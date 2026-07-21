@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animasyon 90: Michelson İnterferometresi Kıyaslaması</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: #f8fafc;
+            margin: 0;
+            padding: 20px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            width: 100%;
+            max-width: 900px;
+            box-sizing: border-box;
+        }
+        h2 { text-align: center; font-size: 20px; margin-top: 0; color: #fff; }
+        .subtitle { text-align: center; font-size: 14px; color: #a3a3a3; margin-bottom: 20px; }
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 15px;
+            background: #1a1a1a;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #404040;
+        }
+        .control-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            font-weight: bold;
+        }
+        .slider-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        input[type=range] {
+            width: 150px;
+            accent-color: #ef4444;
+        }
+        .val-badge {
+            background: #333;
+            padding: 2px 8px;
+            border-radius: 4px;
+            border: 1px solid #555;
+            min-width: 40px;
+            text-align: center;
+        }
+        .canvases {
+            display: flex;
+            gap: 20px;
+            width: 100%;
+            justify-content: space-between;
+        }
+        .canvas-wrapper {
+            flex: 1;
+            background: #0f0f0f;
+            border-radius: 8px;
+            border: 1px solid #404040;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            position: relative;
+        }
+        .canvas-title {
+            text-align: center;
+            background: #1a1a1a;
+            padding: 10px;
+            font-weight: bold;
+            border-bottom: 1px solid #404040;
+            color: #3b82f6;
+        }
+        .canvas-title.zerre {
+            color: #22c55e;
+        }
+        canvas {
+            width: 100%;
+            height: 400px;
+            display: block;
+        }
+        .result-bar {
+            text-align: center;
+            padding: 12px;
+            font-weight: bold;
+            font-size: 15px;
+            background: #1a1a1a;
+            border-top: 1px solid #404040;
+        }
+        .info {
+            text-align: center;
+            font-size: 12px;
+            color: #a3a3a3;
+            margin-top: 15px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2 style="color: #fff; text-shadow: 0 0 10px rgba(0, 229, 255, 0.5);">Animasyon 21.5: Michelson İnterferometresi ve Polarizasyon Sönümlemesi</h2>
+    <div class="subtitle">Standart Dalga Mekaniği ile Evrenakı Zerre Modelinin Davranışsal Kıyaslaması (Tek Dalga Boyu Işık)</div>
+    
+    <div class="controls">
+        <div class="control-group">
+            <label style="color: #a3a3a3;">Kol 1 (Üst Ayna) Polarizörü:</label>
+            <div class="slider-wrapper">
+                <input type="range" id="pol1" min="0" max="180" value="0" step="1">
+                <span class="val-badge" id="val1">0°</span>
+            </div>
+        </div>
+        <div class="control-group">
+            <label style="color: #a3a3a3;">Kol 2 (Sağ Ayna) Polarizörü:</label>
+            <div class="slider-wrapper">
+                <input type="range" id="pol2" min="0" max="180" value="90" step="1">
+                <span class="val-badge" id="val2">90°</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="canvases">
+        <!-- Standart Fizik -->
+        <div class="canvas-wrapper">
+            <div class="canvas-title">Standart Fizik (Dalga Optiği)</div>
+            <canvas id="canvasStd" width="400" height="400"></canvas>
+            <div class="result-bar" id="resStd">Hesaplanıyor...</div>
+        </div>
+
+        <!-- Evrenakı Zerre Modeli -->
+        <div class="canvas-wrapper">
+            <div class="canvas-title zerre">Evrenakı Teorisi (Zerre Modeli)</div>
+            <canvas id="canvasZer" width="400" height="400"></canvas>
+            <div class="result-bar" id="resZer" style="color: #22c55e;">GİRİŞİM HER ZAMAN VAR</div>
+        </div>
+    </div>
+    
+    <div class="info">
+        * Zerreler polarizörden geçerken açısına göre "disk" formuna ezilir. Uzun yolda (>10cm) tekrar küresel simetrik forma dönerek kutuplaşma özelliklerini yitirir ve wake (iz) alanı her halükarda girişimi sağlar.
+    </div>
+</div>
+
+<script>
+    const canvasStd = document.getElementById('canvasStd');
+    const ctxStd = canvasStd.getContext('2d');
+    const canvasZer = document.getElementById('canvasZer');
+    const ctxZer = canvasZer.getContext('2d');
+
+    const pol1Slider = document.getElementById('pol1');
+    const pol2Slider = document.getElementById('pol2');
+    const val1 = document.getElementById('val1');
+    const val2 = document.getElementById('val2');
+    const resStd = document.getElementById('resStd');
+
+    // Update labels
+    pol1Slider.oninput = function() { val1.innerText = this.value + '°'; };
+    pol2Slider.oninput = function() { val2.innerText = this.value + '°'; };
+
+    // Cihaz koordinatları
+    const src = {x: 40, y: 250};
+    const bs = {x: 180, y: 250}; // Yarı Saydam Ayna (Beam Splitter)
+    const m1 = {x: 180, y: 60};  // Üst Ayna
+    const m2 = {x: 350, y: 250}; // Sağ Ayna
+    const det = {x: 180, y: 360}; // Detektör / Ekran
+
+    const p1Pos = {x: 180, y: 150}; // Kol 1 Polarizör
+    const p2Pos = {x: 260, y: 250}; // Kol 2 Polarizör
+
+    let time = 0;
+    const laserColor = '#ef4444'; // Tek dalga boyu (Kırmızı Lazer)
+
+    // Statik Aygıt Çizimi
+    function drawApparatus(ctx) {
+        ctx.clearRect(0, 0, 400, 400);
+
+        ctx.strokeStyle = '#555';
+        ctx.lineWidth = 2;
+
+        // Lazer
+        ctx.fillStyle = '#444';
+        ctx.fillRect(src.x - 20, src.y - 10, 40, 20);
+        ctx.fillStyle = '#fff';
+        ctx.font = '10px Arial';
+        ctx.fillText("Lazer", src.x - 12, src.y + 22);
+
+        // Beam splitter
+        ctx.beginPath();
+        ctx.moveTo(bs.x - 20, bs.y + 20);
+        ctx.lineTo(bs.x + 20, bs.y - 20);
+        ctx.strokeStyle = '#06b6d4';
+        ctx.lineWidth = 4;
+        ctx.stroke();
+
+        // Aynalar
+        ctx.strokeStyle = '#eab308';
+        ctx.lineWidth = 5;
+        ctx.beginPath(); ctx.moveTo(m1.x - 25, m1.y); ctx.lineTo(m1.x + 25, m1.y); ctx.stroke(); 
+        ctx.beginPath(); ctx.moveTo(m2.x, m2.y - 25); ctx.lineTo(m2.x, m2.y + 25); ctx.stroke(); 
+
+        // Ekran (Daha belirgin)
+        ctx.fillStyle = '#111';
+        ctx.fillRect(det.x - 40, det.y - 5, 80, 25);
+        ctx.fillStyle = '#fff';
+        ctx.fillText("Ekran", det.x - 12, det.y - 10);
+
+        // Polarizör Camları Sabit Çizimi
+        let p1Val = parseInt(pol1Slider.value);
+        let p2Val = parseInt(pol2Slider.value);
+        
+        ctx.globalAlpha = 0.5;
+        ctx.fillStyle = '#8b5cf6'; // Polarizör rengi sabit
+        
+        // Pol 1 (Üst Kol) - Yatay cam
+        ctx.fillRect(p1Pos.x - 25, p1Pos.y - 5, 50, 10);
+        // Pol 2 (Sağ Kol) - Dikey cam
+        ctx.fillRect(p2Pos.x - 5, p2Pos.y - 25, 10, 50);
+        
+        ctx.globalAlpha = 1.0;
+
+        // Polarizasyon eksenini göstermek için iç ızgara çizgileri
+        ctx.strokeStyle = 'rgba(255,255,255,0.8)';
+        ctx.lineWidth = 1;
+        
+        // Pol 1 Izgarası
+        ctx.save();
+        ctx.translate(p1Pos.x, p1Pos.y);
+        ctx.beginPath();
+        ctx.rect(-25, -5, 50, 10); // Cam sınırları
+        ctx.clip(); // Taşan çizgileri kes
+        ctx.rotate(p1Val * Math.PI / 180);
+        for(let i = -30; i <= 30; i += 4) {
+            ctx.moveTo(i, -20); ctx.lineTo(i, 20);
+        }
+        ctx.stroke();
+        ctx.restore();
+
+        // Pol 2 Izgarası
+        ctx.save();
+        ctx.translate(p2Pos.x, p2Pos.y);
+        ctx.beginPath();
+        ctx.rect(-5, -25, 10, 50); // Cam sınırları
+        ctx.clip();
+        ctx.rotate(p2Val * Math.PI / 180);
+        for(let i = -30; i <= 30; i += 4) {
+            ctx.moveTo(i, -20); ctx.lineTo(i, 20);
+        }
+        ctx.stroke();
+        ctx.restore();
+
+        ctx.fillStyle = '#fff';
+        ctx.fillText(p1Val + "° Pol.", p1Pos.x + 30, p1Pos.y + 3);
+        ctx.fillText(p2Val + "° Pol.", p2Pos.x - 15, p2Pos.y - 30);
+    }
+
+    // Parçacık/Dalga Yönetimi
+    let particles = [];
+    
+    function spawnParticle() {
+        if (time % 90 === 0) {
+            particles.push({ id: time, x: src.x, y: src.y, state: 'to_bs' });
+        }
+    }
+
+    function updateParticles() {
+        const speed = 1.25;
+        for (let i = particles.length - 1; i >= 0; i--) {
+            let p = particles[i];
+            
+            if (p.state === 'to_bs') {
+                p.x += speed;
+                if (p.x >= bs.x) {
+                    p.x = bs.x;
+                    particles.push({ id: p.id + '_up', x: bs.x, y: bs.y, state: 'to_m1' });
+                    p.state = 'to_m2';
+                }
+            } else if (p.state === 'to_m1') {
+                p.y -= speed;
+                if (p.y <= m1.y) { p.y = m1.y; p.state = 'from_m1'; }
+            } else if (p.state === 'from_m1') {
+                p.y += speed;
+                if (p.y >= bs.y) { p.y = bs.y; p.state = 'to_det1'; }
+            } else if (p.state === 'to_m2') {
+                p.x += speed;
+                if (p.x >= m2.x) { p.x = m2.x; p.state = 'from_m2'; }
+            } else if (p.state === 'from_m2') {
+                p.x -= speed;
+                if (p.x <= bs.x) { p.x = bs.x; p.state = 'to_det2'; }
+            } else if (p.state === 'to_det1' || p.state === 'to_det2') {
+                p.y += speed;
+                if (p.y >= det.y) {
+                    particles.splice(i, 1);
+                }
+            }
+        }
+    }
+
+    // Standart Fizik Dalga Çizimi
+    function drawWaveParticle(ctx, p, p1Val, p2Val) {
+        ctx.beginPath();
+        let ox = p.x;
+        let oy = p.y;
+        
+        ctx.strokeStyle = laserColor; 
+        
+        let currentPol = null;
+        if (p.state === 'to_m1' || p.state === 'from_m1') {
+            if (p.state === 'to_m1' && p.y < p1Pos.y) currentPol = p1Val;
+            if (p.state === 'from_m1') currentPol = p1Val;
+        }
+        if (p.state === 'to_m2' || p.state === 'from_m2') {
+            if (p.state === 'to_m2' && p.x > p2Pos.x) currentPol = p2Val;
+            if (p.state === 'from_m2') currentPol = p2Val;
+        }
+        if (p.state === 'to_det1') currentPol = p1Val;
+        if (p.state === 'to_det2') currentPol = p2Val;
+
+        // Dalga formunu hafif sallantılı çizelim
+        ctx.lineWidth = 2;
+        ctx.moveTo(ox, oy);
+        
+        let isVertical = (p.state === 'to_m1' || p.state === 'from_m1' || p.state === 'to_det1' || p.state === 'to_det2');
+        for (let i = -12; i <= 12; i += 2) {
+            let offset = Math.sin((time + i) * 0.2) * 8;
+            if (isVertical) {
+                ctx.lineTo(ox + offset, oy + i);
+            } else {
+                ctx.lineTo(ox + i, oy + offset);
+            }
+        }
+        ctx.stroke();
+
+        // Kutuplaşma vektörünü çizgi olarak göster
+        if (currentPol !== null) {
+            ctx.beginPath();
+            ctx.strokeStyle = 'rgba(255,255,255,0.7)';
+            ctx.lineWidth = 1;
+            let ang = currentPol * Math.PI / 180;
+            let len = 12;
+            let vx = Math.cos(ang) * len;
+            let vy = Math.sin(ang) * len;
+            ctx.moveTo(ox - vx, oy - vy);
+            ctx.lineTo(ox + vx, oy + vy);
+            ctx.stroke();
+        }
+    }
+
+    // Zerre Modeli Çizimi (Şekil Değiştiren Damlacık)
+    function drawZerreParticle(ctx, p, p1Val, p2Val) {
+        let currentPol = null;
+        let distFromPolarizer = 0;
+
+        if (p.state === 'to_m1' || p.state === 'from_m1') {
+            if (p.state === 'to_m1' && p.y <= p1Pos.y) {
+                currentPol = p1Val;
+                distFromPolarizer = Math.abs(p1Pos.y - p.y);
+            }
+            if (p.state === 'from_m1') {
+                currentPol = p1Val;
+                distFromPolarizer = Math.abs(p1Pos.y - m1.y) + Math.abs(p.y - m1.y);
+            }
+        }
+        if (p.state === 'to_m2' || p.state === 'from_m2') {
+            if (p.state === 'to_m2' && p.x >= p2Pos.x) {
+                currentPol = p2Val;
+                distFromPolarizer = Math.abs(p.x - p2Pos.x);
+            }
+            if (p.state === 'from_m2') {
+                currentPol = p2Val;
+                distFromPolarizer = Math.abs(m2.x - p2Pos.x) + Math.abs(m2.x - p.x);
+            }
+        }
+        if (p.state === 'to_det1') {
+            currentPol = p1Val;
+            distFromPolarizer = Math.abs(p1Pos.y - m1.y) + Math.abs(bs.y - m1.y) + Math.abs(p.y - bs.y);
+        }
+        if (p.state === 'to_det2') {
+            currentPol = p2Val;
+            distFromPolarizer = Math.abs(m2.x - p2Pos.x) + Math.abs(m2.x - bs.x) + Math.abs(p.y - bs.y);
+        }
+
+        let rx = 7;
+        let ry = 7;
+        let rot = 0;
+
+        if (currentPol !== null) {
+            // Uzaklaştıkça küreye geri dönme animasyonu (Recovery)
+            let recovery = Math.min(distFromPolarizer / 120, 1.0);
+            
+            // Polarizörün açısına göre disk şeklinde ezilme
+            rot = currentPol * Math.PI / 180;
+            rx = 7 + (5 * (1 - recovery)); // Polarizasyon yönünde genişler
+            ry = 7 - (4 * (1 - recovery)); // Dik yönde basıklaşır (disk)
+        }
+
+        ctx.fillStyle = laserColor;
+        ctx.beginPath();
+        // Dönüşü uygulayarak elipsi çiz
+        ctx.ellipse(p.x, p.y, Math.max(rx, 1), Math.max(ry, 1), rot, 0, 2 * Math.PI);
+        ctx.fill();
+        
+        // Wake (Basınç Tüneli) İzi
+        ctx.strokeStyle = 'rgba(255,255,255,0.3)';
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        if (p.state.includes('m1') || p.state.includes('det')) {
+            ctx.moveTo(p.x, p.y); ctx.lineTo(p.x, p.y - 20);
+        } else {
+            ctx.moveTo(p.x, p.y); ctx.lineTo(p.x - 20, p.y);
+        }
+        ctx.stroke();
+    }
+
+    // Ekrandaki Girişim Deseni
+    function drawScreenPattern(ctx, isStandard, p1Val, p2Val) {
+        ctx.fillStyle = '#111';
+        ctx.fillRect(det.x - 40, det.y, 80, 20);
+
+        if (isStandard) {
+            // İki açının farkına göre girişim görünürlüğü (Malus yasası / Kuantum silinme)
+            let diff = Math.abs(p1Val - p2Val);
+            let contrast = Math.abs(Math.cos(diff * Math.PI / 180));
+            
+            for(let i=0; i<80; i+=8) {
+                // Girişim tamken (contrast=1): Aydınlık yerler %100, karanlık yerler %0.
+                // Girişim yokken (contrast=0): Her yer %50 homojen (saçaksız) aydınlık (Işık kaybolmaz, sadece saçak silinir).
+                let alpha;
+                if (i % 16 === 0) {
+                    alpha = 0.5 + (0.5 * contrast); // Aydınlık saçak bölgesi
+                } else {
+                    alpha = 0.5 - (0.5 * contrast); // Karanlık saçak bölgesi
+                }
+                ctx.fillStyle = `rgba(239, 68, 68, ${alpha})`;
+                ctx.fillRect(det.x - 40 + i, det.y, 8, 20);
+            }
+        } else {
+            // Zerre Modeli: Zerreler küreye döndüğü için kontrast her zaman tam (1)
+            for(let i=0; i<80; i+=8) {
+                let alpha = (i%16===0) ? 1.0 : 0.0;
+                ctx.fillStyle = `rgba(239, 68, 68, ${alpha})`;
+                ctx.fillRect(det.x - 40 + i, det.y, 8, 20);
+            }
+        }
+    }
+
+    function loop() {
+        time++;
+        let p1Val = parseInt(pol1Slider.value);
+        let p2Val = parseInt(pol2Slider.value);
+
+        // UI Güncellemeleri - Dalga Modeli Kontrastını hesapla
+        let diff = Math.abs(p1Val - p2Val);
+        let contrast = Math.abs(Math.cos(diff * Math.PI / 180));
+
+        if (contrast > 0.8) {
+            resStd.innerText = "GİRİŞİM NET (Benzer Yönlü)";
+            resStd.style.color = "#fff";
+        } else if (contrast < 0.2) {
+            resStd.innerText = "GİRİŞİM YOK (Dik Yönlü)";
+            resStd.style.color = "#ef4444";
+        } else {
+            resStd.innerText = `KISMİ GİRİŞİM (%${Math.round(contrast*100)})`;
+            resStd.style.color = "#a3a3a3";
+        }
+
+        spawnParticle();
+        updateParticles();
+
+        // Sol: Standart Fizik
+        drawApparatus(ctxStd);
+        particles.forEach(p => drawWaveParticle(ctxStd, p, p1Val, p2Val));
+        drawScreenPattern(ctxStd, true, p1Val, p2Val);
+
+        // Sağ: Evrenakı Zerre
+        drawApparatus(ctxZer);
+        particles.forEach(p => drawZerreParticle(ctxZer, p, p1Val, p2Val));
+        drawScreenPattern(ctxZer, false, p1Val, p2Val);
+
+        requestAnimationFrame(loop);
+    }
+
+    loop();
+</script>
+</body>
+</html>

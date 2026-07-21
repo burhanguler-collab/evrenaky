@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evrenakı Teorisi: 4D Mikro-Spinlerin Makro-Spine Dönüşümü Simülasyonu</title>
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --panel-bg: rgba(17, 24, 39, 0.85);
+            --neon-blue: #00f0ff;
+            --neon-magenta: #ff007f;
+            --neon-green: #39ff14;
+            --text-color: #f3f4f6;
+            --text-muted: #9ca3af;
+            --border-color: rgba(0, 240, 255, 0.2);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            overflow: hidden;
+            display: flex;
+            height: 100vh;
+        }
+
+        #app-container {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        /* Controls Panel */
+        #control-panel {
+            width: 380px;
+            background: var(--panel-bg);
+            border-right: 1px solid var(--border-color);
+            backdrop-filter: blur(10px);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            z-index: 10;
+            overflow-y: auto;
+            box-shadow: 10px 0 30px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--neon-blue);
+            text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.4;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 15px;
+        }
+
+        .section-title {
+            font-size: 0.9rem;
+            color: var(--neon-magenta);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .control-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        label {
+            font-size: 0.85rem;
+            display: flex;
+            justify-content: space-between;
+            color: var(--text-color);
+        }
+
+        .val-display {
+            font-family: monospace;
+            color: var(--neon-blue);
+            font-weight: bold;
+        }
+
+        input[type="range"] {
+            width: 100%;
+            background: #1f2937;
+            height: 6px;
+            border-radius: 3px;
+            outline: none;
+            -webkit-appearance: none;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--neon-blue);
+            cursor: pointer;
+            box-shadow: 0 0 8px var(--neon-blue);
+            transition: transform 0.1s;
+        }
+
+        input[type="range"]::-webkit-slider-thumb:hover {
+            transform: scale(1.2);
+        }
+
+        .btn {
+            background: transparent;
+            border: 1px solid var(--neon-blue);
+            color: var(--neon-blue);
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            text-align: center;
+            letter-spacing: 1px;
+            box-shadow: inset 0 0 0 rgba(0, 240, 255, 0);
+        }
+
+        .btn:hover {
+            background: var(--neon-blue);
+            color: #000;
+            box-shadow: 0 0 15px var(--neon-blue), inset 0 0 5px rgba(255,255,255,0.5);
+        }
+
+        .btn-magenta {
+            border-color: var(--neon-magenta);
+            color: var(--neon-magenta);
+        }
+
+        .btn-magenta:hover {
+            background: var(--neon-magenta);
+            color: #fff;
+            box-shadow: 0 0 15px var(--neon-magenta);
+        }
+
+        /* Telemetry HUD */
+        .hud-panel {
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 6px;
+            padding: 15px;
+            font-family: monospace;
+            font-size: 0.8rem;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .hud-row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .hud-label {
+            color: var(--text-muted);
+        }
+
+        .hud-value {
+            color: var(--neon-green);
+            font-weight: bold;
+        }
+
+        /* Simulation Canvas Viewport */
+        #viewport {
+            flex-grow: 1;
+            position: relative;
+            height: 100%;
+        }
+
+        canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Overlay HUD on Canvas */
+        #canvas-hud {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            background: rgba(17, 24, 39, 0.7);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 15px;
+            backdrop-filter: blur(5px);
+            font-family: monospace;
+            pointer-events: none;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            font-size: 0.85rem;
+        }
+
+        /* Instruction banner */
+        #instruction-banner {
+            position: absolute;
+            bottom: 25px;
+            left: 405px;
+            right: 25px;
+            background: rgba(17, 24, 39, 0.8);
+            border: 1px solid rgba(0, 240, 255, 0.1);
+            border-radius: 6px;
+            padding: 15px 25px;
+            backdrop-filter: blur(5px);
+            font-size: 0.85rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        #instruction-banner strong {
+            color: var(--neon-blue);
+        }
+
+        .switch-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 44px;
+            height: 22px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #374151;
+            transition: .4s;
+            border-radius: 22px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: var(--neon-blue);
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(22px);
+        }
+    </style>
+</head>
+<body>
+    <div id="app-container">
+        <!-- Control Panel -->
+        <div id="control-panel">
+            <h1>Evrenakı Simülasyonu</h1>
+            
+            <div class="control-group">
+                <div class="section-title">Kütlesel Birikim Ayarları</div>
+                <label for="particle-count">
+                    <span>Zerre Sayısı (Kütle - $M$):</span>
+                    <span id="particle-count-val" class="val-display">50</span>
+                </label>
+                <input type="range" id="particle-count" min="5" max="300" value="50">
+            </div>
+
+            <div class="control-group">
+                <label for="w-angle">
+                    <span>4D İzdüşüm Açısı ($\alpha$):</span>
+                    <span id="w-angle-val" class="val-display">45°</span>
+                </label>
+                <input type="range" id="w-angle" min="0" max="90" value="45">
+            </div>
+
+            <div class="control-group">
+                <div class="section-title">Görsel Kontroller</div>
+                
+                <div class="switch-container">
+                    <span>4D $w$-Vektörlerini Göster:</span>
+                    <label class="switch">
+                        <input type="checkbox" id="show-vectors" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="switch-container" style="margin-top: 8px;">
+                    <span>Zerreleri Birleştir (Makro Kütle):</span>
+                    <label class="switch">
+                        <input type="checkbox" id="collapse-state">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <div class="section-title">Eylemler</div>
+                <button class="btn" id="btn-toggle-play">Simülasyonu Duraklat</button>
+                <button class="btn btn-magenta" id="btn-reset">Başlangıç Durumuna Dön</button>
+            </div>
+
+            <div class="control-group">
+                <div class="section-title">Teorik HUD Telemetrisi</div>
+                <div class="hud-panel">
+                    <div class="hud-row">
+                        <span class="hud-label">Sistem Kütlesi (M):</span>
+                        <span class="hud-value" id="hud-mass">50.0 zM</span>
+                    </div>
+                    <div class="hud-row">
+                        <span class="hud-label">4D Girdap Torku (&Sigma;&tau;_w):</span>
+                        <span class="hud-value" id="hud-torque">2.41 zT</span>
+                    </div>
+                    <div class="hud-row">
+                        <span class="hud-label">3D Ekvatoral Hız (v):</span>
+                        <span class="hud-value" id="hud-velocity">0.48 km/s</span>
+                    </div>
+                    <div class="hud-row">
+                        <span class="hud-label">Yalpalama Genliği (&theta;_p):</span>
+                        <span class="hud-value" id="hud-precession">7.21°</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Viewport -->
+        <div id="viewport">
+            <canvas id="simCanvas"></canvas>
+            
+            <!-- Floating HUD on Canvas -->
+            <div id="canvas-hud">
+                <div style="color: var(--neon-blue); font-weight: bold; margin-bottom: 5px;">COSMOFLUID 4D HUD</div>
+                <div>Boyut Modu: <span style="color: var(--neon-magenta);">4D Spatial Projection</span></div>
+                <div>Girdap Tipi: <span style="color: var(--neon-green);">Compton Vortex Field</span></div>
+                <div>Çözünürlük: <span style="color: var(--text-color);">60 FPS Real-time</span></div>
+            </div>
+
+            <!-- Instruction Banner -->
+            <div id="instruction-banner">
+                <strong>Simülasyon Açıklaması:</strong> Bu animasyon, 4. boyuttaki mikro zerre girdaplarının vektörel birikimini ve makro kütle dönüşünü gösterir. Sol paneldeki <strong>"Zerreleri Birleştir"</strong> anahtarını açtığınızda, dağınık durumdaki mikro-spin girdaplarının merkeze çökerek makro bir küre (gezegen/yıldız) oluşturduğunu görebilirsiniz. <strong>"Zerre Sayısı" (Kütle)</strong> slider'ını arttırdıkça, biriken 4D torkların toplamı artacak ve oluşan makro kütlenin 3D çizgisel dönüş hızı ile eksen yalpalaması gözle görülür şekilde artacaktır.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('simCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // UI Elements
+        const particleCountSlider = document.getElementById('particle-count');
+        const particleCountVal = document.getElementById('particle-count-val');
+        const wAngleSlider = document.getElementById('w-angle');
+        const wAngleVal = document.getElementById('w-angle-val');
+        const showVectorsCheckbox = document.getElementById('show-vectors');
+        const collapseCheckbox = document.getElementById('collapse-state');
+        const btnTogglePlay = document.getElementById('btn-toggle-play');
+        const btnReset = document.getElementById('btn-reset');
+
+        // HUD Elements
+        const hudMass = document.getElementById('hud-mass');
+        const hudTorque = document.getElementById('hud-torque');
+        const hudVelocity = document.getElementById('hud-velocity');
+        const hudPrecession = document.getElementById('hud-precession');
+
+        // Sim variables
+        let isPlaying = true;
+        let particles = [];
+        let numParticles = parseInt(particleCountSlider.value);
+        let alphaAngle = parseInt(wAngleSlider.value) * Math.PI / 180;
+        let showVectors = showVectorsCheckbox.checked;
+        let isCollapsed = collapseCheckbox.checked;
+        
+        let rotationAngle3D = 0;
+        let precessionAngle = 0;
+        
+        // Physics constants/scales
+        const MACRO_SPHERE_RADIUS = 100;
+        let time = 0;
+
+        // Resize Canvas
+        function resizeCanvas() {
+            canvas.width = canvas.getBoundingClientRect().width;
+            canvas.height = canvas.getBoundingClientRect().height;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        // Particle Class (Laminar and Deterministic in 4D)
+        class Particle {
+            constructor(index) {
+                this.index = index;
+                this.updateProperties();
+            }
+
+            updateProperties() {
+                // 1. Initial State: Laminar Spiral Nebula (3 symmetrical spiral arms)
+                let numArms = 3;
+                let arm = this.index % numArms;
+                let angleOffset = arm * (Math.PI * 2 / numArms);
+                
+                // Spiral distribution based on index
+                let progress = this.index / 300; // normalized over max particles
+                this.spiralR = 120 + progress * 160; 
+                this.spiralTheta = progress * Math.PI * 5 + angleOffset; 
+                this.spiralPhi = Math.PI / 2; // Flat equatorial plane
+                
+                // 4. w spin component (all aligned, no chaos!)
+                this.wSpin = 1.2; // Identical spin vectors representing cohesive angular momentum
+
+                // 2. Final State: Perfectly ordered Fibonacci Sphere Grid
+                // Mathematically optimal distribution on a sphere (golden spiral grid)
+                const goldenRatio = (1 + Math.sqrt(5)) / 2;
+                const goldenAngle = (2 - goldenRatio) * Math.PI * 2;
+                
+                // Distribute on sphere surface using Fibonacci grid
+                this.sphereLat = Math.asin(-1 + 2 * (this.index + 0.5) / 300);
+                this.sphereLonOffset = goldenAngle * this.index; 
+                
+                // Current variables
+                this.x = 0;
+                this.y = 0;
+                this.z = 0;
+                this.w = 0;
+            }
+
+            update(targetCollapse, collapseProgress) {
+                // Calculate current coordinates by interpolating between spiral and sphere grid
+                let r, theta, phi;
+                
+                if (targetCollapse) {
+                    // Radius interpolates from spiral radius to sphere radius
+                    r = this.spiralR * (1 - collapseProgress) + MACRO_SPHERE_RADIUS * collapseProgress;
+                    
+                    // Longitude interpolates to the rotating sphere longitude
+                    let targetLon = this.sphereLonOffset + rotationAngle3D;
+                    theta = this.spiralTheta * (1 - collapseProgress) + targetLon * collapseProgress;
+                    
+                    // Latitude interpolates from equator (PI/2) to the Fibonacci grid latitude
+                    let targetLat = Math.PI / 2 - this.sphereLat; // mapping lat to spherical coordinate phi
+                    phi = this.spiralPhi * (1 - collapseProgress) + targetLat * collapseProgress;
+                } else {
+                    // Stay in structured spiral mode, orbiting in unison
+                    r = this.spiralR;
+                    theta = this.spiralTheta + rotationAngle3D * 0.5; // Orbit speed is proportional to background
+                    phi = this.spiralPhi;
+                }
+                
+                // Calculate 3D Cartesian coordinates based on current spherical coordinates
+                this.x = r * Math.sin(phi) * Math.cos(theta);
+                this.y = r * Math.cos(phi); // y-axis is vertical in this system
+                this.z = r * Math.sin(phi) * Math.sin(theta);
+                
+                // 4D w coordinate oscillates deterministically along the spin vector
+                this.w = 30 * Math.sin(theta + time) * (1 - collapseProgress);
+            }
+        }
+
+        // Initialize particles
+        function initParticles() {
+            particles = [];
+            for (let i = 0; i < 300; i++) {
+                particles.push(new Particle(i));
+            }
+        }
+        initParticles();
+
+        // Collapse progress tracker
+        let collapseProgress = 0;
+        
+        // Main Loop
+        function animate() {
+            if (isPlaying) {
+                time += 0.03;
+                
+                // Linear rotation speed based on active mass (particles)
+                let massMultiplier = numParticles / 300; // 0 to 1
+                let speedScale = 0.005 + (massMultiplier * 0.045);
+                
+                rotationAngle3D += speedScale;
+                precessionAngle += speedScale * 0.25; // Precession is slower than primary spin
+                
+                // Track transition animation for collapse
+                if (isCollapsed) {
+                    if (collapseProgress < 1) collapseProgress += 0.015;
+                    else collapseProgress = 1;
+                } else {
+                    if (collapseProgress > 0) collapseProgress -= 0.015;
+                    else collapseProgress = 0;
+                }
+
+                // Update particles
+                for (let i = 0; i < numParticles; i++) {
+                    particles[i].update(isCollapsed, collapseProgress);
+                }
+
+                // Update HUD Values dynamically
+                let calculatedMass = numParticles * 1.25;
+                let calculatedTorque = Math.abs(calculatedMass * Math.cos(alphaAngle) * 0.05).toFixed(2);
+                let calculatedVelocity = (calculatedMass * 0.015 * Math.sin(alphaAngle)).toFixed(2);
+                let calculatedPrecession = (5 + (calculatedMass * 0.05) * Math.cos(alphaAngle)).toFixed(2);
+
+                hudMass.textContent = `${calculatedMass.toFixed(1)} zM`;
+                hudTorque.textContent = `${calculatedTorque} zT`;
+                hudVelocity.textContent = `${calculatedVelocity} km/s`;
+                hudPrecession.textContent = `${calculatedPrecession}°`;
+            }
+
+            draw();
+            requestAnimationFrame(animate);
+        }
+
+        // 3D/4D Projection Function
+        function project(x, y, z, w) {
+            // 4D Rotation in XW-plane by alphaAngle (user slider)
+            let cosA = Math.cos(alphaAngle);
+            let sinA = Math.sin(alphaAngle);
+            
+            let rotatedX = x * cosA - w * sinA;
+            let rotatedW = x * sinA + w * cosA;
+            
+            // 3D Rotation of the entire scene (Camera / Precession)
+            let cosPre = Math.cos(precessionAngle);
+            let sinPre = Math.sin(precessionAngle);
+            
+            // Apply precession wobble to rotation axis
+            let rx = rotatedX * cosPre - z * sinPre;
+            let rz = rotatedX * sinPre + z * cosPre;
+            let ry = y;
+            
+            // Perspective Projection to 2D Screen
+            let scale = 400 / (400 + rz);
+            let screenX = canvas.width / 2 + rx * scale;
+            let screenY = canvas.height / 2 + ry * scale;
+            
+            return {
+                x: screenX,
+                y: screenY,
+                depth: rz,
+                scale: scale
+            };
+        }
+
+        // Draw Canvas Frame
+        function draw() {
+            ctx.fillStyle = '#0b0f19';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            // Draw background GRID for cosmological space
+            ctx.strokeStyle = 'rgba(0, 240, 255, 0.03)';
+            ctx.lineWidth = 1;
+            let gridSize = 50;
+            for(let x = 0; x < canvas.width; x += gridSize) {
+                ctx.beginPath();
+                ctx.moveTo(x, 0);
+                ctx.lineTo(x, canvas.height);
+                ctx.stroke();
+            }
+            for(let y = 0; y < canvas.height; y += gridSize) {
+                ctx.beginPath();
+                ctx.moveTo(0, y);
+                ctx.lineTo(canvas.width, y);
+                ctx.stroke();
+            }
+
+            // Draw central macro sphere (if collapsed)
+            let centerProj = project(0, 0, 0, 0);
+            if (collapseProgress > 0.05) {
+                ctx.save();
+                
+                // Draw precession cone (Yalpalama konisi)
+                ctx.strokeStyle = 'rgba(255, 0, 127, ' + (collapseProgress * 0.3) + ')';
+                ctx.lineWidth = 2;
+                ctx.setLineDash([4, 4]);
+                ctx.beginPath();
+                // Top cone
+                let coneTop = project(0, -MACRO_SPHERE_RADIUS * 1.5, 0, 0);
+                ctx.moveTo(centerProj.x, centerProj.y);
+                ctx.lineTo(coneTop.x + 30 * Math.sin(precessionAngle), coneTop.y);
+                ctx.stroke();
+                
+                // Draw main Macro Sphere body with glowing gradients
+                let rad = MACRO_SPHERE_RADIUS * collapseProgress;
+                let gradient = ctx.createRadialGradient(
+                    centerProj.x - rad * 0.3, centerProj.y - rad * 0.3, rad * 0.1,
+                    centerProj.x, centerProj.y, rad
+                );
+                gradient.addColorStop(0, '#1e293b');
+                gradient.addColorStop(0.5, '#0f172a');
+                gradient.addColorStop(1, '#020617');
+                
+                ctx.beginPath();
+                ctx.arc(centerProj.x, centerProj.y, rad, 0, Math.PI * 2);
+                ctx.fillStyle = gradient;
+                ctx.shadowBlur = 40 * collapseProgress;
+                ctx.shadowColor = 'rgba(0, 240, 255, 0.4)';
+                ctx.fill();
+                
+                // Draw rotating grid lines (latitude/longitude) on the macro sphere
+                ctx.strokeStyle = 'rgba(0, 240, 255, ' + (0.25 * collapseProgress) + ')';
+                ctx.lineWidth = 1;
+                ctx.shadowBlur = 0;
+                
+                // Draw Longitude lines
+                for (let a = 0; a < Math.PI * 2; a += Math.PI / 4) {
+                    ctx.beginPath();
+                    let currentAngle = a + rotationAngle3D;
+                    for (let lat = -Math.PI/2; lat <= Math.PI/2; lat += 0.1) {
+                        let sx = rad * Math.cos(lat) * Math.cos(currentAngle);
+                        let sy = rad * Math.sin(lat);
+                        let sz = rad * Math.cos(lat) * Math.sin(currentAngle);
+                        let pt = project(sx, sy, sz, 0);
+                        if (lat === -Math.PI/2) ctx.moveTo(pt.x, pt.y);
+                        else ctx.lineTo(pt.x, pt.y);
+                    }
+                    ctx.stroke();
+                }
+                
+                // Draw equator line
+                ctx.strokeStyle = 'rgba(255, 0, 127, ' + (0.5 * collapseProgress) + ')';
+                ctx.lineWidth = 2.5;
+                ctx.beginPath();
+                for (let lon = 0; lon <= Math.PI * 2; lon += 0.1) {
+                    let sx = rad * Math.cos(lon + rotationAngle3D);
+                    let sy = 0; // equator
+                    let sz = rad * Math.sin(lon + rotationAngle3D);
+                    let pt = project(sx, sy, sz, 0);
+                    if (lon === 0) ctx.moveTo(pt.x, pt.y);
+                    else ctx.lineTo(pt.x, pt.y);
+                }
+                ctx.stroke();
+                ctx.restore();
+            }
+
+            // Draw Particles (Micro-spin vortices) sorted by depth
+            let projectedParticles = [];
+            for (let i = 0; i < numParticles; i++) {
+                let p = particles[i];
+                let proj = project(p.x, p.y, p.z, p.w);
+                projectedParticles.push({ p: p, proj: proj });
+            }
+            // Sort by depth (back to front) for correct occlusion
+            projectedParticles.sort((a, b) => b.proj.depth - a.proj.depth);
+
+            projectedParticles.forEach(item => {
+                let p = item.p;
+                let proj = item.proj;
+                
+                // Particle size based on depth scale
+                let size = (1.5 + (1 - collapseProgress) * 2.5) * proj.scale;
+                
+                ctx.beginPath();
+                ctx.arc(proj.x, proj.y, size, 0, Math.PI * 2);
+                ctx.fillStyle = p.color + (0.3 + (1 - collapseProgress) * 0.7) + ')';
+                ctx.fill();
+
+                // Draw micro vector arrows (if showVectors is true and not fully collapsed)
+                if (showVectors && collapseProgress < 0.9) {
+                    ctx.save();
+                    ctx.strokeStyle = 'rgba(0, 240, 255, ' + (0.3 * (1 - collapseProgress)) + ')';
+                    ctx.lineWidth = 1;
+                    ctx.beginPath();
+                    ctx.moveTo(proj.x, proj.y);
+                    
+                    // Laminar flows have parallel spin vectors pointing along rotation axis w
+                    let dx = 0;
+                    let dy = -12 * p.wSpin * proj.scale;
+                    ctx.lineTo(proj.x + dx, proj.y + dy);
+                    ctx.stroke();
+                    ctx.restore();
+                }
+            });
+
+            // Draw Macro Spin vector and precession axis at the top
+            if (collapseProgress > 0.5) {
+                ctx.save();
+                ctx.shadowBlur = 10;
+                ctx.shadowColor = varValue('--neon-magenta');
+                
+                // Draw Precession Arrow
+                let arrowTop = project(0, -MACRO_SPHERE_RADIUS * 1.6, 0, 0);
+                ctx.strokeStyle = varValue('--neon-magenta');
+                ctx.lineWidth = 3;
+                ctx.beginPath();
+                ctx.moveTo(centerProj.x, centerProj.y);
+                ctx.lineTo(arrowTop.x, arrowTop.y);
+                ctx.stroke();
+                
+                // Arrowhead
+                ctx.fillStyle = varValue('--neon-magenta');
+                ctx.beginPath();
+                ctx.arc(arrowTop.x, arrowTop.y, 6, 0, Math.PI * 2);
+                ctx.fill();
+                
+                // Label
+                ctx.font = 'bold 11px monospace';
+                ctx.fillStyle = varValue('--neon-magenta');
+                ctx.fillText("4D DEVT-AKIMI EKSENI", arrowTop.x + 10, arrowTop.y + 4);
+                ctx.restore();
+            }
+        }
+
+        function varValue(name) {
+            return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+        }
+
+        // Event Listeners
+        particleCountSlider.addEventListener('input', (e) => {
+            numParticles = parseInt(e.target.value);
+            particleCountVal.textContent = numParticles;
+            // Re-init properties to update Fibonacci mapping size
+            for (let i = 0; i < numParticles; i++) {
+                particles[i].updateProperties();
+            }
+        });
+
+        wAngleSlider.addEventListener('input', (e) => {
+            alphaAngle = parseInt(e.target.value) * Math.PI / 180;
+            wAngleVal.textContent = e.target.value + '°';
+        });
+
+        showVectorsCheckbox.addEventListener('change', (e) => {
+            showVectors = e.target.checked;
+        });
+
+        collapseCheckbox.addEventListener('change', (e) => {
+            isCollapsed = e.target.checked;
+        });
+
+        btnTogglePlay.addEventListener('click', () => {
+            isPlaying = !isPlaying;
+            btnTogglePlay.textContent = isPlaying ? "Simülasyonu Duraklat" : "Simülasyonu Başlat";
+            btnTogglePlay.style.borderColor = isPlaying ? 'var(--neon-blue)' : 'var(--neon-magenta)';
+            btnTogglePlay.style.color = isPlaying ? 'var(--neon-blue)' : 'var(--neon-magenta)';
+        });
+
+        btnReset.addEventListener('click', () => {
+            initParticles();
+            collapseProgress = 0;
+            isCollapsed = false;
+            collapseCheckbox.checked = false;
+            wAngleSlider.value = 45;
+            alphaAngle = 45 * Math.PI / 180;
+            wAngleVal.textContent = '45°';
+            particleCountSlider.value = 50;
+            numParticles = 50;
+            particleCountVal.textContent = 50;
+        });
+
+        // Start
+        animate();
+    </script>
+</body>
+</html>

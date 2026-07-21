@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { 
+    background: #121212; 
+    color: #fff; 
+    font-family: 'Inter', sans-serif; 
+    margin: 0; 
+    padding: 20px; 
+    text-align: center; 
+    overflow: hidden;
+  }
+  .btn-group { 
+    margin-bottom: 20px; 
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  button { 
+    background: #1e1e1e; 
+    color: #0ea5e9; 
+    border: 1px solid #0ea5e9; 
+    padding: 10px 20px; 
+    cursor: pointer; 
+    border-radius: 8px; 
+    transition: 0.3s; 
+    font-weight: 500;
+  }
+  button:hover, button.active { 
+    background: #0ea5e9; 
+    color: #fff; 
+    box-shadow: 0 0 15px rgba(14, 165, 233, 0.5);
+  }
+  canvas { 
+    background: #050505; 
+    border-radius: 12px; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8); 
+    border: 1px solid #333;
+    max-width: 100%;
+  }
+  .info { 
+    margin-top: 20px; 
+    font-size: 15px; 
+    color: #cbd5e1; 
+    max-width: 600px; 
+    margin-left: auto; 
+    margin-right: auto; 
+    line-height: 1.5;
+    background: rgba(255, 0, 127, 0.05);
+    border-left: 3px solid #ff007f;
+    padding: 12px 20px;
+    border-radius: 0 8px 8px 0;
+    text-align: left;
+  }
+</style>
+</head>
+<body>
+  <div class="btn-group">
+    <button class="active" onclick="setShape('circle', this)">Tam Daire (Küre Kesiti)</button>
+    <button onclick="setShape('square', this)">Kare (Kübik Kesit)</button>
+    <button onclick="setShape('rod', this)">Çubuk (İnce Uzun)</button>
+    <button onclick="setShape('triangle', this)">Üçgen (Asimetrik)</button>
+  </div>
+  
+  <canvas id="simCanvas" width="700" height="450"></canvas>
+  
+  <div class="info" id="infoText">
+    <strong>Tam Daire:</strong> Daire şekli, her yönden gelen basınçlı Evrenakı akışına karşı kusursuz bir radyal sönümleme (gölgelenme) gradyanı oluşturur. Merkezcil itim yüzeyin her noktasında eşittir, bu yüzden gök cisimleri makro boyutta küreselleşme eğilimindedir.
+  </div>
+
+<script>
+  const canvas = document.getElementById('simCanvas');
+  const ctx = canvas.getContext('2d');
+  let currentShape = 'circle';
+  let time = 0;
+
+  const infos = {
+    circle: "<strong>Tam Daire:</strong> Daire şekli, her yönden gelen basınçlı Evrenakı akışına karşı kusursuz bir radyal sönümleme (gölgelenme) gradyanı oluşturur. Merkezcil itim yüzeyin her noktasında eşittir, bu yüzden gök cisimleri makro boyutta küreselleşme eğilimindedir.",
+    square: "<strong>Kare:</strong> Kare şeklinde köşeler, köşegenler boyunca uzandığı için basınca karşı daha kalın bir duvar oluşturur. Bu durum, basınç gradyanının içeriye nüfuzunu engeller ve yıldızvari (haç şeklinde) bir düşük basınç gölgesi oluşturur.",
+    rod: "<strong>Çubuk (Dikdörtgen):</strong> Çubuk şeklinde, uzun kenarlar boyunca yanal basınç çok daha yüksektir (daha fazla gölgeleme alanı). Bu durum eksenel (uçlardan) ve yanal (yanlardan) kütle-itim asimetrisine yol açar. Çubuk yapılar uzayda spin atmaya mecbur kalır.",
+    triangle: "<strong>Üçgen:</strong> Üçgen kesitte kusursuz bir asimetrik sönümleme oluşur. Sivri uç Evrenakı itimini kolay yararken (aerodinamik), geniş taban kendi arkasında çok büyük bir gölge (düşük basınç alanı) yaratır. Gradyan dengesizliği doğurur."
+  };
+
+  function setShape(shape, btn) {
+    currentShape = shape;
+    document.querySelectorAll('button').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('infoText').innerHTML = infos[shape];
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    const cx = canvas.width / 2;
+    const cy = canvas.height / 2;
+
+    // Grid (Evrenakı Matrisi)
+    ctx.strokeStyle = '#1a1a1a';
+    ctx.lineWidth = 1;
+    for(let i = 0; i < canvas.width; i += 40) {
+      ctx.beginPath(); ctx.moveTo(i, 0); ctx.lineTo(i, canvas.height); ctx.stroke();
+    }
+    for(let i = 0; i < canvas.height; i += 40) {
+      ctx.beginPath(); ctx.moveTo(0, i); ctx.lineTo(canvas.width, i); ctx.stroke();
+    }
+
+    // Animasyon nabzı (Kullanıcı isteği üzerine flaş/nabız efekti kapatıldı)
+    const pulsate = 0; 
+    const pulsateSlow = 0;
+
+    // Basınç Gradyanları Çizimi
+    ctx.globalCompositeOperation = 'lighter';
+    
+    if(currentShape === 'circle') {
+      // Daire Dış Gradyanı (Akıcı)
+      const outerGrad = ctx.createRadialGradient(cx, cy, 80, cx, cy, 280 + pulsate);
+      outerGrad.addColorStop(0, 'rgba(0, 229, 255, 0.35)');
+      outerGrad.addColorStop(1, 'rgba(0, 229, 255, 0)');
+      ctx.fillStyle = outerGrad;
+      ctx.beginPath(); ctx.arc(cx, cy, 280 + pulsate, 0, Math.PI*2); ctx.fill();
+
+      // Cisim (Kütle) ve İç Gradyanı
+      ctx.globalCompositeOperation = 'source-over';
+      const innerGrad = ctx.createRadialGradient(cx, cy, 0, cx, cy, 80);
+      innerGrad.addColorStop(0, '#b800e6'); // Merkez (Parlak Mor/Eflatun)
+      innerGrad.addColorStop(1, '#2d004d'); // Yüzey (Koyu Mor)
+      ctx.fillStyle = innerGrad;
+      ctx.strokeStyle = '#ffffff';
+      ctx.lineWidth = 2;
+      ctx.beginPath(); ctx.arc(cx, cy, 80, 0, Math.PI*2); ctx.fill(); ctx.stroke();
+      
+      // İç eşbasınç (isobar) eğrileri (İç gradyan halkaları)
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.2)';
+      ctx.lineWidth = 1;
+      for(let r=20; r<80; r+=15) {
+        ctx.beginPath(); ctx.arc(cx, cy, r, 0, Math.PI*2); ctx.stroke();
+      }
+
+    } else if(currentShape === 'square') {
+      // Kare Dış Gradyanı (Şekle Uyumlu Akıcı)
+      for(let i = 40; i >= 0; i--) {
+        ctx.fillStyle = `rgba(0, 229, 255, 0.015)`;
+        let size = 160 + i*6 + pulsate;
+        ctx.fillRect(cx - size/2, cy - size/2, size, size);
+      }
+
+      // Cisim ve İç Gradyanı
+      ctx.globalCompositeOperation = 'source-over';
+      const innerGradSq = ctx.createRadialGradient(cx, cy, 0, cx, cy, 110);
+      innerGradSq.addColorStop(0, '#b800e6');
+      innerGradSq.addColorStop(1, '#2d004d');
+      ctx.fillStyle = innerGradSq;
+      ctx.strokeStyle = '#ffffff';
+      ctx.lineWidth = 2;
+      ctx.fillRect(cx - 80, cy - 80, 160, 160);
+      ctx.strokeRect(cx - 80, cy - 80, 160, 160);
+      
+      // Kare iç gradyan çizgileri
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.2)';
+      ctx.lineWidth = 1;
+      for(let s=30; s<160; s+=30) {
+        ctx.strokeRect(cx - s/2, cy - s/2, s, s);
+      }
+      ctx.beginPath(); ctx.moveTo(cx-80, cy-80); ctx.lineTo(cx+80, cy+80); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(cx+80, cy-80); ctx.lineTo(cx-80, cy+80); ctx.stroke();
+
+    } else if(currentShape === 'rod') {
+      // Çubuk Dış Gradyanı (Şekle Uyumlu Akıcı)
+      for(let i = 40; i >= 0; i--) {
+        ctx.fillStyle = `rgba(0, 229, 255, 0.015)`;
+        let w = 340 + i*6 + pulsate;
+        let h = 80 + i*6 + pulsate;
+        ctx.fillRect(cx - w/2, cy - h/2, w, h);
+      }
+
+      // Cisim ve İç Gradyanı (4 Taraflı Akıcı)
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.fillStyle = '#2d004d'; // Yüzey (Koyu Mor)
+      ctx.fillRect(cx - 170, cy - 40, 340, 80);
+      
+      for(let i = 0; i <= 30; i++) {
+        ctx.fillStyle = `rgba(184, 0, 230, 0.05)`; // Merkeze doğru parlak mor (#b800e6)
+        let shrinkW = i * 5.5; // Sol ve sağdan daralma
+        let shrinkH = i * 1.3; // Üst ve alttan daralma
+        ctx.fillRect(cx - 170 + shrinkW, cy - 40 + shrinkH, 340 - 2*shrinkW, 80 - 2*shrinkH);
+      }
+
+      ctx.strokeStyle = '#ffffff';
+      ctx.lineWidth = 2;
+      ctx.strokeRect(cx - 170, cy - 40, 340, 80);
+
+      // Çubuk iç gradyan çizgileri
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.2)';
+      ctx.lineWidth = 1;
+      for(let s=20; s<80; s+=20) {
+        ctx.strokeRect(cx - 170 + s*1.5, cy - 40 + s/2, 340 - 3*s, 80 - s);
+      }
+
+    } else if(currentShape === 'triangle') {
+      // Üçgen Dış Gradyanı (Şekle Uyumlu Akıcı)
+      for(let i = 40; i >= 0; i--) {
+        ctx.fillStyle = `rgba(0, 229, 255, 0.015)`;
+        let s = 1 + i*0.05 + pulsate*0.005;
+        ctx.save();
+        ctx.translate(cx, cy + 13);
+        ctx.scale(s, s);
+        ctx.beginPath();
+        ctx.moveTo(0, -103);
+        ctx.lineTo(90, 52);
+        ctx.lineTo(-90, 52);
+        ctx.closePath();
+        ctx.fill();
+        ctx.restore();
+      }
+
+      // Cisim ve İç Gradyanı
+      ctx.globalCompositeOperation = 'source-over';
+      const innerGradTri = ctx.createRadialGradient(cx, cy + 20, 0, cx, cy + 20, 90);
+      innerGradTri.addColorStop(0, '#b800e6');
+      innerGradTri.addColorStop(1, '#2d004d');
+      ctx.fillStyle = innerGradTri;
+      ctx.strokeStyle = '#ffffff';
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.moveTo(cx, cy - 90);
+      ctx.lineTo(cx + 90, cy + 65);
+      ctx.lineTo(cx - 90, cy + 65);
+      ctx.closePath();
+      ctx.fill();
+      ctx.stroke();
+
+      // Üçgen iç eşbasınç çizgileri
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.2)';
+      ctx.lineWidth = 1;
+      for(let s=0.2; s<1.0; s+=0.2) {
+        ctx.save();
+        ctx.translate(cx, cy + 13);
+        ctx.scale(s, s);
+        ctx.beginPath();
+        ctx.moveTo(0, -103);
+        ctx.lineTo(90, 52);
+        ctx.lineTo(-90, 52);
+        ctx.closePath();
+        ctx.stroke();
+        ctx.restore();
+      }
+    }
+
+    // Evrenakı İtim Vektörleri (Oklar) kaldırıldı
+  }
+
+  function loop() {
+    time++;
+    draw();
+    requestAnimationFrame(loop);
+  }
+
+  // Animasyonu başlat
+  loop();
+</script>
+</body>
+</html>

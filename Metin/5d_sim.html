@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dördüncü Boyuttan Üç Boyuta: Dönüş İzdüşümü Simülasyonu</title>
+<style>
+html, body { height: 100%; }
+body { margin: 0; background: #0b0f19; }
+.fdw-widget { border: none !important; margin: 0 !important; max-width: none !important; height: 100%; box-sizing: border-box; display: flex; flex-direction: column; }
+.fdw-canvas-wrap { flex: 1; min-height: 320px; }
+</style>
+</head>
+<body>
+<div class="fdw-widget">
+<style>
+.fdw-widget{--fdw-cyan:#00e5ff;--fdw-orange:#ffb020;background:#0b0f19;border:1px solid rgba(0,240,255,0.2);border-radius:10px;padding:16px;font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#f3f4f6;max-width:960px;margin:1.5em auto;}
+.fdw-widget h4{color:var(--fdw-cyan);font-size:1rem;text-transform:uppercase;letter-spacing:1px;margin:0 0 10px 0;}
+.fdw-modes{display:flex;gap:8px;margin-bottom:10px;flex-wrap:wrap;}
+.fdw-widget button{background:rgba(0,240,255,0.08);border:1px solid rgba(0,240,255,0.2);color:#f3f4f6;padding:8px 14px;border-radius:6px;cursor:pointer;font-weight:600;font-size:0.8rem;}
+.fdw-widget button:hover{background:rgba(0,240,255,0.2);}
+.fdw-widget button.fdw-active{background:var(--fdw-cyan);color:#0b0f19;}
+.fdw-controls{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:10px;align-items:flex-end;}
+.fdw-control{display:flex;flex-direction:column;gap:4px;font-size:0.78rem;color:#9ca3af;min-width:160px;}
+.fdw-control input[type=range]{accent-color:var(--fdw-cyan);width:160px;}
+.fdw-canvas-wrap{width:100%;height:440px;border-radius:8px;overflow:hidden;background:#050a14;}
+.fdw-canvas-wrap canvas{display:block;width:100%;height:100%;}
+.fdw-info{margin-top:10px;font-size:0.82rem;color:#cbd5e1;background:rgba(0,229,255,0.06);border-left:3px solid var(--fdw-cyan);padding:10px 14px;border-radius:0 8px 8px 0;line-height:1.5;}
+</style>
+
+<h4>Dördüncü Boyuttan Üç Boyuta: Dönüş İzdüşümü Simülasyonu</h4>
+<div class="fdw-modes">
+  <button id="fdwModeA" class="fdw-active">Durum A: XY dönüşü</button>
+  <button id="fdwModeB">Durum B: XW dönüşü</button>
+  <button id="fdwModeC">Durum C: Çift dönüş (devinim)</button>
+</div>
+<div class="fdw-controls">
+  <div class="fdw-control"><span>ω₁ — 3B dönüş hızı (XY)</span><input type="range" id="fdwW1" min="20" max="300" value="120" step="10"></div>
+  <div class="fdw-control"><span>ω₂ — W dönüş hızı (XW/ZW)</span><input type="range" id="fdwW2" min="10" max="200" value="45" step="5"></div>
+  <div class="fdw-control"><span>Koni açısı θ (Durum C)</span><input type="range" id="fdwTheta" min="10" max="45" value="25" step="1"></div>
+  <div class="fdw-modes">
+    <button id="fdwPlayPause">Duraklat</button>
+    <button id="fdwReset">Sıfırla</button>
+  </div>
+</div>
+<div class="fdw-canvas-wrap"><canvas id="fdwCanvas"></canvas></div>
+<div class="fdw-info" id="fdwInfo"><strong>Durum A:</strong> Dönüş düzlemi (XY) tamamen üç boyutun içindedir. Soldaki daire ile sağdaki dönüş bire bir aynıdır; izdüşümde hiçbir bilgi kaybolmaz, eksen (Z) sabit kalır.</div>
+
+<script>
+(function(){
+  const canvas = document.getElementById('fdwCanvas');
+  const ctx = canvas.getContext('2d');
+  const wrap = canvas.parentElement;
+
+  const CYAN = '#00e5ff', ORANGE = '#ffb020', GREY = '#4b5563', TEXT = '#9ca3af', LIGHT = '#cbd5e1';
+
+  let mode = 'A', running = true;
+  let w1 = 1.2, w2 = 0.45, thetaDeg = 25;
+  let p1 = 0, p2 = 0;
+
+  const infos = {
+    A: "<strong>Durum A:</strong> Dönüş düzlemi (XY) tamamen üç boyutun içindedir. Soldaki daire ile sağdaki dönüş bire bir aynıdır; izdüşümde hiçbir bilgi kaybolmaz, eksen (Z) sabit kalır.",
+    B: "<strong>Durum B:</strong> Daire XW düzlemindedir — W bileşeni uzayımızda görünmez. Sağda kalan tek iz: küre X doğrultusunda yassılaşıp yeniden açılır, işaretli nokta X doğrusu üzerinde salınır ve her yarım turda yapı ayna-tersine döner (R harfi). Hiçbir dairesel iz, hiçbir görünür dönüş düzlemi yoktur.",
+    C: "<strong>Durum C:</strong> Çift dönüş — cisim aynı anda XY düzleminde (ω₁, camgöbeği) ve ZW düzleminde (ω₂, turuncu) döner. XY bileşeni görünür dönüşü üretir; ZW bileşeni görünür ekseni döndürür. Üç boyutlu sonuç: eksen koni çizerek yalpalar — DEVİNİM. ω₂'yi büyütüp küçülterek yalpalama temposunu izleyin."
+  };
+
+  function setMode(m, btn){
+    mode = m;
+    document.querySelectorAll('.fdw-modes button').forEach(b=>{ if(['fdwModeA','fdwModeB','fdwModeC'].includes(b.id)) b.classList.remove('fdw-active'); });
+    btn.classList.add('fdw-active');
+    document.getElementById('fdwInfo').innerHTML = infos[m];
+  }
+  document.getElementById('fdwModeA').addEventListener('click', e=>setMode('A', e.target));
+  document.getElementById('fdwModeB').addEventListener('click', e=>setMode('B', e.target));
+  document.getElementById('fdwModeC').addEventListener('click', e=>setMode('C', e.target));
+  document.getElementById('fdwW1').addEventListener('input', e=>{ w1 = parseFloat(e.target.value)/100; });
+  document.getElementById('fdwW2').addEventListener('input', e=>{ w2 = parseFloat(e.target.value)/100; });
+  document.getElementById('fdwTheta').addEventListener('input', e=>{ thetaDeg = parseFloat(e.target.value); });
+  document.getElementById('fdwPlayPause').addEventListener('click', e=>{ running = !running; e.target.textContent = running ? 'Duraklat' : 'Devam Et'; });
+  document.getElementById('fdwReset').addEventListener('click', ()=>{
+    w1 = 1.2; document.getElementById('fdwW1').value = 120;
+    w2 = 0.45; document.getElementById('fdwW2').value = 45;
+    thetaDeg = 25; document.getElementById('fdwTheta').value = 25;
+    p1 = 0; p2 = 0;
+    running = true; document.getElementById('fdwPlayPause').textContent = 'Duraklat';
+  });
+
+  function resize(){ canvas.width = wrap.clientWidth; canvas.height = wrap.clientHeight; }
+  window.addEventListener('resize', resize);
+
+  function drawPlaneCircle(cx, cy, r, hLabel, vLabel, color, phase, tag){
+    ctx.strokeStyle = GREY; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(cx - r - 22, cy); ctx.lineTo(cx + r + 22, cy); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(cx, cy - r - 18); ctx.lineTo(cx, cy + r + 18); ctx.stroke();
+    ctx.fillStyle = TEXT; ctx.font = '11px Segoe UI'; ctx.textAlign = 'left';
+    ctx.fillText(hLabel, cx + r + 26, cy + 4);
+    ctx.fillText(vLabel, cx + 5, cy - r - 22);
+    ctx.strokeStyle = color; ctx.lineWidth = 1.8;
+    ctx.beginPath(); ctx.arc(cx, cy, r, 0, Math.PI * 2); ctx.stroke();
+    const px = cx + r * Math.cos(-phase), py = cy + r * Math.sin(-phase);
+    ctx.beginPath(); ctx.arc(px, py, 5, 0, Math.PI * 2);
+    ctx.fillStyle = color; ctx.shadowColor = color; ctx.shadowBlur = 10; ctx.fill(); ctx.shadowBlur = 0;
+    ctx.fillStyle = LIGHT; ctx.font = '12px Segoe UI'; ctx.textAlign = 'center';
+    ctx.fillText(tag, cx, cy + r + 36);
+  }
+
+  function step(ts){
+    if(!step.last) step.last = ts;
+    const dt = Math.min(0.05, (ts - step.last) / 1000); step.last = ts;
+    if(running){ p1 += w1 * dt * 2.4; p2 += w2 * dt * 2.4; }
+
+    const W = canvas.width, H = canvas.height;
+    ctx.clearRect(0, 0, W, H);
+
+    const divX = W * 0.44;
+    ctx.strokeStyle = 'rgba(255,255,255,0.18)'; ctx.setLineDash([6, 6]); ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(divX, 16); ctx.lineTo(divX, H - 16); ctx.stroke(); ctx.setLineDash([]);
+
+    ctx.fillStyle = TEXT; ctx.font = '12px Segoe UI'; ctx.textAlign = 'center';
+    ctx.fillText('4B GERÇEKLİK — dönüşün yaşandığı düzlem(ler)', divX / 2, 26);
+    ctx.fillText("3B'DE GÖRÜNEN — w = 0 izdüşümü", divX + (W - divX) / 2, 26);
+
+    ctx.fillStyle = LIGHT; ctx.font = '12px Segoe UI';
+    ctx.fillText('izdüşüm →', divX, H / 2 - 8);
+
+    const lx = divX / 2;
+    const rx = divX + (W - divX) / 2, ry = H / 2 + 10;
+    const R = Math.min(105, (W - divX) * 0.22, H * 0.27);
+
+    if(mode === 'A'){
+      drawPlaneCircle(lx, H / 2 + 10, 70, 'X', 'Y', CYAN, p1, 'XY düzlemi — ω₁');
+      ctx.strokeStyle = GREY; ctx.lineWidth = 1;
+      ctx.beginPath(); ctx.arc(rx, ry, R, 0, Math.PI * 2); ctx.stroke();
+      ctx.strokeStyle = LIGHT; ctx.lineWidth = 1.5;
+      ctx.beginPath(); ctx.moveTo(rx, ry - R - 22); ctx.lineTo(rx, ry + R + 22); ctx.stroke();
+      ctx.strokeStyle = CYAN; ctx.lineWidth = 1.5;
+      ctx.beginPath(); ctx.ellipse(rx, ry, R, R * 0.28, 0, 0, Math.PI * 2); ctx.stroke();
+      const dx = rx + R * Math.cos(-p1), dy = ry + R * 0.28 * Math.sin(-p1);
+      ctx.beginPath(); ctx.arc(dx, dy, 5, 0, Math.PI * 2);
+      ctx.fillStyle = CYAN; ctx.shadowColor = CYAN; ctx.shadowBlur = 10; ctx.fill(); ctx.shadowBlur = 0;
+      ctx.fillStyle = LIGHT; ctx.font = '12px Segoe UI'; ctx.textAlign = 'center';
+      ctx.fillText('Normal dönüş — eksen (Z) sabit', rx, ry + R + 46);
+    } else if(mode === 'B'){
+      drawPlaneCircle(lx, H / 2 + 10, 70, 'X', 'W', ORANGE, p2, 'XW düzlemi — ω₂ (W görünmez)');
+      const c = Math.cos(p2);
+      ctx.strokeStyle = GREY; ctx.setLineDash([4, 4]); ctx.lineWidth = 1;
+      ctx.beginPath(); ctx.arc(rx, ry, R, 0, Math.PI * 2); ctx.stroke(); ctx.setLineDash([]);
+      ctx.strokeStyle = CYAN; ctx.lineWidth = 1.8;
+      ctx.beginPath(); ctx.ellipse(rx, ry, Math.max(2, R * Math.abs(c)), R, 0, 0, Math.PI * 2); ctx.stroke();
+      const mx = rx + R * c;
+      ctx.strokeStyle = 'rgba(0,229,255,0.3)'; ctx.lineWidth = 3;
+      ctx.beginPath(); ctx.moveTo(rx - R, ry); ctx.lineTo(rx + R, ry); ctx.stroke();
+      ctx.beginPath(); ctx.arc(mx, ry, 5, 0, Math.PI * 2);
+      ctx.fillStyle = CYAN; ctx.shadowColor = CYAN; ctx.shadowBlur = 10; ctx.fill(); ctx.shadowBlur = 0;
+      ctx.save();
+      ctx.translate(rx, ry - R * 0.45);
+      ctx.scale(c < 0 ? -1 : 1, 1);
+      ctx.fillStyle = ORANGE; ctx.font = 'bold 26px Segoe UI'; ctx.textAlign = 'center';
+      ctx.fillText('R', 0, 9);
+      ctx.restore();
+      ctx.fillStyle = LIGHT; ctx.font = '12px Segoe UI'; ctx.textAlign = 'center';
+      ctx.fillText('Dönüş görünmez: X boyunca yassılma/salınım + ayna-terslenme', rx, ry + R + 46);
+    } else {
+      drawPlaneCircle(lx, H / 2 - 78, 52, 'X', 'Y', CYAN, p1, 'XY — ω₁ (görünür dönüş)');
+      drawPlaneCircle(lx, H / 2 + 108, 52, 'Z', 'W', ORANGE, p2, 'ZW — ω₂ (ekseni döndürür)');
+      const th = thetaDeg * Math.PI / 180;
+      const L = R * 1.3;
+      const tipX = rx + L * Math.sin(th) * Math.cos(p2);
+      const tipY = ry - L * Math.cos(th) + L * Math.sin(th) * 0.3 * Math.sin(p2);
+      ctx.strokeStyle = GREY; ctx.lineWidth = 1;
+      ctx.beginPath(); ctx.arc(rx, ry, R, 0, Math.PI * 2); ctx.stroke();
+      ctx.setLineDash([3, 3]);
+      ctx.beginPath(); ctx.moveTo(rx, ry); ctx.lineTo(rx - L * Math.sin(th), ry - L * Math.cos(th)); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(rx, ry); ctx.lineTo(rx + L * Math.sin(th), ry - L * Math.cos(th)); ctx.stroke();
+      ctx.beginPath(); ctx.ellipse(rx, ry - L * Math.cos(th), L * Math.sin(th), L * Math.sin(th) * 0.3, 0, 0, Math.PI * 2); ctx.stroke();
+      ctx.setLineDash([]);
+      const rot = Math.atan2(tipX - rx, -(tipY - ry)) ;
+      ctx.save(); ctx.translate(rx, ry); ctx.rotate(rot);
+      ctx.strokeStyle = CYAN; ctx.lineWidth = 1.5;
+      ctx.beginPath(); ctx.ellipse(0, 0, R, R * 0.28, 0, 0, Math.PI * 2); ctx.stroke();
+      const ex = R * Math.cos(-p1), ey = R * 0.28 * Math.sin(-p1);
+      ctx.beginPath(); ctx.arc(ex, ey, 5, 0, Math.PI * 2);
+      ctx.fillStyle = CYAN; ctx.shadowColor = CYAN; ctx.shadowBlur = 10; ctx.fill(); ctx.shadowBlur = 0;
+      ctx.restore();
+      ctx.strokeStyle = ORANGE; ctx.lineWidth = 2;
+      ctx.beginPath(); ctx.moveTo(rx, ry); ctx.lineTo(tipX, tipY); ctx.stroke();
+      ctx.beginPath(); ctx.arc(tipX, tipY, 4.5, 0, Math.PI * 2);
+      ctx.fillStyle = ORANGE; ctx.shadowColor = ORANGE; ctx.shadowBlur = 10; ctx.fill(); ctx.shadowBlur = 0;
+      ctx.fillStyle = LIGHT; ctx.font = '12px Segoe UI'; ctx.textAlign = 'center';
+      ctx.fillText('DEVİNİM: eksen koni çizerek yalpalar', rx, ry + R + 46);
+    }
+
+    step.count = (step.count || 0) + 1;
+    if(!step.interval) requestAnimationFrame(step);
+  }
+
+  resize();
+  requestAnimationFrame(step);
+  setTimeout(() => {
+    if(!step.count){
+      step.interval = setInterval(() => step(performance.now()), 33);
+    }
+  }, 700);
+})();
+</script>
+</div>
+</body>
+</html>

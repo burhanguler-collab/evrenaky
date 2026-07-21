@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #0b0f19;
+  overflow: hidden;
+}
+.erw-widget {
+  --erw-blue: #00f0ff;
+  --erw-magenta: #ff00e5;
+  --erw-green: #39ff14;
+  --erw-orange: #ff9900;
+  background: #0b0f19;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: #f3f4f6;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 16px;
+}
+.erw-widget h4 { color: var(--erw-blue); font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 10px 0; }
+.erw-controls { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 10px; align-items: flex-end; }
+.erw-control { display: flex; flex-direction: column; gap: 4px; font-size: 0.78rem; color: #9ca3af; min-width: 150px; }
+.erw-control input[type=range] { accent-color: var(--erw-blue); width: 150px; }
+.erw-buttons { display: flex; gap: 8px; }
+.erw-widget button { background: rgba(0,240,255,0.08); border: 1px solid rgba(0,240,255,0.2); color: #f3f4f6; padding: 8px 14px; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 0.8rem; }
+.erw-widget button:hover { background: rgba(0,240,255,0.2); }
+.erw-canvas-wrap { width: 100%; flex: 1; min-height: 200px; border-radius: 8px; overflow: hidden; background: radial-gradient(circle at center,#140a1f 0%,#0b0f19 70%); }
+.erw-canvas-wrap canvas { display: block; width: 100%; height: 100%; }
+.erw-legend { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 10px; font-size: 0.78rem; color: #9ca3af; }
+.erw-legend span.dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 6px; }
+</style>
+</head>
+<body>
+<div class="erw-widget">
+<h4>Evrenakı Rampası Simülasyonu</h4>
+<div class="erw-controls">
+  <div class="erw-control"><span>Elektron Açısal Hızı: <b id="erwOmegaVal">7°/kare</b></span><input type="range" id="erwOmega" min="1" max="20" value="7" step="1"></div>
+  <div class="erw-control"><span>Rampa Sıklığı (Kapalılık): <b id="erwWidthVal">%50</b></span><input type="range" id="erwWidth" min="10" max="90" value="50" step="1"></div>
+  <div class="erw-control"><span>Zerre Hızı: <b id="erwSpeedVal">1.0x</b></span><input type="range" id="erwSpeed" min="3" max="25" value="10" step="1"></div>
+  <div class="erw-buttons">
+    <button id="erwPlayPause">Duraklat</button>
+    <button id="erwReset">Sıfırla</button>
+  </div>
+</div>
+<div class="erw-canvas-wrap"><canvas id="erwCanvas"></canvas></div>
+<div class="erw-legend">
+  <span><span class="dot" style="background:gold;"></span>Çekirdek</span>
+  <span><span class="dot" style="background:#00e5ff;"></span>Elektron</span>
+  <span><span class="dot" style="background:#ff00e5;"></span>Evrenakı Rampası</span>
+  <span><span class="dot" style="background:#ff3b3b;"></span>Gelen zerre</span>
+  <span><span class="dot" style="background:var(--erw-orange);"></span>Yansıyan zerre</span>
+  <span><span class="dot" style="background:var(--erw-green);"></span>Geçen zerre</span>
+</div>
+</div>
+<script>
+(function(){
+  const canvas = document.getElementById('erwCanvas');
+  const ctx = canvas.getContext('2d');
+  const wrap = canvas.parentElement;
+  let omegaDeg = 7, rampCoverage = 50, speedMul = 1.0, running = true;
+
+  function resize(){ canvas.width = wrap.clientWidth; canvas.height = wrap.clientHeight; fitScale(); }
+  window.addEventListener('resize', resize);
+
+  document.getElementById('erwOmega').addEventListener('input', e=>{ omegaDeg=parseFloat(e.target.value); document.getElementById('erwOmegaVal').textContent=omegaDeg+'°/kare'; });
+  document.getElementById('erwWidth').addEventListener('input', e=>{ rampCoverage=parseFloat(e.target.value); document.getElementById('erwWidthVal').textContent='%'+rampCoverage; });
+  document.getElementById('erwSpeed').addEventListener('input', e=>{ speedMul=parseFloat(e.target.value)/10; document.getElementById('erwSpeedVal').textContent=speedMul.toFixed(1)+'x'; });
+  document.getElementById('erwPlayPause').addEventListener('click', e=>{ running=!running; e.target.textContent = running ? 'Duraklat' : 'Devam Et'; });
+  document.getElementById('erwReset').addEventListener('click', ()=>{ particles.forEach((p,i)=>resetParticle(p,beamYs[i])); thetaFrame=0; });
+
+  const NUCLEUS_R=0.32, ORBIT_R=1.2, RAMP_R_IN=1.45, RAMP_R_OUT=2.05, INTERACTION_R=1.35, SPEED_BASE=0.045;
+  let scale=70;
+  function worldToScreen(x,y){ return [canvas.width/2 + x*scale, canvas.height/2 - y*scale]; }
+
+  const beamYs=[-1.4, -0.9, -0.4, 0, 0.4, 0.9, 1.4];
+  let particles = beamYs.map(y=>({x:-6.5,y,vx:SPEED_BASE,vy:0,state:'incoming',color:'#ff3b3b'}));
+  let trails = particles.map(()=>[]);
+  function resetParticle(p,y0){ p.x=-6.5; p.y=y0; p.vx=SPEED_BASE; p.vy=0; p.state='incoming'; p.color='#ff3b3b'; }
+
+  let thetaFrame=0;
+
+  function drawField(){
+    const [cx,cy]=worldToScreen(0,0);
+    for(let i=0;i<10;i++){
+      const r=(2.4+i*0.46)*scale;
+      ctx.beginPath(); ctx.arc(cx,cy,r,0,Math.PI*2);
+      ctx.strokeStyle=`rgba(190,60,255,${0.10+0.02*i})`; ctx.lineWidth=1.2; ctx.stroke();
+    }
+  }
+  function drawOrbit(){
+    const [cx,cy]=worldToScreen(0,0);
+    ctx.beginPath(); ctx.arc(cx,cy,ORBIT_R*scale,0,Math.PI*2);
+    ctx.setLineDash([6,6]); ctx.strokeStyle='rgba(255,255,255,0.35)'; ctx.lineWidth=1; ctx.stroke(); ctx.setLineDash([]);
+  }
+  function drawNucleus(){
+    const [cx,cy]=worldToScreen(0,0);
+    ctx.beginPath(); ctx.arc(cx,cy,NUCLEUS_R*scale,0,Math.PI*2);
+    ctx.fillStyle='gold'; ctx.shadowColor='gold'; ctx.shadowBlur=18; ctx.fill(); ctx.shadowBlur=0;
+    ctx.fillStyle='gold'; ctx.font='12px Segoe UI'; ctx.textAlign='center';
+    ctx.fillText('Çekirdek', cx, cy+NUCLEUS_R*scale+18);
+  }
+  function drawElectron(thetaRad){
+    const ex=ORBIT_R*Math.cos(thetaRad), ey=ORBIT_R*Math.sin(thetaRad);
+    const [sx,sy]=worldToScreen(ex,ey);
+    ctx.beginPath(); ctx.arc(sx,sy,7,0,Math.PI*2);
+    ctx.fillStyle='#00e5ff'; ctx.shadowColor='#00e5ff'; ctx.shadowBlur=14; ctx.fill(); ctx.shadowBlur=0;
+  }
+  function drawRamp(thetaRad){
+    const [cx,cy]=worldToScreen(0,0);
+    const numRamps = 30; // Çok küçük ve fazla rampa
+    const segmentRad = Math.PI*2 / numRamps;
+    const rampRad = segmentRad * (rampCoverage / 100);
+    
+    ctx.fillStyle='rgba(255,0,229,0.5)';
+    ctx.shadowColor='#ff00e5'; ctx.shadowBlur=15;
+    
+    for(let i=0; i<numRamps; i++){
+      const startAngle = thetaRad + i*segmentRad - rampRad/2;
+      const endAngle = thetaRad + i*segmentRad + rampRad/2;
+      
+      ctx.beginPath();
+      ctx.arc(cx, cy, RAMP_R_OUT*scale, startAngle, endAngle, false);
+      ctx.arc(cx, cy, RAMP_R_IN*scale, endAngle, startAngle, true);
+      ctx.closePath();
+      ctx.fill();
+    }
+    ctx.shadowBlur=0;
+  }
+  function drawParticle(p,trail){
+    if(trail.length>1){
+      ctx.beginPath();
+      for(let i=0;i<trail.length;i++){ const [sx,sy]=worldToScreen(trail[i][0],trail[i][1]); if(i===0) ctx.moveTo(sx,sy); else ctx.lineTo(sx,sy); }
+      ctx.strokeStyle=p.color; ctx.globalAlpha=0.5; ctx.lineWidth=2; ctx.stroke(); ctx.globalAlpha=1;
+    }
+    const [sx,sy]=worldToScreen(p.x,p.y);
+    ctx.beginPath(); ctx.arc(sx,sy,6,0,Math.PI*2);
+    ctx.fillStyle=p.color; ctx.shadowColor=p.color; ctx.shadowBlur=10; ctx.fill(); ctx.shadowBlur=0;
+  }
+
+  function step(){
+    if(running) thetaFrame += omegaDeg;
+    const thetaRad = thetaFrame*Math.PI/180;
+
+    if(running){
+      particles.forEach((p,i)=>{
+        if(p.state==='incoming'){
+          const r=Math.hypot(p.x,p.y);
+          if(r<RAMP_R_OUT){
+            const angleRad=Math.atan2(p.y,p.x);
+            let relAngle=(angleRad - thetaRad) % (Math.PI*2);
+            if(relAngle<0) relAngle+=Math.PI*2;
+            
+            const numRamps=30;
+            const segmentRad=Math.PI*2/numRamps;
+            const rampRad=segmentRad*(rampCoverage/100);
+            
+            let shiftedLocal=relAngle%segmentRad;
+            if(shiftedLocal>segmentRad/2) shiftedLocal-=segmentRad;
+            
+            if(Math.abs(shiftedLocal)<=rampRad/2){ 
+              // Rampaya çarptı (Kapalı)
+              p.state='reflected'; 
+              const nx=p.x/r, ny=p.y/r;
+              const dot=p.vx*nx + p.vy*ny;
+              p.vx = p.vx - 2*dot*nx;
+              p.vy = p.vy - 2*dot*ny;
+              p.color='#ff9900'; 
+            }
+            else{ 
+              // Boşluktan geçti (Açık)
+              p.state='transmitted'; 
+              p.color='#39ff14'; 
+            }
+          }
+        }
+        p.x += p.vx*speedMul; p.y += p.vy*speedMul;
+        trails[i].push([p.x,p.y]); if(trails[i].length>20) trails[i].shift();
+        
+        const [sx, sy] = worldToScreen(p.x, p.y);
+        if(sx < -50 || sx > canvas.width + 50 || sy < -50 || sy > canvas.height + 50) {
+            resetParticle(p,beamYs[i]); 
+            trails[i]=[]; 
+        }
+      });
+    }
+
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    drawField(); drawOrbit(); drawRamp(thetaRad); drawNucleus(); drawElectron(thetaRad);
+    particles.forEach((p,i)=>drawParticle(p,trails[i]));
+
+    requestAnimationFrame(step);
+  }
+
+  function fitScale(){ scale = Math.min(canvas.width/16, canvas.height/8); }
+
+  resize();
+  requestAnimationFrame(step);
+})();
+</script>
+</body>
+</html>

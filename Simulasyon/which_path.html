@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Klasik Hangi-Yol (Which-Path) Çift Yarık Deneyi</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --panel-bg: rgba(30, 30, 30, 0.8);
+            --accent: #00ffcc;
+            --accent-alt: #ff00ff;
+            --accent-glow: rgba(0, 255, 204, 0.5);
+            --text-main: #e0e0e0;
+            --text-muted: #888;
+            --border-radius: 12px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        #app-container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 1200px;
+            height: 100%;
+            background: rgba(20, 20, 20, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+            position: relative;
+        }
+
+        header {
+            padding: 15px 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--panel-bg);
+            border-top-left-radius: var(--border-radius);
+            border-top-right-radius: var(--border-radius);
+        }
+
+        header h1 {
+            font-size: 1.2rem;
+            color: var(--accent);
+            text-shadow: 0 0 10px var(--accent-glow);
+        }
+
+        .controls-panel {
+            display: flex;
+            padding: 15px 20px;
+            background: rgba(0,0,0,0.5);
+            gap: 20px;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .control-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            flex: 1;
+        }
+
+        .control-group label {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 15px;
+        }
+
+        .radio-label {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            padding: 8px 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 6px;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: 0.3s;
+        }
+
+        .radio-label:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .radio-label input[type="radio"] {
+            accent-color: var(--accent);
+        }
+        
+        .radio-label.active {
+            border-color: var(--accent);
+            background: rgba(0, 255, 204, 0.1);
+            box-shadow: 0 0 10px rgba(0, 255, 204, 0.2);
+        }
+
+        #simulation-area {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+        }
+
+        canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .info-panel {
+            background: rgba(10,10,10,0.85);
+            padding: 15px 20px;
+            border-top: 1px solid rgba(255,255,255,0.15);
+            font-size: 0.9rem;
+            line-height: 1.5;
+            border-bottom-left-radius: var(--border-radius);
+            border-bottom-right-radius: var(--border-radius);
+            flex-shrink: 0;
+        }
+        
+        .info-overlay h3 {
+            color: var(--accent);
+            margin-bottom: 8px;
+            font-size: 1.05rem;
+        }
+
+        .quantum-myth {
+            color: #ff4444;
+            font-style: italic;
+            margin-bottom: 10px;
+            padding-left: 10px;
+            border-left: 3px solid #ff4444;
+        }
+
+        .physics-reality {
+            color: #00ffcc;
+            padding-left: 10px;
+            border-left: 3px solid #00ffcc;
+        }
+    </style>
+</head>
+<body>
+
+<div id="app-container">
+    <header>
+        <h1 style="color: #fff; text-shadow: 0 0 10px rgba(0, 229, 255, 0.5);">Animasyon 21.2: Gözlemci Etkisi ve "Çöküş" İllüzyonu - Hangi-Yol Deneyi</h1>
+    </header>
+    
+    <div class="controls-panel">
+        <div class="control-group">
+            <label>Deney Durumu (Yarık Filtreleri)</label>
+            <div class="radio-group" id="state-radios">
+                <label class="radio-label active">
+                    <input type="radio" name="exp_state" value="no_filter" checked> 
+                    1. Filtresiz (Doğal Çift Yarık)
+                </label>
+                <label class="radio-label">
+                    <input type="radio" name="exp_state" value="which_path"> 
+                    2. Etiketli (Dik Açılı Filtreler - Hangi Yol)
+                </label>
+                <label class="radio-label">
+                    <input type="radio" name="exp_state" value="parallel"> 
+                    3. Paralel Filtreler (Sahte Etiket)
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div id="simulation-area">
+        <canvas id="simCanvas"></canvas>
+    </div>
+    
+    <div class="info-panel">
+        <h3 id="status-title">Durum: Doğal Girişim</h3>
+        <div class="quantum-myth" id="quantum-desc">
+            Kuantum Yorumu: Hangi yoldan geçildiği bilinmiyor. Foton bir olasılık dalgası olarak her iki yarıktan da aynı anda geçer ve kendisiyle girişim yapar.
+        </div>
+        <div class="physics-reality" id="physics-desc">
+            Fiziksel Gerçeklik: Kaynaktan çıkan dalgalar iki yarıktan da aynı açıda (paralel fazda) çıkar, üst üste biner (süperpoze olur) ve ekranda klasik hidrodinamik aydınlık/karanlık saçaklar oluşturur.
+        </div>
+    </div>
+</div>
+
+<script>
+    const canvas = document.getElementById('simCanvas');
+    const ctx = canvas.getContext('2d');
+    const radios = document.querySelectorAll('input[name="exp_state"]');
+    
+    const statusTitle = document.getElementById('status-title');
+    const quantumDesc = document.getElementById('quantum-desc');
+    const physicsDesc = document.getElementById('physics-desc');
+
+    let currentState = 'no_filter';
+    let time = 0;
+
+    // Simulation Constants
+    const LASER_X = 50;
+    const SLIT_GAP = 120; 
+
+    // Resize handling
+    function resize() {
+        const rect = canvas.parentElement.getBoundingClientRect();
+        canvas.width = rect.width;
+        canvas.height = rect.height;
+    }
+    window.addEventListener('resize', resize);
+    resize();
+
+    // Radio button changes
+    radios.forEach(radio => {
+        radio.addEventListener('change', (e) => {
+            document.querySelectorAll('.radio-label').forEach(lbl => lbl.classList.remove('active'));
+            e.target.closest('.radio-label').classList.add('active');
+            currentState = e.target.value;
+            updateDescriptions();
+        });
+    });
+
+    function updateDescriptions() {
+        if (currentState === 'no_filter') {
+            statusTitle.textContent = "Durum 1: Doğal Girişim";
+            statusTitle.style.color = "#00ffcc";
+            quantumDesc.innerHTML = "<b>Standart Yorum:</b> Hangi yoldan geçildiği bilinmiyor. Dalga fonksiyonu çökmez, ekranda girişim deseni görülür.";
+            physicsDesc.innerHTML = "<b>Fiziksel Gerçeklik:</b> Yarıkların önünde engel yoktur. İki kaynaktan çıkan dalgalar serbestçe birleşir ve uyumlu girişim saçakları oluşturur.";
+        } else if (currentState === 'which_path') {
+            statusTitle.textContent = "Durum 2: Etiketli (Girişim Kayboldu)";
+            statusTitle.style.color = "#ff4444";
+            quantumDesc.innerHTML = "<b>Standart Yorum (İllüzyon):</b> Fotonun hangi yarıktan geçtiği 0° ve 90° filtrelerle 'etiketlendi'. Doğa izlendiğini anladığı için dalga fonksiyonu <b>çöker</b>. Girişim bozulur.";
+            physicsDesc.innerHTML = "<b>Fiziksel Gerçeklik:</b> Bilinçli bir çöküş yoktur. Yarığın ağzına konan dik açılı filtreler dalgaları birbirine dik hale getirir. Birbirine dik salınan dalgalar doğası gereği fiziksel olarak süperpoze olamaz, ekranı düz bir şekilde aydınlatır.";
+        } else if (currentState === 'parallel') {
+            statusTitle.textContent = "Durum 3: Paralel Filtreler (Girişim Geri Geldi)";
+            statusTitle.style.color = "#ff00ff";
+            quantumDesc.innerHTML = "<b>Standart Yorum:</b> Her iki yarığa da aynı (0°) etiket konduğu için fotonun nereden geldiği anlaşılamaz, bilgi yoktur, bu yüzden dalga çökmekten vazgeçer.";
+            physicsDesc.innerHTML = "<b>Fiziksel Gerçeklik:</b> Her iki dalga da aynı 0° düzleminde titreşmeye zorlandığı için birbirleriyle tekrar mükemmel şekilde süperpoze olurlar ve fiziksel girişim geri döner.";
+        }
+    }
+    updateDescriptions();
+
+    function deg2rad(deg) { return deg * Math.PI / 180; }
+
+    // Draw Polarizer Filter
+    function drawPolarizer(x, y, size, angleDeg, color, label) {
+        ctx.save();
+        ctx.translate(x, y);
+        
+        ctx.fillStyle = "rgba(0, 200, 255, 0.15)";
+        ctx.strokeStyle = color;
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.roundRect(-size/2, -size/2, size, size, 5);
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.rotate(deg2rad(angleDeg));
+        ctx.strokeStyle = "rgba(255, 255, 255, 0.5)";
+        ctx.lineWidth = 1.5;
+        for (let i = -size/2 + 5; i < size/2; i += 8) {
+            ctx.beginPath();
+            ctx.moveTo(i, -size/2 + 2);
+            ctx.lineTo(i, size/2 - 2);
+            ctx.stroke();
+        }
+
+        ctx.restore();
+
+        ctx.fillStyle = color;
+        ctx.font = "bold 12px sans-serif";
+        ctx.textAlign = "center";
+        ctx.fillText(`${label} (${angleDeg}°)`, x, y + size/2 + 15);
+    }
+
+    function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+        const SLIT_WALL_X = Math.min(250, canvas.width * 0.3);
+        const SCREEN_X = Math.max(SLIT_WALL_X + 200, canvas.width - 60);
+
+        const cy = canvas.height / 2;
+        const slit1Y = cy - SLIT_GAP/2;
+        const slit2Y = cy + SLIT_GAP/2;
+
+        let theta1 = 0;
+        let theta2 = 0;
+        let hasFilters = (currentState !== 'no_filter');
+        
+        if (currentState === 'which_path') {
+            theta1 = 0;
+            theta2 = 90;
+        } else if (currentState === 'parallel') {
+            theta1 = 0;
+            theta2 = 0;
+        }
+
+        // 1. Draw Laser Source
+        ctx.fillStyle = "#00aaff";
+        ctx.shadowColor = "#00aaff";
+        ctx.shadowBlur = 20;
+        ctx.fillRect(10, cy - 15, 30, 30);
+        ctx.shadowBlur = 0;
+        ctx.fillStyle = "white";
+        ctx.font = "12px sans-serif";
+        ctx.textAlign = "left";
+        ctx.fillText("Işık Kaynağı", 10, cy - 25);
+
+        // Beam
+        ctx.fillStyle = "rgba(0, 170, 255, 0.15)";
+        ctx.beginPath();
+        ctx.moveTo(40, cy - 5);
+        ctx.lineTo(SLIT_WALL_X, slit1Y - 10);
+        ctx.lineTo(SLIT_WALL_X, slit2Y + 10);
+        ctx.lineTo(40, cy + 5);
+        ctx.fill();
+
+        // 2. Draw Slit Wall
+        ctx.fillStyle = "#555";
+        ctx.fillRect(SLIT_WALL_X - 10, 0, 20, slit1Y - 10);
+        ctx.fillRect(SLIT_WALL_X - 10, slit1Y + 10, 20, SLIT_GAP - 20);
+        ctx.fillRect(SLIT_WALL_X - 10, slit2Y + 10, 20, canvas.height - (slit2Y + 10));
+
+        // 3. Draw Filters (if active)
+        if (hasFilters) {
+            let color1 = (theta1 === 0) ? "#00ffcc" : "#ff4444";
+            let color2 = (theta2 === 0) ? "#00ffcc" : "#ff4444";
+            drawPolarizer(SLIT_WALL_X + 25, slit1Y, 40, theta1, color1, "Polarizör");
+            drawPolarizer(SLIT_WALL_X + 25, slit2Y, 40, theta2, color2, "Polarizör");
+        }
+
+        // 4. Draw Animated Wave Fronts
+        const wavelength = 25;
+        const k = 2 * Math.PI / wavelength;
+        
+        ctx.save();
+        ctx.rect(hasFilters ? SLIT_WALL_X + 45 : SLIT_WALL_X + 10, 0, SCREEN_X - SLIT_WALL_X, canvas.height);
+        ctx.clip();
+
+        let waveColor1 = (hasFilters && theta1 === 90) ? '255, 68, 68' : '0, 255, 204';
+        let waveColor2 = (hasFilters && theta2 === 90) ? '255, 68, 68' : '0, 255, 204';
+
+        for(let r = (time * 2) % wavelength; r < 800; r += wavelength) {
+            ctx.lineWidth = 1.5;
+            
+            ctx.strokeStyle = `rgba(${waveColor1}, ${Math.max(0, 0.4 - r/1500)})`;
+            ctx.beginPath();
+            ctx.arc(hasFilters ? SLIT_WALL_X + 25 : SLIT_WALL_X, slit1Y, r, -Math.PI/2, Math.PI/2);
+            ctx.stroke();
+
+            ctx.strokeStyle = `rgba(${waveColor2}, ${Math.max(0, 0.4 - r/1500)})`;
+            ctx.beginPath();
+            ctx.arc(hasFilters ? SLIT_WALL_X + 25 : SLIT_WALL_X, slit2Y, r, -Math.PI/2, Math.PI/2);
+            ctx.stroke();
+        }
+        ctx.restore();
+
+        // 5. Target Screen Logic
+        for (let y = 0; y < canvas.height; y++) {
+            const d1 = Math.sqrt(Math.pow(SCREEN_X - SLIT_WALL_X, 2) + Math.pow(y - slit1Y, 2));
+            const d2 = Math.sqrt(Math.pow(SCREEN_X - SLIT_WALL_X, 2) + Math.pow(y - slit2Y, 2));
+            const deltaPhi = k * (d2 - d1);
+
+            let intensity = 0;
+            
+            if (!hasFilters || currentState === 'parallel') {
+                // Perfect superposition
+                intensity = 1 + 1 + 2 * Math.cos(deltaPhi);
+                intensity /= 4; // Normalize
+            } else if (currentState === 'which_path') {
+                // Orthogonal, no superposition
+                intensity = 1 + 1 + 0; 
+                intensity /= 4; // Constant 0.5
+            }
+
+            const c = Math.floor(intensity * 255);
+            
+            if (currentState === 'which_path') {
+                // Make the orthogonal blend look like a mix of both colors
+                // Since they don't interfere, just a solid purplish/grayish uniform glow
+                ctx.fillStyle = `rgb(${c/1.5}, ${c/1.5}, ${c})`;
+            } else {
+                // Standard bright cyan fringes
+                ctx.fillStyle = `rgb(0, ${c}, ${c})`;
+            }
+            
+            ctx.fillRect(SCREEN_X, y, 20, 1);
+        }
+
+        // Screen Labels
+        ctx.fillStyle = "white";
+        ctx.font = "bold 12px sans-serif";
+        ctx.textAlign = "center";
+        ctx.shadowColor = "black";
+        ctx.shadowBlur = 5;
+        ctx.fillText("HEDEF", SCREEN_X + 10, 30);
+        ctx.fillText("EKRAN", SCREEN_X + 10, 45);
+        ctx.shadowBlur = 0;
+        ctx.textAlign = "left"; 
+
+        time += 1;
+        requestAnimationFrame(draw);
+    }
+
+    // Start
+    draw();
+</script>
+</body>
+</html>

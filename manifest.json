@@ -1,0 +1,22 @@
+{
+  "short_name": "Evrenakı",
+  "name": "Evrenakı Teorisi",
+  "icons": [
+    {
+      "src": "Gorseller/pwa_icon.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "Gorseller/pwa_icon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "index.html",
+  "background_color": "#030712",
+  "theme_color": "#030712",
+  "display": "standalone",
+  "orientation": "portrait"
+}

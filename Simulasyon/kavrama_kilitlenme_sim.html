@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kavrama ve Kilitlenme Laboratuvarı</title>
+<style>
+  :root{ --blue:#00f0ff; --gold:#ffd166; --red:#ff5c7a; --bg:#0b0f19; --panel:#121826; --grid:#243040; --fg:#e6edf3; --mut:#9aa4b2; }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{background:var(--bg); color:var(--fg); font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif; padding:12px;}
+  h3{color:var(--blue); font-size:0.95rem; text-transform:uppercase; letter-spacing:1px; margin-bottom:10px;}
+  .controls{display:flex; flex-wrap:wrap; gap:14px; margin-bottom:10px; align-items:flex-end;}
+  .ctrl{flex:1; min-width:180px; font-size:0.78rem; color:var(--mut);}
+  .ctrl b{color:var(--gold);}
+  .ctrl input[type=range]{width:100%; accent-color:var(--blue); cursor:pointer;}
+  .modes{display:flex; gap:6px; flex-wrap:wrap;}
+  .mbtn{background:rgba(0,240,255,0.08); border:1px solid var(--grid); color:var(--mut); padding:5px 10px; border-radius:4px; cursor:pointer; font-size:0.75rem;}
+  .mbtn.active{border-color:var(--blue); color:var(--blue); background:rgba(0,240,255,0.16);}
+  .wrap{position:relative; width:100%; height:430px; background:#060a12; border:1px solid var(--grid); border-radius:8px; overflow:hidden;}
+  canvas{display:block; width:100%; height:100%;}
+  .readout{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px; font-family:monospace; font-size:0.8rem;}
+  .cell{background:var(--panel); border:1px solid var(--grid); border-radius:6px; padding:7px 12px; flex:1; min-width:130px;}
+  .cell .k{color:var(--mut); font-size:0.68rem; display:block; font-family:'Segoe UI',sans-serif;}
+  .cell .v{color:var(--fg); font-size:0.95rem;}
+  #regime{font-weight:bold; font-size:1.0rem;}
+  .note{margin-top:8px; font-size:0.72rem; color:var(--mut); line-height:1.5;}
+</style>
+</head>
+<body>
+<h3>Kavrama &amp; Kilitlenme Laboratuvarı — ω = (1−g)·ω<sub>serbest</sub> + g·q·Ω<sub>yör</sub></h3>
+
+<div class="controls">
+  <div class="ctrl">Merkez kütle (Güneş = 1): <b id="vStar">1.00 M☉</b>
+    <input type="range" id="sStar" min="0.2" max="5" step="0.01" value="1"></div>
+  <div class="ctrl">Gezegen kütlesi (Dünya = 1): <b id="vPl">1.0 M⊕</b>
+    <input type="range" id="sPl" min="0" max="1" step="0.001" value="0.404"></div>
+  <div class="ctrl">Ortalama uzaklık a: <b id="vR">1.00 AU</b>
+    <input type="range" id="sR" min="0" max="1" step="0.001" value="0.358"></div>
+  <div class="ctrl">Yörünge basıklığı e: <b id="vE">0.000</b>
+    <input type="range" id="sE" min="0" max="0.30" step="0.005" value="0"></div>
+  <div class="ctrl">Venüs geri tepmesi (yoğun atmosfer):
+    <div class="modes">
+      <button class="mbtn active" id="bAtmOff">Kapalı</button>
+      <button class="mbtn" id="bAtmOn">Açık — q→−0,92 (termal yelken dengesi)</button>
+    </div>
+  </div>
+</div>
+
+<div class="wrap"><canvas id="cv"></canvas></div>
+
+<div class="readout">
+  <div class="cell"><span class="k">REJİM</span><span class="v" id="regime">—</span></div>
+  <div class="cell"><span class="k">Kavrama g</span><span class="v" id="oG">—</span></div>
+  <div class="cell"><span class="k">Serbest dönüş (olması gereken)</span><span class="v" id="oFree">—</span></div>
+  <div class="cell"><span class="k">Gözlenen dönüş</span><span class="v" id="oObs">—</span></div>
+  <div class="cell"><span class="k">ω / Ω_yör (tanı)</span><span class="v" id="oRatio">—</span></div>
+  <div class="cell" style="min-width:230px;"><span class="k">Kilit modu q (kavrama tam olunca)</span><span class="v" id="oQ" style="font-size:0.8rem;">—</span></div>
+</div>
+
+<div class="note">
+  Model: kavrama en çok <b>günberide</b> etkir → g=1/(1+(a(1−e)/R<sub>c</sub>)<sup>p</sup>), R<sub>c</sub>=1 AU·(M★/M☉)<sup>1/3</sup> (model varsayımı), p=32 (Güneş Sistemi uyumu p≈44).
+  <b>Kilit modu q artık seçilmez, hesaplanır:</b> günberi ritmi √(1+e)/(1−e)<sup>3/2</sup>·Ω, en yakın kararlı orana oturur — e&lt;0,125 → 1:1 (Ay, e=0,055); e&gt;0,125 → 3:2 (Merkür, e=0,206); e≳0,28 → 2:1 (krş. Goldreich–Peale 1966; teorinin dik-klif okuması bu yakalanmayı deterministik kılar).
+  Atmosfer anahtarı <b>yelken kanalını</b> açar: Güneş-kilitli termal kabartı kilidi senkrondan iter, çözüm retrograd dalda dengelenir (q→−0,92; Venüs). Mekanizma kuruldu (bkz. §3.4.4 ve claude4b §6-B f), kesrin kalibrasyonu açık iş. Gözlemsel imza: süper-rotasyon.
+  ω<sub>serbest</sub>: serbest doğrudan, T<sub>serbest</sub>=14,5 sa·m<sup>−0,28</sup>. Altın kesikli çember = R<sub>c</sub>; altın nokta = günberi. Serbest rejimde görsel dönüş sıkıştırılmıştır (gerçek oran panelde).
+</div>
+
+<script>
+(function(){
+  const cv=document.getElementById('cv'); if(!cv) return;
+  const ctx=cv.getContext('2d');
+  const wrap=cv.parentElement;
+  const dpr=window.devicePixelRatio||1;
+  let W,H;
+  function resize(){ if(!cv.isConnected){window.removeEventListener('resize',resize);return;}
+    W=wrap.clientWidth; H=wrap.clientHeight;
+    cv.width=W*dpr; cv.height=H*dpr; ctx.setTransform(dpr,0,0,dpr,0,0);
+  }
+  window.addEventListener('resize',resize); resize();
+
+  // --- durum ---
+  let Mstar=1, mPl=1, R=1, ecc=0, atm=false;
+  const sStar=document.getElementById('sStar'), sPl=document.getElementById('sPl'), sR=document.getElementById('sR'), sE=document.getElementById('sE');
+  const vStar=document.getElementById('vStar'), vPl=document.getElementById('vPl'), vR=document.getElementById('vR'), vE=document.getElementById('vE');
+  function refresh(){ try{ draw(performance.now()); }catch(e){} }
+  sStar.addEventListener('input',e=>{Mstar=parseFloat(e.target.value); vStar.textContent=Mstar.toFixed(2)+' M☉'; refresh();});
+  sPl.addEventListener('input',e=>{mPl=0.02*Math.pow(16000,parseFloat(e.target.value)); vPl.textContent=(mPl<10?mPl.toFixed(2):mPl.toFixed(0))+' M⊕'; refresh();});
+  sR.addEventListener('input',e=>{R=0.15*Math.pow(200,parseFloat(e.target.value)); vR.textContent=R.toFixed(2)+' AU'; refresh();});
+  sE.addEventListener('input',e=>{ecc=parseFloat(e.target.value); vE.textContent=ecc.toFixed(3); refresh();});
+  const bOff=document.getElementById('bAtmOff'), bOn=document.getElementById('bAtmOn');
+  bOff.addEventListener('click',()=>{atm=false; bOff.classList.add('active'); bOn.classList.remove('active'); refresh();});
+  bOn.addEventListener('click',()=>{atm=true; bOn.classList.add('active'); bOff.classList.remove('active'); refresh();});
+  // baslangic degerleri (Dünya: 1 M⊕, 1 AU)
+  mPl=0.02*Math.pow(16000,0.404); vPl.textContent=mPl.toFixed(2)+' M⊕';
+  R=0.15*Math.pow(200,0.358); vR.textContent=R.toFixed(2)+' AU';
+
+  // --- fizik (formül) ---
+  const P_CLIFF=32;
+  function qHesap(){
+    if(atm) return {q:-0.92, qtxt:'−0,92Ω · termal yelken dengesi (kesir: kalibrasyon açık)'};
+    // günberi ritmi: kavrama en çok günberide → kilit, günberideki girdap hızına oturur
+    const qp=Math.sqrt(1+ecc)/Math.pow(1-ecc,1.5);
+    const cands=[1,1.5,2]; let q=cands[0];
+    for(const c of cands){ if(Math.abs(c-qp)<Math.abs(q-qp)) q=c; }
+    const nm= q===1? '1:1 senkron' : (q===1.5? '3:2 rezonans' : '2:1 rezonans');
+    return {q, qtxt:'+'+(q===1.5?'3/2':q)+'Ω · '+nm+' (günberi ritmi '+qp.toFixed(2)+'Ω → hesaplandı)'};
+  }
+  function fizik(){
+    const Rc=1.0*Math.cbrt(Mstar);
+    const rPeri=R*(1-ecc);                               // kavrama günberide değerlendirilir
+    const g=1/(1+Math.pow(rPeri/Rc,P_CLIFF));
+    const Torb_h=8766*Math.sqrt(R*R*R/Mstar);            // yörünge periyodu (saat)
+    const Tfree_h=14.5*Math.pow(mPl,-0.278);             // serbest dönüş (saat)
+    const ratioFree=Torb_h/Tfree_h;                      // ω_serbest/Ω
+    const qq=qHesap();
+    const ratio=(1-g)*ratioFree + g*qq.q;                // ω_gözlenen/Ω  ← FORMÜL
+    return {Rc,g,Torb_h,Tfree_h,ratioFree,ratio,e:ecc,q:qq.q,qtxt:qq.qtxt};
+  }
+  function fmtT(h){
+    if(!isFinite(h)) return '∞';
+    if(h<48) return h.toFixed(1)+' sa';
+    if(h<24*400) return (h/24).toFixed(1)+' gün';
+    return (h/24/365.25).toFixed(1)+' yıl';
+  }
+
+  // --- animasyon durumu ---
+  let phOrb=0, phSpin=0, last=performance.now();
+  const ringPh=[0,0,0,0,0,0];
+
+  function draw(now){
+    if(!cv.isConnected) return;
+    let dt=(now-last)/1000; if(dt>0.1)dt=0.1; last=now;
+    const f=fizik();
+
+    // gorsel hiz sikistirmasi
+    const OmA=(2*Math.PI/10)*Math.sqrt(Mstar)/Math.pow(R,1.5); // 1AU,1M☉ → 10 sn'de tur
+    const rAbs=Math.abs(f.ratio);
+    const rVis=rAbs<=4? f.ratio : Math.sign(f.ratio)*(4+2*Math.log10(rAbs/4));
+    // Kepler: günberide hızlan (dθ/dt ∝ (1+e·cosθ)²)
+    const kep=Math.pow(1+f.e*Math.cos(phOrb),2)/Math.pow(1-f.e*f.e,1.5);
+    phOrb+=OmA*kep*dt; phSpin+=rVis*OmA*dt;
+
+    ctx.fillStyle='#060a12'; ctx.fillRect(0,0,W,H);
+    const cx=W/2, cy=H/2;
+    const maxPx=Math.min(W,H)/2-26;
+    const mapR=au=>34+ (Math.log10(au/0.15)/Math.log10(30/0.15))*(maxPx-34);
+
+    // girdap halkalari (Kepler kesmesi: iceride hizli)
+    for(let i=0;i<6;i++){
+      const au=0.2*Math.pow(150,i/5);
+      const rp=mapR(au);
+      ringPh[i]+=(2*Math.PI/10)*Math.sqrt(Mstar)/Math.pow(au,1.5)*dt;
+      ctx.strokeStyle='rgba(0,150,220,0.10)'; ctx.lineWidth=1;
+      ctx.beginPath(); ctx.arc(cx,cy,rp,0,Math.PI*2); ctx.stroke();
+      ctx.fillStyle='rgba(0,200,255,0.35)';
+      for(let k=0;k<7;k++){ const a=ringPh[i]+k*Math.PI*2/7;
+        ctx.fillRect(cx+Math.cos(a)*rp-1, cy+Math.sin(a)*rp-1, 2.2,2.2); }
+    }
+
+    // kavrama yaricapi Rc
+    const rcPx=mapR(f.Rc);
+    ctx.strokeStyle='rgba(255,209,102,0.75)'; ctx.setLineDash([6,6]); ctx.lineWidth=1.6;
+    ctx.beginPath(); ctx.arc(cx,cy,rcPx,0,Math.PI*2); ctx.stroke(); ctx.setLineDash([]);
+    ctx.fillStyle='rgba(255,209,102,0.85)'; ctx.font='11px Segoe UI';
+    ctx.fillText('R_c (kavrama yarıçapı)', cx+rcPx*0.71+6, cy-rcPx*0.71-6);
+    // ic bolge tonu
+    ctx.fillStyle='rgba(255,92,122,0.045)';
+    ctx.beginPath(); ctx.arc(cx,cy,rcPx,0,Math.PI*2); ctx.fill();
+
+    // merkez yildiz
+    const rs=10+9*Math.cbrt(Mstar);
+    const gr=ctx.createRadialGradient(cx,cy,2,cx,cy,rs*2.2);
+    gr.addColorStop(0,'rgba(255,230,150,1)'); gr.addColorStop(0.4,'rgba(255,180,60,0.55)'); gr.addColorStop(1,'rgba(255,150,40,0)');
+    ctx.fillStyle=gr; ctx.beginPath(); ctx.arc(cx,cy,rs*2.2,0,Math.PI*2); ctx.fill();
+    ctx.fillStyle='#ffd98a'; ctx.beginPath(); ctx.arc(cx,cy,rs,0,Math.PI*2); ctx.fill();
+
+    // gezegen — eliptik yörünge (yıldız odakta, günberi sağda)
+    ctx.strokeStyle='rgba(255,255,255,0.14)'; ctx.beginPath();
+    for(let t=0;t<=72;t++){ const th=t/72*2*Math.PI;
+      const rr=R*(1-f.e*f.e)/(1+f.e*Math.cos(th));
+      const pe=mapR(rr);
+      const ex=cx+Math.cos(th)*pe, ey=cy+Math.sin(th)*pe;
+      if(t===0)ctx.moveTo(ex,ey); else ctx.lineTo(ex,ey); }
+    ctx.closePath(); ctx.stroke();
+    if(f.e>0.01){ const prp=mapR(R*(1-f.e));
+      ctx.fillStyle='rgba(255,209,102,0.95)'; ctx.beginPath(); ctx.arc(cx+prp,cy,3.2,0,Math.PI*2); ctx.fill();
+      ctx.font='10px Segoe UI'; ctx.fillText('günberi', cx+prp+7, cy+3); }
+    const rNow=R*(1-f.e*f.e)/(1+f.e*Math.cos(phOrb));
+    const rp=mapR(rNow);
+    const px=cx+Math.cos(phOrb)*rp, py=cy+Math.sin(phOrb)*rp;
+    const pr=Math.max(4,Math.min(18,4.5*Math.cbrt(mPl)+2));
+    const locked=f.g>0.9, free=f.g<0.1;
+    const col= locked? '#ff5c7a' : (free? '#4fc3ff' : '#ffd166');
+    // govde
+    const pg=ctx.createRadialGradient(px-pr*0.3,py-pr*0.3,1,px,py,pr);
+    pg.addColorStop(0,col); pg.addColorStop(1,'rgba(10,16,30,0.95)');
+    ctx.fillStyle=pg; ctx.beginPath(); ctx.arc(px,py,pr,0,Math.PI*2); ctx.fill();
+    // donus isaretcisi (parlak yuzey cizgisi)
+    ctx.strokeStyle='#ffffff'; ctx.lineWidth=2;
+    ctx.beginPath(); ctx.moveTo(px,py);
+    ctx.lineTo(px+Math.cos(phSpin)*pr, py+Math.sin(phSpin)*pr); ctx.stroke();
+    ctx.strokeStyle='rgba(255,255,255,0.35)'; ctx.lineWidth=1;
+    ctx.beginPath(); ctx.moveTo(px,py);
+    ctx.lineTo(px-Math.cos(phSpin)*pr, py-Math.sin(phSpin)*pr); ctx.stroke();
+    // kilitte yildiza bakan yuz vurgusu
+    if(locked && f.q===1){
+      ctx.strokeStyle='rgba(255,92,122,0.5)'; ctx.setLineDash([3,4]);
+      ctx.beginPath(); ctx.moveTo(px,py); ctx.lineTo(cx,cy); ctx.stroke(); ctx.setLineDash([]);
+    }
+
+    // rozet
+    const label= locked? 'GİRDAP KİLİDİ' : (free? 'SERBEST İFADE' : 'GEÇİŞ BÖLGESİ');
+    ctx.fillStyle=col; ctx.font='bold 13px Segoe UI';
+    ctx.fillText(label, 14, 22);
+    ctx.fillStyle='rgba(230,237,243,0.55)'; ctx.font='11px Segoe UI';
+    ctx.fillText('görsel dönüş '+(rAbs>4?('sıkıştırıldı (gerçek: '+(f.ratio>0?'+':'')+f.ratio.toFixed(1)+'×Ω)'):'gerçek ölçekte'), 14, 38);
+
+    // okumalar
+    document.getElementById('regime').textContent=label;
+    document.getElementById('regime').style.color=col;
+    document.getElementById('oG').textContent='%'+(f.g*100).toFixed(1);
+    document.getElementById('oFree').textContent=fmtT(f.Tfree_h);
+    const Tobs=f.Torb_h/Math.abs(f.ratio);
+    document.getElementById('oObs').textContent=fmtT(Tobs)+(f.ratio<0?'  TERS ↺':'');
+    document.getElementById('oRatio').textContent=(f.ratio>0?'+':'')+ (Math.abs(f.ratio)>=100? f.ratio.toFixed(0): f.ratio.toFixed(2));
+    document.getElementById('oQ').textContent=f.qtxt;
+  }
+
+  // sürücü: rAF; kısıtlı ortamlarda (rAF askıya alınmışsa) setInterval yedeği
+  let rafAlive=false;
+  function loop(now){ rafAlive=true; if(!cv.isConnected) return; draw(now); requestAnimationFrame(loop); }
+  requestAnimationFrame(loop);
+  setTimeout(()=>{ if(!rafAlive){ setInterval(()=>{ if(cv.isConnected) draw(performance.now()); },33); } },600);
+})();
+</script>
+</body>
+</html>

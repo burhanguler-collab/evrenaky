@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 Kuvvet Laboratuvarı</title>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --bg-color: #030712;
+            --panel-bg: #111827;
+            --border-color: rgba(0, 240, 255, 0.15);
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --neon-blue: #00f0ff;
+            --neon-magenta: #ff007f;
+            --font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body, html {
+            margin: 0; padding: 0; width: 100%; height: 100%;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: var(--font-family);
+            overflow: hidden;
+        }
+
+        .lab-container {
+            display: flex;
+            width: 100%;
+            height: 100vh;
+        }
+
+        /* Sidebar UI */
+        .sidebar {
+            width: 280px;
+            background: rgba(17, 24, 39, 0.8);
+            border-right: 1px solid var(--border-color);
+            padding: 20px 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            box-sizing: border-box;
+            backdrop-filter: blur(10px);
+            z-index: 10;
+        }
+
+        .sidebar h2 {
+            font-size: 1.2rem;
+            color: var(--neon-blue);
+            margin: 0 0 10px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-force {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-muted);
+            padding: 12px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: left;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-force:hover {
+            background: rgba(255, 255, 255, 0.08);
+            color: #fff;
+        }
+
+        .btn-force.active {
+            background: rgba(0, 240, 255, 0.1);
+            border-color: var(--neon-blue);
+            color: #fff;
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.2) inset;
+        }
+
+        .btn-force i {
+            width: 18px; height: 18px;
+        }
+
+        .btn-force.active i {
+            color: var(--neon-blue);
+            filter: drop-shadow(0 0 5px var(--neon-blue));
+        }
+
+        .description-box {
+            margin-top: auto;
+            background: rgba(0,0,0,0.4);
+            border: 1px solid rgba(255,255,255,0.05);
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            line-height: 1.5;
+            color: #d1d5db;
+        }
+
+        .description-box h3 {
+            margin: 0 0 8px 0;
+            font-size: 1rem;
+            color: var(--neon-magenta);
+        }
+
+        /* Canvas Area */
+        .canvas-area {
+            flex: 1;
+            position: relative;
+            background: radial-gradient(circle at center, #0b0f19 0%, #020408 100%);
+            overflow: hidden;
+        }
+
+        #simCanvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Overlay texts */
+        .canvas-overlay {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            pointer-events: none;
+        }
+
+        .canvas-overlay h1 {
+            margin: 0;
+            font-size: 1.8rem;
+            color: #fff;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+        }
+
+        .canvas-overlay p {
+            margin: 5px 0 0 0;
+            color: var(--neon-blue);
+            font-size: 1rem;
+            text-shadow: 0 1px 5px rgba(0,0,0,0.8);
+        }
+        
+        /* Restart button overlay */
+        .btn-restart {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            backdrop-filter: blur(5px);
+        }
+        .btn-restart:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="lab-container">
+    <div class="sidebar">
+        <h2><i data-lucide="microscope"></i> Makro Kuvvetler</h2>
+        
+        <button class="btn-force active" onclick="setForce(1)">
+            <i data-lucide="target"></i> 1. Radyal İtim
+        </button>
+        <button class="btn-force" onclick="setForce(2)">
+            <i data-lucide="waves"></i> 2. Diferansiyel Sıkıştırma
+        </button>
+        <button class="btn-force" onclick="setForce(3)">
+            <i data-lucide="tornado"></i> 3. Vorteks Sürüklenmesi
+        </button>
+        <button class="btn-force" onclick="setForce(4)">
+            <i data-lucide="arrow-down-to-line"></i> 4. Eksenel İtim
+        </button>
+        <button class="btn-force" onclick="setForce(5)">
+            <i data-lucide="minimize-2"></i> 5. Yanal İtim
+        </button>
+
+        <div class="description-box" id="desc-box">
+            <h3>Radyal İtim (Kütle İtimi)</h3>
+            <p>Nükleonların boyutsal salınımı (pulsasyonu) çevredeki Evrenakı'yı dışarı iterek bir şok dalgası yaratır. Uzaydaki akışkan ise bu boşluğu doldurmak için merkeze doğru muazzam bir izotropik geri-basınç (yerçekimi) uygular.</p>
+        </div>
+    </div>
+
+    <div class="canvas-area">
+        <div class="canvas-overlay">
+            <h1 id="overlay-title">1. Radyal İtim (Kütle İtimi)</h1>
+            <p id="overlay-subtitle">Mikro pulsasyondan, makro gradyana geçiş</p>
+        </div>
+        <button class="btn-restart" onclick="resetAnimation()"><i data-lucide="rotate-ccw" style="width:14px;height:14px;"></i> Tekrar Oynat</button>
+        <canvas id="simCanvas"></canvas>
+    </div>
+</div>
+
+<script>
+    // Initialize Icons
+    lucide.createIcons();
+
+    // Text data for states
+    const forceData = {
+        1: {
+            title: "1. Radyal İtim (Kütle İtimi)",
+            subtitle: "Mikro pulsasyondan, makro gradyana geçiş",
+            descTitle: "Radyal İtim (Kütle İtimi)",
+            desc: "Nükleonların boyutsal salınımı (pulsasyonu) çevredeki Evrenakı'yı dışarı iterek bir şok dalgası yaratır. Uzaydaki akışkan ise bu boşluğu doldurmak için merkeze doğru muazzam bir izotropik geri-basınç (yerçekimi) uygular."
+        },
+        2: {
+            title: "2. Diferansiyel Sıkıştırma (Gelgit)",
+            subtitle: "Gradyan örtüşmesi ve çift taraflı esneme",
+            descTitle: "Diferansiyel Sıkıştırma (Gelgit)",
+            desc: "İki makro kütle yaklaştığında basınç gradyanları üst üste biner. Yanlardan gelen eşit hidrostatik sıkıştırma, kütleyi eksen boyunca iki yöne doğru esnetir."
+        },
+        3: {
+            title: "3. Vorteks Sürüklenmesi",
+            subtitle: "Karanlık madde yanılgısının ardındaki gerçek",
+            descTitle: "Vorteks Sürüklenmesi",
+            desc: "Atomik boşluklardaki nükleon motorları, Evrenakı akışkanını kütlenin etrafında devasa bir teğetsel girdap (makro-vorteks) halinde sürükler."
+        },
+        4: {
+            title: "4. Eksenel İtim",
+            subtitle: "Ekvatordaki deplasmanın eksene hücumu",
+            descTitle: "Eksenel İtim",
+            desc: "Ekvatordaki şiddetli dönüşün yarattığı muazzam Evrenakı dışlanması (deplasman), çevre basıncının doğrudan dönme eksenine doğru hücum etmesine yol açar."
+        },
+        5: {
+            title: "5. Yanal İtim",
+            subtitle: "Kutuplardan ekvatora yönelen basınç (Yapım Aşamasında)",
+            descTitle: "Yanal İtim",
+            desc: "Dönen küresel formda kutuplara çıkıldıkça hız düşer. Bu durum, kutuplardaki yüksek basıncın ekvatordaki düşük basınca doğru bastırmasına (yanal itime) neden olur."
+        }
+    };
+
+    // Canvas Setup
+    const canvas = document.getElementById('simCanvas');
+    const ctx = canvas.getContext('2d');
+    let width, height, cx, cy;
+
+    function resize() {
+        width = canvas.parentElement.clientWidth;
+        height = canvas.parentElement.clientHeight;
+        canvas.width = width;
+        canvas.height = height;
+        cx = width / 2;
+        cy = height / 2;
+    }
+    window.addEventListener('resize', resize);
+    resize();
+
+    // State Management
+    let currentForce = 1;
+    let animStartTime = performance.now();
+
+    function setForce(id) {
+        currentForce = id;
+        
+        // Update UI
+        document.querySelectorAll('.btn-force').forEach((btn, idx) => {
+            if(idx + 1 === id) btn.classList.add('active');
+            else btn.classList.remove('active');
+        });
+
+        document.getElementById('overlay-title').innerText = forceData[id].title;
+        document.getElementById('overlay-subtitle').innerText = forceData[id].subtitle;
+        document.getElementById('desc-box').innerHTML = `<h3>${forceData[id].descTitle}</h3><p>${forceData[id].desc}</p>`;
+
+        resetAnimation();
+    }
+
+    function resetAnimation() {
+        animStartTime = performance.now();
+        shockwaves = [];
+    }
+
+    // --- ANIMATION 1 (RADYAL BASINÇ) LOGIC ---
+    
+    // Grid generation for macro mass
+    const DISK_RADIUS = 26;
+    let relativeAtoms = [];
+    
+    function initGrid(){
+        relativeAtoms = [];
+        const rows = Math.ceil((DISK_RADIUS * 2) / Math.sqrt(3)) + 4;
+        const cols = DISK_RADIUS * 2 + 4;
+        const startI = -Math.floor(rows / 2);
+        const endI = Math.ceil(rows / 2);
+        const startJ = -Math.floor(cols / 2);
+        const endJ = Math.ceil(cols / 2);
+        const dy = Math.sqrt(3); 
+        
+        for(let i = startI; i <= endI; i++){
+            const ry = i * dy;
+            const offsetX = (i % 2 === 0) ? 0 : 1;
+            for(let j = startJ; j <= endJ; j++){
+                const rx = j * 2 + offsetX;
+                const dist = Math.sqrt(rx*rx + ry*ry);
+                if(dist <= DISK_RADIUS){
+                    let edgeAlpha = 1.0;
+                    const blendWidth = 3.5; 
+                    if(dist > DISK_RADIUS - blendWidth){
+                        edgeAlpha = (DISK_RADIUS - dist) / blendWidth;
+                    }
+                    relativeAtoms.push({ rx, ry, edgeAlpha, isCenter: (rx===0 && ry===0) });
+                }
+            }
+        }
+    }
+    initGrid();
+
+    let shockwaves = [];
+    let lastShockwaveTime = 0;
+
+    function drawForce1(elapsed) {
+        // Timeline constants
+        const ZOOM_START = 2000; // ms
+        const ZOOM_DURATION = 6000; // ms
+        const MAX_R = 90;
+        const MIN_R = 4.0;
+
+        // Calculate R (Zoom level)
+        let t = 0;
+        if (elapsed > ZOOM_START) {
+            t = (elapsed - ZOOM_START) / ZOOM_DURATION;
+            if (t > 1) t = 1;
+        }
+        // Ease in-out
+        const easedT = t * t * (3 - 2 * t);
+        const R = MAX_R - (MAX_R - MIN_R) * easedT;
+
+        // Pulsation logic (Nefes alma)
+        // Titreşim makro boyutta sönümlenir (kütle büyüdükçe hareketsiz görünür).
+        const pulsePhase = (elapsed % 1500) / 1500; // 0 to 1
+        const pulseAmplitude = 0.15 * (1 - Math.pow(easedT, 0.5)); // Zoom-out oldukça titreşim genliği 0'a düşer
+        const pulseScale = 1.0 + Math.sin(pulsePhase * Math.PI * 2) * pulseAmplitude; 
+        
+        // At micro scale (t=0), atom vibrates. At macro scale (t=1), whole planet is stationary.
+        const atomPulse = isNaN(pulseScale) ? 1 : pulseScale;
+
+        // 1. Draw Shockwaves (Only prominent in Micro phase)
+        if (elapsed - lastShockwaveTime > 500 && easedT < 0.8) {
+            shockwaves.push({ radius: 0, alpha: 1.0 });
+            lastShockwaveTime = elapsed;
+        }
+        
+        for (let i = shockwaves.length - 1; i >= 0; i--) {
+            let sw = shockwaves[i];
+            sw.radius += 100 * (16 / 1000); // expand speed
+            sw.alpha -= 0.008; // fade speed
+            
+            if (sw.alpha <= 0) {
+                shockwaves.splice(i, 1);
+                continue;
+            }
+
+            // In micro phase, shockwaves are huge. As we zoom out, they scale down.
+            // But we simulate them in screen space for simplicity.
+            const screenRadius = sw.radius * (1 - easedT * 0.9); // Shrink visually as we zoom out
+            
+            if (screenRadius > 0) {
+                ctx.beginPath();
+                ctx.arc(cx, cy, screenRadius, 0, Math.PI * 2);
+                ctx.lineWidth = 2 * (1 - easedT);
+                ctx.strokeStyle = `rgba(0, 240, 255, ${sw.alpha * (1 - easedT)})`;
+                ctx.stroke();
+            }
+        }
+
+        // 2. Draw Grid Atoms
+        // Center atom is always visible. Others fade in as we zoom out.
+        const otherAtomsAlpha = easedT; // Fades in during zoom
+        
+        // Draw the inner gradient of the Macro Mass
+        if (easedT > 0.1) {
+            const macroR = DISK_RADIUS * R * 1.12 * atomPulse;
+            const macroGrad = ctx.createRadialGradient(cx, cy, 0, cx, cy, macroR);
+            const alphaCenter = 0.3 + 0.5 * easedT; 
+            
+            macroGrad.addColorStop(0, `rgba(255, 0, 127, ${alphaCenter})`); // İç basınç (Sıcak/Mor)
+            macroGrad.addColorStop(0.6, `rgba(160, 50, 255, ${alphaCenter * 0.7})`); 
+            macroGrad.addColorStop(0.9, `rgba(80, 20, 200, ${alphaCenter * 0.3})`);
+            macroGrad.addColorStop(1, 'rgba(50, 0, 150, 0)');
+            
+            ctx.globalCompositeOperation = 'screen';
+            ctx.beginPath();
+            ctx.arc(cx, cy, macroR, 0, Math.PI * 2);
+            ctx.fillStyle = macroGrad;
+            ctx.fill();
+            ctx.globalCompositeOperation = 'source-over';
+        }
+
+        // Draw individual atoms
+        for(const a of relativeAtoms){
+            const isCenter = a.isCenter;
+            const currentAlpha = isCenter ? 1.0 : otherAtomsAlpha * a.edgeAlpha;
+            if (currentAlpha <= 0.01) continue;
+
+            // Apply pulse to the whole grid coordinates
+            const x = cx + a.rx * R * atomPulse;
+            const y = cy + a.ry * R * atomPulse;
+            
+            if(x < -20 || x > width+20 || y < -20 || y > height+20) continue;
+            
+            const atomSize = Math.max(1.5, R * 0.14) * (isCenter && easedT < 0.2 ? atomPulse : 1);
+
+            ctx.beginPath(); 
+            ctx.arc(x, y, atomSize, 0, Math.PI * 2);
+            
+            // Center atom is gold, others are slightly cooler
+            if (isCenter) {
+                ctx.fillStyle = `rgba(255, 215, 0, ${currentAlpha})`;
+                ctx.shadowColor = `rgba(255, 215, 0, ${currentAlpha})`;
+            } else {
+                ctx.fillStyle = `rgba(200, 150, 255, ${currentAlpha})`;
+                ctx.shadowColor = `rgba(200, 150, 255, ${currentAlpha})`;
+            }
+            ctx.shadowBlur = 4; 
+            ctx.fill(); 
+            ctx.shadowBlur = 0;
+        }
+
+        // 3. Draw External Ambient Gradient (Centripetal Back-pressure)
+        if (easedT > 0.5) {
+            const haloInnerR = DISK_RADIUS * R * atomPulse;
+            const haloOuterR = DISK_RADIUS * R * 3.0; // Uzağa kadar yayılır
+            const haloAlpha = 0.6 * Math.pow(easedT, 2); 
+            
+            const haloGrad = ctx.createRadialGradient(cx, cy, haloInnerR, cx, cy, haloOuterR);
+            haloGrad.addColorStop(0, `rgba(0, 240, 255, ${haloAlpha})`); // Dış basınç halesi (Turkuaz)
+            haloGrad.addColorStop(0.3, `rgba(0, 150, 255, ${haloAlpha * 0.5})`);
+            haloGrad.addColorStop(1, 'rgba(0, 0, 0, 0)'); 
+            
+            ctx.globalCompositeOperation = 'screen';
+            ctx.beginPath();
+            ctx.arc(cx, cy, haloOuterR, 0, Math.PI * 2);
+            ctx.arc(cx, cy, haloInnerR, 0, Math.PI * 2, true); 
+            ctx.fillStyle = haloGrad;
+            ctx.fill();
+            ctx.globalCompositeOperation = 'source-over';
+
+            // Draw animated arrows pointing inward to show back-pressure
+            ctx.globalCompositeOperation = 'source-over';
+            const numArrows = 12;
+            const arrowPhase = (elapsed % 2000) / 2000; // 0 to 1
+            const arrowDist = haloOuterR - (haloOuterR - haloInnerR) * arrowPhase;
+
+            for (let i = 0; i < numArrows; i++) {
+                const angle = (Math.PI * 2 / numArrows) * i;
+                const ax = cx + Math.cos(angle) * arrowDist;
+                const ay = cy + Math.sin(angle) * arrowDist;
+                
+                // Draw arrow head pointing inward
+                ctx.save();
+                ctx.translate(ax, ay);
+                ctx.rotate(angle + Math.PI); // point towards center
+                
+                const arrowAlpha = haloAlpha * Math.sin(arrowPhase * Math.PI); // Fade in and out
+                ctx.fillStyle = `rgba(0, 240, 255, ${arrowAlpha})`;
+                ctx.beginPath();
+                ctx.moveTo(0, 0);
+                ctx.lineTo(-10, 5);
+                ctx.lineTo(-10, -5);
+                ctx.closePath();
+                ctx.fill();
+                
+                // Draw tail
+                ctx.strokeStyle = `rgba(0, 240, 255, ${arrowAlpha * 0.5})`;
+                ctx.lineWidth = 2;
+                ctx.beginPath();
+                ctx.moveTo(0, 0);
+                ctx.lineTo(-20, 0);
+                ctx.stroke();
+
+                ctx.restore();
+            }
+        }
+    }
+
+    // --- ANIMATION 2 (DİFERANSİYEL SIKIŞTIRMA / GELGİT) LOGIC ---
+    function drawForce2(elapsed) {
+        const cycle = 8000;
+        const phase = (elapsed % cycle) / cycle;
+        
+        let moonDist;
+        let squeezeFactor = 0; // 0 to 1
+
+        if (phase < 0.4) {
+            // Ay yaklaşıyor (Approach)
+            let t = phase / 0.4;
+            let easedT = 1 - Math.pow(1 - t, 3); 
+            squeezeFactor = easedT;
+        } else if (phase < 0.6) {
+            // Bekleme (Hold)
+            squeezeFactor = 1.0;
+        } else {
+            // Ay uzaklaşıyor (Recede)
+            let t = (phase - 0.6) / 0.4;
+            let easedT = Math.pow(1 - t, 3); 
+            squeezeFactor = easedT;
+        }
+
+        const earthR = 60;
+        const oceanT = 15;
+        const moonR = 25;
+        
+        const moonMaxDist = width / 2 + 100; // Ekranın sağı
+        const moonMinDist = 180; // Merkezden olan min mesafe
+        moonDist = moonMaxDist - (moonMaxDist - moonMinDist) * squeezeFactor;
+        
+        const moonX = cx + moonDist;
+        const moonY = cy;
+
+        // 1. Gradyanlar (Evrenakı Basınç Alanları)
+        const earthGrad = ctx.createRadialGradient(cx, cy, earthR, cx, cy, earthR * 3.5);
+        earthGrad.addColorStop(0, `rgba(0, 240, 255, 0.45)`);
+        earthGrad.addColorStop(1, 'rgba(0, 0, 0, 0)');
+        
+        const moonGrad = ctx.createRadialGradient(moonX, moonY, moonR, moonX, moonY, moonR * 3.5);
+        moonGrad.addColorStop(0, `rgba(0, 240, 255, 0.45)`);
+        moonGrad.addColorStop(1, 'rgba(0, 0, 0, 0)');
+
+        ctx.globalCompositeOperation = 'screen';
+        ctx.beginPath(); ctx.arc(cx, cy, earthR * 3.5, 0, Math.PI * 2); ctx.fillStyle = earthGrad; ctx.fill();
+        ctx.beginPath(); ctx.arc(moonX, moonY, moonR * 3.5, 0, Math.PI * 2); ctx.fillStyle = moonGrad; ctx.fill();
+        ctx.globalCompositeOperation = 'source-over';
+
+        // 2. Kütle Çekirdeği (Dünya)
+        ctx.beginPath(); ctx.arc(cx, cy, earthR, 0, Math.PI * 2);
+        ctx.fillStyle = '#0f172a'; // koyu kaya form
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = '#334155';
+        ctx.stroke();
+        
+        // 3. Okyanus Katmanı (Eliptik esneme)
+        const bulge = 28 * squeezeFactor; // Ay'a ve ters yöne uzama
+        const compress = 12 * squeezeFactor; // Üstten alttan basılma
+        
+        ctx.beginPath();
+        ctx.ellipse(cx, cy, earthR + oceanT + bulge, earthR + oceanT - compress, 0, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(59, 130, 246, 0.5)`; // Mavi okyanus
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = `rgba(96, 165, 250, 0.8)`;
+        ctx.stroke();
+        
+        // 4. Ay (Küçük Kütle)
+        ctx.beginPath(); ctx.arc(moonX, moonY, moonR, 0, Math.PI * 2);
+        ctx.fillStyle = '#6b7280'; 
+        ctx.fill();
+        ctx.strokeStyle = '#9ca3af';
+        ctx.stroke();
+
+        // 5. Yanal Sıkıştırma Okları (Üst ve Alt Hidrostatik Baskı)
+        if (squeezeFactor > 0.05) {
+            const arrowAlpha = squeezeFactor;
+            // Oklar animasyonlu olarak ileri geri titreşerek basıncı hissettirsin
+            const pulse = Math.sin(elapsed / 80) * 4 * squeezeFactor; 
+            const topY = cy - earthR - oceanT - 30 + compress + pulse; // Okyanus yüzeyine yaklaşır
+            const bottomY = cy + earthR + oceanT + 30 - compress - pulse;
+
+            ctx.fillStyle = `rgba(255, 0, 127, ${arrowAlpha})`;
+            
+            // Üst Ok (Aşağı doğru bastırır)
+            ctx.beginPath();
+            ctx.moveTo(cx, topY);
+            ctx.lineTo(cx - 15, topY - 20);
+            ctx.lineTo(cx - 5, topY - 20);
+            ctx.lineTo(cx - 5, topY - 50);
+            ctx.lineTo(cx + 5, topY - 50);
+            ctx.lineTo(cx + 5, topY - 20);
+            ctx.lineTo(cx + 15, topY - 20);
+            ctx.closePath();
+            ctx.fill();
+
+            // Alt Ok (Yukarı doğru bastırır)
+            ctx.beginPath();
+            ctx.moveTo(cx, bottomY);
+            ctx.lineTo(cx - 15, bottomY + 20);
+            ctx.lineTo(cx - 5, bottomY + 20);
+            ctx.lineTo(cx - 5, bottomY + 50);
+            ctx.lineTo(cx + 5, bottomY + 50);
+            ctx.lineTo(cx + 5, bottomY + 20);
+            ctx.lineTo(cx + 15, bottomY + 20);
+            ctx.closePath();
+            ctx.fill();
+            
+            // Etiketler
+            ctx.fillStyle = `rgba(255, 50, 150, ${arrowAlpha})`;
+            ctx.font = "bold 14px 'Segoe UI'";
+            ctx.textAlign = "center";
+            ctx.fillText("SIKIŞTIRMA", cx, topY - 60);
+            ctx.fillText("SIKIŞTIRMA", cx, bottomY + 70);
+
+            // Çift Taraflı Esneme Etiketleri
+            if (squeezeFactor > 0.8) {
+                ctx.fillStyle = `rgba(96, 165, 250, ${arrowAlpha})`;
+                ctx.font = "italic 13px 'Segoe UI'";
+                ctx.fillText("Ters Yöne Kabarma", cx - earthR - oceanT - bulge - 60, cy + 5);
+                ctx.fillText("Ay'a Doğru Kabarma", cx + earthR + oceanT + bulge + 60, cy + 5);
+            }
+        }
+    }
+
+
+    // --- ANIMATION 3 (VORTEKS SÜRÜKLENMESİ / KARANLIK MADDE) LOGIC ---
+    // Partikülleri bir kez oluştur
+    const numVortexParticles = 1200;
+    let vortexParticles = [];
+    for(let i=0; i<numVortexParticles; i++) {
+        const r = Math.random() * 320 + 45; // 45'ten başlayıp dışa yayılır
+        const initialTheta = Math.random() * Math.PI * 2;
+        // Akışkan hızı (Hiper-hızlı)
+        const speed = 0.0015 + Math.random() * 0.0008; 
+        const size = Math.random() * 2 + 0.5;
+        vortexParticles.push({r, initialTheta, speed, size});
+    }
+
+    const draggedStars = [
+        { r: 110, initialTheta: 0, speed: 0.0018 },
+        { r: 190, initialTheta: Math.PI / 2, speed: 0.0017 },
+        { r: 280, initialTheta: Math.PI, speed: 0.0016 }
+    ];
+
+    function drawForce3(elapsed) {
+        // 1. Yavaş Dönen Merkez Kütle (Makro Kütle / Galaksi Çekirdeği)
+        const coreR = 45;
+        const slowAngle = elapsed * 0.0008; // Biraz daha hızlandırıldı
+
+        ctx.save();
+        ctx.translate(cx, cy);
+        
+        // A. Hiper-Hızlı Evrenakı Vorteksi (Girdap Partikülleri)
+        ctx.globalCompositeOperation = 'screen';
+        for(let p of vortexParticles) {
+            const currentTheta = p.initialTheta + elapsed * p.speed;
+            const px = Math.cos(currentTheta) * p.r;
+            const py = Math.sin(currentTheta) * p.r;
+            
+            // Dışa doğru soluklaşma
+            const alpha = Math.max(0, 1 - (p.r - 45) / 320) * 0.8;
+            
+            ctx.fillStyle = `rgba(0, 240, 255, ${alpha})`;
+            ctx.beginPath();
+            ctx.arc(px, py, p.size, 0, Math.PI * 2);
+            ctx.fill();
+            
+            // Hız hissi için kuyruk (Trail)
+            ctx.strokeStyle = `rgba(0, 200, 255, ${alpha * 0.4})`;
+            ctx.lineWidth = p.size;
+            ctx.beginPath();
+            ctx.moveTo(px, py);
+            const tailTheta = currentTheta - p.speed * 40; // Kuyruk geride
+            ctx.lineTo(Math.cos(tailTheta) * p.r, Math.sin(tailTheta) * p.r);
+            ctx.stroke();
+        }
+        ctx.globalCompositeOperation = 'source-over';
+
+        // B. Sürüklenen Yıldızlar (Uydular) - Vorteks hızına kapılmışlar
+        for(let star of draggedStars) {
+            const starTheta = star.initialTheta + elapsed * star.speed; 
+            const sx = Math.cos(starTheta) * star.r;
+            const sy = Math.sin(starTheta) * star.r;
+            
+            // Yıldız halesi
+            const starGrad = ctx.createRadialGradient(sx, sy, 0, sx, sy, 20);
+            starGrad.addColorStop(0, 'rgba(255, 255, 255, 1)');
+            starGrad.addColorStop(0.2, 'rgba(255, 255, 255, 0.8)');
+            starGrad.addColorStop(1, 'rgba(255, 255, 255, 0)');
+            
+            ctx.beginPath();
+            ctx.arc(sx, sy, 20, 0, Math.PI*2);
+            ctx.fillStyle = starGrad;
+            ctx.fill();
+            
+            // Yıldız çekirdeği
+            ctx.beginPath();
+            ctx.arc(sx, sy, 3, 0, Math.PI*2);
+            ctx.fillStyle = '#fff';
+            ctx.fill();
+        }
+
+        // C. Yavaş Dönen Rijit Çekirdek
+        ctx.rotate(slowAngle);
+        
+        const coreGrad = ctx.createRadialGradient(0, 0, 0, 0, 0, coreR);
+        coreGrad.addColorStop(0, '#fde047'); // sıcak merkez
+        coreGrad.addColorStop(0.5, '#ea580c'); // turuncu
+        coreGrad.addColorStop(1, '#7c2d12'); // karanlık çeper
+        
+        ctx.beginPath();
+        ctx.arc(0, 0, coreR, 0, Math.PI*2);
+        ctx.fillStyle = coreGrad;
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = '#431407';
+        ctx.stroke();
+        
+        // Dönüşün (yavaşlığın) algılanabilmesi için yüzey lekeleri/kraterler
+        ctx.fillStyle = 'rgba(0,0,0,0.5)';
+        ctx.beginPath(); ctx.arc(15, 15, 8, 0, Math.PI*2); ctx.fill();
+        ctx.beginPath(); ctx.arc(-20, 10, 12, 0, Math.PI*2); ctx.fill();
+        ctx.beginPath(); ctx.arc(5, -25, 7, 0, Math.PI*2); ctx.fill();
+        
+        ctx.restore();
+
+        // 3. Etiketler (Bilgi Okları)
+        ctx.fillStyle = "rgba(255, 150, 0, 0.9)";
+        ctx.font = "bold 13px 'Segoe UI'";
+        
+        // Yavaş merkez oku - Kısaltıldı ve merkeze yaklaştırıldı
+        ctx.textAlign = "left";
+        ctx.beginPath();
+        ctx.moveTo(cx + coreR + 5, cy);
+        ctx.lineTo(cx + coreR + 30, cy - 40);
+        ctx.lineTo(cx + coreR + 130, cy - 40);
+        ctx.strokeStyle = "rgba(255, 150, 0, 0.7)";
+        ctx.lineWidth = 1.5;
+        ctx.stroke();
+        ctx.fillText("Yavaş Dönen Makro Kütle", cx + coreR + 35, cy - 48);
+
+        // Hızlı vorteks oku - Kısaltıldı ve merkeze yaklaştırıldı
+        ctx.fillStyle = "rgba(0, 240, 255, 0.9)";
+        ctx.textAlign = "right";
+        ctx.beginPath();
+        ctx.moveTo(cx - 100, cy + 100);
+        ctx.lineTo(cx - 140, cy + 130);
+        ctx.lineTo(cx - 250, cy + 130);
+        ctx.strokeStyle = "rgba(0, 240, 255, 0.7)";
+        ctx.stroke();
+        ctx.fillText("Hiper-Hızlı Evrenakı Vorteksi (Sürüklenme)", cx - 145, cy + 122);
+    }
+
+    // --- ANIMATION 4 (EKSENEL İTİM) LOGIC ---
+    const numParticlesForce4 = 300;
+    const particlesForce4 = [];
+    for(let i=0; i<numParticlesForce4; i++) {
+        particlesForce4.push({
+            angle: Math.random() * Math.PI * 2,
+            r: 60 + Math.random() * 260,
+            size: Math.random() * 2.5 + 0.5,
+            speedPhase: Math.random() * 10
+        });
+    }
+
+    function drawForce4(elapsed) {
+        const timeGlobal = elapsed / 1000;
+        const massSpeed = 1.0;
+        const gradSpeed = 3.0;
+        const baseRotSpeed = 1.5; 
+        
+        const massAngle = massSpeed * baseRotSpeed * timeGlobal;
+        const gradAngle = gradSpeed * baseRotSpeed * timeGlobal;
+
+        // 1. Draw Gradient Vortex
+        const gradient = ctx.createRadialGradient(cx, cy, 30, cx, cy, 320);
+        gradient.addColorStop(0.0, 'rgba(0, 229, 255, 0.9)');
+        gradient.addColorStop(0.2, 'rgba(0, 180, 220, 0.6)');
+        gradient.addColorStop(0.5, 'rgba(0, 80, 120, 0.2)');
+        gradient.addColorStop(1.0, 'rgba(0, 20, 40, 0.0)');
+        
+        ctx.fillStyle = gradient;
+        ctx.beginPath();
+        ctx.arc(cx, cy, 320, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.save();
+        ctx.translate(cx, cy);
+        ctx.rotate(gradAngle);
+        
+        const numArms = 8;
+        for(let i=0; i<numArms; i++) {
+          ctx.beginPath();
+          const armAngle = (i / numArms) * Math.PI * 2;
+          for (let r = 50; r <= 320; r += 10) {
+            const theta = armAngle - (r * 0.012); 
+            const x = r * Math.cos(theta);
+            const y = r * Math.sin(theta);
+            if (r === 50) ctx.moveTo(x, y);
+            else ctx.lineTo(x, y);
+          }
+          ctx.strokeStyle = `rgba(0, 229, 255, ${0.15 + (gradSpeed * 0.02)})`;
+          ctx.lineWidth = 1.5;
+          ctx.stroke();
+        }
+        
+        ctx.fillStyle = 'rgba(0, 255, 255, 0.6)';
+        particlesForce4.forEach(p => {
+          const diffSpeed = (350 - p.r) * 0.001 * gradSpeed;
+          const tAngle = p.angle - diffSpeed; 
+          const px = p.r * Math.cos(tAngle);
+          const py = p.r * Math.sin(tAngle);
+          
+          ctx.beginPath();
+          ctx.arc(px, py, p.size, 0, Math.PI*2);
+          ctx.fill();
+        });
+        
+        ctx.restore();
+
+        // 2. Draw Central Mass
+        ctx.save();
+        ctx.translate(cx, cy);
+        ctx.rotate(massAngle);
+        
+        const r = 45;
+        
+        ctx.shadowColor = 'rgba(0,0,0,0.8)';
+        ctx.shadowBlur = 15;
+        
+        ctx.beginPath();
+        ctx.arc(0, 0, r, 0, Math.PI * 2);
+        ctx.fillStyle = '#0f172a';
+        ctx.fill();
+        
+        ctx.shadowBlur = 0;
+        
+        ctx.strokeStyle = '#334155';
+        ctx.lineWidth = 2;
+        
+        ctx.beginPath(); ctx.moveTo(-r, 0); ctx.lineTo(r, 0); ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(0, -r); ctx.lineTo(0, r); ctx.stroke();
+        
+        ctx.beginPath(); ctx.arc(0, 0, r * 0.6, 0, Math.PI*2); ctx.stroke();
+        
+        ctx.strokeStyle = '#475569';
+        ctx.lineWidth = 3;
+        ctx.beginPath();
+        ctx.arc(0, 0, r, 0, Math.PI * 2);
+        ctx.stroke();
+        
+        ctx.fillStyle = '#00e5ff';
+        ctx.beginPath();
+        ctx.arc(0, 0, 4, 0, Math.PI*2);
+        ctx.fill();
+        ctx.restore();
+
+        // 3. Draw Axial Push Forces
+        const numArrows = 12;
+        const arrowLen = 30 + (gradSpeed * 3);
+        
+        const pulse = (Math.sin(timeGlobal * 5) + 1) / 2;
+        const pushRadius = 240 - (pulse * 20) - (gradSpeed * 5);
+        
+        ctx.save();
+        ctx.translate(cx, cy);
+        
+        for(let i = 0; i < numArrows; i++) {
+          const angle = (i / numArrows) * Math.PI * 2;
+          
+          const startR = pushRadius + arrowLen;
+          const endR = pushRadius;
+          
+          const x0 = startR * Math.cos(angle);
+          const y0 = startR * Math.sin(angle);
+          const x1 = endR * Math.cos(angle);
+          const y1 = endR * Math.sin(angle);
+          
+          const alpha = Math.min(0.3 + (gradSpeed * 0.1) + (pulse * 0.3), 1.0);
+          
+          ctx.strokeStyle = `rgba(255, 176, 32, ${alpha})`;
+          ctx.fillStyle = `rgba(255, 176, 32, ${alpha})`;
+          ctx.lineWidth = 2.5 + (gradSpeed * 0.2);
+          ctx.lineCap = 'round';
+          
+          ctx.beginPath();
+          ctx.moveTo(x0, y0);
+          ctx.lineTo(x1, y1);
+          ctx.stroke();
+          
+          const headLen = 10 + (gradSpeed * 0.5);
+          const headAngle = Math.PI / 6;
+          
+          ctx.beginPath();
+          ctx.moveTo(x1, y1);
+          ctx.lineTo(
+            x1 + headLen * Math.cos(angle + headAngle),
+            y1 + headLen * Math.sin(angle + headAngle)
+          );
+          ctx.lineTo(
+            x1 + headLen * Math.cos(angle - headAngle),
+            y1 + headLen * Math.sin(angle - headAngle)
+          );
+          ctx.closePath();
+          ctx.fill();
+        }
+        
+        ctx.restore();
+    }
+
+    // --- ANIMATION 5 (YANAL İTİM) LOGIC ---
+    let yanalParticles = [];
+
+    function drawForce5(elapsed) {
+        const earthR = 65;
+        const timeGlobal = elapsed / 1000;
+        
+        // Ekvatoral hızlanmadan dolayı dışarı fırlayan partiküller
+        if (Math.random() > 0.3) {
+            yanalParticles.push({
+                x: cx - earthR,
+                y: cy + (Math.random() - 0.5) * 15,
+                vx: -2 - Math.random() * 3,
+                alpha: 1.0
+            });
+            yanalParticles.push({
+                x: cx + earthR,
+                y: cy + (Math.random() - 0.5) * 15,
+                vx: 2 + Math.random() * 3,
+                alpha: 1.0
+            });
+        }
+
+        ctx.globalCompositeOperation = 'screen';
+        for (let i = yanalParticles.length - 1; i >= 0; i--) {
+            let p = yanalParticles[i];
+            p.x += p.vx;
+            p.alpha -= 0.02;
+            if (p.alpha <= 0) {
+                yanalParticles.splice(i, 1);
+                continue;
+            }
+            ctx.fillStyle = `rgba(0, 240, 255, ${p.alpha})`;
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
+            ctx.fill();
+            
+            ctx.strokeStyle = `rgba(0, 240, 255, ${p.alpha * 0.4})`;
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(p.x, p.y);
+            ctx.lineTo(p.x - p.vx * 2, p.y);
+            ctx.stroke();
+        }
+        ctx.globalCompositeOperation = 'source-over';
+
+        // Background Gradient (Evrenakı Basınç Dağılımı)
+        // Kutuplarda yoğun basınç (mavi), Ekvatorda düşük basınç (açık renk / boşluk)
+        const bgGrad = ctx.createLinearGradient(cx, cy - 250, cx, cy + 250);
+        bgGrad.addColorStop(0.0, 'rgba(0, 80, 150, 0.6)'); // Kuzey Kutbu Yüksek Basınç
+        bgGrad.addColorStop(0.4, 'rgba(0, 180, 220, 0.2)');
+        bgGrad.addColorStop(0.5, 'rgba(200, 255, 255, 0.6)'); // Ekvator Düşük Basınç (Açık Parlak Renk)
+        bgGrad.addColorStop(0.6, 'rgba(0, 180, 220, 0.2)');
+        bgGrad.addColorStop(1.0, 'rgba(0, 80, 150, 0.6)'); // Güney Kutbu Yüksek Basınç
+
+        ctx.fillStyle = bgGrad;
+        ctx.beginPath();
+        ctx.rect(cx - 300, cy - 250, 600, 500);
+        ctx.fill();
+
+        // Draw Central Mass (Yandan Kesit)
+        const massGrad = ctx.createRadialGradient(cx, cy, 0, cx, cy, earthR);
+        massGrad.addColorStop(0, '#0f172a');
+        massGrad.addColorStop(1, '#1e293b');
+        
+        ctx.beginPath();
+        ctx.arc(cx, cy, earthR, 0, Math.PI * 2);
+        ctx.fillStyle = massGrad;
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = '#475569';
+        ctx.stroke();
+
+        // Ekvator çizgileri (Dönüş Hissi)
+        ctx.strokeStyle = 'rgba(255, 255, 255, 0.2)';
+        ctx.lineWidth = 1.5;
+        for (let i = -3; i <= 3; i++) {
+            const yOffset = i * 15;
+            const rOffset = Math.sqrt(earthR*earthR - yOffset*yOffset);
+            ctx.beginPath();
+            ctx.moveTo(cx - rOffset, cy + yOffset);
+            ctx.lineTo(cx + rOffset, cy + yOffset);
+            ctx.stroke();
+            
+            // Dönüş noktaları (Ekvatora yaklaştıkça daha hızlı)
+            const speedMultiplier = 1.0 - (Math.abs(i) / 4); 
+            const dotX = cx - rOffset + ((elapsed * 0.15 * speedMultiplier + Math.abs(i) * 30) % (rOffset * 2));
+            if (dotX > cx - rOffset && dotX < cx + rOffset) {
+                ctx.fillStyle = 'rgba(0, 240, 255, 0.8)';
+                ctx.beginPath();
+                ctx.arc(dotX, cy + yOffset, 2.5, 0, Math.PI*2);
+                ctx.fill();
+            }
+        }
+
+        // Kutuplar statik
+        ctx.fillStyle = "rgba(255, 255, 255, 0.8)";
+        ctx.beginPath(); ctx.arc(cx, cy - earthR, 5, 0, Math.PI*2); ctx.fill(); // Kuzey
+        ctx.beginPath(); ctx.arc(cx, cy + earthR, 5, 0, Math.PI*2); ctx.fill(); // Güney
+
+        // YANAL İTİM Kuvvet Okları (Kutuplardan Ekvatora, kütleden uzakta)
+        const arrowPulse = (Math.sin(elapsed / 150) + 1) / 2;
+        const arrowAlpha = 0.6 + arrowPulse * 0.4;
+        
+        ctx.fillStyle = `rgba(255, 100, 0, ${arrowAlpha})`;
+        ctx.strokeStyle = `rgba(255, 100, 0, ${arrowAlpha})`;
+
+        function drawVerticalArrow(x, startY, endY) {
+            const isDown = endY > startY;
+            const dir = isDown ? -1 : 1;
+            const headBase = endY + dir * 30; 
+            
+            ctx.beginPath();
+            ctx.moveTo(x, endY); // Ok ucu
+            ctx.lineTo(x - 15, headBase); // Sol kanat
+            ctx.lineTo(x - 6, headBase); // İç sol
+            ctx.lineTo(x - 6, startY); // Kuyruk üst sol
+            ctx.lineTo(x + 6, startY); // Kuyruk üst sağ
+            ctx.lineTo(x + 6, headBase); // İç sağ
+            ctx.lineTo(x + 15, headBase); // Sağ kanat
+            ctx.closePath();
+            ctx.fill();
+        }
+
+        const leftX = cx - 180;
+        const rightX = cx + 180;
+        
+        // Yukarıdan aşağı inen oklar (Kuzey kutup düzleminden ekvatora)
+        const topStartY = cy - 200 + arrowPulse * 15;
+        const topEndY = cy - 50 + arrowPulse * 15;
+        
+        drawVerticalArrow(leftX, topStartY, topEndY);
+        drawVerticalArrow(rightX, topStartY, topEndY);
+
+        // Aşağıdan yukarı çıkan oklar (Güney kutup düzleminden ekvatora)
+        const bottomStartY = cy + 200 - arrowPulse * 15;
+        const bottomEndY = cy + 50 - arrowPulse * 15;
+        
+        drawVerticalArrow(leftX, bottomStartY, bottomEndY);
+        drawVerticalArrow(rightX, bottomStartY, bottomEndY);
+
+        // Etiketler
+        ctx.fillStyle = `rgba(255, 100, 0, ${arrowAlpha})`;
+        ctx.font = "bold 14px 'Segoe UI'";
+        ctx.textAlign = "center";
+        
+        ctx.fillText("YANAL İTİM", leftX, topStartY - 15);
+        ctx.fillText("YANAL İTİM", rightX, topStartY - 15);
+        ctx.fillText("YANAL İTİM", leftX, bottomStartY + 25);
+        ctx.fillText("YANAL İTİM", rightX, bottomStartY + 25);
+
+        ctx.fillStyle = "rgba(0, 150, 255, 0.8)";
+        ctx.font = "bold 13px 'Segoe UI'";
+        ctx.fillText("YÜKSEK BASINÇ", cx, cy - earthR - 40);
+        ctx.fillText("YÜKSEK BASINÇ", cx, cy + earthR + 50);
+        
+        ctx.fillStyle = "rgba(0, 255, 255, 0.9)";
+        ctx.font = "bold 13px 'Segoe UI'";
+        ctx.fillText("DÜŞÜK BASINÇ (Deplasman)", cx - earthR - 100, cy + 5);
+        ctx.fillText("DÜŞÜK BASINÇ (Deplasman)", cx + earthR + 100, cy + 5);
+    }
+
+
+    // Main Loop
+    function animate(timestamp) {
+        requestAnimationFrame(animate);
+
+        // Clear Screen
+        ctx.clearRect(0, 0, width, height);
+
+        const elapsed = timestamp - animStartTime;
+
+        if (currentForce === 1) {
+            drawForce1(elapsed);
+        } else if (currentForce === 2) {
+            drawForce2(elapsed);
+        } else if (currentForce === 3) {
+            drawForce3(elapsed);
+        } else if (currentForce === 4) {
+            drawForce4(elapsed);
+        } else if (currentForce === 5) {
+            drawForce5(elapsed);
+        }
+    }
+
+    // Start
+    requestAnimationFrame(animate);
+
+</script>
+</body>
+</html>

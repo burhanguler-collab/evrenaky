@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evrenakı Teorisi - 4 Boyutlu Hidrodinamik Evren Modeli</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- KaTeX CSS for LaTeX equations -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Supabase JS Client SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- Mermaid (karar ağaçları ve akış şemaları) -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    
+    <!-- PWA & Mobile Web App Meta Tags -->
+    <link rel="icon" type="image/png" href="Gorseller/pwa_icon.png">
+    <link rel="apple-touch-icon" href="Gorseller/pwa_icon.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#030712">
+    <link rel="apple-touch-icon" href="Gorseller/pwa_icon.png">
+    
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="index.css?v=4">
+</head>
+<body class="dark-theme">
+    
+    <!-- Splash Screen Intro -->
+    <div id="splash-screen">
+        <div class="splash-content">
+            <div class="vortex-container">
+                <div class="vortex-core"></div>
+                <div class="vortex-ring ring-1"></div>
+                <div class="vortex-ring ring-2"></div>
+                <div class="vortex-ring ring-3"></div>
+            </div>
+            <div class="splash-text">
+                <h1 class="splash-title">EVRENAKI</h1>
+                <p class="splash-subtitle">Kozmik Girdap Mekaniği</p>
+                <div style="display: flex; justify-content: center; width: 100%;">
+                    <div class="splash-badge-dev">
+                        <i data-lucide="construction" style="width: 14px; height: 14px; color: #ffb020;"></i>
+                        <span>YAPIM AŞAMASINDADIR (BETA)</span>
+                    </div>
+                </div>
+                <p class="splash-statement">"Evrenakı Teorisi'nde varsayımlara yer yoktur; her iddia mutlaka kanıtlarla mühürlenmiştir."</p>
+            </div>
+            <div class="intro-options" style="display: flex; gap: 16px; margin-top: 24px; z-index: 10;">
+                <button id="btn-academic" class="btn btn-primary" onclick="selectVersion('akademik')">
+                    <i data-lucide="book-open"></i> Akademik Sürüm
+                </button>
+                <button id="btn-popular" class="btn btn-peer-review" onclick="selectVersion('populer')">
+                    <i data-lucide="sparkles"></i> Popüler Sürüm
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Background Cosmofluid Particles Effect -->
+    <div class="space-bg">
+        <div class="stars"></div>
+        <div class="glow-orb glow-1"></div>
+        <div class="glow-orb glow-2"></div>
+    </div>
+
+    <!-- Main Container -->
+    <div id="app-wrapper">
+        
+        <!-- Sidebar Navigation -->
+        <aside id="sidebar" class="sidebar">
+            <div class="sidebar-header">
+                <div class="brand">
+                    <i data-lucide="orbit" class="neon-blue-icon animate-spin-slow"></i>
+                    <div class="brand-text">
+                        <h2>EVRENAKI</h2>
+                        <span>Teorik Fizik & Kozmoloji</span>
+                    </div>
+                </div>
+                <button id="btn-close-sidebar" class="btn-icon mobile-only">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+            
+            <!-- Search Bar -->
+            <div class="search-box">
+                <i data-lucide="search"></i>
+                <input type="text" id="search-input" placeholder="Bölüm veya konu ara...">
+            </div>
+            
+            <!-- Navigation Links / TOC -->
+            <nav class="sidebar-nav">
+                <div class="nav-section-title">İÇİNDEKİLER</div>
+                <ul id="toc-list" class="toc-list">
+                    <!-- Dynamic TOC will be loaded here -->
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Page Content Area -->
+        <div id="content-wrapper">
+            
+            <!-- Top Glassmorphic Navigation Bar -->
+            <header id="main-header">
+                <div class="header-left">
+                    <button id="btn-toggle-sidebar" class="btn-icon">
+                        <i data-lucide="menu"></i>
+                    </button>
+                    <div class="header-title">
+                        <h1 id="page-title">Giriş</h1>
+                    </div>
+                </div>
+                
+                <div class="header-right">
+                    <!-- Main Navigation Tabs -->
+                    <div class="nav-tabs">
+                        <button id="tab-book" class="tab-btn active" onclick="switchTab('book')">
+                            <i data-lucide="book-open"></i><span>Kitap Oku</span>
+                        </button>
+                        <button id="tab-sim" class="tab-btn" onclick="switchTab('sim')">
+                            <i data-lucide="activity"></i><span>4D Simülasyon</span>
+                        </button>
+                        <button id="tab-forum" class="tab-btn" onclick="switchTab('forum')">
+                            <i data-lucide="messages-square"></i><span>Tartışma Forumu</span>
+                        </button>
+                    </div>
+
+                    <!-- User Authentication Area -->
+                    <div id="auth-header-group">
+                        <button id="btn-login-trigger" class="btn btn-secondary" onclick="openAuthModal()">
+                            <i data-lucide="log-in"></i> Giriş Yap
+                        </button>
+                        <div id="user-profile-menu" class="user-profile-menu" style="display: none;">
+                            <i data-lucide="user" class="neon-blue-icon"></i>
+                            <span id="user-display-name">Misafir</span>
+                            <button class="btn-icon" onclick="logout()" title="Çıkış Yap">
+                                <i data-lucide="log-out"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Reader Controls -->
+                    <div class="reader-settings">
+                        <button id="btn-decrease-font" class="btn-icon" title="Yazıyı Küçült">
+                            A-
+                        </button>
+                        <button id="btn-increase-font" class="btn-icon" title="Yazıyı Büyüt">
+                            A+
+                        </button>
+                        <button id="btn-theme-toggle" class="btn-icon" title="Tema Değiştir">
+                            <i data-lucide="sun" class="sun-icon"></i>
+                            <i data-lucide="moon" class="moon-icon"></i>
+                        </button>
+                        <button id="btn-stats-toggle" class="btn-icon" onclick="openStatsModal()" title="İstatistikler">
+                            <i data-lucide="bar-chart-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Main Reading Progress Bar -->
+            <div id="progress-bar-container">
+                <div id="progress-bar"></div>
+            </div>
+
+            <!-- Viewport Area -->
+            <main id="main-viewport">
+                
+                <!-- Tab 1: Book Reader -->
+                <section id="pane-book" class="tab-pane active">
+                    <div id="book-content-container">
+                        
+                        <!-- Splash Screen / Home View -->
+                        <div id="home-view" class="fade-in">
+                            <div class="hero-section">
+                                <div class="hero-actions">
+                                    <button class="btn btn-primary" onclick="loadChapter('ozet')" style="background-color: var(--neon-magenta); border-color: var(--neon-magenta);">
+                                        <i data-lucide="book"></i> Kitabın Özeti
+                                    </button>
+                                    <button class="btn btn-primary" onclick="loadChapter('bolum_01')">
+                                        <i data-lucide="book-open"></i> Okumaya Başla
+                                    </button>
+                                    <button class="btn btn-peer-review" onclick="loadChapter('duzeltme')">
+                                        <i data-lucide="shield-check"></i> Hakem Değerlendirmeleri
+                                    </button>
+                                    <button class="btn btn-secondary" onclick="switchTab('sim')">
+                                        <i data-lucide="cpu"></i> Simülasyonu Çalıştır
+                                    </button>
+                                </div>
+                                
+                                <div class="hero-badge">YENİ KOZMOLOJİK PARADİGMA</div>
+                                <h1 class="hero-title">Evrenakı Teorisi</h1>
+                                <p class="hero-subtitle">Uzay boşluğu bir hiçlik değil; Compton frekansında dönen parçacıklar ve süper-akışkan bir okyanustur.</p>
+                            </div>
+
+                            <div class="features-diagram">
+                                <!-- Top Box -->
+                                <div class="diagram-top">
+                                    <div class="only-these-badge">
+                                        EVRENAKI TEORİSİ'NİN ANA UNSURLARI
+                                        <div class="badge-subtext">SADECE BUNLAR!</div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Connector SVG Lines / Arrows -->
+                                <div class="diagram-connectors">
+                                    <svg viewBox="0 0 400 90" preserveAspectRatio="none">
+                                        <defs>
+                                            <!-- Glow Filters -->
+                                            <filter id="glow-blue" x="-20%" y="-20%" width="140%" height="140%">
+                                                <feGaussianBlur stdDeviation="2.5" result="blur" />
+                                                <feMerge>
+                                                    <feMergeNode in="blur" />
+                                                    <feMergeNode in="SourceGraphic" />
+                                                </feMerge>
+                                            </filter>
+                                            <filter id="glow-magenta" x="-20%" y="-20%" width="140%" height="140%">
+                                                <feGaussianBlur stdDeviation="2.5" result="blur" />
+                                                <feMerge>
+                                                    <feMergeNode in="blur" />
+                                                    <feMergeNode in="SourceGraphic" />
+                                                </feMerge>
+                                            </filter>
+                                            
+                                            <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                                                <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="var(--neon-blue)" />
+                                            </marker>
+                                            <marker id="arrow-magenta" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                                                <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="var(--neon-magenta)" />
+                                            </marker>
+                                        </defs>
+                                        <!-- Left Arrow Line -->
+                                        <line x1="200" y1="5" x2="100" y2="88" stroke="var(--neon-blue)" stroke-width="4.5" marker-end="url(#arrow)" filter="url(#glow-blue)" />
+                                        <!-- Right Arrow Line -->
+                                        <line x1="200" y1="5" x2="300" y2="88" stroke="var(--neon-magenta)" stroke-width="4.5" marker-end="url(#arrow-magenta)" filter="url(#glow-magenta)" />
+                                    </svg>
+                                </div>
+                                
+                                <!-- Bottom Cards -->
+                                <div class="features-grid two-cols">
+                                    <div class="feature-card">
+                                        <div class="feature-icon neon-blue-bg">
+                                            <i data-lucide="droplet"></i>
+                                        </div>
+                                        <h3>Plenum (Sürekli Ortam)</h3>
+                                        <p>Uzay boşluğu viskozitesi sıfır olan sıkıştırılabilir bir Cosmofluid ile doludur. Kütleçekimi bu akışkandaki basınç gradyanıdır.</p>
+                                    </div>
+                                    <div class="feature-card">
+                                        <div class="feature-icon neon-magenta-bg">
+                                            <i data-lucide="refresh-cw"></i>
+                                        </div>
+                                        <h3>Evrensel Spin İlkesi</h3>
+                                        <p>Atom altı parçacıklar soyut olasılık bulutları değil, Compton frekansında fiziksel olarak dönen 4 boyutlu girdapsal yapılardır.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Peer Review Banner -->
+                            <div class="peer-review-banner fade-in" onclick="loadChapter('duzeltme')">
+                                <div class="peer-review-content">
+                                    <div class="peer-badge">
+                                        <i data-lucide="file-text"></i> Akademik Akran Denetimi
+                                    </div>
+                                    <h3>Hakem Değerlendirmeleri & Düzeltme Notları</h3>
+                                    <p>Teorinin geliştirilmesi aşamasında bilim insanlarından gelen zorlu itirazlar, Shapiro Gecikmesi hesaplarındaki rölativistik açmazlar ve bunlara verilen matematiksel/hidrodinamik çözümler.</p>
+                                </div>
+                                <div class="peer-action">
+                                    <span>Tartışmaları İncele</span>
+                                    <i data-lucide="arrow-right"></i>
+                                </div>
+                            </div>
+
+                            <div class="quote-card-home">
+                                <p>“Okuyacağınız bu kitap, geçmişin bilimsel dehalarıyla savaşıyor izlenimi uyandırabilir; oysa gerçekte, o dehaların unutulan doğrularının melodisini yeniden seslendirmekte ve onları devasa bir akışkanlar mekaniği senfonisinde birleştirmektedir.”</p>
+                                <span>— Evrenakı Teorisi, Önsöz</span>
+                            </div>
+                        </div>
+
+                        <!-- Markdown Reader (hidden by default, shown when chapter loaded) -->
+                        <div id="reader-view" class="fade-in" style="display: none;">
+                            <article id="markdown-body" class="markdown-body">
+                                <!-- Dynamic Markdown Content will be injected here -->
+                            </article>
+                            
+                            <!-- Chapter Navigation -->
+                            <footer class="reader-footer">
+                                <button id="btn-prev-chap" class="btn btn-secondary">
+                                    <i data-lucide="arrow-left"></i> Önceki Bölüm
+                                </button>
+                                <button id="btn-next-chap" class="btn btn-primary">
+                                    Sonraki Bölüm <i data-lucide="arrow-right"></i>
+                                </button>
+                            </footer>
+
+                            <!-- Comments Section -->
+                            <div id="comments-section" class="comments-section">
+                                <h3>Bölüm Yorumları (<span id="comment-count">0</span>)</h3>
+                                
+                                <div id="comment-write-area">
+                                    <!-- Logged-in view -->
+                                    <div id="comment-write-logged" style="display: none;">
+                                        <textarea id="comment-textarea" placeholder="Bu bölüm hakkında ne düşünüyorsunuz? Düşüncelerinizi paylaşın..."></textarea>
+                                        <div class="comment-submit-row">
+                                            <button class="btn btn-primary" onclick="submitComment()">Yorum Gönder</button>
+                                        </div>
+                                    </div>
+                                    <!-- Guest view -->
+                                    <div id="comment-write-guest">
+                                        <div class="comment-guest-card">
+                                            <p>Bu bölüme yorum yazabilmek için üye olmanız gerekmektedir.</p>
+                                            <button class="btn btn-peer-review" onclick="openAuthModal()">Giriş Yap / Üye Ol</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="comments-list" class="comments-list">
+                                    <!-- Comments list will be injected here -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Tab 2: Simulation Viewport -->
+                <section id="pane-sim" class="tab-pane">
+                    <div class="simulation-container">
+                        <div class="simulation-header">
+                            <div class="sim-title">
+                                <h2>Etkileşimli 4D Cosmofluid Simülasyonu</h2>
+                                <p>Mikro girdapların merkezcil itim (kütleçekim) ile birikerek makro bir küresel cisim oluşturma sürecini canlı izleyin.</p>
+                            </div>
+                            <button class="btn btn-secondary" onclick="reloadSimulation()">
+                                <i data-lucide="rotate-ccw"></i> Simülasyonu Yeniden Yükle
+                            </button>
+                        </div>
+                        <div class="iframe-wrapper">
+                            <iframe id="sim-frame" src="Simulasyon/eksenel_itim_oto.html" frameborder="0"></iframe>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Tab 3: Discussion Forum -->
+                <section id="pane-forum" class="tab-pane">
+                    <div class="forum-container">
+                        <div class="forum-sidebar">
+                            <button class="btn btn-primary btn-new-thread" onclick="openNewThreadModal()">
+                                <i data-lucide="plus"></i> Yeni Konu Aç
+                            </button>
+                            <div class="forum-categories">
+                                <h4>Kategoriler</h4>
+                                <ul>
+                                    <li id="cat-all" class="active" onclick="loadForumThreads('all')"><i data-lucide="layers"></i> Tüm Başlıklar</li>
+                                    <li id="cat-genel" onclick="loadForumThreads('genel')"><i data-lucide="message-square"></i> Genel Tartışma</li>
+                                    <li id="cat-fizik" onclick="loadForumThreads('fizik')"><i data-lucide="atom"></i> Fizik & Matematik</li>
+                                    <li id="cat-deneyler" onclick="loadForumThreads('deneyler')"><i data-lucide="test-tube"></i> Deney Yorumları</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="forum-board">
+                            <!-- Thread List View -->
+                            <div id="forum-threads" class="forum-threads">
+                                <!-- Thread items will be injected here -->
+                            </div>
+
+                            <!-- Thread Detail View -->
+                            <div id="forum-thread-detail" class="forum-thread-detail" style="display: none;">
+                                <button class="btn btn-secondary btn-back-forum" onclick="showThreadsList()">
+                                    <i data-lucide="arrow-left"></i> Konu Listesine Dön
+                                </button>
+                                
+                                <div id="thread-op-card" class="thread-op-card">
+                                    <!-- Original post content -->
+                                </div>
+
+                                <div class="replies-header">
+                                    <h4>Cevaplar (<span id="reply-count">0</span>)</h4>
+                                </div>
+
+                                <div id="replies-list" class="replies-list">
+                                    <!-- Replies injected here -->
+                                </div>
+
+                                <div id="reply-write-area" class="reply-write-area">
+                                    <!-- Logged-in reply box -->
+                                    <div id="reply-write-logged" style="display: none;">
+                                        <textarea id="reply-textarea" placeholder="Cevabınızı yazın..."></textarea>
+                                        <button class="btn btn-primary" onclick="submitReply()">Cevap Gönder</button>
+                                    </div>
+                                    <!-- Guest view -->
+                                    <div id="reply-write-guest">
+                                        <div class="comment-guest-card">
+                                            <p>Tartışmaya cevap yazabilmek için üye olmanız gerekmektedir.</p>
+                                            <button class="btn btn-peer-review" onclick="openAuthModal()">Giriş Yap / Üye Ol</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </main>
+
+        </div>
+
+    </div>
+
+    <!-- Marked JS for Markdown Parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <!-- KaTeX JS for LaTeX Equations -->
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+
+    <!-- Auth Modal Pop-up -->
+    <div id="auth-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h2 id="auth-modal-title">Giriş Yap</h2>
+                <button class="btn-icon" onclick="closeAuthModal()"><i data-lucide="x"></i></button>
+            </div>
+            
+            <div class="auth-tabs">
+                <button id="auth-tab-signin" class="auth-tab-btn active" onclick="switchAuthTab('signin')">Giriş Yap</button>
+                <button id="auth-tab-signup" class="auth-tab-btn" onclick="switchAuthTab('signup')">Üye Ol</button>
+            </div>
+
+            <div class="auth-forms">
+                <form id="form-auth" onsubmit="handleAuthSubmit(event)">
+                    <div class="form-group" id="group-username" style="display: none;">
+                        <label for="auth-username">Kullanıcı Adı</label>
+                        <input type="text" id="auth-username" placeholder="kullanici_adi">
+                    </div>
+                    <div class="form-group">
+                        <label for="auth-email">E-posta</label>
+                        <input type="email" id="auth-email" placeholder="ornek@mail.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="auth-password">Şifre</label>
+                        <input type="password" id="auth-password" placeholder="••••••••">
+                    </div>
+                    <button type="submit" id="btn-auth-submit" class="btn btn-primary">Giriş Yap</button>
+                </form>
+            </div>
+
+            <div class="auth-divider"><span>VEYA</span></div>
+            <div class="social-login">
+                <button class="btn btn-secondary btn-social" onclick="loginWithOAuth('google')">
+                    <i data-lucide="chrome" class="social-google"></i> Google ile Katıl
+                </button>
+                <button class="btn btn-secondary btn-social" onclick="loginWithOAuth('github')">
+                    <i data-lucide="github" class="social-github"></i> GitHub ile Katıl
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- New Thread Modal -->
+    <div id="new-thread-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h2>Yeni Tartışma Konusu Aç</h2>
+                <button class="btn-icon" onclick="closeNewThreadModal()"><i data-lucide="x"></i></button>
+            </div>
+            <form id="form-new-thread" onsubmit="handleNewThreadSubmit(event)">
+                <div class="form-group">
+                    <label for="thread-title">Konu Başlığı</label>
+                    <input type="text" id="thread-title" required placeholder="Başlık yazın...">
+                </div>
+                <div class="form-group">
+                    <label for="thread-category">Kategori</label>
+                    <select id="thread-category" required>
+                        <option value="genel">Genel Tartışma</option>
+                        <option value="fizik">Fizik & Matematik</option>
+                        <option value="deneyler">Deney Yorumları</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="thread-content">İçerik / Detaylar</label>
+                    <textarea id="thread-content" required placeholder="Açıklamanızı yazın..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Konuyu Aç</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- New Peer Review Submission Modal -->
+    <div id="peer-review-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h2 style="display: flex; align-items: center; gap: 8px; font-family: var(--font-heading); color: var(--neon-blue);">
+                    <i data-lucide="shield-check"></i> Akademik Değerlendirme Sun
+                </h2>
+                <button class="btn-icon" onclick="closePeerReviewModal()"><i data-lucide="x"></i></button>
+            </div>
+            <form id="form-peer-review" onsubmit="handlePeerReviewSubmit(event)">
+                <div class="form-group-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                    <div class="form-group">
+                        <label for="review-reviewer-name">Adınız Soyadınız</label>
+                        <input type="text" id="review-reviewer-name" required placeholder="Örn: Prof. Dr. Ahmet Yılmaz">
+                    </div>
+                    <div class="form-group">
+                        <label for="review-academic-title">Akademik Ünvanınız</label>
+                        <input type="text" id="review-academic-title" required placeholder="Örn: Profesör, Doçent, Araştırmacı">
+                    </div>
+                </div>
+                <div class="form-group-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 8px;">
+                    <div class="form-group">
+                        <label for="review-institution">Çalıştığınız Kurum</label>
+                        <input type="text" id="review-institution" required placeholder="Örn: ODTÜ, Boğaziçi Üni.">
+                    </div>
+                    <div class="form-group">
+                        <label for="review-expertise">Uzmanlık Alanınız</label>
+                        <input type="text" id="review-expertise" required placeholder="Örn: Astrofizik, Yüksek Enerji Fiziği">
+                    </div>
+                </div>
+                <div class="form-group-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 8px;">
+                    <div class="form-group">
+                        <label for="review-email">E-posta Adresiniz</label>
+                        <input type="email" id="review-email" required placeholder="Örn: mehmet@universite.edu.tr">
+                    </div>
+                    <div class="form-group">
+                        <label for="review-orcid">ORCID ID (Opsiyonel)</label>
+                        <input type="text" id="review-orcid" placeholder="Örn: 0000-0002-1825-0097">
+                    </div>
+                </div>
+                <div class="form-group" style="margin-top: 8px;">
+                    <label for="review-text">Değerlendirme Raporu / Eleştiri Metni</label>
+                    <textarea id="review-text" required placeholder="Teori hakkındaki değerlendirmelerinizi, formülasyon eleştirilerinizi veya destekleyici görüşlerinizi detaylıca yazın..." style="height: 140px;"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="margin-top: 12px; width: 100%;">Değerlendirmeyi Gönder (Onaya İlet)</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Admin Statistics Modal -->
+    <div id="stats-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-card stats-modal-card">
+            <div class="modal-header">
+                <h2 style="display: flex; align-items: center; gap: 8px; font-family: var(--font-heading); color: var(--neon-blue);">
+                    <i data-lucide="bar-chart-2"></i> İstatistikler & Analiz
+                </h2>
+                <button class="btn-icon" onclick="closeStatsModal()"><i data-lucide="x"></i></button>
+            </div>
+            
+            <div class="stats-summary-grid">
+                <div class="stat-box">
+                    <span class="stat-val" id="stat-total-visits">0</span>
+                    <span class="stat-lbl">Toplam Oturum</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-val" id="stat-total-views">0</span>
+                    <span class="stat-lbl">Sayfa Gösterimi</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-val" id="stat-avg-duration">0s</span>
+                    <span class="stat-lbl">Ort. Kalış Süresi</span>
+                </div>
+            </div>
+
+            <div class="stats-detail-section">
+                <h3>Bölüm Okunma Dağılımı</h3>
+                <div class="stats-list" id="stats-chapters-list">
+                    <!-- Dynamic stats will load here -->
+                </div>
+            </div>
+
+            <div class="stats-detail-section" style="margin-top: 20px;">
+                <h3>Genel Portal Özeti</h3>
+                <div class="stats-list-horizontal">
+                    <div class="stat-item-sub"><strong>Üye:</strong> <span id="stat-total-users">0</span></div>
+                    <div class="stat-item-sub"><strong>Yorum:</strong> <span id="stat-total-comments">0</span></div>
+                    <div class="stat-item-sub"><strong>Forum Konusu:</strong> <span id="stat-total-threads">0</span></div>
+                </div>
+            </div>
+
+            <!-- Admin Peer Review Moderation Section -->
+            <div class="stats-detail-section" id="admin-reviews-section" style="margin-top: 20px; display: none;">
+                <h3 style="color: var(--neon-magenta); border-bottom-color: rgba(255, 0, 127, 0.15);">Bekleyen Hakem Değerlendirmeleri</h3>
+                <div id="admin-pending-reviews-list" class="admin-reviews-list">
+                    <!-- Pending reviews will be loaded here dynamically -->
+                </div>
+            </div>
+            
+            <div class="stats-info-footer" style="margin-top: 20px; font-size: 0.75rem; color: var(--text-muted); display: flex; align-items: center; gap: 6px; border-top: 1px solid var(--border-color); padding-top: 12px;">
+                <i data-lucide="info" style="width: 14px; height: 14px; color: var(--neon-blue);"></i> 
+                <span>Bu veriler yerel modda tarayıcı önbelleğinizden (localStorage), canlı modda ise doğrudan Supabase bulut veritabanınızdan anlık çekilmektedir.</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- App Logic -->
+    <script src="app.js?v=3"></script>
+    <!-- Firebase Veritabanı Entegrasyonu (Şu an Mock modda çalışması için devre dışı) -->
+    <!-- <script type="module" src="firebase-client.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mach-Zehnder İnterferometresi: Kuantum Silici Yanılgısı</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --panel-bg: rgba(30, 30, 30, 0.8);
+            --accent: #00ffcc;
+            --accent-alt: #ff00ff;
+            --accent-glow: rgba(0, 255, 204, 0.5);
+            --text-main: #e0e0e0;
+            --text-muted: #888;
+            --border-radius: 12px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        #app-container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 1200px;
+            height: 100%;
+            background: rgba(20, 20, 20, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+            position: relative;
+        }
+
+        header {
+            padding: 15px 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--panel-bg);
+            border-top-left-radius: var(--border-radius);
+            border-top-right-radius: var(--border-radius);
+        }
+
+        header h1 {
+            font-size: 1.2rem;
+            color: var(--accent);
+            text-shadow: 0 0 10px var(--accent-glow);
+        }
+
+        .controls-panel {
+            display: flex;
+            padding: 15px 20px;
+            background: rgba(0,0,0,0.5);
+            gap: 20px;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .control-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            flex: 1;
+        }
+
+        .control-group label {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .radio-label {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            padding: 8px 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 6px;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: 0.3s;
+        }
+
+        .radio-label:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .radio-label input[type="radio"] {
+            accent-color: var(--accent);
+        }
+        
+        .radio-label.active {
+            border-color: var(--accent);
+            background: rgba(0, 255, 204, 0.1);
+            box-shadow: 0 0 10px rgba(0, 255, 204, 0.2);
+        }
+
+        #simulation-area {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+        }
+
+        canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .info-panel {
+            background: rgba(10,10,10,0.85);
+            padding: 15px 20px;
+            border-top: 1px solid rgba(255,255,255,0.15);
+            font-size: 0.9rem;
+            line-height: 1.5;
+            border-bottom-left-radius: var(--border-radius);
+            border-bottom-right-radius: var(--border-radius);
+            flex-shrink: 0;
+        }
+        
+        .info-panel h3 {
+            color: var(--accent);
+            margin-bottom: 8px;
+            font-size: 1.05rem;
+        }
+
+        .quantum-myth {
+            color: #ff4444;
+            font-style: italic;
+            margin-bottom: 10px;
+            padding-left: 10px;
+            border-left: 3px solid #ff4444;
+        }
+
+        .physics-reality {
+            color: #00ffcc;
+            padding-left: 10px;
+            border-left: 3px solid #00ffcc;
+        }
+    </style>
+</head>
+<body>
+
+<div id="app-container">
+    <header>
+        <h1 style="color: #fff; text-shadow: 0 0 10px rgba(0, 229, 255, 0.5);">Animasyon 21.3: Mach-Zehnder İnterferometresi ve Kuantum Silici Yanılgısı</h1>
+    </header>
+    
+    <div class="controls-panel">
+        <div class="control-group">
+            <label>Deney Durumu</label>
+            <div class="radio-group" id="state-radios">
+                <label class="radio-label active">
+                    <input type="radio" name="exp_state" value="natural" checked> 
+                    1. Doğal Durum (Girişim Var)
+                </label>
+                <label class="radio-label">
+                    <input type="radio" name="exp_state" value="which_path"> 
+                    2. Etiketli Kollar (Dik Filtreler)
+                </label>
+                <label class="radio-label">
+                    <input type="radio" name="exp_state" value="eraser"> 
+                    3. Kuantum Silici (45° Analizör Eklendi)
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div id="simulation-area">
+        <canvas id="simCanvas"></canvas>
+    </div>
+    
+    <div class="info-panel">
+        <h3 id="status-title">Durum: Doğal Girişim</h3>
+        <div class="quantum-myth" id="quantum-desc">
+            Kuantum Yorumu: Foton bir olasılık dalgası olarak bölünür, aynı anda iki yoldan (A ve B) geçer. Hedefte birleşerek kendisiyle girişim yapar. D1 ekranı aydınlık, D2 karanlık olur.
+        </div>
+        <div class="physics-reality" id="physics-desc">
+            Fiziksel Gerçeklik: Dalgalar BS1 aynasında fiziksel olarak iki yola ayrılır. Hiçbir dış müdahale olmadığı için BS2 aynasında (hedefte) tekrar karşılaştıklarında mükemmel şekilde süperpoze olurlar. Akıntı kanalları uyumludur.
+        </div>
+    </div>
+</div>
+
+<script>
+    const canvas = document.getElementById('simCanvas');
+    const ctx = canvas.getContext('2d');
+    const radios = document.querySelectorAll('input[name="exp_state"]');
+    
+    const statusTitle = document.getElementById('status-title');
+    const quantumDesc = document.getElementById('quantum-desc');
+    const physicsDesc = document.getElementById('physics-desc');
+
+    let currentState = 'natural';
+    let time = 0;
+
+    function resize() {
+        const rect = canvas.parentElement.getBoundingClientRect();
+        canvas.width = rect.width;
+        canvas.height = rect.height;
+    }
+    window.addEventListener('resize', resize);
+    resize();
+
+    radios.forEach(radio => {
+        radio.addEventListener('change', (e) => {
+            document.querySelectorAll('.radio-label').forEach(lbl => lbl.classList.remove('active'));
+            e.target.closest('.radio-label').classList.add('active');
+            currentState = e.target.value;
+            updateDescriptions();
+        });
+    });
+
+    function updateDescriptions() {
+        if (currentState === 'natural') {
+            statusTitle.textContent = "Durum 1: Doğal Girişim (D1 Aydınlık, D2 Karanlık)";
+            statusTitle.style.color = "#00ffcc";
+            quantumDesc.innerHTML = "<b>Standart Yorum:</b> Foton aynı anda iki yoldan da geçer. Hangi yoldan geçtiği bilinmediği için dalga çökmüştür ve girişim deseni görülür (D1 her zaman tetiklenir).";
+            physicsDesc.innerHTML = "<b>Fiziksel Gerçeklik:</b> A ve B kollarından gelen dalgalar, aynı düzlemde titreştikleri için BS2 aynasında tam ve mükemmel bir süperpozisyon oluştururlar.";
+        } else if (currentState === 'which_path') {
+            statusTitle.textContent = "Durum 2: Etiketli Kollar (Girişim Kayboldu, İki Ekran da Yarı Yarıya)";
+            statusTitle.style.color = "#ff4444";
+            quantumDesc.innerHTML = "<b>Standart Yorum (İllüzyon):</b> A koluna 0°, B koluna 90° filtre kondu. Sistem 'izlendiğini' anladı, hangi yoldan geçildiği bilgisi evrene sızdı ve dalga fonksiyonu <b>çöktü</b>!";
+            physicsDesc.innerHTML = "<b>Fiziksel Gerçeklik:</b> Çöküş veya bilinç yoktur. A kolundaki dalgalar 0°, B kolundakiler 90° titreşmeye zorlandı. Birbirine dik (düzlemsel kaostaki) dalgalar birleşme aynasında süperpoze olamaz. Enerji her iki ekrana da homojen dağılır.";
+        } else if (currentState === 'eraser') {
+            statusTitle.textContent = "Durum 3: Kuantum Silici (Girişim Geri Geldi)";
+            statusTitle.style.color = "#ff00ff";
+            quantumDesc.innerHTML = "<b>Standart Yorum:</b> Kollar birleşmeden hemen önce 45° silici kondu ve fotonun geçmişteki yol bilgisi silindi. Zaman geriye aktı ve foton sanki en baştan itibaren etiketsiz geçmiş gibi davrandı!";
+            physicsDesc.innerHTML = "<b>Fiziksel Gerçeklik:</b> Geçmişin silinmesi bir safsatadır. 45°'lik polarizör sihirli bir cihaz değildir, sadece 'Senkronizör'dür. Uyumsuz/dik gelen iki dalgayı fiziksel bir dar boğazdan geçirerek zorla <b>aynı titreşim düzlemine (45°) hizalamıştır</b>. Dalgalar tekrar hizalandığı için süperpozisyon (girişim) mekanik olarak geri dönmüştür.";
+        }
+    }
+    updateDescriptions();
+
+    function deg2rad(deg) { return deg * Math.PI / 180; }
+
+    // Draw Polarizer Graphic
+    function drawPolarizer(x, y, angleDeg, color, label) {
+        ctx.save();
+        ctx.translate(x, y);
+        
+        ctx.fillStyle = "rgba(0, 200, 255, 0.15)";
+        ctx.strokeStyle = color;
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        // A little rectangular glass filter
+        ctx.roundRect(-15, -30, 30, 60, 4);
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.rotate(deg2rad(angleDeg));
+        ctx.strokeStyle = "rgba(255, 255, 255, 0.5)";
+        ctx.lineWidth = 1.5;
+        // Lines indicating polarization
+        for (let i = -10; i <= 10; i += 5) {
+            ctx.beginPath();
+            ctx.moveTo(i, -25);
+            ctx.lineTo(i, 25);
+            ctx.stroke();
+        }
+
+        ctx.restore();
+
+        ctx.fillStyle = color;
+        ctx.font = "bold 11px sans-serif";
+        ctx.textAlign = "center";
+        ctx.fillText(label, x, y + 45);
+    }
+
+    // Draw Beam Splitter or Mirror
+    function drawOpticalElement(x, y, isMirror, label) {
+        ctx.save();
+        ctx.translate(x, y);
+        ctx.rotate(deg2rad(45)); // Diagonal
+
+        if (isMirror) {
+            ctx.fillStyle = "#aaa";
+            ctx.fillRect(-2, -35, 4, 70);
+            ctx.fillStyle = "rgba(255, 255, 255, 0.8)";
+            ctx.fillRect(-2, -35, 1, 70); // shiny surface
+        } else {
+            // Beam Splitter (semi-transparent)
+            ctx.fillStyle = "rgba(0, 255, 255, 0.3)";
+            ctx.strokeStyle = "#00ffff";
+            ctx.lineWidth = 1;
+            ctx.fillRect(-3, -35, 6, 70);
+            ctx.strokeRect(-3, -35, 6, 70);
+        }
+
+        ctx.restore();
+
+        ctx.fillStyle = "white";
+        ctx.font = "bold 12px sans-serif";
+        ctx.textAlign = "center";
+        ctx.fillText(label, x - 25, y - 25);
+    }
+
+    function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+        // Layout points
+        const marginY = 80;
+        const leftX = Math.max(100, canvas.width * 0.15);
+        const rightX = Math.min(canvas.width - 200, canvas.width * 0.75);
+        const topY = marginY;
+        const botY = canvas.height - marginY;
+
+        // Path A: leftX (up) -> topY, then (right) -> rightX
+        // Path B: leftX (right) -> rightX, then (up) -> topY
+
+        let hasTags = (currentState !== 'natural');
+        let hasEraser = (currentState === 'eraser');
+
+        // Draw Beams
+        ctx.lineWidth = 6;
+        ctx.setLineDash([15, 15]);
+        ctx.lineDashOffset = -time * 50;
+
+        ctx.strokeStyle = "rgba(0, 255, 204, 0.5)";
+        ctx.shadowColor = "rgba(0, 255, 204, 1)";
+        ctx.shadowBlur = 15;
+        
+        ctx.beginPath();
+        ctx.moveTo(10, botY);
+        ctx.lineTo(leftX, botY);
+        ctx.stroke();
+
+        // Path A (Up then Right)
+        let colorA = (hasTags && !hasEraser) ? "rgba(0, 200, 255, 0.5)" : "rgba(0, 255, 204, 0.5)"; // cyan
+        ctx.strokeStyle = colorA;
+        ctx.shadowColor = colorA;
+        ctx.beginPath();
+        ctx.moveTo(leftX, botY);
+        ctx.lineTo(leftX, topY);
+        ctx.lineTo(rightX, topY);
+        ctx.stroke();
+
+        // Path B (Right then Up)
+        let colorB = (hasTags && !hasEraser) ? "rgba(255, 0, 100, 0.5)" : "rgba(0, 255, 204, 0.5)"; 
+        ctx.strokeStyle = colorB;
+        ctx.shadowColor = colorB;
+        ctx.beginPath();
+        ctx.moveTo(leftX, botY);
+        ctx.lineTo(rightX, botY);
+        ctx.lineTo(rightX, topY);
+        ctx.stroke();
+
+        ctx.setLineDash([]);
+        ctx.shadowBlur = 0;
+
+        // Beams out of BS2 (To D1 and D2)
+        ctx.setLineDash([15, 15]);
+        ctx.lineDashOffset = -time * 50;
+
+        let intensityD1 = 1; // Constructive default
+        let intensityD2 = 0; // Destructive default
+        
+        if (hasTags && !hasEraser) {
+            intensityD1 = 0.5;
+            intensityD2 = 0.5;
+        } else if (hasEraser) {
+            intensityD1 = 1;
+            intensityD2 = 0;
+        }
+
+        // To D1
+        if (intensityD1 > 0) {
+            ctx.lineWidth = 6;
+            let strokeColor = hasEraser ? "rgba(255, 0, 255, 0.5)" : (hasTags ? "rgba(150, 100, 200, 0.5)" : "rgba(0, 255, 204, 0.5)");
+            ctx.strokeStyle = strokeColor;
+            ctx.shadowColor = strokeColor;
+            ctx.shadowBlur = 10;
+            ctx.beginPath();
+            ctx.moveTo(rightX, topY);
+            ctx.lineTo(rightX + 100, topY);
+            ctx.stroke();
+        }
+
+        // To D2
+        if (intensityD2 > 0) {
+            ctx.lineWidth = 6;
+            let strokeColor = hasEraser ? "rgba(255, 0, 255, 0.5)" : (hasTags ? "rgba(150, 100, 200, 0.5)" : "rgba(0, 255, 204, 0.5)");
+            ctx.strokeStyle = strokeColor;
+            ctx.shadowColor = strokeColor;
+            ctx.shadowBlur = 10;
+            ctx.beginPath();
+            ctx.moveTo(rightX, topY);
+            ctx.lineTo(rightX, topY - 70);
+            ctx.stroke();
+        }
+        
+        ctx.setLineDash([]);
+        ctx.shadowBlur = 0;
+
+        // Draw Optical Elements
+        drawOpticalElement(leftX, botY, false, "BS1"); // Splitter 1
+        drawOpticalElement(leftX, topY, true, "M1"); // Mirror 1
+        drawOpticalElement(rightX, botY, true, "M2"); // Mirror 2
+        drawOpticalElement(rightX, topY, false, "BS2"); // Splitter 2
+
+        // Draw Polarizers (Tags)
+        if (hasTags) {
+            // Path A Polarizer (0°)
+            drawPolarizer(leftX + (rightX - leftX)/2, topY, 0, "#00aaff", "Pol A (0°)");
+            // Path B Polarizer (90°)
+            drawPolarizer(rightX, botY - (botY - topY)/2, 90, "#ff0066", "Pol B (90°)");
+        }
+
+        // Draw Eraser (45°)
+        if (hasEraser) {
+            // Placed just before BS2 on both arms
+            drawPolarizer(rightX - 40, topY, 45, "#ff00ff", "Silici");
+            drawPolarizer(rightX, topY + 40, 45, "#ff00ff", "Silici");
+        }
+
+        // Draw Laser Source Box
+        ctx.fillStyle = "#00ffcc";
+        ctx.fillRect(5, botY - 15, 30, 30);
+        ctx.fillStyle = "white";
+        ctx.font = "bold 12px sans-serif";
+        ctx.fillText("LAZER", 20, botY + 30);
+
+        // Draw Detectors (Screens)
+        let hasInterference = (!hasTags || hasEraser);
+        let baseD1 = hasEraser ? [255, 0, 255] : (hasTags ? [150, 150, 150] : [0, 255, 204]);
+        let baseD2 = hasEraser ? [255, 0, 255] : (hasTags ? [150, 150, 150] : [0, 255, 204]);
+        
+        // Helper function for drawing screen fringes
+        function drawScreenFringes(sx, sy, w, h, isVertical, intensityMultiplier, baseColor) {
+            if (intensityMultiplier === 0) return;
+            for (let i = 0; i < (isVertical ? h : w); i++) {
+                let localIntensity = intensityMultiplier;
+                if (hasInterference) {
+                    let totalLength = isVertical ? h : w;
+                    let k = (3 * Math.PI * 2) / totalLength; 
+                    localIntensity *= (0.5 + 0.5 * Math.cos(k * i));
+                }
+                let r = Math.floor(baseColor[0] * localIntensity);
+                let g = Math.floor(baseColor[1] * localIntensity);
+                let b = Math.floor(baseColor[2] * localIntensity);
+                
+                ctx.fillStyle = `rgb(${r}, ${g}, ${b})`;
+                if (isVertical) {
+                    ctx.fillRect(sx, sy + i, w, 1);
+                } else {
+                    ctx.fillRect(sx + i, sy, 1, h);
+                }
+            }
+        }
+
+        // D1 (Right, Vertical screen)
+        drawScreenFringes(rightX + 100, topY - 30, 10, 60, true, intensityD1, baseD1);
+        ctx.fillStyle = "white";
+        ctx.fillText("Ekran D1", rightX + 130, topY + 5);
+
+        // D2 (Top, Horizontal screen)
+        drawScreenFringes(rightX - 30, topY - 80, 60, 10, false, intensityD2, baseD2);
+        ctx.fillStyle = "white";
+        ctx.fillText("Ekran D2", rightX, topY - 95);
+
+        time += 0.02;
+
+        requestAnimationFrame(draw);
+    }
+
+    draw();
+</script>
+</body>
+</html>

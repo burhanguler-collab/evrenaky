@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Evrenakı - Doğrusal Zerre Katarı</title>
+    <style>
+        body { margin: 0; padding: 0; background-color: #02050a; color: #fff; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; overflow: hidden; }
+        #canvas-container { position: relative; width: 100%; height: 100vh; display: flex; flex-direction: column; }
+        canvas { flex-grow: 1; cursor: default; }
+        #controls { padding: 15px 25px; background: rgba(5, 10, 20, 0.95); border-bottom: 1px solid #1a2540; display: flex; align-items: center; justify-content: space-between; }
+        .control-group { display: flex; align-items: center; gap: 15px; margin-bottom: 5px;}
+        .control-row { display: flex; flex-direction: column; gap: 5px; }
+        label { font-size: 14px; font-weight: 600; color: #88aaff; min-width: 130px; }
+        input[type=range] { width: 150px; cursor: pointer; }
+        .info { font-size: 13px; color: #aaa; max-width: 500px; line-height: 1.4; margin-left: 20px;}
+        .badge { background: #1a2540; padding: 4px 8px; border-radius: 4px; color: #00ffff; font-family: monospace; font-size: 14px; font-weight: bold; min-width: 50px; text-align: center;}
+    </style>
+</head>
+<body>
+
+<div id="canvas-container">
+    <div id="controls">
+        <div class="control-row">
+            <div class="control-group">
+                <label for="freqSlider">Ateşleme Frekansı:</label>
+                <input type="range" id="freqSlider" min="1" max="10" value="1">
+            </div>
+            <div class="control-group">
+                <label for="densitySlider">Ortam Yoğunluğu:</label>
+                <input type="range" id="densitySlider" min="0" max="100" value="0">
+            </div>
+        </div>
+        <div class="info">
+            <strong>Doğrusal Zerre Katarı:</strong> Özdeş kaynaklardan sürekli ateşlenen Zerreler, kütlesiz uzayda hiçbir kavis çizmeden, mutlak doğrusal bir hat üzerinde ilerler. Işık bir dalga değil, bu periyodik zerre diziliminin kendisidir.
+        </div>
+    </div>
+    <canvas id="simCanvas"></canvas>
+</div>
+
+<script>
+    const canvas = document.getElementById('simCanvas');
+    const ctx = canvas.getContext('2d');
+    const freqSlider = document.getElementById('freqSlider');
+    const densitySlider = document.getElementById('densitySlider');
+
+    let width, height;
+    function resize() {
+        width = canvas.clientWidth;
+        height = canvas.clientHeight;
+        canvas.width = width;
+        canvas.height = height;
+    }
+    window.addEventListener('resize', resize);
+    resize();
+
+    // Simülasyon Değişkenleri
+    const NUM_BEAMS = 6;
+    let hitColor = '#ff0000';
+    
+    // Aktif zerreleri tutacağımız liste
+    let activeParticles = [];
+    let spawnTimer = 0;
+
+    function update() {
+        if (!width) return;
+        
+        let freq = parseInt(freqSlider.value);
+        let density = parseInt(densitySlider.value);
+        
+        // Hız hesabı (Yoğunluk %100 olduğunda hız maksimum %30 yavaşlayarak 0.8'den 0.56'ya düşer)
+        let currentSpeed = 0.8 * (1 - (density / 100) * 0.30);
+        
+        let spacingFrames = Math.floor(200 - freq * 12) / 0.8; 
+        
+        spawnTimer++;
+        if (spawnTimer >= spacingFrames) {
+            spawnTimer = 0;
+            activeParticles.push({ x: 50 });
+        }
+        
+        // Zerreleri hareket ettir
+        let nextParticles = [];
+        for (let p of activeParticles) {
+            p.x += currentSpeed;
+            if (p.x <= width - 55) {
+                nextParticles.push(p);
+            }
+        }
+        activeParticles = nextParticles;
+    }
+
+    function draw() {
+        if (!width) return;
+        
+        let density = parseInt(densitySlider.value);
+        // Eflâtun arka plan: Koyu (L=4%) -> Açık (L=25%)
+        let lightness = 4 + (density / 100) * 21;
+        ctx.fillStyle = `hsl(270, 40%, ${lightness}%)`;
+        ctx.fillRect(0, 0, width, height);
+
+        let freq = parseInt(freqSlider.value);
+        let spacing = Math.floor(200 - freq * 12);
+        
+        const spectrumHues = [0, 5, 15, 30, 60, 120, 180, 220, 250, 280];
+        let hue = spectrumHues[freq - 1]; 
+        hitColor = `hsl(${hue}, 100%, 50%)`;
+
+        let startY = height / 2 - 125;
+        let gap = 50; 
+        
+        // Zerreleri Çiz
+        for (let i = 0; i < NUM_BEAMS; i++) {
+            let beamY = startY + i * gap;
+            
+            for (let p of activeParticles) {
+                let x = p.x;
+                
+                // Zerre'nin Kuyruğu (Bağımsız Fiziksel Koni)
+                let tailPixels = 144; 
+                let headX = x;
+                let tailX = Math.max(50, x - tailPixels);
+                
+                let currentTailLen = headX - tailX;
+                let tailRadius = 4 + (currentTailLen / tailPixels) * 12;
+                
+                ctx.beginPath();
+                ctx.moveTo(headX, beamY - 4);
+                ctx.lineTo(tailX, beamY - tailRadius);
+                ctx.lineTo(tailX, beamY + tailRadius);
+                ctx.lineTo(headX, beamY + 4);
+                ctx.closePath();
+                
+                let grad = ctx.createLinearGradient(headX, beamY, tailX, beamY);
+                grad.addColorStop(0, 'rgba(255, 255, 255, 0.40)');
+                grad.addColorStop(0.5, 'rgba(255, 255, 255, 0.15)');
+                grad.addColorStop(1, 'rgba(255, 255, 255, 0)');
+                
+                ctx.fillStyle = grad;
+                ctx.fill();
+                
+                // Zerre (Ana Mermi)
+                ctx.beginPath();
+                ctx.arc(x, beamY, 4.5, 0, Math.PI * 2);
+                ctx.fillStyle = '#ffffff';
+                ctx.shadowBlur = 15;
+                ctx.shadowColor = '#ffffff';
+                ctx.fill();
+                ctx.shadowBlur = 0;
+            }
+        }
+
+        // Hedef Ekran (Sürekli aktif ve frekans renginde)
+        ctx.shadowBlur = 50;
+        ctx.shadowColor = hitColor;
+        ctx.fillStyle = hitColor;
+        ctx.fillRect(width - 60, 0, 60, height);
+        ctx.shadowBlur = 0;
+
+        // Kaynaklar (Sürekli Aktif)
+        for (let i = 0; i < NUM_BEAMS; i++) {
+            let beamY = startY + i * gap;
+            
+            ctx.beginPath();
+            ctx.arc(50, beamY, 12, 0, Math.PI * 2);
+            ctx.fillStyle = hitColor;
+            ctx.shadowBlur = 25;
+            ctx.shadowColor = hitColor;
+            ctx.fill();
+            ctx.shadowBlur = 0;
+            ctx.strokeStyle = '#ffffff';
+            ctx.lineWidth = 2;
+            ctx.stroke();
+            
+            if (i === 0) { 
+                ctx.fillStyle = '#ffffff';
+                ctx.fillText('Kaynak', 50, beamY - 20);
+            }
+        }
+    }
+
+    function loop() {
+        update();
+        draw();
+        requestAnimationFrame(loop);
+    }
+    
+    loop();
+</script>
+</body>
+</html>

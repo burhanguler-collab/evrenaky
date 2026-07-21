@@ -1,0 +1,44 @@
+# 6.3 Ekvatoral Vorteks ve Yörünge Anomalileri: Kutuplara Karşı Ekvator
+
+Evrenakı Teorisi'nin makro ölçekteki en büyük mekanik çıktılarından biri, gök cisimlerinin etraflarında oluşturdukları hidrodinamik girdaplardır (vorteksler). Standart fiziğin soyut "uzay-zaman geometrisi" veya izotropik (her yöne eşit) kütleçekimi modelleri, gezegenlerin etrafındaki yörüngesel davranışı salt kütle merkezli bir çekim olarak açıklar. Oysa Evrenakı akışkanlar dinamiği, uzayın bir "boşluk" değil, bizzat dönen kütle tarafından sürüklenen devasa bir "nehir" (akışkan) olduğunu gösterir.
+
+Bu akışkan modelinin en belirgin kanıtı, Ekvatoral (yatay) yörüngeler ile Kutupsal (dikey) yörüngeler arasındaki devasa asimetridir.
+
+## 6.3.1 Ekvatoral Yörünge ile Kutup Yörüngesi Arasındaki Hidrodinamik Fark
+
+Ekvator bölgesinde Dünya saniyede yaklaşık 460 metre gibi devasa bir çizgisel hızla döner. Bu dönüş, Ekvator çevresindeki Evrenakı akışkanını da kendisiyle birlikte şiddetle sürükleyerek dışa doğru yayılan korkunç bir **Ekvatoral Girdap** yaratır. Kutuplarda ise dönüş hızı sıfıra yakındır; bu nedenle kutup üstlerinde akışkan sürüklenmesi (vorteks) çok zayıftır ve uzaydan gelen "Yanal İtim" (statik basınç) radyal olarak merkeze doğru çok daha baskındır.
+
+* **Ekvatoral Yörüngeler:** Ekvator düzleminde dolanan bir uydu, fırıl fırıl dönen devasa bir akışkan nehrinin (vorteksin) içindedir. Eğer uydu Dünya ile aynı yönde (doğuya doğru) dönüyorsa, akıntıyı arkasına aldığı için daha stabil bir uçuş sergiler. Ancak Dünya'ya ters yönde dönüyorsa, akıntıya karşı kürek çektiği için muazzam bir hidrodinamik basınca maruz kalır.
+* **Kutup Yörüngeleri:** Kutup noktalarında akışkan görece durgundur. Kutup yörüngesindeki bir uydu (polar orbit), turu boyunca kutupların durgun akışkanından çıkıp Ekvatorun fırtınalı nehrine dalmak zorundadır. Uydu her Ekvator geçişinde, Dünya'nın dönüşünden kaynaklı Evrenakı vorteksinin yanal akıntısıyla **dikine (çapraz) kesişir**. 
+
+**Yörünge Dairesel Kalabilir mi?**
+Kutup yörüngesindeki bir uydunun tam dairesel kalması Evrenakı hidrodinamiğinde imkansızdır. Ekvatorun yarattığı yüksek deplasman ve yanal çarpma (shear) etkisi, uydunun hız vektörünü bozarak onu eliptik bir yörüngeye (yumurta formuna) zorlar ve yörünge düzleminin Dünya etrafında yalpalayarak dönmesine (Precession) neden olur. Uydunun yörüngesi, durgun suyla akan nehir arasındaki bu basınç gradyanı asimetrisine boyun eğmek zorundadır.
+
+## 6.3.2 Gözlemsel Kanıt 1: Flyby (Yakın Geçiş) Anomalisi
+
+Bu hidrodinamik asimetri teorik bir varsayım değil, modern astronominin karşısında çaresiz kaldığı kesin gözlemsel verilere dayanır. NASA uzay araçları (Galileo, NEAR, Rosetta vb.) yakıt tasarrufu için Dünya'ya yaklaşıp sapan bir yörünge (flyby) izlediklerinde, Newton ve Einstein'ın öngörmediği gizemli hız sapmaları ($\Delta V$) yaşadılar.
+
+Genel Görelilik bu anomaliyi hiçbir şekilde açıklayamazken, 2008 yılında J.D. Anderson ve ekibi bu verileri toplayarak şok edici bir ampirik (deneysel) formül çıkardılar:
+
+$$\Delta V_\infty = \frac{2\omega_\oplus R_\oplus}{c} V_\infty (\cos \delta_i - \cos \delta_o)$$
+
+Bu formülün açık anlamı şudur: Uydunun yaşadığı hız anomalisi, uzay aracının Ekvator düzlemine hangi açıyla girdiğine ($\delta_i$) ve hangi açıyla çıktığına ($\delta_o$) bağlıdır. 
+
+Eğer kütleçekimi (uzay çukuru) her yöne eşit (izotropik) olsaydı, uydunun Ekvatordan veya Kutuptan gelmesi sonucu değiştirmezdi. Ancak Evrenakı teorisine göre bu anomali beklenen, zorunlu bir Ekvatoral Girdap etkisidir. Uzay aracı Ekvator'u çapraz keserken devasa akıntıya yandan toslar ve momentum transferi yaşar. Bu, standart fiziğin anomali dediği şeyin aslında akışkanlar mekaniğinin doğal bir kesme (shear) kuvveti olduğunun kanıtıdır.
+
+## 6.3.3 Gözlemsel Kanıt 2: Gravity Probe B ve LAGEOS
+
+Einstein, uzay-zaman geometrisinin dönen kütleler tarafından bükülüp sürüklendiğini (Frame-Dragging) iddia etmişti. Bunu kanıtlamak için NASA, Gravity Probe B (GP-B) uydusunu özellikle **Kutupsal Yörüngeye** yerleştirdi. 
+
+Kutupsal yörüngedeki uydunun jiroskopları kuzey-güney ekseninde dönmekteyken, alttaki Ekvator akıntısı (Evrenakı vorteksi) doğu-batı ekseninde fırıl fırıl dönüyordu. Bu çapraz kesişim sonucunda Ekvator akıntısı, kutup yörüngesindeki uydunun jiroskoplarını alttan yanal olarak sürükledi ve eksenlerini yılda tam **39 mas (milisaniye)** kaydırdı.
+
+Aynı şekilde LAGEOS-1 uydusunun yörünge düzleminde de (109.8 derecelik eğikliğinden dolayı) yılda 31 mas'lık bir sapma kaydedildi.
+
+Fizikçiler bu değerleri kurgusal "uzay-zaman kumaşının burulması" ile açıklarken, Evrenakı Navier-Stokes denklemlerinden yola çıkarak bunu bizzat lokal Evrenakı akışkanının girdap rotasyonu (vorticity - $\vec{\Omega}$) olarak hesaplar:
+
+$$\vec{\Omega} = \frac{1}{2} \nabla \times \vec{v}_{vorteks}$$
+
+Dünya'nın kutupsal yörünge (640 km yükseklik) değerleri bu akışkan formülüne konulduğunda, hiçbir "zaman yavaşlaması" veya "soyut eğrilik" konseptine başvurmadan tamamen klasik akışkan mekaniği ile tamı tamına **39 mas/yıl** değeri üretilir. 
+
+**Sonuç**
+Kutup yörüngesindeki uydularla yapılan Flyby hız anomalileri ve Gravity Probe B jiroskop deneyleri, uzayın bir hiçlik (veya metrik kumaş) olmadığını; Dünya'nın etrafında Ekvator hizasında fırıl fırıl dönen fiziksel bir "Uzay Nehri" (Evrenakı Vorteksi) bulunduğunu ölçülebilir şekilde kanıtlamıştır.

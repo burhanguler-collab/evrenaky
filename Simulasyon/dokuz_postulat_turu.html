@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dokuz Postülat Turu</title>
+    <style>
+        :root {
+            color-scheme: dark;
+            --bg: #050811;
+            --panel-bg: rgba(10, 15, 30, 0.85);
+            --text: #f3f4f6;
+            --neon-blue: #00f0ff;
+            --neon-magenta: #ff00e5;
+            --neon-green: #39ff14;
+            --border: #2a355a;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            forced-color-adjust: none;
+            -webkit-forced-color-adjust: none;
+        }
+
+        #ui-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: var(--panel-bg);
+            border-top: 1px solid var(--border);
+            padding: 15px 20px;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 10;
+            backdrop-filter: blur(5px);
+        }
+
+        .scene-info {
+            flex: 1;
+            margin: 0 20px;
+        }
+
+        .scene-title {
+            color: var(--neon-blue);
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .scene-desc {
+            font-size: 0.9rem;
+            color: #b0c0df;
+            line-height: 1.4;
+        }
+
+        .nav-controls {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .btn {
+            background: rgba(0, 240, 255, 0.1);
+            color: var(--neon-blue);
+            border: 1px solid var(--neon-blue);
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.2s;
+            text-transform: uppercase;
+        }
+
+        .btn:hover:not(:disabled) {
+            background: rgba(0, 240, 255, 0.3);
+            box-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+        }
+
+        .btn:disabled {
+            border-color: #3a4c8a;
+            color: #3a4c8a;
+            cursor: not-allowed;
+            background: transparent;
+        }
+
+        .progress-dots {
+            display: flex;
+            gap: 6px;
+            margin: 0 10px;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #3a4c8a;
+            transition: all 0.3s;
+        }
+
+        .dot.active {
+            background: var(--neon-magenta);
+            box-shadow: 0 0 8px var(--neon-magenta);
+            transform: scale(1.3);
+        }
+
+        #canvas-container {
+            flex-grow: 1;
+            position: relative;
+            background: radial-gradient(circle at center, #111827 0%, #050811 100%);
+        }
+
+        canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .watermark {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: rgba(255,255,255,0.1);
+            font-size: 2rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            pointer-events: none;
+            letter-spacing: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="canvas-container">
+        <div class="anim-title" style="position: absolute; top: 20px; left: 20px; color: #00f0ff; font-weight: bold; font-size: 1.1rem; text-transform: uppercase; z-index: 5; pointer-events: none; letter-spacing: 1px; text-shadow: 0 0 10px rgba(0,240,255,0.5);">Animasyon 1.3.3: Dokuz Postülat Turu</div>
+        <div class="watermark" id="watermark">VİTRİN</div>
+        <canvas id="simCanvas"></canvas>
+    </div>
+
+    <div id="ui-overlay">
+        <div class="nav-controls">
+            <button class="btn" id="btn-prev" disabled>Geri</button>
+        </div>
+        
+        <div class="scene-info">
+            <div class="scene-title" id="scene-title">1. Plenum (Ortam Doluluğu)</div>
+            <div class="scene-desc" id="scene-desc">Yükleniyor...</div>
+        </div>
+
+        <div class="nav-controls">
+            <div class="progress-dots" id="dots-container"></div>
+            <button class="btn" id="btn-next">İleri</button>
+        </div>
+    </div>
+
+    <script>
+        const scenesData = [
+            { title: "1. Plenum (Ortam Doluluğu)", desc: "Uzay fiziksel bir hiçlik değil; enerjiyi ve ışığı taşıyabilen, çok yoğun ama sıfır sürtünmeli 'Evrenakı' süper-akışkanıyla doludur." },
+            { title: "2. Uzanımsal Dördüncü Boyut", desc: "Algıladığımız X, Y, Z eksenlerinin her birine aynı anda dik, zamanla ilgisi olmayan gerçek bir dördüncü mekân doğrultusu (W) vardır." },
+            { title: "3. Kozmik Zamanın Mutlaklığı", desc: "Zaman esnemez; evrensel bir saat her yerde aynı akar. Çekim alanında yavaşlayan şey zamanın kendisi değil, saatlerin 'patinaj yapan' fiziksel mekanizmasıdır." },
+            { title: "4. Işık Hızı ve Zerre Katarı", desc: "Işık soyut bir dalga değil, Evrenakı'da yüzen parçacıkların (Zerrelerin) akışıdır. Kütleye yaklaştıkça yoğunluk düşer, ışık patinaj yaparak yavaşlar." },
+            { title: "5. Çift Dönüş (Temel Spin)", desc: "Madde durağan değildir. Hem 3 boyutlu uzayda hem de dördüncü boyutta aynı anda gerçekleşen bir 'çift girdap' rotasyonudur." },
+            { title: "6. Kütle-İtim (Basınç Gradyanı)", desc: "Kütleçekim diye bir 'çekme' kuvveti yoktur. Evrenakı'nın dış uzaydaki yüksek basıncının, maddelerin düşük basınçlı merkezlerine doğru itmesidir." },
+            { title: "7. Sürüklenme (Entrainment)", desc: "Gezegenler akışkan içinde sürtünmez; çünkü etraflarındaki lokal Evrenakı zarfını kendileriyle birlikte, mutlak bir sükunetle sürüklerler." },
+            { title: "8. Galaktik Vorteks", desc: "Galaksilerin dönüşleri karanlık madde ile değil, Evrenakı denizinde oluşan devasa makro-girdapların rotasyonel dinamikleriyle açıklanır." },
+            { title: "9. Beş Hidrodinamik Kuvvet", desc: "Kozmik yapıları tek bir çekim değil; eksenel, yanal, radyal itimler, diferansiyel sıkıştırma ve vorteks sürüklenmesinin eşzamanlı dansı şekillendirir." }
+        ];
+
+        const canvas = document.getElementById('simCanvas');
+        const ctx = canvas.getContext('2d');
+        let width = canvas.width = window.innerWidth;
+        let height = canvas.height = window.innerHeight - document.getElementById('ui-overlay').offsetHeight;
+
+        window.addEventListener('resize', () => {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight - document.getElementById('ui-overlay').offsetHeight;
+            initScene();
+        });
+
+        let currentScene = 0;
+        let time = 0;
+        let particles = [];
+        
+        const btnPrev = document.getElementById('btn-prev');
+        const btnNext = document.getElementById('btn-next');
+        const titleEl = document.getElementById('scene-title');
+        const descEl = document.getElementById('scene-desc');
+        const watermarkEl = document.getElementById('watermark');
+        const dotsContainer = document.getElementById('dots-container');
+
+        // Setup UI
+        for(let i=0; i<scenesData.length; i++) {
+            let dot = document.createElement('div');
+            dot.className = 'dot';
+            dotsContainer.appendChild(dot);
+        }
+
+        function updateUI() {
+            btnPrev.disabled = (currentScene === 0);
+            btnNext.disabled = (currentScene === scenesData.length - 1);
+            
+            titleEl.textContent = scenesData[currentScene].title;
+            descEl.textContent = scenesData[currentScene].desc;
+            watermarkEl.textContent = "POSTÜLAT " + (currentScene + 1);
+
+            let dots = document.querySelectorAll('.dot');
+            dots.forEach((dot, idx) => {
+                dot.className = idx === currentScene ? 'dot active' : 'dot';
+            });
+            
+            initScene();
+        }
+
+        let autoPlayTimer = setInterval(autoAdvance, 7000);
+
+        function autoAdvance() {
+            if(currentScene < scenesData.length - 1) {
+                currentScene++;
+            } else {
+                currentScene = 0; // Vitrin modu için başa dön
+            }
+            updateUI();
+        }
+
+        function stopAutoPlay() {
+            if(autoPlayTimer) {
+                clearInterval(autoPlayTimer);
+                autoPlayTimer = null;
+            }
+        }
+
+        window.addEventListener('click', stopAutoPlay);
+        window.addEventListener('touchstart', stopAutoPlay);
+
+        btnPrev.onclick = () => { stopAutoPlay(); if(currentScene > 0) { currentScene--; updateUI(); } };
+        btnNext.onclick = () => { stopAutoPlay(); if(currentScene < scenesData.length - 1) { currentScene++; updateUI(); } };
+
+        function initScene() {
+            particles = [];
+            time = 0;
+            let cx = width / 2;
+            let cy = height / 2;
+
+            if (currentScene === 0) {
+                // Plenum: Grid particles
+                for(let i=0; i<400; i++) {
+                    particles.push({
+                        x: Math.random() * width,
+                        y: Math.random() * height,
+                        vx: (Math.random()-0.5)*0.5,
+                        vy: (Math.random()-0.5)*0.5,
+                        r: Math.random() * 2 + 1,
+                        phase: Math.random() * Math.PI * 2
+                    });
+                }
+            } else if (currentScene === 3) {
+                // Zerre Katarı
+                for(let i=0; i<30; i++) {
+                    particles.push({
+                        x: (i * 40) % width,
+                        y: cy + (Math.random()-0.5)*10,
+                        baseX: (i * 40) % width
+                    });
+                }
+            } else if (currentScene === 6) {
+                // Entrainment
+                for(let i=0; i<300; i++) {
+                    particles.push({
+                        x: Math.random() * width,
+                        y: Math.random() * height,
+                        vx: -2 - Math.random()
+                    });
+                }
+            } else if (currentScene === 7) {
+                // Galaktik Vorteks
+                for(let i=0; i<800; i++) {
+                    let r = Math.random() * Math.min(cx, cy) * 0.9;
+                    let a = Math.random() * Math.PI * 2;
+                    particles.push({ r: r, a: a, baseR: r });
+                }
+            }
+        }
+
+        function drawScene() {
+            ctx.fillStyle = 'rgba(5, 8, 17, 0.3)';
+            ctx.fillRect(0, 0, width, height);
+            
+            time += 0.016;
+            let cx = width / 2;
+            let cy = height / 2;
+
+            ctx.globalCompositeOperation = 'lighter';
+
+            switch(currentScene) {
+                case 0: // Plenum
+                    ctx.strokeStyle = 'rgba(0, 240, 255, 0.1)';
+                    ctx.lineWidth = 1;
+                    ctx.beginPath();
+                    for(let i=0; i<width; i+=40) { ctx.moveTo(i, 0); ctx.lineTo(i, height); }
+                    for(let i=0; i<height; i+=40) { ctx.moveTo(0, i); ctx.lineTo(width, i); }
+                    ctx.stroke();
+
+                    particles.forEach(p => {
+                        p.x += p.vx; p.y += p.vy;
+                        if(p.x < 0) p.x = width; if(p.x > width) p.x = 0;
+                        if(p.y < 0) p.y = height; if(p.y > height) p.y = 0;
+                        let alpha = 0.5 + Math.sin(time*3 + p.phase)*0.5;
+                        ctx.fillStyle = `rgba(0, 240, 255, ${alpha})`;
+                        ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI*2); ctx.fill();
+                    });
+                    break;
+
+                case 1: // 4. Boyut (W)
+                    ctx.lineWidth = 2;
+                    // X
+                    ctx.strokeStyle = '#ff3333'; ctx.beginPath(); ctx.moveTo(cx, cy); ctx.lineTo(cx + 100, cy + 50); ctx.stroke();
+                    ctx.fillStyle = '#ff3333'; ctx.fillText('X', cx + 110, cy + 55);
+                    // Y
+                    ctx.strokeStyle = '#33ff33'; ctx.beginPath(); ctx.moveTo(cx, cy); ctx.lineTo(cx, cy - 120); ctx.stroke();
+                    ctx.fillStyle = '#33ff33'; ctx.fillText('Y', cx, cy - 130);
+                    // Z
+                    ctx.strokeStyle = '#3333ff'; ctx.beginPath(); ctx.moveTo(cx, cy); ctx.lineTo(cx - 100, cy + 50); ctx.stroke();
+                    ctx.fillStyle = '#3333ff'; ctx.fillText('Z', cx - 110, cy + 55);
+                    
+                    // W (Pulsing)
+                    let wLen = 80 + Math.sin(time*5)*30;
+                    ctx.strokeStyle = 'rgba(255, 0, 229, 0.8)';
+                    ctx.setLineDash([5, 5]);
+                    ctx.beginPath(); ctx.moveTo(cx, cy); ctx.lineTo(cx, cy + wLen); ctx.stroke();
+                    ctx.setLineDash([]);
+                    ctx.fillStyle = '#ff00e5'; ctx.font = 'bold 16px sans-serif'; ctx.fillText('W', cx, cy + wLen + 20);
+                    break;
+
+                case 2: // Kozmik Zaman
+                    // Big background wheel
+                    ctx.save();
+                    ctx.translate(cx, cy);
+                    ctx.rotate(time);
+                    ctx.strokeStyle = 'rgba(0, 240, 255, 0.2)';
+                    ctx.lineWidth = 10;
+                    ctx.beginPath(); ctx.arc(0, 0, 150, 0, Math.PI*2); ctx.stroke();
+                    for(let i=0; i<12; i++) {
+                        ctx.rotate(Math.PI/6);
+                        ctx.beginPath(); ctx.moveTo(130, 0); ctx.lineTo(170, 0); ctx.stroke();
+                    }
+                    ctx.restore();
+                    
+                    // Small local clock (stutters)
+                    let stutterTime = time * 2;
+                    if(Math.sin(time*2) < 0) stutterTime = Math.floor(time*2); // Patinaj
+                    ctx.save();
+                    ctx.translate(cx, cy);
+                    ctx.rotate(stutterTime);
+                    ctx.strokeStyle = '#ff00e5';
+                    ctx.lineWidth = 5;
+                    ctx.beginPath(); ctx.arc(0, 0, 50, 0, Math.PI*2); ctx.stroke();
+                    ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(0, -40); ctx.stroke();
+                    ctx.restore();
+                    break;
+
+                case 3: // Zerre Katarı
+                    ctx.fillStyle = 'rgba(255, 0, 229, 0.1)';
+                    ctx.fillRect(cx - 50, 0, 100, height); // Low density zone
+                    
+                    particles.forEach((p, i) => {
+                        let speed = 4;
+                        let inZone = (p.x > cx - 50 && p.x < cx + 50);
+                        if(inZone) {
+                            speed = 1; // Yavaşlar (Patinaj)
+                        }
+                        
+                        p.y = cy; // Kusursuz düz çizgi (mermi dizisi)
+                        p.x += speed;
+                        if(p.x > width) p.x = -20;
+                        
+                        ctx.fillStyle = inZone ? '#ff00e5' : '#00f0ff';
+                        ctx.beginPath(); ctx.arc(p.x, p.y, 6, 0, Math.PI*2); ctx.fill();
+                        
+                        if(inZone) {
+                            ctx.strokeStyle = 'rgba(255,0,229,0.8)';
+                            ctx.lineWidth = 2;
+                            ctx.beginPath(); ctx.arc(p.x, p.y, 14, time*10, time*10+Math.PI*0.8); ctx.stroke();
+                            ctx.beginPath(); ctx.arc(p.x, p.y, 14, time*10+Math.PI, time*10+Math.PI*1.8); ctx.stroke();
+                        }
+                    });
+                    break;
+
+                case 4: // Çift Dönüş
+                    ctx.save();
+                    ctx.translate(cx, cy);
+                    // 3D Ring
+                    ctx.scale(1, 0.3);
+                    ctx.rotate(time*2);
+                    ctx.strokeStyle = '#00f0ff';
+                    ctx.lineWidth = 4;
+                    ctx.beginPath(); ctx.arc(0, 0, 100, 0, Math.PI*2); ctx.stroke();
+                    ctx.restore();
+                    
+                    // 4D Ring (Pulsing size to simulate passing through 3D plane)
+                    ctx.save();
+                    ctx.translate(cx, cy);
+                    let scale4D = Math.abs(Math.sin(time*1.5));
+                    ctx.scale(0.3, 1 * scale4D);
+                    ctx.strokeStyle = '#ff00e5';
+                    ctx.lineWidth = 4;
+                    ctx.beginPath(); ctx.arc(0, 0, 100, 0, Math.PI*2); ctx.stroke();
+                    ctx.restore();
+                    
+                    // Core
+                    ctx.fillStyle = '#fff';
+                    ctx.beginPath(); ctx.arc(cx, cy, 15, 0, Math.PI*2); ctx.fill();
+                    break;
+
+                case 5: // Kütle İtim
+                    ctx.fillStyle = '#000';
+                    ctx.beginPath(); ctx.arc(cx, cy, 60, 0, Math.PI*2); ctx.fill();
+                    ctx.strokeStyle = '#00f0ff';
+                    ctx.lineWidth = 2;
+                    ctx.stroke();
+                    
+                    // Arrows pushing in
+                    let arrowOffset = 80 + Math.sin(time*4)*10;
+                    ctx.fillStyle = 'rgba(255, 0, 0, 0.8)';
+                    for(let i=0; i<8; i++) {
+                        ctx.save();
+                        ctx.translate(cx, cy);
+                        ctx.rotate(i * Math.PI/4);
+                        // Draw arrow pointing to center
+                        ctx.beginPath();
+                        ctx.moveTo(arrowOffset, -10);
+                        ctx.lineTo(arrowOffset - 20, 0);
+                        ctx.lineTo(arrowOffset, 10);
+                        ctx.fill();
+                        ctx.fillRect(arrowOffset, -3, 30, 6);
+                        ctx.restore();
+                    }
+                    break;
+
+                case 6: // Entrainment
+                    let pX = cx + Math.sin(time)*150;
+                    let pY = cy;
+                    
+                    // Planet
+                    ctx.fillStyle = '#fff';
+                    ctx.beginPath(); ctx.arc(pX, pY, 30, 0, Math.PI*2); ctx.fill();
+                    // Envelope
+                    let grad = ctx.createRadialGradient(pX, pY, 30, pX, pY, 100);
+                    grad.addColorStop(0, 'rgba(0, 240, 255, 0.6)');
+                    grad.addColorStop(1, 'rgba(0, 240, 255, 0)');
+                    ctx.fillStyle = grad;
+                    ctx.beginPath(); ctx.arc(pX, pY, 100, 0, Math.PI*2); ctx.fill();
+
+                    // Fluid particles
+                    ctx.fillStyle = '#00f0ff';
+                    particles.forEach(p => {
+                        let dx = p.x - pX; let dy = p.y - pY;
+                        let dist = Math.hypot(dx, dy);
+                        if(dist < 100) {
+                            // Entrained
+                            ctx.fillRect(p.x, p.y, 3, 3);
+                            p.x = pX + p.ox; p.y = pY + p.oy;
+                        } else {
+                            // Free flow
+                            p.x += p.vx;
+                            if(p.x < 0) p.x = width;
+                            p.ox = p.x - pX; p.oy = p.y - pY;
+                            ctx.fillStyle = 'rgba(255,255,255,0.3)';
+                            ctx.fillRect(p.x, p.y, 2, 2);
+                        }
+                    });
+                    break;
+
+                case 7: // Galaktik Vorteks
+                    particles.forEach((p, i) => {
+                        let speed = 0.05 * (100 / (p.r + 50));
+                        p.a += speed;
+                        let x = cx + Math.cos(p.a) * p.r;
+                        let y = cy + Math.sin(p.a) * p.r;
+                        
+                        let colorStr = i % 3 === 0 ? '#ff00e5' : '#00f0ff';
+                        ctx.fillStyle = colorStr;
+                        ctx.globalAlpha = 0.6;
+                        ctx.beginPath(); ctx.arc(x, y, 1.5, 0, Math.PI*2); ctx.fill();
+                    });
+                    ctx.globalAlpha = 1.0;
+                    break;
+
+                case 8: // Beş Kuvvet
+                    ctx.fillStyle = '#ffcc00';
+                    ctx.beginPath(); ctx.arc(cx, cy, 40, 0, Math.PI*2); ctx.fill();
+                    
+                    ctx.strokeStyle = '#ff00e5'; ctx.lineWidth = 3;
+                    ctx.beginPath(); ctx.arc(cx, cy, 120 + Math.sin(time*2)*10, 0, Math.PI*2); ctx.stroke(); // Radyal
+                    
+                    ctx.fillStyle = '#00f0ff';
+                    ctx.fillRect(cx - 150, cy - 20, 30, 40); // Eksenel/Yanal
+                    ctx.fillRect(cx + 120, cy - 20, 30, 40);
+                    
+                    ctx.strokeStyle = 'rgba(255,255,255,0.5)';
+                    ctx.beginPath(); ctx.moveTo(cx-120, cy); ctx.lineTo(cx-40, cy); ctx.stroke();
+                    ctx.beginPath(); ctx.moveTo(cx+120, cy); ctx.lineTo(cx+40, cy); ctx.stroke();
+                    
+                    ctx.fillStyle = 'rgba(0, 240, 255, 0.2)';
+                    ctx.beginPath(); ctx.ellipse(cx, cy, 180, 60, time, 0, Math.PI*2); ctx.fill(); // Vorteks Sürüklenmesi
+                    break;
+            }
+
+            ctx.globalCompositeOperation = 'source-over';
+            requestAnimationFrame(drawScene);
+        }
+
+        updateUI();
+        drawScene();
+    </script>
+</body>
+</html>

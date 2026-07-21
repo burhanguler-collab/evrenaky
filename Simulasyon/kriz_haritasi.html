@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kriz Haritası</title>
+    <style>
+        :root {
+            color-scheme: dark;
+            --bg: #0b0f19;
+            --text: #f3f4f6;
+            --text-muted: #8892b0;
+            --fam-a: #ff3366;
+            --fam-b: #00f0ff;
+            --fam-c: #ffcc00;
+            --fam-d: #b366ff;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            overflow: hidden;
+            display: flex;
+            height: 100vh;
+            forced-color-adjust: none;
+            -webkit-forced-color-adjust: none;
+        }
+
+        #map-container {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+            background: radial-gradient(circle at center, #111827 0%, #0b0f19 100%);
+        }
+
+        #lines-svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .family-box {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            padding: 10px 16px;
+            border-radius: 8px;
+            border: 2px solid;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(4px);
+            font-weight: bold;
+            font-size: 0.9rem;
+            text-align: center;
+            z-index: 2;
+            box-shadow: 0 0 15px rgba(0,0,0,0.5);
+            transition: all 0.5s ease;
+        }
+
+        .family-box.highlight {
+            transform: translate(-50%, -50%) scale(1.1);
+            box-shadow: 0 0 30px currentColor;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .node {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 3;
+            transition: transform 0.2s;
+            box-shadow: 0 0 10px currentColor;
+        }
+
+        .node:hover {
+            transform: translate(-50%, -50%) scale(1.5);
+            box-shadow: 0 0 20px currentColor;
+        }
+
+        .node.active {
+            transform: translate(-50%, -50%) scale(1.8);
+            box-shadow: 0 0 25px currentColor;
+            border: 2px solid #fff;
+        }
+
+        .node-label {
+            position: absolute;
+            top: 22px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.75rem;
+            white-space: nowrap;
+            color: #ffffff;
+            font-weight: 500;
+            pointer-events: auto;
+            cursor: pointer;
+            background: rgba(0,0,0,0.5);
+            padding: 2px 6px;
+            border-radius: 4px;
+            transition: opacity 0.3s;
+        }
+
+        #side-panel {
+            width: 320px;
+            background: #111827;
+            border-left: 1px solid rgba(255,255,255,0.1);
+            padding: 24px;
+            box-shadow: -5px 0 20px rgba(0,0,0,0.5);
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            transform: translateX(100%);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        #side-panel.open {
+            transform: translateX(0);
+        }
+
+        .panel-header {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .panel-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #fff;
+            margin: 0 0 16px 0;
+            line-height: 1.3;
+        }
+
+        .panel-desc {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+
+        .solution-badge {
+            background: rgba(0, 240, 255, 0.1);
+            border: 1px solid rgba(0, 240, 255, 0.4);
+            border-radius: 6px;
+            padding: 12px;
+            color: #00f0ff;
+        }
+
+        .solution-badge span {
+            display: block;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+            opacity: 0.8;
+        }
+
+        .solution-badge strong {
+            font-size: 0.95rem;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: none;
+            border: none;
+            color: #9ca3af;
+            font-size: 1.5rem;
+            cursor: pointer;
+            line-height: 1;
+        }
+
+        .close-btn:hover {
+            color: #fff;
+        }
+
+        #intro-overlay {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #fff;
+            z-index: 20;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        .nav-hint {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            font-size: 0.8rem;
+            color: #6b7280;
+            z-index: 5;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="map-container">
+        <svg id="lines-svg"></svg>
+        <div class="anim-title" style="position: absolute; top: 20px; left: 20px; color: #00f0ff; font-weight: bold; font-size: 1.1rem; text-transform: uppercase; z-index: 5; pointer-events: none; letter-spacing: 1px;">Animasyon 1.2.1: Kriz Haritası</div>
+        <div class="nav-hint" style="bottom: 40px;">Düğümlere tıklayarak detayları görebilirsiniz.</div>
+        <div class="nav-hint" style="bottom: 20px; color: #4b5563; font-size: 0.75rem;">Not: 10 kriz başlığı; C ailesinde 1.2.8'in üç alt olgusu ayrı düğümlerle gösterildiğinden haritada 12 düğüm bulunur.</div>
+    </div>
+
+    <div id="side-panel">
+        <button class="close-btn" onclick="closePanel()">&times;</button>
+        <div class="panel-header" id="panel-fam">AİLE</div>
+        <h3 class="panel-title" id="panel-title">Kriz Başlığı</h3>
+        <div class="panel-desc" id="panel-desc">Açıklama burada yer alacak.</div>
+        <div class="solution-badge">
+            <span>Kitaptaki Çözüm</span>
+            <strong id="panel-solution">Bölüm X.Y</strong>
+        </div>
+    </div>
+
+    <div id="intro-overlay">Otomatik Tur Başlıyor...</div>
+
+    <script>
+        const families = [
+            { id: 'A', title: 'A. Taşıyıcı ve Ortam', color: 'var(--fam-a)', cx: 0.25, cy: 0.25 },
+            { id: 'B', title: 'B. Işık ve Optik', color: 'var(--fam-b)', cx: 0.75, cy: 0.25 },
+            { id: 'C', title: 'C. Kuantum Yorumları', color: 'var(--fam-c)', cx: 0.25, cy: 0.75 },
+            { id: 'D', title: 'D. Görelilik Çelişkileri', color: 'var(--fam-d)', cx: 0.75, cy: 0.75 }
+        ];
+
+        const crises = [
+            { id: 'c1', fam: 'A', title: 'Aracısız Etkileşim (Horror Vacui)', chapter: '1.2.1', desc: 'Fiziksel bir taşıyıcı (ortam) olmadan uzaktan etkinin kütleleri nasıl ivmelendirdiği sorusu tanımsız bırakılmıştır.', solution: 'Kısım 3: Evrenakı Basınç Gradyanı' },
+            { id: 'c2', fam: 'A', title: 'Uzay-Zaman Geometrisi', chapter: '1.2.3', desc: 'Geometri salt matematiksel bir tariftir; fiziksel nesneleri iten veya çeken kinematik mekanizmayı ontolojik olarak açıklayamaz.', solution: 'Bölüm 3.4 ve 4.3 (Kütle-İtim)' },
+            { id: 'c3', fam: 'A', title: 'Karanlık Sektör', chapter: '1.2.5', desc: 'Evrenin %95\'ini oluşturan eksik madde ve enerji iddiaları, gözlemlenemeyen "esir" konseptinin ad değiştirmiş halidir.', solution: 'Bölüm 3.1.8, 3.7 ve 4.2.8' },
+            
+            { id: 'c4', fam: 'B', title: 'Dalga-Parçacık İkiliği', chapter: '1.2.2', desc: 'Işığın camdan çıkınca tekrar hızlanmasını sağlayan (Hız Geri Kazanımı) eylemsizlik kaynağı standart fizikte yoktur.', solution: 'Bölüm 2.3.2 ve 6.4 (Zerre\'nin Patinajı)' },
+            { id: 'c5', fam: 'B', title: 'Aynı Yüzeyde Çelişen Modeller', chapter: '1.2.6', desc: 'Aynı yüzeyin yansıtma, geçirme ve soğurma yapması birbirinden kopuk üç ayrı matematiksel modelle tarif edilir.', solution: 'Bölüm 2.5 (Tekil Optik Çözüm)' },
+            { id: 'c6', fam: 'B', title: 'Girişimde Enerji Kaybı', chapter: '1.2.7', desc: 'Karanlık saçaklardaki enerjinin aydınlık bölgeye nasıl "fiziksel olarak göç ettiği" açıklanmaz.', solution: 'Bölüm 2.6 ve 2.7 (Kayıpsız Girişim)' },
+            
+            { id: 'c7', fam: 'C', title: 'Vakum Enerjisi', chapter: '1.2.8', desc: 'Casimir etkisinde levhaları iten basıncın kaynağı "sanal (yokluk) parçacıklara" havale edilmiştir.', solution: 'Bölüm 2.9' },
+            { id: 'c8', fam: 'C', title: 'Tünelleme ve Süperpozisyon', chapter: '1.2.8', desc: 'Olguların mekanizması açıklanmadan soyut şekilde "duvardan ışınlanma" veya "aynı anda her yerde olma" diye sunulması.', solution: 'Bölüm 2.9' },
+            { id: 'c9', fam: 'C', title: 'Ölçüm Problemi', chapter: '1.2.8', desc: 'Heisenberg belirsizliği doğanın kendi mistik bulanıklığı değil, foton çarptıran ölçüm aletinin kaba sınırıdır.', solution: 'Bölüm 2.9' },
+            
+            { id: 'c10', fam: 'D', title: 'Birleşememe Krizi', chapter: '1.2.4', desc: 'Mikro ve makro kuramların ontolojik uyuşmazlığı, iki farklı evren yasası varmış gibi bir yanılgı doğurur.', solution: 'Kısım 4: Bilimin Tekilliği' },
+            { id: 'c11', fam: 'D', title: 'Göreliliğin İç Paradoksları', chapter: '1.2.9', desc: 'Ardışık fotonların yaklaşım hızının rölativistik formüle uymaması ve Doppler türetiminde c+v hızlarının yasadışı kullanılması.', solution: 'Bölüm 6.1 (Doppler Türetimi)' },
+            { id: 'c12', fam: 'D', title: 'Açısal Momentum Problemi', chapter: '1.2.10', desc: 'Kütlenin merkezde, dönüş momentumunun ise çeperdeki gezegenlerde toplanmasının net mekanik bir nedeni gösterilemez.', solution: 'Bölüm 3.10.4 ve 6.3' }
+        ];
+
+        const container = document.getElementById('map-container');
+        const svg = document.getElementById('lines-svg');
+        let nodes = [];
+
+        // Initialize Layout
+        function initLayout() {
+            const width = container.clientWidth;
+            const height = container.clientHeight;
+
+            families.forEach(fam => {
+                const el = document.createElement('div');
+                el.className = 'family-box';
+                el.id = 'fam-' + fam.id;
+                el.style.color = fam.color;
+                el.style.borderColor = fam.color;
+                el.style.left = (fam.cx * width) + 'px';
+                el.style.top = (fam.cy * height) + 'px';
+                el.textContent = fam.title;
+                container.appendChild(el);
+            });
+
+            crises.forEach((c, index) => {
+                const fam = families.find(f => f.id === c.fam);
+                
+                // Salınım için rastgele açı ve başlangıç yarıçapı
+                const angle = Math.random() * Math.PI * 2;
+                const radius = 100 + Math.random() * 40;
+                
+                const nodeObj = {
+                    data: c,
+                    famData: fam,
+                    angle: angle,
+                    radius: radius,
+                    speed: 0.001 + Math.random() * 0.002,
+                    x: 0, y: 0
+                };
+
+                const el = document.createElement('div');
+                el.className = 'node';
+                el.style.backgroundColor = fam.color;
+                el.style.color = fam.color;
+                
+                const label = document.createElement('div');
+                label.className = 'node-label';
+                label.textContent = c.chapter + ' ' + c.title.split(' ')[0] + '...';
+                el.appendChild(label);
+
+                el.addEventListener('click', () => openPanel(nodeObj, el));
+
+                container.appendChild(el);
+                nodeObj.element = el;
+                nodes.push(nodeObj);
+            });
+        }
+
+        // Animation Loop
+        function animate() {
+            const width = container.clientWidth;
+            const height = container.clientHeight;
+            
+            svg.innerHTML = ''; // Clear lines
+
+            nodes.forEach(node => {
+                const fcx = node.famData.cx * width;
+                const fcy = node.famData.cy * height;
+                
+                node.angle += node.speed;
+                // Hafif yariçap salınımı (nefes alma)
+                const currentRadius = node.radius + Math.sin(node.angle * 3) * 10;
+
+                node.x = fcx + Math.cos(node.angle) * currentRadius;
+                node.y = fcy + Math.sin(node.angle) * currentRadius;
+
+                node.element.style.left = node.x + 'px';
+                node.element.style.top = node.y + 'px';
+
+                // Draw line to family center
+                const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                line.setAttribute('x1', fcx);
+                line.setAttribute('y1', fcy);
+                line.setAttribute('x2', node.x);
+                line.setAttribute('y2', node.y);
+                line.setAttribute('stroke', node.famData.color);
+                line.setAttribute('stroke-width', '1');
+                line.setAttribute('opacity', '0.2');
+                svg.appendChild(line);
+            });
+
+            requestAnimationFrame(animate);
+        }
+
+        window.addEventListener('resize', () => {
+            const width = container.clientWidth;
+            const height = container.clientHeight;
+            families.forEach(fam => {
+                const el = document.getElementById('fam-' + fam.id);
+                el.style.left = (fam.cx * width) + 'px';
+                el.style.top = (fam.cy * height) + 'px';
+            });
+        });
+
+        // Panel Logic
+        function openPanel(nodeObj, element) {
+            document.querySelectorAll('.node').forEach(n => n.classList.remove('active'));
+            element.classList.add('active');
+
+            const panel = document.getElementById('side-panel');
+            document.getElementById('panel-fam').textContent = nodeObj.famData.title;
+            document.getElementById('panel-fam').style.color = nodeObj.famData.color;
+            document.getElementById('panel-title').textContent = nodeObj.data.chapter + " " + nodeObj.data.title;
+            document.getElementById('panel-desc').textContent = nodeObj.data.desc;
+            document.getElementById('panel-solution').textContent = nodeObj.data.solution;
+            
+            panel.classList.add('open');
+        }
+
+        function closePanel() {
+            document.getElementById('side-panel').classList.remove('open');
+            document.querySelectorAll('.node').forEach(n => n.classList.remove('active'));
+        }
+
+        // Intro Tour
+        async function runIntro() {
+            const overlay = document.getElementById('intro-overlay');
+            overlay.style.opacity = '1';
+
+            const wait = (ms) => new Promise(res => setTimeout(res, ms));
+
+            for (let i = 0; i < families.length; i++) {
+                const fam = families[i];
+                overlay.textContent = "Bölüm Turu: " + fam.title;
+                const box = document.getElementById('fam-' + fam.id);
+                box.classList.add('highlight');
+                await wait(1800);
+                box.classList.remove('highlight');
+            }
+
+            overlay.textContent = "Şimdi detayları inceleyebilirsiniz.";
+            await wait(1500);
+            overlay.style.opacity = '0';
+        }
+
+        initLayout();
+        animate();
+        
+        // Start intro after short delay
+        setTimeout(runIntro, 1000);
+
+    </script>
+</body>
+</html>

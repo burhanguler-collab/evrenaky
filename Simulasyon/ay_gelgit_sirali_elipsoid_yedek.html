@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Ay ve Dünya Okyanusları</title>
+    <style>
+        body { margin: 0; padding: 20px; background: #121212; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; box-sizing: border-box; overflow: hidden; font-family: sans-serif; }
+        h3 { margin-top: 0; margin-bottom: 10px; color: #fff; font-weight: 600; letter-spacing: 1px; text-shadow: 0 0 10px rgba(0, 229, 255, 0.5); }
+        button { padding: 6px 16px; background: #7e22ce; color: #fff; border: 1px solid #a855f7; border-radius: 6px; cursor: pointer; margin-bottom: 20px; font-size: 14px; font-weight: bold; transition: background 0.3s; }
+        button:hover { background: #9333ea; }
+        svg { background: #050505; border: 1px solid #333; border-radius: 8px; width: 100%; max-width: 800px; height: auto; }
+        
+        .gradyan-anim { transform-origin: 240px 200px; animation: a-grad 26s infinite; }
+        .ay-anim { transform-origin: 0px 0px; animation: a-ay 26s infinite; }
+        .okyanus-anim { transform-origin: 0px 0px; animation: a-okyanus 26s infinite; }
+        .dunya-anim { transform-origin: 0px 0px; animation: a-dunya 26s infinite; }
+        .kuvvet-anim { transform-origin: 0px 0px; animation: a-kuvvet 26s infinite; }
+
+        @keyframes a-grad {
+            0%, 1% { opacity: 0; transform: scale(0.001); }
+            2%, 95% { opacity: 1; transform: scale(1); }
+            98%, 100% { opacity: 0; transform: scale(0.001); }
+        }
+        @keyframes a-ay {
+            0%, 2% { opacity: 0; transform: scale(0.001); }
+            3%, 95% { opacity: 1; transform: scale(1); }
+            98%, 100% { opacity: 0; transform: scale(0.001); }
+        }
+        @keyframes a-okyanus {
+            0%, 5% { opacity: 0; transform: scale(0.001); }
+            6%, 95% { opacity: 1; transform: scale(1); }
+            98%, 100% { opacity: 0; transform: scale(0.001); }
+        }
+        @keyframes a-dunya {
+            0%, 7% { opacity: 0; transform: scale(0.001); }
+            8%, 95% { opacity: 1; transform: scale(1); }
+            98%, 100% { opacity: 0; transform: scale(0.001); }
+        }
+        @keyframes a-kuvvet {
+            0%, 9% { opacity: 0; transform: scale(0.001); }
+            10%, 44% { opacity: 1; transform: scale(1); }
+            45%, 100% { opacity: 0; transform: scale(0.001); }
+        }
+    </style>
+</head>
+<body>
+
+<h3>Animasyon 27.1: Ay'ın Evrenakı Basıncı ve Dünya'nın Okyanusları</h3>
+<button onclick="window.location.reload();">Animasyonu Baştan Başlat ↻</button>
+
+<svg id="anim-svg" viewBox="0 0 800 400">
+<defs>
+    <radialGradient id="evrenakiGradient" cx="240" cy="200" r="800" gradientUnits="userSpaceOnUse">
+        <animateTransform attributeName="gradientTransform" type="rotate" values="0 400 200; 0 400 200; 0 400 200; -1080 400 200; -1080 400 200; 0 400 200" keyTimes="0; 0.492; 0.569; 0.915; 0.953; 1" dur="26s" repeatCount="indefinite" />
+        <stop offset="0%" stop-color="#d8b4fe" stop-opacity="0.9" />
+        <stop offset="5%" stop-color="#a855f7" stop-opacity="0.8" />
+        <stop offset="30%" stop-color="#9333ea" stop-opacity="0.5" />
+        <stop offset="100%" stop-color="#050505" stop-opacity="0" />
+    </radialGradient>
+    <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur stdDeviation="3" result="blur" />
+        <feMerge>
+            <feMergeNode in="blur" />
+            <feMergeNode in="SourceGraphic" />
+        </feMerge>
+    </filter>
+</defs>
+
+<!-- Katman 1: Gradyan -->
+<rect x="0" y="0" width="800" height="400" fill="url(#evrenakiGradient)" class="gradyan-anim" />
+
+<!-- Katman 2: Okyanus -->
+<g transform="translate(400, 200)">
+    <g class="okyanus-anim">
+        <g>
+            <animateTransform attributeName="transform" type="rotate" values="0; 0; -15; -1095; -1095; 0" keyTimes="0; 0.492; 0.569; 0.915; 0.953; 1" dur="26s" repeatCount="indefinite" />
+            <g>
+                <animateTransform attributeName="transform" type="scale" values="1,1; 1,1; 1.15,0.9; 1.15,0.9; 1,1" keyTimes="0; 0.307; 0.365; 0.953; 1" dur="26s" repeatCount="indefinite" />
+                <circle cx="0" cy="0" r="52" fill="#0ea5e9" opacity="0.6" />
+                <circle cx="0" cy="0" r="50" fill="none" stroke="#38bdf8" stroke-width="2" stroke-dasharray="6 6" />
+            </g>
+            <line x1="-130" y1="0" x2="65" y2="0" stroke="#000000" stroke-width="4" stroke-dasharray="8 8" opacity="0">
+                <animate attributeName="opacity" values="0; 0; 0.8; 0.8; 0" keyTimes="0; 0.453; 0.492; 0.953; 1" dur="26s" repeatCount="indefinite" />
+            </line>
+        </g>
+    </g>
+</g>
+
+<!-- Katman 3: Dünya -->
+<g transform="translate(400, 200)">
+    <g class="dunya-anim">
+        <circle cx="0" cy="0" r="45" fill="#10b981" />
+        <g>
+            <animateTransform attributeName="transform" type="rotate" values="0; 0; -3960; -3960; 0" keyTimes="0; 0.492; 0.915; 0.953; 1" dur="26s" repeatCount="indefinite" />
+            <path d="M -30 -20 Q -10 -40 10 -20 T 30 -10" fill="none" stroke="#047857" stroke-width="6" stroke-linecap="round" />
+            <path d="M -25 20 Q 0 5 25 30" fill="none" stroke="#047857" stroke-width="8" stroke-linecap="round" />
+        </g>
+        <text x="0" y="5" fill="#fff" font-family="sans-serif" font-weight="bold" font-size="14" text-anchor="middle" style="text-shadow: 1px 1px 2px #000;">Dünya</text>
+    </g>
+</g>
+
+<!-- Katman 4: Ay -->
+<g transform="translate(400, 200)">
+    <g>
+        <animateTransform attributeName="transform" type="rotate" values="0; 0; 0; -1080; -1080; 0" keyTimes="0; 0.492; 0.569; 0.915; 0.953; 1" dur="26s" repeatCount="indefinite" />
+        <g transform="translate(-160, 0)">
+            <g class="ay-anim">
+                <circle cx="0" cy="0" r="24" fill="#d8b4fe" opacity="0.3" /> 
+                <circle cx="0" cy="0" r="18" fill="#e2e8f0" stroke="#a855f7" stroke-width="2" />
+                <circle cx="-5" cy="-5" r="4" fill="#94a3b8" />
+                <circle cx="5" cy="4" r="5" fill="#94a3b8" />
+                <text x="0" y="35" fill="#fff" font-family="sans-serif" font-weight="bold" font-size="14" text-anchor="middle">Ay</text>
+            </g>
+        </g>
+    </g>
+</g>
+
+<!-- Katman 5: Sıkıştırma Kuvvetleri (Evrenakı Mengenesi) -->
+<g transform="translate(400, 200)" filter="url(#neonGlow)">
+    <g class="kuvvet-anim">
+        
+        <!-- Sol (Ay Tarafı) - En Küçük Sıkıştırma Kuvveti -->
+        <g stroke="#facc15" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none">
+            <animateTransform attributeName="transform" type="translate" values="0,0; 0,0; -7.5,0; -7.5,0; 0,0" keyTimes="0; 0.307; 0.365; 0.453; 1" dur="26s" repeatCount="indefinite" />
+            <line x1="-70" y1="0" x2="-50" y2="0" />
+            <polyline points="-58,-6 -50,0 -58,6" />
+            <text x="-75" y="4" fill="#facc15" font-size="12" font-family="sans-serif" text-anchor="end" font-weight="bold" stroke="none">Zayıf</text>
+        </g>
+        
+        <!-- Üst ve Alt (Yanlar) - Orta Sıkıştırma Kuvveti -->
+        <g stroke="#facc15" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+            <!-- Üst -->
+            <g>
+                <animateTransform attributeName="transform" type="translate" values="0,0; 0,0; 0,5; 0,5; 0,0" keyTimes="0; 0.307; 0.365; 0.453; 1" dur="26s" repeatCount="indefinite" />
+                <line x1="0" y1="-80" x2="0" y2="-50" />
+                <polyline points="-8,-60 0,-50 8,-60" />
+                <text x="0" y="-85" fill="#facc15" font-size="12" font-family="sans-serif" text-anchor="middle" font-weight="bold" stroke="none">Orta</text>
+            </g>
+            <!-- Alt -->
+            <g>
+                <animateTransform attributeName="transform" type="translate" values="0,0; 0,0; 0,-5; 0,-5; 0,0" keyTimes="0; 0.307; 0.365; 0.453; 1" dur="26s" repeatCount="indefinite" />
+                <line x1="0" y1="80" x2="0" y2="50" />
+                <polyline points="-8,60 0,50 8,60" />
+                <text x="0" y="95" fill="#facc15" font-size="12" font-family="sans-serif" text-anchor="middle" font-weight="bold" stroke="none">Orta</text>
+            </g>
+        </g>
+
+        <!-- Sağ (Uzak Taraf) - En Büyük Sıkıştırma Kuvveti -->
+        <g>
+            <animateTransform attributeName="transform" type="translate" values="0,0; 0,0; 7.5,0; 7.5,0; 0,0" keyTimes="0; 0.307; 0.365; 0.453; 1" dur="26s" repeatCount="indefinite" />
+            <g stroke="#facc15" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none">
+                <animate attributeName="stroke-width" values="6; 6; 3; 3; 6" keyTimes="0; 0.173; 0.230; 0.453; 1" dur="26s" repeatCount="indefinite" />
+                <line x1="95" y1="0" x2="50" y2="0">
+                    <animate attributeName="x1" values="95; 95; 70; 70; 95" keyTimes="0; 0.173; 0.230; 0.453; 1" dur="26s" repeatCount="indefinite" />
+                </line>
+                <polyline points="62,-10 50,0 62,10">
+                    <animate attributeName="points" values="62,-10 50,0 62,10; 62,-10 50,0 62,10; 58,-6 50,0 58,6; 58,-6 50,0 58,6; 62,-10 50,0 62,10" keyTimes="0; 0.173; 0.230; 0.453; 1" dur="26s" repeatCount="indefinite" />
+                </polyline>
+            </g>
+            <g fill="#facc15" font-size="12" font-family="sans-serif" text-anchor="start" font-weight="bold" stroke="none">
+                <!-- En Güçlü Yazısı (Ok küçülürken kaybolur) -->
+                <text x="100" y="4">
+                    <animate attributeName="x" values="100; 100; 75; 75; 100" keyTimes="0; 0.173; 0.230; 0.453; 1" dur="26s" repeatCount="indefinite" />
+                    <animate attributeName="opacity" values="1; 1; 0; 0; 1" keyTimes="0; 0.173; 0.230; 0.453; 1" dur="26s" repeatCount="indefinite" />
+                    En Güçlü
+                </text>
+                <!-- Zayıf Yazısı (Ok küçülürken belirir) -->
+                <text x="100" y="4" opacity="0">
+                    <animate attributeName="x" values="100; 100; 75; 75; 100" keyTimes="0; 0.173; 0.230; 0.453; 1" dur="26s" repeatCount="indefinite" />
+                    <animate attributeName="opacity" values="0; 0; 1; 1; 0" keyTimes="0; 0.173; 0.230; 0.453; 1" dur="26s" repeatCount="indefinite" />
+                    Zayıf
+                </text>
+            </g>
+        </g>
+
+        <!-- Merkez Net Fark Kuvveti (Dünya'yı Ay'a İten Net İtme) -->
+        <g stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none">
+            <line x1="0" y1="0" x2="0" y2="0">
+                <animate attributeName="x2" values="0; 0; -18; -18; 0" keyTimes="0; 0.173; 0.230; 0.453; 1" dur="26s" repeatCount="indefinite" />
+            </line>
+            <polyline points="0,0 0,0 0,0">
+                <animate attributeName="points" values="0,0 0,0 0,0; 0,0 0,0 0,0; -10,-6 -18,0 -10,6; -10,-6 -18,0 -10,6; 0,0 0,0 0,0" keyTimes="0; 0.173; 0.230; 0.453; 1" dur="26s" repeatCount="indefinite" />
+            </polyline>
+        </g>
+        <text x="-9" y="-12" fill="#000000" font-size="10" font-family="sans-serif" text-anchor="middle" font-weight="bold" opacity="0">
+            <animate attributeName="opacity" values="0; 0; 1; 1; 0" keyTimes="0; 0.173; 0.230; 0.453; 1" dur="26s" repeatCount="indefinite" />
+            Net İtme
+        </text>
+
+    </g>
+</g>
+
+<text x="400" y="30" fill="#d8b4fe" font-family="sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Evrenakı gelgit açıklaması</text>
+</svg>
+
+</body>
+</html>

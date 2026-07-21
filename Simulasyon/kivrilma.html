@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evrenakı Teorisi - Kromatik Sapma Kıyaslaması</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: #f8fafc;
+            margin: 0;
+            padding: 20px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            width: 100%;
+            max-width: 900px;
+            box-sizing: border-box;
+        }
+        h2 { text-align: center; font-size: 20px; margin-top: 0; color: #fff; }
+        .subtitle { text-align: center; font-size: 14px; color: #a3a3a3; margin-bottom: 20px; }
+        
+        .input-group {
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #525252;
+            background: #1a1a1a;
+            max-width: 600px;
+            margin: 0 auto 20px auto;
+        }
+        label { font-weight: bold; color: #e5e5e5; font-size: 14px; }
+        input[type="range"] { width: 100%; cursor: pointer; margin-top: 15px; accent-color: #06b6d4; }
+        input[type="number"] {
+            width: 70px; padding: 4px; font-size: 14px;
+            background-color: #111; border: 1px solid #525252; color: #fff;
+            border-radius: 6px; text-align: center; font-weight: bold;
+        }
+        .slider-header { display: flex; justify-content: space-between; align-items: center; }
+        
+        .canvases {
+            display: flex;
+            gap: 20px;
+            width: 100%;
+            justify-content: space-between;
+        }
+        .canvas-wrapper {
+            flex: 1;
+            background: #0f0f0f;
+            border-radius: 8px;
+            border: 1px solid #404040;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .canvas-title {
+            text-align: center; background: #1a1a1a; padding: 10px;
+            font-weight: bold; border-bottom: 1px solid #404040; color: #3b82f6; font-size: 14px;
+        }
+        .canvas-title.zerre { color: #22c55e; }
+        
+        svg { display: block; width: 100%; height: auto; }
+        
+        .results-box {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-top: 1px solid #404040;
+            background-color: #1a1a1a;
+            min-height: 70px;
+        }
+        .result-title { font-size: 11px; color: #a3a3a3; text-transform: uppercase; margin-bottom: 5px; text-align: center; }
+        .result-value { font-size: 20px; font-weight: bold; color: #ffffff; text-align: center; }
+        .difference { font-size: 13px; font-weight: bold; margin-top: 5px; text-align: center; }
+        
+        .info-caption {
+            font-size: 12px; color: #737373; text-align: center;
+            margin-top: 20px; font-style: italic; max-width: 800px; margin-left: auto; margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2 style="color: #fff; text-shadow: 0 0 10px rgba(0, 229, 255, 0.5);">Animasyon 9.1: Evrenakı Modeli: Işığın Güneş Etrafında Kıvrılması</h2>
+    <div class="subtitle">Bölüm 9.3: Standart Fizik ile Kromatik (Renksel) Sapma Modelinin Kıyaslaması</div>
+    
+    <div class="input-group">
+        <div class="slider-header">
+            <label for="wavelengthRange">Işık/Zerre Dalga Boyu (nm):</label>
+            <input type="number" id="wavelengthInput" value="450" min="380" max="750">
+        </div>
+        <input type="range" id="wavelengthRange" min="380" max="750" value="450">
+    </div>
+
+    <div class="canvases">
+        <!-- Standart Fizik -->
+        <div class="canvas-wrapper" id="panelStd">
+            <div class="canvas-title">Standart Fizik (Genel Görelilik)</div>
+            <svg id="svgStd" viewBox="0 0 500 300">
+                <defs>
+                    <radialGradient id="sunGlowStd" cx="50%" cy="50%" r="50%">
+                        <stop offset="0%" stop-color="#ffea00" stop-opacity="1" />
+                        <stop offset="40%" stop-color="#ff9100" stop-opacity="0.8" />
+                        <stop offset="70%" stop-color="#ff3d00" stop-opacity="0.2" />
+                        <stop offset="100%" stop-color="#0f0f0f" stop-opacity="0" />
+                    </radialGradient>
+                    <filter id="laserGlowStd">
+                        <feGaussianBlur stdDeviation="2" result="blur" />
+                        <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                    </filter>
+                </defs>
+
+                <circle cx="250" cy="170" r="80" fill="#ff9100" opacity="0.03" stroke="#ff9100" stroke-dasharray="4" stroke-opacity="0.15"/>
+                <circle cx="250" cy="170" r="45" fill="url(#sunGlowStd)" />
+                <circle cx="250" cy="170" r="20" fill="#ffe066" />
+                <text x="250" y="174" font-size="10" fill="#7a4300" text-anchor="middle" font-weight="bold">GÜNEŞ</text>
+                
+                <line x1="20" y1="60" x2="480" y2="60" stroke="#525252" stroke-dasharray="5" opacity="0.6" />
+                <path id="rayStd" d="" fill="none" stroke="#fff" stroke-width="3" filter="url(#laserGlowStd)" stroke-linecap="round"/>
+            </svg>
+            <div class="results-box">
+                <div class="result-title">EINSTEIN GR SAPMA AÇISI (&theta;)</div>
+                <div class="result-value" style="color: #3b82f6;">1.750'' (Sabit)</div>
+                <div class="difference" style="color: #a3a3a3;">Frekanstan / Renkten Bağımsız</div>
+            </div>
+        </div>
+
+        <!-- Evrenakı Modeli -->
+        <div class="canvas-wrapper" id="panelZer">
+            <div class="canvas-title zerre">Evrenakı Teorisi (Zerre Modeli)</div>
+            <svg id="svgZer" viewBox="0 0 500 300">
+                <defs>
+                    <radialGradient id="sunGlowZer" cx="50%" cy="50%" r="50%">
+                        <stop offset="0%" stop-color="#ffea00" stop-opacity="1" />
+                        <stop offset="40%" stop-color="#ff9100" stop-opacity="0.8" />
+                        <stop offset="70%" stop-color="#ff3d00" stop-opacity="0.2" />
+                        <stop offset="100%" stop-color="#0f0f0f" stop-opacity="0" />
+                    </radialGradient>
+                    <filter id="laserGlowZer">
+                        <feGaussianBlur stdDeviation="2" result="blur" />
+                        <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                    </filter>
+                </defs>
+
+                <circle cx="250" cy="170" r="80" fill="#ff9100" opacity="0.03" stroke="#ff9100" stroke-dasharray="4" stroke-opacity="0.15"/>
+                <circle cx="250" cy="170" r="45" fill="url(#sunGlowZer)" />
+                <circle cx="250" cy="170" r="20" fill="#ffe066" />
+                <text x="250" y="174" font-size="10" fill="#7a4300" text-anchor="middle" font-weight="bold">GÜNEŞ</text>
+                
+                <line x1="20" y1="60" x2="480" y2="60" stroke="#525252" stroke-dasharray="5" opacity="0.6" />
+                <path id="rayZer" d="" fill="none" stroke="#fff" stroke-width="3" filter="url(#laserGlowZer)" stroke-linecap="round"/>
+            </svg>
+            <div class="results-box">
+                <div class="result-title">HESAPLANAN SAPMA AÇISI (&theta;)</div>
+                <div class="result-value" id="angleResultZer">1.749841''</div>
+                <div class="difference" id="diffResultZer">-159 &mu;as (Yeşile Göre Fark)</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="info-caption">
+        * Standart Fizikte (Genel Görelilik) kütleçekimi uzay-zaman geometrisini büktüğü için her dalga boyundaki ışık aynı açı ile sapar. Evrenakı Zerre Modelinde ise sapma "hidrodinamik yörünge sertliğine" (dirence) bağlıdır, bu sebeple farklı renkler (zerre arası mesafeler) akışkanda mikroskobik düzeyde farklı açılarla (kromatik sapma) kırılır.
+    </div>
+</div>
+
+<script>
+    const thetaRef = 1.750; 
+    const lambdaRef = 550;  
+    const chi = 0.0005;     
+
+    const rangeSlider = document.getElementById('wavelengthRange');
+    const numberInput = document.getElementById('wavelengthInput');
+    
+    const rayStd = document.getElementById('rayStd');
+    const rayZer = document.getElementById('rayZer');
+    
+    const angleResultZer = document.getElementById('angleResultZer');
+    const diffResultZer = document.getElementById('diffResultZer');
+    const panelZer = document.getElementById('panelZer');
+
+    function wavelengthToColor(wavelength) {
+        if (wavelength >= 380 && wavelength < 440) return "#9333ea"; // Mor
+        if (wavelength >= 440 && wavelength < 490) return "#3b82f6"; // Mavi
+        if (wavelength >= 490 && wavelength < 510) return "#06b6d4"; // Turkuaz
+        if (wavelength >= 510 && wavelength < 580) return "#22c55e"; // Yeşil
+        if (wavelength >= 580 && wavelength < 600) return "#eab308"; // Sarı
+        if (wavelength >= 600 && wavelength < 620) return "#f97316"; // Turuncu
+        if (wavelength >= 620 && wavelength <= 750) return "#ef4444"; // Kırmızı
+        return "#ffffff";
+    }
+
+    // Çizgi oluşturma fonksiyonu (Hiperbolik yaklaşım benzeri bükülme simülasyonu)
+    function generatePath(baseSlope) {
+        let startX = 20, startY = 60;
+        let dPath = `M ${startX} ${startY}`;
+        let currentY = startY;
+
+        for (let x = startX + 5; x <= 480; x += 5) {
+            let normalizedX = (x - 250) / 40; 
+            let slopeMultiplier = (Math.atan(normalizedX) + (Math.PI / 2)) / Math.PI; 
+            let currentSlope = baseSlope * slopeMultiplier;
+            currentY += currentSlope * 5; 
+            dPath += ` L ${x} ${currentY}`;
+        }
+        return dPath;
+    }
+
+    function updateSimulation() {
+        let lambda = parseFloat(numberInput.value);
+        if (lambda < 380) lambda = 380;
+        if (lambda > 750) lambda = 750;
+
+        let rayColor = wavelengthToColor(lambda);
+
+        // --- STANDART FİZİK (GR) GÜNCELLEMESİ ---
+        // GR'de eğim (sapma) daima sabittir (550nm yeşil ışığınkine eşdeğer baz aldık)
+        let constantSlope = 0.20 + (((550 - 550) / 170) * 0.08); // 0.20
+        rayStd.setAttribute('d', generatePath(constantSlope));
+        rayStd.setAttribute('stroke', rayColor); // Rengi değişsin ama yolu değişmesin
+
+        // --- EVRENAKI (ZERRE) GÜNCELLEMESİ ---
+        // Matematiği (Sapma açısı metinleri)
+        let theta = thetaRef * (1 + chi * ((lambda - lambdaRef) / lambdaRef));
+        let diffMicroArcsec = (theta - thetaRef) * 1000000;
+
+        angleResultZer.innerHTML = theta.toFixed(6) + "''";
+        let sign = diffMicroArcsec > 0 ? "+" : "";
+        diffResultZer.innerHTML = sign + Math.round(diffMicroArcsec) + " &mu;as (Yeşile Göre Fark)";
+        
+        // Renk güncellemeleri
+        diffResultZer.style.color = rayColor;
+        angleResultZer.style.color = rayColor;
+        panelZer.style.borderLeft = `6px solid ${rayColor}`;
+
+        // Görsel Yolu (Farkı abartarak gösteriyoruz)
+        let factor = (lambda - 550) / 170; // -1 ile +1 arası
+        let dynamicSlope = 0.20 + (factor * 0.08); 
+        rayZer.setAttribute('d', generatePath(dynamicSlope));
+        rayZer.setAttribute('stroke', rayColor);
+    }
+
+    rangeSlider.addEventListener('input', function() {
+        numberInput.value = this.value;
+        updateSimulation();
+    });
+
+    numberInput.addEventListener('input', function() {
+        rangeSlider.value = this.value;
+        updateSimulation();
+    });
+
+    // İlk Yükleme
+    updateSimulation();
+</script>
+
+</body>
+</html>

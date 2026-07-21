@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Fresnel-Arago Deneyi Simülasyonu</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --panel-bg: rgba(30, 30, 30, 0.8);
+            --accent: #00ffcc;
+            --accent-glow: rgba(0, 255, 204, 0.5);
+            --text-main: #e0e0e0;
+            --text-muted: #888;
+            --border-radius: 12px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        #app-container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 1200px;
+            height: 100%;
+            background: rgba(20, 20, 20, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+            position: relative;
+        }
+
+        header {
+            padding: 15px 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--panel-bg);
+            border-top-left-radius: var(--border-radius);
+            border-top-right-radius: var(--border-radius);
+        }
+
+        header h1 {
+            font-size: 1.2rem;
+            color: var(--accent);
+            text-shadow: 0 0 10px var(--accent-glow);
+        }
+
+        .controls-panel {
+            display: flex;
+            padding: 15px 20px;
+            background: rgba(0,0,0,0.5);
+            gap: 20px;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .control-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            flex: 1;
+        }
+
+        .control-group label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .slider-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        input[type=range] {
+            flex: 1;
+            accent-color: var(--accent);
+            cursor: pointer;
+        }
+
+        .angle-value {
+            font-weight: bold;
+            color: var(--accent);
+            min-width: 40px;
+            text-align: right;
+        }
+
+        /* Toggle Switch */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 24px;
+        }
+        .switch input { 
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-color: #333;
+            transition: .4s;
+            border-radius: 24px;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 16px; width: 16px;
+            left: 4px; bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        input:checked + .slider {
+            background-color: var(--accent);
+            box-shadow: 0 0 10px var(--accent-glow);
+        }
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+
+        #simulation-area {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+        }
+
+        canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .info-panel {
+            background: rgba(10,10,10,0.85);
+            padding: 15px 20px;
+            border-top: 1px solid rgba(255,255,255,0.15);
+            font-size: 0.9rem;
+            line-height: 1.5;
+            border-bottom-left-radius: var(--border-radius);
+            border-bottom-right-radius: var(--border-radius);
+            flex-shrink: 0;
+        }
+        
+        .info-overlay h3 {
+            color: var(--accent);
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+<div id="app-container">
+    <header>
+        <h1 style="color: #fff; text-shadow: 0 0 10px rgba(0, 229, 255, 0.5);">Animasyon 21.1: Klasik Dalga Optiği - Fresnel-Arago Yasaları</h1>
+    </header>
+    
+    <div class="controls-panel">
+        <div class="control-group">
+            <label>1. Yarık (Üst) Polarizör Açısı</label>
+            <div class="slider-row">
+                <input type="range" id="slit1-angle" min="0" max="90" step="45" value="0">
+                <span class="angle-value" id="slit1-val">0°</span>
+            </div>
+        </div>
+        <div class="control-group">
+            <label>2. Yarık (Alt) Polarizör Açısı</label>
+            <div class="slider-row">
+                <input type="range" id="slit2-angle" min="0" max="90" step="45" value="90">
+                <span class="angle-value" id="slit2-val">90°</span>
+            </div>
+        </div>
+        <div class="control-group" style="flex: 0.5; align-items: center; border-left: 1px solid rgba(255,255,255,0.1); padding-left: 20px;">
+            <label>Analizör (Silici - 45°)</label>
+            <label class="switch" style="margin-top: 8px;">
+                <input type="checkbox" id="analyzer-toggle">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </div>
+
+    <div id="simulation-area">
+        <canvas id="simCanvas"></canvas>
+    </div>
+    
+    <div class="info-panel">
+        <h3 id="status-title">Durum: Girişim Yok</h3>
+        <p id="status-desc">Birbirine dik açılarla polarize edilmiş dalgalar süperpoze olamazlar. Hedef ekranda homojen bir aydınlanma görülür.</p>
+    </div>
+</div>
+
+<script>
+    const canvas = document.getElementById('simCanvas');
+    const ctx = canvas.getContext('2d');
+    
+    const slider1 = document.getElementById('slit1-angle');
+    const slider2 = document.getElementById('slit2-angle');
+    const val1 = document.getElementById('slit1-val');
+    const val2 = document.getElementById('slit2-val');
+    const analyzerToggle = document.getElementById('analyzer-toggle');
+    const statusTitle = document.getElementById('status-title');
+    const statusDesc = document.getElementById('status-desc');
+
+    let time = 0;
+
+    // Simulation Constants
+    const LASER_X = 50;
+    const SLIT_GAP = 120; // Distance between slits
+
+    function resize() {
+        const rect = canvas.parentElement.getBoundingClientRect();
+        canvas.width = rect.width;
+        canvas.height = rect.height;
+    }
+    window.addEventListener('resize', resize);
+    resize();
+
+    // Convert degrees to radians
+    function deg2rad(deg) { return deg * Math.PI / 180; }
+
+    // Draw a polarizer filter graphic
+    function drawPolarizer(x, y, size, angleDeg, color, label) {
+        ctx.save();
+        ctx.translate(x, y);
+        
+        // Base glass
+        ctx.fillStyle = "rgba(0, 200, 255, 0.1)";
+        ctx.strokeStyle = color;
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.roundRect(-size/2, -size/2, size, size, 5);
+        ctx.fill();
+        ctx.stroke();
+
+        // Lines indicating polarization axis
+        ctx.rotate(deg2rad(angleDeg));
+        ctx.strokeStyle = "rgba(255, 255, 255, 0.4)";
+        ctx.lineWidth = 1.5;
+        for (let i = -size/2 + 5; i < size/2; i += 8) {
+            ctx.beginPath();
+            ctx.moveTo(i, -size/2 + 2);
+            ctx.lineTo(i, size/2 - 2);
+            ctx.stroke();
+        }
+
+        ctx.restore();
+
+        // Label
+        ctx.fillStyle = color;
+        ctx.font = "12px sans-serif";
+        ctx.textAlign = "center";
+        ctx.fillText(`${label} (${angleDeg}°)`, x, y + size/2 + 15);
+    }
+
+    function updateStatus(theta1, theta2, hasAnalyzer) {
+        val1.textContent = theta1 + '°';
+        val2.textContent = theta2 + '°';
+
+        if (hasAnalyzer) {
+            statusTitle.textContent = "Durum: Silici Aktif (Girişim Var)";
+            statusTitle.style.color = "#ff00ff";
+            statusDesc.innerHTML = "45° Analizör (Silici) hedef ekranın hemen önüne eklendi. Uyumsuz dalgalar zorla 45° eksenine izdüşümlenerek hizalandı ve <b>Girişim Geri Geldi!</b>";
+        } else if (theta1 === theta2) {
+            statusTitle.textContent = "Durum: Girişim Var";
+            statusTitle.style.color = "#00ffcc";
+            statusDesc.textContent = "Her iki yarıktan da aynı açıyla (paralel) polarize olmuş dalgalar çıkıyor. Birbirleriyle uyum içinde süperpoze olup girişim deseni oluştururlar.";
+        } else {
+            statusTitle.textContent = "Durum: Girişim Yok";
+            statusTitle.style.color = "#ff4444";
+            statusDesc.textContent = "Birbirine dik açılarla polarize edilmiş dalgalar süperpoze olamazlar. Hedef ekranda sadece düz, homojen bir aydınlanma görülür (Girişim deseni kayboldu).";
+        }
+    }
+
+    function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+        const SLIT_WALL_X = Math.min(250, canvas.width * 0.3);
+        const SCREEN_X = Math.max(SLIT_WALL_X + 200, canvas.width - 60);
+
+        const cy = canvas.height / 2;
+        const slit1Y = cy - SLIT_GAP/2;
+        const slit2Y = cy + SLIT_GAP/2;
+
+        const theta1 = parseInt(slider1.value);
+        const theta2 = parseInt(slider2.value);
+        const hasAnalyzer = analyzerToggle.checked;
+
+        updateStatus(theta1, theta2, hasAnalyzer);
+
+        // 1. Draw Laser Source
+        ctx.fillStyle = "#ff0055";
+        ctx.shadowColor = "#ff0055";
+        ctx.shadowBlur = 20;
+        ctx.fillRect(10, cy - 15, 30, 30);
+        ctx.shadowBlur = 0;
+        ctx.fillStyle = "white";
+        ctx.font = "12px sans-serif";
+        ctx.fillText("Lazer", 25, cy - 25);
+
+        // Beam from laser to slits
+        ctx.fillStyle = "rgba(255, 0, 85, 0.2)";
+        ctx.beginPath();
+        ctx.moveTo(40, cy - 5);
+        ctx.lineTo(SLIT_WALL_X, slit1Y - 10);
+        ctx.lineTo(SLIT_WALL_X, slit2Y + 10);
+        ctx.lineTo(40, cy + 5);
+        ctx.fill();
+
+        // 2. Draw Slit Wall
+        ctx.fillStyle = "#555";
+        // Top block
+        ctx.fillRect(SLIT_WALL_X - 10, 0, 20, slit1Y - 10);
+        // Middle block
+        ctx.fillRect(SLIT_WALL_X - 10, slit1Y + 10, 20, SLIT_GAP - 20);
+        // Bottom block
+        ctx.fillRect(SLIT_WALL_X - 10, slit2Y + 10, 20, canvas.height - (slit2Y + 10));
+
+        // 3. Draw Polarizers right after slits
+        drawPolarizer(SLIT_WALL_X + 25, slit1Y, 40, theta1, "#00ffcc", "Pol. 1");
+        drawPolarizer(SLIT_WALL_X + 25, slit2Y, 40, theta2, "#00ffcc", "Pol. 2");
+
+        // 4. Draw Analyzer (if active) right before screen
+        const analyzerX = SCREEN_X - 30;
+        if (hasAnalyzer) {
+            drawPolarizer(analyzerX, cy, 150, 45, "#ff00ff", "Analizör (Silici)");
+        }
+
+        // 5. Draw Screen
+        ctx.fillStyle = "#333";
+        ctx.fillRect(SCREEN_X, 0, 20, canvas.height);
+
+        // 6. Draw Waves and Calculate Interference
+        // To make it look dynamic, we draw expanding circles from the slits
+        ctx.lineWidth = 1.5;
+        const wavelength = 20;
+        const k = 2 * Math.PI / wavelength;
+        
+        ctx.save();
+        ctx.rect(SLIT_WALL_X + 45, 0, SCREEN_X - (SLIT_WALL_X + 45), canvas.height);
+        ctx.clip();
+
+        // Draw animated wave fronts (abstract representation)
+        for(let r = (time * 2) % wavelength; r < 800; r += wavelength) {
+            ctx.strokeStyle = `rgba(0, 255, 204, ${Math.max(0, 0.3 - r/2000)})`;
+            ctx.beginPath();
+            ctx.arc(SLIT_WALL_X + 25, slit1Y, r, -Math.PI/2, Math.PI/2);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.arc(SLIT_WALL_X + 25, slit2Y, r, -Math.PI/2, Math.PI/2);
+            ctx.stroke();
+        }
+        ctx.restore();
+
+        // 7. Calculate Intensity on Screen
+        for (let y = 0; y < canvas.height; y++) {
+            // Path difference
+            const d1 = Math.sqrt(Math.pow(SCREEN_X - SLIT_WALL_X, 2) + Math.pow(y - slit1Y, 2));
+            const d2 = Math.sqrt(Math.pow(SCREEN_X - SLIT_WALL_X, 2) + Math.pow(y - slit2Y, 2));
+            const deltaPhi = k * (d2 - d1);
+
+            let intensity = 0;
+
+            const t1 = deg2rad(theta1);
+            const t2 = deg2rad(theta2);
+
+            if (hasAnalyzer) {
+                const ta = deg2rad(45);
+                const e1_proj = Math.cos(t1 - ta);
+                const e2_proj = Math.cos(t2 - ta);
+                // I = |e1_proj + e2_proj * e^(i deltaPhi)|^2
+                intensity = e1_proj*e1_proj + e2_proj*e2_proj + 2 * e1_proj * e2_proj * Math.cos(deltaPhi);
+                intensity *= 0.5; // Max becomes 1
+            } else {
+                // I = |E1|^2 + |E2|^2 + 2(E1.E2)cos(deltaPhi)
+                const dot = Math.cos(t1) * Math.cos(t2) + Math.sin(t1) * Math.sin(t2); // cos(t1-t2)
+                intensity = 1 + 1 + 2 * dot * Math.cos(deltaPhi);
+                intensity /= 4; // Max becomes 1. If orthogonal, it becomes 0.5 everywhere.
+            }
+
+            // Draw on screen as color
+            const c = Math.floor(intensity * 255);
+            ctx.fillStyle = hasAnalyzer ? `rgb(${c}, 0, ${c})` : `rgb(0, ${c}, ${c})`;
+            
+            // Screen visualization
+            ctx.fillRect(SCREEN_X, y, 20, 1);
+        }
+
+        // Screen Labels
+        ctx.fillStyle = "white";
+        ctx.font = "bold 12px sans-serif";
+        ctx.textAlign = "center";
+        
+        ctx.shadowColor = "black";
+        ctx.shadowBlur = 5;
+        ctx.fillText("HEDEF", SCREEN_X + 10, 30);
+        ctx.fillText("EKRAN", SCREEN_X + 10, 45);
+        ctx.shadowBlur = 0;
+        ctx.textAlign = "left"; // reset
+
+        time += 1;
+        requestAnimationFrame(draw);
+    }
+
+    // Event listeners for inputs
+    slider1.addEventListener('input', () => { val1.textContent = slider1.value + '°'; });
+    slider2.addEventListener('input', () => { val2.textContent = slider2.value + '°'; });
+    analyzerToggle.addEventListener('change', () => {});
+
+    // Start loop
+    draw();
+
+</script>
+</body>
+</html>

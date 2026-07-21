@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evrenakı Gradyanları Simülasyonu</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #050510;
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        #ui-panel {
+            padding: 15px 20px;
+            background: rgba(10, 15, 30, 0.9);
+            border-bottom: 1px solid #2a355a;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+            z-index: 10;
+        }
+        h2 {
+            margin: 0;
+            font-size: 16px;
+            color: #7bb5ff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-right: 20px;
+        }
+        button {
+            background: #1a2545;
+            color: #a5caff;
+            border: 1px solid #3a4c8a;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+        button:hover, button.active {
+            background: #2a3a6a;
+            color: #fff;
+            border-color: #5a7cda;
+            box-shadow: 0 0 10px rgba(90, 124, 218, 0.4);
+        }
+        #canvas-container {
+            flex-grow: 1;
+            position: relative;
+            cursor: crosshair;
+        }
+        canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        #info-box {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            background: rgba(5, 10, 20, 0.75);
+            border: 1px solid #2a355a;
+            padding: 12px 20px;
+            border-radius: 8px;
+            pointer-events: none;
+            backdrop-filter: blur(3px);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .info-title {
+            color: #ffd700;
+            font-weight: bold;
+            white-space: nowrap;
+            min-width: 150px;
+            border-right: 1px solid #3a4c8a;
+            padding-right: 20px;
+        }
+        .info-desc {
+            font-size: 13.5px;
+            color: #b0c0df;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="ui-panel">
+        <h2>Animasyon 1.5.2: Gradyan Mimarisi</h2>
+        <button id="btn-single" class="active">1. Tek Atom (Tıkla)</button>
+        <button id="btn-electron">Elektron Sınır Tabakası: KAPALI</button>
+        <button id="btn-lattice">2. Kristal Kafes (Kolektif)</button>
+        <button id="btn-draw">3. Makro Fırça (Sürükle)</button>
+        <button id="btn-binary">4. İkili Sistem (Ortak Gradyan)</button>
+        <button id="btn-clear" style="margin-left:auto; border-color: #8a3a3a; color: #ff9a9a;">Temizle</button>
+    </div>
+
+    <div id="canvas-container">
+        <canvas id="simCanvas"></canvas>
+        <div id="info-box">
+            <div class="info-title" id="info-title">Mod: Tek Atom Ekleme</div>
+            <div class="info-desc" id="info-desc">Ekrana tıklayarak izole bir atom yerleştirin. Atomun bulunduğu yer (mavi) akışkanın seyrek olduğu deplasman bölgesidir. Etrafındaki kırmızılık (gradyan) dışa itilen akışkanın yarattığı yüksek basınç halesidir.</div>
+        </div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('simCanvas');
+        const ctx = canvas.getContext('2d');
+        let width = canvas.width = window.innerWidth;
+        let height = canvas.height = window.innerHeight - document.getElementById('ui-panel').offsetHeight;
+
+        window.addEventListener('resize', () => {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight - document.getElementById('ui-panel').offsetHeight;
+            draw();
+        });
+
+        // State
+        let atoms = [];
+        let mode = 'single'; // single, draw
+        let showElectron = false;
+        let isDrawing = false;
+        let time = 0;
+        let binaryMode = false;
+        let binaryA = null, binaryB = null;
+
+        // UI Elements
+        const btnSingle = document.getElementById('btn-single');
+        const btnElectron = document.getElementById('btn-electron');
+        const btnLattice = document.getElementById('btn-lattice');
+        const btnDraw = document.getElementById('btn-draw');
+        const btnBinary = document.getElementById('btn-binary');
+        const btnClear = document.getElementById('btn-clear');
+        const infoTitle = document.getElementById('info-title');
+        const infoDesc = document.getElementById('info-desc');
+
+        // Functions to set modes
+        function updateUI() {
+            btnSingle.classList.toggle('active', mode === 'single');
+            btnDraw.classList.toggle('active', mode === 'draw');
+            
+            if(showElectron) {
+                btnElectron.textContent = "Elektron Sınır Tabakası: AÇIK";
+                btnElectron.style.borderColor = "#ffd700";
+                btnElectron.style.color = "#ffd700";
+            } else {
+                btnElectron.textContent = "Elektron Sınır Tabakası: KAPALI";
+                btnElectron.style.borderColor = "#3a4c8a";
+                btnElectron.style.color = "#a5caff";
+            }
+
+            if(mode === 'single') {
+                infoTitle.textContent = "Mod: Tek Atom (Mikro Gradyan)";
+                infoDesc.textContent = "Ekrana tıklayarak izole bir atom yerleştirin. Atom merkezde akışkanı yerinden eder (mavi deplasman cebi), çevresinde ise yüksek basınçlı bir sınır tabakası (kırmızı gradyan) oluşturur.";
+            } else if (mode === 'draw') {
+                infoTitle.textContent = "Mod: Makro Fırça (Kütle Geometrisi)";
+                infoDesc.textContent = "Farenizi basılı tutarak uzamış (çubuksu) veya halka şeklinde kütleler çizin. Basınç gradyanlarının (kırmızı haleler) kütlenin şeklini birebir nasıl kopyaladığını (Makro Gradyan Topolojisi) gözlemleyin.";
+            }
+        }
+
+        btnSingle.onclick = () => { mode = 'single'; binaryMode = false; updateUI(); };
+        btnDraw.onclick = () => { mode = 'draw'; binaryMode = false; updateUI(); };
+        btnElectron.onclick = () => { showElectron = !showElectron; updateUI(); };
+        btnClear.onclick = () => { atoms = []; binaryMode = false; };
+        btnBinary.onclick = () => {
+            atoms = [];
+            binaryMode = true;
+            mode = 'single';
+            const cy = height / 2;
+            binaryA = { x: width / 2 - 80, y: cy };
+            binaryB = { x: width / 2 + 80, y: cy };
+            [binaryA, binaryB].forEach(c => {
+                atoms.push({x: c.x, y: c.y});
+                for(let k = 0; k < 6; k++) {
+                    const a = k * Math.PI / 3;
+                    atoms.push({x: c.x + Math.cos(a) * 38, y: c.y + Math.sin(a) * 38});
+                }
+            });
+            updateUI();
+            infoTitle.textContent = "İkili Sistem: Ortak Gradyan Bölgesi (İki Referans Seviyesi)";
+            infoDesc.textContent = "Koyu renkler yüksek basıncı (uzayı), açık renkler ise düşük basıncı (maddeyi) temsil eder. İki kütlenin gradyanları aradaki bölgede üst üste biner ve iki cetvelle okunmalıdır: YEREL gradyana göre bu örtüşme bölgesinde sıkışmadan ötürü göreli bir basınç FAZLASI oluşur; ancak KOZMİK arka plan basıncına (P₀) göre aynı bölge yine ALÇAK basınçlıdır — iki kütle, tek ve birleşik bir P₀-altı topoloji içinde davranır. Dış uzayın global basıncı (koyu alan), iki cismi bu P₀-altı ortak bölgeye doğru ezer (Newton'un 'çekim' dediği görüntü, gerçekte Kütle-İtimi'dir; bkz. 1.5.4).";
+        };
+        btnLattice.onclick = () => {
+            atoms = [];
+            binaryMode = false;
+            let startX = width / 2 - 100;
+            let startY = height / 2 - 100;
+            for(let i=0; i<3; i++) {
+                for(let j=0; j<3; j++) {
+                    atoms.push({x: startX + i*100, y: startY + j*100});
+                }
+            }
+            mode = 'single';
+            updateUI();
+            infoTitle.textContent = "Kolektif Gradyan (Kristal Kafes)";
+            infoDesc.textContent = "Trilyonlarca atom birleştiğinde, bireysel kırmızı basınç haleleri süperpozisyona uğrar. Atomların arası, ışığın (Zerre'nin) içinden aktığı 'düzenli basınç labirentlerine' dönüşür. Malzemenin içi toplamda dış uzaya göre daha seyrektir.";
+        };
+
+        // Interaction
+        canvas.addEventListener('mousedown', (e) => {
+            isDrawing = true;
+            binaryMode = false;
+            const rect = canvas.getBoundingClientRect();
+            addAtom(e.clientX - rect.left, e.clientY - rect.top);
+        });
+
+        canvas.addEventListener('pointermove', (e) => {
+            if(isDrawing && mode === 'draw') {
+                // Add atom if sufficiently far from last
+                let rect = canvas.getBoundingClientRect();
+                let x = e.clientX - rect.left;
+                let y = e.clientY - rect.top;
+                
+                if(atoms.length === 0) {
+                    addAtom(x, y);
+                } else {
+                    let last = atoms[atoms.length-1];
+                    let dist = Math.hypot(last.x - x, last.y - y);
+                    if(dist > 15) {
+                        addAtom(x, y);
+                    }
+                }
+            }
+        });
+
+        canvas.addEventListener('mouseup', () => { isDrawing = false; });
+        canvas.addEventListener('mouseleave', () => { isDrawing = false; });
+
+        function addAtom(x, y) {
+            atoms.push({x: x, y: y});
+        }
+
+        // Draw loop
+        function draw() {
+            // Background (Base fluid density)
+            ctx.fillStyle = '#050510';
+            ctx.fillRect(0, 0, width, height);
+
+            // Draw Gradients (Pressure fields) using compositing
+            ctx.globalCompositeOperation = 'screen';
+
+            atoms.forEach((atom, index) => {
+                // Atom's pressure gradient
+                let radGrad = ctx.createRadialGradient(atom.x, atom.y, 0, atom.x, atom.y, 120);
+                // The core (displacement) is not additive pressure, it's a void, so we keep it transparent here
+                // The pressure shell starts around radius 15 and decays
+                radGrad.addColorStop(0, 'rgba(0, 0, 0, 0)');
+                radGrad.addColorStop(0.1, 'rgba(0, 0, 0, 0)');
+                radGrad.addColorStop(0.2, 'rgba(120, 20, 30, 0.6)'); // High pressure boundary
+                radGrad.addColorStop(0.5, 'rgba(40, 10, 50, 0.3)'); // Decaying pressure
+                radGrad.addColorStop(1, 'rgba(0, 0, 0, 0)');
+
+                ctx.fillStyle = radGrad;
+                ctx.beginPath();
+                ctx.arc(atom.x, atom.y, 120, 0, Math.PI * 2);
+                ctx.fill();
+
+                // Draw Electron and its moving boundary layer
+                if(showElectron) { 
+                    let eAngle = time * 0.05 + (index * Math.PI/2);
+                    let eDist = 45;
+                    let ex = atom.x + Math.cos(eAngle) * eDist;
+                    let ey = atom.y + Math.sin(eAngle) * eDist;
+
+                    let eGrad = ctx.createRadialGradient(ex, ey, 0, ex, ey, 50);
+                    eGrad.addColorStop(0, 'rgba(255, 200, 50, 0.8)');
+                    eGrad.addColorStop(0.3, 'rgba(150, 50, 20, 0.4)');
+                    eGrad.addColorStop(1, 'rgba(0, 0, 0, 0)');
+
+                    ctx.fillStyle = eGrad;
+                    ctx.beginPath();
+                    ctx.arc(ex, ey, 50, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+            });
+
+            // Deplasman aydınlatması: madde bölgesinin içi akışkan açısından seyrektir (Vakum/Boşluk cebi)
+            ctx.globalCompositeOperation = 'screen';
+            atoms.forEach(atom => {
+                let dGrad = ctx.createRadialGradient(atom.x, atom.y, 0, atom.x, atom.y, 42);
+                dGrad.addColorStop(0, 'rgba(180, 230, 255, 0.6)'); // Açık, parlak buz mavisi (boşluk hissi)
+                dGrad.addColorStop(1, 'rgba(180, 230, 255, 0)');
+                ctx.fillStyle = dGrad;
+                ctx.beginPath();
+                ctx.arc(atom.x, atom.y, 42, 0, Math.PI * 2);
+                ctx.fill();
+            });
+
+            // İkili sistem: üst üste binen gradyanların oluşturduğu gölgelenme cebi
+            if(binaryMode && binaryA && binaryB) {
+                const mx = (binaryA.x + binaryB.x) / 2;
+                const my = (binaryA.y + binaryB.y) / 2;
+                ctx.fillStyle = 'rgba(255, 210, 160, 0.9)';
+                ctx.font = '11px Segoe UI';
+                ctx.textAlign = 'center';
+                ctx.fillText('ORTAK GRADYAN BÖLGESİ', mx, my - 76);
+                ctx.fillText('yerel gradyana göre: sıkışma fazlası (göreli artış)', mx, my - 60);
+                ctx.fillText('kozmik arka plana (P₀) göre: yine ALÇAK basınç', mx, my - 44);
+                ctx.strokeStyle = 'rgba(255, 210, 160, 0.5)';
+                ctx.lineWidth = 1;
+                ctx.beginPath();
+                ctx.moveTo(mx, my - 38);
+                ctx.lineTo(mx, my - 8);
+                ctx.stroke();
+            }
+
+            // Draw Atom Cores (Displacement / Low density pockets)
+            ctx.globalCompositeOperation = 'source-over';
+            atoms.forEach(atom => {
+                // Outer core shell
+                ctx.beginPath();
+                ctx.arc(atom.x, atom.y, 8, 0, Math.PI * 2);
+                ctx.fillStyle = '#ffffff'; // Parlak beyaz merkez
+                ctx.fill();
+                ctx.strokeStyle = '#aaddff';
+                ctx.lineWidth = 2;
+                ctx.stroke();
+
+                // Inner core void
+                ctx.beginPath();
+                ctx.arc(atom.x, atom.y, 4, 0, Math.PI * 2);
+                ctx.fillStyle = '#e0f5ff';
+                ctx.fill();
+            });
+
+            time++;
+            requestAnimationFrame(draw);
+        }
+
+        // Initialize
+        updateUI();
+        draw();
+    </script>
+</body>
+</html>
