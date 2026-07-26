@@ -773,10 +773,16 @@
     };
 
     window.createSampleUser = async function() {
-        const uName = prompt("Eklenecek üyenin adı:", "B. Güler");
+        const randId = Math.floor(100 + Math.random() * 900);
+        const uName = prompt("Eklenecek üyenin adı:", "Test Okur " + randId);
         if (!uName || !uName.trim()) return;
-        const uEmail = prompt("Üyenin e-postası:", "burhanguler@evrenaky.org");
+        const uEmail = prompt("Üyenin e-postası:", "testokur" + randId + "@evrenaky.org");
         if (!uEmail || !uEmail.trim()) return;
+
+        // Clean from deleted blacklist if re-creating
+        let deletedUsers = safeGet('evrenaky_deleted_user_ids', '[]');
+        deletedUsers = deletedUsers.filter(e => e !== uEmail.trim().toLowerCase());
+        safeSet('evrenaky_deleted_user_ids', deletedUsers);
 
         const newUser = {
             id: 'usr_' + Date.now(),
@@ -797,7 +803,7 @@
             } catch(e) {}
         }
 
-        alert("Test üyesi başarıyla eklendi!");
+        alert("'" + uName.trim() + "' üyeliği başarıyla oluşturuldu ve panele eklendi!");
         loadUsers();
     };
 
