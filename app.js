@@ -947,6 +947,12 @@ async function handleAuthSubmit(event) {
 
     if (result.user) {
         currentUser = result.user;
+        if (isSignup) {
+            const usernameInput = document.getElementById('auth-username');
+            if (usernameInput && usernameInput.value.trim()) {
+                currentUser.username = usernameInput.value.trim();
+            }
+        }
         saveUserToStore(currentUser);
         updateAuthUI();
     }

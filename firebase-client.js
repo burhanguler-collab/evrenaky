@@ -127,11 +127,18 @@ window.firebaseAuth = {
     async kayitOl(email, password, username) {
         try {
             const cred = await createUserWithEmailAndPassword(auth, email, password);
+            const userDispName = username || (email ? email.split('@')[0] : 'Üye');
             if (username) {
-                await updateProfile(cred.user, { displayName: username });
+                try { await updateProfile(cred.user, { displayName: username }); } catch(err) {}
             }
-            await kaydetVeyaGuncelleKullanici(cred.user, { created_at: new Date().toISOString() });
-            return { success: true, user: kullaniciBicimle(cred.user) };
+            await kaydetVeyaGuncelleKullanici(cred.user, { 
+                username: userDispName, 
+                provider: 'E-posta', 
+                created_at: new Date().toISOString() 
+            });
+            const formattedUser = kullaniciBicimle(cred.user);
+            formattedUser.username = userDispName;
+            return { success: true, user: formattedUser };
         } catch (e) {
             return { success: false, message: authHataMesaji(e.code) };
         }
@@ -140,7 +147,7 @@ window.firebaseAuth = {
     async girisYap(email, password) {
         try {
             const cred = await signInWithEmailAndPassword(auth, email, password);
-            await kaydetVeyaGuncelleKullanici(cred.user);
+            await kaydetVeyaGuncelleKullanici(cred.user, { provider: 'E-posta' });
             return { success: true, user: kullaniciBicimle(cred.user) };
         } catch (e) {
             return { success: false, message: authHataMesaji(e.code) };
@@ -150,7 +157,7 @@ window.firebaseAuth = {
     async googleIleGiris() {
         try {
             const cred = await signInWithPopup(auth, new GoogleAuthProvider());
-            await kaydetVeyaGuncelleKullanici(cred.user, { created_at: new Date().toISOString() });
+            await kaydetVeyaGuncelleKullanici(cred.user, { provider: 'Google OAuth', created_at: new Date().toISOString() });
             return { success: true, user: kullaniciBicimle(cred.user) };
         } catch (e) {
             return { success: false, message: authHataMesaji(e.code) };
