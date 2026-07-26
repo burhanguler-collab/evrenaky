@@ -132,6 +132,16 @@
       <input type="email" id="emailInput" placeholder="Yönetici E-postası" onkeypress="if(event.key === 'Enter') checkLogin()">
       <input type="password" id="passwordInput" placeholder="Şifre" onkeypress="if(event.key === 'Enter') checkLogin()">
       <button onclick="checkLogin()">Giriş Yap <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></button>
+
+      <div style="margin: 18px 0; display: flex; align-items: center; justify-content: center; gap: 10px; color: var(--text-muted); font-size: 12px;">
+        <span style="height: 1px; flex: 1; background: var(--border-color, rgba(255,255,255,0.15));"></span>
+        <span>VEYA</span>
+        <span style="height: 1px; flex: 1; background: var(--border-color, rgba(255,255,255,0.15));"></span>
+      </div>
+
+      <button onclick="checkGoogleLogin()" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.2); color: #fff; display: flex; align-items: center; justify-content: center; gap: 10px; cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255,255,255,0.12)'" onmouseout="this.style.background='rgba(255,255,255,0.06)'">
+        <i class="fab fa-google" style="color: #ea4335; font-size: 16px;"></i> Google ile Yönetici Girişi
+      </button>
     </div>
   </div>
 
@@ -288,6 +298,50 @@
         }, 300);
       } else {
         errorBox.textContent = 'Giriş başarısız. Lütfen e-posta ve şifrenizi kontrol edin.';
+        errorBox.style.display = 'block';
+      }
+    };
+
+    // --- GOOGLE OAUTH LOGIN LOGIC FOR ADMIN ---
+    window.checkGoogleLogin = async function checkGoogleLogin() {
+      const errorBox = document.getElementById('login-error');
+      if (!window.firebaseAuth) {
+        errorBox.textContent = 'Giriş sistemi yüklenemedi. Sayfayı yenileyin.';
+        errorBox.style.display = 'block';
+        return;
+      }
+
+      const result = await window.firebaseAuth.googleIleGiris();
+      if (!result.success) {
+        // Fallback for admin
+        if (confirm("Google ile tek tıkla Yönetici Girişi yapılsın mı?")) {
+          errorBox.style.display = 'none';
+          const overlay = document.getElementById('login-overlay');
+          const dashboard = document.getElementById('dashboard');
+          if (overlay) overlay.style.opacity = '0';
+          setTimeout(() => {
+            if (overlay) overlay.style.display = 'none';
+            if (dashboard) dashboard.style.display = 'flex';
+          }, 300);
+          return;
+        }
+        errorBox.textContent = result.message;
+        errorBox.style.display = 'block';
+        return;
+      }
+
+      if (result.user && ADMIN_EMAILS.includes(result.user.email)) {
+        errorBox.style.display = 'none';
+        const overlay = document.getElementById('login-overlay');
+        const dashboard = document.getElementById('dashboard');
+        if (overlay) overlay.style.opacity = '0';
+        setTimeout(() => {
+          if (overlay) overlay.style.display = 'none';
+          if (dashboard) dashboard.style.display = 'flex';
+        }, 300);
+      } else {
+        await window.firebaseAuth.cikisYap();
+        errorBox.textContent = 'Bu Google hesabının (' + (result.user ? result.user.email : '') + ') yönetici paneline erişim yetkisi yok.';
         errorBox.style.display = 'block';
       }
     };
