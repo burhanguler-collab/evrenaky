@@ -28,9 +28,7 @@ const auth = getAuth(app);
 
 // Firebase hata kodlarını okunabilir Türkçe mesaja çevirir
 function authHataMesaji(code) {
-    if (typeof code === 'string' && (code.includes('api-key-not-valid') || code.includes('invalid-api-key') || code.includes('API key'))) {
-        return 'Firebase Authentication servisi henüz Firebase Konsolunda (https://console.firebase.google.com) aktifleştirilmemiştir. Proje yöneticisinin "Authentication > Get Started" butonuna basarak E-posta ve Google giriş yöntemlerini açması gerekmektedir.';
-    }
+    if (!code) return 'Bilinmeyen bir hata oluştu.';
     const map = {
         'auth/email-already-in-use': 'Bu e-posta adresiyle zaten bir üyelik var. Giriş yapmayı deneyin.',
         'auth/invalid-email': 'Geçersiz e-posta adresi.',
@@ -42,9 +40,13 @@ function authHataMesaji(code) {
         'auth/too-many-requests': 'Çok fazla deneme yapıldı. Lütfen biraz sonra tekrar deneyin.',
         'auth/popup-closed-by-user': 'Google penceresi kapatıldı, giriş tamamlanmadı.',
         'auth/operation-not-allowed': 'Bu giriş yöntemi Firebase Console\'da etkinleştirilmemiş.',
-        'auth/network-request-failed': 'İnternet bağlantısı kurulamadı.'
+        'auth/network-request-failed': 'İnternet bağlantısı kurulamadı.',
+        'auth/unauthorized-domain': 'Bu alan adı Firebase Console\'da yetkilendirilmemiş. Lütfen Authentication > Settings > Authorized domains listesine ekleyin.'
     };
-    return map[code] || 'Beklenmeyen bir hata oluştu: ' + code;
+    if (typeof code === 'string' && (code.includes('api-key-not-valid') || code.includes('invalid-api-key'))) {
+        return 'Firebase API anahtarı doğrulanamadı. Lütfen önbelleğinizi temizleyip sayfayı yenileyin.';
+    }
+    return map[code] || ('Hata: ' + code);
 }
 
 // Firebase kullanıcı nesnesini uygulamanın kullandığı sade biçime çevirir
