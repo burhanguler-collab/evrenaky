@@ -485,16 +485,31 @@
         let comments = [];
 
         if (window.firebaseClient) {
-            const [fetchedThreads, fetchedComments] = await Promise.all([
-                window.firebaseClient.getThreads(),
-                window.firebaseClient.getAllComments()
-            ]);
-            threads = fetchedThreads;
-            comments = fetchedComments;
-        } else {
-            threads = safeGet('evrenaky_mock_threads', '[]');
-            comments = safeGet('evrenaky_mock_comments', '[]');
+            try {
+                const [fetchedThreads, fetchedComments] = await Promise.all([
+                    window.firebaseClient.getThreads(),
+                    window.firebaseClient.getAllComments()
+                ]);
+                if (fetchedThreads) threads = fetchedThreads;
+                if (fetchedComments) comments = fetchedComments;
+            } catch(e) {
+                console.warn("Firebase fetch notice:", e);
+            }
         }
+
+        // Merge local storage items so comments created locally also show up
+        const localComments = safeGet('evrenaky_mock_comments', '[]');
+        const localThreads = safeGet('evrenaky_mock_threads', '[]').concat(safeGet('evrenaky_mock_posts', '[]'));
+
+        const commentMap = new Map();
+        comments.forEach(c => { if(c && c.id) commentMap.set(String(c.id), c); });
+        localComments.forEach(c => { if(c && c.id && !commentMap.has(String(c.id))) commentMap.set(String(c.id), c); });
+        comments = Array.from(commentMap.values());
+
+        const threadMap = new Map();
+        threads.forEach(t => { if(t && t.id) threadMap.set(String(t.id), t); });
+        localThreads.forEach(t => { if(t && t.id && !threadMap.has(String(t.id))) threadMap.set(String(t.id), t); });
+        threads = Array.from(threadMap.values());
 
         let html = '';
         

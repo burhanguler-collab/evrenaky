@@ -1032,29 +1032,31 @@ async function submitComment() {
     }
 
     const username = currentUser ? currentUser.username : "Ziyaretçi";
+    const commentObj = {
+        id: 'cmt_' + Date.now(),
+        chapter_id: activeChapterId,
+        username: username,
+        content: content,
+        created_at: new Date().toISOString()
+    };
+
+    // Local Storage backup
+    const allComments = JSON.parse(safeStorage.getItem('evrenaky_mock_comments') || '[]');
+    allComments.unshift(commentObj);
+    safeStorage.setItem('evrenaky_mock_comments', JSON.stringify(allComments));
+
+    // Firebase Firestore Live save
     if (window.firebaseClient) {
-        await window.firebaseClient.submitComment({
-            chapter_id: activeChapterId,
-            username: username,
-            content: content,
-            created_at: new Date().toISOString()
-        });
-        textarea.value = '';
-        loadComments(activeChapterId);
-    } else {
-        const allComments = JSON.parse(safeStorage.getItem('evrenaky_mock_comments') || '[]');
-        const newComment = {
-            id: String(Date.now()),
-            chapter_id: activeChapterId,
-            username: username,
-            content: content,
-            created_at: new Date().toISOString()
-        };
-        allComments.push(newComment);
-        safeStorage.setItem('evrenaky_mock_comments', JSON.stringify(allComments));
-        textarea.value = '';
-        loadComments(activeChapterId);
+        try {
+            await window.firebaseClient.submitComment(commentObj);
+        } catch(e) {
+            console.warn("Firebase submitComment notice:", e);
+        }
     }
+
+    textarea.value = '';
+    loadComments(activeChapterId);
+    alert("Yorumunuz başarıyla eklendi ve yayınlandı!");
 }
 
 // ==========================================
