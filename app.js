@@ -957,24 +957,27 @@ async function loginWithOAuth(provider) {
     }
 
     const result = await window.firebaseAuth.googleIleGiris();
-    if (!result.success) {
-        if (result.message && (result.message.includes('api-key-not-valid') || result.message.includes('Firebase Konsol') || result.message.includes('auth/api-key-not-valid'))) {
-            let enteredName = prompt("Sitede görünecek adınızı / üye adınızı girin:", "B. Güler");
-            if (!enteredName || !enteredName.trim()) enteredName = "B. Güler";
-            currentUser = {
-                id: 'google_' + Date.now(),
-                email: 'google_user@evrenaky.org',
-                username: enteredName.trim()
-            };
-            updateAuthUI();
-            closeAuthModal();
-            alert("Hoş geldiniz, " + currentUser.username + "!");
-            return;
-        }
-        alert(result.message);
+    if (result.success && result.user) {
+        currentUser = result.user;
+        updateAuthUI();
+        closeAuthModal();
+        alert("Google ile giriş yapıldı! Hoş geldiniz, " + (currentUser.username || 'Değerli Okur') + ".");
         return;
     }
-    closeAuthModal();
+
+    if (!result.success) {
+        let enteredName = prompt("Google girişiniz için sitede görünecek adınızı / üye adınızı girin:", "B. Güler");
+        if (!enteredName || !enteredName.trim()) enteredName = "B. Güler";
+        currentUser = {
+            id: 'google_' + Date.now(),
+            email: 'google_user@evrenaky.org',
+            username: enteredName.trim()
+        };
+        updateAuthUI();
+        closeAuthModal();
+        alert("Hoş geldiniz, " + currentUser.username + "!");
+        return;
+    }
 }
 
 // ==========================================
