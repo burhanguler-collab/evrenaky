@@ -2,7 +2,11 @@
 
 ## 3.7.1 Evrenin Genişlemesi ve Karanlık Enerji Çıkmazı
 
-Modern kozmolojide, Edwin Hubble'dan bu yana (Hubble, 1929) galaksilerin bizden uzaklaşması ve evrenin artan bir hızla genişlemesi olgusu gözlemlenmektedir. Astronomi bu gözlemi; mekanik kaynağı, nedenselliği ve rasyonalitesi tamamen belirsiz olan matematiksel bir "Büyük Patlama" (Big Bang) başlangıcıyla ve ivmelenmeyi sağlayan son derece spekülatif bir "Karanlık Enerji" (Dark Energy) konseptiyle açıklamaya çalışır. Karanlık enerji, hesaplamaları (Einstein'ın kozmolojik sabitini; Einstein, 1915) tutturmak için denklemlere eklenen ama laboratuvarda tespit edilemeyen fiktif bir boşluk enerjisi varsayımıdır.
+Modern kozmolojide, Edwin Hubble'dan bu yana (Hubble, 1929) galaksilerin bizden uzaklaşması ve evrenin artan bir hızla genişlemesi olgusu gözlemlenmektedir. Astronomi bu gözlemi, bir "Büyük Patlama" (Big Bang) başlangıcına ve ivmelenmeyi sağlayan bir "Karanlık Enerji" (Dark Energy) bileşenine bağlar. Teorinin bu iki kavram karşısındaki duruşu birbirinden ayrıdır ve netleştirilmelidir:
+
+**Büyük Patlama olayının kendisini Evrenakı Teorisi reddetmez; savunur.** Sıcak, yüksek basınçlı bir başlangıç dönemi, teorinin kendi kozmolojisinin doğal parçasıdır (bkz. 3.7.3 ve 3.7.4.3). İtiraz olaya değil, sunuma yöneliktir: standart model patlamayı, mekanik kaynağı ve taşıyıcı ortamı belirsiz, salt matematiksel bir başlangıç olarak bırakır; Evrenakı ise aynı olaya hidrodinamik bir mekanizma kazandırmayı hedefler.
+
+Karanlık enerji için ise durum farklıdır: bu, hesaplamaları (Einstein'ın kozmolojik sabitini; Einstein, 1915) tutturmak için denklemlere eklenen ama laboratuvarda tespit edilemeyen fiktif bir boşluk enerjisi varsayımıdır ve aşağıda gösterileceği üzere teori buna ihtiyaç duymaz.
 
 Evrenakı modeli, bu olguları mistik veya görünmez enerjiler (karanlık sektör) icat etmek yerine, uzayın bizzat kendisini dolduran Evrenakı akışkanının termodinamik ve akışkanlar mekaniği yasalarıyla temellendirmeyi hedefler. Evren uzayda bir balon gibi şişmez; evreni dolduran okyanusun kendisi (Evrenakı) "deşarj" olur.
 
@@ -28,3 +32,55 @@ O halde kozmolojik ölçekteki bu devasa kızıla kaymanın Evrenakı'daki asıl
 Sonuç olarak; kütleçekimsel kızıla kaymada gördüğümüz o uzaysal ışık hızı oranı ($c_{kaynak}/c_{alıcı}$), kozmolojik ölçekte bizzat evrenin yaşlanmasından doğan **zamansal ışık hızı oranına** dönüşür. Uzak galaksilerdeki kızıla kaymanın sebebi ışığın yolda yorulması değil; o ışığın, bugünkü evrene kıyasla çok daha yüksek basınçlı ve hızlı bir geçmişte üretilmiş olmasıdır.
 
 Bu mekanizma (Kinematik Doppler ile birleştiğinde), doğrudan gözlemlenememiş bir karanlık enerji bileşenine veya ışığın yolda yorulması gibi akı korunumuyla çelişen varsayımlara ihtiyaç bırakmadan, Hubble kızıla kaymasını (Hubble, 1929) hidrodinamik olarak tutarlı biçimde çözer.
+
+## 3.7.4 Karanlık Maddenin Diğer Kanıtları Karşısında Vorteks Modeli: Görünmez Kütle Değil, Görünmez Akış Yapısı
+
+Bölüm 4.2.8–4.2.9, galaktik dönüş eğrilerini karanlık madde parçacığına ihtiyaç duymadan logaritmik vorteks basınç kuyusuyla çözmektedir. Ancak dürüst kayıt şudur: dönüş eğrileri, karanlık madde hipotezinin kanıtları içinde **en zayıf** olanıdır. Hipotezi bugün ayakta tutan asıl üç sütun; çarpışan galaksi kümelerindeki kütle-ışık ayrışması (Bullet Cluster), evrenin büyük ölçekli filaman yapısı (kozmik ağ) ve kozmik arka plan ışımasının akustik pikleridir. Yalnızca dönüş eğrilerini açıklayabilen alternatif modeller (MOND; Milgrom, 1983) tam bu üç sütunda düşmüştür. Bu bölüm, üç sütunu tek tek vorteks modeliyle ele alır.
+
+Üçünü birden çözen çekirdek ilke şudur: **standart fiziğin "karanlık madde" adını verdiği şey, teoride görünmez bir parçacık türü değil, ortamın görünmez sirkülasyon kuyularıdır.** Merceklenmeyi ve dinamiği yöneten basınç topografyası (Bölüm 4.3), ışıyan maddenin yerel yoğunluğuna değil, ortamdaki koherent akış yapılarına bağlıdır: kuyuyu kazan, kütlenin kendisi değil dolaşımdır ($P(r)=P_0+\rho v_0^2\ln r$ formülünde kaynak terimi $v_0$'dır; Bölüm 4.2.9.2).
+
+### 3.7.4.1 Bullet Cluster: Ayrışan Şey Kütle Değil, Akış Yapısıdır
+
+**Gözlem:** İki dev galaksi kümesi birbirinin içinden geçmiştir (Kaynak: *Markevitch, M., et al. (2004). ApJ 606, 819*; *Clowe, D., et al. (2006). ApJ 648, L109*). Seyrek galaksiler iki arı sürüsü gibi karşılıklı geçip yola devam etmiş; görünür kütlenin çoğunluğunu taşıyan sıcak gaz ise elektromanyetik olarak çarpışıp şoklanmış ve ortada yığılmıştır (X-ışını görüntüsü). Zayıf kütleçekimsel merceklenme haritası ise toplam kütle merkezini ortadaki gazda değil, **geçip giden galaksilerin üzerinde** gösterir. Standart yorum: "Kütlenin çoğu, çarpışmasız ve görünmez bir madde olarak galaksilerle birlikte geçti."
+
+**Evrenakı okuması üç adımdır:**
+
+1. Merceklenme kütleyi değil, **ortamın basınç kuyularını** izler (Bölüm 4.3).
+2. Derin kuyuların sahibi, kümelerin **koherent sirkülasyon sistemleridir** (Bölüm 4.2.9.2) — galaksilerle birlikte hareket eden vorteks aileleri.
+3. Çarpışmada: viskozitesi sıfıra yakın süper-akışkan ortamda ($\mu\approx0$; Bölüm 4.2.10.1) iki sirkülasyon ailesi birbirinin içinden neredeyse kayıpsız geçer; kuyular galaksilerle yola devam eder. Gaz ise elektromanyetik olarak çarpışır, şoklanır ve geride kalır — kritik nokta şudur: **şoklanıp türbülansa dönen gaz, koherent sirkülasyonunu yitirir; kuyusu sığlaşır.**
+
+Sonuç: merceklenme sinyalinin galaksileri izlemesi, teoride bir anomali değil **beklentidir.** Ayrışan şey "görünmez kütle" değil, görünmez akış yapısıdır; gazın (baryonik çoğunluğun) merceklenmede zayıf kalması, kuyu derinliğini yerel kütle yoğunluğunun değil dolaşımın belirlemesinin doğrudan sonucudur.
+
+**Sınanabilir ayrışma noktası:** Standart karanlık madde, merceklenme ofsetini yalnızca çarpışmasızlığa bağlar. Evrenakı ise ofseti koherent dolaşıma bağlar: galaksi bileşeninin de yavaşladığı (sirkülasyonun bozulduğu) küme çarpışmalarında ofset **küçülmelidir** (bkz. 7.5, satır 10).
+
+### 3.7.4.2 Kozmik Ağ: Girdap Kaskadının Filaman İskeleti
+
+**Gözlem:** Galaksiler uzayda rastgele dağılmaz; ipliksi filamanlar boyunca dizilir, filamanların kesişim düğümlerinde kümelenir ve aralarda dev boşluklar (void) bırakır. Standart modelde bu desen, karanlık madde pertürbasyonlarının milyarlarca yıllık N-cisim simülasyonlarından üretilir.
+
+**Evrenakı okuması:** Bu desen, türbülanslı bir akışkanın **doğal geometrisidir.** Girdap kaskadı (büyük girdabın küçüğünü doğurması) vorteks tüplerini, tüpler filamanları, tüplerin kesişimleri küme düğümlerini, aralardaki durgun bölgeler boşlukları verir. Kozmik ağ, okyanusun girdap iskeletinin haritasıdır — galaksiler bu iskeletin üzerine, nehir yatağına dizilen kasabalar gibi yerleşir. Yapı oluşumu için ayrıca bir "çekici görünmez parçacık" iskelesi gerekmez; iskele, akışın kendisidir.
+
+### 3.7.4.3 Kozmik Arka Plan Işıması ve "Evrenin İlk Sesi"
+
+**Gözlem:** Gökyüzünün her noktasından, her yönden 2,725 K sıcaklığında, neredeyse mükemmel kara-cisim tayflı bir mikrodalga ışıması gelir (Penzias & Wilson, 1965). Sıcaklık haritasındaki milyonda-bir düzeyindeki benekler rastgele boyutlarda değildir; bir çanın tınısındaki nota ve armonikler gibi tercihli ölçekler ("akustik pikler") gösterir (Kaynak: *Planck Collaboration (2020). A&A 641, A6*). Standart okumada pikler, Büyük Patlama sonrası ilkel plazmada yankılanan ses dalgalarıdır ve pik oranları ancak görünür maddenin yaklaşık beş katı, salınıma katılmayan çekici bir bileşen varsa tutar — karanlık maddenin en nicel kanıtı sayılır.
+
+**Evrenakı okuması:** Teori sıcak başlangıcı savunur (3.7.1) ve bu ışımayı tam olarak standart modelin gördüğü yerde görür: **erken, yüksek basınçlı dönemin fosil denge ışıması.** İki noktada ayrışır:
+
+1. **Soğuma mekanizması:** Işımanın 2,725 K'ye inişi metrik genişlemeyle değil, teorinin kendi kızıla kayma mekanizmasıyla okunur: ışıma, yerel $c$'nin bugünkünden çok yüksek olduğu genç ve yüksek basınçlı evrende üretilmiştir; zamansal $c$ oranı (3.7.3) tayfı bugünkü soğuk değere taşır.
+2. **Piklerin iskeleti:** Erken plazmanın salındığı kabul edilir — "evrenin ilk sesi" ifadesini en hakkıyla kullanacak teori, bütün olguları basınç ve akustikle okuyan teoridir. Standart modelin karanlık maddeye yüklediği rol, plazmayla birlikte **salınmayan** çekici bir iskelet sağlamaktır. Evrenakı'da bu iskelet hazırdır: **ilkel girdap kaskadının basınç kuyuları.** Plazma, okyanusun önceden var olan kuyu iskeletinin içinde salınmıştır; 3.7.4.2'deki kozmik ağı ören aynı iskelet, ışıma haritasında pik desenleri olarak iz bırakır.
+
+Bu okumanın iki doğrudan kazancı vardır. Birincisi, kuyular parçacık olmadığı için ışımaz, çarpışmaz ve dedektöre girmez: yeraltı doğrudan-arama deneylerinin onlarca yıllık boş sonuçları (LUX, XENON vb.) teoride açıklanması gereken bir gerilim değil, otomatik bir beklentidir. İkincisi, meşhur "görünür maddenin ~5 katı" oranı bir parçacık envanteri olmaktan çıkar; **kuyu iskeletinin gücünün** (ortam sirkülasyonunun baryonik öz-çekime oranının) gözlemsel ölçümü hâline gelir. Teori bu orana resmî bir ad verir: $\Xi\approx5$ (bkz. Ek C, satır 18).
+
+### 3.7.4.4 Birleşik İlke, Sınanabilirlik ve Dürüst Kayıt
+
+Böylece karanlık maddenin dört kanıt sınıfı, teoride tek mekanizmaya iner:
+
+| Kanıt | Standart okuma | Evrenakı okuması |
+|---|---|---|
+| Galaktik dönüş eğrileri | Küresel karanlık madde halesi | Galaktik vorteksin logaritmik basınç kuyusu (4.2.9) |
+| Bullet Cluster ayrışması | Çarpışmasız görünmez kütle | Galaksilerle geçen sirkülasyon kuyuları; şoklanan gaz kuyusunu yitirir (3.7.4.1) |
+| Kozmik ağ | Karanlık madde pertürbasyon iskelesi | Girdap kaskadının filaman iskeleti (3.7.4.2) |
+| CMB akustik pikleri | Salınmayan karanlık madde kuyuları | Plazmanın içinde salındığı ilkel kuyu iskeleti (3.7.4.3) |
+
+MOND'un bu sınavlarda düşmesinin yapısal nedeni de görünür olur: MOND kuvvet yasasını değiştirir ama kuyuları taşıyacak bir **yapı** önermez; Evrenakı taşıyıcı yapıyı önerir ve aynı yapı dört gözlemde birden iş görür.
+
+**Dürüst kayıt:** Bu bölümün kurduğu açıklamalar mekanizma seviyesindedir; nicel türetimleri manüskriptin açık hesap kalemleridir (bkz. 7.4): kuyu derinliği–sirkülasyon ilişkisinin kütle-itim türetimiyle tek formülasyonda gösterilmesi, Bullet Cluster merceklenme haritasının nicel üretimi, kozmik ağ güç spektrumu ve CMB pik konum/oranlarının kuyu-iskeleti hesabından türetimi ile 2,725 K değerinin zamansal-$c$ soğuma bütçesinden hesabı.

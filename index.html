@@ -16,9 +16,6 @@
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     
-    <!-- Supabase JS Client SDK -->
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-
     <!-- Mermaid (karar ağaçları ve akış şemaları) -->
     <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
     
@@ -51,7 +48,7 @@
                 <div style="display: flex; justify-content: center; width: 100%;">
                     <div class="splash-badge-dev">
                         <i data-lucide="construction" style="width: 14px; height: 14px; color: #ffb020;"></i>
-                        <span>YAPIM AŞAMASINDADIR (BETA)</span>
+                        <span>YAPIM AŞAMASINDADIR (BETA v1.01)</span>
                     </div>
                 </div>
                 <p class="splash-statement">"Evrenakı Teorisi'nde varsayımlara yer yoktur; her iddia mutlaka kanıtlarla mühürlenmiştir."</p>
@@ -452,15 +449,15 @@
                     </div>
                     <button type="submit" id="btn-auth-submit" class="btn btn-primary">Giriş Yap</button>
                 </form>
+                <p style="text-align:center; margin-top:12px;">
+                    <a href="#" onclick="sifremiUnuttum(); return false;" style="color:var(--text-muted); font-size:13px;">Şifremi unuttum</a>
+                </p>
             </div>
 
             <div class="auth-divider"><span>VEYA</span></div>
             <div class="social-login">
                 <button class="btn btn-secondary btn-social" onclick="loginWithOAuth('google')">
-                    <i data-lucide="chrome" class="social-google"></i> Google ile Katıl
-                </button>
-                <button class="btn btn-secondary btn-social" onclick="loginWithOAuth('github')">
-                    <i data-lucide="github" class="social-github"></i> GitHub ile Katıl
+                    <i data-lucide="globe" class="social-google"></i> Google ile Katıl
                 </button>
             </div>
         </div>
@@ -601,8 +598,8 @@
     </div>
 
     <!-- App Logic -->
-    <script src="app.js?v=3"></script>
-    <!-- Firebase Veritabanı Entegrasyonu (Şu an Mock modda çalışması için devre dışı) -->
-    <!-- <script type="module" src="firebase-client.js"></script> -->
+    <script src="app.js?v=4"></script>
+    <!-- Firebase: Authentication (üyelik) + Firestore (yorum/forum/istatistik) -->
+    <script type="module" src="firebase-client.js?v=2"></script>
 </body>
 </html>

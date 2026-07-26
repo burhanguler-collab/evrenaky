@@ -24,8 +24,21 @@ Standart fizik, ışığın (fotonun) kütlesiz olduğunu ve hızının ($c$) sa
 
 Evrenakı Teorisi, bu asırlık paradoksu "Zerre'nin Akışkanlar Mekaniği" ile tek bir mekanizmayla çözer: Işık soyut bir dalga fonksiyonu değildir. Işık yavaşlamaz; yalnızca **Patinaj (Slip)** yapar.
 
+> **Birleştirici İlke — Işık Nerede Yavaşlar?**
+> Bu bölümde ve kitabın tamamında iki ayrı büyüklüğü **kesinlikle karıştırmamak** gerekir; ikisi birbirine terstir:
+> * **Atomik yoğunluk/basınç:** Maddeyi oluşturan atom/molekül yoğunluğu. Cam, sudan; su, havadan daha yoğundur.
+> * **Evrenakı yoğunluğu/basıncı:** Atomların içinde yüzdüğü akışkanın ($\Psi$) yoğunluğu ve basıncı.
+>
+> **Zıtlık kuralı:** Bir ortamda atomlar arttıkça (atomik yoğunluk ve basınç artarken), o atomların deplasmanı nedeniyle **Evrenakı basıncı düşer.** Işığın yerel sürati kavrama yasası gereği $v=\sqrt{P/\rho}$ olduğundan (burada $P$, $\rho$ *Evrenakı*'nın basınç ve yoğunluğudur), **ışık, Evrenakı'nın $P/\rho$ oranının düştüğü her yerde yavaşlar.** Patinaj, Zerre'nin bu yerel $\sqrt{P/\rho}$ tutunma hızını aşmasından başka bir şey değildir.
+>
+> **İki rejim, tek ilke:**
+> 1. *Yoğun saydam madde (cam, su):* Evrenakı korunumlu olduğundan, atom çekirdeklerinden itilen Evrenakı maddenin *aralarında* kalır; **hacimce ortalama Evrenakı yoğunluğu korunur**, ama düşük-basınçlı deplasman cepleri **ortalama Evrenakı basıncını düşürür.** Işık bu yüzden yavaşlar (kırılma indisi ve Fizeau sürüklemesinin nicel türetimi için bkz. Bölüm 3.4.6).
+> 2. *Astrofiziksel gradyan (yıldız zarfı, galaktik alan):* Burada Evrenakı hem yoğunluk hem basınç olarak makro-ölçekte **gerçekten seyrelir** (bkz. SN 1987A, Bölüm 2.4.4).
+>
+> Her iki rejimde de değişmez sonuç aynıdır: $P/\rho$ düşer, ışık yavaşlar. "Düşük yoğunluk" ifadesi yalnızca ikinci rejim için birebir doğrudur; genel ve kesin sürücü **düşük $P/\rho$**'dur.
+
 **Zerre'nin Dönme Momenti (Spin)**
-Zerreler (ışık mermileri), kaynağını terk ettiği andan itibaren yüksek basınçlı dış uzayda (Evrenakı denizinde) tam bir yol tutuşuyla ilerlerler. Bu ilerleyiş sırasında, bir otomobil lastiği gibi çevrelerindeki sıvıya tam olarak kavrayarak/tutunarak devinirler. Ancak Zerre, bir cam prizması veya su gibi yoğun maddelerin oluşturduğu **düşük basınç (vakum)** bölgesine girdiğinde, etrafındaki uzay sıvısı seyrekleşir.
+Zerreler (ışık mermileri), kaynağını terk ettiği andan itibaren yüksek basınçlı dış uzayda (Evrenakı denizinde) tam bir yol tutuşuyla ilerlerler. Bu ilerleyiş sırasında, bir otomobil lastiği gibi çevrelerindeki sıvıya tam olarak kavrayarak/tutunarak devinirler. Ancak Zerre, bir cam prizması veya su gibi **atomik olarak yoğun** maddelerin oluşturduğu **düşük Evrenakı basıncı (deplasman/vakum)** bölgesine girdiğinde tutunma zeminini yitirir. (Atomik yoğunluk yüksektir; ama bu, Evrenakı basıncını düşürür — zıtlık kuralı. Hacimce ortalama Evrenakı yoğunluğu ise korunur; yerel cepler seyrek, aralar sıkışıktır.)
 
 Vakum (düşük basınç) nedeniyle yola tutunamayan Zerre, buzlanmış bir yola veya çamura giren bir araba tekerleği gibi "boşa dönmeye" başlar. Doğrusal hızı ($v$) gözle görülür şekilde düşerken, kendi ekseni etrafındaki dönme hızı ($\omega$) şiddetle artar.
 
@@ -305,7 +318,7 @@ Patinaj etkisiyle dönüş enerjisi (spin) artan zerrenin formu sabit kalamaz. D
 
 **Standart açıklama ve statüsü:** Bu sıralama, standart çekirdek-çökme modelinin patlamadan *önce* var olan bir öngörüsüydü: patlama enerjisinin büyük kısmını taşıyan nötrinolar çökme anında salınır ve maddeyle neredeyse etkileşmedikleri için yıldızı anında terk eder; ışık ise şok dalgası yıldızın zarfını delip yüzeye ulaşana kadar — bir mavi süperdev için saatler boyunca — içeride hapistir. Yani ana akım çerçevede 3 saatlik fark, ışığın *yolda* yavaşladığının değil, kaynaktan *geç çıktığının* verisidir ve gözlem bu modelin doğrulaması sayılır. Bu olgusal tablo teoriyle çelişmez; aksine aşağıda görüleceği gibi teorinin kendi mekanizmasıyla birebir örtüşür.
 
-**Evrenakı okuması — gecikme bütçesi:** Teoride patinaj, Evrenakı yoğunluğunun *düştüğü* bölgelerin olayıdır ve bu güzergâhta iki tür düşük-yoğunluk bölgesi vardır. Gecikme bu yüzden iki bileşenin toplamıdır:
+**Evrenakı okuması — gecikme bütçesi:** Teoride patinaj, Evrenakı'nın $P/\rho$ oranının düştüğü bölgelerin olayıdır (birleştirici ilke: bkz. Bölüm 2.4.2 kutusu). Bu bölüm, o ilkenin **makro-gradyan rejimidir**: saydam maddedeki gibi yalnızca basıncın düşüp yoğunluğun ortalamada korunduğu durumdan farklı olarak, burada Evrenakı hem basınç hem yoğunluk olarak makro-ölçekte *gerçekten* seyrelir. Güzergâhta bu türden iki bölge vardır ve gecikme iki bileşenin toplamıdır:
 
 $$D_{toplam} = D_{zarf} + D_{yol}$$
 

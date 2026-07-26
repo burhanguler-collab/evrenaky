@@ -1,5 +1,16 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import { getFirestore, collection, addDoc, doc, setDoc, increment, getDocs, deleteDoc, query, orderBy, where } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+import {
+    getAuth,
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword,
+    signInWithPopup,
+    GoogleAuthProvider,
+    updateProfile,
+    signOut,
+    onAuthStateChanged,
+    sendPasswordResetEmail
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAppAEZ5Q8RiR8NePuYXYvrM3OOAgKiRss",
@@ -13,6 +24,89 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+const auth = getAuth(app);
+
+// Firebase hata kodlarını okunabilir Türkçe mesaja çevirir
+function authHataMesaji(code) {
+    const map = {
+        'auth/email-already-in-use': 'Bu e-posta adresiyle zaten bir üyelik var. Giriş yapmayı deneyin.',
+        'auth/invalid-email': 'Geçersiz e-posta adresi.',
+        'auth/weak-password': 'Şifre en az 6 karakter olmalı.',
+        'auth/missing-password': 'Lütfen şifrenizi girin.',
+        'auth/invalid-credential': 'E-posta veya şifre hatalı.',
+        'auth/wrong-password': 'E-posta veya şifre hatalı.',
+        'auth/user-not-found': 'Bu e-postayla kayıtlı üye bulunamadı.',
+        'auth/too-many-requests': 'Çok fazla deneme yapıldı. Lütfen biraz sonra tekrar deneyin.',
+        'auth/popup-closed-by-user': 'Google penceresi kapatıldı, giriş tamamlanmadı.',
+        'auth/operation-not-allowed': 'Bu giriş yöntemi Firebase Console\'da etkinleştirilmemiş.',
+        'auth/network-request-failed': 'İnternet bağlantısı kurulamadı.'
+    };
+    return map[code] || 'Beklenmeyen bir hata oluştu: ' + code;
+}
+
+// Firebase kullanıcı nesnesini uygulamanın kullandığı sade biçime çevirir
+function kullaniciBicimle(user) {
+    if (!user) return null;
+    return {
+        id: user.uid,
+        email: user.email,
+        username: user.displayName || (user.email ? user.email.split('@')[0] : 'Üye')
+    };
+}
+
+window.firebaseAuth = {
+    async kayitOl(email, password, username) {
+        try {
+            const cred = await createUserWithEmailAndPassword(auth, email, password);
+            if (username) {
+                await updateProfile(cred.user, { displayName: username });
+            }
+            return { success: true, user: kullaniciBicimle(cred.user) };
+        } catch (e) {
+            return { success: false, message: authHataMesaji(e.code) };
+        }
+    },
+
+    async girisYap(email, password) {
+        try {
+            const cred = await signInWithEmailAndPassword(auth, email, password);
+            return { success: true, user: kullaniciBicimle(cred.user) };
+        } catch (e) {
+            return { success: false, message: authHataMesaji(e.code) };
+        }
+    },
+
+    async googleIleGiris() {
+        try {
+            const cred = await signInWithPopup(auth, new GoogleAuthProvider());
+            return { success: true, user: kullaniciBicimle(cred.user) };
+        } catch (e) {
+            return { success: false, message: authHataMesaji(e.code) };
+        }
+    },
+
+    async sifreSifirla(email) {
+        try {
+            await sendPasswordResetEmail(auth, email);
+            return { success: true };
+        } catch (e) {
+            return { success: false, message: authHataMesaji(e.code) };
+        }
+    },
+
+    async cikisYap() {
+        await signOut(auth);
+    },
+
+    // Oturum değiştiğinde (giriş/çıkış/sayfa yenileme) çağrılır
+    oturumIzle(callback) {
+        onAuthStateChanged(auth, (user) => callback(kullaniciBicimle(user)));
+    },
+
+    aktifKullanici() {
+        return kullaniciBicimle(auth.currentUser);
+    }
+};
 
 window.firebaseClient = {
     async submitReview(reviewData) {
@@ -57,6 +151,32 @@ window.firebaseClient = {
         } catch(e) {
             console.error("Error fetching reviews", e);
             return [];
+        }
+    },
+
+    async getPendingReviews() {
+        try {
+            const q = query(collection(db, "submissions"), where("status", "==", "pending"));
+            const querySnapshot = await getDocs(q);
+            const reviews = [];
+            querySnapshot.forEach((d) => {
+                reviews.push({ id: d.id, ...d.data() });
+            });
+            reviews.sort((a, b) => new Date(a.created_at) - new Date(b.created_at));
+            return reviews;
+        } catch(e) {
+            console.error("Error fetching pending reviews", e);
+            return [];
+        }
+    },
+
+    async approveReview(docId) {
+        try {
+            await setDoc(doc(db, "submissions", docId), { status: 'approved' }, { merge: true });
+            return true;
+        } catch(e) {
+            console.error("Error approving review", e);
+            return false;
         }
     },
 
@@ -146,6 +266,9 @@ window.firebaseClient = {
         }
     }
 };
+
+// app.js, Firebase geç yüklenirse üyelik sistemini bu olayla devreye alır
+window.dispatchEvent(new Event('firebase-hazir'));
 
 // Sayfa yüklendiğinde ziyareti Firebase'e kaydet
 setTimeout(() => {

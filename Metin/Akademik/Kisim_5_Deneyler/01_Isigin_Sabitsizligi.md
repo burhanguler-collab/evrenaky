@@ -107,3 +107,21 @@ Gözlem sonuçları, vakum ortamında yapılan bir önceki Attometer deneyi ile 
 Uzun süreli bu gözlemler, ışık hızının katı maddeler içerisinde (fiberde) dahi mutlak sabit kalmadığı bulgusunu üretmiştir. Kozmolojik Evrenakı yoğunluğunun katı maddelerin içerisine de nüfuz ederek ışık hızını dalgalandırdığı tezi, bu ölçüm serisiyle desteklenmiştir. Bu perspektif, ışık hızının evrensel bir sabit olmadığı önermesini dört bağımsız düzenekten gelen bulgularla sınanabilir kılmaktadır.
 
 **Not:** Bu dördüncü ve son ışık hızı ölçüm deneyine ait veri tabloları ve detaylı analiz raporları, kitabın tamamlanma aşamasında bu bölüme eklenecektir.
+
+## 5.1.5 Ayırt Edici Kontroller ve Yanlışlanma Taahhüdü
+
+Yukarıdaki dört düzenekten elde edilen bulgular, ışık hızının sabit olmadığı yönündedir. Ancak bir bulgunun bilimsel değeri, onu **başka hiçbir açıklamanın** üretemediğinin gösterilmesiyle belirlenir. Bu ölçüm sınıfında sinyali taklit edebilecek iki rakip mekanizma vardır ve dürüstçe kayda geçirilmelidir: (i) optik yolun sıcaklık ve gerinim kaynaklı değişimi — fiberde optik yolun sıcaklık katsayısı $10^{-6}/^\circ\mathrm{C}$ mertebesindedir ve bu, küçük bir termal kaymanın bile ölçülebilir bir frekans/gecikme kayması üretebileceği anlamına gelir; (ii) referans osilatörün (rubidyum veya kristal) kendi uzun-dönemli yaşlanma drifti.
+
+Bu nedenle Evrenakı Teorisi, iddiasını "ölçtük" beyanıyla değil, **ayırt edici kontrollerle sınanmaya açık bir öngörü** olarak ortaya koyar. Bir sinyalin gerçekten ışık hızı değişkenliğinden kaynaklandığını, çevresel bir artefakttan ayıran dört kontrol şunlardır:
+
+**Kontrol 1 — Yıldız günü / güneş günü ayrımı (en güçlü ayırt edici).** Kozmik çerçeveye (bkz. Bölüm 4.2.16, CMB çapası) bağlı gerçek bir Evrenakı yoğunluk değişimi, Dünya kendi ekseninde dönerken **yıldız günü** (23 saat 56 dakika 4 saniye) periyoduyla modüle olmak zorundadır. Buna karşılık termal, iklimlendirme ve insan kaynaklı bütün çevresel etkiler **güneş günü** (24 saat) periyodunu taşır. Bu iki periyot günde yaklaşık 4 dakika kayar ve birkaç haftalık kesintisiz kayıtta tamamen ayrışır. Astronomi, kozmik kökenli sinyalleri yerel olanlardan tam bu yöntemle ayırır. Sinyalin faz kaymasının yıldız gününü izlemesi, teorinin lehine güçlü bir kanıt; güneş gününü izlemesi ise çevresel köken lehine belirleyici bir bulgudur.
+
+**Kontrol 2 — Farklı malzeme ve uzunlukta eşzamanlı ikinci döngü.** Işık hızındaki gerçek bir değişim **evrenseldir**: farklı malzemeden ve farklı uzunlukta iki bağımsız döngüde **aynı oransal** ($\Delta f/f$) sinyali üretmek zorundadır. Termal ve mekanik artefaktlar ise malzemeye özgüdür; her döngüde farklı oransal değer verir. İki döngünün eşzamanlı ve aynı oranda kayması, çevresel açıklamayı büyük ölçüde eler.
+
+**Kontrol 3 — Referanstan bağımsızlık.** Sinyal, farklı bir zaman referansına (GPS-disipline osilatör, sezyum standardı veya hidrojen maser) karşı da aynı büyüklükte korunmalıdır. Daha kararlı bir referansa geçildiğinde sinyalin küçülmesi veya kaybolması, ölçülen şeyin ışık hızı değil, referansın kendi drifti olduğunu gösterir.
+
+**Kontrol 4 — Çevresel değişkenlerle korelasyonsuzluk.** Fiberin (oda değil) çekirdek sıcaklığı, mekanik gerinim, nem ve basınç eşzamanlı kaydedilmeli; sinyalin bu değişkenlerin hiçbiriyle korele olmadığı nicel olarak gösterilmelidir.
+
+**Yanlışlanma taahhüdü.** Evrenakı Teorisi, 4. Postülat'ı bu sınamaya açıkça bağlar. Bağımsız laboratuvarlarca yürütülecek tekrarlarda ölçülen sinyal; **(a)** yıldız günü yerine güneş günü periyodu taşırsa, **(b)** farklı malzeme ve uzunluktaki döngülerde farklı oransal değerler verirse, **(c)** daha kararlı bir zaman referansına geçildiğinde kaybolursa veya **(d)** çevresel değişkenlerle korele çıkarsa; ışık hızının yerel vakumda değişken olduğu iddiası çürütülmüş sayılacak ve teorinin bu iddiaya dayanan çekirdek postülatı (Postülat 4) terk edilecektir. Kuram, bu koşulların gerçekleşmesi hâlinde savunulmayacaktır.
+
+Bu bölümdeki düzeneklerin tam teknik dokümantasyonu — kol uzunlukları ve asimetri oranı, tur sayısı ve efektif optik yol, referans osilatörün Allan sapması, sayıcı mimarisi, ham veri setleri, hata bütçesi ve yukarıdaki dört kontrolün sonuçları — bağımsız tekrarı mümkün kılacak ayrıntıda yayımlanacaktır. Teori, bu dokümantasyon tamamlanana kadar bulgularını "rapor edilen sonuç" statüsünde tutar.

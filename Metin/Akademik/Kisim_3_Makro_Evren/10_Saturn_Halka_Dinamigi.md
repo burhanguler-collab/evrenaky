@@ -59,7 +59,7 @@ $$\gamma_{Evrenakı} = \gamma_{standart} + \gamma_{ortam}, \qquad \gamma_{ortam}
 - Ana akım model: sönüm sadece parçacık yoğunluğuna ve boyut dağılımına bağlıdır (optik derinlikle ölçeklenir).
 - Evrenakı modeli: sönüme **parçacık boyutundan bağımsız, ortam viskozitesinden gelen sabit bir taban terim** eklenir.
 
-**Dürüst tespit #2:** Bu $\eta_z$ değeri şu anda kitapta **sayısal olarak belirlenmemiştir**. Bu, teorinin zayıflığı değil, henüz atılmamış bir adımdır — ama bu adım atılmadan "Evrenakı, halka yağmurunu (ring rain) açıklıyor" gibi bir iddia yapılamaz; çünkü serbest bir parametre ($\eta_z$) her sonucu "ayarlanabilir" hale getirir (bilimde en sık yapılan hata: serbest parametreyle her veriye uydurma).
+**Dürüst tespit #2:** Bu $\eta_z$ değeri şu anda kitapta **sayısal olarak belirlenmemiştir**. Bu, teorinin zayıflığı değil, henüz atılmamış bir adımdır — ama bu adım atılmadan "Evrenakı, halka yağmurunu (ring rain) açıklıyor" gibi bir iddia yapılamaz; çünkü serbest bir parametre ($\eta_z$) her sonucu "ayarlanabilir" hale getirir (bilimde en sık yapılan hata: serbest parametreyle her veriye uydurma). *(Parametre statüsü için bkz. Ek C, satır 14: $\eta_z$, Bölüm 3.1'deki Evrenakı viskozitesi $\eta_E$ ile aynı büyüklüktür; Gaia/pulsar programına ek olarak aşağıdaki bending-wave testi de onu sabitleyebilir.)*
 
 ## 3.10.5 Somut Test Önerisi (Gerçek Sayılarla)
 

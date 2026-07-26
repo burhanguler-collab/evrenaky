@@ -24,7 +24,7 @@ Aşağıdaki maddeler, Evrenakı Teorisi'nin doğrulanmış sonuçları değil; 
 
 ### 1. Plenum (Ortam Doluluğu) İlkesi
 
-Uzay boşluğu fiziksel bir hiçlik olmayıp, Evrenakı (Cosmofluid) adı verilen sürekli (continuum), dinamik ve atomik olmayan bir akışkanla doludur (Plenum ilkesinin temelleri için bkz. Descartes, 1644). Bu teoride Evrenakı, bütün fiziksel etkileşimlerin ortak taşıyıcı ortamı olarak kabul edilir. Evrenakı; çok yoğun bir durgun kütleye (atalet yoğunluğuna) sahip olan, ancak uzayda serbestçe yayıldığı için bir "ağırlığı" (yerçekimsel yükü) bulunmayan akışkan bir yapıdır. Ortamın atalet yoğunluğunun çok yüksek olması, ışığı oluşturan yüksek hızlı Zerre akışlarını barındırabilmesi ve gök cisimlerini itebilecek basınç gradyanını üretebilmesi için şarttır. Teorinin en belirgin varsayımı, bu akışkanın **sıkıştırılabilir** (compressible) olmasıdır: akışkanın kütleler etrafında sıkışarak veya genleşerek oluşturduğu dinamik yoğunluk ve basınç farkları, kütleçekiminin ve ışık hızındaki dalgalanmaların fiziksel nedeni olarak önerilir. Buradaki "süper-akışkan" tanımı, viskozitenin pratik olarak sıfıra yakın ($\\mu \\approx 0$) olduğu esnek ve atomik olmayan bir hidrodinamik taşıyıcı ortamı tarif eder.
+Uzay boşluğu fiziksel bir hiçlik olmayıp, Evrenakı (Cosmofluid) adı verilen sürekli (continuum), dinamik ve atomik olmayan bir akışkanla doludur (Plenum ilkesinin temelleri için bkz. Descartes, 1644). Bu teoride Evrenakı, bütün fiziksel etkileşimlerin ortak taşıyıcı ortamı olarak kabul edilir. Evrenakı; çok yoğun bir durgun kütleye (atalet yoğunluğuna) sahip akışkan bir yapıdır. Bu ortamın bir "ağırlığının" (yerçekimsel yükünün) bulunmaması ise ayrı bir muafiyet varsayımı değil, teorinin kuvvet tanımının doğrudan sonucudur: bu teoride ağırlık, kütlenin değil basınç gradyanının (deplasmanın) özelliğidir ve homojen bir ortam tanım gereği gradyan üretmez — **madde düşer, ortam dolaşır** (nicel gerekçe ve kararlılık analizi: Teknik Ek B). Ortamın atalet yoğunluğunun çok yüksek olması, ışığı oluşturan yüksek hızlı Zerre akışlarını barındırabilmesi ve gök cisimlerini itebilecek basınç gradyanını üretebilmesi için şarttır. Teorinin en belirgin varsayımı, bu akışkanın **sıkıştırılabilir** (compressible) olmasıdır: akışkanın kütleler etrafında sıkışarak veya genleşerek oluşturduğu dinamik yoğunluk ve basınç farkları, kütleçekiminin ve ışık hızındaki dalgalanmaların fiziksel nedeni olarak önerilir. Buradaki "süper-akışkan" tanımı, viskozitenin pratik olarak sıfıra yakın ($\\mu \\approx 0$) olduğu esnek ve atomik olmayan bir hidrodinamik taşıyıcı ortamı tarif eder.
 
 ### 2. Uzanımsal Dördüncü Boyut (W) İlkesi
 
@@ -266,7 +266,7 @@ Işık, ortamsız yayılan soyut bir dalga veya noktasal bir parçacık değil; 
 
 Evrendeki temel parçacıklar (nükleonlar, Zerreler) durağan noktalar değil, sürekli fiziksel dönme hâlindeki hacimsel girdaplardır. Bu teorideki "spin", modern fizikteki soyut içsel açısal momentum tanımının aksine, Evrenakı içinde hacimsel yer kaplayan **gerçek bir dönme hareketidir** ve 2. postülat gereği bu dönüş dört boyutludur — birbirine tamamen dik iki düzlemde aynı anda gerçekleşen bir **çift dönüştür** (Clifford dönüşü):
 
-   * **Hızlı bileşen ($\omega_1$):** Üç boyutun içindeki bir düzlemde gerçekleşen, parçacığın varlığını sürdüren asıl enerji girdabıdır. Compton frekansı, bu fiziksel dönüşün etkin frekansı olarak yorumlanır: $\approx 1$ GeV enerjili bir protonun kendi ekseni etrafında $\nu_c \approx 10^{23}$ Hz mertebesinde döndüğü kabul edilir. Yarıçapı $\approx 0.8$ fm olan bir protonun bu frekansta dönmesi, ekvatoral çizgisel hızın ışık hızını aşmasını gerektirir: $v_{ekvator} = 2\pi \nu_c R \approx 5 \times 10^8 \text{ m/s} > c$. **(Önemli Not: Proton birçok alt parçacıktan oluşan 'bileşik' bir yapı olduğu için, $5 \times 10^8 \text{ m/s}$ onun alt bileşenlerinin saf dönüşlerine kıyasla çok daha yavaşlamış olan 'kompozit/bileşik' hızıdır. Atom altı düzeyde gerçekleşen ve kavitasyon zarflarının birbirine kenetlenmesinden doğan bu bileşik dönüş yavaşlaması, makro evrende gezegenlerin veya yıldızların kütle-itimiyle birleşerek yaşadığı eylemsizlik tabanlı hızlanmayla aynı kefeye konulamaz; ikisi tamamen farklı mekanizmalardır. Buna rağmen protonun bu yavaşlamış kompozit hızı bile ışık hızını rahatlıkla aşar.)** Evrenakı Teorisi'nde $c$ mutlak bir üst sınır değil, Zerre'nin akışkan içindeki limit hızıdır; ışık hızı üzerindeki hızların bugüne dek doğrudan ölçülememiş olması, ölçüm teknolojilerimizin bizzat $c$ hızıyla yayılan araçlara (elektromanyetik sinyallere) bağımlı olmasından kaynaklanan metodolojik bir sınırdır.
+   * **Hızlı bileşen ($\omega_1$):** Üç boyutun içindeki bir düzlemde gerçekleşen, parçacığın varlığını sürdüren asıl enerji girdabıdır. Compton frekansı, bu fiziksel dönüşün etkin frekansı olarak yorumlanır: $\approx 1$ GeV enerjili bir protonun kendi ekseni etrafında $\nu_c \approx 10^{23}$ Hz mertebesinde döndüğü kabul edilir. Yarıçapı $\approx 0.8$ fm olan bir protonun bu frekansta dönmesi, ekvatoral çizgisel hızın ışık hızını aşmasını gerektirir: $v_{ekvator} = 2\pi \nu_c R \approx 5 \times 10^8 \text{ m/s} > c$. **(Önemli Not: Proton birçok alt parçacıktan oluşan 'bileşik' bir yapı olduğu için, $5 \times 10^8 \text{ m/s}$ onun alt bileşenlerinin saf dönüşlerine kıyasla çok daha yavaşlamış olan 'kompozit/bileşik' hızıdır. Atom altı düzeyde gerçekleşen ve kavitasyon zarflarının birbirine kenetlenmesinden doğan bu bileşik dönüş yavaşlaması, makro evrende gezegenlerin veya yıldızların kütle-itimiyle birleşerek yaşadığı eylemsizlik tabanlı hızlanmayla aynı kefeye konulamaz; ikisi tamamen farklı mekanizmalardır. Buna rağmen protonun bu yavaşlamış kompozit hızı bile ışık hızını rahatlıkla aşar — ve bu aşma bir istisna değil, yapısal bir zorunluluktur: içinde vakum cebi taşıyan her girdap zarfının denge yüzey hızı $\sqrt{2}\,c \approx 4{,}24 \times 10^8 \text{ m/s}$'dir; duvarı $c$'nin altında dönen bir zarf, cebini açık tutacak basınç açığını üretemez ve çöker. Nicel türetim ve hız kavramlarının tam ayrıştırması için bkz. Teknik Ek A.)** Evrenakı Teorisi'nde $c$ mutlak bir üst sınır değil, Zerre'nin akışkan içindeki limit hızıdır; ışık hızı üzerindeki hızların bugüne dek doğrudan ölçülememiş olması, ölçüm teknolojilerimizin bizzat $c$ hızıyla yayılan araçlara (elektromanyetik sinyallere) bağımlı olmasından kaynaklanan metodolojik bir sınırdır.
    * **Yavaş bileşen ($\omega_2$):** W eksenini içeren düzlemde gerçekleşen, üç boyutta asla dönüş olarak görünmeyen bileşendir; tek başına ürettiği görünür etki yalnızca doğrusal salınım/pulsasyondur ("nefes alma"). Parçacık ekseninin periyodik kayması (devinim) ise $\omega_2$'nin bağımsız bir etkisi değil, ancak $\omega_1$ ile birlikteliğinin (çift dönüşün bileşkesinin) bir ürünüdür — bkz. Bölüm 1.4. Bu bileşenin mikrodan makroya taşınması (Kinetik Ayrışma) Kısım 3'te ele alınacaktır.
 
 Parçacığın bu fiziksel dönüşü, çevreleyen Evrenakı ile sınır tabaka etkileşimi (boundary layer coupling) kurarak ortamda mikro-girdaplar üretir. Bu spin hızlarının Evrenakı'nın kavitasyon (yırtılma) eşiğiyle ilişkisi ve maddeyi var eden şok zarfının kararlılığı, bölüm sonundaki **Teknik Ek A**'da ele alınmıştır (<a href="javascript:void(0)" onclick="document.getElementById('animasyon-132-kavitasyon').scrollIntoView({behavior: 'smooth', block: 'center'})" style="color:var(--neon-blue); text-decoration:none;">bkz. Animasyon 1.3.2</a>).
@@ -285,7 +285,7 @@ Gök cisimlerinin akışkan ortamda kinetik enerji kaybetmeden hareket etmesi, E
 
 $$\vec{v}_{bağıl} = \vec{v}_{cisim} - \vec{v}_{akışkan} = 0$$
 
-Bu sınır koşulu nedeniyle sürtünme direnci oluşmaz. Michelson-Morley deneyindeki sıfır girişim farkı (Michelson & Morley, 1887) da bu mekanizmayla yorumlanır: Dünya'nın sürüklenme zarfı nedeniyle yerel Evrenakı Dünya ile birlikte hareket eder ve ışık bu sürüklenen ortamda her yönde eşit hızda yayılır.
+Bu sınır koşulu nedeniyle sürtünme direnci oluşmaz. Michelson-Morley deneyindeki sıfır girişim farkı (Michelson & Morley, 1887) da bu mekanizmayla yorumlanır: Dünya'nın sürüklenme zarfı nedeniyle yerel Evrenakı Dünya ile birlikte hareket eder ve ışık bu sürüklenen ortamda her yönde eşit hızda yayılır. (Bu mekanizmanın yıldız sapması ve Fizeau kısmi sürüklemesi karşısındaki sınavı ve $1-1/n^2$ katsayısının nicel türetimi için bkz. Bölüm 3.4.6.)
 
 ### 8. Makro-Spin ve Galaktik Vorteksler İlkesi
 
@@ -307,9 +307,71 @@ Yukarıdaki üç öbekli yapı (zemin → aktörler → davranış kuralları), 
 
 Aşağıdaki iki ek, 5. ve 6. postülatların ardındaki nicel hesapları toplar. Postülatların ana akışını takip eden okuyucu bunları atlayabilir; teorinin sayısal iskeletiyle ilgilenen okuyucu için burada bir arada verilmiştir.
 
-### Ek A: Gerçek Kavitasyon Sınırının Aşılması ve Şok Balonunun Kararlılığı
+### Ek A: Hız Kavramlarının Ayrıştırılması: Patinaj Sınırı, Denge Hızı ve Kavitasyon Eşiği
 
-Bölüm 2.2.1'de detaylandırılacağı üzere $c$ (299.792.458 m/s), Evrenakı'nın yırtılma (kavitasyon) sınırı DEĞİLDİR; o yalnızca ışığın bulunduğu yoğunluktaki yola tutunabildiği lokal 'patinaj' sınırıdır. Evrenakı'nın gerçek kavitasyon (yırtılma) eşiği $c$'den çok daha yüksektir. Evrenakı'yı yırtarak maddeyi (şok zarfını) sıfırdan var eden şey; protonun yavaşlamış kompozit hızı olan $5 \times 10^8 \text{ m/s}$ değil, onu oluşturan temel alt-bileşenlerin o devasa kavitasyon sınırını aşan **'saf dönüş' hızlarıdır**. Kavitasyon sınırını aşarak uzayı yırtan bu temel parçacıklar, viskozitenin pratik olarak sıfır olduğu bu süper-akışkanda enerjilerini dağıtmazlar; tam aksine **kendilerini (kuantize olmuş kararlı bir şok zarfı veya topolojik bir hata olarak) yaratırlar.** Proton ise bu önceden yırtılmış ölümsüz şok dalgalarının birleşip yavaşladığı kompozit bir makinedir. Hızı kavitasyon sınırının altına düşmüş olsa da, $5 \times 10^8 \text{ m/s}$'lik bu kalıntı kompozit hız bile lokal patinaj sınırını ($c$) rahatlıkla aşar.
+Bölüm 2.2.1'de detaylandırılacağı üzere $c$ (299.792.458 m/s), Evrenakı'nın yırtılma (kavitasyon) sınırı DEĞİLDİR; o yalnızca ışığın bulunduğu yoğunluktaki yola tutunabildiği lokal 'patinaj' sınırıdır. Bu ek, teoride adı geçen tüm hız kavramlarını tek bir çatı altında ayrıştırır ve aralarındaki ilişkiyi nicel olarak kurar.
+
+#### Ek A.1 — İki Sınır, İki Kategori
+
+Kavrama Yasası ($v=\sqrt{P/\rho}$; Ek B'de $\rho_0=P_0/c^2$ olarak kullanılan ve Bölüm 3.4.6.3'te Fizeau katsayısını türeten bağıntı), $c$'nin fiziksel kimliğini netleştirir: **$c$, ortamın basınç-iletim (sonik) hızıdır** — Evrenakı'nın "Mach 1"i (bkz. Bölüm 2.4.1). Bu kimlik, sık karıştırılan iki sınırın kategorik farkını kendiliğinden verir:
+
+| | $c$ — kavrama (patinaj) sınırı | $v_{kav}$ — yırtılma (kavitasyon) eşiği |
+|---|---|---|
+| **Neyin sınırı?** | Kavrama yoluyla *ilerlemenin*: Zerre'nin ortama tutunarak yol alabilmesinin | Ortamın *bütünlüğünün*: akışkanın sürekli (yırtıksız) kalabilmesinin |
+| **Aşılırsa ne olur?** | Yasak değildir: patinaj/şok oluşur, enerji kaybedilir, hız $c$'ye oturur | Yasak değildir: akışkan yırtılır, vakum cebi açılır — **madde doğar** |
+| **Gündelik karşılığı** | Havada ses hızı: süpersonik uçuş vardır, yalnızca şok üretir | Sıvının çekme dayanımı: pervane ucundaki kavitasyon köpüğü |
+
+Buradan teorinin en yalın özeti çıkar: **ışık tam-sonik bir olgudur** (ortama kavrayarak tam $c$'de ilerler); **madde ise kalıcı süpersonik bir olgudur** (yüzeyi $c$'nin üstünde dönen, kendini sürekli yeniden kuran şok zarfı). $c$'nin üstündeki hızlar yasak değildir; yalnızca kavrama ile *sürdürülemez* — ya şok üreterek $c$'ye geri oturur, ya da ($v_{kav}$ da aşılmışsa) ortamı yırtarak maddeyi var eder.
+
+#### Ek A.2 — Denge Hızının Türetimi: Her Vakum-Cepli Girdap, Duvarını $\sqrt{2}\,c$'de Döndürür
+
+Teoride madde, içinde vakum cebi (yırtık) taşıyan ve dengede dönen bir girdap zarfıdır (bkz. Animasyon 1.3.2, Aşama 2–3). Cebin dışındaki akışkanda dönme akışı $v_\theta(r)=\Gamma/2\pi r$ ve Bernoulli ilkesi geçerlidir:
+
+$$P(r)=P_0-\tfrac{1}{2}\rho_0\, v_\theta^2(r)$$
+
+Cep duvarında ($r=a$) basınç, cebin iç basıncına (vakum, $P\approx0$) inmek zorundadır:
+
+$$P_0-\tfrac{1}{2}\rho_0\, v_{duvar}^2=0 \;\;\Longrightarrow\;\; v_{duvar}=\sqrt{\frac{2P_0}{\rho_0}}=\boxed{\sqrt{2}\,c\approx 4{,}24\times10^8\ \text{m/s}}$$
+
+Bu sonucun üç kritik özelliği vardır:
+
+1. **Evrensellik.** $v_{duvar}=\sqrt{2}\,c$ sonucu cebin yarıçapına bağlı değildir; sirkülasyon $\Gamma$ yalnızca cebin *boyutunu* belirler ($a=\Gamma/2\pi\sqrt{2}c$), duvar hızını değil. Üstelik bu bir denge çekim noktasıdır: zarf daha hızlı dönerse cep genişler, genişleyen yarıçapta çevresel hız düşer ve duvar $\sqrt{2}\,c$'ye geri oturur. **Her kararlı vakum-cepli girdap — boyutu ne olursa olsun — duvarını tam $\sqrt{2}\,c$'de döndürür.** Tüm nükleonların (ve onlarla aynı sıkışmış girdap fazını taşıyan Zerre'nin) yüzey hızının evrenselliği buradan çıkar.
+2. **Sayısal uyum.** Postülat 5'in bağımsız yoldan (Compton frekansı × proton yarıçapı: $2\pi\nu_c R$) verdiği kompozit ekvator hızı $\approx5\times10^8$ m/s'dir; türetilen $\sqrt{2}\,c=4{,}24\times10^8$ m/s ile fark ~%18'dir. Ters okuma da tutarlıdır: $\nu=\sqrt{2}c/2\pi R$ bağıntısı, $R=0{,}84$ fm için $\nu\approx8\times10^{22}$ Hz verir — postüladaki $\sim10^{23}$ Hz ile aynı mertebe. Bu uyum **kesin eşitlik değil, mertebe + $O(1)$ uyumudur:** türetim, sıkıştırılamaz Bernoulli, iki boyutlu ideal girdap ve tam-sıfır cep basıncı varsayımlarını kullanır; sıkıştırılabilirlik (zarf bölgesinde yoğunluk artışı), dört boyutlu çift dönüşün üç boyuta izdüşümü ve zarfın sonlu kalınlığı $O(1)$ düzeltmeler getirir (açık hesap: Bölüm 7.4).
+3. **Zorunluluk.** Protonun ekvator hızının $c$'yi aşması bir istisna ya da savunulması gereken bir pürüz değil, **yapısal bir zorunluluktur.** Duvarı $c$'nin altında dönen bir zarf, cebindeki vakuma karşı gereken basınç açığını ($\tfrac12\rho_0 v^2<P_0$) üretemez ve cep çöker. Kısacası: **yüzeyi $c$-altı hızda dönen madde var olamaz.** Postülat 5'in "ışık hızını aşan ekvator hızı" ifadesi, böylece Kavrama Yasası'nın doğrudan bir sonucu hâline gelir.
+
+#### Ek A.3 — Kavitasyon Eşiği ve Kohezyon Dayanımı ($\Sigma$): Yaratma ile Sürdürme Ayrımı
+
+Sağlam (yırtıksız) bir akışkanı yırtmak, basıncı sıfırın da altına — akışkanın **kohezyon (çekme) dayanımı** olan $-\Sigma$'nın altına — düşürmeyi gerektirir. Aynı Bernoulli hesabıyla yırtma eşiği:
+
+$$v_{kav}=\sqrt{\frac{2(P_0+\Sigma)}{\rho_0}}=\sqrt{2}\,c\,\sqrt{1+\frac{\Sigma}{P_0}}$$
+
+Evrenakı'nın kavitasyon eşiğinin $c$'den çok daha yüksek olması, $\Sigma\gg P_0$ demektir. Bu keyfî bir kabul değildir; gerçek akışkanlarda doğrudan emsali vardır: suyun teorik çekme dayanımı ($\sim10^2$ MPa), üzerindeki atmosfer basıncının ($\sim0{,}1$ MPa) yaklaşık bin katıdır. Nükleasyon çekirdeği içermeyen, viskozitesi sıfıra yakın bir süper-akışkanda bu oranın çok daha yüksek olması beklenir. ($\Sigma$, teorinin adlandırılmış bir parametresidir; Bell hız-sınırı deneyleri $v_m$ özdeşleştirmesi üzerinden ilk gözlemsel alt sınırı verir — $\Sigma/P_0>10^8$, Bölüm 2.10.1 — tam sabitlenmesi Bölüm 7.4'te açık iş olarak kayıtlıdır.)
+
+Kohezyon yalnızca yırtılmaya direnç değil, aynı zamanda ikinci bir **sinyal kanalıdır.** Basınç (sıkışma) salınımları ortamda sonik hızla ($c=\sqrt{P_0/\rho_0}$) yayılırken, ortamın *yapısal* yeniden düzenlenmesi — gradyan ve topografya kurulumu — kohezyon kanalının elastik hızıyla taşınır:
+
+$$v_m=\sqrt{\frac{\Sigma}{\rho_0}}=c\,\sqrt{\frac{\Sigma}{P_0}}$$
+
+Bu hızın fiziksel rolü ve gözlemsel ölçüm programı Bölüm 2.10.1'de işlenir.
+
+Böylece teorinin tüm hız kavramları tek bir sıralama üzerinde yerini bulur:
+
+$$c \;<\; \underbrace{\sqrt{2}\,c}_{v_{denge}\;\approx\;v_{ekvator}} \;<\; \underbrace{c\sqrt{\Sigma/P_0}}_{v_m} \;<\; \underbrace{\sqrt{2}\,c\sqrt{1+\Sigma/P_0}}_{v_{kav}} \;\le\; v_{saf}$$
+
+| Hız | Fiziksel kimliği | Formülü | Değeri |
+|---|---|---|---|
+| $c$ | Zerre'nin kavrama (patinaj) sınırı = ortamın sonik hızı | $\sqrt{P_0/\rho_0}$ (yerel: $\sqrt{P/\rho}$) | $2{,}998\times10^8$ m/s |
+| $v_{denge}$ | Vakum-cepli girdap zarfının denge yüzey hızı | $\sqrt{2}\,c$ | $4{,}24\times10^8$ m/s |
+| $v_{ekvator}$ | Protonun kompozit ekvator hızı (gözlemsel girdi) | $2\pi\nu_c R$ | $\approx5\times10^8$ m/s |
+| $v_m$ | Kohezyon kanalının elastik sinyal hızı — topografya/gradyan kurulumu (Bölüm 2.10.1) | $\sqrt{\Sigma/\rho_0}=c\sqrt{\Sigma/P_0}$ | $>10^4\,c$ (Bell alt sınırı) |
+| $v_{kav}$ | Sağlam akışkanı yırtma (kavitasyon) eşiği | $\sqrt{2}\,c\sqrt{1+\Sigma/P_0}\approx\sqrt2\,v_m$ | $\gg c$ ($\Sigma\gg P_0$) |
+| $v_{saf}$ | Temel alt-bileşenlerin saf dönüş hızları | $>v_{kav}$ | $\gg c$ |
+
+Bu sıralama, maddenin öyküsünü iki ayrı hıza böler — **yaratma ve sürdürme:**
+
+* **Yaratma ($v_{saf}>v_{kav}$):** Evrenakı'yı yırtarak maddeyi (şok zarfını) sıfırdan var eden şey; protonun yavaşlamış kompozit hızı olan $5 \times 10^8 \text{ m/s}$ değil, onu oluşturan temel alt-bileşenlerin o devasa kavitasyon eşiğini aşan **'saf dönüş' hızlarıdır**. Kavitasyon sınırını aşarak uzayı yırtan bu temel parçacıklar, viskozitenin pratik olarak sıfır olduğu bu süper-akışkanda enerjilerini dağıtmazlar; tam aksine **kendilerini (kuantize olmuş kararlı bir şok zarfı veya topolojik bir hata olarak) yaratırlar.**
+* **Sürdürme ($v_{denge}=\sqrt{2}\,c$):** Yırtık bir kez açıldıktan sonra zarf, artık kohezyona değil yalnızca arka plan basıncına ($P_0$) karşı çalışır ve Ek A.2'deki denge hızına oturur. Proton, bu önceden yırtılmış ölümsüz şok dalgalarının birleşip yavaşladığı kompozit bir makinedir: hızı kavitasyon eşiğinin çok altına düşmüştür, ama denge gereği lokal patinaj sınırını ($c$) daima aşar.
+
+> **Ek B ile bağ (açık iş):** Ek B'deki asgari arka plan basıncı türetimi, yırtılmanın $P=0$'da başladığını varsayar. Kohezyon dayanımı hesaba katıldığında bu koşul $P_0+\Sigma>\Delta P$ biçimini alır; iki ekin bu ortak paydada uzlaştırılması Bölüm 7.4'te kayıtlı açık iştir.
 
 <div class="pol-widget-132" id="animasyon-132-kavitasyon">
 <style>
@@ -516,7 +578,9 @@ Bölüm 2.2.1'de detaylandırılacağı üzere $c$ (299.792.458 m/s), Evrenakı'
 </script>
 </div>
 
-### Ek B: Çok Bileşenli Basınç Alanı ve Galileo İvmesi
+### Ek B: Çok Bileşenli Basınç Alanı, Arka Plan Basıncının Sabitlenmesi ve Ortamın Ağırlıksızlığı
+
+#### Ek B.1 — Çok Bileşenli Basınç Alanı ve Galileo İvmesi
 
 Yeryüzünde ölçülen $g \approx 9.8\text{ m/s}^2$ ivmesi tek bir statik kuvvetin değil; Dünya'nın toplam nükleon hacminin yarattığı radyal deplasman ($\nabla P_r$) ile kendi eksenindeki dönüşünden doğan yanal/azimut girdap bileşenlerinin ($\nabla P_{spin}$) süperpozisyonudur:
 
@@ -524,6 +588,71 @@ $$\nabla P_{toplam} = \nabla P_r + \nabla P_{spin}$$
 
 Bu spin-girdap bileşeni, Gravity Probe B jiroskobundaki 39 mas/yıl sapmasının temel mekanik kaynağıdır (bkz. Kısım 3 ve Kısım 5).
 
-Yüzeydeki toplam gradyanı $\nabla P \approx 2.6 \times 10^{18}\text{ Pa/m}$ olan bu basınç alanında, Dünya'nın iç kısımlarında iç nükleon kütlesi yarıçapla azaldığından gradyan merkeze doğru lineer olarak sıfıra iner: $\nabla P(r) = \frac{\alpha M r}{R^3}$. Bu değişken gradyanın merkezden yüzeye entegrasyonu, merkezdeki net basınç düşüşünün düz hesaba kıyasla yarıya indiğini gösterir: $\Delta P = \frac{1}{2} \nabla P_{yüzey} \cdot R_{Dünya} \approx 0.83 \times 10^{25}\text{ Pa}$. Akışkanın yırtılmasını (kavitasyonu) önlemek için arka plan basıncı $P_0 > \Delta P$ olmalıdır; buradan türetilen asgari arka plan basıncı $P_0 \ge 1.6 \times 10^{25}\text{ Pa}$, asgari arka plan yoğunluğu ise $\rho_0 = P_0/c^2 \ge 1.8 \times 10^8\text{ kg/m}^3$ mertebesindedir.
+#### Ek B.2 — Yırtılmama Koşulu: Muhafazakâr Alt Sınır
+
+Yüzeydeki toplam gradyanı $\nabla P \approx 2.6 \times 10^{18}\text{ Pa/m}$ olan bu basınç alanında, Dünya'nın iç kısımlarında iç nükleon kütlesi yarıçapla azaldığından gradyan merkeze doğru lineer olarak sıfıra iner: $\nabla P(r) = \frac{\alpha M r}{R^3}$. Bu değişken gradyanın merkezden yüzeye entegrasyonu, merkezdeki net basınç düşüşünün düz hesaba kıyasla yarıya indiğini gösterir: $\Delta P = \frac{1}{2} \nabla P_{yüzey} \cdot R_{Dünya} \approx 0.83 \times 10^{25}\text{ Pa}$. Akışkanın yırtılmaması için **en muhafazakâr koşul** — kohezyon dayanımı sıfır sayılırsa ($\Sigma=0$; bkz. Ek A.3) — $P_0 > \Delta P$'dir; buradan $P_0 \ge 1.6 \times 10^{25}\text{ Pa}$ ve $\rho_0 = P_0/c^2 \ge 1.8 \times 10^8\text{ kg/m}^3$ **alt sınırı** çıkar. Kohezyon hesaba katıldığında koşul $P_0+\Sigma>\Delta P$ biçimini alır; yani bu bir kesin değer değil, güvenli tarafta kalan bir tabandır. Ortamın gerçek basıncı, aşağıdaki bağımsız sabitlemeyle bu tabanın yaklaşık **dokuz mertebe üzerinde** çıkar — dolayısıyla yırtılmama koşulu her durumda devasa bir marjla sağlanır.
+
+#### Ek B.3 — Arka Plan Basıncının Gözlemsel Sabitlenmesi: $P_0 \approx \tfrac{1}{2}\rho_n c^2$
+
+Alt sınır yerine gerçek değeri, teorinin kendi mekanizmasından sabitlemek mümkündür. Kütleye yaklaşıldıkça hem basınç hem yoğunluk düşer; ikisinin birlikte düşme oranını $\delta\rho/\rho_0=k\,\delta P/P_0$ ($0\le k<1$; teori basıncın daha hızlı düştüğünü söyler, kesin oran açık iştir — bkz. Bölüm 7.4) ile parametrize edelim. Kavrama Yasası'ndan, yerel ışık hızındaki — ve Postülat 3 gereği yerel saat hızındaki — oransal kayma:
+
+$$\frac{\delta c}{c}=\frac{1}{2}\left(\frac{\delta P}{P_0}-\frac{\delta\rho}{\rho_0}\right)=\frac{1-k}{2}\cdot\frac{\Delta P_{yüzey}}{P_0}$$
+
+Bu genlik, GPS ve Pound–Rebka'nın ölçtüğü $\Phi/c^2\approx7\times10^{-10}$ değeridir ($\Phi$: yüzey kütleçekim potansiyeli). Yüzeydeki basınç açığı ise Ek B.2'deki gradyanın integralinden $\Delta P_{yüzey}=\rho_n\Phi$'dir. İkisi eşitlenince $\Phi$ sadeleşir ve arka plan basıncı, kütleden bağımsız **evrensel** bir değere sabitlenir:
+
+$$\boxed{P_0=\frac{1-k}{2}\,\rho_n c^2\sim10^{33}\text{–}10^{34}\ \text{Pa},\qquad \rho_0=\frac{P_0}{c^2}=\frac{1-k}{2}\,\rho_n\sim10^{16}\text{–}10^{17}\ \text{kg/m}^3}$$
+
+Bu sabitlemenin üç sonucu vardır:
+
+1. **Monizm nicelleşir.** Arka plan yoğunluğu, nükleon öz yoğunluğunun ($\rho_n\approx2.7\times10^{17}\text{ kg/m}^3$) yarısı mertebesindedir: madde, okyanustan kopuk bir "yabancı cisim" değil, okyanusun yalnızca ~2 kat sıkışmış girdap fazıdır. Bölüm 1.3.1'deki "madde, uzay okyanusunun yoğunlaşmış hâlidir" cümlesi böylece nicel bir orana kavuşur (Postülat 4'teki Zerre öz yoğunluğuyla da tutarlı).
+2. **Zayıf-alan kontrolü.** Dünya'nın toplam basınç çukuru ($\Delta P\approx0.83\times10^{25}$ Pa), $P_0$'ın yanında $\sim10^{-9}$'luk bir pürüzdür. Kütleçekimsel etkilerin gözlenen küçüklüğü (saat kaymalarının $10^{-9}$–$10^{-10}$ mertebesi) doğrudan bu orandır: gezegenler, okyanusun milyarda-birlik dalgacıklarıdır.
+3. **Yırtılma marjı.** $\Delta P/P_0\sim10^{-9}$ olduğundan, Ek B.2'nin yırtılmama koşulu kohezyondan bağımsız olarak devasa marjla sağlanır.
+
+*Dürüst kayıt:* (i) $k$ oranı teoride henüz taahhüt edilmemiştir; sonuç bu nedenle yalnızca $O(1)$ düzeyinde belirsizdir (Bölüm 7.4). (ii) Kütleçekim sabiti $G$'nin türetimi (Bölüm 4.2) yalnızca gradyan bağlaşımına ($\alpha$) dayandığından $P_0$'ın mutlak değerinden bağımsızdır — sabitleme onu etkilemez; SN 1987A gecikme bütçesinin (Bölüm 2.4.4) bu değerlerle çapraz kontrolü ise açık iştir (Bölüm 7.4).
+
+#### Ek B.4 — Ortamın Ağırlıksızlığı: Tanım Değil Teorem
+
+Postülat 1'deki "ağırlıksız ortam" ifadesi bu ekte kanıt statüsü kazanır. Newtoncu sezgiden gelen itiraz — *"$10^{17}\text{ kg/m}^3$'lük bir ortam neden çökmez, neden tartılmaz?"* — gizli bir varsayım taşır: kütle yoğunluğunun kendiliğinden çekim alanı kaynakladığı ($\nabla^2\Phi=4\pi G\rho_{toplam}$). Evrenakı'da böyle bir yasa yoktur ve olamaz: teoride çekim diye bağımsız bir kuvvet yok; tek alan basınçtır, tek kuvvet gradyandır (Postülat 6). Buradan üç adımlık teorem:
+
+1. **Ağırlıksızlık.** Ağırlık, kütlenin değil gradyanın — yani deplasmanın — özelliğidir. Homojen arka plan hiçbir şeyi yerinden itmez; o, basınç alanının sıfır noktasıdır (datum) ve $\nabla P_0=0$ olduğundan hiçbir kuvvet hissetmez. Arşimet'in kaldırma kuvveti nasıl mutlak yoğunluğun değil yoğunluk *farkının* olayıysa, Evrenakı ağırlığı da mutlak $\rho_0$'ın değil deplasman *açığının* olayıdır.
+2. **Kararlılık.** Klasik öz-kütleçekimli akışkanda homojen durum kararsızdır (Jeans): yoğunlaşan bölge daha çok çeker ve çöküş büyür. Evrenakı'da bu geri-beslemenin iki bacağı da yoktur — yoğunlaşan bölge kimseyi çekmez, yalnızca basıncını yükseltir; ve Kavrama Yasası gereği $c^2=dP/d\rho>0$ olduğundan her yoğunluk pürüzü, $c$ hızında yayılan basınç dalgası olarak dağılır. Homojen durum yalnızca izinli değil, ortamın **tek doğal taban durumudur.**
+3. **Kendiliğinden madde doğumu yok.** Arka planın "kaynayıp" kendiliğinden girdap-madde üretmesi için yerel akışın $v_{kav}=\sqrt{2}\,c\sqrt{1+\Sigma/P_0}\gg c$ eşiğine (Ek A.3) ulaşması gerekir; $\Sigma\gg P_0$ kohezyonlu bir süper-akışkanda rastgele dalgalanmalar bu eşiğe ulaşamaz. Vakumun kararlılığı — uzayın durup dururken maddeye dönüşmemesi — aynı çerçevenin bedava sonucudur.
+
+Son bir mekanik incelik: kütle *çevresindeki* gradyan bölgesinde ortamın kendisi de tepkisiz değildir — Euler denklemi gereği gradyana cevap verir; ama cevabı *düşmek* değil **dolaşmaktır**: gradyan, dolaşımın merkezcil ivmesiyle dengelenir ($\nabla P/\rho_0=v_\theta^2/r$; Postülat 7–8'in sürüklenme ve vorteks alanları). Katı deplasman cebi (nükleon) ise akıp dengelenemez; bütün hâlde itilir. **Madde düşer, ortam dolaşır.**
 
 Evrenakı'nın bu devasa yoğunluğuna rağmen nesnelerin sürtünmesizce hareket edebilmesi, atomların içinin "boşluk" olmamasından; tamamen bu sıfıra yakın viskoziteli süper-akışkanla dolu olmasından kaynaklanır. Madde bu okyanusta yüzen yabancı cisim değil, okyanusun kendi içindeki lokal girdapsal yoğunlaşmadır. Hissettiğimiz kütleitimi, bu devasa hidrostatik okyanus basıncındaki küçük dalgalanmalardan (gradyanlardan) ibarettir.
+
+### Ek C: Parametre Envanteri ve Sabitleme Programı
+
+Bir teorinin bilimsel disiplini, parametrelerinin muhasebesinden okunur: hangileri başka büyüklüklerden türetilmiştir, hangileri gözlemle sabitlenmiştir, hangileri yalnızca sınırlanmıştır ve hangileri gerçekten serbesttir. Bu ek, manüskriptin farklı bölümlerinde adlandırılan tüm parametreleri tek resmî çizelgede toplar. Kritik sütun sonuncudur: **her serbest parametrenin karşısında, onu sabitleyecek gözlem yazılıdır.** Hiçbir parametre, ihtiyaç anında istenen değeri alabilen bir yama konumunda bırakılmamıştır.
+
+**Statü kodları:** **T** — Türetilmiş (başka parametrelerden formülle çıkar) · **S** — Sabitlenmiş (bağımsız gözlemle) · **A** — Aralıklı (gözlemsel sınır var, tam değer yok) · **F** — Serbest (sabitleme programı tanımlı, ölçüm bekliyor) · **G** — Gözlemsel girdi (standart fizikten alınan ölçüm).
+
+| # | Parametre | Fiziksel anlamı | Statü | Değer / Sınır | Sabitleyen / sabitleyecek gözlem | Bölüm |
+|---|---|---|---|---|---|---|
+| 1 | $m_z$ | Zerre kütlesi | **S** | $\approx1{,}47\times10^{-35}$ kg | Planck sabitinden türetim | 2.2.2 |
+| 2 | $\rho_n$ | Nükleon öz yoğunluğu | **G** | $\approx2{,}7\times10^{17}$ kg/m³ | Standart nükleer ölçüm | Ek B.3 |
+| 3 | $k$ | Kütle yakınında $\rho$'nun $P$'ye eşlik oranı | **F** ($O(1)$) | $0\le k<1$ | SN 1987A gecikme bütçesiyle çapraz kontrol (2.4.4) | Ek B.3 |
+| 4 | $P_0$ | Arka plan basıncı | **S** ($k$'ya $O(1)$ duyarlı) | $\tfrac{1-k}{2}\rho_n c^2\sim10^{33}$–$10^{34}$ Pa | Kütleçekimsel kızıla kayma genliği (GPS / Pound–Rebka) | Ek B.3 |
+| 5 | $\rho_0$ | Arka plan yoğunluğu | **S** (aynı) | $\tfrac{1-k}{2}\rho_n\sim10^{16}$–$10^{17}$ kg/m³ | Aynı sabitleme | Ek B.3 |
+| 6 | $c$ | Yerel sonik / patinaj hızı — **sabit değildir** | **T** | $\sqrt{P/\rho}$; arka planda $2{,}998\times10^8$ m/s | Türetilmiş; yerel değişkendir (Postülat 4) | Ek A.1, KY-1 |
+| 7 | $v_{denge}$ | Vakum-cepli girdap zarfının denge hızı | **T** | $\sqrt{2}\,c$ | — | Ek A.2 |
+| 8 | $v_{ekvator}$ | Protonun kompozit ekvator hızı | **G** | $\approx5\times10^8$ m/s | $2\pi\nu_c R$; $\sqrt2 c$ ile ~%18 farkın $O(1)$ bütçesi açık (7.4) | Postülat 5, Ek A |
+| 9 | $\Sigma$ | Kohezyon (çekme) dayanımı | **A** | $\Sigma/P_0>10^8$ | Alt sınır: Bell hız-sınırı deneyleri (Salart 2008); tam değer: $S\to2$ bozulması ölçümü | Ek A.3, 2.10.1 |
+| 10 | $v_m$ | Kohezyon kanalının sinyal hızı (topografya ayarı) | **T** ($\Sigma$'dan) | $c\sqrt{\Sigma/P_0}>10^4\,c$ | $\Sigma$ ile birlikte | Ek A.3, 2.10.1 |
+| 11 | $v_{kav}$ | Kavitasyon (yırtılma) eşiği | **T** | $\sqrt{2}\,c\sqrt{1+\Sigma/P_0}\approx\sqrt2\,v_m$ | $\Sigma$ ile birlikte | Ek A.3 |
+| 12 | $\alpha$ | Gradyan bağlaşım katsayısı | **S** | — | Kütleçekim sabiti $G$ ölçümünden | 4.2 |
+| 13 | $S_{kosmik}$ | Evrensel deşarj kaynak terimi | **S** | $3\rho_0 H_0$ | Hubble sabitinden | 3.7.2, 4.2.11 |
+| 14 | $\eta_E$ | Evrenakı viskozitesi (3.10'da $\eta_z$ olarak geçer; aynı büyüklüktür) | **F** | $0^+$ (süper-akışkan) | Gaia / pulsar katalog korelasyonları (3.1) + Satürn bending-wave sönüm testi (3.10.5) | 3.1, 3.7.2, 3.10 |
+| 15 | $\kappa_d$ | İçsel deşarj sabiti | **F** | — | Aynı katalog programı | 3.1.8 |
+| 16 | $\tau$ | Kopma penceresi | **F** | — | Fotoelektrik zamanlama deneyleri | 2.2.3 |
+| 17 | $\delta$ | Tek-vuruş enerji aktarımı | **F** | — | Aynı program | 2.6.5 |
+| 18 | $\Xi$ | Kuyu iskeleti gücü: ortam sirkülasyonunun baryonik öz-çekime oranı | **A** | $\approx5{:}1$ | CMB akustik pik oranları (3.7.4.3 okumasıyla) | 3.7.4 |
+| P1 | $\rho(r)$ | Galaktik vorteks yoğunluk profili | **F** (fonksiyon) | izotermal eğilim ($\propto1/r^2$) | Dönüş eğrisi + galaktik kızıla kayma sapmasının ortak fiti | 4.2.9, 6.2.8 |
+| P2 | Rampa profili | Sürüklenme zarfı gradyanının biçimi | **A** (fonksiyon) | Gaia µas üst sınırı | Gaia tüm-gökyüzü astrometrisi + Fizeau katsayısı | 3.4.6 |
+
+#### Ek C.1 — Dürüst Sayım
+
+Çizelgenin bilançosu şudur: **gerçekten serbest kalem 6 skalerdir** ($k$, $\Sigma$'nın tam değeri, $\eta_E$, $\kappa_d$, $\tau$, $\delta$) **artı 2 profil fonksiyonu** ($\rho(r)$, Rampa). Karşılaştırma için: Standart Model 19'dan fazla serbest parametre taşır; ΛCDM kozmolojisi bunlara 6 parametre daha ekler.
+
+Bu sayım iki yönde de dürüst okunmalıdır. Sayıca teori dardadır ve tek töz iddiasıyla tutarlıdır: parametrelerin çoğu birbirinden türer ($c$, $v_{denge}$, $v_m$, $v_{kav}$ tek zincirdir) ve kavramsal olarak bağımsız düğme sayısı azdır. **Ancak** Standart Çatı'nın parametreleri binlerce bağımsız ölçümü aynı anda tutturmaktadır; Evrenakı'nın parametreleri ise henüz sabitleme programındadır. Sayı azlığı bir avantaj *adayıdır*, kanıt değildir — avantaja dönüşmesi, son sütundaki programın yürütülmesine bağlıdır (bkz. 7.4).

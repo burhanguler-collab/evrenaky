@@ -239,6 +239,104 @@ Bağıl hızın sıfır ($0$) olması, Navier-Stokes kuralları gereği hidrodin
 
 Evrenakı, gezegenlerin önüne çıkıp onları yavaşlatan statik dev bir okyanus/fren değildir. Aksine gezegenleri makro girdap akıntılarıyla (entrainment) taşıyan, içindeki momentum kaybını mikro/makro spin mekanizmalarıyla tazeleyen, sürtünmesiz ve kusursuz bir "Kozmik Akışkan Motorunun" ta kendisidir. Kütle-İtim modeli, bu kusursuz sürüklenme mekanizmasıyla, gezegenlerin milyarlarca yıl boyunca uzayda sürtünme kaynaklı bir enerji kaybına uğramadan yörüngelerinde kalabilmelerinin sırrını tam bir akışkanlar mekaniği rasyonalitesiyle çözer. (Ortam yoğunluğunun kozmolojik ölçekte çok yavaş seyrelmesinden doğan tedrici yörünge açılması ayrı bir olgudur; Bkz. 3.9.5.) M&M deneyi esirin yokluğunu değil, Dünya ile onu saran Evrenakı zarfı arasındaki bağıl hızın (esir rüzgarının) sıfır olduğunu ispatlamış muazzam bir denemedir.
 
+**Zarfın İki Ayrı İşlevi: Yönsel Sürükleme ve Skaler Saydamlık.** Buradan sık karşılaşılan bir yanlış anlama doğar: "Eğer zarf yerel Evrenakı'yı Dünya ile birlikte taşıyıp M&M'i sıfırlıyorsa, ışık hızının kozmolojik değişimlerini ölçmeyi amaçlayan deneyler (bkz. Kısım 5) bu değişimleri nasıl görebilir? Zarf onları perdelemez mi?" Cevap, zarfın **birbirinden bağımsız iki işlevi** olmasında yatar. Zarf, yalnızca **yönsel bağıl hızı** (esir rüzgârını, vektörel büyüklüğü) sıfırlar; ama Evrenakı her maddeye nüfuz ettiğinden, ortamın **skaler $P/\rho$ büyüklüğüne saydamdır** — bu değer perdelenmez, yerel kozmik ortamın değerini izler. Denizaltı benzetmesi nettir: gövdeyi saran sınır tabakası denizaltıyla birlikte hareket eder (gövdede bağıl akış ve sürtünme yoktur ≈ M&M sıfır), ama o tabakanın basıncı ve yoğunluğu, denizaltı farklı derinliklere indikçe yerel ortamın değerini alır. Evrenakı zarfı da Dünya ile birlikte akar (yön anizotropisi sıfır), fakat Dünya farklı kozmik basınç bölgelerinden geçtikçe zarfın $P/\rho$'su bunları izler ve $c=\sqrt{P/\rho}$ zamanla değişir.
+
+Bu ayrım, aynı zamanda hangi düzeneğin neyi ölçtüğünü de belirler. Bir interferometrenin iki kolu arasındaki faz farkı $\Delta\varphi = \tfrac{2\omega}{c}(L_1-L_2)$ olduğundan, skaler bir hız değişiminin ($c\to c+\delta c$) ürettiği kayma $(L_1-L_2)$ ile orantılıdır. Kolları **eşit** olan klasik Michelson–Morley düzeneği bu yüzden skaler zaman-değişimine kördür; yalnızca anlık yön anizotropisini görür ve sonuç sıfırdır. Skaler değişimi yakalamak için kolların **kasıtlı olarak eşitsiz** olması gerekir — Kısım 5'teki asimetrik-kollu düzeneğin (bir kol diğerinin üç katı) fiziksel gerekçesi tam budur. Böylece M&M'in sıfır sonucu ile Kısım 5'in beklenen zamansal sinyali çelişmez; iki deney **farklı fiziksel büyüklükleri** ölçen tamamlayıcı sınamalar olur.
+
+## 3.4.6 Sürüklenme Zarfının Sınavı: Yıldız Sapması ve Fizeau Katsayısı
+
+Bir önceki bölümde (3.4.5), Michelson–Morley deneyinin sıfır sonucunu, Dünya'nın kendi **sürüklenme zarfı** içinde bağıl hızın sıfır olmasıyla açıkladık. Bu açıklama güçlüdür; ancak dürüst bir teori, kendi en güçlü savunmasını da en sert sınava sokmak zorundadır. Sürüklenme fikrine yöneltilebilecek en keskin itiraz, tarihsel olarak esir kuramlarının çoğunu deviren itirazdır: **yıldız sapması.** Bu bölüm, o itirazı tam gücüyle kurar ve Evrenakı'nın ondan nasıl çıktığını gösterir.
+
+### 3.4.6.1 Kıskaç: Beş Gözlem Aynı Anda
+
+Dürüst kayıt: sürüklenme mekanizması tek bir deneyle değil, birbirini kısıtlayan beş bağımsız gözlemle sınanır. Bir modelin ışığı açıklayıp diğerini bozması yetmez; beşini birden vermek zorundadır.
+
+| Gözlem | Ölçülen | Sürüklenmeye dayattığı |
+|---|---|---|
+| Yıllık yıldız sapması (Bradley, 1728) | Her yıldız gökyüzünde 20,49″ yarıçaplı bir elips çizer | Işığın doğrultusu, gözlemcinin dış ortama göre hızını **taşımalı** |
+| Günlük sapma | 0,32″·cos φ (Dünya'nın kendi dönüşünden) | Yön etkisi, zarfın dönüşünden **etkilenmemeli** |
+| Su dolu teleskop (Airy, 1871) | Tüp suyla dolunca sapma **değişmez** | Sapma yerel ortamda/zarf sınırında **üretilemez** |
+| Kısmi sürükleme (Fizeau, 1851; Zeeman, 1914) | Akan su ışığı hızının $1-1/n^2$'si kadar sürükler | Sürükleme ne tam ne sıfır; **kırılma indisine kilitli** |
+| Michelson–Morley (1887) ve modern rezonatörler | Sıfır; yönsel $\Delta c/c < 10^{-17}$ | Yerel ortam laboratuvarla **birlikte hareket etmeli** |
+
+Bu beş satır bir kıskaç kurar. Klasik dalga-esiri mantığında bir çıkış yoktur: birinci ve beşinci satır *tam sürüklenme* ister, ikinci ve üçüncü satır *hiç sürüklenme* ister, dördüncü satır ise *kısmi ve nicel* bir sürüklenme dayatır. Stokes'un (1845) tam sürüklenmeyi kurtarma girişimi, akışkan koşullarının aynı anda sağlanamaması nedeniyle çökmüştü; tarihsel çözüm Lorentz dönüşümlerine, yani göreliliğe giden yol oldu. Evrenakı, farklı ve mekanik bir çıkış sunar.
+
+### 3.4.6.2 Çözümün Anahtarı: Kavrama Skalerdir
+
+Evrenakı'nın esir kuramlarından ayrıldığı kritik nokta, **kavrama ilkesinin doğasıdır** (bkz. 2.4.1). Zerre bir dalga değil, fiziksel bir mermidir; ve ortamla kavraması **skalerdir**: ortamın yerel yoğunluğu Zerre'nin *süratini* belirler, ancak Evrenakı gradyanı yoksa *yönüne karışmaz.* Yön yalnızca gradyan (deplasman eğimi) varlığında, o gradyan ölçüsünde kıvrılır.
+
+Bu tek ilke, kıskacın dört kolunu birden açar:
+
+* **Yıllık ve günlük sapma.** Zerre'nin doğrultusu balistik olarak korunduğundan, sapma tıpkı yağmurda koşan birinin şemsiyesini eğmesi gibi, saf kinematik bir sonuçtur. Dünya'nın dış ortama göre hızı (yörünge için ~30 km/s, dönüş için ~465 m/s) doğrultuya olduğu gibi yansır. Zarfın Dünya (hatta Ay'ı da içine alan gradyan) ile birlikte toplu hareketi, kavrama skaler olduğu için Zerre'nin yönüne karışmaz — bu yüzden zarfın varlığı sapmayı **silmez.**
+* **Airy'nin su dolu teleskobu.** Sapma, ışığın gözlemciye varış doğrultusunda zaten kodludur; teleskop içindeki ortam bu doğrultuyu değiştiremez. Skaler kavrama yalnızca tüp içindeki *sürati* düşürür, geliş *açısını* değil — bu yüzden açı değişmez.
+* **Michelson–Morley.** Sürat, yerel zarfa göre $c$'ye oturur; zarf laboratuvarla birlikte hareket ettiğinden, laboratuvar çerçevesinde ışık her yönde eşit hızlıdır. Sonuç sıfırdır.
+
+Geriye kıskacın tek sert kolu kalır: Fizeau'nun **kısmi** sürüklemesi. İşte teorinin nicel sınavı buradadır.
+
+### 3.4.6.3 İki Bileşenli Ortam ve Fizeau Katsayısının Türetimi
+
+Fizeau, akan suyun içindeki ışığın, suyun hızının tamamını değil, tam olarak $\left(1-\tfrac{1}{n^2}\right)$ kesrini aldığını ölçmüştür (su için ≈ %44). Neden tam ne 0 ne 1?
+
+Cevap, ortamın **tek parça olmamasındadır.** Işığı taşıyan Evrenakı iki bileşenin süperpozisyonudur — bu, teorinin 1.3.1'deki modelleme dualitesinin ($\Psi_{Evrenakı}=\Psi_0+\sum_i\psi_i$) doğrudan uygulanmasıdır:
+
+1. **Arka plan Evrenakı'sı ($\Psi_0$):** Evrenseldir; suyun molekülleri onu yaratmadı ve akıtamaz. **Durgundur.**
+2. **Molekül deplasman payı ($\sum_i\psi_i$):** Her molekülün yerinden ittiği Evrenakı, o molekülün **sürüklenme zarfı** olarak onunla birlikte akar (Postülat 7'nin molekül ölçeğindeki hali).
+
+Su molekülleri, boru ve dış ortamın Evrenakı'sını topluca sürükleyemez; çünkü arka plan durgundur. Yalnızca kendi deplasman paylarını taşırlar. İşte kısmi sürüklemenin fiziksel kökeni budur.
+
+**Nicel türetim.** Işığın dalga boyu molekül ölçeğinden binlerce kat büyük olduğundan, Zerre ortamın hacimce ortalanmış halini örnekler. Üç fiziksel girdi:
+
+(Aşağıda $P$ ve $\rho$ daima **Evrenakı**'nın basıncı ve yoğunluğudur; atomik/moleküler yoğunlukla karıştırılmamalıdır — ikisi birbirine terstir, bkz. 2.4.2 "Birleştirici İlke" kutusu.)
+
+* *(Korunum)* Moleküller Evrenakı'yı yaratmaz/yok etmez, yalnızca iter. Hacimce ortalama **Evrenakı yoğunluğu** sabittir: $\bar\rho_m=\rho_0$.
+* *(Basınç)* Moleküller — atomik olarak yoğun olsalar da — hacim kesri $\phi$ kadar yer kaplayan düşük **Evrenakı basıncı** cepleridir (zıtlık kuralı). Hacimce ortalama Evrenakı basıncı: $\bar P_m = P_0(1-\phi)$.
+* *(Kavrama Yasası)* Zerre'nin bir ortamdaki sürati, o ortamın Evrenakı basınç-iletim hızıdır: $v=\sqrt{P/\rho}$ (Ek B'de $\rho_0=P_0/c^2$ olarak zaten kullanılan bağıntı; ışığın ses benzeri iletim doğasının, bkz. 2.4.1, nicel ifadesi).
+
+Kırılma indisi bu üçünden çıkar:
+
+$$\left(\frac{c}{n}\right)^2=\frac{\bar P_m}{\bar\rho_m}=\frac{P_0(1-\phi)}{\rho_0}=c^2(1-\phi)\;\;\Longrightarrow\;\; \frac{1}{n^2}=1-\phi$$
+
+Burada kritik bir kavramsal düzeltme vardır: **ışık, madde içinde düşük *Evrenakı basıncı* nedeniyle yavaşlar** (hacimce ortalama Evrenakı yoğunluğu sabit kalır; yalnızca yerel deplasman ceplerinde seyrelir). Bu, kütle-itim mekanizmasıyla tam aynı dildir — her ikisi de bir düşük Evrenakı-basıncı olgusudur.
+
+Sürükleme katsayısına gelince: ortamın momentum-ağırlıklı ortalama hızı, yalnızca akan deplasman payından gelir:
+
+$$w=\frac{\rho_0\cdot 0+\dfrac{\rho_0\phi}{1-\phi}\cdot u}{\dfrac{\rho_0}{1-\phi}}=\phi\,u$$
+
+Zerre balistik olduğundan laboratuvar hızı $v_{lab}=\dfrac{c}{n}+w$, yani sürükleme katsayısı $f=\phi$. İki sonucu birleştirince:
+
+$$\boxed{\,f=\phi=1-\frac{1}{n^2}\,}$$
+
+Su için ($n=1{,}333$) bu $f=0{,}437$ verir; Michelson & Morley'in (1886) ölçtüğü $0{,}434\pm0{,}020$ değeriyle %1'in altında bir uyum. Katsayı yalnızca $n$'ye bağlıdır, boru uzunluğundan bağımsızdır — Zeeman'ın uzunluk-bağımsızlık gözlemi de böylece karşılanır.
+
+### 3.4.6.4 Tek Mekanizma, İki Ölçek
+
+Bu türetimin en güçlü yanı ekonomisidir. Michelson–Morley'in sıfır sonucu ile Fizeau'nun kısmi sürüklemesi, standart tarihte iki ayrı bilmece olmuştur. Evrenakı'da ikisi **tek bir mekanizmanın** iki ölçekteki görünümüdür:
+
+* **Gezegen ölçeğinde** sürüklenme zarfı → Dünya yerel Evrenakı'yı tam taşır → M&M sıfır.
+* **Molekül ölçeğinde** sürüklenme zarfı → her molekül yalnızca kendi deplasman payını taşır → Fizeau $1-1/n^2$.
+
+Aynı Postülat 7, hem laboratuvarın neden esir rüzgârı görmediğini hem de akan suyun ışığı neden yalnızca kısmen sürüklediğini açıklar.
+
+### 3.4.6.5 Dispersiyon (Renk) Terimi: Zeeman Sınavı
+
+Zeeman (1914–15), Fizeau katsayısının bir de renge bağlı ince bir düzeltme taşıdığını ölçmüştür. Zerre'nin bir **mermi akışı** oluşu (renk = atış ritmi, bkz. 2.3) bu terimi doğal kılar: akan ortam, mermi akışının ritmini Doppler ile kaydırır.
+
+Molekül ortamı $u$ ile aynı yöne aktığında, Zerreleri daha seyrek yakalar; molekül çerçevesindeki ritim kızıla kayar: $\omega'=\omega(1-nu/c)$. Zerre-molekül etkileşimi bu kaymış ritme göre gerçekleştiğinden, kırılma indisi $\omega'$'de değerlenir ve süratte ek bir pay doğar. Entrainment sürüklemesiyle birleştiğinde laboratuvar hızı:
+
+$$v_{lab}=\frac{c}{n}+u\left[\,1-\frac{1}{n^2}+\frac{\omega}{n}\frac{dn}{d\omega}\,\right]$$
+
+İkinci köşeli terim, Lorentz'in dispersiyon-düzeltmeli katsayısının birebir aynısıdır ve Zeeman'ın ölçtüğü pozitif renk katkısını (normal dispersiyonda $dn/d\omega>0$) verir. Böylece Fizeau deneyinin hem ana katsayısı hem de ince renk yapısı, tek bir Zerre-akışı resminden türetilmiş olur.
+
+### 3.4.6.6 Dürüst Kayıt: Açık Kalanlar
+
+Bu bölüm kıskacı kapatır; ancak bilimsel dürüstlük, geriye kalan üç kalemi de işaretlemeyi gerektirir (ayrıntılı liste için bkz. 7.4):
+
+1. **Sürüklenme zarfı katsayısı.** Türetim, deplase edilen Evrenakı'nın *tamamının* molekülle aktığını (zarfın cisimle taşındığını) varsayar. Bu, Postülat 7'nin entrainment tanımıyla tutarlıdır; ancak tam hidrodinamik bir hesabın bu "tam taşıma" katsayısını bağımsızca doğrulaması gerekir.
+2. **Dispersiyonun kökeni.** Burada $n(\omega)$ ölçümden alınmış ve hareketli ortamın renkleri nasıl farklı sürüklediği türetilmiştir. $n$'nin *neden* renge bağlı olduğu (dispersiyonun mikroskobik kaynağı) ise ayrı bir sorudur — standart fizikte de öyledir (Lorentz osilatör modeli). Evrenakı'daki karşılığı, Zerre atış ritmi ile molekül girdaplarının rezonans tepkisi arasındaki bağdır ve bir sonraki sürümün konusudur.
+3. **Gradyan bükmesi ve astrometri.** Zarfın gradyanlı (Rampa) yapısı, içinden geçen yıldız ışığını hafifçe kırar. Bu bükmenin, Gaia'nın mikro-yay-saniyesi hassasiyetindeki tüm-gökyüzü astrometrisine koyduğu üst sınırla uyumu, nicel olarak ayrıca gösterilmelidir.
+
+Bu kalemler bir zafiyet değil, araştırma programının bir sonraki adımlarıdır: her biri teorinin hangi hesapla daha da güçleneceğini tarif eder.
+
 ---
 
 Bu bölümde kütleçekimin yerine geçen mekanizmayı — girdapların basınç gradyanlarını ve girdap rekabetini — gök mekaniği ölçeğinde kurduk. Bir sonraki bölümde aynı girdap mekaniğini gökyüzünden yeryüzüne indiriyoruz: hortumlar, kasırgalar ve mutfağınızdaki girdap deneyleri (Bölüm 3.5), bu bölümde anlatılan hidrodinamik yasaların gözlerimizin önünde işleyen küçük ölçekli provalarıdır.

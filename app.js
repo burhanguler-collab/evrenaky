@@ -103,17 +103,13 @@ try {
 }
 
 
-// Supabase Configuration
-// Canlıya alırken kendi Supabase bilgilerinizle güncelleyin.
-const SUPABASE_URL = 'https://YOUR_SUPABASE_PROJECT.supabaseClient.co';
-const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEY';
-
-let useMockBackend = true;
-let supabaseClient = null;
+// Üyelik/oturum altyapısı: Firebase Authentication (firebase-client.js)
+// firebase-client.js yüklenemezse üyelik özellikleri kapanır; site okuma modunda çalışmaya devam eder.
 let currentUser = null; // Giriş yapmış üye bilgisi
 
-// Administrator Email list who can access the Analytics dashboard
-const ADMIN_EMAILS = ['burhanguler@gmail.com', 'ahmet@mail.com', 'admin@proje.com'];
+// Yönetici hesapları — Firebase Authentication ile doğrulanmış e-postalar.
+// Buradaki e-posta ile Firebase Console > Authentication > Users içinde bir hesap açılmış olmalıdır.
+const ADMIN_EMAILS = ['burhanguler@gmail.com'];
 
 // App State Variables
 
@@ -781,40 +777,24 @@ function initMockDB() {
     }
 }
 
-// Initialize Auth
+// Initialize Auth — Firebase Authentication
 function initAuth() {
-    // Try to init Supabase client if configured
-    if (typeof Supabase !== 'undefined' && SUPABASE_URL && !SUPABASE_URL.includes('YOUR_SUPABASE_PROJECT')) {
-        try {
-            supabase = Supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-            useMockBackend = false;
-        } catch (e) {
-            console.error("Supabase fail, mock active:", e);
-        }
-    }
+    initMockDB(); // yorum/forum için çevrimdışı örnek veri (üyelik/şifre saklamaz)
 
-    if (useMockBackend) {
-        initMockDB();
-        // Check local session
-        const session = safeStorage.getItem('proje_mock_session');
-        if (session) {
-            currentUser = JSON.parse(session);
-        }
-        updateAuthUI();
-    } else {
-        // Real Supabase Auth listener
-        supabaseClient.auth.onAuthStateChange((event, session) => {
-            if (session && session.user) {
-                currentUser = {
-                    id: session.user.id,
-                    email: session.user.email,
-                    username: session.user.user_metadata.username || session.user.email.split('@')[0]
-                };
-            } else {
-                currentUser = null;
-            }
+    if (window.firebaseAuth) {
+        // Oturumu Firebase izler: sayfa yenilense de giriş korunur.
+        window.firebaseAuth.oturumIzle((user) => {
+            currentUser = user;
             updateAuthUI();
+            if (activeChapterId) loadComments(activeChapterId);
+            if (activeThreadId) openThreadDetail(activeThreadId);
         });
+    } else {
+        // Firebase henüz yüklenmediyse hazır olduğunda tekrar dene.
+        console.warn("Firebase Authentication henüz hazır değil — bekleniyor.");
+        currentUser = null;
+        updateAuthUI();
+        window.addEventListener('firebase-hazir', () => initAuth(), { once: true });
     }
 }
 
@@ -897,105 +877,91 @@ function switchAuthTab(mode) {
     }
 }
 
-// Handle login / sign up submission
+// Handle login / sign up submission — Firebase Authentication
 async function handleAuthSubmit(event) {
     event.preventDefault();
-    const email = document.getElementById('auth-email').value;
+
+    if (!window.firebaseAuth) {
+        alert("Üyelik sistemi şu anda kullanılamıyor. Lütfen sayfayı yenileyip tekrar deneyin.");
+        return;
+    }
+
+    const email = document.getElementById('auth-email').value.trim();
     const password = document.getElementById('auth-password').value;
     const isSignup = document.getElementById('auth-tab-signup').classList.contains('active');
+    const submitBtn = document.getElementById('btn-auth-submit');
 
-    if (useMockBackend) {
-
-        const mockUsers = JSON.parse(safeStorage.getItem('evrenaky_mock_users') || '[]');
-
-        if (isSignup) {
-            const username = document.getElementById('auth-username').value || email.split('@')[0];
-            // Check if user exists
-            if (mockUsers.some(u => u.email === email)) {
-                alert("Bu e-posta adresiyle zaten bir kullanıcı kayıtlı!");
-                return;
-            }
-            const newUser = { id: String(Date.now()), email, username };
-            mockUsers.push({ ...newUser, password });
-            safeStorage.setItem('evrenaky_mock_users', JSON.stringify(mockUsers));
-            currentUser = newUser;
-            safeStorage.setItem('evrenaky_mock_session', JSON.stringify(newUser));
-            alert("Üyeliğiniz başarıyla oluşturuldu!");
-        } else {
-            // Login
-            const user = mockUsers.find(u => u.email === email && u.password === password);
-            if (user) {
-                const sessionUser = { id: user.id, email: user.email, username: user.username };
-                currentUser = sessionUser;
-                safeStorage.setItem('evrenaky_mock_session', JSON.stringify(sessionUser));
-            } else {
-                alert("Hatalı e-posta veya şifre!");
-                return;
-            }
-        }
-        updateAuthUI();
-        closeAuthModal();
-        // Reload comments/forum if viewing
-        if (activeChapterId) loadComments(activeChapterId);
-        if (activeThreadId) openThreadDetail(activeThreadId);
-    } else {
-        // Real Supabase
-        if (isSignup) {
-            const username = document.getElementById('auth-username').value || email.split('@')[0];
-            const { error } = await supabaseClient.auth.signUp({
-                email,
-                password,
-                options: { data: { username } }
-            });
-            if (error) alert(error.message);
-            else alert("Kayıt başarılı! E-posta onay linkini kontrol edin.");
-        } else {
-            const { error } = await supabaseClient.auth.signInWithPassword({ email, password });
-            if (error) alert(error.message);
-            else closeAuthModal();
-        }
+    if (!email || !password) {
+        alert("Lütfen e-posta ve şifrenizi girin.");
+        return;
     }
+
+    const oldLabel = submitBtn.textContent;
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Lütfen bekleyin...';
+
+    let result;
+    if (isSignup) {
+        const username = document.getElementById('auth-username').value.trim() || email.split('@')[0];
+        result = await window.firebaseAuth.kayitOl(email, password, username);
+    } else {
+        result = await window.firebaseAuth.girisYap(email, password);
+    }
+
+    submitBtn.disabled = false;
+    submitBtn.textContent = oldLabel;
+
+    if (!result.success) {
+        alert(result.message);
+        return;
+    }
+
+    // Oturum değişimini initAuth içindeki oturumIzle dinleyicisi yakalar ve arayüzü tazeler.
+    if (isSignup) alert("Üyeliğiniz oluşturuldu, hoş geldiniz!");
+    closeAuthModal();
 }
 
 // Log out user
 async function logout() {
-    if (useMockBackend) {
-        currentUser = null;
-        safeStorage.removeItem('evrenaky_mock_session');
-        updateAuthUI();
-        if (activeChapterId) loadComments(activeChapterId);
-        if (activeThreadId) openThreadDetail(activeThreadId);
+    if (window.firebaseAuth) {
+        await window.firebaseAuth.cikisYap();
     } else {
-        await supabaseClient.auth.signOut();
+        currentUser = null;
+        updateAuthUI();
     }
 }
 
-// Social Media Login simulation or real integration
-async function loginWithOAuth(provider) {
-    if (useMockBackend) {
-        // Simulate OAuth login instantly
-        const providerName = provider.charAt(0).toUpperCase() + provider.slice(1);
-        const sessionUser = {
-            id: String(Date.now()),
-            email: `burhanguler@gmail.com`, // Yönetici yetkilerini test etmek için
-            username: `Burhan_Güler`
-        };
-        currentUser = sessionUser;
-        safeStorage.setItem('evrenaky_mock_session', JSON.stringify(sessionUser));
-        updateAuthUI();
-        closeAuthModal();
-        if (activeChapterId) loadComments(activeChapterId);
-        if (activeThreadId) openThreadDetail(activeThreadId);
-        alert(`${providerName} doğrulamasıyla başarıyla giriş yapıldı!`);
-    } else {
-        const { error } = await supabaseClient.auth.signInWithOAuth({
-            provider: provider,
-            options: {
-                redirectTo: window.location.origin + '/index.html'
-            }
-        });
-        if (error) alert(error.message);
+// Şifremi unuttum — Firebase sıfırlama e-postası gönderir
+async function sifremiUnuttum() {
+    if (!window.firebaseAuth) return;
+    const email = document.getElementById('auth-email').value.trim();
+    if (!email) {
+        alert("Şifre sıfırlama bağlantısı için önce e-posta adresinizi yazın.");
+        return;
     }
+    const result = await window.firebaseAuth.sifreSifirla(email);
+    alert(result.success
+        ? "Şifre sıfırlama bağlantısı e-posta adresinize gönderildi."
+        : result.message);
+}
+
+// Google ile gerçek giriş (Firebase popup)
+async function loginWithOAuth(provider) {
+    if (!window.firebaseAuth) {
+        alert("Üyelik sistemi şu anda kullanılamıyor. Lütfen sayfayı yenileyip tekrar deneyin.");
+        return;
+    }
+    if (provider !== 'google') {
+        alert("Bu giriş yöntemi henüz aktif değil. Lütfen Google ile veya e-posta/şifre ile giriş yapın.");
+        return;
+    }
+
+    const result = await window.firebaseAuth.googleIleGiris();
+    if (!result.success) {
+        alert(result.message);
+        return;
+    }
+    closeAuthModal();
 }
 
 // ==========================================
@@ -1211,16 +1177,11 @@ async function loadReplies(postId) {
 
     let replies = [];
 
-    if (useMockBackend) {
+    if (window.firebaseClient) {
+        replies = await window.firebaseClient.getReplies(postId);
+    } else {
         const allReplies = JSON.parse(safeStorage.getItem('evrenaky_mock_replies') || '[]');
         replies = allReplies.filter(r => r.post_id === postId);
-    } else {
-        const { data, error } = await supabase
-            .from('forum_replies')
-            .select('*')
-            .eq('post_id', postId)
-            .order('created_at', { ascending: true });
-        if (!error && data) replies = data;
     }
 
     count.textContent = replies.length;
@@ -1419,7 +1380,7 @@ function updateCurrentSessionInStorage() {
     }
 }
 
-function openStatsModal() {
+async function openStatsModal() {
     const modal = document.getElementById('stats-modal');
     if (!modal) return;
 
@@ -1503,13 +1464,22 @@ function openStatsModal() {
     });
 
     // General Portal aggregates
-    const mockUsers = JSON.parse(safeStorage.getItem('evrenaky_mock_users') || '[]');
-    const mockComments = JSON.parse(safeStorage.getItem('evrenaky_mock_comments') || '[]');
-    const mockThreads = JSON.parse(safeStorage.getItem('evrenaky_mock_posts') || '[]');
-
-    document.getElementById('stat-total-users').textContent = mockUsers.length;
-    document.getElementById('stat-total-comments').textContent = mockComments.length;
-    document.getElementById('stat-total-threads').textContent = mockThreads.length;
+    if (window.firebaseClient) {
+        const [allComments, allThreads] = await Promise.all([
+            window.firebaseClient.getAllComments(),
+            window.firebaseClient.getThreads()
+        ]);
+        document.getElementById('stat-total-comments').textContent = allComments.length;
+        document.getElementById('stat-total-threads').textContent = allThreads.length;
+        // Üye sayısı yalnızca Firebase Console > Authentication > Users ekranından görülebilir.
+        document.getElementById('stat-total-users').textContent = '—';
+    } else {
+        const mockComments = JSON.parse(safeStorage.getItem('evrenaky_mock_comments') || '[]');
+        const mockThreads = JSON.parse(safeStorage.getItem('evrenaky_mock_posts') || '[]');
+        document.getElementById('stat-total-users').textContent = '—';
+        document.getElementById('stat-total-comments').textContent = mockComments.length;
+        document.getElementById('stat-total-threads').textContent = mockThreads.length;
+    }
 
     // Toggle Admin Panel Visibility inside stats modal
     const isAdmin = currentUser && ADMIN_EMAILS.includes(currentUser.email);
@@ -1624,15 +1594,6 @@ async function handlePeerReviewSubmit(e) {
             alert("Değerlendirmeniz Firebase'e başarıyla gönderildi. Yönetici onayının ardından yayınlanacaktır. Katkınız için teşekkür ederiz!");
         } else {
             alert("Gönderim sırasında hata oluştu. Konsolu kontrol edin.");
-        }
-    } else if (supabaseClient) {
-        try {
-            const { error } = await supabaseClient.from('peer_reviews').insert([reviewData]);
-            if (error) throw error;
-            alert("Değerlendirmeniz başarıyla gönderildi. Yönetici onayının ardından yayınlanacaktır. Katkınız için teşekkür ederiz!");
-        } catch (err) {
-            console.error("Supabase peer review submit error:", err);
-            alert("Gönderim sırasında hata oluştu: " + err.message);
         }
     } else {
         // Local Mock DB
@@ -1769,18 +1730,8 @@ async function loadAdminPendingReviews() {
     `;
 
     let pendingReviews = [];
-    if (supabaseClient) {
-        try {
-            const { data, error } = await supabaseClient
-                .from('peer_reviews')
-                .select('*')
-                .eq('status', 'pending')
-                .order('created_at', { ascending: true });
-            if (error) throw error;
-            pendingReviews = data || [];
-        } catch (err) {
-            console.error("Supabase load pending reviews error:", err);
-        }
+    if (window.firebaseClient) {
+        pendingReviews = await window.firebaseClient.getPendingReviews();
     } else {
         initPeerReviewsMockData();
         const allReviews = JSON.parse(safeStorage.getItem('evrenaky_mock_peer_reviews') || '[]');
@@ -1808,8 +1759,8 @@ async function loadAdminPendingReviews() {
                 <div class="admin-review-item-meta" style="color: var(--text-primary); margin-top: 6px; font-style: italic; white-space: pre-line;">"${escapeHTML(rev.review_text)}"</div>
             </div>
             <div class="admin-review-item-actions">
-                <button class="btn-approve" onclick="handleUpdateReviewStatus(${rev.id}, 'approved')">Onayla</button>
-                <button class="btn-reject" onclick="handleUpdateReviewStatus(${rev.id}, 'rejected')">Reddet/Sil</button>
+                <button class="btn-approve" onclick="handleUpdateReviewStatus('${rev.id}', 'approved')">Onayla</button>
+                <button class="btn-reject" onclick="handleUpdateReviewStatus('${rev.id}', 'rejected')">Reddet/Sil</button>
             </div>
         `;
         listContainer.appendChild(item);
@@ -1817,27 +1768,24 @@ async function loadAdminPendingReviews() {
 }
 
 async function handleUpdateReviewStatus(id, newStatus) {
-    if (supabaseClient) {
-        try {
-            if (newStatus === 'approved') {
-                const { error } = await supabaseClient
-                    .from('peer_reviews')
-                    .update({ status: 'approved' })
-                    .eq('id', id);
-                if (error) throw error;
-                alert("Hakem raporu başarıyla onaylandı ve yayına alındı.");
-            } else {
-                const { error } = await supabaseClient
-                    .from('peer_reviews')
-                    .delete()
-                    .eq('id', id);
-                if (error) throw error;
-                alert("Hakem raporu reddedildi ve silindi.");
-            }
-        } catch (err) {
-            console.error("Supabase update peer review status error:", err);
-            alert("İşlem sırasında hata oluştu: " + err.message);
+    // Yönetici yetkisi Firestore kurallarında da doğrulanır; buradaki kontrol yalnızca arayüz içindir.
+    if (!currentUser || !ADMIN_EMAILS.includes(currentUser.email)) {
+        alert("Bu işlem için yönetici girişi gereklidir.");
+        return;
+    }
+
+    if (window.firebaseClient) {
+        let ok;
+        if (newStatus === 'approved') {
+            ok = await window.firebaseClient.approveReview(id);
+            alert(ok ? "Hakem raporu başarıyla onaylandı ve yayına alındı."
+                     : "İşlem başarısız. Yetkiniz veya bağlantınız kontrol edilmeli.");
+        } else {
+            ok = await window.firebaseClient.deleteDocument('submissions', id);
+            alert(ok ? "Hakem raporu reddedildi ve silindi."
+                     : "İşlem başarısız. Yetkiniz veya bağlantınız kontrol edilmeli.");
         }
+        if (ok) loadAdminPendingReviews();
     } else {
         // Local Mock DB
         const reviews = JSON.parse(safeStorage.getItem('evrenaky_mock_peer_reviews') || '[]');

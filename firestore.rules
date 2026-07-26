@@ -1,0 +1,57 @@
+rules_version = '2';
+
+// Firebase Console > Firestore Database > Rules ekranına yapıştırıp "Publish" deyin.
+// Yönetici e-postasını kendi Firebase hesabınıza göre güncelleyin.
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function yonetici() {
+      return request.auth != null
+             && request.auth.token.email in ['burhanguler@gmail.com'];
+    }
+
+    function uye() {
+      return request.auth != null;
+    }
+
+    // Ziyaretçi sayacı: herkes okur, yalnızca sayaç alanı güncellenebilir.
+    match /stats/global {
+      allow read: if true;
+      allow write: if request.resource.data.keys().hasOnly(['pageViews']);
+    }
+
+    // Hakem değerlendirmeleri: herkes gönderebilir ama "pending" olarak;
+    // sitede yalnızca onaylananlar görünür; onay/silme yalnızca yöneticide.
+    match /submissions/{docId} {
+      allow read: if resource.data.status == 'approved' || yonetici();
+      allow create: if request.resource.data.status == 'pending';
+      allow update, delete: if yonetici();
+    }
+
+    // Bölüm yorumları: herkes okur, yalnızca giriş yapmış üye yazar, silme yöneticide.
+    match /chapter_comments/{docId} {
+      allow read: if true;
+      allow create: if uye();
+      allow update, delete: if yonetici();
+    }
+
+    // Forum konuları ve cevapları: aynı kural.
+    match /forum_threads/{docId} {
+      allow read: if true;
+      allow create: if uye();
+      allow update, delete: if yonetici();
+    }
+
+    match /forum_replies/{docId} {
+      allow read: if true;
+      allow create: if uye();
+      allow update, delete: if yonetici();
+    }
+
+    // Yukarıda tanımlanmayan her şey kapalı.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

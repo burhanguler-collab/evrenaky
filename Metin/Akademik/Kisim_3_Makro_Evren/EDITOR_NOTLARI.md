@@ -10,6 +10,8 @@
 > **1) "GR sadece iki kuvvet modelleyebilir" iddiası teknik olarak yanlıştır:**
 > GR'nin matematiksel yapısı (Einstein alan denklemleri, $G_{\mu\nu} = \frac{8\pi G}{c^4} T_{\mu\nu}$) herhangi bir enerji-momentum tensörünü kabul eder — bu tensöre basınç, gerilme, akışkan akışı eklenebilir. GR, "perfect fluid" veya anizotropik basınçları dışlamaz, aksine astrofizik modellemelerinde (örn. nötron yıldızları TOV denklemleri) bunu rutin olarak kullanır. Bu sebeple "GR akışkan kuvvetlerini dışlar" demek, teorinin GR'ye karşı üstünlük iddiasını zayıflatmaktadır.
 > 
+> ✅ **[KARŞILANDI — 26.07.2026]** Aşağıdaki 2. madde, yeni Bölüm 3.7.4 ile karşılanmıştır: Bullet Cluster (3.7.4.1), kozmik ağ (3.7.4.2) ve CMB akustik pikleri (3.7.4.3) "görünmez sirkülasyon kuyuları" ilkesiyle mekanizma seviyesinde ele alındı; nicel kalemler 7.4 madde 4'te kayıtlıdır. 3. maddedeki iç-tutarlılık görevi 7.4 madde 5'te açık durmaya devam ediyor.
+>
 > **2) Karanlık madde "tek bir yama" değildir, çoklu kanıtları vardır:**
 > Metin karanlık maddeyi sadece dönüş hızlarındaki çöküşü "telafi" eden bir yama gibi sunmaktadır. Ancak karanlık madde; Bullet Cluster (Çarpışan Galaksi Kümelerinde zayıf mercekleme kütle merkezi ile ışık yayan gazın fiziksel olarak ayrışması), CMB akustik pik oranları ve büyük ölçekli yapı oluşumu gibi bağımsız kanıtlara dayanır. Evrenakı'nın karanlık maddeye rakip olabilmesi için, "Kutupsal Sıkıştırma" mantığının *Bullet Cluster* gibi kütle-ışık ayrışması vakalarını da akışkan basıncıyla çözmesi gerekmektedir.
 > 

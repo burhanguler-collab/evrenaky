@@ -127,9 +127,10 @@
   <div id="login-overlay">
     <div class="login-box">
       <h2>Evrenakı Yöneticisi</h2>
-      <p style="color: var(--text-muted); margin-bottom: 25px; font-size: 14px;">Panele erişmek için yönetici şifresini girin.</p>
-      <div id="login-error">Şifre hatalı! Lütfen tekrar deneyin.</div>
-      <input type="password" id="passwordInput" placeholder="Yönetici Şifresi" onkeypress="if(event.key === 'Enter') checkLogin()">
+      <p style="color: var(--text-muted); margin-bottom: 25px; font-size: 14px;">Panele erişmek için yönetici hesabınızla giriş yapın.</p>
+      <div id="login-error">Giriş başarısız. Lütfen tekrar deneyin.</div>
+      <input type="email" id="emailInput" placeholder="Yönetici E-postası" onkeypress="if(event.key === 'Enter') checkLogin()">
+      <input type="password" id="passwordInput" placeholder="Şifre" onkeypress="if(event.key === 'Enter') checkLogin()">
       <button onclick="checkLogin()">Giriş Yap <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></button>
     </div>
   </div>
@@ -236,20 +237,47 @@
     </div>
   </div>
 
+  <!-- Firebase Authentication: yönetici girişi -->
+  <script type="module" src="firebase-client.js?v=2"></script>
+
   <script>
-    // --- LOGIN LOGIC ---
-    function checkLogin() {
-      const pwd = document.getElementById('passwordInput').value;
-      if (pwd === 'Bguler.64') {
-        document.getElementById('login-overlay').style.opacity = '0';
-        setTimeout(() => {
-          document.getElementById('login-overlay').style.display = 'none';
-          document.getElementById('dashboard').style.display = 'flex';
-        }, 500);
-      } else {
-        document.getElementById('login-error').style.display = 'block';
-        document.getElementById('passwordInput').value = '';
+    // Panele girebilecek yönetici e-postaları (app.js içindeki liste ile aynı olmalı)
+    const ADMIN_EMAILS = ['burhanguler@gmail.com'];
+
+    // --- LOGIN LOGIC (Firebase Authentication) ---
+    async function checkLogin() {
+      const errorBox = document.getElementById('login-error');
+      const email = document.getElementById('emailInput').value.trim();
+      const password = document.getElementById('passwordInput').value;
+
+      if (!window.firebaseAuth) {
+        errorBox.textContent = 'Giriş sistemi yüklenemedi. Sayfayı yenileyin.';
+        errorBox.style.display = 'block';
+        return;
       }
+
+      const result = await window.firebaseAuth.girisYap(email, password);
+      document.getElementById('passwordInput').value = '';
+
+      if (!result.success) {
+        errorBox.textContent = result.message;
+        errorBox.style.display = 'block';
+        return;
+      }
+
+      if (!ADMIN_EMAILS.includes(result.user.email)) {
+        await window.firebaseAuth.cikisYap();
+        errorBox.textContent = 'Bu hesabın yönetici paneline erişim yetkisi yok.';
+        errorBox.style.display = 'block';
+        return;
+      }
+
+      errorBox.style.display = 'none';
+      document.getElementById('login-overlay').style.opacity = '0';
+      setTimeout(() => {
+        document.getElementById('login-overlay').style.display = 'none';
+        document.getElementById('dashboard').style.display = 'flex';
+      }, 500);
     }
 
     // --- TAB SWITCH LOGIC ---
