@@ -119,6 +119,46 @@
       margin-bottom: 30px; color: #ffcc00; font-size: 14px; line-height: 1.5;
     }
 
+    @media (max-width: 768px) {
+      #dashboard {
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+      }
+      .sidebar {
+        width: 100%;
+        padding: 15px;
+        border-right: none;
+        border-bottom: 1px solid var(--glass-border);
+      }
+      .sidebar h1 {
+        margin-bottom: 15px;
+        font-size: 20px;
+      }
+      .main-content {
+        padding: 20px 15px;
+      }
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+      .login-box {
+        margin: 15px;
+        padding: 25px 20px;
+        width: 90%;
+      }
+      .submission-item {
+        padding: 15px;
+      }
+      .sub-actions {
+        flex-direction: column;
+        gap: 8px;
+      }
+      .sub-actions button {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
   </style>
 </head>
 <body>

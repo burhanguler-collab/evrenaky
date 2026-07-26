@@ -2167,6 +2167,23 @@ body.light-theme #btn-theme-toggle .moon-icon {
     bottom: 125%;
     left: 50%;
     transform: translateX(-50%);
+
+/* --- Evrenaki Tooltip System --- */
+.evrenaki-tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: help;
+    border-bottom: 1px dotted var(--neon-blue);
+    color: var(--neon-blue);
+    font-weight: 500;
+}
+
+.evrenaki-tooltip::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: var(--card-bg);
     border: 1px solid var(--border-color);
     color: var(--text-primary);
@@ -2186,4 +2203,120 @@ body.light-theme #btn-theme-toggle .moon-icon {
 .evrenaki-tooltip:hover::after {
     opacity: 1;
     visibility: visible;
+}
+
+/* ==========================================
+   MOBILE & TABLET RESPONSIVE ENHANCEMENTS
+   (DESKTOP UNTOUCHED)
+   ========================================== */
+
+/* Table & Math & Media Fluidity */
+.markdown-body table {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 20px 0;
+}
+
+.markdown-body img, 
+.markdown-body svg, 
+.markdown-body iframe,
+.markdown-body video {
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+.katex-display {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 6px 0;
+    max-width: 100%;
+    -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 768px) {
+    #main-header {
+        padding: 0 12px;
+        gap: 8px;
+    }
+    .header-title h1 {
+        font-size: 0.95rem;
+        max-width: 160px;
+    }
+    .header-right {
+        gap: 8px;
+    }
+    .nav-tabs {
+        overflow-x: auto;
+        max-width: 200px;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+    .tab-btn {
+        padding: 5px 10px;
+        font-size: 0.78rem;
+    }
+    .reader-settings {
+        padding-left: 8px;
+        gap: 4px;
+    }
+    .btn-icon {
+        width: 32px;
+        height: 32px;
+    }
+    .user-profile-menu {
+        padding: 3px 8px;
+    }
+    #user-display-name {
+        max-width: 80px;
+        font-size: 0.75rem;
+    }
+    #book-content-container {
+        padding: 14px 14px 60px 14px;
+    }
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    .hero-subtitle {
+        font-size: 0.95rem;
+    }
+    .hero-actions {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+    .btn {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    .modal-card {
+        padding: 20px 16px;
+        max-width: 94%;
+        margin: 0 12px;
+    }
+    .splash-title {
+        font-size: 2rem;
+        letter-spacing: 3px;
+    }
+    .splash-statement {
+        font-size: 1.05rem;
+        padding: 12px 18px;
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-left .header-title {
+        display: none;
+    }
+    .nav-tabs {
+        max-width: 100%;
+    }
 }
