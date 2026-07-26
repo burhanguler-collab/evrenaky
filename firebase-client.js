@@ -72,8 +72,14 @@ async function kaydetVeyaGuncelleKullanici(user, extraData = {}) {
         ...extraData
     };
 
-    // 1. ALWAYS Save to LocalStorage first
+    // 1. ALWAYS Save to LocalStorage first & unblock if actively logging in
     try {
+        let deleted = JSON.parse(localStorage.getItem('evrenaky_deleted_user_ids') || '[]');
+        if (userData.email) {
+            deleted = deleted.filter(e => e.toLowerCase() !== userData.email.toLowerCase());
+            localStorage.setItem('evrenaky_deleted_user_ids', JSON.stringify(deleted));
+        }
+
         const localUsers = JSON.parse(localStorage.getItem('evrenaky_mock_users') || '[]');
         const idx = localUsers.findIndex(u => u && u.email && u.email.toLowerCase() === userData.email.toLowerCase());
         if (idx >= 0) {

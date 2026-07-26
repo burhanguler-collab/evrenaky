@@ -696,12 +696,13 @@
 
         let allUsersList = Array.from(userMap.values());
 
-        // Blacklist filter
+        // Blacklist filter (never filter out master admin emails)
         const deletedUsers = safeGet('evrenaky_deleted_user_ids', '[]');
         allUsersList = allUsersList.filter(u => {
             if (!u) return false;
             const uid = String(u.id || '');
             const uemail = String(u.email || '').toLowerCase();
+            if (ADMIN_EMAILS.map(e => e.toLowerCase()).includes(uemail)) return true;
             return !deletedUsers.includes(uid) && !deletedUsers.includes(uemail);
         });
 
