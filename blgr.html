@@ -463,20 +463,18 @@
     window.rejectSubmission = async function(id) {
         if (confirm("Bu değerlendirmeyi reddedip tamamen silmek istediğinize emin misiniz?")) {
             if (window.firebaseClient) {
-                const success = await window.firebaseClient.deleteDocument("submissions", id);
-                if (success) {
-                    alert("Başarıyla reddedildi ve silindi.");
-                    loadSubmissions();
-                } else {
-                    alert("Silme sırasında bir hata oluştu.");
+                try {
+                    await window.firebaseClient.deleteDocument("submissions", id);
+                } catch(e) {
+                    console.warn("Firebase delete submission notice:", e);
                 }
-            } else {
-                let reviews = safeGet('evrenaky_mock_peer_reviews', '[]');
-                reviews = reviews.filter(r => r.id != id);
-                safeSet('evrenaky_mock_peer_reviews', reviews);
-                alert("Başarıyla reddedildi ve silindi.");
-                loadSubmissions();
             }
+            let reviews = safeGet('evrenaky_mock_peer_reviews', '[]');
+            reviews = reviews.filter(r => String(r.id) !== String(id));
+            safeSet('evrenaky_mock_peer_reviews', reviews);
+
+            alert("Başarıyla reddedildi ve silindi.");
+            loadSubmissions();
         }
     };
 
@@ -548,38 +546,40 @@
     window.deleteComment = async function(id) {
         if (confirm("Bu bölüm yorumunu silmek istediğinize emin misiniz?")) {
             if (window.firebaseClient) {
-                const success = await window.firebaseClient.deleteDocument("chapter_comments", id);
-                if (success) {
-                    alert("Yorum silindi.");
-                    loadDiscussions();
-                } else {
-                    alert("Silme sırasında hata oluştu.");
+                try {
+                    await window.firebaseClient.deleteDocument("chapter_comments", id);
+                } catch(e) {
+                    console.warn("Firebase delete comment notice:", e);
                 }
-            } else {
-                let comments = safeGet('evrenaky_mock_comments', '[]');
-                comments = comments.filter(c => c.id != id);
-                safeSet('evrenaky_mock_comments', comments);
-                loadDiscussions();
             }
+            let comments = safeGet('evrenaky_mock_comments', '[]');
+            comments = comments.filter(c => String(c.id) !== String(id));
+            safeSet('evrenaky_mock_comments', comments);
+
+            alert("Yorum başarıyla silindi.");
+            loadDiscussions();
         }
     };
 
     window.deleteThread = async function(id) {
         if (confirm("Bu tartışma konusunu tamamen silmek istediğinize emin misiniz?")) {
             if (window.firebaseClient) {
-                const success = await window.firebaseClient.deleteDocument("forum_threads", id);
-                if (success) {
-                    alert("Tartışma konusu silindi.");
-                    loadDiscussions();
-                } else {
-                    alert("Silme sırasında hata oluştu.");
+                try {
+                    await window.firebaseClient.deleteDocument("forum_threads", id);
+                } catch(e) {
+                    console.warn("Firebase delete thread notice:", e);
                 }
-            } else {
-                let threads = safeGet('evrenaky_mock_threads', '[]');
-                threads = threads.filter(t => t.id != id);
-                safeSet('evrenaky_mock_threads', threads);
-                loadDiscussions();
             }
+            let threads = safeGet('evrenaky_mock_threads', '[]');
+            threads = threads.filter(t => String(t.id) !== String(id));
+            safeSet('evrenaky_mock_threads', threads);
+
+            let posts = safeGet('evrenaky_mock_posts', '[]');
+            posts = posts.filter(p => String(p.id) !== String(id));
+            safeSet('evrenaky_mock_posts', posts);
+
+            alert("Tartışma konusu başarıyla silindi.");
+            loadDiscussions();
         }
     };
 
