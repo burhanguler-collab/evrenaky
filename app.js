@@ -1016,7 +1016,17 @@ async function loadComments(chapterId) {
         localComments.forEach(c => { if (c && c.id && !commentMap.has(String(c.id))) commentMap.set(String(c.id), c); });
     }
 
-    const comments = Array.from(commentMap.values());
+    let comments = Array.from(commentMap.values());
+
+    // Blacklist filter
+    const deletedList = JSON.parse(safeStorage.getItem('evrenaky_deleted_discussion_ids') || '[]');
+    comments = comments.filter(c => {
+        if (!c) return false;
+        if (deletedList.includes(String(c.id))) return false;
+        if (c.content && deletedList.includes(c.content.trim())) return false;
+        return true;
+    });
+
     comments.sort((a, b) => new Date(b.created_at || 0) - new Date(a.created_at || 0));
 
     count.textContent = comments.length;
@@ -1128,6 +1138,17 @@ async function loadForumThreads(category = 'all') {
     }
 
     let posts = Array.from(threadMap.values());
+
+    // Blacklist filter
+    const deletedList = JSON.parse(safeStorage.getItem('evrenaky_deleted_discussion_ids') || '[]');
+    posts = posts.filter(p => {
+        if (!p) return false;
+        if (deletedList.includes(String(p.id))) return false;
+        if (p.title && deletedList.includes(p.title.trim())) return false;
+        if (p.content && deletedList.includes(p.content.trim())) return false;
+        return true;
+    });
+
     if (category !== 'all') {
         posts = posts.filter(p => String(p.category || 'genel').toLowerCase() === String(category).toLowerCase());
     }

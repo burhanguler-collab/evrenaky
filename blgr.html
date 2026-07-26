@@ -502,7 +502,7 @@
             }
         }
 
-        // Merge local storage items so comments created locally also show up
+        // Merge local storage items
         const localComments = safeGet('evrenaky_mock_comments', '[]');
         const localThreads = safeGet('evrenaky_mock_threads', '[]').concat(safeGet('evrenaky_mock_posts', '[]'));
 
@@ -515,6 +515,23 @@
         threads.forEach(t => { if(t && t.id) threadMap.set(String(t.id), t); });
         localThreads.forEach(t => { if(t && t.id && !threadMap.has(String(t.id))) threadMap.set(String(t.id), t); });
         threads = Array.from(threadMap.values());
+
+        // Blacklist filter
+        const deletedList = safeGet('evrenaky_deleted_discussion_ids', '[]');
+        threads = threads.filter(t => {
+            if (!t) return false;
+            if (deletedList.includes(String(t.id))) return false;
+            if (t.title && deletedList.includes(t.title.trim())) return false;
+            if (t.content && deletedList.includes(t.content.trim())) return false;
+            return true;
+        });
+
+        comments = comments.filter(c => {
+            if (!c) return false;
+            if (deletedList.includes(String(c.id))) return false;
+            if (c.content && deletedList.includes(c.content.trim())) return false;
+            return true;
+        });
 
         let html = '';
         
@@ -554,6 +571,11 @@
 
     window.deleteComment = async function(id, textSnippet) {
         if (confirm("Bu bölüm yorumunu silmek istediğinize emin misiniz?")) {
+            let deleted = safeGet('evrenaky_deleted_discussion_ids', '[]');
+            if (id) deleted.push(String(id));
+            if (textSnippet) deleted.push(textSnippet.trim());
+            safeSet('evrenaky_deleted_discussion_ids', deleted);
+
             if (window.firebaseClient && id) {
                 try {
                     await window.firebaseClient.deleteDocument("chapter_comments", id);
@@ -570,13 +592,18 @@
             });
             safeSet('evrenaky_mock_comments', comments);
 
-            alert("Yorum başarıyla silindi.");
+            alert("Yorum başarıyla silindi ve kaldırıldı.");
             loadDiscussions();
         }
     };
 
     window.deleteThread = async function(id, textSnippet) {
         if (confirm("Bu tartışma konusunu tamamen silmek istediğinize emin misiniz?")) {
+            let deleted = safeGet('evrenaky_deleted_discussion_ids', '[]');
+            if (id) deleted.push(String(id));
+            if (textSnippet) deleted.push(textSnippet.trim());
+            safeSet('evrenaky_deleted_discussion_ids', deleted);
+
             if (window.firebaseClient && id) {
                 try {
                     await window.firebaseClient.deleteDocument("forum_threads", id);
@@ -602,18 +629,26 @@
             });
             safeSet('evrenaky_mock_posts', posts);
 
-            alert("Tartışma konusu başarıyla silindi.");
+            alert("Tartışma konusu başarıyla silindi ve kaldırıldı.");
             loadDiscussions();
         }
     };
 
     window.clearAllOldSampleData = function() {
-        if (confirm("Tüm eski yerel örnek yorum ve tartışmaları temizlemek istediğinize emin misiniz?")) {
+        if (confirm("Tüm eski örnek yorum ve tartışmaları tamamen temizlemek istediğinize emin misiniz?")) {
+            let deleted = safeGet('evrenaky_deleted_discussion_ids', '[]');
+            deleted.push("sssss", "dddddddddddddddddddd", "GR", "Allah Hayırlı Uğurlu Etsin.", "123456789");
+            document.querySelectorAll('.submission-item').forEach(el => {
+                const id = el.id.replace('thread-', '').replace('comment-', '');
+                if (id) deleted.push(id);
+            });
+            safeSet('evrenaky_deleted_discussion_ids', Array.from(new Set(deleted)));
             safeSet('evrenaky_mock_comments', []);
             safeSet('evrenaky_mock_threads', []);
             safeSet('evrenaky_mock_posts', []);
             safeSet('evrenaky_mock_replies', []);
-            alert("Eski tüm yerel veriler ve örnek kayıtlar başarıyla temizlendi!");
+
+            alert("Eski tüm veriler ve yorumlar başarıyla temizlendi!");
             loadDiscussions();
         }
     };
