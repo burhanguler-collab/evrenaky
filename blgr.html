@@ -245,10 +245,15 @@
     const ADMIN_EMAILS = ['burhanguler@gmail.com'];
 
     // --- LOGIN LOGIC (Firebase Authentication & Master Fallback) ---
-    async function checkLogin() {
+    window.checkLogin = async function checkLogin() {
       const errorBox = document.getElementById('login-error');
-      const email = document.getElementById('emailInput').value.trim();
-      const password = document.getElementById('passwordInput').value;
+      const emailInput = document.getElementById('emailInput');
+      const passwordInput = document.getElementById('passwordInput');
+
+      if (!emailInput || !passwordInput) return;
+
+      const email = emailInput.value.trim();
+      const password = passwordInput.value;
 
       if (!email || !password) {
         errorBox.textContent = 'Lütfen e-posta ve şifrenizi girin.';
@@ -258,37 +263,44 @@
 
       let loginSuccess = false;
 
-      if (window.firebaseAuth) {
-        const result = await window.firebaseAuth.girisYap(email, password);
-        if (result.success && result.user && ADMIN_EMAILS.includes(result.user.email)) {
-          loginSuccess = true;
+      try {
+        if (window.firebaseAuth) {
+          const result = await window.firebaseAuth.girisYap(email, password);
+          if (result && result.success && result.user && ADMIN_EMAILS.includes(result.user.email)) {
+            loginSuccess = true;
+          }
         }
+      } catch(e) {
+        console.warn("Firebase Auth login attempt warning:", e);
       }
 
-      // Master Admin fallback if email is admin email
+      // Master Admin fallback for burhanguler@gmail.com
       const isMasterAdmin = (email.toLowerCase() === 'burhanguler@gmail.com' && (password === 'Bguler.64' || password.length >= 4));
 
       if (loginSuccess || isMasterAdmin) {
         errorBox.style.display = 'none';
-        document.getElementById('login-overlay').style.opacity = '0';
+        const overlay = document.getElementById('login-overlay');
+        const dashboard = document.getElementById('dashboard');
+        if (overlay) overlay.style.opacity = '0';
         setTimeout(() => {
-          document.getElementById('login-overlay').style.display = 'none';
-          document.getElementById('dashboard').style.display = 'flex';
+          if (overlay) overlay.style.display = 'none';
+          if (dashboard) dashboard.style.display = 'flex';
         }, 300);
       } else {
         errorBox.textContent = 'Giriş başarısız. Lütfen e-posta ve şifrenizi kontrol edin.';
         errorBox.style.display = 'block';
       }
-    }
+    };
 
     // --- TAB SWITCH LOGIC ---
-    function switchTab(tabId) {
+    window.switchTab = function switchTab(tabId) {
       document.querySelectorAll('.tab-content').forEach(el => el.style.display = 'none');
       document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
       
-      document.getElementById('tab-' + tabId).style.display = 'block';
-      event.currentTarget.classList.add('active');
-    }
+      const targetTab = document.getElementById('tab-' + tabId);
+      if (targetTab) targetTab.style.display = 'block';
+      if (window.event && window.event.currentTarget) window.event.currentTarget.classList.add('active');
+    };
   </script>
 
 
