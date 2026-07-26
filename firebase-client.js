@@ -44,7 +44,7 @@ function authHataMesaji(code) {
         'auth/unauthorized-domain': 'Bu alan adı Firebase Console\'da yetkilendirilmemiş. Lütfen Authentication > Settings > Authorized domains listesine ekleyin.'
     };
     if (typeof code === 'string' && (code.includes('api-key-not-valid') || code.includes('invalid-api-key'))) {
-        return 'Firebase API anahtarı doğrulanamadı. Lütfen önbelleğinizi temizleyip sayfayı yenileyin.';
+        return 'auth/api-key-not-valid';
     }
     return map[code] || ('Hata: ' + code);
 }

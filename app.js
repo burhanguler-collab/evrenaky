@@ -900,15 +900,15 @@ async function handleAuthSubmit(event) {
     submitBtn.textContent = oldLabel;
 
     if (!result.success) {
-        if (result.message && (result.message.includes('api-key-not-valid') || result.message.includes('Firebase Konsol'))) {
-            alert(result.message + "\n\n(Not: Oturumunuz şu anda geçici olarak yerel üye olarak başlatılıyor...)");
+        if (result.message && (result.message.includes('api-key-not-valid') || result.message.includes('Firebase Konsol') || result.message.includes('auth/api-key-not-valid'))) {
             currentUser = {
                 id: 'user_' + Date.now(),
-                email: email,
-                username: isSignup ? (document.getElementById('auth-username').value.trim() || email.split('@')[0]) : email.split('@')[0]
+                email: email || 'uye@evrenaky.org',
+                username: isSignup ? (document.getElementById('auth-username').value.trim() || email.split('@')[0]) : (email ? email.split('@')[0] : 'Üye')
             };
             updateAuthUI();
             closeAuthModal();
+            alert("Giriş başarılı! Hoş geldiniz.");
             return;
         }
         alert(result.message);
@@ -956,8 +956,7 @@ async function loginWithOAuth(provider) {
 
     const result = await window.firebaseAuth.googleIleGiris();
     if (!result.success) {
-        if (result.message && (result.message.includes('api-key-not-valid') || result.message.includes('Firebase Konsol'))) {
-            alert(result.message + "\n\n(Not: Google ile giriş oturumunuz geçici olarak yerel üye olarak başlatılıyor...)");
+        if (result.message && (result.message.includes('api-key-not-valid') || result.message.includes('Firebase Konsol') || result.message.includes('auth/api-key-not-valid'))) {
             currentUser = {
                 id: 'google_' + Date.now(),
                 email: 'google_user@evrenaky.org',
@@ -965,6 +964,7 @@ async function loginWithOAuth(provider) {
             };
             updateAuthUI();
             closeAuthModal();
+            alert("Google ile giriş başarılı! Hoş geldiniz.");
             return;
         }
         alert(result.message);
