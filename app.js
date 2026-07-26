@@ -865,6 +865,33 @@ function switchAuthTab(mode) {
     }
 }
 
+function saveUserToStore(userObj) {
+    if (!userObj || !userObj.email) return;
+    try {
+        const localUsers = JSON.parse(safeStorage.getItem('evrenaky_mock_users') || '[]');
+        const idx = localUsers.findIndex(u => u && u.email && u.email.toLowerCase() === userObj.email.toLowerCase());
+        const userItem = {
+            id: userObj.id || 'usr_' + Date.now(),
+            email: userObj.email,
+            username: userObj.username || userObj.email.split('@')[0],
+            provider: userObj.provider || (userObj.email.includes('google') ? 'Google OAuth' : 'E-posta'),
+            created_at: new Date().toISOString()
+        };
+        if (idx >= 0) {
+            localUsers[idx] = { ...localUsers[idx], ...userItem };
+        } else {
+            localUsers.unshift(userItem);
+        }
+        safeStorage.setItem('evrenaky_mock_users', JSON.stringify(localUsers));
+
+        if (window.firebaseAuth && window.firebaseAuth.saveUserDoc) {
+            window.firebaseAuth.saveUserDoc(userItem);
+        }
+    } catch(e) {
+        console.warn("saveUserToStore notice:", e);
+    }
+}
+
 // Handle login / sign up submission — Firebase Authentication
 async function handleAuthSubmit(event) {
     event.preventDefault();
@@ -908,6 +935,7 @@ async function handleAuthSubmit(event) {
                 email: email || 'uye@evrenaky.org',
                 username: enteredName
             };
+            saveUserToStore(currentUser);
             updateAuthUI();
             closeAuthModal();
             alert("Giriş başarılı! Hoş geldiniz, " + enteredName + ".");
@@ -917,7 +945,12 @@ async function handleAuthSubmit(event) {
         return;
     }
 
-    // Oturum değişimini initAuth içindeki oturumIzle dinleyicisi yakalar ve arayüzü tazeler.
+    if (result.user) {
+        currentUser = result.user;
+        saveUserToStore(currentUser);
+        updateAuthUI();
+    }
+
     if (isSignup) alert("Üyeliğiniz oluşturuldu, hoş geldiniz!");
     closeAuthModal();
 }
@@ -959,6 +992,7 @@ async function loginWithOAuth(provider) {
     const result = await window.firebaseAuth.googleIleGiris();
     if (result.success && result.user) {
         currentUser = result.user;
+        saveUserToStore(currentUser);
         updateAuthUI();
         closeAuthModal();
         alert("Google ile giriş yapıldı! Hoş geldiniz, " + (currentUser.username || 'Değerli Okur') + ".");
@@ -973,6 +1007,7 @@ async function loginWithOAuth(provider) {
             email: 'google_user@evrenaky.org',
             username: enteredName.trim()
         };
+        saveUserToStore(currentUser);
         updateAuthUI();
         closeAuthModal();
         alert("Hoş geldiniz, " + currentUser.username + "!");

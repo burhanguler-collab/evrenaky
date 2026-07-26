@@ -64,13 +64,30 @@ async function kaydetVeyaGuncelleKullanici(user, extraData = {}) {
     if (!user) return;
     try {
         const userRef = doc(db, "users", user.uid);
-        await setDoc(userRef, {
+        const userData = {
+            id: user.uid,
             uid: user.uid,
             email: user.email || '',
             username: user.displayName || (user.email ? user.email.split('@')[0] : 'Üye'),
+            created_at: new Date().toISOString(),
             last_login: new Date().toISOString(),
             ...extraData
-        }, { merge: true });
+        };
+        await setDoc(userRef, userData, { merge: true });
+
+        // Backup to LocalStorage mock users
+        try {
+            const localUsers = JSON.parse(localStorage.getItem('evrenaky_mock_users') || '[]');
+            const idx = localUsers.findIndex(u => u && u.email && u.email.toLowerCase() === userData.email.toLowerCase());
+            if (idx >= 0) {
+                localUsers[idx] = { ...localUsers[idx], ...userData };
+            } else {
+                localUsers.unshift(userData);
+            }
+            localStorage.setItem('evrenaky_mock_users', JSON.stringify(localUsers));
+        } catch(err) {
+            console.warn("LocalStorage save user backup error:", err);
+        }
     } catch(e) {
         console.error("Firestore user doc save error:", e);
     }
