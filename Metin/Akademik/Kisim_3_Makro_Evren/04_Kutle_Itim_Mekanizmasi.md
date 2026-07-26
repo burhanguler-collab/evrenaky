@@ -18,7 +18,7 @@ $\frac{dP}{dr} = \rho \frac{v_\theta^2}{r}$
 
 Newton elmanın yere düşmesini "Dünya elmayı çekiyor" olarak tanımlamıştır ve fizik asırlardır bu yaklaşımla yetinmiştir. Oysa elmayı Dünyanın yüzeyine doğru "iten" kuvvet, Dünyayı oluşturan trilyonlarca atomun (çekirdek ve elektronların) her birinin kendi etrafında dönerek (mikro-spin) yarattığı sayısız mikro-girdapların kümülatif olarak birleşmesiyle oluşan devasa basınç gradyanıdır ( $-\nabla P$ ). Uzayın derinliklerindeki yüksek statik Evrenakı (vakum) basıncı, gezegen yüzeyindeki bu devasa düşük basınç havzasına doğru kesintisiz bir akış (vektör) yaratır ve elmayı (yahut Ay'ı) o merkeze doğru kesintisizce **iter**. Böylece Kütle-İtim (Push-Gravity) mekanizması, Euler denklemleri üzerinden matematiksel kesinliğe kavuşur.
 
-## 3.4.2 Kütleçekimine (Push-Gravity) Doğru İlerleyen Görsel Analoji
+## 3.4.2 Kütle-İtime (Push-Gravity) Doğru İlerleyen Görsel Analoji
 
 <div style="background: #121212; padding: 20px; border-radius: 12px; border: 1px solid #404040; box-shadow: 0 10px 30px rgba(0,0,0,0.8); margin: 20px 0; text-align: center;">
   <h3 style="margin-top: 0; margin-bottom: 20px; color: #fff; font-weight: 600; letter-spacing: 1px; text-shadow: 0 0 10px rgba(0, 229, 255, 0.5);">Animasyon 3.4.1: Newton'un Cansız Çekimi (Pull) ve Evrenakı'nın Akışkan İtimi (Push) Karşılaştırması</h3>
@@ -137,16 +137,16 @@ Dış gözlemci, gezegene (Dünyaya) doğru düşen göktaşlarına ve elmalara 
 
 Klasik Newton ve Einstein mekanikleri, kütleyi ($M$) yerçekimini bizzat üreten, uzayı aktif olarak büken mutlak bir "birincil etken" olarak kabul ederler. Evrenakı (Plenum — ortam doluluğu ilkesi, bkz. 1. Postülat; Descartes, 1644) modelinde ise **kütle, tek başına durduğunda tamamen pasif bir unsurdur.**
 
-Kütleyi aktif kılan, uzay dokusunu etkileyen ve o bildiğimiz çekimsel/itimsel etkilere sebep olan yegane unsur kütlenin kendisi değil; **Dönme Hareketi (Spin)**'dir. Evrenakı teorisi, gravitasyonu anlamak için yüzeydeki yerçekimi ile yörüngesel çekim arasında çok kritik bir hidrodinamik ayrım yapar:
+Kütleyi aktif kılan, uzay dokusunu etkileyen ve o bildiğimiz çekimsel/itimsel etkilere sebep olan yegane unsur kütlenin kendisi değil; **Dönme Hareketi (Spin)**'dir. Evrenakı teorisi, kütle-itimi anlamak için yüzeydeki itim ile yörüngesel sürüklenme arasında çok kritik bir hidrodinamik ayrım yapar:
 
-1. **Mikroskobik Spin (Merkezcil Kuvvetler / Yüzey Yerçekimi):** Bir gezegenin kütlesini oluşturan trilyonlarca atomun kendi içsel dönüşlerinden (elektron ve çekirdek mikro-girdaplarından) doğan ve kümülatif olarak (toplamda) birleşerek cismin yüzeyine doğru net bir düşük basınç gradyanı yaratan "Lokal Kütle-İtim" kuvvetidir. Kütle (atomlar) var olduğu sürece o küçük atomik spinler daima var olacağından, yüzey yerçekimi (elmanın yere düşmesi, insanların havada uçmaması) **her gezegende daima mevcuttur**.
+1. **Mikroskobik Spin (Merkezcil Kuvvetler / Yüzey Kütle-İtimi):** Bir gezegenin kütlesini oluşturan trilyonlarca atomun kendi içsel dönüşlerinden (elektron ve çekirdek mikro-girdaplarından) doğan ve kümülatif olarak (toplamda) birleşerek cismin yüzeyine doğru net bir düşük basınç gradyanı yaratan "Lokal Kütle-İtim" kuvvetidir. Kütle (atomlar) var olduğu sürece o küçük atomik spinler daima var olacağından, yüzey kütle-itimi (elmanın yere düşmesi, insanların havada uçmaması) **her gezegende daima mevcuttur**.
 
 2. **Makroskobik Spin (Eksenel Kuvvetler / Uydu Yörüngeleri):** Gezegenin kütlesel bir bütün olarak "kendi ekseni etrafında dönmesiyle (Gezegen Spini)" oluşan, yüzeyin çok ötesine, binlerce kilometre uzaya uzanan o devasa **makro-girdap**'tır. Uyduları (Ay'ı vs.) uzayın derinliğinde yörüngede tutan ve onları sürükleyen asıl mekanizma kütle büyüklüğü değil, bu makroskobik dönüşün (spinin) oluşturduğu "Evrenakı Akışkan Sürüklenmesi"dir (Entrainment).
 
 *Altın Kural: Makroskobik dönme hareketi (gezegensel spin) yoksa, makro girdap yoktur. Makro girdap yoksa, o gezegenin uzayın derinliklerinden uydu yakalama ve onu yörüngesinde tutma yeteneği de bulunmaz.*
 
 **Sarsıcı Öngörü ve Yanlışlanabilirlik (Falsifiability) Kriteri:**
-Evrenakı modelinin bu akışkan prensibinden, yerleşik gök mekaniği modellerini temelden sarsacak denli güçlü ve test edilebilir bir astronomik sonuç çıkar: Kendi ekseni etrafındaki dönme hızı sıfıra yakın olan gezegenler, devasa kütlelere ve yüzey yerçekimlerine sahip olsalar bile, çevrelerinde (uzay boşluğunda) uyduları yörüngede sürükleyecek o makro Evrenakı girdabını oluşturamazlar. 
+Evrenakı modelinin bu akışkan prensibinden, yerleşik gök mekaniği modellerini temelden sarsacak denli güçlü ve test edilebilir bir astronomik sonuç çıkar: Kendi ekseni etrafındaki dönme hızı sıfıra yakın olan gezegenler, devasa kütlelere ve yüzey kütle-itimine sahip olsalar bile, çevrelerinde (uzay boşluğunda) uyduları yörüngede sürükleyecek o makro Evrenakı girdabını oluşturamazlar. 
 
 Gerçekten de Güneş Sistemi'ne baktığımızda, kendi ekseni etrafında dönme hızları son derece yavaş olan (hatta Venüs o kadar yavaştır ki kendi ekseni etrafındaki bir günü, Güneş etrafındaki yılından daha uzundur) **Merkür ve Venüs'ün hiçbir uydusu bulunmamaktadır.**
 
@@ -217,7 +217,7 @@ Aşağıdaki etkileşimli laboratuvar, kavrama formülünü ($\omega = (1-g)\,\o
 
 <iframe src="Simulasyon/kavrama_kilitlenme_sim.html" width="100%" frameborder="0" style="height: 720px; border: 1px solid rgba(0, 240, 255, 0.2); border-radius: 8px; margin-top: 10px; margin-bottom: 30px;"></iframe>
 
-Evrenakı akışkanında kütleçekim yörüngelerini var eden şey salt "kütle" değildir; kütlenin dördüncü boyut motorlarının, içinde bulunduğu ortam girdabı karşısında bulabildiği **serbest dönüş ifadesidir**.
+Evrenakı akışkanında yörüngeleri var eden şey salt "kütle" değildir; kütlenin dördüncü boyut motorlarının, içinde bulunduğu ortam girdabı karşısında bulabildiği **serbest dönüş ifadesidir**.
 
 ## 3.4.5 Plenum Direncinin Çözümü (Esir Rüzgarı Yanılgısı ve Bağıl Hız)
 

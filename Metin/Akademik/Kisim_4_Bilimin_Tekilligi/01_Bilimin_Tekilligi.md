@@ -13,9 +13,9 @@ Bu iki düşman kardeş, Evrenakı Teorisi'nde tek bir ortak paydada buluşup mu
 Evrenakı denizinde kuantum dünyası ile kozmoloji dünyası farklı fizik yasalarına değil, sadece farklı **ölçeklerdeki** hidrodinamik kurallara tabidir:
 
 1.  **Mikro Evren:** Zerrenin kendi eksenindeki patinajı (spin), elektronun yörünge dalgalanmaları ve nükleonların Zitterbewegung titreşimleri; Evrenakı akışkanı içindeki mikroskobik girdaplar ve kavitasyon (yırtılma) dinamikleridir. 
-2.  **Makro Evren:** Gezegenlerin kütleçekimi, kara deliklerin etrafındaki devasa deplasman havuzları ve galaksilerin yörünge dinamikleri; tamamen aynı akışkanın geniş ölçekli basınç gradyanları (derinlik farkları) ve makro akıntılarıdır.
+2.  **Makro Evren:** Gezegenlerin kütle-itimi, kara deliklerin etrafındaki devasa deplasman havuzları ve galaksilerin yörünge dinamikleri; tamamen aynı akışkanın geniş ölçekli basınç gradyanları (derinlik farkları) ve makro akıntılarıdır.
 
-Evrenakı akışkanı (uzay boşluğu) tek, homojen ve bütündür. Bu yüzden mikro seviyedeki bir zerrenin (ışığın) bükülmesi de, makro seviyedeki dev bir gezegenin kütleçekim yörüngesine oturması da **tamamen aynı hidro-mekanik prensiple** (basınç rampalarına hizalanma ve deplasman torkuyla) gerçekleşir.
+Evrenakı akışkanı (uzay boşluğu) tek, homojen ve bütündür. Bu yüzden mikro seviyedeki bir zerrenin (ışığın) bükülmesi de, makro seviyedeki dev bir gezegenin yörüngesine oturması da **tamamen aynı hidro-mekanik prensiple** (basınç rampalarına hizalanma ve deplasman torkuyla) gerçekleşir.
 
 ### Çatışmanın Sonu ve Büyük Birleşme
 

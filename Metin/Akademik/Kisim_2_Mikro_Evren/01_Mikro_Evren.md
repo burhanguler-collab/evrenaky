@@ -28,7 +28,7 @@ Zerre (ışık), akışkan içinde ilerlemek için sıvıya "tutunmak" (kavrama/
 
 > [!NOTE]
 > **Elektrik Yükü Üzerine Kısa Bir Not**
-> Bu teoride standart fiziğin "+" ve "-" gibi sihirli elektrik yükü etiketleri yerine hidrodinamik fazlar vardır (Proton akışkanı dışarı savuran bir Kaynak, Elektron akışkanı merkeze çeken bir Kuyu/Disk, Nötron ise kendi içinde kilitli net sızıntısı olmayan bir sistemdir). Evrenakı Teorisi, elektromanyetik etkileşimleri hidrodinamik denklemlerle açıklayacak muazzam bir kapasiteye sahiptir. Ancak bu kitabın asıl amacı *Kütleçekim* krizini çözmek olduğu için, yük dinamiklerinin tam ispatı geleceğin bilim insanlarına bırakılmıştır.
+> Bu teoride standart fiziğin "+" ve "-" gibi sihirli elektrik yükü etiketleri yerine hidrodinamik fazlar vardır (Proton akışkanı dışarı savuran bir Kaynak, Elektron akışkanı merkeze çeken bir Kuyu/Disk, Nötron ise kendi içinde kilitli net sızıntısı olmayan bir sistemdir). Evrenakı Teorisi, elektromanyetik etkileşimleri hidrodinamik denklemlerle açıklayacak muazzam bir kapasiteye sahiptir. Ancak bu kitabın asıl amacı kütle-itim (standart fizikte "kütleçekim") krizini çözmek olduğu için, yük dinamiklerinin tam ispatı geleceğin bilim insanlarına bırakılmıştır.
 
 ### Karşılaştırmalı Özet Tablosu
 

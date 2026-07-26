@@ -1,12 +1,12 @@
 # 4.3 Kütleçekimsel Merceklenme: Optik ve Kütlenin Tekilliği
 
-Bilimin tekilliği (Büyük Birleşik Kuram), doğadaki tüm farklı kuvvetlerin aslında aynı yasanın farklı yüzleri olduğunu kanıtlamak demektir. Optik kurallarının (kırılma ve yansımanın) makro evrendeki devasa yerçekimi yasalarıyla nasıl tek bir bedende (Evrenakı akışkanında) birleştiğinin en muazzam kanıtı **Kütleçekimsel Merceklenme** (Gravitational Lensing) fenomenidir.
+Bilimin tekilliği (Büyük Birleşik Kuram), doğadaki tüm farklı kuvvetlerin aslında aynı yasanın farklı yüzleri olduğunu kanıtlamak demektir. Optik kurallarının (kırılma ve yansımanın) makro evrendeki devasa kütle-itim yasalarıyla nasıl tek bir bedende (Evrenakı akışkanında) birleştiğinin en muazzam kanıtı **Kütleçekimsel Merceklenme** (Gravitational Lensing) fenomenidir.
 
 ## 4.3.1 Einstein'ın Uzay-Zaman Eğriliği İllüzyonu
 
 1919'daki meşhur Güneş tutulması deneyinde Arthur Eddington, uzak yıldızlardan gelen ışığın Güneş'in yanından geçerken büküldüğünü fotoğrafladı (Dyson vd., 1920). Einstein'ın Genel Görelilik teorisi (Einstein, 1915) bu durumu şu iddiayla açıkladı: *"Güneş'in devasa kütlesi uzay ve zaman dokusunu bir çarşaf gibi bükmektedir. Işık da bu bükülmüş uzayda düz gitmeye çalışırken mecburen kavis çizer."*
 
-Ancak Kısım 2'de Işık (Zerre) kinematiğini ve Kısım 3'te Kütle-İtimi (Yerçekimi) mekaniğini deşifre ettik. Evrenakı'ya göre bükülen şey soyut bir "zaman" veya boşluk değildir; bükülen şey doğrudan **Zerre'nin (Işığın) rotasıdır.** Ve bu bükülme soyut bir geometri yüzünden değil, laboratuvardaki bir su bardağında kalem nasıl kırılıyorsa bütünüyle aynı **hidrodinamik optik yasa (Kırılma/Snell Yasası)** yüzünden gerçekleşir!
+Ancak Kısım 2'de Işık (Zerre) kinematiğini ve Kısım 3'te Kütle-İtim mekaniğini deşifre ettik. Evrenakı'ya göre bükülen şey soyut bir "zaman" veya boşluk değildir; bükülen şey doğrudan **Zerre'nin (Işığın) rotasıdır.** Ve bu bükülme soyut bir geometri yüzünden değil, laboratuvardaki bir su bardağında kalem nasıl kırılıyorsa bütünüyle aynı **hidrodinamik optik yasa (Kırılma/Snell Yasası)** yüzünden gerçekleşir!
 
 ## 4.3.2 Yıldız Işığının Bükülmesi (Eddington Deneyi) ve 1.75 Arksaniye Çözümü
 
@@ -95,7 +95,7 @@ Kozmolojinin 100 yıllık kör noktası olan **"Kuazar Boyut Anomalisi"** bu sor
 Evrenakı bu devasa uyuşmazlığı tek satırda çözer: **Boyut anomalisi gerçek değildir; kütleçekimsel merceklenmeyi "renksiz (akromatik)" sanmalarından kaynaklanan optik bir illüzyondur!**
 Mercek görevi gören ön plandaki galaksinin Evrenakı gradyanı, kuazardan gelen farklı renkleri (kırmızı ve mavi) Evrenakı dispersiyonu nedeniyle **farklı açılarla** bükmektedir. Bu renksel sapma (kromatik bükülme), Dünya'daki teleskoplara ulaşan görüntüyü uzaysal olarak yayar ve diski olduğundan çok daha büyük gösterir. Renksel sapma denkleme eklendiğinde, kuazarların boyutları Shakura-Sunyaev modeline tam olarak uyan normal boyutlarına geri döner!
 
-Bu astronomik test, öngörünün doğrulanması hâlinde, uzay-zaman eğriliği yorumuna karşı Evrenakı'nın (optik ile yerçekiminin hidrodinamik tekilliğinin) belirleyici bir kanıtını oluşturacaktır.
+Bu astronomik test, öngörünün doğrulanması hâlinde, uzay-zaman eğriliği yorumuna karşı Evrenakı'nın (optik ile kütle-itimin hidrodinamik tekilliğinin) belirleyici bir kanıtını oluşturacaktır.
 
 ## 4.3.5 Matematiksel İspat: Renksel Sapma Açısı ve $318\ \mu\text{as}$ Fark
 

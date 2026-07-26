@@ -33,12 +33,12 @@ Bu nedenle, kitabın bu bölümünde Evrenakı'nın sadece "temel matematiği ve
 
 ## 4.2.15 G Sabiti Paradigmasının Sınırları ve Klasik Fiziğin İtirazlarına Cevaplar
 
-Yerçekiminin salt bir Evrenakı basıncı ($G = \alpha/\rho_n$, bkz. 4.2.4) olduğunu gösterdikten sonra, klasik fiziğin ana akım savunucularından gelebilecek en sert 5 eleştiriyi ve bu eleştirilerin Evrenakı mekaniğiyle nasıl karşılandığını incelemek şarttır:
+Kütle-itimin salt bir Evrenakı basıncı ($G = \alpha/\rho_n$, bkz. 4.2.4) olduğunu gösterdikten sonra, klasik fiziğin ana akım savunucularından gelebilecek en sert 5 eleştiriyi ve bu eleştirilerin Evrenakı mekaniğiyle nasıl karşılandığını incelemek şarttır:
 
 ### İtiraz 1: "Eğer $G$ sabit değilse ($\alpha/\rho_n$ ise), neden Güneş sistemindeki yörüngeler kusursuzca $6.67 \times 10^{-11}$ sabitine uyuyor?"
 
 **Evrenakı'nın Cevabı:** Güneş Sistemi dediğimiz lokal bölge, Evrenakı okyanusunun içinde nispeten stabil bir "havuzdur". Bu havuzun içinde arka plan Evrenakı basıncı ($\alpha$) homojene yakındır. Ayrıca gezegenlerin yapıldığı baryonik maddenin (atomların) Evrenakı ile olan aerodinamik sürtünme kesiti ($\gamma$), nükleon sayısıyla doğru orantılı olarak büyür. Yani $\gamma / m$ oranı standart madde için sabittir. Bizim lokal Güneş Sistemimizde $(\gamma/m)\,\alpha = \alpha/\rho_n$ oranı bu yüzden sabit "görünür". 
-Eğer $G$ gerçekten evrensel bir sabit olsaydı, devasa galaksilerin dış kollarındaki yıldızların çok yavaş dönmesi gerekirdi. Klasik fizikçiler yıldızların neden hızlı döndüğünü açıklayamadıkları için "Karanlık Madde" teorisini varsaymışlardır. Oysa Evrenakı çok nettir; galaksinin dış çeperlerinde ortam basıncı ($\alpha$) ve girdap dinamikleri değişir. Dolayısıyla oradaki yerçekimi (yani efektif $G$) Güneş sistemindekiyle aynı değildir!
+Eğer $G$ gerçekten evrensel bir sabit olsaydı, devasa galaksilerin dış kollarındaki yıldızların çok yavaş dönmesi gerekirdi. Klasik fizikçiler yıldızların neden hızlı döndüğünü açıklayamadıkları için "Karanlık Madde" teorisini varsaymışlardır. Oysa Evrenakı çok nettir; galaksinin dış çeperlerinde ortam basıncı ($\alpha$) ve girdap dinamikleri değişir. Dolayısıyla oradaki kütle-itim (yani efektif $G$) Güneş sistemindekiyle aynı değildir!
 
 ### İtiraz 2: "Galileo'nun deneyinde gösterildiği gibi 1 kiloluk demir de, 10 kiloluk demir de aynı hızda düşer. Eğer aerodinamik sürtünme/direnç ($\gamma$) varsa, büyük olanın farklı hızda düşmesi gerekmez mi?"
 
@@ -56,7 +56,7 @@ Yani kütleler seyrek uzayda eylemsizliğini korurken, Zerre seyrek uzayda hız 
 ### İtiraz 4: "Gezegenlerin ve Yıldızların Etrafındaki Bu Devasa Evrenakı Vortekslerini Sürekli Döndüren Motor (Kaynak) Nedir?"
 
 **Evrenakı'nın Cevabı:** Evrenakı teorisinin ve sarmal galaksilerin hidrodinamiğinde göz ardı edilmemesi gereken en kritik olgu **Çekirdek Dönüşü (Core Rotation)** mekanizmasıdır. Klasik fizikte Dünya'nın veya Güneş'in kendi etrafında dönmesi sadece günü belirleyen basit bir kinematik olaydır. Oysa Evrenakı'da gökcisimlerinin ultra-yoğun sıvı veya katı metalik çekirdeklerinin muazzam bir hızla fırıldaması, bizzat etraflarındaki uzayı (Evrenakı okyanusunu) fırıldak gibi çeviren **ana motordur**. 
-Eğer Dünya'nın merkezindeki demir-nikel çekirdek dönmeyi bırakırsa, etrafındaki Evrenakı girdabı (vorteksi) zamanla sönümlenir. Girdap sönümlendiğinde, Bölüm 4.2.7'de işlediğimiz o "eksenel basınç ve ekvatoral şişkinlik" yavaşça çöker. Galaksileri kollar halinde döndüren ve "Karanlık Madde" hipotezinin öne sürülmesine sebep olan o devasa girdap da aslında Galaksi merkezindeki devasa Süper Kütleli Çekirdek'in dönüşüyle Evrenakı'ya aktarılan torktur. Kütleçekimi (Vorteks dinamiği) gücünü kütlenin durağan varlığından değil, çekirdeğin muazzam dönüşünden alır!
+Eğer Dünya'nın merkezindeki demir-nikel çekirdek dönmeyi bırakırsa, etrafındaki Evrenakı girdabı (vorteksi) zamanla sönümlenir. Girdap sönümlendiğinde, Bölüm 4.2.7'de işlediğimiz o "eksenel basınç ve ekvatoral şişkinlik" yavaşça çöker. Galaksileri kollar halinde döndüren ve "Karanlık Madde" hipotezinin öne sürülmesine sebep olan o devasa girdap da aslında Galaksi merkezindeki devasa Süper Kütleli Çekirdek'in dönüşüyle Evrenakı'ya aktarılan torktur. Kütle-itim (Vorteks dinamiği) gücünü kütlenin durağan varlığından değil, çekirdeğin muazzam dönüşünden alır!
 
 ### İtiraz 5: "Modern Lorentz-ihlali deneyleri (dönen optik rezonatörler, Kennedy–Thorndike düzenekleri, optik saat karşılaştırmaları) tercihli bir referans çerçevesinin ve ışık hızındaki değişkenliğin etkilerini $10^{-16}$–$10^{-18}$ düzeyinde dışlamıştır. Evrenakı mutlak bir kozmik ortam ve değişken bir $c$ öneriyorsa, bu ortam neden hiçbir hassas deneyde görünmüyor?"
 

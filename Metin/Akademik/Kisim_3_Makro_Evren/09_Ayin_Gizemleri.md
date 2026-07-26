@@ -51,7 +51,7 @@ Bu eşitsizlik yüzünden yumuşak top, yanlardan (çembersel olarak) çok daha 
 
 ### 3.9.2.2 Gelgitte Ay ve Güneş Farkı (Akışkan Basınç Gradyanı)
 
-Güneş'in Dünya üzerindeki toplam kütleçekimsel etkisi (Evrenakı akışkanını sürükleme gücü), Ay'ınkisinden tam **177 kat daha büyüktür**. Zaten bu yüzden Ay'ın değil, Güneş'in etrafında dolanırız. Peki toplam akışkan gücü bu kadar büyük olan Güneş, iş okyanusları sıkıştırmaya (gelgite) gelince neden Ay'ın gerisinde kalır?
+Güneş'in Dünya üzerindeki toplam kütle-itim etkisi (Evrenakı akışkanını sürükleme gücü), Ay'ınkisinden tam **177 kat daha büyüktür**. Zaten bu yüzden Ay'ın değil, Güneş'in etrafında dolanırız. Peki toplam akışkan gücü bu kadar büyük olan Güneş, iş okyanusları sıkıştırmaya (gelgite) gelince neden Ay'ın gerisinde kalır?
 
 Cevap, akışkanlar mekaniğinin temel bir kuralı olan **"Basınç Gradyanı" (Değişim Farkı)** kavramında gizlidir. Diferansiyel çembersel sıkıştırmayı (gelgiti) yaratan şey, cisme vuran kuvvetin toplam büyüklüğü değil; cismin bir ucundan diğer ucuna (ön yüz ile arka yüz arasına) o basıncın **ne kadar keskin bir şekilde değiştiğidir**.
 
@@ -138,9 +138,9 @@ Gerisini teorinin en temel kuralı tamamlar: **madde, Evrenakı gradyanına tabi
 
 Bu açıdan bakıldığında mascon olgusu, gelgit mekanizmasının jeolojik ölçekte donmuş hâlidir. Dünya'da aynı sıkıştırma, dönen gövde üzerinde her gün yer değiştirdiği için akışkan ve geçici bir kabarma (okyanus gelgiti) üretir; kilitli Ay'da ise aynı harita tek yüze sabitlendiği için kabaran şey magma olmuş ve **taşlaşarak kalıcılaşmıştır.** Gelgit ile mascon, tek basınç fiziğinin iki cisimdeki iki görünümüdür: biri günlük ve sıvı, öbürü jeolojik ve taş.
 
-Kütle-İtim çerçevesinde (Bkz. Bölüm 3.4) anomalinin kendisi de doğrudan okunur: Yerçekimi, nükleonların dördüncü boyut deşarjının kurduğu gradyanın itmesi olduğuna göre, GRAIL'in çektiği harita teorinin gözünde bir **nükleon (mikro-motor) yoğunluğu haritasıdır.** Havzalardaki yoğun dolgu, birim hacimde motor fazlası demektir; üzerinden geçen uydu, yerel olarak dikleşen gradyan tarafından yüzeye doğru itilir. Ayrıca Ay'ın kendi makro-girdabı bastırılmış olduğundan (Bkz. 3.9.1 ve 3.4.4 — girdap rekabeti), bu yerel pürüzleri azimutal olarak yayıp törpüleyecek bir girdap örtüsü de yoktur: masconların hem keskinliği hem de milyarlarca yıldır silinmemiş olması, alanın bu "çıplaklığının" sonucudur.
+Kütle-İtim çerçevesinde (Bkz. Bölüm 3.4) anomalinin kendisi de doğrudan okunur: Kütle-itim, nükleonların dördüncü boyut deşarjının kurduğu gradyanın itmesi olduğuna göre, GRAIL'in çektiği harita teorinin gözünde bir **nükleon (mikro-motor) yoğunluğu haritasıdır.** Havzalardaki yoğun dolgu, birim hacimde motor fazlası demektir; üzerinden geçen uydu, yerel olarak dikleşen gradyan tarafından yüzeye doğru itilir. Ayrıca Ay'ın kendi makro-girdabı bastırılmış olduğundan (Bkz. 3.9.1 ve 3.4.4 — girdap rekabeti), bu yerel pürüzleri azimutal olarak yayıp törpüleyecek bir girdap örtüsü de yoktur: masconların hem keskinliği hem de milyarlarca yıldır silinmemiş olması, alanın bu "çıplaklığının" sonucudur.
 
-Tablo, teoriyi yine sınanabilir bir karşılaştırmaya bağlar: **Kilitli (girdapsız) cisimlerin çekim alanları pürüzlü; serbest dönen (girdap örtülü) cisimlerinki görece törpülenmiş olmalıdır.** Güneş Sistemi'ndeki kilitli uydular ailesi ile serbest dönen gezegenlerin çekim alanı haritalarının bu gözle sistematik karşılaştırılması, öngörünün doğal laboratuvarıdır.
+Tablo, teoriyi yine sınanabilir bir karşılaştırmaya bağlar: **Kilitli (girdapsız) cisimlerin kütle-itim alanları pürüzlü; serbest dönen (girdap örtülü) cisimlerinki görece törpülenmiş olmalıdır.** Güneş Sistemi'ndeki kilitli uydular ailesi ile serbest dönen gezegenlerin kütle-itim alanı haritalarının bu gözle sistematik karşılaştırılması, öngörünün doğal laboratuvarıdır.
 
 ## 3.9.6 Yörüngenin İnce Ayarları: Librasyon, Apsidal Yalpalama ve Düğüm Gerilemesi — Teorinin Açık Test Alanı
 

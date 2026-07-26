@@ -7,7 +7,7 @@
 ## Deney 1: Eksenel Kütle İtimi
 
 ### 5.4.1 Deneyin Amacı ve Hipotez
-Modern fizik, kütleler arasındaki etkileşimleri yalnızca kütleçekim kuvvetiyle açıklar. Ancak Evrenakı teorimize göre, evrensel bir akışkanın içinde dönen bir kütle, çevresindeki Evrenakı dokusunu hareketlendirerek eksenel yönlerde olağanüstü büyüklükte itici/çekici kuvvetler yaratmalıdır. Jiroskopların yerçekimine meydan okuyan hareketleri veya sarmal galaksilerin yörünge anomalileri (Rubin & Ford, 1970) de bu fenomenin sonuçlarıdır. Bu deneyin amacı, laboratuvar koşullarında dönen bir diskin yakınına yerleştirilmiş bir kütleyi, hesaplanan kütleçekim kuvvetinden çok daha büyük bir kuvvetle, tamamen Evrenakı rüzgarları aracılığıyla ittiğini kanıtlamaktır.
+Modern fizik, kütleler arasındaki etkileşimleri yalnızca kütleçekim kuvvetiyle açıklar. Ancak Evrenakı teorimize göre, evrensel bir akışkanın içinde dönen bir kütle, çevresindeki Evrenakı dokusunu hareketlendirerek eksenel yönlerde olağanüstü büyüklükte itici/çekici kuvvetler yaratmalıdır. Jiroskopların kütle-itime meydan okuyan hareketleri veya sarmal galaksilerin yörünge anomalileri (Rubin & Ford, 1970) de bu fenomenin sonuçlarıdır. Bu deneyin amacı, laboratuvar koşullarında dönen bir diskin yakınına yerleştirilmiş bir kütleyi, hesaplanan kütleçekim kuvvetinden çok daha büyük bir kuvvetle, tamamen Evrenakı rüzgarları aracılığıyla ittiğini kanıtlamaktır.
 
 ### 5.4.2 Deney Düzeneği
 Deneysel donanımımız son derece hassas bir şekilde tasarlanmıştır:
@@ -52,4 +52,4 @@ Ancak vakum ortamında motor hızlanmaya başladığı an, hedef kütlenin (bekl
 
 Bu kusursuz deney;
 1. Modern fiziğin iddia ettiği "boş uzay" kavramının yanlış olduğunu, uzayın Evrenakı (cosmofluid) adını verdiğimiz bir akışkanla dolu olduğunu,
-2. Dönen astronomik cisimlerin (örneğin galaksilerin, karadeliklerin veya jiroskopların) etraflarında yalnızca kütleçekim değil, Evrenakı girdapları aracılığıyla çok güçlü eksenel itici ve çekici alanlar yarattığı hipotezini güçlü biçimde desteklemektedir.
+2. Dönen astronomik cisimlerin (örneğin galaksilerin, karadeliklerin veya jiroskopların) etraflarında yalnızca kütle-itim değil, Evrenakı girdapları aracılığıyla çok güçlü eksenel itici ve çekici alanlar yarattığı hipotezini güçlü biçimde desteklemektedir.

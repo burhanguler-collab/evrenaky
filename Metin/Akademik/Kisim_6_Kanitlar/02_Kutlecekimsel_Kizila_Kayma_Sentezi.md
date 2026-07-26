@@ -52,7 +52,7 @@ Bu, Özel Görelilik'in (Ives-Stilwell deneyiyle doğrulanan) rölativistik Dopp
 
 ## 6.2.5 Kütleçekimsel Kayma: Değişken Işık Hızı ve Esneyen Dalga Boyu
 
-Şimdi hareket olmasın ($v = 0$, $\gamma = 1$), ama kaynak ve alıcı farklı yoğunluklarda olsun. Kaynak, derin bir kütle çekim vadisinin dibinde (yüksek yoğunluk, düşük $c_{kaynak}$); alıcı serbest uzayda (düşük yoğunluk, yüksek $c_{alıcı}$).
+Şimdi hareket olmasın ($v = 0$, $\gamma = 1$), ama kaynak ve alıcı farklı yoğunluklarda olsun. Kaynak, derin bir basınç vadisinin dibinde (yüksek yoğunluk, düşük $c_{kaynak}$); alıcı serbest uzayda (düşük yoğunluk, yüksek $c_{alıcı}$).
 
 **1. Üretim.** Kaynağın Zerre-Saati $c_{kaynak}$ düşük olduğu için yavaş tikler ve akısını düşük doğurur:
 $$ f_{emit} = f_0 \cdot \frac{c_{kaynak}}{c_{ref}} $$

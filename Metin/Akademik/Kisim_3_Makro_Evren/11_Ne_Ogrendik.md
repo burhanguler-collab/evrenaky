@@ -4,7 +4,7 @@
 
 ## Temel Kazanımlarımız
 
-* **Evrenin Makine Dairesi (Bölüm 3.1):** Nükleonun 4 boyutlu çift dönüşünü makro evrenin motoru olarak tanımladık. **Kinetik Ayrışma** ile kütle birleştiğinde hızlı dönüşün ($\omega_1$) akışkana "kusulup" makro-vorteksi, W-salınımının ise statik kütle-itimi (yerçekimini) doğurduğunu kurduk. Galaksilerin hızlı dönüşünün karanlık madde değil, bu makro-vorteksin taşıması olduğunu; YORP ve pulsar glitch anomalilerinin de aynı mekanizmaya bağlandığını savunduk.
+* **Evrenin Makine Dairesi (Bölüm 3.1):** Nükleonun 4 boyutlu çift dönüşünü makro evrenin motoru olarak tanımladık. **Kinetik Ayrışma** ile kütle birleştiğinde hızlı dönüşün ($\omega_1$) akışkana "kusulup" makro-vorteksi, W-salınımının ise statik kütle-itimi doğurduğunu kurduk. Galaksilerin hızlı dönüşünün karanlık madde değil, bu makro-vorteksin taşıması olduğunu; YORP ve pulsar glitch anomalilerinin de aynı mekanizmaya bağlandığını savunduk.
 * **Beş Hidrodinamik Kuvvetin Kökü (Bölüm 3.2):** Merkezcil itim, yanal itim, diferansiyel sıkıştırma (gelgit), sürüklenme ve eksenel etkilerin tek kaynaktan — kütlenin akışkanda yarattığı basınç alanından — türediğini sınıflandırdık.
 * **Mikrodan Makroya Gradyanlar (Bölüm 3.3):** Makro kütlelerin merkezcil gradyanlarını, cisim geometrisinin (küre, silindir, disk) yarattığı özel 2D/3D gradyan desenlerini (Bölüm 3.3.2) ve makro kütle çevresinde ışığın davranışını inceledik.
 * **Kütle-İtim Mekanizması (Bölüm 3.4):** "Kütlelerin birbirini çekmesi" fikrini yıktık: kütleçekimi bir *çekim (pull)* değil, dışarıdaki yüksek basınçlı Evrenakı'nın cisimleri kütlenin düşük basınç havuzuna *itmesidir (push)*. Michelson-Morley'in sıfır sonucunun, Dünya'nın kendi sürüklenme zarfı içinde bağıl hızın sıfır olmasıyla açıklandığını gösterdik.
