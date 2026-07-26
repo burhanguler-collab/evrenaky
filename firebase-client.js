@@ -308,6 +308,31 @@ window.firebaseClient = {
         } catch(e) {
             console.error("Firebase stats update error:", e);
         }
+    },
+
+    async getAllUsers() {
+        try {
+            const querySnapshot = await getDocs(collection(db, "users"));
+            const users = [];
+            querySnapshot.forEach((doc) => {
+                users.push({ id: doc.id, ...doc.data() });
+            });
+            users.sort((a, b) => new Date(b.created_at || 0) - new Date(a.created_at || 0));
+            return users;
+        } catch(e) {
+            console.error("Error fetching users:", e);
+            return [];
+        }
+    },
+
+    async deleteUserDoc(userId) {
+        try {
+            await deleteDoc(doc(db, "users", userId));
+            return true;
+        } catch(e) {
+            console.error("Error deleting user doc:", e);
+            return false;
+        }
     }
 };
 
