@@ -1315,12 +1315,17 @@ async function submitReply() {
 
     if (!content) return;
     if (!currentUser) {
-        alert("Cevap yazabilmek için lütfen giriş yapın.");
-        openAuthModal();
-        return;
+        let guestName = prompt("Yanıtınızda yazar adı olarak görünecek isminizi girin:", "B. Güler");
+        if (!guestName || !guestName.trim()) guestName = "B. Güler";
+        currentUser = {
+            id: 'guest_' + Date.now(),
+            email: 'okur@evrenaky.org',
+            username: guestName.trim()
+        };
+        updateAuthUI();
     }
 
-    const username = currentUser ? currentUser.username : "Ziyaretçi";
+    const username = currentUser ? currentUser.username : "Okur";
     const replyObj = {
         id: 'rpl_' + Date.now(),
         thread_id: activeThreadId,
@@ -1352,15 +1357,22 @@ async function submitReply() {
 // Thread creation modal controls
 function openNewThreadModal() {
     if (!currentUser) {
-        alert("Yeni konu açabilmek için üye girişi yapmanız gerekmektedir.");
-        openAuthModal();
-        return;
+        let guestName = prompt("Yeni konunuzda yazar adı olarak görünecek isminizi girin:", "B. Güler");
+        if (!guestName || !guestName.trim()) guestName = "B. Güler";
+        currentUser = {
+            id: 'guest_' + Date.now(),
+            email: 'okur@evrenaky.org',
+            username: guestName.trim()
+        };
+        updateAuthUI();
     }
-    document.getElementById('new-thread-modal').style.display = 'flex';
+    const modal = document.getElementById('new-thread-modal');
+    if (modal) modal.style.display = 'flex';
 }
 
 function closeNewThreadModal() {
-    document.getElementById('new-thread-modal').style.display = 'none';
+    const modal = document.getElementById('new-thread-modal');
+    if (modal) modal.style.display = 'none';
     const titleInput = document.getElementById('thread-title');
     const contentInput = document.getElementById('thread-content');
     if (titleInput) titleInput.value = '';
@@ -1383,7 +1395,7 @@ async function handleNewThreadSubmit(event) {
         return;
     }
 
-    const username = currentUser ? currentUser.username : "Ziyaretçi";
+    const username = currentUser ? currentUser.username : "Değerli Okur";
     const newPost = {
         id: 'th_' + Date.now(),
         category: category,
