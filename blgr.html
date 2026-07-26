@@ -367,7 +367,18 @@
       
       const targetTab = document.getElementById('tab-' + tabId);
       if (targetTab) targetTab.style.display = 'block';
-      if (window.event && window.event.currentTarget) window.event.currentTarget.classList.add('active');
+      
+      if (window.event && window.event.currentTarget) {
+        window.event.currentTarget.classList.add('active');
+      } else {
+        const btn = document.querySelector(`.nav-btn[onclick*="${tabId}"]`);
+        if (btn) btn.classList.add('active');
+      }
+
+      if (tabId === 'users' && typeof loadUsers === 'function') loadUsers();
+      if (tabId === 'discussions' && typeof loadDiscussions === 'function') loadDiscussions();
+      if (tabId === 'submissions' && typeof loadSubmissions === 'function') loadSubmissions();
+      if (tabId === 'stats' && typeof loadStats === 'function') loadStats();
     };
   </script>
 
