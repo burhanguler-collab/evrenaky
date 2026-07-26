@@ -985,16 +985,39 @@ async function loginWithOAuth(provider) {
 async function loadComments(chapterId) {
     const list = document.getElementById('comments-list');
     const count = document.getElementById('comment-count');
+    if (!list || !count) return;
     list.innerHTML = '';
 
-    let comments = [];
+    let firebaseComments = [];
 
     if (window.firebaseClient) {
-        comments = await window.firebaseClient.getComments(chapterId);
-    } else {
-        const allComments = JSON.parse(safeStorage.getItem('evrenaky_mock_comments') || '[]');
-        comments = allComments.filter(c => c.chapter_id === chapterId);
+        try {
+            const allFbComments = await window.firebaseClient.getAllComments();
+            if (Array.isArray(allFbComments)) {
+                firebaseComments = allFbComments.filter(c => 
+                    !chapterId || String(c.chapter_id).toLowerCase() === String(chapterId).toLowerCase()
+                );
+            }
+        } catch(e) {
+            console.warn("Firebase loadComments notice:", e);
+        }
     }
+
+    // LocalStorage supplement
+    const localComments = JSON.parse(safeStorage.getItem('evrenaky_mock_comments') || '[]')
+        .filter(c => !chapterId || String(c.chapter_id).toLowerCase() === String(chapterId).toLowerCase());
+
+    // Merge comments by ID
+    const commentMap = new Map();
+    if (Array.isArray(firebaseComments)) {
+        firebaseComments.forEach(c => { if (c && c.id) commentMap.set(String(c.id), c); });
+    }
+    if (Array.isArray(localComments)) {
+        localComments.forEach(c => { if (c && c.id && !commentMap.has(String(c.id))) commentMap.set(String(c.id), c); });
+    }
+
+    const comments = Array.from(commentMap.values());
+    comments.sort((a, b) => new Date(b.created_at || 0) - new Date(a.created_at || 0));
 
     count.textContent = comments.length;
 
@@ -1004,17 +1027,17 @@ async function loadComments(chapterId) {
     }
 
     comments.forEach(c => {
-        const date = new Date(c.created_at).toLocaleDateString('tr-TR', {
+        const dateStr = c.created_at ? new Date(c.created_at).toLocaleDateString('tr-TR', {
             hour: '2-digit', minute: '2-digit'
-        });
+        }) : 'Tarih Yok';
         const card = document.createElement('div');
         card.className = 'comment-card fade-in';
         card.innerHTML = `
             <div class="comment-header">
-                <span class="comment-author">${c.username}</span>
-                <span class="comment-date">${date}</span>
+                <span class="comment-author">${escapeHTML(c.username || 'Üye')}</span>
+                <span class="comment-date">${dateStr}</span>
             </div>
-            <div class="comment-body">${escapeHTML(c.content)}</div>
+            <div class="comment-body">${escapeHTML(c.content || '')}</div>
         `;
         list.appendChild(card);
     });
