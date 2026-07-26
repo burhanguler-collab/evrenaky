@@ -105,4 +105,4 @@ Kütlenin büyümesiyle birlikte içsel 4D spinlerin sayısının arttığını 
 
 ---
 
-Bu motor çerçevesinin en çetin sayısal sınavı hemen yanı başımızdadır: Bölüm 3.9, aynı akışkan muhasebesini Ay'ın gizemlerine — ve özellikle Dünya-Ay sisteminin mekanik iflasına (3.9.4) — uygular.
+Motor çerçevesinin son adımı, motorun kendisinin de bir yolcu olduğunu görmektir: bir sonraki bölümde (3.8.6–3.8.8) Güneş'i, kendi girdabıyla birlikte içinde sürüklendiği galaktik girdabın basınç oluğuna yerleştirecek; Güneş'in dalgalı galaktik yörüngesini ve Samanyolu diskinin "kanat çırpışını" (warp ve devinimini) aynı akışkan mekanizmasına bağlayacağız. Çerçevenin en çetin sayısal sınavı ise hemen yanı başımızdadır: Bölüm 3.9, aynı akışkan muhasebesini Ay'ın gizemlerine — ve özellikle Dünya-Ay sisteminin mekanik iflasına (3.9.4) — uygular.

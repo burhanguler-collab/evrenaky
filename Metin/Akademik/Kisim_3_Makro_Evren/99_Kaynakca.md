@@ -2,6 +2,8 @@
 
 *Kısım III — Makro Evren* bölümündeki kütle-itim, makro-vorteks, atmosferik dinamik, kozmolojik genişleme ve gök cisimleri anomalileri konuları aşağıdaki başlıca kaynaklara dayanır. Girdiler, önceki çalışmanın kaynakça derlemesinden bu bölümün konularına göre seçilmiştir; sonraki sürümde metin-içi atıflarla eşleştirilecektir.
 
+* Alves, J., et al. (2020). *A Galactic-scale gas wave in the solar neighbourhood*. Nature, 578(7794), 237-239. (Radcliffe Dalgası — disk düzlemi etrafında salınan dev gaz yapısı; §3.8.7).
+* Antoja, T., et al. (2018). *A dynamically young and perturbed Milky Way disk*. Nature, 561(7723), 360-362. (Gaia faz-uzayı sarmalı — diskin sönmemiş dikey salınımları; §3.8.7).
 * Bahcall, J. N., & Bahcall, S. (1985). *The Sun's motion perpendicular to the galactic plane*. Nature, 316(6030), 706-708. (Güneş'in galaktik düzlemdeki dikey salınım periyodu).
 * Bernoulli, D. (1738). *Hydrodynamica, sive de viribus et motibus fluidorum commentarii*. Strasbourg: Johann Reinhold Dulsecker. (Basınç-hız ters orantısı).
 * Chen, X., et al. (2019). *An intuitive 3D map of the Galactic warp's precession traced by classical Cepheids*. Nature Astronomy, 3(4), 320-325. (Galaktik çarpılmanın haritalanması).

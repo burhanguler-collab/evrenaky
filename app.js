@@ -30,6 +30,7 @@ const chapters = [
     { id: 'akademik_03_06', title: '3.6 Atmosferik Hareketler ve Coriolis Etkisi', file: 'Metin/Akademik/Kisim_3_Makro_Evren/06_Atmosferik_Hareketler.md', group: 'akademik', part: 'Kısım III: Makro Evren' },
     { id: 'akademik_03_07', title: '3.7 Kozmolojik Genişleme ve Karanlık Enerji Hipotezi', file: 'Metin/Akademik/Kisim_3_Makro_Evren/07_Kozmolojik_Genisleme.md', group: 'akademik', part: 'Kısım III: Makro Evren' },
     { id: 'akademik_03_08', title: '3.8 Makro-Girdabın Motoru: Vorteks Nedenselliği', file: 'Metin/Akademik/Kisim_3_Makro_Evren/08_Makro_Girdabin_Motoru.md', group: 'akademik', part: 'Kısım III: Makro Evren' },
+    { id: 'akademik_03_08b', title: "3.8.6 Güneş'in Galaktik Yörüngesi ve Galaksinin Kanat Çırpışı", file: 'Metin/Akademik/Kisim_3_Makro_Evren/08_5_Gunesin_Galaktik_Yorungesi_ve_Galaksinin_Kanat_Cirpisi.md', group: 'akademik', part: 'Kısım III: Makro Evren' },
     { id: 'akademik_03_09', title: "3.9 Ay'ın Görmezden Gelinen Gizemleri", file: 'Metin/Akademik/Kisim_3_Makro_Evren/09_Ayin_Gizemleri.md', group: 'akademik', part: 'Kısım III: Makro Evren' },
     { id: 'akademik_03_10', title: '3.10 Satürn Halka Dinamiği', file: 'Metin/Akademik/Kisim_3_Makro_Evren/10_Saturn_Halka_Dinamigi.md', group: 'akademik', part: 'Kısım III: Makro Evren' },
     { id: 'akademik_03_11', title: '3.11 Kısım Özeti: Ne Öğrendik?', file: 'Metin/Akademik/Kisim_3_Makro_Evren/11_Ne_Ogrendik.md', group: 'akademik', part: 'Kısım III: Makro Evren' },
