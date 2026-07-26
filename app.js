@@ -1059,15 +1059,16 @@ async function loadComments(chapterId) {
 // Submit a new comment
 async function submitComment() {
     const textarea = document.getElementById('comment-textarea');
-    const content = textarea.value.trim();
+    const content = textarea ? textarea.value.trim() : '';
 
     if (!content) return;
     if (!currentUser) {
-        alert("Yorum yapabilmek için lütfen giriş yapın.");
+        alert("Bölüm yorumu yazabilmek için lütfen önce giriş yapın veya üye olun.");
+        openAuthModal();
         return;
     }
 
-    const username = currentUser ? currentUser.username : "Ziyaretçi";
+    const username = currentUser.username || "Üye";
     const commentObj = {
         id: 'cmt_' + Date.now(),
         chapter_id: activeChapterId,
@@ -1315,17 +1316,12 @@ async function submitReply() {
 
     if (!content) return;
     if (!currentUser) {
-        let guestName = prompt("Yanıtınızda yazar adı olarak görünecek isminizi girin:", "B. Güler");
-        if (!guestName || !guestName.trim()) guestName = "B. Güler";
-        currentUser = {
-            id: 'guest_' + Date.now(),
-            email: 'okur@evrenaky.org',
-            username: guestName.trim()
-        };
-        updateAuthUI();
+        alert("Tartışmaya yanıt verebilmek için lütfen önce giriş yapın veya üye olun.");
+        openAuthModal();
+        return;
     }
 
-    const username = currentUser ? currentUser.username : "Okur";
+    const username = currentUser.username || "Üye";
     const replyObj = {
         id: 'rpl_' + Date.now(),
         thread_id: activeThreadId,
@@ -1357,14 +1353,9 @@ async function submitReply() {
 // Thread creation modal controls
 function openNewThreadModal() {
     if (!currentUser) {
-        let guestName = prompt("Yeni konunuzda yazar adı olarak görünecek isminizi girin:", "B. Güler");
-        if (!guestName || !guestName.trim()) guestName = "B. Güler";
-        currentUser = {
-            id: 'guest_' + Date.now(),
-            email: 'okur@evrenaky.org',
-            username: guestName.trim()
-        };
-        updateAuthUI();
+        alert("Yeni tartışma konusu açabilmek için lütfen önce giriş yapın veya üye olun.");
+        openAuthModal();
+        return;
     }
     const modal = document.getElementById('new-thread-modal');
     if (modal) modal.style.display = 'flex';
@@ -1382,6 +1373,12 @@ function closeNewThreadModal() {
 // Handle thread submission
 async function handleNewThreadSubmit(event) {
     if (event) event.preventDefault();
+    if (!currentUser) {
+        alert("Yeni konu açabilmek için lütfen önce giriş yapın veya üye olun.");
+        openAuthModal();
+        return;
+    }
+
     const titleInput = document.getElementById('thread-title');
     const catInput = document.getElementById('thread-category');
     const contentInput = document.getElementById('thread-content');
@@ -1395,7 +1392,7 @@ async function handleNewThreadSubmit(event) {
         return;
     }
 
-    const username = currentUser ? currentUser.username : "Değerli Okur";
+    const username = currentUser.username || "Üye";
     const newPost = {
         id: 'th_' + Date.now(),
         category: category,
