@@ -58,6 +58,14 @@
 * **Standart Fiziğin Çıkmazı:** Halkaların dağılmadan korunması "çoban uydular" gibi geçici açıklamalarla geçiştirilir.
 * **Evrenakı Mekanik Çözümü:** Satürn etrafındaki hortum dinamikleri (Siklostrofik Denge) ve eksenel kütle-itim gradyanı.
 
+### 2.8 Güneş'in Galaktik Yunuslaması (Dikey Sinüs Salınımı)
+* **Standart Fiziğin Çıkmazı:** Düzlemden uzaklaşan yıldızı geri çağıran dikey kuvvet baryonik maddeyle üretilemez; görünmez karanlık maddeye dayanmak zorundadır (sürücü mekanizması yoktur).
+* **Evrenakı Mekanik Çözümü:** Galaksi merkezindeki karadelik 4D çift dönüşü gereği deviner (precession yapar). Devinen karadelik galaktik ekvator basınç oluğunu sallar; Güneş bu oluğa yanal ve eksenel itim basınç kilidiyle bağlı olduğundan uzayda dikey sinüs dalgası (yunuslama) çizer.
+
+### 2.9 Galaksinin Kanat Çırpışı (Warp) ve Gaia Hızlı Devinim Krizi
+* **Standart Fiziğin Çıkmazı:** Diskin S-biçimli bükülmesi (warp) ve Gaia uydusunun ölçtüğü hızlı devinim ($10.9 \text{ km/s/kpc}$) bağımsız parçacık diskinde sarılma problemi yaratır; standart model Sagittarius çarpması veya yamuk halo torku yamasıyla dahi bu hızı tutturamaz.
+* **Evrenakı Mekanik Çözümü:** Devinen merkez motorun ürettiği sallanma, akışkan yaprak boyunca dışa gecikmeyle yayılır (kırbaç dalgası). Dış kenarların gecikmeyle izlemesi S-biçimli bükülmeyi (warp) doğurur; devinim temposu ise doğrudan merkez motorun 4D devinim frekansına bağlı olduğundan hızlı devinim kendiliğinden türetilir.
+
 ---
 
 ## 3. TEMEL KUVVETLER VE MADDE ANATOMİSİ OLGULARI
@@ -82,6 +90,8 @@
 |---|---|---|
 | **Galaktik Dönüş Eğrileri** | Fiktif Karanlık Madde parçacığı | Görünmez Sirkülasyon Kuyuları (Galaktik Vorteks) |
 | **İvmelenen Genleşme** | Fiktif Karanlık Enerji ($\Lambda$) | Nükleon deşarjıyla ortamın termodinamik hacim kazanması |
+| **Güneş Yunuslaması & Galactic Warp** | Çarpışma yaması / Yamuk Halo torku | Devinen merkez motorun salladığı basınç oluğu & kırbaç dalgası |
+| **Warp Devinim Hızı (Gaia 2020)** | **Başarısız/Kriz:** $10.9\text{ km/s/kpc}$ hızını halo modelleri tutturamaz | **Başarılı:** Devinim frekansı doğrudan 4D merkez motor devinimine bağlıdır |
 | **Çift Yarık Deneyi** | Soyut Dalga Fonksiyonu Çökmesi | Sınır Tabakası Gradyanı ve Kenar Vorteksi Teması |
 | **Camda Işık Hızı** | Emilip yeniden yayınlanma varsayımı | Yerel basınç patinajı ve geri kazanımı ($c=\sqrt{P/\rho}$) |
 | **Bell Dolanıklığı** | Uzaktan gizemli etki / Telepati | Kohezyon Kanalı ($v_m \gg c$) ile ortak topografya |
@@ -93,4 +103,4 @@
 
 ---
 
-> **Sonuç:** Standart fizik 15 farklı doğa olgusu için 15 ayrı soyutlama ve serbest parametre üretmek zorunda kalırken, **Evrenakı Teorisi tek bir süper-akışkan tözünün hidrodinamiği ile tüm bu olguları tek çatı altında toplar.**
+> **Sonuç:** Standart fizik doğa olguları için ayrı ayrı soyutlama ve serbest parametre üretmek zorunda kalırken, **Evrenakı Teorisi tek bir süper-akışkan tözünün hidrodinamiği ile tüm bu olguları tek çatı altında toplar.**
