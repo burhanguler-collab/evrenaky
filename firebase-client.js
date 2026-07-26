@@ -230,13 +230,15 @@ window.firebaseClient = {
     },
     async getComments(chapterId) {
         try {
-            const q = query(collection(db, "chapter_comments"), where("chapter_id", "==", chapterId));
-            const querySnapshot = await getDocs(q);
+            const querySnapshot = await getDocs(collection(db, "chapter_comments"));
             const comments = [];
             querySnapshot.forEach((doc) => {
-                comments.push({ id: doc.id, ...doc.data() });
+                const data = doc.data();
+                if (!chapterId || String(data.chapter_id).toLowerCase() === String(chapterId).toLowerCase()) {
+                    comments.push({ id: doc.id, ...data });
+                }
             });
-            comments.sort((a, b) => new Date(a.created_at) - new Date(b.created_at));
+            comments.sort((a, b) => new Date(b.created_at || 0) - new Date(a.created_at || 0));
             return comments;
         } catch(e) {
             console.error("Error fetching comments", e);
@@ -250,7 +252,7 @@ window.firebaseClient = {
             querySnapshot.forEach((doc) => {
                 comments.push({ id: doc.id, ...doc.data() });
             });
-            comments.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+            comments.sort((a, b) => new Date(b.created_at || 0) - new Date(a.created_at || 0));
             return comments;
         } catch(e) {
             return [];
@@ -258,12 +260,12 @@ window.firebaseClient = {
     },
     async getThreads() {
         try {
-            const q = query(collection(db, "forum_threads"), orderBy("created_at", "desc"));
-            const querySnapshot = await getDocs(q);
+            const querySnapshot = await getDocs(collection(db, "forum_threads"));
             const threads = [];
             querySnapshot.forEach((doc) => {
                 threads.push({ id: doc.id, ...doc.data() });
             });
+            threads.sort((a, b) => new Date(b.created_at || 0) - new Date(a.created_at || 0));
             return threads;
         } catch(e) {
             console.error("Error fetching threads", e);
