@@ -9,9 +9,11 @@
 * Chen, X., et al. (2019). *An intuitive 3D map of the Galactic warp's precession traced by classical Cepheids*. Nature Astronomy, 3(4), 320-325. (Galaktik çarpılmanın haritalanması).
 * Coriolis, G. G. (1835). *Sur les équations du mouvement relatif des systèmes de corps*. Journal de l'École Polytechnique, 15, 142-154. (Coriolis kuvveti — dönen sistemlerde göreli hareket).
 * Correia, A. C. M., & Laskar, J. (2001). *The four final rotation states of Venus*. Nature, 411(6839), 767-770. (Venüs'ün retrograd denge durumları — §3.4.4 yelken kanalıyla karşılaştırma).
+* Curtis, H. D. (1918). *Descriptions of 762 Nebulae and Clusters Photographed with the Crossley Reflector*. Publications of Lick Observatory, 13, 9-42. (M87 jetinin ilk gözlemi — kutup ekseni boyunca kaçış; §3.8.6).
 * Descartes, R. (1644). *Principia Philosophiae*. Amsterdam: Ludovicum Elzevirium. (Plenum/Girdap kütleçekim yaklaşımı).
 * Dziewonski, A. M., & Anderson, D. L. (1981). *Preliminary reference Earth model*. Physics of the Earth and Planetary Interiors, 25(4), 297-356. (PREM Dünya yoğunluk modeli).
 * Einstein, A. (1915). *Erklärung der Perihelbewegung des Merkur aus der allgemeinen Relativitätstheorie*. Sitzungsberichte der Preussischen Akademie der Wissenschaften. (Merkür günberi kayması anomalisi).
+* Event Horizon Telescope Collaboration (2022). *First Sagittarius A* Event Horizon Telescope Results. I. The Shadow of the Supermassive Black Hole in the Center of the Milky Way*. The Astrophysical Journal Letters, 930(2), L12. (Samanyolu merkez karadeliğinin doğrudan görüntülenmesi; §3.8.6).
 * Gerritsma, R., Kirchmair, G., Zähringer, F., Solano, E., Blatt, R., & Roos, C. F. (2010). *Quantum simulation of the Dirac equation*. Nature, 463(7277), 68-71. (Zitterbewegung analog simülasyonu).
 * Gold, T., & Soter, S. (1969). *Atmospheric tides and the resonant rotation of Venus*. Icarus, 11(3), 356-366. (Atmosferik termal gelgit torku — §3.4.4 termal yelken kanalının klasik öncülü).
 * Goldreich, P., & Peale, S. (1966). *Spin-orbit coupling in the solar system*. The Astronomical Journal, 71, 425-438. (Merkür'ün 3:2 rezonansı ve spin-yörünge yakalanma olasılıkları — §3.4.4 kilit modu türetimiyle karşılaştırma).
@@ -30,6 +32,7 @@
 * Schrödinger, E. (1930). *Über die kräftefreie Bewegung in der relativistischen Quantenmechanik*. Sitzungsberichte der Preußischen Akademie der Wissenschaften, 24, 418-428. (Zitterbewegung — nükleon salınımı).
 * Shapiro, A. H. (1962). *Bath-tub vortex*. Nature, 196(4859), 1080-1081. (Lavabo girdabı ve rotasyonel Coriolis etkisi).
 * Snellen, I. A. G., et al. (2014). *Fast spin of the young extrasolar planet β Pictoris b*. Nature, 509(7498), 63-65. (Genç bir gezegenin hızlı öz dönüşü).
+* Stairs, I. H., Lyne, A. G., & Shemar, S. L. (2000). *Evidence for free precession in a pulsar*. Nature, 406(6795), 484-486. (PSR B1828-11 — izole pulsarın eksen yalpalaması; §3.8.6).
 * Tisza, L. (1938). *Transport Phenomena in Helium II*. Nature, 141(3577), 913. (Ultra-akışkan taşınım).
 * Tittemore, W. C., & Wisdom, J. (1989). *Tidal evolution of the Uranian satellites. II...*. Icarus, 81(2), 290-350. (Uranüs uydularının gelgit sönümlemesi ve eğiklikleri).
 * Zwicky, F. (1933). *Die Rotverschiebung von extragalaktischen Nebeln*. Helvetica Physica Acta, 6, 110-127. (Kızıla kayma / eksik kütle).
