@@ -342,15 +342,19 @@
         document.getElementById('totalPageViews').innerText = totalViews;
     }
 
-    // Load Submissions
-    function loadSubmissions() {
-        const reviews = safeGet('evrenaky_mock_peer_reviews', '[]');
+    // Load Submissions (Akademik Değerlendirme Raporları)
+    async function loadSubmissions() {
+        let reviews = [];
+        if (window.firebaseClient) {
+            reviews = await window.firebaseClient.getPendingReviews();
+        } else {
+            reviews = safeGet('evrenaky_mock_peer_reviews', '[]');
+        }
+
         let html = '';
-        let pendingCount = 0;
+        let pendingCount = reviews.length;
         
         reviews.forEach((data) => {
-            if(data.status === 'pending') { pendingCount++; }
-            
             let dateStr = data.created_at ? new Date(data.created_at).toLocaleString('tr-TR') : 'Tarih Yok';
             let statusBadge = data.status === 'approved' 
                 ? '<span style="color:#00ff88; font-size:12px; border:1px solid #00ff88; padding:2px 6px; border-radius:4px; margin-left:10px;">YAYINDA</span>' 
@@ -358,10 +362,10 @@
 
             html += `<div class="submission-item">
             <div class="sub-header">
-                <span class="sub-author"><i class="fas fa-user-circle"></i> ` + escapeHTML(data.reviewer_name || 'Bilinmeyen') + ` (` + escapeHTML(data.academic_title || '') + `) ${statusBadge}</span>
-                <span class="sub-date">` + dateStr + `</span>
+                <span class="sub-author"><i class="fas fa-user-circle"></i> ${escapeHTML(data.reviewer_name || 'Bilinmeyen')} (${escapeHTML(data.academic_title || '')}) ${statusBadge}</span>
+                <span class="sub-date">${dateStr}</span>
             </div>
-            <div class="sub-content">` + escapeHTML(data.review_text || '') + `</div>
+            <div class="sub-content">${escapeHTML(data.review_text || data.content || '')}</div>
             <div class="sub-actions">`;
             
             if (data.status === 'pending') {
@@ -376,46 +380,79 @@
             html += `</div></div>`;
         });
         
-        document.getElementById('submissionsList').innerHTML = html !== '' ? html : '<p style="color:var(--text-muted); text-align:center; padding: 20px;">Henüz sistemde kayıtlı bir değerlendirme bulunmamaktadır.</p>';
+        document.getElementById('submissionsList').innerHTML = html !== '' ? html : '<p style="color:var(--text-muted); text-align:center; padding: 20px;">Henüz onay bekleyen kayıtlı bir değerlendirme bulunmamaktadır.</p>';
         document.getElementById('pendingCount').innerText = pendingCount;
         document.getElementById('navPendingCount').innerText = pendingCount;
     }
 
-    window.approveSubmission = function(id) {
-        let reviews = safeGet('evrenaky_mock_peer_reviews', '[]');
-        let idx = reviews.findIndex(r => r.id == id);
-        if(idx !== -1) {
-            reviews[idx].status = 'approved';
-            safeSet('evrenaky_mock_peer_reviews', reviews);
-            alert("Başarıyla onaylandı! Artık sitede yayınlanıyor.");
-            loadSubmissions();
-        }
-    };
-
-    window.rejectSubmission = function(id) {
-        if(confirm("Bu değerlendirmeyi reddedip tamamen silmek istediğinize emin misiniz?")) {
+    window.approveSubmission = async function(id) {
+        if (window.firebaseClient) {
+            const success = await window.firebaseClient.approveReview(id);
+            if (success) {
+                alert("Başarıyla onaylandı! Artık sitede yayınlanıyor.");
+                loadSubmissions();
+            } else {
+                alert("Onaylama sırasında bir hata oluştu.");
+            }
+        } else {
             let reviews = safeGet('evrenaky_mock_peer_reviews', '[]');
-            reviews = reviews.filter(r => r.id != id);
-            safeSet('evrenaky_mock_peer_reviews', reviews);
-            alert("Başarıyla reddedildi ve silindi.");
-            loadSubmissions();
+            let idx = reviews.findIndex(r => r.id == id);
+            if(idx !== -1) {
+                reviews[idx].status = 'approved';
+                safeSet('evrenaky_mock_peer_reviews', reviews);
+                alert("Başarıyla onaylandı! Artık sitede yayınlanıyor.");
+                loadSubmissions();
+            }
         }
     };
 
-    function loadDiscussions() {
-        const threads = safeGet('evrenaky_mock_threads', '[]');
-        const comments = safeGet('evrenaky_mock_comments', '[]');
+    window.rejectSubmission = async function(id) {
+        if (confirm("Bu değerlendirmeyi reddedip tamamen silmek istediğinize emin misiniz?")) {
+            if (window.firebaseClient) {
+                const success = await window.firebaseClient.deleteDocument("submissions", id);
+                if (success) {
+                    alert("Başarıyla reddedildi ve silindi.");
+                    loadSubmissions();
+                } else {
+                    alert("Silme sırasında bir hata oluştu.");
+                }
+            } else {
+                let reviews = safeGet('evrenaky_mock_peer_reviews', '[]');
+                reviews = reviews.filter(r => r.id != id);
+                safeSet('evrenaky_mock_peer_reviews', reviews);
+                alert("Başarıyla reddedildi ve silindi.");
+                loadSubmissions();
+            }
+        }
+    };
+
+    async function loadDiscussions() {
+        let threads = [];
+        let comments = [];
+
+        if (window.firebaseClient) {
+            const [fetchedThreads, fetchedComments] = await Promise.all([
+                window.firebaseClient.getThreads(),
+                window.firebaseClient.getAllComments()
+            ]);
+            threads = fetchedThreads;
+            comments = fetchedComments;
+        } else {
+            threads = safeGet('evrenaky_mock_threads', '[]');
+            comments = safeGet('evrenaky_mock_comments', '[]');
+        }
+
         let html = '';
         
         threads.forEach((data) => {
             let dateStr = data.created_at ? new Date(data.created_at).toLocaleString('tr-TR') : 'Tarih Yok';
             html += `<div class="submission-item" id="thread-${data.id}">
             <div class="sub-header">
-                <span class="sub-author"><i class="fas fa-user-circle"></i> ${escapeHTML(data.username)} <span style="font-size:12px;color:var(--text-muted);">(Forum Konusu: ${escapeHTML(data.category)})</span></span>
+                <span class="sub-author"><i class="fas fa-user-circle"></i> ${escapeHTML(data.username || 'Üye')} <span style="font-size:12px;color:var(--text-muted);">(Forum Konusu: ${escapeHTML(data.category || 'Genel')})</span></span>
                 <span class="sub-date">${dateStr}</span>
             </div>
-            <div style="margin-top: 5px; font-size: 16px; font-weight: bold; color: var(--neon-blue);">${escapeHTML(data.title)}</div>
-            <div class="sub-content">${escapeHTML(data.content)}</div>
+            <div style="margin-top: 5px; font-size: 16px; font-weight: bold; color: var(--primary);">${escapeHTML(data.title || '')}</div>
+            <div class="sub-content">${escapeHTML(data.content || '')}</div>
             <div class="sub-actions">
                 <button class="btn-reject" onclick="deleteThread('${data.id}')"><i class="fas fa-trash"></i> Siteden Sil</button>
             </div>
@@ -426,10 +463,10 @@
             let dateStr = data.created_at ? new Date(data.created_at).toLocaleString('tr-TR') : 'Tarih Yok';
             html += `<div class="submission-item" id="comment-${data.id}">
             <div class="sub-header">
-                <span class="sub-author"><i class="fas fa-comment-dots"></i> ${escapeHTML(data.username)} <span style="font-size:12px;color:var(--text-muted);">(Bölüm Yorumu: ${escapeHTML(data.chapter_id)})</span></span>
+                <span class="sub-author"><i class="fas fa-comment-dots"></i> ${escapeHTML(data.username || 'Üye')} <span style="font-size:12px;color:var(--text-muted);">(Bölüm Yorumu: ${escapeHTML(data.chapter_id || '')})</span></span>
                 <span class="sub-date">${dateStr}</span>
             </div>
-            <div class="sub-content">${escapeHTML(data.content)}</div>
+            <div class="sub-content">${escapeHTML(data.content || '')}</div>
             <div class="sub-actions">
                 <button class="btn-reject" onclick="deleteComment('${data.id}')"><i class="fas fa-trash"></i> Siteden Sil</button>
             </div>
@@ -439,21 +476,41 @@
         document.getElementById('discussionsList').innerHTML = html !== '' ? html : '<p style="color:var(--text-muted); text-align:center; padding: 20px;">Henüz sistemde kayıtlı bir forum başlığı veya bölüm yorumu bulunmamaktadır.</p>';
     }
 
-    window.deleteComment = function(id) {
-        if(confirm("Bu bölüm yorumunu silmek istediğinize emin misiniz?")) {
-            let comments = safeGet('evrenaky_mock_comments', '[]');
-            comments = comments.filter(c => c.id != id);
-            safeSet('evrenaky_mock_comments', comments);
-            loadDiscussions();
+    window.deleteComment = async function(id) {
+        if (confirm("Bu bölüm yorumunu silmek istediğinize emin misiniz?")) {
+            if (window.firebaseClient) {
+                const success = await window.firebaseClient.deleteDocument("chapter_comments", id);
+                if (success) {
+                    alert("Yorum silindi.");
+                    loadDiscussions();
+                } else {
+                    alert("Silme sırasında hata oluştu.");
+                }
+            } else {
+                let comments = safeGet('evrenaky_mock_comments', '[]');
+                comments = comments.filter(c => c.id != id);
+                safeSet('evrenaky_mock_comments', comments);
+                loadDiscussions();
+            }
         }
     };
 
-    window.deleteThread = function(id) {
-        if(confirm("Bu tartışma konusunu tamamen silmek istediğinize emin misiniz?")) {
-            let threads = safeGet('evrenaky_mock_threads', '[]');
-            threads = threads.filter(t => t.id != id);
-            safeSet('evrenaky_mock_threads', threads);
-            loadDiscussions();
+    window.deleteThread = async function(id) {
+        if (confirm("Bu tartışma konusunu tamamen silmek istediğinize emin misiniz?")) {
+            if (window.firebaseClient) {
+                const success = await window.firebaseClient.deleteDocument("forum_threads", id);
+                if (success) {
+                    alert("Tartışma konusu silindi.");
+                    loadDiscussions();
+                } else {
+                    alert("Silme sırasında hata oluştu.");
+                }
+            } else {
+                let threads = safeGet('evrenaky_mock_threads', '[]');
+                threads = threads.filter(t => t.id != id);
+                safeSet('evrenaky_mock_threads', threads);
+                loadDiscussions();
+            }
         }
     };
 
