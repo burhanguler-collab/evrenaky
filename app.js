@@ -57,6 +57,7 @@ const chapters = [
     { id: 'akademik_06_05', title: '6.5 Kısım Özeti: Ne Öğrendik?', file: 'Metin/Akademik/Kisim_6_Kanitlar/05_Ne_Ogrendik.md', group: 'akademik', part: 'Kısım VI: Kanıtlar' },
     { id: 'akademik_06_kaynakca', title: '6.6 Kaynakça', file: 'Metin/Akademik/Kisim_6_Kanitlar/99_Kaynakca.md', group: 'akademik', part: 'Kısım VI: Kanıtlar' },
     { id: 'akademik_07', title: 'Kısım VII: Tartışma ve Sonuç', file: 'Metin/Akademik/Kisim_7_Tartisma_ve_Sonuc/06_Tartisma_ve_Sonuc.md', group: 'akademik', part: 'Kısım VII: Tartışma ve Sonuç' },
+    { id: 'akademik_07_03', title: '7.3 Modern Fiziğin Açık Krizleri ve Evrenakı Ufku', file: 'Metin/Akademik/Kisim_7_Tartisma_ve_Sonuc/03_Modern_Fizigin_Acik_Krizleri_ve_Evrenaki_Ufku.md', group: 'akademik', part: 'Kısım VII: Tartışma ve Sonuç' },
     { id: 'akademik_07_kaynakca', title: 'Kaynakça', file: 'Metin/Akademik/Kisim_7_Tartisma_ve_Sonuc/99_Kaynakca.md', group: 'akademik', part: 'Kısım VII: Tartışma ve Sonuç' },
     { id: 'akademik_08', title: 'Kısım VIII: Ekler', file: 'Metin/Akademik/Kisim_8_Ekler/07_Matematiksel_Ekler.md', group: 'akademik', part: 'Kısım VIII: Ekler' },
     { id: 'akademik_09', title: '9.1 Doç. Dr. Rıza Demirbilek Değerlendirmesi', file: 'Metin/Akademik/Kisim_9_Hakem_Degerlendirmeleri/01_Doc_Dr_Riza_Demirbilek_Degerlendirmesi.md', group: 'akademik', part: 'Kısım IX: Hakem Değerlendirmeleri' },
