@@ -253,6 +253,9 @@
             <h2 class="section-title" style="margin-bottom: 5px;">Kayıtlı Portal Üyeleri</h2>
             <p style="color: var(--text-muted); margin: 0; font-size: 14px;">Sisteme kayıtlı veya Google ile giriş yapmış tüm okuyucuları buradan yönetebilir, istediğiniz üyenin hesabını silebilirsiniz.</p>
           </div>
+          <button onclick="createSampleUser()" style="background: rgba(0, 240, 255, 0.15); border: 1px solid #00f0ff; color: #00f0ff; padding: 8px 14px; border-radius: 6px; cursor: pointer; font-size: 13px; font-weight: 500; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(0, 240, 255, 0.3)'" onmouseout="this.style.background='rgba(0, 240, 255, 0.15)'">
+            <i class="fas fa-user-plus"></i> Örnek Test Üyesi Ekle
+          </button>
         </div>
         <div class="submission-list" id="usersList">
           <div style="text-align:center; padding:20px; color:var(--text-muted);">Yükleniyor...</div>
@@ -767,6 +770,35 @@
             alert("Kullanıcı başarıyla silindi ve erişimi engellendi.");
             loadUsers();
         }
+    };
+
+    window.createSampleUser = async function() {
+        const uName = prompt("Eklenecek üyenin adı:", "B. Güler");
+        if (!uName || !uName.trim()) return;
+        const uEmail = prompt("Üyenin e-postası:", "burhanguler@evrenaky.org");
+        if (!uEmail || !uEmail.trim()) return;
+
+        const newUser = {
+            id: 'usr_' + Date.now(),
+            uid: 'usr_' + Date.now(),
+            username: uName.trim(),
+            email: uEmail.trim(),
+            provider: uEmail.includes('google') ? 'Google OAuth' : 'E-posta',
+            created_at: new Date().toISOString()
+        };
+
+        const localUsers = safeGet('evrenaky_mock_users', '[]');
+        localUsers.unshift(newUser);
+        safeSet('evrenaky_mock_users', localUsers);
+
+        if (window.firebaseAuth && window.firebaseAuth.saveUserDoc) {
+            try {
+                await window.firebaseAuth.saveUserDoc(newUser);
+            } catch(e) {}
+        }
+
+        alert("Test üyesi başarıyla eklendi!");
+        loadUsers();
     };
 
     loadStats();
