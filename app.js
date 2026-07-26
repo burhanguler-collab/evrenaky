@@ -49,6 +49,7 @@ const chapters = [
     { id: 'akademik_05_05', title: '5.5 Kısım Özeti: Ne Öğrendik?', file: 'Metin/Akademik/Kisim_5_Deneyler/05_Ne_Ogrendik.md', group: 'akademik', part: 'Kısım V: Deneyler' },
     { id: 'akademik_05_kaynakca', title: '5.6 Kaynakça', file: 'Metin/Akademik/Kisim_5_Deneyler/99_Kaynakca.md', group: 'akademik', part: 'Kısım V: Deneyler' },
     { id: 'akademik_06', title: '6. Kanıtlara Giriş', file: 'Metin/Akademik/Kisim_6_Kanitlar/06_Kanitlar.md', group: 'akademik', part: 'Kısım VI: Kanıtlar' },
+    { id: 'akademik_06_00', title: '6.0 Yalnızca Evrenakı’nın Açıkladığı Gözlemler Matrisi', file: 'Metin/Akademik/Kisim_6_Kanitlar/00_Yalnizca_Evrenakinin_Acikladigi_Gozlemler.md', group: 'akademik', part: 'Kısım VI: Kanıtlar' },
     { id: 'akademik_06_01', title: '6.1 Evrenakı Kinematiğinden Doppler Türetimi', file: 'Metin/Akademik/Kisim_6_Kanitlar/01_Evrenaki_Doppler_Turetimi.md', group: 'akademik', part: 'Kısım VI: Kanıtlar' },
     { id: 'akademik_06_02', title: '6.2 Kütleçekimsel Kızıla Kayma ve Tek Mekanizmalı Çözüm', file: 'Metin/Akademik/Kisim_6_Kanitlar/02_Kutlecekimsel_Kizila_Kayma_Sentezi.md', group: 'akademik', part: 'Kısım VI: Kanıtlar' },
     { id: 'akademik_06_03', title: '6.3 Ekvatoral Vorteks ve Yörünge Anomalileri', file: 'Metin/Akademik/Kisim_6_Kanitlar/03_Ekvatoral_Vorteks_ve_Yorunge_Anomalileri.md', group: 'akademik', part: 'Kısım VI: Kanıtlar' },
