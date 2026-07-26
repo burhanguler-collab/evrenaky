@@ -685,43 +685,64 @@
         const localUsers = safeGet('evrenaky_mock_users', '[]');
         const userMap = new Map();
         if (Array.isArray(users)) {
-            users.forEach(u => { if (u && u.id) userMap.set(String(u.id), u); });
+            users.forEach(u => { if (u && (u.id || u.email)) userMap.set(String(u.id || u.email), u); });
         }
         if (Array.isArray(localUsers)) {
-            localUsers.forEach(u => { if (u && u.id && !userMap.has(String(u.id))) userMap.set(String(u.id), u); });
+            localUsers.forEach(u => { if (u && (u.id || u.email) && !userMap.has(String(u.id || u.email))) userMap.set(String(u.id || u.email), u); });
         }
 
         let allUsersList = Array.from(userMap.values());
 
         // Blacklist filter
         const deletedUsers = safeGet('evrenaky_deleted_user_ids', '[]');
-        allUsersList = allUsersList.filter(u => !deletedUsers.includes(String(u.id)) && !deletedUsers.includes((u.email || '').toLowerCase()));
+        allUsersList = allUsersList.filter(u => {
+            if (!u) return false;
+            const uid = String(u.id || '');
+            const uemail = String(u.email || '').toLowerCase();
+            return !deletedUsers.includes(uid) && !deletedUsers.includes(uemail);
+        });
 
         const navCount = document.getElementById('navUsersCount');
         if (navCount) navCount.textContent = allUsersList.length;
 
-        let html = '';
+        const container = document.getElementById('usersList');
+        if (!container) return;
+
+        if (allUsersList.length === 0) {
+            container.innerHTML = '<p style="color:var(--text-muted); text-align:center; padding: 20px;">Henüz sistemde kayıtlı üye bulunmamaktadır.</p>';
+            return;
+        }
+
+        container.innerHTML = '';
         allUsersList.forEach(u => {
             let dateStr = u.created_at ? new Date(u.created_at).toLocaleString('tr-TR') : 'Tarih Yok';
             let provider = u.provider || (u.email && u.email.includes('google') ? 'Google OAuth' : 'E-posta');
-            let safeName = escapeHTML(u.username || 'Okur').replace(/'/g, "\\'");
+            let uName = u.username || 'Üye';
+            let uEmail = u.email || 'E-posta Yok';
+            let uId = u.id || uEmail;
 
-            html += `<div class="submission-item" id="user-${u.id}">
-            <div class="sub-header">
-                <span class="sub-author"><i class="fas fa-user"></i> ${escapeHTML(u.username || 'Üye')} <span style="font-size:12px;color:var(--text-muted);">(${escapeHTML(u.email || 'E-posta Yok')})</span></span>
-                <span class="sub-date">Kayıt: ${dateStr}</span>
-            </div>
-            <div style="margin-top: 6px; font-size: 13px; color: var(--neon-blue);">Yöntem: ${escapeHTML(provider)}</div>
-            <div class="sub-actions">
-                <button class="btn-reject" onclick="deleteUser('${u.id}', '${safeName}', '${escapeHTML(u.email || '')}')"><i class="fas fa-user-minus"></i> Üyeyi Sil & Bağlantısını Kes</button>
-            </div>
-            </div>`;
+            const card = document.createElement('div');
+            card.className = 'submission-item';
+            card.id = 'user-' + String(uId).replace(/[^a-zA-Z0-9_-]/g, '_');
+            
+            card.innerHTML = `
+                <div class="sub-header">
+                    <span class="sub-author"><i class="fas fa-user"></i> ${escapeHTML(uName)} <span style="font-size:12px;color:var(--text-muted);">(${escapeHTML(uEmail)})</span></span>
+                    <span class="sub-date">Kayıt: ${dateStr}</span>
+                </div>
+                <div style="margin-top: 6px; font-size: 13px; color: var(--neon-blue);">Yöntem: ${escapeHTML(provider)}</div>
+                <div class="sub-actions">
+                    <button class="btn-reject btn-del-user"><i class="fas fa-user-minus"></i> Üyeyi Sil & Bağlantısını Kes</button>
+                </div>
+            `;
+
+            const delBtn = card.querySelector('.btn-del-user');
+            if (delBtn) {
+                delBtn.onclick = () => deleteUser(uId, uName, uEmail);
+            }
+
+            container.appendChild(card);
         });
-
-        const container = document.getElementById('usersList');
-        if (container) {
-            container.innerHTML = html !== '' ? html : '<p style="color:var(--text-muted); text-align:center; padding: 20px;">Henüz sistemde kayıtlı üye bulunmamaktadır.</p>';
-        }
     }
 
     window.deleteUser = async function(userId, username, email) {
