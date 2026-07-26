@@ -13,7 +13,7 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAppAEZ5Q8RiR8NePuYXYvrM3OOAgKiRss",
+  apiKey: "AIzaSyAppAEZ5Q8RiR8NePuyXYvrM3OOAgKiRss",
   authDomain: "evrenaky-1f2a0.firebaseapp.com",
   projectId: "evrenaky-1f2a0",
   storageBucket: "evrenaky-1f2a0.firebasestorage.app",
