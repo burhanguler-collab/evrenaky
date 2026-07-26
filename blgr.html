@@ -229,8 +229,15 @@
 
       <!-- TAB: DISCUSSIONS -->
       <div id="tab-discussions" class="tab-content" style="display: none;">
-        <h2 class="section-title">Forum ve Okuyucu Yorumları</h2>
-        <p style="color: var(--text-muted); margin-bottom: 20px;">Sitede anında yayınlanan tartışma başlıklarını buradan yönetebilir ve uygunsuz bulduklarınızı silebilirsiniz.</p>
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 20px;">
+          <div>
+            <h2 class="section-title" style="margin-bottom: 5px;">Forum ve Okuyucu Yorumları</h2>
+            <p style="color: var(--text-muted); margin: 0; font-size: 14px;">Sitede anında yayınlanan tartışma başlıklarını buradan yönetebilir ve uygunsuz bulduklarınızı silebilirsiniz.</p>
+          </div>
+          <button onclick="clearAllOldSampleData()" style="background: rgba(255, 68, 68, 0.15); border: 1px solid #ff4444; color: #ff6666; padding: 8px 14px; border-radius: 6px; cursor: pointer; font-size: 13px; font-weight: 500; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255, 68, 68, 0.3)'" onmouseout="this.style.background='rgba(255, 68, 68, 0.15)'">
+            <i class="fas fa-trash-alt"></i> Tüm Eski Örnek Yorumları Temizle
+          </button>
+        </div>
         <div class="submission-list" id="discussionsList">
           <div style="text-align:center; padding:20px; color:var(--text-muted);">Yükleniyor...</div>
         </div>
@@ -513,6 +520,7 @@
         
         threads.forEach((data) => {
             let dateStr = data.created_at ? new Date(data.created_at).toLocaleString('tr-TR') : 'Tarih Yok';
+            let safeTitle = escapeHTML(data.title || '').replace(/'/g, "\\'");
             html += `<div class="submission-item" id="thread-${data.id}">
             <div class="sub-header">
                 <span class="sub-author"><i class="fas fa-user-circle"></i> ${escapeHTML(data.username || 'Üye')} <span style="font-size:12px;color:var(--text-muted);">(Forum Konusu: ${escapeHTML(data.category || 'Genel')})</span></span>
@@ -521,13 +529,14 @@
             <div style="margin-top: 5px; font-size: 16px; font-weight: bold; color: var(--primary);">${escapeHTML(data.title || '')}</div>
             <div class="sub-content">${escapeHTML(data.content || '')}</div>
             <div class="sub-actions">
-                <button class="btn-reject" onclick="deleteThread('${data.id}')"><i class="fas fa-trash"></i> Siteden Sil</button>
+                <button class="btn-reject" onclick="deleteThread('${data.id}', '${safeTitle}')"><i class="fas fa-trash"></i> Siteden Sil</button>
             </div>
             </div>`;
         });
         
         comments.forEach((data) => {
             let dateStr = data.created_at ? new Date(data.created_at).toLocaleString('tr-TR') : 'Tarih Yok';
+            let safeContent = escapeHTML(data.content || '').replace(/'/g, "\\'");
             html += `<div class="submission-item" id="comment-${data.id}">
             <div class="sub-header">
                 <span class="sub-author"><i class="fas fa-comment-dots"></i> ${escapeHTML(data.username || 'Üye')} <span style="font-size:12px;color:var(--text-muted);">(Bölüm Yorumu: ${escapeHTML(data.chapter_id || '')})</span></span>
@@ -535,7 +544,7 @@
             </div>
             <div class="sub-content">${escapeHTML(data.content || '')}</div>
             <div class="sub-actions">
-                <button class="btn-reject" onclick="deleteComment('${data.id}')"><i class="fas fa-trash"></i> Siteden Sil</button>
+                <button class="btn-reject" onclick="deleteComment('${data.id}', '${safeContent}')"><i class="fas fa-trash"></i> Siteden Sil</button>
             </div>
             </div>`;
         });
@@ -543,9 +552,9 @@
         document.getElementById('discussionsList').innerHTML = html !== '' ? html : '<p style="color:var(--text-muted); text-align:center; padding: 20px;">Henüz sistemde kayıtlı bir forum başlığı veya bölüm yorumu bulunmamaktadır.</p>';
     }
 
-    window.deleteComment = async function(id) {
+    window.deleteComment = async function(id, textSnippet) {
         if (confirm("Bu bölüm yorumunu silmek istediğinize emin misiniz?")) {
-            if (window.firebaseClient) {
+            if (window.firebaseClient && id) {
                 try {
                     await window.firebaseClient.deleteDocument("chapter_comments", id);
                 } catch(e) {
@@ -553,7 +562,12 @@
                 }
             }
             let comments = safeGet('evrenaky_mock_comments', '[]');
-            comments = comments.filter(c => String(c.id) !== String(id));
+            comments = comments.filter(c => {
+                if (!c) return false;
+                if (c.id && String(c.id) === String(id)) return false;
+                if (textSnippet && c.content && c.content.trim() === textSnippet.trim()) return false;
+                return true;
+            });
             safeSet('evrenaky_mock_comments', comments);
 
             alert("Yorum başarıyla silindi.");
@@ -561,9 +575,9 @@
         }
     };
 
-    window.deleteThread = async function(id) {
+    window.deleteThread = async function(id, textSnippet) {
         if (confirm("Bu tartışma konusunu tamamen silmek istediğinize emin misiniz?")) {
-            if (window.firebaseClient) {
+            if (window.firebaseClient && id) {
                 try {
                     await window.firebaseClient.deleteDocument("forum_threads", id);
                 } catch(e) {
@@ -571,14 +585,35 @@
                 }
             }
             let threads = safeGet('evrenaky_mock_threads', '[]');
-            threads = threads.filter(t => String(t.id) !== String(id));
+            threads = threads.filter(t => {
+                if (!t) return false;
+                if (t.id && String(t.id) === String(id)) return false;
+                if (textSnippet && t.title && t.title.trim() === textSnippet.trim()) return false;
+                return true;
+            });
             safeSet('evrenaky_mock_threads', threads);
 
             let posts = safeGet('evrenaky_mock_posts', '[]');
-            posts = posts.filter(p => String(p.id) !== String(id));
+            posts = posts.filter(p => {
+                if (!p) return false;
+                if (p.id && String(p.id) === String(id)) return false;
+                if (textSnippet && p.title && p.title.trim() === textSnippet.trim()) return false;
+                return true;
+            });
             safeSet('evrenaky_mock_posts', posts);
 
             alert("Tartışma konusu başarıyla silindi.");
+            loadDiscussions();
+        }
+    };
+
+    window.clearAllOldSampleData = function() {
+        if (confirm("Tüm eski yerel örnek yorum ve tartışmaları temizlemek istediğinize emin misiniz?")) {
+            safeSet('evrenaky_mock_comments', []);
+            safeSet('evrenaky_mock_threads', []);
+            safeSet('evrenaky_mock_posts', []);
+            safeSet('evrenaky_mock_replies', []);
+            alert("Eski tüm yerel veriler ve örnek kayıtlar başarıyla temizlendi!");
             loadDiscussions();
         }
     };
