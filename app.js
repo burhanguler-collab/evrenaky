@@ -1096,30 +1096,43 @@ async function loadForumThreads(category = 'all') {
     const activeLi = document.getElementById(`cat-${category}`);
     if (activeLi) activeLi.classList.add('active');
 
-    // Show list hide detail
-    document.getElementById('forum-threads').style.display = 'flex';
-    document.getElementById('forum-thread-detail').style.display = 'none';
+    // Show list, hide detail view
+    const threadsContainer = document.getElementById('forum-threads');
+    const detailContainer = document.getElementById('forum-thread-detail');
+    if (threadsContainer) threadsContainer.style.display = 'flex';
+    if (detailContainer) detailContainer.style.display = 'none';
 
     const list = document.getElementById('forum-threads');
-    list.innerHTML = `
-        <div style="text-align:center; padding:50px 0;">
-            <i data-lucide="loader-2" class="animate-spin" style="width:36px; height:36px; color:var(--neon-blue);"></i>
-        </div>
-    `;
-    lucide.createIcons();
+    if (!list) return;
 
-    let posts = [];
-
+    let firebasePosts = [];
     if (window.firebaseClient) {
-        const allPosts = await window.firebaseClient.getThreads();
-        posts = category === 'all' ? allPosts : allPosts.filter(p => p.category === category);
-    } else {
-        const allPosts = JSON.parse(safeStorage.getItem('evrenaky_mock_posts') || '[]');
-        posts = category === 'all' ? allPosts : allPosts.filter(p => p.category === category);
+        try {
+            firebasePosts = await window.firebaseClient.getThreads();
+        } catch(e) {
+            console.warn("Firebase getThreads notice:", e);
+        }
     }
 
-    // Sort posts by date descending
-    posts.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+    const localPosts1 = JSON.parse(safeStorage.getItem('evrenaky_mock_posts') || '[]');
+    const localPosts2 = JSON.parse(safeStorage.getItem('evrenaky_mock_threads') || '[]');
+    const localPosts = localPosts1.concat(localPosts2);
+
+    // Merge threads by ID
+    const threadMap = new Map();
+    if (Array.isArray(firebasePosts)) {
+        firebasePosts.forEach(p => { if (p && p.id) threadMap.set(String(p.id), p); });
+    }
+    if (Array.isArray(localPosts)) {
+        localPosts.forEach(p => { if (p && p.id && !threadMap.has(String(p.id))) threadMap.set(String(p.id), p); });
+    }
+
+    let posts = Array.from(threadMap.values());
+    if (category !== 'all') {
+        posts = posts.filter(p => String(p.category || 'genel').toLowerCase() === String(category).toLowerCase());
+    }
+
+    posts.sort((a, b) => new Date(b.created_at || 0) - new Date(a.created_at || 0));
 
     list.innerHTML = '';
 
@@ -1129,7 +1142,7 @@ async function loadForumThreads(category = 'all') {
     }
 
     posts.forEach(p => {
-        const date = new Date(p.created_at).toLocaleDateString('tr-TR');
+        const date = p.created_at ? new Date(p.created_at).toLocaleDateString('tr-TR') : 'Tarih Yok';
         const card = document.createElement('div');
         card.className = 'thread-card fade-in';
         card.onclick = () => openThreadDetail(p.id);
@@ -1140,13 +1153,13 @@ async function loadForumThreads(category = 'all') {
 
         card.innerHTML = `
             <div class="thread-meta">
-                <span class="thread-badge ${p.category}">${badgeName}</span>
-                <span class="thread-author" style="color:var(--neon-blue); font-weight:500;">${p.username}</span>
+                <span class="thread-badge ${p.category || 'genel'}">${badgeName}</span>
+                <span class="thread-author" style="color:var(--neon-blue); font-weight:500;">${escapeHTML(p.username || 'Üye')}</span>
                 <span class="thread-date" style="color:var(--text-muted); font-size:0.75rem;">${date}</span>
             </div>
-            <h3>${escapeHTML(p.title)}</h3>
+            <h3>${escapeHTML(p.title || '')}</h3>
             <div class="thread-info">
-                <span>${escapeHTML(p.content.substring(0, 120))}${p.content.length > 120 ? '...' : ''}</span>
+                <span>${escapeHTML((p.content || '').substring(0, 120))}${(p.content || '').length > 120 ? '...' : ''}</span>
             </div>
         `;
         list.appendChild(card);
@@ -1157,21 +1170,31 @@ async function loadForumThreads(category = 'all') {
 async function openThreadDetail(threadId) {
     activeThreadId = threadId;
 
-    // Show detail view hide list
-    document.getElementById('forum-threads').style.display = 'none';
-    document.getElementById('forum-thread-detail').style.display = 'block';
+    const threadsContainer = document.getElementById('forum-threads');
+    const detailContainer = document.getElementById('forum-thread-detail');
+    if (threadsContainer) threadsContainer.style.display = 'none';
+    if (detailContainer) detailContainer.style.display = 'block';
 
     const opContainer = document.getElementById('thread-op-card');
+    if (!opContainer) return;
     opContainer.innerHTML = '';
 
     let post = null;
 
     if (window.firebaseClient) {
-        const allPosts = await window.firebaseClient.getThreads();
-        post = allPosts.find(p => p.id === threadId);
-    } else {
-        const allPosts = JSON.parse(safeStorage.getItem('evrenaky_mock_posts') || '[]');
-        post = allPosts.find(p => p.id === threadId);
+        try {
+            const allPosts = await window.firebaseClient.getThreads();
+            post = allPosts.find(p => String(p.id) === String(threadId));
+        } catch(e) {
+            console.warn("Firebase getThreads detail notice:", e);
+        }
+    }
+
+    if (!post) {
+        const localPosts1 = JSON.parse(safeStorage.getItem('evrenaky_mock_posts') || '[]');
+        const localPosts2 = JSON.parse(safeStorage.getItem('evrenaky_mock_threads') || '[]');
+        const allLocal = localPosts1.concat(localPosts2);
+        post = allLocal.find(p => String(p.id) === String(threadId));
     }
 
     if (!post) {
@@ -1180,9 +1203,9 @@ async function openThreadDetail(threadId) {
         return;
     }
 
-    const date = new Date(post.created_at).toLocaleDateString('tr-TR', {
+    const date = post.created_at ? new Date(post.created_at).toLocaleDateString('tr-TR', {
         hour: '2-digit', minute: '2-digit'
-    });
+    }) : 'Tarih Yok';
 
     let badgeName = 'Genel';
     if (post.category === 'fizik') badgeName = 'Fizik & Mat';
@@ -1190,12 +1213,12 @@ async function openThreadDetail(threadId) {
 
     opContainer.innerHTML = `
         <div class="thread-meta">
-            <span class="thread-badge ${post.category}">${badgeName}</span>
-            <span class="thread-author" style="color:var(--neon-blue); font-weight:600;">${post.username}</span>
+            <span class="thread-badge ${post.category || 'genel'}">${badgeName}</span>
+            <span class="thread-author" style="color:var(--neon-blue); font-weight:600;">${escapeHTML(post.username || 'Üye')}</span>
             <span class="thread-date">${date}</span>
         </div>
-        <h3 style="margin-top:12px;">${escapeHTML(post.title)}</h3>
-        <div class="thread-op-body">${escapeHTML(post.content).replace(/\n/g, '<br>')}</div>
+        <h3 style="margin-top:12px;">${escapeHTML(post.title || '')}</h3>
+        <div class="thread-op-body">${escapeHTML(post.content || '').replace(/\n/g, '<br>')}</div>
     `;
 
     // Load Replies
@@ -1211,16 +1234,31 @@ function showThreadsList() {
 async function loadReplies(postId) {
     const list = document.getElementById('replies-list');
     const count = document.getElementById('reply-count');
+    if (!list || !count) return;
     list.innerHTML = '';
 
-    let replies = [];
-
+    let fbReplies = [];
     if (window.firebaseClient) {
-        replies = await window.firebaseClient.getReplies(postId);
-    } else {
-        const allReplies = JSON.parse(safeStorage.getItem('evrenaky_mock_replies') || '[]');
-        replies = allReplies.filter(r => r.post_id === postId);
+        try {
+            fbReplies = await window.firebaseClient.getReplies(postId);
+        } catch(e) {
+            console.warn("Firebase getReplies notice:", e);
+        }
     }
+
+    const localReplies = JSON.parse(safeStorage.getItem('evrenaky_mock_replies') || '[]')
+        .filter(r => String(r.post_id) === String(postId) || String(r.thread_id) === String(postId));
+
+    const replyMap = new Map();
+    if (Array.isArray(fbReplies)) {
+        fbReplies.forEach(r => { if (r && r.id) replyMap.set(String(r.id), r); });
+    }
+    if (Array.isArray(localReplies)) {
+        localReplies.forEach(r => { if (r && r.id && !replyMap.has(String(r.id))) replyMap.set(String(r.id), r); });
+    }
+
+    const replies = Array.from(replyMap.values());
+    replies.sort((a, b) => new Date(a.created_at || 0) - new Date(b.created_at || 0));
 
     count.textContent = replies.length;
 
@@ -1230,17 +1268,17 @@ async function loadReplies(postId) {
     }
 
     replies.forEach(r => {
-        const date = new Date(r.created_at).toLocaleDateString('tr-TR', {
+        const date = r.created_at ? new Date(r.created_at).toLocaleDateString('tr-TR', {
             hour: '2-digit', minute: '2-digit'
-        });
+        }) : 'Tarih Yok';
         const card = document.createElement('div');
         card.className = 'reply-card fade-in';
         card.innerHTML = `
             <div class="comment-header" style="margin-bottom:6px;">
-                <span class="comment-author" style="color:var(--neon-magenta);">${r.username}</span>
+                <span class="comment-author" style="color:var(--neon-magenta);">${escapeHTML(r.username || 'Üye')}</span>
                 <span class="comment-date">${date}</span>
             </div>
-            <div class="comment-body">${escapeHTML(r.content).replace(/\n/g, '<br>')}</div>
+            <div class="comment-body">${escapeHTML(r.content || '').replace(/\n/g, '<br>')}</div>
         `;
         list.appendChild(card);
     });
@@ -1249,38 +1287,42 @@ async function loadReplies(postId) {
 // Submit a new forum reply
 async function submitReply() {
     const textarea = document.getElementById('reply-textarea');
-    const content = textarea.value.trim();
+    const content = textarea ? textarea.value.trim() : '';
 
     if (!content) return;
     if (!currentUser) {
         alert("Cevap yazabilmek için lütfen giriş yapın.");
+        openAuthModal();
         return;
     }
 
     const username = currentUser ? currentUser.username : "Ziyaretçi";
+    const replyObj = {
+        id: 'rpl_' + Date.now(),
+        thread_id: activeThreadId,
+        post_id: activeThreadId,
+        username: username,
+        content: content,
+        created_at: new Date().toISOString()
+    };
+
+    // Save locally
+    const allReplies = JSON.parse(safeStorage.getItem('evrenaky_mock_replies') || '[]');
+    allReplies.push(replyObj);
+    safeStorage.setItem('evrenaky_mock_replies', JSON.stringify(allReplies));
+
+    // Save to Firebase
     if (window.firebaseClient) {
-        await window.firebaseClient.submitReply({
-            thread_id: activeThreadId,
-            username: username,
-            content: content,
-            created_at: new Date().toISOString()
-        });
-        textarea.value = '';
-        loadReplies(activeThreadId);
-    } else {
-        const allReplies = JSON.parse(safeStorage.getItem('evrenaky_mock_replies') || '[]');
-        const newReply = {
-            id: String(Date.now()),
-            post_id: activeThreadId,
-            username: username,
-            content: content,
-            created_at: new Date().toISOString()
-        };
-        allReplies.push(newReply);
-        safeStorage.setItem('evrenaky_mock_replies', JSON.stringify(allReplies));
-        textarea.value = '';
-        loadReplies(activeThreadId);
+        try {
+            await window.firebaseClient.submitReply(replyObj);
+        } catch(e) {
+            console.warn("Firebase submitReply notice:", e);
+        }
     }
+
+    if (textarea) textarea.value = '';
+    loadReplies(activeThreadId);
+    alert("Yanıtınız başarıyla yayınlandı!");
 }
 
 // Thread creation modal controls
@@ -1295,48 +1337,57 @@ function openNewThreadModal() {
 
 function closeNewThreadModal() {
     document.getElementById('new-thread-modal').style.display = 'none';
-    document.getElementById('thread-title').value = '';
-    document.getElementById('thread-content').value = '';
+    const titleInput = document.getElementById('thread-title');
+    const contentInput = document.getElementById('thread-content');
+    if (titleInput) titleInput.value = '';
+    if (contentInput) contentInput.value = '';
 }
 
 // Handle thread submission
 async function handleNewThreadSubmit(event) {
-    event.preventDefault();
-    const title = document.getElementById('thread-title').value.trim();
-    const category = document.getElementById('thread-category').value;
-    const content = document.getElementById('thread-content').value.trim();
+    if (event) event.preventDefault();
+    const titleInput = document.getElementById('thread-title');
+    const catInput = document.getElementById('thread-category');
+    const contentInput = document.getElementById('thread-content');
 
-    // Firebase'de giriş zorunluluğu yok (Test modu)
-    const username = currentUser ? currentUser.username : "Ziyaretçi";
-    if (!title || !content) return;
+    const title = titleInput ? titleInput.value.trim() : '';
+    const category = catInput ? catInput.value : 'genel';
+    const content = contentInput ? contentInput.value.trim() : '';
 
-    if (window.firebaseClient) {
-        const newPost = {
-            category: category,
-            title: title,
-            content: content,
-            username: username,
-            created_at: new Date().toISOString(),
-            status: "approved"
-        };
-        await window.firebaseClient.submitThread(newPost);
-        closeNewThreadModal();
-        loadForumThreads(category);
-    } else {
-        const allPosts = JSON.parse(safeStorage.getItem('evrenaky_mock_posts') || '[]');
-        const newPost = {
-            id: String(Date.now()),
-            category: category,
-            title: title,
-            content: content,
-            username: username,
-            created_at: new Date().toISOString()
-        };
-        allPosts.unshift(newPost);
-        safeStorage.setItem('evrenaky_mock_posts', JSON.stringify(allPosts));
-        closeNewThreadModal();
-        loadForumThreads(category);
+    if (!title || !content) {
+        alert("Lütfen konu başlığı ve içeriğini girin.");
+        return;
     }
+
+    const username = currentUser ? currentUser.username : "Ziyaretçi";
+    const newPost = {
+        id: 'th_' + Date.now(),
+        category: category,
+        title: title,
+        content: content,
+        username: username,
+        created_at: new Date().toISOString(),
+        status: "approved"
+    };
+
+    // Save locally
+    const allPosts = JSON.parse(safeStorage.getItem('evrenaky_mock_posts') || '[]');
+    allPosts.unshift(newPost);
+    safeStorage.setItem('evrenaky_mock_posts', JSON.stringify(allPosts));
+    safeStorage.setItem('evrenaky_mock_threads', JSON.stringify(allPosts));
+
+    // Save to Firebase
+    if (window.firebaseClient) {
+        try {
+            await window.firebaseClient.submitThread(newPost);
+        } catch(e) {
+            console.warn("Firebase submitThread notice:", e);
+        }
+    }
+
+    closeNewThreadModal();
+    loadForumThreads(category);
+    alert("Tartışma konunuz başarıyla açıldı!");
 }
 
 // Simple HTML escaping helper for security

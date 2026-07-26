@@ -272,15 +272,18 @@ window.firebaseClient = {
     },
     async getReplies(threadId) {
         try {
-            const q = query(collection(db, "forum_replies"), where("thread_id", "==", threadId), orderBy("created_at", "asc"));
-            const querySnapshot = await getDocs(q);
+            const querySnapshot = await getDocs(collection(db, "forum_replies"));
             const replies = [];
             querySnapshot.forEach((doc) => {
-                replies.push({ id: doc.id, ...doc.data() });
+                const data = doc.data();
+                if (String(data.thread_id) === String(threadId) || String(data.post_id) === String(threadId)) {
+                    replies.push({ id: doc.id, ...data });
+                }
             });
+            replies.sort((a, b) => new Date(a.created_at || 0) - new Date(b.created_at || 0));
             return replies;
         } catch(e) {
-            console.error("Error fetching replies", e);
+            console.warn("Error fetching replies:", e);
             return [];
         }
     },
