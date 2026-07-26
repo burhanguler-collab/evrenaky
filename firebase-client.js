@@ -62,20 +62,42 @@ function kullaniciBicimle(user) {
 // Firestore kullanıcı belgesi oluşturma/güncelleme yardımcısı
 async function kaydetVeyaGuncelleKullanici(user, extraData = {}) {
     if (!user) return;
+    const userData = {
+        id: user.uid,
+        uid: user.uid,
+        email: user.email || '',
+        username: user.displayName || (user.email ? user.email.split('@')[0] : 'Üye'),
+        created_at: new Date().toISOString(),
+        last_login: new Date().toISOString(),
+        ...extraData
+    };
+
+    // 1. ALWAYS Save to LocalStorage first
+    try {
+        const localUsers = JSON.parse(localStorage.getItem('evrenaky_mock_users') || '[]');
+        const idx = localUsers.findIndex(u => u && u.email && u.email.toLowerCase() === userData.email.toLowerCase());
+        if (idx >= 0) {
+            localUsers[idx] = { ...localUsers[idx], ...userData };
+        } else {
+            localUsers.unshift(userData);
+        }
+        localStorage.setItem('evrenaky_mock_users', JSON.stringify(localUsers));
+    } catch(err) {
+        console.warn("LocalStorage save user backup notice:", err);
+    }
+
+    // 2. Save to Firestore users collection
     try {
         const userRef = doc(db, "users", user.uid);
-        const userData = {
-            id: user.uid,
-            uid: user.uid,
-            email: user.email || '',
-            username: user.displayName || (user.email ? user.email.split('@')[0] : 'Üye'),
-            created_at: new Date().toISOString(),
-            last_login: new Date().toISOString(),
-            ...extraData
-        };
         await setDoc(userRef, userData, { merge: true });
+    } catch(e) {
+        console.warn("Firestore user doc save notice:", e);
+    }
+}
 
-        // Backup to LocalStorage mock users
+window.firebaseAuth = {
+    async saveUserDoc(userData) {
+        if (!userData || !userData.email) return;
         try {
             const localUsers = JSON.parse(localStorage.getItem('evrenaky_mock_users') || '[]');
             const idx = localUsers.findIndex(u => u && u.email && u.email.toLowerCase() === userData.email.toLowerCase());
@@ -85,15 +107,23 @@ async function kaydetVeyaGuncelleKullanici(user, extraData = {}) {
                 localUsers.unshift(userData);
             }
             localStorage.setItem('evrenaky_mock_users', JSON.stringify(localUsers));
-        } catch(err) {
-            console.warn("LocalStorage save user backup error:", err);
-        }
-    } catch(e) {
-        console.error("Firestore user doc save error:", e);
-    }
-}
+        } catch(err) {}
 
-window.firebaseAuth = {
+        try {
+            const docId = userData.id || userData.email.replace(/[@.]/g, '_');
+            const userRef = doc(db, "users", docId);
+            await setDoc(userRef, {
+                uid: docId,
+                email: userData.email,
+                username: userData.username || 'Üye',
+                provider: userData.provider || 'E-posta',
+                created_at: userData.created_at || new Date().toISOString(),
+                last_login: new Date().toISOString()
+            }, { merge: true });
+        } catch(e) {
+            console.warn("Firestore saveUserDoc notice:", e);
+        }
+    },
     async kayitOl(email, password, username) {
         try {
             const cred = await createUserWithEmailAndPassword(auth, email, password);
