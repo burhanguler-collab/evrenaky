@@ -29,7 +29,7 @@ const chapters = [
     { id: 'akademik_03_05', title: '3.5 Hortum Dinamikleri ve Siklostrofik Denge', file: 'Metin/Akademik/Kisim_3_Makro_Evren/05_Hortum_Dinamikleri.md', group: 'akademik', part: 'Kısım III: Makro Evren' },
     { id: 'akademik_03_06', title: '3.6 Atmosferik Hareketler ve Coriolis Etkisi', file: 'Metin/Akademik/Kisim_3_Makro_Evren/06_Atmosferik_Hareketler.md', group: 'akademik', part: 'Kısım III: Makro Evren' },
     { id: 'akademik_03_07', title: '3.7 Kozmolojik Genişleme ve Karanlık Enerji Hipotezi', file: 'Metin/Akademik/Kisim_3_Makro_Evren/07_Kozmolojik_Genisleme.md', group: 'akademik', part: 'Kısım III: Makro Evren' },
-    { id: 'akademik_03_08', title: '3.8 Yanlışlanabilirlik ve Deneysel Test Kurguları', file: 'Metin/Akademik/Kisim_3_Makro_Evren/08_Yanlislanabilirlik.md', group: 'akademik', part: 'Kısım III: Makro Evren' },
+    { id: 'akademik_03_08', title: '3.8 Makro-Girdabın Motoru: Vorteks Nedenselliği', file: 'Metin/Akademik/Kisim_3_Makro_Evren/08_Makro_Girdabin_Motoru.md', group: 'akademik', part: 'Kısım III: Makro Evren' },
     { id: 'akademik_03_09', title: "3.9 Ay'ın Görmezden Gelinen Gizemleri", file: 'Metin/Akademik/Kisim_3_Makro_Evren/09_Ayin_Gizemleri.md', group: 'akademik', part: 'Kısım III: Makro Evren' },
     { id: 'akademik_03_10', title: '3.10 Satürn Halka Dinamiği', file: 'Metin/Akademik/Kisim_3_Makro_Evren/10_Saturn_Halka_Dinamigi.md', group: 'akademik', part: 'Kısım III: Makro Evren' },
     { id: 'akademik_03_11', title: '3.11 Kısım Özeti: Ne Öğrendik?', file: 'Metin/Akademik/Kisim_3_Makro_Evren/11_Ne_Ogrendik.md', group: 'akademik', part: 'Kısım III: Makro Evren' },
@@ -752,28 +752,16 @@ let activeThreadId = null;
 
 // Mock database default seed data
 const MOCK_SEEDS = {
-    users: [
-        { id: '1', email: 'kullanici1@mail.com', username: 'Okuyucu_1' },
-        { id: '2', email: 'kullanici2@mail.com', username: 'Okuyucu_2' }
-    ],
-    comments: [
-        { id: '1', chapter_id: 'bolum_01', username: 'Okuyucu_1', content: 'Bu bölüm çok açıklayıcı olmuş.', created_at: '2026-06-29T14:24:00Z' }
-    ],
-    posts: [
-        { id: '1', category: 'genel', title: 'Kitap Hakkında Genel Düşüncelerim', content: 'Projenin altyapısını ve tasarımını çok beğendim.', username: 'Okuyucu_2', created_at: '2026-06-28T09:12:00Z' }
-    ],
-    replies: [
-        { id: '1', post_id: '1', username: 'Okuyucu_1', content: 'Kesinlikle katılıyorum.', created_at: '2026-06-28T11:30:00Z' }
-    ]
+    users: [],
+    comments: [],
+    posts: [],
+    replies: []
 };
 
 // Initialize Mock Local Storage if empty
 function initMockDB() {
     if (!safeStorage.getItem('proje_mock_users')) {
         safeStorage.setItem('proje_mock_users', JSON.stringify(MOCK_SEEDS.users));
-        safeStorage.setItem('proje_mock_comments', JSON.stringify(MOCK_SEEDS.comments));
-        safeStorage.setItem('proje_mock_posts', JSON.stringify(MOCK_SEEDS.posts));
-        safeStorage.setItem('proje_mock_replies', JSON.stringify(MOCK_SEEDS.replies));
     }
 }
 
@@ -1465,18 +1453,18 @@ async function openStatsModal() {
 
     // General Portal aggregates
     if (window.firebaseClient) {
-        const [allComments, allThreads] = await Promise.all([
+        const [allComments, allThreads, totalUsers] = await Promise.all([
             window.firebaseClient.getAllComments(),
-            window.firebaseClient.getThreads()
+            window.firebaseClient.getThreads(),
+            window.firebaseClient.getUsersCount ? window.firebaseClient.getUsersCount() : Promise.resolve(0)
         ]);
         document.getElementById('stat-total-comments').textContent = allComments.length;
         document.getElementById('stat-total-threads').textContent = allThreads.length;
-        // Üye sayısı yalnızca Firebase Console > Authentication > Users ekranından görülebilir.
-        document.getElementById('stat-total-users').textContent = '—';
+        document.getElementById('stat-total-users').textContent = totalUsers;
     } else {
         const mockComments = JSON.parse(safeStorage.getItem('evrenaky_mock_comments') || '[]');
         const mockThreads = JSON.parse(safeStorage.getItem('evrenaky_mock_posts') || '[]');
-        document.getElementById('stat-total-users').textContent = '—';
+        document.getElementById('stat-total-users').textContent = '0';
         document.getElementById('stat-total-comments').textContent = mockComments.length;
         document.getElementById('stat-total-threads').textContent = mockThreads.length;
     }

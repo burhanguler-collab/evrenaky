@@ -54,6 +54,23 @@ function kullaniciBicimle(user) {
     };
 }
 
+// Firestore kullanıcı belgesi oluşturma/güncelleme yardımcısı
+async function kaydetVeyaGuncelleKullanici(user, extraData = {}) {
+    if (!user) return;
+    try {
+        const userRef = doc(db, "users", user.uid);
+        await setDoc(userRef, {
+            uid: user.uid,
+            email: user.email || '',
+            username: user.displayName || (user.email ? user.email.split('@')[0] : 'Üye'),
+            last_login: new Date().toISOString(),
+            ...extraData
+        }, { merge: true });
+    } catch(e) {
+        console.error("Firestore user doc save error:", e);
+    }
+}
+
 window.firebaseAuth = {
     async kayitOl(email, password, username) {
         try {
@@ -61,6 +78,7 @@ window.firebaseAuth = {
             if (username) {
                 await updateProfile(cred.user, { displayName: username });
             }
+            await kaydetVeyaGuncelleKullanici(cred.user, { created_at: new Date().toISOString() });
             return { success: true, user: kullaniciBicimle(cred.user) };
         } catch (e) {
             return { success: false, message: authHataMesaji(e.code) };
@@ -70,6 +88,7 @@ window.firebaseAuth = {
     async girisYap(email, password) {
         try {
             const cred = await signInWithEmailAndPassword(auth, email, password);
+            await kaydetVeyaGuncelleKullanici(cred.user);
             return { success: true, user: kullaniciBicimle(cred.user) };
         } catch (e) {
             return { success: false, message: authHataMesaji(e.code) };
@@ -79,6 +98,7 @@ window.firebaseAuth = {
     async googleIleGiris() {
         try {
             const cred = await signInWithPopup(auth, new GoogleAuthProvider());
+            await kaydetVeyaGuncelleKullanici(cred.user, { created_at: new Date().toISOString() });
             return { success: true, user: kullaniciBicimle(cred.user) };
         } catch (e) {
             return { success: false, message: authHataMesaji(e.code) };
@@ -100,7 +120,12 @@ window.firebaseAuth = {
 
     // Oturum değiştiğinde (giriş/çıkış/sayfa yenileme) çağrılır
     oturumIzle(callback) {
-        onAuthStateChanged(auth, (user) => callback(kullaniciBicimle(user)));
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                kaydetVeyaGuncelleKullanici(user);
+            }
+            callback(kullaniciBicimle(user));
+        });
     },
 
     aktifKullanici() {
@@ -109,6 +134,15 @@ window.firebaseAuth = {
 };
 
 window.firebaseClient = {
+    async getUsersCount() {
+        try {
+            const querySnapshot = await getDocs(collection(db, "users"));
+            return querySnapshot.size;
+        } catch(e) {
+            console.error("Error fetching users count:", e);
+            return 0;
+        }
+    },
     async submitReview(reviewData) {
         try {
             await addDoc(collection(db, "submissions"), reviewData);

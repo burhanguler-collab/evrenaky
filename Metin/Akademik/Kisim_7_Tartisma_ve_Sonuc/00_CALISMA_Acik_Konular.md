@@ -14,7 +14,7 @@
 |---|---|---|---|---|
 | **T-1** | Yıldız Sapması Kıskacı | 🔴 Kritik | ✅ TAŞINDI — 3.4.6 + Postülat 7 ref + 7.4/7.5 eklendi (Tur 9). Kalan: T-10 | Yeni **3.4.6** ✓ |
 | **T-10** | Yoğunluk↔basınç dil birleştirmesi (T-1'den doğdu) | 🟠 İç tutarlılık | ✅ TAŞINDI — 2.4.2 ilke kutusu + 2.6/2.4.4/3.4.6/7.4 düzenlendi | **2.4.2, 2.6, 2.4.4** ✓ |
-| **T-2** | Lorentz İhlali Duvarı | 🔴 Kritik | ✅ TAŞINDI — İtiraz 5 (4.2.16) + 5.1.5 Ayırt Edici Kontroller & Yanlışlanma Taahhüdü + 7.4 md.9 + 7.5 satır 1b | **4.2.16** ✓ **5.1.5** ✓ |
+| **T-2** | Lorentz İhlali Duvarı | 🔴 Kritik | ✅ TAŞINDI — İtiraz 5 (4.2.15) + 5.1.5 Ayırt Edici Kontroller & Yanlışlanma Taahhüdü + 7.4 md.9 + 7.5 satır 1b | **4.2.15** ✓ **5.1.5** ✓ |
 | **T-3** | Zarf Körlüğü Paradoksu | 🔴 Kritik | ✅ Teori tarafı taşındı (3.4.5); deney tarafı Kısım 5 yazımına ertelendi | **3.4.5** ✓ + 5.1 (ertelendi) |
 | **T-4** | Proton Yüzey Hızı ve $c$ Sınırı | 🟠 İç tutarlılık | ✅ TAŞINDI — Postülat 5 notu + Ek A yeniden yazıldı ($\sqrt2 c$ türetimi, $\Sigma$) + 7.4 md.10; Ek B revizyonu T-5'e devredildi | **Postülat 5** + **Ek A** ✓ |
 | **T-5** | Ortamın Kütleçekimsel Muafiyeti | 🟠 İç tutarlılık | ✅ TAŞINDI — Postülat 1 teorem dili + Ek B yeniden yapılandırıldı (B.1–B.4) + 7.4 md.10 güncellendi | **Postülat 1** + **Ek B** ✓ |

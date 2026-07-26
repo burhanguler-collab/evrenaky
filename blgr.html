@@ -163,7 +163,7 @@
     <div class="main-content">
       
       <div class="fb-notice" id="firebaseNotice">
-        <i class="fas fa-exclamation-triangle"></i> <strong>Sistem Uyarı:</strong> Firebase (Google Sunucusu) bağlantısı henüz kurulmadı. Aşağıdaki istatistikler ve yazılar şu an için yalnızca arayüz testidir. Gerçek verileri çekmek için `index.html` ve `blgr.html` içine Firebase API yapılandırmanızı girmeniz gerekmektedir.
+        <i class="fas fa-shield-alt"></i> <strong>Canlı Firebase Bağlantısı Aktif:</strong> Üye girişleri, Google OAuth, yorumlar ve forum verileri doğrudan canlı Google Firebase (Authentication & Firestore) veritabanı üzerinden işlenmektedir.
       </div>
 
       <!-- TAB: STATS -->
@@ -292,7 +292,7 @@
 
 
   <script>
-    document.getElementById("firebaseNotice").innerHTML = "<i class='fas fa-info-circle'></i> <strong>Sistem Uyarı:</strong> BLGR Paneli şu anda Yerel (Mock) veritabanı modunda çalışmaktadır. Firebase/Supabase aktif edilene kadar veriler tarayıcıda tutulur.";
+    document.getElementById("firebaseNotice").innerHTML = "<i class='fas fa-shield-alt'></i> <strong>Canlı Firebase Bağlantısı Aktif:</strong> Üye girişleri, Google OAuth ve portal verileri canlı Firebase veritabanı üzerinden işlenmektedir.";
     document.getElementById("firebaseNotice").style.borderColor = "#00f0ff";
     document.getElementById("firebaseNotice").style.color = "#00f0ff";
     document.getElementById("firebaseNotice").style.background = "rgba(0, 240, 255, 0.1)";

@@ -45,7 +45,7 @@ Fotoelektrik etkide metalden elektron söken şey, "Planck sabiti kadar enerji t
 
 Özetle Evrenakı Teorisinde Planck sabitinin ($h$) kökeni; evrenin en temel, kütleli ve bölünemez hidrodinamik damlacığının (Zerre'nin) tekil mekanik gücü ve yapısal bütünlüğüdür. Kuantum mekaniğinin o mistik ve olasılıksal perdesi, bu modelle birlikte yerini tamamen Newtoniyen ve hidrodinamik bir fiziksel altyapıya bırakır.
 
-## 7.3 Genel Sentez: Kitabın Tek Cümlelik Tezi ve Yedi Kısmın Yayı
+## 7.3 Genel Sentez: Kitabın Tek Cümlelik Tezi ve Ana Gövdenin Yayı (Kısım 1–7)
 
 Kitabın tamamı tek bir tezin açılımıdır: **Uzay boş değildir; ölçülebilir yoğunluğa ve basınca sahip, sürtünmesiz bir süper-akışkanla (Evrenakı) doludur ve fizikte "kuvvet", "alan" veya "uzay-zaman eğriliği" adıyla soyutlanan her şey, bu akışkanın hidrodinamiğinden türer.**
 
@@ -59,11 +59,13 @@ Bu tez kitap boyunca şu yay üzerinde işlendi:
 * **Kısım 6** kâğıt üzerinde kanıtları topladı: rölativistik Doppler formülünün mekanik türetimi, kızıla kaymanın tek mekanizmalı çözümü, yörünge anomalilerinin (Flyby, Gravity Probe B) vorteks yorumu ve optikteki çifte paradoksun (hız geri kazanımı ile Abraham-Minkowski) tek mekanizmayla kapanması.
 * **Kısım 7** (bu kısım) iki sınır vakasını — akışkan topaç ve Planck sabitinin ontolojisi — tartışıp teoriyi sınırlılıklarıyla birlikte teraziye koydu.
 
+Ana gövdeyi iki destek katmanı tamamlar: **Kısım 8** (Ekler) uzun nicel türetimlerin ve parametre envanterinin (Ek A–C) adresini verir; **Kısım 9** hakem değerlendirmelerini toplar.
+
 Sentezin özü şudur: teori, standart fiziğin doğrulanmış *ölçümlerini* reddetmez; onların *yorumunu* değiştirir. Ives-Stilwell, Pound-Rebka, GPS ve Gravity Probe B verileri teorinin içinde yeniden türetilir; ayrışma iddiası ise henüz ölçülmemiş rejimlere (galaktik sınırlar, derin uzay, dönen kütle yakını) yerleştirilir. Teorinin bilimsel kaderi, bu ayrışma noktalarındaki ölçümlere bağlıdır.
 
 ## 7.4 Sınırlılıklar ve Açık Sorular
 
-Teorinin bilimsellik iddiası (bkz. Bölüm 3.8, Popper şartı), zayıf noktalarının da açıkça listelenmesini gerektirir. Mevcut manüskriptin bilinen sınırlılıkları şunlardır:
+Teorinin bilimsellik iddiası (bkz. Bölüm 3.7.5, Popper şartı), zayıf noktalarının da açıkça listelenmesini gerektirir. Mevcut manüskriptin bilinen sınırlılıkları şunlardır:
 
 1. **Nicel boşluklar:** Satürn halkalarındaki "ring rain" kütle kaybı hızı mevcut parametre setiyle nicel olarak türetilememektedir (bkz. Bölüm 3.10'daki dürüst tespitler); bu iddia şimdilik nitel düzeydedir. Benzer şekilde galaktik kızıla kayma sapmasının (Bölüm 6.2.8) sayısal değeri, gerçek bir vorteks yoğunluk profili $\rho(r)$ hesaplanmadan verilemez. Her iki kalem de Ek C'deki **P1** profilinin sabitlenmesine bağlıdır: $\rho(r)$, dönüş eğrisi + kızıla kayma ortak fitiyle sabitlendiğinde iki boşluk birden kapanır.
 2. **Serbest parametreler (resmî envanter: Ek C):** Teorinin tüm adlandırılmış parametreleri Ek C'de tek çizelgede muhasebe edilmiştir. Bilanço: gerçekten serbest kalem **6 skaler** ($k$, $\Sigma$'nın tam değeri, $\eta_E$, $\kappa_d$, $\tau$, $\delta$) **+ 2 profil fonksiyonudur** ($\rho(r)$, Rampa) ve her birinin karşısında onu sabitleyecek gözlem tanımlıdır — hiçbiri istenen değeri alabilen bir yama konumunda değildir. Sayıca karşılaştırma (Standart Model 19+, ΛCDM +6) teorinin lehinedir; ancak Ek C.1'in dürüst kaydı geçerlidir: sayı azlığı avantaj *adayıdır*, kanıt değildir — Standart Çatı'nın parametreleri binlerce bağımsız ölçümü aynı anda tutturmaktadır, Evrenakı'nınkiler henüz sabitleme programındadır.
@@ -74,7 +76,7 @@ Teorinin bilimsellik iddiası (bkz. Bölüm 3.8, Popper şartı), zayıf noktala
 
 7. **Sürüklenme zarfı ve optik sürükleme programı (Bölüm 3.4.6):** Fizeau katsayısının türetimi (Bölüm 3.4.6.3), her molekülün deplase ettiği Evrenakı'nın *tamamının* zarfla birlikte aktığı ("tam taşıma") varsayımına dayanır; bu katsayının tam hidrodinamik bir hesapla bağımsızca doğrulanması gerekir. Ayrıca dispersiyon teriminin türetimi (Bölüm 3.4.6.5) $n(\omega)$'yi ölçümden alır — dispersiyonun mikroskobik kökeni (Zerre atış ritmi ile molekül girdaplarının rezonans tepkisi) ayrı bir modelleme işidir. Son olarak, zarfın gradyanlı (Rampa) yapısının yıldız ışığında ürettiği bükmenin, Gaia'nın µas-düzeyi astrometrisine koyduğu üst sınırla nicel uyumu gösterilmelidir.
 
-9. **Yerel vakumda değişken $c$ iddiasının nicel konumu:** 4. Postülat'ın en iddialı ayağı, ışık hızının yerel laboratuvar vakumunda dahi değişken olduğudur (Kısım 5). Bu iddia, aynı arazide çalışan modern Kennedy–Thorndike ve optik saat ölçümlerinin koyduğu sınırlarla ($10^{-16}$–$10^{-18}$ mertebesi) nicel olarak uzlaştırılmalıdır: öngörülen sinyal genliği, periyodu (yıldız günü beklentisi) ve bu sınırların altında mı kaldığı yoksa onları test mi ettiği açıkça verilmelidir. Bununla bağlantılı ikinci kalem, **ortak-mod gözlemlenebilirlik** sorusudur: eğer yerel standartların bir kısmı $c$ ile birlikte ölçekleniyorsa, hangi referansın ölçeklenmediği ve ölçümü mümkün kılan diferansiyel yapının ne olduğu türetilmelidir. Sınama protokolü ve teorinin bağladığı yanlışlanma koşulları Bölüm 5.1.5'te tanımlanmıştır; kavramsal çerçeve için bkz. Bölüm 4.2.16 (İtiraz 5).
+9. **Yerel vakumda değişken $c$ iddiasının nicel konumu:** 4. Postülat'ın en iddialı ayağı, ışık hızının yerel laboratuvar vakumunda dahi değişken olduğudur (Kısım 5). Bu iddia, aynı arazide çalışan modern Kennedy–Thorndike ve optik saat ölçümlerinin koyduğu sınırlarla ($10^{-16}$–$10^{-18}$ mertebesi) nicel olarak uzlaştırılmalıdır: öngörülen sinyal genliği, periyodu (yıldız günü beklentisi) ve bu sınırların altında mı kaldığı yoksa onları test mi ettiği açıkça verilmelidir. Bununla bağlantılı ikinci kalem, **ortak-mod gözlemlenebilirlik** sorusudur: eğer yerel standartların bir kısmı $c$ ile birlikte ölçekleniyorsa, hangi referansın ölçeklenmediği ve ölçümü mümkün kılan diferansiyel yapının ne olduğu türetilmelidir. Sınama protokolü ve teorinin bağladığı yanlışlanma koşulları Bölüm 5.1.5'te tanımlanmıştır; kavramsal çerçeve için bkz. Bölüm 4.2.15 (İtiraz 5).
 
 8. **Işık yavaşlamasında yoğunluk–basınç dili (giderildi):** Işığın yavaşlaması, birleştirici bir ilkeyle tek çatıya oturtulmuştur (bkz. Bölüm 2.4.2 "Birleştirici İlke" kutusu): sürücü, Evrenakı'nın $P/\rho$ oranının düşmesidir. Saydam maddede hacimce ortalama Evrenakı yoğunluğu korunur, basınç düşer (Bölüm 3.4.6.3); astrofiziksel gradyanda (SN 1987A, Bölüm 2.4.4) hem yoğunluk hem basınç makro-ölçekte seyrelir. Atomik yoğunluk ile Evrenakı yoğunluğunun zıtlığı tüm ilgili bölümlerde açıkça ayrılmıştır. *(Açık kalan tek nicel kalem: hacimce-ortalama korunumun deplasman geometrisinden birinci-ilkelerle türetilmesi.)*
 
@@ -105,7 +107,7 @@ Tablodaki her satır çift taraflı bir bıçaktır: ölçüm Evrenakı beklenti
 ## 7.6 Kapanış: Ne Öğrendik?
 
 * Gaz devlerinin katı kabuk olmadan bütünsel devinim sergilemesi ve Planck sabitinin bölünmezliği, teoride ayrı ayrı yamalarla değil, aynı iki temel kavramla (4. boyut çift dönüşü ve Zerre'nin damla bütünlüğü) açıklandı (7.1–7.2).
-* Kitabın yedi kısmı tek bir tezin — dolu uzay hidrodinamiği — kademeli açılımı olarak özetlendi (7.3).
+* Kitabın ana gövdesini oluşturan yedi kısım, tek bir tezin — dolu uzay hidrodinamiği — kademeli açılımı olarak özetlendi (7.3).
 * Teorinin beş başlıkta sınırlılığı ve açık sorusu, çözüm yollarıyla birlikte listelendi (7.4).
 * Sekiz yanlışlanabilir öngörü, standart fizik beklentileriyle karşı karşıya tek tabloda toplandı (7.5).
 

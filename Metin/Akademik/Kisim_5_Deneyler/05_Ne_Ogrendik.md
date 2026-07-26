@@ -28,6 +28,9 @@ Hareketli kütle plakalarının ışık huzmelerine yaklaştırılıp uzaklaşt�
 ### 4. Dönen Kütleler Eksenel İtim Doğurur (Bölüm 5.4)
 Vakum ortamında 30.000 devirle dönen 200 gramlık alüminyum diskin yanındaki 6 gramlık kütleye uyguladığı kuvvet ölçülmüştür. Klasik kütleçekim beklentisi ~0,00000008 N iken, rapor edilen değer ~0,00981 N'luk **eksenel itme kuvvetidir** — yaklaşık yüz bin kat fark. Hava ortamındaki ön test (kanatçık kontrolü), etkinin hava akımı artefaktı olmadığını dışlamak için yapılmıştır. Doğrulanması hâlinde bu, teorinin en çarpıcı laboratuvar kanıtı olacaktır.
 
+### 5. Program Kendi Ayırt Edici Kontrollerini ve Yanlışlanma Koşullarını Tanımlar (Bölüm 5.1.5 ve 5.3.7)
+Deney programı yalnızca ölçüm protokolü değil, **ayırt etme taahhüdü** de içerir. Bölüm 5.1.5, sinyalin kozmik mi çevresel mi olduğunu ayrıştıracak kontrolleri tanımlar — en güçlüsü yıldız günü / güneş günü ayrımıdır: gerçek bir Evrenakı sinyali yıldız günü (23 sa 56 dk) periyodu taşımak zorundadır, çevresel etkilerin tamamı ise güneş günü (24 sa) periyodu taşır; sinyal güneş gününü izlerse teori bu alanda yanlışlanmış sayılacaktır. Bölüm 5.3.7 ise programın bir sonraki halkasını tanımlar: dönen/akan optik ortamlarda hız-profili asimetrisi arayan, henüz tasarım aşamasındaki DENEY 2 ve DENEY 8 kurguları.
+
 ## Anahtar Terimler
 
 **Zaman-Uçuş (Time-of-Flight) Ölçümü** · **Ring Osilatör** · **Attometer** · **Kütle Dışı / Kütle İçi Gradyan** · **Eksenel İtim** · **Kanatçık Kontrolü** (artefakt dışlama) · **Beyza Deneyi** (Deney 3'ün — hareketli plakalı gradyan ölçümünün — özel adı)
@@ -39,6 +42,7 @@ Vakum ortamında 30.000 devirle dönen 200 gramlık alüminyum diskin yanındaki
 3. Cam küp deneyinin bulgusu, Kısım 1.5'teki hangi teorik profili sınar? (5.3)
 4. Eksenel itim deneyindeki hava ortamı ön testinin amacı neydi? (5.4)
 5. Bu kısımdaki bulguların bilimsel statüsü nedir — yayımlanmış, tekrarlanmış veri mi, yazarın rapor ettiği ilk bulgular mı? (Bu özet ve bölüm dipnotları)
+6. Yıldız günü / güneş günü ayrımı hangi karışıklığı dışlamak için tasarlanmıştır ve sinyal hangi periyodu izlerse teori yanlışlanmış sayılır? (5.1.5)
 
 ## Kısım 6'ya Geçiş
 

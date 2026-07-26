@@ -35,6 +35,8 @@ Bu mekanizma (Kinematik Doppler ile birleştiğinde), doğrudan gözlemlenememi�
 
 ## 3.7.4 Karanlık Maddenin Diğer Kanıtları Karşısında Vorteks Modeli: Görünmez Kütle Değil, Görünmez Akış Yapısı
 
+> **Okuma yönlendirmesi:** Bu bölüm, vorteks modelinin Kısım 4'te kurulacak iki matematiksel aracını — logaritmik basınç kuyusu (4.2.9.2) ve merceklenmenin ortam-gradyanı okuması (4.3) — türetimlerine girmeden, sonuçları itibarıyla önden kullanır. Bölüm sonuç düzeyinde kendi içinde takip edilebilir; türetimleri görmek isteyen okuyucu önce 4.2.8–4.2.9 ile 4.3'ü okuyup buraya dönebilir.
+
 Bölüm 4.2.8–4.2.9, galaktik dönüş eğrilerini karanlık madde parçacığına ihtiyaç duymadan logaritmik vorteks basınç kuyusuyla çözmektedir. Ancak dürüst kayıt şudur: dönüş eğrileri, karanlık madde hipotezinin kanıtları içinde **en zayıf** olanıdır. Hipotezi bugün ayakta tutan asıl üç sütun; çarpışan galaksi kümelerindeki kütle-ışık ayrışması (Bullet Cluster), evrenin büyük ölçekli filaman yapısı (kozmik ağ) ve kozmik arka plan ışımasının akustik pikleridir. Yalnızca dönüş eğrilerini açıklayabilen alternatif modeller (MOND; Milgrom, 1983) tam bu üç sütunda düşmüştür. Bu bölüm, üç sütunu tek tek vorteks modeliyle ele alır.
 
 Üçünü birden çözen çekirdek ilke şudur: **standart fiziğin "karanlık madde" adını verdiği şey, teoride görünmez bir parçacık türü değil, ortamın görünmez sirkülasyon kuyularıdır.** Merceklenmeyi ve dinamiği yöneten basınç topografyası (Bölüm 4.3), ışıyan maddenin yerel yoğunluğuna değil, ortamdaki koherent akış yapılarına bağlıdır: kuyuyu kazan, kütlenin kendisi değil dolaşımdır ($P(r)=P_0+\rho v_0^2\ln r$ formülünde kaynak terimi $v_0$'dır; Bölüm 4.2.9.2).
@@ -84,3 +86,15 @@ Böylece karanlık maddenin dört kanıt sınıfı, teoride tek mekanizmaya iner
 MOND'un bu sınavlarda düşmesinin yapısal nedeni de görünür olur: MOND kuvvet yasasını değiştirir ama kuyuları taşıyacak bir **yapı** önermez; Evrenakı taşıyıcı yapıyı önerir ve aynı yapı dört gözlemde birden iş görür.
 
 **Dürüst kayıt:** Bu bölümün kurduğu açıklamalar mekanizma seviyesindedir; nicel türetimleri manüskriptin açık hesap kalemleridir (bkz. 7.4): kuyu derinliği–sirkülasyon ilişkisinin kütle-itim türetimiyle tek formülasyonda gösterilmesi, Bullet Cluster merceklenme haritasının nicel üretimi, kozmik ağ güç spektrumu ve CMB pik konum/oranlarının kuyu-iskeleti hesabından türetimi ile 2,725 K değerinin zamansal-$c$ soğuma bütçesinden hesabı.
+
+## 3.7.5 Makro Programın Yanlışlanma Taahhütleri (Popper Şartı)
+
+Bir teorinin bilimsel geçerliliği, ne kadar çok şeyi açıkladığıyla değil, hangi koşullar altında "yanlışlanabileceği (falsifiable)" ile ölçülür. Kütle-İtim ve Evrenakı teorisi, salt spekülatif bir felsefi kurgu, test edilemez bir matematiksel sicim (string) veya hayalet bir karanlık madde arayışı değildir; ampirik olarak test edilebilir ve çok net koşullar altında doğrudan "yanlışlanabilir" bir akışkanlar mekaniği modelidir.
+
+Bu kısmın kurduğu makro program, Karl Popper'ın yanlışlanabilirlik ilkesine bütünüyle sadık kalacak şekilde şu keskin test sınırlarını taahhüt eder. Şayet bu testlerden herhangi biri negatif sonuçlanırsa, ilgili katmanın çöktüğü kayıtsız şartsız kabul edilecektir:
+
+1. **İnterferometrik Hız Değişimi:** Evrenakı'nın basıncının ve yoğunluğunun değiştiği derin uzay koşullarında veya çok yoğun kütle sistemlerinin yakın alanında (örneğin Güneş'in taç tabakasına yakın geçişlerde) ışık hızında (lokal $c$) hidrodinamiğin öngördüğü yavaşlama/hızlanma saptanamazsa, teori ampirik olarak geçersiz kılınacaktır.
+2. **Akışkanlar Mekaniği Uyumsuzluğu:** Astrofiziksel gözlemlerden elde edilen yeni gezegensel yörünge/presesyon verileri, Kütle-İtim modelinin Evrenakı'nın ultra-akışkan davranışı (Tisza, 1938; Landau, 1941) ile türettiği viskozite sıfırlanması veya sürtünmesizlik matematiğiyle çelişirse, akışkanlar modelinin bu boyutu iptal olacaktır.
+3. **Rejim Geçişinin İhlali:** Kütle-İtim konseptinden türetilen radyal "İtim" (Push) basınç gradyanı, Güneş sistemi gibi lokal girdaplarda Newton'un ters-kare yasasını ($1/r^2$) ve devasa sarmal galaksilerde logaritmik $\ln(r)$ basınç sönümlenmesini tek ve aynı diferansiyel denklem setinden (rejim geçişiyle) türetemezse, teorinin matematiksel tutarlılığı tümüyle reddedilecektir.
+
+Kitabın tamamına yayılan yanlışlanabilir öngörülerin tek tablodaki dökümü için bkz. Bölüm 7.5; laboratuvar deney kurguları (DENEY serisi) Kısım 5'te tanımlanmıştır.

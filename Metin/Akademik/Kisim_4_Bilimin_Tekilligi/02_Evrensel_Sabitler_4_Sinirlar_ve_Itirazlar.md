@@ -1,6 +1,6 @@
-# 4.2 Evrenakı'nın Matematiksel Modeli — IV: Modelin Sınırları ve İtirazlara Cevaplar (4.2.13–4.2.16)
+# 4.2 Evrenakı'nın Matematiksel Modeli — IV: Modelin Sınırları ve İtirazlara Cevaplar (4.2.12–4.2.17)
 
-## 4.2.13 Değerlendirme ve Modelin Sınırları
+## 4.2.12 Değerlendirme ve Modelin Sınırları
 Geliştirilen bu matematiksel model:
 * Newton'un (1687) $1/r^2$ yasasını hidro-mekanik bir sonuç olarak türetir.
 * Göksel hareketleri 3 boyutlu basınç bileşenleri üzerinden inceler.
@@ -12,7 +12,7 @@ Ancak bilimsel standartlar gereği modelin limitleri dikkate alınmalıdır:
 * İleri sürülen hidrodinamik etkiler, bağımsız kozmolojik gözlemlerle test edilmelidir.
 * $\alpha$ ve $\gamma$ gibi parametrelerin fiziksel doğası daha detaylı analitik modellere oturtulmalıdır.
 
-## 4.2.14 Özet: Rejim-Bağımlı Fiziksel Çerçeve
+## 4.2.13 Özet: Rejim-Bağımlı Fiziksel Çerçeve
 Gözlemlediğimiz yörünge mekaniği, içinde bulunduğumuz Evrenakı ölçeğinin yerel bir tepkisidir.
 
 | **Rejim (Ölçek)** | **Fiziksel Koşul** | **Evrenakı Yoğunluk Profili ($\rho$)** | **Cosmofluid Net Etki Eğilimi** | **Gözlemsel Sonuç** |
@@ -23,7 +23,7 @@ Gözlemlediğimiz yörünge mekaniği, içinde bulunduğumuz Evrenakı ölçeği
 
 **Sonuç:** Evrenakı modelinde kuvvetler evrensel sabitlerle değil, ortamın yerel dinamiğiyle belirlenir. Sistem, içinde bulunulan Euler ve Süreklilik rejimine göre gözlemlenen itim davranışını otomatik olarak üretir.
 
-## 4.2.15 Bir İtiraf: Matematiksel Karmaşıklık ve Gelecek Vizyonu
+## 4.2.14 Bir İtiraf: Matematiksel Karmaşıklık ve Gelecek Vizyonu
 
 Görüldüğü üzere Evrenakı (Cosmofluid) teorisi, evrenin işleyişini klasik mekanikteki $F = G \frac{m_1 m_2}{r^2}$ denklemi gibi izole, statik ve basit birkaç formülle kestirip atılabilecek bir sığlıkta görmez. Aksine, doğanın gerçek yüzü olan akışkanlar mekaniğinin o muazzam ve kaotik karmaşıklığını kucaklar.
 
@@ -31,7 +31,7 @@ Burada sunulan hidrodinamik denklemler, sistemin sadece en idealize edilmiş, te
 
 Bu nedenle, kitabın bu bölümünde Evrenakı'nın sadece "temel matematiği ve iskeleti" işlenmiş, denklemlerin o kaotik ve boğucu detaylarına bilerek girilmemiştir. Klasik fiziğin matematiği basit ama hatalıdır; Evrenakı hidrodinamiği ise ürkütücü derecede karmaşık ama doğanın ta kendisidir. Bu devasa kozmik okyanusun tüm spesifik denklemlerini çözmek, bu teoriyi devralacak geleceğin fizikçilerine bırakılmış bir mirastır.
 
-## 4.2.16 G Sabiti Paradigmasının Sınırları ve Klasik Fiziğin İtirazlarına Cevaplar
+## 4.2.15 G Sabiti Paradigmasının Sınırları ve Klasik Fiziğin İtirazlarına Cevaplar
 
 Yerçekiminin salt bir Evrenakı basıncı ($G = \alpha/\rho_n$, bkz. 4.2.4) olduğunu gösterdikten sonra, klasik fiziğin ana akım savunucularından gelebilecek en sert 5 eleştiriyi ve bu eleştirilerin Evrenakı mekaniğiyle nasıl karşılandığını incelemek şarttır:
 
@@ -73,3 +73,27 @@ Eğer Dünya'nın merkezindeki demir-nikel çekirdek dönmeyi bırakırsa, etraf
 **Kozmik çerçevenin çapası.** Teorinin "mutlak kozmik ortam" kavramı soyut bir varsayım olarak bırakılmamalıdır: Evrenakı'nın durgun çerçevesi, kozmik mikrodalga arka plan ışımasının dipol ölçümüyle belirlenen çerçeveyle özdeşleştirilir. Güneş sisteminin bu çerçeveye göre yaklaşık 370 km/s hızla hareket ettiği ölçülmüş bir olgudur. Bu hareket bir "esir rüzgârı" olarak görünmez — çünkü hem sürüklenme zarfı hem de 6.1'de türetilen fiziksel deformasyon mekanizmaları (boy kısalması ve saat yavaşlaması) mutlak hızı yerel gözlemden siler. Böylece teori, tercihli bir çerçeveye sahip olmakla anizotropi deneylerinin null sonucunu aynı anda taşıyabilir.
 
 **Teorinin sahiplendiği yük ve yanlışlanma taahhüdü.** Yukarıdaki dört katman, itirazın kavramsal gücünü karşılar. Ancak teorinin en iddialı ayağı bunlarla tamamlanmaz: 4. Postülat, ışık hızının **yerel vakumda dahi** sabit olmadığını öne sürer ve Kısım 5'teki deney programı bunu doğrudan ölçmek üzere kurulmuştur. Bu iddia, mevcut Kennedy–Thorndike ve optik saat sınırlarıyla aynı arazide yarıştığı için, teori onu bir "yorum" olarak değil, **ayırt edici kontrollerle sınanacak yanlışlanabilir bir öngörü** olarak sahiplenir. Bu öngörünün kesin biçimi, sınama protokolü ve teorinin bağladığı yanlışlanma koşulu Bölüm 5.1'de ayrıca tanımlanmıştır (bkz. Bölüm 5.1 "Ayırt Edici Kontroller ve Yanlışlanma Taahhüdü"); açık nicel kalemler ise Bölüm 7.4'te listelenmiştir.
+
+## 4.2.16 Genel Görelilik ve Evrenakı: Matematiğin Fiziksel Nedenselliği
+Evrenakı teorisi, modern fiziğin ve Einstein'ın Genel Görelilik (GR) denklemlerinin ürettiği kusursuz matematiksel sonuçları (örneğin kara deliklerin dönüş limitlerini veya uzay-zaman eğriliklerini) **reddetmez.** Aksine, o denklemlerin astronomik gözlemlerle birebir uyuştuğunu kabul eder. 
+
+Ancak Evrenakı'nın itiraz ettiği ve çözdüğü şey, **bu matematiğin arkasındaki fiziksel nedenselliktir (causality).**
+
+Genel Görelilik, uzayın büküldüğünü ve cisimlerin bu geometrik eğriliğe göre hareket ettiğini söyler, ancak "boş uzayın nasıl olup da bükülebilen fiziksel bir doku gibi davrandığını" açıklamaz; sadece matematiğini kurar. Evrenakı teorisi ise o eksik olan "fiziksel aktörü" sahneye koyar: **Süperakışkan Uzay Dokusu (Evrenakı) ve 4. Boyut Mikro Dönüşleri.**
+
+Genel Görelilik'teki o esnek, bükülen ve cisimleri bir arada tutan soyut "Uzay-Zaman Geometrisi", Evrenakı teorisinde devasa ve sürtünmesiz bir **Makro Vorteksin (Girdabın) Radyal Basıncıdır.** Evrenakı'nın nihai hedefi; Genel Görelilik'in gözlemlerle uyuşan kusursuz sayısal öngörülerini (örneğin Kritik Dönüş Limitlerini veya $r_{ISCO}$ değerlerini) reddetmek değil, tam aksine bu sayıları saf akışkanlar mekaniği denklemleri üzerinden bağımsızca türetmektir. Genel Görelilik olayı soyut bir matematiksel geometri olarak tanımlayıp bırakırken; Evrenakı teorisi, bu geometrinin arkasında yatan hidro-dinamik basıncı ve 4D spin motorunu ortaya çıkararak **"Matematiğe fiziksel bir vücut"** giydirmeyi amaçlar.
+
+Kısacası bizler GR'nin (Genel Görelilik'in) gözlemlerle doğrulanan matematiğini reddetmiyoruz; o matematiği yaratan asıl "mekanik ve akışkan" nedenselliği felsefi olarak kuruyoruz. Bölüm 6.3'te tartışılan *Gravity Probe B* verilerindeki sayısal uyuşmazlıklarda (39 mas/yr) da görüldüğü üzere; Genel Görelilik'in ürettiği sayıların Evrenakı'nın akışkan denklemlerinden bağımsızca ve birebir türetilmesi, teorinin önündeki en büyük matematiksel sınavdır. Ancak nedensellik (causality) açısından makro vorteks modeli, fizikteki "soyut geometriye" somut ve mekanik bir gerçeklik kazandırır.
+
+## 4.2.17 Genel Göreliliğin Geometrik Çöküşü: Eksik Olan Basınç Kuvvetleri
+Genel Görelilik (GR), uzay-zamanı bükülebilir esnek bir çarşaf gibi modelleyerek bazı kuvvetleri başarıyla geometrik kalıplara sığdırabilir. Nitekim matematiğinde gördüğümüz üzere GR, "merkezcil kuvvetleri" (cismi merkeze çeken kütleçekim eğriliğini) ve "eksenel kuvvetleri" (dönen kütlelerin uzayı peşinden sürüklemesi olan *frame-dragging* etkisini) bu soyut geometri üzerinden başarıyla tanımlayabilir. 
+
+Ancak GR'nin en büyük açmazı, soyut esnek uzayı ne kadar bükerseniz bükün asla elde edemeyeceğiniz, sadece gerçek bir "akışkan" mekaniğinde var olabilecek eksik kuvvetlerdir. Evrenakı teorisi, GR'nin öngöremeyeceği iki devasa hidro-dinamik basınç kuvvetinin daha evrende aktif olarak iş yaptığını ortaya koyar:
+
+1. **Kutupsal Yanal Sıkıştırma Kuvvetleri:** Dönen makro girdaplar, sadece ekvatoral düzlemde dönmekle kalmaz; akışkan mekaniği gereği kutuplardan (üstten ve alttan) ekvator düzlemine doğru devasa bir yanal sıkıştırma kuvveti uygularlar. GR'nin "uzay çukurunda" böyle kutupsal bir basınç karşılığı yoktur.
+2. **Akışkanın Doğal Arka Plan Basıncı:** Uzay boşluğu gerçek bir süperakışkan (Evrenakı) olduğu için, zaten kendi içinde doğal bir statik basınca sahiptir. Herhangi bir girdap olmasa bile, akışkanın içine dalmış her kütle bu her yönden gelen omnidireksiyonel doğal sıkıştırmaya maruz kalır.
+
+**Sonuç: Neden Galaksilerde GR Çöküyor?**
+Sadece merkezcil ve eksenel kuvvetlerin (Güneş sistemi gibi nispeten küçük ölçeklerde) iş yaptığı yerlerde GR'nin matematiği çalışır ve gözlemlerle uyuşur. Ancak ölçek büyüyüp devasa galaksilere geçildiğinde; o galaksiyi bir arada tutan şey sadece merkezdeki karadeliğin kütleçekim eğriliği (merkezcil kuvvet) değildir. Asıl yapıştırıcı güç, devasa galaktik girdabın yarattığı kutupsal yanal sıkıştırmalar ve Evrenakı'nın statik arka plan basıncıdır. 
+
+GR bu sıvısal basınç kuvvetlerini geometrisine dahil edemediği için galaksilerin dönüş hızlarını ve yıldızların savrulmamasını hesaplarken tamamen çöker. Bilim dünyası bu çöküşü (eksik kuvvetleri) telafi edebilmek için "Karanlık Madde" adında görünmez bir kütle icat etmek zorunda kalmıştır (illüzyonun vorteks çözümü için Bkz. 3.1.8). Özetle Evrenakı teorisi çok yönlü akışkan basınçlarını kapsayan kapsamlı bir hidro-dinamik paket sunarken; GR, bu devasa evrensel dengeyi ancak soyut varsayımlarla ve sadece iki kuvvet (merkezcil ve eksenel) üzerinden eksik bir şekilde modellemeye çalışır.
