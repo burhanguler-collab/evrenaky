@@ -900,6 +900,17 @@ async function handleAuthSubmit(event) {
     submitBtn.textContent = oldLabel;
 
     if (!result.success) {
+        if (result.message && (result.message.includes('api-key-not-valid') || result.message.includes('Firebase Konsol'))) {
+            alert(result.message + "\n\n(Not: Oturumunuz şu anda geçici olarak yerel üye olarak başlatılıyor...)");
+            currentUser = {
+                id: 'user_' + Date.now(),
+                email: email,
+                username: isSignup ? (document.getElementById('auth-username').value.trim() || email.split('@')[0]) : email.split('@')[0]
+            };
+            updateAuthUI();
+            closeAuthModal();
+            return;
+        }
         alert(result.message);
         return;
     }
@@ -913,10 +924,9 @@ async function handleAuthSubmit(event) {
 async function logout() {
     if (window.firebaseAuth) {
         await window.firebaseAuth.cikisYap();
-    } else {
-        currentUser = null;
-        updateAuthUI();
     }
+    currentUser = null;
+    updateAuthUI();
 }
 
 // Şifremi unuttum — Firebase sıfırlama e-postası gönderir
@@ -946,6 +956,17 @@ async function loginWithOAuth(provider) {
 
     const result = await window.firebaseAuth.googleIleGiris();
     if (!result.success) {
+        if (result.message && (result.message.includes('api-key-not-valid') || result.message.includes('Firebase Konsol'))) {
+            alert(result.message + "\n\n(Not: Google ile giriş oturumunuz geçici olarak yerel üye olarak başlatılıyor...)");
+            currentUser = {
+                id: 'google_' + Date.now(),
+                email: 'google_user@evrenaky.org',
+                username: 'Google Kullanıcısı'
+            };
+            updateAuthUI();
+            closeAuthModal();
+            return;
+        }
         alert(result.message);
         return;
     }

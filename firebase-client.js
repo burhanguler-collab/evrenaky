@@ -28,6 +28,9 @@ const auth = getAuth(app);
 
 // Firebase hata kodlarını okunabilir Türkçe mesaja çevirir
 function authHataMesaji(code) {
+    if (typeof code === 'string' && (code.includes('api-key-not-valid') || code.includes('invalid-api-key') || code.includes('API key'))) {
+        return 'Firebase Authentication servisi henüz Firebase Konsolunda (https://console.firebase.google.com) aktifleştirilmemiştir. Proje yöneticisinin "Authentication > Get Started" butonuna basarak E-posta ve Google giriş yöntemlerini açması gerekmektedir.';
+    }
     const map = {
         'auth/email-already-in-use': 'Bu e-posta adresiyle zaten bir üyelik var. Giriş yapmayı deneyin.',
         'auth/invalid-email': 'Geçersiz e-posta adresi.',
