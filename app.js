@@ -901,14 +901,16 @@ async function handleAuthSubmit(event) {
 
     if (!result.success) {
         if (result.message && (result.message.includes('api-key-not-valid') || result.message.includes('Firebase Konsol') || result.message.includes('auth/api-key-not-valid'))) {
+            const usernameInput = document.getElementById('auth-username');
+            let enteredName = (usernameInput && usernameInput.value.trim()) ? usernameInput.value.trim() : (email ? email.split('@')[0] : 'Üye');
             currentUser = {
                 id: 'user_' + Date.now(),
                 email: email || 'uye@evrenaky.org',
-                username: isSignup ? (document.getElementById('auth-username').value.trim() || email.split('@')[0]) : (email ? email.split('@')[0] : 'Üye')
+                username: enteredName
             };
             updateAuthUI();
             closeAuthModal();
-            alert("Giriş başarılı! Hoş geldiniz.");
+            alert("Giriş başarılı! Hoş geldiniz, " + enteredName + ".");
             return;
         }
         alert(result.message);
@@ -957,14 +959,16 @@ async function loginWithOAuth(provider) {
     const result = await window.firebaseAuth.googleIleGiris();
     if (!result.success) {
         if (result.message && (result.message.includes('api-key-not-valid') || result.message.includes('Firebase Konsol') || result.message.includes('auth/api-key-not-valid'))) {
+            let enteredName = prompt("Sitede görünecek adınızı / üye adınızı girin:", "B. Güler");
+            if (!enteredName || !enteredName.trim()) enteredName = "B. Güler";
             currentUser = {
                 id: 'google_' + Date.now(),
                 email: 'google_user@evrenaky.org',
-                username: 'Google Kullanıcısı'
+                username: enteredName.trim()
             };
             updateAuthUI();
             closeAuthModal();
-            alert("Google ile giriş başarılı! Hoş geldiniz.");
+            alert("Hoş geldiniz, " + currentUser.username + "!");
             return;
         }
         alert(result.message);
