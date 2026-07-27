@@ -173,7 +173,7 @@
       return { w: Math.max(w, 200), h: Math.max(h, 150) };
     }
 
-    // Smart Multi-Tier WebGL Renderer initialization for Firefox / Edge / Safari / Chrome
+    // Try WebGL
     let webglSuccess = false;
     if (typeof THREE !== 'undefined') {
       try {
@@ -184,12 +184,10 @@
         const camera = new THREE.PerspectiveCamera(45, dim.w / dim.h, 0.1, 1000);
         camera.position.set(0, 0, 16);
 
-        // Tier 1: Try full WebGL with antialiasing & default power
         let renderer;
         try {
           renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: "default", failIfMajorPerformanceCaveat: false });
         } catch (e1) {
-          // Tier 2: Try WebGL without antialiasing (fixes Firefox WebGL context creation on certain GPUs)
           renderer = new THREE.WebGLRenderer({ antialias: false, alpha: true, powerPreference: "default", failIfMajorPerformanceCaveat: false });
         }
 
@@ -286,11 +284,11 @@
           webglSuccess = true;
         }
       } catch (e) {
-        console.warn("WebGL initialization failed, switching to 2D Canvas Fallback:", e);
+        console.warn("WebGL initialization failed, using High-Fidelity 2D Solid 3D Engine:", e);
       }
     }
 
-    // 2D CANVAS FALLBACK ENGINE (For Firefox / devices with disabled WebGL)
+    // HIGH-FIDELITY SOLID 3D ENGINE FOR 2D CANVAS (Renders Solid Filled Polygons with Specular Lighting & Volumetric Glows)
     if (!webglSuccess) {
       container.innerHTML = '';
       const fallbackCanvas = document.createElement('canvas');
@@ -308,62 +306,75 @@
       window.addEventListener('resize', resize2D);
       resize2D();
 
-      // Shape Vertices and Edges for 3D Projection in 2D
-      const shapeData = {
+      // Solid 3D Geometry Definitions (Vertices & Polygon Faces)
+      const solidShapes = {
         tetra: {
-          nodes: [[0,-1.8,0], [1.7,1,-1], [-1.7,1,-1], [0,1,1.7]],
-          edges: [[0,1],[0,2],[0,3],[1,2],[2,3],[3,1]]
+          nodes: [[0,-2,0], [1.9,1.1,-1.1], [-1.9,1.1,-1.1], [0,1.1,1.9]],
+          faces: [
+            [0,2,1], [0,1,3], [0,3,2], [1,2,3]
+          ]
         },
         cube: {
-          nodes: [[-1.2,-1.2,-1.2],[1.2,-1.2,-1.2],[1.2,1.2,-1.2],[-1.2,1.2,-1.2],
-                  [-1.2,-1.2,1.2],[1.2,-1.2,1.2],[1.2,1.2,1.2],[-1.2,1.2,1.2]],
-          edges: [[0,1],[1,2],[2,3],[3,0],[4,5],[5,6],[6,7],[7,4],[0,4],[1,5],[2,6],[3,7]]
+          nodes: [[-1.3,-1.3,-1.3],[1.3,-1.3,-1.3],[1.3,1.3,-1.3],[-1.3,1.3,-1.3],
+                  [-1.3,-1.3,1.3],[1.3,-1.3,1.3],[1.3,1.3,1.3],[-1.3,1.3,1.3]],
+          faces: [
+            [0,3,2,1], [4,5,6,7], [0,1,5,4],
+            [2,3,7,6], [0,4,7,3], [1,2,6,5]
+          ]
         },
         cylinder: {
           nodes: (function(){
             let n = [];
-            for(let i=0;i<12;i++){
-              let a = (i/12)*Math.PI*2;
-              n.push([Math.cos(a)*1.4, -2, Math.sin(a)*1.4]);
-              n.push([Math.cos(a)*1.4, 2, Math.sin(a)*1.4]);
+            for(let i=0;i<16;i++){
+              let a = (i/16)*Math.PI*2;
+              n.push([Math.cos(a)*1.4, -2.4, Math.sin(a)*1.4]); // bot
+              n.push([Math.cos(a)*1.4, 2.4, Math.sin(a)*1.4]);  // top
             }
             return n;
           })(),
-          edges: (function(){
-            let e = [];
-            for(let i=0;i<12;i++){
-              let top1 = i*2, bot1 = i*2+1;
-              let top2 = ((i+1)%12)*2, bot2 = ((i+1)%12)*2+1;
-              e.push([top1, bot1]);
-              e.push([top1, top2]);
-              e.push([bot1, bot2]);
+          faces: (function(){
+            let f = [];
+            for(let i=0;i<16;i++){
+              let b1 = i*2, t1 = i*2+1;
+              let b2 = ((i+1)%16)*2, t2 = ((i+1)%16)*2+1;
+              f.push([b1, b2, t2, t1]);
             }
-            return e;
+            let topCap = [], botCap = [];
+            for(let i=0;i<16;i++){
+              topCap.push(i*2+1);
+              botCap.unshift(i*2);
+            }
+            f.push(topCap);
+            f.push(botCap);
+            return f;
           })()
         },
         sphere: {
           nodes: (function(){
             let n = [];
-            for(let lat=-2; lat<=2; lat++){
-              let r = Math.sqrt(Math.max(0, 4 - lat*lat));
-              for(let lon=0; lon<10; lon++){
-                let a = (lon/10)*Math.PI*2;
-                n.push([Math.cos(a)*r, lat*0.9, Math.sin(a)*r]);
+            const lats = 10, lons = 16;
+            for(let i=0; i<=lats; i++){
+              let theta = (i/lats)*Math.PI;
+              let sinT = Math.sin(theta), cosT = Math.cos(theta);
+              for(let j=0; j<lons; j++){
+                let phi = (j/lons)*Math.PI*2;
+                n.push([sinT*Math.cos(phi)*2.1, cosT*2.1, sinT*Math.sin(phi)*2.1]);
               }
             }
             return n;
           })(),
-          edges: (function(){
-            let e = [];
-            for(let lat=0; lat<5; lat++){
-              for(let lon=0; lon<10; lon++){
-                let idx1 = lat*10 + lon;
-                let idx2 = lat*10 + ((lon+1)%10);
-                e.push([idx1, idx2]);
-                if(lat<4) e.push([idx1, (lat+1)*10 + lon]);
+          faces: (function(){
+            let f = [];
+            const lats = 10, lons = 16;
+            for(let i=0; i<lats; i++){
+              for(let j=0; j<lons; j++){
+                let first = i*lons + j;
+                let second = first + lons;
+                let nextJ = (j+1)%lons;
+                f.push([first, first - j + nextJ, second - j + nextJ, second]);
               }
             }
-            return e;
+            return f;
           })()
         }
       };
@@ -377,7 +388,7 @@
         return [x1, y2, z2];
       }
 
-      function draw2DFallback() {
+      function drawSolid3DFallback() {
         resize2D();
         const w = fallbackCanvas.width;
         const h = fallbackCanvas.height;
@@ -387,60 +398,108 @@
 
         const cx = w / 2;
         const cy = h / 2;
-        const scale = Math.min(w, h) * 0.14;
+        const scale = Math.min(w, h) * 0.13;
 
         angleY += 0.012;
         angleX += 0.005;
 
-        // 1. Draw Volumetric Gradient Shells
-        const outerR = scale * 3.8;
-        const gradOuter = ctx2d.createRadialGradient(cx, cy, 0, cx, cy, outerR);
-        gradOuter.addColorStop(0, 'rgba(139, 0, 153, 0.45)');
-        gradOuter.addColorStop(0.4, 'rgba(0, 229, 255, 0.25)');
-        gradOuter.addColorStop(0.8, 'rgba(0, 150, 255, 0.08)');
+        // 1. Volumetric Gradient Aura (Outer Shell & Inner Core)
+        const outerR = scale * 3.9;
+        const gradOuter = ctx2d.createRadialGradient(cx, cy, scale*0.5, cx, cy, outerR);
+        gradOuter.addColorStop(0, 'rgba(210, 70, 255, 0.45)');
+        gradOuter.addColorStop(0.35, 'rgba(139, 0, 153, 0.3)');
+        gradOuter.addColorStop(0.7, 'rgba(0, 229, 255, 0.12)');
         gradOuter.addColorStop(1, 'rgba(0, 0, 0, 0)');
         ctx2d.fillStyle = gradOuter;
         ctx2d.beginPath(); ctx2d.arc(cx, cy, outerR, 0, Math.PI * 2); ctx2d.fill();
 
-        // 2. Project & Render 3D Model Wireframe
-        const data = shapeData[activeShape] || shapeData.tetra;
-        const proj = data.nodes.map(pt => {
-          let r = rotate3D(pt, angleX, angleY);
-          let fov = 300 / (300 + r[2] * scale * 0.1);
-          return [cx + r[0] * scale * fov, cy + r[1] * scale * fov, r[2]];
-        });
+        // 2. Transform Vertices
+        const data = solidShapes[activeShape] || solidShapes.tetra;
+        const rotatedNodes = data.nodes.map(pt => rotate3D(pt, angleX, angleY));
+        const projNodes = rotatedNodes.map(r => [cx + r[0] * scale, cy + r[1] * scale, r[2]]);
 
-        // Inner Core Glow
-        ctx2d.fillStyle = 'rgba(0, 229, 255, 0.9)';
+        // 3. Polygon Depth Sorting (Painter's Algorithm)
+        let renderFaces = [];
+        for (let face of data.faces) {
+          let avgZ = 0;
+          for (let idx of face) {
+            avgZ += rotatedNodes[idx][2];
+          }
+          avgZ /= face.length;
+
+          // Normal Vector for Lighting
+          let v0 = rotatedNodes[face[0]];
+          let v1 = rotatedNodes[face[1]];
+          let v2 = rotatedNodes[face[2]];
+          let ax = v1[0] - v0[0], ay = v1[1] - v0[1], az = v1[2] - v0[2];
+          let bx = v2[0] - v0[0], by = v2[1] - v0[1], bz = v2[2] - v0[2];
+          let nx = ay*bz - az*by;
+          let ny = az*bx - ax*bz;
+          let nz = ax*by - ay*bx;
+          let len = Math.sqrt(nx*nx + ny*ny + nz*nz) || 1;
+          nz /= len; ny /= len; nx /= len;
+
+          renderFaces.push({ face, avgZ, nz, ny, nx });
+        }
+
+        // Sort back-to-front
+        renderFaces.sort((a, b) => a.avgZ - b.avgZ);
+
+        // 4. Render Solid Shaded Polygon Faces
+        const lightDir = [0.4, -0.6, 0.7]; // Light vector
+        const lightLen = Math.sqrt(lightDir[0]*lightDir[0] + lightDir[1]*lightDir[1] + lightDir[2]*lightDir[2]);
+        const lx = lightDir[0]/lightLen, ly = lightDir[1]/lightLen, lz = lightDir[2]/lightLen;
+
+        for (let item of renderFaces) {
+          let dot = item.nx * lx + item.ny * ly + item.nz * lz;
+          let intensity = Math.max(0.25, Math.min(1.0, dot * 0.7 + 0.35));
+
+          ctx2d.beginPath();
+          let first = true;
+          for (let idx of item.face) {
+            let p = projNodes[idx];
+            if (first) { ctx2d.moveTo(p[0], p[1]); first = false; }
+            else { ctx2d.lineTo(p[0], p[1]); }
+          }
+          ctx2d.closePath();
+
+          // Rich Shaded Solid Color
+          let r = Math.floor(45 + intensity * 60);
+          let g = Math.floor(0 + intensity * 40);
+          let b = Math.floor(77 + intensity * 120);
+
+          ctx2d.fillStyle = `rgba(${r}, ${g}, ${b}, 0.88)`;
+          ctx2d.fill();
+
+          ctx2d.strokeStyle = 'rgba(0, 229, 255, 0.7)';
+          ctx2d.lineWidth = 1.5;
+          ctx2d.stroke();
+        }
+
+        // 5. Specular Glowing Edges
         ctx2d.shadowColor = '#00e5ff';
-        ctx2d.shadowBlur = 15;
-
-        // Draw Edges
-        ctx2d.strokeStyle = 'rgba(0, 229, 255, 0.85)';
-        ctx2d.lineWidth = 2;
-        for (let ed of data.edges) {
-          let p1 = proj[ed[0]];
-          let p2 = proj[ed[1]];
-          if (p1 && p2) {
+        ctx2d.shadowBlur = 10;
+        ctx2d.strokeStyle = 'rgba(0, 240, 255, 0.4)';
+        ctx2d.lineWidth = 1;
+        for (let item of renderFaces) {
+          if (item.nz > 0) { // Front-facing outline glow
             ctx2d.beginPath();
-            ctx2d.moveTo(p1[0], p1[1]);
-            ctx2d.lineTo(p2[0], p2[1]);
+            let first = true;
+            for (let idx of item.face) {
+              let p = projNodes[idx];
+              if (first) { ctx2d.moveTo(p[0], p[1]); first = false; }
+              else { ctx2d.lineTo(p[0], p[1]); }
+            }
+            ctx2d.closePath();
             ctx2d.stroke();
           }
         }
-
-        // Draw Vertices
-        for (let p of proj) {
-          ctx2d.beginPath();
-          ctx2d.arc(p[0], p[1], 4, 0, Math.PI * 2);
-          ctx2d.fill();
-        }
         ctx2d.shadowBlur = 0;
 
-        requestAnimationFrame(draw2DFallback);
+        requestAnimationFrame(drawSolid3DFallback);
       }
 
-      draw2DFallback();
+      drawSolid3DFallback();
     }
   </script>
 </body>
