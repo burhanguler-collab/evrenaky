@@ -119,6 +119,30 @@ const ADMIN_EMAILS = ['burhanguler@gmail.com'];
 // Global Version State
 let activeVersion = safeStorage ? (safeStorage.getItem('selectedVersion') || 'akademik') : 'akademik';
 
+// Global Memory Cache for full-text chapter search
+const chapterTextsCache = {};
+let isIndexLoading = false;
+
+// Preload/Index chapter markdown files in background for full-text search
+async function preloadChapterTexts() {
+    if (isIndexLoading) return;
+    isIndexLoading = true;
+    for (const chap of chapters) {
+        if (!chapterTextsCache[chap.id]) {
+            try {
+                const res = await fetch(chap.file);
+                if (res.ok) {
+                    const text = await res.text();
+                    // Store normalized lower-case text for fast search
+                    chapterTextsCache[chap.id] = text.toLocaleLowerCase('tr-TR');
+                }
+            } catch (e) {
+                // Ignore fetch errors
+            }
+        }
+    }
+}
+
 window.selectVersion = function(version) {
     activeVersion = version;
     if (safeStorage) safeStorage.setItem('selectedVersion', version);
@@ -251,9 +275,14 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Search bar filter function (Türkçe karakter duyarlı ve akordiyon destekli arama)
+    // Trigger background pre-index of all chapters for instant full-text search
+    preloadChapterTexts();
+
+    // Search bar filter function (Başlık ve Tüm Bölüm İçeriğinde Arama)
     const searchInput = document.getElementById('search-input');
     if (searchInput) {
+        searchInput.addEventListener('focus', () => preloadChapterTexts(), { once: true });
+
         searchInput.addEventListener('input', (e) => {
             const rawQuery = e.target.value;
             const query = (rawQuery || '').toLocaleLowerCase('tr-TR').trim();
@@ -266,6 +295,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 // Reset all elements
                 list.querySelectorAll('.toc-item').forEach(item => {
                     item.style.display = '';
+                    const badge = item.querySelector('.search-match-badge');
+                    if (badge) badge.remove();
                 });
                 accordions.forEach(acc => {
                     acc.style.display = '';
@@ -276,6 +307,10 @@ document.addEventListener("DOMContentLoaded", () => {
                     if (icon) icon.style.transform = hasActiveChild ? 'rotate(180deg)' : 'rotate(0deg)';
                 });
                 return;
+            }
+
+            if (query.length >= 2 && Object.keys(chapterTextsCache).length === 0) {
+                preloadChapterTexts();
             }
 
             // Direct top level items (e.g., home item or change version)
@@ -296,9 +331,30 @@ document.addEventListener("DOMContentLoaded", () => {
                 let matchedSubCount = 0;
                 subItems.forEach(sub => {
                     const subTitle = (sub.getAttribute('data-title') || sub.textContent || '').toLocaleLowerCase('tr-TR');
-                    if (subTitle.includes(query) || partTitle.includes(query)) {
+                    const chapLink = sub.querySelector('.toc-link');
+                    const chapId = chapLink ? chapLink.id.replace('link-', '') : '';
+
+                    let isTitleMatch = subTitle.includes(query) || partTitle.includes(query);
+                    let isContentMatch = false;
+
+                    if (chapId && chapterTextsCache[chapId]) {
+                        isContentMatch = chapterTextsCache[chapId].includes(query);
+                    }
+
+                    const oldBadge = sub.querySelector('.search-match-badge');
+                    if (oldBadge) oldBadge.remove();
+
+                    if (isTitleMatch || isContentMatch) {
                         sub.style.display = '';
                         matchedSubCount++;
+
+                        if (isContentMatch && !isTitleMatch && chapLink) {
+                            const badge = document.createElement('span');
+                            badge.className = 'search-match-badge';
+                            badge.style.cssText = 'font-size: 0.72em; color: var(--neon-cyan); background: rgba(0, 229, 255, 0.12); border: 1px solid rgba(0, 229, 255, 0.25); padding: 1px 6px; border-radius: 10px; margin-left: 6px; font-weight: 500;';
+                            badge.textContent = 'metinde geçiyor';
+                            chapLink.appendChild(badge);
+                        }
                     } else {
                         sub.style.display = 'none';
                     }
