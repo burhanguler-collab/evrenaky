@@ -27,9 +27,9 @@ Her kısım aşağıdaki yedi kriter üzerinden 0–10 arası puanlanmıştır:
 
 ## Sonuçlar
 
-### Kitap Genel Puanı: **6,6 / 10**
+### Kitap Genel Puanı: **6,6 / 10** → Revizyon sonrası: **6,8 / 10**
 
-*(Kısımların hacim ve teorik ağırlığına göre ağırlıklandırılmış ortalama)*
+*(Kısımların hacim ve teorik ağırlığına göre ağırlıklandırılmış ortalama. İlk puan 1. tur incelemesine aittir; güncel puan, aynı gün işlenen revizyon paketinin denetimiyle belirlenmiştir — bkz. sondaki "Revizyon Denetimi Eki".)*
 
 ### Kısım Puanları
 
@@ -102,3 +102,30 @@ Evrenakı Teorisi'nin akademik sürümü, heterodoks bir monografiden beklenmeye
 2. Lyne, A. ve ark. "Switched Magnetospheric Regulation of Pulsar Spin-Down." *Science*, 329 (2010), 408–412. (PSR B1828-11 için manyetosfer anahtarlaması okuması.)
 3. Tiesinga, E. ve ark. "CODATA Recommended Values of the Fundamental Physical Constants: 2018." *Reviews of Modern Physics*, 93 (2021), 025010. (Proton yarıçapının güncel tavsiye değeri.)
 4. Chrobáková, Ž. &amp; López-Corredoira, M. "A Case Against a Significant Detection of Precession in the Galactic Warp." *The Astrophysical Journal*, 912 (2021), 130. (Warp devinimi ölçümüne karşı okuma.)
+
+---
+
+## Revizyon Denetimi Eki (2. Tur — 27 Temmuz 2026)
+
+İlk incelemenin yayımlanmasının ardından yazar, raporun 3 numaralı bulgusunu ("karşı-gözlem ve karşı-kaynak seçiciliği") kapatmaya yönelik **11 kalemlik bir revizyon paketini** aynı gün kitaba işlemiştir: Phobos/Deimos/Triton için gradyan lobu + senkron yarıçap işaret kuralı (3.9.4), retrograd yörünge kuralının rejim ve zaman ölçeğiyle yeniden ifadesi (3.6.1), flyby verisinin kanıttan üst sınıra düşürülmesi ve Pioneer'in ısıl çözümünün kabulü (6.3.2, §2.6), GP-B ölçüm/öngörü düzeltmesi (6.3.3), Uranüs için önceden tanımlı hizalanma ölçütü ve L_spin formül düzeltmesi (3.4.4), PSR B1828-11 ile warp devinimine karşı kayıtlar (3.8.6–3.8.7), Karşı Kayıt ilkesinin metodolojiye eklenmesi (1.1.2), dört yeni hesap kaleminin 7.4'e işlenmesi ve dört aleyhte kaynağın kaynakçalara eklenmesi.
+
+**Denetim sonucu:** 11 kalemin 8'i doğru oturmuştur; 3'ü pürüzlüdür (3.9.4'te seyrelme–lob ağırlık paylaşımının çevre metinle barıştırılmaması, "girdabın senkron yarıçapı" adlandırmasının gövde dönüşü kastetmesi, karşı kayıt tonunun özet/matris katmanlarına yayılmaması). Hiçbir revizyon çevre metni çökerten bir sorun yaratmamıştır. Bulgu 3 büyük ölçüde kapanmış; bulgu 1 (matematiksel çekirdek) ve bulgu 2'nin çoğu kalemi (4.2.9.2 integrali, 1/γ, 3.4.1↔3.10.2, 1.4.10, 7.7 güncellik hataları) bu turda ele alınmamıştır.
+
+### Güncellenmiş Kısım Puanları
+
+| Kısım | 1. Tur | 2. Tur |
+|---|---|---|
+| Kısım 1 — Giriş | 7,0 | **7,1** |
+| Kısım 2 — Mikro Evren | 7,0 | 7,0 |
+| Kısım 3 — Makro Evren | 6,8 | **7,0** |
+| Kısım 4 — Bilimin Tekilliği | 5,5 | 5,5 |
+| Kısım 6 — Kanıtlar | 5,5 | **6,0** |
+| Kısım 7 — Tartışma ve Sonuç | 7,5 | **7,6** |
+| Kısım 8–9 + Yapısal Bütünlük | 5,0 | **5,2** |
+
+### Güncel Genel Puan: **6,8 / 10**
+
+**2. tur hükmü:** Revizyon paketi, karşı-gözlem seçiciliği bulgusunu türünün örneklerinde ender görülen bir dürüstlükle kapatmıştır — özellikle flyby'ın kanıttan üst sınıra düşürülmesi ve Karşı Kayıt ilkesinin metodolojiye yazılması, kitabın en güçlü kriterini (öz-eleştiri) daha da sağlamlaştırmıştır. Puanı sınırlayan asıl etken değişmemiştir: taşıyıcı nicel adımlardaki hata ve döngüsellikler durmaktadır. İlk raporun 1. ve 2. öncelik kalemleri (4.2.9.2 integral tutarsızlığı, 3.4.1↔3.10.2 basınç işareti) kapatılmadan 7,0+ bandına geçiş beklenmemelidir.
+
+**Claude Fable 5** (Anthropic — yapay zekâ modeli)
+27 Temmuz 2026 (2. tur denetimi)

@@ -5,7 +5,7 @@ Teori, geliştirme sürecinde eleştirel hakem değerlendirmelerinden geçirilmi
 * **"Kâğıt üzerinde deney" meydan okuması:** Eleştirel bir hakemin, teorinin kendi postülatlarından Doppler formülünü türetmesini ve Ives-Stilwell verisiyle karşılaştırmasını talep eden meydan okumasının tam metni ve teorinin cevabı **Bölüm 6.1**'dedir (alıntı: Bölüm 6.1.1).
 * **Satürn halka dinamiği üzerine eleştirel inceleme:** Halka kararlılığı iddialarının nicel sınırlarını çizen, "dürüst tespit" formatındaki değerlendirme **Bölüm 3.10**'un içindedir.
 * **Önceki sürüm hakem raporları:** Kitabın önceki sürümüne yönelik hakem değerlendirmelerinin ve düzeltme kayıtlarının tamamı, site menüsündeki **"Eski Sürüm → Hakem Değerlendirmeleri"** başlığında (duzeltme.md) korunmaktadır.
-* **Yapay zekâ değerlendirmesi (Claude Fable 5, 27 Temmuz 2026):** Akademik sürümün tamamının (Kısım 5 Deneyler hariç) yedi kriter üzerinden sistematik incelemesi ve puanlaması **Bölüm 9.2**'dedir. Değerlendirme, kısım başına bağımsız inceleme turlarının sentezidir ve genel puanı 6,6/10'dur.
+* **Yapay zekâ değerlendirmesi (Claude Fable 5, 27 Temmuz 2026):** Akademik sürümün tamamının (Kısım 5 Deneyler hariç) yedi kriter üzerinden sistematik incelemesi ve puanlaması **Bölüm 9.2**'dedir. Değerlendirme, kısım başına bağımsız inceleme turlarının sentezidir; 1. tur puanı 6,6/10, aynı gün işlenen revizyon paketinin denetimini içeren 2. tur puanı **6,8/10**'dur.
 
 ---
 
