@@ -74,6 +74,7 @@ const chapters = [
     { id: 'populer_09', title: "9. Ay ve Satürn'ün Gizemleri", file: 'Metin/Populer/populer_09.md', group: 'populer' },
     { id: 'populer_10', title: '10. Einstein Bile İtiraf Etti', file: 'Metin/Populer/populer_10.md', group: 'populer' },
     { id: 'populer_11', title: '11. Görünmezi Ölçtük', file: 'Metin/Populer/populer_11.md', group: 'populer' },
+    { id: 'populer_12', title: '12. Sözlük, SSS & İnteraktif Test', file: 'Metin/Populer/populer_12.md', group: 'populer' },
     { id: 'eski_akademik_01', title: 'Eski: Akademik Bölüm 1', file: 'Metin/Eski_Surum/akademik_01.md', group: 'eski' },
     { id: 'eski_akademik_29', title: 'Eski: Akademik Bölüm 29', file: 'Metin/Eski_Surum/akademik_29.md', group: 'eski' },
     { id: 'duzeltme', title: 'Hakem Değerlendirmeleri', file: 'Metin/Eski_Surum/duzeltme.md', group: 'eski' }

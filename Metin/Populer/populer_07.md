@@ -1,5 +1,8 @@
 # 7. Karanlık Madde Masalı
 
+⏱️ **Tahmini Okuma Süresi:** 4 dakika  
+🎓 **Akademik Sürüm Temeli:** [Kısım III: Kozmolojik Genişleme ve Karanlık Madde (Akademik 3.7)](#akademik_03_07)  
+
 Bu, modern kozmolojinin en büyük "kral çıplak" anıdır. Astrofizikçiler teleskoplarını galaksilere çevirdiklerinde beklemedikleri bir şey gördüler: Galaksinin merkezinden çok uzaktaki, kollardaki yıldızlar **olması gerekenden çok daha hızlı** dönüyordu. Newton'un formüllerine göre bu hızda dönen yıldızların çoktan uzaya savrulup gitmiş olması lazımdı. Ama gitmiyorlardı.
 
 İşte kritik an. Bilim insanlarının önünde iki yol vardı:

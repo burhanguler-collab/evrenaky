@@ -1,5 +1,8 @@
 # 3. Işığın Gerçek Yüzü: Zerreler
 
+⏱️ **Tahmini Okuma Süresi:** 4 dakika  
+🎓 **Akademik Sürüm Temeli:** [Kısım II: Mikro Evren ve Işığın Kinematiği (Akademik 2.1–2.4)](#akademik_02_01)  
+
 Modern fizik yüz yılı aşkın bir süredir ciddi bir açmazla karşı karşıya. Bu utancın adı şu: **"Işık hem dalgadır hem de parçacıktır."** (Dalga-Parçacık İkiliği.)
 
 Bir düşünün. Işık bazen bilardo topu gibi bir yere çarpıp sekiyor (parçacık), bazen de göle atılan taşın halkaları gibi yayılıp girişim yapıyor (dalga). Bilim insanları bu ikisini bir türlü aynı mantığa oturtamayınca ne yaptılar? Sorunu çözmek yerine üstünü örttüler ve *"ikisi birden işte, kafanızı yormayın"* deyip geçtiler. Bir şeyin hem hacimsiz-kütlesiz bir olasılık dalgası, hem de gidip elektron söken katı bir mermi olması imkânsızdır. Bu bir açıklama değil, **fiziği çıkmaza sokmuştur.**

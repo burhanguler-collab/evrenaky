@@ -1,5 +1,8 @@
 # 5. Dördüncü Boyutun Sırrı: Evrenin Motoru
 
+⏱️ **Tahmini Okuma Süresi:** 4 dakika  
+🎓 **Akademik Sürüm Temeli:** [Kısım I & III: Dördüncü Boyut ve 4D Deplasman (Akademik 1.4 & 3.1)](#akademik_01_04)  
+
 Şimdiye kadar okyanustan (Evrenakı), su damlacıklarından (Zerre) ve bu okyanustaki girdaplardan (gezegenler, yıldızlar) bahsettik. Ama aklınıza şu soru gelmedi mi: **Bu okyanusu kim karıştırıyor?** Girdaplar durup dururken oluşmaz; birinin kaşığı çevirmesi gerekir. Evrenin bu görünmez kaşığı, işte bu bölümün konusu: **dördüncü boyut.**
 
 Korkmayın, bu bir bilim-kurgu filmi değil. "Zaman" gibi soyut bir şeyden de bahsetmiyoruz.

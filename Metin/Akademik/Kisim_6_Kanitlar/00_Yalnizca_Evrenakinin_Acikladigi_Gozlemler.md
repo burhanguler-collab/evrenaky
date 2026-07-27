@@ -91,7 +91,7 @@
 | **Galaktik Dönüş Eğrileri** | Fiktif Karanlık Madde parçacığı | Görünmez Sirkülasyon Kuyuları (Galaktik Vorteks) |
 | **İvmelenen Genleşme** | Fiktif Karanlık Enerji ($\Lambda$) | Nükleon deşarjıyla ortamın termodinamik hacim kazanması |
 | **Güneş Yunuslaması & Galactic Warp** | Çarpışma yaması / Yamuk Halo torku | Devinen merkez motorun salladığı basınç oluğu & kırbaç dalgası |
-| **Warp Devinim Hızı (Poggio vd., 2020)** | **Başarısız/Kriz:** $10{,}9\text{ km/s/kpc}$ hızını halo modelleri tutturamaz | **Başarılı:** Devinim frekansı doğrudan 4D merkez motor devinimine bağlıdır |
+| **Warp Devinim Hızı (Poggio ve ark., 2020)** | **Başarısız/Kriz:** $10{,}9\text{ km/s/kpc}$ hızını halo modelleri tutturamaz | **Başarılı:** Devinim frekansı doğrudan 4D merkez motor devinimine bağlıdır |
 | **Çift Yarık Deneyi** | Soyut Dalga Fonksiyonu Çökmesi | Sınır Tabakası Gradyanı ve Kenar Vorteksi Teması |
 | **Camda Işık Hızı** | Emilip yeniden yayınlanma varsayımı | Yerel basınç patinajı ve geri kazanımı ($c=\sqrt{P/\rho}$) |
 | **Bell Dolanıklığı** | Uzaktan gizemli etki / Telepati | Kohezyon Kanalı ($v_m \gg c$) ile ortak topografya |

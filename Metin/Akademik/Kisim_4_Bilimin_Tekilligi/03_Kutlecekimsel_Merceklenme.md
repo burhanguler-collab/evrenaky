@@ -4,7 +4,7 @@ Bilimin tekilliği (Büyük Birleşik Kuram), doğadaki tüm farklı kuvvetlerin
 
 ## 4.3.1 Einstein'ın Uzay-Zaman Eğriliği İllüzyonu
 
-1919'daki meşhur Güneş tutulması deneyinde Arthur Eddington, uzak yıldızlardan gelen ışığın Güneş'in yanından geçerken büküldüğünü fotoğrafladı (Dyson vd., 1920). Einstein'ın Genel Görelilik teorisi (Einstein, 1915) bu durumu şu iddiayla açıkladı: *"Güneş'in devasa kütlesi uzay ve zaman dokusunu bir çarşaf gibi bükmektedir. Işık da bu bükülmüş uzayda düz gitmeye çalışırken mecburen kavis çizer."*
+1919'daki meşhur Güneş tutulması deneyinde Arthur Eddington, uzak yıldızlardan gelen ışığın Güneş'in yanından geçerken büküldüğünü fotoğrafladı (Dyson ve ark., 1920). Einstein'ın Genel Görelilik teorisi (Einstein, 1915) bu durumu şu iddiayla açıkladı: *"Güneş'in devasa kütlesi uzay ve zaman dokusunu bir çarşaf gibi bükmektedir. Işık da bu bükülmüş uzayda düz gitmeye çalışırken mecburen kavis çizer."*
 
 Ancak Kısım 2'de Işık (Zerre) kinematiğini ve Kısım 3'te Kütle-İtim mekaniğini deşifre ettik. Evrenakı'ya göre bükülen şey soyut bir "zaman" veya boşluk değildir; bükülen şey doğrudan **Zerre'nin (Işığın) rotasıdır.** Ve bu bükülme soyut bir geometri yüzünden değil, laboratuvardaki bir su bardağında kalem nasıl kırılıyorsa bütünüyle aynı **hidrodinamik optik yasa (Kırılma/Snell Yasası)** yüzünden gerçekleşir!
 

@@ -10,7 +10,7 @@ Bu bölüm, Evrenakı Teorisi'nin Satürn halkalarındaki dikey salınım ve sö
 
 ## 3.10.2 Evrenakı'nın Temel Akışkan Denklemi (Zerre Ortamı)
 
-Evrenakı postülası: uzay, sıkıştırılabilir bir süperakışkan (Evrenakı/Zerre ortamı) ile doludur; kütleli cisimler bu ortamda bir yoğunluk/basınç çukuru (potansiyel kuyusu) oluşturur. Ortamın hareketi, sıkıştırılabilir Euler denklemiyle tarif edilir:
+Evrenakı postülası: uzay, sıkıştırılabilir bir süperakışkan (Evrenakı/Zerre ortamı) ile doludur; kütleli cisimler bu ortamda bir yoğunluk/basınç çukuru (potansiyel kuyusu) oluşturur. Ortamın hareketi, sıkıştırılabilir Euler denklemiyle (Euler, 1757) tarif edilir:
 
 $$\rho_z \left(\frac{\partial \vec{v}}{\partial t} + (\vec{v}\cdot\nabla)\vec{v}\right) = -\nabla P_z + \rho_z \vec{g}_{ek}$$
 
@@ -40,7 +40,7 @@ Teorinin akışkanlar mekaniği temelinin **gerçekten** bir şey söyleyebilece
 
 ### 3.10.4.1 Standart (ana akım) sönüm terimi — karşılaştırma referansı
 
-Ana akım halka fiziğinde sönüm, parçacıklar arası inelastik çarpışmalardan gelir (bkz. Nicholson & Marouf tipi kinetik teori):
+Ana akım halka fiziğinde sönüm, parçacıklar arası inelastik çarpışmalardan gelir (halka viskozitesinin kinetik teorisi: Goldreich & Tremaine, 1978; yoğunluk dalgalarından yüzey yoğunluğu ve viskozite kestirimi: Hedman & Nicholson, 2016):
 
 $$\gamma_{standart} \sim \Omega \cdot \tau_c^{-1} \cdot (1-\epsilon^2)$$
 
@@ -52,18 +52,18 @@ Evrenakı'nın farkı şurada yatabilir: eğer Zerre ortamının kendisi sonlu b
 
 $$\gamma_{Evrenakı} = \gamma_{standart} + \gamma_{ortam}, \qquad \gamma_{ortam} \sim \frac{6\pi \eta_z a}{m}$$
 
-(Stokes sürtünmesi formuyla benzer; $a$ parçacık yarıçapı, $m$ kütlesidir.)
+(Stokes sürtünmesi formuyla benzer — Stokes, 1851; $a$ parçacık yarıçapı, $m$ kütlesidir.)
 
 **Bu, gerçekten test edilebilir bir ayırt edici öngörü olabilir** — çünkü:
 
 - Ana akım model: sönüm sadece parçacık yoğunluğuna ve boyut dağılımına bağlıdır (optik derinlikle ölçeklenir).
 - Evrenakı modeli: sönüme **parçacık boyutundan bağımsız, ortam viskozitesinden gelen sabit bir taban terim** eklenir.
 
-**Dürüst tespit #2:** Bu $\eta_z$ değeri şu anda kitapta **sayısal olarak belirlenmemiştir**. Bu, teorinin zayıflığı değil, henüz atılmamış bir adımdır — ama bu adım atılmadan "Evrenakı, halka yağmurunu (ring rain) açıklıyor" gibi bir iddia yapılamaz; çünkü serbest bir parametre ($\eta_z$) her sonucu "ayarlanabilir" hale getirir (bilimde en sık yapılan hata: serbest parametreyle her veriye uydurma). *(Parametre statüsü için bkz. Ek C, satır 14: $\eta_z$, Bölüm 3.1'deki Evrenakı viskozitesi $\eta_E$ ile aynı büyüklüktür; Gaia/pulsar programına ek olarak aşağıdaki bending-wave testi de onu sabitleyebilir.)*
+**Dürüst tespit #2:** Bu $\eta_z$ değeri şu anda kitapta **sayısal olarak belirlenmemiştir**. Bu, teorinin zayıflığı değil, henüz atılmamış bir adımdır — ama bu adım atılmadan "Evrenakı, halka yağmurunu (ring rain; gözlemsel kütle-kaybı ölçümü: O'Donoghue ve ark., 2019) açıklıyor" gibi bir iddia yapılamaz; çünkü serbest bir parametre ($\eta_z$) her sonucu "ayarlanabilir" hale getirir (bilimde en sık yapılan hata: serbest parametreyle her veriye uydurma). *(Parametre statüsü için bkz. Ek C, satır 14: $\eta_z$, Bölüm 3.1'deki Evrenakı viskozitesi $\eta_E$ ile aynı büyüklüktür; Gaia/pulsar programına ek olarak aşağıdaki bending-wave testi de onu sabitleyebilir.)*
 
 ## 3.10.5 Somut Test Önerisi (Gerçek Sayılarla)
 
-Ana akım veri: Mimas 5:3 dikey rezonansında gözlenen bending wave sönüm mesafesi **~150 km** (Voyager verisi). Yörünge yarıçapı $r\approx1.3\times10^8$ m civarında $\Omega \approx 1.31\times10^{-4}$ rad/s, $T\approx13.3$ saat.
+Ana akım veri: Mimas 5:3 dikey rezonansında gözlenen bending wave sönüm mesafesi **~150 km** (Voyager verisi; Shu ve ark., 1983). Halkanın toplam kütlesi ise Cassini'nin son yörüngeleriyle ölçülmüştür (Iess ve ark., 2019). Yörünge yarıçapı $r\approx1.3\times10^8$ m civarında $\Omega \approx 1.31\times10^{-4}$ rad/s, $T\approx13.3$ saat.
 
 Eğer Evrenakı'nın $\gamma_{ortam}$ terimi gerçekse, şu **kesin, çürütülebilir tahmin** yapılabilir:
 
@@ -73,7 +73,7 @@ Bu, laboratuvarda değil ama **mevcut Cassini/Voyager verisinde zaten var olan, 
 
 ## 3.10.6 Bölüm 6.3 ile Tutarlılık Uyarısı
 
-Bölüm 6.3'te, Evrenakı'nın frame-dragging/entrainment formülü Gravity Probe B için **82 mas/yr** öngörürken, gözlenen değer **39 mas/yr** idi — yaklaşık 2 kat sapma, henüz çözülmemiştir (kutupsal yörünge için geometrik düzeltme faktörü gerekmektedir).
+Bölüm 6.3'te, Evrenakı'nın frame-dragging/entrainment formülü Gravity Probe B için **82 mas/yr** öngörürken, gözlenen değer **39 mas/yr** idi (Everitt ve ark., 2011) — yaklaşık 2 kat sapma, henüz çözülmemiştir (kutupsal yörünge için geometrik düzeltme faktörü gerekmektedir).
 
 **Kritik nokta:** Eğer bu bölümdeki $\gamma_{ortam}$ terimi, Bölüm 6.3'teki aynı entrainment mekanizmasından türetiliyorsa (yani ortamın "sürüklenme hafızası" hem GPB'deki frame-dragging'i hem burada halka sönümünü açıklıyorsa), o zaman **GPB'deki 2 katlık sapma düzeltilmeden bu formülü halka yağmuruna uygulamak, aynı sistematik hatayı ikinci bir gözleme taşımak demektir.** Tutarlılık için izlenecek yol bellidir: önce Bölüm 6.3'teki geometrik düzeltme tamamlanmalı, sonra bu düzeltilmiş formül buraya (halka sönümüne) uygulanmalıdır.
 

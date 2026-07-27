@@ -71,17 +71,19 @@ Bir el feneri ince ve seyrek bir Zerre akışı gönderirken, Güneş hedefe dev
 
 Dalga mekaniğinde ışınların "aynı faza" (senkrona) oturması durumu (koherens), lazer teknolojisinin temelini oluşturur. Evrenakı teorisinde bu durum, askeri bir birliğin uygun adım yürümesine benzer: **Zerrelerin kaynaktan (atomdan) tamamen senkronize ve eşit aralıklarla fırlatılmasıdır.**
 
-Normal bir ampul, Zerreleri Evrenakı okyanusuna rastgele zamanlarda ve farklı açılarda fırlatır (ekoherensiz). Bu nedenle ışık dağılır ve şiddetini çabuk kaybeder. Ancak bir Lazer cihazı, Zerreleri kusursuz bir "makineli tüfek" gibi, mükemmel zaman aralıklarında ve tek bir doğrultuda ateşler. Zerreler birbirlerinin açtığı hidrodinamik yoldan (wake) yararlandıkları için enerjileri sağa sola saçılmaz ve atmosferi çok daha uzağa kadar delip geçebilirler.
+Normal bir ampul, Zerreleri Evrenakı okyanusuna rastgele zamanlarda ve farklı açılarda fırlatır (ekoherensiz). Bu nedenle ışık dağılır ve şiddetini çabuk kaybeder. Ancak bir Lazer cihazı (ilk çalışan optik maser: Maiman, 1960), Zerreleri kusursuz bir "makineli tüfek" gibi, mükemmel zaman aralıklarında ve tek bir doğrultuda ateşler. Zerreler birbirlerinin açtığı hidrodinamik yoldan (wake) yararlandıkları için enerjileri sağa sola saçılmaz ve atmosferi çok daha uzağa kadar delip geçebilirler.
 
 ## 2.3.7 Kırılma (Snell Yasası) ve Yansıma Mekaniği
 
+*(Bu bölümde tartışılan klasik çerçevenin kaynakları: kırılma yasasının ilk yayımı Descartes, 1637; dalga cephesi yapısı Huygens, 1690; yansıma/geçirme katsayıları Fresnel, 1823.)*
+
 Işığın aynalardan yansıması, Zerre modelinde en basit klasik mekanik ilkeyle çalışır: Esnek Çarpışma. Zerre, aynanın kusursuz dizilimli atom ızgarasına çarpar ve bir bilardo topu gibi momentumunu koruyarak seker.
 
-Kırılma (Refraksiyon) ise, Zerrelerin bir ortama açılı girmesi sonucunda karşılaştıkları Evrenakı basınç farkından kaynaklanır. Bir otomobilin sağ tekerleklerinin asfalttan çıkıp çamura (camın yoğun Evrenakı direnci bölgesine) girmesi gibi, Zerre de açılı giriş yaptığında spin (patinaj) transferini asimetrik yaşar ve rotası bükülür. Huygens prensibi gibi karmaşık dalga cephelerine gerek kalmaksızın, kırılma açısı tamamen basınç gradyanındaki yörünge sapmasıdır. (Bu mekanizmanın tek hidrodinamik çerçevede — yansıma, geçirme ve soğurmayla birlikte — tam işlenişi Bölüm 2.6'da verilmektedir.)
+Kırılma (Refraksiyon) ise, Zerrelerin bir ortama açılı girmesi sonucunda karşılaştıkları Evrenakı basınç farkından kaynaklanır. Bir otomobilin sağ tekerleklerinin asfalttan çıkıp çamura (camın yoğun Evrenakı direnci bölgesine) girmesi gibi, Zerre de açılı giriş yaptığında spin (patinaj) transferini asimetrik yaşar ve rotası bükülür. Huygens prensibi (Huygens, 1690) gibi karmaşık dalga cephelerine gerek kalmaksızın, kırılma açısı tamamen basınç gradyanındaki yörünge sapmasıdır. (Bu mekanizmanın tek hidrodinamik çerçevede — yansıma, geçirme ve soğurmayla birlikte — tam işlenişi Bölüm 2.6'da verilmektedir.)
 
 ## 2.3.8 Işınım Basıncı (Radiation Pressure) ve Zerre Kütlesi
 
-Klasik fiziğin en büyük çıkmazlarından biri, "kütlesiz" kabul ettiği "foton"ların nasıl olup da uzay araçlarını itebilecek bir basınca (güneş yelkeni) sahip olduğudur. Kütlesi olmayan bir şey momentum aktaramaz.
+Klasik fiziğin en büyük çıkmazlarından biri, "kütlesiz" kabul ettiği "foton"ların nasıl olup da uzay araçlarını itebilecek bir basınca (güneş yelkeni) sahip olduğudur. Işınım basıncı laboratuvarda ilk kez 20. yüzyılın başında ölçülmüş (Lebedew, 1901; Nichols & Hull, 1903), gerçek bir güneş yelkeniyle uzayda ilk kez IKAROS görevinde doğrulanmıştır (Tsuda ve ark., 2011). Kütlesi olmayan bir şey momentum aktaramaz.
 
 Evrenakı modeli bu karmaşayı temelden çözer: **Zerreler kütlelidir ($m_z$).** Işık, uzayda yol alan bir madde katarıdır. Trilyonlarca kütleli Zerre mermisi bir güneş yelkenine çarptığında, tıpkı şiddetli bir dolu yağışının çadırı itmesi gibi, Newton'un basit Etki-Tepki ($F = m \cdot a$) prensibiyle yelkeni iter. Işınım basıncı soyut bir dalga etkisi değil, makroskobik evrenin mikroskobik boyutlarda işleyen klasik bir momentum aktarımıdır.
 

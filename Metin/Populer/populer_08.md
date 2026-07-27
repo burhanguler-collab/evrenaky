@@ -1,5 +1,8 @@
 # 8. Evreni Şekillendiren 5 Güç
 
+⏱️ **Tahmini Okuma Süresi:** 6 dakika  
+🎓 **Akademik Sürüm Temeli:** [Kısım III: Makro Evreni Şekillendiren 5 Hidrodinamik Kuvvet (Akademik 3.2)](#akademik_03_02)  
+
 Newton evreni tek bir kuvvetle (çekim) yönetmeye çalıştı. Einstein tek bir geometriyle (bükülen uzay-zaman) idare etmek istedi. İkisi de evreni tek bir sopayla döven adamlar gibiydi. Oysa doğa öyle çalışmıyor.
 
 Evrenakı Teorisine göre kütleçekim sabiti $G$'ye de, göreli eğriliklere de ihtiyaç yoktur. Uzaydaki bir cisim (Güneş, Dünya, hatta siz), içinde yüzdüğü sıvıda aynı anda **beş farklı hidrodinamik güç** üretir ve tüm dengesini bu beş gücün muhteşem uyumuyla kurar. İşte evreni yöneten o beş el:

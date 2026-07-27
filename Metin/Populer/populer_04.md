@@ -1,5 +1,8 @@
 # 4. Işık Hakkında Öğrendiğiniz Her Şey Yanlış
 
+⏱️ **Tahmini Okuma Süresi:** 5 dakika  
+🎓 **Akademik Sürüm Temeli:** [Kısım II: Işık Davranışlarında Tekillik (Akademik 2.6–2.8)](#akademik_02_06)  
+
 Bir önceki bölümde ışığın Zerre denen su damlacıklarından oluştuğunu gördük. Şimdi sıra, okulda ışıkla ilgili size ezberletilen o pürüzsüz masalların altındaki çatlakları göstermeye geldi. Hazır olun: aynadaki yansımadan gökkuşağına, mercekten girişime kadar, standart fiziğin "hallettim" dediği her konu aslında **halının altına süpürülmüş bir çelişkidir.**
 
 ## 1. Ayna Neden Yansıtır? (Atomlar Yansıtamaz!)

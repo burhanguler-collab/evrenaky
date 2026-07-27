@@ -1,5 +1,8 @@
 # 1. Uzay Boş Değil: Evrenakı Okyanusu
 
+⏱️ **Tahmini Okuma Süresi:** 4 dakika  
+🎓 **Akademik Sürüm Temeli:** [Kısım I: Temeller ve Problemin Tespiti (Akademik 1.1–1.7)](#akademik_01_01)  
+
 Geceleri gökyüzüne baktığınızda ne görüyorsunuz? Yıldızlar, gezegenler ve aralarındaki uçsuz bucaksız, kapkara bir **boşluk**, değil mi? Yüzyıllardır okullarda size uzayın devasa bir vakum, yani koca bir "hiçlik" olduğu öğretildi. Gezegenlerin bu hiçliğin içinde, hiçbir şeye tutunmadan, sebepsizce süzüldüğü söylendi.
 
 Şimdi rahat oturun, çünkü size on yıllardır ezberletilen bu varsayımın **eksik bir kavrayış** olduğunu söyleyeceğiz.

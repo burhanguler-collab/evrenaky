@@ -1,5 +1,8 @@
 # 2. Elma Neden Düşmez, İtilir! (Kütle-İtim)
 
+⏱️ **Tahmini Okuma Süresi:** 4 dakika  
+🎓 **Akademik Sürüm Temeli:** [Kısım III & IV: Kütle-İtim Mekanizması ve Sabitlerin Türetimi (Akademik 3.4 & 4.2)](#akademik_03_04)  
+
 Isaac Newton'un kafasına elma düşünce, gezegenlerin ve nesnelerin birbirini uzaktan uzağa gizemli bir kuvvetle "çektiğini" düşündü ve buna kütleçekimi (gravity) adını verdi. Yaklaşık 250 yıl sonra Albert Einstein geldi ve dedi ki: "Hayır, çekim yok; kütle uzay-zaman denilen görünmez bir çarşafı büküyor, cisimler de bu çukura yuvarlanıyor."
 
 Kulağa hoş geliyor. Ama iki dâhi de kaçamadıkları o dev soruyu halının altına süpürdü: **Arada hiçbir fiziksel bağ, hiçbir ip, hiçbir temas yokken bir cisim diğerini nasıl çeker?**

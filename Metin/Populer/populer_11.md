@@ -1,5 +1,8 @@
 # 11. Görünmezi Ölçtük: Mai'nin Kanıtı
 
+⏱️ **Tahmini Okuma Süresi:** 4 dakika  
+🎓 **Akademik Sürüm Temeli:** [Kısım V: Deneysel Öneriler ve Mai'nin İspatı (Akademik 5.1–5.5)](#akademik_05_01)  
+
 Bir teori ne kadar güzel olursa olsun, laboratuvarda test edilemiyorsa masaldır. Karanlık madde, karanlık enerji, bükülen uzay-zaman — bunların ortak özelliği, hiçbirinin doğrudan ölçülememesidir. Onlar "denklem tutsun diye" var edilmiş hayaletlerdir.
 
 Evrenakı ise farklı. Biz bu görünmez okyanusu — eski adıyla **Mai**'yi — bir masaya kurduğumuz gerçek cihazlarla, gerçek sayılarla **ölçtük**. Hem de mütevazı bir düzenekle. İşte o hikâye.

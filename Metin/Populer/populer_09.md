@@ -1,5 +1,8 @@
 # 9. Ay'ın ve Satürn'ün Çözülen Gizemleri
 
+⏱️ **Tahmini Okuma Süresi:** 4 dakika  
+🎓 **Akademik Sürüm Temeli:** [Kısım III: Yörünge Anomalileri, Satürn Halka Dinamiği ve Ay (Akademik 3.9 & 3.10)](#akademik_03_09)  
+
 Gökyüzüne baktığınızda en tanıdık iki manzara: geceyi aydınlatan Ay ve o muhteşem halkalarıyla Satürn. İkisi de öyle sırlar taşır ki, modern astronomi bunları ya "tesadüf" diye geçiştirir ya da her biri için ayrı bir yama uydurur. Evrenakı ise ikisini de tek bir sıvı mekaniğiyle, hem de dudak uçuklatan bir sadelikle açıklar.
 
 ## Satürn'ün Halkası Neden Dümdüz ve Kâğıt Gibi İnce?

@@ -1,7 +1,7 @@
 # 4.2 Evrenakı'nın Matematiksel Modeli — III: Galaktik ve Kozmolojik Ölçek (4.2.8–4.2.11)
 
 ## 4.2.8 Karanlık Madde Hipotezine Karşı Cosmofluid Yaklaşımı
-Sarmal galaksilerin dış kollarındaki yıldızların hızları, Newton'un (1687) $1/r^2$ yasasının öngördüğü gibi yavaşlamak yerine sabit kalır (Rubin & Ford, 1970; Rubin vd., 1980). Bu anomaliyi açıklamak için standart kozmolojide **Karanlık Madde (Dark Matter)** hipotezi geliştirilmiştir (Zwicky, 1933).
+Sarmal galaksilerin dış kollarındaki yıldızların hızları, Newton'un (1687) $1/r^2$ yasasının öngördüğü gibi yavaşlamak yerine sabit kalır (Rubin & Ford, 1970; Rubin ve ark., 1980). Bu anomaliyi açıklamak için standart kozmolojide **Karanlık Madde (Dark Matter)** hipotezi geliştirilmiştir (Zwicky, 1933).
 
 Evrenakı teorisine göre galaksiler, devasa dönme momentine sahip Cosmofluid kasırgalarıdır. Bu sistemler küresel değil, silindirik bir hortum (vorteks) profiline daha yakındır. Vorteks yapısında $\nabla P$'nin **"Eksenel"** bileşeni çok daha baskın hale gelir. Yıldızları galaksi kollarında asılı tutan şey gözlemlenemeyen parçacıklar değil, dönme eksenine doğru bastıran bu Eksenel hidrodinamik itimdir.
 

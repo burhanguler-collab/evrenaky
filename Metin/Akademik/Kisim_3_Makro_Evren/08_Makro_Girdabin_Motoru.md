@@ -8,13 +8,13 @@ Evrenakı teorisine göre Güneş'in kendi ekseni etrafındaki devasa dönüşü
 
 Peki astronomik veriler bu "akışkan hızı düşüşünü" matematiksel olarak doğruluyor mu? Evet.
 
-Standart astronomide **Kepler'in Üçüncü Yasası** olarak bilinen gözlemsel kurala göre, bir gezegenin yörünge dolanım süresi ($T$) ile Güneş'e olan uzaklığı ($R$) arasında $T^2 \propto R^3$ şeklinde kesin bir oran vardır. 
+Standart astronomide **Kepler'in Üçüncü Yasası** olarak bilinen gözlemsel kurala göre (Kepler, 1619), bir gezegenin yörünge dolanım süresi ($T$) ile Güneş'e olan uzaklığı ($R$) arasında $T^2 \propto R^3$ şeklinde kesin bir oran vardır. 
 Bir cismin yörünge hızını ($v = \frac{2\pi R}{T}$) hesaplayıp bu uzaklık denklemine yerleştirdiğimizde, gezegen hızlarının şu formüle göre düştüğünü buluruz:
 
 $$ v \propto \frac{1}{\sqrt{R}} $$
 
 **Bu matematiksel bağıntının Evrenakı açısından anlamı şudur:**
-Güneş Sistemi'ndeki tüm gezegenlerin yörünge hızları, Güneş'e olan uzaklıklarının karekökü ile ters orantılı olarak kusursuz bir uyumla azalır. Merkür (en yakın) saniyede 47 km hızla savrulurken, en uzaktaki Neptün saniyede sadece 5.4 km hızla ilerler.
+Güneş Sistemi'ndeki tüm gezegenlerin yörünge hızları, Güneş'e olan uzaklıklarının karekökü ile ters orantılı olarak kusursuz bir uyumla azalır. Merkür (en yakın) saniyede 47 km hızla savrulurken, en uzaktaki Neptün saniyede sadece 5.4 km hızla ilerler (yörünge hızları: NASA/JPL Planetary Fact Sheet, 2024).
 
 Standart fizik bunu "uzaktan etki eden kütleçekim kuvveti" olarak soyutlaştırırken, Evrenakı teorisi bunu **Akışkanlar Dinamiği** ile somutlaştırır:
 Gezegenler boş uzayda kendi motorlarıyla veya sihirli bir iple dolanmazlar. Güneş'in dönüşüyle oluşan dev **Güneş Vorteksi'nin** akıntı katmanlarına kapılmış (sürüklenme/entrainment) durumdadırlar. Akışkan mekaniğinde bu profil (hızın merkeze uzaklığın karekökü oranında düşmesi) tam bir akışkan davranışıdır. Güneş girdabının akış hızı uzaklaştıkça $\frac{1}{\sqrt{R}}$ oranında düştüğü için, o girdabın içinde yüzen gezegenlerin hızları da bu akışkanın hız profiline %100 uyum sağlar. 
@@ -25,13 +25,13 @@ Kısacası bu matematiksel bağıntı; gezegenlerin boşlukta düşmediğini, so
 
 Evrenakı akıntısının Güneş'ten başlayarak kesintisiz bir $v \propto \frac{1}{\sqrt{R}}$ hız profiliyle yayıldığını gördük. Ancak burada standart astrofiziği de yıllarca şaşkına çeviren devasa bir "Açısal Momentum Paradoksu" ortaya çıkar. 
 
-Güneş'in (ekvator) yüzey hızı saniyede sadece **2 km**'dir. Eğer Güneş, Evrenakı girdabını sadece yüzeyindeki bu yavaş dönüşle (mekanik sürtünme) üretiyor olsaydı, Güneş'ten 58 milyon km uzaktaki Merkür yörüngesinde akışkan hızının çok daha düşük (0.2 km/s civarı) olması gerekirdi. Oysa Merkür, saniyede **47.4 km** hızla, yani Güneş'in yüzeyinin kendi etrafındaki dönüşünden tam **23 kat daha hızlı** dolanmaktadır! Eğer Merkür'ün bu hız profilini geriye, Güneş'e doğru sararsak, girdabı üreten merkez kaynağın (Güneş'in) saniyede 430 km'den daha hızlı dönmesi gerektiği matematiksel bir zorunluluk olarak ortaya çıkar.
+Güneş'in (ekvator) yüzey hızı saniyede sadece **2 km**'dir (yüzey diferansiyel dönüş ölçümleri: Beck, 2000). Eğer Güneş, Evrenakı girdabını sadece yüzeyindeki bu yavaş dönüşle (mekanik sürtünme) üretiyor olsaydı, Güneş'ten 58 milyon km uzaktaki Merkür yörüngesinde akışkan hızının çok daha düşük (0.2 km/s civarı) olması gerekirdi. Oysa Merkür, saniyede **47.4 km** hızla, yani Güneş'in yüzeyinin kendi etrafındaki dönüşünden tam **23 kat daha hızlı** dolanmaktadır! Eğer Merkür'ün bu hız profilini geriye, Güneş'e doğru sararsak, girdabı üreten merkez kaynağın (Güneş'in) saniyede 430 km'den daha hızlı dönmesi gerektiği matematiksel bir zorunluluk olarak ortaya çıkar.
 
 Peki Güneş 2 km/s hızla dönerken, kendisinden katbekat daha hızlı dönen devasa bir Evrenakı akıntısını nasıl yaratabiliyor?
 
 **Çözüm:** Bu paradoks, girdabı kütlenin mekanik dönüşüne bağlayan sürükleme varsayımının çöküşüdür. Vorteksi döndüren ana motor, Güneş'in ne yavaş dış yüzeyi ne de mekanik olarak dönen herhangi bir katmanıdır; Güneş kütlesini oluşturan nükleonların **dördüncü boyuttan gelen çift dönüş deşarjıdır** (Bkz. 3.4.4; mekanizmanın tam işlenişi için 3.8.2). Sürtünmesiz Evrenakı bu deşarjla, sürtünmeli ve hantal kütlenin görünen devrinden kat kat hızlı döndürülür. Dolayısıyla "saniyede 430 km dönme gerekliliği" teorinin bir sorunu değil, mekanik sürükleme muhasebesinin iflas belgesidir.
 
-2017 yılında SOHO (Solar and Heliospheric Observatory) uydusundan alınan içsel salınım kipi (g-modes) verileriyle beklenmedik bir keşif yapıldı: **Güneş'in çekirdeği, yüzeyinden tam 4 kat daha hızlı dönüyordu!**
+2017 yılında SOHO (Solar and Heliospheric Observatory) uydusundan alınan içsel salınım kipi (g-modes) verileriyle beklenmedik bir keşif yapıldı: **Güneş'in çekirdeği, yüzeyinden tam 4 kat daha hızlı dönüyordu!** (Fossat ve ark., 2017.)
 
 Bu keşif teorinin tablosuna tam oturur; ancak dikkatle okunmalıdır: çekirdeğin 4 katlık hızı bile (yaklaşık 8 km/s), mekanik modelin gerektirdiği 430 km/s'nin elli kattan fazla altındadır. Yani hızlı çekirdek dahi girdabın motoru olamaz; keşfin gerçek anlamı, iç bölgelerin dördüncü boyut motorunun serbest ifadesine dış kabuktan daha yakın kalmış olmasıdır:
 Güneş Sistemi ilk oluştuğunda (Proto-Yıldız evresi) Güneş ve onun etrafındaki Evrenakı girdabı muazzam hızlarda dönüyordu. Milyarlarca yıl içinde Güneş'in dış plazma yüzeyi, güneş rüzgarları ve içsel frenlemeler yüzünden yavaşlayarak hantal bir kabuğa dönüştü. Ancak içerideki o ultra-yoğun çekirdek ve uzay boşluğundaki devasa Evrenakı girdabı, 4.6 milyar yıl önceki o devasa **"kalıntı (fosil) momentumlarını"** korumaya devam ettiler. 
@@ -49,7 +49,7 @@ Ancak su mekaniği hesaplamalarında (Bkz. 3.8.1.1; Dünya-Ay hesabı için 3.9.
 Girdap kütlenin dönüşüyle oluşmaz; tam tersine, **kütlenin dönüşü, devasa girdabın (vorteksin) yavaşlamış bir sonucudur!** Peki bu devasa Evrenakı girdaplarını ilk başlatan şey nedir? Cevap, kuantum mekaniğinin en temel kavramında, yani "Mikro Dönüşlerde (Spin)" gizlidir.
 
 ### Kuantum Vortisitesi (Quantum Vorticity) ve Makro Büyüme
-Modern fiziğin **"Süperakışkan Dinamiği (Superfluid Dynamics)"** ve **"Einstein-de Haas Etkisi"** gibi deneylerinde kanıtlanan sarsılmaz bir gerçek vardır: Mikroskobik boyuttaki (kuantum) içsel dönüşler (spinler), üst üste eklendiklerinde (coherent hale geldiklerinde) devasa **"Makroskobik Dönüşlere"** dönüşürler. 
+Modern fiziğin **"Süperakışkan Dinamiği (Superfluid Dynamics)"** (Tisza, 1938; Landau, 1941; kuantize girdapların gözlemi: Vinen, 1961) ve **"Einstein-de Haas Etkisi"** (Einstein & de Haas, 1915) gibi deneylerinde kanıtlanan sarsılmaz bir gerçek vardır: Mikroskobik boyuttaki (kuantum) içsel dönüşler (spinler), üst üste eklendiklerinde (coherent hale geldiklerinde) devasa **"Makroskobik Dönüşlere"** dönüşürler. 
 
 Evrenakı, en alt boyutta (4. boyutta/mikro boyutta) hiper-hızlı dönen mikroskobik akışkan zerrelerinden (mikro-vortekslerden) oluşur.
 1. **Mikro Kaynak:** Evrenakı'nın kendisi durağan bir deniz değildir. Mikroskobik zerreler sürekli bir spin (dönüş) halindedir. Bu mikro dönüşler bir araya gelip aynı yöne hizalandıklarında (Kuantum Vortisitesi), uzayda kendiliğinden devasa ve fırtınalı **Makro Evrenakı Girdapları (Vorteksler)** oluştururlar.
@@ -80,7 +80,7 @@ Yani evrenin derinliklerinde ortada birbirinden farklı iki motor (kütle ve gir
 ## 3.8.4 Başıboş Gezegenler (Rogue Planets) ve Öz-Dönüş Kanıtı
 Teorideki "dönüşün kaynağının dışarıdaki dev yıldız değil, kütlenin kendi içindeki 4. boyut mikro spinleri olduğu" gerçeğinin en büyük astronomik kanıtlarından biri de **Başıboş Gezegenler (Rogue Planets)** keşifleridir.
 
-Son yıllarda kütleçekimsel mikro-mercekleme ve gelişmiş kızılötesi teleskoplar (özellikle James Webb) sayesinde, uzayın derinliklerinde hiçbir yıldıza veya sisteme bağlı olmadan zifiri karanlıkta tek başına sürüklenen milyarlarca başıboş gezegen tespit edilmiştir. İşin en çarpıcı astronomik gerçeği şudur: Yapılan gözlemler, hiçbir yıldıza bağlı olmayan bu yetim gezegenlerin **kendi etraflarında dönüş (rotasyon) hareketi yaptığını** göstermektedir.
+Son yıllarda kütleçekimsel mikro-mercekleme (Sumi ve ark., 2011; Mróz ve ark., 2017) ve gelişmiş kızılötesi teleskoplar (özellikle James Webb; Pearson & McCaughrean, 2023) sayesinde, uzayın derinliklerinde hiçbir yıldıza veya sisteme bağlı olmadan zifiri karanlıkta tek başına sürüklenen milyarlarca başıboş gezegen tespit edilmiştir. İşin en çarpıcı astronomik gerçeği şudur: Yapılan gözlemler, hiçbir yıldıza bağlı olmayan bu yetim gezegenlerin **kendi etraflarında dönüş (rotasyon) hareketi yaptığını** göstermektedir (serbest yüzen gezegen-kütleli cisimlerin dönüş periyodu ölçümleri: Vos ve ark., 2020).
 
 Eğer kütleleri (gezegenleri) çeviren tek şey Güneş gibi dev bir yıldızın dışarıdan uyguladığı "Makro Evrenakı Girdabı" (standart fizikte "kütleçekimi") olsaydı, Güneş'ten kopan ve yıldızsız uzay boşluğuna savrulan bir gezegenin dış motor kapandığı için dönmemesi gerekirdi. Ancak başıboş gezegenler, etraflarında onları dışarıdan çevirecek devasa bir yıldız vorteksi olmamasına rağmen kendi eksenlerinde fırıl fırıl dönmeye devam ederler. 
 
@@ -93,13 +93,13 @@ Evrenakı teorisindeki "Kütle büyüdükçe dış çevre koşullarından bağı
 Mars ile Jüpiter arasındaki asteroit kuşağı, milyonlarca irili ufaklı kayanın Güneş'in devasa Evrenakı girdabı içinde kaotik bir şekilde savrulduğu bir bölgedir. Küçük asteroitler çevrelerindeki bu şiddetli akıntılardan, çarpışmalardan ve dış faktörlerden kolayca etkilenerek düzensiz taklalar atarlar. Ancak kütle büyüdüğünde durum tamamen değişir! 
 
 Astronomik gözlemlere göre asteroit kuşağındaki **büyük kütleli cisimlerin hepsi kendi eksenlerinde son derece istikrarlı ve hızlı bir şekilde dönerler:**
-*   Kuşağın en büyüğü olan cüce gezegen **Ceres**, etrafındaki kaosa rağmen kendi eksenindeki bir turunu sadece **9 saatte** tamamlar.
-*   İkinci en büyük asteroit **Vesta**, kendi etrafında fırıl fırıl dönerek turunu **5.3 saatte** atar.
+*   Kuşağın en büyüğü olan cüce gezegen **Ceres**, etrafındaki kaosa rağmen kendi eksenindeki bir turunu sadece **9 saatte** tamamlar (Russell ve ark., 2016).
+*   İkinci en büyük asteroit **Vesta**, kendi etrafında fırıl fırıl dönerek turunu **5.3 saatte** atar (Russell ve ark., 2012). (Dönüş periyotlarının resmî değerleri için ayrıca bkz. Archinal ve ark., 2018.)
 
 **Dahası: Kendi Uydularını (Mini Girdaplarını) Yaratırlar!**
 Kütlenin büyümesiyle birlikte içsel 4D spinlerin sayısının arttığını ve bunun da dışarıya "kendi yerel Evrenakı girdabını (kütle-itim alanını) yaratmak" olarak yansıdığını belirtmiştik. Asteroit kuşağı bu teoriyi de çarpıcı biçimde doğrular. Sadece dev gezegenlerin değil, yeterli büyüklüğe ulaşmış asteroitlerin bile **kendi uyduları** vardır.
-*   **Ida** asteroiti (4.6 saatte döner) etrafında dönen **Dactyl** adında bir uyduya sahiptir.
-*   **Sylvia** asteroiti (5.1 saatte döner) ise etrafında dönen tam iki uyduya (**Romulus ve Remus**) sahiptir.
+*   **Ida** asteroiti (4.6 saatte döner) etrafında dönen **Dactyl** adında bir uyduya sahiptir (Belton ve ark., 1995).
+*   **Sylvia** asteroiti (5.1 saatte döner) ise etrafında dönen tam iki uyduya (**Romulus ve Remus**) sahiptir (Marchis ve ark., 2005).
 
 **Sonuç:** Güneş'in o devasa ve kaotik akıntısının tam ortasında olmalarına rağmen, bu büyük asteroitlerin istikrarlı bir şekilde dönmeleri ve etraflarında kendi uydularını yörüngede tutabilmeleri; dönüşün dışarıdan (Güneş'ten) dikte edilmediğini kanıtlar. Kütle büyüdükçe, o kütlenin içindeki 4D mikro spin motoru güçlenir, dış akıntıya kafa tutar ve kendi uydusunu (Dactyl veya Romulus gibi) çevirecek kadar güçlü, yepyeni lokal bir Evrenakı vorteksi yaratır.
 

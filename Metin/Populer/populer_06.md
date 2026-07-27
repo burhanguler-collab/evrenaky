@@ -1,5 +1,8 @@
 # 6. Zaman Bükülmez, Sadece Saatler Yavaşlar
 
+⏱️ **Tahmini Okuma Süresi:** 4 dakika  
+🎓 **Akademik Sürüm Temeli:** [Kısım V & VI: Işığın Sabitsizliği ve Zaman Genleşmesi (Akademik 5.1 & 6.2)](#akademik_05_01)  
+
 Modern fiziğin en büyük gösterisi, en çok film ve belgesele konu olan iddiası şudur: **"Zaman görecelidir; hızlı gidersen zaman senin için yavaşlar, ağır bir yıldızın yanında zaman esner."** Einstein'ın bu fikri neredeyse dinî bir inanca dönüştü; sorgulayana "cahil" damgası vuruldu.
 
 Biz bu damgayı göze alıyoruz ve net söylüyoruz: **Zaman diye bir kumaş yoktur; o yüzden bükülemez de.** Bükülen zaman değildir — yavaşlayan **saatlerdir.** Bu ikisi arasındaki fark, evreni anlamanın anahtarıdır.

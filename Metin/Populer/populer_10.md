@@ -1,5 +1,8 @@
 # 10. Einstein Bile İtiraf Etti: Esir Geri Döndü
 
+⏱️ **Tahmini Okuma Süresi:** 4 dakika  
+🎓 **Akademik Sürüm Temeli:** [Kısım I & VII: Görelilik Eleştirisi ve Tarihsel Gelişim (Akademik 1.2 & 7.3)](#akademik_01_02)  
+
 Şimdiye kadar size "uzay bir sıvıdır" dedik durduk. Aklınızdan haklı bir soru geçiyor olmalı: *"Madem bu sıvı var, neden bilim onu yıllar önce çöpe attı? Koca bilim insanları aptal mıydı?"* Hayır, aptal değillerdi. Sadece **yanlış bir deneyden yanlış bir ders çıkardılar.** Bu bölüm, tarihin en büyük yanlış anlaşılmasının hikâyesidir.
 
 ## 1887: Rüzgârı Bulamayan Deney
