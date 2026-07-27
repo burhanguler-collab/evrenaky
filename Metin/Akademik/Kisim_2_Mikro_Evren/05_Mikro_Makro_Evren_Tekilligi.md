@@ -12,7 +12,7 @@
 
 Evrenakı teorisi, ışığın davranışını "atomların boşluklarına denk gelip gelmemesi" gibi yüzeysel bir tesadüfe bırakmaz; her atomun çevresinde, çekirdeğin ve elektronun kendi kütlesinden ve dönüşünden kaynaklanan somut bir hidrodinamik topoloji (Evrenakı Rampası) bulunduğunu ve yansımanın, geçirgenliğin ve soğurmanın bu **tek** topolojinin farklı sonuçlarından ibaret olduğunu öne sürer.
 
-Işık (Zerre), saydam cisimlerin içinden "boşluk" olduğu için geçmez; tam aksine, oradaki eşsiz akışkan mimarisine tutunarak süzülür. Yansıtan cisimlerde ise, tıpkı denizde sektirilen bir taş gibi yüzeydeki yoğun Evrenakı basıncına çarparak seker. Işığın kaderi boşlukların insafına değil, Evrenakı denizinin kusursuz basınç gradyanlarına bağlıdır. Şimdi, atomik ölçekteki bu muazzam hidrodinamik şaheserin detaylarına inelim.
+Işık (Zerre), saydam cisimlerin içinden "boşluk" olduğu için geçmez; tam aksine, oradaki eşsiz akışkan mimarisine tutunarak süzülür. Yansıtan cisimlerde ise, tıpkı denizde sektirilen bir taş gibi yüzeydeki yoğun Evrenakı basıncına çarparak seker. Işığın kaderi boşlukların insafına değil, Evrenakı denizinin kusursuz basınç gradyanlarına bağlıdır. Şimdi, atomik ölçekteki bu hidrodinamik mekanizmanın detaylarına inelim.
 
 
 ## 2.5.1 Evrenakı Rampası: Yüzey Gerilimi ve Sınır Tabakası Etkisi
@@ -320,7 +320,7 @@ Işık (zerre katarı) bir kütleye doğru ilerlediğinde, aslında o kütlenin 
 
 ## 2.5.2 Tek Mekanizma: Yansıma, Geçirme ve Soğurma
 
-Kütlenin yüzeyindeki "Evrenakı Rampası" (Sınır Tabakası), aslında o kütleyi oluşturan tekil atomların ve etraflarında hızla dönen elektronların yarattığı devasa, birleşik bir hidrodinamik kalkanın eseridir. Ancak bu makro kalkanın asıl kaynağına, yani tek bir atomun mikroskobik ölçeğine indiğimizde, mekanizmanın ne kadar kusursuz ve tıkır tıkır işlediğini görmek çok daha aydınlatıcıdır.
+Kütlenin yüzeyindeki "Evrenakı Rampası" (Sınır Tabakası), aslında o kütleyi oluşturan tekil atomların ve etraflarında hızla dönen elektronların yarattığı devasa, birleşik bir hidrodinamik kalkanın eseridir. Ancak bu makro kalkanın asıl kaynağına, yani tek bir atomun mikroskobik ölçeğine indiğimizde, mekanizmanın nasıl adım adım işlediğini görmek çok daha aydınlatıcıdır.
 
 Standart fizikte; ışığın bir cisme çarpıp sekmesi (yansıma), saydam bir maddeden geçmesi (geçirgenlik) veya madde tarafından yutularak ısıya dönüşmesi (soğurma), birbirinden tamamen farklı formüllerle açıklanan bağımsız fenomenler olarak öğretilir. Oysa Evrenakı Teorisi'nde bu üç temel optik olay; aynı katı hidrodinamik yasaya tabi olan **tek bir mekanizmanın üç farklı sonucundan** ibarettir. 
 

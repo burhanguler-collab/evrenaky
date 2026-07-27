@@ -1,6 +1,6 @@
 # 1.6 Evrenakı Terminolojisi ve Temel Kavramlar Sözlüğü
 
-Evrenakı Teorisi, mevcut fizik paradigmasının soyut kavramlarını (karanlık madde, uzay-zaman bükülmesi, dalga-parçacık ikiliği) akışkanlar mekaniğinin (hidrodinamik) son derece somut ve fiziksel terimleriyle değiştirir. Okuma süresince sıklıkla karşılaşacağınız bu temel kavramların ne anlama geldiğini anlamak, teorinin bütününü kavramak için hayati öneme sahiptir.
+Evrenakı Teorisi, mevcut fizik paradigmasının soyut kavramlarını (karanlık madde, uzay-zaman bükülmesi, dalga-parçacık ikiliği) akışkanlar mekaniğinin (hidrodinamik) son derece somut ve fiziksel terimleriyle değiştirir. Okuma süresince sıklıkla karşılaşacağınız bu temel kavramların ne anlama geldiğini bilmek, teorinin bütününü izleyebilmenin ön koşuludur.
 
 > **Sözlük nasıl kullanılır:** Buradaki maddelerin bir bölümü bu kısımda (Kısım 1) tanımlanan çekirdek kavramlardır; bir bölümü ise kitabın ilerleyen kısımlarında ayrıntılı işlenecek terimlerin ön tanımlarıdır. İkinci gruptakiler madde sonunda *(ayrıntılı işleniş: Bölüm X)* notuyla işaretlenmiştir — bu maddeleri ilk okumada tam kavrayamazsanız endişelenmeyin; ilgili bölüme geldiğinizde mekanizmalarıyla birlikte yeniden kurulacaklardır.
 
@@ -42,4 +42,4 @@ Evrenakı Teorisi, mevcut fizik paradigmasının soyut kavramlarını (karanlık
 - **Zerre-Saati:** Bir atomun ışıma frekansını belirleyen, yerel ışık hızına ($c_{yerel}$) tabi iç sinyallerle çalışan mekanik saat (ışık saati). Tik hızı hem yerel ışık hızına hem de (cisim hareketliyse) çapraz-yol uzamasına ($\gamma$) bağlıdır; bu yüzden kütleçekimsel ve kinematik zaman kaymalarının ortak fiziksel kaynağıdır. *(ayrıntılı işleniş: Bölüm 6.1–6.2)*
 - **Zitterbewegung:** Standart elektron teorisinde parçacığın anlamsızca titremesi (titrek hareket) olarak bilinen kuantum anomalisidir. Evrenakı modelinde ise bu, parçacığın dördüncü boyuttaki (W ekseni) dönüşünün üç boyutlu uzayımıza düşen **"boyutsal salınım (pulsasyon)"** izdüşümüdür; dönüşün kendisi görünmez, yalnızca bir doğru boyunca ileri-geri salınım olarak iz bırakır (bkz. 1.4).
 
-Bu kavramlar, kitabın ilerleyen kısımlarındaki makro ve mikro evren mekaniklerini anlamanız için anahtar niteliğindedir. Yeni bir bölüm okurken ihtiyaç duyduğunuzda bu sayfaya geri dönerek terimlerin hidrodinamik karşılıklarını hatırlayabilirsiniz.
+Kitabın ilerleyen kısımlarındaki makro ve mikro evren mekanikleri bu kavramlar üzerine kurulacaktır. Yeni bir bölüm okurken ihtiyaç duyduğunuzda bu sayfaya geri dönerek terimlerin hidrodinamik karşılıklarını hatırlayabilirsiniz.

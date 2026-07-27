@@ -29,7 +29,7 @@ Görüldüğü üzere Evrenakı (Cosmofluid) teorisi, evrenin işleyişini klasi
 
 Burada sunulan hidrodinamik denklemler, sistemin sadece en idealize edilmiş, temel iskeletidir. Gerçekte, bir gezegenin veya bir galaksinin etrafındaki Evrenakı vorteks yapısı 3 boyutlu, asimetrik, türbülanslı ve inanılmaz derecede non-lineer (doğrusal olmayan) sürüklenme süreçleri içerir. Sadece tek bir galaktik vorteksin tüm akış çizgilerini, basınç haritalarını ve sınır tabakası sürtünmelerini tam anlamıyla hesaplayabilmek için bile her bir özel vaka adına ayrı kalın kitaplar yazılmak, devasa Hesaplamalı Akışkanlar Dinamiği (CFD) simülasyonları yapılmak zorundadır.
 
-Bu nedenle, kitabın bu bölümünde Evrenakı'nın sadece "temel matematiği ve iskeleti" işlenmiş, denklemlerin o kaotik ve boğucu detaylarına bilerek girilmemiştir. Klasik fiziğin matematiği basit ama hatalıdır; Evrenakı hidrodinamiği ise ürkütücü derecede karmaşık ama doğanın ta kendisidir. Bu devasa kozmik okyanusun tüm spesifik denklemlerini çözmek, bu teoriyi devralacak geleceğin fizikçilerine bırakılmış bir mirastır.
+Bu nedenle, kitabın bu bölümünde Evrenakı'nın sadece "temel matematiği ve iskeleti" işlenmiş, denklemlerin o kaotik ve boğucu detaylarına bilerek girilmemiştir. Klasik fiziğin matematiği basit ama hatalıdır; Evrenakı hidrodinamiği ise çok daha karmaşık olmakla birlikte doğanın işleyişine sadık kalır. Bu kozmik okyanusun tüm spesifik denklemlerinin çözümü, bu çerçeve üzerinde çalışacak gelecekteki araştırmalara açık bir alandır.
 
 ## 4.2.15 G Sabiti Paradigmasının Sınırları ve Klasik Fiziğin İtirazlarına Cevaplar
 

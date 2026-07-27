@@ -40,7 +40,7 @@
 
 ### 2.3 Doğrudan Karanlık Madde Arama (WIMP / Axion) Deneylerinin Sıfır Sonuçları
 * **Standart Fiziğin Çıkmazı:** 40 yıldır yeraltı laboratuvarlarında (LUX, XENON1T vb.) parçacık bulunamaması bir "anomali/kriz" olarak görülür.
-* **Evrenakı Mekanik Çözümü:** Girdap kuyuları parçacık değildir; ortamın akışkan fazıdır. Dedektörlerin parçacık bulamaması teorinin doğrudan ÖNGÖRÜSÜDÜR.
+* **Evrenakı Mekanik Çözümü:** Girdap kuyuları parçacık değildir; ortamın akışkan fazıdır. Dedektörlerin parçacık bulamaması teorinin doğrudan **öngörüsüdür**.
 
 ### 2.4 Kozmolojik İvmelenen Genleşme (Karanlık Enerji Olmadan)
 * **Standart Fiziğin Çıkmazı:** Evrenin %68'ini oluşturduğu iddia edilen ama ne olduğu bilinmeyen fiktif "Karanlık Enerji" (Kozmolojik Sabit $\Lambda$).
@@ -103,4 +103,4 @@
 
 ---
 
-> **Sonuç:** Standart fizik doğa olguları için ayrı ayrı soyutlama ve serbest parametre üretmek zorunda kalırken, **Evrenakı Teorisi tek bir süper-akışkan tözünün hidrodinamiği ile tüm bu olguları tek çatı altında toplar.**
+> **Sonuç:** Standart fizik doğa olguları için ayrı ayrı soyutlama ve serbest parametre üretmek zorunda kalırken, **Evrenakı Teorisi tüm bu olguları tek bir süper-akışkan tözünün hidrodinamiği ile tek çatı altında toplamayı önerir.** Bu matristeki her satırın kanıt statüsü (yeniden-türetim / yeniden-yorum / açıklayıcı güç) Bölüm 6.5'te sınıflandırılmıştır.

@@ -4,7 +4,7 @@ Evrenakı teorisinde uzay boşluğu (vakum), pasif bir "hiçlik" değil, devasa 
 
 Standart fizik, ışığın (Zerrenin) boşlukta saniyede tam 299.792.458 metre ($c$) hızla hareket ettiğini ve bu değerin Evren'in her yerinde mutlak bir evrensel sabit olduğunu iddia eder. Ancak bu yaklaşım bu hızın mekanik altyapısını veya "neden" bu değere sahip olduğunu açıklayamaz. 
 
-Evrenakı mekaniği ise ışık hızını çok net bir akışkanlar dinamiği yasasıyla tanımlar: **$c$, Evrenakı akışkanının bulunduğumuz lokal yoğunluğunun müsaade ettiği Kavrama (Tutunma) hızıdır.** Şayet Evrenakı akışkanının kendi doğası için mutlak bir "üst sınır" tanımlayacak isek, bu sınır 299.792.458 m/s'den tahminlerin ötesinde çok çok daha fazladır.
+Evrenakı mekaniği ise ışık hızını çok net bir akışkanlar dinamiği yasasıyla tanımlar: **$c$, Evrenakı akışkanının bulunduğumuz lokal yoğunluğunun müsaade ettiği Kavrama (Tutunma) hızıdır.** Şayet Evrenakı akışkanının kendi doğası için mutlak bir "üst sınır" tanımlayacak isek, bu sınır 299.792.458 m/s'nin çok ötesindedir.
 
 ## 2.4.1 İletim Sınırı Olarak $c$
 
@@ -51,7 +51,7 @@ $$E_T = \frac{1}{2} m_z v^2 \ (\text{Çizgisel}) + \frac{1}{2} I \omega^2 \ (\te
 
 Zerre camdan çıkıp tekrar dış uzayın yüksek basıncına (kuru asfalta) temas ettiğinde, tekerlek yeniden yola tutunur (kavrama sağlanır). Patinaj biter, fırıldak gibi dönme (spin) enerjisi tekrar çizgisel ivmeye aktarılır ve Zerre hiçbir dış enerjiye ihtiyaç duymadan (Bölüm 1.2.2'deki paradoksu çözerek) eski çizgisel hızı olan $c$'ye geri döner.
 
-Minkowski ve Abraham'ın ışığın momentumu konusunda bir asırdır tartıştığı o meşhur paradoksun (Minkowski, 1908; Abraham, 1909) (momentum artar mı azalır mı sorusunun) çözümü işte bu kadar basittir: Işık soyut bir dalga değil mermidir, camda yavaşlamaz, sadece patinaj yapar.
+Minkowski ve Abraham'ın ışığın momentumu konusunda bir asırdır tartıştığı o meşhur paradoksun (Minkowski, 1908; Abraham, 1909) (momentum artar mı azalır mı sorusunun) çözümü tek bir mekanizmaya dayanır: Işık soyut bir dalga değil mermidir, camda yavaşlamaz, sadece patinaj yapar.
 
 *(Bu mekanizmanın — iki bağımsız paradoksu tek hamlede çözmesinin — kanıt değeri, Kısım 6'daki kanıt dosyasında ayrıca değerlendirilmektedir: bkz. Bölüm 6.4.)*
 

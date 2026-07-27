@@ -1,6 +1,6 @@
 # 2.11 Kısım Özeti: Ne Öğrendik?
 
-İkinci kısımda, standart fiziğin en "gizemli" ve anlaşılmaz ilan ettiği mikro evrenin (kuantum dünyasının) kapılarını ardına kadar açtık. Atom altı dünyayı yönettiği sanılan soyut dalga fonksiyonlarının, belirsizliklerin ve olasılıksal yorumların temel gerçeklik olmadığını; arka planda tıkır tıkır işleyen somut, deterministik bir akışkanlar mekaniğinin yattığını savunduk.
+İkinci kısımda, standart fiziğin en "gizemli" ve anlaşılmaz ilan ettiği mikro evrenin (kuantum dünyasının) kapılarını açtık. Atom altı dünyayı yönettiği sanılan soyut dalga fonksiyonlarının, belirsizliklerin ve olasılıksal yorumların temel gerçeklik olmadığını; arka planda adım adım işleyen somut, deterministik bir akışkanlar mekaniğinin yattığını savunduk.
 
 ## Temel Kazanımlarımız
 

@@ -1,6 +1,6 @@
 # 2.9 Evrenakı Gradyanları ve Polarizasyon
 
-Işığın uzayda (Evrenakı denizinde) nasıl ilerlediğini tam anlamıyla kavrayabilmek için, fotonların "dalga" veya "parçacık" gibi sabit kimliklere sahip olmadığını, bulundukları hidrodinamik şartlara göre şekil değiştiren **esnek akışkan zerreler** olduğunu hatırlamalıyız. Evrenakı teorisine göre zerreler sabit boyutlu katı bilyeler değil, kendi iç dinamikleri (spinleri) ile Evrenakı'nın dış basıncı arasında sürekli dinamik bir denge kuran esnek akışkan yapılardır.
+Işığın uzayda (Evrenakı denizinde) nasıl ilerlediğini tam anlamıyla kavrayabilmek için, standart fiziğin "foton" dediği ışık birimlerinin "dalga" veya "parçacık" gibi sabit kimliklere sahip olmadığını, bulundukları hidrodinamik şartlara göre şekil değiştiren **esnek akışkan zerreler** olduğunu hatırlamalıyız. Evrenakı teorisine göre zerreler sabit boyutlu katı bilyeler değil, kendi iç dinamikleri (spinleri) ile Evrenakı'nın dış basıncı arasında sürekli dinamik bir denge kuran esnek akışkan yapılardır.
 
 Bu esnekliğin kutuplaşma bağlamındaki temel sonucu Bölüm 2.4.3'te kurulmuştu ve tek cümleyle özetlenebilir: düşük basınçlı gradyana giren Zerre patinaja geçer, doğrusal enerjisi dönüşe aktarılır ve artan merkezkaç ile azalan dış baskı altında **küreden diske (elipsoide)** yassılaşır — standart fiziğin "polarizasyon" dediği durum, bu mekanik form değişiminin ta kendisidir. Bu bölümün özgün konusu ise bir sonraki adımdır: polarize olmuş diskin, gradyan alanlarında **basınç torkuyla** nasıl yönlendirildiği.
 

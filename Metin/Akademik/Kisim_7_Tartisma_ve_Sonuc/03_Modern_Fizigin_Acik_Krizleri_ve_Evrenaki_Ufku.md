@@ -1,70 +1,70 @@
-# 7.3 Modern Fiziğin Açık Krizleri ve Evrenakı Teorisi'nin Çözüm Ufku
+# 7.7 Modern Fiziğin Açık Krizleri ve Evrenakı Teorisi'nin Çözüm Ufku
 
 Önceki kısımlarda Evrenakı Teorisi'nin temel postülatları kurulmuş, mikro/makro mekanizmaları tanımlanmış ve kâğıt üzerindeki deneysel/matematiksel kanıtları sunulmuştur (Kısım 6). Bu bölümde ise günümüz modern fiziğinde (Standart Model + Genel Görelilik + $\Lambda\text{CDM}$ kozmolojisi) **derin bir kriz ve anomali olarak kabul edilen**, henüz geleneksel kuramlarca çözülememiş 22 büyük problem ele alınmakta ve Evrenakı'nın bu krizlere sunduğu **doğrudan mekanik çözüm potansiyeli** analiz edilmektedir.
 
 ---
 
-## 7.3.1 Hubble Tensi ($H_0$ Krizi — Astrofiziğin En Büyük Çıkmazı)
+## 7.7.1 Hubble Tensi ($H_0$ Krizi — Astrofiziğin En Büyük Çıkmazı)
 
 ### 1. Güncel Fizikteki Kriz
-Erken evren verileri (Planck Uydusu CMB: $H_0 \approx 67.4$ km/s/Mpc) ile yakın/geç evren ölçümleri (James Webb / Hubble Tip Ia Süpernovaları: $H_0 \approx 73.0-74.0$ km/s/Mpc) arasında $5\sigma$ düzeyinde **çözülemeyen istatistiksel bir çelişki** vardır. Standart $\Lambda\text{CDM}$ kozmolojik modeli bu iki bağımsız ölçümü aynı tutarlı parametre setiyle açıklayamamaktadır.
+Erken evren verileri (Planck Uydusu CMB: $H_0 \approx 67{,}4$ km/s/Mpc) ile yakın/geç evren ölçümleri (James Webb / Hubble Tip Ia Süpernovaları: $H_0 \approx 73{,}0-74{,}0$ km/s/Mpc) arasında $5\sigma$ düzeyinde **çözülemeyen istatistiksel bir çelişki** vardır. Standart $\Lambda\text{CDM}$ kozmolojik modeli bu iki bağımsız ölçümü aynı tutarlı parametre setiyle açıklayamamaktadır.
 
 ### 2. Evrenakı Mekanik Çözümü
 Evrenakı Teorisi'nde ışık hızı mutlak sabit değildir; ortamın yerel basınç ve yoğunluk oranına bağlı sonik patinaj hızıdır ($c=\sqrt{P/\rho}$). Yüksek basınçlı erken evrenden gelen ışığın yayınlanma hızı ($c_{erken}$) ile günümüz düşük basınçlı yerel ortamındaki ışık hızı ($c_{yerel}$) farklıdır. Astronomlar uzaklık ve genleşme hızı hesaplarken $c$'yi geçmişten bugüne mutlak sabit aldıkları için, uzaklığa bağlı yapay bir genleşme hızı farkı ($H_0$ sapması) ölçmektedirler. Evrenakı, fiktif bir karanlık enerjiye ihtiyaç duymadan Hubble krizini $c(t)$ zamansal değişkenliği ile matematiksel olarak çözer.
 
 ---
 
-## 7.3.2 JWST "İmkânsız Erken Galaksiler" Problemi
+## 7.7.2 JWST "İmkânsız Erken Galaksiler" Problemi
 
 ### 1. Güncel Fizikteki Kriz
-James Webb Uzay Teleskobu (JWST), Büyük Patlama'dan sadece 300–400 milyon yıl sonra ($z > 10$) oluşması standart fizikte imkânsız kabul edilen derece devasa, son derece parlak ve olgun galaksiler keşfetmiştir. Standart modelin "yavaş karanlık madde çökmesi ve hiyerarşik parçacık birikimi" teorisi bu kadar kısa sürede bu boyutta galaksi üretemez.
+James Webb Uzay Teleskobu (JWST), Büyük Patlama'dan sadece 300–400 milyon yıl sonra ($z > 10$) oluşması standart fizikte imkânsız kabul edilen derecede devasa, son derece parlak ve olgun galaksiler keşfetmiştir. Standart modelin "yavaş karanlık madde çökmesi ve hiyerarşik parçacık birikimi" teorisi bu kadar kısa sürede bu boyutta galaksi üretemez.
 
 ### 2. Evrenakı Mekanik Çözümü
 Evrenakı Teorisi'nde galaksiler parçacıkların yavaş kütleçekimsel birikimiyle değil, ortamın **Görünmez Sirkülasyon Kuyuları (Dev Akışkan Girdapları)** ile oluşur. Akışkanlar mekaniğinde vorteks oluşumu (girdap kaskadı) non-lineerdir ve anidir. Süper-akışkan ortamın kararsızlığa uğradığı ilk anda devasa galaktik girdaplar anında teşekkül eder. JWST'nin gördüğü "erken dev galaksiler", Evrenakı'nın girdap dinamiğinin doğal bir sonucudur.
 
 ---
 
-## 7.3.3 Proton Yarıçapı Bilmecesi (Proton Radius Puzzle)
+## 7.7.3 Proton Yarıçapı Bilmecesi (Proton Radius Puzzle)
 
 ### 1. Güncel Fizikteki Kriz
-Protonun yarıçapı normal hidrojen atomuyla (elektronlu) ölçüldüğünde $r_p \approx 0.877$ fm çıkarken, elektronun 200 katı kütleli müon içeren "müonik hidrojen" ile ölçüldüğünde $r_p \approx 0.8409$ fm çıkmaktadır. Standart kuantum elektrodinamiği (QED) bu $4\sigma$'lık farkı yeni bir fizik tanımlamadan açıklayamamaktadır.
+Protonun yarıçapı normal hidrojen atomuyla (elektronlu) ölçüldüğünde $r_p \approx 0{,}877$ fm çıkarken, elektronun 200 katı kütleli müon içeren "müonik hidrojen" ile ölçüldüğünde $r_p \approx 0{,}8409$ fm çıkmaktadır. Standart kuantum elektrodinamiği (QED) bu $4\sigma$'lık farkı yeni bir fizik tanımlamadan açıklayamamaktadır.
 
 ### 2. Evrenakı Mekanik Çözümü
 Evrenakı'da proton nokta-parçacık değil, çeperinde yüksek yoğunluklu **Evrenakı Rampası (Sınır Tabakası)** taşıyan 4D deplasman pompasıdır. Müon elektrondan 200 kat daha ağır olduğu için kendi sürüklenme zarfı protonun Evrenakı Rampası'nın daha derinlerine nüfuz eder ve temas yarıçapını hidrodinamik olarak daraltır ($r_{temas} < r_{serbest}$).
 
 ---
 
-## 7.3.4 Müon $g-2$ Anormal Manyetik Moment Sapması
+## 7.7.4 Müon $g-2$ Anormal Manyetik Moment Sapması
 
 ### 1. Güncel Fizikteki Kriz
-Fermilab'daki $g-2$ deneyinde müonun manyetik momenti Standart Model'in teorik öngörüsünden $5.1\sigma$ oranında sapmıştır. Doğa, Standart Model'de yer almayan ek bir etkileşim sergilemektedir.
+Fermilab'daki $g-2$ deneyinde müonun manyetik momenti Standart Model'in teorik öngörüsünden $5{,}1\sigma$ oranında sapmıştır. Doğa, Standart Model'de yer almayan ek bir etkileşim sergilemektedir.
 
 ### 2. Evrenakı Mekanik Çözümü
 Müon daha büyük kütleye (daha yüksek 4D deplasman pompalama debisine) sahip olduğu için, ortamdaki arka plan vortisite tüpleriyle nötr elektronunkinden farklı boyutta bir hidrodinamik tork (dönü momenti) alışverişi yaparlar. QED'in sanal parçacık ilmekleri yerine ortamın vortisite direnci hesaba katıldığında bu sapma türetilebilir.
 
 ---
 
-## 7.3.5 Güneş Korona Isınma Anomalisi (Solar Coronal Heating)
+## 7.7.5 Güneş Korona Isınma Anomalisi (Solar Coronal Heating)
 
 ### 1. Güncel Fizikteki Kriz
-Güneş'in yüzey sıcaklığı $\sim 5,800$ K iken, dış atmosferi (Korona) milyonlarca derece ($1,000,000 - 3,000,000$ K) sıcaklıktadır. Termodinamiğin 2. Kanunu gereği soğuk yüzeyden sıcak atmosfere termal ısı akamaz. Astrofizik bunu manyetik yeniden bağlanma ile açıklamaya çalışsa da somut iletim mekanizması eksiktir.
+Güneş'in yüzey sıcaklığı $\sim 5.800$ K iken, dış atmosferi (Korona) milyonlarca derece ($1.000.000 - 3.000.000$ K) sıcaklıktadır. Termodinamiğin 2. Kanunu gereği soğuk yüzeyden sıcak atmosfere termal ısı akamaz. Astrofizik bunu manyetik yeniden bağlanma ile açıklamaya çalışsa da somut iletim mekanizması eksiktir.
 
 ### 2. Evrenakı Mekanik Çözümü
 Güneş'in ekvatoral vorteks pompası dışa doğru Evrenakı akışkanını deşarj ederken, yüzey çeperinde devasa kesme kuvvetleri (shear flow) ve kavitasyon şok dalgaları üretir. Isı akışı yüzeyden termal iletimle değil, ortamın kinetik şok kavitasyonunun koronada plazmaya mekanik enerji aktarmasıyla gerçekleşir.
 
 ---
 
-## 7.3.6 Kozmolojik Lityum Problemi (BBN Anomalisi)
+## 7.7.6 Kozmolojik Lityum Problemi (BBN Anomalisi)
 
 ### 1. Güncel Fizikteki Kriz
-Büyük Patlama Çekirdek Sentezi (BBN) modelleri, evrendeki Hidrojen ve Helyum oranını mükemmel tuttururken, Lityum-7 ($^7\text{Li}$) miktarını gözlenenden **3 kat fazla** öngörmektedir. 40 yıldır bu 3 katlık Lityum kayıplığı çözülememiştir.
+Büyük Patlama Çekirdek Sentezi (BBN) modelleri, evrendeki Hidrojen ve Helyum oranını mükemmel tuttururken, Lityum-7 ($^7\text{Li}$) miktarını gözlenenden **3 kat fazla** öngörmektedir. 40 yıldır bu 3 katlık lityum uyuşmazlığı çözülememiştir.
 
 ### 2. Evrenakı Mekanik Çözümü
 Nükleer birleşme ve nükleonların rampa kilitlenmesi mesafe yarıçapı ($r_c$), ortamın yerel arka plan basıncına ($P_0$) bağlıdır. Erken evrendeki yüksek basınç ortamı ($P_{erken} > P_0$), Kütle-7 çekirdeklerinin ($^7\text{Be}$ / $^7\text{Li}$) rampa tutunma tesir kesitini değiştirerek Lityum sentezini doğal olarak bastırır.
 
 ---
 
-## 7.3.7 CMB Yön Anomalileri (Soğuk Leke ve Düşük Multipol Hizalanmaları)
+## 7.7.7 CMB Yön Anomalileri (Soğuk Leke ve Düşük Multipol Hizalanmaları)
 
 ### 1. Güncel Fizikteki Kriz
 WMAP ve Planck haritaları, standart enflasyon modelinin öngördüğü izotropik Gauss rastgeleliğine uymayan üç desen taşır: (i) güney gök yarımküresinde beklenenden derin ve geniş **Soğuk Leke**; (ii) en büyük ölçekli sıcaklık dalgalanmalarının (kuadrupol–oktupol) birbiriyle ve Güneş Sistemi düzlemiyle şaşırtıcı hizalanması (literatürdeki takma adıyla "Axis of Evil"); (iii) iki yarımküre arasındaki güç asimetrisi. Standart kozmoloji bu desenleri mekanizmaya bağlayamaz ve "istatistiksel şanssızlık" etiketiyle geçiştirir.
@@ -74,7 +74,7 @@ CMB pikleri, ilkel plazmanın ortamın kuyu iskeletinde salınmasının izidir (
 
 ---
 
-## 7.3.8 $S_8$ Gerilimi (Yapı Büyüme Krizi)
+## 7.7.8 $S_8$ Gerilimi (Yapı Büyüme Krizi)
 
 ### 1. Güncel Fizikteki Kriz
 Erken evren verisinden ($\Lambda\text{CDM}$ ile) öngörülen madde kümelenme genliği ($S_8 \approx 0{,}83$), geç evrenin zayıf merceklenme taramalarının ölçtüğü değerden ($S_8 \approx 0{,}76$) sistematik olarak yüksektir. Hubble tensinin kardeşi olan bu ikinci erken/geç kalibrasyon çelişkisi de $\Lambda\text{CDM}$ içinde çözümsüzdür.
@@ -84,7 +84,7 @@ Yapı büyümesi standart anlatıdaki gibi "karanlık madde çökmesiyle" değil
 
 ---
 
-## 7.3.9 DESI ve "Evrilen Karanlık Enerji"
+## 7.7.9 DESI ve "Evrilen Karanlık Enerji"
 
 ### 1. Güncel Fizikteki Kriz
 DESI iş birliğinin baryon akustik salınım ölçümleri (2024–2025), karanlık enerjinin sabit bir kozmolojik sabitten ($w=-1$) ziyade **zamanla zayıflayan** bir bileşenle uyumlu olduğunu göstermiştir. $\Lambda\text{CDM}$'in temel direği olan "sabit $\Lambda$" sarsılmakta, standart kozmoloji ne sabitin kendisini ne de evrimini mekanizmaya bağlayabilmektedir.
@@ -94,7 +94,7 @@ Teori karanlık enerjiyi zaten reddeder: genişleme, tüm atomik girdapların or
 
 ---
 
-## 7.3.10 "Olamayacak Kadar Büyük" Yapılar (Dev Yay, Büyük Halka, KBC Boşluğu)
+## 7.7.10 "Olamayacak Kadar Büyük" Yapılar (Dev Yay, Büyük Halka, KBC Boşluğu)
 
 ### 1. Güncel Fizikteki Kriz
 3,3 milyar ışık yıllık Dev Yay (Giant Arc), 1,3 milyar ışık yıllık Büyük Halka (Big Ring) ve içinde yaşadığımız ~2 milyar ışık yıllık düşük yoğunluklu KBC boşluğu: kozmolojik ilkenin (büyük ölçekte homojenlik) izin verdiği üst boyut sınırlarını aşan yapılar birikmektedir. Standart model bu ölçekte tutarlı yapı üretemez.
@@ -104,7 +104,7 @@ Homojenlik, teoride temel ilke değil, girdap kaskadının alt ölçeklerdeki is
 
 ---
 
-## 7.3.11 Karanlık Akış ve Büyük Çekici
+## 7.7.11 Karanlık Akış ve Büyük Çekici
 
 ### 1. Güncel Fizikteki Kriz
 Galaksi kümelerinin, genişlemeden bağımsız olarak belirli bir doğrultuya doğru toplu sürüklenişi ölçülmüştür ("dark flow"); yerel ölçekte de Samanyolu dahil binlerce galaksi "Büyük Çekici" (Great Attractor) denilen doğrultuya akar. Standart fizik "çeken" dev bir kütle yoğunlaşması arar; görünen envanter bu akışı karşılamaz.
@@ -114,7 +114,7 @@ Galaksiler boşlukta çekilen cisimler değil, akıntıda taşınan yüzücüler
 
 ---
 
-## 7.3.12 Kuazar Eksen Hizalanmaları
+## 7.7.12 Kuazar Eksen Hizalanmaları
 
 ### 1. Güncel Fizikteki Kriz
 Birbirinden milyarlarca ışık yılı uzaktaki kuazarların dönüş eksenlerinin ve polarizasyon doğrultularının, içinde bulundukları filamanlarla ve birbirleriyle istatistiksel olarak hizalandığı ölçülmüştür. Standart modelde bu ölçekler arasında nedensel bir bağ kurulamaz.
@@ -124,7 +124,7 @@ Açısal momentum, girdap kaskadında üst ölçekten alta miras kalır: filaman
 
 ---
 
-## 7.3.13 Baryon Asimetrisi (Antimadde Nereye Gitti?)
+## 7.7.13 Baryon Asimetrisi (Antimadde Nereye Gitti?)
 
 ### 1. Güncel Fizikteki Kriz
 Büyük Patlama eşit miktarda madde ve antimadde üretmiş olmalıdır; oysa evren maddeden ibarettir. Standart Model'in bilinen CP ihlali, gözlenen fazlalığı yaklaşık on mertebe açıklayamaz.
@@ -134,7 +134,7 @@ Teoride maddeyi antimaddeden ayıran şey, parçacık girdabının 4. boyutla ku
 
 ---
 
-## 7.3.14 Uydu Galaksi Düzlemleri ve Küçük Ölçek Krizleri
+## 7.7.14 Uydu Galaksi Düzlemleri ve Küçük Ölçek Krizleri
 
 ### 1. Güncel Fizikteki Kriz
 Samanyolu ve Andromeda'nın uydu galaksileri, $\Lambda\text{CDM}$ simülasyonlarının öngördüğü gibi kabaca küresel ve rastgele dağılmak yerine **ince, eş-dönen düzlemlerde** dizilir. Aynı simülasyon ailesi, galaksi merkezlerinde gözlenmeyen sivri yoğunluk profilleri (core-cusp problemi) ve gözlenenden kalabalık/ağır alt kümeler ("too big to fail") öngörür.
@@ -144,7 +144,7 @@ Her galaktik vorteksin, yanal ve eksenel itimin süpürdüğü bir **ekvator bas
 
 ---
 
-## 7.3.15 "Karanlık Maddesiz" Galaksiler (NGC 1052-DF2/DF4)
+## 7.7.15 "Karanlık Maddesiz" Galaksiler (NGC 1052-DF2/DF4)
 
 ### 1. Güncel Fizikteki Kriz
 İç dinamiği yalnızca görünen yıldız kütlesiyle açıklanan galaksiler keşfedilmiştir. Karanlık madde galaksinin ayrılmaz halesi ise nasıl "soyulmuş" olabilir? Madalyonun öbür yüzü de vardır: neredeyse tamamen "karanlık" görünen, aşırı sönük ama ağır galaksiler.
@@ -154,7 +154,7 @@ Her galaktik vorteksin, yanal ve eksenel itimin süpürdüğü bir **ekvator bas
 
 ---
 
-## 7.3.16 Fermi ve eROSITA Baloncukları
+## 7.7.16 Fermi ve eROSITA Baloncukları
 
 ### 1. Güncel Fizikteki Kriz
 Galaktik merkezden diske dik, her biri ~25.000 ışık yılı uzanan iki simetrik gama lobu (Fermi baloncukları) ve onları saran daha büyük X-ışını kabarcıkları (eROSITA baloncukları) keşfedilmiştir. Standart açıklamalar geçmişte tek seferlik bir AGN patlamasına veya yıldız oluşum rüzgârına başvurur; yaş, enerji ve iki lobun kusursuz simetrisi aynı senaryoda zor tutturulur.
@@ -164,17 +164,17 @@ Galaktik merkezden diske dik, her biri ~25.000 ışık yılı uzanan iki simetri
 
 ---
 
-## 7.3.17 Galaktik Merkezin 511 keV İmzası
+## 7.7.17 Galaktik Merkezin 511 keV İmzası
 
 ### 1. Güncel Fizikteki Kriz
 Galaksi merkezi bölgesinden, elektron-pozitron yokoluşunun 511 keV'lik ışıma imzası onlarca yıldır ölçülmektedir. Pozitronları bu debide ve bu dağılımda üreten kaynak standart fizikte hâlâ belirsizdir.
 
 ### 2. Evrenakı Mekanik Çözümü
-Merkez motor, galaksinin en şiddetli girdap-deşarj bölgesidir (3.8.2). Yüksek enerjili deşarj, ortamdan karşıt helisiteli zerre yapılarının (standart adıyla pozitronların) çiftler halinde koparılmasını sürekli besler; azınlık helisitesi çoğunlukla buluştukça (7.3.13) yok oluşun 511 keV'lik Zerre paketleri salınır. İmzanın merkezde yoğunlaşması, üretimin motor deşarjına bağlı olduğunun doğrudan göstergesidir.
+Merkez motor, galaksinin en şiddetli girdap-deşarj bölgesidir (3.8.2). Yüksek enerjili deşarj, ortamdan karşıt helisiteli zerre yapılarının (standart adıyla pozitronların) çiftler halinde koparılmasını sürekli besler; azınlık helisitesi çoğunlukla buluştukça (7.7.13) yok oluşun 511 keV'lik Zerre paketleri salınır. İmzanın merkezde yoğunlaşması, üretimin motor deşarjına bağlı olduğunun doğrudan göstergesidir.
 
 ---
 
-## 7.3.18 Hızlı Radyo Patlamaları (FRB)
+## 7.7.18 Hızlı Radyo Patlamaları (FRB)
 
 ### 1. Güncel Fizikteki Kriz
 Milisaniye içinde bir galaksinin günlerce üreteceği enerjiyi salan radyo patlamaları keşfedilmiştir; kimileri tekrarlar, kimileri düzenli uzun periyotlar taşır. Magnetar hipotezi popülasyonun tamamını (özellikle düzenli periyotları) açıklayamamaktadır.
@@ -184,7 +184,7 @@ Nötron yıldızı, teoride en sıkı sarılmış makro girdaptır. Kabuk-girdap
 
 ---
 
-## 7.3.19 'Oumuamua'nın Kuyruksuz İvmesi
+## 7.7.19 'Oumuamua'nın Kuyruksuz İvmesi
 
 ### 1. Güncel Fizikteki Kriz
 İlk yıldızlararası ziyaretçi 'Oumuamua, Güneş'ten uzaklaşırken standart yörünge hesabından sapan ek bir ivme göstermiştir; ancak bu itkiyi sağlayacak gaz çıkışı (kuyruk) hiçbir teleskopta görülmemiştir. Önerilen "hidrojen buzdağı" gibi modeller ince ayarlıdır.
@@ -194,7 +194,7 @@ Güneş Sistemi, yıldızlararası akıntının içinde kendi sürüklenme zarf�
 
 ---
 
-## 7.3.20 Dokuzuncu Gezegen Bilmecesi ve Kuiper Uçurumu
+## 7.7.20 Dokuzuncu Gezegen Bilmecesi ve Kuiper Uçurumu
 
 ### 1. Güncel Fizikteki Kriz
 Uzak Neptün-ötesi cisimlerin (ETNO) yörünge eksenleri açıklanamayan biçimde kümelenir; standart fizik bunu görünmeyen bir "Dokuzuncu Gezegen"in kütleçekimine bağlar, ancak yıllardır süren taramalara rağmen gezegen bulunamamıştır. Ayrıca Kuiper Kuşağı ~50 AU'da, standart oluşum modellerinin öngörmediği keskin bir uçurumla kesilir.
@@ -204,7 +204,7 @@ Güneş vorteksinin dış bölgesi, iç bölge gibi motoru değil ortamı izler 
 
 ---
 
-## 7.3.21 IBEX Şeridi
+## 7.7.21 IBEX Şeridi
 
 ### 1. Güncel Fizikteki Kriz
 IBEX uydusu, heliosferin sınır bölgesinden gelen enerjik nötral atomların gökyüzünde dar bir şerit halinde yoğunlaştığını keşfetmiştir. Şerit, gözlemden önce hiçbir heliosfer modelince öngörülmemişti; mevcut açıklamalar gözleme sonradan uydurulmuş ve hâlâ tartışmalıdır.
@@ -214,7 +214,7 @@ Heliosfer, teoride Güneş'in yıldızlararası akıntı içinde yüzen sürükl
 
 ---
 
-## 7.3.22 Soluk Genç Güneş Paradoksu
+## 7.7.22 Soluk Genç Güneş Paradoksu
 
 ### 1. Güncel Fizikteki Kriz
 Yıldız evrim modellerine göre genç Güneş bugünkünden yaklaşık %30 sönüktü; buna rağmen jeolojik kayıt, genç Dünya'da (ve genç Mars'ta) akan sıvı su göstermektedir. Sera gazı telafileri ince ayar gerektirir ve jeokimyasal kayıtla tam bağdaşmaz.
@@ -224,14 +224,14 @@ Bir gezegene ulaşan enerji yalnızca kaynağın parlaklığına değil, Zerre k
 
 ---
 
-## 7.3.23 GÜNCEL KRİZLER VE EVRENAKI ÇÖZÜM MATRİSİ
+## 7.7.23 Güncel Krizler ve Evrenakı Çözüm Matrisi
 
 | Açık Fizik Kriz/Anomalisi | Standart Fizik Yaklaşımı | Evrenakı Teorisi Mekanik Çözüm Ufku |
 |---|---|---|
 | **Hubble Tensi ($H_0$)** | Çözümsüz $5\sigma$ Kriz | Zamansal $c(t)=\sqrt{P/\rho}$ Değişimi |
 | **JWST Erken Galaksiler** | İmkânsız Derecede Hızlı Oluşum | Anlık Sirkülasyon Kuyuları (Girdap Kaskadı) |
 | **Proton Yarıçapı Bilmecesi** | $4\sigma$ Ölçüm Çelişkisi | Müon Sürüklenme Zarfının Rampa Nüfuzu |
-| **Müon $g-2$ Sapması** | $5.1\sigma$ Standart Model İhlali | 4D Deplasman Vortisite Torku |
+| **Müon $g-2$ Sapması** | $5{,}1\sigma$ Standart Model İhlali | 4D Deplasman Vortisite Torku |
 | **Güneş Korona Isınması** | 2. Termodinamik Kanununa Aykırı Görünüm | Vorteks Kavitasyon Şok Dalgaları |
 | **Kozmolojik Lityum Krizi** | 3 Kat Fazla Lityum Tahmini | Erken Yüksek Basınçta Rampa Tesir Kesiti |
 | **CMB Yön Anomalileri** | "İstatistiksel Şanssızlık" | İlkel Kuyu İskeletinin Yönlü Filaman İmzası |

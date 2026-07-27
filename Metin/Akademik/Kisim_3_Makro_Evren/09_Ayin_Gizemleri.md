@@ -24,7 +24,7 @@ Standart fizik, Ay'ın Dünya'daki okyanus sularını, mekanizması gösterilmey
 
 Ay ve Dünya uzayda hareket ederken çevrelerindeki Evrenakı akışkanını yararlar. Ay'ın devasa kütlesi, Dünya ile kendi arasındaki Evrenakı akıntısını hızlandırır. Bernoulli Prensibi (Bernoulli, 1738) gereği, hızın arttığı yerde iç basınç düşer. Dünya'nın Ay'a bakan yüzündeki akış hızı ($v_{Ay}$) ile uzaya bakan dış yüzündeki akış hızı ($v_{Uzay}$) farklıdır. Bu asimetrik hız farkı, Dünya'yı yörünge yanaklarından "sıkıştıran" bir diferansiyel basınç (çembersel sıkıştırma) yaratır.
 
-Yanlardan sıkışan bir su balonunun kutuplardan (merkeze doğru ve zıttına) pırtlaması gibi, Dünya'nın okyanusları da bu yanal sıkıştırma nedeniyle Ay'a doğru ve Ay'ın tam zıttı yöne doğru kabarır. Gelgit, bir "çekme" kuvveti değil, Evrenakı akışkanının yarattığı bir **yanal sıkıştırma (squeeze)** olayıdır.
+Yanlardan sıkışan bir su balonunun kutuplardan (merkeze doğru ve zıttına) fışkırması gibi, Dünya'nın okyanusları da bu yanal sıkıştırma nedeniyle Ay'a doğru ve Ay'ın tam zıttı yöne doğru kabarır. Gelgit, bir "çekme" kuvveti değil, Evrenakı akışkanının yarattığı bir **yanal sıkıştırma (squeeze)** olayıdır.
 
 **Gelgit Şişkinliği Kayması (Tidal Bulge Offset) ve NASA Verileri:**
 NASA'nın astronomik gelgit modellerinde ve gözlemlerinde açıkça gösterildiği üzere; yeryüzündeki okyanus kabarmasının (şişkinliğinin) tepe noktası, gökyüzündeki Ay ile kusursuz bir hizada değildir. Dünya kendi etrafında (24 saat) Ay'ın yörünge turundan (27.3 gün) çok daha hızlı döndüğü için, yeryüzündeki sürtünme bu su şişkinliğini Ay'ın hareketinin **biraz daha önüne (ilerisine)** doğru sürükler. Şişkinliğin ekseni, Ay'ın doğrultusundan birkaç derecelik küçük bir açıyla önde seyreder. Aşağıdaki animasyonda da bu durum (şişkinliğin Ay'ın hizasından nasıl önce döndüğü) görselleştirilmiştir.
@@ -47,7 +47,7 @@ Yanlardan vuran kuvvetler ($\rho \cdot g \cdot h$), dikey eksendeki efektif ezme
 
 Bu eşitsizlik yüzünden yumuşak top, yanlardan (çembersel olarak) çok daha şiddetli sıkıştırılır. Hacmini koruyabilmek için, bu çembersel sıkışmadan kaçarak basıncın zayıf geldiği dikey yöne (aşağı-yukarı) doğru uzar. Top yukarı doğru uzamış bir **elipsoid** şeklini alır.
 
-İşte Dünya'nın uzay akışkanı (Evrenakı) içindeki durumu da tam olarak bu "suya batan top" anomalisidir. Dünyayı sıkan akışkan basıncı asimetrik hale geldiğinde (Ay'ın yarattığı hız farkından dolayı), Dünya'yı ekvatoral yörünge düzleminden sıkan **yan kuvvetler** baskın çıkar ve okyanuslar Ay eksenine doğru pırtlayıp uzayarak elipsoid (gelgit) şeklini alır.
+İşte Dünya'nın uzay akışkanı (Evrenakı) içindeki durumu da tam olarak bu "suya batan top" anomalisidir. Dünyayı sıkan akışkan basıncı asimetrik hale geldiğinde (Ay'ın yarattığı hız farkından dolayı), Dünya'yı ekvatoral yörünge düzleminden sıkan **yan kuvvetler** baskın çıkar ve okyanuslar Ay eksenine doğru fışkırıp uzayarak elipsoid (gelgit) şeklini alır.
 
 ### 3.9.2.2 Gelgitte Ay ve Güneş Farkı (Akışkan Basınç Gradyanı)
 
@@ -68,15 +68,15 @@ Ancak Ay hemen burnumuzun dibindedir. Ay'ın Evrenakı akışkanında yarattığ
 
 **Animasyon 3.9.1 — Sıralı Gelgit Mekanizması**
 
-*İzleme rehberi:* Animasyon, gelgiti aşama aşama kurar; şu üç noktayı izleyiniz: (1) Okyanusların Ay tarafından "çekilmediğini" — kabarmanın, yanaklardan gelen çembersel sıkıştırmanın suyu düşük basınçlı eksene (Ay yönüne ve tam tersine) pırtlatmasıyla oluştuğunu. (2) Şişkinlik ekseninin Ay'la tam hizada olmadığını — Dünya'nın hızlı dönüşünün kabarmayı Ay'ın 10-15 derece önüne taşıdığını (NASA gözlemleriyle uyumlu kayma). (3) Sıkıştırmanın gücünün toplam kuvvetle değil gradyanla ($1/r^3$) ölçeklendiğini — Güneş'in 27 milyon katlık kütle avantajına rağmen etkisinin Ay'ın ancak yarısı kalmasının sebebi budur.
+*İzleme rehberi:* Animasyon, gelgiti aşama aşama kurar; şu üç noktayı izleyiniz: (1) Okyanusların Ay tarafından "çekilmediğini" — kabarmanın, yanaklardan gelen çembersel sıkıştırmanın suyu düşük basınçlı eksene (Ay yönüne ve tam tersine) fışkırtmasıyla oluştuğunu. (2) Şişkinlik ekseninin Ay'la tam hizada olmadığını — Dünya'nın hızlı dönüşünün kabarmayı Ay'ın 10-15 derece önüne taşıdığını (NASA gözlemleriyle uyumlu kayma). (3) Sıkıştırmanın gücünün toplam kuvvetle değil gradyanla ($1/r^3$) ölçeklendiğini — Güneş'in 27 milyon katlık kütle avantajına rağmen etkisinin Ay'ın ancak yarısı kalmasının sebebi budur.
 
 <iframe src="Simulasyon/ay_gelgit_sirali.html" width="100%" scrolling="no" style="height: min(520px, 75vh); border: 1px solid #404040; border-radius:12px; margin-top:20px; margin-bottom:20px; box-shadow:0 10px 30px rgba(0,0,0,0.8); overflow: hidden; background-color: #121212;"></iframe>
 
-## 3.9.3 Ay'ın Yörünge Muhteşemliği (Ekvator Düzlemleri ve Akışkan Yoğunluğu)
+## 3.9.3 Ay'ın Yörünge Hassasiyeti (Ekvator Düzlemleri ve Akışkan Yoğunluğu)
 
 Standart bilimin açıklamakta en çok zorlandığı anomalilerden biri de Ay'ın yörünge eğikliğidir. Çoğu gezegenin uydusu kendi ana gezegeninin ekvator düzleminde (sıfır eğimle) dolanırken, Ay'ın yörüngesi Dünya'nın ekvatoruna değil, Güneş'in yörünge düzlemine (ekliptik) daha yakın ve yaklaşık 5 derecelik bağımsız bir eğiklik sergiler. 
 
-Evrenakı (Cosmofluid) teorisine göre bu bir anomali (sapma) değil; iki devasa akışkan girdabının (Dünya ve Güneş) çatıştığı alanda kurulan kusursuz bir **hidrodinamik dengenin** (yörünge muhteşemliğinin) ta kendisidir.
+Evrenakı (Cosmofluid) teorisine göre bu bir anomali (sapma) değil; iki devasa akışkan girdabının (Dünya ve Güneş) çatıştığı alanda kurulan kusursuz bir **hidrodinamik dengenin** (yörünge hassasiyetinin) ta kendisidir.
 
 Ay uzayda dolaşırken sadece Dünya'nın yerel Evrenakı girdabına (vorteksine) maruz kalmaz; aynı zamanda bütün Güneş Sistemi'ni sarmalayan o devasa Güneş vorteksinin güçlü akıntılarına da maruz kalır.
 1. **Dünya Vorteksi'nin Etkisi:** Dünya kendi etrafında dönerken en güçlü Evrenakı akıntısını (sürüklenme zarfını) kendi ekvator düzleminde oluşturur. Ay bu yoğun yerel akıntıya, yani Dünya'nın ekvator düzlemine girmek ister, çünkü orası sürüklenme ve yanal basınç açısından dominant bir bölgedir.

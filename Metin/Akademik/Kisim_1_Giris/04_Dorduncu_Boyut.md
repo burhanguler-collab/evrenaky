@@ -304,7 +304,7 @@ Dönen bir topacı veya jiroskobu düşünün: Kütle-itim cismi **aşağı** do
 
 Bu salt-formel çözümün temel nedeni, klasik fiziğin **dönmeyi bir "eksen" (tek boyutlu bir ok) zannetmesidir.** Açısal momentum, 3 boyutlu uzayda bir ok (pseudovector/sahte vektör) olarak kabul edilir. Oysa dönme bir eksen etrafında değil, daima **iki boyutlu bir düzlem içinde** gerçekleşir. 
 
-İşte Evrenakı teorisinin gücü burada devreye girer: Devinim (yalpalama), aşağı doğru olan bir dış kuvvetin nedensellik gösterilmeden 90 derece yana sapıp cismi sarsması değildir. Devinim; cismin bizzat 4. boyuttaki **"Çift Dönüş"ünün (örneğin XY ve ZW düzlemlerindeki eşzamanlı hareketin)** bizim üç boyutlu uzayımıza düşen mecburi, doğal ve tamamen içsel izdüşümüdür. Salt formel bir kurala (vektörel çarpıma) veya dış torka ihtiyaç duymaz.
+Evrenakı teorisi bu noktada farklı bir mekanizma önerir: Devinim (yalpalama), aşağı doğru olan bir dış kuvvetin nedensellik gösterilmeden 90 derece yana sapıp cismi sarsması değildir. Devinim; cismin bizzat 4. boyuttaki **"Çift Dönüş"ünün (örneğin XY ve ZW düzlemlerindeki eşzamanlı hareketin)** bizim üç boyutlu uzayımıza düşen mecburi, doğal ve tamamen içsel izdüşümüdür. Salt formel bir kurala (vektörel çarpıma) veya dış torka ihtiyaç duymaz.
 
 ## 1.4.10 Teorinin Test Edilebilirliği ve Temel İddiamız
 
@@ -322,7 +322,7 @@ Bu nedenle deney; ya (bir topaç gibi) ilk ivmesi verilip **serbest dönüşe b�
 
 Eğer böyle serbest dönen bir nesne; kütle-itim, manyetik alan ve diğer tüm harici fiziksel etkilerden **tamamen yalıtılmış** bir ortamda (örneğin derin uzay boşluğundaki kusursuz bir vakum odasında) gözlemlenirse, klasik fiziğe göre ekseni sonsuza kadar sabit kalmalı, asla yalpalamamalıdır. Ancak Evrenakı teorisi bu konuda son derece iddialıdır: Eğer nesnenin geometrik yapısı içsel bir dördüncü boyut bileşenine (Çift Dönüşe) sahipse, hiçbir dış kuvvet olmamasına rağmen bu serbest cisim **kendi kendine devinim (yalpalama) yapacaktır.**
 
-Gök cisimlerinde ve nükleonlarda gözlemlediğimiz, kökeni standart fizikte kafa karışıklığı yaratan yalpalamaların (precession) sırrı buradadır. Bütün dış etkilerden uzak yapılacak hassas dönme deneyleri, klasik mekaniğin "gizli dış kuvvetler" arayışına son verecek ve dördüncü boyutun (Devinimli Dönmenin) evrendeki en doğal dönüş formu olduğunu ispatlayacaktır.
+Gök cisimlerinde ve nükleonlarda gözlemlediğimiz, kökeni standart fizikte kafa karışıklığı yaratan yalpalamaların (precession) sırrı buradadır. Bütün dış etkilerden uzak yapılacak hassas dönme deneyleri bu iddiayı doğrudan sınayacaktır: teori, yalıtılmış serbest dönüşte net bir devinim imzası öngörür. Bu imza gözlenirse dördüncü boyutlu Çift Dönüş modeli güçlü bir doğrulama kazanır; eksen mutlak sabit kalırsa teori bu noktada yanlışlanmış olur.
 
 ## 1.4.11 Sonuç: Üç İzdüşüm İmzası ve Kısımlara Köprü
 

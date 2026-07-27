@@ -317,7 +317,7 @@ Bir maddenin Evrenakı içindeki optik ve fiziksel davranışı, yalnızca tekil
 
 ## 3.3.2 Makro Kütle Geometri Gradyanları
 
-Evrenakı Teorisi'nin merkezinde yatan temel prensiplerden biri, kütleçekiminin bir "çekim" (pull) değil, çevresel kozmik akışkanın (Cosmofluid) makro kütle üzerinde oluşturduğu bir "itim" (push) ve basınç gradyanı olmasıdır. Bu hidrodinamik modelde, mikro ölçekteki girdapların (vortekslerin) bir araya gelerek oluşturduğu makro kütleler, sadece kütle miktarından ibaret statik nesneler değil; aynı zamanda içinde bulundukları Evrenakı denizinde kendi fiziksel formlarına ve geometrilerine tam uyumlu bir "gölgelenme" ve basınç sönümleme alanı yaratan dinamik engellerdir.
+Evrenakı Teorisi'nin merkezinde yatan temel prensiplerden biri, standart fizikte "kütleçekim" denen etkinin bir "çekim" (pull) değil, çevresel kozmik akışkanın (Cosmofluid) makro kütle üzerinde oluşturduğu bir "itim" (push) ve basınç gradyanı — yani kütle-itim — olmasıdır. Bu hidrodinamik modelde, mikro ölçekteki girdapların (vortekslerin) bir araya gelerek oluşturduğu makro kütleler, sadece kütle miktarından ibaret statik nesneler değil; aynı zamanda içinde bulundukları Evrenakı denizinde kendi fiziksel formlarına ve geometrilerine tam uyumlu bir "gölgelenme" ve basınç sönümleme alanı yaratan dinamik engellerdir.
 
 Klasik fizik modellerinde kütleçekimi, çoğunlukla noktasal kütleler (point-mass) etrafında oluşan ve mesafe ile zayıflayan basit küresel simetrik alanlar olarak idealize edilir. Ancak Evrenakı modeline göre; bir makro kütlenin sahip olduğu fiziksel şekil, bu kütlenin içerisindeki ve çevresindeki basınç gradyanının yayılım topolojisini doğrudan şekillendirir. Kütlenin geometrisi, her yönden gelen Evrenakı itiminin kütle boyunca ilerlerken hangi eksenlerde daha fazla sönümleneceğini ve nerede nasıl bir iç kuvvet dengesi (gradyan) oluşturacağını dikte eder.
 
@@ -345,7 +345,7 @@ Evrenakı'nın (Cosmofluid) her yönden gelen merkezcil itim etkisi, kütle blo�
     <button onclick="window.setShape26('square', this)">Kare (Kübik Kesit)</button>
     <button onclick="window.setShape26('rod', this)">Çubuk (İnce Uzun)</button>
     <button onclick="window.setShape26('triangle', this)">Üçgen (Asimetrik)</button>
-    <button onclick="window.setShape26('binary', this)">İkili Sistem (Çekim)</button>
+    <button onclick="window.setShape26('binary', this)">İkili Sistem</button>
     <button onclick="window.setShape26('ellipse', this)">Elips (Gezegen Formu)</button>
     <button onclick="window.setShape26('ring', this)">Halka (Yığılma Diskleri)</button>
     <button onclick="window.setShape26('asteroid', this)">Asteroit (Kaotik)</button>

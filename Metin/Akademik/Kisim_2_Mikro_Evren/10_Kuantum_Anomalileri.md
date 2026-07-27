@@ -52,7 +52,7 @@ graph TD
     F -->|Kütleli Sensör Var| H[Türbülans Vorteksi Yıkar<br>Desen Kaybolur]
     
     B -->|Prizma/Kristale Çarptı| I[Ortak Matriste Büküldü]
-    I --> J[Birlikte Doğmuş Paket Çiftleri<br>İki katmanlı açıklama: Bölüm 2.9.1]
+    I --> J[Birlikte Doğmuş Paket Çiftleri<br>İki katmanlı açıklama: Bölüm 2.10.1]
     
     classDef anomaly fill:#2b003a,stroke:#ff00e5,stroke-width:2px,color:#fff;
     classDef mekanik fill:#0a192f,stroke:#00f0ff,stroke-width:2px,color:#fff;

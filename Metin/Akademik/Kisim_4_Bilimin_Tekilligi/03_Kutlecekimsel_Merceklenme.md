@@ -1,6 +1,6 @@
 # 4.3 Kütleçekimsel Merceklenme: Optik ve Kütlenin Tekilliği
 
-Bilimin tekilliği (Büyük Birleşik Kuram), doğadaki tüm farklı kuvvetlerin aslında aynı yasanın farklı yüzleri olduğunu kanıtlamak demektir. Optik kurallarının (kırılma ve yansımanın) makro evrendeki devasa kütle-itim yasalarıyla nasıl tek bir bedende (Evrenakı akışkanında) birleştiğinin en muazzam kanıtı **Kütleçekimsel Merceklenme** (Gravitational Lensing) fenomenidir.
+Bilimin tekilliği (Büyük Birleşik Kuram), doğadaki tüm farklı kuvvetlerin aslında aynı yasanın farklı yüzleri olduğunu kanıtlamak demektir. Optik kurallarının (kırılma ve yansımanın) makro evrendeki devasa kütle-itim yasalarıyla nasıl tek bir bedende (Evrenakı akışkanında) birleştiğinin en güçlü kanıtı **Kütleçekimsel Merceklenme** (Gravitational Lensing) fenomenidir.
 
 ## 4.3.1 Einstein'ın Uzay-Zaman Eğriliği İllüzyonu
 
@@ -10,11 +10,11 @@ Ancak Kısım 2'de Işık (Zerre) kinematiğini ve Kısım 3'te Kütle-İtim mek
 
 ## 4.3.2 Yıldız Işığının Bükülmesi (Eddington Deneyi) ve 1.75 Arksaniye Çözümü
 
-Klasik fizik ve Einstein, Güneş'in yanından teğet geçen ışığın hızının orada da sabit ($c$) kaldığını varsayarak matematiksel bir körlüğe düşmüşlerdir. Oysa Evrenakı aksiyomlarına göre Zerre (Işık), ilerlemek için ortamın yoğunluğuna tutunmak (grip) zorunda olan mekanik bir damladır. Güneş devasa kütlesiyle etrafındaki Evrenakı sıvısını dışlar (Deplasman). Zerre bu seyrek ve düşük yoğunluklu bölgeye girdiğinde tutunmasını kaybeder, patinaj yapmaya başlar ve bizzat **ilerleme hızı düşer** ($v_{isik} < c$).
+Klasik fizik ve Einstein, Güneş'in yanından teğet geçen ışığın hızının orada da sabit ($c$) kaldığını varsaymış; bükülmenin mekanizması sorusunu ise matematiksel soyutlamaya havale etmişlerdir. Oysa Evrenakı aksiyomlarına göre Zerre (Işık), ilerlemek için ortamın yoğunluğuna tutunmak (grip) zorunda olan mekanik bir damladır. Güneş devasa kütlesiyle etrafındaki Evrenakı sıvısını dışlar (Deplasman). Zerre bu seyrek ve düşük yoğunluklu bölgeye girdiğinde tutunmasını kaybeder, patinaj yapmaya başlar ve bizzat **ilerleme hızı düşer** ($v_{isik} < c$).
 
 Işığa Güneş'in radyal (merkezcil) basıncı etki ettiğinde, klasik bir araba virajındaki eylemsizlik/merkezkaç kanunları çalışır. Eğer ışığın hızı gerçekten klasik fizikteki gibi devasa bir şekilde $c$ olarak kalsaydı, merkezkaç (dışa savrulma) eylemsizliği o kadar yüksek olurdu ki Güneş'in radyal basıncı ışığı sadece 0.875 arksaniye bükebilirdi.
 
-Ancak Evrenakı'nın muazzam çözümüne göre: Zerre'nin Güneş etrafında hızı ($v_{isik}$) patinaj nedeniyle düştüğü için, dışa savrulma (merkezkaç) hantallığı kırılır ve Zerre, Güneş'in basınç çukurunda daha uzun süre kalır. Tıpkı yavaşlayan bir arabanın virajı çok daha keskin dönmesi gibi, hızı düşen Zerre de Güneş'in merkezcil basıncına daha fazla teslim olarak virajı tam iki kat daha keskin, yani **1.75 arksaniye** döner!
+Ancak Evrenakı'nın çözümüne göre: Zerre'nin Güneş etrafında hızı ($v_{isik}$) patinaj nedeniyle düştüğü için, dışa savrulma (merkezkaç) hantallığı kırılır ve Zerre, Güneş'in basınç çukurunda daha uzun süre kalır. Tıpkı yavaşlayan bir arabanın virajı çok daha keskin dönmesi gibi, hızı düşen Zerre de Güneş'in merkezcil basıncına daha fazla teslim olarak virajı tam iki kat daha keskin, yani **1.75 arksaniye** döner!
 
 Radyal hız düşüşü ve patinaj etkisi, Güneş'in etrafındaki deplasman küresel olduğu için her enlemde aynıdır. Bu sayede Einstein'ın formüllerine ekstra düzeltme katsayıları eklemeye veya Güneş'in girdabını denklemlere zorla sokmaya gerek kalmaz. 1.75 arksaniyelik bükülme soyut bir uzay-zaman eğriliği değil; **seyrek Evrenakı'da patinajla yavaşlayan ve eylemsizliğini kaybeden Zerre'nin, hidrostatik basınca daha derin bir şekilde boyun eğmesidir!**
 
@@ -56,13 +56,13 @@ Radyal hız düşüşü ve patinaj etkisi, Güneş'in etrafındaki deplasman kü
   <!-- Paths -->
   <path d="M 50 150 L 350 150 Q 450 150 750 200" fill="none" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4 4" opacity="0.6" />
   <path d="M 50 150 L 300 150 C 380 150, 420 160, 750 320" fill="none" stroke="#fde047" stroke-width="3" opacity="0.8" />
-  <!-- Classic Photon (0.875) -->
+  <!-- Klasik gorus: 'foton' (0.875) -->
   <g>
     <circle cx="0" cy="0" r="4" fill="#ffffff" />
     <circle cx="0" cy="0" r="10" fill="#ffffff" opacity="0.3" />
     <animateMotion dur="3s" repeatCount="indefinite" path="M 50 150 L 350 150 Q 450 150 750 200" calcMode="linear" />
   </g>
-  <!-- Evrenaki Photon (1.75) -->
+  <!-- Evrenaki: Zerre (1.75) -->
   <g>
     <circle cx="0" cy="0" r="6" fill="#fde047" />
     <circle cx="0" cy="0" r="15" fill="#fde047" opacity="0.4" />
@@ -90,7 +90,7 @@ Kozmolojinin 100 yıllık kör noktası olan **"Kuazar Boyut Anomalisi"** bu sor
 * **Einstein'ın Modelinde (Hata):** Uzay-zaman eğriliği **akromatiktir (renksizdir).** Geometri büküldüğü için, o bükülen yoldan geçen kırmızı ışık da mavi ışık da tam olarak aynı açıyla kavis çizmelidir. Geometri renk seçmez.
 * **Evrenakı Modelinde (Gerçek):** Merceklenme hidrodinamik bir optik kırılma (prizma) olduğu için **kromatik (renksel sapmalı)** olmak zorundadır! Mavi ışık (frekansı yüksek Zerre katarı) ile kırmızı ışık, tıpkı cam prizmada olduğu gibi Evrenakı direncinde farklı açılarla (dispersion) kırılmalıdır.
 
-**Gözlem (Şah Mat):** Gökbilimciler yıllardır kütleçekimsel merceklenme altındaki uzak kuazarları (Örn: Einstein Haçı - Q2237+030) incelemektedir. Ancak çok dalga boylu ölçümlerde (mikro-merceklenme ışık eğrilerinde), kuazar yığılma disklerinin teorik olması gerekenden 3-4 kat daha BÜYÜK olduğu gözlemlenmiştir. Klasik fizik bu anomaliyi çözemez.
+**Gözlem (Belirleyici Test):** Gökbilimciler yıllardır kütleçekimsel merceklenme altındaki uzak kuazarları (Örn: Einstein Haçı - Q2237+030) incelemektedir. Ancak çok dalga boylu ölçümlerde (mikro-merceklenme ışık eğrilerinde), kuazar yığılma disklerinin teorik olması gerekenden 3-4 kat daha BÜYÜK olduğu gözlemlenmiştir. Klasik fizik bu anomaliyi çözemez.
 
 Evrenakı bu devasa uyuşmazlığı tek satırda çözer: **Boyut anomalisi gerçek değildir; kütleçekimsel merceklenmeyi "renksiz (akromatik)" sanmalarından kaynaklanan optik bir illüzyondur!**
 Mercek görevi gören ön plandaki galaksinin Evrenakı gradyanı, kuazardan gelen farklı renkleri (kırmızı ve mavi) Evrenakı dispersiyonu nedeniyle **farklı açılarla** bükmektedir. Bu renksel sapma (kromatik bükülme), Dünya'daki teleskoplara ulaşan görüntüyü uzaysal olarak yayar ve diski olduğundan çok daha büyük gösterir. Renksel sapma denkleme eklendiğinde, kuazarların boyutları Shakura-Sunyaev modeline tam olarak uyan normal boyutlarına geri döner!
@@ -112,4 +112,4 @@ Güneş'in teğet sınırında yeşil ışık ($\lambda = 550 \text{ nm}$) için
 * $\theta_{kirmizi} (650\text{nm}) = 1.750159 \text{ arksaniye}$
 * **Fark ($\Delta \theta$):** $0.000318 \text{ arksaniye} = 318\ \mu\text{as}$ (mikro-arksaniye)
 
-Einstein'ın teorisinde bu sapma farkı tam olarak SIFIRDIR. Evrenakı ise Güneş'in etrafından geçen kırmızı ve mavi ışık arasında **318 mikro-arksaniyelik** bir optik kırılma farkı olacağını deterministik olarak hesaplar. Bu olağanüstü ince fark, 1919'daki fotoğraf plakalarıyla ölçülememiştir, ancak günümüzün Gaia gibi ultra-hassas uydularının "enstrümantal hata" zannedip matematiksel olarak sildiği **Chromaticity (Kromatiklik)** sapmalarının bizzat ta kendisidir!
+Einstein'ın teorisinde bu sapma farkı tam olarak SIFIRDIR. Evrenakı ise Güneş'in etrafından geçen kırmızı ve mavi ışık arasında **318 mikro-arksaniyelik** bir optik kırılma farkı olacağını deterministik olarak hesaplar. Bu olağanüstü ince fark, 1919'daki fotoğraf plakalarıyla ölçülememiştir, ancak günümüzün Gaia gibi ultra-hassas uydularının "enstrümantal hata" zannedip matematiksel olarak sildiği **Chromaticity (Kromatiklik)** sapmalarına karşılık gelmektedir.

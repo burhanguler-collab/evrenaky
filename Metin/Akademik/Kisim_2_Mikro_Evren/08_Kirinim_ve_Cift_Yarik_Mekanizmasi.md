@@ -19,7 +19,7 @@ Animasyon 2.8.1'deki simülasyonda tek bir kenara doğru fırlatılan 15 adet Ze
 
 1. **Zerrelerin Doğası (Dalga Değil, Katı Damlalar):** Işık, soyut bir dalga veya "olasılık bulutu" değildir. Ekranda sağdan sola süzülen bu 15 Zerre, Evrenakı okyanusunda ilerleyen fiziksel kütleli akışkan damlalarıdır. Hızları, o anki Evrenakı yoğunluğuna ($\rho$) bağlıdır.
 2. **Kütleye Çarpışma ve Sekme (1, 2, 3 ve 4. Zerreler):** Mekanik kurallar eksiksiz işler. 1. Zerre bıçağın gövdesine çarpıp geri sekerken; 2, 3 ve 4. Zerreler tam sivri uca temas ettikleri için, oradaki yüksek Evrenakı basıncı ve kütlenin pürüzlü mikroskobik geometrisi nedeniyle geldikleri hizaya veya çok daha dik açılara şahlanarak sekerler.
-3. **Gölgeye Dökülen Şelale ve Kırınım (5 - 14. Zerreler):** İşte klasik fiziğin ışığı ortamsız bir "dalga" olarak yorumlamasına sebep olan o meşhur olgunun alternatif mekanizması buradadır! Bu zerreler kütleye (bıçağa) ASLA değmezler. Onu sadece teğet geçerler. Ancak kütlenin etrafında yarattığı görünmez **Evrenakı basınç çukuruna (gradyanına)** yakalanırlar. İçinde yüzdükleri akışkanın (Evrenakı'nın) basıncı, kütleye doğru düştüğü için onları mecburen gölge alana doğru büker. Kütleye en yakın geçen 5. Zerre en şiddetli çekime (basınca) maruz kalıp gölgeye derin bir uçurum gibi dalarken; 6, 7, 8 diye uzaklaştıkça bu çekim doğrusal olarak sönümlenir. Zerrelerin bükülme kavisleri yavaşça açılarak arkalarında harika bir "Kırınım Yelpazesi" (Diffraction Waterfall) bırakır.
+3. **Gölgeye Dökülen Şelale ve Kırınım (5 - 14. Zerreler):** İşte klasik fiziğin ışığı ortamsız bir "dalga" olarak yorumlamasına sebep olan o meşhur olgunun alternatif mekanizması buradadır! Bu zerreler kütleye (bıçağa) ASLA değmezler. Onu sadece teğet geçerler. Ancak kütlenin etrafında yarattığı görünmez **Evrenakı basınç çukuruna (gradyanına)** yakalanırlar. İçinde yüzdükleri akışkanın (Evrenakı'nın) basıncı, kütleye doğru düştüğü için onları mecburen gölge alana doğru büker. Kütleye en yakın geçen 5. Zerre en şiddetli çekime (basınca) maruz kalıp gölgeye derin bir uçurum gibi dalarken; 6, 7, 8 diye uzaklaştıkça bu çekim doğrusal olarak sönümlenir. Zerrelerin bükülme kavisleri yavaşça açılarak arkalarında bir "Kırınım Yelpazesi" (Diffraction Waterfall) bırakır.
 4. **Sıfır Etki (15. Zerre):** Bu zerre kütleden öylesine uzaktadır ki, kütlenin Evrenakı'da yarattığı yerel basınç girdabından hiç etkilenmez. Eylemsizlik kuralına tam sadık kalarak, milim sapmadan cetvelle çizilmiş gibi dümdüz ilerler.
 5. **Ekrandaki Aydınlanma ve Gerçek Girişim Deseni:** Zerreler karşıdaki ekrana (X=9.5) ulaştıklarında donarlar ve sahip oldukları tüm enerjiyi devasa kırmızı bir **"aydınlanma parlaması (glow)"** olarak duvara bırakırlar. Kuantum fiziğinin "yapıcı girişim, dalgaların üst üste binmesi" dediği o parlak şeritler, aslında Evrenakı okyanusundaki basınç çizgilerini takip ederek bükülen **fiziksel Zerrelerin hedefte bıraktıkları kurşun izlerinden** başka bir şey değildir! Işık enerjisi asla yok olmaz, sadece Evrenakı basıncı tarafından bükülerek yeni bir adrese göç eder.
 
@@ -50,7 +50,7 @@ Aşağıdaki diyagram (Şekil 2.8.1.1), ışık kaynağı, bıçak kenarı ve ek
 
 ![Şekil 2.8.1.1: DENEY 4 Düzeneği Şeması](Gorseller/image_sekil_109_modern.png)
 
-Ekranın bıçaktan **8 metre uzakta** olması muazzam kritik bir parametredir! Çünkü kütlenin yanından geçerken kavis alan zerreler ile düz giden zerrelerin yörüngelerinin havada çaprazlama kesişmesi ve birbirlerinin izlerine (wake tünellerine) yığılabilmeleri için uzun bir uçuş mesafesine ihtiyaçları vardır.
+Ekranın bıçaktan **8 metre uzakta** olması kritik bir parametredir. Çünkü kütlenin yanından geçerken kavis alan zerreler ile düz giden zerrelerin yörüngelerinin havada çaprazlama kesişmesi ve birbirlerinin izlerine (wake tünellerine) yığılabilmeleri için uzun bir uçuş mesafesine ihtiyaçları vardır.
 
 **Seyreltilmiş Işık ("Tek Foton") Deneyleri Kaydı:** Bu mekanizmaya yöneltilen standart itiraz, desenin "tek tek gönderilen fotonlarla" da oluşmasıdır. Teorinin cevabı kendi paket kavramından gelir: hiçbir kaynak "tek Zerre" yaymaz — şiddet kısıldığında azalan şey *paket sayısıdır*, paketin içi değil. Standart fiziğin tek "foton" saydığı her tespit, gerçekte 2.6.5'te tanımlanan $N \approx 10^4$ Zerrelik bir katarın (paketin) varışıdır — teoride foton diye bir nesne yoktur; dolayısıyla öncü Zerrelerin iz açıp arkadakilerin o izlere kapılması (zerre-arası wake takibi), kaynak ne kadar seyreltilirse seyreltilsin **katarın içinde kesintisiz işler**. Sürekli ve parlak demetlerde aynı mekanizma paketler arasında da devam eder ve desen hızla keskinleşir.
 
@@ -93,7 +93,7 @@ Bu "dışa doğru yayılım" (kırınım) aşaması son derece kritiktir. Çünk
 
 ![Şekil 2.8.2.1: Tek Yarık Genişlemesi](Gorseller/tek_yarik.png)
 
-Şimdi tam sırası: 2 + 2 = Dört sivri kenarın (Çift Yarık) bir araya gelmesiyle bu yörüngelerin nasıl devasa bir ağ gibi kesiştiğini ve meşhur karanlık/aydınlık saçakları nasıl ördüğünü inceleyelim.
+Şimdi, iki yarığın yan yana gelmesiyle oluşan dört sivri kenarın (Çift Yarık) bu yörüngeleri nasıl bir ağ gibi kesiştirdiğini ve meşhur karanlık/aydınlık saçakları nasıl ördüğünü inceleyelim.
 
 ## 2.8.3 Çift Yarık ve Çoklu Kırınım Ağları: Evrensel Yörünge Kesişmeleri
 

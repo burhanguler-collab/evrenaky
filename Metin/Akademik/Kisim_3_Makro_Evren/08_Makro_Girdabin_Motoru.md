@@ -6,7 +6,7 @@ Bölüm 3.4.4'te açılan soru — *"gezegenleri ve yıldız sistemlerini saran 
 
 Evrenakı teorisine göre Güneş'in kendi ekseni etrafındaki devasa dönüşü, etrafındaki tüm Güneş Sistemi'ni kapsayan dev bir akışkan girdabı (vorteks) yaratır. Akışkanlar dinamiğinin doğası gereği, merkezdeki bu girdap kaynağından (Güneş'ten) uzaklaştıkça, girdabı oluşturan akışkanın (Evrenakı'nın) sürüklenme hızının kademeli olarak düşmesi kaçınılmazdır.
 
-Peki astronomik veriler bu "akışkan hızı düşüşünü" matematiksel olarak doğruluyor mu? Kesinlikle evet.
+Peki astronomik veriler bu "akışkan hızı düşüşünü" matematiksel olarak doğruluyor mu? Evet.
 
 Standart astronomide **Kepler'in Üçüncü Yasası** olarak bilinen gözlemsel kurala göre, bir gezegenin yörünge dolanım süresi ($T$) ile Güneş'e olan uzaklığı ($R$) arasında $T^2 \propto R^3$ şeklinde kesin bir oran vardır. 
 Bir cismin yörünge hızını ($v = \frac{2\pi R}{T}$) hesaplayıp bu uzaklık denklemine yerleştirdiğimizde, gezegen hızlarının şu formüle göre düştüğünü buluruz:
@@ -31,7 +31,7 @@ Peki Güneş 2 km/s hızla dönerken, kendisinden katbekat daha hızlı dönen d
 
 **Çözüm:** Bu paradoks, girdabı kütlenin mekanik dönüşüne bağlayan sürükleme varsayımının çöküşüdür. Vorteksi döndüren ana motor, Güneş'in ne yavaş dış yüzeyi ne de mekanik olarak dönen herhangi bir katmanıdır; Güneş kütlesini oluşturan nükleonların **dördüncü boyuttan gelen çift dönüş deşarjıdır** (Bkz. 3.4.4; mekanizmanın tam işlenişi için 3.8.2). Sürtünmesiz Evrenakı bu deşarjla, sürtünmeli ve hantal kütlenin görünen devrinden kat kat hızlı döndürülür. Dolayısıyla "saniyede 430 km dönme gerekliliği" teorinin bir sorunu değil, mekanik sürükleme muhasebesinin iflas belgesidir.
 
-2017 yılında SOHO (Solar and Heliospheric Observatory) uydusundan alınan içsel salınım kipi (g-modes) verileriyle astronomi dünyasını şok eden bir keşif yapıldı: **Güneş'in çekirdeği, yüzeyinden tam 4 kat daha hızlı dönüyordu!**
+2017 yılında SOHO (Solar and Heliospheric Observatory) uydusundan alınan içsel salınım kipi (g-modes) verileriyle beklenmedik bir keşif yapıldı: **Güneş'in çekirdeği, yüzeyinden tam 4 kat daha hızlı dönüyordu!**
 
 Bu keşif teorinin tablosuna tam oturur; ancak dikkatle okunmalıdır: çekirdeğin 4 katlık hızı bile (yaklaşık 8 km/s), mekanik modelin gerektirdiği 430 km/s'nin elli kattan fazla altındadır. Yani hızlı çekirdek dahi girdabın motoru olamaz; keşfin gerçek anlamı, iç bölgelerin dördüncü boyut motorunun serbest ifadesine dış kabuktan daha yakın kalmış olmasıdır:
 Güneş Sistemi ilk oluştuğunda (Proto-Yıldız evresi) Güneş ve onun etrafındaki Evrenakı girdabı muazzam hızlarda dönüyordu. Milyarlarca yıl içinde Güneş'in dış plazma yüzeyi, güneş rüzgarları ve içsel frenlemeler yüzünden yavaşlayarak hantal bir kabuğa dönüştü. Ancak içerideki o ultra-yoğun çekirdek ve uzay boşluğundaki devasa Evrenakı girdabı, 4.6 milyar yıl önceki o devasa **"kalıntı (fosil) momentumlarını"** korumaya devam ettiler. 
@@ -75,7 +75,7 @@ Aynı 4 boyutlu dönüşün nasıl olup da kütlede "yavaş", Evrenakı akışka
 1. **Kutuplardan Yansıma (Üstten Bakış):** Eğer ışığı tam kutuplardan vurursanız, 2 boyutlu duvardaki gölge kusursuz bir **"Dairesel Girdap (Vorteks)"** gibi görünür. Tüm noktalar devasa bir anafor gibi merkezin etrafında döner. (Bu, 4D spinin boş uzaydaki Evrenakı girdabı olarak yansımasıdır).
 2. **Ekvatordan Yansıma (Yandan Bakış):** Eğer ışığı tam ekvatordan vurursanız, gölge yine aynı kürenindir ama **kesinlikle bir girdap gibi görünmez!** Ortada bir girdap merkezi yoktur. Noktalar sadece sağdan sola doğru akan düz bir çizgide (sarkaç gibi) hareket eder. Dönüş, yoğunlaşmış yanal bir dalga gibi algılanır. (Bu da, aynı 4D spinin madde/kütle içine girdiğindeki yavaş makro rotasyon ve kütle-itim baskısı olarak yansımasıdır).
 
-Yani evrenin derinliklerinde ortada birbirinden farklı iki motor (kütle ve girdap) yoktur. İkisi de 4. boyuttaki aynı küresel mikro dönüşün (Kuantum Spini), 3. boyuttaki iki farklı yansımasıdır (gölgesidir). İşte Evrenakı teorisini her şeyin teorisi (Theory of Everything) yapmaya en büyük aday kılan şey, evrendeki tüm karmaşık devinimleri bu tek 4D kuantum spin motoruna bağlayabilmesidir.
+Yani evrenin derinliklerinde ortada birbirinden farklı iki motor (kütle ve girdap) yoktur. İkisi de 4. boyuttaki aynı küresel mikro dönüşün (Kuantum Spini), 3. boyuttaki iki farklı yansımasıdır (gölgesidir). Teorinin mikro ve makro ölçeği aynı mekanizmayla kapsama iddiasının kaynağı da budur: evrendeki tüm karmaşık devinimler bu tek 4D kuantum spin motoruna bağlanır.
 
 ## 3.8.4 Başıboş Gezegenler (Rogue Planets) ve Öz-Dönüş Kanıtı
 Teorideki "dönüşün kaynağının dışarıdaki dev yıldız değil, kütlenin kendi içindeki 4. boyut mikro spinleri olduğu" gerçeğinin en büyük astronomik kanıtlarından biri de **Başıboş Gezegenler (Rogue Planets)** keşifleridir.
@@ -97,9 +97,9 @@ Astronomik gözlemlere göre asteroit kuşağındaki **büyük kütleli cisimler
 *   İkinci en büyük asteroit **Vesta**, kendi etrafında fırıl fırıl dönerek turunu **5.3 saatte** atar.
 
 **Dahası: Kendi Uydularını (Mini Girdaplarını) Yaratırlar!**
-Kütlenin büyümesiyle birlikte içsel 4D spinlerin sayısının arttığını ve bunun da dışarıya "kendi yerel Evrenakı girdabını (kütle-itim alanını) yaratmak" olarak yansıdığını belirtmiştik. Asteroit kuşağı bu teoriyi de şok edici bir şekilde doğrular. Sadece dev gezegenlerin değil, yeterli büyüklüğe ulaşmış asteroitlerin bile **kendi uyduları** vardır!
+Kütlenin büyümesiyle birlikte içsel 4D spinlerin sayısının arttığını ve bunun da dışarıya "kendi yerel Evrenakı girdabını (kütle-itim alanını) yaratmak" olarak yansıdığını belirtmiştik. Asteroit kuşağı bu teoriyi de çarpıcı biçimde doğrular. Sadece dev gezegenlerin değil, yeterli büyüklüğe ulaşmış asteroitlerin bile **kendi uyduları** vardır.
 *   **Ida** asteroiti (4.6 saatte döner) etrafında dönen **Dactyl** adında bir uyduya sahiptir.
-*   **Sylvia** asteroiti (5.1 saatte döner) ise etrafında dönen tam iki uyduya (**Romulus ve Remus**) sahiptir!
+*   **Sylvia** asteroiti (5.1 saatte döner) ise etrafında dönen tam iki uyduya (**Romulus ve Remus**) sahiptir.
 
 **Sonuç:** Güneş'in o devasa ve kaotik akıntısının tam ortasında olmalarına rağmen, bu büyük asteroitlerin istikrarlı bir şekilde dönmeleri ve etraflarında kendi uydularını yörüngede tutabilmeleri; dönüşün dışarıdan (Güneş'ten) dikte edilmediğini kanıtlar. Kütle büyüdükçe, o kütlenin içindeki 4D mikro spin motoru güçlenir, dış akıntıya kafa tutar ve kendi uydusunu (Dactyl veya Romulus gibi) çevirecek kadar güçlü, yepyeni lokal bir Evrenakı vorteksi yaratır.
 

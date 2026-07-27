@@ -2,7 +2,7 @@
 
 Evrenakı Teorisi, mevcut standart fizikle sadece felsefi bir tartışma yürütmez; bizzat standart fiziğin ölçülebilir verilerini kendi mekanik denklemleriyle yeniden, sıfırdan türetebilecek kadar sağlam bir matematiksel çekirdeğe sahiptir.
 
-Aşağıdaki kısımda, eleştirel bir hakem perspektifinden Evrenakı teorisine yöneltilen "kâğıt üzerinde deney" meydan okumasının tam metnini ve teorimizin bu meydan okumaya verdiği kusursuz matematiksel cevabı göreceksiniz.
+Aşağıdaki kısımda, eleştirel bir hakem perspektifinden Evrenakı teorisine yöneltilen "kâğıt üzerinde deney" meydan okumasının tam metni sunulacak ve teorinin bu meydan okumaya verdiği matematiksel cevap adım adım türetilecektir.
 
 ---
 

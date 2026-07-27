@@ -31,4 +31,4 @@ Bu kuram, evrende gözlemlenen pek çok olguyu — ışığın kıvrılmasından
 
 Kuramımız, dördüncü boyuttaki bu kök motorun *neden* dönmeye başladığıyla değil; durmaksızın döndüğü için Evrenakı okyanusunda hangi devasa hidrodinamik süreçleri tetiklediğiyle ve evrenin fiziksel işleyişini nasıl şekillendirdiğiyle ilgilenir. Evrenakı ve 4 Boyutlu Dönüş — biri yoksa diğeri sessizliğe gömülür; bu iki kavramdan herhangi birinin eksikliği, elinizdeki çalışmanın sayfalarının sonsuza dek boş kalması anlamına gelirdi.
 
-Ve peşinen belirtmeliyiz ki; bu kitabın son sayfasına ulaştığınızda, zihninizde evrenin nasıl işlediğine dair hiçbir mekanik boşluk kalmayacak olsa da, ruhunuzda yankılanmaya devam edecek yegâne muamma şu olacaktır: *Evrenakı denizini durmaksızın çırpan bu dördüncü boyuttaki kusursuz dönüşün asıl kaynağı nedir?*
+Hedefimiz, bu kitabın son sayfasına ulaştığınızda zihninizde evrenin nasıl işlediğine dair mekanik bir boşluk kalmamasıdır; bu hedefe ne ölçüde ulaştığımızın yargıcı okuyucudur. Ancak her durumda geriye kalacak muamma şudur: *Evrenakı denizini durmaksızın çırpan bu dördüncü boyuttaki kusursuz dönüşün asıl kaynağı nedir?*

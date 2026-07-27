@@ -247,7 +247,7 @@ $$ \vec{a} = \vec{\Omega} \times \vec{v}_{basınç} = \begin{vmatrix} \hat{i} & 
 Bu sonuçtan ivme bileşenlerini ayırırsak ($a_x = -\Omega v_y$ ve $a_y = +\Omega v_x$);
 * **Kuzey Yarımküre ($\Omega > 0$):** Merkeze (alçak basınca) koşan bir kütle için $v_y$ ve $v_x$ pozitif olduğunda $a_x < 0$ (batı), $a_y > 0$ (kuzey) çıkar. Bileşke kuvvet, hareketi zorunlu olarak **sola (saat yönünün tersine - CCW)** büker.
 * **Güney Yarımküre ($\Omega < 0$):** $\Omega$ işareti eksiye döndüğü için $a_x > 0$ ve $a_y < 0$ olur. Bileşke kuvvet, hareketi zorunlu olarak **sağa (saat yönüne - CW)** büker.
-Görüldüğü üzere yön problemi bir "varsayım" değil, %100 türetilmiş kesin bir sonuçtur.
+Görüldüğü üzere yön problemi bir "varsayım" değil, doğrudan türetilmiş bir sonuçtur.
 
 **4. Sonuç: Yeni Bir Kuvvet Değil, Yeni Bir Ontoloji (Gerçek Momentum Transferi)**
 Bilimsel olarak açıkça belirtmeliyiz ki; bu türetimle Evrenakı Teorisi, mevcut matematiği geçersiz sayıp yepyeni bir kuvvet önermiyor. **Aynı denklemi, farklı ve ontolojik olarak gerçek bir fiziksel zeminle (yorumla) buluşturuyor.**
