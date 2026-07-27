@@ -7,7 +7,7 @@
 
 > [!NOTE]
 > **Teorinin Özü:**  
-> Evrenakı Teorisi; modern fiziğin uzaktan etki (*action-at-a-distance*), soyut uzay-zaman eğriliği, kütlesiz foton ikiliği ve evrenin %95'ini oluşturan ölçülemez karanlık sektör (Karanlık Madde & Karanlık Enerji) krizlerini **tek bir temaslı ilkeyle** çözen yeni bir kozmolojik ve hidrodinamik paradigmadır. Uzay boşluğu kapkara bir vakum değil, sürtünmesiz ve sıkıştırılabilir süper-akışkan bir ortamdır (*Evrenakı*).
+> Evrenakı Teorisi; modern fiziğin uzaktan etki (*action-at-a-distance*), soyut uzay-zaman eğriliği, kütlesiz foton ikiliği ve evrenin %95'ini oluşturan ölçülemez karanlık sektör (Karanlık Madde & Karanlık Enerji) krizlerini **tek bir temaslı ilkeyle** çözen yeni bir kozmolojik ve hidrodinamik paradigmadır. Uzay boşluğu kapkara bir vakum değil, sıfıra yakın viskoziteli (ultra-düşük sürtünmeli) ve sıkıştırılabilir süper-akışkan bir ortamdır (*Evrenakı*).
 
 ---
 
@@ -15,7 +15,7 @@
 
 Modern fizik yüz yılı aşkın süredir uzayın devasa bir hiçlik olduğunu ve gök cisimlerinin bu hiçlik içinde birbirini gizemli bir kuvvetle çektiğini varsaydı. Evrenakı Teorisi bu varsayımı reddeder:
 
-1. **Evrenakı Okyanusu:** Uzay; viskozitesi sıfır olan (sürtünmesiz), sıkıştırılabilir ve tüm varlığı kuşatan süper-akışkan bir ham malzeme ortamıdır.
+1. **Evrenakı Okyanusu:** Uzay; viskozitesi sıfıra yakın (ultra-düşük sürtünmeli), sıkıştırılabilir ve tüm varlığı kuşatan süper-akışkan bir ham malzeme ortamıdır.
 2. **Zerre (Işık Parçacığı/Damlası):** Işığı ve elektromanyetik ışınımı oluşturan, fiziksel hacmi, kütlesi ve Compton dönel frekansı olan temel ışık damlacıklarıdır.
 3. **Dördüncü Boyut ve Nefes Alan Parçacıklar:** Tüm temel parçacıklar, dördüncü boyuttaki ($W$ ekseni) Compton frekanslı dönüşlerinin ($f_C \approx 10^{20} \text{ Hz}$) 3B uzaya düşen izdüşümüyle sürekli dışa doğru akışkan iter (**Deplasman / Nefes alma**).
 4. **Basınç Gradyanı (Kütle-İtim):** Kütle kalkanı Evrenakı'yı dışa ittiği için, kütleye yaklaştıkça akışkan basıncı yükselmez, **düşer**. Dış uzaydaki yüksek basınçlı Evrenakı, cisimleri merkezdeki düşük basınç kuyusuna doğru bastırır. **Newton'un "çekim" dediği şey, dış okyanusun itişidir (Push-Gravity).**

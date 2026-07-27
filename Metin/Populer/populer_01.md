@@ -12,7 +12,7 @@ Geceleri gökyüzüne baktığınızda ne görüyorsunuz? Yıldızlar, gezegenle
 
 ## Balık Suyu Göremez
 
-Uzay bir hiçlik değildir. Tam tersine; gözle göremediğimiz, akıl almaz derecede yoğun, sıkıştırılabilen ve **hiçbir sürtünmesi olmayan** muazzam bir sıvıyla — bir tür "süper-akışkan" ile — ağzına kadar doludur. Biz bu sıvıya **Evrenakı** diyoruz. (Kadim çağların "esir/eter" diye arayıp bir türlü doğru tarif edemediği o efsanevi ortam da işte budur.)
+Uzay bir hiçlik değildir. Tam tersine; gözle göremediğimiz, akıl almaz derecede yoğun, sıkıştırılabilen ve **sıfıra yakın sürtünmesi (ultra-düşük viskozitesi)** olan muazzam bir sıvıyla — bir tür "süper-akışkan" ile — ağzına kadar doludur. Biz bu sıvıya **Evrenakı** diyoruz. (Kadim çağların "esir/eter" diye arayıp bir türlü doğru tarif edemediği o efsanevi ortam da işte budur.)
 
 Peki bu okyanus her yerdeyse, biz onu neden hissetmiyoruz? Cevap basit: **Balık suyu göremez.** Ömrü boyunca suyun içinde yüzen bir balığa "su" diye bir kavramı anlatamazsınız; çünkü su onun için "her yer"dir, dolayısıyla "hiçbir yer"dir. Biz de aynı balığız. Doğduğumuz andan beri bu Evrenakı okyanusunun içinde yüzüyoruz; o yüzden onu bir "boşluk" sanıyoruz.
 

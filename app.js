@@ -2121,7 +2121,7 @@ window.handleUpdateReviewStatus = handleUpdateReviewStatus;
 function postProcessTooltips(container) {
     if (!container) return;
     const terms = [
-        { regex: /\b(Evrenakı)\b/g, tooltip: 'Sürtünmesiz, uzayı dolduran, sıkıştırılabilen süper-akışkan ortam.' },
+        { regex: /\b(Evrenakı)\b/g, tooltip: 'Sıfıra yakın sürtünmeli (ultra-düşük viskoziteli), uzayı dolduran süper-akışkan ortam.' },
         { regex: /\b(Zerre)\b/g, tooltip: 'Işığı oluşturan, fiziksel hacmi ve kütlesi olan damlacık.' },
         { regex: /\b(Kütle-İtimi|Kütle-İtim)\b/gi, tooltip: 'Çekim yerine, akışkan basınç farkından doğan itme kuvveti.' },
         { regex: /\b(Esir)\b/gi, tooltip: 'Tarihte ışığın yayıldığı varsayılan ortam. (Evrenakı\'nın ilkel fikri)' }

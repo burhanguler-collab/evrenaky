@@ -12,7 +12,7 @@
 
 | Terim | Açıklama (Popüler Anlatım) | Akademik Karşılığı |
 |---|---|---|
-| **Evrenakı (Plenum / Cosmofluid)** | Uzay boşluğunu dolduran, viskozitesi sıfır olan, sıkıştırılabilir ve sürtünmesiz devasa süper-akışkan okyanusu. | Madde 1 & 2 (Tek Töz ve Boşluksuzluk) |
+| **Evrenakı (Plenum / Cosmofluid)** | Uzay boşluğunu dolduran, viskozitesi sıfıra yakın (ultra-düşük sürtünmeli), sıkıştırılabilir devasa süper-akışkan okyanusu. | Madde 1 & 2 (Tek Töz ve Boşluksuzluk) |
 | **Zerre** | Işığı ve elektromanyetik ışınımı oluşturan, kütlesi ve hacmi olan bölünmez en küçük akışkan damlacığı. | Madde 3 (Foton İllüzyonunun Reddi) |
 | **Zerre Katarı / Paket** | Işığın uzayda bir makineli tüfek gibi art arda dizilmiş Zerre mermileri halinde yayılması. | Akademik Bölüm 2.2 |
 | **Kütle-İtim (Push-Gravity)** | "Kütleçekimi" bir emme/çekme değil; akışkandaki alçak basınç kuyusuna doğru cisimlerin dış okyanusça itilmesidir. | Madde 9 (Kütle-İtim İlkesi) |
@@ -26,7 +26,7 @@
 ## ❓ 2. Sıkça Sorulan Sorular (SSS)
 
 ### S1: Madem uzay bir sıvı, gezegenler yavaşlamadan nasıl milyarlarca yıl dönebiliyor?
-> **Cevap:** Gündelik hayatta bildiğimiz su ve hava viskoziteye (iç sürtünmeye) sahiptir. Evrenakı ise kuantum ölçeğinde **sıfır viskoziteli (süper-akışkan)** bir ortamdır. Sürtünme olmadığı için bir gezegen ya da elektron bu okyanus içinde milyarlarca yıl tek bir joule enerji kaybetmeden dönmeye devam eder.
+> **Cevap:** Gündelik hayatta bildiğimiz su ve hava viskoziteye (iç sürtünmeye) sahiptir. Evrenakı ise kuantum ölçeğinde **sıfıra yakın viskoziteli (ultra-düşük sürtünmeli süper-akışkan)** bir ortamdır. Sürtünme sıfıra yakın olduğu ve gezegen kendi sürüklenme zarfını (Entrainment) taşıdığı için sistem belirgin bir momentum kaybetmeden milyarlarca yıl dönmeye devam eder.
 
 ### S2: Einstein'ın Görelilik Teorisi tamamen yanlış mı?
 > **Cevap:** Hayır, Einstein'ın matematiksel denklemleri gözlemleri doğru tahmin eder. Ancak Einstein uzay-zamanın *"neden ve nasıl büküldüğünün"* fiziksel mekanizmasını açıklayamamıştır. Evrenakı Teorisi, Görelilik'in doğru sonuçlarına akışkanlar mekaniği üzerinden somut, temaslı bir mekanizma kazandırır.
