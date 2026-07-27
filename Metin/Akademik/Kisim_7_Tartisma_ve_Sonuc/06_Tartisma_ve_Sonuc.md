@@ -47,11 +47,11 @@ Fotoelektrik etkide metalden elektron söken şey, "Planck sabiti kadar enerji t
 
 ## 7.3 Genel Sentez: Kitabın Tek Cümlelik Tezi ve Ana Gövdenin Yayı (Kısım 1–7)
 
-Kitabın tamamı tek bir tezin açılımıdır: **Uzay boş değildir; ölçülebilir yoğunluğa ve basınca sahip, sürtünmesiz bir süper-akışkanla (Evrenakı) doludur ve fizikte "kuvvet", "alan" veya "uzay-zaman eğriliği" adıyla soyutlanan her şey, bu akışkanın hidrodinamiğinden türer.**
+Kitabın tamamı tek bir tezin açılımıdır: **Uzay boş değildir; ölçülebilir yoğunluğa ve basınca sahip, viskozitesi sıfıra çok yakın (ama sıfır olmayan) bir süper-akışkanla (Evrenakı) doludur ve fizikte "kuvvet", "alan" veya "uzay-zaman eğriliği" adıyla soyutlanan her şey, bu akışkanın hidrodinamiğinden türer.**
 
 Bu tez kitap boyunca şu yay üzerinde işlendi:
 
-* **Kısım 1** dokuz postülatı kurdu: Plenum, uzanımsal dördüncü boyut (W), mutlak kozmik zaman, değişken ışık hızı, dört boyutlu çift dönüş, kütle-itim, sürtünmesizlik/sürüklenme, makro-spin ve beş hidrodinamik kuvvet.
+* **Kısım 1** dokuz postülatı kurdu: Plenum, uzanımsal dördüncü boyut (W), mutlak kozmik zaman, değişken ışık hızı, dört boyutlu çift dönüş, kütle-itim, ultra-düşük viskozite/sürüklenme, makro-spin ve beş hidrodinamik kuvvet.
 * **Kısım 2** ışığı bir Zerre Katarı olarak tanımladı; yansıma, kırılma, girişim, kırınım ve polarizasyonu tek mekanizmaya (Evrenakı rampası ve gradyanları) bağladı.
 * **Kısım 3** aynı mekaniği makro evrene taşıdı: yerçekimi kütle-itim olarak, yörüngeler makro-vorteks sürüklenmesi olarak, atmosferik ve gelgitsel olaylar akışkan basınç gradyanları olarak yeniden kuruldu.
 * **Kısım 4** modelin matematiksel iskeletini verdi: $G$'nin akışkan parametrelerinden türetimi ve gözlemsel karşılıklar.

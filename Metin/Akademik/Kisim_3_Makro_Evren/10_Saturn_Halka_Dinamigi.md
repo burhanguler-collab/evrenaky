@@ -48,7 +48,7 @@ burada $\tau_c$ ortalama çarpışma zamanı, $\epsilon$ ise geri tepme (restitu
 
 ### 3.10.4.2 Evrenakı'nın önerebileceği ek terim: ortam-parçacık sürtünmesi
 
-Evrenakı'nın farkı şurada yatabilir: eğer Zerre ortamının kendisi sonlu bir viskoziteye ($\eta_z$) sahipse (Bölüm 1.3'te $\eta \approx 0$ ama tam sıfır değil olarak tanımlandığı hatırlanmalı), o zaman parçacık-parçacık çarpışmasından **bağımsız**, ortam kaynaklı ek bir sürtünme terimi olabilir:
+Evrenakı'nın farkı şurada yatar: Zerre ortamının kendisi **sonlu bir viskoziteye ($\eta_z$) sahiptir** — Bölüm 1.3'ün 7. postülatında kurulduğu üzere teoride viskozite "sıfıra yakın"dır, *tam sıfır değildir* ve bu sonluluk teorinin bir seçimi değil iç zorunluluğudur (aynı $\eta_E$, kozmolojik genişlemenin deşarj motorunu da besler; bkz. Bölüm 3.7.2). Bu sonlu viskozite, parçacık-parçacık çarpışmasından **bağımsız**, ortam kaynaklı ek bir sürtünme terimi üretir:
 
 $$\gamma_{Evrenakı} = \gamma_{standart} + \gamma_{ortam}, \qquad \gamma_{ortam} \sim \frac{6\pi \eta_z a}{m}$$
 

@@ -78,7 +78,7 @@ Yani esiri gençken teoriden kovan adamın ta kendisi, olgunlaştığında **"uz
 
 ## Biz Ne Diyoruz?
 
-Einstein "bir ortam var ama ne olduğunu tam bilmiyorum" dediği yerde durdu. Biz o cümleyi tamamlıyoruz: O ortam **Evrenakı'dır**; sıkıştırılabilir, sürtünmesiz, süper bir akışkandır ve içindeki ışığın hızı yoğunluğa göre değişir. Eskiler "esir"i yanlış tanımladığı için bulamadı. Biz doğru tanımladık — ve bulduk.
+Einstein "bir ortam var ama ne olduğunu tam bilmiyorum" dediği yerde durdu. Biz o cümleyi tamamlıyoruz: O ortam **Evrenakı'dır**; sıkıştırılabilir, sürtünmesi sıfıra çok yakın (ama tam sıfır olmayan) süper bir akışkandır ve içindeki ışığın hızı yoğunluğa göre değişir. Eskiler "esir"i yanlış tanımladığı için bulamadı. Biz doğru tanımladık — ve bulduk.
 
 "Bulduk mu? Kanıtınız ne?" diyorsunuz. Çok güzel bir soru. Çünkü sıradaki ve son bölümde, bu görünmez okyanusu bir laboratuvarda, gerçek cihazlarla nasıl **ölçtüğümüzü** anlatacağız. Evet, yanlış duymadınız: Görünmez esiri ölçtük.
 

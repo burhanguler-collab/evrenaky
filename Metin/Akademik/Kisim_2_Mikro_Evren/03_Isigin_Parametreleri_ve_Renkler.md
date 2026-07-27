@@ -6,7 +6,7 @@ Buradaki tanımlar, ilerleyen bölümlerde ışığın hızını (2.4), yansıma
 
 ## 2.3.1 Zerre Sürüsünde Dalga Boyu ($\lambda$) ve Frekans ($\nu$)
 
-Klasik optik ve dalga mekaniği; ışığın dalga boyunu bir sinüs dalgasının iki tepe noktası arasındaki mesafe, frekansı ise saniyedeki salınım sayısı olarak tanımlar. Ancak Evrenakı teorisinde uzayda "boşluğun içinde salınan görünmez bir ip" yoktur; uzay, Evrenakı okyanusuyla doludur ve ışık bu okyanusu yararak ilerleyen sürtünmesiz akışkan kütleleri (Zerreler) serisidir.
+Klasik optik ve dalga mekaniği; ışığın dalga boyunu bir sinüs dalgasının iki tepe noktası arasındaki mesafe, frekansı ise saniyedeki salınım sayısı olarak tanımlar. Ancak Evrenakı teorisinde uzayda "boşluğun içinde salınan görünmez bir ip" yoktur; uzay, Evrenakı okyanusuyla doludur ve ışık bu okyanusu yararak ilerleyen — ortamın ultra-düşük viskozitesi nedeniyle neredeyse hiç direnç duymayan — akışkan kütleleri (Zerreler) serisidir.
 
 Bu durumda optik bilimi şu şekilde revize edilir:
 1. **Dalga Boyu ($\lambda$):** Olasılık dalgasının genişliği değil; ardışık iki Zerre (ışık mermisi) arasındaki **fiziksel, ölçülebilir uzaklıktır.** Dalga boyu ne kadar küçükse, zerreler birbirine o kadar yakın uçuyor demektir.

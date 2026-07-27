@@ -140,7 +140,7 @@ Peki madem uzay bir sıvı, gezegenler birbirini nasıl "çekiyor"? Elma neden y
 
 > [!NOTE]
 > - **Eski Fizik:** Uzay boş bir vakumdur; gezegenler bu hiçliğin içinde süzülür.
-> - **Evrenakı Teorisi:** Uzay, Evrenakı adı verilen sürtünmesiz bir süper-akışkanla doludur. Gezegenler bu akışkanın içindeki devasa girdaplardır.
+> - **Evrenakı Teorisi:** Uzay, Evrenakı adı verilen ve sürtünmesi sıfıra çok yakın (ama sıfır olmayan) bir süper-akışkanla doludur. Gezegenler bu akışkanın içindeki devasa girdaplardır.
 
 > [!TIP]
 > Bu bölümün matematiksel ispatlarını ve akademik dildeki detaylı açıklamalarını görmek için **[Akademik Sürüm Kısım 1'ye geçiş yapın](#akademik_01)**.

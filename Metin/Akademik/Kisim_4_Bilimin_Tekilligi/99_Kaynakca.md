@@ -23,7 +23,7 @@
 * Huchra, J., Gorenstein, M., Kent, S., Shapiro, I., Smith, G., Horine, E., & Perley, R. (1985). *2237+0305: A new and unusual gravitational lens*. The Astronomical Journal, 90, 691-696. (Einstein Haçı Q2237+030'un keşfi; 4.3.4'te atıflı).
 * Kennedy, R. J., & Thorndike, E. M. (1932). *Experimental Establishment of the Relativity of Time*. Physical Review, 42(3), 400-418. (Kennedy–Thorndike deneyi; 4.2.15 — İtiraz 5'te atıflı).
 * Kepler, J. (1619). *Harmonices Mundi*. Linz: Johann Planck. (Üçüncü yasa ve ters kare yasasının gözlemsel temeli; 4.2.4'te atıflı).
-* Landau, L. D. (1941). *The Theory of Superfluidity of Helium II*. Journal of Physics USSR, 5, 71-90. (Ultra-akışkanlık — sürtünmesiz ortam modeli; 4.2.3'te atıflı).
+* Landau, L. D. (1941). *The Theory of Superfluidity of Helium II*. Journal of Physics USSR, 5, 71-90. (Ultra-akışkanlık — viskozitesi sıfıra çok yakın ortam modeli; 4.2.3'te atıflı).
 * Laplace, P.-S. (1799). *Traité de mécanique céleste*, Cilt I. Paris: Duprat. (Laplace denklemi ve potansiyel kuramı; 4.2.4'te atıflı).
 * Lindegren, L., et al. (2021). *Gaia Early Data Release 3: The astrometric solution*. Astronomy & Astrophysics, 649, A2. (Astrometrik çözümde renk-bağımlı (kromatik) kalibrasyonun ele alınışı; 4.3.5'te atıflı).
 * Michelson, A. A., & Morley, E. W. (1887). *On the Relative Motion of the Earth and the Luminiferous Ether*. American Journal of Science, 34(203), 333-345. (Anizotropi ölçümünün boş sonucu; 4.2.10.1 ve 4.2.15'te atıflı).

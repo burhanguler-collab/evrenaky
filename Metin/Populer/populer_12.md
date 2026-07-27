@@ -70,12 +70,12 @@ Aşağıdaki mini testi çözerek Evrenakı Teorisi'nin temel kavramlarını ne 
             q: "1. Evrenakı Teorisi'ne göre uzay boşluğu nedir?",
             options: [
                 "Tamamen hiçlikten oluşan boş bir vakumdur.",
-                "Sürtünmesiz, sıkıştırılabilir süper-akışkan bir okyanustur.",
+                "Sürtünmesi sıfıra çok yakın, sıkıştırılabilir süper-akışkan bir okyanustur.",
                 "Geometriye sahip ama maddesiz bükülen bir kumaştır.",
                 "Karanlık madde parçacıkları ile kaplı bir alandır."
             ],
             answer: 1,
-            explain: "Doğru! Evrenakı Teorisi'ne göre uzay hiçlik değil; sıfır viskoziteli, sıkıştırılabilir süper-akışkan bir Plenum okyanusudur (Madde 1 ve 2)."
+            explain: "Doğru! Evrenakı Teorisi'ne göre uzay hiçlik değil; viskozitesi sıfıra çok yakın (ama sıfır olmayan), sıkıştırılabilir süper-akışkan bir Plenum okyanusudur (Madde 1 ve 2). Viskozitenin tam sıfır olmaması önemlidir: evrenin genişlemesini üreten viskoz deşarj tam da bu küçük sürtünmeden doğar."
         },
         {
             q: "2. Dalından kopan bir elma neden yere doğru düşer?",

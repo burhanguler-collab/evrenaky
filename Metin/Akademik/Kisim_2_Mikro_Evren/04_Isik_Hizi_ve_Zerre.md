@@ -1,6 +1,6 @@
 # 2.4 Işık Hızı ve Zerre
 
-Evrenakı teorisinde uzay boşluğu (vakum), pasif bir "hiçlik" değil, devasa bir iç basınca sahip sürtünmesiz bir akışkandır (süper-akışkan). Işık ise bu akışkanın içinde dalgalanan soyut bir enerji değil, bizzat bu akışkandan kopartılarak fırlatılan somut bir kütle, yani **Zerre**'dir.
+Evrenakı teorisinde uzay boşluğu (vakum), pasif bir "hiçlik" değil, devasa bir iç basınca sahip ve viskozitesi sıfıra çok yakın (ama sıfır olmayan) bir akışkandır (süper-akışkan; bkz. Bölüm 1.3, 7. postülat). Işık ise bu akışkanın içinde dalgalanan soyut bir enerji değil, bizzat bu akışkandan kopartılarak fırlatılan somut bir kütle, yani **Zerre**'dir.
 
 Standart fizik, ışığın (Zerrenin) boşlukta saniyede tam 299.792.458 metre ($c$) hızla hareket ettiğini (SI'da bu değer tanım gereği sabittir; BIPM, 2019) ve bu değerin Evren'in her yerinde mutlak bir evrensel sabit olduğunu iddia eder. Ancak bu yaklaşım bu hızın mekanik altyapısını veya "neden" bu değere sahip olduğunu açıklayamaz. 
 
@@ -8,7 +8,7 @@ Evrenakı mekaniği ise ışık hızını çok net bir akışkanlar dinamiği ya
 
 ## 2.4.1 İletim Sınırı Olarak $c$
 
-Evrenakı denizine ateşlenen bir Zerre, 7. Postülat'ta belirtildiği üzere sürtünmesiz ($\mu \approx 0$) bir ortamda hareket eder; yani klasik anlamda kinetik enerjisini sömüren bir "direnç" kuvveti yoktur. Zerre'nin hızı $c$'ye ulaştığında olan şey, bir direnç dengesi değil, akışkana "kavrama (tutunma)" mekanizmasının sınırlarına ulaşılmasıdır. Bu noktada $c$ limitinin ikili doğasını (Öteleme vs. Dönüş) çok net ayırmak gerekir:
+Evrenakı denizine ateşlenen bir Zerre, 7. Postülat'ta belirtildiği üzere viskozitesi sıfıra çok yakın ($\mu \approx 0$; "sıfıra yakın, sıfır değil") bir ortamda hareket eder; yani klasik anlamda kinetik enerjisini gözlemsel ölçekte sömüren bir "direnç" kuvveti yoktur — kalan viskoz kayıp, Zerre'nin yol boyunca hızını hissedilir biçimde düşürmeyecek kadar küçüktür. Zerre'nin hızı $c$'ye ulaştığında olan şey, bir direnç dengesi değil, akışkana "kavrama (tutunma)" mekanizmasının sınırlarına ulaşılmasıdır. Bu noktada $c$ limitinin ikili doğasını (Öteleme vs. Dönüş) çok net ayırmak gerekir:
 
 *   **Öteleme (Çizgisel İlerleme) için Kavrama Limiti:** Zerre (ışık) gibi akışkan içinde öteleme hareketi yapan cisimler için $c$, ortamın izin verdiği maksimum iletim hızıdır (tıpkı sesin havadaki hızının Mach 1 olması gibi). Zerre, bu hıza ulaştığında daha fazla çizgisel ivmelenemez; çünkü içinden geçtiği sıvıya tutunma (kavrama) limiti budur. Bu sınır aşılmaya çalışıldığında zerre akışkanı yırtamaz, sadece akışkan üzerinde "patinaja" düşer.
 *   **Dönüş (Spin) ve Gerçek Kavitasyon (Yırtılma) Sınırı:** Bir nükleonun kendi kompozit dönüş hızı $c$'yi aşsa da yeni bir kavitasyon yaratmaz; ancak onu oluşturan **temel alt-bileşenlerin çekirdeğindeki** devasa 4 boyutlu girdaplar, Evrenakı'nın $c$'den çok daha yüksek olan **gerçek kavitasyon (yırtılma) sınırını** bile aşacak kadar akıl almaz bir hızda döner. Öteleme olmadığı için patinaj yaşanmaz; bunun yerine Evrenakı yırtılır. Kısım 1'deki 5. Postülat'ta belirtildiği gibi, madde dediğimiz o ölümsüz şok zarfını (çekirdeği) sıfırdan yaratan şey $c$'nin aşılması değil, bu temel alt-parçacıkların gerçek kavitasyon sınırını yırtmasıdır.
