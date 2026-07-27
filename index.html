@@ -219,9 +219,10 @@
                 <div id="progress-bar"></div>
             </div>
 
-            <!-- Main Dynamic Container -->
-            <main id="main-container">
-                <!-- Tab 1: Book View (Markdown Content) -->
+            <!-- Viewport Area -->
+            <main id="main-viewport">
+                
+                <!-- Tab 1: Book Reader -->
                 <section id="pane-book" class="tab-pane active">
                     <div id="book-content-container">
                         
@@ -239,7 +240,7 @@
                                         <i data-lucide="shield-check"></i> Hakem Değerlendirmeleri
                                     </button>
                                     <button class="btn btn-secondary" onclick="switchTab('sim')">
-                                        <i data-lucide="cpu"></i> Simülasyonları İncele
+                                        <i data-lucide="cpu"></i> Simülasyonu Çalıştır
                                     </button>
                                 </div>
                                 
@@ -259,13 +260,39 @@
                                 
                                 <!-- Connector SVG Lines / Arrows -->
                                 <div class="diagram-connectors">
-                                    <svg viewBox="0 0 500 90" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <line x1="250" y1="0" x2="250" y2="35" stroke="var(--neon-blue)" stroke-width="2" stroke-dasharray="4 4" />
-                                        <line x1="125" y1="35" x2="375" y2="35" stroke="var(--neon-blue)" stroke-width="2" />
-                                        <line x1="125" y1="35" x2="125" y2="90" stroke="var(--neon-blue)" stroke-width="2" />
-                                        <line x1="375" y1="35" x2="375" y2="90" stroke="var(--neon-blue)" stroke-width="2" />
+                                    <svg viewBox="0 0 400 90" preserveAspectRatio="none">
+                                        <defs>
+                                            <!-- Glow Filters -->
+                                            <filter id="glow-blue" x="-20%" y="-20%" width="140%" height="140%">
+                                                <feGaussianBlur stdDeviation="2.5" result="blur" />
+                                                <feMerge>
+                                                    <feMergeNode in="blur" />
+                                                    <feMergeNode in="SourceGraphic" />
+                                                </feMerge>
+                                            </filter>
+                                            <filter id="glow-magenta" x="-20%" y="-20%" width="140%" height="140%">
+                                                <feGaussianBlur stdDeviation="2.5" result="blur" />
+                                                <feMerge>
+                                                    <feMergeNode in="blur" />
+                                                    <feMergeNode in="SourceGraphic" />
+                                                </feMerge>
+                                            </filter>
+                                            
+                                            <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                                                <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="var(--neon-blue)" />
+                                            </marker>
+                                            <marker id="arrow-magenta" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                                                <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="var(--neon-magenta)" />
+                                            </marker>
+                                        </defs>
+                                        <!-- Left Arrow Line -->
+                                        <line x1="200" y1="5" x2="100" y2="88" stroke="var(--neon-blue)" stroke-width="4.5" marker-end="url(#arrow)" filter="url(#glow-blue)" />
+                                        <!-- Right Arrow Line -->
+                                        <line x1="200" y1="5" x2="300" y2="88" stroke="var(--neon-magenta)" stroke-width="4.5" marker-end="url(#arrow-magenta)" filter="url(#glow-magenta)" />
                                     </svg>
                                 </div>
+                                
+                                <!-- Bottom Cards -->
                                 <div class="features-grid two-cols">
                                     <div class="feature-card">
                                         <div class="feature-icon neon-blue-bg">
@@ -350,7 +377,7 @@
                     </div>
                 </section>
                 
-                <!-- Tab 2: Simulation Hub Viewport & Gallery -->
+                                <!-- Tab 2: Simulation Hub Viewport & Gallery -->
                 <section id="pane-sim" class="tab-pane">
                     <div class="sim-hub-container">
                         <!-- Hub Header & Active Player View -->
