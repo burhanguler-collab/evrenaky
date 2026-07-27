@@ -5,132 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>3D Gradyan Simülasyonu</title>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { width: 100%; height: 100%; overflow: hidden; background: #050505; color: #fff; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
-    
-    #app-layout {
-      display: flex;
-      flex-direction: column;
-      width: 100vw;
-      height: 100vh;
-      background: #050505;
-    }
-
-    #top-bar {
-      flex: 0 0 auto;
-      padding: 8px 12px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 6px;
-      background: rgba(10, 15, 25, 0.95);
-      border-bottom: 1px solid rgba(0, 229, 255, 0.2);
-      z-index: 10;
-    }
-
-    .btn-group {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    button {
-      background: rgba(30, 30, 30, 0.9);
-      color: #0ea5e9;
-      border: 1px solid #0ea5e9;
-      padding: 6px 14px;
-      cursor: pointer;
-      border-radius: 6px;
-      transition: all 0.2s ease;
-      font-weight: 500;
-      font-size: 13px;
-    }
-    button:hover, button.active {
-      background: #0ea5e9;
-      color: #fff;
-      box-shadow: 0 0 12px rgba(14, 165, 233, 0.6);
-    }
-
-    .legend-row {
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-      font-size: 11px;
-      color: #94a3b8;
-    }
-    .legend-item {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .legend-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-    }
-
-    #canvas-container {
-      flex: 1 1 auto;
-      position: relative;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      background: #050505;
-    }
-    #canvas-container canvas {
-      display: block;
-      width: 100% !important;
-      height: 100% !important;
-    }
-
-    #infoText3d {
-      flex: 0 0 auto;
-      padding: 10px 16px;
-      background: rgba(10, 15, 25, 0.95);
-      border-top: 1px solid rgba(0, 229, 255, 0.2);
-      font-size: 12px;
-      line-height: 1.45;
-      color: #cbd5e1;
-      border-left: 4px solid #00e5ff;
-      max-height: 90px;
-      overflow-y: auto;
-      z-index: 10;
-    }
+    body { background: #121212; color: #fff; font-family: 'Inter', sans-serif; margin: 0; padding: 0; overflow: hidden; width: 100vw; height: 100vh; }
+    #ui-container { position: absolute; top: 10px; left: 0; right: 0; display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; z-index: 10; padding: 0 10px; }
+    button { background: #1e1e1e; color: #0ea5e9; border: 1px solid #0ea5e9; padding: 8px 16px; cursor: pointer; border-radius: 8px; transition: 0.3s; font-weight: 500; font-size: 13px; }
+    button:hover, button.active { background: #0ea5e9; color: #fff; box-shadow: 0 0 15px rgba(14, 165, 233, 0.5); }
+    #infoText3d { position: absolute; bottom: 15px; left: 50%; transform: translateX(-50%); width: 85%; max-width: 700px; font-size: 13px; color: #cbd5e1; line-height: 1.45; background: rgba(0, 229, 255, 0.12); border-left: 4px solid #00e5ff; padding: 10px 16px; border-radius: 8px; text-align: left; z-index: 10; backdrop-filter: blur(6px); pointer-events: none; }
   </style>
 </head>
 <body>
 
-  <div id="app-layout">
-    <div id="top-bar">
-      <div class="btn-group" id="ui-container">
-        <button class="active" onclick="window.setShape3d('tetra', this)">Piramit</button>
-        <button onclick="window.setShape3d('cube', this)">Küp</button>
-        <button onclick="window.setShape3d('cylinder', this)">Silindir</button>
-        <button onclick="window.setShape3d('sphere', this)">Küre</button>
-      </div>
-      <div class="legend-row">
-        <div class="legend-item">
-          <span class="legend-dot" style="background: #00e5ff; box-shadow: 0 0 6px #00e5ff;"></span>
-          Dış Evrenakı Gradyanı
-        </div>
-        <div class="legend-item">
-          <span class="legend-dot" style="background: #8b0099; box-shadow: 0 0 6px #8b0099;"></span>
-          İç Evrenakı Gradyanı
-        </div>
-      </div>
+  <div id="ui-container">
+    <button class="active" onclick="window.setShape3d('tetra', this)">Piramit</button>
+    <button onclick="window.setShape3d('cube', this)">Küp</button>
+    <button onclick="window.setShape3d('cylinder', this)">Silindir</button>
+    <button onclick="window.setShape3d('sphere', this)">Küre</button>
+  </div>
+  
+  <div style="position: absolute; top: 55px; left: 0; right: 0; display: flex; justify-content: center; flex-wrap: wrap; gap: 18px; font-size: 12px; color: #cbd5e1; z-index: 10; pointer-events: none;">
+    <div style="display: flex; align-items: center; gap: 8px;">
+      <span style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #00e5ff; box-shadow: 0 0 8px #00e5ff;"></span>
+      Dış Evrenakı Gradyanı (Basınç ve Yoğunluk Sönümlemesi)
     </div>
-
-    <div id="canvas-container">
-      <canvas id="webgl-canvas"></canvas>
-    </div>
-
-    <div id="infoText3d">
-      <strong>Piramit (Üçgenin 3D'si - Tetrahedron):</strong> Uzayda asimetrik basınç gölgelenmesinin en belirgin 3D örneğidir. Dört sivri uç (köşe) aerodinamik olarak akışı yararken, geniş düz yüzeyler devasa vakum cepleri oluşturur. Kendi kendine yönelim (oryantasyon) ve itki kazanır.
+    <div style="display: flex; align-items: center; gap: 8px;">
+      <span style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #8b0099; box-shadow: 0 0 8px #8b0099;"></span>
+      İç Evrenakı Gradyanı (Kütle İçi Basınç ve Yoğunluk Merkezi)
     </div>
   </div>
+  
+  <div id="infoText3d">
+    <strong>Piramit (Üçgenin 3D'si - Tetrahedron):</strong> Uzayda asimetrik basınç gölgelenmesinin en belirgin 3D örneğidir. Dört sivri uç (köşe) aerodinamik olarak akışı yararken, geniş düz yüzeyler devasa vakum cepleri oluşturur. Kendi kendine yönelim (oryantasyon) ve itki kazanır.
+  </div>
 
-  <!-- Local and CDN Fallbacks for Three.js and OrbitControls -->
   <script src="three.min.js"></script>
   <script src="./three.min.js"></script>
   <script src="../three.min.js"></script>
@@ -156,305 +61,149 @@
       tetra: "<strong>Piramit (Üçgenin 3D'si - Tetrahedron):</strong> Uzayda asimetrik basınç gölgelenmesinin en belirgin 3D örneğidir. Dört sivri uç (köşe) aerodinamik olarak akışı yararken, geniş düz yüzeyler devasa vakum cepleri oluşturur. Kendi kendine yönelim (oryantasyon) ve itki kazanır."
     };
 
-    let activeShape = 'tetra';
-    window.setShape3d = function(type, btn) {
-      activeShape = type;
-      document.querySelectorAll('.btn-group button').forEach(b => b.classList.remove('active'));
-      if(btn) btn.classList.add('active');
-      document.getElementById('infoText3d').innerHTML = infos[type];
-      if (typeof window.switchShapeWebGL === 'function') {
-        window.switchShapeWebGL(type);
+    function getDimensions() {
+      let w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth || 800;
+      let h = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight || 500;
+      return { w: Math.max(w, 200), h: Math.max(h, 200) };
+    }
+
+    let dim = getDimensions();
+
+    const scene = new THREE.Scene();
+    scene.background = new THREE.Color(0x050505);
+
+    const camera = new THREE.PerspectiveCamera(45, dim.w / dim.h, 0.1, 1000);
+    camera.position.set(0, 2, 16);
+
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    renderer.setSize(dim.w, dim.h);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+    document.body.appendChild(renderer.domElement);
+
+    let controls;
+    if (typeof THREE.OrbitControls !== 'undefined') {
+      controls = new THREE.OrbitControls(camera, renderer.domElement);
+      controls.enableDamping = true;
+      controls.dampingFactor = 0.05;
+      controls.autoRotate = true;
+      controls.autoRotateSpeed = 1.0;
+      controls.target.set(0, 0.8, 0);
+    }
+
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.3);
+    scene.add(ambientLight);
+
+    const pointLight = new THREE.PointLight(0xffffff, 1.2);
+    pointLight.position.set(10, 15, 10);
+    scene.add(pointLight);
+
+    const pointLight2 = new THREE.PointLight(0x00e5ff, 0.8);
+    pointLight2.position.set(-10, -10, -10);
+    scene.add(pointLight2);
+
+    let currentGroup = new THREE.Group();
+    scene.add(currentGroup);
+
+    const coreMaterial = new THREE.MeshPhongMaterial({
+      color: 0x2d004d,
+      emissive: 0x1a0033,
+      shininess: 80,
+      specular: 0x00e5ff,
+      transparent: true,
+      opacity: 0.65
+    });
+
+    const innerMaterial = new THREE.MeshBasicMaterial({
+      color: 0x8b0099,
+      transparent: true,
+      opacity: 0.08,
+      blending: THREE.AdditiveBlending,
+      side: THREE.DoubleSide,
+      depthWrite: false
+    });
+
+    const shellMaterial = new THREE.MeshBasicMaterial({
+      color: 0x00e5ff,
+      transparent: true,
+      opacity: 0.012,
+      blending: THREE.AdditiveBlending,
+      side: THREE.FrontSide,
+      depthWrite: false
+    });
+
+    function createShape(type) {
+      scene.remove(currentGroup);
+      currentGroup = new THREE.Group();
+      
+      let coreGeometry;
+      let shellGeometry;
+      let shellCount = 35;
+      let shellScaleStep = 0.05;
+
+      if (type === 'sphere') {
+        coreGeometry = new THREE.SphereGeometry(2, 32, 32);
+        shellGeometry = new THREE.SphereGeometry(2, 32, 32);
+      } else if (type === 'cube') {
+        coreGeometry = new THREE.BoxGeometry(3.2, 3.2, 3.2);
+        shellGeometry = new THREE.BoxGeometry(3.2, 3.2, 3.2);
+        shellScaleStep = 0.04;
+      } else if (type === 'cylinder') {
+        coreGeometry = new THREE.CylinderGeometry(1.1, 1.1, 5.5, 32);
+        shellGeometry = new THREE.CylinderGeometry(1.1, 1.1, 5.5, 32);
+        shellScaleStep = 0.04;
+      } else if (type === 'tetra') {
+        coreGeometry = new THREE.TetrahedronGeometry(3.0, 0);
+        shellGeometry = new THREE.TetrahedronGeometry(3.0, 0);
+        shellScaleStep = 0.04;
       }
+
+      for (let i = 1; i <= 20; i++) {
+        const innerMesh = new THREE.Mesh(coreGeometry, innerMaterial);
+        const s = 1.0 - (i * 0.045);
+        if (s > 0) {
+          innerMesh.scale.set(s, s, s);
+          currentGroup.add(innerMesh);
+        }
+      }
+
+      for (let i = 1; i <= shellCount; i++) {
+        const shellMesh = new THREE.Mesh(shellGeometry, shellMaterial);
+        const s = 1 + i * shellScaleStep;
+        shellMesh.scale.set(s, s, s);
+        currentGroup.add(shellMesh);
+      }
+
+      scene.add(currentGroup);
+    }
+
+    createShape('tetra');
+
+    window.setShape3d = function(type, btn) {
+      document.querySelectorAll('#ui-container button').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('infoText3d').innerHTML = infos[type];
+      createShape(type);
     };
 
-    const container = document.getElementById('canvas-container');
-    const canvasEl = document.getElementById('webgl-canvas');
-
-    function getDimensions() {
-      let w = container.clientWidth || window.innerWidth || 800;
-      let h = container.clientHeight || window.innerHeight || 400;
-      return { w: Math.max(w, 200), h: Math.max(h, 150) };
+    function handleResize() {
+      const d = getDimensions();
+      camera.aspect = d.w / d.h;
+      camera.updateProjectionMatrix();
+      renderer.setSize(d.w, d.h);
     }
 
-    // Firefox Bug Fix: Attach renderer to pre-existing DOM canvas element
-    let webglSuccess = false;
-    if (typeof THREE !== 'undefined' && canvasEl) {
-      try {
-        let dim = getDimensions();
-        const scene = new THREE.Scene();
-        scene.background = new THREE.Color(0x050505);
+    window.addEventListener('resize', handleResize);
 
-        const camera = new THREE.PerspectiveCamera(45, dim.w / dim.h, 0.1, 1000);
-        camera.position.set(0, 0, 16);
-
-        let renderer;
-        try {
-          renderer = new THREE.WebGLRenderer({ canvas: canvasEl, antialias: true, alpha: true });
-        } catch (e1) {
-          renderer = new THREE.WebGLRenderer({ canvas: canvasEl, antialias: false, alpha: true });
-        }
-
-        if (renderer) {
-          renderer.setSize(dim.w, dim.h);
-          renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
-
-          let controls;
-          if (typeof THREE.OrbitControls !== 'undefined') {
-            controls = new THREE.OrbitControls(camera, renderer.domElement);
-            controls.enableDamping = true;
-            controls.dampingFactor = 0.05;
-            controls.autoRotate = true;
-            controls.autoRotateSpeed = 1.0;
-          }
-
-          const ambientLight = new THREE.AmbientLight(0xffffff, 0.3);
-          scene.add(ambientLight);
-
-          const pointLight = new THREE.PointLight(0xffffff, 1.2);
-          pointLight.position.set(10, 15, 10);
-          scene.add(pointLight);
-
-          let currentGroup = new THREE.Group();
-          scene.add(currentGroup);
-
-          const coreMaterial = new THREE.MeshPhongMaterial({
-            color: 0x2d004d, emissive: 0x1a0033, shininess: 80, specular: 0x00e5ff, transparent: true, opacity: 0.65
-          });
-          const innerMaterial = new THREE.MeshBasicMaterial({
-            color: 0x8b0099, transparent: true, opacity: 0.08, blending: THREE.AdditiveBlending, side: THREE.DoubleSide, depthWrite: false
-          });
-          const shellMaterial = new THREE.MeshBasicMaterial({
-            color: 0x00e5ff, transparent: true, opacity: 0.012, blending: THREE.AdditiveBlending, side: THREE.FrontSide, depthWrite: false
-          });
-
-          function createShapeWebGL(type) {
-            scene.remove(currentGroup);
-            currentGroup = new THREE.Group();
-            let coreGeometry;
-            let shellCount = 35;
-            let shellScaleStep = 0.05; 
-
-            if (type === 'sphere') {
-              coreGeometry = new THREE.SphereGeometry(2, 32, 32);
-            } else if (type === 'cube') {
-              coreGeometry = new THREE.BoxGeometry(3.2, 3.2, 3.2);
-              shellScaleStep = 0.04;
-            } else if (type === 'cylinder') {
-              coreGeometry = new THREE.CylinderGeometry(1.1, 1.1, 5.5, 32);
-              shellScaleStep = 0.04;
-            } else if (type === 'tetra') {
-              coreGeometry = new THREE.TetrahedronGeometry(3.0, 0);
-              shellScaleStep = 0.04;
-            }
-
-            for (let i = 1; i <= 20; i++) {
-              const innerMesh = new THREE.Mesh(coreGeometry, innerMaterial);
-              const s = 1.0 - (i * 0.045);
-              if (s > 0) { innerMesh.scale.set(s, s, s); currentGroup.add(innerMesh); }
-            }
-            for (let i = 1; i <= shellCount; i++) {
-              const shellMesh = new THREE.Mesh(coreGeometry, shellMaterial);
-              const s = 1 + i * shellScaleStep;
-              shellMesh.scale.set(s, s, s);
-              currentGroup.add(shellMesh);
-            }
-            scene.add(currentGroup);
-          }
-
-          window.switchShapeWebGL = createShapeWebGL;
-          createShapeWebGL('tetra');
-
-          function handleResize() {
-            const d = getDimensions();
-            camera.aspect = d.w / d.h;
-            camera.updateProjectionMatrix();
-            renderer.setSize(d.w, d.h);
-          }
-          window.addEventListener('resize', handleResize);
-          setTimeout(handleResize, 100);
-          setTimeout(handleResize, 500);
-
-          let time = 0;
-          function animateWebGL() {
-            requestAnimationFrame(animateWebGL);
-            if (controls) controls.update();
-            time += 0.02;
-            const s = 1 + Math.sin(time) * 0.01;
-            currentGroup.scale.set(s, s, s);
-            renderer.render(scene, camera);
-          }
-          animateWebGL();
-          webglSuccess = true;
-        }
-      } catch (e) {
-        console.warn("WebGL initialization failed in Firefox:", e);
-      }
+    let time = 0;
+    function animate() {
+      requestAnimationFrame(animate);
+      if (controls) controls.update();
+      time += 0.02;
+      const s = 1 + Math.sin(time) * 0.01;
+      currentGroup.scale.set(s, s, s);
+      renderer.render(scene, camera);
     }
-
-    // 2D SOLID CANVAS FALLBACK (For devices with disabled WebGL)
-    if (!webglSuccess) {
-      container.innerHTML = '';
-      const fallbackCanvas = document.createElement('canvas');
-      container.appendChild(fallbackCanvas);
-      const ctx2d = fallbackCanvas.getContext('2d');
-
-      let angleX = 0.4;
-      let angleY = 0.4;
-
-      function resize2D() {
-        const d = getDimensions();
-        fallbackCanvas.width = d.w;
-        fallbackCanvas.height = d.h;
-      }
-      window.addEventListener('resize', resize2D);
-      resize2D();
-
-      const solidShapes = {
-        tetra: {
-          nodes: [[0,-2,0], [1.9,1.1,-1.1], [-1.9,1.1,-1.1], [0,1.1,1.9]],
-          faces: [[0,2,1], [0,1,3], [0,3,2], [1,2,3]]
-        },
-        cube: {
-          nodes: [[-1.3,-1.3,-1.3],[1.3,-1.3,-1.3],[1.3,1.3,-1.3],[-1.3,1.3,-1.3],
-                  [-1.3,-1.3,1.3],[1.3,-1.3,1.3],[1.3,1.3,1.3],[-1.3,1.3,1.3]],
-          faces: [[0,3,2,1], [4,5,6,7], [0,1,5,4], [2,3,7,6], [0,4,7,3], [1,2,6,5]]
-        },
-        cylinder: {
-          nodes: (function(){
-            let n = [];
-            for(let i=0;i<16;i++){
-              let a = (i/16)*Math.PI*2;
-              n.push([Math.cos(a)*1.4, -2.4, Math.sin(a)*1.4]);
-              n.push([Math.cos(a)*1.4, 2.4, Math.sin(a)*1.4]);
-            }
-            return n;
-          })(),
-          faces: (function(){
-            let f = [];
-            for(let i=0;i<16;i++){
-              let b1 = i*2, t1 = i*2+1;
-              let b2 = ((i+1)%16)*2, t2 = ((i+1)%16)*2+1;
-              f.push([b1, b2, t2, t1]);
-            }
-            let topCap = [], botCap = [];
-            for(let i=0;i<16;i++){ topCap.push(i*2+1); botCap.unshift(i*2); }
-            f.push(topCap); f.push(botCap);
-            return f;
-          })()
-        },
-        sphere: {
-          nodes: (function(){
-            let n = [];
-            const lats = 10, lons = 16;
-            for(let i=0; i<=lats; i++){
-              let theta = (i/lats)*Math.PI;
-              let sinT = Math.sin(theta), cosT = Math.cos(theta);
-              for(let j=0; j<lons; j++){
-                let phi = (j/lons)*Math.PI*2;
-                n.push([sinT*Math.cos(phi)*2.1, cosT*2.1, sinT*Math.sin(phi)*2.1]);
-              }
-            }
-            return n;
-          })(),
-          faces: (function(){
-            let f = [];
-            const lats = 10, lons = 16;
-            for(let i=0; i<lats; i++){
-              for(let j=0; j<lons; j++){
-                let first = i*lons + j;
-                let second = first + lons;
-                let nextJ = (j+1)%lons;
-                f.push([first, first - j + nextJ, second - j + nextJ, second]);
-              }
-            }
-            return f;
-          })()
-        }
-      };
-
-      function rotate3D(pt, ax, ay) {
-        let x = pt[0], y = pt[1], z = pt[2];
-        let x1 = x * Math.cos(ay) + z * Math.sin(ay);
-        let z1 = -x * Math.sin(ay) + z * Math.cos(ay);
-        let y2 = y * Math.cos(ax) - z1 * Math.sin(ax);
-        let z2 = y * Math.sin(ax) + z1 * Math.cos(ax);
-        return [x1, y2, z2];
-      }
-
-      function drawSolid3DFallback() {
-        resize2D();
-        const w = fallbackCanvas.width;
-        const h = fallbackCanvas.height;
-        ctx2d.clearRect(0, 0, w, h);
-        ctx2d.fillStyle = '#050505';
-        ctx2d.fillRect(0, 0, w, h);
-
-        const cx = w / 2;
-        const cy = h / 2;
-        const scale = Math.min(w, h) * 0.13;
-
-        angleY += 0.012;
-        angleX += 0.005;
-
-        // Volumetric Glow Shells
-        for(let s=35; s>=1; s--) {
-          const r = scale * (1 + s * 0.05);
-          ctx2d.fillStyle = `rgba(0, 229, 255, ${0.012})`;
-          ctx2d.beginPath(); ctx2d.arc(cx, cy, r, 0, Math.PI * 2); ctx2d.fill();
-        }
-
-        const data = solidShapes[activeShape] || solidShapes.tetra;
-        const rotatedNodes = data.nodes.map(pt => rotate3D(pt, angleX, angleY));
-        const projNodes = rotatedNodes.map(r => [cx + r[0] * scale, cy + r[1] * scale, r[2]]);
-
-        let renderFaces = [];
-        for (let face of data.faces) {
-          let avgZ = 0;
-          for (let idx of face) avgZ += rotatedNodes[idx][2];
-          avgZ /= face.length;
-
-          let v0 = rotatedNodes[face[0]], v1 = rotatedNodes[face[1]], v2 = rotatedNodes[face[2]];
-          let ax = v1[0] - v0[0], ay = v1[1] - v0[1], az = v1[2] - v0[2];
-          let bx = v2[0] - v0[0], by = v2[1] - v0[1], bz = v2[2] - v0[2];
-          let nx = ay*bz - az*by, ny = az*bx - ax*bz, nz = ax*by - ay*bx;
-          let len = Math.sqrt(nx*nx + ny*ny + nz*nz) || 1;
-          nz /= len; ny /= len; nx /= len;
-
-          renderFaces.push({ face, avgZ, nz, ny, nx });
-        }
-
-        renderFaces.sort((a, b) => a.avgZ - b.avgZ);
-
-        for (let item of renderFaces) {
-          let dot = item.nx * 0.4 - item.ny * 0.6 + item.nz * 0.7;
-          let intensity = Math.max(0.25, Math.min(1.0, dot * 0.7 + 0.35));
-
-          ctx2d.beginPath();
-          let first = true;
-          for (let idx of item.face) {
-            let p = projNodes[idx];
-            if (first) { ctx2d.moveTo(p[0], p[1]); first = false; }
-            else { ctx2d.lineTo(p[0], p[1]); }
-          }
-          ctx2d.closePath();
-
-          let r = Math.floor(45 + intensity * 60);
-          let g = Math.floor(0 + intensity * 40);
-          let b = Math.floor(77 + intensity * 120);
-
-          ctx2d.fillStyle = `rgba(${r}, ${g}, ${b}, 0.88)`;
-          ctx2d.fill();
-
-          ctx2d.strokeStyle = 'rgba(0, 229, 255, 0.7)';
-          ctx2d.lineWidth = 1.5;
-          ctx2d.stroke();
-        }
-
-        requestAnimationFrame(drawSolid3DFallback);
-      }
-
-      drawSolid3DFallback();
-    }
+    animate();
   </script>
 </body>
 </html>
