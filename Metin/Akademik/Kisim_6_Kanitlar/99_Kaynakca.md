@@ -39,6 +39,8 @@
 * Rubin, V. C., & Ford, W. K. (1970). *Rotation of the Andromeda Nebula...*. The Astrophysical Journal, 159, 379-403. (Galaktik rotasyon eğrileri — Bölüm 6.2.8).
 * Rubin, V. C., Ford, W. K. Jr., & Thonnard, N. (1980). *Rotational properties of 21 SC galaxies...*. The Astrophysical Journal, 238, 471-487. (Karanlık madde hipotezini doğuran dönüş hızları — Bölüm 6.0, §2.1).
 * Stokes, G. G. (1845). *On the Theories of the Internal Friction of Fluids in Motion*. Transactions of the Cambridge Philosophical Society, 8, 287-319. (Navier–Stokes denklemlerinin viskoz formülasyonu — Bölüm 6.3.3).
+* Thompson, P. F., Abrahamson, M., Ardalan, S., & Bordi, J. (2014). *Reconstruction of Earth flyby by the Juno spacecraft*. 24th AAS/AIAA Space Flight Mechanics Meeting, AAS 14-435. (Juno Dünya yakın geçişinde anomali gözlenmemesi — Bölüm 6.3.2 karşı kayıt).
+* Turyshev, S. G., Toth, V. T., Kinsella, G., Lee, S.-C., Lok, S. M., & Ellis, J. (2012). *Support for the Thermal Origin of the Pioneer Anomaly*. Physical Review Letters, 108(24), 241101. (Pioneer anomalisinin ısıl geri tepme çözümü — Bölüm 6.3.2 ve §2.6 karşı kayıt).
 * Zwicky, F. (1933). *Die Rotverschiebung von extragalaktischen Nebeln*. Helvetica Physica Acta, 6, 110-127. (Eksik kütle / karanlık madde hipotezinin kökeni — Bölüm 6.0, §2.1).
 
 ## Atıf Biçimi

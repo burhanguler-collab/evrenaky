@@ -190,7 +190,7 @@ Nötron yıldızı, teoride en sıkı sarılmış makro girdaptır. Kabuk-girdap
 İlk yıldızlararası ziyaretçi 'Oumuamua, Güneş'ten uzaklaşırken standart yörünge hesabından sapan ek bir ivme göstermiştir; ancak bu itkiyi sağlayacak gaz çıkışı (kuyruk) hiçbir teleskopta görülmemiştir (Micheli ve ark., 2018). Önerilen "hidrojen buzdağı" gibi modeller ince ayarlıdır (Seligman & Laughlin, 2020).
 
 ### 2. Evrenakı Mekanik Çözümü
-Güneş Sistemi, yıldızlararası akıntının içinde kendi sürüklenme zarfıyla yüzer (3.8.6); zarfın içi ile dışı arasında akıntı hızı ve basınç tablosu farklıdır. Zarf bölgelerini büyük hızla kesen bir cisim, ortamdan **kuyruk gerektirmeyen hidrodinamik bir itki** alır. 'Oumuamua'nın anomal ivmesi, flyby anomalileriyle (6.3) aynı ailenin zarf-sınırı üyesidir; teori, benzer geçiş yapan her yıldızlararası cisimde aynı imzayı öngörür.
+Güneş Sistemi, yıldızlararası akıntının içinde kendi sürüklenme zarfıyla yüzer (3.8.6); zarfın içi ile dışı arasında akıntı hızı ve basınç tablosu farklıdır. Zarf bölgelerini büyük hızla kesen bir cisim, ortamdan **kuyruk gerektirmeyen hidrodinamik bir itki** alır. 'Oumuamua'nın anomal ivmesi, zarf-sınırı geçişlerinin öngördüğü imza ailesindendir (mekanizmanın Dünya ölçeğindeki karşılığı ve verinin bugünkü statüsü — üst sınır — için bkz. 6.3.2); teori, benzer geçiş yapan her yıldızlararası cisimde aynı imzayı öngörür.
 
 ---
 

@@ -23,6 +23,8 @@ Evrenakı Teorisi'nin yöntemsel dayanağı; hidrodinamik (akışkanlar mekaniğ
 
 Evrenakı Teorisi, makro ve mikro evrenin ayrı yasalara tabi olmadığını; evrendeki tüm hareketin, aynı akışkan okyanusu içinde tek bir 4 boyutlu dönüş mekanizmasının farklı ölçeklerdeki tezahürleri olduğunu analitik yöntemlerle temellendirmeyi ve bu temelden **test edilebilir, yanlışlanabilir (falsifiable) öngörüler** türetmeyi amaçlamaktadır. Bu taahhüt kâğıt üzerinde kalmaz: kuramın öngörüleri, ilerleyen kısımlarda hem tarihsel astronomik veriler (Shapiro gecikmesi ölçümleri — Shapiro, 1964; Gaia astrometri kataloğu — Gaia Collaboration, 2021; SN 1987A kayıtları — Hirata ve ark., 1987) hem de bu çalışmaya özgü tasarlanmış özgün laboratuvar deneyleri (DENEY serisi) ile sınanacaktır.
 
+Bu taahhüdün simetrik bir yüzü, kitap boyunca **Karşı Kayıt ilkesi** olarak uygulanır: bir gözlem teorinin lehine kanıt olarak sunuluyorsa, o gözlemin literatürdeki en güçlü karşı okuması veya sonraki olumsuz ölçümü de aynı yerde künyesiyle anılır; literatürde çözülen ya da doğrulanmayan kalemler ise kanıt listesinden geri çekilir ve mümkünse teorinin parametrelerine sınır koyan ölçümlere dönüştürülür (uygulama örnekleri: Bölüm 3.8.6, 3.9.4, 6.3.2). Lehte verinin titizlikle belgelenmesi, ancak aleyhte verinin de aynı titizlikle kaydedilmesiyle bilimsel değer taşır.
+
 > **Okuyucuya not:** Kitap boyunca sık karşılaşacağınız *Zerre, gradyan, deplasman, patinaj, çift dönüş, sınır tabakası* gibi hidrodinamik terimlerin özlü tanımları, bu kısmın sonundaki **1.6 Terminoloji Sözlüğü**'nde toplanmıştır. Herhangi bir bölümde bir terime takıldığınızda oraya başvurabilirsiniz.
 
 ## 1.1.3 Yazarın Açık Beyanı: Sınırın Dürüstçe Çizilmesi

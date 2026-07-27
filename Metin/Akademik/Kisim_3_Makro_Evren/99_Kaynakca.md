@@ -13,6 +13,7 @@
 * Bernoulli, D. (1738). *Hydrodynamica, sive de viribus et motibus fluidorum commentarii*. Strasbourg: Johann Reinhold Dulsecker. (Basınç-hız ters orantısı; §3.5.2, §3.9.2).
 * Bradley, J. (1728). *A Letter... giving an Account of a new discovered Motion of the Fix'd Stars*. Philosophical Transactions of the Royal Society, 35, 637-661. (Yıllık yıldız sapmasının keşfi; §3.4.6).
 * Chen, X., et al. (2019). *An intuitive 3D map of the Galactic warp's precession traced by classical Cepheids*. Nature Astronomy, 3(4), 320-325. (Galaktik çarpılmanın haritalanması).
+* Chrobáková, Ž., & López-Corredoira, M. (2021). *A Case Against a Significant Detection of Precession in the Galactic Warp*. The Astrophysical Journal, 912(2), 130. (Warp deviniminin ölçümüne karşı okuma — §3.8.7 karşı kayıt).
 * Clowe, D., et al. (2006). *A Direct Empirical Proof of the Existence of Dark Matter*. The Astrophysical Journal Letters, 648(2), L109-L113. (Bullet Cluster zayıf merceklenme haritası; §3.7.4.1).
 * Coriolis, G. G. (1835). *Sur les équations du mouvement relatif des systèmes de corps*. Journal de l'École Polytechnique, 15, 142-154. (Coriolis kuvveti — dönen sistemlerde göreli hareket).
 * Correia, A. C. M., & Laskar, J. (2001). *The four final rotation states of Venus*. Nature, 411(6839), 767-770. (Venüs'ün retrograd denge durumları — §3.4.4 yelken kanalıyla karşılaştırma).
@@ -40,6 +41,7 @@
 * Landau, L. D. (1941). *The Theory of Superfluidity of Helium II*. Journal of Physics USSR, 5, 71-90. (Ultra-akışkanlık kavramları; §3.7, §3.8.2).
 * Le Sage, G.-L. (1784). *Lucrèce Newtonien*. Mémoires de l'Académie Royale des Sciences et Belles-Lettres de Berlin. (İtme-temelli (push) kütleçekim modeli).
 * Lowry, S. C., et al. (2007). *Direct Detection of the Asteroidal YORP Effect*. Science, 316(5822), 272-274. (Asteroitlerin kendi kendine hızlanması).
+* Lyne, A., Hobbs, G., Kramer, M., Stairs, I., & Stappers, B. (2010). *Switched Magnetospheric Regulation of Pulsar Spin-Down*. Science, 329(5990), 408-412. (PSR B1828-11 için devinimsiz alternatif okuma — §3.8.6 karşı kayıt).
 * Marchis, F., et al. (2005). *Discovery of the triple asteroidal system 87 Sylvia*. Nature, 436, 822-824. (Sylvia ve iki uydusu Romulus–Remus; §3.8.5).
 * Markevitch, M., et al. (2004). *Direct Constraints on the Dark Matter Self-Interaction Cross Section from the Merging Galaxy Cluster 1E 0657-56*. The Astrophysical Journal, 606(2), 819-824. (Bullet Cluster — X-ışını gazı ile kütle merkezinin ayrışması; §3.7.4.1).
 * Michelson, A. A., & Morley, E. W. (1886). *Influence of Motion of the Medium on the Velocity of Light*. American Journal of Science, 31(185), 377-386. (Fizeau deneyinin hassas tekrarı — $f=0{,}434\pm0{,}020$; §3.4.6.3).

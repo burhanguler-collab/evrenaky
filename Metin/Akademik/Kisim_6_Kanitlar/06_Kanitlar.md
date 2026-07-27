@@ -8,7 +8,7 @@ Bu kısımda dört kanıt bölümü yer alır:
 
 2. **Bölüm 6.2 — Kütleçekimsel Kızıla Kayma ve Tek Mekanizmalı Çözüm:** Hareket kaynaklı ve kütleçekim kaynaklı frekans kaymalarının, "akı frekansı / gözlem frekansı" ayrımı üzerinden tek bir yerel-saat mekanizmasına indirgenmesi; Pound-Rebka ve GPS ölçümleriyle uyum ile galaktik ölçekte öngörülen ppm düzeyindeki sapma.
 
-3. **Bölüm 6.3 — Ekvatoral Vorteks ve Yörünge Anomalileri:** Flyby (yakın geçiş) hız anomalileri ile Gravity Probe B / LAGEOS ölçümlerinin, Ekvatoral Evrenakı girdabının hidrodinamik kesme kuvvetleri olarak yorumlanması.
+3. **Bölüm 6.3 — Ekvatoral Vorteks ve Yörünge Anomalileri:** Gravity Probe B / LAGEOS ölçümlerinin Ekvatoral Evrenakı girdabının hidrodinamik kesme kuvvetleri olarak yorumlanması; flyby verisinin ise Karşı Kayıt ilkesi gereği kanıt statüsünden çıkarılıp girdap kesme katsayısına üst sınır koyan ölçüme dönüştürülmesi.
 
 4. **Bölüm 6.4 — Camdaki Hız Geri Kazanımı ve Abraham-Minkowski Paradoksu:** Patinaj/kinetik takas mekanizmasının (Bölüm 2.4.2), optiğin birbirinden bağımsız iki açık paradoksunu ek varsayımsız aynı anda çözmesinin "açıklayıcı güç" kanıtı olarak değerlendirilmesi.
 

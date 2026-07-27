@@ -50,9 +50,9 @@
 * **Standart Fiziğin Çıkmazı:** Uzay kumaşının genleşmesi.
 * **Evrenakı Mekanik Çözümü:** Işık yolda frekans kaybetmez. Genç, yüksek basınçlı evrende ortamın $c$ hızı daha yüksektir ($c=\sqrt{P/\rho}$); geçmişte yüksek $c$ ile yayınlanan ışık günümüz düşük $c$ ortamına ulaştığında doğal olarak kızıla kaymış gözlenir.
 
-### 2.6 Pioneer ve Sinekkuşu (Flyby) Yörünge Anomalileri
-* **Standart Fiziğin Çıkmazı:** Uzay araçlarının gezegen yakın geçişlerinde sergilediği açıklanamayan ekstra ivmelenmeler (flyby: Anderson ve ark., 2008; Pioneer: Anderson ve ark., 2002).
-* **Evrenakı Mekanik Çözümü:** Gezegenlerin etrafında dönen *Ekvatoral Vorteks Sürüklenme Zarfı* ile araçların yaptığı fiziksel hidrodinamik temas.
+### 2.6 Pioneer ve Sinekkuşu (Flyby) Yörünge Anomalileri — GERİ ÇEKİLEN KALEM
+* **Verinin bugünkü durumu:** Pioneer ivmesi, sondaların ısıl ışınım geri tepmesiyle çözülmüştür (Turyshev ve ark., 2012); flyby sapmaları ise sonraki hassas geçişlerde (Rosetta 2009/2011, Juno 2013) gözlenmemiştir (Thompson ve ark., 2014).
+* **Evrenakı'nın konumu:** İki kalem de Karşı Kayıt ilkesi (Bölüm 1.1.2) gereği bu matristen çıkarılmıştır. Flyby verisi artık kanıt değil, ekvatoral girdabın kesme katsayısına üst sınır koyan bir ölçümdür (bkz. Bölüm 6.3.2). Bu satır, geri çekmenin kaydı olarak korunmaktadır.
 
 ### 2.7 Satürn Halkalarının Keskin Sınırları ve "Ring Rain" Kütle Kaybı
 * **Standart Fiziğin Çıkmazı:** Halkaların dağılmadan korunması "çoban uydular" gibi geçici açıklamalarla geçiştirilir (Goldreich & Tremaine, 1979); halka yağmurunun kütle-kaybı ölçümü için bkz. O'Donoghue ve ark., 2019.
