@@ -28,9 +28,7 @@ Ancak asıl dikkat çekici olan, Güneş'in yörüngesinin düz bir çember olma
   <stop offset="100%" stop-color="#f59e0b" stop-opacity="0" />
 </radialGradient>
 </defs>
-
 <line x1="410" y1="55" x2="410" y2="385" stroke="#333" stroke-width="1" />
-
 <!-- SOL PANEL: Tepeden görünüm -->
 <text x="200" y="34" fill="#fff" font-family="sans-serif" font-size="14" font-weight="600" text-anchor="middle">Tepeden görünüm — atlıkarınca</text>
 <circle cx="200" cy="215" r="40" fill="none" stroke="#00e5ff" stroke-width="1" opacity="0.12" />
@@ -48,7 +46,6 @@ Ancak asıl dikkat çekici olan, Güneş'in yörüngesinin düz bir çember olma
 <text x="286" y="137" fill="#fde047" font-family="sans-serif" font-size="12" text-anchor="middle">Güneş</text>
 <text x="200" y="352" fill="#9ca3af" font-family="sans-serif" font-size="12" text-anchor="middle">1 tur = 1 "galaktik yıl" ≈ 230 milyon yıl;</text>
 <text x="200" y="370" fill="#9ca3af" font-family="sans-serif" font-size="12" text-anchor="middle">Güneş bugüne dek ~20 tur attı</text>
-
 <!-- SAĞ PANEL: Yandan görünüm (zamana açılmış yol) -->
 <text x="610" y="34" fill="#fff" font-family="sans-serif" font-size="14" font-weight="600" text-anchor="middle">Yandan görünüm — yunuslama</text>
 <rect x="445" y="207" width="335" height="16" fill="rgba(0,229,255,0.05)" />
@@ -99,17 +96,14 @@ Evrenakı'nda bu salınım için yeni hiçbir mekanizma icat edilmez; kitabın k
   <stop offset="100%" stop-color="#f59e0b" stop-opacity="0" />
 </radialGradient>
 </defs>
-
 <!-- Devinim konisi (sabit, soluk) -->
 <line x1="400" y1="230" x2="381" y2="112" stroke="#00e5ff" stroke-width="1" stroke-dasharray="3 5" opacity="0.18" />
 <line x1="400" y1="230" x2="419" y2="112" stroke="#00e5ff" stroke-width="1" stroke-dasharray="3 5" opacity="0.18" />
 <line x1="400" y1="230" x2="381" y2="348" stroke="#00e5ff" stroke-width="1" stroke-dasharray="3 5" opacity="0.18" />
 <line x1="400" y1="230" x2="419" y2="348" stroke="#00e5ff" stroke-width="1" stroke-dasharray="3 5" opacity="0.18" />
 <text x="400" y="66" fill="#00e5ff" font-family="sans-serif" font-size="13" text-anchor="middle" opacity="0.85">Devinen eksen (precession konisi) — kutup jetleri: tek kaçış kapısı</text>
-
 <!-- Güneş'in uzaya göre sabit sinüs izi -->
 <path id="sinYol386" d="M80,230 C112,192 176,192 208,230 C240,268 304,268 336,230 C368,192 432,192 464,230 C496,268 560,268 592,230 C624,192 688,192 720,230" fill="none" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="4 5" opacity="0.5" />
-
 <!-- Basınç kilidi okları (tepede aşağı, çukurda yukarı iter) -->
 <g stroke="#00e5ff" stroke-width="2">
   <line x1="144" y1="150" x2="144" y2="176" marker-end="url(#okCyan386)" />
@@ -120,14 +114,12 @@ Evrenakı'nda bu salınım için yeni hiçbir mekanizma icat edilmez; kitabın k
 </g>
 <text x="144" y="138" fill="#00e5ff" font-family="sans-serif" font-size="11" text-anchor="middle" opacity="0.8">basınç kilidi</text>
 <text x="272" y="330" fill="#00e5ff" font-family="sans-serif" font-size="11" text-anchor="middle" opacity="0.8">yanal + eksenel itim</text>
-
 <!-- GECİKEN DIŞ KENARLAR (warp): iç diskle aynı sallanma, faz gecikmeli -->
 <g>
   <animateTransform attributeName="transform" type="rotate" values="-9 400 230; 9 400 230; -9 400 230" keyTimes="0;0.5;1" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1" dur="10s" begin="-8.6s" repeatCount="indefinite" />
   <line x1="255" y1="230" x2="85" y2="230" stroke="#a78bfa" stroke-width="2.5" opacity="0.75" />
   <line x1="545" y1="230" x2="715" y2="230" stroke="#a78bfa" stroke-width="2.5" opacity="0.75" />
 </g>
-
 <!-- İÇ DİSK + EKSEN: merkez motorla birlikte sallanır -->
 <g>
   <animateTransform attributeName="transform" type="rotate" values="-9 400 230; 9 400 230; -9 400 230" keyTimes="0;0.5;1" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1" dur="10s" repeatCount="indefinite" />
@@ -141,7 +133,6 @@ Evrenakı'nda bu salınım için yeni hiçbir mekanizma icat edilmez; kitabın k
     <animate attributeName="opacity" values="0.35;1;0.35" dur="1.6s" repeatCount="indefinite" />
   </line>
 </g>
-
 <!-- MERKEZ MOTOR: karadelik (salınır + döner) -->
 <circle cx="400" cy="230" r="30" fill="url(#bhGlow386)" />
 <circle cx="400" cy="230" r="11" fill="#000" stroke="#f59e0b" stroke-width="2">
@@ -150,14 +141,12 @@ Evrenakı'nda bu salınım için yeni hiçbir mekanizma icat edilmez; kitabın k
 <circle cx="400" cy="230" r="19" fill="none" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="6 9" opacity="0.8">
   <animateTransform attributeName="transform" type="rotate" values="0 400 230; 360 400 230" dur="6s" repeatCount="indefinite" />
 </circle>
-
 <!-- GÜNEŞ: sinüs izini süren yolcu -->
 <circle r="7" fill="#fde047" stroke="#fbbf24" stroke-width="2">
   <animateMotion dur="12s" repeatCount="indefinite">
     <mpath href="#sinYol386" />
   </animateMotion>
 </circle>
-
 <!-- Etiketler -->
 <text x="88" y="38" fill="#fbbf24" font-family="sans-serif" font-size="13" text-anchor="start">Güneş: sallanan oluğa basınçla kilitli → uzayda sinüs (yunuslama)</text>
 <text x="712" y="392" fill="#a78bfa" font-family="sans-serif" font-size="13" text-anchor="end">Geciken kenarlar → S biçimi (warp)</text>
@@ -191,9 +180,7 @@ Samanyolu'nun diski düz bir plak değildir. 1950'lerin sonundan beri radyo (HI)
   <stop offset="100%" stop-color="#f59e0b" stop-opacity="0" />
 </radialGradient>
 </defs>
-
 <line x1="400" y1="55" x2="400" y2="395" stroke="#333" stroke-width="1" />
-
 <!-- SOL PANEL: Yandan görünüm — kanat çırpan S biçimi -->
 <text x="200" y="34" fill="#fff" font-family="sans-serif" font-size="14" font-weight="600" text-anchor="middle">Yandan görünüm: S biçimi (warp)</text>
 <circle cx="200" cy="220" r="22" fill="url(#merkezGlow387)" />
@@ -211,7 +198,6 @@ Samanyolu'nun diski düz bir plak değildir. 1950'lerin sonundan beri radyo (HI)
 <text x="258" y="203" fill="#fde047" font-family="sans-serif" font-size="11" text-anchor="start">Güneş</text>
 <text x="200" y="352" fill="#a78bfa" font-family="sans-serif" font-size="12" text-anchor="middle">kenarlar bükülü — ve bükülme sabit durmuyor</text>
 <text x="200" y="370" fill="#9ca3af" font-family="sans-serif" font-size="11.5" text-anchor="middle">S biçimi 1339 Sefeid'le haritalandı (Chen vd., 2019)</text>
-
 <!-- SAĞ PANEL: Tepeden görünüm — devinen düğüm hattı -->
 <text x="600" y="34" fill="#fff" font-family="sans-serif" font-size="14" font-weight="600" text-anchor="middle">Tepeden görünüm: düğüm hattı dönüyor</text>
 <circle cx="600" cy="220" r="110" fill="rgba(0,229,255,0.04)" stroke="#00e5ff" stroke-width="1.5" opacity="0.5" />
@@ -241,7 +227,6 @@ Samanyolu'nun diski düz bir plak değildir. 1950'lerin sonundan beri radyo (HI)
 <circle cx="600" cy="220" r="5" fill="#000" stroke="#f59e0b" stroke-width="1.5" />
 <text x="600" y="352" fill="#9ca3af" font-family="sans-serif" font-size="11.5" text-anchor="middle">⊙ kalkık kenar · ⊗ inik kenar — mor kesikli hat: warp'ın düğüm hattı</text>
 <text x="600" y="370" fill="#a78bfa" font-family="sans-serif" font-size="11.5" text-anchor="middle">devinim: dönüş yönünde, 10,9 km/s/kpc (Poggio vd., 2020)</text>
-
 <text x="400" y="430" fill="#9ca3af" font-family="sans-serif" font-size="13" text-anchor="middle">Düğüm hattı yarım tur döndüğünde (sağ), S biçiminin kalkık ve inik uçları yer değiştirir (sol) — disk, ağır çekimde kanat çırpar.</text>
 </svg>
 </div>
