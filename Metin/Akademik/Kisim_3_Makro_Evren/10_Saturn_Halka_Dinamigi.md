@@ -16,11 +16,13 @@ $$\rho_z \left(\frac{\partial \vec{v}}{\partial t} + (\vec{v}\cdot\nabla)\vec{v}
 
 Burada $\rho_z$ Zerre yoğunluğu, $P_z$ Zerre basıncı, $\vec{g}_{ek}$ ise dönme/entrainment kaynaklı ek terimdir (Bölüm 6.3'te tanımlanan spin-pressure, $\nabla P_{spin}$).
 
-Bir kütle kaynağı (Satürn, $M$) etrafında, **durgun/quasi-statik rejimde** ($\partial\vec{v}/\partial t \to 0$, $\vec{v}\cdot\nabla\vec{v}$ ihmal edilebilir — yani "yavaş sıkıştırma" limiti), denklem basınç dengesine indirgenir:
+Bir kütle kaynağı (Satürn, $M$) etrafında, **durgun/quasi-statik rejimde** ($\partial\vec{v}/\partial t \to 0$, $\vec{v}\cdot\nabla\vec{v}$ ihmal edilebilir — yani "yavaş sıkıştırma" limiti), denklem basınç dengesine indirgenir. İşaret zemini, teorinin kuyu konvansiyonudur (Bölüm 1.5 ve 3.4.1 ile ortak): kütle bir **basınç çukurudur**, Zerre basıncı kuyudan dışa doğru **yükselir** ($dP_z/dr > 0$) ve cismi merkeze iten şey gradyanın yönü değil, itim yasasındaki eksi işarettir ($\vec{a} = -\nabla P_z/\rho_z$):
 
-$$\nabla P_z = \rho_z \vec{g}_{ek} \quad \Rightarrow \quad \frac{1}{\rho_z}\frac{dP_z}{dr} = -\frac{GM}{r^2}$$
+$$\frac{1}{\rho_z}\frac{dP_z}{dr} = +\frac{GM}{r^2} \quad \Rightarrow \quad a_r = -\frac{1}{\rho_z}\frac{dP_z}{dr} = -\frac{GM}{r^2}$$
 
-**Bu adım, teorinin rejim aksiyomunun (Bölüm 4.2) doğrudan sonucudur**: güneş sistemi ölçeğinde (galaktik izotermal profil rejiminde değil), Zerre basınç gradyanı klasik $GM/r^2$'ye eşitlenecek şekilde kalibre edilmiştir. Yani **bu satıra kadar hiçbir yeni fiziksel içerik yok** — sadece Newton yasasının Zerre diliyle yeniden yazımı.
+> *Düzeltme kaydı:* Bu bağıntı önceki sürümde $\frac{1}{\rho_z}\frac{dP_z}{dr} = -\frac{GM}{r^2}$ (basınç merkeze doğru artar) biçiminde yazılmıştı. Bu, standart astrofizikteki **gazın** hidrostatik dengesinden (gaz basıncı merkezde yüksektir) alışkanlıkla taşınmış bir işaretti ve hem teorinin kuyu konvansiyonuyla (3.4.1'deki siklostrofik denge aynı işareti verir: $dP/dr = +\rho v_\theta^2/r$) hem de 3.10.3'teki geri-çağırıcı kuvvet formülüyle ($F_z = -\rho_z^{-1}\partial_z P_z \cdot m$; eski işaretle bu kuvvet geri çağırıcı değil, itici çıkardı) çelişiyordu. İşaret düzeltilmiş, Zerre basıncı ile madde/gaz basıncının **iki ayrı alan** olduğu netleştirilmiştir.
+
+**Bu adım, teorinin rejim aksiyomunun (Bölüm 4.2) doğrudan sonucudur**: güneş sistemi ölçeğinde (galaktik düz-hız girdap rejiminde değil; bkz. 4.2.9.2), Zerre basınç gradyanının büyüklüğü klasik $GM/r^2$'ye eşitlenecek şekilde kalibre edilmiştir. Yani **bu satıra kadar hiçbir yeni fiziksel içerik yok** — sadece Newton yasasının Zerre diliyle yeniden yazımı.
 
 ## 3.10.3 Dikey Salınım: Zerre Basıncının z-Bileşeni
 

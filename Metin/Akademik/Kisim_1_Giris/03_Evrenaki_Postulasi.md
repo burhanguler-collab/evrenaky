@@ -912,7 +912,7 @@ Bir teorinin bilimsel disiplini, parametrelerinin muhasebesinden okunur: hangile
 | 16 | $\tau$ | Kopma penceresi | **F** | — | Fotoelektrik zamanlama deneyleri | 2.2.3 |
 | 17 | $\delta$ | Tek-vuruş enerji aktarımı | **F** | — | Aynı program | 2.6.5 |
 | 18 | $\Xi$ | Kuyu iskeleti gücü: ortam sirkülasyonunun baryonik öz-çekime oranı | **A** | $\approx5{:}1$ | CMB akustik pik oranları (Planck Collaboration, 2020) (3.7.4.3 okumasıyla) | 3.7.4 |
-| P1 | $\rho(r)$ | Galaktik vorteks yoğunluk profili | **F** (fonksiyon) | izotermal eğilim ($\propto1/r^2$) | Dönüş eğrisi + galaktik kızıla kayma sapmasının ortak fiti | 4.2.9, 6.2.8 |
+| P1 | $\rho(r)$ | Galaktik vorteks yoğunluk profili | **F** (fonksiyon) | $\approx$ sabit ($k\ll1$ çalışma hipotezi; bileşik girdap — 4.2.9.2) | Dönüş eğrisi + galaktik kızıla kayma sapmasının ortak fiti | 4.2.9, 6.2.8 |
 | P2 | Rampa profili | Sürüklenme zarfı gradyanının biçimi | **A** (fonksiyon) | Gaia µas üst sınırı | Gaia tüm-gökyüzü astrometrisi (Gaia Collaboration, 2021) + Fizeau katsayısı (Fizeau, 1851) | 3.4.6 |
 
 #### Ek C.1 — Dürüst Sayım

@@ -30,16 +30,24 @@ Karanlık madde hipotezi "frenleyici/durağan" bir karanlık deniz öngördüğ�
 Güneş Sistemi homojene yakın bir "Serbest Girdap"tır. Bu rejimde dönüş hızı Kepler yasasına göre sönümlenir: ($v_\theta^2 = \frac{GM}{r}$).
 Bunu Siklostrofik Denge ($\frac{dP}{dr} = \rho \frac{v_\theta^2}{r}$) denklemine yerleştirdiğimizde:
 $$ \frac{dP}{dr} = \rho \frac{GM}{r^2} $$
-Bu sonuç, Güneş sisteminde Cosmofluid İtim Kuvvetinin ($\nabla P$) uzaklığın karesiyle ($1/r^2$) sönümlendiğini doğrular.
+Dürüstlük gereği vurgulanmalıdır: bu bir *doğrulama* değil, bir **tutarlılık denetimidir** — Kepler yasası denkleme girdi olarak konduğundan, çıktının $1/r^2$ vermesi beklenen sonuçtur. Denetimin gösterdiği şey, siklostrofik dengenin Güneş sistemi rejiminde Newton davranışıyla çelişmeden yaşayabildiğidir (aynı dürüst konumlandırma için bkz. 3.10.2: "bu satıra kadar yeni fiziksel içerik yok").
 
-### 4.2.9.2 Spiral Galaksiler: Homojenliğin Kırılması ve Logaritmik Çukur
-Galaksilerde Evrenakı yoğunluğu sabit kalmaz; "izotermal bir küre profili" ($\rho \propto 1/r^2$) izleme eğilimi gösterir. Aynı zamanda dış kollarda dönüş hızı sabit bir hıza kilitlenir ($v_\theta = v_0$). 
+### 4.2.9.2 Spiral Galaksiler: Bileşik Girdap ve Logaritmik Çukur
 
-Bu koşullar Siklostrofik Dengeye uygulandığında:
-$$ \frac{dP}{dr} = \rho \frac{v_0^2}{r} $$
-Bu aşamada radyal basınç gradyanı $1/r^2$ ile değil, çok daha yavaş sönümlenen $1/r$ ile azalır. İntegrali alındığında ise Logaritmik ($\ln(r)$) bir basınç çukuru elde edilir:
-$$ P(r) = P_0 + \rho v_0^2 \ln(r) $$
-Bu logaritmik kuyu, yıldızların dış bölgelerde neden yavaşlamadığını ve savrulmadan yörüngede kaldığını karanlık madde hipotezine ihtiyaç duymadan hidro-mekanik olarak açıklar.
+> *Düzeltme kaydı:* Bu bölümün önceki sürümü, Evrenakı yoğunluğuna "izotermal küre profili" ($\rho \propto 1/r^2$) atfedip integrali sabit $\rho$ ile alıyordu — iki varsayım birbiriyle çelişiyordu: $\rho \propto 1/r^2$ alınsaydı $dP/dr \propto 1/r^3$ çıkar ve logaritmik kuyu elde edilemezdi. Tutarsızlık aşağıdaki gibi giderilmiştir. $1/r^2$ profili, standart fizikte *görünmez madde halesine* atfedilen **madde** yoğunluğudur; Evrenakı **akışkanına** taşınması hatalıydı.
+
+**Varsayım 1 — yoğunluk:** Evrenakı yoğunluğu galaktik ölçekte yaklaşık sabittir: $\rho_E \approx$ sabit. Bu ayrı bir kabul değil, teorinin kendi birleştirici ilkesinin uzantısıdır (Bölüm 2.4.2; Ek B.3'teki $k \ll 1$ rejimi): gradyanlarda asıl değişen şey **basınçtır**, yoğunluk basınca ancak zayıf biçimde eşlik eder.
+
+**Varsayım 2 — hız profili (bileşik girdap):** Galaktik vorteks, akışkanlar mekaniğinin klasik **bileşik (Rankine-tipi) girdap** yapısındadır: iç bölgede motorun mutlak kavradığı katı-cisim dönüşü ($v_\theta = \omega r$), geçiş yarıçapı $r_0$'ın ötesinde ise merkez motorun sürüklediği düz-hız bölgesi ($v_\theta = v_0$). ($v_0$'ın değeri burada türetilmez; Ek C'deki P1 sabitleme programının konusudur.)
+
+Siklostrofik denge her iki bölgede aynı tek denklemdir: $\frac{dP}{dr} = \rho_E \frac{v_\theta^2}{r}$.
+
+* **İç bölge** ($r < r_0$): $\frac{dP}{dr} = \rho_E\, \omega^2 r \;\Rightarrow\; P(r) = P_{merkez} + \tfrac{1}{2}\rho_E\, \omega^2 r^2$ — parabolik profil; basınç merkezde sonlu ve düzgündür (kuyu dibi patolojisiz).
+* **Dış bölge** ($r > r_0$): $\frac{dP}{dr} = \rho_E \frac{v_0^2}{r} \;\Rightarrow\; P(r) = P_0 + \rho_E\, v_0^2 \ln\!\left(\frac{r}{r_0}\right)$ — logaritmik basınç çukuru.
+
+$\rho_E$ sabit olduğundan her iki integral de meşrudur ve iki parça $r_0$'da sürekli eklenir. Logaritmik kuyu, yıldızların dış bölgelerde neden yavaşlamadığını ve savrulmadan yörüngede kaldığını karanlık madde hipotezine ihtiyaç duymadan hidro-mekanik olarak açıklar.
+
+**Bileşik yapının bedava öngörüsü:** Gözlenen galaktik dönüş eğrileri tam bu bileşik deseni çizer — iç bölgede hız $r$ ile yaklaşık doğrusal yükselir (katı-cisim kolu), $r_0$ civarında kırılıp düzleşir. Standart fizik bu iki kolu iki ayrı bileşenle (iç: baryonik disk; dış: karanlık madde halesi) fit etmek zorundadır; bileşik girdapta ikisi, tek yapının iki bölgesidir. *Dürüst kayıt:* $v_0$ ve $r_0$'ın merkez motor parametrelerinden nicel türetimi yapılmamıştır; P1 programı (Ek C) bu profili dönüş eğrisi + galaktik kızıla kayma sapmasının ortak fitiyle sabitleyecektir (bkz. 7.4, madde 1 ve 5).
 
 ## 4.2.10 Sıfır Bağıl Hız ve Entrainment Çözümü
 "Uzay yoğun bir akışkansa, gezegenler sürtünmeyle neden yavaşlamaz?" sorusu, Evrenakı'nın Entrainment (sürüklenme/eşlik etme) mekanizmasıyla cevaplanır. Gezegenlerin etrafındaki yerel Evrenakı zarı, gezegenle birlikte hareket eder. Gezegenin kendi hızı ile yerel Evrenakı'nın akış hızı arasındaki bağıl hız sıfırdır ($v_{bağıl} = 0$). Sürüklenme stresi sıfırlandığı için sistem momentum kaybetmez. Michelson-Morley deneyindeki "sıfır" sapma sonucunun fiziksel karşılığı da bu eşzamanlı hareket (entrainment) olgusudur.

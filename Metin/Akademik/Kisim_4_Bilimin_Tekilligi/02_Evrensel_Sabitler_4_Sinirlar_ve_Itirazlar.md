@@ -18,7 +18,7 @@ Gözlemlediğimiz yörünge mekaniği, içinde bulunduğumuz Evrenakı ölçeği
 | **Rejim (Ölçek)** | **Fiziksel Koşul** | **Evrenakı Yoğunluk Profili ($\rho$)** | **Cosmofluid Net Etki Eğilimi** | **Gözlemsel Sonuç** |
 | :--- | :--- | :--- | :--- | :--- |
 | **Güneş Sistemi** | Homojen, Kaynaksız, Radyal Simetrik | $\rho \approx$ Sabit | $F \propto 1/r^2$ (Gauss Yüzey Dağılımı) | Kepler Yörüngeleri |
-| **Spiral Galaksiler** | İzotermal Disk, Asimetrik Sürüklenme | $\rho \propto 1/r^2$ | $F \propto 1/r$ (Logaritmik Çukur) | Düz Rotasyon Eğrisi |
+| **Spiral Galaksiler** | Bileşik (Rankine-tipi) Girdap, Asimetrik Sürüklenme | $\rho_E \approx$ Sabit ($k \ll 1$; bkz. 4.2.9.2) | iç: $F \propto r$; dış: $F \propto 1/r$ (Logaritmik Çukur) | Yükselen iç kol + Düz Rotasyon Eğrisi |
 | **Kozmik Ağ** | Global Diverjans, Basınç Gevşemesi | Hacimsel Genleşme | $v \propto r$ (Merkezkaç Genişleme) | Hubble Akışı |
 
 **Sonuç:** Evrenakı modelinde kuvvetler evrensel sabitlerle değil, ortamın yerel dinamiğiyle belirlenir. Sistem, içinde bulunulan Euler ve Süreklilik rejimine göre gözlemlenen itim davranışını otomatik olarak üretir.
