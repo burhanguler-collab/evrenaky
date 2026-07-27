@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>3D Gradyan Simülasyonu</title>
   <style>
-    body { background: #121212; color: #fff; font-family: 'Inter', sans-serif; margin: 0; padding: 0; overflow: hidden; width: 100vw; height: 100vh; }
+    body { background: #050505; color: #fff; font-family: 'Inter', sans-serif; margin: 0; padding: 0; overflow: hidden; width: 100vw; height: 100vh; }
     #ui-container { position: absolute; top: 10px; left: 0; right: 0; display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; z-index: 10; padding: 0 10px; }
-    button { background: #1e1e1e; color: #0ea5e9; border: 1px solid #0ea5e9; padding: 8px 16px; cursor: pointer; border-radius: 8px; transition: 0.3s; font-weight: 500; font-size: 13px; }
+    button { background: rgba(30, 30, 30, 0.85); color: #0ea5e9; border: 1px solid #0ea5e9; padding: 6px 14px; cursor: pointer; border-radius: 8px; transition: 0.3s; font-weight: 500; font-size: 13px; backdrop-filter: blur(4px); }
     button:hover, button.active { background: #0ea5e9; color: #fff; box-shadow: 0 0 15px rgba(14, 165, 233, 0.5); }
-    #infoText3d { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); width: 80%; font-size: 14px; color: #cbd5e1; line-height: 1.5; background: rgba(0, 229, 255, 0.1); border-left: 3px solid #00e5ff; padding: 12px 20px; border-radius: 8px; text-align: left; z-index: 10; backdrop-filter: blur(5px); }
+    #infoText3d { position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 650px; font-size: 12px; line-height: 1.4; color: #cbd5e1; background: rgba(11, 15, 25, 0.88); border: 1px solid rgba(0, 229, 255, 0.3); border-left: 4px solid #00e5ff; padding: 8px 14px; border-radius: 8px; text-align: left; z-index: 10; backdrop-filter: blur(8px); pointer-events: none; }
   </style>
 </head>
 <body>
@@ -21,14 +21,14 @@
     <button onclick="window.setShape3d('sphere', this)">Küre</button>
   </div>
   
-  <div style="position: absolute; top: 60px; left: 0; right: 0; display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; font-size: 13px; color: #cbd5e1; z-index: 10; pointer-events: none;">
-    <div style="display: flex; align-items: center; gap: 8px;">
-      <span style="display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: #00e5ff; box-shadow: 0 0 8px #00e5ff;"></span>
-      Dış Evrenakı Gradyanı (Basınç ve Yoğunluk Sönümlemesi)
+  <div style="position: absolute; top: 48px; left: 0; right: 0; display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; font-size: 11px; color: #cbd5e1; z-index: 10; pointer-events: none;">
+    <div style="display: flex; align-items: center; gap: 6px;">
+      <span style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #00e5ff; box-shadow: 0 0 6px #00e5ff;"></span>
+      Dış Evrenakı Gradyanı
     </div>
-    <div style="display: flex; align-items: center; gap: 8px;">
-      <span style="display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: #8b0099; box-shadow: 0 0 8px #8b0099;"></span>
-      İç Evrenakı Gradyanı (Kütle İçi Basınç ve Yoğunluk Merkezi)
+    <div style="display: flex; align-items: center; gap: 6px;">
+      <span style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #8b0099; box-shadow: 0 0 6px #8b0099;"></span>
+      İç Evrenakı Gradyanı
     </div>
   </div>
   
@@ -40,7 +40,6 @@
   <script src="three.min.js"></script>
   <script src="./three.min.js"></script>
   <script src="../three.min.js"></script>
-  <script src="../../three.min.js"></script>
   <script>
     if (typeof THREE === 'undefined') {
       document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"><\/script>');
@@ -49,7 +48,6 @@
   <script src="OrbitControls.js"></script>
   <script src="./OrbitControls.js"></script>
   <script src="../OrbitControls.js"></script>
-  <script src="../../OrbitControls.js"></script>
   <script>
     if (typeof THREE !== 'undefined' && typeof THREE.OrbitControls === 'undefined') {
       document.write('<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"><\/script>');
@@ -81,7 +79,8 @@
     scene.background = new THREE.Color(0x050505);
 
     const camera = new THREE.PerspectiveCamera(45, dim.w / dim.h, 0.1, 1000);
-    camera.position.set(0, 5, 18);
+    // Position camera so model sits nicely in upper-middle viewport
+    camera.position.set(0, 2.5, 17);
 
     let renderer;
     try {
@@ -109,6 +108,7 @@
       controls.dampingFactor = 0.05;
       controls.autoRotate = true;
       controls.autoRotateSpeed = 1.0;
+      controls.target.set(0, 1.2, 0); // Focus target shifted slightly up
     }
 
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.3);
@@ -165,20 +165,20 @@
         coreGeometry = new THREE.SphereGeometry(2, 32, 32);
         shellGeometry = new THREE.SphereGeometry(2, 32, 32);
       } else if (type === 'cube') {
-        coreGeometry = new THREE.BoxGeometry(3.5, 3.5, 3.5);
-        shellGeometry = new THREE.BoxGeometry(3.5, 3.5, 3.5);
+        coreGeometry = new THREE.BoxGeometry(3.2, 3.2, 3.2);
+        shellGeometry = new THREE.BoxGeometry(3.2, 3.2, 3.2);
         shellScaleStep = 0.04;
       } else if (type === 'cylinder') {
-        coreGeometry = new THREE.CylinderGeometry(1.2, 1.2, 7, 32);
-        shellGeometry = new THREE.CylinderGeometry(1.2, 1.2, 7, 32);
+        coreGeometry = new THREE.CylinderGeometry(1.1, 1.1, 5.5, 32);
+        shellGeometry = new THREE.CylinderGeometry(1.1, 1.1, 5.5, 32);
         shellScaleStep = 0.04;
       } else if (type === 'tetra') {
-        coreGeometry = new THREE.TetrahedronGeometry(3.2, 0);
-        shellGeometry = new THREE.TetrahedronGeometry(3.2, 0);
+        coreGeometry = new THREE.TetrahedronGeometry(3.0, 0);
+        shellGeometry = new THREE.TetrahedronGeometry(3.0, 0);
         shellScaleStep = 0.04;
       } else if (type === 'torus') {
-        coreGeometry = new THREE.TorusGeometry(2.5, 1, 32, 100);
-        shellGeometry = new THREE.TorusGeometry(2.5, 1, 32, 100);
+        coreGeometry = new THREE.TorusGeometry(2.3, 0.9, 32, 100);
+        shellGeometry = new THREE.TorusGeometry(2.3, 0.9, 32, 100);
         shellScaleStep = 0.04;
       }
 
@@ -211,9 +211,9 @@
         });
         
         for(let i = 1; i <= 25; i++) {
-          const r = 1.5 - i*0.06; 
+          const r = 1.4 - i*0.05; 
           if (r > 0) {
-            const cylGeo = new THREE.CylinderGeometry(r, r, 5, 32, 1, true);
+            const cylGeo = new THREE.CylinderGeometry(r, r, 4.5, 32, 1, true);
             const centerMesh = new THREE.Mesh(cylGeo, centerGlowMat);
             centerMesh.rotation.x = Math.PI / 2;
             currentGroup.add(centerMesh);
