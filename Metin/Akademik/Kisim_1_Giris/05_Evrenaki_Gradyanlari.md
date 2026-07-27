@@ -6,7 +6,7 @@ Standart fizik, maddenin çevresindeki etki bölgelerini soyut "alan" kavramlar�
 
 ## 1.5.1 Gradyanın Kaynağı: Dönen Madde ve Deplasman
 
-Gradyanın var olabilmesi iki postülatın doğrudan sonucudur. Birincisi, Evrenakı **sıkıştırılabilirdir** (1. postülat): sıkıştırılamaz bir akışkanda kalıcı yoğunluk farkı oluşamazdı. İkincisi, madde durağan değildir (5. postülat): her nükleon, Evrenakı içinde Compton frekansında dönen hacimsel bir girdaptır ve bu dönüş, çevresindeki akışkanla sınır tabakası etkileşimi (boundary layer coupling) kurar.
+Gradyanın var olabilmesi iki postülatın doğrudan sonucudur. Birincisi, Evrenakı **sıkıştırılabilirdir** (1. postülat): sıkıştırılamaz bir akışkanda kalıcı yoğunluk farkı oluşamazdı. İkincisi, madde durağan değildir (5. postülat): her nükleon, Evrenakı içinde Compton frekansında (Compton, 1923) dönen hacimsel bir girdaptır ve bu dönüş, çevresindeki akışkanla sınır tabakası etkileşimi (boundary layer coupling) kurar.
 
 Bu iki olgu birleştiğinde her madde parçacığı, çevresindeki akışkanda iki temel iz bırakır:
 

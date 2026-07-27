@@ -1,6 +1,6 @@
 # Yalnızca Evrenakı Teorisi'nin Açıkladığı Doğa Olguları ve Gözlem Matrisi
 
-Önceki kısımlarda Evrenakı Teorisi'nin temel postülatları, mikro/makro mekanizmaları ve matematiksel modeli sunuldu. Bu bölüm, Standart Model ve Genel Görelilik gibi geleneksel kuramların **soyut kabullerle (foton, uzaktan etki, karanlık madde/enerji, dalga fonksiyonu çökmesi)** geçiştirdiği veya tamamen çaresiz kaldığı, buna karşılık **yalnızca Evrenakı'nın somut mekanik ve hidrodinamik ilkelerle açıkladığı** 15 temel gözlem ve doğa olgusunun toplu kanıt haritasıdır.
+Önceki kısımlarda Evrenakı Teorisi'nin temel postülatları, mikro/makro mekanizmaları ve matematiksel modeli sunuldu. Bu bölüm, Standart Model ve Genel Görelilik gibi geleneksel kuramların **soyut kabullerle (foton, uzaktan etki, karanlık madde/enerji, dalga fonksiyonu çökmesi)** geçiştirdiği veya tamamen çaresiz kaldığı, buna karşılık **yalnızca Evrenakı'nın somut mekanik ve hidrodinamik ilkelerle açıkladığı** 17 temel gözlem ve doğa olgusunun toplu kanıt haritasıdır.
 
 ---
 
@@ -91,7 +91,7 @@
 | **Galaktik Dönüş Eğrileri** | Fiktif Karanlık Madde parçacığı | Görünmez Sirkülasyon Kuyuları (Galaktik Vorteks) |
 | **İvmelenen Genleşme** | Fiktif Karanlık Enerji ($\Lambda$) | Nükleon deşarjıyla ortamın termodinamik hacim kazanması |
 | **Güneş Yunuslaması & Galactic Warp** | Çarpışma yaması / Yamuk Halo torku | Devinen merkez motorun salladığı basınç oluğu & kırbaç dalgası |
-| **Warp Devinim Hızı (Gaia 2020)** | **Başarısız/Kriz:** $10.9\text{ km/s/kpc}$ hızını halo modelleri tutturamaz | **Başarılı:** Devinim frekansı doğrudan 4D merkez motor devinimine bağlıdır |
+| **Warp Devinim Hızı (Poggio vd., 2020)** | **Başarısız/Kriz:** $10{,}9\text{ km/s/kpc}$ hızını halo modelleri tutturamaz | **Başarılı:** Devinim frekansı doğrudan 4D merkez motor devinimine bağlıdır |
 | **Çift Yarık Deneyi** | Soyut Dalga Fonksiyonu Çökmesi | Sınır Tabakası Gradyanı ve Kenar Vorteksi Teması |
 | **Camda Işık Hızı** | Emilip yeniden yayınlanma varsayımı | Yerel basınç patinajı ve geri kazanımı ($c=\sqrt{P/\rho}$) |
 | **Bell Dolanıklığı** | Uzaktan gizemli etki / Telepati | Kohezyon Kanalı ($v_m \gg c$) ile ortak topografya |

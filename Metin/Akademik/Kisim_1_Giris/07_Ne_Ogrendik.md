@@ -4,23 +4,27 @@ Kitabın bu ilk kısmında, mevcut fiziksel paradigmaların tıkandığı noktal
 
 ## Temel Kazanımlarımız
 
-* **Metodoloji ve Krizler:** Hedefin matematiği yenmek değil, ona fiziksel karşılık kazandırmak olduğunu ilan ettik (Bölüm 1.1) ve modern fiziğin on temel kriz başlığını dört aile altında sınıflandırdık: Taşıyıcı/Ortam Sorunu, Işık/Optik, Kuantum Yorumları ve Görelilik/Mekanik (Bölüm 1.2).
-* **Dokuz Postülat:** Evrenin boşluk olmadığını, kusursuz bir süper-akışkanla (Evrenakı) dolu olduğunu varsaydık (Bölüm 1.3). Dokuz postülatın en radikal üçünün altını çizelim: **zaman mutlaktır** (göreceli olan yalnızca saatlerin mekanizmasıdır — 3. postülat), **ışık hızı değişkendir** (yerel yoğunluğa bağlıdır — 4. postülat) ve **standart fizikte "kütleçekim" denen olgu bir çekim değil, basınç gradyanının itimidir: kütle-itim** (6. postülat).
+* **Metodoloji ve Krizler:** Hedefin matematiği yenmek değil, ona fiziksel karşılık kazandırmak olduğunu ilan ettik; teorinin ontolojik sınırını da baştan dürüstçe çizdik — dördüncü boyuttaki temel çift dönüşü başlatan "ilk hareket ettirici" sorusuna cevabımız yoktur (Bölüm 1.1). Ardından modern fiziğin on temel kriz başlığını dört aile altında sınıflandırdık: Taşıyıcı/Ortam Sorunu, Işık/Optik, Kuantum Yorumları ve Görelilik/Mekanik; krizlerin ortak paydasının, tarif eden matematik ile açıklayan mekanizma arasındaki boşluğun her seferinde yeni bir soyut kavramla doldurulması olduğunu savunduk (Bölüm 1.2).
+* **Dokuz Postülat:** Evrenin boşluk olmadığını, kusursuz bir süper-akışkanla (Evrenakı) dolu olduğunu varsaydık (Bölüm 1.3). Dokuz postülatın en radikal üçünün altını çizelim: **zaman mutlaktır** (göreceli olan yalnızca saatlerin mekanizmasıdır — 3. postülat), **ışık hızı değişkendir** (yerel yoğunluğa bağlıdır — 4. postülat) ve **standart fizikte "kütleçekim" denen olgu bir çekim değil, basınç gradyanının itimidir: kütle-itim** (6. postülat). Bölüm sonundaki teknik eklerde ise vakum cepli her girdap zarfının denge yüzey hızını ($\sqrt{2}\,c$) ve arka plan basıncının gözlemsel değerini ($P_0 \approx \tfrac{1}{2}\rho_n c^2$) türettik; teoride $c$'nin mutlak bir üst sınır olmadığını, Zerre'nin akışkana tutunma (patinaj) sınırı olduğunu vurguladık (Bölüm 1.3.4, Teknik Ek A–B).
 * **Dördüncü Boyutun Üç İzdüşüm İmzası:** Dördüncü uzanımsal boyuttaki (W) çift dönüşün üç boyutlu uzayımıza yalnızca üç imzayla yansıdığını betimsel geometriyle gösterdik: **(1) boyutsal salınım** (titreşim), **(2) ayna-terslenme** ve **(3) devinim** (precession). Sonraki kısımların tüm 4B açıklamaları yalnızca bu üç imzaya başvuracaktır (Bölüm 1.4.11).
-* **Alanların Fiziksel Karşılığı (Gradyan):** Kütleçekim alanı denilen soyut kavramın, Evrenakı akışkanı içindeki fiziksel **basınç ve yoğunluk farklarından (gradyanlardan)** ibaret olduğunu ortaya koyduk; kütle dışı ve kütle içi gradyan profillerini (vadi–rampa yapısını) tanımladık (Bölüm 1.5).
+* **Alanların Fiziksel Karşılığı (Gradyan):** Standart fiziğin soyut "alan" kavramlarının (gravitasyon alanı, elektromanyetik alan) fiziksel karşılığının, Evrenakı akışkanındaki **basınç ve yoğunluk değişimlerinden (gradyanlardan)** ibaret olduğunu savunduk; vadi–rampa basınç profilini ve mikro (atom) → kolektif (malzeme) → makro (gök cismi) gradyan hiyerarşisini tanımladık. Gradyanın kütle miktarının değil, kütle dağılımının ve **şeklinin** fonksiyonu olduğunu; ikili sistemlerdeki itimin yerel ve kozmik olmak üzere iki referans seviyesiyle okunması gerektiğini ortaya koyduk (Bölüm 1.5).
 * **Test Edilebilirlik:** Teorinin bir inanç sistemi değil, yanlışlanabilir bir model olduğunu vurguladık: dördüncü boyut kinematiğinin "Belirleyici Deney" (experimentum crucis) sınaması (Bölüm 1.4.10) ve postülatların sınanabilirlik statüsü (Bölüm 1.3.3) baştan ilan edildi.
 * **Yeni Bir Fizik Dili:** Akışkanlar mekaniğinin terimlerini kozmolojik ve kuantum ölçeğe taşıyan sözlüğü kurduk (Bölüm 1.6).
 
 ## Anahtar Terimler
 
-**Evrenakı (Plenum)** · **Zerre** · **Patinaj** (Zerre'nin ortam yoğunluğuna bağlı boşa dönmesi) · **Deplasman** · **Basınç Gradyanı** · **Kütle-İtim** · **Çift Dönüş (Clifford dönüşü)** · **W ekseni** · **Kozmik Zaman** · **Sınır Tabakası** · **Zerre Katarı**
+**Evrenakı (Plenum)** · **W Ekseni (Uzanımsal Dördüncü Boyut)** · **Kozmik Zaman** · **Çift Dönüş (Clifford dönüşü)** · **Üç İzdüşüm İmzası** (boyutsal salınım · ayna-terslenme · devinim) · **Epür (Monge Yöntemi)** · **Zerre** · **Zerre Katarı** · **Zerre Aralığı** · **Patinaj** (Zerre'nin ortam yoğunluğuna bağlı boşa dönmesi) · **Kavitasyon (Yırtılma) Eşiği** · **Deplasman** · **Basınç Gradyanı** (vadi–rampa profili) · **Kütle-İtim** · **Sınır Tabakası (Evrenakı Rampası)** · **Sürüklenme Zarfı (Entrainment)** · **Vorteks (Makro-Girdap)**
 
 ## Kendinizi Sınayın
 
-1. Teoriye göre GPS uydularının saatlerinin yüzeydekilerden hızlı işlemesi, zamanın gerçekten esnemesinden mi kaynaklanır? Değilse mekanik sebebi nedir? (Bölüm 1.3, 3. postülat)
-2. Dördüncü boyuttaki bir dönüş üç boyutlu uzayımızda hangi üç imzayla görünür? (Bölüm 1.4.11)
-3. "Kütle çeker" ifadesinin Evrenakı'daki karşılığı nedir; itim hangi basınç farkından doğar? (Bölüm 1.3, 6. postülat; Bölüm 1.5)
-4. Işık hızının sabit sayılmasına teori hangi gerekçeyle itiraz eder? (4. postülat)
+1. Bölüm 1.2'deki on kriz başlığı hangi dört aile altında toplanır ve teoriye göre bu krizlerin ortak paydası nedir? (Bölüm 1.2, 1.2.11)
+2. Teoriye göre GPS uydularının saatlerinin yüzeydekilerden hızlı işlemesi, zamanın gerçekten esnemesinden mi kaynaklanır? Değilse mekanik sebebi nedir? (Bölüm 1.3, 3. postülat)
+3. Dördüncü boyuttaki bir dönüş üç boyutlu uzayımızda hangi üç imzayla görünür? (Bölüm 1.4.11)
+4. "Belirleyici Deney"in mekanik ön şartı nedir (neden dışarıdan sürekli tork uygulanamaz) ve hangi gözlem teoriyi bu noktada yanlışlar? (Bölüm 1.4.10)
+5. "Kütle çeker" ifadesinin Evrenakı'daki karşılığı nedir; itim hangi basınç farkından doğar? (Bölüm 1.3, 6. postülat; Bölüm 1.5)
+6. İkili bir sistemde iki kütle arasındaki bölgede basınç yerel referansa göre yükseldiği hâlde, cisimler neden yine de birbirine doğru itilir? (Bölüm 1.5.4)
+7. Işık hızının sabit sayılmasına teori hangi gerekçeyle itiraz eder? (4. postülat)
+8. Standart fizikteki soyut "dalga boyu" kavramının yerine teorinin koyduğu somut terim hangisidir ve neyi ölçer? (Bölüm 1.6)
 
 ## Kısım 2'ye Geçiş
 

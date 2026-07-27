@@ -91,11 +91,4 @@ Bölüm 6.3'te, Evrenakı'nın frame-dragging/entrainment formülü Gravity Prob
 
 Makro evren yolculuğumuz burada tamamlanıyor: mikro-motorlardan (3.1) girdap rekabetine (3.4), Güneş vorteksinden (3.9) halka dinamiğinin dürüst sınır analizine (3.10) uzanan zincirin toplu dökümü, bir sonraki kısım özetinde (3.11 Ne Öğrendik) verilmiştir.
 
-## Kaynakça
-
-1. Nicholson, P.D. & Hedman, M.M. (çeşitli) — Saturn ring viscosity ve kinetik teori kaynakları.
-2. Iess, L. et al. (2019). *Science*, 364(6445) — halka kütlesi ölçümü.
-3. Voyager PPS/RSS verisi — Mimas 5:3 bending wave sönüm mesafesi (~150 km).
-4. Bu kitap, Bölüm 1.3 — Zerre viskozitesi ($\eta\approx0$) tanımı.
-5. Bu kitap, Bölüm 4.2 — rejim-bağımlı kuvvet süperpozisyonu (1/r² vs 1/r).
-6. Bu kitap, Bölüm 6.3 — Gravity Probe B frame-dragging sapması (82 vs 39 mas/yr), çözülmemiş.
+*Bu bölümün kaynakları Kısım sonundaki kaynakçaya işlenmiştir.*

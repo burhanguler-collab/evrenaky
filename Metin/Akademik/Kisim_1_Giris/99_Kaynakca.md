@@ -9,6 +9,7 @@
 * Descartes, R. (1644). *Principia Philosophiae*. Amsterdam: Ludovicum Elzevirium. (İlk Plenum/Girdap kütleçekim yaklaşımı).
 * Einstein, A. (1920). *Äther und Relativitätstheorie* (Esir ve Görelilik Teorisi). Leiden Üniversitesi Konuşması. Berlin: Julius Springer. (Uzay-zamanın fiziksel nitelikleri ve Aether itirafı).
 * Fizeau, H. (1851). *Sur les hypothèses relatives à l'éther lumineux*. Comptes Rendus de l'Académie des Sciences, 33, 349-355. (Hareketli ortamlarda optik sürüklenme).
+* Güler, B. (2021). *Atom Geometrisi*. İstanbul: Profil Kitap. ISBN 978-625-7637-34-3. (Atom içi 3B vadi-rampa topolojisinin gerekçelendirmesi; Bölüm 1.5'te atıflı).
 * Helmholtz, H. (1858). *Über Integrale der hydrodynamischen Gleichungen, welche den Wirbelbewegungen entsprechen*. Journal für die reine und angewandte Mathematik, 55, 25-55. (Vortex/Girdap teorisi temelleri).
 * Higgs, P. W. (1964). *Broken Symmetries and the Masses of Gauge Bosons*. Physical Review Letters, 13(16), 508-509. (Kütle kazandıran evrensel alan — esir konseptinin modern karşılığı).
 * Le Sage, G.-L. (1784). *Lucrèce Newtonien*. Mémoires de l'Académie Royale des Sciences et Belles-Lettres de Berlin. (İtme-temelli (push) kütleçekim modeli — karşılaştırma).
@@ -17,6 +18,7 @@
 * Newton, I. (1687). *Philosophiae Naturalis Principia Mathematica*. Londra: Royal Society. (Kütleçekim matematiği).
 * Planck, M. (1901). *Ueber das Gesetz der Energieverteilung im Normalspectrum*. Annalen der Physik, 309(3), 553-563. (Siyah cisim ışıması ve h sabiti).
 * Rubin, V. C., & Ford, W. K. (1970). *Rotation of the Andromeda Nebula from a Spectroscopic Investigation of Emission Regions*. The Astrophysical Journal, 159, 379-403. (Galaktik rotasyon eğrileri ve karanlık madde krizi).
+* Salart, D., Baas, A., Branciard, C., Gisin, N., & Zbinden, H. (2008). *Testing the speed of 'spooky action at a distance'*. Nature, 454(7206), 861-864. (Bell hız-sınırı deneyleri — kohezyon kanalının sinyal hızına alt sınır).
 * Stokes, G. G. (1845). *On the Aberration of Light*. Philosophical Magazine, 27, 9-15. (Aether drag limiti).
 * Swenson, L. S. (1972). *The Ethereal Aether: A History of the Michelson-Morley-Miller Aether-Drift Experiments, 1880-1930*. University of Texas Press.
 * Whittaker, E. T. (1910). *A History of the Theories of Aether and Electricity*. Dublin: Dublin University Press Series. (Aether'in tarihsel analizi).

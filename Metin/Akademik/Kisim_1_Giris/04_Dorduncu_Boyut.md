@@ -1,6 +1,6 @@
 # 1.4 Evrenakı Teorisinin Doğumu: Dördüncü Uzanımsal Boyut
 
-Önceki bölümler teorinin *neden* gerektiğini (1.2'deki krizler) ve *neyi* varsaydığını (1.3'teki postülatlar) ortaya koydu; bu bölümde ise teori ilk sonuçlarını üreterek doğar. Manifestoda (1.1) bu çalışmanın ana omurgası olarak ilan edilen ve 2. postülatla (1.3) aksiyomatik zemine oturtulan uzanımsal dördüncü boyutun kinematik sonuçları, burada betimsel geometrinin epür (Monge izdüşümü) yöntemiyle adım adım türetilecektir. Cevaplanacak soru kesin ve tektir: **dördüncü boyutta dönen bir cismin bu dönüşü, üç boyutlu uzay kesitimizde nasıl görünür?** Bölümün sonunda ulaşılacak üç izdüşüm imzası — doğrusal salınım, ayna-terslenme ve devinim — kitabın geri kalanının başvuru tanımlarını oluşturacaktır.
+Önceki bölümler teorinin *neden* gerektiğini (1.2'deki krizler) ve *neyi* varsaydığını (1.3'teki postülatlar) ortaya koydu; bu bölümde ise teori ilk sonuçlarını üreterek doğar. Manifestoda (1.1) bu çalışmanın ana omurgası olarak ilan edilen ve 2. postülatla (1.3) aksiyomatik zemine oturtulan uzanımsal dördüncü boyutun kinematik sonuçları, burada betimsel geometrinin epür (Monge izdüşümü) yöntemiyle (Monge, 1799) adım adım türetilecektir. Cevaplanacak soru kesin ve tektir: **dördüncü boyutta dönen bir cismin bu dönüşü, üç boyutlu uzay kesitimizde nasıl görünür?** Bölümün sonunda ulaşılacak üç izdüşüm imzası — doğrusal salınım, ayna-terslenme ve devinim — kitabın geri kalanının başvuru tanımlarını oluşturacaktır.
 
 > **Bu bölüm nasıl okunur?** Bu, kitabın en teknik kısmıdır (betimsel geometri, epür diyagramları, çift-dönüş kinematiği). Ama tek bir ana fikre iner: **dört boyutta dönen bir cisim, üç boyutlu uzayımızda asla "dönüş" olarak görünmez; kendini yalnızca üç dolaylı imzayla ele verir — salınım, ayna-terslenme ve devinim.** Geometrik türetimin ayrıntısıyla ilgilenmeyen okuyucu, doğrudan **1.4.11'deki sonuç** kısmına geçip bu üç imzayı öğrenebilir; sonraki bütün kısımlar yalnızca o üç imzaya başvurur.
 
@@ -217,16 +217,16 @@ Bir **küre** için bu, çarpıcı bir görüntü üretir: XW düzleminde dönen
 
 ## 1.4.6 Soyut Spin'e Karşı Fiziksel Çift Dönüş (Wigner'in Sınırları)
 
-Klasik mekaniğin makroskopik cisimler (örneğin jiroskoplar) için kurduğu devinim modeli, büyük ölçüde malzemenin esnekliği ve rijit cisim kısıtlamaları üzerinden çalışır. Ancak fiziğin en büyük krizi kuantum ölçeğine inildiğinde yaşanır: **Bir elektron esnek veya rijit değildir; hiçbir uzaysal hacmi olmayan noktasal bir parçacıktır. Buna rağmen manyetik alanda kusursuz bir Larmor devinimi (precession) sergiler.** 
+Klasik mekaniğin makroskopik cisimler (örneğin jiroskoplar) için kurduğu devinim modeli, büyük ölçüde malzemenin esnekliği ve rijit cisim kısıtlamaları üzerinden çalışır. Ancak fiziğin en büyük krizi kuantum ölçeğine inildiğinde yaşanır: **Bir elektron esnek veya rijit değildir; hiçbir uzaysal hacmi olmayan noktasal bir parçacıktır. Buna rağmen manyetik alanda kusursuz bir Larmor devinimi (precession) sergiler (Larmor, 1897).** 
 
 Uzayda yer kaplamayan bir şeyin esnemesi veya dönmesi fiziksel olarak nasıl mümkündür? 
-Fizik camiası bu krizi aşmak için Eugene Wigner'in sınıflandırmasına başvurur: Spin, Poincaré grubunun 3 boyutlu dönme simetrisini (SO(3)) temsil eden soyut bir "kuantum etiketidir". Yani standart fiziğe göre elektron gerçekte dönmez; matematiksel olarak dönüyormuş gibi davranır. 
+Fizik camiası bu krizi aşmak için Eugene Wigner'in sınıflandırmasına başvurur (Wigner, 1939): Spin, Poincaré grubunun 3 boyutlu dönme simetrisini (SO(3)) temsil eden soyut bir "kuantum etiketidir". Yani standart fiziğe göre elektron gerçekte dönmez; matematiksel olarak dönüyormuş gibi davranır. 
 
 Evrenakı Teorisi, Wigner'in SO(3) tabanlı mükemmel matematiksel sınıflandırmasını reddetmez; aksine o kusursuz matematiğin eksik bıraktığı **ontolojik (fiziksel) sahneyi** kurar. SO(3) bizzat 3 boyutlu dönme grubudur ve matematiği eksiksizdir; ancak bu matematik, uzayımızda var olan bir elektrona uygulandığında ontolojik bir kilitlenme yaratır: Noktasal elektron varsayımı standart fiziğin kendi içinde çözümsüzdür; Evrenakı ise elektrona hem hacim (geniş bir disk) verir hem de deviniminin kökeni olan o kilitli **çift dönüşü (Double Rotation)** W ekseninde konumlandırarak SO(3) matematiğini mekanik bir sahneye taşır. Dördüncü boyut, Wigner'in soyut matematiksel spinini yeniden "gerçek bir çarka" dönüştüren kurgudur.
 
 ## 1.4.7 Çift Dönüş ve Devinimli Dönme: Açık Epürün Üç Boyutlu Sonucu
 
-Dört boyutun üç boyutta hiçbir karşılığı olmayan en özgün hareketi **çift dönüştür**: cisim, birbirine tamamen dik iki düzlemde (örneğin XY ve ZW) **aynı anda ve bağımsız hızlarla** dönebilir. Üç boyutta bu imkânsızdır; bir cisim aynı anda iki bağımsız düzlemde dönemez. Çift dönüşün üç boyuta yansıması ise iki bileşenin bileşkesidir:
+Dört boyutun üç boyutta hiçbir karşılığı olmayan en özgün hareketi **çift dönüştür** (Clifford, 1873): cisim, birbirine tamamen dik iki düzlemde (örneğin XY ve ZW) **aynı anda ve bağımsız hızlarla** dönebilir. Üç boyutta bu imkânsızdır; bir cisim aynı anda iki bağımsız düzlemde dönemez. Çift dönüşün üç boyuta yansıması ise iki bileşenin bileşkesidir:
 
 $$\underset{\text{XY bileşeni: 3B'de görünür dönüş}}{\underbrace{x = R\cos\omega_1 t,\ y = R\sin\omega_1 t}} \qquad \underset{\text{ZW bileşeni: 3B'de Z doğrusunda salınım}}{\underbrace{z = r\cos\omega_2 t,\ w = r\sin\omega_2 t}}$$
 
