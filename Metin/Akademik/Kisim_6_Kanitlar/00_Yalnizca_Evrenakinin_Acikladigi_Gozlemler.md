@@ -16,14 +16,14 @@
 
 ### 1.3 Michelson-Morley Sıfır Sonucu ve Bradley Yıldız Sapması İkilemi
 * **Standart Fiziğin Çıkmazı:** Özel Görelilik postülatı ile mutlak referans sisteminin reddi ve esir modellerinin sapmayla çelişmesi.
-* **Evrenakı Mekanik Çözümü:** Moleküler ölçekten gezegensel ölçeğe kadar her kütle etrafında bir **Sürüklenme Zarfı (Entrainment)** taşır. Michelson-Morley cihazı bu zarfın içinde olduğu için sıfır sonucu verir; uzaydan gelen ışık ise zarf sınırına girdiğinde kırıldığı için Bradley yıldız sapması gözlenir.
+* **Evrenakı Mekanik Çözümü:** Moleküler ölçekten gezegensel ölçeğe kadar her kütle etrafında bir **Sürüklenme Zarfı (Entrainment)** taşır. Michelson-Morley cihazı (Michelson & Morley, 1887) bu zarfın içinde olduğu için sıfır sonucu verir; uzaydan gelen ışık ise zarf sınırına girdiğinde kırıldığı için Bradley yıldız sapması (Bradley, 1729) gözlenir.
 
 ### 1.4 Bell Dolanıklığı ve Gezegenler Arası Anlık Korelasyon
-* **Standart Fiziğin Çıkmazı:** "Spooky action at a distance" (Uzaktan gizemli etki / telepati) veya nedensellik ihlali.
+* **Standart Fiziğin Çıkmazı:** "Spooky action at a distance" (Uzaktan gizemli etki / telepati) veya nedensellik ihlali (Einstein, Podolsky & Rosen, 1935; Bell, 1964; deneysel ihlaller: Aspect ve ark., 1982; Hensen ve ark., 2015).
 * **Evrenakı Mekanik Çözümü:** Ortam iki kanaldan haber taşır. Basınç (dalga) kanalı $c$ ile çalışırken, ortamın yapısal düzenleme/topografya kanalı (Kohezyon kanalı) $v_m = c\sqrt{\Sigma/P_0}$ hızıyla ($v_m \gg c$) anında ayarlanır. Gizemli bir iletişim değil, tek okyanusun yapısal sürekliliğidir.
 
 ### 1.5 Atalet (İnerji) ve Ek-Kütle (Added Mass) Mekanizması
-* **Standart Fiziğin Çıkmazı:** Atalet maddenin içkin, mekanizmasız bir özelliğidir (veya soyut Higgs etkileşimidir).
+* **Standart Fiziğin Çıkmazı:** Atalet maddenin içkin, mekanizmasız bir özelliğidir (veya soyut Higgs etkileşimidir; Higgs, 1964).
 * **Evrenakı Mekanik Çözümü:** Atalet, bir kütlenin ivmelenirken etrafındaki Evrenakı Rampası'na ve sürüklenme zarfına uyguladığı hidrodinamik tepki kuvvetidir (akışkan ek-kütlesi direnci).
 
 ---
@@ -31,19 +31,19 @@
 ## 2. MAKRO EVREN, ASTRONOMİ VE KOZMOLOJİ OLGULARI
 
 ### 2.1 Galaktik Dönüş Eğrileri (Karanlık Madde Olmadan)
-* **Standart Fiziğin Çıkmazı:** Galaksi kollarının dışındaki yıldızların hızlı dönmesini açıklamak için görünmeyen "Karanlık Madde" parçacıkları varsayılır.
+* **Standart Fiziğin Çıkmazı:** Galaksi kollarının dışındaki yıldızların hızlı dönmesini (Rubin ve ark., 1980) açıklamak için görünmeyen "Karanlık Madde" parçacıkları varsayılır (Zwicky, 1933).
 * **Evrenakı Mekanik Çözümü:** Ortamın kendisinin dönmesinden kaynaklanan **Görünmez Sirkülasyon Kuyuları (Galaktik Girdap)**. Yıldızlar hayali parçacıklar tarafından değil, galaktik vorteksin hidrodinamik akıntısı tarafından taşınır.
 
 ### 2.2 Bullet Cluster (Mermi Kümesi) Ayrışması
-* **Standart Fiziğin Çıkmazı:** Çarpışan iki galaksi kümesinde gaz ile kütleçekim merkezinin ayrılmasını karanlık madde parçacığı birikimiyle açıklar.
+* **Standart Fiziğin Çıkmazı:** Çarpışan iki galaksi kümesinde gaz ile kütleçekim merkezinin ayrılmasını (Markevitch ve ark., 2004; Clowe ve ark., 2006) karanlık madde parçacığı birikimiyle açıklar.
 * **Evrenakı Mekanik Çözümü:** Girdap kuyularının parçacık kütlesinden bağımsız olarak süper-akışkan ortam içinde hidrodinamik kaskad olarak hareket etmesi.
 
 ### 2.3 Doğrudan Karanlık Madde Arama (WIMP / Axion) Deneylerinin Sıfır Sonuçları
-* **Standart Fiziğin Çıkmazı:** 40 yıldır yeraltı laboratuvarlarında (LUX, XENON1T vb.) parçacık bulunamaması bir "anomali/kriz" olarak görülür.
+* **Standart Fiziğin Çıkmazı:** 40 yıldır yeraltı laboratuvarlarında parçacık bulunamaması bir "anomali/kriz" olarak görülür (LUX: Akerib ve ark., 2017; XENON1T: Aprile ve ark., 2018).
 * **Evrenakı Mekanik Çözümü:** Girdap kuyuları parçacık değildir; ortamın akışkan fazıdır. Dedektörlerin parçacık bulamaması teorinin doğrudan **öngörüsüdür**.
 
 ### 2.4 Kozmolojik İvmelenen Genleşme (Karanlık Enerji Olmadan)
-* **Standart Fiziğin Çıkmazı:** Evrenin %68'ini oluşturduğu iddia edilen ama ne olduğu bilinmeyen fiktif "Karanlık Enerji" (Kozmolojik Sabit $\Lambda$).
+* **Standart Fiziğin Çıkmazı:** Evrenin %68'ini oluşturduğu iddia edilen ama ne olduğu bilinmeyen fiktif "Karanlık Enerji" (Kozmolojik Sabit $\Lambda$; Riess ve ark., 1998; Perlmutter ve ark., 1999; oran: Planck Collaboration, 2020).
 * **Evrenakı Mekanik Çözümü:** Evrendeki tüm atomik girdapların (nükleonların) ortama sürekli viskoz enerji deşarj etmesi sonucu okyanusun hacim kazanması (termodinamik genişleme).
 
 ### 2.5 Kozmolojik Kızıla Kayma (Yorgun Işık Reddi)
@@ -51,11 +51,11 @@
 * **Evrenakı Mekanik Çözümü:** Işık yolda frekans kaybetmez. Genç, yüksek basınçlı evrende ortamın $c$ hızı daha yüksektir ($c=\sqrt{P/\rho}$); geçmişte yüksek $c$ ile yayınlanan ışık günümüz düşük $c$ ortamına ulaştığında doğal olarak kızıla kaymış gözlenir.
 
 ### 2.6 Pioneer ve Sinekkuşu (Flyby) Yörünge Anomalileri
-* **Standart Fiziğin Çıkmazı:** Uzay araçlarının gezegen yakın geçişlerinde sergilediği açıklanamayan ekstra ivmelenmeler.
+* **Standart Fiziğin Çıkmazı:** Uzay araçlarının gezegen yakın geçişlerinde sergilediği açıklanamayan ekstra ivmelenmeler (flyby: Anderson ve ark., 2008; Pioneer: Anderson ve ark., 2002).
 * **Evrenakı Mekanik Çözümü:** Gezegenlerin etrafında dönen *Ekvatoral Vorteks Sürüklenme Zarfı* ile araçların yaptığı fiziksel hidrodinamik temas.
 
 ### 2.7 Satürn Halkalarının Keskin Sınırları ve "Ring Rain" Kütle Kaybı
-* **Standart Fiziğin Çıkmazı:** Halkaların dağılmadan korunması "çoban uydular" gibi geçici açıklamalarla geçiştirilir.
+* **Standart Fiziğin Çıkmazı:** Halkaların dağılmadan korunması "çoban uydular" gibi geçici açıklamalarla geçiştirilir (Goldreich & Tremaine, 1979); halka yağmurunun kütle-kaybı ölçümü için bkz. O'Donoghue ve ark., 2019.
 * **Evrenakı Mekanik Çözümü:** Satürn etrafındaki hortum dinamikleri (Siklostrofik Denge) ve eksenel kütle-itim gradyanı.
 
 ### 2.8 Güneş'in Galaktik Yunuslaması (Dikey Sinüs Salınımı)

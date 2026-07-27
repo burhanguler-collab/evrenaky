@@ -6,7 +6,7 @@ Cevap, standart fiziğin Genel Görelilik (GR) adı altında "uzay-zaman eğrili
 
 ## 6.2.1 Standart Anlatı ve Görünürdeki İki Rakip Tez
 
-Einstein'ın Genel Görelilik teorisine göre (Einstein, 1915), büyük bir yıldızın (kütleçekim kuyusunun) yüzeyinden derin uzaya fırlatılan bir "foton", kuyu boyunca yukarı tırmanırken yerçekimine karşı iş yapar ve enerji kaybeder. Işığın enerjisi doğrudan frekansına bağlı olduğu için ($E=hf$), enerji kaybeden ışığın **frekansının düştüğü** ve bu yüzden renginin kırmızıya kaydığı varsayılır (örn. Pound-Rebka Deneyi).
+Einstein'ın Genel Görelilik teorisine göre (Einstein, 1915), büyük bir yıldızın (kütleçekim kuyusunun) yüzeyinden derin uzaya fırlatılan bir "foton", kuyu boyunca yukarı tırmanırken yerçekimine karşı iş yapar ve enerji kaybeder. Işığın enerjisi doğrudan frekansına bağlı olduğu için ($E=hf$), enerji kaybeden ışığın **frekansının düştüğü** ve bu yüzden renginin kırmızıya kaydığı varsayılır (örn. Pound–Rebka Deneyi; Pound & Rebka, 1960).
 
 Evrenakı Teorisine göre ise ışık, enerjisi tükenen hayali bir dalga değil, fiziksel bir **Zerre Katarı'dır (mermi dizisidir).** Akışkanlar mekaniğinin en temel kuralı şudur: Bir kaynaktan saniyede 100 mermi çıkıyorsa, hedefteki alıcıya da saniyede 100 mermi ulaşmak zorundadır; mermiler yolda buharlaşamaz.
 
@@ -83,7 +83,7 @@ Buradaki en kritik nokta, mekanizmaların **toplanmadığıdır.** Saat yavaşla
 
 ## 6.2.8 Yanlışlanabilir Öngörü: Fark Nereden Doğar?
 
-Bu mekanik model, standart fiziğin ölçümleriyle (kinematik tarafta Ives-Stilwell; kütleçekim tarafında Pound-Rebka, GPS, Galileo uyduları) çatışmaz: Evrenakı'nın öngördüğü hidrodinamik yoğunluk profili, Dünya gibi *lokal* rejimlerde bu ölçümlerle birebir örtüşmek zorundadır. Peki teori standart fizikten tam olarak nerede ve neden ayrışır? Bunu iki katmanı ayırarak görebiliriz.
+Bu mekanik model, standart fiziğin ölçümleriyle (kinematik tarafta Ives & Stilwell, 1938; kütleçekim tarafında Pound & Rebka, 1960; GPS: Ashby, 2003; Galileo uyduları: Delva ve ark., 2018) çatışmaz: Evrenakı'nın öngördüğü hidrodinamik yoğunluk profili, Dünya gibi *lokal* rejimlerde bu ölçümlerle birebir örtüşmek zorundadır. Peki teori standart fizikten tam olarak nerede ve neden ayrışır? Bunu iki katmanı ayırarak görebiliriz.
 
 **Kinematik (hareket) tarafında ayrışma yoktur.** Hareket kaynaklı kaymada teori, Özel Görelilik'i birebir kapsar ve ondan sapmaz. Sebebi şudur: saatin yavaşlaması ($\gamma$) ve hareket yönündeki fiziksel sıkışma (boy kısalması) kusursuz işlediği için, kaynak ile alıcının Evrenakı'ya göre *mutlak* hızları gözlem sonucundan matematiksel olarak silinir; geriye yalnızca iki cismin *bağıl* hızı kalır. Yani "ortama göre mutlak hızı yakalarsak Özel Görelilik'i sapıtırız" denemez — boş uzayda bile kinematik sonuç aynıdır. Ayrışma bu katmanda aranmaz.
 

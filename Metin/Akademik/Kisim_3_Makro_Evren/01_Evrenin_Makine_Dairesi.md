@@ -80,7 +80,7 @@ Cevap, sistemdeki toplam motor sayısının ve Evrenakı makro-girdabının katl
 
 Kısacası; **Kütle arttıkça dönüşün hızlanması tesadüf değildir. Kütle demek "dönüş" (spin) demektir.** Daha fazla kütle, daha fazla aktif motor ve Evrenakı içinde yaratılan çok daha hızlı bir kasırga anlamına gelir.
 
-* **Güneş Sistemi Dışı Gezegenler (Exoplanets) ve $\beta$ Pictoris b Keşfi:** Astronomlar 2014 yılında VLT (Very Large Telescope) kullanarak Güneş sistemimiz dışındaki devasa bir gaz devi olan $\beta$ Pictoris b gezegeninin dönüş hızını ölçmüşlerdir. Jüpiter'den yaklaşık 11 kat daha kütleli olan bu gezegenin, saatte 100.000 km gibi muazzam bir hızla döndüğü (ekvatoral dönüş hızı 25 km/s) bulunmuştur. Bu keşif, kütle arttıkça dönüş hızının artması kuralının sadece sistemimize has bir tesadüf değil, evrensel bir gerçeklik olabileceğini ve ötegezegenler için de geçerli olduğunu güçlü bir şekilde desteklemiştir.
+* **Güneş Sistemi Dışı Gezegenler (Exoplanets) ve $\beta$ Pictoris b Keşfi:** Astronomlar 2014 yılında VLT (Very Large Telescope) kullanarak Güneş sistemimiz dışındaki devasa bir gaz devi olan $\beta$ Pictoris b gezegeninin dönüş hızını ölçmüşlerdir (Snellen ve ark., 2014). Jüpiter'den yaklaşık 11 kat daha kütleli olan bu gezegenin, saatte 100.000 km gibi muazzam bir hızla döndüğü (ekvatoral dönüş hızı 25 km/s) bulunmuştur. Bu keşif, kütle arttıkça dönüş hızının artması kuralının sadece sistemimize has bir tesadüf değil, evrensel bir gerçeklik olabileceğini ve ötegezegenler için de geçerli olduğunu güçlü bir şekilde desteklemiştir.
 
 ### Evrenakı Hidrodinamik Dengesi: Girdap ve Basıncın Evrensel Rekabeti
 

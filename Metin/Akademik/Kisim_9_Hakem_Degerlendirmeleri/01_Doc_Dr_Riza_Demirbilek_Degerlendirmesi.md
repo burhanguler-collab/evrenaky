@@ -27,13 +27,18 @@ Sonuç olarak, Evrenakı Teorisi'nin en büyük gücünün bugün kesin doğrula
 
 ### Tarihsel Arka Plan İçin Seçme Kaynaklar
 
-1. Descartes, René. *Principia Philosophiae*. Amsterdam: Ludovicus Elzevir, 1644.
-2. Whittaker, E. T. *A History of the Theories of Aether and Electricity*. Vol. I. London: Longmans, Green and Co., 1910.
-3. Kragh, Helge. "The Vortex Atom: A Victorian Theory of Everything." *Centaurus*, 44 (2002), 32–114.
-4. Madelung, Erwin. "Quantentheorie in hydrodynamischer Form." *Zeitschrift für Physik*, 40 (1927), 322–326.
-5. Bohm, David. "A Suggested Interpretation of the Quantum Theory in Terms of Hidden Variables I & II." *Physical Review*, 85 (1952), 166–193.
-6. Volovik, G. E. *The Universe in a Helium Droplet*. Oxford: Oxford University Press, 2003.
-7. Zwiebach, Barton. *A First Course in String Theory*. Cambridge: Cambridge University Press, 2004 (2nd ed., 2009).
+*(Liste, metinde adı anılan çalışmaların künyelerini paragraf sırasına göre tamamlayacak biçimde düzenlenmiştir.)*
+
+1. Descartes, René. *Principia Philosophiae*. Amsterdam: Ludovicus Elzevir, 1644. (Gezegen hareketlerinin girdapsı ortam modeli.)
+2. Le Sage, Georges-Louis. "Lucrèce Newtonien." *Mémoires de l'Académie Royale des Sciences et Belles-Lettres de Berlin*, 1784. (Kütleçekiminin dıştan gelen parçacık akılarıyla itme olarak yorumu.)
+3. Thomson, William (Lord Kelvin). "On Vortex Atoms." *Philosophical Magazine*, 34 (1867), 15–24. (Vorteks Atom Modeli'nin özgün formülasyonu.)
+4. Kragh, Helge. "The Vortex Atom: A Victorian Theory of Everything." *Centaurus*, 44 (2002), 32–114. (Vorteks atom programının tarihsel değerlendirmesi.)
+5. Whittaker, E. T. *A History of the Theories of Aether and Electricity*. Vol. I. London: Longmans, Green and Co., 1910. (Esir kuramlarının tarihsel analizi.)
+6. Madelung, Erwin. "Quantentheorie in hydrodynamischer Form." *Zeitschrift für Physik*, 40 (1927), 322–326. (Schrödinger denkleminin hidrodinamik biçimde yeniden ifadesi.)
+7. de Broglie, Louis. "Recherches sur la théorie des quanta." *Annales de Physique*, 10(3) (1925), 22–128. (Madde dalgaları ve pilot-dalga fikrinin kökeni.)
+8. Bohm, David. "A Suggested Interpretation of the Quantum Theory in Terms of 'Hidden' Variables I & II." *Physical Review*, 85 (1952), 166–193. (Parçacığın her an belirli konuma sahip olduğu alternatif çerçeve.)
+9. Volovik, G. E. *The Universe in a Helium Droplet*. Oxford: Oxford University Press, 2003. (Süperakışkan vakum modelleri.)
+10. Zwiebach, Barton. *A First Course in String Theory*. Cambridge: Cambridge University Press, 2004 (2. baskı, 2009). (Sicim teorisi programına giriş.)
 
 ---
 

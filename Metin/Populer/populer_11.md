@@ -102,3 +102,22 @@ Artık geceleri gökyüzüne baktığınızda kapkara bir boşluk görmeyeceksin
 
 > [!TIP]
 > Bu bölümün matematiksel ispatlarını ve akademik dildeki detaylı açıklamalarını görmek için **[Akademik Sürüm Kısım 11'ye geçiş yapın](#akademik_11)**.
+
+---
+
+## Kaynaklar ve İleri Okuma
+
+Popüler sürüm, akışı bozmamak adına metin-içi atıf kullanmaz. Ancak bu sürümde anlatılan her tarihsel deney, gözlem ve ölçüm, akademik sürümde kaynağıyla birlikte verilmiştir. Konu başlığına göre ilgili kaynakçaya şu şekilde ulaşabilirsiniz:
+
+| Merak ettiğiniz konu | Akademik sürümdeki kaynakça |
+|---|---|
+| Fiziğin krizleri, esirin tarihi, dördüncü boyut, postülatlar | **1.8 Kaynakça** (Kısım 1) |
+| Işık, Zerre, girişim, kırınım, çift yarık, kuantum anomalileri | **2.12 Kaynakça** (Kısım 2) |
+| Kütle-itim, girdaplar, gelgit, Ay, Satürn halkaları, galaksiler | **3.12 Kaynakça** (Kısım 3) |
+| $G$ sabitinin türetimi, kütleçekimsel merceklenme | **4.5 Kaynakça** (Kısım 4) |
+| Bu bölümde anlatılan laboratuvar deneyleri | **5.6 Kaynakça** (Kısım 5) |
+| Doppler, kızıla kayma, yörünge anomalileri, Gravity Probe B | **6.6 Kaynakça** (Kısım 6) |
+| Modern fiziğin 22 açık krizi (Hubble tensi, JWST, müon $g-2$, FRB…) | **7.8 Kaynakça** (Kısım 7) |
+| Hakem değerlendirmelerinin tarihsel arka planı | **9.1 Kaynakça** (Kısım 9) |
+
+Kitabın tamamında kullanılan kaynak sayısı 200'ün üzerindedir; Michelson–Morley'den Gaia'ya, Pound–Rebka'dan JWST'ye kadar anılan her ölçümün özgün yayın künyesi bu listelerde bulunur.

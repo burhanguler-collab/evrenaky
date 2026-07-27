@@ -8,6 +8,8 @@ Aşağıdaki kısımda, eleştirel bir hakem perspektifinden Evrenakı teorisine
 
 ## 6.1.1 Hakem Perspektifinden Meydan Okuma: Ives-Stilwell Deneyi
 
+*(Söz konusu deney için bkz. Ives & Stilwell, 1938; rölativistik Doppler kaymasının ilk doğrudan laboratuvar doğrulaması.)*
+
 > *"Somut önerim: Bu, Kısım 5 için bedava bir 'kâğıt üzerinde deney'. Patinaj mekaniğinizden kendi Doppler formülünüzü türetin (Zerre Katarı modelinde bu doğal: kaynak hareket edince ardışık mermiler arası mesafe — Zerre Aralığı — mekanik olarak değişir; alıcı hareket edince saniyedeki isabet sayısı değişir; saatlerin yoğunluğa bağlı yavaşlaması da $\gamma$-benzeri düzeltmeyi verir). Sonra bunu Ives–Stilwell verisiyle karşılaştırın. Üç sonuç mümkün:*
 > 
 > *1. Formülünüz laboratuvar koşullarında standartla örtüşüyor ve başka rejimde sapma öngörüyor → teori tam istediğiniz konuma oturur: matematiği kapsayan, ötesinde yanlışlanabilir öngörü veren bir üst-çerçeve.*
@@ -20,7 +22,7 @@ Aşağıdaki kısımda, eleştirel bir hakem perspektifinden Evrenakı teorisine
 
 ## 6.1.2 Türetim: Evrenakı Mekaniği ile Doppler Kayması
 
-Özel Görelilik, uzayda hareket eden bir cisim için Doppler kaymasını ($f_{obs}$) hesaplarken, uzayın bizzat genleştiği veya zamanın soyut bir dördüncü boyut olarak yavaşladığı varsayımına dayanır ve Ives-Stilwell deneyiyle doğrulanan şu meşhur formülü kullanır (uzaklaşan bir kaynak için):
+Özel Görelilik, uzayda hareket eden bir cisim için Doppler kaymasını ($f_{obs}$) hesaplarken, uzayın bizzat genleştiği veya zamanın soyut bir dördüncü boyut olarak yavaşladığı varsayımına dayanır (Einstein, 1905a) ve Ives-Stilwell deneyiyle (Ives & Stilwell, 1938) doğrulanan şu meşhur formülü kullanır (uzaklaşan bir kaynak için):
 
 $$ f_{obs} = f_0 \sqrt{\frac{1 - v/c}{1 + v/c}} $$
 
@@ -98,6 +100,6 @@ Bu durumda genel ve nicel (iki-hızlı) **Evrenakı Doppler Formülü** şu şek
 
 $$ f_{obs} = f_0 \left( \frac{1 \pm u/c}{1 \pm v/c} \right) \frac{\sqrt{1 - v^2/c^2}}{\sqrt{1 - u^2/c^2}} $$
 
-Yukarıdaki denklem, Lorentz esir teorisinin o meşhur gözlemlenemezlik teoremine saygı duyar: Saat yavaşlaması ve boy kısalması mekanizmaları (ezilme) kusursuz çalıştığı için, $u$ ve $v$ mutlak hızları tam olarak SR'nin bağıl hız ($V_{rel}$) formülüne matematiksel olarak eşdeğer çıkar. Yani Evrenakı, Özel Görelilik'i kinematik düzeyde **%100 oranında kapsar ve doğrular.**
+Yukarıdaki denklem, Lorentz esir teorisinin o meşhur gözlemlenemezlik teoremine (Lorentz, 1904) saygı duyar: Saat yavaşlaması ve boy kısalması mekanizmaları (ezilme) kusursuz çalıştığı için, $u$ ve $v$ mutlak hızları tam olarak SR'nin bağıl hız ($V_{rel}$) formülüne matematiksel olarak eşdeğer çıkar. Yani Evrenakı, Özel Görelilik'i kinematik düzeyde **%100 oranında kapsar ve doğrular.**
 
 Peki Evrenakı nerede Özel Görelilik'ten ayrışır ve onu yanlışlar? Cevap kinematik katmanda (hareket) değil, dinamik katmandadır (Postülat 4: Değişken $c$). Standart fizikte "Kütleçekimsel Kızıla Kayma" (Gravitational Redshift) olarak bilinen olguyu, Evrenakı teorisinde tamamen mekanik bir **dalga boyu esnemesi** (sabit frekans, değişen hız) olarak incelemek için bir sonraki kâğıt üzerinde deneye (Bölüm 6.2) geçiyoruz.

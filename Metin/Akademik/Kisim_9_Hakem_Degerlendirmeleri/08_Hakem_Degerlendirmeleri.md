@@ -5,3 +5,14 @@ Teori, geliştirme sürecinde eleştirel hakem değerlendirmelerinden geçirilmi
 * **"Kâğıt üzerinde deney" meydan okuması:** Eleştirel bir hakemin, teorinin kendi postülatlarından Doppler formülünü türetmesini ve Ives-Stilwell verisiyle karşılaştırmasını talep eden meydan okumasının tam metni ve teorinin cevabı **Bölüm 6.1**'dedir (alıntı: Bölüm 6.1.1).
 * **Satürn halka dinamiği üzerine eleştirel inceleme:** Halka kararlılığı iddialarının nicel sınırlarını çizen, "dürüst tespit" formatındaki değerlendirme **Bölüm 3.10**'un içindedir.
 * **Önceki sürüm hakem raporları:** Kitabın önceki sürümüne yönelik hakem değerlendirmelerinin ve düzeltme kayıtlarının tamamı, site menüsündeki **"Eski Sürüm → Hakem Değerlendirmeleri"** başlığında (duzeltme.md) korunmaktadır.
+
+---
+
+## 9.1 Kaynakça
+
+Bu kısımda yer alan değerlendirme metinlerinin dayandığı kaynaklar iki yerde toplanmıştır:
+
+* **Doç. Dr. Rıza Demirbilek'in değerlendirmesi:** Metinde anılan tarihsel ve çağdaş çalışmaların künyeleri, değerlendirmenin kendi sonundaki **"Tarihsel Arka Plan İçin Seçme Kaynaklar"** listesinde verilmiştir (Descartes, 1644; Le Sage, 1784; Thomson/Kelvin, 1867; Whittaker, 1910; Madelung, 1927; de Broglie, 1925; Bohm, 1952; Kragh, 2002; Volovik, 2003; Zwiebach, 2004).
+* **Gövdeye işlenmiş hakem değerlendirmeleri:** Yukarıda anılan iki değerlendirme (Ives–Stilwell meydan okuması ve Satürn halka dinamiği incelemesi) ilgili gövde bölümlerinin içindedir; dolayısıyla dayandıkları kaynaklar o kısımların kaynakçalarında listelenmiştir — Ives–Stilwell için bkz. **6.6 Kaynakça** (Ives & Stilwell, 1938; Doppler, 1842; Einstein, 1905a), Satürn halka dinamiği için bkz. **3.12 Kaynakça** (Shu ve ark., 1983; Iess ve ark., 2019; Hedman & Nicholson, 2016; Goldreich & Tremaine, 1978).
+
+*Not: Bu kısma yeni bir hakem değerlendirmesi eklendiğinde, o metnin kendi kaynak listesi de değerlendirmenin sonuna iliştirilecek ve burada özetlenecektir.*

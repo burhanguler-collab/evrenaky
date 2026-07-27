@@ -16,9 +16,9 @@ Kutup yörüngesindeki bir uydunun tam dairesel kalması Evrenakı hidrodinamiğ
 
 ## 6.3.2 Gözlemsel Kanıt 1: Flyby (Yakın Geçiş) Anomalisi
 
-Bu hidrodinamik asimetri teorik bir varsayım değil, modern astronominin karşısında çaresiz kaldığı kesin gözlemsel verilere dayanır. NASA uzay araçları (Galileo, NEAR, Rosetta vb.) yakıt tasarrufu için Dünya'ya yaklaşıp sapan bir yörünge (flyby) izlediklerinde, Newton ve Einstein'ın öngörmediği, açıklanamayan hız sapmaları ($\Delta V$) yaşadılar.
+Bu hidrodinamik asimetri teorik bir varsayım değil, modern astronominin karşısında çaresiz kaldığı kesin gözlemsel verilere dayanır. NASA uzay araçları (Galileo, NEAR, Rosetta vb.) yakıt tasarrufu için Dünya'ya yaklaşıp sapan bir yörünge (flyby) izlediklerinde, Newton ve Einstein'ın öngörmediği, açıklanamayan hız sapmaları ($\Delta V$) yaşadılar (Anderson ve ark., 2008; benzer bir açık anomali için ayrıca bkz. Pioneer: Anderson ve ark., 2002).
 
-Genel Görelilik bu anomaliyi hiçbir şekilde açıklayamazken, 2008 yılında J.D. Anderson ve ekibi bu verileri toplayarak çarpıcı bir ampirik (deneysel) formül çıkardılar:
+Genel Görelilik bu anomaliyi hiçbir şekilde açıklayamazken, 2008 yılında J. D. Anderson ve ekibi bu verileri toplayarak çarpıcı bir ampirik (deneysel) formül çıkardılar (Anderson ve ark., 2008):
 
 $$\Delta V_\infty = \frac{2\omega_\oplus R_\oplus}{c} V_\infty (\cos \delta_i - \cos \delta_o)$$
 
@@ -28,13 +28,13 @@ Eğer kütleçekimi (uzay çukuru) her yöne eşit (izotropik) olsaydı, uydunun
 
 ## 6.3.3 Gözlemsel Kanıt 2: Gravity Probe B ve LAGEOS
 
-Einstein, uzay-zaman geometrisinin dönen kütleler tarafından bükülüp sürüklendiğini (Frame-Dragging) iddia etmişti. Bunu kanıtlamak için NASA, Gravity Probe B (GP-B) uydusunu özellikle **Kutupsal Yörüngeye** yerleştirdi. 
+Einstein, uzay-zaman geometrisinin dönen kütleler tarafından bükülüp sürüklendiğini (Frame-Dragging) iddia etmişti (Lense & Thirring, 1918). Bunu kanıtlamak için NASA, Gravity Probe B (GP-B) uydusunu özellikle **Kutupsal Yörüngeye** yerleştirdi (Everitt ve ark., 2011). 
 
 Kutupsal yörüngedeki uydunun jiroskopları kuzey-güney ekseninde dönmekteyken, alttaki Ekvator akıntısı (Evrenakı vorteksi) doğu-batı ekseninde hızla dönüyordu. Bu çapraz kesişim sonucunda Ekvator akıntısı, kutup yörüngesindeki uydunun jiroskoplarını alttan yanal olarak sürükledi ve eksenlerini yılda **39 mas (miliarksaniye; yay-saniyesinin binde biri)** kaydırdı.
 
-Aynı şekilde LAGEOS-1 uydusunun yörünge düzleminde de (109.8 derecelik eğikliğinden dolayı) yılda 31 mas'lık bir sapma kaydedildi.
+Aynı şekilde LAGEOS-1 uydusunun yörünge düzleminde de (109.8 derecelik eğikliğinden dolayı) yılda 31 mas'lık bir sapma kaydedildi (Ciufolini & Pavlis, 2004).
 
-Fizikçiler bu değerleri kurgusal "uzay-zaman kumaşının burulması" ile açıklarken, Evrenakı Navier-Stokes denklemlerinden yola çıkarak bunu bizzat lokal Evrenakı akışkanının girdap rotasyonu (vorticity - $\vec{\Omega}$) olarak hesaplar:
+Fizikçiler bu değerleri kurgusal "uzay-zaman kumaşının burulması" ile açıklarken, Evrenakı Navier–Stokes denklemlerinden (Navier, 1823; Stokes, 1845) yola çıkarak bunu bizzat lokal Evrenakı akışkanının girdap rotasyonu (vorticity - $\vec{\Omega}$) olarak hesaplar:
 
 $$\vec{\Omega} = \frac{1}{2} \nabla \times \vec{v}_{vorteks}$$
 

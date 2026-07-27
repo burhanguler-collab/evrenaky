@@ -51,9 +51,9 @@ $$ \frac{\partial \rho}{\partial t} + \nabla \cdot (\rho \vec{v}) = S(x,t) $$
 Buradaki $S(x,t)$ madde kaynak/kuyu (source/sink) terimidir. Ancak Evrenakı modelinde madde, uzay dokusunu sihirli bir şekilde "yok etmez" (yutmaz) veya "hiçlikten üretmez". Tıpkı ağzına kadar dolu bir havuza atılan devasa bir taşın kendi hacmi kadar suyu dışarı itmesi gibi, gezegenler ve yıldızlar da uzayda işgal ettikleri devasa kütle-hacim ile Evrenakı akışkanını dışarı doğru **deplase eder (öteler).** Madde tarafından yerinden edilen bu akışkan, uzayın o bölgesinde muazzam bir hidrodinamik gerilim ve basınç gradyanı (yoğunluk farkı) yaratır. Kütlenin büyüklüğü, ötelediği (deplase ettiği) Evrenakı miktarını belirler; bu da klasik mekaniğin "kütleçekim alanı" zannettiği o etki alanının (hidrodinamik basınç boşluğunun) ta kendisidir.
 
 ## 4.2.3 Euler Formülasyonu ve Deplasman Etkisi
-Normal bir akışkanın hareketini modelleyen temel denklem Navier-Stokes denklemidir. Ancak gezegenlerin yörüngelerinde milyarlarca yıl boyunca hız kaybetmeden hareket edebilmesi, uzayı dolduran bu ortamın klasik bir sürtünme (drag) yaratmadığını gösterir. Bu gözlem, Evrenakı'nın elektromanyetik dalgaları zayıflatmadan taşıyabilen **ultra-akışkan (superfluid)** (Landau, 1941) karakteristiğine sahip olduğunu zorunlu kılar.
+Normal bir akışkanın hareketini modelleyen temel denklem Navier-Stokes denklemidir (Navier, 1823; Stokes, 1845). Ancak gezegenlerin yörüngelerinde milyarlarca yıl boyunca hız kaybetmeden hareket edebilmesi, uzayı dolduran bu ortamın klasik bir sürtünme (drag) yaratmadığını gösterir. Bu gözlem, Evrenakı'nın elektromanyetik dalgaları zayıflatmadan taşıyabilen **ultra-akışkan (superfluid)** (Landau, 1941) karakteristiğine sahip olduğunu zorunlu kılar.
 
-Kinematik viskozitesi pratik olarak sıfıra çok yakın ($\\mu \\approx 0$) kabul edildiğinde, viskozite terimleri sıfırlanır ve Evrenakı'nın momentum dengesini tanımlayan kusursuz **Euler Denklemi** ortaya çıkar:
+Kinematik viskozitesi pratik olarak sıfıra çok yakın ($\\mu \\approx 0$) kabul edildiğinde, viskozite terimleri sıfırlanır ve Evrenakı'nın momentum dengesini tanımlayan kusursuz **Euler Denklemi** (Euler, 1757) ortaya çıkar:
 
 $$ \rho \left( \frac{\partial \mathbf{v}}{\partial t} + (\mathbf{v} \cdot \nabla)\mathbf{v} \right) = -\nabla P $$
 
@@ -63,7 +63,7 @@ Kütle (örneğin Güneş), kendi hacmiyle Evrenakı ortamını dışarıya doğ
 ## 4.2.4 Kütleçekim Sabiti ($G$)'nin Doğası: Basınç Alanı Çözümü
 Kütlenin uzayda yarattığı "Deplasman Etkisi", Evrenakı akışkanında radyal bir hız/batış alanı oluşturur. Merkezi ve tekil bir kütle ($M$), çevresindeki Cosmofluid ortamında simetrik ve radyal bir basınç bozulumu yaratır.
 
-Klasik fizikte gözlemsel verilere (Kepler yasalarına) dayalı olarak başarıyla tespit edilen ters kare yasasının ($1/r^2$) altında yatan fiziksel mekanizmayı, Cosmofluid modelinde boş uzayın geometrik ve hidrodinamik zorunluluklarından doğrudan türetebiliriz. Madde kaynaklarının olmadığı ($S = 0$) ve Evrenakı yoğunluğunun lokal olarak sabit kaldığı ($\rho \approx$ sabit) durağan uzay bölgelerinde, akışkanın basınç alanı Laplace denklemini sağlamak zorundadır:
+Klasik fizikte gözlemsel verilere (Kepler yasalarına; Kepler, 1619) dayalı olarak başarıyla tespit edilen ters kare yasasının ($1/r^2$) altında yatan fiziksel mekanizmayı, Cosmofluid modelinde boş uzayın geometrik ve hidrodinamik zorunluluklarından doğrudan türetebiliriz. Madde kaynaklarının olmadığı ($S = 0$) ve Evrenakı yoğunluğunun lokal olarak sabit kaldığı ($\rho \approx$ sabit) durağan uzay bölgelerinde, akışkanın basınç alanı Laplace denklemini (Laplace, 1799) sağlamak zorundadır:
 $$ \nabla^2 P = 0 $$
 
 Küresel simetride bu diferansiyel denklemin fiziksel olarak anlamlı (sonsuzda sabit bir $P_0$ değerine yakınsayan) tek çözümü şöyledir:
@@ -90,5 +90,5 @@ Bu sonuca göre, fizikte evrensel ve temel bir sabit olarak kabul edilen $G$, as
 [^3]: **Boyutsal Analiz Notu:** Newton mekaniğinde $G$ sabitinin birimi $[\text{m}^3 \text{ kg}^{-1} \text{ s}^{-2}]$'dir. Evrenakı modelinde $P(r) = P_0 - \frac{\alpha M}{r}$ denkleminden türetilen potansiyel sabiti $\alpha$'nın boyutu $[\text{s}^{-2}]$, nükleon öz yoğunluğu $\rho_n$'in boyutu ise $[\text{kg/m}^3]$'tür. Bu iki fiziksel parametrenin oranı ($G = \alpha / \rho_n$), klasik kütleçekim sabitinin birimini ($[\text{m}^3 \text{ kg}^{-1} \text{ s}^{-2}]$) kusursuz şekilde sağlar.
 
 ### 4.2.4.1 1/r² Davranışı ve Gauss Teoremi
-Modern fizikte $1/r^2$ sönümlemesi evrensel bir yasa olarak görülürken, Evrenakı modelinde bu durum yalnızca belirli koşullar sağlandığında ortaya çıkan geometrik bir zorunluluktur. Güneş Sistemi ölçeğinde yoğunluk ($\rho$) homojene yakın kabul edilebilir. Homojen bir ortamda, dışarı yayılan basınç akısı, Gauss teoremi gereği $A = 4\pi r^2$ yüzey alanına dağılır. Toplam akı korunduğu için, gradyan $1/r^2$ oranında azalmak zorundadır. Bu davranış mistik bir yasa değil, homojen Evrenakı'nın 3-boyutlu dağılımının doğal sonucudur.
+Modern fizikte $1/r^2$ sönümlemesi evrensel bir yasa olarak görülürken, Evrenakı modelinde bu durum yalnızca belirli koşullar sağlandığında ortaya çıkan geometrik bir zorunluluktur. Güneş Sistemi ölçeğinde yoğunluk ($\rho$) homojene yakın kabul edilebilir. Homojen bir ortamda, dışarı yayılan basınç akısı, Gauss teoremi (Gauss, 1813) gereği $A = 4\pi r^2$ yüzey alanına dağılır. Toplam akı korunduğu için, gradyan $1/r^2$ oranında azalmak zorundadır. Bu davranış mistik bir yasa değil, homojen Evrenakı'nın 3-boyutlu dağılımının doğal sonucudur.
 

@@ -6,7 +6,7 @@ Bilimin tekilliği (Büyük Birleşik Kuram), doğadaki tüm farklı kuvvetlerin
 
 1919'daki meşhur Güneş tutulması deneyinde Arthur Eddington, uzak yıldızlardan gelen ışığın Güneş'in yanından geçerken büküldüğünü fotoğrafladı (Dyson ve ark., 1920). Einstein'ın Genel Görelilik teorisi (Einstein, 1915) bu durumu şu iddiayla açıkladı: *"Güneş'in devasa kütlesi uzay ve zaman dokusunu bir çarşaf gibi bükmektedir. Işık da bu bükülmüş uzayda düz gitmeye çalışırken mecburen kavis çizer."*
 
-Ancak Kısım 2'de Işık (Zerre) kinematiğini ve Kısım 3'te Kütle-İtim mekaniğini deşifre ettik. Evrenakı'ya göre bükülen şey soyut bir "zaman" veya boşluk değildir; bükülen şey doğrudan **Zerre'nin (Işığın) rotasıdır.** Ve bu bükülme soyut bir geometri yüzünden değil, laboratuvardaki bir su bardağında kalem nasıl kırılıyorsa bütünüyle aynı **hidrodinamik optik yasa (Kırılma/Snell Yasası)** yüzünden gerçekleşir!
+Ancak Kısım 2'de Işık (Zerre) kinematiğini ve Kısım 3'te Kütle-İtim mekaniğini deşifre ettik. Evrenakı'ya göre bükülen şey soyut bir "zaman" veya boşluk değildir; bükülen şey doğrudan **Zerre'nin (Işığın) rotasıdır.** Ve bu bükülme soyut bir geometri yüzünden değil, laboratuvardaki bir su bardağında kalem nasıl kırılıyorsa bütünüyle aynı **hidrodinamik optik yasa (Kırılma/Snell Yasası; Descartes, 1637)** yüzünden gerçekleşir!
 
 ## 4.3.2 Yıldız Işığının Bükülmesi (Eddington Deneyi) ve 1.75 Arksaniye Çözümü
 
@@ -90,10 +90,10 @@ Kozmolojinin 100 yıllık kör noktası olan **"Kuazar Boyut Anomalisi"** bu sor
 * **Einstein'ın Modelinde (Hata):** Uzay-zaman eğriliği **akromatiktir (renksizdir).** Geometri büküldüğü için, o bükülen yoldan geçen kırmızı ışık da mavi ışık da tam olarak aynı açıyla kavis çizmelidir. Geometri renk seçmez.
 * **Evrenakı Modelinde (Gerçek):** Merceklenme hidrodinamik bir optik kırılma (prizma) olduğu için **kromatik (renksel sapmalı)** olmak zorundadır! Mavi ışık (frekansı yüksek Zerre katarı) ile kırmızı ışık, tıpkı cam prizmada olduğu gibi Evrenakı direncinde farklı açılarla (dispersion) kırılmalıdır.
 
-**Gözlem (Belirleyici Test):** Gökbilimciler yıllardır kütleçekimsel merceklenme altındaki uzak kuazarları (Örn: Einstein Haçı - Q2237+030) incelemektedir. Ancak çok dalga boylu ölçümlerde (mikro-merceklenme ışık eğrilerinde), kuazar yığılma disklerinin teorik olması gerekenden 3-4 kat daha BÜYÜK olduğu gözlemlenmiştir. Klasik fizik bu anomaliyi çözemez.
+**Gözlem (Belirleyici Test):** Gökbilimciler yıllardır kütleçekimsel merceklenme altındaki uzak kuazarları (Örn: Einstein Haçı - Q2237+030; keşif: Huchra ve ark., 1985) incelemektedir. Ancak çok dalga boylu ölçümlerde (mikro-merceklenme ışık eğrilerinde), kuazar yığılma disklerinin teorik olması gerekenden 3-4 kat daha BÜYÜK olduğu gözlemlenmiştir (Pooley ve ark., 2007; Morgan ve ark., 2010). Klasik fizik bu anomaliyi çözemez.
 
 Evrenakı bu devasa uyuşmazlığı tek satırda çözer: **Boyut anomalisi gerçek değildir; kütleçekimsel merceklenmeyi "renksiz (akromatik)" sanmalarından kaynaklanan optik bir illüzyondur!**
-Mercek görevi gören ön plandaki galaksinin Evrenakı gradyanı, kuazardan gelen farklı renkleri (kırmızı ve mavi) Evrenakı dispersiyonu nedeniyle **farklı açılarla** bükmektedir. Bu renksel sapma (kromatik bükülme), Dünya'daki teleskoplara ulaşan görüntüyü uzaysal olarak yayar ve diski olduğundan çok daha büyük gösterir. Renksel sapma denkleme eklendiğinde, kuazarların boyutları Shakura-Sunyaev modeline tam olarak uyan normal boyutlarına geri döner!
+Mercek görevi gören ön plandaki galaksinin Evrenakı gradyanı, kuazardan gelen farklı renkleri (kırmızı ve mavi) Evrenakı dispersiyonu nedeniyle **farklı açılarla** bükmektedir. Bu renksel sapma (kromatik bükülme), Dünya'daki teleskoplara ulaşan görüntüyü uzaysal olarak yayar ve diski olduğundan çok daha büyük gösterir. Renksel sapma denkleme eklendiğinde, kuazarların boyutları Shakura-Sunyaev modeline (Shakura & Sunyaev, 1973) tam olarak uyan normal boyutlarına geri döner!
 
 Bu astronomik test, öngörünün doğrulanması hâlinde, uzay-zaman eğriliği yorumuna karşı Evrenakı'nın (optik ile kütle-itimin hidrodinamik tekilliğinin) belirleyici bir kanıtını oluşturacaktır.
 
@@ -112,4 +112,4 @@ Güneş'in teğet sınırında yeşil ışık ($\lambda = 550 \text{ nm}$) için
 * $\theta_{kirmizi} (650\text{nm}) = 1.750159 \text{ arksaniye}$
 * **Fark ($\Delta \theta$):** $0.000318 \text{ arksaniye} = 318\ \mu\text{as}$ (mikro-arksaniye)
 
-Einstein'ın teorisinde bu sapma farkı tam olarak SIFIRDIR. Evrenakı ise Güneş'in etrafından geçen kırmızı ve mavi ışık arasında **318 mikro-arksaniyelik** bir optik kırılma farkı olacağını deterministik olarak hesaplar. Bu olağanüstü ince fark, 1919'daki fotoğraf plakalarıyla ölçülememiştir, ancak günümüzün Gaia gibi ultra-hassas uydularının "enstrümantal hata" zannedip matematiksel olarak sildiği **Chromaticity (Kromatiklik)** sapmalarına karşılık gelmektedir.
+Einstein'ın teorisinde bu sapma farkı tam olarak SIFIRDIR. Evrenakı ise Güneş'in etrafından geçen kırmızı ve mavi ışık arasında **318 mikro-arksaniyelik** bir optik kırılma farkı olacağını deterministik olarak hesaplar. Bu olağanüstü ince fark, 1919'daki fotoğraf plakalarıyla ölçülememiştir, ancak günümüzün Gaia gibi ultra-hassas uydularının "enstrümantal hata" zannedip matematiksel olarak sildiği **Chromaticity (Kromatiklik)** sapmalarına karşılık gelmektedir (Gaia astrometrik çözümünde renk-bağımlı kalibrasyonun ele alınışı: Lindegren ve ark., 2021; Gaia Collaboration, 2021).

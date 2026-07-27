@@ -43,7 +43,7 @@ Bölüm 4.2.8–4.2.9, galaktik dönüş eğrilerini karanlık madde parçacığ
 
 ### 3.7.4.1 Bullet Cluster: Ayrışan Şey Kütle Değil, Akış Yapısıdır
 
-**Gözlem:** İki dev galaksi kümesi birbirinin içinden geçmiştir (Kaynak: *Markevitch, M., et al. (2004). ApJ 606, 819*; *Clowe, D., et al. (2006). ApJ 648, L109*). Seyrek galaksiler iki arı sürüsü gibi karşılıklı geçip yola devam etmiş; görünür kütlenin çoğunluğunu taşıyan sıcak gaz ise elektromanyetik olarak çarpışıp şoklanmış ve ortada yığılmıştır (X-ışını görüntüsü). Zayıf kütleçekimsel merceklenme haritası ise toplam kütle merkezini ortadaki gazda değil, **geçip giden galaksilerin üzerinde** gösterir. Standart yorum: "Kütlenin çoğu, çarpışmasız ve görünmez bir madde olarak galaksilerle birlikte geçti."
+**Gözlem:** İki dev galaksi kümesi birbirinin içinden geçmiştir (Markevitch ve ark., 2004; Clowe ve ark., 2006). Seyrek galaksiler iki arı sürüsü gibi karşılıklı geçip yola devam etmiş; görünür kütlenin çoğunluğunu taşıyan sıcak gaz ise elektromanyetik olarak çarpışıp şoklanmış ve ortada yığılmıştır (X-ışını görüntüsü). Zayıf kütleçekimsel merceklenme haritası ise toplam kütle merkezini ortadaki gazda değil, **geçip giden galaksilerin üzerinde** gösterir. Standart yorum: "Kütlenin çoğu, çarpışmasız ve görünmez bir madde olarak galaksilerle birlikte geçti."
 
 **Evrenakı okuması üç adımdır:**
 
@@ -63,7 +63,7 @@ Sonuç: merceklenme sinyalinin galaksileri izlemesi, teoride bir anomali değil 
 
 ### 3.7.4.3 Kozmik Arka Plan Işıması ve "Evrenin İlk Sesi"
 
-**Gözlem:** Gökyüzünün her noktasından, her yönden 2,725 K sıcaklığında, neredeyse mükemmel kara-cisim tayflı bir mikrodalga ışıması gelir (Penzias & Wilson, 1965). Sıcaklık haritasındaki milyonda-bir düzeyindeki benekler rastgele boyutlarda değildir; bir çanın tınısındaki nota ve armonikler gibi tercihli ölçekler ("akustik pikler") gösterir (Kaynak: *Planck Collaboration (2020). A&A 641, A6*). Standart okumada pikler, Büyük Patlama sonrası ilkel plazmada yankılanan ses dalgalarıdır ve pik oranları ancak görünür maddenin yaklaşık beş katı, salınıma katılmayan çekici bir bileşen varsa tutar — karanlık maddenin en nicel kanıtı sayılır.
+**Gözlem:** Gökyüzünün her noktasından, her yönden 2,725 K sıcaklığında, neredeyse mükemmel kara-cisim tayflı bir mikrodalga ışıması gelir (Penzias & Wilson, 1965). Sıcaklık haritasındaki milyonda-bir düzeyindeki benekler rastgele boyutlarda değildir; bir çanın tınısındaki nota ve armonikler gibi tercihli ölçekler ("akustik pikler") gösterir (Planck Collaboration, 2020). Standart okumada pikler, Büyük Patlama sonrası ilkel plazmada yankılanan ses dalgalarıdır ve pik oranları ancak görünür maddenin yaklaşık beş katı, salınıma katılmayan çekici bir bileşen varsa tutar — karanlık maddenin en nicel kanıtı sayılır.
 
 **Evrenakı okuması:** Teori sıcak başlangıcı savunur (3.7.1) ve bu ışımayı tam olarak standart modelin gördüğü yerde görür: **erken, yüksek basınçlı dönemin fosil denge ışıması.** İki noktada ayrışır:
 
