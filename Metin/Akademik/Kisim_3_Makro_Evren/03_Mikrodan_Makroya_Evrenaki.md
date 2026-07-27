@@ -694,7 +694,7 @@ Aşağıdaki interaktif simülasyonda, temel geometrik şekillerin uzayda nasıl
 <div style="background: #121212; padding: 20px; border-radius: 12px; border: 1px solid #404040; box-shadow: 0 10px 30px rgba(0,0,0,0.8); margin: 20px 0; text-align: center;">
   <h3 style="margin-top: 0; margin-bottom: 10px; color: #fff; font-weight: 600; letter-spacing: 1px; text-shadow: 0 0 10px rgba(0, 229, 255, 0.5);">Animasyon 3.3.2.2: Klasik Geometrik Şekillerin 3D Gradyanları</h3>
   <p style="color: #cbd5e1; font-size: 14px; margin-top: 0; margin-bottom: 20px; font-style: italic;">Bu görsel, geometrik kütlelerin uzay dokusunda yarattığı Evrenakı gradyanlarını (basınç ve yoğunluk alanlarını) 3 boyutlu olarak göstermektedir.</p>
-  <iframe src="Metin/bolum_26_3d.html" width="100%" frameborder="0" style="height: min(600px, 75vh); border-radius: 8px; border: 1px solid #333; background: #121212;"></iframe>
+  <iframe src="Metin/bolum_26_3d.html" width="100%" frameborder="0" style="height: 520px; min-height: 520px; border-radius: 8px; border: 1px solid #333; background: #050505;"></iframe>
 </div>
 
 

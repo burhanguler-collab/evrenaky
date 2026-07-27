@@ -5,35 +5,127 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>3D Gradyan Simülasyonu</title>
   <style>
-    body { background: #050505; color: #fff; font-family: 'Inter', sans-serif; margin: 0; padding: 0; overflow: hidden; width: 100vw; height: 100vh; }
-    #ui-container { position: absolute; top: 10px; left: 0; right: 0; display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; z-index: 10; padding: 0 10px; }
-    button { background: rgba(30, 30, 30, 0.85); color: #0ea5e9; border: 1px solid #0ea5e9; padding: 6px 14px; cursor: pointer; border-radius: 8px; transition: 0.3s; font-weight: 500; font-size: 13px; backdrop-filter: blur(4px); }
-    button:hover, button.active { background: #0ea5e9; color: #fff; box-shadow: 0 0 15px rgba(14, 165, 233, 0.5); }
-    #infoText3d { position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 650px; font-size: 12px; line-height: 1.4; color: #cbd5e1; background: rgba(11, 15, 25, 0.88); border: 1px solid rgba(0, 229, 255, 0.3); border-left: 4px solid #00e5ff; padding: 8px 14px; border-radius: 8px; text-align: left; z-index: 10; backdrop-filter: blur(8px); pointer-events: none; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { width: 100%; height: 100%; overflow: hidden; background: #050505; color: #fff; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+    
+    #app-layout {
+      display: flex;
+      flex-direction: column;
+      width: 100vw;
+      height: 100vh;
+      background: #050505;
+    }
+
+    #top-bar {
+      flex: 0 0 auto;
+      padding: 8px 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      background: rgba(10, 15, 25, 0.95);
+      border-bottom: 1px solid rgba(0, 229, 255, 0.2);
+      z-index: 10;
+    }
+
+    .btn-group {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    button {
+      background: rgba(30, 30, 30, 0.9);
+      color: #0ea5e9;
+      border: 1px solid #0ea5e9;
+      padding: 6px 14px;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: all 0.2s ease;
+      font-weight: 500;
+      font-size: 13px;
+    }
+    button:hover, button.active {
+      background: #0ea5e9;
+      color: #fff;
+      box-shadow: 0 0 12px rgba(14, 165, 233, 0.6);
+    }
+
+    .legend-row {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      font-size: 11px;
+      color: #94a3b8;
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .legend-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+
+    #canvas-container {
+      flex: 1 1 auto;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #050505;
+    }
+    #canvas-container canvas {
+      display: block;
+      width: 100% !important;
+      height: 100% !important;
+    }
+
+    #infoText3d {
+      flex: 0 0 auto;
+      padding: 10px 16px;
+      background: rgba(10, 15, 25, 0.95);
+      border-top: 1px solid rgba(0, 229, 255, 0.2);
+      font-size: 12px;
+      line-height: 1.45;
+      color: #cbd5e1;
+      border-left: 4px solid #00e5ff;
+      max-height: 90px;
+      overflow-y: auto;
+      z-index: 10;
+    }
   </style>
 </head>
 <body>
 
-  <div id="ui-container">
-    <button class="active" onclick="window.setShape3d('tetra', this)">Piramit</button>
-    <button onclick="window.setShape3d('cube', this)">Küp</button>
-    <button onclick="window.setShape3d('cylinder', this)">Silindir</button>
-    <button onclick="window.setShape3d('sphere', this)">Küre</button>
-  </div>
-  
-  <div style="position: absolute; top: 48px; left: 0; right: 0; display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; font-size: 11px; color: #cbd5e1; z-index: 10; pointer-events: none;">
-    <div style="display: flex; align-items: center; gap: 6px;">
-      <span style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #00e5ff; box-shadow: 0 0 6px #00e5ff;"></span>
-      Dış Evrenakı Gradyanı
+  <div id="app-layout">
+    <div id="top-bar">
+      <div class="btn-group" id="ui-container">
+        <button class="active" onclick="window.setShape3d('tetra', this)">Piramit</button>
+        <button onclick="window.setShape3d('cube', this)">Küp</button>
+        <button onclick="window.setShape3d('cylinder', this)">Silindir</button>
+        <button onclick="window.setShape3d('sphere', this)">Küre</button>
+      </div>
+      <div class="legend-row">
+        <div class="legend-item">
+          <span class="legend-dot" style="background: #00e5ff; box-shadow: 0 0 6px #00e5ff;"></span>
+          Dış Evrenakı Gradyanı
+        </div>
+        <div class="legend-item">
+          <span class="legend-dot" style="background: #8b0099; box-shadow: 0 0 6px #8b0099;"></span>
+          İç Evrenakı Gradyanı
+        </div>
+      </div>
     </div>
-    <div style="display: flex; align-items: center; gap: 6px;">
-      <span style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #8b0099; box-shadow: 0 0 6px #8b0099;"></span>
-      İç Evrenakı Gradyanı
+
+    <div id="canvas-container"></div>
+
+    <div id="infoText3d">
+      <strong>Piramit (Üçgenin 3D'si - Tetrahedron):</strong> Uzayda asimetrik basınç gölgelenmesinin en belirgin 3D örneğidir. Dört sivri uç (köşe) aerodinamik olarak akışı yararken, geniş düz yüzeyler devasa vakum cepleri oluşturur. Kendi kendine yönelim (oryantasyon) ve itki kazanır.
     </div>
-  </div>
-  
-  <div id="infoText3d">
-    <strong>Piramit (Üçgenin 3D'si - Tetrahedron):</strong> Uzayda asimetrik basınç gölgelenmesinin en belirgin 3D örneğidir. Dört sivri uç (köşe) aerodinamik olarak akışı yararken, geniş düz yüzeyler devasa vakum cepleri oluşturur. Kendi kendine yönelim (oryantasyon) ve itki kazanır.
   </div>
 
   <!-- Local and CDN Fallbacks for Three.js and OrbitControls -->
@@ -67,10 +159,12 @@
       torus: "<strong>Torus (Halkanın 3D'si):</strong> Dış yüzeyi klasik bir bulut oluştururken, ortasındaki 3 boyutlu tünelde (delikte) Evrenakı akışı hapsolup sıkışarak şiddetli bir enerji/basınç girdabı (jet ekseni) meydana getirir. Kara delik yığılma disklerinin 3D modelidir."
     };
 
+    const container = document.getElementById('canvas-container');
+
     function getDimensions() {
-      let w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth || 800;
-      let h = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight || 500;
-      return { w: Math.max(w, 200), h: Math.max(h, 200) };
+      let w = container.clientWidth || window.innerWidth || 800;
+      let h = container.clientHeight || window.innerHeight || 400;
+      return { w: Math.max(w, 200), h: Math.max(h, 150) };
     }
 
     let dim = getDimensions();
@@ -79,22 +173,21 @@
     scene.background = new THREE.Color(0x050505);
 
     const camera = new THREE.PerspectiveCamera(45, dim.w / dim.h, 0.1, 1000);
-    // Position camera so model sits nicely in upper-middle viewport
-    camera.position.set(0, 2.5, 17);
+    camera.position.set(0, 0, 16);
 
     let renderer;
     try {
       renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: "high-performance" });
       renderer.setSize(dim.w, dim.h);
       renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
-      document.body.appendChild(renderer.domElement);
+      container.appendChild(renderer.domElement);
     } catch (e) {
       document.getElementById('infoText3d').innerHTML += `<br><br><span style="color:red">SİSTEM HATASI (WebGL): Cihazınızda 3D hızlandırma başlatılamadı. (${e.message})</span>`;
     }
 
     if (!renderer) {
       window.setShape3d = function(type, btn) {
-        document.querySelectorAll('#ui-container button').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.btn-group button').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
         document.getElementById('infoText3d').innerHTML = infos[type] + "<br><br><span style='color:red'>SİSTEM HATASI: WebGL desteklenmediği için 3D görsel yüklenemedi.</span>";
       };
@@ -108,7 +201,7 @@
       controls.dampingFactor = 0.05;
       controls.autoRotate = true;
       controls.autoRotateSpeed = 1.0;
-      controls.target.set(0, 1.2, 0); // Focus target shifted slightly up
+      controls.target.set(0, 0, 0);
     }
 
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.3);
@@ -227,7 +320,7 @@
     createShape('tetra');
 
     window.setShape3d = function(type, btn) {
-      document.querySelectorAll('#ui-container button').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.btn-group button').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       document.getElementById('infoText3d').innerHTML = infos[type];
       createShape(type);
@@ -241,7 +334,8 @@
     }
 
     window.addEventListener('resize', handleResize);
-    setTimeout(handleResize, 300);
+    setTimeout(handleResize, 100);
+    setTimeout(handleResize, 500);
 
     let time = 0;
     function animate() {
