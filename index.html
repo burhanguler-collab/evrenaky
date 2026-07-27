@@ -171,7 +171,7 @@
                             <i data-lucide="book-open"></i><span>Kitap Oku</span>
                         </button>
                         <button id="tab-sim" class="tab-btn" onclick="switchTab('sim')">
-                            <i data-lucide="activity"></i><span>4D Simülasyon</span>
+                            <i data-lucide="cpu"></i><span>Simülasyonlar</span>
                         </button>
                         <button id="tab-forum" class="tab-btn" onclick="switchTab('forum')">
                             <i data-lucide="messages-square"></i><span>Tartışma Forumu</span>
@@ -219,51 +219,10 @@
                 <div id="progress-bar"></div>
             </div>
 
-            <!-- Viewport Area -->
-            <main id="main-viewport">
-                
-                <!-- Tab 1: Book Reader -->
+            <!-- Main Dynamic Container -->
+            <main id="main-container">
+                <!-- Tab 1: Book View (Markdown Content) -->
                 <section id="pane-book" class="tab-pane active">
-                    <div id="book-content-container">
-                        
-                        <!-- Splash Screen / Home View -->
-                        <div id="home-view" class="fade-in">
-                            <div class="hero-section">
-                                <div class="hero-actions">
-                                    <button class="btn btn-primary" onclick="loadChapter('ozet')" style="background-color: var(--neon-magenta); border-color: var(--neon-magenta);">
-                                        <i data-lucide="book"></i> Kitabın Özeti
-                                    </button>
-                                    <button class="btn btn-primary" onclick="loadChapter('bolum_01')">
-                                        <i data-lucide="book-open"></i> Okumaya Başla
-                                    </button>
-                                    <button class="btn btn-peer-review" onclick="loadChapter('duzeltme')">
-                                        <i data-lucide="shield-check"></i> Hakem Değerlendirmeleri
-                                    </button>
-                                    <button class="btn btn-secondary" onclick="switchTab('sim')">
-                                        <i data-lucide="cpu"></i> Simülasyonu Çalıştır
-                                    </button>
-                                </div>
-                                
-                                <div class="hero-badge">YENİ KOZMOLOJİK PARADİGMA</div>
-                                <h1 class="hero-title">Evrenakı Teorisi</h1>
-                                <p class="hero-subtitle">Uzay boşluğu bir hiçlik değil; Compton frekansında dönen parçacıklar ve süper-akışkan bir okyanustur.</p>
-                            </div>
-
-                            <div class="features-diagram">
-                                <!-- Top Box -->
-                                <div class="diagram-top">
-                                    <div class="only-these-badge">
-                                        EVRENAKI TEORİSİ'NİN ANA UNSURLARI
-                                        <div class="badge-subtext">SADECE BUNLAR!</div>
-                                    </div>
-                                </div>
-                                
-                                <!-- Connector SVG Lines / Arrows -->
-                                <div class="diagram-connectors">
-                                    <svg viewBox="0 0 400 90" preserveAspectRatio="none">
-                                        <defs>
-                                            <!-- Glow Filters -->
-                                            <filter id="glow-blue" x="-20%" y="-20%" width="140%" height="140%">
                                                 <feGaussianBlur stdDeviation="2.5" result="blur" />
                                                 <feMerge>
                                                     <feMergeNode in="blur" />
@@ -377,20 +336,53 @@
                     </div>
                 </section>
                 
-                <!-- Tab 2: Simulation Viewport -->
+                <!-- Tab 2: Simulation Hub Viewport & Gallery -->
                 <section id="pane-sim" class="tab-pane">
-                    <div class="simulation-container">
-                        <div class="simulation-header">
-                            <div class="sim-title">
-                                <h2>Etkileşimli 4D Cosmofluid Simülasyonu</h2>
-                                <p>Mikro girdapların merkezcil itim (kütleçekim) ile birikerek makro bir küresel cisim oluşturma sürecini canlı izleyin.</p>
+                    <div class="sim-hub-container">
+                        <!-- Hub Header & Active Player View -->
+                        <div class="sim-active-player" id="sim-active-player">
+                            <div class="sim-player-header">
+                                <div class="sim-player-info">
+                                    <span class="sim-category-badge badge-magenta" id="sim-active-badge">4D & KOZMOLOJİ</span>
+                                    <h2 id="sim-active-title">4D İzdüşüm ve Hiper-Küre Akışkan Tüneli</h2>
+                                    <p id="sim-active-desc">4. Boyut hiper-küre kesitlerinin 3D uzaydaki küresel sönümleme ve akışkan tüneli kinematiği.</p>
+                                </div>
+                                <div class="sim-player-actions">
+                                    <button class="btn btn-secondary" id="sim-btn-chapter" onclick="openActiveSimChapter()">
+                                        <i data-lucide="book-open"></i> <span id="sim-chapter-name">Bölümü Oku</span>
+                                    </button>
+                                    <button class="btn btn-secondary" onclick="reloadSimulation()">
+                                        <i data-lucide="rotate-ccw"></i> Yeniden Yükle
+                                    </button>
+                                </div>
                             </div>
-                            <button class="btn btn-secondary" onclick="reloadSimulation()">
-                                <i data-lucide="rotate-ccw"></i> Simülasyonu Yeniden Yükle
-                            </button>
+                            <div class="sim-iframe-wrapper">
+                                <iframe id="sim-frame" src="Simulasyon/boyut_simulasyonu.html" frameborder="0"></iframe>
+                            </div>
                         </div>
-                        <div class="iframe-wrapper">
-                            <iframe id="sim-frame" src="Simulasyon/eksenel_itim_oto.html" frameborder="0"></iframe>
+
+                        <!-- Simulation Gallery Grid & Filter Area -->
+                        <div class="sim-gallery-section">
+                            <div class="sim-gallery-header">
+                                <div class="sim-gallery-title">
+                                    <h3><i data-lucide="cpu"></i> Simülasyon Laboratuvarı Kataloğu</h3>
+                                    <p>Teorinin tüm etkileşimli modellerini inceleyin. Çalıştırmak istediğiniz simülasyona tıklayın.</p>
+                                </div>
+                                
+                                <!-- Category Filter Tabs -->
+                                <div class="sim-filter-tabs" id="sim-filter-tabs">
+                                    <button class="sim-filter-btn active" onclick="filterSimulations('all', this)">Tümü (12)</button>
+                                    <button class="sim-filter-btn" onclick="filterSimulations('kozmoloji', this)">4D & Kozmoloji</button>
+                                    <button class="sim-filter-btn" onclick="filterSimulations('geometri', this)">Geometri & Gradyanlar</button>
+                                    <button class="sim-filter-btn" onclick="filterSimulations('optik', this)">Optik & Zerre</button>
+                                    <button class="sim-filter-btn" onclick="filterSimulations('gok', this)">Gök Mekaniği</button>
+                                </div>
+                            </div>
+
+                            <!-- Cards Grid Container -->
+                            <div class="sim-cards-grid" id="sim-cards-grid">
+                                <!-- Cards injected dynamically via JS -->
+                            </div>
                         </div>
                     </div>
                 </section>

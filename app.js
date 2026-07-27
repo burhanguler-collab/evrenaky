@@ -551,7 +551,7 @@ function handleRoute() {
     }
 }
 
-// Switch between Tabs (Book Reading vs 4D Simulation view)
+// Switch between Tabs (Book Reading vs Simulation Hub view)
 function switchTab(tabId) {
     document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
     document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.remove('active'));
@@ -567,6 +567,7 @@ function switchTab(tabId) {
         document.getElementById('tab-sim').classList.add('active');
         document.getElementById('pane-sim').classList.add('active');
         window.location.hash = '#sim';
+        initSimulationHub();
     } else if (tabId === 'forum') {
         document.getElementById('tab-forum').classList.add('active');
         document.getElementById('pane-forum').classList.add('active');
@@ -585,16 +586,240 @@ function showTab(tabId) {
     } else if (tabId === 'sim') {
         document.getElementById('tab-sim').classList.add('active');
         document.getElementById('pane-sim').classList.add('active');
+        initSimulationHub();
     } else if (tabId === 'forum') {
         document.getElementById('tab-forum').classList.add('active');
         document.getElementById('pane-forum').classList.add('active');
     }
 }
 
-// Reload iframe content of simulation
+// Reload iframe content of active simulation
 function reloadSimulation() {
     const frame = document.getElementById('sim-frame');
-    frame.src = frame.src;
+    if (frame) frame.src = frame.src;
+}
+
+// SIMULATION LABORATORY CATALOG REGISTRY
+const simulationsList = [
+    {
+        id: 'sim_boyut_4d',
+        title: '4D İzdüşüm ve Hiper-Küre Akışkan Tüneli',
+        category: 'kozmoloji',
+        badgeClass: 'badge-magenta',
+        badgeText: '4D & KOZMOLOJİ',
+        file: 'Simulasyon/boyut_simulasyonu.html',
+        chapterId: 'akademik_01_04',
+        chapterName: '1.4 Dördüncü Boyut ve İzdüşüm',
+        desc: '4. Boyut hiper-küre kesitlerinin 3D uzaydaki küresel sönümleme ve akışkan tüneli kinematiğini interaktif olarak deneyimleyin.'
+    },
+    {
+        id: 'sim_3d_gradyan',
+        title: '3D Klasik Geometrik Şekillerin Gradyanları',
+        category: 'geometri',
+        badgeClass: 'badge-blue',
+        badgeText: 'GEOMETRİ & GRADYANLAR',
+        file: 'Metin/bolum_26_3d.html',
+        chapterId: 'akademik_03_03',
+        chapterName: '3.3 Mikrodan Makroya Evrenakı',
+        desc: 'Piramit, Küp, Silindir ve Küre kütlelerinin uzay dokusunda yarattığı 3 boyutlu hacimsel vakum kılıfları.'
+    },
+    {
+        id: 'sim_2d_gradyan',
+        title: '2D Geometrik Kütle Gradyan Haritası',
+        category: 'geometri',
+        badgeClass: 'badge-blue',
+        badgeText: 'GEOMETRİ & GRADYANLAR',
+        file: 'Metin/bolum_26_2d.html',
+        chapterId: 'akademik_03_03',
+        chapterName: '3.3 Mikrodan Makroya Evrenakı',
+        desc: 'Kare, Üçgen, Çubuk ve Daire kütlelerinin 2D basınç gölgeleri ve asimetrik yönelim itki vektörleri.'
+    },
+    {
+        id: 'sim_eksenel_itim',
+        title: 'Eksenel Kütle-İtim (Centripetal Push)',
+        category: 'kozmoloji',
+        badgeClass: 'badge-magenta',
+        badgeText: '4D & KOZMOLOJİ',
+        file: 'Simulasyon/eksenel_itim_oto.html',
+        chapterId: 'akademik_03_04',
+        chapterName: '3.4 Kütle-İtim Mekanizması',
+        desc: 'Mikro girdapların merkezcil basınç ile kütleyi sıkıştırarak makro kütleçekim alanını oluşturma süreci.'
+    },
+    {
+        id: 'sim_michelson_90',
+        title: 'Michelson 90° İnterferometre Simülatörü',
+        category: 'optik',
+        badgeClass: 'badge-green',
+        badgeText: 'OPTİK & ZERRE',
+        file: 'Simulasyon/michelson_90.html',
+        chapterId: 'akademik_02_07',
+        chapterName: '2.7 Michelson İnterferometresi',
+        desc: 'Süper-akışkan ortamda ışık sürüklenmesi ve kayıpsız girişim saçakları simülasyonu.'
+    },
+    {
+        id: 'sim_mach_zehnder',
+        title: 'Mach-Zehnder İnterferometresi',
+        category: 'optik',
+        badgeClass: 'badge-green',
+        badgeText: 'OPTİK & ZERRE',
+        file: 'Simulasyon/mach_zehnder.html',
+        chapterId: 'akademik_02_08',
+        chapterName: '2.8 Çift Yarığın Deşifresi',
+        desc: 'Faz kayması ve fotonsuz Zerre dalga paketi yönlendirme kinematiği.'
+    },
+    {
+        id: 'sim_ciftyarik',
+        title: 'Çift Yarık ve Kuantum Silici (Which-Path)',
+        category: 'optik',
+        badgeClass: 'badge-green',
+        badgeText: 'OPTİK & ZERRE',
+        file: 'Simulasyon/ciftyarik_silici.html',
+        chapterId: 'akademik_02_10',
+        chapterName: '2.10 Kuantum Anomalileri',
+        desc: 'Tek kenar kırınımı ve kuantum potansiyel engeli deşifre simülasyonu.'
+    },
+    {
+        id: 'sim_fresnel_arago',
+        title: 'Fresnel-Arago Girişim Deneyi',
+        category: 'optik',
+        badgeClass: 'badge-green',
+        badgeText: 'OPTİK & ZERRE',
+        file: 'Simulasyon/fresnel_arago.html',
+        chapterId: 'akademik_02_09',
+        chapterName: '2.9 Polarizasyon',
+        desc: 'Polarize ışık demetlerinin akışkan ortamda girişim ve faz davranışları.'
+    },
+    {
+        id: 'sim_ay_yorunge',
+        title: 'Ay Yörünge Dengesi ve Vorteks Kilitlenmesi',
+        category: 'gok',
+        badgeClass: 'badge-yellow',
+        badgeText: 'GÖK MEKANİĞİ',
+        file: 'Simulasyon/ay_yorunge_dengesi.html',
+        chapterId: 'akademik_03_09',
+        chapterName: "3.9 Ay'ın Gizemleri",
+        desc: 'Dünya-Ay sistemindeki ekvatoral girdap ve yörünge kilitlenme dinamiği.'
+    },
+    {
+        id: 'sim_ay_gelgit',
+        title: 'Ay Gelgit ve Elipsoid Şişkinlik',
+        category: 'gok',
+        badgeClass: 'badge-yellow',
+        badgeText: 'GÖK MEKANİĞİ',
+        file: 'Simulasyon/ay_gelgit_sirali.html',
+        chapterId: 'akademik_03_09',
+        chapterName: "3.9 Ay'ın Gizemleri",
+        desc: 'Okyanus gelgitlerinin Evrenakı basınç gradyanı ile açıklanması.'
+    },
+    {
+        id: 'sim_girdap',
+        title: 'Evrenakı Girdap Mekanizması ve Vorteks',
+        category: 'kozmoloji',
+        badgeClass: 'badge-magenta',
+        badgeText: '4D & KOZMOLOJİ',
+        file: 'Simulasyon/evrenaki_girdap_animasyonu.html',
+        chapterId: 'akademik_03_08',
+        chapterName: '3.8 Makro-Girdabın Motoru',
+        desc: 'Makro evren ölçeğinde galaksi ve yıldız sistemlerini döndüren vorteks alanları.'
+    },
+    {
+        id: 'sim_kavrama',
+        title: 'Kavrama ve Kilitlenme Mekanizması',
+        category: 'gok',
+        badgeClass: 'badge-yellow',
+        badgeText: 'GÖK MEKANİĞİ',
+        file: 'Simulasyon/kavrama_kilitlenme_sim.html',
+        chapterId: 'akademik_03_08',
+        chapterName: '3.8 Makro-Girdabın Motoru',
+        desc: 'Dönel kütlelerin Evrenakı akışkanında tork kilitlenmesi ve spin transferi.'
+    }
+];
+
+let activeSimData = simulationsList[0];
+let currentSimFilter = 'all';
+
+function initSimulationHub() {
+    renderSimulationCards(currentSimFilter);
+}
+
+function renderSimulationCards(categoryFilter) {
+    const grid = document.getElementById('sim-cards-grid');
+    if (!grid) return;
+
+    currentSimFilter = categoryFilter;
+
+    let filtered = categoryFilter === 'all' 
+        ? simulationsList 
+        : simulationsList.filter(s => s.category === categoryFilter);
+
+    grid.innerHTML = filtered.map(sim => `
+        <div class="sim-card ${sim.id === activeSimData.id ? 'active-card' : ''}" onclick="selectSimulation('${sim.id}')">
+            <div class="sim-card-header">
+                <span class="sim-category-badge ${sim.badgeClass}">${sim.badgeText}</span>
+                <i data-lucide="play-circle" style="width:18px;height:18px;color:var(--neon-blue);"></i>
+            </div>
+            <div class="sim-card-body">
+                <h4>${sim.title}</h4>
+                <p>${sim.desc}</p>
+            </div>
+            <div class="sim-card-footer">
+                <span class="sim-card-chapter">${sim.chapterName}</span>
+                <button class="sim-card-run-btn">
+                    Çalıştır <i data-lucide="arrow-right" style="width:12px;height:12px;"></i>
+                </button>
+            </div>
+        </div>
+    `).join('');
+
+    if (window.lucide) {
+        window.lucide.createIcons();
+    }
+}
+
+function filterSimulations(cat, btn) {
+    document.querySelectorAll('.sim-filter-btn').forEach(b => b.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+    renderSimulationCards(cat);
+}
+
+function selectSimulation(simId) {
+    const sim = simulationsList.find(s => s.id === simId);
+    if (!sim) return;
+
+    activeSimData = sim;
+
+    const frame = document.getElementById('sim-frame');
+    if (frame) frame.src = sim.file;
+
+    const badge = document.getElementById('sim-active-badge');
+    if (badge) {
+        badge.className = `sim-category-badge ${sim.badgeClass}`;
+        badge.textContent = sim.badgeText;
+    }
+
+    const title = document.getElementById('sim-active-title');
+    if (title) title.textContent = sim.title;
+
+    const desc = document.getElementById('sim-active-desc');
+    if (desc) desc.textContent = sim.desc;
+
+    const chapterName = document.getElementById('sim-chapter-name');
+    if (chapterName) chapterName.textContent = sim.chapterName;
+
+    // Highlight active card in grid
+    renderSimulationCards(currentSimFilter);
+
+    // Smooth scroll to active player
+    const player = document.getElementById('sim-active-player');
+    if (player) {
+        player.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+}
+
+function openActiveSimChapter() {
+    if (activeSimData && activeSimData.chapterId) {
+        loadChapter(activeSimData.chapterId);
+    }
 }
 
 // Load and Parse Markdown Chapter Contents
