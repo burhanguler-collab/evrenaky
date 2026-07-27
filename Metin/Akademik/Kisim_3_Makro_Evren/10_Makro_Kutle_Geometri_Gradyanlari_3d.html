@@ -173,7 +173,7 @@
       return { w: Math.max(w, 200), h: Math.max(h, 150) };
     }
 
-    // Try WebGL first
+    // Smart Multi-Tier WebGL Renderer initialization for Firefox / Edge / Safari / Chrome
     let webglSuccess = false;
     if (typeof THREE !== 'undefined') {
       try {
@@ -184,97 +184,107 @@
         const camera = new THREE.PerspectiveCamera(45, dim.w / dim.h, 0.1, 1000);
         camera.position.set(0, 0, 16);
 
-        const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-        renderer.setSize(dim.w, dim.h);
-        renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
-        container.appendChild(renderer.domElement);
-
-        let controls;
-        if (typeof THREE.OrbitControls !== 'undefined') {
-          controls = new THREE.OrbitControls(camera, renderer.domElement);
-          controls.enableDamping = true;
-          controls.dampingFactor = 0.05;
-          controls.autoRotate = true;
-          controls.autoRotateSpeed = 1.0;
+        // Tier 1: Try full WebGL with antialiasing & default power
+        let renderer;
+        try {
+          renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: "default", failIfMajorPerformanceCaveat: false });
+        } catch (e1) {
+          // Tier 2: Try WebGL without antialiasing (fixes Firefox WebGL context creation on certain GPUs)
+          renderer = new THREE.WebGLRenderer({ antialias: false, alpha: true, powerPreference: "default", failIfMajorPerformanceCaveat: false });
         }
 
-        const ambientLight = new THREE.AmbientLight(0xffffff, 0.3);
-        scene.add(ambientLight);
+        if (renderer) {
+          renderer.setSize(dim.w, dim.h);
+          renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+          container.appendChild(renderer.domElement);
 
-        const pointLight = new THREE.PointLight(0xffffff, 1.2);
-        pointLight.position.set(10, 15, 10);
-        scene.add(pointLight);
-
-        let currentGroup = new THREE.Group();
-        scene.add(currentGroup);
-
-        const coreMaterial = new THREE.MeshPhongMaterial({
-          color: 0x2d004d, emissive: 0x1a0033, shininess: 80, specular: 0x00e5ff, transparent: true, opacity: 0.65
-        });
-        const innerMaterial = new THREE.MeshBasicMaterial({
-          color: 0x8b0099, transparent: true, opacity: 0.08, blending: THREE.AdditiveBlending, side: THREE.DoubleSide, depthWrite: false
-        });
-        const shellMaterial = new THREE.MeshBasicMaterial({
-          color: 0x00e5ff, transparent: true, opacity: 0.012, blending: THREE.AdditiveBlending, side: THREE.FrontSide, depthWrite: false
-        });
-
-        function createShapeWebGL(type) {
-          scene.remove(currentGroup);
-          currentGroup = new THREE.Group();
-          let coreGeometry;
-          let shellCount = 35;
-          let shellScaleStep = 0.05; 
-
-          if (type === 'sphere') {
-            coreGeometry = new THREE.SphereGeometry(2, 32, 32);
-          } else if (type === 'cube') {
-            coreGeometry = new THREE.BoxGeometry(3.2, 3.2, 3.2);
-            shellScaleStep = 0.04;
-          } else if (type === 'cylinder') {
-            coreGeometry = new THREE.CylinderGeometry(1.1, 1.1, 5.5, 32);
-            shellScaleStep = 0.04;
-          } else if (type === 'tetra') {
-            coreGeometry = new THREE.TetrahedronGeometry(3.0, 0);
-            shellScaleStep = 0.04;
+          let controls;
+          if (typeof THREE.OrbitControls !== 'undefined') {
+            controls = new THREE.OrbitControls(camera, renderer.domElement);
+            controls.enableDamping = true;
+            controls.dampingFactor = 0.05;
+            controls.autoRotate = true;
+            controls.autoRotateSpeed = 1.0;
           }
 
-          for (let i = 1; i <= 20; i++) {
-            const innerMesh = new THREE.Mesh(coreGeometry, innerMaterial);
-            const s = 1.0 - (i * 0.045);
-            if (s > 0) { innerMesh.scale.set(s, s, s); currentGroup.add(innerMesh); }
-          }
-          for (let i = 1; i <= shellCount; i++) {
-            const shellMesh = new THREE.Mesh(coreGeometry, shellMaterial);
-            const s = 1 + i * shellScaleStep;
-            shellMesh.scale.set(s, s, s);
-            currentGroup.add(shellMesh);
-          }
+          const ambientLight = new THREE.AmbientLight(0xffffff, 0.3);
+          scene.add(ambientLight);
+
+          const pointLight = new THREE.PointLight(0xffffff, 1.2);
+          pointLight.position.set(10, 15, 10);
+          scene.add(pointLight);
+
+          let currentGroup = new THREE.Group();
           scene.add(currentGroup);
-        }
 
-        window.switchShapeWebGL = createShapeWebGL;
-        createShapeWebGL('tetra');
+          const coreMaterial = new THREE.MeshPhongMaterial({
+            color: 0x2d004d, emissive: 0x1a0033, shininess: 80, specular: 0x00e5ff, transparent: true, opacity: 0.65
+          });
+          const innerMaterial = new THREE.MeshBasicMaterial({
+            color: 0x8b0099, transparent: true, opacity: 0.08, blending: THREE.AdditiveBlending, side: THREE.DoubleSide, depthWrite: false
+          });
+          const shellMaterial = new THREE.MeshBasicMaterial({
+            color: 0x00e5ff, transparent: true, opacity: 0.012, blending: THREE.AdditiveBlending, side: THREE.FrontSide, depthWrite: false
+          });
 
-        function handleResize() {
-          const d = getDimensions();
-          camera.aspect = d.w / d.h;
-          camera.updateProjectionMatrix();
-          renderer.setSize(d.w, d.h);
-        }
-        window.addEventListener('resize', handleResize);
-        setTimeout(handleResize, 200);
+          function createShapeWebGL(type) {
+            scene.remove(currentGroup);
+            currentGroup = new THREE.Group();
+            let coreGeometry;
+            let shellCount = 35;
+            let shellScaleStep = 0.05; 
 
-        let time = 0;
-        function animateWebGL() {
-          requestAnimationFrame(animateWebGL);
-          if (controls) controls.update();
-          time += 0.02;
-          const s = 1 + Math.sin(time) * 0.01;
-          currentGroup.scale.set(s, s, s);
-          renderer.render(scene, camera);
+            if (type === 'sphere') {
+              coreGeometry = new THREE.SphereGeometry(2, 32, 32);
+            } else if (type === 'cube') {
+              coreGeometry = new THREE.BoxGeometry(3.2, 3.2, 3.2);
+              shellScaleStep = 0.04;
+            } else if (type === 'cylinder') {
+              coreGeometry = new THREE.CylinderGeometry(1.1, 1.1, 5.5, 32);
+              shellScaleStep = 0.04;
+            } else if (type === 'tetra') {
+              coreGeometry = new THREE.TetrahedronGeometry(3.0, 0);
+              shellScaleStep = 0.04;
+            }
+
+            for (let i = 1; i <= 20; i++) {
+              const innerMesh = new THREE.Mesh(coreGeometry, innerMaterial);
+              const s = 1.0 - (i * 0.045);
+              if (s > 0) { innerMesh.scale.set(s, s, s); currentGroup.add(innerMesh); }
+            }
+            for (let i = 1; i <= shellCount; i++) {
+              const shellMesh = new THREE.Mesh(coreGeometry, shellMaterial);
+              const s = 1 + i * shellScaleStep;
+              shellMesh.scale.set(s, s, s);
+              currentGroup.add(shellMesh);
+            }
+            scene.add(currentGroup);
+          }
+
+          window.switchShapeWebGL = createShapeWebGL;
+          createShapeWebGL('tetra');
+
+          function handleResize() {
+            const d = getDimensions();
+            camera.aspect = d.w / d.h;
+            camera.updateProjectionMatrix();
+            renderer.setSize(d.w, d.h);
+          }
+          window.addEventListener('resize', handleResize);
+          setTimeout(handleResize, 200);
+
+          let time = 0;
+          function animateWebGL() {
+            requestAnimationFrame(animateWebGL);
+            if (controls) controls.update();
+            time += 0.02;
+            const s = 1 + Math.sin(time) * 0.01;
+            currentGroup.scale.set(s, s, s);
+            renderer.render(scene, camera);
+          }
+          animateWebGL();
+          webglSuccess = true;
         }
-        animateWebGL();
-        webglSuccess = true;
       } catch (e) {
         console.warn("WebGL initialization failed, switching to 2D Canvas Fallback:", e);
       }
@@ -360,10 +370,8 @@
 
       function rotate3D(pt, ax, ay) {
         let x = pt[0], y = pt[1], z = pt[2];
-        // Rotate Y
         let x1 = x * Math.cos(ay) + z * Math.sin(ay);
         let z1 = -x * Math.sin(ay) + z * Math.cos(ay);
-        // Rotate X
         let y2 = y * Math.cos(ax) - z1 * Math.sin(ax);
         let z2 = y * Math.sin(ax) + z1 * Math.cos(ax);
         return [x1, y2, z2];
