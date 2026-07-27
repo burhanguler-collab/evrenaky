@@ -11,7 +11,7 @@ Aşağıdaki on kriz başlığı dağınık bir liste değildir; dört aile alt�
 
 ### Animasyon 1.2.1: Fizik Krizleri Haritası
 
-<iframe src="Simulasyon/kriz_haritasi.html" width="100%" frameborder="0" style="height: min(600px, 75vh); border: 1px solid rgba(0, 240, 255, 0.2); border-radius: 8px; margin-top: 20px; margin-bottom: 30px;"></iframe>
+<iframe src="Simulasyon/kriz_haritasi.html" width="100%" frameborder="0" style="height: 600px; min-height: 600px; border: 1px solid rgba(0, 240, 255, 0.2); border-radius: 8px; margin-top: 20px; margin-bottom: 30px;"></iframe>
 
 ## 1.2.1 Aracısız Etkileşim Sorunu ve "Horror Vacui"
 

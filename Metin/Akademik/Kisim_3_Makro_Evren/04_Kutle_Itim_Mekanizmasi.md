@@ -215,7 +215,7 @@ Aşağıdaki etkileşimli laboratuvar, kavrama formülünü ($\omega = (1-g)\,\o
 3. **Venüs'ü deneyin (açık iş):** 0,72 AU'da "Venüs geri tepmesi (yoğun atmosfer)" anahtarını açın: ~247 gün TERS çıkar (gerçek: 243 gün, ters). Bu tek girdi türetilmemiştir ve ekranda da dürüstçe "açık iş" olarak etiketlenmiştir.
 4. **Merkez kütleyi büyütün:** Yıldız kütlesi arttıkça $R_c$ çemberinin dışa doğru büyüdüğünü izleyin — daha ağır yıldız, daha geniş bir kavrama bölgesi demektir. Gezegen kütlesini büyütmek serbest dönüşü hızlandırır ($T_{\text{serbest}} \propto m^{-0{,}28}$) ama bu modelde kilidi geciktirmez (hacimsel kuplaj varsayımı; nicel gerekçesi 7.4'te açık kalemdir). Basıklığı artırmak ise günberiyi içeri çeker ($a(1-e)$) — dıştaki bir gezegen bile yeterince basık yörüngeyle pençeye yakalanabilir.
 
-<iframe src="Simulasyon/kavrama_kilitlenme_sim.html" width="100%" frameborder="0" style="height: 720px; border: 1px solid rgba(0, 240, 255, 0.2); border-radius: 8px; margin-top: 10px; margin-bottom: 30px;"></iframe>
+<iframe src="Simulasyon/kavrama_kilitlenme_sim.html" width="100%" frameborder="0" style="height: 720px; min-height: 720px; border: 1px solid rgba(0, 240, 255, 0.2); border-radius: 8px; margin-top: 10px; margin-bottom: 30px;"></iframe>
 
 Evrenakı akışkanında yörüngeleri var eden şey salt "kütle" değildir; kütlenin dördüncü boyut motorlarının, içinde bulunduğu ortam girdabı karşısında bulabildiği **serbest dönüş ifadesidir**.
 

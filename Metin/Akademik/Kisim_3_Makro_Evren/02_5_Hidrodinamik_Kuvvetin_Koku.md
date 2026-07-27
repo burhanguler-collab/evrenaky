@@ -30,7 +30,7 @@ Burada çok kritik bir ayrım vardır: Makro kütle de, kütlenin içinden geçe
 *İzleme rehberi:* Animasyonda yukarıda numaralanan beş kuvvetin her biri görselleştirilmiştir; izlerken şu üç eşleştirmeye dikkat ediniz: (1) **Salınım kökenli çift** — nükleon pompalarının dışa püskürttüğü akışkana karşı çevrenin her yönden uyguladığı geri-basınç (Kuvvet 1: Kütle İtimi) ve iki kütle arasında düşen basıncın yanaklardan sıkıştırmayla dengelenmesi (Kuvvet 2: Gelgit). (2) **Dönüş kökenli üçlü** — kütleden kat kat hızlı dönen akışkan halkası (Kuvvet 3: Vorteks Sürüklenmesi), ekvator deplasmanının eksene doğru çektiği basınç (Kuvvet 4: Eksenel İtim) ve kutuplardan ekvatora inen ezici gradyan (Kuvvet 5: Yanal İtim — cisimlerin basıklığının sebebi). (3) Beş okun da kütlenin *dışındaki* akışkandan kaynaklandığına — yani sahnede hiçbir "çeken" ajan bulunmadığına — dikkat ediniz.
 
 <div style="background: #0b0f19; padding: 0; border-radius: 12px; border: 1px solid #1f2937; box-shadow: 0 10px 30px rgba(0,240,255,0.1); margin: 30px 0; overflow: hidden;">
-  <iframe src="Metin/Akademik/Kisim_3_Makro_Evren/13_5_Kuvvet_Laboratuvari.html" width="100%" frameborder="0" style="height: min(600px, 75vh); display: block;"></iframe>
+  <iframe src="Metin/Akademik/Kisim_3_Makro_Evren/13_5_Kuvvet_Laboratuvari.html" width="100%" frameborder="0" style="height: 600px; min-height: 600px; display: block;"></iframe>
 </div>
 
 ## 3.2.3 Kuvvetlerin Gözlemsel Sınıflandırması: İçsel Dinamikler ve Makro Hareket

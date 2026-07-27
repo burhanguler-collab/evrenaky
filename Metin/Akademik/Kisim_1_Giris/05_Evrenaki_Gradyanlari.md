@@ -399,4 +399,4 @@ Bu sözlük tamamlandığına göre kitabın programı netleşmiştir: Kısım 2
 3. **Makro Fırça:** Sürükleyerek büyük, biçimli bir kütle çizin; gradyanın kütle *miktarına* değil, kütlenin **şekline ve dağılımına** nasıl duyarlı olduğunu görün (Bölüm 1.5.4'teki geometri vurgusu).
 4. **İkili Sistem:** İki ayrı kütle yerleştirip aralarındaki **ortak gradyanın** (iki referans seviyesinin) nasıl kurulduğunu inceleyin — Bölüm 1.5.4'teki ikili sistemler maddesinin görsel karşılığı budur.
 
-<iframe src="gradient_sim.html" width="100%" frameborder="0" style="height: 800px; border: 1px solid #2a355a; border-radius: 8px; margin-top: 20px;"></iframe>
+<iframe src="gradient_sim.html" width="100%" frameborder="0" style="height: 800px; min-height: 800px; border: 1px solid #2a355a; border-radius: 8px; margin-top: 20px;"></iframe>

@@ -2206,12 +2206,17 @@ body.light-theme #btn-theme-toggle .moon-icon {
     margin: 20px 0;
 }
 
-.markdown-body img, 
-.markdown-body svg, 
-.markdown-body iframe,
+.markdown-body img,
+.markdown-body svg,
 .markdown-body video {
     max-width: 100% !important;
     height: auto !important;
+}
+
+/* iframe'lerde height: auto satır içi yüksekliği ezip animasyonları
+   ~150px'e daraltıyordu; iframe yüksekliği satır içi stilden gelir. */
+.markdown-body iframe {
+    max-width: 100% !important;
 }
 
 .katex-display {

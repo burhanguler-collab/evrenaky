@@ -70,4 +70,4 @@ Dalga boyu ve frekans kavramlarının bütün ölçülebilir içeriği Zerre Kat
 2. **Ortam Yoğunluğu:** Yoğunluğu düşürdükçe katarın çizgisel hızının nasıl azaldığını (patinaj) gözlemleyin — ışık hızının yerel yoğunluğa bağlılığının (4. postülat) doğrudan canlandırması.
 3. **İkisini birlikte değiştirin:** Frekans kaynağın, hız ise ortamın özelliğidir — katarın enerjisiyle (vuruş ritmi) ilerleme hızının bağımsız iki büyüklük olduğunu görün.
 
-<iframe src="zerre_sim.html" width="100%" frameborder="0" style="height: min(500px, 75vh); border: 1px solid #2a355a; border-radius: 8px; margin-top: 20px;"></iframe>
+<iframe src="zerre_sim.html" width="100%" frameborder="0" style="height: 500px; min-height: 500px; border: 1px solid #2a355a; border-radius: 8px; margin-top: 20px;"></iframe>

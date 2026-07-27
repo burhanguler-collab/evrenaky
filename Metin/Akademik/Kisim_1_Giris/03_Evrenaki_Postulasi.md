@@ -306,7 +306,7 @@ Newton gök cisimlerini birbirine çeken tekil bir kuvvet önermiş (Newton, 168
 
 ### Animasyon 1.3.3: Dokuz Postülat Turu
 
-<iframe src="Simulasyon/dokuz_postulat_turu.html" width="100%" frameborder="0" style="height: min(600px, 75vh); border: 1px solid rgba(0, 240, 255, 0.2); border-radius: 8px; margin-top: 20px; margin-bottom: 30px;"></iframe>
+<iframe src="Simulasyon/dokuz_postulat_turu.html" width="100%" frameborder="0" style="height: 600px; min-height: 600px; border: 1px solid rgba(0, 240, 255, 0.2); border-radius: 8px; margin-top: 20px; margin-bottom: 30px;"></iframe>
 
 ## 1.3.3 Postülatların Statüsü ve Sınanabilirlik
 

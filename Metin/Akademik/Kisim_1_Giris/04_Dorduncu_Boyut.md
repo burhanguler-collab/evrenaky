@@ -290,7 +290,7 @@ Aşağıdaki simülasyon, epür analizinde çıkarılan üç temel durumu tek bi
 
 Kaydırıcılarla iki dönüşün açısal hızını (ω₁: 3B bileşeni, ω₂: W bileşeni) ve Durum C için koni açısını değiştirebilirsiniz.
 
-<iframe src="Metin/5d_sim.html" width="100%" frameborder="0" style="height: min(720px, 75vh); border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.8); margin: 20px 0; border: 1px solid #333; background: #0b0f19;"></iframe>
+<iframe src="Metin/5d_sim.html" width="100%" frameborder="0" style="height: 720px; min-height: 720px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.8); margin: 20px 0; border: 1px solid #333; background: #0b0f19;"></iframe>
 
 ### Simülasyonda İzlenmesi Gerekenler
 

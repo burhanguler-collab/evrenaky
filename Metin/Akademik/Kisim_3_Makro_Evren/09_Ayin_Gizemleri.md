@@ -70,7 +70,7 @@ Ancak Ay hemen burnumuzun dibindedir. Ay'ın Evrenakı akışkanında yarattığ
 
 *İzleme rehberi:* Animasyon, gelgiti aşama aşama kurar; şu üç noktayı izleyiniz: (1) Okyanusların Ay tarafından "çekilmediğini" — kabarmanın, yanaklardan gelen çembersel sıkıştırmanın suyu düşük basınçlı eksene (Ay yönüne ve tam tersine) fışkırtmasıyla oluştuğunu. (2) Şişkinlik ekseninin Ay'la tam hizada olmadığını — Dünya'nın hızlı dönüşünün kabarmayı Ay'ın 10-15 derece önüne taşıdığını (NASA gözlemleriyle uyumlu kayma). (3) Sıkıştırmanın gücünün toplam kuvvetle değil gradyanla ($1/r^3$) ölçeklendiğini — Güneş'in 27 milyon katlık kütle avantajına rağmen etkisinin Ay'ın ancak yarısı kalmasının sebebi budur.
 
-<iframe src="Simulasyon/ay_gelgit_sirali.html" width="100%" scrolling="no" style="height: min(520px, 75vh); border: 1px solid #404040; border-radius:12px; margin-top:20px; margin-bottom:20px; box-shadow:0 10px 30px rgba(0,0,0,0.8); overflow: hidden; background-color: #121212;"></iframe>
+<iframe src="Simulasyon/ay_gelgit_sirali.html" width="100%" scrolling="no" style="height: 520px; min-height: 520px; border: 1px solid #404040; border-radius:12px; margin-top:20px; margin-bottom:20px; box-shadow:0 10px 30px rgba(0,0,0,0.8); overflow: hidden; background-color: #121212;"></iframe>
 
 ## 3.9.3 Ay'ın Yörünge Hassasiyeti (Ekvator Düzlemleri ve Akışkan Yoğunluğu)
 
@@ -91,7 +91,7 @@ Ay, adeta akışkan mekaniğindeki bir sörfçü gibi, Güneş ve Dünya girdapl
 
 *İzleme rehberi:* Sahnede iki düzlem yarışır: Dünya vorteksinin en yoğun olduğu **ekvator düzlemi** ile Güneş vorteksinin makro tabakası olan **ekliptik**. Şunlara dikkat ediniz: (1) Ay'ın iki düzlemden birine oturmayıp, iki akıntının itmelerinin birbirini sönümlediği ara hatta — yaklaşık 5 derecelik optimum yoğunluk kanalına — yerleştiğine. (2) Bu kanalın sabit bir ray değil, iki girdabın dönemsel yoğunluk dalgalanmalarıyla birlikte nefes alan **canlı bir denge** olduğuna (librasyon, apsidal yalpalama ve düğüm gerilemesinin kökeni — Bkz. 3.9.6).
 
-<iframe src="Simulasyon/ay_yorunge_dengesi.html" width="100%" scrolling="no" style="height: min(600px, 75vh); border: 1px solid #404040; border-radius:12px; margin-top:20px; margin-bottom:20px; box-shadow:0 10px 30px rgba(0,0,0,0.8); overflow: hidden; background-color: #121212;"></iframe>
+<iframe src="Simulasyon/ay_yorunge_dengesi.html" width="100%" scrolling="no" style="height: 600px; min-height: 600px; border: 1px solid #404040; border-radius:12px; margin-top:20px; margin-bottom:20px; box-shadow:0 10px 30px rgba(0,0,0,0.8); overflow: hidden; background-color: #121212;"></iframe>
 
 ## 3.9.4 Dünya-Ay Sistemi: Mekanik Muhasebenin Çöküşü ve Ay'ın Uzaklaşması
 
