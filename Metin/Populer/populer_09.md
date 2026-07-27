@@ -82,7 +82,7 @@ Evrenakı'nın açıklaması şiirsel: Dünya'nın sıvı girdabı, Ay'ın kabu�
 
 Dikkat ettiniz mi? Satürn'ün kâğıt ince halkası, Ay'ın kilitlenmesi, masconlar, gelgitler, gezegenlerin basıklığı... hepsi **tek bir mekanizmanın** farklı görünümleri: Dönen bir kütlenin, içinde yüzdüğü sıvıya bıraktığı basınç izi. Modern astronomi her biri için ayrı bir kavram, ayrı bir formül, ayrı bir "tesadüf" uydurmak zorunda kaldı. Evrenakı tek bir cümleyle bitiriyor: **Uzay bir sıvıdır ve her dönen cisim onu şekillendirir.**
 
-Peki bütün bunlar sadece güzel bir hikâye mi, yoksa bu "esir/Mai" gerçekten var mı? Sıradaki bölümde tarihin en ünlü bilim insanının — **Einstein'ın kendisinin** — bu sıvının varlığını nasıl itiraf etmek zorunda kaldığını anlatacağız.
+Peki bütün bunlar sadece güzel bir hikâye mi, yoksa bu "esir/Evrenakı" gerçekten var mı? Sıradaki bölümde tarihin en ünlü bilim insanının — **Einstein'ın kendisinin** — bu sıvının varlığını nasıl itiraf etmek zorunda kaldığını anlatacağız.
 
 
 ---

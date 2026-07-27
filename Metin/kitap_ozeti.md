@@ -7,7 +7,7 @@
 
 > [!NOTE]
 > **Teorinin Özü:**  
-> Evrenakı Teorisi; modern fiziğin uzaktan etki (*action-at-a-distance*), soyut uzay-zaman eğriliği, kütlesiz foton ikiliği ve evrenin %95'ini oluşturan ölçülemez karanlık sektör (Karanlık Madde & Karanlık Enerji) krizlerini **tek bir temaslı ilkeyle** çözen yeni bir kozmolojik ve hidrodinamik paradigmadır. Uzay boşluğu kapkara bir vakum değil, sürtünmesiz ve sıkıştırılabilir süper-akışkan bir ortamdır (*Evrenakı / Mai*).
+> Evrenakı Teorisi; modern fiziğin uzaktan etki (*action-at-a-distance*), soyut uzay-zaman eğriliği, kütlesiz foton ikiliği ve evrenin %95'ini oluşturan ölçülemez karanlık sektör (Karanlık Madde & Karanlık Enerji) krizlerini **tek bir temaslı ilkeyle** çözen yeni bir kozmolojik ve hidrodinamik paradigmadır. Uzay boşluğu kapkara bir vakum değil, sürtünmesiz ve sıkıştırılabilir süper-akışkan bir ortamdır (*Evrenakı*).
 
 ---
 
@@ -15,7 +15,7 @@
 
 Modern fizik yüz yılı aşkın süredir uzayın devasa bir hiçlik olduğunu ve gök cisimlerinin bu hiçlik içinde birbirini gizemli bir kuvvetle çektiğini varsaydı. Evrenakı Teorisi bu varsayımı reddeder:
 
-1. **Evrenakı Okyanusu (Mai):** Uzay; $10^{-95} \text{ m}$ ölçeğinde Zerre ad verilen parçacıklardan oluşan, sıfıra yakın viskoziteli, sıkıştırılabilir süper-akışkan bir ortamla kaplıdır.
+1. **Evrenakı Okyanusu:** Uzay; $10^{-95} \text{ m}$ ölçeğinde Zerre ad verilen parçacıklardan oluşan, sıfıra yakın viskoziteli, sıkıştırılabilir süper-akışkan bir ortamla kaplıdır.
 2. **Dördüncü Boyut ve Nefes Alan Parçacıklar:** Tüm temel parçacıklar, dördüncü boyuttaki ($W$ ekseni) Compton frekanslı dönüşlerinin ($f_C \approx 10^{20} \text{ Hz}$) 3B uzaya düşen izdüşümüyle sürekli dışa doğru akışkan iter (**Deplasman / Nefes alma**).
 3. **Basınç Gradyanı (Kütle-İtim):** Kütle kalkanı Evrenakı'yı dışa ittiği için, kütleye yaklaştıkça akışkan basıncı yükselmez, **düşer**. Dış uzaydaki yüksek basınçlı Evrenakı, cisimleri merkezdeki düşük basınç kuyusuna doğru bastırır. **Newton'un "çekim" dediği şey, dış okyanusun itişidir (Push-Gravity).**
 
@@ -48,7 +48,7 @@ Gök cisimleri ve parçacıklar, Evrenakı okyanusunda yüzelerken aynı anda **
 
 ---
 
-## 🔬 5. Laboratuvar Kanıtları ve Yanlışlanabilirlik (Mai'nin İspatı)
+## 🔬 5. Laboratuvar Kanıtları ve Yanlışlanabilirlik (Deneysel Kanıt)
 
 * **Fiber Optik Osilatör Deneyi (DENEY 1):** 30 metrelik fiber kablo içinde turlayan ışığın frekansı, yanına dokunmaksızın yaklaştırılan 300 gramlık bir kütle ile saniyede 4.500 m/s hız değişimine denk gelecek şekilde **senkron biçimde kaydırılmış ve ölçülmüştür.**
 * **Yanlışlanabilirlik Matrisi:** Teori gizemli kavramlar arkasına saklanmaz; ötegezegenlerin dönüş yönleri, pulsar yalpalama süreleri ve yıldız günü/güneş günü sinyal ayrımları üzerinden deneysel olarak yanlışlanabilir net öngörüler sunar.

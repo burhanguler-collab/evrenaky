@@ -1,11 +1,11 @@
-# 11. Görünmezi Ölçtük: Mai'nin Kanıtı
+# 11. Görünmezi Ölçtük: Laboratuvar Kanıtı
 
 ⏱️ **Tahmini Okuma Süresi:** 4 dakika  
-🎓 **Akademik Sürüm Temeli:** [Kısım V: Deneysel Öneriler ve Mai'nin İspatı (Akademik 5.1–5.5)](#akademik_05_01)  
+🎓 **Akademik Sürüm Temeli:** [Kısım V: Deneysel Öneriler ve Laboratuvar İspatı (Akademik 5.1–5.5)](#akademik_05_01)  
 
 Bir teori ne kadar güzel olursa olsun, laboratuvarda test edilemiyorsa masaldır. Karanlık madde, karanlık enerji, bükülen uzay-zaman — bunların ortak özelliği, hiçbirinin doğrudan ölçülememesidir. Onlar "denklem tutsun diye" var edilmiş hayaletlerdir.
 
-Evrenakı ise farklı. Biz bu görünmez okyanusu — eski adıyla **Mai**'yi — bir masaya kurduğumuz gerçek cihazlarla, gerçek sayılarla **ölçtük**. Hem de mütevazı bir düzenekle. İşte o hikâye.
+Evrenakı ise farklı. Biz bu görünmez okyanusu — Evrenakı'nı — bir masaya kurduğumuz gerçek cihazlarla, gerçek sayılarla **ölçtük**. Hem de mütevazı bir düzenekle. İşte o hikâye.
 
 ## Fikir: Işık Hızını Dinleyen Bir Kulak
 
@@ -98,7 +98,7 @@ Artık geceleri gökyüzüne baktığınızda kapkara bir boşluk görmeyeceksin
 
 > [!NOTE]
 > - **Eski Fizik:** Teoriler sadece soyut matematiksel formüllerle geçerliliğini korur.
-> - **Evrenakı Teorisi:** Sadece teorik bir kurgu değil, bağımsız deneylerle ölçülebilen ve fiziksel olarak ispatlanabilen (Mai'nin Kanıtı) somut bir gerçekliktir.
+> - **Evrenakı Teorisi:** Sadece teorik bir kurgu değil, bağımsız deneylerle ölçülebilen ve fiziksel olarak ispatlanabilen (Deneysel Kanıt) somut bir gerçekliktir.
 
 > [!TIP]
 > Bu bölümün matematiksel ispatlarını ve akademik dildeki detaylı açıklamalarını görmek için **[Akademik Sürüm Kısım 11'ye geçiş yapın](#akademik_11)**.
