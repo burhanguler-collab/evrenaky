@@ -845,6 +845,21 @@ function closeAuthModal() {
     if (usernameInput) usernameInput.value = '';
 }
 
+// Open Kunya & ISBN Pop-up Modal
+function openKunyaModal() {
+    const modal = document.getElementById('kunya-modal');
+    if (modal) {
+        modal.style.display = 'flex';
+        if (typeof lucide !== 'undefined') lucide.createIcons();
+    }
+}
+
+// Close Kunya & ISBN Pop-up Modal
+function closeKunyaModal() {
+    const modal = document.getElementById('kunya-modal');
+    if (modal) modal.style.display = 'none';
+}
+
 // Switch between Log In and Register forms
 function switchAuthTab(mode) {
     const tabSignin = document.getElementById('auth-tab-signin');

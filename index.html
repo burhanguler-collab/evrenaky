@@ -5,6 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Evrenakı Teorisi - 4 Boyutlu Hidrodinamik Evren Modeli</title>
     
+    <!-- Primary Meta Tags -->
+    <meta name="description" content="Evrenakı Teorisi: Uzay boşluğunun süper-akışkan bir ortam (Plenum) ve parçacıkların 4D Compton dönüşlü girdaplar olduğunu savunan yeni kuramsal fizik ve kozmoloji modeli. Yazar: Burhan Güler.">
+    <meta name="keywords" content="Evrenakı Teorisi, Burhan Güler, Kuramsal Fizik, Kozmoloji, Akışkanlar Mekanigi, 4D Spin, Kütle-İtim, Cosmofluid, Sürüklenme Zarfı, ISBN, Bilimsel Kitap">
+    <meta name="author" content="Burhan Güler">
+    <meta name="publisher" content="Burhan Güler">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://evrenaky.org/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="book">
+    <meta property="og:url" content="https://evrenaky.org/">
+    <meta property="og:title" content="Evrenakı Teorisi - 4 Boyutlu Hidrodinamik Evren Modeli">
+    <meta property="og:description" content="Uzay boşluğu bir hiçlik değil; Compton frekansında dönen parçacıklar ve süper-akışkan bir okyanustur. Burhan Güler'in eserini hemen çevrimiçi okuyun.">
+    <meta property="og:image" content="https://evrenaky.org/Gorseller/pwa_icon.png">
+    <meta property="og:locale" content="tr_TR">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://evrenaky.org/">
+    <meta property="twitter:title" content="Evrenakı Teorisi - 4 Boyutlu Hidrodinamik Evren Modeli">
+    <meta property="twitter:description" content="Uzay boşluğu bir hiçlik değil; Compton frekansında dönen parçacıklar ve süper-akışkan bir okyanustur. Yazar: Burhan Güler.">
+    <meta property="twitter:image" content="https://evrenaky.org/Gorseller/pwa_icon.png">
+
+    <!-- Schema.org Structured Data (Book Entity) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Book",
+      "name": "Evrenakı Teorisi",
+      "alternateName": "4 Boyutlu Hidrodinamik Evren Modeli & Kozmik Girdap Mekaniği",
+      "author": {
+        "@type": "Person",
+        "name": "Burhan Güler",
+        "email": "burhanguler@gmail.com"
+      },
+      "url": "https://evrenaky.org",
+      "inLanguage": "tr",
+      "genre": "Theoretical Physics & Cosmology",
+      "datePublished": "2026",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Evrenakı Yayınları / Burhan Güler"
+      },
+      "description": "Evrenakı Teorisi: Uzay boşluğunu süper-akışkan bir okyanus (Plenum), kütleçekimini basınç gradyanı ve parçacıkları 4D Compton dönüşlü girdaplar olarak ele alan yeni kozmolojik paradigma."
+    }
+    </script>
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,10 +73,9 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="theme-color" content="#030712">
-    <link rel="apple-touch-icon" href="Gorseller/pwa_icon.png">
     
     <!-- Custom Style Sheet -->
-    <link rel="stylesheet" href="index.css?v=5">
+    <link rel="stylesheet" href="index.css?v=6">
 </head>
 <body class="dark-theme">
     
@@ -160,6 +206,9 @@
                         </button>
                         <button id="btn-stats-toggle" class="btn-icon" onclick="openStatsModal()" title="İstatistikler">
                             <i data-lucide="bar-chart-2"></i>
+                        </button>
+                        <button id="btn-kunya-toggle" class="btn-icon" onclick="openKunyaModal()" title="Yayın Künyesi & ISBN">
+                            <i data-lucide="book-marked"></i>
                         </button>
                     </div>
                 </div>
@@ -593,6 +642,63 @@
             <div class="stats-info-footer" style="margin-top: 20px; font-size: 0.75rem; color: var(--text-muted); display: flex; align-items: center; gap: 6px; border-top: 1px solid var(--border-color); padding-top: 12px;">
                 <i data-lucide="info" style="width: 14px; height: 14px; color: var(--neon-blue);"></i> 
                 <span>Bu veriler yerel modda tarayıcı önbelleğinizden (localStorage), canlı modda ise doğrudan Supabase bulut veritabanınızdan anlık çekilmektedir.</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Publication Metadata & ISBN Modal -->
+    <div id="kunya-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-card" style="max-width: 650px;">
+            <div class="modal-header">
+                <h2 style="display: flex; align-items: center; gap: 8px; font-family: var(--font-heading); color: var(--neon-blue);">
+                    <i data-lucide="book-marked"></i> Yayın Künyesi & Resmî Bilgiler
+                </h2>
+                <button class="btn-icon" onclick="closeKunyaModal()"><i data-lucide="x"></i></button>
+            </div>
+            
+            <div class="kunya-content" style="font-size: 0.92rem; line-height: 1.6; color: var(--text-primary);">
+                <div style="background: rgba(0, 240, 255, 0.05); border: 1px solid rgba(0, 240, 255, 0.2); border-radius: 8px; padding: 16px; margin-bottom: 18px;">
+                    <h3 style="margin:0 0 4px 0; color: var(--neon-blue); font-size: 1.1rem;">EVRENAKİ TEORİSİ</h3>
+                    <p style="margin:0; color: var(--text-muted); font-size: 0.85rem;">4 Boyutlu Hidrodinamik Evren Modeli & Kozmik Girdap Mekaniği</p>
+                </div>
+
+                <table style="width: 100%; border-collapse: collapse; margin-bottom: 18px; font-size: 0.88rem;">
+                    <tbody>
+                        <tr style="border-bottom: 1px solid var(--border-color);">
+                            <td style="padding: 8px 0; font-weight: 600; color: var(--text-muted); width: 140px;">Yazar / Müellif:</td>
+                            <td style="padding: 8px 0;">Burhan Güler</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border-color);">
+                            <td style="padding: 8px 0; font-weight: 600; color: var(--text-muted);">Yayın Dili:</td>
+                            <td style="padding: 8px 0;">Türkçe</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border-color);">
+                            <td style="padding: 8px 0; font-weight: 600; color: var(--text-muted);">Kategori / Konu:</td>
+                            <td style="padding: 8px 0;">Kuramsal Fizik & Kozmoloji (Dewey: 530 / 523.1)</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border-color);">
+                            <td style="padding: 8px 0; font-weight: 600; color: var(--text-muted);">Yayın Tarihi:</td>
+                            <td style="padding: 8px 0;">Temmuz 2026 (1. Baskı)</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border-color);">
+                            <td style="padding: 8px 0; font-weight: 600; color: var(--text-muted);">ISBN Status:</td>
+                            <td style="padding: 8px 0;">
+                                <span style="display: inline-flex; align-items: center; gap: 4px; background: rgba(255, 176, 32, 0.15); color: #ffb020; padding: 2px 8px; border-radius: 12px; font-size: 0.8rem; font-weight: 600;">
+                                    <i data-lucide="clock" style="width: 12px; height: 12px;"></i> Başvuru Hazırlık Aşamasında
+                                </span>
+                            </td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border-color);">
+                            <td style="padding: 8px 0; font-weight: 600; color: var(--text-muted);">Resmî Portal:</td>
+                            <td style="padding: 8px 0;"><a href="https://evrenaky.org" target="_blank" style="color: var(--neon-blue); text-decoration: none;">evrenaky.org</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div style="font-size: 0.78rem; color: var(--text-muted); border-top: 1px solid var(--border-color); padding-top: 12px;">
+                    <p style="margin: 0 0 6px 0;"><strong>Telif Hakkı © 2026 Burhan Güler. Tüm hakları saklıdır.</strong></p>
+                    <p style="margin: 0;">Bu eserin tüm telif ve yayın hakları yazarına aittir. Yazarın yazılı izni olmadan içeriğin tamamı veya bir kısmı kopyalanamaz, çoğaltılamaz veya başka sistemlere aktarılamaz.</p>
+                </div>
             </div>
         </div>
     </div>

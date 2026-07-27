@@ -10,6 +10,69 @@ Güneş, Samanyolu'nun merkezine yaklaşık 26.000 ışık yılı uzaklıkta, sa
 
 Ancak asıl dikkat çekici olan, Güneş'in yörüngesinin düz bir çember olmamasıdır. Güneş, galaktik düzlem boyunca ilerlerken aynı zamanda bu düzlemin **içinden yukarı-aşağı geçerek salınır**: Şu anda düzlemin yaklaşık 50–100 ışık yılı üzerindedir ve saniyede ~7 km hızla yukarı doğru tırmanmaktadır. Tırmanış bir yerde duracak, Güneş geri dönüp düzlemi delerek bu kez altına inecek ve bu **dikey salınım** — genliği birkaç yüz ışık yılı, tam periyodu on milyonlarca yıl (literatür tahminleri ~60–90 milyon yıl; düzlemden geçişler ~30–45 milyon yılda bir) — sonsuza dek tekrarlanacaktır (Bahcall & Bahcall, 1985). Yörüngenin gerçek biçimi, atlıkarıncadaki bir atın hareketidir: merkez etrafında dolanırken bir yandan da inip kalkan, uzayda dev bir sinüs dalgası çizen **yunuslama** hareketi. (Bahcall'ların bu ölçümü yapmasının asıl motivasyonu da bu geçiş dönemselliğinin, fosil kayıtlardaki kitlesel yok oluş dönemselliği tartışmasıyla karşılaştırılmasıydı — düzlem geçişlerinin Güneş Sistemi'ni periyodik olarak farklı bir ortamdan geçirdiği fikri, aşağıda kurulacak basınç tablosuyla doğal olarak örtüşür.)
 
+<div style="background: #121212; padding: 20px; border-radius: 12px; border: 1px solid #404040; box-shadow: 0 10px 30px rgba(0,0,0,0.8); margin: 20px 0; text-align: center;">
+  <h3 style="margin-top: 0; margin-bottom: 20px; color: #fff; font-weight: 600; letter-spacing: 1px; text-shadow: 0 0 10px rgba(0, 229, 255, 0.5);">Şekil 3.8.6a: Güneş'in Galaktik Yörüngesi — Atlıkarınca ve Yunuslama</h3>
+  <svg viewBox="0 0 800 420" width="100%" style="max-width: 800px; background: #050505; border: 1px solid #333; border-radius: 8px;">
+<defs>
+<marker id="okSari3865" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+  <path d="M 0 0 L 10 5 L 0 10 z" fill="#fbbf24" />
+</marker>
+<marker id="okGri3865" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto">
+  <path d="M 0 0 L 10 5 L 0 10 z" fill="#9ca3af" />
+</marker>
+<marker id="okGriTers3865" viewBox="0 0 10 10" refX="2" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto">
+  <path d="M 10 0 L 0 5 L 10 10 z" fill="#9ca3af" />
+</marker>
+<radialGradient id="merkezGlow3865" cx="50%" cy="50%" r="50%">
+  <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.55" />
+  <stop offset="100%" stop-color="#f59e0b" stop-opacity="0" />
+</radialGradient>
+</defs>
+
+<line x1="410" y1="55" x2="410" y2="385" stroke="#333" stroke-width="1" />
+
+<!-- SOL PANEL: Tepeden görünüm -->
+<text x="200" y="34" fill="#fff" font-family="sans-serif" font-size="14" font-weight="600" text-anchor="middle">Tepeden görünüm — atlıkarınca</text>
+<circle cx="200" cy="215" r="40" fill="none" stroke="#00e5ff" stroke-width="1" opacity="0.12" />
+<circle cx="200" cy="215" r="75" fill="none" stroke="#00e5ff" stroke-width="1" opacity="0.12" />
+<circle cx="200" cy="215" r="140" fill="none" stroke="#00e5ff" stroke-width="1" opacity="0.12" />
+<circle cx="200" cy="215" r="18" fill="url(#merkezGlow3865)" />
+<circle cx="200" cy="215" r="5" fill="#000" stroke="#f59e0b" stroke-width="1.5" />
+<text x="200" y="243" fill="#f59e0b" font-family="sans-serif" font-size="11" text-anchor="middle" opacity="0.9">Sgr A*</text>
+<circle cx="200" cy="215" r="105" fill="none" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="5 5" opacity="0.6" />
+<line x1="200" y1="215" x2="286" y2="155" stroke="#9ca3af" stroke-width="1" stroke-dasharray="4 4" opacity="0.7" />
+<text x="224" y="176" fill="#9ca3af" font-family="sans-serif" font-size="11.5" text-anchor="start">26.000 ıy</text>
+<line x1="286" y1="155" x2="319" y2="202" stroke="#fbbf24" stroke-width="2" marker-end="url(#okSari3865)" />
+<text x="328" y="212" fill="#fbbf24" font-family="sans-serif" font-size="11.5" text-anchor="start">230 km/s</text>
+<circle cx="286" cy="155" r="5.5" fill="#fde047" stroke="#fbbf24" stroke-width="1.5" />
+<text x="286" y="137" fill="#fde047" font-family="sans-serif" font-size="12" text-anchor="middle">Güneş</text>
+<text x="200" y="352" fill="#9ca3af" font-family="sans-serif" font-size="12" text-anchor="middle">1 tur = 1 "galaktik yıl" ≈ 230 milyon yıl;</text>
+<text x="200" y="370" fill="#9ca3af" font-family="sans-serif" font-size="12" text-anchor="middle">Güneş bugüne dek ~20 tur attı</text>
+
+<!-- SAĞ PANEL: Yandan görünüm (zamana açılmış yol) -->
+<text x="610" y="34" fill="#fff" font-family="sans-serif" font-size="14" font-weight="600" text-anchor="middle">Yandan görünüm — yunuslama</text>
+<rect x="445" y="207" width="335" height="16" fill="rgba(0,229,255,0.05)" />
+<line x1="445" y1="215" x2="780" y2="215" stroke="#00e5ff" stroke-width="1.5" opacity="0.5" />
+<text x="500" y="238" fill="#00e5ff" font-family="sans-serif" font-size="11" text-anchor="middle" opacity="0.65">galaktik düzlem</text>
+<path d="M460,215 C478,181 515,181 533,215 C551,249 588,249 606,215 C624,181 661,181 679,215 C697,249 734,249 752,215 C757,206 762,199 768,194" fill="none" stroke="#fde047" stroke-width="2" />
+<line x1="445" y1="181" x2="445" y2="249" stroke="#9ca3af" stroke-width="1.2" marker-start="url(#okGriTers3865)" marker-end="url(#okGri3865)" />
+<text x="447" y="170" fill="#9ca3af" font-family="sans-serif" font-size="11" text-anchor="start">genlik: birkaç yüz ıy</text>
+<circle cx="533" cy="215" r="3.5" fill="#00e5ff" />
+<circle cx="606" cy="215" r="3.5" fill="#00e5ff" />
+<circle cx="679" cy="215" r="3.5" fill="#00e5ff" />
+<line x1="533" y1="272" x2="679" y2="272" stroke="#9ca3af" stroke-width="1.2" marker-start="url(#okGriTers3865)" marker-end="url(#okGri3865)" />
+<text x="606" y="292" fill="#9ca3af" font-family="sans-serif" font-size="11.5" text-anchor="middle">tam salınım: ~60–90 milyon yıl</text>
+<text x="606" y="314" fill="#00e5ff" font-family="sans-serif" font-size="11.5" text-anchor="middle" opacity="0.85">düzlem geçişleri: ~30–45 My'de bir (Bahcall &amp; Bahcall, 1985)</text>
+<circle cx="768" cy="194" r="5" fill="#fde047" stroke="#fbbf24" stroke-width="1.5" />
+<line x1="768" y1="184" x2="768" y2="166" stroke="#fbbf24" stroke-width="1.8" marker-end="url(#okSari3865)" />
+<text x="758" y="156" fill="#fbbf24" font-family="sans-serif" font-size="11" text-anchor="end">bugün: düzlemin ~50–100 ıy üstünde,</text>
+<text x="758" y="172" fill="#fbbf24" font-family="sans-serif" font-size="11" text-anchor="end">~7 km/s ile yukarı tırmanıyor</text>
+<line x1="480" y1="340" x2="720" y2="340" stroke="#9ca3af" stroke-width="1" opacity="0.6" marker-end="url(#okGri3865)" />
+<text x="600" y="360" fill="#9ca3af" font-family="sans-serif" font-size="11.5" text-anchor="middle">yörünge boyunca ilerleme (zaman)</text>
+</svg>
+  <p style="color: #9ca3af; font-size: 0.85em; margin: 12px 0 0 0; text-align: left;"><strong style="color: #fff;">Şekil 3.8.6a — Gözlemsel tablonun özeti.</strong> Sol: Güneş, Sgr A* etrafındaki ~26.000 ışık yıllık yörüngesinde saniyede ~230 km ile dolanır. Sağ: aynı yolculuğun yandan görünümü — Güneş galaktik düzlemin içinden bir aşağı bir yukarı geçerek dev bir sinüs çizer; bugün düzlemin üzerinde olup yukarı tırmanmaktadır. Şema ölçekli değildir; dikey salınım, görünürlük için abartılmıştır.</p>
+</div>
+
 Standart fizik bu salınımı şöyle modeller: disk içindeki toplam kütlenin kütleçekimi, düzlemden uzaklaşan yıldızı geri çağıran bir kuvvet üretir; yıldız düzlem etrafında harmonik salınım yapar. Bu modelin sayısal tutarlılığı ise diskin görünen (baryonik) kütlesiyle kurulamaz; hesap, aynı standart fiziğin dönüş eğrileri için icat ettiği görünmez kütle envanterine yaslanmak zorundadır. Yani standart tabloda Güneş'in yunuslamasının muhasebesi, Bölüm 3.1.8'de eleştirilen karanlık madde hipoteziyle aynı açık senete bağlıdır. Üstelik standart tabloda salınımın bir **sürücüsü** de yoktur: düzlem hareketsiz bir simetri düzlemidir, yıldız oraya nasıl saptıysa öyle salınır.
 
 ### Evrenakı Çözümü: Devinen Motor, Sallanan Düzlem, Kilitli Yolcular
@@ -115,6 +178,75 @@ Samanyolu'nun diski düz bir plak değildir. 1950'lerin sonundan beri radyo (HI)
 1. **Warp'ın üç boyutlu haritası çıkarıldı:** 1339 klasik Sefeid değişen yıldızı kullanılarak diskin dış bölgelerinin bükülmesi doğrudan, yıldız yıldız haritalandı (Chen vd., 2019).
 2. **Warp deviniyor — hem de "olmaması gerektiği" kadar hızlı:** Warp'ın düğüm hattı sabit durmuyor; galaksinin dönüş yönünde, yaklaşık **10,9 km/s/kpc** hızla dönüyor (Poggio vd., 2020). Bu değer, warp'ı durağan bir karanlık madde halosunun torkuna bağlayan standart modellerin öngörüsünden **kat kat hızlıdır** ve dış diskin dönüş frekansıyla aynı mertebededir.
 3. **Diskin her yeri dikey dalgalarla ürperiyor:** Gaia verilerindeki faz-uzayı sarmalı, Güneş civarındaki yıldızların dikey konum-hız düzleminde hâlâ sönmemiş bir salınım deseni taşıdığını gösterdi (Antoja vd., 2018). Hemen yanı başımızda ise 9000 ışık yılı uzunluğundaki dev gaz yapısı — **Radcliffe Dalgası** — disk düzlemi etrafında gözle görülür biçimde inip kalkan bir dalga olarak bulundu (Alves vd., 2020).
+
+<div style="background: #121212; padding: 20px; border-radius: 12px; border: 1px solid #404040; box-shadow: 0 10px 30px rgba(0,0,0,0.8); margin: 20px 0; text-align: center;">
+  <h3 style="margin-top: 0; margin-bottom: 20px; color: #fff; font-weight: 600; letter-spacing: 1px; text-shadow: 0 0 10px rgba(0, 229, 255, 0.5);">Animasyon 3.8.7: Gaia'nın Üç Gözlemi — Bükülen, Devinen, Dalgalanan Disk</h3>
+  <svg viewBox="0 0 800 460" width="100%" style="max-width: 800px; background: #050505; border: 1px solid #333; border-radius: 8px;">
+<defs>
+<marker id="okTuruncu387" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+  <path d="M 0 0 L 10 5 L 0 10 z" fill="#f59e0b" />
+</marker>
+<radialGradient id="merkezGlow387" cx="50%" cy="50%" r="50%">
+  <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.55" />
+  <stop offset="100%" stop-color="#f59e0b" stop-opacity="0" />
+</radialGradient>
+</defs>
+
+<line x1="400" y1="55" x2="400" y2="395" stroke="#333" stroke-width="1" />
+
+<!-- SOL PANEL: Yandan görünüm — kanat çırpan S biçimi -->
+<text x="200" y="34" fill="#fff" font-family="sans-serif" font-size="14" font-weight="600" text-anchor="middle">Yandan görünüm: S biçimi (warp)</text>
+<circle cx="200" cy="220" r="22" fill="url(#merkezGlow387)" />
+<ellipse cx="200" cy="220" rx="85" ry="9" fill="rgba(0,229,255,0.07)" stroke="#00e5ff" stroke-width="2" opacity="0.9" />
+<circle cx="200" cy="220" r="7" fill="#000" stroke="#f59e0b" stroke-width="1.5" />
+<path stroke="#a78bfa" stroke-width="3" fill="none" stroke-linecap="round">
+  <animate attributeName="d" values="M118,221 Q78,216 38,198; M118,221 Q78,226 38,242; M118,221 Q78,216 38,198" keyTimes="0;0.5;1" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1" dur="10s" repeatCount="indefinite" />
+</path>
+<path stroke="#a78bfa" stroke-width="3" fill="none" stroke-linecap="round">
+  <animate attributeName="d" values="M282,221 Q322,226 362,242; M282,221 Q322,216 362,198; M282,221 Q322,226 362,242" keyTimes="0;0.5;1" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1" dur="10s" repeatCount="indefinite" />
+</path>
+<path d="M138,207 q7,-6 14,0 q7,6 14,0 q7,-6 14,0" fill="none" stroke="#fbbf24" stroke-width="1.5" opacity="0.5" />
+<text x="159" y="190" fill="#fbbf24" font-family="sans-serif" font-size="10.5" text-anchor="middle" opacity="0.75">Radcliffe Dalgası</text>
+<circle cx="252" cy="217" r="4.5" fill="#fde047" stroke="#fbbf24" stroke-width="1.5" />
+<text x="258" y="203" fill="#fde047" font-family="sans-serif" font-size="11" text-anchor="start">Güneş</text>
+<text x="200" y="352" fill="#a78bfa" font-family="sans-serif" font-size="12" text-anchor="middle">kenarlar bükülü — ve bükülme sabit durmuyor</text>
+<text x="200" y="370" fill="#9ca3af" font-family="sans-serif" font-size="11.5" text-anchor="middle">S biçimi 1339 Sefeid'le haritalandı (Chen vd., 2019)</text>
+
+<!-- SAĞ PANEL: Tepeden görünüm — devinen düğüm hattı -->
+<text x="600" y="34" fill="#fff" font-family="sans-serif" font-size="14" font-weight="600" text-anchor="middle">Tepeden görünüm: düğüm hattı dönüyor</text>
+<circle cx="600" cy="220" r="110" fill="rgba(0,229,255,0.04)" stroke="#00e5ff" stroke-width="1.5" opacity="0.5" />
+<circle cx="600" cy="220" r="73" fill="none" stroke="#00e5ff" stroke-width="1" opacity="0.12" />
+<circle cx="600" cy="220" r="36" fill="none" stroke="#00e5ff" stroke-width="1" opacity="0.12" />
+<path d="M522,127 A122,122 0 0 1 678,127" fill="none" stroke="#f59e0b" stroke-width="2" opacity="0.8" marker-end="url(#okTuruncu387)" />
+<text x="600" y="108" fill="#f59e0b" font-family="sans-serif" font-size="11" text-anchor="middle">galaksinin dönüş yönü</text>
+<!-- Disk yıldızları + Güneş: hızlı dönüş -->
+<g>
+  <animateTransform attributeName="transform" type="rotate" values="0 600 220; 360 600 220" dur="4s" repeatCount="indefinite" />
+  <circle cx="600" cy="130" r="3" fill="#00e5ff" opacity="0.5" />
+  <circle cx="690" cy="220" r="3" fill="#00e5ff" opacity="0.35" />
+  <circle cx="600" cy="310" r="3" fill="#00e5ff" opacity="0.5" />
+  <circle cx="527" cy="220" r="5" fill="#fde047" stroke="#fbbf24" stroke-width="1.5" />
+</g>
+<!-- Düğüm hattı: yavaş devinim (sol paneldeki çırpınımla senkron) -->
+<g>
+  <animateTransform attributeName="transform" type="rotate" values="0 600 220; 360 600 220" dur="10s" repeatCount="indefinite" />
+  <line x1="490" y1="220" x2="710" y2="220" stroke="#a78bfa" stroke-width="2.5" stroke-dasharray="7 5" />
+  <circle cx="718" cy="220" r="6" fill="none" stroke="#00e5ff" stroke-width="1.5" />
+  <circle cx="718" cy="220" r="1.8" fill="#00e5ff" />
+  <circle cx="482" cy="220" r="6" fill="none" stroke="#a78bfa" stroke-width="1.5" />
+  <path d="M478.5,216.5 l7,7 M485.5,216.5 l-7,7" stroke="#a78bfa" stroke-width="1.5" />
+</g>
+<!-- Merkez -->
+<circle cx="600" cy="220" r="14" fill="url(#merkezGlow387)" />
+<circle cx="600" cy="220" r="5" fill="#000" stroke="#f59e0b" stroke-width="1.5" />
+<text x="600" y="352" fill="#9ca3af" font-family="sans-serif" font-size="11.5" text-anchor="middle">⊙ kalkık kenar · ⊗ inik kenar — mor kesikli hat: warp'ın düğüm hattı</text>
+<text x="600" y="370" fill="#a78bfa" font-family="sans-serif" font-size="11.5" text-anchor="middle">devinim: dönüş yönünde, 10,9 km/s/kpc (Poggio vd., 2020)</text>
+
+<text x="400" y="430" fill="#9ca3af" font-family="sans-serif" font-size="13" text-anchor="middle">Düğüm hattı yarım tur döndüğünde (sağ), S biçiminin kalkık ve inik uçları yer değiştirir (sol) — disk, ağır çekimde kanat çırpar.</text>
+</svg>
+</div>
+
+*İzleme rehberi:* Sahne, Gaia çağının üç gözlemini tek karede toplar. **Solda** disk yandan görülür: mor dış kenarlar bükülüdür — bir uç kalkık, karşı uç iniktir (S biçimi; Chen vd., 2019) — ve bükülme yerinde durmaz, uçlar ağır çekimde inip kalkar; Güneş civarındaki küçük sarı dalga, diskin gövdesini ürperten dikey dalgaların (Radcliffe Dalgası; Alves vd., 2020) temsilcisidir. **Sağda** aynı disk tepeden görülür: kalkık kenar (⊙) ile inik kenarı (⊗) birbirine bağlayan mor **düğüm hattı**, galaksinin dönüş yönünde döner (Poggio vd., 2020). Camgöbeği noktaların (disk yıldızları ve sarı Güneş) düğüm hattından belirgin biçimde hızlı dönmesine dikkat ediniz: devinim, dönüşten yavaştır ama standart beklentinin kat kat üzerindedir — iki panelin senkronu, "kanat çırpışı" ile "düğüm hattı dönüşü"nün aynı olayın iki görünümü olduğunu gösterir. Bükülme genlikleri görünürlük için abartılmıştır. Bu sahne yalnızca **gözlemi** resmeder; mekanizma aşağıda, Evrenakı çözümünde kurulacaktır.
 
 Bu üç gözlemin bileşik resmi tektir: galaktik disk, kenarları bükülmüş ve o bükülmesi dönen, gövdesi boydan boya dikey dalgalarla salınan **diri bir yüzeydir.** Dev bir kuşun ağır çekimde kanat çırpışı gibi: kanat uçları (dış disk) kalkıp inmekte, çırpınım dalgaları gövdeye doğru yayılmaktadır.
 
