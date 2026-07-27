@@ -251,18 +251,65 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Search bar filter function
+    // Search bar filter function (Türkçe karakter duyarlı ve akordiyon destekli arama)
     const searchInput = document.getElementById('search-input');
     if (searchInput) {
         searchInput.addEventListener('input', (e) => {
-            const query = e.target.value.toLowerCase();
-            const items = document.querySelectorAll('.toc-item');
-            items.forEach(item => {
-                const title = item.getAttribute('data-title').toLowerCase();
-                if (title.includes(query)) {
-                    item.style.display = 'block';
+            const rawQuery = e.target.value;
+            const query = (rawQuery || '').toLocaleLowerCase('tr-TR').trim();
+            const list = document.getElementById('toc-list');
+            if (!list) return;
+
+            const accordions = list.querySelectorAll('.toc-accordion');
+
+            if (!query) {
+                // Reset all elements
+                list.querySelectorAll('.toc-item').forEach(item => {
+                    item.style.display = '';
+                });
+                accordions.forEach(acc => {
+                    acc.style.display = '';
+                    const content = acc.querySelector('.toc-accordion-content');
+                    const icon = acc.querySelector('i');
+                    const hasActiveChild = content && content.querySelector('.toc-link.active');
+                    if (content) content.style.display = hasActiveChild ? 'block' : 'none';
+                    if (icon) icon.style.transform = hasActiveChild ? 'rotate(180deg)' : 'rotate(0deg)';
+                });
+                return;
+            }
+
+            // Direct top level items (e.g., home item or change version)
+            const topItems = list.children;
+            Array.from(topItems).forEach(li => {
+                if (li.classList.contains('toc-accordion')) return;
+                const title = (li.getAttribute('data-title') || li.textContent || '').toLocaleLowerCase('tr-TR');
+                li.style.display = title.includes(query) ? '' : 'none';
+            });
+
+            // Accordion sections (parts and sub-chapters)
+            accordions.forEach(acc => {
+                const partTitle = (acc.getAttribute('data-title') || '').toLocaleLowerCase('tr-TR');
+                const content = acc.querySelector('.toc-accordion-content');
+                const icon = acc.querySelector('i');
+                const subItems = content ? content.querySelectorAll('.toc-item') : [];
+
+                let matchedSubCount = 0;
+                subItems.forEach(sub => {
+                    const subTitle = (sub.getAttribute('data-title') || sub.textContent || '').toLocaleLowerCase('tr-TR');
+                    if (subTitle.includes(query) || partTitle.includes(query)) {
+                        sub.style.display = '';
+                        matchedSubCount++;
+                    } else {
+                        sub.style.display = 'none';
+                    }
+                });
+
+                if (matchedSubCount > 0 || partTitle.includes(query)) {
+                    acc.style.display = '';
+                    if (content) content.style.display = 'block';
+                    if (icon) icon.style.transform = 'rotate(180deg)';
                 } else {
-                    item.style.display = 'none';
+                    acc.style.display = 'none';
                 }
             });
         });
@@ -320,6 +367,7 @@ function buildTOC() {
                 currentPartName = chap.part;
                 const partLi = document.createElement('li');
                 partLi.className = 'toc-item toc-accordion';
+                partLi.setAttribute('data-title', chap.part);
                 partLi.innerHTML = `
                     <div class="toc-accordion-header" style="display:flex; justify-content:space-between; align-items:center; cursor:pointer; padding: 12px; background: rgba(0, 229, 255, 0.05); border-radius: 8px; margin-bottom: 4px; font-weight: 600; color: var(--neon-cyan); border-left: 2px solid var(--neon-cyan);">
                         <span>${chap.part}</span>
@@ -372,6 +420,7 @@ function buildTOC() {
     // Sürüm Değiştir Butonu
     const changeVersionLi = document.createElement('li');
     changeVersionLi.className = 'toc-item';
+    changeVersionLi.setAttribute('data-title', 'Başka Sürüm Seç');
     changeVersionLi.innerHTML = `
         <a href="#" class="toc-link" onclick="resetVersionSelection(event)" style="color: var(--neon-magenta); border-top: 1px solid var(--border-color); margin-top: 15px; padding-top: 15px; font-weight: bold;">
             <i data-lucide="refresh-cw" style="width:16px; height:16px; margin-right:8px;"></i>
@@ -387,10 +436,23 @@ function buildTOC() {
 function setActiveTocLink(id) {
     document.querySelectorAll('.toc-link').forEach(link => link.classList.remove('active'));
     const activeLink = document.getElementById(`link-${id}`);
-    if (activeLink) activeLink.classList.add('active');
+    if (activeLink) {
+        activeLink.classList.add('active');
+        // Active link bir akordiyon içerisindeyse üst akordiyonu otomatik aç
+        const parentContent = activeLink.closest('.toc-accordion-content');
+        if (parentContent) {
+            parentContent.style.display = 'block';
+            const parentAcc = parentContent.closest('.toc-accordion');
+            if (parentAcc) {
+                const icon = parentAcc.querySelector('.toc-accordion-header i');
+                if (icon) icon.style.transform = 'rotate(180deg)';
+            }
+        }
+    }
 
     // Close mobile drawer on link select
-    document.getElementById('sidebar').classList.remove('open');
+    const sidebar = document.getElementById('sidebar');
+    if (sidebar) sidebar.classList.remove('open');
 }
 
 // Hash Routing Handler
