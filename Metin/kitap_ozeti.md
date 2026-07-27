@@ -15,9 +15,10 @@
 
 Modern fizik yüz yılı aşkın süredir uzayın devasa bir hiçlik olduğunu ve gök cisimlerinin bu hiçlik içinde birbirini gizemli bir kuvvetle çektiğini varsaydı. Evrenakı Teorisi bu varsayımı reddeder:
 
-1. **Evrenakı Okyanusu:** Uzay; $10^{-95} \text{ m}$ ölçeğinde Zerre ad verilen parçacıklardan oluşan, sıfıra yakın viskoziteli, sıkıştırılabilir süper-akışkan bir ortamla kaplıdır.
-2. **Dördüncü Boyut ve Nefes Alan Parçacıklar:** Tüm temel parçacıklar, dördüncü boyuttaki ($W$ ekseni) Compton frekanslı dönüşlerinin ($f_C \approx 10^{20} \text{ Hz}$) 3B uzaya düşen izdüşümüyle sürekli dışa doğru akışkan iter (**Deplasman / Nefes alma**).
-3. **Basınç Gradyanı (Kütle-İtim):** Kütle kalkanı Evrenakı'yı dışa ittiği için, kütleye yaklaştıkça akışkan basıncı yükselmez, **düşer**. Dış uzaydaki yüksek basınçlı Evrenakı, cisimleri merkezdeki düşük basınç kuyusuna doğru bastırır. **Newton'un "çekim" dediği şey, dış okyanusun itişidir (Push-Gravity).**
+1. **Evrenakı Okyanusu:** Uzay; viskozitesi sıfır olan (sürtünmesiz), sıkıştırılabilir ve tüm varlığı kuşatan süper-akışkan bir ham malzeme ortamıdır.
+2. **Zerre (Işık Parçacığı/Damlası):** Işığı ve elektromanyetik ışınımı oluşturan, fiziksel hacmi, kütlesi ve Compton dönel frekansı olan temel ışık damlacıklarıdır.
+3. **Dördüncü Boyut ve Nefes Alan Parçacıklar:** Tüm temel parçacıklar, dördüncü boyuttaki ($W$ ekseni) Compton frekanslı dönüşlerinin ($f_C \approx 10^{20} \text{ Hz}$) 3B uzaya düşen izdüşümüyle sürekli dışa doğru akışkan iter (**Deplasman / Nefes alma**).
+4. **Basınç Gradyanı (Kütle-İtim):** Kütle kalkanı Evrenakı'yı dışa ittiği için, kütleye yaklaştıkça akışkan basıncı yükselmez, **düşer**. Dış uzaydaki yüksek basınçlı Evrenakı, cisimleri merkezdeki düşük basınç kuyusuna doğru bastırır. **Newton'un "çekim" dediği şey, dış okyanusun itişidir (Push-Gravity).**
 
 ---
 
