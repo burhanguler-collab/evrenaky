@@ -1,12 +1,12 @@
-# 📘 Evrenakı Teorisi — Kitabın Genel Özeti ve Yönetici Özeti
+# 📘 Evrenakı Teorisi — Kitabın Özeti
 
 ⏱️ **Tahmini Okuma Süresi:** 5 dakika  
-🎓 **Sürüm Kapsamı:** Popüler & Akademik Sürümler İçin Genel Giriş ve Yönetici Özeti  
+🎓 **Sürüm Kapsamı:** Popüler & Akademik Sürümler İçin Genel Giriş ve Özellikler  
 
 ---
 
 > [!NOTE]
-> **Yönetici Özeti (Executive Summary):**  
+> **Teorinin Özü:**  
 > Evrenakı Teorisi; modern fiziğin uzaktan etki (*action-at-a-distance*), soyut uzay-zaman eğriliği, kütlesiz foton ikiliği ve evrenin %95'ini oluşturan ölçülemez karanlık sektör (Karanlık Madde & Karanlık Enerji) krizlerini **tek bir temaslı ilkeyle** çözen yeni bir kozmolojik ve hidrodinamik paradigmadır. Uzay boşluğu kapkara bir vakum değil, sürtünmesiz ve sıkıştırılabilir süper-akışkan bir ortamdır (*Evrenakı / Mai*).
 
 ---

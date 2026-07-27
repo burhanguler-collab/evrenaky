@@ -2,7 +2,7 @@
 
 // Chapter Registry
 const chapters = [
-    { id: 'ozet', title: 'Kitabın Genel Özeti & Yönetici Özeti', file: 'Metin/kitap_ozeti.md', group: 'all' },
+    { id: 'ozet', title: 'Kitabın Özeti & Teorinin Özü', file: 'Metin/kitap_ozeti.md', group: 'all' },
     { id: 'akademik_01_01', title: '1.1 Giriş ve Metodoloji', file: 'Metin/Akademik/Kisim_1_Giris/01_Metodoloji_ve_Manifesto.md', group: 'akademik', part: 'Kısım I: Temeller ve Problemin Tespiti' },
     { id: 'akademik_01_02', title: '1.2 Klasik ve Modern Fiziğin Krizleri', file: 'Metin/Akademik/Kisim_1_Giris/02_Fizigin_Krizleri.md', group: 'akademik', part: 'Kısım I: Temeller ve Problemin Tespiti' },
     { id: 'akademik_01_03', title: '1.3 Evrenin Akışkan Doğası', file: 'Metin/Akademik/Kisim_1_Giris/03_Evrenaki_Postulasi.md', group: 'akademik', part: 'Kısım I: Temeller ve Problemin Tespiti' },
