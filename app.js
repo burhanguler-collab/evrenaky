@@ -2118,6 +2118,7 @@ window.handleUpdateReviewStatus = handleUpdateReviewStatus;
 
 
 function postProcessTooltips(container) {
+    if (!container) return;
     const terms = [
         { regex: /\b(Evrenakı)\b/g, tooltip: 'Sürtünmesiz, uzayı dolduran, sıkıştırılabilen süper-akışkan ortam.' },
         { regex: /\b(Zerre)\b/g, tooltip: 'Işığı oluşturan, fiziksel hacmi ve kütlesi olan damlacık.' },
@@ -2130,7 +2131,9 @@ function postProcessTooltips(container) {
     const nodesToReplace = [];
 
     while (node = walker.nextNode()) {
-        if (node.parentNode && (node.parentNode.tagName === 'A' || node.parentNode.tagName === 'CODE' || node.parentNode.tagName === 'PRE' || node.parentNode.tagName === 'H1' || node.parentNode.tagName === 'H2' || node.parentNode.tagName === 'H3' || node.parentNode.classList.contains('evrenaki-tooltip') || node.parentNode.tagName === 'SCRIPT')) {
+        const parent = node.parentNode;
+        if (!parent) continue;
+        if (parent.closest('a, code, pre, h1, h2, h3, h4, h5, h6, button, script, style, .evrenaki-tooltip, .alert, blockquote')) {
             continue;
         }
         nodesToReplace.push(node);
@@ -2147,10 +2150,10 @@ function postProcessTooltips(container) {
             }
         });
 
-        if (replaced) {
+        if (replaced && textNode.parentNode) {
             const span = document.createElement('span');
             span.innerHTML = text;
-            while(span.firstChild) {
+            while (span.firstChild) {
                 textNode.parentNode.insertBefore(span.firstChild, textNode);
             }
             textNode.parentNode.removeChild(textNode);

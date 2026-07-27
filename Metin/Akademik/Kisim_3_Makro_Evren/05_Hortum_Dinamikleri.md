@@ -4,7 +4,7 @@
 
 Evrenakı ortamında meydana gelen devasa astrofiziksel olayları (kütle-itim, uydu yörüngeleri, galaktik rotasyonlar) anlayabilmek adına, öncelikle mekanizması bilinen temel akışkan davranışlarına dair klasik analojiler kurmak pedagojik olarak zorunludur. Su gibi gündelik yaşamdan aşina olduğumuz akışkanlar üzerinden yürütülecek bir düşünce deneyi, bize Evrenakı'nın görünmez doğasını ifşa edecektir.
 
-Örneğin, hidrostatik basıncın yarattığı "kaldırma kuvveti" mekanizmasını ele alalım. Su ortamında, yüzeyden derinlere inildikçe kütle-itim kaynaklı hidrostatik basıncın arttığı gözlemlenir. Bu derinliğe bağlı basınç artışının skaler dağılımı ( $\nabla P$ ), suyun temel karakteristiğidir. 
+Örneğin, hidrostatik basıncın yarattığı "kaldırma kuvveti" mekanizmasını ele alalım (kaldırma kuvvetinin klasik formülasyonu: Arşimet, *Yüzen Cisimler Üzerine*, MÖ ~250; modern akışkanlar mekaniği sunumu: White, 2011). Su ortamında, yüzeyden derinlere inildikçe kütle-itim kaynaklı hidrostatik basıncın arttığı gözlemlenir. Bu derinliğe bağlı basınç artışının skaler dağılımı ( $\nabla P$ ), suyun temel karakteristiğidir. 
 <div style="background: #121212; padding: 20px; border-radius: 12px; border: 1px solid #404040; box-shadow: 0 10px 30px rgba(0,0,0,0.8); margin: 20px 0; text-align: center;">
   <h3 style="margin-top: 0; margin-bottom: 20px; color: #fff; font-weight: 600; letter-spacing: 1px; text-shadow: 0 0 10px rgba(0, 229, 255, 0.5);">Animasyon 3.5.1: Basınç farkının Net İtim (Kaldırma) ve Sıkıştırma kuvvetlerine dönüşümü.</h3>
   <svg viewBox="0 0 600 360" width="100%" style="max-width: 600px; background: #050505; border: 1px solid #333; border-radius: 8px;">
@@ -73,9 +73,9 @@ Animasyon 3.5.1'de bu hidrodinamik süreçlerin eşzamanlı etkisi açıkça gö
 
 Kozmolojik ölçekteki devasa kuvvetleri (gezegenlerin çekimi gibi) anlamadan önce, yeryüzündeki standart akışkanlarda nesnelerin birbirini "çekiyormuş" gibi göründüğü yanılgıların ardındaki fiziksel gerçeği incelemek elzemdir. Algılarımız bizi nasıl aldatır?
 
-Gemi inşaatı ve denizcilik literatüründe "Hydrodynamic Interaction" (Hidrodinamik Etkileşim) veya "Ship-to-Ship Suction" (Gemiden Gemiye Emme) olarak bilinen meşhur ve tehlikeli bir kural vardır: İki büyük gemi denizde birbirine paralel ve dar bir mesafede seyrettiklerinde, hızlandıkça açıklanamaz bir şekilde birbirlerine doğru "çekilirler" ve çarpışma riski doğar. 
+Gemi inşaatı ve denizcilik literatüründe "Hydrodynamic Interaction" (Hidrodinamik Etkileşim) veya "Ship-to-Ship Suction" (Gemiden Gemiye Emme) olarak bilinen meşhur ve tehlikeli bir kural vardır: İki büyük gemi denizde birbirine paralel ve dar bir mesafede seyrettiklerinde, hızlandıkça açıklanamaz bir şekilde birbirlerine doğru "çekilirler" ve çarpışma riski doğar (etkileşim kuvvetlerinin model deneyleriyle ölçümü: Vantorre ve ark., 2002). 
 
-Tarihte 1911 yılında devasa lüks yolcu gemisi *RMS Olympic* ile donanma kruvazörü *HMS Hawke* gemilerinin Southampton açıklarında okyanus ortasında açıklanamaz bir şekilde birbirlerine "çekilerek" çarpışması, bu etkinin mahkemelerde bilimsel olarak incelendiği ilk büyük vakadır. Bu durum, iki geminin kütlesinin uzaktan anında etki eden hipotetik bir Newton çekim kuvvetiyle birbirini çekmesiyle açıklanamaz; oysa uzaydaki gezegenler söz konusu olduğunda klasik yaklaşım tam olarak bu varsayımsal çekime (Gravity) dayanmaktadır.
+Tarihte 1911 yılında devasa lüks yolcu gemisi *RMS Olympic* ile donanma kruvazörü *HMS Hawke* gemilerinin Southampton açıklarında okyanus ortasında açıklanamaz bir şekilde birbirlerine "çekilerek" çarpışması, bu etkinin mahkemelerde bilimsel olarak incelendiği ilk büyük vakadır (vakanın hidrodinamik değerlendirmesi ve gemi-gemi emme kuvvetlerinin analizi için bkz. Dand, 1981). Bu durum, iki geminin kütlesinin uzaktan anında etki eden hipotetik bir Newton çekim kuvvetiyle birbirini çekmesiyle açıklanamaz; oysa uzaydaki gezegenler söz konusu olduğunda klasik yaklaşım tam olarak bu varsayımsal çekime (Gravity) dayanmaktadır.
 
 Olayın ardındaki asıl mekanizma **Bernoulli İlkesi**'dir (Bernoulli, 1738) ve gezegenler için de geçerlidir:
 1. İki geminin arasındaki dar kanalda (boğazda) akan suyun hızı, gemilerin dış taraflarındaki (açık denizdeki) suyun hızından çok daha yüksektir. (Daralma etkisi).
@@ -212,7 +212,7 @@ Bu paradoksun çözümü, Evrenakı ortamında kütle-itim mekanizmasını anlam
 </circle>
 </svg>
 </div>
-Hortumun (Vortex) iç dinamikleri Bernoulli ilkesi ve dairesel akım (circulation) kuralları ile analiz edildiğinde, "Hız" ve "Basınç" arasında ters orantılı kesin bir denklem ortaya çıkar. Animasyon 3.5.3'te net bir şekilde görüldüğü gibi; girdap merkezinde (r=0 noktasına yaklaştıkça) dönüş hızı inanılmaz boyutlara ulaşırken, akışkan (hava) basıncı merkezde ani bir çökme (düşüş) yaşar. Akışkanlar mekaniğindeki **Siklostrofik Denge** formülü ($v^2/r \propto \nabla P$) gereği, merkezdeki düşük basınç alanı devasa bir vakum (emme/itme) kuvveti yaratır.
+Hortumun (Vortex) iç dinamikleri Bernoulli ilkesi ve dairesel akım (circulation) kuralları ile analiz edildiğinde, "Hız" ve "Basınç" arasında ters orantılı kesin bir denklem ortaya çıkar. Animasyon 3.5.3'te net bir şekilde görüldüğü gibi; girdap merkezinde (r=0 noktasına yaklaştıkça) dönüş hızı inanılmaz boyutlara ulaşırken, akışkan (hava) basıncı merkezde ani bir çökme (düşüş) yaşar. Akışkanlar mekaniğindeki **Siklostrofik Denge** formülü ($v^2/r \propto \nabla P$; Holton, 2004) gereği, merkezdeki düşük basınç alanı devasa bir vakum (emme/itme) kuvveti yaratır.
 
 Merkezden dışarıya doğru radyal olarak ilerledikçe rüzgar (akışkan) hızı azalırken, statik hava basıncı artarak atmosferik normale döner. Su altı analojisinde (ve Gemi örneğinde) kurduğumuz altın kuralı burada da işletirsek: **Partiküller daima yüksek basınçtan (dış çeperden) düşük basınca (hortumun merkezine) doğru itilir.** 
 
@@ -222,7 +222,7 @@ Güneş sistemi de, Evrenakı (Aether) okyanusunda dönen devasa bir hortumdur. 
 
 ## 3.5.4 Makroskobik Girdap (Forced Vortex) Laboratuvar Deneyi
 
-Hortum mekanizmasında gördüğümüz, dönen akışkanın merkezine doğru oluşan bu basınç gradiyanı etkisini laboratuvar şartlarında izole edebiliriz. Kapalı bir silindirik kap (örneğin bir Erlenmeyer şişesi) içine su ve bir miktar askıda kalabilen ağır partikül (örn. sim veya pirinç taneleri) konulup sistem dış eksen etrafında döndürüldüğünde (Forced Vortex oluşturulduğunda) şaşırtıcı bir sonuç gözlemlenir.
+Hortum mekanizmasında gördüğümüz, dönen akışkanın merkezine doğru oluşan bu basınç gradiyanı etkisini laboratuvar şartlarında izole edebiliriz. Kapalı bir silindirik kap (örneğin bir Erlenmeyer şişesi) içine su ve bir miktar askıda kalabilen ağır partikül (örn. sim veya pirinç taneleri) konulup sistem dış eksen etrafında döndürüldüğünde (Forced Vortex oluşturulduğunda; zorlanmış/serbest girdap ayrımının klasik formülasyonu: Rankine, 1858; ders kitabı sunumu: White, 2011) şaşırtıcı bir sonuç gözlemlenir.
 
 ![Şekil 3.5.2: Su içerisinde yaratılan kuvvetler ve makroskobik girdap deneyimi.](Gorseller/image4.png)
 

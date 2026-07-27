@@ -5,19 +5,29 @@
 * Airy, G. B. (1871). *On a supposed alteration in the amount of astronomical aberration of light, produced by the passage of the light through a considerable thickness of refracting medium*. Proceedings of the Royal Society of London, 20, 35-39. (Su dolu teleskop — sapma açısının değişmemesi; §3.4.6).
 * Alves, J., et al. (2020). *A Galactic-scale gas wave in the solar neighbourhood*. Nature, 578(7794), 237-239. (Radcliffe Dalgası — disk düzlemi etrafında salınan dev gaz yapısı; §3.8.7).
 * Antoja, T., et al. (2018). *A dynamically young and perturbed Milky Way disk*. Nature, 561(7723), 360-362. (Gaia faz-uzayı sarmalı — diskin sönmemiş dikey salınımları; §3.8.7).
+* Archinal, B. A., et al. (2018). *Report of the IAU Working Group on Cartographic Coordinates and Rotational Elements: 2015*. Celestial Mechanics and Dynamical Astronomy, 130, 22. (Gök cisimlerinin resmî dönüş periyotları; §3.8.5).
+* Arşimet (MÖ ~250). *Yüzen Cisimler Üzerine* (*De corporibus fluitantibus*). (Kaldırma kuvvetinin klasik formülasyonu; §3.5.1).
 * Bahcall, J. N., & Bahcall, S. (1985). *The Sun's motion perpendicular to the galactic plane*. Nature, 316(6030), 706-708. (Güneş'in galaktik düzlemdeki dikey salınım periyodu).
-* Bernoulli, D. (1738). *Hydrodynamica, sive de viribus et motibus fluidorum commentarii*. Strasbourg: Johann Reinhold Dulsecker. (Basınç-hız ters orantısı).
+* Beck, J. G. (2000). *A comparison of differential rotation measurements*. Solar Physics, 191, 47-70. (Güneş yüzeyinin diferansiyel dönüş hızı; §3.8.1.1).
+* Belton, M. J. S., et al. (1995). *Bulk density of asteroid 243 Ida from the orbit of its satellite Dactyl*. Nature, 374, 785-788. (Ida–Dactyl sistemi; §3.8.5).
+* Bernoulli, D. (1738). *Hydrodynamica, sive de viribus et motibus fluidorum commentarii*. Strasbourg: Johann Reinhold Dulsecker. (Basınç-hız ters orantısı; §3.5.2, §3.9.2).
 * Bradley, J. (1728). *A Letter... giving an Account of a new discovered Motion of the Fix'd Stars*. Philosophical Transactions of the Royal Society, 35, 637-661. (Yıllık yıldız sapmasının keşfi; §3.4.6).
 * Chen, X., et al. (2019). *An intuitive 3D map of the Galactic warp's precession traced by classical Cepheids*. Nature Astronomy, 3(4), 320-325. (Galaktik çarpılmanın haritalanması).
 * Clowe, D., et al. (2006). *A Direct Empirical Proof of the Existence of Dark Matter*. The Astrophysical Journal Letters, 648(2), L109-L113. (Bullet Cluster zayıf merceklenme haritası; §3.7.4.1).
 * Coriolis, G. G. (1835). *Sur les équations du mouvement relatif des systèmes de corps*. Journal de l'École Polytechnique, 15, 142-154. (Coriolis kuvveti — dönen sistemlerde göreli hareket).
 * Correia, A. C. M., & Laskar, J. (2001). *The four final rotation states of Venus*. Nature, 411(6839), 767-770. (Venüs'ün retrograd denge durumları — §3.4.4 yelken kanalıyla karşılaştırma).
 * Curtis, H. D. (1918). *Descriptions of 762 Nebulae and Clusters Photographed with the Crossley Reflector*. Publications of Lick Observatory, 13, 9-42. (M87 jetinin ilk gözlemi — kutup ekseni boyunca kaçış; §3.8.6).
+* Dand, I. W. (1981). *Some measurements of interaction between ship models passing on parallel courses*. National Maritime Institute Report R 108. (Gemi-gemi emme kuvvetleri ve Olympic–Hawke tipi vakaların hidrodinamik değerlendirmesi; §3.5.2).
 * Descartes, R. (1644). *Principia Philosophiae*. Amsterdam: Ludovicum Elzevirium. (Plenum/Girdap kütleçekim yaklaşımı).
-* Dziewonski, A. M., & Anderson, D. L. (1981). *Preliminary reference Earth model*. Physics of the Earth and Planetary Interiors, 25(4), 297-356. (PREM Dünya yoğunluk modeli).
+* Dickey, J. O., et al. (1994). *Lunar Laser Ranging: A Continuing Legacy of the Apollo Program*. Science, 265(5171), 482-490. (Ay'ın yıllık 3,8 cm uzaklaşması ve LLR arşivi; §3.9.1, §3.9.4, §3.9.6).
+* Dziewonski, A. M., & Anderson, D. L. (1981). *Preliminary reference Earth model*. Physics of the Earth and Planetary Interiors, 25(4), 297-356. (PREM Dünya yoğunluk modeli; §3.9.4).
+* Einstein, A., & de Haas, W. J. (1915). *Experimenteller Nachweis der Ampèreschen Molekularströme*. Verhandlungen der Deutschen Physikalischen Gesellschaft, 17, 152-170. (Einstein–de Haas etkisi — mikro spinlerin makro dönüşe eklenmesi; §3.8.2).
 * Einstein, A. (1915). *Erklärung der Perihelbewegung des Merkur aus der allgemeinen Relativitätstheorie*. Sitzungsberichte der Preussischen Akademie der Wissenschaften. (Merkür günberi kayması anomalisi).
 * Event Horizon Telescope Collaboration (2022). *First Sagittarius A* Event Horizon Telescope Results. I. The Shadow of the Supermassive Black Hole in the Center of the Milky Way*. The Astrophysical Journal Letters, 930(2), L12. (Samanyolu merkez karadeliğinin doğrudan görüntülenmesi; §3.8.6).
+* Euler, L. (1757). *Principes généraux du mouvement des fluides*. Mémoires de l'Académie Royale des Sciences et Belles-Lettres de Berlin, 11, 274-315. (Sıkıştırılabilir Euler denklemi; §3.10.2).
+* Everitt, C. W. F., et al. (2011). *Gravity Probe B: Final Results of a Space Experiment to Test General Relativity*. Physical Review Letters, 106, 221101. (Gözlenen 39 mas/yıl çerçeve sürüklenmesi; §3.10.6).
 * Fizeau, H. (1851). *Sur les hypothèses relatives à l'éther lumineux*. Comptes Rendus de l'Académie des Sciences, 33, 349-355. (Akan suda ışığın kısmi sürüklenmesi — $1-1/n^2$ katsayısı; §3.4.6).
+* Fossat, E., et al. (2017). *Asymptotic g modes: Evidence for a rapid rotation of the solar core*. Astronomy & Astrophysics, 604, A40. (Güneş çekirdeğinin yüzeyden ~4 kat hızlı dönüşü; §3.8.1.1).
 * Gerritsma, R., Kirchmair, G., Zähringer, F., Solano, E., Blatt, R., & Roos, C. F. (2010). *Quantum simulation of the Dirac equation*. Nature, 463(7277), 68-71. (Zitterbewegung analog simülasyonu).
 * Gold, T., & Soter, S. (1969). *Atmospheric tides and the resonant rotation of Venus*. Icarus, 11(3), 356-366. (Atmosferik termal gelgit torku — §3.4.4 termal yelken kanalının klasik öncülü).
 * Goldreich, P., & Peale, S. (1966). *Spin-orbit coupling in the solar system*. The Astronomical Journal, 71, 425-438. (Merkür'ün 3:2 rezonansı ve spin-yörünge yakalanma olasılıkları — §3.4.4 kilit modu türetimiyle karşılaştırma).
