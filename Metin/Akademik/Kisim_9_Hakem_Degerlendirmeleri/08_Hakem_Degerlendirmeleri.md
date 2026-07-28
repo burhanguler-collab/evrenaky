@@ -6,6 +6,7 @@ Teori, geliştirme sürecinde eleştirel hakem değerlendirmelerinden geçirilmi
 * **Satürn halka dinamiği üzerine eleştirel inceleme:** Halka kararlılığı iddialarının nicel sınırlarını çizen, "dürüst tespit" formatındaki değerlendirme **Bölüm 3.10**'un içindedir.
 * **Önceki sürüm hakem raporları:** Kitabın önceki sürümüne yönelik hakem değerlendirmelerinin ve düzeltme kayıtlarının tamamı, site menüsündeki **"Eski Sürüm → Hakem Değerlendirmeleri"** başlığında (duzeltme.md) korunmaktadır.
 * **Yapay zekâ değerlendirmesi (Claude Fable 5, 27 Temmuz 2026):** Akademik sürümün tamamının (Kısım 5 Deneyler hariç) yedi kriter üzerinden sistematik incelemesi ve puanlaması **Bölüm 9.2**'dedir. Değerlendirme, kısım başına bağımsız inceleme turlarının sentezidir; 1. tur puanı 6,6/10, aynı gün işlenen revizyon paketinin denetimini içeren 2. tur puanı **6,8/10**'dur.
+* **14 kriterli standarda göre hakem raporu (Claude Fable 5, 27 Temmuz 2026):** Bölüm 9.7'deki Hakemlik Standardı'nın ilk resmî uygulaması **Bölüm 9.5**'tedir. Rapor; katil itiraz denetimi (Kriter 11), kanıt sınıflandırması (Kriter 12) ve 22 kriz kaleminin güncellik denetimi (Kriter 13) için ayrı denetim turları içerir. Sonuç: **6,1/10 — majör revizyon** (iki majör, altı minör zorunlu kalem listelenmiştir; puanın 9.2'deki 6,8'den farkı, standardın bilinçli olarak daha sert olmasındandır).
 
 ---
 

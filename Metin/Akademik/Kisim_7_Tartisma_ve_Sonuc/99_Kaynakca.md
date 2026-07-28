@@ -2,7 +2,9 @@
 
 *Kısım VII — Tartışma ve Sonuç*, iki vaka analizinde (7.1–7.2), genel sentezde (7.3), sınırlılıklar listesinde (7.4), yanlışlanabilir öngörüler tablosunda (7.5) ve modern fiziğin 22 açık krizi bölümünde (7.7) dayanak olarak kullanılan gözlem ve çalışmaları aşağıdaki kaynaklara bağlar. Girdiler, bölüm metinlerindeki metin-içi atıflarla eşleştirilmiştir. Kitabın tamamına yönelik atıflar için ilgili kısımların kaynakçalarına da bakınız.
 
-* Aguillard, D. P., et al. (Muon g-2 Collaboration) (2023). *Measurement of the Positive Muon Anomalous Magnetic Moment to 0.20 ppm*. Physical Review Letters, 131, 161802. (Fermilab müon $g-2$ sapması; Bölüm 7.7.4).
+* Aguillard, D. P., et al. (Muon g-2 Collaboration) (2023). *Measurement of the Positive Muon Anomalous Magnetic Moment to 0.20 ppm*. Physical Review Letters, 131, 161802. (Fermilab müon $g-2$ 2023 ölçümü; Bölüm 7.7.4).
+* Aguillard, D. P., et al. (Muon g-2 Collaboration) (2025). *Measurement of the Positive Muon Anomalous Magnetic Moment to 127 ppb*. Physical Review Letters. (Nihai Fermilab ölçümü; Bölüm 7.7.4 karşı kayıt).
+* Aliberti, R., et al. (Muon g-2 Theory Initiative) (2025). *The anomalous magnetic moment of the muon in the Standard Model: an update*. arXiv:2505.21476. (Örgü-QCD temelli teorik öngörü güncellemesi; Bölüm 7.7.4 karşı kayıt).
 * Antognini, A., et al. (2013). *Proton Structure from the Measurement of 2S-2P Transition Frequencies of Muonic Hydrogen*. Science, 339(6118), 417-420. (Müonik hidrojenle proton yarıçapının doğrulanması; Bölüm 7.7.3).
 * Archinal, B. A., et al. (2018). *Report of the IAU Working Group on Cartographic Coordinates and Rotational Elements: 2015*. Celestial Mechanics and Dynamical Astronomy, 130, 22. (Gaz devlerinin dönüş periyotları ve basıklık katsayıları; Bölüm 7.1.2).
 * Asgari, M., et al. (2021). *KiDS-1000 Cosmology: Cosmic shear constraints and comparison between two point statistics*. Astronomy & Astrophysics, 645, A104. (Geç evren $S_8$ ölçümü; Bölüm 7.7.8).
@@ -10,6 +12,8 @@
 * Bahcall, J. N., & Bahcall, S. (1985). *The Sun's motion perpendicular to the galactic plane*. Nature, 316(6030), 706-708. (Güneş'in dikey salınım periyodu; Bölüm 7.4, md. 1).
 * Batygin, K., & Brown, M. E. (2016). *Evidence for a Distant Giant Planet in the Solar System*. The Astronomical Journal, 151, 22. (Dokuzuncu Gezegen hipotezi; Bölüm 7.7.20).
 * Bennett, C. L., et al. (2013). *Nine-Year Wilkinson Microwave Anisotropy Probe (WMAP) Observations: Final Maps and Results*. The Astrophysical Journal Supplement, 208, 20. (WMAP CMB haritaları; Bölüm 7.7.7).
+* Bezginov, N., et al. (2019). *A measurement of the atomic hydrogen Lamb shift and the proton charge radius*. Science, 365(6457), 1007-1012. (Elektronik hidrojenle küçük proton yarıçapının doğrulanması; Bölüm 7.7.3 karşı kayıt).
+* Bochenek, C. D., et al. (2020). *A fast radio burst associated with a Galactic magnetar*. Nature, 587(7832), 59-62. (SGR 1935+2154'ten Galaktik FRB; Bölüm 7.7.18 karşı kayıt).
 * Boylan-Kolchin, M., Bullock, J. S., & Kaplinghat, M. (2011). *Too big to fail? The puzzling darkness of massive Milky Way subhaloes*. Monthly Notices of the Royal Astronomical Society, 415, L40-L44. ("Too big to fail" problemi; Bölüm 7.7.14).
 * Canetti, L., Drewes, M., & Shaposhnikov, M. (2012). *Matter and antimatter in the universe*. New Journal of Physics, 14, 095012. (Baryon asimetrisinin güncel durumu; Bölüm 7.7.13).
 * CHIME/FRB Collaboration (2020). *Periodic activity from a fast radio burst source*. Nature, 582, 351-355. (FRB'lerde düzenli uzun periyotlar; Bölüm 7.7.18).
@@ -24,6 +28,7 @@
 * Fields, B. D. (2011). *The Primordial Lithium Problem*. Annual Review of Nuclear and Particle Science, 61, 47-68. (Kozmolojik lityum problemi derlemesi; Bölüm 7.7.6).
 * Finkelstein, S. L., et al. (2022). *A Long Time Ago in a Galaxy Far, Far Away: A Candidate z ~ 12 Galaxy in Early JWST CEERS Imaging*. The Astrophysical Journal Letters, 940, L55. (JWST erken galaksi adayları; Bölüm 7.7.2).
 * Gaia Collaboration (Brown, A. G. A., et al.) (2021). *Gaia Early Data Release 3: Summary of the contents and survey properties*. Astronomy & Astrophysics, 649, A1. (Astrometri ve yıldız/pulsar katalogları; Bölüm 7.5, satır 5 ve 9).
+* Grinin, A., et al. (2020). *Two-photon frequency comb spectroscopy of atomic hydrogen*. Science, 370(6520), 1061-1066. (Küçük proton yarıçapının bağımsız elektronik doğrulaması; Bölüm 7.7.3 karşı kayıt).
 * Heymans, C., et al. (2021). *KiDS-1000 Cosmology: Multi-probe weak gravitational lensing and spectroscopic galaxy clustering constraints*. Astronomy & Astrophysics, 646, A140. (Geç evren $S_8$ ölçümü; Bölüm 7.7.8).
 * Hutsemékers, D., Braibant, L., Pelgrims, V., & Sluse, D. (2014). *Alignment of quasar polarizations with large-scale structures*. Astronomy & Astrophysics, 572, A18. (Kuazar eksen ve polarizasyon hizalanmaları; Bölüm 7.7.12).
 * Ibata, R. A., et al. (2013). *A vast, thin plane of corotating dwarf galaxies orbiting the Andromeda galaxy*. Nature, 493, 62-65. (Andromeda uydu düzlemi; Bölüm 7.7.14).
@@ -46,6 +51,7 @@
 * Newton, I. (1687). *Philosophiae Naturalis Principia Mathematica*. Londra: Royal Society. (Newtoniyen mekanik çerçeve; Bölüm 7.2.2).
 * Pawlowski, M. S., Pflamm-Altenburg, J., & Kroupa, P. (2012). *The VPOS: a vast polar structure of satellite galaxies, globular clusters and streams around the Milky Way*. Monthly Notices of the Royal Astronomical Society, 423, 1109-1126. (Samanyolu uydu düzlemi; Bölüm 7.7.14).
 * Planck, M. (1901). *Ueber das Gesetz der Energieverteilung im Normalspectrum*. Annalen der Physik, 309(3), 553-563. (Planck sabitinin özgün formülasyonu; Bölüm 7.2).
+* Planck Collaboration (Ade, P. A. R., et al.) (2014). *Planck intermediate results. XIII. Constraints on peculiar velocities*. Astronomy & Astrophysics, 561, A97. (Karanlık akış sinyalinin doğrulanmaması; Bölüm 7.7.11 karşı kayıt).
 * Planck Collaboration (Aghanim, N., et al.) (2020). *Planck 2018 Results. VI. Cosmological Parameters*. Astronomy & Astrophysics, 641, A6. (Erken evren $H_0$ ve $S_8$ değerleri, CMB akustik pikleri; Bölüm 7.4, 7.7.1, 7.7.8).
 * Planck Collaboration (Akrami, Y., et al.) (2020b). *Planck 2018 Results. VII. Isotropy and Statistics of the CMB*. Astronomy & Astrophysics, 641, A7. (CMB izotropi anomalilerinin resmî analizi; Bölüm 7.7.7).
 * Poggio, E., et al. (2020). *Evidence of a dynamically evolving Galactic warp*. Nature Astronomy, 4(6), 590-596. (Warp devinim hızı ~10,9 km/s/kpc; Bölüm 7.5, satır 11).
@@ -61,10 +67,11 @@
 * Seligman, D., & Laughlin, G. (2020). *Evidence that 1I/2017 U1 ('Oumuamua) was Composed of Molecular Hydrogen Ice*. The Astrophysical Journal Letters, 896, L8. ("Hidrojen buzdağı" modeli; Bölüm 7.7.19).
 * Siegert, T., et al. (2016). *Gamma-ray spectroscopy of positron annihilation in the Milky Way*. Astronomy & Astrophysics, 586, A84. (511 keV imzasının güncel spektroskopisi; Bölüm 7.7.17).
 * Su, M., Slatyer, T. R., & Finkbeiner, D. P. (2010). *Giant Gamma-ray Bubbles from Fermi-LAT: Active Galactic Nucleus Activity or Bipolar Galactic Wind?* The Astrophysical Journal, 724, 1044-1082. (Fermi baloncukları; Bölüm 7.7.16).
-* Tiesinga, E., Mohr, P. J., Newell, D. B., & Taylor, B. N. (2021). *CODATA Recommended Values of the Fundamental Physical Constants: 2018*. Reviews of Modern Physics, 93, 025010. (Proton yük yarıçapının derlenmiş değeri; Bölüm 7.7.3).
+* Tiesinga, E., Mohr, P. J., Newell, D. B., & Taylor, B. N. (2021). *CODATA Recommended Values of the Fundamental Physical Constants: 2018*. Reviews of Modern Physics, 93, 025010. (CODATA 2018'in **küçük** proton yarıçapını ($\approx 0{,}8414$ fm) tavsiye değeri olarak benimsemesi; Bölüm 7.7.3 karşı kayıt).
 * Trujillo, C. A., & Sheppard, S. S. (2014). *A Sedna-like body with a perihelion of 80 astronomical units*. Nature, 507, 471-474. (ETNO yörünge kümelenmesinin ilk kaydı; Bölüm 7.7.20).
 * van Dokkum, P., et al. (2018). *A galaxy lacking dark matter*. Nature, 555, 629-632. (NGC 1052-DF2; Bölüm 7.7.15).
 * Vielva, P., Martínez-González, E., Barreiro, R. B., Sanz, J. L., & Cayón, L. (2004). *Detection of Non-Gaussianity in the WMAP 1-Year Data Using Spherical Wavelets*. The Astrophysical Journal, 609, 22-34. (CMB Soğuk Lekesi; Bölüm 7.7.7).
+* Wright, A. H., et al. (2025). *KiDS-Legacy: Cosmological constraints from cosmic shear*. Astronomy & Astrophysics. (KiDS-Legacy son analizinin $S_8$ gerilimini eritmesi; Bölüm 7.7.8 karşı kayıt).
 
 ## Atıf Biçimi
 

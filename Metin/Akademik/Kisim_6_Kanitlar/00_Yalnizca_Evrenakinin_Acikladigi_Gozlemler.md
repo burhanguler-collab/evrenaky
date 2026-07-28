@@ -1,6 +1,6 @@
 # Yalnızca Evrenakı Teorisi'nin Açıkladığı Doğa Olguları ve Gözlem Matrisi
 
-Önceki kısımlarda Evrenakı Teorisi'nin temel postülatları, mikro/makro mekanizmaları ve matematiksel modeli sunuldu. Bu bölüm, Standart Model ve Genel Görelilik gibi geleneksel kuramların **soyut kabullerle (foton, uzaktan etki, karanlık madde/enerji, dalga fonksiyonu çökmesi)** geçiştirdiği veya tamamen çaresiz kaldığı, buna karşılık **yalnızca Evrenakı'nın somut mekanik ve hidrodinamik ilkelerle açıkladığı** 17 temel gözlem ve doğa olgusunun toplu kanıt haritasıdır.
+Önceki kısımlarda Evrenakı Teorisi'nin temel postülatları, mikro/makro mekanizmaları ve matematiksel modeli sunuldu. Bu bölüm, Standart Model ve Genel Görelilik gibi geleneksel kuramların **soyut kabullerle (foton, uzaktan etki, karanlık madde/enerji, dalga fonksiyonu çökmesi)** geçiştirdiği veya tamamen çaresiz kaldığı, buna karşılık **yalnızca Evrenakı'nın somut mekanik ve hidrodinamik ilkelerle açıkladığı** 16 temel gözlem ve doğa olgusunun toplu kanıt haritasıdır (on yedinci kalem — §2.6 — Karşı Kayıt ilkesi gereği geri çekilmiş ve kaydı korunarak işaretlenmiştir).
 
 ---
 
@@ -16,7 +16,7 @@
 
 ### 1.3 Michelson-Morley Sıfır Sonucu ve Bradley Yıldız Sapması İkilemi
 * **Standart Fiziğin Çıkmazı:** Özel Görelilik postülatı ile mutlak referans sisteminin reddi ve esir modellerinin sapmayla çelişmesi.
-* **Evrenakı Mekanik Çözümü:** Moleküler ölçekten gezegensel ölçeğe kadar her kütle etrafında bir **Sürüklenme Zarfı (Entrainment)** taşır. Michelson-Morley cihazı (Michelson & Morley, 1887) bu zarfın içinde olduğu için sıfır sonucu verir; uzaydan gelen ışık ise zarf sınırına girdiğinde kırıldığı için Bradley yıldız sapması (Bradley, 1729) gözlenir.
+* **Evrenakı Mekanik Çözümü:** Moleküler ölçekten gezegensel ölçeğe kadar her kütle etrafında bir **Sürüklenme Zarfı (Entrainment)** taşır. Michelson-Morley cihazı (Michelson & Morley, 1887) bu zarfın içinde olduğu için sıfır sonucu verir. Bradley yıldız sapması (Bradley, 1729) ise zarf sınırında üretilmez ve silinmez — **kavrama skalerdir**: ortam Zerre'nin yalnızca süratini belirler, geliş doğrultusuna karışmaz; sapma, kaynağın ve gözlemcinin hareketinden doğan saf kinematik bir açı olarak zarftan etkilenmeden korunur (tam mekanizma ve Airy su teleskobu dahil beş gözlemli kıskacın çözümü: Bölüm 3.4.6).
 
 ### 1.4 Bell Dolanıklığı ve Gezegenler Arası Anlık Korelasyon
 * **Standart Fiziğin Çıkmazı:** "Spooky action at a distance" (Uzaktan gizemli etki / telepati) veya nedensellik ihlali (Einstein, Podolsky & Rosen, 1935; Bell, 1964; deneysel ihlaller: Aspect ve ark., 1982; Hensen ve ark., 2015).
@@ -40,7 +40,7 @@
 
 ### 2.3 Doğrudan Karanlık Madde Arama (WIMP / Axion) Deneylerinin Sıfır Sonuçları
 * **Standart Fiziğin Çıkmazı:** 40 yıldır yeraltı laboratuvarlarında parçacık bulunamaması bir "anomali/kriz" olarak görülür (LUX: Akerib ve ark., 2017; XENON1T: Aprile ve ark., 2018).
-* **Evrenakı Mekanik Çözümü:** Girdap kuyuları parçacık değildir; ortamın akışkan fazıdır. Dedektörlerin parçacık bulamaması teorinin doğrudan **öngörüsüdür**.
+* **Evrenakı Mekanik Çözümü:** Girdap kuyuları parçacık değildir; ortamın akışkan fazıdır. Dedektörlerin parçacık bulamaması teorinin çerçevesiyle **geriye dönük uyumludur** (teori bu deneylerden sonra formüle edildiğinden bu bir kayıt-öncesi öngörü değildir; sınıflandırma için bkz. 6.5 "Kanıtların Statüsü"). Aramaların gelecekte de sıfır sonuç vermeye devam etmesi ise teorinin ileriye dönük beklentisidir.
 
 ### 2.4 Kozmolojik İvmelenen Genleşme (Karanlık Enerji Olmadan)
 * **Standart Fiziğin Çıkmazı:** Evrenin %68'ini oluşturduğu iddia edilen ama ne olduğu bilinmeyen fiktif "Karanlık Enerji" (Kozmolojik Sabit $\Lambda$; Riess ve ark., 1998; Perlmutter ve ark., 1999; oran: Planck Collaboration, 2020).

@@ -33,7 +33,7 @@
 * Fan, X., Myers, T. G., Sukra, B. A. D., & Gabrielse, G. (2023). *Measurement of the Electron Magnetic Moment*. Physical Review Letters, 130, 071801. (Elektron manyetik momentinin en hassas ölçümü, Bölüm 2.1).
 * Feynman, R. P. (1948). *Space-Time Approach to Non-Relativistic Quantum Mechanics*. Reviews of Modern Physics, 20(2), 367-387. (Yol integrali — "tüm olası yollar toplamı", Bölüm 2.6.2).
 * Feynman, R. P. (1985). *QED: The Strange Theory of Light and Matter*. Princeton: Princeton University Press. (Yol toplamı ilkesinin popüler sunumu, Bölüm 2.6.2).
-* Fizeau, H. (1851). *Sur les hypothèses relatives à l'éther lumineux*. Comptes Rendus de l'Académie des Sciences, 33, 349-355. (Hareketli ortamlarda optik sürüklenme).
+* Fizeau, H. (1851). *Sur les hypothèses relatives à l'éther lumineux*. Comptes Rendus de l'Académie des Sciences, 33, 349-355. (Hareketli ortamlarda kısmi optik sürüklenme; bu kısımda metin-içi atıfı yoktur — deneyin teorideki ayrıntılı işlenişi ve katsayı türetimi Bölüm 3.4.6'dadır, bkz. 3.12 Kaynakça).
 * Fresnel, A. (1819). *Mémoire sur la diffraction de la lumière*. Mémoires de l'Académie des Sciences, 5, 339-475. (Fresnel kırınımı — kenar saçakları, Bölüm 2.8.1).
 * Fresnel, A. (1823). *Mémoire sur la loi des modifications que la réflexion imprime à la lumière polarisée*. Mémoires de l'Académie des Sciences, 11, 393-433. (Yansıma/geçirme katsayıları, Bölüm 2.3.7).
 * Gerritsma, R., Kirchmair, G., Zähringer, F., Solano, E., Blatt, R., & Roos, C. F. (2010). *Quantum simulation of the Dirac equation*. Nature, 463(7277), 68-71. (Zitterbewegung salınımının analog simülasyonu, Bölüm 2.1).

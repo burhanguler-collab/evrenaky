@@ -82,7 +82,9 @@ Kısım 3'te ispatladığımız üzere Güneş (veya herhangi bir yıldız), iç
 Uzak bir galaksiden gelen Zerre (Işık) damlacığı, Güneş'in bu yoğun Evrenakı alanına açılı bir şekilde girdiğinde, tıpkı havadan cama giren ışık gibi davranır. Zerre'nin bir tarafı bu yoğun dirence diğer tarafından saliseler kadar erken girer. Kısım 2.5.2'de (Snell Yasası) anlattığımız o meşhur **"Asimetrik Patinaj"** (sağ tekerleği çamura düşen araba) etkisi, uzay boşluğunda makro ölçekte gerçekleşir. 
 Zerre asimetrik bir sürtünmeyle karşılaşır, kendi ekseninde dönmeye zorlanır ve rotası Güneş'in merkezine doğru kavis çizer. Kütleçekimsel merceklenme, Einstein'ın iddia ettiği gibi soyut bir boyut bükülmesi değil; Güneş'in Evrenakı gradyanını devasa bir **cam prizma** (lens) gibi kullanarak Işığı optik olarak kırmasından ibarettir!
 
-## 4.3.4 Kesin İspat: Kuazar Mikro-Merceklenme Boyut Anomalisi
+## 4.3.4 Aday Açıklama: Kuazar Mikro-Merceklenme Boyut Anomalisi
+
+> *Statü notu (6.5 taksonomisi):* Bu bölümün önerdiği çözüm, bilinen bir anomaliye serbest bir katsayı ($\chi$, bkz. 4.3.5) üzerinden geriye dönük uyumdur — kanıt sınıflandırmasında **kalibrasyon** kategorisindedir. "Kanıt" statüsü, ancak $\chi$ bağımsız kalibre edildikten sonra yapılacak ileriye dönük testle kazanılabilir; bölümün asıl kanıt değeri, öngörünün **kromatik olması** gibi nitel ve çift taraflı ayrımdadır (GR'de fark tam sıfırdır).
 
 Peki Kütleçekimsel Merceklenmenin uzay-zaman eğriliği (Einstein) değil de Evrenakı optik kırılması (Akışkanlar Mekaniği) olduğunu nasıl kanıtlarız? 
 Kozmolojinin 100 yıllık kör noktası olan **"Kuazar Boyut Anomalisi"** bu sorunun kesin cevabıdır:
@@ -97,7 +99,7 @@ Mercek görevi gören ön plandaki galaksinin Evrenakı gradyanı, kuazardan gel
 
 Bu astronomik test, öngörünün doğrulanması hâlinde, uzay-zaman eğriliği yorumuna karşı Evrenakı'nın (optik ile kütle-itimin hidrodinamik tekilliğinin) belirleyici bir kanıtını oluşturacaktır.
 
-## 4.3.5 Matematiksel İspat: Renksel Sapma Açısı ve $318\ \mu\text{as}$ Fark
+## 4.3.5 Nicel Kestirim (serbest $\chi$ ile): Renksel Sapma Açısı ve $318\ \mu\text{as}$ Fark
 
 Peki bu bükülmenin formülü nedir? Güneş'in radyal basınç gradyanı ($\nabla P_r$) altında ilerleyen bir Zerre dizisine etki eden toplam dik kuvvet $F_{\perp}$ ise, sapma açısı ($\theta$) doğrudan yerel ışık hızına ($v_{ışık}$) ve frekansa ($\nu$) bağlıdır:
 

@@ -633,7 +633,7 @@ const simulationsList = [
         category: 'geometri',
         badgeClass: 'badge-blue',
         badgeText: 'GEOMETRİ & GRADYANLAR',
-        file: 'Metin/bolum_26_2d.html',
+        file: 'gradient_sim.html',
         chapterId: 'akademik_03_03',
         chapterName: '3.3 Mikrodan Makroya Evrenakı',
         desc: 'Kare, Üçgen, Çubuk ve Daire kütlelerinin 2D basınç gölgeleri ve asimetrik yönelim itki vektörleri.'

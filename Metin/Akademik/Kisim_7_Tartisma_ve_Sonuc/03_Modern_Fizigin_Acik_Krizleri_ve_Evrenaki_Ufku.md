@@ -1,6 +1,8 @@
 # 7.7 Modern Fiziğin Açık Krizleri ve Evrenakı Teorisi'nin Çözüm Ufku
 
-Önceki kısımlarda Evrenakı Teorisi'nin temel postülatları kurulmuş, mikro/makro mekanizmaları tanımlanmış ve kâğıt üzerindeki deneysel/matematiksel kanıtları sunulmuştur (Kısım 6). Bu bölümde ise günümüz modern fiziğinde (Standart Model + Genel Görelilik + $\Lambda\text{CDM}$ kozmolojisi) **derin bir kriz ve anomali olarak kabul edilen**, henüz geleneksel kuramlarca çözülememiş 22 büyük problem ele alınmakta ve Evrenakı'nın bu krizlere sunduğu **doğrudan mekanik çözüm potansiyeli** analiz edilmektedir.
+Önceki kısımlarda Evrenakı Teorisi'nin temel postülatları kurulmuş, mikro/makro mekanizmaları tanımlanmış ve kâğıt üzerindeki deneysel/matematiksel kanıtları sunulmuştur (Kısım 6). Bu bölümde ise günümüz modern fiziğinde (Standart Model + Genel Görelilik + $\Lambda\text{CDM}$ kozmolojisi) **derin bir kriz ve anomali olarak kabul edilen** 22 büyük problem ele alınmakta ve Evrenakı'nın bu krizlere sunduğu **doğrudan mekanik çözüm potansiyeli** analiz edilmektedir.
+
+Karşı Kayıt ilkesi (Bölüm 1.1.2) gereği bu envanter **yaşayan bir listedir**: literatürde sonradan kapanan veya zayıflayan kalemler silinmez, ilgili başlıkta açıkça işaretlenir ve teorinin okuması arşive alınır. Bu sürümde 7.7.3 ile 7.7.4 "kapanan kriz" olarak geri çekilmiş, 7.7.8 "zayıflayan gerilim" statüsüne indirilmiş, 7.7.11'in karanlık akış bileşeni daraltılmış; 7.7.5'in termodinamik çerçevesi ile 7.7.18'in enerji kıyası düzeltilmiştir. Kriz envanterinin gücü kalem sayısından değil, sağlam kalemlerden gelir.
 
 ---
 
@@ -24,30 +26,30 @@ Evrenakı Teorisi'nde galaksiler parçacıkların yavaş kütleçekimsel birikim
 
 ---
 
-## 7.7.3 Proton Yarıçapı Bilmecesi (Proton Radius Puzzle)
+## 7.7.3 Proton Yarıçapı Bilmecesi (Proton Radius Puzzle) — KAPANAN KRİZ
 
-### 1. Güncel Fizikteki Kriz
-Protonun yarıçapı normal hidrojen atomuyla (elektronlu) ölçüldüğünde $r_p \approx 0{,}877$ fm çıkarken (CODATA derlemesi: Tiesinga ve ark., 2021), elektronun 200 katı kütleli müon içeren "müonik hidrojen" ile ölçüldüğünde $r_p \approx 0{,}8409$ fm çıkmaktadır (Pohl ve ark., 2010; Antognini ve ark., 2013). Standart kuantum elektrodinamiği (QED) bu $4\sigma$'lık farkı yeni bir fizik tanımlamadan açıklayamamaktadır.
+### 1. Krizin Tarihçesi ve Güncel Durumu
+Protonun yarıçapı eski elektronik hidrojen ölçümlerinin derlemesinde $r_p \approx 0{,}877$ fm iken, müonik hidrojen ölçümleri $r_p \approx 0{,}8409$ fm vermiş (Pohl ve ark., 2010; Antognini ve ark., 2013) ve bu ~$4\sigma$ fark on yıl boyunca "yeni fizik" adayı sayılmıştı. *Karşı kayıt (güncellik):* Sonraki hassas **elektronik** ölçümler de küçük değeri doğrulamış (Bezginov ve ark., 2019; Grinin ve ark., 2020) ve CODATA 2018 derlemesi küçük değeri ($\approx 0{,}8414$ fm) tavsiye değeri olarak benimsemiştir (Tiesinga ve ark., 2021). Bilmece bugün büyük ölçüde kapanmış sayılmaktadır; Karşı Kayıt ilkesi gereği bu kalem açık kriz statüsünden **geri çekilmiştir**. (Bu bölümün önceki sürümünde 0,877 fm değerine Tiesinga 2021'in kaynak gösterilmesi bir atıf hatasıydı; düzeltilmiştir.)
 
-### 2. Evrenakı Mekanik Çözümü
-Evrenakı'da proton nokta-parçacık değil, çeperinde yüksek yoğunluklu **Evrenakı Rampası (Sınır Tabakası)** taşıyan 4D deplasman pompasıdır. Müon elektrondan 200 kat daha ağır olduğu için kendi sürüklenme zarfı protonun Evrenakı Rampası'nın daha derinlerine nüfuz eder ve temas yarıçapını hidrodinamik olarak daraltır ($r_{temas} < r_{serbest}$).
+### 2. Evrenakı Mekanik Okuması (arşiv)
+Evrenakı'da proton nokta-parçacık değil, çeperinde yüksek yoğunluklu **Evrenakı Rampası (Sınır Tabakası)** taşıyan 4D deplasman pompasıdır. Müon elektrondan 200 kat daha ağır olduğu için kendi sürüklenme zarfı protonun Evrenakı Rampası'nın daha derinlerine nüfuz eder ve temas yarıçapını hidrodinamik olarak daraltır ($r_{temas} < r_{serbest}$). Elektronik ölçümlerin de küçük değere yakınsaması, bu mekanizmanın öngöreceği kalıcı elektron-müon farkına sıkı bir üst sınır koyar; okuma, fark ileride yeniden açılırsa devreye girecek aday mekanizma olarak arşivlenmiştir.
 
 ---
 
-## 7.7.4 Müon $g-2$ Anormal Manyetik Moment Sapması
+## 7.7.4 Müon $g-2$ Anormal Manyetik Moment Sapması — KAPANAN KRİZ
 
-### 1. Güncel Fizikteki Kriz
-Fermilab'daki $g-2$ deneyinde müonun manyetik momenti Standart Model'in teorik öngörüsünden $5{,}1\sigma$ oranında sapmıştır (Aguillard ve ark., 2023). Doğa, Standart Model'de yer almayan ek bir etkileşim sergilemektedir.
+### 1. Krizin Tarihçesi ve Güncel Durumu
+Fermilab'ın 2023 ölçümü, müonun manyetik momentinin o günkü Standart Model öngörüsünden $5{,}1\sigma$ saptığını raporlamıştı (Aguillard ve ark., 2023). *Karşı kayıt (güncellik):* 2025'te açıklanan nihai Fermilab ölçümü deneysel değeri kesinleştirmiş; aynı dönemde Teori Girişimi'nin örgü-QCD (lattice) temelli hadronik vakum polarizasyonu güncellemesi (Aliberti ve ark., 2025) teorik öngörüyü deneysel değere taşımıştır. Deney-teori farkı fiilen kapanmıştır: sapmanın kaynağı Doğa'daki yeni bir etkileşim değil, teorik hesabın eski, veri-temelli girdisiydi. Karşı Kayıt ilkesi gereği bu kalem açık kriz statüsünden **geri çekilmiştir**.
 
-### 2. Evrenakı Mekanik Çözümü
-Müon daha büyük kütleye (daha yüksek 4D deplasman pompalama debisine) sahip olduğu için, ortamdaki arka plan vortisite tüpleriyle nötr elektronunkinden farklı boyutta bir hidrodinamik tork (dönü momenti) alışverişi yaparlar. QED'in sanal parçacık ilmekleri yerine ortamın vortisite direnci hesaba katıldığında bu sapma türetilebilir.
+### 2. Evrenakı Mekanik Okuması (arşiv)
+Müon daha büyük kütleye (daha yüksek 4D deplasman pompalama debisine) sahip olduğu için, ortamdaki arka plan vortisite tüpleriyle normal elektronunkinden farklı boyutta bir hidrodinamik tork (dönü momenti) alışverişi yapar. Bu vortisite-torku okuması, deney-teori farkı gelecekte yeniden açılırsa devreye girecek aday mekanizma olarak arşivlenmiştir.
 
 ---
 
 ## 7.7.5 Güneş Korona Isınma Anomalisi (Solar Coronal Heating)
 
 ### 1. Güncel Fizikteki Kriz
-Güneş'in yüzey sıcaklığı $\sim 5.800$ K iken, dış atmosferi (Korona) milyonlarca derece ($1.000.000 - 3.000.000$ K) sıcaklıktadır. Termodinamiğin 2. Kanunu gereği soğuk yüzeyden sıcak atmosfere termal ısı akamaz. Astrofizik bunu manyetik yeniden bağlanma ile açıklamaya çalışsa da somut iletim mekanizması eksiktir (sorunun güncel durumu: Klimchuk, 2006).
+Güneş'in yüzey sıcaklığı $\sim 5.800$ K iken, dış atmosferi (Korona) milyonlarca derece ($1.000.000 - 3.000.000$ K) sıcaklıktadır. Buradaki bilmece — sık yapılan sunumun aksine — bir termodinamik ihlal **değildir**: enerji koronaya termal iletimle değil, manyetik ve mekanik akılarla (manyetik yeniden bağlanma, Alfvén dalgaları, nanoflare'ler) taşındığından 2. Kanun'la çelişki yoktur. Açık soru, bu mekanizmalardan hangisinin baskın olduğu ve enerjinin koronada nasıl biriktirilip ısıya çevrildiğidir (güncel durum: Klimchuk, 2006; Parker Solar Probe ölçümleri aday mekanizmaları daraltmaktadır).
 
 ### 2. Evrenakı Mekanik Çözümü
 Güneş'in ekvatoral vorteks pompası dışa doğru Evrenakı akışkanını deşarj ederken, yüzey çeperinde devasa kesme kuvvetleri (shear flow) ve kavitasyon şok dalgaları üretir. Isı akışı yüzeyden termal iletimle değil, ortamın kinetik şok kavitasyonunun koronada plazmaya mekanik enerji aktarmasıyla gerçekleşir.
@@ -74,13 +76,13 @@ CMB pikleri, ilkel plazmanın ortamın kuyu iskeletinde salınmasının izidir (
 
 ---
 
-## 7.7.8 $S_8$ Gerilimi (Yapı Büyüme Krizi)
+## 7.7.8 $S_8$ Gerilimi (Yapı Büyüme Krizi) — ZAYIFLAYAN GERİLİM
 
-### 1. Güncel Fizikteki Kriz
-Erken evren verisinden ($\Lambda\text{CDM}$ ile) öngörülen madde kümelenme genliği ($S_8 \approx 0{,}83$; Planck Collaboration, 2020), geç evrenin zayıf merceklenme taramalarının ölçtüğü değerden ($S_8 \approx 0{,}76$; Heymans ve ark., 2021; Asgari ve ark., 2021) sistematik olarak yüksektir. Hubble tensinin kardeşi olan bu ikinci erken/geç kalibrasyon çelişkisi de $\Lambda\text{CDM}$ içinde çözümsüzdür.
+### 1. Krizin Tarihçesi ve Güncel Durumu
+Erken evren verisinden ($\Lambda\text{CDM}$ ile) öngörülen madde kümelenme genliği ($S_8 \approx 0{,}83$; Planck Collaboration, 2020), ilk büyük zayıf merceklenme taramalarının ölçtüğü değerden ($S_8 \approx 0{,}76$; Heymans ve ark., 2021; Asgari ve ark., 2021) sistematik olarak yüksek çıkmış ve gerilim 2-3$\sigma$ düzeyine ulaşmıştı. *Karşı kayıt (güncellik):* KiDS'in son ve en kapsamlı analizi (KiDS-Legacy; Wright ve ark., 2025) $S_8 \approx 0{,}815$ ile Planck'la uyum raporlamış, gerilim büyük ölçüde erimiştir. Kalem "zayıflayan gerilim" statüsündedir.
 
-### 2. Evrenakı Mekanik Çözümü
-Yapı büyümesi standart anlatıdaki gibi "karanlık madde çökmesiyle" değil, maddenin kuyu iskeletinin sirkülasyonuna süpürülmesiyle ilerler. Girdapların viskoz deşarjı (3.7.2) kuyu gücünü zamanla söndürür: erken dönemin iskelet gücünden ($\Xi \approx 5$; 3.7.4) bugüne kümelenme temposu yavaşça düşer. Erken veriden sabit-güçlü kuyu varsayımıyla ileriye ekstrapolasyon yapan standart hesap, geç evrende olduğundan fazla kümelenme bekler — gerilim, deşarj sönümünün ($\eta_E$, Ek C) kozmolojik ölçüsüdür.
+### 2. Evrenakı Mekanik Çözümü (koşullu)
+Gerilim gelecekteki taramalarda kalıcı çıkarsa, teorinin doğal adayı şudur: yapı büyümesi standart anlatıdaki gibi "karanlık madde çökmesiyle" değil, maddenin kuyu iskeletinin sirkülasyonuna süpürülmesiyle ilerler. Girdapların viskoz deşarjı (3.7.2) kuyu gücünü zamanla söndürür: erken dönemin iskelet gücünden ($\Xi \approx 5$; 3.7.4) bugüne kümelenme temposu yavaşça düşer. Erken veriden sabit-güçlü kuyu varsayımıyla ileriye ekstrapolasyon yapan standart hesap, geç evrende olduğundan fazla kümelenme bekler — gerilim, deşarj sönümünün ($\eta_E$, Ek C) kozmolojik ölçüsüdür.
 
 ---
 
@@ -107,7 +109,7 @@ Homojenlik, teoride temel ilke değil, girdap kaskadının alt ölçeklerdeki is
 ## 7.7.11 Karanlık Akış ve Büyük Çekici
 
 ### 1. Güncel Fizikteki Kriz
-Galaksi kümelerinin, genişlemeden bağımsız olarak belirli bir doğrultuya doğru toplu sürüklenişi ölçülmüştür ("dark flow"; Kashlinsky ve ark., 2008); yerel ölçekte de Samanyolu dahil binlerce galaksi "Büyük Çekici" (Great Attractor) denilen doğrultuya akar (Lynden-Bell ve ark., 1988). Standart fizik "çeken" dev bir kütle yoğunlaşması arar; görünen envanter bu akışı karşılamaz.
+Samanyolu dahil binlerce galaksi, "Büyük Çekici" (Great Attractor) denilen doğrultuya doğru toplu biçimde akar (Lynden-Bell ve ark., 1988). 2008'de bunun evrensel ölçekli bir versiyonu ("dark flow") da rapor edilmişti (Kashlinsky ve ark., 2008). *Karşı kayıt:* Planck'ın kinematik SZ analizi karanlık akış sinyalini **doğrulamamıştır** (Planck Collaboration, 2014); bu kalem bu nedenle, gerçek ve güncel olan Büyük Çekici / yerel toplu akış olgusuna daraltılmıştır. Akışın önemli bölümü bugün Laniakea/Shapley kütle haritalarıyla envantere bağlanmaktadır; açık kalan, akış vektörlerinin filaman iskeletiyle hizalanma deseni ve envanterin uç bölgelerdeki yetersizliğidir.
 
 ### 2. Evrenakı Mekanik Çözümü
 Galaksiler boşlukta çekilen cisimler değil, akıntıda taşınan yüzücülerdir. Yerel evren, kaskadın bir üst ölçek sirkülasyon hücresinin kolunda topluca sürüklenmektedir; "Büyük Çekici" bir cisim değil, akıntı kolunun yakınsama doğrultusudur. Aranması gereken kütle değil, akım haritasıdır — toplu akış vektörlerinin filaman iskeletiyle hizalanması teorinin doğrudan öngörüsüdür.
@@ -177,7 +179,7 @@ Merkez motor, galaksinin en şiddetli girdap-deşarj bölgesidir (3.8.2). Yükse
 ## 7.7.18 Hızlı Radyo Patlamaları (FRB)
 
 ### 1. Güncel Fizikteki Kriz
-Milisaniye içinde bir galaksinin günlerce üreteceği enerjiyi salan radyo patlamaları keşfedilmiştir (Lorimer ve ark., 2007); kimileri tekrarlar, kimileri düzenli uzun periyotlar taşır (CHIME/FRB Collaboration, 2020). Magnetar hipotezi popülasyonun tamamını (özellikle düzenli periyotları) açıklayamamaktadır.
+Milisaniye içinde Güneş'in günler–aylar boyunca üreteceği enerjiyi salan radyo patlamaları keşfedilmiştir (Lorimer ve ark., 2007); kimileri tekrarlar, kimileri düzenli uzun periyotlar taşır (CHIME/FRB Collaboration, 2020). *Karşı kayıt:* 2020'de Galaktik magnetar SGR 1935+2154'ten eşzamanlı bir FRB yakalanmış (CHIME/FRB Collaboration, 2020; Bochenek ve ark., 2020) ve magnetar bağlantısı doğrudan kurulmuştur. Kriz, popülasyonun tamamı için değil, özellikle **uzun ve düzenli periyot** taşıyan alt sınıfın modülasyon mekanizması için açıktır.
 
 ### 2. Evrenakı Mekanik Çözümü
 Nötron yıldızı, teoride en sıkı sarılmış makro girdaptır. Kabuk-girdap kenetlenmesindeki ani çözülmeler (glitch mekanizmasının büyük ölçekli akrabası; 3.1.8) rampada kavitasyon çöküşü yaratır ve ortama milisaniyelik dev bir basınç atımı — sıkıştırılmış bir Zerre katarı paketi — bırakır. Tekrarlayan kaynaklardaki uzun periyotlar, yıldızın içsel deviniminin (3.8.6'da PSR B1828-11 için kullanılan aynı yalpa mekanizması) atım doğrultusunu döndürmesiyle doğal olarak modüle olur.
@@ -230,22 +232,22 @@ Bir gezegene ulaşan enerji yalnızca kaynağın parlaklığına değil, Zerre k
 |---|---|---|
 | **Hubble Tensi ($H_0$)** | Çözümsüz $5\sigma$ Kriz | Zamansal $c(t)=\sqrt{P/\rho}$ Değişimi |
 | **JWST Erken Galaksiler** | İmkânsız Derecede Hızlı Oluşum | Anlık Sirkülasyon Kuyuları (Girdap Kaskadı) |
-| **Proton Yarıçapı Bilmecesi** | $4\sigma$ Ölçüm Çelişkisi | Müon Sürüklenme Zarfının Rampa Nüfuzu |
-| **Müon $g-2$ Sapması** | $5{,}1\sigma$ Standart Model İhlali | 4D Deplasman Vortisite Torku |
-| **Güneş Korona Isınması** | 2. Termodinamik Kanununa Aykırı Görünüm | Vorteks Kavitasyon Şok Dalgaları |
+| **Proton Yarıçapı Bilmecesi** | KAPANAN KRİZ (CODATA 2018 küçük değeri benimsedi) | Rampa Nüfuzu okuması (arşiv) |
+| **Müon $g-2$ Sapması** | KAPANAN KRİZ (2025 nihai sonuç + örgü-QCD) | Vortisite Torku okuması (arşiv) |
+| **Güneş Korona Isınması** | Baskın mekanizma arayışı (termodinamik ihlal yok) | Vorteks Kavitasyon Şok Dalgaları |
 | **Kozmolojik Lityum Krizi** | 3 Kat Fazla Lityum Tahmini | Erken Yüksek Basınçta Rampa Tesir Kesiti |
 | **CMB Yön Anomalileri** | "İstatistiksel Şanssızlık" | İlkel Kuyu İskeletinin Yönlü Filaman İmzası |
-| **$S_8$ Gerilimi** | Erken/Geç Kalibrasyon Çelişkisi | Kuyu Gücünün Deşarjla Sönümü ($\eta_E$) |
+| **$S_8$ Gerilimi** | ZAYIFLAYAN GERİLİM (KiDS-Legacy 2025) | Koşullu: Kuyu Gücünün Deşarjla Sönümü ($\eta_E$) |
 | **DESI Evrilen Karanlık Enerji** | Sabit $\Lambda$ Sarsılıyor | Zamana Bağlı Viskoz Deşarj Debisi |
 | **Dev Yapılar (Yay / Halka / KBC)** | Kozmolojik İlke İhlali | Kaskadın En Üst Ölçek Sirkülasyon Hücreleri |
-| **Karanlık Akış / Büyük Çekici** | Bulunamayan "Çeken" Kütle | Üst Ölçek Akıntı Kolunda Toplu Sürüklenme |
+| **Büyük Çekici (karanlık akış kısmı geri çekildi)** | Akış kısmı doğrulanmadı (Planck 2014); toplu akış güncel | Üst Ölçek Akıntı Kolunda Toplu Sürüklenme |
 | **Kuazar Hizalanmaları** | Nedensel Bağ Kurulamıyor | Filaman Girdabından Miras Vortisite |
 | **Baryon Asimetrisi** | CP İhlali ~10 Mertebe Yetersiz | İlk Girdabın Tek İşaretli Helisite Seçimi |
 | **Uydu Galaksi Düzlemleri + Core-Cusp** | Rastgele Dağılım Öngörüsü Çöküyor | Ekvator Basınç Oluğu + Rankine Çekirdeği |
 | **Karanlık Maddesiz Galaksiler (DF2/DF4)** | Hale Modeliyle Çelişki | Kuyu ile Yıldız Topluluğunun Ayrılabilirliği |
 | **Fermi / eROSITA Baloncukları** | Tek Seferlik Patlama Senaryoları | Merkez Motorun Kalıcı Kutup Deşarjı |
 | **511 keV İmzası** | Pozitron Kaynağı Belirsiz | Motor Deşarjında Karşıt Helisite Yokoluşu |
-| **Hızlı Radyo Patlamaları (FRB)** | Mekanizma Tartışmalı | Rampa Kavitasyon Atımı + Devinim Modülasyonu |
+| **Hızlı Radyo Patlamaları (FRB)** | Magnetar bağı kuruldu (2020); uzun periyotlar açık | Devinim Modülasyonu (uzun-periyot alt sorusu) |
 | **'Oumuamua İvmesi** | Kuyruksuz İtki Açıklamasız | Zarf Sınırının Hidrodinamik İtkisi |
 | **Dokuzuncu Gezegen / Kuiper Uçurumu** | Bulunamayan Gezegen Arayışı | Dış Akıntı Kanalı Hizalaması + Zarf Duvarı |
 | **IBEX Şeridi** | Öngörülememiş, Sonradan Modellenmiş | Zarf–Akıntı Kesme Arayüzünde Yığılma |
@@ -253,4 +255,4 @@ Bir gezegene ulaşan enerji yalnızca kaynağın parlaklığına değil, Zerre k
 
 ---
 
-> **Sonuç:** Bu 22 açık kriz gösteriyor ki, Evrenakı Teorisi sadece geçmişin klasik ve kuantum paradokslarını çözmekle kalmamakta, **21. yüzyıl astrofizik ve parçacık fiziğinin en çetin krizlerine de tek tözlü süper-akışkan hidrodinamiği çatısı altında somut çözüm ufku sunmaktadır.** Kozmik mikrodalga arka planının yön anomalilerinden heliosferin sınır şeridine kadar uzanan bu tablo tek bir omurgaya oturur: girdap kaskadının iskeleti, merkez motorların deşarjı ve her kütlenin sürüklenme zarfı. Bu maddelerin nicel türetim borçları 7.4'te, yanlışlanabilir öngörüleri ise 7.5 tablosunda izlenmektedir.
+> **Sonuç:** Bu envanter — güncellik denetiminden sonra ikisi kapanan, biri zayıflayan, biri daraltılan işaretleriyle birlikte 22 kalem — gösteriyor ki, Evrenakı Teorisi sadece geçmişin klasik ve kuantum paradokslarını çözmekle kalmamakta, **21. yüzyıl astrofizik ve parçacık fiziğinin en çetin krizlerine de tek tözlü süper-akışkan hidrodinamiği çatısı altında somut çözüm ufku sunmaktadır.** Kozmik mikrodalga arka planının yön anomalilerinden heliosferin sınır şeridine kadar uzanan bu tablo tek bir omurgaya oturur: girdap kaskadının iskeleti, merkez motorların deşarjı ve her kütlenin sürüklenme zarfı. Bu maddelerin nicel türetim borçları 7.4'te, yanlışlanabilir öngörüleri ise 7.5 tablosunda izlenmektedir.

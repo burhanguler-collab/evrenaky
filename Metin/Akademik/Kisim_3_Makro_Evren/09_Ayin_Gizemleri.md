@@ -68,7 +68,7 @@ Ancak Ay hemen burnumuzun dibindedir. Ay'ın Evrenakı akışkanında yarattığ
 
 **Animasyon 3.9.1 — Sıralı Gelgit Mekanizması**
 
-*İzleme rehberi:* Animasyon, gelgiti aşama aşama kurar; şu üç noktayı izleyiniz: (1) Okyanusların Ay tarafından "çekilmediğini" — kabarmanın, yanaklardan gelen çembersel sıkıştırmanın suyu düşük basınçlı eksene (Ay yönüne ve tam tersine) fışkırtmasıyla oluştuğunu. (2) Şişkinlik ekseninin Ay'la tam hizada olmadığını — Dünya'nın hızlı dönüşünün kabarmayı Ay'ın 10-15 derece önüne taşıdığını (NASA gözlemleriyle uyumlu kayma). (3) Sıkıştırmanın gücünün toplam kuvvetle değil gradyanla ($1/r^3$) ölçeklendiğini — Güneş'in 27 milyon katlık kütle avantajına rağmen etkisinin Ay'ın ancak yarısı kalmasının sebebi budur.
+*İzleme rehberi:* Animasyon, gelgiti aşama aşama kurar; şu üç noktayı izleyiniz: (1) Okyanusların Ay tarafından "çekilmediğini" — kabarmanın, yanaklardan gelen çembersel sıkıştırmanın suyu düşük basınçlı eksene (Ay yönüne ve tam tersine) fışkırtmasıyla oluştuğunu. (2) Şişkinlik ekseninin Ay'la tam hizada olmadığını — Dünya'nın hızlı dönüşünün kabarmayı Ay'ın birkaç derece (~3°) önüne taşıdığını (gözlemle uyumlu kayma; animasyondaki açı, görünürlük için abartılmıştır). (3) Sıkıştırmanın gücünün toplam kuvvetle değil gradyanla ($1/r^3$) ölçeklendiğini — Güneş'in 27 milyon katlık kütle avantajına rağmen etkisinin Ay'ın ancak yarısı kalmasının sebebi budur.
 
 <iframe src="Simulasyon/ay_gelgit_sirali.html" width="100%" scrolling="no" style="height: 520px; min-height: 520px; border: 1px solid #404040; border-radius:12px; margin-top:20px; margin-bottom:20px; box-shadow:0 10px 30px rgba(0,0,0,0.8); overflow: hidden; background-color: #121212;"></iframe>
 
@@ -123,7 +123,7 @@ Madem Dünya'nın girdabı Ay'ı taşımaya yetmektedir, Ay neden her yıl bizde
 1. **Şişkinlik yalnız kaya değil, gradyan taşır.** 3.9.2'de kuruldu: gelgit şişkinliği, gövde üzerinde yer değiştiren bir kütle fazlasıdır — ve her kütle fazlası, çevresindeki Evrenakı'da kendi **gradyan lobunu** (yerel basınç çukurunu) taşır.
 2. **Lobun konumunu, dönüş-yörünge yarışı belirler.** Gezegen kendi girdabıyla uydusundan **hızlı** dönüyorsa (Dünya: 24 saat ↔ Ay: 27,3 gün), şişkinlik ve taşıdığı lob uydunun önüne taşınır; öndeki lobun kütle-itim gradyanı uyduya sürekli **öne doğru teğetsel itki** verir — uydu tur başına enerji kazanır ve yörünge dışa açılır. Gezegen uydusundan **yavaş** dönüyorsa (Mars: 24,6 saat ↔ Phobos: 7,7 saat), lob uydunun arkasında kalır ve aynı gradyan bu kez **geri yönde** çeker — yörünge içe sarmal çizer. Yörünge retrogradsa (Triton), lob daima karşı yönde kalır — içe göç en hızlı biçimde işler.
 
-Sınır çizgisi, girdabın **senkron yarıçapıdır**: uydunun yörünge açısal hızının gezegenin dönüş açısal hızına eşitlendiği uzaklık. Bu tek kuralın dört bağımsız sınavı gözlemle birebir örtüşür:
+Sınır çizgisi, **gövde dönüşünün senkron yarıçapıdır**: uydunun yörünge açısal hızının gezegenin mekanik dönüş açısal hızına eşitlendiği uzaklık. (Belirleyici olan girdap hızı değil gövde dönüşüdür; çünkü şişkinliği ve taşıdığı gradyan lobunu konumlandıran, kayanın kendisidir — lob gövdeye kilitlidir.) Bu tek kuralın — uydu ölçeğinden ötegezegen ölçeğine — beş bağımsız sınavı gözlemle birebir örtüşür:
 
 | Uydu | Rejim | Kuralın öngörüsü | Gözlem |
 |---|---|---|---|
@@ -131,8 +131,11 @@ Sınır çizgisi, girdabın **senkron yarıçapıdır**: uydunun yörünge açı
 | Phobos | senkron altı, prograd | içe sarmal | Mars'a yaklaşıyor (~1,8 cm/yıl) ✓ |
 | Deimos | senkron üstü, prograd | yavaşça dışa | uzaklaşıyor ✓ |
 | Triton | retrograd | hızla içe | Neptün'e göçüyor ✓ |
+| WASP-12b (sıcak Jüpiter) | senkron altı, prograd | içe sarmal | yörünge bozunumu ölçüldü ✓ |
 
-*Karşı kayıt:* Standart fizik aynı işaret tablosunu gelgit torku muhasebesiyle üretir; senkron yörünge kuralı ders kitabı malzemesidir. Teorinin buradaki katkısı işaret tablosunu keşfetmek değil, torku taşıyan **mekanik aracıyı** adlandırmaktır: şişkinliğin Evrenakı gradyan lobu. Kozmolojik seyrelme ise bu tablonun üzerine binen, işaretten bağımsız ve çok daha yavaş bir taban terimidir; uydunun net kaderini lob teriminin işareti belirler. Lob-itki katsayısının ve senkron yarıçap bağıntısının nicel türetimi 7.4'ün hesap kalemidir.
+**Üçüncü Ölçek: Çift Yıldızlar ve Sıcak Jüpiterler.** Lob-işaret kuralı ölçek seçmez; çift sistemlere doğrudan uzanır. Yakın bir çiftte her bileşen, eşinin gövdesinde bir şişkinlik ve o şişkinliğin taşıdığı gradyan lobunu yaratır: eşinin yörüngesinden hızlı dönen bileşenin lobu öne kaçar — dönüş frenlenir, yörünge beslenir ve sistem **senkronizasyona** sürülür; sürekli enerji alışverişi eksantrikliği yiyerek yörüngeyi **çemberselleştirir**. Lob torku uzaklıkla çok dik düştüğünden bu süreç yalnız yakın çiftlerde tamamlanır: gözlemsel **çembersellik kesim periyodu** ve bu kesimin küme yaşıyla büyümesi, lob torkunun zaman entegralinin doğal çıktısıdır. Ölçeğin uç örneği tablodaki WASP-12b'dir: gezegen, yıldızının dönüşünden hızlı dolanır — tam Phobos rejimi — lob geride kalır ve yörünge içe sarmal çizer; ölçülen yörünge bozunumu işaret uyumuyla oturur.
+
+*Karşı kayıt:* Standart fizik aynı işaret tablosunu gelgit torku muhasebesiyle üretir; senkron yörünge kuralı ve çift yıldız senkronizasyonu/çemberselleşmesi, standart gelgit kuramının en nicel başarı alanlarıdır (kesim periyotları ve WASP-12b bozunumu standart kuramca hesaplanır). Teorinin buradaki katkısı işaret tablosunu keşfetmek değil, torku taşıyan **mekanik aracıyı** adlandırmaktır: şişkinliğin Evrenakı gradyan lobu. Kozmolojik seyrelme ise bu tablonun üzerine binen, işaretten bağımsız ve çok daha yavaş bir taban terimidir; uydunun net kaderini lob teriminin işareti belirler. Lob-itki katsayısının ve senkron yarıçap bağıntısının nicel türetimi 7.4'ün hesap kalemidir ve kapsamı, uydu ölçeğinden çift yıldız/sıcak Jüpiter ölçeğine kadar bu beş satırın tamamıdır.
 
 ## 3.9.5 Masconlar: Ay'ın Taşlaşmış Gelgiti (Kütle Yoğunlaşmaları)
 

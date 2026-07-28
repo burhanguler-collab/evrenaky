@@ -273,7 +273,7 @@ Parçacığın bu fiziksel dönüşü, çevreleyen Evrenakı ile sınır tabaka 
 
 ### 6. Kütle-İtim (Basınç Gradyanı) İlkesi
 
-Standart fizikte "gravitasyon" denen olgu, hidrodinamik bir **itme** mekanizmasıyla açıklanır. Kütle-itim, Le Sage modelindeki gibi rastgele uçuşan katı parçacıkların bombardımanıyla oluşmaz (Le Sage, 1784; bu model gezegenlerde aşırı termodinamik ısınmaya yol açar); sürekli bir akışkan içindeki **basınç gradyanı** olarak formüle edilir. Bir cismin maruz kaldığı kütle-itim kaynaklı ivmelenme, nükleonların öz yoğunluğu ($\rho_n$) ve lokal basınç gradyanı ($\nabla P$) cinsinden:
+Standart fizikte "gravitasyon" denen olgu, hidrodinamik bir **itme** mekanizmasıyla açıklanır. Kütle-itim, Le Sage modelindeki gibi rastgele uçuşan katı parçacıkların bombardımanıyla oluşmaz (Le Sage, 1784); sürekli bir akışkan içindeki **basınç gradyanı** olarak formüle edilir. Bu ayrım, Le Sage ailesini tarihsel olarak eleyen **ısınma itirazını** da kökünden çözer: Le Sage'da kuvvet, cismin akıdan momentum **soğurmasıyla** doğar ve soğurulan momentum akısına eşlik eden enerji, gezegenleri eritecek düzeyde zorunlu bir ısınma üretir. Basınç gradyanındaki cisim ise — sıvıdaki kaldırma kuvveti gibi — net kuvveti **enerji soğurmadan** alır: kuvvet, akı yutulmasından değil çevre basınçlarının farkından doğar ve denge hâlinde cisim üzerinde yaptığı net iş sıfırdır; ısınma üretmez. Teoride kalan tek ısıl kanal, sıfıra yakın ama sonlu viskozitedir ($\eta_E$; Postülat 7) ve bu kanalın enerji bütçesi kozmolojik deşarj muhasebesine zaten dahildir (Bkz. Bölüm 3.7.2). Bir cismin maruz kaldığı kütle-itim kaynaklı ivmelenme, nükleonların öz yoğunluğu ($\rho_n$) ve lokal basınç gradyanı ($\nabla P$) cinsinden:
 
 $$\vec{a} = -\frac{1}{\rho_n} \nabla P$$
 

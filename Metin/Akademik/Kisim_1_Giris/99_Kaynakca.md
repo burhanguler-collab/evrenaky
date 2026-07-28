@@ -19,6 +19,7 @@
 * Descartes, R. (1644). *Principia Philosophiae*. Amsterdam: Ludovicum Elzevirium. (İlk Plenum/Girdap kütleçekim yaklaşımı; Bölüm 1.3 Postülat 1'de atıflı).
 * Drosd, R., Minkin, L., & Shapovalov, A. S. (2014). *Interference and the Law of Energy Conservation*. The Physics Teacher, 52(7), 428-429. (Girişimde enerji korunumu; Bölüm 1.2.7).
 * Einstein, A. (1905a). *Zur Elektrodynamik bewegter Körper*. Annalen der Physik, 17, 891-921. (Özel görelilik postülatları ve hız birleşimi; Bölüm 1.2.9).
+* Einstein, A. (1905b). *Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt*. Annalen der Physik, 17, 132-148. (Foton hipotezinin özgün kaynağı; Bölüm 1.2.2).
 * Einstein, A. (1920). *Äther und Relativitätstheorie* (Esir ve Görelilik Teorisi). Leiden Üniversitesi Konuşması. Berlin: Julius Springer. (Uzay-zamanın fiziksel nitelikleri ve Aether itirafı; Bölüm 1.2.5).
 * Esaki, L. (1958). *New Phenomenon in Narrow Germanium p-n Junctions*. Physical Review, 109(2), 603-604. (Tünellemenin katıhal aygıtlarındaki ilk doğrudan kullanımı; Bölüm 1.2.8).
 * Euler, L. (1757). *Principes généraux du mouvement des fluides*. Mémoires de l'Académie Royale des Sciences et Belles-Lettres de Berlin, 11, 274-315. (İdeal akışkan hareket denklemleri; Bölüm 1.3 Postülat 8).

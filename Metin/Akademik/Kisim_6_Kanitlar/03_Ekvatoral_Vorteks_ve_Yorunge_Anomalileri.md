@@ -11,8 +11,13 @@ Ekvator bölgesinde Dünya saniyede yaklaşık 460 metre gibi devasa bir çizgis
 * **Ekvatoral Yörüngeler:** Ekvator düzleminde dolanan bir uydu, hızla dönen devasa bir akışkan nehrinin (vorteksin) içindedir. Eğer uydu Dünya ile aynı yönde (doğuya doğru) dönüyorsa, akıntıyı arkasına aldığı için daha stabil bir uçuş sergiler. Ancak Dünya'ya ters yönde dönüyorsa, akıntıya karşı kürek çektiği için muazzam bir hidrodinamik basınca maruz kalır.
 * **Kutup Yörüngeleri:** Kutup noktalarında akışkan görece durgundur. Kutup yörüngesindeki bir uydu (polar orbit), turu boyunca kutupların durgun akışkanından çıkıp Ekvatorun fırtınalı nehrine dalmak zorundadır. Uydu her Ekvator geçişinde, Dünya'nın dönüşünden kaynaklı Evrenakı vorteksinin yanal akıntısıyla **dikine (çapraz) kesişir**. 
 
-**Yörünge Dairesel Kalabilir mi?**
-Kutup yörüngesindeki bir uydunun tam dairesel kalması Evrenakı hidrodinamiğinde imkansızdır. Ekvatorun yarattığı yüksek deplasman ve yanal çarpma (shear) etkisi, uydunun hız vektörünü bozarak onu eliptik bir yörüngeye (yumurta formuna) zorlar ve yörünge düzleminin Dünya etrafında yalpalayarak dönmesine (Precession) neden olur. Uydunun yörüngesi, durgun suyla akan nehir arasındaki bu basınç gradyanı asimetrisine boyun eğmek zorundadır.
+**Girdabın İzi Yörünge Verisinde Nerede? (Hassas Yörünge Belirleme ile Yüzleşme)**
+Bu asimetri iddiasının en sert sınavı, uzay çağının en hassas veri setidir: binlerce uydunun santimetre düzeyindeki rutin yörünge belirlemesi (GNSS/SLR/DORIS izleme; GRACE/GOCE gravite haritaları), gözlenen tüm sapmaları bilinen terimlerle kapatır ve modellenmemiş bir "girdap artığı" bırakmaz; "donmuş yörünge" tasarımlı kutupsal uydular, dairesel-yakın yörüngelerini yıllarca korur. Teorinin cevabı bu veriyi reddetmek değil, **sahiplenmektir** — iki katmanda:
+
+1. **Verinin en büyük düzeltme terimi olan $J_2$ düğüm gerilemesinin kendisi, teoride girdabın imzasıdır.** Dünya'nın ekvatoral şişkinliği dönüşün — teorideki okumayla girdap/deplasman dengesinin — eseridir; dolayısıyla standart fiziğin "kütle geometrisinin basıklık terimi" diye etiketlediği $J_2$ alanı, Evrenakı okumasında **ekvatoral girdabın şekillendirdiği kalıcı basınç deseninin ta kendisidir.** Kutup yörüngesinin düzlem devinimi, tam da bu desenin dikte ettiği harekettir: girdabın izi hassas yörünge verisinde "eksik" değil, verinin en büyük modellenen teriminin **içindedir.** Donmuş yörüngelerin işlemesi de bundandır — tasarım, bu kalıcı desenle çalışır.
+2. **Kalıcı desenin ötesindeki ayrık girdap-kesme artığı ise teoride Lense-Thirring mertebesindedir ve ölçülmüştür:** GP-B ve LAGEOS'un mas/yıl düzeyindeki eksen kaymaları (6.3.3). Teori, hassas yörünge belirlemede bundan büyük, modellenmemiş bir artık **öngörmez**; Juno geçişinin sıfır sonucundan gelen kesme üst sınırı (6.3.2) da bu beklentiyi bağımsızca doğrular.
+
+Böylece iki ontoloji — "kütle geometrisi + metrik burulması" ile "girdabın basınç deseni + akışkan kesmesi" — aynı ölçüm setini paylaşır; bu bir yeniden-yorum durumudur (Kanıtların Statüsü, 6.5) ve ayrıştırıcı yük, 7.4'te senetli nicel türetimler ile 7.5'teki ayrık öngörülere biner.
 
 ## 6.3.2 Flyby (Yakın Geçiş) Anomalisi: Kanıttan Sınır Koşuluna
 
@@ -26,7 +31,7 @@ Formülün anlamı şudur: rapor edilen sapma, aracın Ekvator düzlemine giriş
 
 **Bu nedenle bu bölümün iddiası bilinçli olarak düşürülmüştür:** flyby verisi artık teorinin *kanıtı* değil, ekvatoral girdabın kesme kuvvetine bugüne kadarki en sıkı **üst sınırı** koyan ölçümdür. Juno'nun sıfır sonucu, girdap kesme katsayısının Anderson formülü ölçeğindeki değerlerden küçük kalması gerektiğini söyler; açı bağımlılığı ise girdap geometrisinin imza şablonu olarak arşivde durmaktadır. Kesme katsayısının bu üst sınırla tutarlı yeniden hesabı 7.4'ün hesap kalemidir. (Kitap genelindeki Karşı Kayıt ilkesi için bkz. Bölüm 1.1.2.)
 
-## 6.3.3 Gözlemsel Kanıt: Gravity Probe B ve LAGEOS
+## 6.3.3 Yeniden-Yorum: Gravity Probe B ve LAGEOS
 
 Einstein, uzay-zaman geometrisinin dönen kütleler tarafından bükülüp sürüklendiğini (Frame-Dragging) iddia etmişti (Lense & Thirring, 1918). Bunu kanıtlamak için NASA, Gravity Probe B (GP-B) uydusunu özellikle **Kutupsal Yörüngeye** yerleştirdi (Everitt ve ark., 2011). 
 
