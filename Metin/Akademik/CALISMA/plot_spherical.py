@@ -19,13 +19,14 @@ def model_newton(r, A):
 
 # Zayıf eksenel kuvvet (B) aktiftir. 
 # Merkezdeki küçük ve yavaş dönen kara delik, galaksiyi yassılaştırmaya yetmez ama
-# dış bölgelerde hızı tutacak kadar (B) sabiti sağlar.
-def model_evrenaki(r, A, B):
-    return np.sqrt(A / r + B)
+# dış bölgelerde hızı belli bir oranda tutar. Dönüş hızı düşük olduğu için B sabiti düşüktür.
+def model_evrenaki(r, A):
+    B_zayif = 120 # Düşük dönüş hızı için zayıf B sabiti (asimptotik hız ~10.9 km/s)
+    return np.sqrt(A / r + B_zayif)
 
 # Fit
 popt_newton, _ = curve_fit(model_newton, r_obs, v_obs, p0=[100])
-popt_evrenaki, _ = curve_fit(model_evrenaki, r_obs, v_obs, p0=[100, 100])
+popt_evrenaki, _ = curve_fit(model_evrenaki, r_obs, v_obs, p0=[100])
 
 # Çizim
 r_plot = np.linspace(0.1, 2.0, 200)
