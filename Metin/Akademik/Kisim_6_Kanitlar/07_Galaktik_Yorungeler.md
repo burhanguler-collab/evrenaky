@@ -88,6 +88,14 @@ Evrenakı teorisinin kinematik denklemleri; sarmal, eliptik ve cüce küresel g�
     <span style="color: #888; font-size: 0.8em; margin-left: 10px;">(Kara deliğin dönüş şiddeti)</span>
   </div>
 
+  <div style="margin-bottom: 25px; background: rgba(255,255,255,0.05); padding: 10px; border-radius: 6px;">
+    <label style="color: #ddd; display: inline-flex; align-items: center; cursor: pointer; font-size: 0.95em;">
+      <input type="checkbox" id="check-bulge" checked style="margin-right: 10px; width: 18px; height: 18px; accent-color: #55aaff;">
+      <b>Galaksi Kütle Dağılımını (Bulge) Uygula</b>
+    </label>
+    <div style="color: #888; font-size: 0.85em; margin-left: 28px; margin-top: 4px;">Kapalıyken tüm galaksi kütlesi merkezde tek bir "nokta" kabul edilir (eğri merkezde fırlar).</div>
+  </div>
+
   <canvas id="galaxy-canvas" width="600" height="350" style="background-color: #0a0a0a; border: 1px solid #444; border-radius: 4px; display: block; max-width: 100%;"></canvas>
   
   <div style="margin-top: 15px; font-size: 0.9em; margin-bottom: 10px;">
@@ -115,6 +123,7 @@ Evrenakı teorisinin kinematik denklemleri; sarmal, eliptik ve cüce küresel g�
         
         const sliderM = document.getElementById("slider-M");
         const sliderB = document.getElementById("slider-B");
+        const checkBulge = document.getElementById("check-bulge");
         const valM = document.getElementById("val-M");
         const valA = document.getElementById("val-A");
         const valB = document.getElementById("val-B");
@@ -209,24 +218,25 @@ Evrenakı teorisinin kinematik denklemleri; sarmal, eliptik ve cüce küresel g�
                 ctx.setLineDash([]);
             }
             
-            // Kütle dağılımı (Bulge) faktörü: Nokta kütle yerine merkeze doğru sıfırlanan çekirdek
+            // Kütle dağılımı (Bulge) faktörü
             const Rc = 1.5; // Şişkinlik (Bulge) yarıçapı
+            const useBulge = checkBulge ? checkBulge.checked : true;
             
             drawCurve("#ff5555", true, (r) => {
-                let A_eff = A * (r * r) / (r * r + Rc * Rc);
+                let A_eff = useBulge ? A * (r * r) / (r * r + Rc * Rc) : A;
                 return Math.sqrt(A_eff / r);
             });
             
             drawCurve("#55aaff", false, (r) => {
-                let A_eff = A * (r * r) / (r * r + Rc * Rc);
-                let B_eff = B * (r * r) / (r * r + Rc * Rc); // Girdap içi katı cisim dönüşü mantığı
+                let A_eff = useBulge ? A * (r * r) / (r * r + Rc * Rc) : A;
+                let B_eff = useBulge ? B * (r * r) / (r * r + Rc * Rc) : B; 
                 return Math.sqrt(A_eff / r + B_eff);
             });
             
             // Dış yörünge (r=8 kpc) için anlık sayısal hız değerlerini yazdır
             const r_edge = 8.0;
-            const A_eff_edge = A * (r_edge * r_edge) / (r_edge * r_edge + Rc * Rc);
-            const B_eff_edge = B * (r_edge * r_edge) / (r_edge * r_edge + Rc * Rc);
+            const A_eff_edge = useBulge ? A * (r_edge * r_edge) / (r_edge * r_edge + Rc * Rc) : A;
+            const B_eff_edge = useBulge ? B * (r_edge * r_edge) / (r_edge * r_edge + Rc * Rc) : B;
             const v_newt = Math.sqrt(A_eff_edge / r_edge);
             const v_evr = Math.sqrt(A_eff_edge / r_edge + B_eff_edge);
             
@@ -238,6 +248,7 @@ Evrenakı teorisinin kinematik denklemleri; sarmal, eliptik ve cüce küresel g�
         
         sliderM.addEventListener("input", drawGraph);
         sliderB.addEventListener("input", drawGraph);
+        if(checkBulge) checkBulge.addEventListener("change", drawGraph);
         
         drawGraph();
     }
