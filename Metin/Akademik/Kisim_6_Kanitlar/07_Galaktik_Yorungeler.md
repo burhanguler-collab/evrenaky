@@ -85,10 +85,16 @@ Evrenakı teorisinin kinematik denklemleri; sarmal, eliptik ve cüce küresel g�
 
   <canvas id="galaxy-canvas" width="600" height="350" style="background-color: #0a0a0a; border: 1px solid #444; border-radius: 4px; display: block; max-width: 100%;"></canvas>
   
-  <div style="margin-top: 15px; font-size: 0.9em;">
+  <div style="margin-top: 15px; font-size: 0.9em; margin-bottom: 10px;">
     <span style="color: #ff5555; font-weight: bold;">- - - Klasik Çekim ($v = \sqrt{A/r}$)</span> &nbsp; | &nbsp; 
     <span style="color: #55aaff; font-weight: bold;">── Evrenakı ($v = \sqrt{A/r + B}$)</span> &nbsp; | &nbsp;
     <span style="color: #ffff00;">● Temsili Sarmal Galaksi Verisi</span>
+  </div>
+
+  <div style="padding: 12px; background-color: #1a1a1a; border-radius: 6px; border: 1px solid #333; display: flex; justify-content: space-between; flex-wrap: wrap;">
+    <div style="color: #ccc; font-size: 0.9em; margin-bottom: 5px; width: 100%;"><b>Dış Yörünge (r=8 kpc) Anlık Hız Sonuçları:</b></div>
+    <div style="color: #ff5555; font-size: 1.05em;">Klasik Çekim: <span id="v-newton" style="font-weight:bold; font-size: 1.2em;">0.0</span> km/s</div>
+    <div style="color: #55aaff; font-size: 1.05em;">Evrenakı Teorisi: <span id="v-evrenaki" style="font-weight:bold; font-size: 1.2em;">0.0</span> km/s</div>
   </div>
 </div>
 
@@ -192,6 +198,16 @@ Evrenakı teorisinin kinematik denklemleri; sarmal, eliptik ve cüce küresel g�
             
             drawCurve("#ff5555", true, (r) => Math.sqrt(A / r));
             drawCurve("#55aaff", false, (r) => Math.sqrt(A / r + B));
+            
+            // Dış yörünge (r=8 kpc) için anlık sayısal hız değerlerini yazdır
+            const r_edge = 8.0;
+            const v_newt = Math.sqrt(A / r_edge);
+            const v_evr = Math.sqrt(A / r_edge + B);
+            
+            const vNewtEl = document.getElementById("v-newton");
+            const vEvrEl = document.getElementById("v-evrenaki");
+            if (vNewtEl) vNewtEl.textContent = v_newt.toFixed(1);
+            if (vEvrEl) vEvrEl.textContent = v_evr.toFixed(1);
         }
         
         sliderA.addEventListener("input", drawGraph);
