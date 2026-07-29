@@ -83,9 +83,9 @@ Evrenakı teorisinin kinematik denklemleri; sarmal, eliptik ve cüce küresel g�
   </div>
   
   <div style="margin-bottom: 25px;">
-    <label for="slider-B" style="color: #ddd; display: inline-block; width: 170px;">Eksenel İtim (B): <span id="val-B" style="font-weight: bold; color: #55aaff;">150</span></label>
-    <input type="range" id="slider-B" min="0" max="500" value="150" style="width: 230px; vertical-align: middle;">
-    <span style="color: #888; font-size: 0.8em; margin-left: 10px;">(Kara deliğin dönüş hızı)</span>
+    <label for="slider-B" style="color: #ddd; display: inline-block; width: 170px;">Eksenel İtim (B): <span id="val-B" style="font-weight: bold; color: #55aaff;">450</span></label>
+    <input type="range" id="slider-B" min="0" max="10000" step="10" value="450" style="width: 230px; vertical-align: middle;">
+    <span style="color: #888; font-size: 0.8em; margin-left: 10px;">(Kara deliğin dönüş şiddeti)</span>
   </div>
 
   <canvas id="galaxy-canvas" width="600" height="350" style="background-color: #0a0a0a; border: 1px solid #444; border-radius: 4px; display: block; max-width: 100%;"></canvas>
@@ -219,14 +219,16 @@ Evrenakı teorisinin kinematik denklemleri; sarmal, eliptik ve cüce küresel g�
             
             drawCurve("#55aaff", false, (r) => {
                 let A_eff = A * (r * r) / (r * r + Rc * Rc);
-                return Math.sqrt(A_eff / r + B);
+                let B_eff = B * (r * r) / (r * r + Rc * Rc); // Girdap içi katı cisim dönüşü mantığı
+                return Math.sqrt(A_eff / r + B_eff);
             });
             
             // Dış yörünge (r=8 kpc) için anlık sayısal hız değerlerini yazdır
             const r_edge = 8.0;
             const A_eff_edge = A * (r_edge * r_edge) / (r_edge * r_edge + Rc * Rc);
+            const B_eff_edge = B * (r_edge * r_edge) / (r_edge * r_edge + Rc * Rc);
             const v_newt = Math.sqrt(A_eff_edge / r_edge);
-            const v_evr = Math.sqrt(A_eff_edge / r_edge + B);
+            const v_evr = Math.sqrt(A_eff_edge / r_edge + B_eff_edge);
             
             const vNewtEl = document.getElementById("v-newton");
             const vEvrEl = document.getElementById("v-evrenaki");
