@@ -1,4 +1,4 @@
-const CACHE_NAME = 'project-cache-20260729-2046';
+const CACHE_NAME = 'project-cache-20260729-2051';
 const ASSETS = [
   'index.html',
   'index.css',

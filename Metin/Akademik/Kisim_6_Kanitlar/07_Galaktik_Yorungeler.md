@@ -59,7 +59,7 @@ Bu durum, teori açısından muazzam bir içsel tutarlılığa ve çok sert bir 
 
 Dolayısıyla teoriden taviz yoktur: "Cüce Küresel" (Dwarf Spheroidal) gibi kusursuz **küresel formunu koruyan bir galaksinin merkezinde dönen bir yapı kesinlikle bulunamaz.** Merkezde dönen bir yapı (kara delik) yoksa, eksenel kuvvet ($B=0$) de fiziken yoktur. 
 
-O halde cüce küresel galaksilerdeki yıldız hızlarının dışarıya doğru düşmemesinin tek bir fiziksel sebebi vardır: Galaksinin kütle dağılımının ve dolayısıyla yarattığı hidrodinamik basınç gradyanının (A sabiti) dışarıya doğru gittikçe artması. Yani eksenel kuvvet yoktur; kütlelerin (gaz ve yıldız yoğunluğunun) radyal olarak artan dağılımı vardır.
+O halde cüce küresel galaksilerdeki yıldız hızlarının dışarıya doğru düşmemesinin yegane sebebi, galaksinin **toplam kütlesinin Evrenakı'yı deplase etmesidir**. Teorimiz gereği kütle artışı (artan kütle dağılımı) gibi ek varsayımlara ihtiyaç yoktur; galaksinin bütünsel kütle hacmi Evrenakı akışkanını yerinden ederek (deplase ederek) o bölgedeki hidrodinamik basınç gradyanını (A sabiti) oluşturur ve yıldız hızlarını sabitler. Yani eksenel kuvvet ($B=0$) yoktur; sadece toplam kütlenin Evrenakı deplasmanı vardır.
 
 ![Fornax Küresel Testi](Gorseller/fornax_kuresel_testi.png)
 
