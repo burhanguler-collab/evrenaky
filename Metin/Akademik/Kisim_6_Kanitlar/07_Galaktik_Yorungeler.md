@@ -72,14 +72,19 @@ Evrenakı teorisinin kinematik denklemleri; sarmal, eliptik ve cüce küresel g�
   <p style="color: #aaa; font-size: 0.9em; margin-bottom: 20px;">Evrenakı formülünü ($v = \sqrt{A/r + B}$) kendiniz test edin! Merkez kütleyi (A) ve kara deliğin dönüş hızını (B) değiştirerek, klasik Newton çekiminin dış bölgelerde nasıl çöktüğünü ve Evrenakı eksenel itiminin hızı nasıl havada tuttuğunu anında gözlemleyin.</p>
   
   <div style="margin-bottom: 15px;">
-    <label for="slider-A" style="color: #ddd; display: inline-block; width: 150px;">Merkezcil İtim (A): <span id="val-A" style="font-weight: bold; color: #ff5555;">200</span></label>
-    <input type="range" id="slider-A" min="1" max="1000" value="200" style="width: 250px; vertical-align: middle;">
-    <span style="color: #888; font-size: 0.8em; margin-left: 10px;">(Merkezi kütle / Basınç Gradyanı)</span>
+    <label for="slider-M" style="color: #ddd; display: inline-block; width: 170px;">Galaksi Kütlesi (M): <span id="val-M" style="font-weight: bold; color: #ffaa00;">0.05</span></label>
+    <input type="range" id="slider-M" min="0.01" max="10.0" step="0.01" value="0.05" style="width: 230px; vertical-align: middle;">
+    <span style="color: #888; font-size: 0.8em; margin-left: 10px;">(Milyar Güneş Kütlesi - $10^9 M_\odot$)</span>
+  </div>
+  
+  <div style="margin-bottom: 15px;">
+    <label style="color: #ddd; display: inline-block; width: 170px; color: #888;">Merkezcil İtim (A): <span id="val-A" style="font-weight: bold; color: #ff5555;">200</span></label>
+    <span style="color: #666; font-size: 0.8em;">(Kütlenin yarattığı basınç gradyanı: $A \approx 4300 \times M$)</span>
   </div>
   
   <div style="margin-bottom: 25px;">
-    <label for="slider-B" style="color: #ddd; display: inline-block; width: 150px;">Eksenel İtim (B): <span id="val-B" style="font-weight: bold; color: #55aaff;">150</span></label>
-    <input type="range" id="slider-B" min="0" max="500" value="150" style="width: 250px; vertical-align: middle;">
+    <label for="slider-B" style="color: #ddd; display: inline-block; width: 170px;">Eksenel İtim (B): <span id="val-B" style="font-weight: bold; color: #55aaff;">150</span></label>
+    <input type="range" id="slider-B" min="0" max="500" value="150" style="width: 230px; vertical-align: middle;">
     <span style="color: #888; font-size: 0.8em; margin-left: 10px;">(Kara deliğin dönüş hızı)</span>
   </div>
 
@@ -108,8 +113,9 @@ Evrenakı teorisinin kinematik denklemleri; sarmal, eliptik ve cüce küresel g�
         }
         const ctx = canvas.getContext("2d");
         
-        const sliderA = document.getElementById("slider-A");
+        const sliderM = document.getElementById("slider-M");
         const sliderB = document.getElementById("slider-B");
+        const valM = document.getElementById("val-M");
         const valA = document.getElementById("val-A");
         const valB = document.getElementById("val-B");
 
@@ -121,11 +127,17 @@ Evrenakı teorisinin kinematik denklemleri; sarmal, eliptik ve cüce küresel g�
         ];
 
         function drawGraph() {
-            if (!sliderA || !sliderB) return;
-            let A = parseFloat(sliderA.value);
+            if (!sliderM || !sliderB) return;
+            
+            let M = parseFloat(sliderM.value);
             let B = parseFloat(sliderB.value);
             
-            valA.textContent = A;
+            // A sabitini kütleden hesapla (G = 4.3e-6 kpc/M_sun (km/s)^2)
+            // M, milyar güneş kütlesi cinsinden. A = G * M * 10^9 = 4300.9 * M
+            let A = 4300.9 * M;
+            
+            valM.textContent = M.toFixed(2);
+            valA.textContent = Math.round(A);
             valB.textContent = B;
             
             ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -210,7 +222,7 @@ Evrenakı teorisinin kinematik denklemleri; sarmal, eliptik ve cüce küresel g�
             if (vEvrEl) vEvrEl.textContent = v_evr.toFixed(1);
         }
         
-        sliderA.addEventListener("input", drawGraph);
+        sliderM.addEventListener("input", drawGraph);
         sliderB.addEventListener("input", drawGraph);
         
         drawGraph();
