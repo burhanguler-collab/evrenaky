@@ -196,6 +196,7 @@ Evrenakı teorisinin kinematik denklemleri; sarmal, eliptik ve cüce küresel g�
                 for(let px = 0; px <= width; px += 2) {
                     let r = (px / width) * xMax;
                     if(r < 0.1) continue; 
+                    
                     let v = func(r);
                     if(v > yMax) continue; 
                     
@@ -208,13 +209,24 @@ Evrenakı teorisinin kinematik denklemleri; sarmal, eliptik ve cüce küresel g�
                 ctx.setLineDash([]);
             }
             
-            drawCurve("#ff5555", true, (r) => Math.sqrt(A / r));
-            drawCurve("#55aaff", false, (r) => Math.sqrt(A / r + B));
+            // Kütle dağılımı (Bulge) faktörü: Nokta kütle yerine merkeze doğru sıfırlanan çekirdek
+            const Rc = 1.5; // Şişkinlik (Bulge) yarıçapı
+            
+            drawCurve("#ff5555", true, (r) => {
+                let A_eff = A * (r * r) / (r * r + Rc * Rc);
+                return Math.sqrt(A_eff / r);
+            });
+            
+            drawCurve("#55aaff", false, (r) => {
+                let A_eff = A * (r * r) / (r * r + Rc * Rc);
+                return Math.sqrt(A_eff / r + B);
+            });
             
             // Dış yörünge (r=8 kpc) için anlık sayısal hız değerlerini yazdır
             const r_edge = 8.0;
-            const v_newt = Math.sqrt(A / r_edge);
-            const v_evr = Math.sqrt(A / r_edge + B);
+            const A_eff_edge = A * (r_edge * r_edge) / (r_edge * r_edge + Rc * Rc);
+            const v_newt = Math.sqrt(A_eff_edge / r_edge);
+            const v_evr = Math.sqrt(A_eff_edge / r_edge + B);
             
             const vNewtEl = document.getElementById("v-newton");
             const vEvrEl = document.getElementById("v-evrenaki");
