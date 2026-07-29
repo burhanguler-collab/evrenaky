@@ -42,15 +42,15 @@ Bu matematiksel model ($v = \sqrt{A/r + B}$), evrendeki farklı galaksi türleri
 Sarmal galaksiler, karanlık madde probleminin en belirgin gözlemlendiği yapılardır. 
 M33 (Triangulum) galaksisinde Newton kütleçekimi hızla düşüşe geçerken, Evrenakı modeli ölçülen hızı ~120 km/s bandında kusursuzca yakalamaktadır. Benzer şekilde, dönüş eğrisinin 30 kpc gibi inanılmaz uzak mesafelere kadar dümdüz kalmasıyla bilinen devasa NGC 3198 galaksisinde, $1/r$ eksenel itim kuvveti yıldız hızlarını ~150 km/s bandında pürüzsüz bir doğrulukla kilitlemektedir.
 
-![M33 Gözlem Testi](../CALISMA/m33_gozlem_testi.png)
-![NGC 3198 Gözlem Testi](../CALISMA/ngc3198_gozlem_testi.png)
+![M33 Gözlem Testi](Gorseller/m33_gozlem_testi.png)
+![NGC 3198 Gözlem Testi](Gorseller/ngc3198_gozlem_testi.png)
 
 #### 2. Dev Eliptik Galaksiler: M87 ve NGC 4472
 Eliptik galaksiler sarmal bir diske sahip olmadıkları için net dönüş eğrileri vermezler. Yıldızlar rastgele yörüngelerde bir arı kovanı gibi hareket eder (hız dağılımı). Ancak bu galaksileri saran devasa sıcak X-ışını gaz halelerinden hesaplanan kütleçekim potansiyelleri ("Efektif Dairesel Hız" $V_c$), sarmal galaksilerdeki asimptotik düz yapıyı birebir tekrar eder. 
 Evrenin en meşhur dev eliptik galaksilerinden olan M87 ve NGC 4472'nin merkezlerinde korkunç hızlarda dönen süper kütleli kara delikler bulunur. Bu devasa çekirdek dönüşünden kaynaklı eksenel itim, galaksi eliptik de olsa formülün aynı mükemmellikte çalışmasını sağlar.
 
-![M87 Eliptik Testi](../CALISMA/m87_eliptik_testi.png)
-![NGC 4472 Eliptik Testi](../CALISMA/ngc4472_eliptik_testi.png)
+![M87 Eliptik Testi](Gorseller/m87_eliptik_testi.png)
+![NGC 4472 Eliptik Testi](Gorseller/ngc4472_eliptik_testi.png)
 
 #### 3. Cüce Küresel (Dwarf Spheroidal) Galaksiler: Derin Bir Fiziksel Öngörü
 Fornax (Ocak) gibi cüce küresel galaksiler, evrendeki karanlık maddenin oransal olarak en yoğun bulunduğu düşünülen, sadece 1-2 kpc boyutlarındaki minicik yapılardır. Çok düşük kütlelerine rağmen efektif hız profilleri $\sim18$ km/s bandında asimptota oturur.
@@ -59,7 +59,7 @@ Bu durum, teori açısından iki muazzam öngörüden birine işaret eder:
 1. Ya astronomi cüce küresellerin merkezindeki karanlıkta kalmış devri (ışıma yapmayan kütleli yapıları) henüz görememektedir.
 2. Ya da bu $1/r$ yasası sadece spesifik bir kara delik devrinden ibaret değildir; bizzat Evrenakı'nın/uzay-zamanın kendiliğinden oluşturduğu daha temel ve fundamental bir topolojik girdap yapısından kaynaklanmaktadır.
 
-![Fornax Küresel Testi](../CALISMA/fornax_kuresel_testi.png)
+![Fornax Küresel Testi](Gorseller/fornax_kuresel_testi.png)
 
 ### Sonuç
 Evrenakı teorisinin kinematik denklemleri; sarmal, eliptik ve cüce küresel gözetmeksizin, dönen bir çekirdeğe sahip tüm galaktik yapılarda "Karanlık Madde" varsayımını tamamen ortadan kaldırmakta ve kütleçekim anomalisini kendi iç dinamikleriyle, saf matematiksel bir kesinlikle çözmektedir.
