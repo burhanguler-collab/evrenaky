@@ -55,9 +55,9 @@ Evrenin en meşhur dev eliptik galaksilerinden olan M87 ve NGC 4472'nin merkezle
 #### 3. Cüce Küresel (Dwarf Spheroidal) Galaksiler: Derin Bir Fiziksel Öngörü
 Fornax (Ocak) gibi cüce küresel galaksiler, evrendeki karanlık maddenin oransal olarak en yoğun bulunduğu düşünülen, sadece 1-2 kpc boyutlarındaki minicik yapılardır. Çok düşük kütlelerine rağmen efektif hız profilleri $\sim18$ km/s bandında asimptota oturur.
 Evrenakı modeli bu galaksilerde de pürüzsüz çalışarak hızı dengeler. Ancak burada astrofiziğe karşı çok derin bir meydan okuma yatar: Güncel astronomiye göre cüce küresellerde süper kütleli kara delik **yoktur**. 
-Bu durum, teori açısından iki muazzam öngörüden birine işaret eder:
-1. Ya astronomi cüce küresellerin merkezindeki karanlıkta kalmış devri (ışıma yapmayan kütleli yapıları) henüz görememektedir.
-2. Ya da bu $1/r$ yasası sadece spesifik bir kara delik devrinden ibaret değildir; bizzat Evrenakı'nın/uzay-zamanın kendiliğinden oluşturduğu daha temel ve fundamental bir topolojik girdap yapısından kaynaklanmaktadır.
+Bu durum, teori açısından çok kesin ve test edilebilir bir öngörüye işaret eder: **Merkezde dönen bir yapı (çekirdek devri) yoksa, eksenel itim kuvvetinden (B sabiti) de bahsedilemez.** Dolayısıyla, cüce küresel galaksilerdeki bu düz hız eğrisi için teorinin önünde iki net fiziksel çıkarım vardır:
+1. Ya astronomi cüce küresellerin merkezindeki karanlıkta kalmış devri (ışıma yapmayan, yüksek hızda dönen kütleli yapıları) henüz görememektedir ve eksenel kuvvet bu gizli devirden kaynaklanmaktadır.
+2. Ya da merkezde gerçekten dönen hiçbir şey yoktur (B=0). Bu durumda yıldız hızlarının dışarıya doğru düşmemesinin yegane sebebi, galaksinin yıldız/gaz (görünür) kütlesinin gittikçe artan bir dağılım sergilemesi ve dolayısıyla hidrodinamik basınç gradyanının (A sabiti) mesafeyle birlikte artmasıdır.
 
 ![Fornax Küresel Testi](Gorseller/fornax_kuresel_testi.png)
 
