@@ -256,3 +256,29 @@ Evrenakı teorisinin kinematik denklemleri; sarmal, eliptik ve cüce küresel g�
     setTimeout(initSim, 100);
 })();
 </script>
+
+---
+
+## 4. Galaktik Morfolojilerin Evrenakı Akışkanlar Mekaniği ile İzahı
+
+Galaksilerin şekilleri (Sarmal, Elips, Küre) ve yörünge eğrilerindeki (Dönüş Eğrisi vs Hız Dağılımı) astronomik gerçekler, klasik bilimin karanlık madde yamalarıyla çözmeye çalıştığı ancak Evrenakı'nın sadece akışkanlar mekaniği (Girdap ve İtim) prensipleriyle kusursuzca açıkladığı doğa olaylarıdır.
+
+### A. Core-Cusp Problemi ve "Boş" Küre Galaksiler
+Standart astronomi, içlerinde gaz ve toz barındırmayan, ölü ve hayaletimsi "Cüce Küresel Galaksilerin" (Fornax, Sculptor vb.) yüksek yıldız hızlarını açıklayabilmek için kütlelerinin 1000 katı kadar "Karanlık Madde" uydurmak zorundadır. Ancak bu varsayım, astronominin halen çözemediği **Core-Cusp (Çekirdek-Zirve) Problemini** doğurur: Karanlık madde merkezde sivrilmelidir (Cusp) ancak gözlemler merkezin düz (Core) ve sakin olduğunu gösterir.
+
+Evrenakı'ya göre karanlık maddeye ihtiyaç yoktur. Galaksideki her yıldız ve atom, Evrenakı'nın içinde bir "vakum cebi" (deplasman) yaratır. Trilyonlarca kütlenin hacmi, merkezdeki Evrenakı sıvısını dışarı deplase eder. Bu fiziksel boşaltım, merkezde devasa bir düşük basınç alanı (çukur) yaratır. Dış uzayın bu çukura hücum etmesi (**Merkezcil İtim**), yıldızları bir arada tutan gücün ta kendisidir. Sistemde aktif bir girdap olmadığı için merkez sakindir (Core verisiyle birebir uyuşur).
+
+### B. Galaksi Şekillerini (Düzenli vs Rastgele) Belirleyen Eksenel İtim
+Galaksilerdeki yörüngelerin "düzenli disk" mi yoksa "kaotik küre" mi olacağı, bütünüyle merkezdeki kara deliğin **Eksenel İtim (Girdap Sürüklenmesi)** gücüne ve kararlılığına bağlıdır.
+
+* **Cüce Küreseller (Sıfır Eksenel İtim):** Merkezde kara delik yoktur. Eksenel İtim ($B=0$) olmadığı için akışkan dönmez, yıldızlar sadece merkezdeki kütleçekim çukuruna (Merkezcil İtim'e) doğru rastgele, arı kovanı gibi 3 boyutlu kaotik yörüngelerde uçuşurlar.
+* **Sarmal Galaksiler (Maksimum ve Sabit Eksenel İtim):** Kara delik, Evrenakı'yı tek ve sabit bir eksende (dev bir mikser gibi) döndürür. Sürtünme (gaz ve toz) de mevcut olduğundan, Eksenel İtim (B) yıldızları zamanla tek bir düzleme (diske) kusursuzca hizalar. Sarmal şekil doğar.
+* **Dev Elips Galaksiler (Yalpalayan / Precession Yapan İtim):** Çarpışmalar kurbanı olan bu ölü devlerin merkezindeki süper kara delikler; kütlece devasadır ancak eksenleri sabitleşememiş, şiddetle yalpalayan (**Precession**) durumdadır. Yalpalayan eksenel itim, akışkanı bir düzlemde değil, "3 boyutlu bir çalkalama" şeklinde savurur. Gaz ve sürtünme de olmadığı için trilyonlarca yıldız asla bir diske yerleşemez, rastgele 3 boyutlu yörüngelerde salınım (pendulum) hareketi yaparak galaksiyi devasa bir küre (elips) formuna mahkûm eder.
+
+### C. 4B'den 3B'ye İzdüşümün Makro Kanıtı: Precession
+Dev galaksilerin yalpalaması (Precession) basit bir tesadüf veya sadece çarpışmaların bir sonucu değildir. Matematikte 4 Boyutlu uzaydaki (4B) dönüşler (SO(4) Isoclinic dönüşler), 3 Boyutlu (3B) uzaya yansıtıldıklarında geometrik bir zorunluluk olarak "Yalpalama" (Precession) hareketi üretirler. Evrenakı teorisine göre madde (kavitasyon yırtığı), doğası gereği 4B veya üst boyutlu bir dönüşün eseridir. Bu devasa kara deliklerin dönüş eksenlerinin mecburen yalpalaması, aslında 4B'deki Evrenakı girdabının 3B uzayımıza düşen devasa topolojik gölgesidir! Galaksilerin o devasa küre yapıları, 4 boyutlu mekaniğin galaktik ölçekteki doğrudan ispatıdır.
+
+### D. Kütle ve Dönüş Paradoksunun Çözümü ($\sqrt{2}c$)
+Astronomide dev elips galaksilerin merkezindeki devasa kara deliklerin "yavaş" döndüğü ($a^*$ spin katsayısının düşük olduğu) ölçülür. Bu durum, teorimizin *"Kütle arttıkça dönüş gücü artmalıdır"* kuralıyla asla çelişmez, bilakis doğrular:
+1. **Mutlak Açısal Momentum:** Astronomların yavaş dediği şey kütleye oranlanmış katsayıdır. Kara deliğin gerçek fiziksel dönüş gücü (Açısal Momentumu, $J \propto M^2$) kütlenin karesiyle artar. Yani kütlesi devasa olan bir kara deliğin mutlak eksenel itim gücü, küçük ama hızlı dönen bir kara delikten milyonlarca kat daha fazladır.
+2. **$\sqrt{2}c$ Denge Hızı:** Ek A.2'de kanıtlandığı gibi, *Her kararlı vakum-cepli girdap boyutu ne olursa olsun duvarını tam $\sqrt{2}c$'de döndürür.* Eğer dev kara delikler tek bir makro-Zerre (vakum cebi) ise, kavitasyon yüzeyindeki teğetsel hız hep sabit ve ışık hızının üzerindedir ($\sqrt{2}c$). Kütle arttıkça kara deliğin çapı Güneş Sistemi boyutlarına ulaştığından, yüzey hızı aynı kalmasına rağmen tam tur atma süresi uzar (RPM düşer) ve dışarıdan "yavaş dönüyor" gibi algılanır. Oysa kavitasyon duvarı, içerideki devasa kütleyi (deplasmanı) yaratan asıl yırtılma hızıyla dönmeye devam etmektedir.
