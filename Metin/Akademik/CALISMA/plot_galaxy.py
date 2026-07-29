@@ -48,8 +48,8 @@ ax.set_facecolor('#121212')
 plt.errorbar(r_obs, v_obs, yerr=v_err, fmt='o', color='#00ff88', label='M33 Gerçek Gözlem Verisi', capsize=4, zorder=5)
 
 # Fit edilmiş modeller
-plt.plot(r_plot, model_newton(r_plot, *popt_newton), label='Klasik Çekim Fit (Sadece 1/r²)', color='#ff5555', linestyle='--', linewidth=2)
-plt.plot(r_plot, model_evrenaki(r_plot, *popt_evrenaki), label='Evrenakı Fit (1/r² + 1/r)', color='#55aaff', linewidth=2.5)
+plt.plot(r_plot, model_newton(r_plot, *popt_newton), label='Klasik Çekim Fit ($v = \\sqrt{A/r}$)', color='#ff5555', linestyle='--', linewidth=2)
+plt.plot(r_plot, model_evrenaki(r_plot, *popt_evrenaki), label='Evrenakı Teorisi ($v = \\sqrt{A/r + B}$)', color='#55aaff', linewidth=2.5)
 
 plt.title('M33 Galaksisi Gerçek Verileriyle Teori Testi', fontsize=14, pad=15, color='white')
 plt.xlabel('Merkezden Uzaklık - r (kpc)', fontsize=12, color='#cccccc')
