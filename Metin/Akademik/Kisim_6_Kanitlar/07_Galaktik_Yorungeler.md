@@ -20,17 +20,17 @@ $$a_{merkezcil} = a_{kütleçekim} + a_{eksenel}$$
 
 Terimleri kendi fiziksel bağımlılıklarıyla açtığımızda:
 1. **Merkezcil İvme:** $\frac{v^2}{r}$
-2. **Klasik Kütleçekim (Newton):** $\frac{GM}{r^2}$
-3. **Eksenel Kuvvet (Evrenakı):** $\frac{K}{r}$ *(Buradaki K sabiti, merkezdeki süper kütleli kara deliğin devri ve galaktik çekirdeğin dönüş karakteristiği ile orantılıdır)*
+2. **Evrenakı Kütleçekim (Basınç Gradyanı):** $\frac{A}{r^2}$ *(Buradaki A sabiti, galaksinin merkez kütlesinin yarattığı hidrodinamik basınç düşümü ile orantılıdır)*
+3. **Eksenel Kuvvet (Evrenakı):** $\frac{B}{r}$ *(Buradaki B sabiti, merkezdeki süper kütleli kara deliğin devri ve galaktik çekirdeğin dönüş karakteristiği ile orantılıdır)*
 
 Eşitliği kuralım:
-$$\frac{v^2}{r} = \frac{GM}{r^2} + \frac{K}{r}$$
+$$\frac{v^2}{r} = \frac{A}{r^2} + \frac{B}{r}$$
 
 Denklemin her iki tarafını da yarıçap ($r$) ile çarptığımızda, yörünge hızı $v$ şu şekilde doğrudan elde edilir:
-$$\mathbf{v = \sqrt{\frac{GM}{r} + K}}$$
+$$\mathbf{v = \sqrt{\frac{A}{r} + B}}$$
 
 Bu zarif ve kompakt denklemin sunduğu fiziksel sonuç son derece derindir:
-Klasik fizikte $K=0$'dır; dolayısıyla yarıçap ($r$) büyüdükçe hız sıfıra yaklaşır. Ancak Evrenakı teorisinde, galaksinin çok uzak dış kollarına gidildiğinde ($r \to \infty$), $\frac{GM}{r}$ terimi sıfıra yaklaşsa dahi yıldızın hızı sıfıra düşmez. Hız doğrudan **$\sqrt{K}$** limitine, yani sabit bir asimptota kilitlenir.
+Klasik fizikte (B=0 kabul edildiğinde) yarıçap ($r$) büyüdükçe hız sıfıra yaklaşır. Ancak Evrenakı teorisinde, galaksinin çok uzak dış kollarına gidildiğinde ($r \to \infty$), $\frac{A}{r}$ terimi sıfıra yaklaşsa dahi yıldızın hızı sıfıra düşmez. Hız doğrudan **$\sqrt{B}$** limitine, yani sabit bir asimptota kilitlenir.
 
 Astronomların teleskoplarla gözlemlediği meşhur **"Düz Dönüş Eğrisi" (Flat Rotation Curve)** profili, teorik altyapıda hiçbir yama kullanılmadan, tamamen doğal yollarla elde edilmiştir.
 
