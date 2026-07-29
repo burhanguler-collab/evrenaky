@@ -20,7 +20,7 @@ Doğada gördüğümüz bütün renkler, aslında gözümüzün retinasına sani
 
 * **Mavi Işık (Kısa Dalga Boyu, Yüksek Frekans):** Zerreler arası mesafe çok kısadır. Zerreler birbirinin âdeta tamponuna yapışmış şekilde uçarlar. Bu yüzden retinaya saniyede çarpan mermi sayısı (frekans) çok yüksektir. Mavi ışığın standart fizikçe "foton enerjisi" ($E=h\nu$) diye adlandırılan büyüklüğünün yüksek hesaplanması, birim zamanda hedefe aktarılan bu yüksek mermi sayısının kinetik sonucudur.
 * **Yeşil Işık (Orta Dalga Boyu, Orta Frekans):** Zerreler arası boşluk biraz daha açılmıştır. Ekrana saniyede çarpan zerre sayısı maviye göre daha az, kırmızıya göre daha fazladır.
-* **Kırmızı Işık (Uzun Dalga Boyu, Düşük Frekans):** Zerreler arası mesafe (boşluk) oldukça uzundur. Hedefe saniyede ulaşan mermi sayısı oldukça düşüktür. Bu yüzden kırmızı ışık daha "düşük enerjili" kabul edilir. Aslında tekil bir zerrenin (h) enerjisi değişmemiştir; değişen tek şey hedefin maruz kaldığı atış (çarpma) hızıdır.
+* **Kırmızı Işık (Uzun Dalga Boyu, Düşük Frekans):** Zerreler arası mesafe (boşluk) oldukça uzundur. Hedefe saniyede ulaşan mermi sayısı oldukça düşüktür. Bu yüzden kırmızı ışık daha "düşük enerjili" kabul edilir. Aslında tekil bir Zerre'nin enerjisi değişmemiştir; değişen tek şey hedefin maruz kaldığı atış (çarpma) hızıdır.
 
 Bu üç farklı "mermi sağanağının" Evrenakı okyanusu içerisindeki ilerleyişini aşağıdaki simülasyonla inceleyebiliriz.
 
@@ -63,9 +63,9 @@ Zerrelerin hızı, kutsal bir sınır veya aşılamaz bir duvar değildir. Evren
 
 ## 2.3.5 Işık Şiddeti ve Parlaklık (Genlik)
 
-Klasik optik, ışığın şiddetini (parlaklığını) bir dalganın "genliği" (tepe yüksekliği) olarak tanımlar. Ancak dalga-parçacık ikiliği yetersiz kaldığında genlik kavramı da anlamsızlaşır. Evrenakı teorisine göre parlaklık, sadece ve sadece **birim alana düşen Zerre sayısıdır (Sürünün Kalabalıklığı).** 
+Klasik optik, ışığın şiddetini (parlaklığını) bir dalganın "genliği" (tepe yüksekliği) olarak tanımlar. Ancak dalga-parçacık ikiliği yetersiz kaldığında genlik kavramı da anlamsızlaşır. Evrenakı teorisine göre parlaklık, sadece ve sadece **birim alana düşen Zerre katarı sayısıdır** — yani o alana kaç paralel mermi dizisinin isabet ettiğidir. Bu, katarın *içindeki* ardışık Zerre ritmi olan frekanstan (Bölüm 2.3.1) tamamen ayrı bir büyüklüktür: **şiddet katarların sayısını, frekans katarın içindeki ritmi sayar.**
 
-Bir el feneri ince ve seyrek bir Zerre akışı gönderirken, Güneş hedefe devasa ve sıkı bir "mermi sağanağı" gönderir. Işığın şiddeti, hedefe çarpan toplam kinetik kütle yoğunluğudur. Sönük bir kırmızı ışık ile kör edici parlaklıktaki bir kırmızı ışık arasındaki tek fark, fırlatılan Zerrelerin miktarından (hacimsel yoğunluğundan) ibarettir.
+Bir el feneri hedefe seyrek sayıda katar gönderirken, Güneş devasa ve sıkı bir "katar sağanağı" gönderir. Işığın şiddeti, bu katar kalabalığının hedefe taşıdığı toplam kinetik kütle akısıdır. Sönük bir kırmızı ışık ile kör edici parlaklıktaki bir kırmızı ışık arasındaki tek fark, birim alana düşen **katar sayısıdır**; her katarın içindeki ritim (frekans = renk) ikisinde de aynıdır.
 
 ## 2.3.6 Faz, Koherens ve Lazer Işığı
 
@@ -85,7 +85,7 @@ Kırılma (Refraksiyon) ise, Zerrelerin bir ortama açılı girmesi sonucunda ka
 
 Klasik fiziğin en büyük çıkmazlarından biri, "kütlesiz" kabul ettiği "foton"ların nasıl olup da uzay araçlarını itebilecek bir basınca (güneş yelkeni) sahip olduğudur. Işınım basıncı laboratuvarda ilk kez 20. yüzyılın başında ölçülmüş (Lebedew, 1901; Nichols & Hull, 1903), gerçek bir güneş yelkeniyle uzayda ilk kez IKAROS görevinde doğrulanmıştır (Tsuda ve ark., 2011). Kütlesi olmayan bir şey momentum aktaramaz.
 
-Evrenakı modeli bu karmaşayı temelden çözer: **Zerreler kütlelidir ($m_z$).** Işık, uzayda yol alan bir madde katarıdır. Trilyonlarca kütleli Zerre mermisi bir güneş yelkenine çarptığında, tıpkı şiddetli bir dolu yağışının çadırı itmesi gibi, Newton'un basit Etki-Tepki ($F = m \cdot a$) prensibiyle yelkeni iter. Işınım basıncı soyut bir dalga etkisi değil, makroskobik evrenin mikroskobik boyutlarda işleyen klasik bir momentum aktarımıdır.
+Evrenakı modeli bu karmaşayı temelden çözer: **Zerreler kütlelidir ($m_z$).** Işık, uzayda yol alan bir madde katarıdır. Trilyonlarca kütleli Zerre mermisi bir güneş yelkenine çarptığında, tıpkı şiddetli bir dolu yağışının çadırı itmesi gibi, Newton'un ikinci yasası ($F = m \cdot a$) uyarınca yelkeni iter. Işınım basıncı soyut bir dalga etkisi değil, makroskobik evrenin mikroskobik boyutlarda işleyen klasik bir momentum aktarımıdır.
 
 ---
 

@@ -36,16 +36,14 @@ Dürüstlük gereği vurgulanmalıdır: bu bir *doğrulama* değil, bir **tutarl
 
 > *Düzeltme kaydı:* Bu bölümün önceki sürümü, Evrenakı yoğunluğuna "izotermal küre profili" ($\rho \propto 1/r^2$) atfedip integrali sabit $\rho$ ile alıyordu — iki varsayım birbiriyle çelişiyordu: $\rho \propto 1/r^2$ alınsaydı $dP/dr \propto 1/r^3$ çıkar ve logaritmik kuyu elde edilemezdi. Tutarsızlık aşağıdaki gibi giderilmiştir. $1/r^2$ profili, standart fizikte *görünmez madde halesine* atfedilen **madde** yoğunluğudur; Evrenakı **akışkanına** taşınması hatalıydı.
 
-**Varsayım 1 — yoğunluk:** Evrenakı yoğunluğu galaktik ölçekte yaklaşık sabittir: $\rho_E \approx$ sabit. Bu ayrı bir kabul değil, teorinin kendi birleştirici ilkesinin uzantısıdır (Bölüm 2.4.2; Ek B.3'teki $k \ll 1$ rejimi): gradyanlarda asıl değişen şey **basınçtır**, yoğunluk basınca ancak zayıf biçimde eşlik eder.
+**Varsayım 1 — yoğunluk:** Evrenakı yoğunluğu galaktik ölçekte yaklaşık sabittir: $\rho \approx$ sabit (eski yazım: $\rho_E$). Bu ayrı bir kabul değil, teorinin kendi birleştirici ilkesinin uzantısıdır (Bölüm 2.4.2; Ek B.3'teki $k \ll 1$ rejimi): gradyanlarda asıl değişen şey **basınçtır**, yoğunluk basınca ancak zayıf biçimde eşlik eder.
 
 **Varsayım 2 — hız profili (bileşik girdap):** Galaktik vorteks, akışkanlar mekaniğinin klasik **bileşik (Rankine-tipi) girdap** yapısındadır: iç bölgede motorun mutlak kavradığı katı-cisim dönüşü ($v_\theta = \omega r$), geçiş yarıçapı $r_0$'ın ötesinde ise merkez motorun sürüklediği düz-hız bölgesi ($v_\theta = v_0$). ($v_0$'ın değeri burada türetilmez; Ek C'deki P1 sabitleme programının konusudur.)
 
-Siklostrofik denge her iki bölgede aynı tek denklemdir: $\frac{dP}{dr} = \rho_E \frac{v_\theta^2}{r}$.
+Siklostrofik dengenin ($\frac{dP}{dr} = \rho \frac{v_\theta^2}{r}$) sabit $\rho$ ile her iki bölgede integrasyonu, $r_0$'da sürekli eklenen iki basınç profilini verir *(tam türetim ve rejim tablosu: **Ek M-30**)*:
 
-* **İç bölge** ($r < r_0$): $\frac{dP}{dr} = \rho_E\, \omega^2 r \;\Rightarrow\; P(r) = P_{merkez} + \tfrac{1}{2}\rho_E\, \omega^2 r^2$ — parabolik profil; basınç merkezde sonlu ve düzgündür (kuyu dibi patolojisiz).
-* **Dış bölge** ($r > r_0$): $\frac{dP}{dr} = \rho_E \frac{v_0^2}{r} \;\Rightarrow\; P(r) = P_0 + \rho_E\, v_0^2 \ln\!\left(\frac{r}{r_0}\right)$ — logaritmik basınç çukuru.
-
-$\rho_E$ sabit olduğundan her iki integral de meşrudur ve iki parça $r_0$'da sürekli eklenir. Logaritmik kuyu, yıldızların dış bölgelerde neden yavaşlamadığını ve savrulmadan yörüngede kaldığını karanlık madde hipotezine ihtiyaç duymadan hidro-mekanik olarak açıklar.
+* **İç bölge** ($r < r_0$): $P(r) = P_{merkez} + \tfrac{1}{2}\rho\, \omega^2 r^2$ — parabolik profil; basınç merkezde sonlu ve düzgündür (kuyu dibi patolojisiz).
+* **Dış bölge** ($r > r_0$): $P(r) = P_{ref} + \rho\, v_0^2 \ln\!\left(\frac{r}{r_0}\right)$ — logaritmik basınç çukuru; yıldızların dış bölgelerde savrulmadan yörüngede kalışını karanlık madde hipotezine ihtiyaç duymadan hidro-mekanik olarak açıklar. ($P_{ref}$: $r_0$'daki referans basınç; eski yazım $P_0$ — arka plan basıncıyla karışmaması için ayrıldı.)
 
 **Bileşik yapının bedava öngörüsü:** Gözlenen galaktik dönüş eğrileri tam bu bileşik deseni çizer — iç bölgede hız $r$ ile yaklaşık doğrusal yükselir (katı-cisim kolu), $r_0$ civarında kırılıp düzleşir. Standart fizik bu iki kolu iki ayrı bileşenle (iç: baryonik disk; dış: karanlık madde halesi) fit etmek zorundadır; bileşik girdapta ikisi, tek yapının iki bölgesidir. *Dürüst kayıt:* $v_0$ ve $r_0$'ın merkez motor parametrelerinden nicel türetimi yapılmamıştır; P1 programı (Ek C) bu profili dönüş eğrisi + galaktik kızıla kayma sapmasının ortak fitiyle sabitleyecektir (bkz. 7.4, madde 1 ve 5).
 
@@ -69,7 +67,7 @@ Uzayın genişleme hızı Hubble Yasası ile verilir (Hubble, 1929): $\vec{v} = 
 Evrenakı yoğunluğunun global ölçekte nispeten dengeli kaldığını ($\partial \rho / \partial t \approx 0$) varsayarsak:
 $$ 3 \rho H_0 = S_{kosmik} \implies H_0 = \frac{S_{kosmik}}{3\rho} $$
 
-Bu sonuç, Hubble Sabiti'nin ($H_0$), Evrenakı akışkanının içsel hacimsel genleşme (diverjans) oranının veya global bir kaynak teriminin ($S_{kosmik}$) mekanik bir ölçüsü olduğunu gösterir.
+Bu sonuç, Hubble Sabiti'nin ($H_0$), Evrenakı akışkanının içsel hacimsel genleşme (diverjans) oranının veya global bir kaynak teriminin ($S_{kosmik}$) mekanik bir ölçüsü olduğunu gösterir. *(katalog: **Ek M-31**)*
 
 ### 4.2.11.2 Global Basınç Gevşemesi (Pressure Relaxation)
 Navier-Stokes denklemlerindeki Basınç Gradyanı ($-\nabla P$) üzerinden değerlendirildiğinde, evrenin sınırlarına veya dış uzay bölgelerine doğru Evrenakı basıncının düşmesi, dışarıya doğru net bir negatif basınç gradyanı ($+\nabla P$) yaratır. Bu senaryo, evrenin mevcut genişlemesinin devasa ve evrensel bir **"Basınç Gevşemesi (Relaxation)"** süreci olduğunu öngörür.

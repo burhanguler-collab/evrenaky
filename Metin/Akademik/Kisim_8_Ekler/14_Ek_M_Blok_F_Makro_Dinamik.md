@@ -1,0 +1,216 @@
+# Ek M — Merkezî Türetim Kataloğu · Blok F: Makro Evren Dinamiği
+
+Şablon ve rozet sistemi için bkz. Blok A (M-1..M-6) girişi.
+
+---
+
+## M-22 · Radyal Momentum Dengesi: $dP/dr = \rho v_\theta^2/r$ · **[T]**
+
+**Kullanıldığı bölümler:** 3.4.1 (kütle-itim ispatı), 3.10.2 (işaret zemini / düzeltme kaydı), 3.6.2 (atmosferik burulma zemini), 4.2.9.2 (galaktik rejime geçiş).
+
+### Varsayımlar
+1. Evrenakı, Navier-Stokes denklemine tabi sıkıştırılabilir bir akışkandır (Postülat 1); viskozitesi sıfıra çok yakındır: $0 < \mu \ll 1$ (Postülat 7; $\mu$ sembolü yalnız bu standart alıntıda geçer, teorinin kendi viskozite parametresi $\eta_E$'dir — S-19).
+2. Kütle çevresindeki makro girdap **kararlı** ($\partial\vec v/\partial t = 0$) ve **eksenel simetriktir**; akış alanı saf teğetseldir: $\vec v = v_\theta(r)\,\hat e_\theta$.
+
+### Adımlar
+1. Standart Navier-Stokes denkleminden başlanır:
+$$\rho\left(\frac{\partial \vec v}{\partial t} + (\vec v\cdot\nabla)\vec v\right) = -\nabla P + \mu\nabla^2\vec v$$
+2. $\mu \to 0^+$ idealleştirmesiyle denklem Euler biçimine sadeleşir:
+$$\rho\left(\frac{\partial \vec v}{\partial t} + (\vec v\cdot\nabla)\vec v\right) = -\nabla P$$
+3. Silindirik koordinatlarda, kararlı saf dönüş için konvektif terimin radyal bileşeni merkezcil ivmedir: $\big[(\vec v\cdot\nabla)\vec v\big]_r = -v_\theta^2/r$. Euler denkleminin radyal bileşeni böylece momentum dengesine (siklostrofik denge) indirgenir:
+$$-\rho\frac{v_\theta^2}{r} = -\frac{dP}{dr}$$
+4. Sağ taraf düzenlenince sonuç çıkar; $dP/dr$ **kesinlikle pozitiftir** — merkeze yaklaştıkça hız artar, statik basınç düşer; dışarı doğru basınç yükselir. Bu, M-2'nin kuyu konvansiyonunun ($dP/dr > 0$) hidrodinamik ispatıdır: cismi merkeze iten şey gradyanın kendisi değil, itim yasasındaki eksi işarettir — kuvvet daima $-\nabla P$'dir, cismin ivmesi $\vec a = -(1/\rho_n)\nabla P$ (M-2).
+
+### Sonuç
+$$\boxed{\frac{dP}{dr} = \rho\,\frac{v_\theta^2}{r} \;>\; 0}$$
+
+Newton'un "çekim" (pull) soyutlaması yerine mekanik zemin: uzayın derinliklerindeki yüksek statik Evrenakı basıncı, kütle çevresindeki düşük basınç havzasına doğru cisimleri kesintisiz **iter** — kütle-itim, Euler denkleminin matematiksel zorunluluğudur.
+
+### Geçerlilik Sınırı
+- Kararlı, eksenel simetrik, viskoz terimi ihmal edilmiş rejim.
+- **Rejim notu:** Hız profili denkleme dışarıdan girer ve iki rejim ayrışır. Güneş sistemi ölçeğindeki **lokal (Kepler) girdapta** $v_\theta \propto 1/\sqrt{r}$ (M-25) ile $dP/dr \propto 1/r^2$ çıkar — klasik gözlemle örtüşen kuyu. **Galaktik düz-hız rejiminde** ($v_\theta \approx$ sabit) ise $dP/dr \propto 1/r$, yani **logaritmik basınç kuyusu** doğar (4.2.9.2; tam türetim M-30'da).
+
+### Açık Uçlar
+- $v_\theta(r)$ profilini iki rejim arasında tek denklemde bağlayan geçiş fonksiyonunun türetimi (M-30, 7.4).
+- Kuyunun $\rho(r)$ eşlik profilinin ($k$ eşlik oranıyla, M-8) kapalı çözümü.
+
+---
+
+## M-23 · Coriolis Biçiminin Türetimi · **[T (kısmi)]**
+
+**Kullanıldığı bölümler:** 3.6.3 (matematiksel ispat), 3.6.2 ve 3.6.4–3.6.5 (fırtına/kasırga yön imzaları).
+
+### Varsayımlar
+1. Dönen bir gezegen çevresindeki toplam Evrenakı hız alanı iki **fiziksel** bileşenin toplamıdır:
+$$\vec v = \vec v_{basınç} + \vec v_{dönüş}$$
+$\vec v_{basınç}$: gezegene inen radyal kütle-itim akışı; $\vec v_{dönüş}$: gezegenin dönüşünün akışkana verdiği rotasyon alanı.
+2. Rotasyon alanı katı-cisim biçimindedir: $\vec v_{dönüş} = \vec\Omega_{dön}\times\vec r$ (gezegen dönüş vektörü $\vec\Omega_{dön}$ sabittir; Anayasa S-7 — kaynak metinde $\vec\Omega$ yazılıdır, katalogda yörünge frekansı $\Omega_{yör}$ ile karışmaması için $\Omega_{dön}$ kullanılır).
+
+### Adımlar
+1. Akışkan ivmesindeki konvektif türev $(\vec v\cdot\nabla)\vec v$, toplam hız yerleştirilince çapraz etkileşim terimleri üretir; incelenen terim:
+$$(\vec v_{basınç}\cdot\nabla)\,\vec v_{dönüş}$$
+2. Sabit $\vec\Omega_{dön}$ için vektör kimliği doğrudan uygulanır:
+$$(\vec v_{basınç}\cdot\nabla)(\vec\Omega_{dön}\times\vec r) = \vec\Omega_{dön}\times\vec v_{basınç}$$
+Bu, standart fizikteki Coriolis ivmesinin (Coriolis, 1835) temel matematiksel formudur.
+3. **Yön tayini (determinant hesabı).** Kartezyen eksenlerde ($x\to$ doğu, $y\to$ kuzey, $z\to$ yukarı), $\vec\Omega_{dön}=(0,0,\Omega_{dön})$ ve $\vec v_{basınç}=(v_x,v_y,0)$ için:
+$$\vec a = \vec\Omega_{dön}\times\vec v_{basınç} = \begin{vmatrix}\hat i & \hat j & \hat k\\ 0 & 0 & \Omega_{dön}\\ v_x & v_y & 0\end{vmatrix} = (-\Omega_{dön}v_y,\ +\Omega_{dön}v_x,\ 0)$$
+4. **İşaret analizi.** Kuzey Yarımküre'de ($\Omega_{dön}>0$) alçak basınca koşan kütle için $a_x<0$, $a_y>0$: hareket zorunlu olarak **sola (CCW)** bükülür. Güney Yarımküre'de ($\Omega_{dön}<0$) işaretler döner: **sağa (CW)**. Yön deseni varsayım değil, türetilmiş sonuçtur.
+5. **Gözlemsel çapa:** Kontrollü küvet-girdabı deneyi (Shapiro, 1962), yarımküre işaret desenini laboratuvarda doğrular.
+
+### Sonuç
+$$\boxed{\vec a = \vec\Omega_{dön}\times\vec v_{basınç} = (-\Omega_{dön}v_y,\ +\Omega_{dön}v_x,\ 0) \qquad \text{KYK: CCW,\ \ GYK: CW}}$$
+
+Coriolis terimi burada yeni bir kuvvet değil, ontoloji düzeltmesidir: dönen çerçevenin "sanal" ivmesi değil, radyal basınç akışı ile makro-vorteks alanı arasındaki **gerçek momentum transferidir**.
+
+### Geçerlilik Sınırı
+Sabit $\vec\Omega_{dön}$, yatay düzlemde hareket, tek çapraz terimin izolasyonu. Türetim, Coriolis ivmesinin *biçimini* ve *işaret desenini* verir; tam katsayı için aşağıdaki açık uca bakınız.
+
+### Açık Uçlar
+- **2 çarpanının tam gösterimi** (ikinci çapraz terimin $(\vec v_{dönüş}\cdot\nabla)\vec v_{basınç}$ ve zaman türevinin katkısı) **açık hesap kalemidir**; kaynak metindeki "Euler'in diğer terimleriyle 2 çarpanı da doğrudan elde edilir" ifadesinin açık hesabı henüz yazılmamıştır. Rozetin **[T (kısmi)]** kalmasının nedeni budur.
+
+---
+
+## M-24 · Kavrama/Kilitlenme Denklemi · **[K]**
+
+**Kullanıldığı bölümler:** 3.4.4 (ana metin + Şekil 3.4.1–3.4.2 + Animasyon 3.4.2), 3.9.1 (Ay'ın 1:1 senkron kilidi), 3.8.2 (girdap rekabeti bağlamı), 7.4 (açık hesap kalemleri).
+
+> **Rozet gerekçesi (peşin dürüstlük):** Bu girdinin ana denklemi bir **ilk-ilke türetimi değil**, gözlemle kalibre edilmiş bir çerçevedir. Kavrama klifi $g(R)$ dört veri noktasına iki parametreyle oturtulmuş **betimleyici bir fittir**; Venüs satırındaki $\sigma\Gamma/k_g \approx 2$ oranı ölçümden kalibre edilmiştir. Yalnızca günberi-ritmi alt-bağıntısı $q_{peri}(e)$ türetilmiştir ve ayrıca **[T]** ile işaretlenmiştir. Bu kayıt kaynak metinde (3.4.4, dürüst kayıt paragrafı) aynen mevcuttur.
+
+### Varsayımlar
+1. Her kütlenin dördüncü boyut mikro-motorları, cisme kütlesiyle orantılı bir serbest dönüş ifadesi ($\omega_{serbest}(M)$) yüklemeye çalışır (3.8.2).
+2. Merkez yıldızın makro girdabı, kendi kavrama bölgesi içindeki cisimlerin bu ifadesini bastırır ve kalıntı dönüşü **yerel girdap ritmine** ($\Omega_{yör}$) kilitler.
+3. Kavrama en şiddetli günberide etkir (klif dikliği nedeniyle pençe fiilen günberide kavrar).
+
+### Bileşenler ve Adımlar
+1. **Kavrama derecesi (tanım):**
+$$g \equiv 1 - \frac{L_{gözlenen}}{L_{serbest}}$$
+2. **Kavrama klifi** — dört iç gezegene uygulanan tanımdan çıkan dik geçiş, iki parametreli biçimle betimlenir:
+$$g(R) = \frac{1}{1+(R/R_c)^p}, \qquad R_c \approx 1{,}0 \text{ AU}$$
+**[K]:** Bu biçim **türetim değildir**; dört nokta / iki parametre ile betimleyici bir fittir.
+3. **Kilit modları:** $q \in \{+\tfrac{3}{2},\ +1,\ \approx -1\}$. İlk ikisi serbest parametre değildir; günberi ritminden okunur (adım 4).
+4. **Günberi ritmi alt-bağıntısı — [T]:** Kepler yörüngesinde açısal momentum $h=\sqrt{GMa(1-e^2)}$ ve günberi uzaklığı $r_p=a(1-e)$ ile günberi açısal hızı $\omega_{peri}=h/r_p^2$'dir; ortalama harekete ($\Omega_{yör}=\sqrt{GM/a^3}$) oranı doğrudan hesaplanır:
+$$q_{peri}(e) = \frac{\omega_{peri}}{\Omega_{yör}} = \frac{\sqrt{1-e^2}}{(1-e)^2} = \frac{\sqrt{1+e}}{(1-e)^{3/2}} \;\longrightarrow\; \text{en yakın kararlı oran}$$
+Ay ($e=0{,}055$): $1{,}12 \to 1{:}1$; Merkür ($e=0{,}206$): $1{,}55 \to 3{:}2$. İki mod arasındaki eşik $e \approx 0{,}125$'tir (R-6 bağlayıcı değeri). Ayırt edici öngörü: ötegezegen sistemlerinde $e\approx0{,}2$ civarında kilitlenmiş cisimler **daima 3:2'de** bulunmalıdır.
+5. **Atmosferli gövdeler (yelken kanalı):** Kalın atmosfer ayrı bir kuplaj kanalı ($\sigma$) açar; doygun rejimde kalıntı kilit iki kanalın dengesinden seçilir:
+$$\frac{\omega^\ast}{\Omega_{yör}} = q_{peri}(e) - \frac{\sigma\Gamma}{k_g}$$
+Venüs kalibrasyonu **[K]**: $e=0{,}007 \Rightarrow q_{peri}=1{,}01$; ölçülen kilit $-0{,}92\,\Omega_{yör}$ ile $\sigma\Gamma/k_g = 1{,}01-(-0{,}92)=1{,}93\approx 2$. Aynı ifade parametresiz tarama yapar: Merkür ve Ay'da $\sigma=0$ (kilit $=q_{peri}$ ✓), Titan ve Dünya'da $\sigma\Gamma/k_g\ll1$ (prograd ✓).
+6. **Ana denklem** — tüm tablo tek ifadede toplanır:
+$$\omega_{gözlenen}(M,R) = \big[1-g(R)\big]\,\omega_{serbest}(M) + g(R)\,q\,\Omega_{yör}(R)$$
+7. **Ölçekleme yasaları — [S] (log-log fit):** hizalı serbest gezegenler (Mars → Jüpiter) için $v_{ekv}\propto M^{0{,}54}$ ($R^2=0{,}98$) ve $L_{spin}\propto M^{1{,}94}$ ($R^2=1{,}00$); $\omega_{serbest}(M)$ bu doğrunun ekstrapolasyonundan okunur.
+
+### Sonuç
+$$\boxed{\omega_{gözlenen}(M,R) = \big[1-g(R)\big]\,\omega_{serbest}(M) + g(R)\,q\,\Omega_{yör}(R), \qquad q\in\left\{+\tfrac{3}{2},\ +1,\ \approx-1\right\}}$$
+
+**Sayısal başarılar:** $g_\oplus = 0{,}39$ → Dünya'nın 24 saati (serbest ~14,5 saatlik ifadenin %61'i) kendiliğinden çıkar; Merkür'ün dönüş momentumunun **%97,7'si** yutulmuş, kalıntı $+\tfrac{3}{2}\Omega_{yör}$ (58,6 gün ✓); Venüs ~**247 gün ters** (gerçek: 243 gün, ters).
+
+### Geçerlilik Sınırı
+- Yasa, girdapla **hizalı** ($\theta \lesssim 30°$) **serbest-denge** cisimleri içindir; Merkür/Venüs "bastırılmış", Uranüs "hizasız" sınıfındadır (önceden tanımlı ölçüt, sonuca göre ayıklama değildir).
+- Kapsam dışı: çökmüş cisimler (beyaz cüce, nötron yıldızı — açısal momentum korunumu dönüşü mertebelerce büyütür) ve beslenen cisimler (yığışma diskinden momentum alan milisaniye pulsarları).
+
+### Açık Uçlar
+- $g(R)$ klifinin ($R_c$, $p$) girdap rekabetinden ilk-ilke türetimi (7.4).
+- $\sigma\Gamma/k_g$ oranının atmosfer kütlesi ve termal genlikten hesabı (Venüs'te yalnız kalibre, 7.4).
+- Hizalanma verimi $f(\theta)$'nın türetimi; ötegezegen sınavı: eksen eğikliği ile dönüş hızı arasında negatif korelasyon (7.4).
+
+---
+
+## M-25 · Girdap Hız Profili ve Muhasebe Zincirleri: $v \propto 1/\sqrt{R}$ · **[T]** *(muhasebe girdileri: [S])*
+
+**Kullanıldığı bölümler:** 3.8.1–3.8.1.1 (Güneş vorteksi + Açısal Momentum Paradoksu), 3.9.4 (Dünya-Ay muhasebesi), 3.8.2 (nedenselliğin tersinmesi), 3.4.4.
+
+### Varsayımlar
+1. Gezegenler boşlukta dolanmaz; merkez kütlenin makro Evrenakı girdabının akıntı katmanlarına kapılmış (sürüklenme/entrainment) durumdadır (3.8.1).
+2. Kepler'in Üçüncü Yasası gözlemsel girdi olarak alınır: $T^2 \propto R^3$ (Kepler, 1619) **[S]**.
+
+### Adımlar
+1. Yörünge hızı tanımı $v = 2\pi R/T$, Kepler-3 ile birleştirilir:
+$$T \propto R^{3/2} \;\Longrightarrow\; v = \frac{2\pi R}{T} \propto \frac{R}{R^{3/2}} = \frac{1}{\sqrt{R}}$$
+Girdabın sürüklenme hız profili budur; içinde yüzen cisimlerin hızları bu profile oturur.
+2. **Muhasebe zinciri 1 — Güneş (girdilerin tümü [S]):** Güneş'in ekvator yüzey hızı 2 km/s'dir (Beck, 2000). Girdap yalnız yüzeyin mekanik dönüşüyle üretilseydi, profil 58 milyon km'deki Merkür yörüngesinde ~**0,2 km/s** öngörürdü. Gözlenen: **47,4 km/s** — Güneş yüzey dönüşünden **23 kat** hızlı. Profil geriye sarılırsa, girdabı üretecek merkez kaynağın **>430 km/s** dönmesi gerekir. SOHO g-mode verisi (Fossat ve ark., 2017) çekirdeği yüzeyin 4 katında (~8 km/s) bulur — gereken değerin elli kattan fazla altında. **Sonuç:** ne kabuk ne çekirdek; girdabın motoru gövdenin mekanik devri olamaz — motor, kütle nükleonlarının dördüncü boyut çift dönüş deşarjıdır (3.8.2).
+3. **Muhasebe zinciri 2 — Dünya-Ay (girdiler [S]):** Ay'ın yörünge hızı 1,02 km/s'dir. Aynı profil, girdabı Dünya'nın mekanik dönüşüne bağlayan varsayım altında ekvator hızını **7,93 km/s** gerektirir. Gerçek: **0,465 km/s** (R-6 bağlayıcı değeri) — açık **17 kat**. Sismolojik veri (PREM; Song & Richards, 1996; Vidale ve ark., 2000) iç çekirdeğin de neredeyse aynı yavaşlıkta döndüğünü gösterir: mekanik sürükleme muhasebesi her düzeyde çöker.
+4. İki zincirin ortak okuması: 23 ve 17 katlık açıklar teorinin açmazı değil **keşif aracıdır** — girdap hızı ile kütlenin mekanik devri arasındaki oran, motorun mekanik değil dördüncü-boyutsal olduğunun gözlemsel imzasıdır.
+
+### Sonuç
+$$\boxed{v(R) \propto \frac{1}{\sqrt{R}}\,, \qquad \frac{v_{girdap}}{v_{mekanik}}\bigg|_{Güneş} \approx 23\,, \qquad \frac{v_{gereken}}{v_{ekvator}}\bigg|_{Dünya} = \frac{7{,}93}{0{,}465} \approx 17}$$
+
+### Geçerlilik Sınırı
+Profil, merkez kütlenin baskın olduğu lokal (Kepler) girdap rejimi içindir; galaktik düz-hız rejimi (4.2.9.2, M-30) bu profilin dışındadır. Muhasebe zincirleri profili varsaymaz-doğrular döngüsüne düşmez: profil gözlemsel Kepler-3'ten, açıklar bağımsız hız ölçümlerinden gelir.
+
+### Açık Uçlar
+- Dördüncü boyut deşarjının girdaba yüklediği momentum debisinin nicel modeli (7.4).
+- Fosil (kalıntı) momentumun ultra-düşük viskoziteli ortamdaki sönüm zaman ölçeği ($\eta_E$ sabitlenince, bkz. M-27).
+
+---
+
+## M-26 · Gelgit Elipsoidi ve Güneş/Ay Oranı · **[T]**
+
+**Kullanıldığı bölümler:** 3.9.2 (yanal sıkıştırma mekanizması), 3.9.2.1 (suya batan top anomalisi), 3.9.2.2 (Güneş/Ay farkı).
+
+### Varsayımlar
+1. Gelgit bir "çekme" değil, Ay'ın Dünya-Ay arası Evrenakı akıntısını hızlandırmasıyla (Bernoulli, 1738: hız artan yerde iç basınç düşer) doğan **asimetrik yanal sıkıştırmadır** (squeeze).
+2. Mekanizmanın hidrostatik analoğu: derinliği $d$ olan suya batırılmış, yarıçapı $r$ olan yumuşak top. *(Notasyon kaydı: kaynak metinde derinlik $h$ ile yazılıdır; Anayasa S-4 gereği $h$ yalnız Planck sabitidir — katalogda derinlik **$d$**.)*
+
+### Adımlar
+1. Hidrostatik kuvvetler ($P = \rho g \cdot \text{derinlik}$):
+$$F_{üst} \propto \rho g (d-r), \qquad F_{alt} \propto \rho g (d+r), \qquad F_{yan} \propto \rho g d$$
+2. Kaldırma kuvveti alt-üst farkıdır: $F_{alt}-F_{üst} \propto 2\rho g r$. Bu pay ayrıldıktan sonra topu dikeyde karşılıklı ezen **efektif dikey sıkıştırma**, en zayıf kuvvete eşit kalır: $F_{dikey\_ezme} = F_{üst} \propto \rho g(d-r)$.
+3. Karşılaştırma:
+$$F_{yan} - F_{dikey\_ezme} \propto \rho g d - \rho g (d-r) = \rho g r > 0$$
+Yanlar dikeyden daima daha şiddetli ezer; hacmini koruyan top, sıkışmadan kaçarak zayıf eksene doğru uzar → **elipsoid**.
+4. Dünya'ya uygulama: Ay'ın yarattığı hız/basınç asimetrisi yan kuvvetleri baskın kılar; okyanuslar Ay eksenine doğru **ve** tam zıddına fışkırıp kabarır — çift şişkinlik, tek denklemden.
+5. **Güneş/Ay oranı.** Sıkıştırmayı yaratan, kuvvetin toplam büyüklüğü değil cismin bir ucundan diğerine **değişimidir**: toplam kütle-itim kuvveti $\propto M/r^2$, gelgit gradyanı $\propto M/r^3$. Sayılar (NASA/JPL, 2024): $M_{Güneş}/M_{Ay} \approx 2{,}7\times10^7$, uzaklık oranı $390$, $390^3 \approx 5{,}9\times10^7$:
+$$\frac{\text{Güneş gelgiti}}{\text{Ay gelgiti}} = \frac{2{,}7\times10^7}{5{,}9\times10^7} \approx 0{,}46$$
+Toplam kuvvette 177 kat üstün olan Güneş (bu yüzden onun etrafında dolanırız), gradyanda Ay'ın **%46'sına** düşer — gözlemle uyum ✓ (Pugh & Woodworth, 2014).
+
+### Sonuç
+$$\boxed{F_{yan} > F_{dikey\_ezme} \;\Rightarrow\; \text{elipsoid uzaması}\,, \qquad \frac{\text{Güneş}}{\text{Ay}}\bigg|_{gelgit} = \frac{M_G/M_A}{(r_G/r_A)^3} = \frac{2{,}7\times10^7}{390^3} \approx \%46}$$
+
+### Geçerlilik Sınırı
+Hidrostatik analoji $r \ll d$ (cisim boyutu ≪ karakteristik uzaklık) limitinde kurulur; oran hesabı yalnız ölçekleme üstünden yürür ve katsayı iddiası taşımaz. Gradyanın $1/r^3$ ölçeklenmesi standart gelgit kuramıyla ortaktır — teorinin farkı sayıda değil, mekanizmadadır (çekme değil yanal sıkıştırma).
+
+### Açık Uçlar
+- Şişkinlik ekseninin Ay'ın önüne kayma açısının (~3°, gözlemle uyumlu) sürtünme-sürüklenme dengesinden nicel hesabı.
+- Kabarma **genliğinin** (metre mertebesi) Evrenakı basınç asimetrisinden mutlak hesabı (7.4).
+
+---
+
+## M-27 · Halka Dikey Salınımı ve Ortam Sönümü · **[T]** *(sönüm taban terimi: açık parametre $\eta_E$)*
+
+**Kullanıldığı bölümler:** 3.10.2–3.10.7 (Satürn halka dinamiği), 6.3 (GPB tutarlılık uyarısı), Ek C satır 14 ($\eta_E$ parametre statüsü).
+
+### Varsayımlar
+1. Uzay, sıkıştırılabilir süperakışkan Zerre ortamıdır; hareketi sıkıştırılabilir Euler denklemiyle (Euler, 1757) tarif edilir. *(Notasyon kaydı: kaynak metinde $\rho_z$, $P_z$ yazılıdır; Anayasa S-17/S-18 gereği katalogda yerel alanlar $\rho$, $P$ ile gösterilir — Zerre basınç alanı ile madde/gaz basıncı iki ayrı alandır.)*
+2. Halka parçacıkları quasi-statik rejimdedir: $\partial\vec v/\partial t \to 0$, $(\vec v\cdot\nabla)\vec v$ ihmal edilebilir.
+3. Kuyu konvansiyonu (M-2, M-22): kütle bir basınç çukurudur, $dP/dr>0$; itim $-\nabla P$'den gelir.
+4. Ortam viskozitesi sıfıra yakın ama **tam sıfır değildir** (Postülat 7): $\eta_E > 0$ (dinamik viskozite, Pa·s — S-19).
+
+### Adımlar
+1. Sıkıştırılabilir Euler:
+$$\rho\left(\frac{\partial\vec v}{\partial t} + (\vec v\cdot\nabla)\vec v\right) = -\nabla P + \rho\,\vec g_{ek}$$
+($\vec g_{ek}$: dönme/entrainment kaynaklı ek terim, $\nabla P_{spin}$; bkz. 6.3.)
+2. Quasi-statik limitte denklem basınç dengesine indirgenir ve **kalibre edilir**:
+$$\frac{1}{\rho}\frac{dP}{dr} = +\frac{GM}{r^2} \quad\Rightarrow\quad a_r = -\frac{1}{\rho}\frac{dP}{dr} = -\frac{GM}{r^2}$$
+**Dürüst not (kaynaktan aynen):** güneş sistemi ölçeğinde gradyanın $GM/r^2$'ye eşitlenmesi teorinin rejim aksiyomudur (4.2) — **bu satıra kadar hiçbir yeni fiziksel içerik yok**; yalnızca Newton yasasının Zerre diliyle yeniden yazımı. $G$ ve $GM$ burada kalibrasyon bağlamında kullanılır.
+3. Parçacık düzlemden $z$ kadar saptığında gradyanın dikey izdüşümü:
+$$F_z = -\frac{GMm}{R^2}\sin\theta, \qquad R=\sqrt{r^2+z^2},\quad \sin\theta = \frac{z}{R}$$
+4. $z \ll r$ limitinde ($R^3\approx r^3$) harmonik salınım çıkar (dikey salınım frekansı $\Omega_z$ — S-7):
+$$\frac{d^2z}{dt^2} + \Omega_z^2\,z = 0, \qquad \Omega_z^2 = \frac{GM}{r^3}$$
+**Dürüst tespit:** Bu denklem Newton mekaniğinin birebir aynısıdır; Newton da, GR de, Evrenakı da aynı $\Omega_z$'yi verir. **Dikey salınım periyodu tek başına Evrenakı lehine ayırt edici kanıt olarak kullanılamaz.**
+5. **Ayırt edici terim — sönüm.** Ana akım halka fiziğinde sönüm parçacıklar arası inelastik çarpışmadan gelir (Goldreich & Tremaine, 1978): $\gamma_{standart}\sim \Omega_{yör}\,\tau_c^{-1}(1-\epsilon^2)$. Evrenakı'nın sonlu $\eta_E$'si, çarpışmadan **bağımsız**, ortam kaynaklı Stokes-tipi bir sürtünme ekler (Stokes, 1851; tanecik yarıçapı $r_t$ — S-13, kaynakta $a$):
+$$\gamma_{Evrenakı} = \gamma_{standart} + \gamma_{ortam}, \qquad \gamma_{ortam} \sim \frac{6\pi\,\eta_E\,r_t}{m}$$
+6. **Somut test.** Sönüm mesafesi (S-25: $\lambda_s$):
+$$\lambda_s = \frac{v_{grup}}{\gamma_{toplam}}$$
+Gözlemsel çapa: Mimas 5:3 dikey rezonansındaki bending-wave sönümü ~**150 km** (Shu ve ark., 1983). Ayırt edici öngörü: ana akım sönüm boyut-bağımlıdır; $\gamma_{ortam}$ ise **boyuttan bağımsız bir taban terim** ekler → farklı parçacık boyut dağılımlı A/B/C halkalarının sönüm mesafeleri karşılaştırıldığında sistematik fark çıkmalıdır. Mevcut Cassini/Voyager verisinin yeniden analiziyle sınanabilir; yeni görev gerektirmez.
+
+### Sonuç
+$$\boxed{\frac{d^2z}{dt^2} + \Omega_z^2\,z = 0\,,\quad \Omega_z^2=\frac{GM}{r^3}\,; \qquad \gamma_{Evrenakı} = \gamma_{standart} + \underbrace{\frac{6\pi\,\eta_E\,r_t}{m}}_{\text{boyut-bağımsız taban}}\,; \qquad \lambda_s = \frac{v_{grup}}{\gamma_{toplam}}}$$
+
+### Geçerlilik Sınırı
+- Quasi-statik rejim, $z\ll r$, güneş sistemi (Kepler) ölçeği.
+- Salınım kısmı ([T]) Newton ile özdeştir ve ayırt edicilik taşımaz; teorinin test edilebilir iddiası **yalnızca** $\gamma_{ortam}$ terimindedir.
+- $\eta_E$ sayısal olarak belirlenmeden "halka yağmurunu açıklıyor" türü bir iddia yapılamaz — serbest parametre her veriye uydurulabilir (3.10.4.2'nin dürüst tespiti).
+
+### Açık Uçlar
+- $\eta_E$'nin sayısal değeri (Ek C satır 14; Gaia/pulsar programı + A/B/C bending-wave karşılaştırması onu sabitleyebilir).
+- ~~GPB uyuşmazlığı~~ → **çözüldü (Ek M-40):** 6.3'ün öngörüsüyle GP-B ölçümü arasındaki çarpan, kutupsal yörünge geometrik ortalamasının tam $\tfrac12$ olmasıydı; 41,0 ↔ $37{,}2\pm7{,}2$ mas/yıl (0,52σ). Aynı entrainment mekanizması artık bilinen bir sistematik taşımadan halka sönümüne uygulanabilir; kalan tek engel $\eta_E$'nin tam değeridir.
+- A, B, C halkalarının sönüm mesafelerinin boyut dağılımına karşı sistematik karşılaştırması (arşiv verisi yeniden analizi).

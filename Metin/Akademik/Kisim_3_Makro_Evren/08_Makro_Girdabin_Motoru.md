@@ -13,8 +13,10 @@ Bir cismin yörünge hızını ($v = \frac{2\pi R}{T}$) hesaplayıp bu uzaklık 
 
 $$ v \propto \frac{1}{\sqrt{R}} $$
 
+*(katalog: **Ek M-25**)*
+
 **Bu matematiksel bağıntının Evrenakı açısından anlamı şudur:**
-Güneş Sistemi'ndeki tüm gezegenlerin yörünge hızları, Güneş'e olan uzaklıklarının karekökü ile ters orantılı olarak kusursuz bir uyumla azalır. Merkür (en yakın) saniyede 47 km hızla savrulurken, en uzaktaki Neptün saniyede sadece 5.4 km hızla ilerler (yörünge hızları: NASA/JPL Planetary Fact Sheet, 2024).
+Güneş Sistemi'ndeki tüm gezegenlerin yörünge hızları, Güneş'e olan uzaklıklarının karekökü ile ters orantılı olarak kusursuz bir uyumla azalır. Merkür (en yakın) saniyede 47,4 km hızla savrulurken, en uzaktaki Neptün saniyede sadece 5.4 km hızla ilerler (yörünge hızları: NASA/JPL Planetary Fact Sheet, 2024).
 
 Standart fizik bunu "uzaktan etki eden kütleçekim kuvveti" olarak soyutlaştırırken, Evrenakı teorisi bunu **Akışkanlar Dinamiği** ile somutlaştırır:
 Gezegenler boş uzayda kendi motorlarıyla veya sihirli bir iple dolanmazlar. Güneş'in dönüşüyle oluşan dev **Güneş Vorteksi'nin** akıntı katmanlarına kapılmış (sürüklenme/entrainment) durumdadırlar. Akışkan mekaniğinde bu profil (hızın merkeze uzaklığın karekökü oranında düşmesi) tam bir akışkan davranışıdır. Güneş girdabının akış hızı uzaklaştıkça $\frac{1}{\sqrt{R}}$ oranında düştüğü için, o girdabın içinde yüzen gezegenlerin hızları da bu akışkanın hız profiline %100 uyum sağlar. 
@@ -25,7 +27,7 @@ Kısacası bu matematiksel bağıntı; gezegenlerin boşlukta düşmediğini, so
 
 Evrenakı akıntısının Güneş'ten başlayarak kesintisiz bir $v \propto \frac{1}{\sqrt{R}}$ hız profiliyle yayıldığını gördük. Ancak burada standart astrofiziği de yıllarca şaşkına çeviren devasa bir "Açısal Momentum Paradoksu" ortaya çıkar. 
 
-Güneş'in (ekvator) yüzey hızı saniyede sadece **2 km**'dir (yüzey diferansiyel dönüş ölçümleri: Beck, 2000). Eğer Güneş, Evrenakı girdabını sadece yüzeyindeki bu yavaş dönüşle (mekanik sürtünme) üretiyor olsaydı, Güneş'ten 58 milyon km uzaktaki Merkür yörüngesinde akışkan hızının çok daha düşük (0.2 km/s civarı) olması gerekirdi. Oysa Merkür, saniyede **47.4 km** hızla, yani Güneş'in yüzeyinin kendi etrafındaki dönüşünden tam **23 kat daha hızlı** dolanmaktadır! Eğer Merkür'ün bu hız profilini geriye, Güneş'e doğru sararsak, girdabı üreten merkez kaynağın (Güneş'in) saniyede 430 km'den daha hızlı dönmesi gerektiği matematiksel bir zorunluluk olarak ortaya çıkar.
+Güneş'in (ekvator) yüzey hızı saniyede sadece **2 km**'dir (yüzey diferansiyel dönüş ölçümleri: Beck, 2000). Eğer Güneş, Evrenakı girdabını sadece yüzeyindeki bu yavaş dönüşle (mekanik sürtünme) üretiyor olsaydı, Güneş'ten 58 milyon km uzaktaki Merkür yörüngesinde akışkan hızının çok daha düşük (0.2 km/s civarı) olması gerekirdi. Oysa Merkür, saniyede **47.4 km** hızla, yani Güneş'in yüzeyinin kendi etrafındaki dönüşünden tam **23 kat daha hızlı** dolanmaktadır! Eğer Merkür'ün bu hız profilini geriye, Güneş'e doğru sararsak, girdabı üreten merkez kaynağın (Güneş'in) saniyede 430 km'den daha hızlı dönmesi gerektiği matematiksel bir zorunluluk olarak ortaya çıkar. *(zincirin adım dökümü: **Ek M-25**)*
 
 Peki Güneş 2 km/s hızla dönerken, kendisinden katbekat daha hızlı dönen devasa bir Evrenakı akıntısını nasıl yaratabiliyor?
 
@@ -43,7 +45,7 @@ Yani bugün gezegenleri saniyede onlarca kilometre hızlarla çeviren devasa Evr
 "Eğer Güneş ve Dünya yavaş dönüyorsa, gezegenleri bu kadar hızlı çeviren bu devasa Evrenakı girdabını (vorteksini) ne döndürüyor?" sorusu, Evrenakı (Cosmofluid) teorisinin asıl sırrını barındıran büyük bir felsefi ve fiziksel kırılma noktasıdır. 
 
 Bugüne kadar klasik fizikte hep şu yanılgıya düşüldü: *"Ortada dönen büyük bir makro kütle (Güneş) vardır, bu kütle döndüğü için etrafındaki uzayı (akışkanı) çevirir."*
-Ancak su mekaniği hesaplamalarında (Bkz. 3.8.1.1; Dünya-Ay hesabı için 3.9.4) kanıtladığımız üzere, merkezdeki bu hantal ve yavaş makro kütleler (Güneş 2 km/s, Dünya 0.46 km/s) bu devasa akıntıları **yaratamazlar**.
+Ancak su mekaniği hesaplamalarında (Bkz. 3.8.1.1; Dünya-Ay hesabı için 3.9.4) kanıtladığımız üzere, merkezdeki bu hantal ve yavaş makro kütleler (Güneş 2 km/s, Dünya 0.465 km/s) bu devasa akıntıları **yaratamazlar**.
 
 **Gerçek Mekanizma: Nedenselliğin Tersinmesi**
 Girdap kütlenin dönüşüyle oluşmaz; tam tersine, **kütlenin dönüşü, devasa girdabın (vorteksin) yavaşlamış bir sonucudur!** Peki bu devasa Evrenakı girdaplarını ilk başlatan şey nedir? Cevap, kuantum mekaniğinin en temel kavramında, yani "Mikro Dönüşlerde (Spin)" gizlidir.

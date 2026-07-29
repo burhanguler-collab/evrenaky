@@ -1,6 +1,6 @@
 # 7.7 Modern Fiziğin Açık Krizleri ve Evrenakı Teorisi'nin Çözüm Ufku
 
-Önceki kısımlarda Evrenakı Teorisi'nin temel postülatları kurulmuş, mikro/makro mekanizmaları tanımlanmış ve kâğıt üzerindeki deneysel/matematiksel kanıtları sunulmuştur (Kısım 6). Bu bölümde ise günümüz modern fiziğinde (Standart Model + Genel Görelilik + $\Lambda\text{CDM}$ kozmolojisi) **derin bir kriz ve anomali olarak kabul edilen** 22 büyük problem ele alınmakta ve Evrenakı'nın bu krizlere sunduğu **doğrudan mekanik çözüm potansiyeli** analiz edilmektedir.
+Önceki kısımlarda Evrenakı Teorisi'nin temel postülatları kurulmuş, mikro/makro mekanizmaları tanımlanmış ve kâğıt üzerindeki deneysel/matematiksel kanıtları sunulmuştur (Kısım 6). Bu bölümde ise günümüz modern fiziğinde (Standart Model + Genel Görelilik + $\Lambda\text{CDM}$ kozmolojisi) **derin bir kriz ve anomali olarak kabul edilegelmiş** 22 büyük problem ele alınmakta ve Evrenakı'nın bu krizlere sunduğu **doğrudan mekanik çözüm potansiyeli** analiz edilmektedir.
 
 Karşı Kayıt ilkesi (Bölüm 1.1.2) gereği bu envanter **yaşayan bir listedir**: literatürde sonradan kapanan veya zayıflayan kalemler silinmez, ilgili başlıkta açıkça işaretlenir ve teorinin okuması arşive alınır. Bu sürümde 7.7.3 ile 7.7.4 "kapanan kriz" olarak geri çekilmiş, 7.7.8 "zayıflayan gerilim" statüsüne indirilmiş, 7.7.11'in karanlık akış bileşeni daraltılmış; 7.7.5'in termodinamik çerçevesi ile 7.7.18'in enerji kıyası düzeltilmiştir. Kriz envanterinin gücü kalem sayısından değil, sağlam kalemlerden gelir.
 
@@ -12,7 +12,7 @@ Karşı Kayıt ilkesi (Bölüm 1.1.2) gereği bu envanter **yaşayan bir listedi
 Erken evren verileri (Planck Uydusu CMB: $H_0 \approx 67{,}4$ km/s/Mpc; Planck Collaboration, 2020) ile yakın/geç evren ölçümleri (James Webb / Hubble Tip Ia Süpernovaları: $H_0 \approx 73{,}0-74{,}0$ km/s/Mpc; Riess ve ark., 2022) arasında $5\sigma$ düzeyinde **çözülemeyen istatistiksel bir çelişki** vardır. Standart $\Lambda\text{CDM}$ kozmolojik modeli bu iki bağımsız ölçümü aynı tutarlı parametre setiyle açıklayamamaktadır.
 
 ### 2. Evrenakı Mekanik Çözümü
-Evrenakı Teorisi'nde ışık hızı mutlak sabit değildir; ortamın yerel basınç ve yoğunluk oranına bağlı sonik patinaj hızıdır ($c=\sqrt{P/\rho}$). Yüksek basınçlı erken evrenden gelen ışığın yayınlanma hızı ($c_{erken}$) ile günümüz düşük basınçlı yerel ortamındaki ışık hızı ($c_{yerel}$) farklıdır. Astronomlar uzaklık ve genleşme hızı hesaplarken $c$'yi geçmişten bugüne mutlak sabit aldıkları için, uzaklığa bağlı yapay bir genleşme hızı farkı ($H_0$ sapması) ölçmektedirler. Evrenakı, fiktif bir karanlık enerjiye ihtiyaç duymadan Hubble krizini $c(t)$ zamansal değişkenliği ile matematiksel olarak çözer.
+Evrenakı Teorisi'nde ışık hızı mutlak sabit değildir; ortamın yerel basınç ve yoğunluk oranına bağlı sonik patinaj hızıdır ($c=\sqrt{P/\rho}$). Yüksek basınçlı erken evrenden gelen ışığın yayınlanma hızı ($c_{erken}$) ile günümüz düşük basınçlı ortamındaki ışık hızı ($c_{bugün}$) farklıdır. *(Buradaki fark **zamansaldır** — arka plan basıncının kozmolojik evrimi; kütle yakınındaki konumsal ölçeklemeyle, yani Ek M-42'nin $\Lambda$ yapısıyla karıştırılmamalıdır.)* Astronomlar uzaklık ve genleşme hızı hesaplarken $c$'yi geçmişten bugüne mutlak sabit aldıkları için, uzaklığa bağlı yapay bir genleşme hızı farkı ($H_0$ sapması) ölçmektedirler. Evrenakı, fiktif bir karanlık enerjiye ihtiyaç duymadan Hubble krizini $c(t)$ zamansal değişkenliği ile matematiksel olarak çözer.
 
 ---
 
@@ -89,10 +89,10 @@ Gerilim gelecekteki taramalarda kalıcı çıkarsa, teorinin doğal adayı şudu
 ## 7.7.9 DESI ve "Evrilen Karanlık Enerji"
 
 ### 1. Güncel Fizikteki Kriz
-DESI iş birliğinin baryon akustik salınım ölçümleri (DESI Collaboration, 2024), karanlık enerjinin sabit bir kozmolojik sabitten ($w=-1$) ziyade **zamanla zayıflayan** bir bileşenle uyumlu olduğunu göstermiştir. $\Lambda\text{CDM}$'in temel direği olan "sabit $\Lambda$" sarsılmakta, standart kozmoloji ne sabitin kendisini ne de evrimini mekanizmaya bağlayabilmektedir.
+DESI iş birliğinin baryon akustik salınım ölçümleri (DESI Collaboration, 2024), karanlık enerjinin sabit bir kozmolojik sabitten ($w=-1$; buradaki $w$, standart kozmolojinin hâl-denklemi parametresidir; teorinin dördüncü-eksen koordinatı $w$ ile ilgisizdir) ziyade **zamanla zayıflayan** bir bileşenle uyumlu olduğunu göstermiştir. $\Lambda\text{CDM}$'in temel direği olan "sabit $\Lambda$" sarsılmakta, standart kozmoloji ne sabitin kendisini ne de evrimini mekanizmaya bağlayabilmektedir.
 
 ### 2. Evrenakı Mekanik Çözümü
-Teori karanlık enerjiyi zaten reddeder: genişleme, tüm atomik girdapların ortama viskoz enerji deşarjının termodinamik sonucudur (3.7.2). Deşarj bir doğa sabiti değil, evrenin girdap envanterine ve arka plan basıncına bağlı bir **debidir**; zamanla değişmesi zorunludur. "Evrilen karanlık enerji" bulgusu, teori açısından sürpriz değil, sabit-$\Lambda$ varsayımının çöküşü ve deşarj modelinin doğal beklentisidir.
+Teori karanlık enerjiyi zaten reddeder: genişleme, tüm atomik girdapların ortama viskoz enerji deşarjının termodinamik sonucudur (3.7.2). Deşarj bir doğa sabiti değil, evrenin girdap envanterine ve arka plan basıncına bağlı bir **debidir**; zamanla değişmesi zorunludur. "Evrilen karanlık enerji" bulgusu, teori açısından sürpriz değil, sabit kozmolojik sabit ($\Lambda_{kozm}$) varsayımının çöküşü ve deşarj modelinin doğal beklentisidir.
 
 ---
 
@@ -238,7 +238,7 @@ Bir gezegene ulaşan enerji yalnızca kaynağın parlaklığına değil, Zerre k
 | **Kozmolojik Lityum Krizi** | 3 Kat Fazla Lityum Tahmini | Erken Yüksek Basınçta Rampa Tesir Kesiti |
 | **CMB Yön Anomalileri** | "İstatistiksel Şanssızlık" | İlkel Kuyu İskeletinin Yönlü Filaman İmzası |
 | **$S_8$ Gerilimi** | ZAYIFLAYAN GERİLİM (KiDS-Legacy 2025) | Koşullu: Kuyu Gücünün Deşarjla Sönümü ($\eta_E$) |
-| **DESI Evrilen Karanlık Enerji** | Sabit $\Lambda$ Sarsılıyor | Zamana Bağlı Viskoz Deşarj Debisi |
+| **DESI Evrilen Karanlık Enerji** | Sabit $\Lambda_{kozm}$ Sarsılıyor | Zamana Bağlı Viskoz Deşarj Debisi |
 | **Dev Yapılar (Yay / Halka / KBC)** | Kozmolojik İlke İhlali | Kaskadın En Üst Ölçek Sirkülasyon Hücreleri |
 | **Büyük Çekici (karanlık akış kısmı geri çekildi)** | Akış kısmı doğrulanmadı (Planck 2014); toplu akış güncel | Üst Ölçek Akıntı Kolunda Toplu Sürüklenme |
 | **Kuazar Hizalanmaları** | Nedensel Bağ Kurulamıyor | Filaman Girdabından Miras Vortisite |

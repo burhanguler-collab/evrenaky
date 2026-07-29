@@ -34,6 +34,7 @@
 * Perlmutter, S., et al. (1999). *Measurements of Ω and Λ from 42 High-Redshift Supernovae*. The Astrophysical Journal, 517(2), 565-586. (İvmelenen genişleme; 4.2.11'de atıflı).
 * Planck Collaboration (Aghanim, N., et al.) (2020). *Planck 2018 results. VI. Cosmological parameters*. Astronomy & Astrophysics, 641, A6. (Karanlık enerji oranı ve kozmolojik parametreler; 4.2.11'de atıflı).
 * Pooley, D., Blackburne, J. A., Rappaport, S., & Schechter, P. L. (2007). *X-ray and Optical Flux Ratio Anomalies in Quadruply Lensed Quasars*. The Astrophysical Journal, 661, 19-29. (Kuazar disk boyutu anomalisi; 4.3.4'te atıflı).
+* Reasenberg, R. D., Shapiro, I. I., MacNeil, P. E., et al. (1979). *Viking relativity experiment: Verification of signal retardation by solar gravity*. The Astrophysical Journal Letters, 234, L219-L221. (Shapiro gecikmesinin Viking ölçümü ≈250 µs; Ek M-42'de atıflı).
 * Riess, A. G., et al. (1998). *Observational Evidence from Supernovae for an Accelerating Universe and a Cosmological Constant*. The Astronomical Journal, 116(3), 1009-1038. (İvmelenen genişleme; 4.2.11'de atıflı).
 * Rubin, V. C., & Ford, W. K. (1970). *Rotation of the Andromeda Nebula...*. The Astrophysical Journal, 159, 379-403. (Galaktik rotasyon eğrileri; 4.2.8'de atıflı).
 * Rubin, V. C., Ford, W. K. Jr., & Thonnard, N. (1980). *Rotational properties of 21 SC galaxies...*. The Astrophysical Journal, 238, 471-487. (Karanlık madde ve galaktik ölçek; 4.2.8'de atıflı).

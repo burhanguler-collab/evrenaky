@@ -10,7 +10,7 @@ Kısım 5 boyunca, teorinin öngördüğü etkileri doğrudan ölçmek üzere ta
 | 5.1.2 | Deney 2 | Fiber ring osilatör | Osilatör frekans kayması | Periyodik frekans salınımı |
 | 5.1.3 | Deney 3 | Attometer | Zaman-uçuş değişimi | Hız değişkenliğiyle uyumlu sapma |
 | 5.1.4 | Deney 4 | Attometer (fiber) | Fiber içi zaman-uçuş | Aynı yönde sapma |
-| 5.2 | Deneyler 1–3 | İnterferometre + ring osilatör + attometer | Yaklaştırılan ~300 g kütlenin ışık hızına etkisi | ~4500 m/sn'lik hız değişimi |
+| 5.2 | Deneyler 1–3 | İnterferometre + ring osilatör + attometer | Yaklaştırılan kütle plakalarının ışık hızına etkisi | Deney 1: 250 g plaka → ~200 m/sn; Deney 2 (fiber osilatör): ~300 g plaka → ~4500 m/sn |
 | 5.3 | Deney 1 | Michelson interferometresi | 50 mm cam küpün iç gradyanı | Merkez-kenar arasında ~4650 m/sn fark |
 | 5.4 | Deney | Hassas terazi + vakumda 30.000 devirli disk | Eksenel kuvvet | ~0,00981 N itim (klasik beklenti: ~8×10⁻⁸ N) |
 
@@ -20,7 +20,7 @@ Kısım 5 boyunca, teorinin öngördüğü etkileri doğrudan ölçmek üzere ta
 Durağan düzeneklerle (Michelson interferometresi, fiber ring osilatör ve attometer) yürütülen zaman-uçuş ve frekans ölçüm protokolü, ışık hızının her yerde ve her anda sabit kalmadığını sınamak üzere kuruldu. Rapor edilen ilk ölçüm serileri, Dünya farklı "Evrenakı basınç bölgelerinden" geçtikçe ışık hızında periyodik yavaşlama ve hızlanmalara işaret etmektedir. Üç bağımsız tekniğin aynı deseni göstermesi, tekil cihaz hatası olasılığını dışlamak için tasarımın bilinçli bir parçasıdır.
 
 ### 2. Her Kütle Kendi Çevresinde Bir "Evrenakı Gradyanı" Yaratır (Bölüm 5.2)
-Hareketli kütle plakalarının ışık huzmelerine yaklaştırılıp uzaklaştırıldığı deneylerde, ışığa hiç temas etmeyen ~300 gramlık bir kütlenin bile, yarattığı basınç gradyanı yoluyla ışık hızını ~4500 m/sn mertebesinde değiştirdiği rapor edilmiştir — klasik fizikte bu düzenekten hiçbir etki beklenmez.
+Hareketli kütle plakalarının ışık huzmelerine yaklaştırılıp uzaklaştırıldığı deneylerde, ışığa hiç temas etmeyen kütlelerin bile yarattıkları basınç gradyanı yoluyla ışık hızını değiştirdiği rapor edilmiştir: interferometrik düzenekte (Deney 1) 250 gramlık bir plaka açık ortamdaki ışık hızında ~200 m/sn'lik, fiber osilatör düzeneğinde (Deney 2) ise ~300 gramlık bir plaka fiber içindeki ışık hızında ~4500 m/sn'lik değişim üretmiştir — klasik fizikte bu düzeneklerden hiçbir etki beklenmez.
 
 ### 3. Katı Cisimlerin İç Yapısı Evrenakı Açısından Homojen Değildir (Bölüm 5.3)
 50 mm'lik homojen bir cam küpün ışıkla taranmasında, camın merkezinde Evrenakı yoğunluğunun düşük, çeperlere doğru yüksek olduğu; ışığın merkezden geçerken kenarlara göre ~4650 m/sn daha yavaş seyahat ettiği rapor edilmiştir. Bu, Kısım 1.5'te tanımlanan kütle içi "vadi" profilinin doğrudan sınamasıdır. (Bu bölümde tek teknik kullanılmıştır; diğer iki tekniğin eklenmesi, Kısım 7.4'te listelenen açık işlerdendir.)

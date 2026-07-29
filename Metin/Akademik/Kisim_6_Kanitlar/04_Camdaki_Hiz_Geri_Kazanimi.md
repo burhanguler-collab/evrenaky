@@ -15,6 +15,7 @@ Bu iki paradoksun kritik özelliği, birbirinden **bağımsız** olmalarıdır: 
 Mekanizmanın tam kuruluşu Bölüm 2.4.2'de verilmişti; burada kanıt değerlendirmesi için gereken çekirdeği hatırlatalım. Zerre, cam gibi yoğun maddenin oluşturduğu düşük yoğunluklu Evrenakı bölgesine girdiğinde akışkana tutunamaz ve patinaja geçer: çizgisel hızı ($v$) düşerken dönüş hızı ($\omega$) artar. Toplam enerji Zerre'nin *içinde* korunur:
 
 $$E_T = \frac{1}{2} m_z v^2 \ (\text{çizgisel}) + \frac{1}{2} I \omega^2 \ (\text{dönme})$$
+*(Zerre boyutları ve enerji muhasebesi kataloğu: **Ek M-10**, **M-12**)*
 
 Ortamdan çıkışta tutunma yeniden sağlanır ve dönme enerjisi çizgisel hıza geri aktarılır. Bu tek tablo, iki paradoksu aynı anda kapatır:
 

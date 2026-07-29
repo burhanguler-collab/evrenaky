@@ -6,11 +6,7 @@ Evrenakı'nın Kütle-İtim (Push-Gravity) yaratma yeteneği (Le Sage, 1784) yal
 
 $\rho \left( \frac{\partial \vec{v}}{\partial t} + \vec{v} \cdot \nabla \vec{v} \right) = - \nabla P + \mu \nabla^2 \vec{v}$
 
-Evrenakı, elektromanyetik etkileşimleri ve gezegensel yörüngeleri kesintisiz sürdürebilen, kinematik viskozitesi sıfıra çok yakın ($0 < \mu \ll 1$) bir ortam olduğu için bu karmaşık Navier-Stokes denklemi çok iyi bir yaklaşımla klasik **Euler Denklemine** sadeleşir: 
-
-$\rho \left( \frac{\partial \vec{v}}{\partial t} + \vec{v} \cdot \nabla \vec{v} \right) = - \nabla P$
-
-Bu denklemden yola çıkarak, dönen bir serbest girdapta (örneğin Güneşin veya Dünyanın etrafındaki makro Evrenakı akıntısında) merkezkaç kuvveti ile basınç kuvvetinin dengesini (radyal momentum denklemini) yazdığımızda karşımıza çıkan nihai formül şudur:
+Evrenakı, kinematik viskozitesi sıfıra çok yakın ($0 < \mu \ll 1$) bir ortam olduğu için bu denklem çok iyi bir yaklaşımla klasik **Euler Denklemine** sadeleşir; dönen bir serbest girdapta (örneğin Güneşin veya Dünyanın etrafındaki makro Evrenakı akıntısında) merkezkaç kuvveti ile basınç kuvvetinin dengesi (radyal momentum denklemi) yazıldığında karşımıza çıkan nihai formül şudur *(tam türetim: **Ek M-22**)*:
 
 $\frac{dP}{dr} = \rho \frac{v_\theta^2}{r}$
 
@@ -125,7 +121,7 @@ Newton elmanın yere düşmesini "Dünya elmayı çekiyor" olarak tanımlamışt
 
 Tanımladığımız akışkan ilkeleri (Navier-Stokes / Euler) ışığında, dönen bir ortamın (vortex) yarattığı radyal basınç gradyanı Animasyon 3.4.1 (A)'da iki boyutlu bir kesit olarak görselleştirilmiştir. 
 
-Merkezden dışarı gidildikçe rengin koyulaşması, merkeze uzak ($r$ büyük) dış uzayda Evrenakı (Aether) basıncının yüksek olduğunu sembolize etmektedir. Yüksek basınçtan (Koyu renk), düşük basınç olan girdap merkezine (Açık renk) doğru yönelen kırmızı oklar ise bizzat "Net İtim Kuvveti" ($\nabla P$) vektörleridir. Akışkan okyanusu içerisindeki herhangi bir kütleli nesne, bu vektörlerin yönünde kaçınılmaz olarak merkeze doğru bastırılacaktır.
+Merkezden dışarı gidildikçe rengin koyulaşması, merkeze uzak ($r$ büyük) dış uzayda Evrenakı (Aether) basıncının yüksek olduğunu sembolize etmektedir. Yüksek basınçtan (Koyu renk), düşük basınç olan girdap merkezine (Açık renk) doğru yönelen kırmızı oklar ise bizzat "Net İtim Kuvveti" ($-\nabla P$) vektörleridir. Akışkan okyanusu içerisindeki herhangi bir kütleli nesne, bu vektörlerin yönünde kaçınılmaz olarak merkeze doğru bastırılacaktır.
 
 Bu noktada, dönen Evrenakı girdabında sadece "basınç değişiminin" yarattığı bu "merkeze yığılma" mekanizmasının, klasik Newton fiziğindeki "Kütleçekimi" fenomenine (Animasyon 3.4.1 (B)'deki merkeze çekilen oklara) yapısal ve vektörel olarak ne kadar kusursuz bir biçimde oturduğuna dikkat edilmelidir. Formül olarak, yavaş dönüşlü Güneş Sistemi gibi lokal girdaplarda bu akışkan vektörleri Newton'un meşhur Ters Kare ($1/r^2$) ampirik davranışını mükemmel şekilde dengeler. Ancak Evrenakı asıl devrimini, sarmal galaksiler gibi devasa kasırgalarda Newton'un $1/r^2$ formülü yetersiz kaldığında gösterir. Karanlık madde varsaymak yerine, doğrudan diferansiyel denklemler ve logaritmik basınç kuyularıyla sarsılmaz bir Evrenakı dinamiği sunar (Matematiksel ispatları Bölüm 4.2'de detaylandırılmıştır).
 
@@ -189,9 +185,13 @@ Motorun her cismi kütlesiyle (mikro-motor sayısıyla) orantılı yüklemesi, g
 
 $$\omega_{\text{gözlenen}}(M,R) \;=\; \big[1-g(R)\big]\,\omega_{\text{serbest}}(M) \;+\; g(R)\,q\,\Omega_{\text{yör}}(R), \qquad q \in \{+\tfrac{3}{2},\ +1,\ \approx-1\}.$$
 
+*(katalog ve kalibrasyon kaydı: **Ek M-24**)*
+
 Motorun ifadesi tam yutulduğunda cisim durmaz; girdabın **yerel ritmine** oturur. İlk iki kilit modu ($+1$ ve $+\tfrac{3}{2}$) ayrıca serbest parametre de değildir: kavrama klifi çok dik olduğundan pençe fiilen **günberide** kavrar ve kalıntı, günberideki girdap ritmine oturur:
 
 $$\frac{\omega_{\text{kilit}}}{\Omega_{\text{yör}}} \;=\; \frac{\sqrt{1+e}}{(1-e)^{3/2}} \;\longrightarrow\; \text{en yakın kararlı oran}.$$
+
+*(Kepler'den türetimi: **Ek M-24**)*
 
 Ay için ($e=0{,}055$) bu oran $1{,}12 \to 1{:}1$; Merkür için ($e=0{,}206$) $1{,}55 \to 3{:}2$ verir; iki mod arasındaki eşik $e \approx 0{,}125$'tir. Rezonans yakalanmasının klasik çözümlemesi için krş. Goldreich & Peale (1966); fark şudur: klasik çözümleme yakalanmayı *olasılıksal* işlerken, teorinin dik-klifli günberi-kavraması onu *deterministik* kılar — buradan ayırt edici bir öngörü doğar: **ötegezegen sistemlerinde $e \approx 0{,}2$ civarında kilitlenmiş cisimler daima 3:2'de bulunmalıdır** (bazen 1:1, bazen 3:2 değil). **Venüs'ün ters dönüşü: yelken kanalı.** Retrograd kesir, kavrama denklemine eksik kalan son değişkenin eklenmesiyle çözülür: cismin Evrenakı ile **etkileşim kesiti** yalnızca kayaç yarıçapı değildir — kalın bir atmosfer, ayrı bir kuplaj kanalı ("yelken", $\sigma$) açar. Doygun rejimde kalıntı kilit, iki kanalın dengesinden seçilir: **gövde (asimetri) kanalı** kalıntıyı günberi ritmine çekerken ($\sigma \approx 0$: Merkür 3:2, Ay 1:1), **termal yelken kanalı** — Güneş'in gündüz tarafında ısıttığı atmosferin Evrenakı deplasmanının oluşturduğu Güneş-kilitli asimetrik tutamaç — kalıntıyı senkrondan uzaklaştırır. İki dürüstlük kaydı zorunludur: yelken bastırılmayı açıklamaz (yelkensiz Merkür de %97,7 bastırılmıştır; yelken yalnızca **kilit modunu** seçer) ve tekdüze bir yelkene saf kesme $+\tfrac14\Omega$ verir — ters çeviren, yelkenin termal asimetrisidir. $\sigma\Gamma/k_g > 1$ olan Venüs'te çözüm senkron daldan kaçıp retrograd dalda dengelenir ($\omega^\ast \approx -0{,}92\,\Omega$). Mekanizmanın iki gözlemsel çapası vardır: **süper-rotasyon** (Venüs atmosferi gövdeden ~60 kat hızlı *ileri* döner — girdap yelkene ileri momentum yüklerken tepki torkunun gövdeyi geri itmesinin, yani momentum takasının doğrudan imzası) ve **Titan kontrolü** (kalın atmosferli ama 1:1 kilitli: Güneş ısıtması zayıf, Satürn kavraması güçlü — flip koşulu sağlanmaz). Yapı, standart mekaniğin yerçekimsel-gelgit ↔ atmosferik-termal-gelgit dengesinin (Gold & Soter, 1969; Correia & Laskar, 2001) hidrodinamik yeniden okumasıdır; buradan ötegezegen öngörüsü de doğar: kavrama bölgesindeki sıcak, kalın atmosferli gezegenler retrograd/asenkron durakları tercih etmeli, retrograd kilitli her yelkenli cisim süper-rotasyon taşımalıdır.
 
@@ -215,7 +215,7 @@ Aşağıdaki etkileşimli laboratuvar, kavrama formülünü ($\omega = (1-g)\,\o
 **İzlenmesi gerekenler:**
 
 1. **Klifi geçin:** Uzaklık kaydırıcısını 1,5 AU'dan 0,5 AU'ya doğru yavaşça çekin. Altın çemberin ($R_c$) dışında gezegen kendi hızlı dönüşünü sürdürür (SERBEST İFADE, mavi); çemberi geçer geçmez dönüş çöker ve girdabın ritmine kilitlenir (GİRDAP KİLİDİ, kırmızı) — geçiş bandının ne kadar dar (klif gibi) olduğuna dikkat edin.
-2. **Merkür'ü basıklıktan üretin:** Uzaklığı 0,39 AU'ya getirip basıklığı e=0,205'e çekin: kilit modu panelde kendiliğinden **"+3/2Ω (günberi ritmi 1,55Ω → hesaplandı)"** olur ve gözlenen dönüş ~59 gün çıkar (gerçek Merkür: 58,6 gün, e=0,206). Sonra e'yi 0,12'nin altına indirin — kilit **1:1'e atlar**: Ay'ın senkron kilidi, aynı hesabın düşük-basıklık ucudur. Yani iki kilit modu da düğmeyle seçilmez, yörünge geometrisinden türetilir.
+2. **Merkür'ü basıklıktan üretin:** Uzaklığı 0,39 AU'ya getirip basıklığı e=0,205'e çekin: kilit modu panelde kendiliğinden **"+3/2Ω (günberi ritmi 1,55Ω → hesaplandı)"** olur ve gözlenen dönüş ~59 gün çıkar (gerçek Merkür: 58,6 gün, e=0,206). Sonra e'yi 0,125'in altına indirin — kilit **1:1'e atlar**: Ay'ın senkron kilidi, aynı hesabın düşük-basıklık ucudur. Yani iki kilit modu da düğmeyle seçilmez, yörünge geometrisinden türetilir.
 3. **Venüs'ü deneyin (açık iş):** 0,72 AU'da "Venüs geri tepmesi (yoğun atmosfer)" anahtarını açın: ~247 gün TERS çıkar (gerçek: 243 gün, ters). Bu tek girdi türetilmemiştir ve ekranda da dürüstçe "açık iş" olarak etiketlenmiştir.
 4. **Merkez kütleyi büyütün:** Yıldız kütlesi arttıkça $R_c$ çemberinin dışa doğru büyüdüğünü izleyin — daha ağır yıldız, daha geniş bir kavrama bölgesi demektir. Gezegen kütlesini büyütmek serbest dönüşü hızlandırır ($T_{\text{serbest}} \propto m^{-0{,}28}$) ama bu modelde kilidi geciktirmez (hacimsel kuplaj varsayımı; nicel gerekçesi 7.4'te açık kalemdir). Basıklığı artırmak ise günberiyi içeri çeker ($a(1-e)$) — dıştaki bir gezegen bile yeterince basık yörüngeyle pençeye yakalanabilir.
 
@@ -245,7 +245,7 @@ Evrenakı, gezegenlerin önüne çıkıp onları yavaşlatan statik dev bir okya
 
 **Zarfın İki Ayrı İşlevi: Yönsel Sürükleme ve Skaler Saydamlık.** Buradan sık karşılaşılan bir yanlış anlama doğar: "Eğer zarf yerel Evrenakı'yı Dünya ile birlikte taşıyıp M&M'i sıfırlıyorsa, ışık hızının kozmolojik değişimlerini ölçmeyi amaçlayan deneyler (bkz. Kısım 5) bu değişimleri nasıl görebilir? Zarf onları perdelemez mi?" Cevap, zarfın **birbirinden bağımsız iki işlevi** olmasında yatar. Zarf, yalnızca **yönsel bağıl hızı** (esir rüzgârını, vektörel büyüklüğü) sıfırlar; ama Evrenakı her maddeye nüfuz ettiğinden, ortamın **skaler $P/\rho$ büyüklüğüne saydamdır** — bu değer perdelenmez, yerel kozmik ortamın değerini izler. Denizaltı benzetmesi nettir: gövdeyi saran sınır tabakası denizaltıyla birlikte hareket eder (gövdede bağıl akış ve dolayısıyla kayda değer sürtünme oluşmaz ≈ M&M sıfır), ama o tabakanın basıncı ve yoğunluğu, denizaltı farklı derinliklere indikçe yerel ortamın değerini alır. Evrenakı zarfı da Dünya ile birlikte akar (yön anizotropisi sıfır), fakat Dünya farklı kozmik basınç bölgelerinden geçtikçe zarfın $P/\rho$'su bunları izler ve $c=\sqrt{P/\rho}$ zamanla değişir.
 
-Bu ayrım, aynı zamanda hangi düzeneğin neyi ölçtüğünü de belirler. Bir interferometrenin iki kolu arasındaki faz farkı $\Delta\varphi = \tfrac{2\omega}{c}(L_1-L_2)$ olduğundan, skaler bir hız değişiminin ($c\to c+\delta c$) ürettiği kayma $(L_1-L_2)$ ile orantılıdır. Kolları **eşit** olan klasik Michelson–Morley düzeneği bu yüzden skaler zaman-değişimine kördür; yalnızca anlık yön anizotropisini görür ve sonuç sıfırdır. Skaler değişimi yakalamak için kolların **kasıtlı olarak eşitsiz** olması gerekir — Kısım 5'teki asimetrik-kollu düzeneğin (bir kol diğerinin üç katı) fiziksel gerekçesi tam budur. Böylece M&M'in sıfır sonucu ile Kısım 5'in beklenen zamansal sinyali çelişmez; iki deney **farklı fiziksel büyüklükleri** ölçen tamamlayıcı sınamalar olur.
+Bu ayrım, aynı zamanda hangi düzeneğin neyi ölçtüğünü de belirler. Bir interferometrenin iki kolu arasındaki faz farkı $\Delta\varphi = \tfrac{2\omega}{c}(L_1-L_2)$ olduğundan, skaler bir hız değişiminin ($c\to c+\delta c$) ürettiği kayma $(L_1-L_2)$ ile orantılıdır. Kolları **eşit** olan klasik Michelson–Morley düzeneği bu yüzden skaler zaman-değişimine kördür; yalnızca anlık yön anizotropisini görür ve sonuç sıfırdır. Skaler değişimi yakalamak için kolların **kasıtlı olarak eşitsiz** olması gerekir — Kısım 5'teki asimetrik-kollu düzeneğin (bir kol diğerinin üç katı) fiziksel gerekçesi tam budur *(duyarlılık analizi ve termal dejenerasyon: **Ek M-18**)*. Böylece M&M'in sıfır sonucu ile Kısım 5'in beklenen zamansal sinyali çelişmez; iki deney **farklı fiziksel büyüklükleri** ölçen tamamlayıcı sınamalar olur.
 
 ## 3.4.6 Sürüklenme Zarfının Sınavı: Yıldız Sapması ve Fizeau Katsayısı
 
@@ -258,7 +258,7 @@ Dürüst kayıt: sürüklenme mekanizması tek bir deneyle değil, birbirini kı
 | Gözlem | Ölçülen | Sürüklenmeye dayattığı |
 |---|---|---|
 | Yıllık yıldız sapması (Bradley, 1728) | Her yıldız gökyüzünde 20,49″ yarıçaplı bir elips çizer | Işığın doğrultusu, gözlemcinin dış ortama göre hızını **taşımalı** |
-| Günlük sapma | 0,32″·cos φ (Dünya'nın kendi dönüşünden) | Yön etkisi, zarfın dönüşünden **etkilenmemeli** |
+| Günlük sapma | $0{,}32''\cdot\cos\varphi_c$ (Dünya'nın kendi dönüşünden; $\varphi_c$: gözlemcinin coğrafi enlemi — eski yazım $\varphi$) | Yön etkisi, zarfın dönüşünden **etkilenmemeli** |
 | Su dolu teleskop (Airy, 1871) | Tüp suyla dolunca sapma **değişmez** | Sapma yerel ortamda/zarf sınırında **üretilemez** |
 | Kısmi sürükleme (Fizeau, 1851; Zeeman, 1914) | Akan su ışığı hızının $1-1/n^2$'si kadar sürükler | Sürükleme ne tam ne sıfır; **kırılma indisine kilitli** |
 | Michelson–Morley (1887) ve modern rezonatörler | Sıfır; yönsel $\Delta c/c < 10^{-17}$ | Yerel ortam laboratuvarla **birlikte hareket etmeli** |
@@ -288,29 +288,13 @@ Cevap, ortamın **tek parça olmamasındadır.** Işığı taşıyan Evrenakı i
 
 Su molekülleri, boru ve dış ortamın Evrenakı'sını topluca sürükleyemez; çünkü arka plan durgundur. Yalnızca kendi deplasman paylarını taşırlar. İşte kısmi sürüklemenin fiziksel kökeni budur.
 
-**Nicel türetim.** Işığın dalga boyu molekül ölçeğinden binlerce kat büyük olduğundan, Zerre ortamın hacimce ortalanmış halini örnekler. Üç fiziksel girdi:
+**Nicel sonuç.** Işığın ölçeği molekül aralığından binlerce kat büyük olduğundan, Zerre ortamın hacimce ortalanmış hâlini örnekler. Üç fiziksel girdi — *(korunum)* hacimce ortalama Evrenakı yoğunluğu sabittir, $\bar\rho_m=\rho_0$; *(basınç)* moleküller hacim kesri $\phi$ kadar yer kaplayan düşük Evrenakı-basıncı cepleridir, $\bar P_m = P_0(1-\phi)$; *(Kavrama Yasası, Ek M-1)* $v=\sqrt{P/\rho}$ — kırılma indisini ve sürükleme katsayısını başka hiçbir serbest parametre olmadan sabitler *(tam türetimler: **Ek M-15** kırılma indisi, **Ek M-16** sürükleme katsayısı)*:
 
-(Aşağıda $P$ ve $\rho$ daima **Evrenakı**'nın basıncı ve yoğunluğudur; atomik/moleküler yoğunlukla karıştırılmamalıdır — ikisi birbirine terstir, bkz. 2.4.2 "Birleştirici İlke" kutusu.)
+$$\frac{1}{n^2}=1-\phi \qquad\Longrightarrow\qquad \boxed{\,f=\phi=1-\frac{1}{n^2}\,}$$
 
-* *(Korunum)* Moleküller Evrenakı'yı yaratmaz/yok etmez, yalnızca iter. Hacimce ortalama **Evrenakı yoğunluğu** sabittir: $\bar\rho_m=\rho_0$.
-* *(Basınç)* Moleküller — atomik olarak yoğun olsalar da — hacim kesri $\phi$ kadar yer kaplayan düşük **Evrenakı basıncı** cepleridir (zıtlık kuralı). Hacimce ortalama Evrenakı basıncı: $\bar P_m = P_0(1-\phi)$.
-* *(Kavrama Yasası)* Zerre'nin bir ortamdaki sürati, o ortamın Evrenakı basınç-iletim hızıdır: $v=\sqrt{P/\rho}$ (Ek B'de $\rho_0=P_0/c^2$ olarak zaten kullanılan bağıntı; ışığın ses benzeri iletim doğasının, bkz. 2.4.1, nicel ifadesi).
+(Burada $P$ ve $\rho$ daima **Evrenakı**'nın basıncı ve yoğunluğudur; atomik yoğunlukla terstir — bkz. 2.4.2 "Birleştirici İlke" kutusu.) Kritik kavramsal nokta şudur: **ışık, madde içinde düşük *Evrenakı basıncı* nedeniyle yavaşlar** — hacimce ortalama yoğunluk sabit kalır. Bu, kütle-itim mekanizmasıyla tam aynı dildir; her ikisi de bir düşük Evrenakı-basıncı olgusudur.
 
-Kırılma indisi bu üçünden çıkar:
-
-$$\left(\frac{c}{n}\right)^2=\frac{\bar P_m}{\bar\rho_m}=\frac{P_0(1-\phi)}{\rho_0}=c^2(1-\phi)\;\;\Longrightarrow\;\; \frac{1}{n^2}=1-\phi$$
-
-Burada kritik bir kavramsal düzeltme vardır: **ışık, madde içinde düşük *Evrenakı basıncı* nedeniyle yavaşlar** (hacimce ortalama Evrenakı yoğunluğu sabit kalır; yalnızca yerel deplasman ceplerinde seyrelir). Bu, kütle-itim mekanizmasıyla tam aynı dildir — her ikisi de bir düşük Evrenakı-basıncı olgusudur.
-
-Sürükleme katsayısına gelince: ortamın momentum-ağırlıklı ortalama hızı, yalnızca akan deplasman payından gelir:
-
-$$w=\frac{\rho_0\cdot 0+\dfrac{\rho_0\phi}{1-\phi}\cdot u}{\dfrac{\rho_0}{1-\phi}}=\phi\,u$$
-
-Zerre balistik olduğundan laboratuvar hızı $v_{lab}=\dfrac{c}{n}+w$, yani sürükleme katsayısı $f=\phi$. İki sonucu birleştirince:
-
-$$\boxed{\,f=\phi=1-\frac{1}{n^2}\,}$$
-
-Su için ($n=1{,}333$) bu $f=0{,}437$ verir; Michelson & Morley'in (1886) ölçtüğü $0{,}434\pm0{,}020$ değeriyle %1'in altında bir uyum. Katsayı yalnızca $n$'ye bağlıdır, boru uzunluğundan bağımsızdır — Zeeman'ın uzunluk-bağımsızlık gözlemi de böylece karşılanır.
+Su için ($n=1{,}333$) formül $f=0{,}437$ verir; Michelson & Morley'in (1886) ölçtüğü $0{,}434\pm0{,}020$ değeriyle %1'in altında bir uyum. Katsayı yalnızca $n$'ye bağlıdır, boru uzunluğundan bağımsızdır — Zeeman'ın uzunluk-bağımsızlık gözlemi de böylece karşılanır.
 
 ### 3.4.6.4 Tek Mekanizma, İki Ölçek
 
@@ -325,7 +309,7 @@ Aynı Postülat 7, hem laboratuvarın neden esir rüzgârı görmediğini hem de
 
 Zeeman (1914–15), Fizeau katsayısının bir de renge bağlı ince bir düzeltme taşıdığını ölçmüştür. Zerre'nin bir **mermi akışı** oluşu (renk = atış ritmi, bkz. 2.3) bu terimi doğal kılar: akan ortam, mermi akışının ritmini Doppler ile kaydırır.
 
-Molekül ortamı $u$ ile aynı yöne aktığında, Zerreleri daha seyrek yakalar; molekül çerçevesindeki ritim kızıla kayar: $\omega'=\omega(1-nu/c)$. Zerre-molekül etkileşimi bu kaymış ritme göre gerçekleştiğinden, kırılma indisi $\omega'$'de değerlenir ve süratte ek bir pay doğar. Entrainment sürüklemesiyle birleştiğinde laboratuvar hızı:
+Molekül ortamı $u$ ile aynı yöne aktığında, Zerreleri daha seyrek yakalar; molekül çerçevesindeki ritim kızıla kayar ($\omega'=\omega(1-nu/c)$) ve kırılma indisi bu kaymış ritimde değerlenir. Entrainment sürüklemesiyle birleşen sonuç *(tam türetim: **Ek M-17**)*:
 
 $$v_{lab}=\frac{c}{n}+u\left[\,1-\frac{1}{n^2}+\frac{\omega}{n}\frac{dn}{d\omega}\,\right]$$
 

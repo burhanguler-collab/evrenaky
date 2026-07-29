@@ -23,11 +23,11 @@ Kısacası Evrenakı maddeyi uzaktan soyut bir çekim kuvvetiyle hareket ettirme
 | $\rho$ | Evrenakı (Cosmofluid) yoğunluk alanı | 4.2.1 |
 | $\vec{v}$ | Evrenakı hız alanı | 4.2.1 |
 | $P$ | Evrenakı basınç alanı | 4.2.1 |
-| $P_0$, $P_\infty$ | Derin uzaydaki (arka plan) maksimum basınç | 4.2.3–4.2.4 |
+| $P_0$ | Derin uzaydaki (arka plan) maksimum basınç (eski yazım: metnin önceki sürümlerinde $P_\infty$ da kullanılıyordu; tek sembolde birleştirildi) | 4.2.3–4.2.4 |
 | $S(x,t)$ | Süreklilik denklemindeki kaynak/kuyu terimi | 4.2.2 |
 | $M$, $m$ | Merkezi kütle ve test kütlesi | 4.2.4 |
 | $\alpha$ | Cosmofluid potansiyel sabiti (boyutu $[\text{s}^{-2}]$) | 4.2.4 |
-| $\gamma$ | Cismin akışkanla aerodinamik etkileşim katsayısı ($\gamma = N V_n$). **Dikkat:** Kısım 6'daki Lorentz çarpanı $\gamma$ ile aynı harf, farklı büyüklüktür. | 4.2.4 |
+| $\gamma_N$ | Cismin akışkanla aerodinamik etkileşim katsayısı ($\gamma_N = N V_n$) (eski yazım: $\gamma$; Kısım 6'daki Lorentz çarpanı $\gamma$ ile karışmaması için $\gamma_N$) | 4.2.4 |
 | $N$, $V_n$, $m_n$ | Nükleon sayısı, tekil nükleon etkileşim hacmi ve kütlesi | 4.2.4 |
 | $\rho_n$ | Nükleon öz yoğunluğu ($m_n / V_n$) | 4.2.4 |
 | $G = \alpha/\rho_n$ | Türetilen kütleçekim "sabiti" | 4.2.4 |
@@ -58,9 +58,11 @@ Kinematik viskozite sıfıra çok yakın olduğundan ($0 < \mu \ll 1$), viskozit
 $$ \rho \left( \frac{\partial \mathbf{v}}{\partial t} + (\mathbf{v} \cdot \nabla)\mathbf{v} \right) = -\nabla P $$
 
 Bu denklemin sağ tarafı, hareketi dikte eden **Basınç Gradyanını ($-\nabla P$)** ifade eder. Göksel hareketlerin ve yörünge dinamiklerinin itici gücü bu basınç gradyanı vektörüdür.
-Kütle (örneğin Güneş), kendi hacmiyle Evrenakı ortamını dışarıya doğru iter (Deplasman Etkisi). Bu durum, yıldızın merkezinde bir Evrenakı seyrelmesi yaratırken, derin uzayda maksimum arka plan basıncı ($P_\infty$) oluşturur.
+Kütle (örneğin Güneş), kendi hacmiyle Evrenakı ortamını dışarıya doğru iter (Deplasman Etkisi). Bu durum, yıldızın merkezinde bir Evrenakı seyrelmesi yaratırken, derin uzayda maksimum arka plan basıncı ($P_0$; eski yazım: $P_\infty$) oluşturur.
 
 ## 4.2.4 Kütleçekim Sabiti ($G$)'nin Doğası: Basınç Alanı Çözümü
+*(Bu türetim, katalogda **M-28** olarak numaralanmıştır; boyut analizi ve kuyu-konvansiyonlu yazımı için oraya bakınız.)*
+
 Kütlenin uzayda yarattığı "Deplasman Etkisi", Evrenakı akışkanında radyal bir hız/batış alanı oluşturur. Merkezi ve tekil bir kütle ($M$), çevresindeki Cosmofluid ortamında simetrik ve radyal bir basınç bozulumu yaratır.
 
 Klasik fizikte gözlemsel verilere (Kepler yasalarına; Kepler, 1619) dayalı olarak başarıyla tespit edilen ters kare yasasının ($1/r^2$) altında yatan fiziksel mekanizmayı, Cosmofluid modelinde boş uzayın geometrik ve hidrodinamik zorunluluklarından doğrudan türetebiliriz. Madde kaynaklarının olmadığı ($S = 0$) ve Evrenakı yoğunluğunun lokal olarak sabit kaldığı ($\rho \approx$ sabit) durağan uzay bölgelerinde, akışkanın basınç alanı Laplace denklemini (Laplace, 1799) sağlamak zorundadır:
@@ -73,15 +75,15 @@ Burada $P_0$ derin uzaydaki (arka plan) maksimum Evrenakı basıncını, $\alpha
 Bu basınç alanının gradyanını alırsak, merkeze doğru iten vektörel basıncı buluruz:
 $$ \nabla P = \frac{\alpha M}{r^2} $$
 
-Sistemdeki bir test parçacığının (örneğin gezegenin) Cosmofluid ile aerodinamik etkileşim/sürtünme (drag) katsayısına $\gamma$ dersek, parçacığa etkiyen kuvvet doğrudan bu basınç gradyanından türer ($\vec{F} = - \gamma \nabla P$):
-$$ \mathbf{F} = -\gamma \frac{\alpha M}{r^2} \mathbf{\hat{r}} $$
+Sistemdeki bir test parçacığının (örneğin gezegenin) Cosmofluid ile aerodinamik etkileşim/sürtünme (drag) katsayısına $\gamma_N$ dersek (eski yazım: $\gamma$; Kısım 6'daki Lorentz çarpanı $\gamma$ ile karışmaması için $\gamma_N$), parçacığa etkiyen kuvvet doğrudan bu basınç gradyanından türer ($\vec{F} = - \gamma_N \nabla P$):
+$$ \mathbf{F} = -\gamma_N \frac{\alpha M}{r^2} \mathbf{\hat{r}} $$
 
-Burada nesnenin efektif aerodinamik kesit/sürtünme katsayısı $\gamma$, onu oluşturan nükleonların (proton/nötron) toplam etkileşim hacmiyle doğru orantılıdır ($\gamma = N V_n$). Nesnenin kütlesi ise nükleon sayısı ile tekil nükleon kütlesinin çarpımıdır ($m = N m_n$). Dolayısıyla sürtünme katsayısının cismin kütlesine oranı, nükleon öz yoğunluğunun ($\rho_n = m_n / V_n$) tersine eşittir:
-$$ \frac{\gamma}{m} = \frac{V_n}{m_n} = \frac{1}{\rho_n} $$
+Burada nesnenin efektif aerodinamik kesit/sürtünme katsayısı $\gamma_N$, onu oluşturan nükleonların (proton/nötron) toplam etkileşim hacmiyle doğru orantılıdır ($\gamma_N = N V_n$). Nesnenin kütlesi ise nükleon sayısı ile tekil nükleon kütlesinin çarpımıdır ($m = N m_n$). Dolayısıyla sürtünme katsayısının cismin kütlesine oranı, nükleon öz yoğunluğunun ($\rho_n = m_n / V_n$) tersine eşittir:
+$$ \frac{\gamma_N}{m} = \frac{V_n}{m_n} = \frac{1}{\rho_n} $$
 
 **Newton Limiti ve G Sabiti:**
 Bu bağıntıyı yerleştirirsek, parçacığa etkiyen kuvvet:
-$$ F = \left(\frac{\gamma}{m}\right) \frac{\alpha M m}{r^2} = \frac{\alpha}{\rho_n} \frac{M m}{r^2} $$
+$$ F = \left(\frac{\gamma_N}{m}\right) \frac{\alpha M m}{r^2} = \frac{\alpha}{\rho_n} \frac{M m}{r^2} $$
 Bu denklem, Newton'un ünlü evrensel kütleçekim formülüyle ($F = G \frac{M m}{r^2}$) birebir örtüşür. Buradan, klasik kütleçekim sabiti ($G$) şu şekilde tanımlanır:
 $$ G = \frac{\alpha}{\rho_n} $$
 
@@ -90,5 +92,5 @@ Bu sonuca göre, fizikte evrensel ve temel bir sabit olarak kabul edilen $G$, as
 [^3]: **Boyutsal Analiz Notu:** Newton mekaniğinde $G$ sabitinin birimi $[\text{m}^3 \text{ kg}^{-1} \text{ s}^{-2}]$'dir. Evrenakı modelinde $P(r) = P_0 - \frac{\alpha M}{r}$ denkleminden türetilen potansiyel sabiti $\alpha$'nın boyutu $[\text{s}^{-2}]$, nükleon öz yoğunluğu $\rho_n$'in boyutu ise $[\text{kg/m}^3]$'tür. Bu iki fiziksel parametrenin oranı ($G = \alpha / \rho_n$), klasik kütleçekim sabitinin birimini ($[\text{m}^3 \text{ kg}^{-1} \text{ s}^{-2}]$) kusursuz şekilde sağlar.
 
 ### 4.2.4.1 1/r² Davranışı ve Gauss Teoremi
-Modern fizikte $1/r^2$ sönümlemesi evrensel bir yasa olarak görülürken, Evrenakı modelinde bu durum yalnızca belirli koşullar sağlandığında ortaya çıkan geometrik bir zorunluluktur. Güneş Sistemi ölçeğinde yoğunluk ($\rho$) homojene yakın kabul edilebilir. Homojen bir ortamda, dışarı yayılan basınç akısı, Gauss teoremi (Gauss, 1813) gereği $A = 4\pi r^2$ yüzey alanına dağılır. Toplam akı korunduğu için, gradyan $1/r^2$ oranında azalmak zorundadır. Bu davranış mistik bir yasa değil, homojen Evrenakı'nın 3-boyutlu dağılımının doğal sonucudur.
+Modern fizikte $1/r^2$ sönümlemesi evrensel bir yasa olarak görülürken, Evrenakı modelinde bu durum yalnızca belirli koşullar sağlandığında ortaya çıkan geometrik bir zorunluluktur. Güneş Sistemi ölçeğinde yoğunluk ($\rho$) homojene yakın kabul edilebilir. Homojen bir ortamda, dışarı yayılan basınç akısı, Gauss teoremi (Gauss, 1813) gereği $A = 4\pi r^2$ yüzey alanına dağılır. Toplam akı korunduğu için, gradyan $1/r^2$ oranında azalmak zorundadır. Bu davranış mistik bir yasa değil, homojen Evrenakı'nın 3-boyutlu dağılımının doğal sonucudur. *(katalog: **Ek M-29**)*
 

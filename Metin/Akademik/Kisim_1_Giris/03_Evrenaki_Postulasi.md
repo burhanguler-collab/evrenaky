@@ -260,13 +260,13 @@ Bu ayrım yalnızca felsefi bir etiketleme değildir; doğrudan mekanik bir teme
 
 ### 4. Işığın Doğası ve Hızının Değişkenliği İlkesi
 
-Işık, ortamsız yayılan soyut bir dalga veya noktasal bir parçacık değil; Evrenakı ortamında oluşan, belirli bir hacmi ve kinetik kütlesi olan **"Zerre Katarı"** (fiziksel ışık akışı) olarak tanımlanır. Tüm Zerreler evrensel ve sabit bir kütleye ($m_z \approx 1.47 \times 10^{-35} \text{ kg}$) ve nükleonlarla aynı sıkışmış girdap fazına sahip oldukları için nükleon yoğunluğuna eşit bir öz yoğunluğa ($\rho_{zerre} \approx 2.7 \times 10^{17} \text{ kg/m}^3$) sahiptir. Işığın rengini ve enerjisini belirleyen şey Zerrelerin kütle farkı değil; akıştaki ardışık mesafeleri (Zerre Aralığı) ve hedefe saniyede çarpan Zerre sayısıdır (frekans). Bu modelde ışığın çizgisel yayılma hızı, içinden geçtiği Evrenakı'nın yerel yoğunluğuna ($\rho$) ve parçacığın patinaj (boşa dönme) oranına bağlı olarak **değişkendir**. Teori, laboratuvar deneylerinin (bkz. Kısım 5: DENEY serisi) ve astronomik gözlemlerin bu modeli desteklediğini ileri sürer; özellikle SN 1987A Süpernovası'nda nötrinoların ışıktan yaklaşık 3 saat önce ulaşması (Hirata ve ark., 1987), Zerre katarının yoğun yıldız zarfında ve yol üzerindeki galaktik gradyan alanlarında patinaj yaparak oyalanmasıyla yorumlanır (gecikme bütçesi ve karar deneyleri: Bölüm 2.4.4).
+Işık, ortamsız yayılan soyut bir dalga veya noktasal bir parçacık değil; Evrenakı ortamında oluşan, belirli bir hacmi ve kinetik kütlesi olan **"Zerre Katarı"** (fiziksel ışık akışı) olarak tanımlanır. Tüm Zerreler evrensel ve sabit bir kütleye ($m_z \approx 1.47 \times 10^{-35} \text{ kg}$) ve nükleonlarla aynı sıkışmış girdap fazına sahip oldukları için nükleon yoğunluğuna eşit bir öz yoğunluğa ($\rho_{zerre} \approx 2.7 \times 10^{17} \text{ kg/m}^3$) sahiptir. Işığın rengini ve enerjisini belirleyen şey Zerrelerin kütle farkı değil; akıştaki ardışık mesafeleri (Zerre Aralığı) ve tek katarın içindeki ardışık Zerrelerin hedefe saniyede çarpma ritmidir (frekans); ışığın şiddeti ise ayrı bir büyüklüktür — birim alana düşen katar sayısı (bkz. Bölüm 2.2.3). Bu modelde ışığın çizgisel yayılma hızı, içinden geçtiği Evrenakı'nın yerel yoğunluğuna ($\rho$) ve parçacığın patinaj (boşa dönme) oranına bağlı olarak **değişkendir**. Teori, laboratuvar deneylerinin (bkz. Kısım 5: DENEY serisi) ve astronomik gözlemlerin bu modeli desteklediğini ileri sürer; özellikle SN 1987A Süpernovası'nda nötrinoların ışıktan yaklaşık 3 saat önce ulaşması (Hirata ve ark., 1987), Zerre katarının yoğun yıldız zarfında ve yol üzerindeki galaktik gradyan alanlarında patinaj yaparak oyalanmasıyla yorumlanır (gecikme bütçesi ve karar deneyleri: Bölüm 2.4.4).
 
 ### 5. Dört Boyutlu Çift Dönüş (Temel Dönüş) İlkesi
 
 Evrendeki temel parçacıklar (nükleonlar, Zerreler) durağan noktalar değil, sürekli fiziksel dönme hâlindeki hacimsel girdaplardır. Bu teorideki "spin", modern fizikteki soyut içsel açısal momentum tanımının aksine, Evrenakı içinde hacimsel yer kaplayan **gerçek bir dönme hareketidir** ve 2. postülat gereği bu dönüş dört boyutludur — birbirine tamamen dik iki düzlemde aynı anda gerçekleşen bir **çift dönüştür** (Clifford dönüşü; Clifford, 1873):
 
-   * **Hızlı bileşen ($\omega_1$):** Üç boyutun içindeki bir düzlemde gerçekleşen, parçacığın varlığını sürdüren asıl enerji girdabıdır. Compton frekansı (Compton, 1923), bu fiziksel dönüşün etkin frekansı olarak yorumlanır: $\approx 1$ GeV enerjili bir protonun kendi ekseni etrafında $\nu_c \approx 10^{23}$ Hz mertebesinde döndüğü kabul edilir. Yarıçapı $\approx 0.8$ fm olan (proton yük yarıçapının güncel değeri: Tiesinga ve ark., 2021) bir protonun bu frekansta dönmesi, ekvatoral çizgisel hızın ışık hızını aşmasını gerektirir: $v_{ekvator} = 2\pi \nu_c R \approx 5 \times 10^8 \text{ m/s} > c$. **(Önemli Not: Proton birçok alt parçacıktan oluşan 'bileşik' bir yapı olduğu için, $5 \times 10^8 \text{ m/s}$ onun alt bileşenlerinin saf dönüşlerine kıyasla çok daha yavaşlamış olan 'kompozit/bileşik' hızıdır. Atom altı düzeyde gerçekleşen ve kavitasyon zarflarının birbirine kenetlenmesinden doğan bu bileşik dönüş yavaşlaması, makro evrende gezegenlerin veya yıldızların kütle-itimiyle birleşerek yaşadığı eylemsizlik tabanlı hızlanmayla aynı kefeye konulamaz; ikisi tamamen farklı mekanizmalardır. Buna rağmen protonun bu yavaşlamış kompozit hızı bile ışık hızını rahatlıkla aşar — ve bu aşma bir istisna değil, yapısal bir zorunluluktur: içinde vakum cebi taşıyan her girdap zarfının denge yüzey hızı $\sqrt{2}\,c \approx 4{,}24 \times 10^8 \text{ m/s}$'dir; duvarı $c$'nin altında dönen bir zarf, cebini açık tutacak basınç açığını üretemez ve çöker. Nicel türetim ve hız kavramlarının tam ayrıştırması için bkz. Teknik Ek A.)** Evrenakı Teorisi'nde $c$ mutlak bir üst sınır değil, Zerre'nin akışkan içindeki limit hızıdır; ışık hızı üzerindeki hızların bugüne dek doğrudan ölçülememiş olması, ölçüm teknolojilerimizin bizzat $c$ hızıyla yayılan araçlara (elektromanyetik sinyallere) bağımlı olmasından kaynaklanan metodolojik bir sınırdır.
+   * **Hızlı bileşen ($\omega_1$):** Üç boyutun içindeki bir düzlemde gerçekleşen, parçacığın varlığını sürdüren asıl enerji girdabıdır. Compton frekansı (Compton, 1923), bu fiziksel dönüşün etkin frekansı olarak yorumlanır: $\approx 1$ GeV enerjili bir protonun kendi ekseni etrafında $\nu_c \approx 10^{23}$ Hz mertebesinde döndüğü kabul edilir. Yarıçapı $\approx 0{,}84$ fm olan (proton yük yarıçapının güncel değeri: Tiesinga ve ark., 2021) bir protonun bu frekansta dönmesi, ekvatoral çizgisel hızın ışık hızını aşmasını gerektirir: $v_{ekvator} = 2\pi \nu_c R \approx 5 \times 10^8 \text{ m/s} > c$. **(Önemli Not: Proton birçok alt parçacıktan oluşan 'bileşik' bir yapı olduğu için, $5 \times 10^8 \text{ m/s}$ onun alt bileşenlerinin saf dönüşlerine kıyasla çok daha yavaşlamış olan 'kompozit/bileşik' hızıdır. Atom altı düzeyde gerçekleşen ve kavitasyon zarflarının birbirine kenetlenmesinden doğan bu bileşik dönüş yavaşlaması, makro evrende gezegenlerin veya yıldızların kütle-itimiyle birleşerek yaşadığı eylemsizlik tabanlı hızlanmayla aynı kefeye konulamaz; ikisi tamamen farklı mekanizmalardır. Buna rağmen protonun bu yavaşlamış kompozit hızı bile ışık hızını rahatlıkla aşar — ve bu aşma bir istisna değil, yapısal bir zorunluluktur: içinde vakum cebi taşıyan her girdap zarfının denge yüzey hızı $\sqrt{2}\,c \approx 4{,}24 \times 10^8 \text{ m/s}$'dir *(tam türetim: **Ek M-3**)*; duvarı $c$'nin altında dönen bir zarf, cebini açık tutacak basınç açığını üretemez ve çöker. Nicel türetim ve hız kavramlarının tam ayrıştırması için bkz. Teknik Ek A.)** Evrenakı Teorisi'nde $c$ mutlak bir üst sınır değil, Zerre'nin akışkan içindeki limit hızıdır; ışık hızı üzerindeki hızların bugüne dek doğrudan ölçülememiş olması, ölçüm teknolojilerimizin bizzat $c$ hızıyla yayılan araçlara (elektromanyetik sinyallere) bağımlı olmasından kaynaklanan metodolojik bir sınırdır.
    * **Yavaş bileşen ($\omega_2$):** W eksenini içeren düzlemde gerçekleşen, üç boyutta asla dönüş olarak görünmeyen bileşendir; tek başına ürettiği görünür etki yalnızca doğrusal salınım/pulsasyondur ("nefes alma"). Parçacık ekseninin periyodik kayması (devinim) ise $\omega_2$'nin bağımsız bir etkisi değil, ancak $\omega_1$ ile birlikteliğinin (çift dönüşün bileşkesinin) bir ürünüdür — bkz. Bölüm 1.4. Bu bileşenin mikrodan makroya taşınması (Kinetik Ayrışma) Kısım 3'te ele alınacaktır.
 
 Parçacığın bu fiziksel dönüşü, çevreleyen Evrenakı ile sınır tabaka etkileşimi (boundary layer coupling) kurarak ortamda mikro-girdaplar üretir. Bu spin hızlarının Evrenakı'nın kavitasyon (yırtılma) eşiğiyle ilişkisi ve maddeyi var eden şok zarfının kararlılığı, bölüm sonundaki **Teknik Ek A**'da ele alınmıştır (<a href="javascript:void(0)" onclick="document.getElementById('animasyon-132-kavitasyon').scrollIntoView({behavior: 'smooth', block: 'center'})" style="color:var(--neon-blue); text-decoration:none;">bkz. Animasyon 1.3.2</a>).
@@ -276,6 +276,8 @@ Parçacığın bu fiziksel dönüşü, çevreleyen Evrenakı ile sınır tabaka 
 Standart fizikte "gravitasyon" denen olgu, hidrodinamik bir **itme** mekanizmasıyla açıklanır. Kütle-itim, Le Sage modelindeki gibi rastgele uçuşan katı parçacıkların bombardımanıyla oluşmaz (Le Sage, 1784); sürekli bir akışkan içindeki **basınç gradyanı** olarak formüle edilir. Bu ayrım, Le Sage ailesini tarihsel olarak eleyen **ısınma itirazını** da kökünden çözer: Le Sage'da kuvvet, cismin akıdan momentum **soğurmasıyla** doğar ve soğurulan momentum akısına eşlik eden enerji, gezegenleri eritecek düzeyde zorunlu bir ısınma üretir. Basınç gradyanındaki cisim ise — sıvıdaki kaldırma kuvveti gibi — net kuvveti **enerji soğurmadan** alır: kuvvet, akı yutulmasından değil çevre basınçlarının farkından doğar ve denge hâlinde cisim üzerinde yaptığı net iş sıfırdır; ısınma üretmez. Teoride kalan tek ısıl kanal, sıfıra yakın ama sonlu viskozitedir ($\eta_E$; Postülat 7) ve bu kanalın enerji bütçesi kozmolojik deşarj muhasebesine zaten dahildir (Bkz. Bölüm 3.7.2). Bir cismin maruz kaldığı kütle-itim kaynaklı ivmelenme, nükleonların öz yoğunluğu ($\rho_n$) ve lokal basınç gradyanı ($\nabla P$) cinsinden:
 
 $$\vec{a} = -\frac{1}{\rho_n} \nabla P$$
+
+*(katalog ve işaret konvansiyonu: **Ek M-2**)*
 
 Bu formül, Galileo'nun düşme deneyini (tüm cisimlerin boşlukta aynı ivmeyle düşmesini) mekanik olarak açıklar: Evrenakı atomik boşluklardan sızarak doğrudan nükleonlarla etkileştiği için itici güç her nükleonun hacmiyle orantılıdır; tüm baryonik madde aynı nükleonlardan oluştuğu ve $\rho_n \approx 2.7 \times 10^{17} \text{ kg/m}^3$ evrensel bir sabit olduğu için, cismin cinsi ne olursa olsun ivme eşittir. Maddesel nesneler, yüksek akışkan basıncından alçak akışkan basıncına doğru itilir. Bu itme alanının çok bileşenli yapısı ($\nabla P_r + \nabla P_{spin}$) ve akışkanın yırtılmadan bu basıncı taşıyabilmesi için gereken asgari arka plan basıncının ($P_0$) nicel türetimi, bölüm sonundaki **Teknik Ek B**'de verilmiştir.
 
@@ -287,18 +289,24 @@ $$\vec{v}_{bağıl} = \vec{v}_{cisim} - \vec{v}_{akışkan} \approx 0$$
 
 Bu sınır koşulu, viskoz sürtünme direncini gözlemsel olarak fark edilemeyecek düzeye indirir; **ortadan kaldırmaz.** Michelson-Morley deneyindeki sıfır girişim farkı (Michelson & Morley, 1887) da bu mekanizmayla yorumlanır: Dünya'nın sürüklenme zarfı nedeniyle yerel Evrenakı Dünya ile birlikte hareket eder ve ışık bu sürüklenen ortamda her yönde eşit hızda yayılır. (Bu mekanizmanın yıldız sapması ve Fizeau kısmi sürüklemesi karşısındaki sınavı ve $1-1/n^2$ katsayısının nicel türetimi için bkz. Bölüm 3.4.6.)
 
+**Sürüklenme yalnız ötelemededir — dönmede patinaj vardır.** Yukarıdaki $\vec v_{bağıl}\approx0$ koşulu cismin **öteleme** hareketine aittir; zarf gövdeyle birlikte *taşınır*, ama gövdeyle birlikte *dönmez*. Bu, teorinin patinaj (slip) ilkesinin (Bölüm 2.4.2) dönme eksenine uygulanmasından çıkan doğrudan bir öngörüdür: rijit kafes yavaş döner, atomik boşluklardan sızan akışkan ise kafese tutunmaz (bkz. Bölüm 3.2.2). Dönme kuplajı bu yüzden ayrı bir **sürüklenme kesriyle** ($\xi$) yazılır ve $\xi\ll1$'dir:
+
+$$\vec\Omega_{ortam} = \xi\,\vec\omega_{gövde},\qquad \xi = 2\left(\frac{I}{MR^2}\right)\frac{\Phi}{c^2}$$
+
+İki koşulun ayrılması zorunludur, çünkü sınavları da ayrıdır: ötelemedeki tam sürüklenme Michelson–Morley'in sıfır sonucunu verirken, dönmedeki neredeyse-tam patinaj Gravity Probe B'nin mas/yıl mertebesindeki küçük jiroskop sapmasını verir. Ortam gövdeyle eş-dönseydi GP-B ölçülenin $10^{10}$ katı bir presesyon görürdü. Kesir türetilmiştir: $\xi=(I/MR^2)\,|\delta c_{loc}/c| = (I/MR^2)(2\Phi/c^2)$ — ortam bir cismi ancak kavrama hızının bozulduğu ölçüde tutar. Dünya için $4{,}605\times10^{-10}$ verir; GP-B'nin ölçtüğü $(4{,}2\pm0{,}8)\times10^{-10}$ ile 0,52σ uyum sağlar. Kompaktlıkla ölçeklendiğinden nötron yıldızlarında $\sim0{,}1$ mertebesine, karadelik ufkunda ise 1'e (ergosfer) yaklaşır. *(Nicel türetim: Bölüm 6.3.3 ve **Ek M-40**; girdisi olan $\delta c_{loc}/c$ için **Ek M-42**; parametre statüsü: Teknik Ek C, satır 19 — **[T]**.)*
+
 > [!IMPORTANT]
 > **Viskozite neden tam sıfır olamaz — teorinin iç zorunluluğu.** Bu ayrım terminolojik bir titizlik değil, teorinin yapısal bir gereğidir: **$\mu$ tam olarak sıfır alınırsa teorinin üç ayrı mekanizması aynı anda çöker.**
 >
 > 1. **Kozmolojik genişleme (Bölüm 3.7.2):** Evrenin genişlemesi, teoride karanlık enerjiyle değil, atomik girdapların ortama **viskoz enerji deşarjıyla** açıklanır. Deşarjın kendisi viskoz bir süreçtir; $\mu = 0$ ise deşarj debisi de sıfırdır, okyanus hacim kazanmaz ve genişlemenin motoru ortadan kalkar. Aynı gerekçe, "evrilen karanlık enerji" bulgusunun teorideki okumasını da (Bölüm 7.7.9) geçersiz kılardı.
-> 2. **Ortam kaynaklı sönüm (Bölüm 3.10.4.2):** Satürn halkalarında öngörülen ve teorinin standart granüler fizikten **ayırt edici** tek iddiası olan ek sönüm terimi $\gamma_{ortam} \sim 6\pi\eta_z a/m$ biçimindedir. $\eta_z = 0$ ise bu terim özdeş olarak sıfırdır ve teorinin bu alandaki tek sınanabilir öngörüsü yok olur.
+> 2. **Ortam kaynaklı sönüm (Bölüm 3.10.4.2):** Satürn halkalarında öngörülen ve teorinin standart granüler fizikten **ayırt edici** tek iddiası olan ek sönüm terimi $\gamma_{ortam} \sim 6\pi\eta_E a/m$ biçimindedir. $\eta_E = 0$ ise bu terim özdeş olarak sıfırdır ve teorinin bu alandaki tek sınanabilir öngörüsü yok olur.
 > 3. **Kendi kendine hızlanan kütleler (Bölüm 3.1.8):** Pulsar glitch'leri ve YORP etkisi gibi olguların tek mekanizmaya bağlanması, içsel deşarj sabiti $\kappa_d$ ile birlikte sonlu bir $\eta_E$ gerektirir; sıfır viskozite bu korelasyon programını (Bölüm 7.5, satır 5) anlamsızlaştırır.
 >
 > Dolayısıyla teorinin doğru ifadesi **"sürtünmesiz ortam" değil, "sürtünmesi ölçüm eşiğinin altında kalan ultra-düşük viskoziteli ortam"dır.** $\eta_E$, teorinin resmî parametre envanterinde (Ek C) **serbest (F)** statüsündedir; tam sıfır değil, henüz ölçülmemiş küçük bir pozitif sayıdır ve onu sabitleyecek gözlem programı tanımlıdır (Gaia/pulsar katalog korelasyonları ve Satürn bending-wave sönüm testi). Kitap boyunca kolaylık olsun diye kullanılan $\mu \approx 0$ gösterimi, daima bu **"sıfıra yakın, sıfır değil"** anlamını taşır; sıfır viskozite yalnızca matematiksel bir *idealleştirme limiti* olarak (Euler denklemine geçişte) kullanılır.
 
 ### 8. Makro-Spin ve Galaktik Vorteksler İlkesi
 
-Galaksilerin ve yıldızların dönüşleri, Evrenakı ortamında üç boyutlu makro-girdaplar oluşturur. Bu girdaplar, ortamın ultra-düşük viskozitesi sayesinde çok iyi bir yaklaşımla Euler denklemiyle — yani Navier–Stokes'un $\mu \to 0^+$ *idealleştirme limitiyle* — modellenir (Euler, 1757; Navier, 1823; Stokes, 1845b). Buradaki sıfır viskozite bir fiziksel iddia değil, hesabı kolaylaştıran bir limittir: sönüm ve deşarj süreçleri ele alındığında sonlu $\eta_E$ terimi denkleme geri konur (bkz. 7. postülat kutusu ve Bölüm 3.10.4.2). Lokal vortisiti $\vec{\Omega} = \frac{1}{2}(\nabla \times \vec{v})$ ile tanımlanır. Evrenakı girdapları; galaksilerin dış kollarındaki dönüş hızı anomalilerini (rotasyon eğrilerini) (Rubin & Ford, 1970), ek bir karanlık madde varsayımına ihtiyaç duymaksızın, akışkanın rotasyonel ve yanal basınç kuvvetleriyle açıklamayı önerir.
+Galaksilerin ve yıldızların dönüşleri, Evrenakı ortamında üç boyutlu makro-girdaplar oluşturur. Bu girdaplar, ortamın ultra-düşük viskozitesi sayesinde çok iyi bir yaklaşımla Euler denklemiyle — yani Navier–Stokes'un $\mu \to 0^+$ *idealleştirme limitiyle* — modellenir (Euler, 1757; Navier, 1823; Stokes, 1845b). Buradaki sıfır viskozite bir fiziksel iddia değil, hesabı kolaylaştıran bir limittir: sönüm ve deşarj süreçleri ele alındığında sonlu $\eta_E$ terimi denkleme geri konur (bkz. 7. postülat kutusu ve Bölüm 3.10.4.2). Girdap kinematiğinin temel büyüklüğü, yerel rotasyon (açısal hız) vektörüdür: $\vec{\Omega}_{rot} = \frac{1}{2}(\nabla \times \vec{v})$; vortisite bunun iki katıdır: $\vec{\omega}_v = \nabla \times \vec{v} = 2\vec{\Omega}_{rot}$. Evrenakı girdapları; galaksilerin dış kollarındaki dönüş hızı anomalilerini (rotasyon eğrilerini) (Rubin & Ford, 1970), ek bir karanlık madde varsayımına ihtiyaç duymaksızın, akışkanın rotasyonel ve yanal basınç kuvvetleriyle açıklamayı önerir.
 
 ### 9. Uzayı Şekillendiren Beş Hidrodinamik Kuvvet İlkesi
 
@@ -314,577 +322,13 @@ Yukarıdaki üç öbekli yapı (zemin → aktörler → davranış kuralları), 
 
 ## 1.3.4 Teknik Ekler: Nicel Türetimler
 
-Aşağıdaki iki ek, 5. ve 6. postülatların ardındaki nicel hesapları toplar. Postülatların ana akışını takip eden okuyucu bunları atlayabilir; teorinin sayısal iskeletiyle ilgilenen okuyucu için burada bir arada verilmiştir.
-
-### Ek A: Hız Kavramlarının Ayrıştırılması: Patinaj Sınırı, Denge Hızı ve Kavitasyon Eşiği
-
-Bölüm 2.2.1'de detaylandırılacağı üzere $c$ (SI'da tanım gereği 299.792.458 m/s; BIPM, 2019), Evrenakı'nın yırtılma (kavitasyon) sınırı DEĞİLDİR; o yalnızca ışığın bulunduğu yoğunluktaki yola tutunabildiği lokal 'patinaj' sınırıdır. Bu ek, teoride adı geçen tüm hız kavramlarını tek bir çatı altında ayrıştırır ve aralarındaki ilişkiyi nicel olarak kurar.
-
-#### Ek A.1 — İki Sınır, İki Kategori
-
-Kavrama Yasası ($v=\sqrt{P/\rho}$; Ek B'de $\rho_0=P_0/c^2$ olarak kullanılan ve Bölüm 3.4.6.3'te Fizeau katsayısını türeten bağıntı), $c$'nin fiziksel kimliğini netleştirir: **$c$, ortamın basınç-iletim (sonik) hızıdır** — Evrenakı'nın "Mach 1"i (bkz. Bölüm 2.4.1). Bu kimlik, sık karıştırılan iki sınırın kategorik farkını kendiliğinden verir:
-
-| | $c$ — kavrama (patinaj) sınırı | $v_{kav}$ — yırtılma (kavitasyon) eşiği |
-|---|---|---|
-| **Neyin sınırı?** | Kavrama yoluyla *ilerlemenin*: Zerre'nin ortama tutunarak yol alabilmesinin | Ortamın *bütünlüğünün*: akışkanın sürekli (yırtıksız) kalabilmesinin |
-| **Aşılırsa ne olur?** | Yasak değildir: patinaj/şok oluşur, enerji kaybedilir, hız $c$'ye oturur | Yasak değildir: akışkan yırtılır, vakum cebi açılır — **madde doğar** |
-| **Gündelik karşılığı** | Havada ses hızı: süpersonik uçuş vardır, yalnızca şok üretir | Sıvının çekme dayanımı: pervane ucundaki kavitasyon köpüğü |
-
-Buradan teorinin en yalın özeti çıkar: **ışık tam-sonik bir olgudur** (ortama kavrayarak tam $c$'de ilerler); **madde ise kalıcı süpersonik bir olgudur** (yüzeyi $c$'nin üstünde dönen, kendini sürekli yeniden kuran şok zarfı). $c$'nin üstündeki hızlar yasak değildir; yalnızca kavrama ile *sürdürülemez* — ya şok üreterek $c$'ye geri oturur, ya da ($v_{kav}$ da aşılmışsa) ortamı yırtarak maddeyi var eder.
-
-#### Ek A.2 — Denge Hızının Türetimi: Her Vakum-Cepli Girdap, Duvarını $\sqrt{2}\,c$'de Döndürür
-
-Teoride madde, içinde vakum cebi (yırtık) taşıyan ve dengede dönen bir girdap zarfıdır (bkz. Animasyon 1.3.2, Aşama 2–3). Cebin dışındaki akışkanda dönme akışı $v_\theta(r)=\Gamma/2\pi r$ ve Bernoulli ilkesi geçerlidir:
-
-$$P(r)=P_0-\tfrac{1}{2}\rho_0\, v_\theta^2(r)$$
-
-Cep duvarında ($r=a$) basınç, cebin iç basıncına (vakum, $P\approx0$) inmek zorundadır:
-
-$$P_0-\tfrac{1}{2}\rho_0\, v_{duvar}^2=0 \;\;\Longrightarrow\;\; v_{duvar}=\sqrt{\frac{2P_0}{\rho_0}}=\boxed{\sqrt{2}\,c\approx 4{,}24\times10^8\ \text{m/s}}$$
-
-Bu sonucun üç kritik özelliği vardır:
-
-1. **Evrensellik.** $v_{duvar}=\sqrt{2}\,c$ sonucu cebin yarıçapına bağlı değildir; sirkülasyon $\Gamma$ yalnızca cebin *boyutunu* belirler ($a=\Gamma/2\pi\sqrt{2}c$), duvar hızını değil. Üstelik bu bir denge çekim noktasıdır: zarf daha hızlı dönerse cep genişler, genişleyen yarıçapta çevresel hız düşer ve duvar $\sqrt{2}\,c$'ye geri oturur. **Her kararlı vakum-cepli girdap — boyutu ne olursa olsun — duvarını tam $\sqrt{2}\,c$'de döndürür.** Tüm nükleonların (ve onlarla aynı sıkışmış girdap fazını taşıyan Zerre'nin) yüzey hızının evrenselliği buradan çıkar.
-2. **Sayısal uyum.** Postülat 5'in bağımsız yoldan (Compton frekansı × proton yarıçapı: $2\pi\nu_c R$) verdiği kompozit ekvator hızı $\approx5\times10^8$ m/s'dir; türetilen $\sqrt{2}\,c=4{,}24\times10^8$ m/s ile fark ~%18'dir. Ters okuma da tutarlıdır: $\nu=\sqrt{2}c/2\pi R$ bağıntısı, $R=0{,}84$ fm için $\nu\approx8\times10^{22}$ Hz verir — postüladaki $\sim10^{23}$ Hz ile aynı mertebe. Bu uyum **kesin eşitlik değil, mertebe + $O(1)$ uyumudur:** türetim, sıkıştırılamaz Bernoulli, iki boyutlu ideal girdap ve tam-sıfır cep basıncı varsayımlarını kullanır; sıkıştırılabilirlik (zarf bölgesinde yoğunluk artışı), dört boyutlu çift dönüşün üç boyuta izdüşümü ve zarfın sonlu kalınlığı $O(1)$ düzeltmeler getirir (açık hesap: Bölüm 7.4).
-3. **Zorunluluk.** Protonun ekvator hızının $c$'yi aşması bir istisna ya da savunulması gereken bir pürüz değil, **yapısal bir zorunluluktur.** Duvarı $c$'nin altında dönen bir zarf, cebindeki vakuma karşı gereken basınç açığını ($\tfrac12\rho_0 v^2<P_0$) üretemez ve cep çöker. Kısacası: **yüzeyi $c$-altı hızda dönen madde var olamaz.** Postülat 5'in "ışık hızını aşan ekvator hızı" ifadesi, böylece Kavrama Yasası'nın doğrudan bir sonucu hâline gelir.
-
-#### Ek A.3 — Kavitasyon Eşiği ve Kohezyon Dayanımı ($\Sigma$): Yaratma ile Sürdürme Ayrımı
-
-Sağlam (yırtıksız) bir akışkanı yırtmak, basıncı sıfırın da altına — akışkanın **kohezyon (çekme) dayanımı** olan $-\Sigma$'nın altına — düşürmeyi gerektirir. Aynı Bernoulli hesabıyla yırtma eşiği:
-
-$$v_{kav}=\sqrt{\frac{2(P_0+\Sigma)}{\rho_0}}=\sqrt{2}\,c\,\sqrt{1+\frac{\Sigma}{P_0}}$$
-
-Evrenakı'nın kavitasyon eşiğinin $c$'den çok daha yüksek olması, $\Sigma\gg P_0$ demektir. Bu keyfî bir kabul değildir; gerçek akışkanlarda doğrudan emsali vardır: suyun teorik çekme dayanımı ($\sim10^2$ MPa), üzerindeki atmosfer basıncının ($\sim0{,}1$ MPa) yaklaşık bin katıdır (ölçüm ve teorik sınırlar: Briggs, 1950; Caupin & Herbert, 2006). Nükleasyon çekirdeği içermeyen, viskozitesi sıfıra yakın bir süper-akışkanda bu oranın çok daha yüksek olması beklenir. ($\Sigma$, teorinin adlandırılmış bir parametresidir; Bell hız-sınırı deneyleri $v_m$ özdeşleştirmesi üzerinden ilk gözlemsel alt sınırı verir — $\Sigma/P_0>10^8$, Bölüm 2.10.1 — tam sabitlenmesi Bölüm 7.4'te açık iş olarak kayıtlıdır.)
-
-Kohezyon yalnızca yırtılmaya direnç değil, aynı zamanda ikinci bir **sinyal kanalıdır.** Basınç (sıkışma) salınımları ortamda sonik hızla ($c=\sqrt{P_0/\rho_0}$) yayılırken, ortamın *yapısal* yeniden düzenlenmesi — gradyan ve topografya kurulumu — kohezyon kanalının elastik hızıyla taşınır:
-
-$$v_m=\sqrt{\frac{\Sigma}{\rho_0}}=c\,\sqrt{\frac{\Sigma}{P_0}}$$
-
-Bu hızın fiziksel rolü ve gözlemsel ölçüm programı Bölüm 2.10.1'de işlenir.
-
-<div class="pol-widget-134" id="animasyon-134-ikikanal">
-<style>
-.pol-widget-134 { --pol-blue:#00f0ff; --pol-magenta:#ff00e5; background:#0b0f19; border:1px solid rgba(0,240,255,0.2); border-radius:10px; padding:16px; font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif; color:#f3f4f6; max-width:900px; margin:1.5em auto; box-shadow: 0 4px 20px rgba(0,0,0,0.5); }
-.pol-widget-134 h4 { color:var(--pol-blue); font-size:1rem; text-transform:uppercase; letter-spacing:1px; margin:0 0 10px 0; }
-.pol-controls-134 { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:10px; flex-wrap:wrap; }
-.btn-134 { background:rgba(0,240,255,0.12); color:var(--pol-blue); border:1px solid rgba(0,240,255,0.4); border-radius:4px; padding:6px 16px; cursor:pointer; font-size:0.9rem; }
-.btn-134:hover { background:rgba(0,240,255,0.25); }
-.note-134 { font-size:0.8rem; color:#8892b0; }
-.pol-canvas-wrap-134 { width:100%; height:380px; border-radius:8px; overflow:hidden; background:#02050a; position:relative; }
-.pol-canvas-wrap-134 canvas { display:block; width:100%; height:100%; }
-.desc-134 { background: rgba(255,0,229,0.1); padding: 12px; border-radius: 4px; border: 1px solid rgba(255,0,229,0.3); margin-top: 10px; font-size: 0.95rem; line-height: 1.5; color: #f3f4f6; }
-</style>
-
-<h4>Animasyon 1.3.4: İki Kanal — Basınç ($c$) ve Kohezyon ($v_m$) <a name="animasyon-134-ikikanal"></a></h4>
-<div class="pol-controls-134">
-  <button class="btn-134" id="btn-fire-134">⟳ Sinyali Gönder</button>
-  <div class="note-134">Temsilî oran: kohezyon kanalı burada yalnızca <b>50×</b> hızlı çizilmiştir; gerçekte oran <b>&ge; 10.000×</b>tir (Salart 2008 alt sınırı).</div>
-</div>
-<div class="pol-canvas-wrap-134"><canvas id="canvas134"></canvas></div>
-<div class="desc-134">Solda bir kütle (analizör) belirdiğinde ortama <b>iki ayrı haber</b> yayılır. <b>Üst şerit — basınç (sıkışma) kanalı:</b> yoğunluk dalgası sonik hızla ($c$) ilerler; ışık ve —standart fiziğin "kütleçekim dalgası" dediği— basınç salınımları bu kanaldadır. <b>Alt şerit — kohezyon (yapı) kanalı:</b> ortamın basınç topografyası, yapıyı bir arada tutan kohezyon ($\Sigma$) üzerinden $v_m=c\sqrt{\Sigma/P_0}$ hızıyla neredeyse anında yeniden kurulur; kütle-itim alanının kurulumu ve dolanıklık geçidi (Bölüm 2.10.1) bu kanaldadır. İki kanalın karıştırılması yasaktır: GW170817'nin bu basınç salınımlarının hızını tam $c$ ölçmesi üst şeridin, Bell korelasyonlarının "anındalığı" alt şeridin olayıdır.</div>
-
-<script>
-(function(){
-  const canvas = document.getElementById('canvas134');
-  if(!canvas) return;
-  const ctx = canvas.getContext('2d');
-  const wrap = canvas.parentElement;
-  function resize(){ if(!canvas.isConnected) { window.removeEventListener('resize', resize); return; }
-      canvas.width = wrap.clientWidth; canvas.height = wrap.clientHeight; }
-  window.addEventListener('resize', resize); resize();
-
-  let t = -1; // sinyal yok
-  const DUR = 7.0;          // basınç dalgasının ekranı geçme süresi (sn)
-  const RATIO = 50;         // temsilî v_m/c oranı
-  document.getElementById('btn-fire-134').onclick = () => { t = 0; };
-
-  function lane(y0, h, label, color){
-      ctx.strokeStyle = 'rgba(42,53,90,0.8)'; ctx.strokeRect(8, y0, canvas.width-16, h);
-      ctx.fillStyle = color; ctx.font = 'bold 12px Segoe UI';
-      ctx.fillText(label, 18, y0 + 18);
-  }
-
-  function draw(){
-      if(!canvas.isConnected) return;
-      const W = canvas.width, H = canvas.height;
-      ctx.fillStyle = '#02050a'; ctx.fillRect(0,0,W,H);
-      const x0 = 60, x1 = W - 30;
-      const laneH = (H - 60) / 2;
-      const yP = 20, yK = 40 + laneH;      // üst ve alt şerit
-      lane(yP, laneH, 'BASINÇ KANALI — hız: c  (ışık; std. fizikte "kütleçekim dalgaları")', '#00f0ff');
-      lane(yK, laneH, 'KOHEZYON KANALI — hız: v_m ≥ 10⁴·c  (topografya, kütle-itim kurulumu)', '#ff00e5');
-
-      // kaynak kütle
-      for(const yy of [yP, yK]){
-          ctx.beginPath(); ctx.arc(x0-18, yy+laneH/2, 10, 0, 6.283);
-          ctx.fillStyle = '#ffcc00'; ctx.fill();
-      }
-      ctx.fillStyle = '#8892b0'; ctx.font = '11px Segoe UI';
-      ctx.fillText('kütle / analizör', x0-45, yK + laneH + 16);
-
-      // ortam noktaları
-      const nx = 60, ny = 6;
-      const fP = (t < 0) ? -1 : Math.min(1, t/DUR);              // basınç cephesi (0..1)
-      const fK = (t < 0) ? -1 : Math.min(1, (t*RATIO)/DUR);      // kohezyon cephesi
-      for(let i=0;i<nx;i++){
-        const fx = i/(nx-1), px = x0 + fx*(x1-x0);
-        for(let j=0;j<ny;j++){
-          const fy = (j+1)/(ny+1);
-          // üst: sıkışma darbesi — gauss paketi cepheyle taşınır
-          let dx = 0, glow = 0;
-          if(fP >= 0){
-              const d = (fx - fP) / 0.05;
-              dx = -8 * Math.exp(-d*d) * Math.sign(d || 1);
-              glow = Math.exp(-d*d);
-          }
-          ctx.beginPath(); ctx.arc(px + dx, yP + fy*laneH, 2 + 1.5*glow, 0, 6.283);
-          ctx.fillStyle = glow > 0.05 ? 'rgba(0,240,255,'+(0.35+0.65*glow)+')' : 'rgba(136,146,176,0.35)';
-          ctx.fill();
-          // alt: yapısal yeniden dizilim — cephe geçince noktalar yeni (eğimli) konuma oturur
-          let shift = 0, hot = 0;
-          if(fK >= 0 && fx <= fK){ shift = (0.5 - fy) * 14 * (1 - fx*0.5); hot = Math.max(0, 1 - Math.abs(fx - fK)/0.04); }
-          ctx.beginPath(); ctx.arc(px, yK + fy*laneH + shift, 2 + 1.5*hot, 0, 6.283);
-          ctx.fillStyle = (fK >= 0 && fx <= fK) ? 'rgba(255,0,229,'+(0.45+0.55*hot)+')' : 'rgba(136,146,176,0.35)';
-          ctx.fill();
-        }
-      }
-      // cephe çizgileri ve varış rozetleri
-      function front(f, y, color, doneLabel){
-          if(f < 0) return;
-          const fx = x0 + Math.min(f,1)*(x1-x0);
-          ctx.strokeStyle = color; ctx.lineWidth = 2;
-          ctx.beginPath(); ctx.moveTo(fx, y+4); ctx.lineTo(fx, y+laneH-4); ctx.stroke(); ctx.lineWidth = 1;
-          if(f >= 1){ ctx.fillStyle = color; ctx.font = 'bold 12px Segoe UI'; ctx.fillText(doneLabel, x1-150, y+laneH-10); }
-      }
-      front(fP, yP, '#00f0ff', 'ulaştı  (t = L/c)');
-      front(fK, yK, '#ff00e5', 'ulaştı  (t ≈ 0)');
-
-      if(t >= 0 && t < DUR + 0.5) t += 0.016;
-      requestAnimationFrame(draw);
-  }
-  requestAnimationFrame(draw);
-})();
-</script>
-</div>
-
-Böylece teorinin tüm hız kavramları tek bir sıralama üzerinde yerini bulur:
-
-$$c \;<\; \underbrace{\sqrt{2}\,c}_{v_{denge}\;\approx\;v_{ekvator}} \;<\; \underbrace{c\sqrt{\Sigma/P_0}}_{v_m} \;<\; \underbrace{\sqrt{2}\,c\sqrt{1+\Sigma/P_0}}_{v_{kav}} \;\le\; v_{saf}$$
-
-| Hız | Fiziksel kimliği | Formülü | Değeri |
-|---|---|---|---|
-| $c$ | Zerre'nin kavrama (patinaj) sınırı = ortamın sonik hızı | $\sqrt{P_0/\rho_0}$ (yerel: $\sqrt{P/\rho}$) | $2{,}998\times10^8$ m/s |
-| $v_{denge}$ | Vakum-cepli girdap zarfının denge yüzey hızı | $\sqrt{2}\,c$ | $4{,}24\times10^8$ m/s |
-| $v_{ekvator}$ | Protonun kompozit ekvator hızı (gözlemsel girdi) | $2\pi\nu_c R$ | $\approx5\times10^8$ m/s |
-| $v_m$ | Kohezyon kanalının elastik sinyal hızı — topografya/gradyan kurulumu (Bölüm 2.10.1) | $\sqrt{\Sigma/\rho_0}=c\sqrt{\Sigma/P_0}$ | $>10^4\,c$ (Bell alt sınırı) |
-| $v_{kav}$ | Sağlam akışkanı yırtma (kavitasyon) eşiği | $\sqrt{2}\,c\sqrt{1+\Sigma/P_0}\approx\sqrt2\,v_m$ | $\gg c$ ($\Sigma\gg P_0$) |
-| $v_{saf}$ | Temel alt-bileşenlerin saf dönüş hızları | $>v_{kav}$ | $\gg c$ |
-
-<div class="pol-widget-135" id="animasyon-135-merdiven">
-<style>
-.pol-widget-135 { --pol-blue:#00f0ff; --pol-magenta:#ff00e5; background:#0b0f19; border:1px solid rgba(0,240,255,0.2); border-radius:10px; padding:16px; font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif; color:#f3f4f6; max-width:900px; margin:1.5em auto; box-shadow: 0 4px 20px rgba(0,0,0,0.5); }
-.pol-widget-135 h4 { color:var(--pol-blue); font-size:1rem; text-transform:uppercase; letter-spacing:1px; margin:0 0 10px 0; }
-.pol-canvas-wrap-135 { width:100%; height:340px; border-radius:8px; overflow:hidden; background:#02050a; position:relative; }
-.pol-canvas-wrap-135 canvas { display:block; width:100%; height:100%; }
-.desc-135 { background: rgba(255,0,229,0.1); padding: 12px; border-radius: 4px; border: 1px solid rgba(255,0,229,0.3); margin-top: 10px; font-size: 0.95rem; line-height: 1.5; color: #f3f4f6; min-height: 64px; }
-.ladder-135 { margin-top: 14px; position: relative; height: 56px; background: rgba(0,0,0,0.5); border: 1px solid #2a355a; border-radius: 4px; padding: 0 4%; }
-.ladder-inner-135 { position:relative; height:100%; }
-.lmark-135 { position:absolute; top:8px; width:2px; height:14px; }
-.llabel-135 { position:absolute; top:26px; transform:translateX(-50%); font-size:0.72rem; white-space:nowrap; color:#8892b0; }
-.slider-135 { width:100%; margin-top: 12px; accent-color:#00f0ff; }
-.readout-135 { font-size:0.95rem; color:#ffcc00; font-weight:bold; }
-</style>
-
-<h4>Animasyon 1.3.5: Hız Merdiveni — Kavramadan Yırtılmaya <a name="animasyon-135-merdiven"></a></h4>
-<div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-  <div class="readout-135">Hız: <span id="v-read-135">1,00 c</span> — <span id="v-mode-135">TAM-SONİK</span></div>
-  <div style="font-size:0.8rem; color:#8892b0;">Eksen logaritmiktir (0,1c → ~10⁴·c). Kaydırıcıyı sürükleyin.</div>
-</div>
-<input type="range" class="slider-135" id="slider135" min="-1" max="4.35" step="0.01" value="0">
-<div class="ladder-135"><div class="ladder-inner-135" id="ladder135">
-  <div style="position:absolute; top:14px; left:0; right:0; height:2px; background:linear-gradient(90deg,#3a4c8a 0%, #00f0ff 20%, #ff8800 45%, #ff00e5 88%, #ff0000 100%);"></div>
-</div></div>
-<div class="pol-canvas-wrap-135" style="margin-top:14px;"><canvas id="canvas135"></canvas></div>
-<div class="desc-135" id="desc135"></div>
-
-<script>
-(function(){
-  const canvas = document.getElementById('canvas135');
-  if(!canvas) return;
-  const ctx = canvas.getContext('2d');
-  const wrap = canvas.parentElement;
-  const slider = document.getElementById('slider135');
-  const vRead = document.getElementById('v-read-135');
-  const vMode = document.getElementById('v-mode-135');
-  const desc = document.getElementById('desc135');
-  const ladder = document.getElementById('ladder135');
-
-  const LOGMIN = -1, LOGMAX = 4.35;
-  const pos = lg => ((lg - LOGMIN) / (LOGMAX - LOGMIN) * 100);
-  const marks = [
-      [0,            'c (patinaj sınırı)',        '#00f0ff'],
-      [0.1505,       '√2·c (denge zarfı)',        '#ff8800'],
-      [0.2227,       'v_ekvator (proton)',        '#ffcc00'],
-      [4,            'v_m (kohezyon sinyali)',    '#ff00e5'],
-      [4.1505,       'v_kav (yırtılma)',          '#ff0000']
-  ];
-  marks.forEach(([lg, label, color]) => {
-      const m = document.createElement('div'); m.className = 'lmark-135';
-      m.style.left = pos(lg) + '%'; m.style.background = color; m.style.boxShadow = '0 0 5px ' + color;
-      const l = document.createElement('div'); l.className = 'llabel-135';
-      l.style.left = pos(lg) + '%'; l.style.color = color; l.textContent = label;
-      ladder.appendChild(m); ladder.appendChild(l);
-  });
-  const dot = document.createElement('div');
-  dot.style.cssText = 'position:absolute; top:10px; width:10px; height:10px; border-radius:50%; background:#fff; box-shadow:0 0 10px #fff; transform:translateX(-5px); z-index:3;';
-  ladder.appendChild(dot);
-
-  function regime(v){ // v: c biriminde
-      if(v < 0.97)        return ['KAVRAMA', 'Zerre ortama kavrayarak ilerler; önünde yumuşak bir baş dalgası taşır. Işık, bu bölgenin tepe noktasında — tam-sonik rejimde — yaşar.'];
-      if(v < 1.25)        return ['TAM-SONİK (IŞIK)', 'Tam patinaj sınırı: Zerre, ortamın basınç-iletim hızında yol alır (c = √(P/ρ); yerel ve değişkendir). Işık kalıcı olarak bu basamaktadır.'];
-      if(v < 1.41)        return ['SÜPERSONİK — ŞOK', 'c aşıldı: kavramayla taşınamaz, Mach konisi (şok) açılır. Bu hız kavramayla sürdürülemez — ya şok üretip c\'ye geri oturur, ya da dengeye tırmanır.'];
-      if(v < 1.8)         return ['DENGE ZARFI (√2·c bölgesi)', 'Vakum-cepli girdap zarfının zorunlu yüzey hızı: √2·c (Ek A.2). Protonun kompozit ekvator hızı (~1,67c) bu banttadır: yüzeyi c-altı dönen madde var olamaz.'];
-      if(v < 10000)       return ['SÜRDÜRÜLEMEZ ARA BÖLGE', 'Denge bandının üstü, kavitasyon eşiğinin altı: burada kalıcı yapı yoktur. Cisimler şok üretip yavaşlar; yalnızca kohezyon kanalının SİNYALİ (v_m) bu bölgenin tepesine erişir.'];
-      if(v < 14100)       return ['v_m — KOHEZYON SİNYAL HIZI', 'Dikkat: bu bir cisim hızı değil, yapısal bilginin hızıdır. Topografya/gradyan kurulumu ve dolanıklık geçidi (2.10.1) bu hızla ayarlanır: v_m = c·√(Σ/P₀) ≥ 10⁴·c.'];
-      return ['YIRTILMA — MADDE DOĞUŞU', 'Kavitasyon eşiği aşıldı (v_kav = √2·c·√(1+Σ/P₀) ≈ √2·v_m): akışkan yırtılır, vakum cebi açılır, şok zarfı kurulur — madde doğar (bkz. Animasyon 1.3.2). v_saf, temel alt-bileşenlerin bu eşiği aşan saf dönüş hızlarıdır.'];
-  }
-
-  function resize(){ if(!canvas.isConnected) { window.removeEventListener('resize', resize); return; }
-      canvas.width = wrap.clientWidth; canvas.height = wrap.clientHeight; }
-  window.addEventListener('resize', resize); resize();
-
-  let time = 0;
-  function draw(){
-      if(!canvas.isConnected) return;
-      const W = canvas.width, H = canvas.height, cy = H/2, ox = W*0.32;
-      const lg = parseFloat(slider.value), v = Math.pow(10, lg);
-      dot.style.left = pos(lg) + '%';
-      vRead.textContent = (v >= 100 ? v.toExponential(1).replace('e+','×10^') : v.toFixed(2)).replace('.', ',') + ' c';
-      const [mode, text] = regime(v);
-      vMode.textContent = mode; desc.textContent = text;
-
-      ctx.fillStyle = '#02050a'; ctx.fillRect(0,0,W,H);
-      time += 0.016;
-      // ortam akış çizgileri (cisim sabit, ortam akar)
-      const flow = Math.min(60, 8 + 10*Math.log10(1+v));
-      ctx.strokeStyle = 'rgba(58,76,138,0.5)';
-      for(let j=0;j<7;j++){
-          const y = (j+1)*H/8;
-          ctx.beginPath();
-          for(let x=0;x<=W;x+=6){
-              const ph = ((x + time*flow*10) % W);
-              ctx.lineTo(x, y + 2*Math.sin(ph*0.05));
-          }
-          ctx.stroke();
-      }
-      if(v < 10000){
-          // cisim
-          const isMatterBand = (v >= 1.41 && v < 1.8);
-          ctx.beginPath(); ctx.arc(ox, cy, 14, 0, 6.283);
-          ctx.fillStyle = isMatterBand ? '#ffcc00' : '#f3f4f6'; ctx.fill();
-          if(v < 1.0){
-              // kavrama: yumuşak baş dalgaları
-              for(let k=1;k<=3;k++){
-                  ctx.beginPath(); ctx.arc(ox + 8*k + 6*Math.sin(time*3), cy, 14 + 9*k, -1.1, 1.1);
-                  ctx.strokeStyle = 'rgba(0,240,255,' + (0.5/k) + ')'; ctx.stroke();
-              }
-          } else {
-              // Mach konisi: yarım açı = asin(c/v)
-              const a = Math.asin(Math.min(1, 1/v));
-              const L = W*0.6;
-              ctx.strokeStyle = (v < 1.41) ? 'rgba(255,136,0,0.9)' : 'rgba(255,0,229,0.8)';
-              ctx.beginPath();
-              ctx.moveTo(ox + L, cy - Math.tan(a)*L); ctx.lineTo(ox, cy); ctx.lineTo(ox + L, cy + Math.tan(a)*L);
-              ctx.stroke();
-              for(let k=1;k<=2;k++){
-                  ctx.beginPath(); ctx.arc(ox - 10*k, cy, 6*k, 0, 6.283);
-                  ctx.strokeStyle = 'rgba(255,136,0,' + (0.35/k) + ')'; ctx.stroke();
-              }
-          }
-          if(isMatterBand){
-              ctx.beginPath(); ctx.arc(ox, cy, 22 + 2*Math.sin(time*5), 0, 6.283);
-              ctx.strokeStyle = '#ffcc00'; ctx.stroke();
-              ctx.fillStyle = '#ffcc00'; ctx.font = 'bold 12px Segoe UI';
-              ctx.fillText('kararlı zarf', ox - 34, cy - 30);
-          }
-      } else if(v < 14100){
-          // kohezyon sinyal cephesi
-          const fx = (time*1.4 % 1) * W;
-          ctx.strokeStyle = '#ff00e5'; ctx.lineWidth = 3;
-          ctx.beginPath(); ctx.moveTo(fx, 20); ctx.lineTo(fx, H-20); ctx.stroke(); ctx.lineWidth = 1;
-          ctx.fillStyle = '#ff00e5'; ctx.font = 'bold 13px Segoe UI';
-          ctx.fillText('yapısal sinyal (cisim değil)', W*0.36, 30);
-      } else {
-          // yırtılma
-          const r = 26 + 6*Math.sin(time*6);
-          ctx.beginPath(); ctx.arc(ox, cy, r, 0, 6.283); ctx.fillStyle = '#000'; ctx.fill();
-          ctx.strokeStyle = '#ff0000'; ctx.lineWidth = 3; ctx.stroke(); ctx.lineWidth = 1;
-          ctx.beginPath(); ctx.arc(ox, cy, r + 14, 0, 6.283); ctx.strokeStyle = 'rgba(255,0,229,0.8)'; ctx.stroke();
-          ctx.fillStyle = '#ff0000'; ctx.font = 'bold 13px Segoe UI';
-          ctx.fillText('vakum cebi + şok zarfı = madde', ox + r + 24, cy + 4);
-      }
-      requestAnimationFrame(draw);
-  }
-  requestAnimationFrame(draw);
-})();
-</script>
-</div>
-
-Bu sıralama, maddenin öyküsünü iki ayrı hıza böler — **yaratma ve sürdürme:**
-
-* **Yaratma ($v_{saf}>v_{kav}$):** Evrenakı'yı yırtarak maddeyi (şok zarfını) sıfırdan var eden şey; protonun yavaşlamış kompozit hızı olan $5 \times 10^8 \text{ m/s}$ değil, onu oluşturan temel alt-bileşenlerin o devasa kavitasyon eşiğini aşan **'saf dönüş' hızlarıdır**. Kavitasyon sınırını aşarak uzayı yırtan bu temel parçacıklar, viskozitenin sıfıra çok yakın olduğu bu süper-akışkanda enerjilerini gözlemsel ölçekte fark edilir biçimde dağıtmazlar; tam aksine **kendilerini (kuantize olmuş kararlı bir şok zarfı veya topolojik bir hata olarak) yaratırlar.**
-* **Sürdürme ($v_{denge}=\sqrt{2}\,c$):** Yırtık bir kez açıldıktan sonra zarf, artık kohezyona değil yalnızca arka plan basıncına ($P_0$) karşı çalışır ve Ek A.2'deki denge hızına oturur. Proton, bu önceden yırtılmış ölümsüz şok dalgalarının birleşip yavaşladığı kompozit bir makinedir: hızı kavitasyon eşiğinin çok altına düşmüştür, ama denge gereği lokal patinaj sınırını ($c$) daima aşar.
-
-> **Ek B ile bağ (açık iş):** Ek B'deki asgari arka plan basıncı türetimi, yırtılmanın $P=0$'da başladığını varsayar. Kohezyon dayanımı hesaba katıldığında bu koşul $P_0+\Sigma>\Delta P$ biçimini alır; iki ekin bu ortak paydada uzlaştırılması Bölüm 7.4'te kayıtlı açık iştir.
-
-<div class="pol-widget-132" id="animasyon-132-kavitasyon">
-<style>
-.pol-widget-132 { --pol-blue:#00f0ff; --pol-magenta:#ff00e5; background:#0b0f19; border:1px solid rgba(0,240,255,0.2); border-radius:10px; padding:16px; font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif; color:#f3f4f6; max-width:900px; margin:1.5em auto; box-shadow: 0 4px 20px rgba(0,0,0,0.5); }
-.pol-widget-132 h4 { color:var(--pol-blue); font-size:1rem; text-transform:uppercase; letter-spacing:1px; margin:0 0 10px 0; }
-.pol-controls-132 { display:flex; justify-content: space-between; align-items: center; margin-bottom:15px; }
-.btn-group-132 { display:flex; gap: 10px; }
-.btn-132 { background: rgba(0, 240, 255, 0.1); border: 1px solid var(--pol-blue); color: var(--pol-blue); padding: 8px 16px; border-radius: 4px; cursor: pointer; transition: all 0.2s; font-weight: bold; }
-.btn-132:hover:not(:disabled) { background: rgba(0, 240, 255, 0.3); }
-.btn-132:disabled { border-color: #3a4c8a; color: #3a4c8a; cursor: not-allowed; background: transparent; }
-.stage-indicator { font-weight: bold; color: #ffcc00; }
-.pol-canvas-wrap-132 { width:100%; height:400px; border-radius:8px; overflow:hidden; background:#02050a; position:relative; }
-.pol-canvas-wrap-132 canvas { display:block; width:100%; height:100%; }
-.stage-desc-132 { background: rgba(255,0,229,0.1); padding: 12px; border-radius: 4px; border: 1px solid rgba(255,0,229,0.3); margin-top: 10px; font-size: 0.95rem; line-height: 1.5; color: #f3f4f6; min-height: 48px; }
-.scale-wrap-132 { margin-top: 25px; background: rgba(0,0,0,0.5); padding: 10px; border-radius: 4px; position: relative; height: 40px; border: 1px solid #2a355a; }
-.scale-marker { position: absolute; top: 10px; width: 2px; height: 12px; background: #fff; }
-.scale-label { position: absolute; top: 28px; transform: translateX(-50%); font-size: 0.75rem; color: #8892b0; white-space: nowrap; }
-</style>
-
-<h4>Animasyon 1.3.2: Kavitasyon ve Maddenin Doğuşu <a name="animasyon-132-kavitasyon"></a></h4>
-<div class="pol-controls-132">
-  <div class="stage-indicator">Aşama: <span id="stg-num-132">1</span> / 4</div>
-  <div class="btn-group-132">
-      <button class="btn-132" id="btn-prev-132" disabled>Geri</button>
-      <button class="btn-132" id="btn-next-132">İleri</button>
-  </div>
-</div>
-<div class="pol-canvas-wrap-132"><canvas id="canvas132"></canvas></div>
-<div class="stage-desc-132" id="stg-desc-132">Aşama 1: Homojen akışkanda giderek hızlanan yerel bir dönüş (mikro-girdap) başlar. Akışkan henüz bütündür.</div>
-
-<div class="scale-wrap-132">
-    <div style="position:relative; width:80%; margin: 0 auto; height:100%;">
-        <div style="position:absolute; top:15px; left:0; right:0; height:2px; background: linear-gradient(90deg, #3a4c8a 0%, #ff00e5 80%, #ff0000 100%);"></div>
-        <div class="scale-marker" style="left:0%;"></div><div class="scale-label" style="left:0%;">0 m/s</div>
-        <div class="scale-marker" style="left:10%; background: var(--pol-blue); box-shadow: 0 0 5px var(--pol-blue);"></div><div class="scale-label" style="left:10%; color: var(--pol-blue);">c (Patinaj Sınırı)</div>
-        <div class="scale-marker" style="left:90%; background: #ffcc00; box-shadow: 0 0 5px #ffcc00;"></div><div class="scale-label" style="left:90%; color: #ffcc00; font-weight: bold;">Kavitasyon (Yırtılma) Eşiği</div>
-        <div id="speed-bar-132" style="position:absolute; top:15px; left:0; width:0%; height:2px; background:#fff; box-shadow:0 0 8px #fff; transition:width 0.5s; z-index:2;"></div>
-        <div id="speed-dot-132" style="position:absolute; top:12px; left:0%; width:8px; height:8px; border-radius:50%; background:#fff; transform:translateX(-4px); transition:left 0.5s; box-shadow:0 0 10px #fff; z-index:3;"></div>
-    </div>
-</div>
-
-<script>
-(function(){
-  const canvas = document.getElementById('canvas132');
-  if(!canvas) return;
-  const ctx = canvas.getContext('2d');
-  const wrap = canvas.parentElement;
-  
-  let stage = 1;
-  const btnPrev = document.getElementById('btn-prev-132');
-  const btnNext = document.getElementById('btn-next-132');
-  const stgNum = document.getElementById('stg-num-132');
-  const stgDesc = document.getElementById('stg-desc-132');
-  const speedBar = document.getElementById('speed-bar-132');
-  const speedDot = document.getElementById('speed-dot-132');
-
-  const descriptions = [
-      "Aşama 1: Homojen akışkanda giderek hızlanan yerel bir dönüş (mikro-girdap) başlar. Akışkan henüz bütündür, yırtılma yoktur.",
-      "Aşama 2: Dönüş hızı muazzam kavitasyon eşiğini aşar; akışkan fiziksel olarak yırtılır ve merkezde bir vakum boşluğu (void) açılır.",
-      "Aşama 3: Yırtığın çevresinde çökmeye çalışan akışkan, dönüşün merkezkaçıyla dengelenir ve kararlı bir 'şok zarfı' oluşur. Madde doğmuştur.",
-      "Aşama 4: Direnç (Kalıcılık) - Dış basınç (Evrenakı P₀) zarfı ezmeye çalışsa da, içerideki 'saf dönüş' sürdükçe şok zarfı kendini daima yeniden kurar; yapı ölümsüzleşir."
-  ];
-
-  const speedTargets = [ "3%", "10%", "90%", "95%" ];
-
-  btnNext.onclick = () => { if(stage < 4) { stage++; updateStage(); } };
-  btnPrev.onclick = () => { if(stage > 1) { stage--; updateStage(); } };
-
-  function updateStage() {
-      btnPrev.disabled = (stage === 1);
-      btnNext.disabled = (stage === 4);
-      stgNum.textContent = stage;
-      stgDesc.textContent = descriptions[stage-1];
-      
-      let w = speedTargets[stage-1];
-      speedBar.style.width = w;
-      speedDot.style.left = w;
-      
-      initParticles();
-  }
-
-  function resize(){ if(typeof canvas !== "undefined" && !canvas.isConnected) { window.removeEventListener("resize", resize); return; } 
-      canvas.width = wrap.clientWidth;
-      canvas.height = wrap.clientHeight;
-      initParticles();
-  }
-  window.addEventListener('resize', resize);
-  
-  let particles = [];
-  const numParticles = 1000;
-  let cx = 0, cy = 0;
-  
-  function initParticles() {
-      particles = [];
-      cx = canvas.width / 2;
-      cy = canvas.height / 2;
-      
-      for(let i=0; i<numParticles; i++) {
-          let r = Math.random() * Math.max(cx, cy) * 1.5;
-          let a = Math.random() * Math.PI * 2;
-          particles.push({
-              baseR: r,
-              a: a,
-              r: r
-          });
-      }
-  }
-
-  let time = 0;
-
-  function draw() {
-      if(typeof canvas !== "undefined" && !canvas.isConnected) return;
-      if(!canvas.isConnected) return;
-      ctx.fillStyle = 'rgba(2, 5, 10, 0.25)'; 
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-      
-      time += 0.016;
-
-      let voidRadius = 0;
-      let rotationSpeed = 0.02;
-      let showShock = false;
-      let crushSpike = 0;
-
-      if(stage === 1) {
-          rotationSpeed = 0.03 + (Math.sin(time)*0.01);
-          voidRadius = 0;
-      } else if (stage === 2) {
-          rotationSpeed = 0.2;
-          voidRadius = 45 + Math.random()*15; 
-      } else if (stage === 3) {
-          rotationSpeed = 0.15;
-          voidRadius = 55;
-          showShock = true;
-      } else if (stage === 4) {
-          rotationSpeed = 0.18;
-          voidRadius = 55;
-          showShock = true;
-          if(Math.sin(time*8) > 0.85) crushSpike = Math.random() * 25;
-      }
-
-      ctx.globalCompositeOperation = 'lighter';
-
-      if(showShock) {
-          let rEdge = voidRadius - crushSpike;
-          if(rEdge < 10) rEdge = 10;
-          let grad = ctx.createRadialGradient(cx, cy, rEdge - 5, cx, cy, rEdge + 25);
-          grad.addColorStop(0, 'rgba(255, 0, 229, 0)');
-          grad.addColorStop(0.2, 'rgba(255, 0, 229, 0.9)');
-          grad.addColorStop(0.6, 'rgba(0, 240, 255, 0.5)');
-          grad.addColorStop(1, 'rgba(0, 0, 0, 0)');
-          
-          ctx.beginPath();
-          ctx.arc(cx, cy, rEdge + 25, 0, Math.PI*2);
-          ctx.fillStyle = grad;
-          ctx.fill();
-      }
-
-      ctx.fillStyle = 'rgba(0, 240, 255, 0.7)';
-      for(let i=0; i<particles.length; i++) {
-          let p = particles[i];
-          
-          let v = rotationSpeed * (80 / (p.r + 10));
-          p.a += v;
-          
-          let targetR = p.baseR;
-          
-          if(stage >= 2) {
-              if(targetR < voidRadius) targetR = voidRadius + Math.random()*8; 
-          }
-          if(stage === 4 && p.baseR < voidRadius + 30) {
-              targetR -= crushSpike; 
-              if(targetR < 15) targetR = 15; 
-          }
-          
-          p.r += (targetR - p.r) * 0.15;
-
-          let x = cx + Math.cos(p.a) * p.r;
-          let y = cy + Math.sin(p.a) * p.r;
-          
-          if(stage >= 2 && p.r < voidRadius + 18) {
-              ctx.fillStyle = 'rgba(255, 204, 0, 0.9)'; 
-          } else {
-              ctx.fillStyle = 'rgba(0, 240, 255, 0.5)';
-          }
-
-          ctx.fillRect(x, y, 1.5, 1.5);
-      }
-      
-      if(stage >= 2) {
-          ctx.globalCompositeOperation = 'source-over';
-          ctx.beginPath();
-          let rCore = voidRadius - crushSpike - 5;
-          if(rCore < 0) rCore = 0;
-          ctx.arc(cx, cy, rCore, 0, Math.PI*2);
-          ctx.fillStyle = '#000000';
-          ctx.fill();
-      }
-
-      requestAnimationFrame(draw);
-  }
-
-  setTimeout(() => { resize(); updateStage(); draw(); }, 100);
-})();
-</script>
-</div>
-
-### Ek B: Çok Bileşenli Basınç Alanı, Arka Plan Basıncının Sabitlenmesi ve Ortamın Ağırlıksızlığı
-
-#### Ek B.1 — Çok Bileşenli Basınç Alanı ve Galileo İvmesi
-
-Yeryüzünde ölçülen $g \approx 9.8\text{ m/s}^2$ ivmesi tek bir statik kuvvetin değil; Dünya'nın toplam nükleon hacminin yarattığı radyal deplasman ($\nabla P_r$) ile kendi eksenindeki dönüşünden doğan yanal/azimut girdap bileşenlerinin ($\nabla P_{spin}$) süperpozisyonudur:
-
-$$\nabla P_{toplam} = \nabla P_r + \nabla P_{spin}$$
-
-Bu spin-girdap bileşeni, Gravity Probe B jiroskobundaki 39 mas/yıl sapmasının (Everitt ve ark., 2011) temel mekanik kaynağıdır (bkz. Kısım 3 ve Kısım 5).
-
-#### Ek B.2 — Yırtılmama Koşulu: Muhafazakâr Alt Sınır
-
-Yüzeydeki toplam gradyanı $\nabla P \approx 2.6 \times 10^{18}\text{ Pa/m}$ olan bu basınç alanında, Dünya'nın iç kısımlarında iç nükleon kütlesi yarıçapla azaldığından gradyan merkeze doğru lineer olarak sıfıra iner: $\nabla P(r) = \frac{\alpha M r}{R^3}$. Bu değişken gradyanın merkezden yüzeye entegrasyonu, merkezdeki net basınç düşüşünün düz hesaba kıyasla yarıya indiğini gösterir: $\Delta P = \frac{1}{2} \nabla P_{yüzey} \cdot R_{Dünya} \approx 0.83 \times 10^{25}\text{ Pa}$. Akışkanın yırtılmaması için **en muhafazakâr koşul** — kohezyon dayanımı sıfır sayılırsa ($\Sigma=0$; bkz. Ek A.3) — $P_0 > \Delta P$'dir; buradan $P_0 \ge 1.6 \times 10^{25}\text{ Pa}$ ve $\rho_0 = P_0/c^2 \ge 1.8 \times 10^8\text{ kg/m}^3$ **alt sınırı** çıkar. Kohezyon hesaba katıldığında koşul $P_0+\Sigma>\Delta P$ biçimini alır; yani bu bir kesin değer değil, güvenli tarafta kalan bir tabandır. Ortamın gerçek basıncı, aşağıdaki bağımsız sabitlemeyle bu tabanın yaklaşık **dokuz mertebe üzerinde** çıkar — dolayısıyla yırtılmama koşulu her durumda devasa bir marjla sağlanır.
-
-#### Ek B.3 — Arka Plan Basıncının Gözlemsel Sabitlenmesi: $P_0 \approx \tfrac{1}{2}\rho_n c^2$
-
-Alt sınır yerine gerçek değeri, teorinin kendi mekanizmasından sabitlemek mümkündür. Kütleye yaklaşıldıkça hem basınç hem yoğunluk düşer; ikisinin birlikte düşme oranını $\delta\rho/\rho_0=k\,\delta P/P_0$ ($0\le k<1$; teori basıncın daha hızlı düştüğünü söyler, kesin oran açık iştir — bkz. Bölüm 7.4) ile parametrize edelim. Kavrama Yasası'ndan, yerel ışık hızındaki — ve Postülat 3 gereği yerel saat hızındaki — oransal kayma:
-
-$$\frac{\delta c}{c}=\frac{1}{2}\left(\frac{\delta P}{P_0}-\frac{\delta\rho}{\rho_0}\right)=\frac{1-k}{2}\cdot\frac{\Delta P_{yüzey}}{P_0}$$
-
-Bu genlik, GPS ve Pound–Rebka'nın ölçtüğü $\Phi/c^2\approx7\times10^{-10}$ değeridir ($\Phi$: yüzey kütleçekim potansiyeli). Yüzeydeki basınç açığı ise Ek B.2'deki gradyanın integralinden $\Delta P_{yüzey}=\rho_n\Phi$'dir. İkisi eşitlenince $\Phi$ sadeleşir ve arka plan basıncı, kütleden bağımsız **evrensel** bir değere sabitlenir:
-
-$$\boxed{P_0=\frac{1-k}{2}\,\rho_n c^2\sim10^{33}\text{–}10^{34}\ \text{Pa},\qquad \rho_0=\frac{P_0}{c^2}=\frac{1-k}{2}\,\rho_n\sim10^{16}\text{–}10^{17}\ \text{kg/m}^3}$$
-
-Bu sabitlemenin üç sonucu vardır:
-
-1. **Monizm nicelleşir.** Arka plan yoğunluğu, nükleon öz yoğunluğunun ($\rho_n\approx2.7\times10^{17}\text{ kg/m}^3$) yarısı mertebesindedir: madde, okyanustan kopuk bir "yabancı cisim" değil, okyanusun yalnızca ~2 kat sıkışmış girdap fazıdır. Bölüm 1.3.1'deki "madde, uzay okyanusunun yoğunlaşmış hâlidir" cümlesi böylece nicel bir orana kavuşur (Postülat 4'teki Zerre öz yoğunluğuyla da tutarlı).
-2. **Zayıf-alan kontrolü.** Dünya'nın toplam basınç çukuru ($\Delta P\approx0.83\times10^{25}$ Pa), $P_0$'ın yanında $\sim10^{-9}$'luk bir pürüzdür. Kütle-itim etkilerinin gözlenen küçüklüğü (saat kaymalarının $10^{-9}$–$10^{-10}$ mertebesi) doğrudan bu orandır: gezegenler, okyanusun milyarda-birlik dalgacıklarıdır.
-3. **Yırtılma marjı.** $\Delta P/P_0\sim10^{-9}$ olduğundan, Ek B.2'nin yırtılmama koşulu kohezyondan bağımsız olarak devasa marjla sağlanır.
-
-*Dürüst kayıt:* (i) $k$ oranı teoride henüz taahhüt edilmemiştir; sonuç bu nedenle yalnızca $O(1)$ düzeyinde belirsizdir (Bölüm 7.4). (ii) Kütleçekim sabiti $G$'nin türetimi (Bölüm 4.2) yalnızca gradyan bağlaşımına ($\alpha$) dayandığından $P_0$'ın mutlak değerinden bağımsızdır — sabitleme onu etkilemez; SN 1987A gecikme bütçesinin (Bölüm 2.4.4) bu değerlerle çapraz kontrolü ise açık iştir (Bölüm 7.4).
-
-#### Ek B.4 — Ortamın Ağırlıksızlığı: Tanım Değil Teorem
-
-Postülat 1'deki "ağırlıksız ortam" ifadesi bu ekte kanıt statüsü kazanır. Newtoncu sezgiden gelen itiraz — *"$10^{17}\text{ kg/m}^3$'lük bir ortam neden çökmez, neden tartılmaz?"* — gizli bir varsayım taşır: kütle yoğunluğunun kendiliğinden çekim alanı kaynakladığı ($\nabla^2\Phi=4\pi G\rho_{toplam}$). Evrenakı'da böyle bir yasa yoktur ve olamaz: teoride çekim diye bağımsız bir kuvvet yok; tek alan basınçtır, tek kuvvet gradyandır (Postülat 6). Buradan üç adımlık teorem:
-
-1. **Ağırlıksızlık.** Ağırlık, kütlenin değil gradyanın — yani deplasmanın — özelliğidir. Homojen arka plan hiçbir şeyi yerinden itmez; o, basınç alanının sıfır noktasıdır (datum) ve $\nabla P_0=0$ olduğundan hiçbir kuvvet hissetmez. Arşimet'in kaldırma kuvveti nasıl mutlak yoğunluğun değil yoğunluk *farkının* olayıysa, Evrenakı ağırlığı da mutlak $\rho_0$'ın değil deplasman *açığının* olayıdır.
-2. **Kararlılık.** Klasik öz-kütleçekimli akışkanda homojen durum kararsızdır (Jeans kararsızlığı; Jeans, 1902): yoğunlaşan bölge daha çok çeker ve çöküş büyür. Evrenakı'da bu geri-beslemenin iki bacağı da yoktur — yoğunlaşan bölge kimseyi çekmez, yalnızca basıncını yükseltir; ve Kavrama Yasası gereği $c^2=dP/d\rho>0$ olduğundan her yoğunluk pürüzü, $c$ hızında yayılan basınç dalgası olarak dağılır. Homojen durum yalnızca izinli değil, ortamın **tek doğal taban durumudur.**
-3. **Kendiliğinden madde doğumu yok.** Arka planın "kaynayıp" kendiliğinden girdap-madde üretmesi için yerel akışın $v_{kav}=\sqrt{2}\,c\sqrt{1+\Sigma/P_0}\gg c$ eşiğine (Ek A.3) ulaşması gerekir; $\Sigma\gg P_0$ kohezyonlu bir süper-akışkanda rastgele dalgalanmalar bu eşiğe ulaşamaz. Vakumun kararlılığı — uzayın durup dururken maddeye dönüşmemesi — aynı çerçevenin bedava sonucudur.
-
-Son bir mekanik incelik: kütle *çevresindeki* gradyan bölgesinde ortamın kendisi de tepkisiz değildir — Euler denklemi gereği gradyana cevap verir; ama cevabı *düşmek* değil **dolaşmaktır**: gradyan, dolaşımın merkezcil ivmesiyle dengelenir ($\nabla P/\rho_0=v_\theta^2/r$; Postülat 7–8'in sürüklenme ve vorteks alanları). Katı deplasman cebi (nükleon) ise akıp dengelenemez; bütün hâlde itilir. **Madde düşer, ortam dolaşır.**
-
-Evrenakı'nın bu devasa yoğunluğuna rağmen nesnelerin ölçülebilir bir direnç duymaksızın hareket edebilmesi, atomların içinin "boşluk" olmamasından; tamamen bu sıfıra yakın (ama sıfır olmayan) viskoziteli süper-akışkanla dolu olmasından kaynaklanır. Madde bu okyanusta yüzen yabancı cisim değil, okyanusun kendi içindeki lokal girdapsal yoğunlaşmadır. Hissettiğimiz kütleitimi, bu devasa hidrostatik okyanus basıncındaki küçük dalgalanmalardan (gradyanlardan) ibarettir.
+Bu başlık altında daha önce tam metin olarak yer alan iki teknik ek (Ek A ve Ek B), kitabın merkezî türetim mimarisine uygun olarak **Kısım 8'e taşınmıştır** (tam metinler ve Animasyon 1.3.4–1.3.5 oradadır; şablonlu türetimler için Ek M kataloğu: M-1..M-9). Ana akışı takip eden okuyucu için sonuçların kompakt özeti:
+
+> **Ek A özeti — Hız Kavramları (tam metin: Kısım 8, Ek A):**
+> $c=\sqrt{P/\rho}$ mutlak bir üst sınır değil, Zerre'nin kavrama (patinaj) sınırıdır (**M-1**). Her vakum-cepli girdap zarfı, boyutundan bağımsız olarak duvarını $\sqrt{2}\,c \approx 4{,}24\times10^8$ m/s'de döndürür (**M-3**); Evrenakı'yı yırtma eşiği $v_{kav}=\sqrt{2}\,c\sqrt{1+\Sigma/P_0}$ (**M-4**), kohezyon kanalının ayar sinyali $v_m=c\sqrt{\Sigma/P_0}>10^4c$'dir (**M-5**). Sıralama teoremi: $c<\sqrt{2}c<v_m<v_{kav}\le v_{saf}$ (**M-6**).
+>
+> **Ek B özeti — Arka Plan Basıncı (tam metin: Kısım 8, Ek B):**
+> İtme alanı çok bileşenlidir: $\nabla P_{toplam}=\nabla P_r+\nabla P_{spin}$ (B.1). Dünya'nın yırtılmama koşulu $P_0\ge1{,}6\times10^{25}$ Pa alt sınırını verir (**M-7**); ışık bükülmesinin sabitlediği ölçek yapısı (**M-42**) arka planı sabitler: $P_0=\tfrac{1-k}{4}\rho_n c^2\sim10^{33}\text{-}10^{34}$ Pa, $\rho_0\approx\rho_n/4$ (**M-8**). Homojen arka plan kuvvet üretmez ($\nabla P_0=0$): ortamın ağırlıksızlığı tanım değil teoremdir (**M-9**).
 
 ### Ek C: Parametre Envanteri ve Sabitleme Programı
 
@@ -896,9 +340,9 @@ Bir teorinin bilimsel disiplini, parametrelerinin muhasebesinden okunur: hangile
 |---|---|---|---|---|---|---|
 | 1 | $m_z$ | Zerre kütlesi | **S** | $\approx1{,}47\times10^{-35}$ kg | Planck sabitinden türetim | 2.2.2 |
 | 2 | $\rho_n$ | Nükleon öz yoğunluğu | **G** | $\approx2{,}7\times10^{17}$ kg/m³ | Standart nükleer ölçüm | Ek B.3 |
-| 3 | $k$ | Kütle yakınında $\rho$'nun $P$'ye eşlik oranı | **F** ($O(1)$) | $0\le k<1$ | SN 1987A gecikme bütçesiyle çapraz kontrol (2.4.4) | Ek B.3 |
-| 4 | $P_0$ | Arka plan basıncı | **S** ($k$'ya $O(1)$ duyarlı) | $\tfrac{1-k}{2}\rho_n c^2\sim10^{33}$–$10^{34}$ Pa | Kütleçekimsel kızıla kayma genliği (GPS / Pound–Rebka) | Ek B.3 |
-| 5 | $\rho_0$ | Arka plan yoğunluğu | **S** (aynı) | $\tfrac{1-k}{2}\rho_n\sim10^{16}$–$10^{17}$ kg/m³ | Aynı sabitleme | Ek B.3 |
+| 3 | $k$ | **Deplasman** sürecinde $\rho$'nun $P$'ye eşlik oranı (dalga kanalının adiyabatik katsayısıyla karıştırılmamalıdır) | **T** *(29 Tem 2026'da F→T)* | $k=0$ — deplasman yoğunluğu değil basıncı değiştirir | **Türetilmiştir:** M-15'in G2 aksiyomu ($\bar\rho_m=\rho_0$) ve M-30'un Varsayım 1'i ("gradyanlarda asıl değişen basınçtır") bağımsız olarak aynı değeri verir | Ek B.3, **Ek M-44** |
+| 4 | $P_0$ | Arka plan basıncı | **S** *(29 Tem: $k$ belirsizliği kalktı, değer kesinleşti)* | $\tfrac14\rho_n c^2 = 6{,}07\times10^{33}$ Pa | Işık bükülmesi genliği ($1{,}75''$) + ölçek yapısı (Ek M-42); $k=0$ için Ek M-44 | Ek B.3 |
+| 5 | $\rho_0$ | Arka plan yoğunluğu | **S** (aynı) | $\tfrac14\rho_n = 6{,}8\times10^{16}$ kg/m³ | Aynı sabitleme | Ek B.3 |
 | 6 | $c$ | Yerel sonik / patinaj hızı — **sabit değildir** | **T** | $\sqrt{P/\rho}$; arka planda $2{,}998\times10^8$ m/s | Türetilmiş; yerel değişkendir (Postülat 4) | Ek A.1, KY-1 |
 | 7 | $v_{denge}$ | Vakum-cepli girdap zarfının denge hızı | **T** | $\sqrt{2}\,c$ | — | Ek A.2 |
 | 8 | $v_{ekvator}$ | Protonun kompozit ekvator hızı | **G** | $\approx5\times10^8$ m/s | $2\pi\nu_c R$; $\sqrt2 c$ ile ~%18 farkın $O(1)$ bütçesi açık (7.4) | Postülat 5, Ek A |
@@ -907,16 +351,19 @@ Bir teorinin bilimsel disiplini, parametrelerinin muhasebesinden okunur: hangile
 | 11 | $v_{kav}$ | Kavitasyon (yırtılma) eşiği | **T** | $\sqrt{2}\,c\sqrt{1+\Sigma/P_0}\approx\sqrt2\,v_m$ | $\Sigma$ ile birlikte | Ek A.3 |
 | 12 | $\alpha$ | Gradyan bağlaşım katsayısı | **S** | — | Kütleçekim sabiti $G$ ölçümünden | 4.2 |
 | 13 | $S_{kosmik}$ | Evrensel deşarj kaynak terimi | **S** | $3\rho_0 H_0$ | Hubble sabitinden (Hubble, 1929; Planck Collaboration, 2020) | 3.7.2, 4.2.11 |
-| 14 | $\eta_E$ | Evrenakı viskozitesi (3.10'da $\eta_z$ olarak geçer; aynı büyüklüktür) | **F** | $0^+$ — **sıfıra yakın, kesinlikle sıfır değil** (bkz. Postülat 7 kutusu) | Gaia / pulsar katalog korelasyonları (Gaia Collaboration, 2021) (3.1) + Satürn bending-wave sönüm testi (3.10.5) | 3.1, 3.7.2, 3.10 |
+| 14 | $\eta_E$ | Evrenakı viskozitesi — dinamik (Pa·s); teorinin tek viskozite parametresi (3.10'daki Stokes sönüm teriminde de aynı parametredir; eski yazım $\eta_z$) | **F** | $0^+$ — **sıfıra yakın, kesinlikle sıfır değil** (bkz. Postülat 7 kutusu) | Gaia / pulsar katalog korelasyonları (Gaia Collaboration, 2021) (3.1) + Satürn bending-wave sönüm testi (3.10.5) | 3.1, 3.7.2, 3.10 |
 | 15 | $\kappa_d$ | İçsel deşarj sabiti | **F** | — | Aynı katalog programı | 3.1.8 |
 | 16 | $\tau$ | Kopma penceresi | **F** | — | Fotoelektrik zamanlama deneyleri | 2.2.3 |
 | 17 | $\delta$ | Tek-vuruş enerji aktarımı | **F** | — | Aynı program | 2.6.5 |
 | 18 | $\Xi$ | Kuyu iskeleti gücü: ortam sirkülasyonunun baryonik öz-çekime oranı | **A** | $\approx5{:}1$ | CMB akustik pik oranları (Planck Collaboration, 2020) (3.7.4.3 okumasıyla) | 3.7.4 |
+| 19 | $\xi$ | **Dönme sürüklenme kesri** (ortamın gövde dönüşüne tutunma oranı; ötelemedeki tam sürüklenmeden ayrıdır) | **T** *(28 Tem 2026'da S→T)* | $\xi=\dfrac{I}{MR^2}\left\lvert\dfrac{\delta c_{loc}}{c}\right\rvert=\dfrac{I}{MR^2}\dfrac{2\Phi}{c^2}=4{,}605\times10^{-10}$ (Dünya) — serbest katsayısı yok, kompaktlıkla ölçeklenir | **Türetilmiştir** (Ek M-40 "$\xi$'nin Türetimi"); girdisi Ek M-42'nin ışık bükülmesiyle sabitlenmiş $\delta c_{loc}/c$'sidir. GP-B ($37{,}2\pm7{,}2$ mas/yıl) artık kalibrasyon değil **sınavdır** (0,52σ ✓) | Postülat 7, 6.3.3, Ek M-40, Ek M-42 |
 | P1 | $\rho(r)$ | Galaktik vorteks yoğunluk profili | **F** (fonksiyon) | $\approx$ sabit ($k\ll1$ çalışma hipotezi; bileşik girdap — 4.2.9.2) | Dönüş eğrisi + galaktik kızıla kayma sapmasının ortak fiti | 4.2.9, 6.2.8 |
 | P2 | Rampa profili | Sürüklenme zarfı gradyanının biçimi | **A** (fonksiyon) | Gaia µas üst sınırı | Gaia tüm-gökyüzü astrometrisi (Gaia Collaboration, 2021) + Fizeau katsayısı (Fizeau, 1851) | 3.4.6 |
 
 #### Ek C.1 — Dürüst Sayım
 
-Çizelgenin bilançosu şudur: **gerçekten serbest kalem 6 skalerdir** ($k$, $\Sigma$'nın tam değeri, $\eta_E$, $\kappa_d$, $\tau$, $\delta$) **artı 2 profil fonksiyonu** ($\rho(r)$, Rampa). Karşılaştırma için: Standart Model 19'dan fazla serbest parametre taşır (Workman ve ark., 2022); ΛCDM kozmolojisi bunlara 6 parametre daha ekler (Planck Collaboration, 2020).
+Çizelgenin bilançosu şudur: **gerçekten serbest kalem 5 skalerdir** ($\Sigma$'nın tam değeri, $n$, $\kappa_d$, $\tau$, $\delta$) **artı 2 profil fonksiyonu** ($\rho(r)$, Rampa).
+
+*Güncelleme kaydı (28–29 Temmuz 2026):* Liste iki adımda daraldı. **(i)** $\eta_E$ yerini $n$'ye bıraktı: Ek M-43 artık kuplajı altkritik bastırmayla yeniden kurunca $\eta_E$ boyutlu serbest parametre olmaktan çıktı ($\eta_E^{etkin}\propto a_bv^4/v_{kav}^3$ türetilmiş büyüklük oldu), yerine boyutsuz bastırma üssü $n\simeq3$ geçti — sayı değişmedi, cinsi iyileşti. **(ii)** $k$ listeden **çıktı**: Ek M-44 ortamın hâl denklemini iki değişkenli kurunca ($P=P(\rho,\chi)$), $k$'nın deplasman kanalına ait olduğu ve değerinin G2 aksiyomu ile M-30'un profil varsayımından $k=0$ olarak belirlendiği görüldü. Ayrıca $\xi$ [S]'den [T]'ye geçtiği için serbest listede zaten yoktu (satır 19). **6 → 5.** Karşılaştırma için: Standart Model 19'dan fazla serbest parametre taşır (Workman ve ark., 2022); ΛCDM kozmolojisi bunlara 6 parametre daha ekler (Planck Collaboration, 2020).
 
 Bu sayım iki yönde de dürüst okunmalıdır. Sayıca teori dardadır ve tek töz iddiasıyla tutarlıdır: parametrelerin çoğu birbirinden türer ($c$, $v_{denge}$, $v_m$, $v_{kav}$ tek zincirdir) ve kavramsal olarak bağımsız düğme sayısı azdır. **Ancak** Standart Çatı'nın parametreleri binlerce bağımsız ölçümü aynı anda tutturmaktadır; Evrenakı'nın parametreleri ise henüz sabitleme programındadır. Sayı azlığı bir avantaj *adayıdır*, kanıt değildir — avantaja dönüşmesi, son sütundaki programın yürütülmesine bağlıdır (bkz. 7.4).

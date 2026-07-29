@@ -48,7 +48,7 @@ Ancak vakum ortamında motor hızlanmaya başladığı an, hedef kütlenin (bekl
 </div>
 
 ### 5.4.5 Sonuç ve Değerlendirme
-Ölçülen 0,00981 Newton'luk itim kuvveti, modern fiziğin hesapladığı kütleçekim kuvvetinden yüz binlerce kat daha büyüktür. Manyetizma yok, hava (rüzgar) yok, ölçülebilir bir mekanik sürtünme yok; dolayısıyla bu kuvveti yaratan yegâne unsur, dönen diskin **Evrenakı akışkanı içerisinde yarattığı devasa eksenel basınç (itim) dalgasıdır**. 
+Ölçülen 0,00981 Newton'luk itim kuvveti, modern fiziğin hesapladığı kütleçekim kuvvetinden yaklaşık yüz bin kat (≈1,2×10⁵) daha büyüktür. Manyetizma yok, hava (rüzgar) yok, ölçülebilir bir mekanik sürtünme yok; dolayısıyla bu kuvveti yaratan yegâne unsur, dönen diskin **Evrenakı akışkanı içerisinde yarattığı devasa eksenel basınç (itim) dalgasıdır**. 
 
 Bu kusursuz deney;
 1. Modern fiziğin iddia ettiği "boş uzay" kavramının yanlış olduğunu, uzayın Evrenakı (cosmofluid) adını verdiğimiz bir akışkanla dolu olduğunu,

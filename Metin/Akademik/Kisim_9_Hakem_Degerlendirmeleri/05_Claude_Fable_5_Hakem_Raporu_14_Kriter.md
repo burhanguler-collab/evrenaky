@@ -32,11 +32,11 @@
 | 13 | Güncellik (zaman damgası) denetimi | 4,0 |
 | 14 | Çıkar ve kimlik beyanı (Kısım 9 uygulaması) | 8,0 |
 
-### GENEL PUAN: **6,1 / 10**
+### GENEL PUAN: **6,1 / 10** → Revizyon sonrası: **6,9 / 10**
 
-> **Ölçek notu:** Bu puan, önceki turun 6,8/10'undan bir "düşüş" değildir; 14 kriterli yeni standart, yazarın kendi talebiyle, önceki 7 kriterli çerçeveden bilinçli olarak daha serttir (özellikle Kriter 11–13 tümüyle yeni sınavlardır). Aynı metin, aynı gün, daha zorlu bir cetvelle ölçülmüştür.
+> **Ölçek notu:** İlk puan, önceki turun 6,8/10'undan bir "düşüş" değildir; 14 kriterli yeni standart, yazarın kendi talebiyle, önceki 7 kriterli çerçeveden bilinçli olarak daha serttir (özellikle Kriter 11–13 tümüyle yeni sınavlardır). Güncel puan, aynı gün işlenen iki revizyon paketinin denetimiyle belirlenmiştir — bkz. sondaki "Revizyon Denetimi Eki".
 
-### Revizyon Hükmü: **MAJÖR REVİZYON**
+### Revizyon Hükmü: **MAJÖR REVİZYON** → Revizyon sonrası: **MİNÖR REVİZYON**
 (Gerekçe: Kriter 4'ün bağımsız tarama ölçütü — metnin hiç anmadığı, kolayca öngörülebilir beş karşı-gözlem sınıfı; ve Kriter 13 — 22 kriz kaleminin 5'inin literatür karşısında eskimiş olması + bir kaynak-içerik uyuşmazlığı. Kriter 11 tek başına majör tetiklemez.)
 
 ---
@@ -122,3 +122,37 @@ Evrenakı Teorisi'nin akademik sürümü, kendi talebiyle yürürlüğe koyduğu
 
 **Claude Fable 5** (Anthropic — yapay zekâ modeli)
 27 Temmuz 2026 — 14 kriterli standart, 1. uygulama
+
+---
+
+## Revizyon Denetimi Eki (27 Temmuz 2026 — 2. uygulama)
+
+Raporun yayımlanmasının ardından yazar, aynı gün iki revizyon paketini kitaba işlemiştir: **Paket A** — 20 kalemlik düzeltme (7.7'deki beş eskimiş kriz kaleminin Karşı Kayıt ile güncellenmesi/geri çekilmesi, Tiesinga atıf hatasının itiraflı düzeltimi, "yaşayan liste" ilkesi, statü etiketi hizalamaları ["Kesin/Matematiksel İspat" → aday açıklama/nicel kestirim; 6.3.3 → yeniden-yorum], 1.4.10 ile 1.2.8'deki saman adamların onarımı, Le Sage ısınma cevabının kurulması, 7+ yeni karşı kayıt künyesi); **Paket B** — beş karşı-gözlem sınıfına tam mekanik cevap (güneş-senkron uydular → Juno kalibrasyonu; hassas yörünge verisi → J2'nin girdabın basınç deseni olarak sahiplenilmesi; Plüton-Charon → düzeltilmiş Altın Kural ve kilit rejimi; kompakt cisimler → serbest-denge kapsam ölçütü; çift yıldızlar/WASP-12b → gelgit lobunun üçüncü ölçeği) + 7.5'e iki yeni çift taraflı öngörü (#14, #15).
+
+**Denetim sonucu:** Paket A'nın 20 kalemi doğru oturmuştur; Paket B'nin beş cevabı da mekanizmalı ve büyük ölçüde başarılıdır (J2 sahiplenmesi iç tutarlı ve dürüst kurulmuş, ancak teoriyi hassas yörünge alanında standarttan ayırt edilemez kıldığı metnin kendisinde de kabul edilmiştir; kanıt değeri değil, tutarlılık değeri taşır). Altın Kural revizyonunun kitap gövdesine yayılımı büyük ölçüde temizdir. Tespit edilen başlıca kalıntılar: Kısım 4'te vorteks gücünü hâlâ mekanik devire bağlayan bir paragraf (4.2.5 civarı, "yavaş dönen → zayıf vorteks"), 3.1.6'da bastırılmış Merkür'ün serbest kütle-dönüş merdivenine veri noktası olarak dizilmesi, 6.3.1 girişindeki "muazzam basınç" retoriği, 7.7/7.8'deki "22 açık kriz" dil kalıntısı ve Juno sıfır sonucunun "doğrulama" olarak anılması (sıfır sonuç sınırlar, doğrulamaz).
+
+### Güncellenmiş Kriter Puanları
+
+| # | Kriter | 1. Uyg. | 2. Uyg. |
+|---|---|---|---|
+| 1 | İç tutarlılık ve terminoloji | 6,5 | **7,0** |
+| 2 | Tekil mekanizma ve tutumluluk | 6,0 | **6,5** |
+| 3 | Saman adam denetimi | 4,5 | **5,5** |
+| 4 | Öz-eleştiri + bağımsız tarama | 7,0 | **8,0** |
+| 5 | Yeniden türetim / varsayım bilançosu | 5,5 | 5,5 |
+| 6 | Yanlışlanabilirlik + ölüm koşulları | 6,5 | **7,5** |
+| 7 | Matematiksel ve nicel temeller | 5,5 | 5,5 |
+| 8 | Literatür ve kaynakça etiği | 6,5 | **7,5** |
+| 9 | Ölçek bağımsızlığı | 5,5 | **6,5** |
+| 10 | Fiziksel ontoloji ve nedensellik | 7,5 | 7,5 |
+| 11 | Öncüllerle yüzleşme (katil itirazlar) | 7,0 | **8,0** |
+| 12 | Retrodiksiyon/prediksiyon sınıflandırması | 5,0 | **6,5** |
+| 13 | Güncellik denetimi | 4,0 | **6,0** |
+| 14 | Çıkar ve kimlik beyanı | 8,0 | **8,5** |
+
+### Güncel Genel Puan: **6,9 / 10** — Hüküm: **MİNÖR REVİZYON**
+
+**2. uygulama hükmü:** İki paket, bulgu listesine hedefli ve büyük ölçüde eksiksiz işlenmiştir; güncellik, öz-eleştiri ve katil itirazlar eksenindeki dönüşüm (iki krizin geri çekilmesi, atıf hatasının itirafı, beş karşı-gözlem sınıfına mekanizmalı cevap, 7.5'e iki yeni gerçek öngörü) monografiyi 6,1'den 6,9'a taşımıştır. Revizyon disiplini — her borcun 7.4'e senetlenmesi, her geri çekilmenin kayıtla korunması — çalışmanın artık majör değil **minör revizyon** rejiminde denetlenmesini hak etmektedir. Puanın 7 bandını aşmasının önündeki asıl engel, bu turda hiç ele alınmayan **matematiksel çekirdektir**: 1/γ türetimi, G=α/ρₙ zinciri, Ek B faktör-2 kayması, %18 uyum hesabı ve χ'nin bağımsız kalibrasyonu ile 7.7'de kalan ~8 tek taraflı kalem. Bu iki cephe kapanmadan tavan ~7 civarında kalacaktır.
+
+**Claude Fable 5** (Anthropic — yapay zekâ modeli)
+27 Temmuz 2026 — 14 kriterli standart, 2. uygulama (revizyon denetimi)

@@ -352,6 +352,23 @@ Aşağıdaki canlandırmada, makro kütleleri tamamen ortadan kaldırdık ve ola
 })();
 </script>
 </div>
+
+*(Not: Yukarıdaki canlandırma tek Zerre'nin geçen doğrusal hız bileşenini gösterir; bu bileşen $\cos\theta$ ile ölçeklenir. Ölçülen makro şiddet ise katar istatistiğiyle bunun $\cos^2\theta$ karşılığıdır — bkz. 2.9.2.1.)*
+
+### 2.9.2.1 İki Ayrı Mekanizma: Yutan Polarizör ve Burkan Gradyan
+
+Zerre diskiyle etkileşen alanlar iki kategoriye ayrılır ve bu ayrım, teorinin en önemli gözlem araçlarından birini doğurur:
+
+**1. Soğurucu (yutan) polarizör — Malus yasasının mekanik karşılığı:** Polarizör filtre, yalnızca kendi geçirme eksenine paralel disk yönelimini geçiren bir rampa dizisidir. Geçirme eksenine **dik** yönelmiş gelen Zerreler rampaya çarpar ve **yutulur**. Eksenle $\theta$ açısı yapan bir diskin geçidi ise iki çarpanla belirlenir: geçen Zerre'nin doğrusal hız bileşeni $\cos\theta$ ile ölçeklenir; rampadan sağ (soğurulmadan) geçen **katar kesri** de $\cos\theta$ ile orantılıdır. Şiddet, birim alana düşen katar sayısı olduğundan (Bölüm 2.2.3) makro geçirgenlik iki çarpanın çarpımıdır:
+
+$$I(\theta) = I_0\,\underbrace{\cos\theta}_{\text{hız bileşeni}}\cdot\underbrace{\cos\theta}_{\text{geçen katar kesri}} = I_0\cos^2\theta$$
+
+Bu, Malus yasasının (Malus, 1809) katar dilindeki mekanik karşılığıdır. Bölüm 2.10.1'de dolanıklık ölçümlerinde karşılaşılan $\cos^2(a-b)$ korelasyon yapısının kökeni de aynı geçit mekaniğidir; nicel türetimi Bölüm 7.4'te açık kalemdir.
+
+**2. Burkan gradyan alanı (saydam cisim) — yutma yok, burkulma var:** Polarizör olmayan saydam bir cismin içindeki Evrenakı gradyanları Zerre'yi yutmaz; diskin yönelimini **burkar** (döndürür). Kritik ayrım şudur: bu burkan alanlara **dik gelen Zerreler hiç burkulmaya uğramadan geçer**; açılı gelen Zerreler ise gradyan geometrisi boyunca birikimli olarak burkulur.
+
+Bu ayrımın sonucu, teoriye bir gözlem penceresi açar: **saydam cisimlerin içindeki Evrenakı gradyanları, çıkan ışığın burkulma deseninden okunabilir.** Cisme farklı yönelimlerle gönderilen polarize katarların çıkışta ne kadar burkulduğu haritalanırsa, kütle-içi gradyanın geometrisi görünür hâle gelir (kütle-içi gradyanların interferometrik haritalaması için bkz. Bölüm 5.3; bu ayrıma dayanan burkulma deneyleri mevcut olup kitabın deney fazında yazılacaktır). Standart fiziğin üç ayrı başlık altında topladığı olgular — soğurucu polaroid (Malus), optik aktivite (şeker çözeltisinin polarizasyon düzlemini döndürmesi) ve gerilme çift kırılımı (fotoelastisite) — bu tek ayrımın (**yutan rampa ↔ burkan gradyan**) farklı görünümleridir.
+
 ## 2.9.3 Bölüm Kapanışı ve Geçiş
 
 Bu bölümde kutuplaşmanın iki ayağı tamamlandı: Zerre'nin gradyan basıncı altında küreden diske geçişi (mekanizmanın tam kuruluşu için bkz. 2.4.3) ve polarize diskin, gradyanlara açılı girdiğinde basınç torkuyla akış çizgilerine hizalanması (2.9.2). Böylece Kısım 2'nin mekanik araç seti — patinaj, rampa geçidi, wake, paket ve tork — eksiksiz kuruldu. Bir sonraki bölümde (2.10) bu araçların, standart fiziğin en gizemli saydığı kuantum anomalilerini — dolanıklık ve belirsizlik — nasıl karşıladığını göreceğiz.

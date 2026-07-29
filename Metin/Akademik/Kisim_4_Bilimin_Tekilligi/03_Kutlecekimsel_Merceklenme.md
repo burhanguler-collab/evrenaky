@@ -12,9 +12,15 @@ Ancak Kısım 2'de Işık (Zerre) kinematiğini ve Kısım 3'te Kütle-İtim mek
 
 Klasik fizik ve Einstein, Güneş'in yanından teğet geçen ışığın hızının orada da sabit ($c$) kaldığını varsaymış; bükülmenin mekanizması sorusunu ise matematiksel soyutlamaya havale etmişlerdir. Oysa Evrenakı aksiyomlarına göre Zerre (Işık), ilerlemek için ortamın yoğunluğuna tutunmak (grip) zorunda olan mekanik bir damladır. Güneş devasa kütlesiyle etrafındaki Evrenakı sıvısını dışlar (Deplasman). Zerre bu seyrek ve düşük yoğunluklu bölgeye girdiğinde tutunmasını kaybeder, patinaj yapmaya başlar ve bizzat **ilerleme hızı düşer** ($v_{isik} < c$).
 
-Işığa Güneş'in radyal (merkezcil) basıncı etki ettiğinde, klasik bir araba virajındaki eylemsizlik/merkezkaç kanunları çalışır. Eğer ışığın hızı gerçekten klasik fizikteki gibi devasa bir şekilde $c$ olarak kalsaydı, merkezkaç (dışa savrulma) eylemsizliği o kadar yüksek olurdu ki Güneş'in radyal basıncı ışığı sadece 0.875 arksaniye bükebilirdi.
+Işığa Güneş'in radyal (merkezcil) basıncı etki ettiğinde, klasik bir araba virajındaki eylemsizlik/merkezkaç kanunları çalışır. Eğer ışığın hızı gerçekten klasik fizikteki gibi devasa bir şekilde $c$ olarak kalsaydı, merkezkaç (dışa savrulma) eylemsizliği o kadar yüksek olurdu ki Güneş'in radyal basıncı ışığı sadece 0,876 arksaniye bükebilirdi (Soldner'ın 1801 hesabı).
 
-Ancak Evrenakı'nın çözümüne göre: Zerre'nin Güneş etrafında hızı ($v_{isik}$) patinaj nedeniyle düştüğü için, dışa savrulma (merkezkaç) hantallığı kırılır ve Zerre, Güneş'in basınç çukurunda daha uzun süre kalır. Tıpkı yavaşlayan bir arabanın virajı çok daha keskin dönmesi gibi, hızı düşen Zerre de Güneş'in merkezcil basıncına daha fazla teslim olarak virajı tam iki kat daha keskin, yani **1.75 arksaniye** döner!
+Ancak Evrenakı'nın çözümüne göre: Zerre'nin Güneş etrafında hızı ($v_{isik}$) patinaj nedeniyle düştüğü için, dışa savrulma (merkezkaç) hantallığı kırılır ve Zerre, Güneş'in basınç çukurunda daha uzun süre kalır. Tıpkı yavaşlayan bir arabanın virajı çok daha keskin dönmesi gibi, hızı düşen Zerre de Güneş'in merkezcil basıncına daha fazla teslim olarak virajı **iki kat daha keskin**, yani **1,75 arksaniye** döner!
+
+> **Bu "iki kat" nereden gelir?** Sezgisel benzetmenin arkasında sayısal bir türetim vardır (**Ek M-42**). Kütle-itim potansiyeli bölgedeki her şeyi birlikte ölçekler; madde ölçeği $\Lambda = 1-\Phi/c^2$ cetvelleri ve saatleri yönetirken Zerre'nin yayılma hızı bunun **karesiyle** ölçeklenir: $c_{loc}=c\Lambda^2$. Etkin kırılma indisi buradan çıkar:
+> $$n_{eff} = \frac{c}{c_{loc}} = \frac{1}{\Lambda^2} = 1+\frac{2\Phi}{c^2}$$
+> Snell yasasının bu indisle integrali Güneş kenarı için
+> $$\delta = \frac{4GM_\odot}{c^2 R_\odot} = 1{,}7512''$$
+> verir; ölçülen değer $1{,}7510''$'dır. İndisin yarısı ($1+\Phi/c^2$) alınsaydı sonuç Soldner'ın 1801'deki klasik değeri olan $0{,}876''$ olurdu — yukarıdaki paragrafın "hızı sabit kalsaydı" durumu tam olarak budur. Yani iki kat, benzetmeye eklenen bir katsayı değil, ölçeklemenin karesel oluşunun doğrudan sonucudur.
 
 Radyal hız düşüşü ve patinaj etkisi, Güneş'in etrafındaki deplasman küresel olduğu için her enlemde aynıdır. Bu sayede Einstein'ın formüllerine ekstra düzeltme katsayıları eklemeye veya Güneş'in girdabını denklemlere zorla sokmaya gerek kalmaz. 1.75 arksaniyelik bükülme soyut bir uzay-zaman eğriliği değil; **seyrek Evrenakı'da patinajla yavaşlayan ve eylemsizliğini kaybeden Zerre'nin, hidrostatik basınca daha derin bir şekilde boyun eğmesidir!**
 
@@ -101,17 +107,19 @@ Bu astronomik test, öngörünün doğrulanması hâlinde, uzay-zaman eğriliği
 
 ## 4.3.5 Nicel Kestirim (serbest $\chi$ ile): Renksel Sapma Açısı ve $318\ \mu\text{as}$ Fark
 
-Peki bu bükülmenin formülü nedir? Güneş'in radyal basınç gradyanı ($\nabla P_r$) altında ilerleyen bir Zerre dizisine etki eden toplam dik kuvvet $F_{\perp}$ ise, sapma açısı ($\theta$) doğrudan yerel ışık hızına ($v_{ışık}$) ve frekansa ($\nu$) bağlıdır:
+Peki bu bükülmenin formülü nedir? Güneş'in radyal basınç gradyanı ($\nabla P_r$) altında ilerleyen Zerre dizisinin sapma açısı ($\theta_{sap}$; eski yazım: $\theta$ — silindirik koordinat açısıyla karışmaması için), yerel ışık hızı frekansa (renge) bağlı olduğu için dalga boyuna bağlıdır. Sayısal kestirimin gerçekte kullandığı parametrizasyon şudur:
 
-$$\theta(\nu) = \int \frac{\nabla P_{toplam}}{\rho_n \cdot v_{ışık}(\nu)} dt$$
+$$\theta_{sap}(\lambda) = \theta_{sap,0}\left[1 + \chi\,\frac{\lambda-\lambda_0}{\lambda_0}\right]$$
 
-Zerre'nin yerel hızı $v_{ışık}(\nu)$, frekansa (renge) bağlı olduğu için formülün paydası renkten renge değişir:
-* **Mavi Işık (Yüksek frekans, sıkı katar):** Daha az patinaj yaptığı için yerel hızları ($v_{mavi}$) yüksek kalır. Payda büyüdüğü için sapma açısı ($\theta_{mavi}$) **daha küçük** olur.
-* **Kırmızı Işık (Düşük frekans, gevşek katar):** Daha fazla patinaj yaptığı için hızları ($v_{kırmızı}$) düşer. Payda küçüldüğü için basınçta daha uzun süre kalırlar ve sapma açısı ($\theta_{kırmızı}$) **daha keskin (büyük)** olur. 
+*(katalog ve statü [K]: **Ek M-32**)*
 
-Güneş'in teğet sınırında yeşil ışık ($\lambda = 550 \text{ nm}$) için sapma açısını referans $1.750000$ arksaniye kabul ettiğimizde, Evrenakı dispersiyon sabiti ($\chi = 5 \times 10^{-4}$; ışığın frekansına bağlı patinaj farkını ölçeklendiren boyutsuz, fenomenolojik bir katsayıdır — ilk ilkelerden türetimi ve bağımsız kalibrasyonu teorinin açık işlerindendir, bkz. Bölüm 7.4) ile yapılan diferansiyel hesaplama şu sonucu verir:
-* $\theta_{mavi} (450\text{nm}) = 1.749841 \text{ arksaniye}$
-* $\theta_{kirmizi} (650\text{nm}) = 1.750159 \text{ arksaniye}$
-* **Fark ($\Delta \theta$):** $0.000318 \text{ arksaniye} = 318\ \mu\text{as}$ (mikro-arksaniye)
+Burada $\theta_{sap,0}$ referans sapmadır ($\lambda_0 = 550$ nm'de $1.75''$), $\chi$ ise boyutsuz Evrenakı dispersiyon katsayısıdır (fenomenolojik, $5 \times 10^{-4}$). Zerre'nin yerel hızı frekansa (renge) bağlı olduğu için sapma renkten renge değişir:
+* **Mavi Işık (Yüksek frekans, sıkı katar):** Daha az patinaj yaptığı için yerel hızları ($v_{mavi}$) yüksek kalır. Basınç bölgesinde daha kısa süre kaldıkları için sapma açısı ($\theta_{sap,mavi}$) **daha küçük** olur.
+* **Kırmızı Işık (Düşük frekans, gevşek katar):** Daha fazla patinaj yaptığı için hızları ($v_{kırmızı}$) düşer. Basınçta daha uzun süre kaldıkları için sapma açısı ($\theta_{sap,kırmızı}$) **daha keskin (büyük)** olur. 
+
+Güneş'in teğet sınırında yeşil ışık ($\lambda = 550 \text{ nm}$) için sapma açısını referans $1.750000$ arksaniye kabul ettiğimizde, Evrenakı dispersiyon sabiti ($\chi = 5 \times 10^{-4}$; ışığın frekansına bağlı patinaj farkını ölçeklendiren boyutsuz, fenomenolojik bir katsayıdır — ilk ilkelerden türetimi ve bağımsız kalibrasyonu teorinin açık işlerindendir, bkz. Bölüm 7.4) ile yukarıdaki parametrizasyon şu sonucu verir:
+* $\theta_{sap,mavi} (450\text{nm}) = 1.749841 \text{ arksaniye}$
+* $\theta_{sap,kirmizi} (650\text{nm}) = 1.750159 \text{ arksaniye}$
+* **Fark ($\Delta \theta_{sap}$):** $0.000318 \text{ arksaniye} = 318\ \mu\text{as}$ (mikro-arksaniye)
 
 Einstein'ın teorisinde bu sapma farkı tam olarak SIFIRDIR. Evrenakı ise Güneş'in etrafından geçen kırmızı ve mavi ışık arasında **318 mikro-arksaniyelik** bir optik kırılma farkı olacağını deterministik olarak hesaplar. Bu olağanüstü ince fark, 1919'daki fotoğraf plakalarıyla ölçülememiştir, ancak günümüzün Gaia gibi ultra-hassas uydularının "enstrümantal hata" zannedip matematiksel olarak sildiği **Chromaticity (Kromatiklik)** sapmalarına karşılık gelmektedir (Gaia astrometrik çözümünde renk-bağımlı kalibrasyonun ele alınışı: Lindegren ve ark., 2021; Gaia Collaboration, 2021).

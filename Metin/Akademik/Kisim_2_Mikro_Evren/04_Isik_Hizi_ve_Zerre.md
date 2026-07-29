@@ -29,11 +29,23 @@ Evrenakı Teorisi, bu asırlık paradoksu "Zerre'nin Akışkanlar Mekaniği" ile
 > * **Atomik yoğunluk/basınç:** Maddeyi oluşturan atom/molekül yoğunluğu. Cam, sudan; su, havadan daha yoğundur.
 > * **Evrenakı yoğunluğu/basıncı:** Atomların içinde yüzdüğü akışkanın ($\Psi$) yoğunluğu ve basıncı.
 >
-> **Zıtlık kuralı:** Bir ortamda atomlar arttıkça (atomik yoğunluk ve basınç artarken), o atomların deplasmanı nedeniyle **Evrenakı basıncı düşer.** Işığın yerel sürati kavrama yasası gereği $v=\sqrt{P/\rho}$ olduğundan (burada $P$, $\rho$ *Evrenakı*'nın basınç ve yoğunluğudur), **ışık, Evrenakı'nın $P/\rho$ oranının düştüğü her yerde yavaşlar.** Patinaj, Zerre'nin bu yerel $\sqrt{P/\rho}$ tutunma hızını aşmasından başka bir şey değildir.
+> **Zıtlık kuralı:** Bir ortamda atomlar arttıkça (atomik yoğunluk ve basınç artarken), o atomların deplasmanı nedeniyle **Evrenakı basıncı düşer.** Işığın yerel sürati kavrama yasası gereği $v=\sqrt{P/\rho}$ olduğundan (burada $P$, $\rho$ *Evrenakı*'nın basınç ve yoğunluğudur), **ışık, Evrenakı'nın $P/\rho$ oranının düştüğü her yerde yavaşlar.** Patinaj, Zerre'nin bu yerel $\sqrt{P/\rho}$ tutunma hızını aşmasından başka bir şey değildir. *(katalog: **Ek M-1**)*
 >
 > **İki rejim, tek ilke:**
 > 1. *Yoğun saydam madde (cam, su):* Evrenakı korunumlu olduğundan, atom çekirdeklerinden itilen Evrenakı maddenin *aralarında* kalır; **hacimce ortalama Evrenakı yoğunluğu korunur**, ama düşük-basınçlı deplasman cepleri **ortalama Evrenakı basıncını düşürür.** Işık bu yüzden yavaşlar (kırılma indisi ve Fizeau sürüklemesinin nicel türetimi için bkz. Bölüm 3.4.6).
 > 2. *Astrofiziksel gradyan (yıldız zarfı, galaktik alan):* Burada Evrenakı hem yoğunluk hem basınç olarak makro-ölçekte **gerçekten seyrelir** (bkz. SN 1987A, Bölüm 2.4.4).
+>
+> **Yön kuralı (eşlik oranı $k$):** İkinci rejimde akla şu soru gelir: madem hem $P$ hem $\rho$ düşüyor, $P/\rho$ oranının — dolayısıyla $c$'nin — düşeceği nereden belli? Cevap, Ek B.3'te tanımlanan eşlik oranındadır: yoğunluk, basınçtaki değişime ancak $k$ kesriyle eşlik eder ($\delta\rho/\rho_0 = k\cdot\delta P/P_0$ ve $0 \le k < 1$). $k<1$ olduğu sürece **basınçtaki oransal düşüş yoğunluktakinden daima büyüktür**; bu nedenle
+> $$\frac{\delta c}{c} = \frac{1}{2}\left(\frac{\delta P}{P_0}-\frac{\delta\rho}{\rho_0}\right) = \frac{1-k}{2}\cdot\frac{\delta P}{P_0} < 0 \quad (\delta P < 0)$$
+> yani kütleye yaklaşan ışık **zorunlu olarak** yavaşlar. "Işık kütle yanında yavaşlar" iddiası ayrı bir varsayım değil, $k<1$ koşulunun doğrudan sonucudur.
+>
+> **Ölçek yapısı — iki ayrı büyüklük.** Yavaşlamanın *büyüklüğü* için bir incelik zorunludur (tam türetim: **Ek M-42**). Kütle-itim potansiyeli bölgedeki her şeyi birlikte ölçekler: yalnız ortamı değil, ölçüm aletlerinin maddesini de. Madde ölçeği
+> $$\Lambda \equiv 1-\frac{\Phi}{c^2}$$
+> cetvelleri, saatleri ve atomik geçiş frekanslarını yönetirken ($\ell\propto\Lambda$, $f\propto\Lambda$), Zerre'nin arka plandaki **yayılma hızı** bunun karesiyle ölçeklenir:
+> $$c_{loc} = c\,\Lambda^2 \quad\Longrightarrow\quad n_{eff}=\frac{1}{\Lambda^2}=1+\frac{2\Phi}{c^2}$$
+> İki sonucu vardır. Birincisi: ışık bükülmesi $1{,}7512''$ çıkar (ölçülen $1{,}7510''$) — Bölüm 4.2.15'te uzun süre analojiyle bırakılan **2 çarpanı** buradan gelir. İkincisi: $\ell$ ve $f$ aynı çarpanla ölçeklendiği için **yerel olarak ölçülen $c$ tam olarak değişmezdir** ($c_{loc}/(\ell f)$ sabit) — Lorentz ihlali deneylerinin $10^{-18}$ düzeyindeki null sonuçları teorinin öngörüsüdür.
+>
+> **Ortak-mod ↔ diferansiyel ayrımı (kritik).** Bu değişmezlik yalnız **ortak-mod** etkiler için geçerlidir; maddi ortamdaki yavaşlamayı ortadan kaldırmaz. Bir cam bloğu, ışığın *yolundaki* $P/\rho$'yu düşürür ama laboratuvardaki cetveli ve saati değiştirmez — telafi yoktur, etki **yerel olarak ölçülebilir** kalır ve $n=1/\sqrt{1-\phi}$ ile Fizeau katsayısı buradan çıkar (yukarıdaki 1. rejim; Bölüm 3.4.6). Yani teorinin "ışık hızı değişkendir" iddiasının iki ayrı sınıfı vardır: potansiyel kaynaklı (ortak-mod, yerel ölçümde gizli, bükülmede görünür) ve maddi ortam kaynaklı (diferansiyel, doğrudan ölçülebilir).
 >
 > Her iki rejimde de değişmez sonuç aynıdır: $P/\rho$ düşer, ışık yavaşlar. "Düşük yoğunluk" ifadesi yalnızca ikinci rejim için birebir doğrudur; genel ve kesin sürücü **düşük $P/\rho$**'dur.
 
@@ -47,7 +59,7 @@ Bu yavaşlama esnasında Zerre'nin toplam enerjisi ($E_T$) eksilmez. Kaybolduğu
 
 $$E_T = \frac{1}{2} m_z v^2 \ (\text{Çizgisel}) + \frac{1}{2} I \omega^2 \ (\text{Dönme})$$
 
-*(Not: Buradaki atalet momenti $I = k \cdot m_z \cdot r^2$, **Bölüm 2.2.2**'de türettiğimiz Zerrenin Kütlesi $m_z$ denkleminin paydasındaki $(c^2 + k \cdot v_{cev}^2)$ terimi ile aynı fiziğin iki farklı yüzüdür. Zerre kütlesi sabittir, enerji formu dönüşür.)*
+*(Not: Buradaki atalet momenti $I = k_a \cdot m_z \cdot r^2$, **Bölüm 2.2.2**'deki fotoelektrik enerji muhasebesi denkleminde geçen $(c^2 + k_a \cdot v_{cev}^2)$ teriminin dönme payı ile aynı fiziğin iki farklı yüzüdür — $k_a$, Zerre'nin kütle dağılımı (atalet) katsayısıdır; homojen küre için $k_a=2/5$. Zerre kütlesi ($m_z$; Postülat 4'te tanımlı evrensel sabit) değişmez, yalnızca enerjinin formu dönüşür.)*
 
 Zerre camdan çıkıp tekrar dış uzayın yüksek basıncına (kuru asfalta) temas ettiğinde, tekerlek yeniden yola tutunur (kavrama sağlanır). Patinaj biter, fırıldak gibi dönme (spin) enerjisi tekrar çizgisel ivmeye aktarılır ve Zerre hiçbir dış enerjiye ihtiyaç duymadan (Bölüm 1.2.2'deki paradoksu çözerek) eski çizgisel hızı olan $c$'ye geri döner.
 
@@ -327,7 +339,7 @@ $$D_{toplam} = D_{zarf} + D_{yol}$$
 
 Nötrino, tutunma mekanizmasına bağımlı olmadığından (bkz. 2.1) her iki bölgeden de oyalanmadan geçer — 3 saatin tamamı ışığın hanesine yazılır. İki bileşenin **ağırlığı ise SN 1987A verisinden tek başına ayrıştırılamaz ve açık problemdir.** Bununla birlikte patinajın renk bağımlılığı (dispersiyon, bkz. Bölüm 4.3) $D_{yol}$'a bugünden bir tavan koyar: yol payı büyük olsaydı, galaksi içindeki kaynakların — örneğin Crab pulsarının milisaniyelik optik nabızlarının (Cocke ve ark., 1969) — renkler arasında ölçülebilir varış saçılması göstermesi gerekirdi; böyle bir saçılma gözlenmediğinden $D_{yol}$, toplamın küçük bir kesriyle sınırlı görünmektedir.
 
-**Nicel kısıt ve karar deneyleri:** 168.000 yıllık yol yaklaşık $1{,}5 \times 10^9$ saattir; varış farkının yalnızca ~3 saat olması, yol-içi *ortalama* yavaşlamayı $\Delta v / c \lesssim 2 \times 10^{-9}$ ile sınırlar — bu değer, $D_{yol}$ bileşeninin gözlemsel üst sınırıdır. Bileşenlerin ağırlığını gelecekte üç deney ayrıştıracaktır:
+**Nicel kısıt ve karar deneyleri:** 168.000 yıllık yol yaklaşık $1{,}5 \times 10^9$ saattir; varış farkının yalnızca ~3 saat olması, yol-içi *ortalama* yavaşlamayı $\Delta v / c \lesssim 2 \times 10^{-9}$ ile sınırlar — bu değer, $D_{yol}$ bileşeninin gözlemsel üst sınırıdır. *(hesap: **Ek M-13**)* Bileşenlerin ağırlığını gelecekte üç deney ayrıştıracaktır:
 
 1. **Bir sonraki galaktik süpernova:** Nötrino dedektörleri çağında Samanyolu'nda henüz süpernova patlamamıştır (nötrinosu yakalanan tek süpernova SN 1987A'dır); SNEWS erken-uyarı ağı, tam da nötrino-önce sıralamasını bekleyerek kuruludur (Antonioli ve ark., 2004; ikinci nesil ağ: Al Kharusi ve ark., 2021). Gözlenecek gecikmenin **progenitör tipiyle** ölçeklenmesi $D_{zarf}$'ın, **güzergâh uzunluğuyla** ölçeklenmesi $D_{yol}$'un baskınlığını gösterir.
 2. **Farklı uzaklıklardaki nötrinolu süpernovalar:** Gecikme–mesafe ilişkisi, yol bileşeninin birikimli karakterini doğrudan test eder.

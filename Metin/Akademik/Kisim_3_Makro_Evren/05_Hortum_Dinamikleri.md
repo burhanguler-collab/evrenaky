@@ -4,7 +4,7 @@
 
 Evrenakı ortamında meydana gelen devasa astrofiziksel olayları (kütle-itim, uydu yörüngeleri, galaktik rotasyonlar) anlayabilmek adına, öncelikle mekanizması bilinen temel akışkan davranışlarına dair klasik analojiler kurmak pedagojik olarak zorunludur. Su gibi gündelik yaşamdan aşina olduğumuz akışkanlar üzerinden yürütülecek bir düşünce deneyi, bize Evrenakı'nın görünmez doğasını ifşa edecektir.
 
-Örneğin, hidrostatik basıncın yarattığı "kaldırma kuvveti" mekanizmasını ele alalım (kaldırma kuvvetinin klasik formülasyonu: Arşimet, *Yüzen Cisimler Üzerine*, MÖ ~250; modern akışkanlar mekaniği sunumu: White, 2011). Su ortamında, yüzeyden derinlere inildikçe kütle-itim kaynaklı hidrostatik basıncın arttığı gözlemlenir. Bu derinliğe bağlı basınç artışının skaler dağılımı ( $\nabla P$ ), suyun temel karakteristiğidir. 
+Örneğin, hidrostatik basıncın yarattığı "kaldırma kuvveti" mekanizmasını ele alalım (kaldırma kuvvetinin klasik formülasyonu: Arşimet, *Yüzen Cisimler Üzerine*, MÖ ~250; modern akışkanlar mekaniği sunumu: White, 2011). Su ortamında, yüzeyden derinlere inildikçe kütle-itim kaynaklı hidrostatik basıncın arttığı gözlemlenir. Bu derinliğe bağlı basınç artışının oluşturduğu basınç gradyanı ( $\nabla P$ ), suyun temel karakteristiğidir. 
 <div style="background: #121212; padding: 20px; border-radius: 12px; border: 1px solid #404040; box-shadow: 0 10px 30px rgba(0,0,0,0.8); margin: 20px 0; text-align: center;">
   <h3 style="margin-top: 0; margin-bottom: 20px; color: #fff; font-weight: 600; letter-spacing: 1px; text-shadow: 0 0 10px rgba(0, 229, 255, 0.5);">Animasyon 3.5.1: Basınç farkının Net İtim (Kaldırma) ve Sıkıştırma kuvvetlerine dönüşümü.</h3>
   <svg viewBox="0 0 600 360" width="100%" style="max-width: 600px; background: #050505; border: 1px solid #333; border-radius: 8px;">
@@ -81,7 +81,7 @@ Olayın ardındaki asıl mekanizma **Bernoulli İlkesi**'dir (Bernoulli, 1738) v
 1. İki geminin arasındaki dar kanalda (boğazda) akan suyun hızı, gemilerin dış taraflarındaki (açık denizdeki) suyun hızından çok daha yüksektir. (Daralma etkisi).
 2. Suyun hızının arttığı bu orta bölgede basınç ($P_{iç}$) Bernoulli ilkesi gereği aniden düşer.
 3. Gemilerin dış yüzeylerindeki durgun (veya yavaş akan) deniz suyu ise çok daha yüksek bir statik basınca ($P_{dış}$) sahiptir.
-4. Oluşan bu devasa yüksek basınç farkı ($\nabla P = P_{dış} - P_{iç}$), gemileri dışarıdan içeriye doğru kararlılıkla **iter (push)**.
+4. Oluşan bu devasa yüksek basınç farkı ($\Delta P = P_{dış} - P_{iç}$), gemileri dışarıdan içeriye doğru kararlılıkla **iter (push)**.
 
 Uzaktan bakan bir gözlemci "gemiler birbirini çekiyor (pull)" biçiminde yorumlar; tıpkı klasik yaklaşımın elmanın düşüşünü Dünya'nın çekimi olarak yorumlaması gibi. Oysa gerçekte olan biten, **dış okyanus basıncının nesneleri içteki düşük basınca doğru itmesidir (push)**. Akışkanlar dünyasında "çekim" (Gravity) aslında kavramsal bir basitleştirmedir, asıl çalışan mekanizma her zaman "İtim" (Push) yönündedir.
 

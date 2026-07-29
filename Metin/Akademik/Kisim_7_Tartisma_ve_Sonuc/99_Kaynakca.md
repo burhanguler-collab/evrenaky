@@ -1,6 +1,6 @@
 # 7.8 Kaynakça
 
-*Kısım VII — Tartışma ve Sonuç*, iki vaka analizinde (7.1–7.2), genel sentezde (7.3), sınırlılıklar listesinde (7.4), yanlışlanabilir öngörüler tablosunda (7.5) ve modern fiziğin 22 açık krizi bölümünde (7.7) dayanak olarak kullanılan gözlem ve çalışmaları aşağıdaki kaynaklara bağlar. Girdiler, bölüm metinlerindeki metin-içi atıflarla eşleştirilmiştir. Kitabın tamamına yönelik atıflar için ilgili kısımların kaynakçalarına da bakınız.
+*Kısım VII — Tartışma ve Sonuç*, iki vaka analizinde (7.1–7.2), genel sentezde (7.3), sınırlılıklar listesinde (7.4), yanlışlanabilir öngörüler tablosunda (7.5) ve modern fiziğin 22 kalemlik kriz envanteri bölümünde (7.7; kapanan/zayıflayan kalemler işaretli, yaşayan liste) dayanak olarak kullanılan gözlem ve çalışmaları aşağıdaki kaynaklara bağlar. Girdiler, bölüm metinlerindeki metin-içi atıflarla eşleştirilmiştir. Kitabın tamamına yönelik atıflar için ilgili kısımların kaynakçalarına da bakınız.
 
 * Aguillard, D. P., et al. (Muon g-2 Collaboration) (2023). *Measurement of the Positive Muon Anomalous Magnetic Moment to 0.20 ppm*. Physical Review Letters, 131, 161802. (Fermilab müon $g-2$ 2023 ölçümü; Bölüm 7.7.4).
 * Aguillard, D. P., et al. (Muon g-2 Collaboration) (2025). *Measurement of the Positive Muon Anomalous Magnetic Moment to 127 ppb*. Physical Review Letters. (Nihai Fermilab ölçümü; Bölüm 7.7.4 karşı kayıt).

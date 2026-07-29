@@ -1,5 +1,7 @@
 # 6.1 Kâğıt Üzerinde Deney 1: Evrenakı Kinematiğinden Doppler Türetimi
 
+*(Bu bölümdeki türetim, Ek M kataloğunda **M-19** olarak numaralanmıştır; şablonlu özeti için oraya bakınız.)*
+
 Evrenakı Teorisi, mevcut standart fizikle sadece felsefi bir tartışma yürütmez; bizzat standart fiziğin ölçülebilir verilerini kendi mekanik denklemleriyle yeniden, sıfırdan türetebilecek kadar sağlam bir matematiksel çekirdeğe sahiptir.
 
 Aşağıdaki kısımda, eleştirel bir hakem perspektifinden Evrenakı teorisine yöneltilen "kâğıt üzerinde deney" meydan okumasının tam metni sunulacak ve teorinin bu meydan okumaya verdiği matematiksel cevap adım adım türetilecektir.
@@ -80,6 +82,7 @@ $1 + \beta$ ifadesini $\sqrt{1 + \beta} \cdot \sqrt{1 + \beta}$ olarak düşün�
 $$ f_{obs} = f_0 \sqrt{\frac{1 - \beta}{1 + \beta}} $$
 Veya $\beta$ yerine $v/c$ yazarsak:
 $$ f_{obs} = f_0 \sqrt{\frac{1 - v/c}{1 + v/c}} $$
+*(katalog: **Ek M-19**)*
 
 ---
 

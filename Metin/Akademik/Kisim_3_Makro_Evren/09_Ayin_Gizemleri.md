@@ -12,7 +12,7 @@
 
 ## 3.9.1 Ay Neden Kendi Etrafında Dönmez? (Senkronize Dönüş)
 
-Standart bilimin "Tidal Locking (Gelgit Sürtünmesi)" diyerek geçiştirdiği bu durum, Evrenakı akışkanlar dinamiğinin en temel sonuçlarından biridir. Ay, uzayda boşlukta süzülen bağımsız bir cisim değil, Dünya'nın yarattığı devasa Evrenakı girdabının (vorteksinin) tam içinde yer alan bir kütledir. 
+Standart bilimin "Tidal Locking (Gelgit Kilidi)" adıyla nicel biçimde modellediği bu durum (bu alandaki nicel başarının teslimi için bkz. 3.9.4'teki karşı kayıt), Evrenakı akışkanlar dinamiğinde mekanik taşıyıcısını bulur. Ay, uzayda boşlukta süzülen bağımsız bir cisim değil, Dünya'nın yarattığı devasa Evrenakı girdabının (vorteksinin) tam içinde yer alan bir kütledir. 
 
 Bölüm 3.6.1'de kurduğumuz "girdabı durdurmaya çalışırsak frenleniriz" (hidrodinamik direnç / entrainment) mantığı burada kusursuz işler. Ay kendi ekseni etrafında dönmeye (kendi mini girdabını yaratmaya) çalışsa da, içinde bulunduğu Dünya'nın devasa ve baskın Evrenakı akıntısı buna müthiş bir **hidrodinamik direnç (fren)** uygular. Tıpkı güçlü bir nehir akıntısına bırakılan büyük bir kütüğün kendi etrafında serbestçe dönemeyip akıntının yönüne kilitlenmesi gibi, Ay'ın dönüşü de bu akışkan sürtünmesiyle tamamen frenlenmiş ve durdurulmuştur. Sonuç olarak Ay, hidrodinamik olarak en az direnç göreceği pozisyona kilitlenir ve bize hep aynı yüzünü gösterir.
 
@@ -33,17 +33,10 @@ Astronomik gelgit modellerinde ve gözlemlerinde açıkça gösterildiği üzere
 
 Diferansiyel çembersel sıkıştırma (gelgit) etkisinin mekanizmasını tam olarak kavramak için, hidrostatik sıvı (su) içine batırılmış çok yumuşak bir pinpon topu örneğini ele alalım. Top suya batırıldığında alttan, üstten ve yanlardan kuvvetlere maruz kalır. Derinliğe bağlı olarak en büyük kuvvet alttan, en küçük kuvvet ise üstten etki eder.
 
-Eğer alt ve üst kuvvetin farkını alırsak, bu fark kuvveti topu yukarı iter (kaldırma kuvveti). Bu durumu basit bir hidrostatik matematikle (Basınç = $\rho \cdot g \cdot h$) ifade edebiliriz:
-
-*   Topun yarıçapı $r$, merkezinin derinliği $h$ olsun.
-*   **Üst Kuvvet (Aşağı doğru ezer):** $F_{üst} \propto \rho \cdot g \cdot (h - r)$
-*   **Alt Kuvvet (Yukarı itip ezer):** $F_{alt} \propto \rho \cdot g \cdot (h + r)$
-*   **Yan Kuvvetler (Merkeze ezer):** $F_{yan} \propto \rho \cdot g \cdot h$
-
-Topu yüzeye doğru iten net "kaldırma kuvveti", alt ve üst kuvvetin farkıdır ($F_{alt} - F_{üst}$). Ancak bu itme payı dengelendikten veya çıktıktan sonra, topu dikey eksende karşılıklı olarak ezmeye çalışan **efektif dikey sıkıştırma kuvveti**, sadece en zayıf olan üst kuvvete ($F_{üst}$) eşit kalır.
+Eğer alt ve üst kuvvetin farkını alırsak, bu fark kuvveti topu yukarı iter (kaldırma kuvveti). Bu durumu basit bir hidrostatik matematikle (Basınç = $\rho \cdot g \cdot d$; derinlik için $d$; eski yazım $h$ — Planck sabitiyle karışmaması için ayrıldı) ifade edebiliriz: yarıçapı $r$, merkez derinliği $d$ olan top için kaldırma payı ayrıldıktan sonra, yan basınç dikey eksendeki efektif ezme kuvvetini tam $\rho \cdot g \cdot r$ kadar aşar — top elipsoide zorlanır *(tam türetim: **Ek M-26**)*.
 
 **Matematiksel Sonuç:** 
-Yanlardan vuran kuvvetler ($\rho \cdot g \cdot h$), dikey eksendeki efektif ezme kuvvetinden ($\rho \cdot g \cdot (h - r)$) matematiksel olarak daha büyüktür ($F_{yan} > F_{dikey\_ezme}$). 
+Yanlardan vuran kuvvetler ($\rho \cdot g \cdot d$), dikey eksendeki efektif ezme kuvvetinden ($\rho \cdot g \cdot (d - r)$) matematiksel olarak daha büyüktür ($F_{yan} > F_{dikey\_ezme}$). 
 
 Bu eşitsizlik yüzünden yumuşak top, yanlardan (çembersel olarak) çok daha şiddetli sıkıştırılır. Hacmini koruyabilmek için, bu çembersel sıkışmadan kaçarak basıncın zayıf geldiği dikey yöne (aşağı-yukarı) doğru uzar. Top yukarı doğru uzamış bir **elipsoid** şeklini alır.
 
@@ -59,7 +52,7 @@ Matematiksel olarak:
 *   **Toplam Akışkan Kuvveti:** Uzaklığın karesiyle ($1/r^2$) zayıflar.
 *   **Diferansiyel Sıkıştırma (Gelgit Gradyanı):** Uzaklığın **küpüyle ($1/r^3$)** zayıflar.
 
-Güneş, Ay'dan yaklaşık 27 milyon kat daha büyük bir kütleye sahip olmasına rağmen, bize Ay'dan **390 kat daha uzaktadır**. Akışkan mengenesinin (sıkıştırmanın) gücü uzaklığın küpüyle ($390^3 \approx 59.000.000$) zayıfladığı için; Güneş'in kütleden kazandığı 27 milyonluk avantaj, uzaklıktan kaybettiği 59 milyonluk dezavantaja yenik düşer. (Kütle ve uzaklık değerleri: NASA/JPL Planetary Fact Sheet, 2024; gelgit kuvvetinin $1/r^3$ ölçeklenmesi: Pugh & Woodworth, 2014.) Sonuç olarak Güneş'in Dünya üzerindeki çembersel sıkıştırma gücü, Ay'ın gücünün sadece **yarısı (%46'sı)** kadardır.
+Güneş, Ay'dan yaklaşık 27 milyon kat daha büyük bir kütleye sahip olmasına rağmen, bize Ay'dan **390 kat daha uzaktadır**. Akışkan mengenesinin (sıkıştırmanın) gücü uzaklığın küpüyle ($390^3 \approx 59.000.000$) zayıfladığı için; Güneş'in kütleden kazandığı 27 milyonluk avantaj, uzaklıktan kaybettiği 59 milyonluk dezavantaja yenik düşer. (Kütle ve uzaklık değerleri: NASA/JPL Planetary Fact Sheet, 2024; gelgit kuvvetinin $1/r^3$ ölçeklenmesi: Pugh & Woodworth, 2014.) Sonuç olarak Güneş'in Dünya üzerindeki çembersel sıkıştırma gücü, Ay'ın gücünün sadece **yarısı (%46'sı)** kadardır. *(oran hesabı: **Ek M-26**)*
 
 **Akışkan Dinamiği Açısından Anlamı:**
 Güneş o kadar uzaktadır ki, Dünya'nın ön yüzü ile arka yüzü arasındaki 12.700 kilometrelik fark, Güneş'in o uçsuz bucaksız akışkan denizinde "neredeyse dümdüz" kalır. Güneş'in akışkan basıncı Dünya'nın önüne de, arkasına da hemen hemen eşit vurur. Aradaki "fark" (diferansiyel) çok zayıftır. 
@@ -99,14 +92,14 @@ Güneş'in devasa Evrenakı girdabının gezegenleri nasıl kusursuz bir matemat
 
 Hesaplamayı yapalım: Ay'ın yörünge hızı saniyede yaklaşık **1.02 km'dir**. Eğer girdabı üreten şey Dünya'nın *mekanik* dönüşü olsaydı, aynı uzaklık/hız formülüne göre Dünya ekvatorunun saniyede **7.93 km** hızla dönmesi gerekirdi.
 
-Ancak Dünya ekvatoru, saniyede sadece **0.46 km** hızla döner! 
-Yani Dünya, Ay'ı o hızda çevirebilecek bir girdap üretmek için gerekenden tam **17 kat daha yavaş** dönmektedir.
+Ancak Dünya ekvatoru, saniyede sadece **0.465 km** hızla döner! 
+Yani Dünya, Ay'ı o hızda çevirebilecek bir girdap üretmek için gerekenden tam **17 kat daha yavaş** dönmektedir. *(katalog: **Ek M-25**)*
 
 Mekanik model burada son bir sığınak deneyebilir: belki motor, yavaş yüzey değil hızlı dönen çekirdektir? (Oysa Güneş'te bile 4 katlık çekirdek hızının mekanik açığı kapatmaya yetmediğini 3.8.1.1'de görmüştük.) Yine de soralım: Dünya'nın çekirdeği için durum nedir?
 
 Burada Evrenakı teorisinin en kilit prensiplerinden biri devreye girer: **Evrenakı için katı madde yoktur.** Tıpkı nötrinoların Dünya'nın içinden hiçbir engele takılmadan geçip gitmesi gibi, son derece ince ve viskozitesi sıfıra çok yakın bir akışkan olan Evrenakı da Dünya'nın kabuğunu, mantosunu ve kayalarını kayda değer bir "engel" olarak görmez; doğrudan içinden geçer. Bu nedenle, girdaba mekanik bir motor aranacaksa bu, yavaş dönen dış kabuk değil, olsa olsa **içerideki çekirdek** olabilirdi.
 
-Modern sismolojik deprem verileri (PREM; Dziewonski & Anderson, 1981) bu son kaçış yolunu da kapatır: Dünya'nın katı iç çekirdeği, yüzeyden sadece yok denecek kadar küçük bir farkla (yılda 0.1 derece) hızlı döner (süper-dönüş hızının sismik ölçümü: Song & Richards, 1996; düşük değere revizyon: Vidale ve ark., 2000). Yani Dünya'nın devasa kütleli demir çekirdeği de, dış kabuğuyla neredeyse aynı yavaşlıkta (0.46 km/s) dönmektedir. **Mekanik sürükleme muhasebesi, Dünya-Ay sisteminde her düzeyde çökmüştür.**
+Modern sismolojik deprem verileri (PREM; Dziewonski & Anderson, 1981) bu son kaçış yolunu da kapatır: Dünya'nın katı iç çekirdeği, yüzeyden sadece yok denecek kadar küçük bir farkla (yılda 0.1 derece) hızlı döner (süper-dönüş hızının sismik ölçümü: Song & Richards, 1996; düşük değere revizyon: Vidale ve ark., 2000). Yani Dünya'nın devasa kütleli demir çekirdeği de, dış kabuğuyla neredeyse aynı yavaşlıkta (0.465 km/s) dönmektedir. **Mekanik sürükleme muhasebesi, Dünya-Ay sisteminde her düzeyde çökmüştür.**
 
 **Bu Rakamsal Çöküşün Evrenakı Açısından Anlamı:**
 1. Ay'ı 380.000 km öteden yörüngesinde taşıyan girdabın motoru, Dünya'nın ne kabuğunun ne de çekirdeğinin mekanik devridir; Dünya kütlesini oluşturan nükleonların **dördüncü boyuttan gelen çift dönüş deşarjıdır** (Bkz. 3.4.4 ve 3.8.2). Viskozitesi mertebelerce küçük olan Evrenakı, bu deşarjla, sürtünmeli kütlenin görünen devrinden kat kat hızlı döner; Dünya'nın makro-girdabı Ay'ı taşımaya bu sayede yeter.

@@ -3,6 +3,7 @@
 // Chapter Registry
 const chapters = [
     { id: 'ozet', title: 'Kitabın Özeti & Teorinin Özü', file: 'Metin/kitap_ozeti.md', group: 'all' },
+
     { id: 'akademik_01_01', title: '1.1 Giriş ve Metodoloji', file: 'Metin/Akademik/Kisim_1_Giris/01_Metodoloji_ve_Manifesto.md', group: 'akademik', part: 'Kısım I: Temeller ve Problemin Tespiti' },
     { id: 'akademik_01_02', title: '1.2 Klasik ve Modern Fiziğin Krizleri', file: 'Metin/Akademik/Kisim_1_Giris/02_Fizigin_Krizleri.md', group: 'akademik', part: 'Kısım I: Temeller ve Problemin Tespiti' },
     { id: 'akademik_01_03', title: '1.3 Evrenin Akışkan Doğası', file: 'Metin/Akademik/Kisim_1_Giris/03_Evrenaki_Postulasi.md', group: 'akademik', part: 'Kısım I: Temeller ve Problemin Tespiti' },
@@ -61,15 +62,29 @@ const chapters = [
     { id: 'akademik_07', title: 'Kısım VII: Tartışma ve Sonuç', file: 'Metin/Akademik/Kisim_7_Tartisma_ve_Sonuc/06_Tartisma_ve_Sonuc.md', group: 'akademik', part: 'Kısım VII: Tartışma ve Sonuç' },
     { id: 'akademik_07_03', title: '7.7 Modern Fiziğin Açık Krizleri ve Evrenakı Ufku', file: 'Metin/Akademik/Kisim_7_Tartisma_ve_Sonuc/03_Modern_Fizigin_Acik_Krizleri_ve_Evrenaki_Ufku.md', group: 'akademik', part: 'Kısım VII: Tartışma ve Sonuç' },
     { id: 'akademik_07_kaynakca', title: 'Kaynakça', file: 'Metin/Akademik/Kisim_7_Tartisma_ve_Sonuc/99_Kaynakca.md', group: 'akademik', part: 'Kısım VII: Tartışma ve Sonuç' },
-    { id: 'akademik_08', title: 'Kısım VIII: Ekler', file: 'Metin/Akademik/Kisim_8_Ekler/07_Matematiksel_Ekler.md', group: 'akademik', part: 'Kısım VIII: Ekler' },
+    { id: 'akademik_08', title: 'Kısım VIII: Ekler (Dizin)', file: 'Metin/Akademik/Kisim_8_Ekler/07_Matematiksel_Ekler.md', group: 'akademik', part: 'Kısım VIII: Ekler' },
+    { id: 'akademik_08_eka', title: 'Ek A — Hız Kavramlarının Ayrıştırılması', file: 'Metin/Akademik/Kisim_8_Ekler/16_Ek_A_Hiz_Kavramlari.md', group: 'akademik', part: 'Kısım VIII: Ekler' },
+    { id: 'akademik_08_ekb', title: 'Ek B — Arka Plan Basıncı ve Ağırlıksızlık', file: 'Metin/Akademik/Kisim_8_Ekler/17_Ek_B_Arka_Plan_Basinci.md', group: 'akademik', part: 'Kısım VIII: Ekler' },
+    { id: 'akademik_08_ekd', title: 'Ek D — Sembol Sözlüğü ve Notasyon Kuralları', file: 'Metin/Akademik/Kisim_8_Ekler/08_Sembol_Sozlugu.md', group: 'akademik', part: 'Kısım VIII: Ekler' },
+    { id: 'akademik_08_ma', title: 'Ek M · Blok A — Temel Yasalar ve Hız Merdiveni (M-1..M-6)', file: 'Metin/Akademik/Kisim_8_Ekler/09_Ek_M_Blok_A_Temel_Yasalar.md', group: 'akademik', part: 'Kısım VIII: Ekler' },
+    { id: 'akademik_08_mb', title: 'Ek M · Blok B — Arka Plan Basıncı (M-7..M-9)', file: 'Metin/Akademik/Kisim_8_Ekler/10_Ek_M_Blok_B_Arka_Plan_Basinci.md', group: 'akademik', part: 'Kısım VIII: Ekler' },
+    { id: 'akademik_08_mc', title: 'Ek M · Blok C — Zerre Mekaniği (M-10..M-14)', file: 'Metin/Akademik/Kisim_8_Ekler/11_Ek_M_Blok_C_Zerre_Mekanigi.md', group: 'akademik', part: 'Kısım VIII: Ekler' },
+    { id: 'akademik_08_md', title: 'Ek M · Blok D — Optik ve Fizeau (M-15..M-18)', file: 'Metin/Akademik/Kisim_8_Ekler/12_Ek_M_Blok_D_Optik_Fizeau.md', group: 'akademik', part: 'Kısım VIII: Ekler' },
+    { id: 'akademik_08_me', title: 'Ek M · Blok E — Doppler ve Kızıla Kayma (M-19..M-21)', file: 'Metin/Akademik/Kisim_8_Ekler/13_Ek_M_Blok_E_Doppler_Kizila_Kayma.md', group: 'akademik', part: 'Kısım VIII: Ekler' },
+    { id: 'akademik_08_mf', title: 'Ek M · Blok F — Makro Evren Dinamiği (M-22..M-27)', file: 'Metin/Akademik/Kisim_8_Ekler/14_Ek_M_Blok_F_Makro_Dinamik.md', group: 'akademik', part: 'Kısım VIII: Ekler' },
+    { id: 'akademik_08_mg', title: 'Ek M · Blok G — Sabitler ve Kozmoloji (M-28..M-34)', file: 'Metin/Akademik/Kisim_8_Ekler/15_Ek_M_Blok_G_Sabitler_Kozmoloji.md', group: 'akademik', part: 'Kısım VIII: Ekler' },
+    { id: 'akademik_08_mh', title: 'Ek M · Blok H — Beş Kuvvet, Ölçek Yapısı ve Kuplaj Rejimi (M-35..M-43)', file: 'Metin/Akademik/Kisim_8_Ekler/18_5_Kuvvet_Matematigi.md', group: 'akademik', part: 'Kısım VIII: Ekler' },
+    { id: 'akademik_08_mi', title: 'Ek M · Blok I — Hâl Denklemi ve Eylem İlkesi (M-44)', file: 'Metin/Akademik/Kisim_8_Ekler/19_Ek_M_Blok_I_Eylem_Ilkesi.md', group: 'akademik', part: 'Kısım VIII: Ekler' },
     { id: 'akademik_09', title: '9.1 Doç. Dr. Rıza Demirbilek Değerlendirmesi', file: 'Metin/Akademik/Kisim_9_Hakem_Degerlendirmeleri/01_Doc_Dr_Riza_Demirbilek_Degerlendirmesi.md', group: 'akademik', part: 'Kısım IX: Hakem Değerlendirmeleri' },
     { id: 'akademik_09_ai', title: '9.2 Claude Fable 5 Değerlendirmesi', file: 'Metin/Akademik/Kisim_9_Hakem_Degerlendirmeleri/02_Claude_Fable_5_Degerlendirmesi.md', group: 'akademik', part: 'Kısım IX: Hakem Değerlendirmeleri' },
     { id: 'akademik_09_gemini', title: '9.3 Gemini 3.1 Pro Değerlendirmesi', file: 'Metin/Akademik/Kisim_9_Hakem_Degerlendirmeleri/03_Gemini_3_1_Pro_Degerlendirmesi.md', group: 'akademik', part: 'Kısım IX: Hakem Değerlendirmeleri' },
     { id: 'akademik_09_10kriter', title: '9.4 10 Kriterlik Resmi Standart Testi', file: 'Metin/Akademik/Kisim_9_Hakem_Degerlendirmeleri/04_Evrenaki_Resmi_Standartlara_Gore_Degerlendirme.md', group: 'akademik', part: 'Kısım IX: Hakem Değerlendirmeleri' },
     { id: 'akademik_09_ai2', title: '9.5 Claude Fable 5 Hakem Raporu (14 Kriter)', file: 'Metin/Akademik/Kisim_9_Hakem_Degerlendirmeleri/05_Claude_Fable_5_Hakem_Raporu_14_Kriter.md', group: 'akademik', part: 'Kısım IX: Hakem Değerlendirmeleri' },
     { id: 'akademik_09_antigravity', title: '9.6 Antigravity AI Hakem Raporu (14 Kriter)', file: 'Metin/Akademik/Kisim_9_Hakem_Degerlendirmeleri/06_Antigravity_Hakem_Raporu_14_Kriter.md', group: 'akademik', part: 'Kısım IX: Hakem Değerlendirmeleri' },
-    { id: 'akademik_09_02', title: '9.7 Önceki Değerlendirmeler ve Tartışmalar', file: 'Metin/Akademik/Kisim_9_Hakem_Degerlendirmeleri/08_Hakem_Degerlendirmeleri.md', group: 'akademik', part: 'Kısım IX: Hakem Değerlendirmeleri' },
-    { id: 'akademik_09_99', title: '9.8 Hakemlik Standardı ve Kriterler', file: 'Metin/Akademik/Kisim_9_Hakem_Degerlendirmeleri/99_Hakemlik_Standarti.md', group: 'akademik', part: 'Kısım IX: Hakem Değerlendirmeleri' },
+    { id: 'akademik_09_gemini_3_1_pro', title: '9.7 Gemini 3.1 Pro Hakem Raporu (14 Kriter)', file: 'Metin/Akademik/Kisim_9_Hakem_Degerlendirmeleri/07_Gemini_3_1_Pro_Hakem_Raporu_14_Kriter.md', group: 'akademik', part: 'Kısım IX: Hakem Değerlendirmeleri' },
+    { id: 'akademik_09_claude_sonnet', title: '9.8 Claude Sonnet 4.6 Hakem Raporu (14 Kriter)', file: 'Metin/Akademik/Kisim_9_Hakem_Degerlendirmeleri/08_Claude_Sonnet_4_6_Hakem_Raporu_14_Kriter.md', group: 'akademik', part: 'Kısım IX: Hakem Değerlendirmeleri' },
+    { id: 'akademik_09_02', title: '9.9 Önceki Değerlendirmeler ve Tartışmalar', file: 'Metin/Akademik/Kisim_9_Hakem_Degerlendirmeleri/98_Hakem_Degerlendirmeleri.md', group: 'akademik', part: 'Kısım IX: Hakem Değerlendirmeleri' },
+    { id: 'akademik_09_99', title: '9.10 Hakemlik Standardı ve Kriterler', file: 'Metin/Akademik/Kisim_9_Hakem_Degerlendirmeleri/99_Hakemlik_Standarti.md', group: 'akademik', part: 'Kısım IX: Hakem Değerlendirmeleri' },
     { id: 'populer_01', title: '1. Uzay Boş Değil!', file: 'Metin/Populer/populer_01.md', group: 'populer' },
     { id: 'populer_02', title: '2. Elma Neden Düşmez, İtilir!', file: 'Metin/Populer/populer_02.md', group: 'populer' },
     { id: 'populer_03', title: '3. Işığın Gerçek Yüzü: Zerreler', file: 'Metin/Populer/populer_03.md', group: 'populer' },
@@ -872,6 +887,9 @@ async function loadChapterContent(chapter) {
         // Process tooltips
         postProcessTooltips(bodyContainer);
 
+        // [M-n] atıflarını Ek M katalog sayfalarına tıklanabilir bağlantıya çevir
+        linkifyEkMReferences(bodyContainer);
+
         // Render mathematical formulas via KaTeX
         renderMathInElement(bodyContainer, {
             delimiters: [
@@ -891,6 +909,9 @@ async function loadChapterContent(chapter) {
 
         // Manage previous/next button visibilities
         updateNavigationButtons();
+
+        // Bekleyen bir M-n çapası varsa ilgili türetim başlığına kaydır
+        scrollToPendingMAnchor(bodyContainer);
 
         // Load comments for active chapter
         loadComments(chapter.id);
@@ -914,6 +935,92 @@ async function loadChapterContent(chapter) {
         lucide.createIcons();
     }
 }
+
+// ---- Ek M çapa sistemi (Faz 6) ----------------------------------------------
+// Metindeki "**Ek M-15**" / "**M-3**" atıflarını, ilgili Ek M blok sayfasına
+// giden ve sayfa yüklenince doğru türetim başlığına kaydıran bağlantılara çevirir.
+const EK_M_BLOK_MAP = [
+    { min: 1,  max: 6,  id: 'akademik_08_ma' },
+    { min: 7,  max: 9,  id: 'akademik_08_mb' },
+    { min: 10, max: 14, id: 'akademik_08_mc' },
+    { min: 15, max: 18, id: 'akademik_08_md' },
+    { min: 19, max: 21, id: 'akademik_08_me' },
+    { min: 22, max: 27, id: 'akademik_08_mf' },
+    { min: 28, max: 34, id: 'akademik_08_mg' },
+    { min: 35, max: 43, id: 'akademik_08_mh' },
+    { min: 44, max: 44, id: 'akademik_08_mi' },
+];
+
+function ekMChapterIdFor(n) {
+    const b = EK_M_BLOK_MAP.find(b => n >= b.min && n <= b.max);
+    return b ? b.id : null;
+}
+
+function linkifyEkMReferences(container) {
+    container.querySelectorAll('strong').forEach(el => {
+        if (el.closest('a')) return; // zaten bağlantı içinde
+        const m = el.textContent.trim().match(/^(?:Ek\s+)?M-(\d{1,2})$/);
+        if (!m) return;
+        const n = parseInt(m[1], 10);
+        const chapId = ekMChapterIdFor(n);
+        if (!chapId) return;
+        const a = document.createElement('a');
+        a.href = `#${chapId}`;
+        a.className = 'ekm-link';
+        a.title = `Ek M kataloğu: M-${n} türetimine git`;
+        a.addEventListener('click', (e) => {
+            e.preventDefault();
+            const sameChapter = (activeChapterId === chapId);
+            if (!sameChapter) window.location.hash = `#${chapId}`;
+            // Hedef sayfa yüklenene kadar M-n başlığını bekle; bulunca kaydır.
+            // (Yükleme sırasında gösterilen .loader kaybolmadan kaydırma yapılmaz.)
+            const t0 = Date.now();
+            const firstDelay = sameChapter ? 0 : 300;
+            const poll = () => {
+                const body = document.getElementById('markdown-body');
+                const loading = body && body.querySelector('.loader');
+                const h = body && !loading && Array.from(body.querySelectorAll('h2, h3'))
+                    .find(x => x.textContent.trim().startsWith(`M-${n} `));
+                if (h) {
+                    const vp = document.getElementById('main-viewport');
+                    if (vp) {
+                        const delta = h.getBoundingClientRect().top - vp.getBoundingClientRect().top;
+                        vp.scrollTop = vp.scrollTop + delta - 16;
+                    } else {
+                        h.scrollIntoView({ block: 'start' });
+                    }
+                } else if (Date.now() - t0 < 6000) {
+                    setTimeout(poll, 150);
+                }
+            };
+            setTimeout(poll, firstDelay);
+        });
+        el.parentNode.insertBefore(a, el);
+        a.appendChild(el);
+    });
+}
+
+function scrollToPendingMAnchor(container) {
+    const target = window.__pendingMAnchor;
+    if (!target || !container) return;
+    window.__pendingMAnchor = null;
+    const h = Array.from(container.querySelectorAll('h2, h3'))
+        .find(x => x.textContent.trim().startsWith(target + ' '));
+    if (!h) return;
+    // İçerik, window değil #main-viewport içinde kayar; bu konteynerde
+    // smooth scroll güvenilir çalışmadığından düz scrollTo kullanılır ve
+    // yerleşimin oturması için bir sonraki kareye ertelenir.
+    requestAnimationFrame(() => {
+        const vp = document.getElementById('main-viewport');
+        if (vp) {
+            const delta = h.getBoundingClientRect().top - vp.getBoundingClientRect().top;
+            vp.scrollTop = vp.scrollTop + delta - 16;
+        } else {
+            h.scrollIntoView({ block: 'start' });
+        }
+    });
+}
+// -----------------------------------------------------------------------------
 
 // marked.js, ```mermaid çitlerini <pre><code class="language-mermaid"> olarak üretir;
 // mermaid.js bunları tanımaz. Bu fonksiyon blokları .mermaid div'lerine çevirip çizdirir.

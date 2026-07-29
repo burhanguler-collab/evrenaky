@@ -356,7 +356,9 @@ Bunun için Tur 3/5'teki karar hâlâ bekliyor: **kavrama yasası KY-1 ($v=\sqrt
 
 #### TUR 5 — TÜRETİM DENEMESİ: KOŞULLU BAŞARI (25 Temmuz 2026)
 
-**Karar:** KY-1 ($v=\sqrt{P/\rho}$) yazar tarafından onaylandı. Aşağıda tam türetim.
+> ⚠️ **ARŞİV — GERİ ALINMIŞ TÜRETİM (28 Temmuz 2026):** Bu turdaki türetim zinciri TUR 6'da yazar tarafından **çürütülmüş ve geri alınmıştır.** Buradaki ara sonuçlar ($P_m = P_0$ ve $\rho_m = n^2\rho_0$) teoriyle çelişir: madde içinde Evrenakı basıncı arka planın altındadır ($P_m < P_0$, aktif vakum cebi) ve hacimce ortalama yoğunluk korunur ($\bar\rho_m = \rho_0$). **Geçerli türetim TUR 7'dedir** (gövde karşılığı: Bölüm 3.4.6.3). Bu tur, düşünce sürecinin dürüst kaydı olarak silinmeden saklanmaktadır; hiçbir sonucu alıntılanamaz.
+
+**Karar (güncellenmiş):** KY-1 ($v=\sqrt{P/\rho}$) onayı geçerlidir; ancak aşağıdaki türetim yolu geçersizdir — bkz. yukarıdaki arşiv notu.
 
 ## 1. Kurulum (iki denklem)
 
@@ -1366,7 +1368,7 @@ Postülat 1, Evrenakı'yı *"çok yoğun bir durgun kütleye sahip olan, ancak u
 
 > **T-4'ten devredilen iki gündem maddesi (25 Temmuz 2026, yazar onaylı):**
 > 1. **Ek B'nin $\Sigma$ ile revizyonu:** Ek B, asgari arka plan basıncını "yırtılma $P=0$'da başlar" ($\Sigma=0$) varsayımıyla türetiyor; Ek A artık $\Sigma\gg P_0$ diyor. Doğru koşul $P_0+\Sigma>\Delta P$'dir ve mevcut $P_0\ge1{,}6\times10^{25}$ Pa alt sınırı $(1+\Sigma/P_0)$ çarpanı kadar gevşer. (7.4 madde 10'a da işlendi.)
-> 2. **$P_0$'ı bağımsız sabitleme denemesi:** Kızıla kayma/saat-kayması genliğinden $\delta c/c\sim\tfrac12\Delta P_{yüzey}/P_0=\Phi/c^2$ kurulursa $P_0\approx\tfrac12\rho_n c^2\approx1{,}2\times10^{34}$ Pa ve $\rho_0\approx\rho_n/2\approx1{,}35\times10^{17}$ kg/m³ çıkar — arka plan yoğunluğu nükleon öz yoğunluğunun yarısı (monizmle uyumlu: madde, arka planın ~2 kat sıkışmış fazı). Varsayımları ($\rho$ sabit, lineer ölçekleme; oysa teoride kütle yakınında $\rho$ da düşüyor) Tur 1'de denetlenecek. **Not:** Bu sabitleme tutarsa, T-5'in "ağırlıksızlık muafiyeti" argümanı da yeni $P_0/\rho_0$ değerleriyle kurulmalı; ayrıca Ek B'deki $\rho_0\ge1{,}8\times10^8$ kg/m³ alt sınırının statüsü (alt sınır → sabitlenmiş değer) değişir.
+> 2. **$P_0$'ı bağımsız sabitleme denemesi:** Kızıla kayma/saat-kayması genliğinden $\delta c/c\sim\tfrac12\Delta P_{yüzey}/P_0=\Phi/c^2$ kurulursa $P_0\approx\tfrac12\rho_n c^2\approx1{,}2\times10^{34}$ Pa ve $\rho_0\approx\rho_n/2\approx1{,}4\times10^{17}$ kg/m³ çıkar — arka plan yoğunluğu nükleon öz yoğunluğunun yarısı (monizmle uyumlu: madde, arka planın ~2 kat sıkışmış fazı). Varsayımları ($\rho$ sabit, lineer ölçekleme; oysa teoride kütle yakınında $\rho$ da düşüyor) Tur 1'de denetlenecek. **Not:** Bu sabitleme tutarsa, T-5'in "ağırlıksızlık muafiyeti" argümanı da yeni $P_0/\rho_0$ değerleriyle kurulmalı; ayrıca Ek B'deki $\rho_0\ge1{,}8\times10^8$ kg/m³ alt sınırının statüsü (alt sınır → sabitlenmiş değer) değişir.
 
 ---
 
@@ -1735,7 +1737,7 @@ Taslak tablo (statüler: **T**üretilmiş · **S**abitlenmiş · **A**ralıklı/
 | # | Parametre | Anlamı | Statü | Değer/Sınır | Sabitleyen/Sabitleyecek gözlem | Bölüm |
 |---|---|---|---|---|---|---|
 | 1 | $m_z$ | Zerre kütlesi | **S** | $\approx1{,}47\times10^{-35}$ kg | Planck sabitinden türetim | 2.2.2 |
-| 2 | $\rho_n$ | Nükleon öz yoğunluğu | **G** | $\approx2{,}8\times10^{17}$ kg/m³ | Standart nükleer ölçüm | Ek B.3 |
+| 2 | $\rho_n$ | Nükleon öz yoğunluğu | **G** | $\approx2{,}7\times10^{17}$ kg/m³ | Standart nükleer ölçüm | Ek B.3 |
 | 3 | $k$ | Kütle yakınında $\rho$'nun $P$'ye eşlik oranı | **F** ($O(1)$) | $0\le k<1$ | SN 1987A gecikme bütçesi (çapraz kontrol bekliyor) | Ek B.3 |
 | 4 | $P_0$ | Arka plan basıncı | **S** ($k$'ya $O(1)$ duyarlı) | $\tfrac{1-k}{2}\rho_n c^2\sim10^{33}$ Pa | Kütleçekimsel kızıla kayma genliği (GPS/Pound–Rebka) | Ek B.3 |
 | 5 | $\rho_0$ | Arka plan yoğunluğu | **S** (aynı) | $\tfrac{1-k}{2}\rho_n\sim10^{17}$ kg/m³ | Aynı sabitleme | Ek B.3 |
