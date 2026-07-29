@@ -65,3 +65,134 @@ Bu zayıf eksenel kuvvet, galaksiyi tamamen yassılaştırmaya yetmez ve kürese
 
 ### Sonuç
 Evrenakı teorisinin kinematik denklemleri; sarmal, eliptik ve cüce küresel gözetmeksizin, dönen bir çekirdeğe sahip tüm galaktik yapılarda "Karanlık Madde" varsayımını tamamen ortadan kaldırmakta ve kütleçekim anomalisini kendi iç dinamikleriyle, saf matematiksel bir kesinlikle çözmektedir.
+
+### İnteraktif Galaktik Yörünge Simülatörü
+
+<div class="interactive-simulator" style="background-color: #121212; border: 1px solid #333; padding: 20px; border-radius: 8px; margin-top: 30px;">
+  <p style="color: #aaa; font-size: 0.9em; margin-bottom: 20px;">Evrenakı formülünü ($v = \sqrt{A/r + B}$) kendiniz test edin! Merkez kütleyi (A) ve kara deliğin dönüş hızını (B) değiştirerek, klasik Newton çekiminin dış bölgelerde nasıl çöktüğünü ve Evrenakı eksenel itiminin hızı nasıl havada tuttuğunu anında gözlemleyin.</p>
+  
+  <div style="margin-bottom: 15px;">
+    <label for="slider-A" style="color: #ddd; display: inline-block; width: 150px;">Merkezcil İtim (A): <span id="val-A" style="font-weight: bold; color: #ff5555;">200</span></label>
+    <input type="range" id="slider-A" min="1" max="1000" value="200" style="width: 250px; vertical-align: middle;">
+    <span style="color: #888; font-size: 0.8em; margin-left: 10px;">(Merkezi kütle / Basınç Gradyanı)</span>
+  </div>
+  
+  <div style="margin-bottom: 25px;">
+    <label for="slider-B" style="color: #ddd; display: inline-block; width: 150px;">Eksenel İtim (B): <span id="val-B" style="font-weight: bold; color: #55aaff;">150</span></label>
+    <input type="range" id="slider-B" min="0" max="500" value="150" style="width: 250px; vertical-align: middle;">
+    <span style="color: #888; font-size: 0.8em; margin-left: 10px;">(Kara deliğin dönüş hızı)</span>
+  </div>
+
+  <canvas id="galaxy-canvas" width="600" height="350" style="background-color: #0a0a0a; border: 1px solid #444; border-radius: 4px; display: block; max-width: 100%;"></canvas>
+  
+  <div style="margin-top: 15px; font-size: 0.9em;">
+    <span style="color: #ff5555; font-weight: bold;">- - - Klasik Çekim ($v = \sqrt{A/r}$)</span> &nbsp; | &nbsp; 
+    <span style="color: #55aaff; font-weight: bold;">── Evrenakı ($v = \sqrt{A/r + B}$)</span> &nbsp; | &nbsp;
+    <span style="color: #ffff00;">● Temsili Sarmal Galaksi Verisi</span>
+  </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const canvas = document.getElementById("galaxy-canvas");
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    
+    const sliderA = document.getElementById("slider-A");
+    const sliderB = document.getElementById("slider-B");
+    const valA = document.getElementById("val-A");
+    const valB = document.getElementById("val-B");
+
+    // Örnek bir sarmal galaksinin yörünge hız profili (ör. M33 benzeri)
+    const obsData = [
+        {r: 0.5, v: 12}, {r: 1.0, v: 16}, {r: 1.5, v: 18},
+        {r: 2.0, v: 19.5}, {r: 2.5, v: 20}, {r: 3.0, v: 20.5},
+        {r: 3.5, v: 21}, {r: 4.0, v: 21}, {r: 5.0, v: 21.5},
+        {r: 6.0, v: 21}, {r: 7.0, v: 21.5}
+    ];
+
+    function drawGraph() {
+        let A = parseFloat(sliderA.value);
+        let B = parseFloat(sliderB.value);
+        
+        valA.textContent = A;
+        valB.textContent = B;
+        
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+        const padding = 40;
+        const width = canvas.width - padding * 2;
+        const height = canvas.height - padding * 2;
+        const xMax = 8.0; 
+        const yMax = 35.0; 
+        
+        ctx.strokeStyle = "#333";
+        ctx.lineWidth = 1;
+        
+        for(let i=0; i<=xMax; i+=1) {
+            let x = padding + (i/xMax)*width;
+            ctx.beginPath(); ctx.moveTo(x, padding); ctx.lineTo(x, canvas.height - padding); ctx.stroke();
+            ctx.fillStyle = "#888"; ctx.font = "10px sans-serif";
+            ctx.fillText(i, x - 3, canvas.height - padding + 15);
+        }
+        for(let i=0; i<=yMax; i+=5) {
+            let y = (canvas.height - padding) - (i/yMax)*height;
+            ctx.beginPath(); ctx.moveTo(padding, y); ctx.lineTo(canvas.width - padding, y); ctx.stroke();
+            ctx.fillStyle = "#888"; ctx.font = "10px sans-serif";
+            ctx.fillText(i, padding - 20, y + 4);
+        }
+        
+        ctx.strokeStyle = "#777";
+        ctx.beginPath(); ctx.moveTo(padding, padding); ctx.lineTo(padding, canvas.height - padding); ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(padding, canvas.height - padding); ctx.lineTo(canvas.width - padding, canvas.height - padding); ctx.stroke();
+        
+        ctx.fillStyle = "#bbb";
+        ctx.fillText("r (kpc) ->", canvas.width/2 - 15, canvas.height - 5);
+        ctx.save();
+        ctx.translate(15, canvas.height/2 + 20);
+        ctx.rotate(-Math.PI/2);
+        ctx.fillText("v (km/s) ->", 0, 0);
+        ctx.restore();
+
+        ctx.fillStyle = "#ffff00";
+        obsData.forEach(pt => {
+            let cx = padding + (pt.r / xMax) * width;
+            let cy = (canvas.height - padding) - (pt.v / yMax) * height;
+            ctx.beginPath();
+            ctx.arc(cx, cy, 4, 0, Math.PI*2);
+            ctx.fill();
+        });
+        
+        function drawCurve(color, isDashed, func) {
+            ctx.strokeStyle = color;
+            ctx.lineWidth = 3;
+            if(isDashed) ctx.setLineDash([6, 6]);
+            else ctx.setLineDash([]);
+            
+            ctx.beginPath();
+            let first = true;
+            for(let px = 0; px <= width; px += 2) {
+                let r = (px / width) * xMax;
+                if(r < 0.1) continue; 
+                let v = func(r);
+                if(v > yMax) continue; 
+                
+                let cx = padding + px;
+                let cy = (canvas.height - padding) - (v / yMax) * height;
+                if(first) { ctx.moveTo(cx, cy); first = false; }
+                else { ctx.lineTo(cx, cy); }
+            }
+            ctx.stroke();
+            ctx.setLineDash([]);
+        }
+        
+        drawCurve("#ff5555", true, (r) => Math.sqrt(A / r));
+        drawCurve("#55aaff", false, (r) => Math.sqrt(A / r + B));
+    }
+    
+    sliderA.addEventListener("input", drawGraph);
+    sliderB.addEventListener("input", drawGraph);
+    
+    drawGraph();
+});
+</script>
