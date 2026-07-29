@@ -55,11 +55,11 @@ Evrenin en meşhur dev eliptik galaksilerinden olan M87 ve NGC 4472'nin merkezle
 #### 3. Cüce Küresel (Dwarf Spheroidal) Galaksiler: Derin Bir Fiziksel Öngörü
 Fornax (Ocak) gibi cüce küresel galaksiler, evrendeki karanlık maddenin oransal olarak en yoğun bulunduğu düşünülen, sadece 1-2 kpc boyutlarındaki minicik yapılardır. Çok düşük kütlelerine rağmen efektif hız profilleri $\sim18$ km/s bandında asimptota oturur.
 Evrenakı modeli bu galaksilerde de pürüzsüz çalışarak hızı dengeler. Ancak burada astrofiziğe karşı çok derin bir meydan okuma yatar: Güncel astronomiye göre cüce küresellerde süper kütleli kara delik **yoktur**. 
-Bu durum, teori açısından muazzam bir içsel tutarlılığa ve çok sert bir kurala işaret eder: **Evrenakı teorisi gereği, eğer bir yapının merkezinde dönen bir çekirdek devri varsa, o yapı eksenel itim kuvvetinin (B sabiti) etkisiyle basıklaşmak, disk veya eliptik bir form kazanmak zorundadır (Bkz. Bölüm 6.6 Gezegen Figürü).** 
+Bu durum, teori açısından çok net bir fiziksel öngörüye işaret eder: Cüce küresel galaksilerin merkezinde astronominin henüz tespit edemediği, **küçük ve düşük hızda dönen gizli bir kara delik (çekirdek devri) bulunmak zorundadır.**
 
-Dolayısıyla teoriden taviz yoktur: "Cüce Küresel" (Dwarf Spheroidal) gibi kusursuz **küresel formunu koruyan bir galaksinin merkezinde dönen bir yapı kesinlikle bulunamaz.** Merkezde dönen bir yapı (kara delik) yoksa, eksenel kuvvet ($B=0$) de fiziken yoktur. 
+Evrenakı teorisine göre (Bkz. Bölüm 6.6 Gezegen Figürü), güçlü bir eksenel itim kuvveti galaksiyi basıklaştırarak sarmal bir disk formuna sokar. Bu galaksiler küresel formlarını koruduklarına göre, merkezdeki bu kara deliğin kütlesi küçük ve dönüş hızı (dolayısıyla yarattığı eksenel itim kuvveti - $B$ sabiti) nispeten zayıftır. 
 
-O halde cüce küresel galaksilerdeki yıldız hızlarının dışarıya doğru düşmemesinin tek bir fiziksel sebebi vardır: Galaksinin kütle dağılımının ve dolayısıyla yarattığı hidrodinamik basınç gradyanının (A sabiti) dışarıya doğru gittikçe artması. Yani eksenel kuvvet ($B=0$) yoktur; kütlelerin (gaz ve yıldız yoğunluğunun) radyal olarak artan dağılımı vardır. (Bkz: Aşağıdaki grafikte hızın düşmemesi A(r)'nin r ile orantılı artmasıyla modellenmiştir).
+Bu zayıf eksenel kuvvet, galaksiyi tamamen yassılaştırmaya yetmez ve küresel form büyük ölçüde korunur. Ancak eksenel itimin uzayda $1/r$ ile yavaş sönümlenme karakteristiği sayesinde, bu zayıf dönüş bile dış bölgelerdeki yıldız hızlarının sıfıra çakılmasını engelleyecek o kritik matematiksel desteği (B sabiti dengesini) sağlamak için yeterlidir. Evrenakı'nın $v = \\sqrt{A/r + B}$ formülü, bu düşük dönüş hızıyla da gözlemlere tam oturur.
 
 ![Fornax Küresel Testi](Gorseller/fornax_kuresel_testi.png)
 
