@@ -55,9 +55,11 @@ Evrenin en meşhur dev eliptik galaksilerinden olan M87 ve NGC 4472'nin merkezle
 #### 3. Cüce Küresel (Dwarf Spheroidal) Galaksiler: Derin Bir Fiziksel Öngörü
 Fornax (Ocak) gibi cüce küresel galaksiler, evrendeki karanlık maddenin oransal olarak en yoğun bulunduğu düşünülen, sadece 1-2 kpc boyutlarındaki minicik yapılardır. Çok düşük kütlelerine rağmen efektif hız profilleri $\sim18$ km/s bandında asimptota oturur.
 Evrenakı modeli bu galaksilerde de pürüzsüz çalışarak hızı dengeler. Ancak burada astrofiziğe karşı çok derin bir meydan okuma yatar: Güncel astronomiye göre cüce küresellerde süper kütleli kara delik **yoktur**. 
-Bu durum, teori açısından çok kesin ve test edilebilir bir öngörüye işaret eder: **Merkezde dönen bir yapı (çekirdek devri) yoksa, eksenel itim kuvvetinden (B sabiti) de bahsedilemez.** Dolayısıyla, cüce küresel galaksilerdeki bu düz hız eğrisi için teorinin önünde iki net fiziksel çıkarım vardır:
-1. Ya astronomi cüce küresellerin merkezindeki karanlıkta kalmış devri (ışıma yapmayan, yüksek hızda dönen kütleli yapıları) henüz görememektedir ve eksenel kuvvet bu gizli devirden kaynaklanmaktadır.
-2. Ya da merkezde gerçekten dönen hiçbir şey yoktur (B=0). Bu durumda yıldız hızlarının dışarıya doğru düşmemesinin yegane sebebi, galaksinin yıldız/gaz (görünür) kütlesinin gittikçe artan bir dağılım sergilemesi ve dolayısıyla hidrodinamik basınç gradyanının (A sabiti) mesafeyle birlikte artmasıdır.
+Bu durum, teori açısından muazzam bir içsel tutarlılığa ve çok sert bir kurala işaret eder: **Evrenakı teorisi gereği, eğer bir yapının merkezinde dönen bir çekirdek devri varsa, o yapı eksenel itim kuvvetinin (B sabiti) etkisiyle basıklaşmak, disk veya eliptik bir form kazanmak zorundadır (Bkz. Bölüm 6.6 Gezegen Figürü).** 
+
+Dolayısıyla teoriden taviz yoktur: "Cüce Küresel" (Dwarf Spheroidal) gibi kusursuz **küresel formunu koruyan bir galaksinin merkezinde dönen bir yapı kesinlikle bulunamaz.** Merkezde dönen bir yapı (kara delik) yoksa, eksenel kuvvet ($B=0$) de fiziken yoktur. 
+
+O halde cüce küresel galaksilerdeki yıldız hızlarının dışarıya doğru düşmemesinin tek bir fiziksel sebebi vardır: Galaksinin kütle dağılımının ve dolayısıyla yarattığı hidrodinamik basınç gradyanının (A sabiti) dışarıya doğru gittikçe artması. Yani eksenel kuvvet yoktur; kütlelerin (gaz ve yıldız yoğunluğunun) radyal olarak artan dağılımı vardır.
 
 ![Fornax Küresel Testi](Gorseller/fornax_kuresel_testi.png)
 
