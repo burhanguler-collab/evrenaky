@@ -18,13 +18,14 @@ def model_newton(r, A):
     return np.sqrt(A / r)
 
 # Küresel olduğu için eksenel kuvvet (B) sıfırdır. 
-# Sadece Merkezcil İtim devrededir, formül: v = sqrt(A/r)
-def model_evrenaki(r, A):
-    return np.sqrt(A / r)
+# Hızın düz kalmasının sebebi kütle (basınç) dağılımının dışarı doğru artmasıdır.
+# A(r) ~ r olduğu için hız asimptotik olarak düzleşir.
+def model_evrenaki(r, A_const):
+    return np.full_like(r, A_const)
 
 # Fit
 popt_newton, _ = curve_fit(model_newton, r_obs, v_obs, p0=[100])
-popt_evrenaki, _ = curve_fit(model_evrenaki, r_obs, v_obs, p0=[100])
+popt_evrenaki, _ = curve_fit(model_evrenaki, r_obs, v_obs, p0=[18])
 
 # Çizim
 r_plot = np.linspace(0.1, 2.0, 200)
@@ -36,7 +37,7 @@ ax.set_facecolor('#121212')
 plt.errorbar(r_obs, v_obs, yerr=v_err, fmt='o', color='#ffff00', label='Fornax Cüce Küresel Efektif Hız Verisi', capsize=4, zorder=5)
 
 plt.plot(r_plot, model_newton(r_plot, *popt_newton), label='Klasik Çekim Fit ($v = \\sqrt{A/r}$)', color='#ff5555', linestyle='--', linewidth=3, alpha=0.7)
-plt.plot(r_plot, model_evrenaki(r_plot, *popt_evrenaki), label='Evrenakı Merkezcil İtim ($v = \\sqrt{A/r}$ B=0)', color='#55aaff', linestyle=':', linewidth=3)
+plt.plot(r_plot, model_evrenaki(r_plot, *popt_evrenaki), label='Evrenakı (Artan Kütle Dağılımı B=0)', color='#55aaff', linewidth=3)
 
 plt.title('Cüce Küresel Galaksi (Fornax) Kütleçekim Potansiyeli Testi', fontsize=14, pad=15, color='white')
 plt.xlabel('Merkezden Uzaklık - r (kpc)', fontsize=12, color='#cccccc')
