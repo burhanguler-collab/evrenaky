@@ -93,106 +93,113 @@ Evrenakı teorisinin kinematik denklemleri; sarmal, eliptik ve cüce küresel g�
 </div>
 
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-    const canvas = document.getElementById("galaxy-canvas");
-    if (!canvas) return;
-    const ctx = canvas.getContext("2d");
-    
-    const sliderA = document.getElementById("slider-A");
-    const sliderB = document.getElementById("slider-B");
-    const valA = document.getElementById("val-A");
-    const valB = document.getElementById("val-B");
-
-    // Örnek bir sarmal galaksinin yörünge hız profili (ör. M33 benzeri)
-    const obsData = [
-        {r: 0.5, v: 12}, {r: 1.0, v: 16}, {r: 1.5, v: 18},
-        {r: 2.0, v: 19.5}, {r: 2.5, v: 20}, {r: 3.0, v: 20.5},
-        {r: 3.5, v: 21}, {r: 4.0, v: 21}, {r: 5.0, v: 21.5},
-        {r: 6.0, v: 21}, {r: 7.0, v: 21.5}
-    ];
-
-    function drawGraph() {
-        let A = parseFloat(sliderA.value);
-        let B = parseFloat(sliderB.value);
-        
-        valA.textContent = A;
-        valB.textContent = B;
-        
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        
-        const padding = 40;
-        const width = canvas.width - padding * 2;
-        const height = canvas.height - padding * 2;
-        const xMax = 8.0; 
-        const yMax = 35.0; 
-        
-        ctx.strokeStyle = "#333";
-        ctx.lineWidth = 1;
-        
-        for(let i=0; i<=xMax; i+=1) {
-            let x = padding + (i/xMax)*width;
-            ctx.beginPath(); ctx.moveTo(x, padding); ctx.lineTo(x, canvas.height - padding); ctx.stroke();
-            ctx.fillStyle = "#888"; ctx.font = "10px sans-serif";
-            ctx.fillText(i, x - 3, canvas.height - padding + 15);
+(function() {
+    function initSim() {
+        const canvas = document.getElementById("galaxy-canvas");
+        if (!canvas) {
+            setTimeout(initSim, 50); // Canvas yüklenene kadar bekle
+            return;
         }
-        for(let i=0; i<=yMax; i+=5) {
-            let y = (canvas.height - padding) - (i/yMax)*height;
-            ctx.beginPath(); ctx.moveTo(padding, y); ctx.lineTo(canvas.width - padding, y); ctx.stroke();
-            ctx.fillStyle = "#888"; ctx.font = "10px sans-serif";
-            ctx.fillText(i, padding - 20, y + 4);
-        }
+        const ctx = canvas.getContext("2d");
         
-        ctx.strokeStyle = "#777";
-        ctx.beginPath(); ctx.moveTo(padding, padding); ctx.lineTo(padding, canvas.height - padding); ctx.stroke();
-        ctx.beginPath(); ctx.moveTo(padding, canvas.height - padding); ctx.lineTo(canvas.width - padding, canvas.height - padding); ctx.stroke();
-        
-        ctx.fillStyle = "#bbb";
-        ctx.fillText("r (kpc) ->", canvas.width/2 - 15, canvas.height - 5);
-        ctx.save();
-        ctx.translate(15, canvas.height/2 + 20);
-        ctx.rotate(-Math.PI/2);
-        ctx.fillText("v (km/s) ->", 0, 0);
-        ctx.restore();
+        const sliderA = document.getElementById("slider-A");
+        const sliderB = document.getElementById("slider-B");
+        const valA = document.getElementById("val-A");
+        const valB = document.getElementById("val-B");
 
-        ctx.fillStyle = "#ffff00";
-        obsData.forEach(pt => {
-            let cx = padding + (pt.r / xMax) * width;
-            let cy = (canvas.height - padding) - (pt.v / yMax) * height;
-            ctx.beginPath();
-            ctx.arc(cx, cy, 4, 0, Math.PI*2);
-            ctx.fill();
-        });
-        
-        function drawCurve(color, isDashed, func) {
-            ctx.strokeStyle = color;
-            ctx.lineWidth = 3;
-            if(isDashed) ctx.setLineDash([6, 6]);
-            else ctx.setLineDash([]);
+        const obsData = [
+            {r: 0.5, v: 12}, {r: 1.0, v: 16}, {r: 1.5, v: 18},
+            {r: 2.0, v: 19.5}, {r: 2.5, v: 20}, {r: 3.0, v: 20.5},
+            {r: 3.5, v: 21}, {r: 4.0, v: 21}, {r: 5.0, v: 21.5},
+            {r: 6.0, v: 21}, {r: 7.0, v: 21.5}
+        ];
+
+        function drawGraph() {
+            if (!sliderA || !sliderB) return;
+            let A = parseFloat(sliderA.value);
+            let B = parseFloat(sliderB.value);
             
-            ctx.beginPath();
-            let first = true;
-            for(let px = 0; px <= width; px += 2) {
-                let r = (px / width) * xMax;
-                if(r < 0.1) continue; 
-                let v = func(r);
-                if(v > yMax) continue; 
-                
-                let cx = padding + px;
-                let cy = (canvas.height - padding) - (v / yMax) * height;
-                if(first) { ctx.moveTo(cx, cy); first = false; }
-                else { ctx.lineTo(cx, cy); }
+            valA.textContent = A;
+            valB.textContent = B;
+            
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            const padding = 40;
+            const width = canvas.width - padding * 2;
+            const height = canvas.height - padding * 2;
+            const xMax = 8.0; 
+            const yMax = 35.0; 
+            
+            ctx.strokeStyle = "#333";
+            ctx.lineWidth = 1;
+            
+            for(let i=0; i<=xMax; i+=1) {
+                let x = padding + (i/xMax)*width;
+                ctx.beginPath(); ctx.moveTo(x, padding); ctx.lineTo(x, canvas.height - padding); ctx.stroke();
+                ctx.fillStyle = "#888"; ctx.font = "10px sans-serif";
+                ctx.fillText(i, x - 3, canvas.height - padding + 15);
             }
-            ctx.stroke();
-            ctx.setLineDash([]);
+            for(let i=0; i<=yMax; i+=5) {
+                let y = (canvas.height - padding) - (i/yMax)*height;
+                ctx.beginPath(); ctx.moveTo(padding, y); ctx.lineTo(canvas.width - padding, y); ctx.stroke();
+                ctx.fillStyle = "#888"; ctx.font = "10px sans-serif";
+                ctx.fillText(i, padding - 20, y + 4);
+            }
+            
+            ctx.strokeStyle = "#777";
+            ctx.beginPath(); ctx.moveTo(padding, padding); ctx.lineTo(padding, canvas.height - padding); ctx.stroke();
+            ctx.beginPath(); ctx.moveTo(padding, canvas.height - padding); ctx.lineTo(canvas.width - padding, canvas.height - padding); ctx.stroke();
+            
+            ctx.fillStyle = "#bbb";
+            ctx.fillText("r (kpc) ->", canvas.width/2 - 15, canvas.height - 5);
+            ctx.save();
+            ctx.translate(15, canvas.height/2 + 20);
+            ctx.rotate(-Math.PI/2);
+            ctx.fillText("v (km/s) ->", 0, 0);
+            ctx.restore();
+
+            ctx.fillStyle = "#ffff00";
+            obsData.forEach(pt => {
+                let cx = padding + (pt.r / xMax) * width;
+                let cy = (canvas.height - padding) - (pt.v / yMax) * height;
+                ctx.beginPath();
+                ctx.arc(cx, cy, 4, 0, Math.PI*2);
+                ctx.fill();
+            });
+            
+            function drawCurve(color, isDashed, func) {
+                ctx.strokeStyle = color;
+                ctx.lineWidth = 3;
+                if(isDashed) ctx.setLineDash([6, 6]);
+                else ctx.setLineDash([]);
+                
+                ctx.beginPath();
+                let first = true;
+                for(let px = 0; px <= width; px += 2) {
+                    let r = (px / width) * xMax;
+                    if(r < 0.1) continue; 
+                    let v = func(r);
+                    if(v > yMax) continue; 
+                    
+                    let cx = padding + px;
+                    let cy = (canvas.height - padding) - (v / yMax) * height;
+                    if(first) { ctx.moveTo(cx, cy); first = false; }
+                    else { ctx.lineTo(cx, cy); }
+                }
+                ctx.stroke();
+                ctx.setLineDash([]);
+            }
+            
+            drawCurve("#ff5555", true, (r) => Math.sqrt(A / r));
+            drawCurve("#55aaff", false, (r) => Math.sqrt(A / r + B));
         }
         
-        drawCurve("#ff5555", true, (r) => Math.sqrt(A / r));
-        drawCurve("#55aaff", false, (r) => Math.sqrt(A / r + B));
+        sliderA.addEventListener("input", drawGraph);
+        sliderB.addEventListener("input", drawGraph);
+        
+        drawGraph();
     }
     
-    sliderA.addEventListener("input", drawGraph);
-    sliderB.addEventListener("input", drawGraph);
-    
-    drawGraph();
-});
+    setTimeout(initSim, 100);
+})();
 </script>
