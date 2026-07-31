@@ -338,7 +338,7 @@ Bir teorinin bilimsel disiplini, parametrelerinin muhasebesinden okunur: hangile
 
 | # | Parametre | Fiziksel anlamı | Statü | Değer / Sınır | Sabitleyen / sabitleyecek gözlem | Bölüm |
 |---|---|---|---|---|---|---|
-| 1 | $m_z$ | Zerre kütlesi | **S** | $\approx1{,}47\times10^{-35}$ kg | Planck sabitinden türetim | 2.2.2 |
+| 1 | $m_z$ | Zerre kütlesi | **S** *(30 Tem 2026: kaynak sütunu düzeltildi)* | $\approx1{,}47\times10^{-35}$ kg | Fotoelektrik eşik ölçeği: $\tfrac12 m_z c^2 \simeq \Phi \approx 4$ eV — **Planck sabitinden türetim değildir** (aşağıdaki düzeltme kaydı) | 2.2.2, **Ek M-10** |
 | 2 | $\rho_n$ | Nükleon öz yoğunluğu | **G** | $\approx2{,}7\times10^{17}$ kg/m³ | Standart nükleer ölçüm | Ek B.3 |
 | 3 | $k$ | **Deplasman** sürecinde $\rho$'nun $P$'ye eşlik oranı (dalga kanalının adiyabatik katsayısıyla karıştırılmamalıdır) | **T** *(29 Tem 2026'da F→T)* | $k=0$ — deplasman yoğunluğu değil basıncı değiştirir | **Türetilmiştir:** M-15'in G2 aksiyomu ($\bar\rho_m=\rho_0$) ve M-30'un Varsayım 1'i ("gradyanlarda asıl değişen basınçtır") bağımsız olarak aynı değeri verir | Ek B.3, **Ek M-44** |
 | 4 | $P_0$ | Arka plan basıncı | **S** *(29 Tem: $k$ belirsizliği kalktı, değer kesinleşti)* | $\tfrac14\rho_n c^2 = 6{,}07\times10^{33}$ Pa | Işık bükülmesi genliği ($1{,}75''$) + ölçek yapısı (Ek M-42); $k=0$ için Ek M-44 | Ek B.3 |
@@ -359,6 +359,12 @@ Bir teorinin bilimsel disiplini, parametrelerinin muhasebesinden okunur: hangile
 | 19 | $\xi$ | **Dönme sürüklenme kesri** (ortamın gövde dönüşüne tutunma oranı; ötelemedeki tam sürüklenmeden ayrıdır) | **T** *(28 Tem 2026'da S→T)* | $\xi=\dfrac{I}{MR^2}\left\lvert\dfrac{\delta c_{loc}}{c}\right\rvert=\dfrac{I}{MR^2}\dfrac{2\Phi}{c^2}=4{,}605\times10^{-10}$ (Dünya) — serbest katsayısı yok, kompaktlıkla ölçeklenir | **Türetilmiştir** (Ek M-40 "$\xi$'nin Türetimi"); girdisi Ek M-42'nin ışık bükülmesiyle sabitlenmiş $\delta c_{loc}/c$'sidir. GP-B ($37{,}2\pm7{,}2$ mas/yıl) artık kalibrasyon değil **sınavdır** (0,52σ ✓) | Postülat 7, 6.3.3, Ek M-40, Ek M-42 |
 | P1 | $\rho(r)$ | Galaktik vorteks yoğunluk profili | **F** (fonksiyon) | $\approx$ sabit ($k\ll1$ çalışma hipotezi; bileşik girdap — 4.2.9.2) | Dönüş eğrisi + galaktik kızıla kayma sapmasının ortak fiti | 4.2.9, 6.2.8 |
 | P2 | Rampa profili | Sürüklenme zarfı gradyanının biçimi | **A** (fonksiyon) | Gaia µas üst sınırı | Gaia tüm-gökyüzü astrometrisi (Gaia Collaboration, 2021) + Fizeau katsayısı (Fizeau, 1851) | 3.4.6 |
+
+> *Düzeltme kaydı — $m_z$'nin kaynağı (30 Temmuz 2026, Claude Opus 5):* Bu satırın önceki sürümü sabitleyen gözlem olarak **"Planck sabitinden türetim"** yazıyordu. Bu ifade hem yanlıştı hem de satırın kendi statü koduyla çelişiyordu: $h$'tan formülle çıkan bir büyüklük **T** rozeti almalıydı, oysa satır **S** taşıyor — ve Ek M-10'un Geçerlilik Sınırı açıkça *"$m_z$ değeri ilk-ilkelerden türetilmemiştir... gözlemle sabitlenir"* diyor. Gerçek çapa, M-10'un sayısal zincirinde gizliydi: $\tfrac12 m_z c^2 \approx 4{,}1$ eV, yani tek Zerre'nin öteleme enerjisinin **tipik iş fonksiyonu ölçeğine** eşitlenmesi. Bu koşul tersine çözüldüğünde $m_z = 1{,}4618\times10^{-35}$ kg verir — çizelgedeki değerle %0,56 uyum. Kaynak sütunu buna göre düzeltildi.
+>
+> **İlişki ters yöndedir:** teori $h$'ı girdi almaz, **üretir.** M-10'un muhasebesinde $N=\nu\tau$ konulduğunda standart $h\nu$ ile eşleşme $h \leftrightarrow 2\tau m_z^2c^2/m_e$ verir; bu da $\tau = 15{,}5$ ps gerektirir. M-10 birikim penceresini bağımsız olarak $\sim10$ ps hesaplıyor — 1,6 kat uyum. "Planck sabitinden türetim" ibaresi muhtemelen bu bağın yönünün ters okunmasından doğmuştur.
+>
+> *Kalan çekince (Ek M-10'a da işlendi):* M-10'un muhasebe denklemi $\eta=4m_z/m_e$ yerine konduğunda $\Phi+E_{ke} = (2Nm_z^2/m_e)(c^2+k_a v_{cev}^2)$ hâlini alır — **bir denklem, üç bilinmeyen** ($N$, $m_z$, $v_{cev}$). Dolayısıyla fotoelektrik veri tek başına $m_z$'yi belirlemez, yalnızca bir kombinasyonu kısıtlar; değeri yukarıdaki eşik eşleşmesi sabitler. **S** rozeti bu nedenle bir *ölçek eşleşmesi* düzeyindedir, hassas bir tayin değil.
 
 #### Ek C.1 — Dürüst Sayım
 

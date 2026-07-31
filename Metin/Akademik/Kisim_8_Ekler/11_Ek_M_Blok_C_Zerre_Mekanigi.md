@@ -33,6 +33,12 @@ $$\boxed{\Phi + E_{ke} = N \cdot \eta \cdot \tfrac{1}{2} m_z \left(c^2 + k_a\, v
 
 ### Geçerlilik Sınırı
 - Rozet **[S]**: $m_z$ değeri ilk-ilkelerden türetilmemiştir; fotoelektrik veri ($\Phi$, $E_{ke}$, $\nu$) ile Postülat 4'ün evrensel $m_z$ değerinin tutarlılığı üzerinden **gözlemle sabitlenir**. $N$–$m_z$ kombinasyonu bu veriyle bağlıdır.
+- **Kalibrasyon varsayımı — açıkça (eklendi 30 Temmuz 2026, Claude Opus 5):** Yukarıdaki kutulu denklem $\eta = 4m_z/m_e$ yerine konduğunda
+  $$\Phi + E_{ke} = \frac{2N m_z^2}{m_e}\left(c^2 + k_a\, v_{cev}^2\right)$$
+  hâlini alır: **bir denklem, üç bilinmeyen** ($N$, $m_z$, $v_{cev}$; $k_a=2/5$ alınmıştır). Bu denklem $m_z$'yi tek başına belirlemez. Çizelgedeki $m_z \approx 1{,}47\times10^{-35}$ kg değerini sabitleyen, yukarıdaki sayısal zincirin ilk halkasında örtük duran şu ek koşuldur ve bir **varsayım** olarak kayda geçirilmelidir:
+  $$\tfrac12 m_z c^2 \;\simeq\; \Phi \;\approx\; 4\ \text{eV}$$
+  Yani tek Zerre'nin öteleme enerjisi, tipik metal iş fonksiyonu ölçeğine eşitlenir. Ters çözüm $m_z = 1{,}4618\times10^{-35}$ kg verir (çizelge değeriyle %0,56 uyum). Bu bir *ölçek eşleşmesidir*, hassas tayin değil: iş fonksiyonları malzemeye göre ~2–5 eV arasında değişir, dolayısıyla bu çapa $m_z$'ye kendiliğinden $\sim\pm25\%$ genişlik bırakır. $v_{cev}$ ve $N$ bağımsız olarak sabitlenmedikçe daha keskin bir tayin yapılamaz (Açık Uçlar; 7.4).
+- **Bağın yönü:** Bu ek, teorinin $h$'ı **girdi aldığı** biçiminde okunmamalıdır — tersi geçerlidir. Muhasebede $N=\nu\tau$ konulduğunda standart $h\nu$ ile eşleşme $h \leftrightarrow 2\tau m_z^2 c^2/m_e$ verir; bu bağıntı $\tau = 15{,}5$ ps gerektirir ve yukarıdaki bağımsız birikim hesabı $\sim10$ ps vermektedir (1,6 kat uyum). Yani $h$, teorinin kendi mekaniğinden mertebe doğruluğunda **geri üretilir**. *(Ek C parametre çizelgesinin 1. satırı bu bağı ters yönde okuyup "Planck sabitinden türetim" yazıyordu; 30 Temmuz 2026'da düzeltildi.)*
 - $\eta$, kafa kafaya elastik çarpışmanın üst sınırıdır; gerçek vuruş geometrisi dağılımı $N$'yi yukarı esnetebilir (mertebe değişmez).
 - Elektron burada standart kinematik hedef olarak alınmıştır; girdap iç yapısının (2.1) aktarım verimine düzeltmesi ihmal edilmiştir.
 

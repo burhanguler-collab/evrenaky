@@ -47,6 +47,10 @@ Siklostrofik dengenin ($\frac{dP}{dr} = \rho \frac{v_\theta^2}{r}$) sabit $\rho$
 
 **Bileşik yapının bedava öngörüsü:** Gözlenen galaktik dönüş eğrileri tam bu bileşik deseni çizer — iç bölgede hız $r$ ile yaklaşık doğrusal yükselir (katı-cisim kolu), $r_0$ civarında kırılıp düzleşir. Standart fizik bu iki kolu iki ayrı bileşenle (iç: baryonik disk; dış: karanlık madde halesi) fit etmek zorundadır; bileşik girdapta ikisi, tek yapının iki bölgesidir. *Dürüst kayıt:* $v_0$ ve $r_0$'ın merkez motor parametrelerinden nicel türetimi yapılmamıştır; P1 programı (Ek C) bu profili dönüş eğrisi + galaktik kızıla kayma sapmasının ortak fitiyle sabitleyecektir (bkz. 7.4, madde 1 ve 5).
 
+> *Güncelleme (30 Temmuz 2026):* Yukarıdaki açığın **$r_0$ ayağı kapatılmıştır**, ama bu bölümün Rankine kurgusu üzerinden değil. Bölüm 6.5.4.3, F4'ün genliğini nükleonun dolanım debisinden türetir ve geçiş yarıçapını ayrı bir parametre olmaktan çıkarır: $r_0=\ell_\omega=q_n/2\gamma_n$ (vortisite uzunluğu). Ayrıca kaynak kapsanan nükleon kütlesi alındığında ($M_{kaps}\propto R^2$, küçük $R$) eksendeki ıraksama **kendiliğinden** düzenlenir; elle konan bir düzenleme çarpanına gerek kalmaz. **$v_0$ ayağı hâlâ açıktır** — P1 programının konusu olarak kalır.
+>
+> *Ek kayıt:* Düz eğrinin öngörü statüsü kazandığı yol **M-38+M-37 zinciridir** (Ek M-30, madde 5); bu bölümün bileşik girdap kurgusunun katkısı basınç profilini (logaritmik kuyu) vermektir, düz eğriyi türetmek değil. Bu güncelleme Claude Opus 5 tarafından üretilmiştir; nicel sınav ve dürüstlük kayıtları 6.5.3.1 ve 6.5.4.7'dedir.
+
 ## 4.2.10 Sıfır Bağıl Hız ve Entrainment Çözümü
 "Uzay yoğun bir akışkansa, gezegenler sürtünmeyle neden yavaşlamaz?" sorusu, Evrenakı'nın Entrainment (sürüklenme/eşlik etme) mekanizmasıyla cevaplanır. Gezegenlerin etrafındaki yerel Evrenakı zarı, gezegenle birlikte hareket eder. Gezegenin kendi hızı ile yerel Evrenakı'nın akış hızı arasındaki bağıl hız sıfırdır ($v_{bağıl} = 0$). Sürüklenme stresi sıfırlandığı için sistem momentum kaybetmez. Michelson-Morley deneyindeki "sıfır" sapma sonucunun fiziksel karşılığı da bu eşzamanlı hareket (entrainment) olgusudur.
 

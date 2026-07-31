@@ -11,11 +11,13 @@
 * Ashby, N. (2003). *Relativity in the Global Positioning System*. Living Reviews in Relativity, 6, 1. (GPS saat kayması — Bölüm 6.2.8).
 * Barnett, S. M. (2010). *Resolution of the Abraham-Minkowski Dilemma*. Physical Review Letters, 104(7), 070401. (Kinetik/kanonik momentum ayrımı — Bölüm 6.4).
 * Bell, J. S. (1964). *On the Einstein Podolsky Rosen paradox*. Physics Physique Fizika, 1(3), 195-200. (Yerel gizli değişkenler teoremi — Bölüm 6.0, §1.4).
+* Burnham, K. P., & Anderson, D. R. (2002). *Model Selection and Multimodel Inference: A Practical Information-Theoretic Approach* (2. baskı). Springer. (AIC ile model seçimi ve $\Delta$AIC > 10 dışlama eşiği — Bölüm 6.5.3.1).
 * Bradley, J. (1729). *A Letter... giving an Account of a new discovered Motion of the Fix'd Stars*. Philosophical Transactions, 35(406), 637-661. (Yıldız sapması / aberasyon gözlemi — Bölüm 6.0, §1.3).
 * Ciufolini, I., & Pavlis, E. C. (2004). *A confirmation of the general relativistic prediction of the Lense-Thirring effect*. Nature, 431(7011), 958-960. (LAGEOS eksen kayması ölçümleri — Bölüm 6.3.3).
 * Clowe, D., et al. (2006). *A Direct Empirical Proof of the Existence of Dark Matter*. The Astrophysical Journal Letters, 648(2), L109-L113. (Bullet Cluster zayıf merceklenme haritası — Bölüm 6.0, §2.2).
 * Delva, P., et al. (2018). *Gravitational Redshift Test Using Eccentric Galileo Satellites*. Physical Review Letters, 121, 231101. (Galileo uydularıyla kütleçekimsel kızıla kayma testi — Bölüm 6.2.8).
 * Doppler, C. (1842). *Über das farbige Licht der Doppelsterne und einiger anderer Gestirne des Himmels*. Abhandlungen der Königlich Böhmischen Gesellschaft der Wissenschaften. (Doppler kaymasının özgün formülasyonu — Bölüm 6.2).
+* Dutton, A. A., & Macciò, A. V. (2014). *Cold dark matter haloes in the Planck era: evolution of structural parameters for Einasto and NFW profiles*. Monthly Notices of the Royal Astronomical Society, 441(4), 3359-3374. (NFW konsantrasyon–kütle ilişkisi — Bölüm 6.5.3.1).
 * Einstein, A. (1905a). *Zur Elektrodynamik bewegter Körper*. Annalen der Physik, 17, 891-921. (Özel Görelilik ve rölativistik Doppler — Bölüm 6.1.2).
 * Einstein, A. (1915). *Erklärung der Perihelbewegung des Merkur aus der allgemeinen Relativitätstheorie*. Sitzungsberichte der Preussischen Akademie der Wissenschaften. (Genel Görelilik ve kütleçekimsel kayma — Bölüm 6.2.1).
 * Einstein, A., Podolsky, B., & Rosen, N. (1935). *Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?* Physical Review, 47(10), 777-780. (EPR — "uzaktan gizemli etki" — Bölüm 6.0, §1.4).
@@ -26,9 +28,11 @@
 * Ives, H. E., & Stilwell, G. R. (1938). *An Experimental Study of the Rate of a Moving Atomic Clock*. Journal of the Optical Society of America, 28(7), 215-226. (Rölativistik Doppler kaymasının ilk laboratuvar doğrulaması — Bölüm 6.1 ve 6.2.8).
 * Lense, J., & Thirring, H. (1918). *Über den Einfluß der Eigenrotation der Zentralkörper auf die Bewegung der Planeten und Monde nach der Einsteinschen Gravitationstheorie*. Physikalische Zeitschrift, 19, 156-163. (Çerçeve sürüklenmesi (frame-dragging) öngörüsü — Bölüm 6.3.3).
 * Lorentz, H. A. (1904). *Electromagnetic phenomena in a system moving with any velocity smaller than that of light*. Proceedings of the Royal Netherlands Academy of Arts and Sciences, 6, 809-831. (Esir teorisinde gözlemlenemezlik — Bölüm 6.1.3).
+* Lelli, F., McGaugh, S. S., & Schombert, J. M. (2016). *SPARC: Mass Models for 175 Disk Galaxies with Spitzer Photometry and Accurate Rotation Curves*. The Astronomical Journal, 152, 157. (NGC 3198 dönüş eğrisi ve baryonik ayrıştırma; kovan kataloğu $L_{bul}=0$ — Bölüm 6.5.3.1 ve 6.5.4).
 * Markevitch, M., et al. (2004). *Direct Constraints on the Dark Matter Self-Interaction Cross Section from the Merging Galaxy Cluster 1E 0657-56*. The Astrophysical Journal, 606(2), 819-824. (Bullet Cluster — X-ışını gazı ile kütle merkezinin ayrışması — Bölüm 6.0, §2.2).
 * Michelson, A. A., & Morley, E. W. (1887). *On the Relative Motion of the Earth and the Luminiferous Ether*. American Journal of Science, 34(203), 333-345. (Sıfır sonucu — Bölüm 6.0, §1.3).
 * Minkowski, H. (1908). *Die Grundgleichungen für die elektromagnetischen Vorgänge in bewegten Körpern*. Nachrichten von der Gesellschaft der Wissenschaften zu Göttingen, 53-111. (Işığın dielektrik ortamdaki momentumu — Bölüm 6.4).
+* Navarro, J. F., Frenk, C. S., & White, S. D. M. (1996). *The Structure of Cold Dark Matter Halos*. The Astrophysical Journal, 462, 563-575. (NFW profili ve merkezdeki cusp ölçütü — Bölüm 6.5.3.1 ve 6.5.4-A).
 * Navier, C.-L. M. H. (1823). *Mémoire sur les lois du mouvement des fluides*. Mémoires de l'Académie Royale des Sciences de l'Institut de France, 6, 389-440. (Navier–Stokes denklemleri — Bölüm 6.3.3).
 * O'Donoghue, J., et al. (2019). *Observations of the chemical and thermal response of 'ring rain' on Saturn's ionosphere*. Icarus, 322, 251-260. (Halka yağmuru kütle kaybı — Bölüm 6.0, §2.7).
 * Perlmutter, S., et al. (1999). *Measurements of Ω and Λ from 42 High-Redshift Supernovae*. The Astrophysical Journal, 517(2), 565-586. (İvmelenen genişleme — Bölüm 6.0, §2.4).
