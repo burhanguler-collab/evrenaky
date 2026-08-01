@@ -23,5 +23,13 @@ Erken evrende (baryon ağırlıklı ve düşen dönüş eğrisine sahip) gözlem
 * **Genzel, R., et al.** (2017). *Strongly baryon-dominated disk galaxies at the peak of galaxy formation epoch.* Nature, 543(7645), 397-401. [arXiv:1703.04310]
 * **Lang, P., et al.** (2017). *Falling Outer Rotation Curves of Star-forming Galaxies at 0.6 ≲ z ≲ 2.6 Probed with KMOS3D and SINS/zC-SINF.* The Astrophysical Journal, 840(2), 92. [arXiv:1703.05491]
 
+## 6. Gaz Dinamikleri, Karanlık Madde ve Ek Çalışmalar
+* **Ianjamasimanana, R., et al.** (2012). [arXiv:1207.5041]
+* **Stilp, A. M., et al.** (2013).
+* **Ianjamasimanana, R., et al.** (2015).
+* **Oh, S.-H., et al.** (2015).
+* **Mogotsi, K. M., et al.** (2016).
+* **Iorio, G., et al.** (2017). [arXiv:1611.03865]
+
 ---
 **Veri Kullanım Etiği:** Evrenakı teorisi, kendi sonuçlarını iyileştirmek adına yukarıdaki yayımlanmış verilerin hiçbirine fit işlemi (eğri uydurma) veya veri seçimi (cherry-picking) uygulamamıştır. Yalnızca veri setlerinin kendi içindeki kalite bayrakları (örneğin SPARC'ın kendi belirlediği Q=3 düşük kalite bayrakları veya $i < 30^\circ$ eğiklik sınırları) filtrelenerek adil bir test ortamı kurulmuştur.

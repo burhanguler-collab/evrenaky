@@ -25,3 +25,12 @@ Bu kısımdaki bütün dönüş eğrisi verileri, gözlemsel noktalar ve baryoni
 
 * **Genzel, R., ve ark.** (2017). *Strongly baryon-dominated disk galaxies at the peak of galaxy formation epoch.* Nature, 543(7645), 397–401. [arXiv:1703.04310] — 10.9'un altı diski.
 * **Lang, P., ve ark.** (2017). *Falling Outer Rotation Curves of Star-forming Galaxies at 0.6 ≲ z ≲ 2.6 Probed with KMOS³D and SINS/zC-SINF.* ApJ, 840(2), 92. [arXiv:1703.05491] — açık iş: 101 galaksilik yığılmış eğri (10.10.3, madde 6).
+
+## Gaz Dinamikleri — HI hız dağılımları (σ sınavı, 10.10)
+
+* **Ianjamasimanana, R., de Blok, W. J. G., Walter, F., & Heald, G. H.** (2012). *The Shapes of the HI Velocity Profiles of the THINGS Galaxies.* AJ, 144, 96. [arXiv:1207.5041] — süper-profil $\sigma_{dar}/\sigma_{geniş}$, birincil ölçek.
+* **Stilp, A. M., ve ark.** (2013). *Global HI Kinematics in Dwarf Galaxies.* ApJ, 765, 136. [arXiv:1301.1989] — VLA-ANGST/THINGS süper-profil $\sigma_{merkez}$.
+* **Ianjamasimanana, R., ve ark.** (2015). *The radial variation of HI velocity dispersions in dwarfs and spirals.* AJ, 150, 47.
+* **Oh, S.-H., ve ark.** (2015). *The HI Kinematics of the LITTLE THINGS Dwarf Galaxy Sample.* AJ, 149, 180.
+* **Mogotsi, K. M., ve ark.** (2016). *HI and CO Velocity Dispersions in Nearby Galaxies.* AJ, 151, 15.
+* **Iorio, G., ve ark.** (2017). *LITTLE THINGS in 3D: robust determination of the circular velocity of dwarf irregular galaxies.* MNRAS, 466, 4159. [arXiv:1611.03865] — cüce medyan $\sigma$.

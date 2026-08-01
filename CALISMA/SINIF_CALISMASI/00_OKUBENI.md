@@ -30,6 +30,7 @@ Aşağıdakiler morfolojik sınıf değil, **ayrı veri kümeleri** üzerinde ku
 
 | Klasör | Ne | Veri | Fit |
 |---|---|---|---|
+| [`85_TUTARLILIK_YASASI`](85_TUTARLILIK_YASASI/CALISMA.md) | **Sınıf bandının mekanizması** — [$N_c$ türetildi](85_TUTARLILIK_YASASI/NC_TURETIM.md): **kafes = atom çekirdeği**, pencere $[X,\langle A\rangle]$ parametresiz, band içinde; $M_{tut}\approx X m_n$ %15. [$\lambda$ denemesi](85_TUTARLILIK_YASASI/LAMBDA_TURETIM.md): $\sqrt{N}$ **teoremleşti** (polarizasyon $<3\times10^{-35}$), aday: kaskad karakteri; S0/BCD'ye $\lambda<1$ çağrısı. [σ sınavı](85_TUTARLILIK_YASASI/SIGMA_SINAVI.md): $n=18$'de **ilk anlamlı işaret** $+0{,}49$ ($p=0{,}02$) | 148 galaksi · 8 grup | fit yok |
 | [`86_NIHAI`](86_NIHAI/CALISMA.md) | ⚡ **NİHAİ KURULUM KARARI** — yerel $\ell_\omega$ + $a_0=1{,}75\times cH_0/16{,}1$; toplu defter: **8 iyileşti / 1 kötüleşti**, RMS 12,79 < ΛCDM 14,56 | 9 ölçüt · 4 kurulum | — |
 | [`88_TARAMA`](88_TARAMA/CALISMA.md) | Galaksi başına açığı ne öngörüyor? — 14 değişken tarandı, **NULL SONUÇ** | 141 / 38 galaksi | fit yok |
 | [`89_KAFES`](89_KAFES/CALISMA.md) | **Kafes yasası, yoğun rejimde** — yazarın iddiası ölçüldü; 2,6 kat bastırma, ölçülen yönde | 2728 nokta, 137 galaksi | fit yok |

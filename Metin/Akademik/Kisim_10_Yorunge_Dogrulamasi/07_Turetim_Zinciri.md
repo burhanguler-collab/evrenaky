@@ -65,12 +65,33 @@ Teoride $\mathcal{G}=\alpha/\rho_n$ ve $\rho_n$ ortamın yerel yoğunluğudur; s
 
 **İşaret teorinin öngördüğü işarettir** — ama iki kayıt hükmü sınırlar: (1) $\mathcal{G}$ ile $\Upsilon_*$ bu yöntemle **ayrılamaz** ve ayrılamama yapısaldır (F4'ün ihmal edilebilir olduğu bölge zaten yıldız-baskındır; gaz kaldıracı doğmaz). (2) Yine de iki açıklamadan biri fizikle uyumsuzdur: sapmayı $\Upsilon_*$ ile açıklamak, 3,6 μm'de yoğun bölgelerin daha yaşlı (daha yüksek $\Upsilon_*$'lı) olması gerçeğiyle **ters işaret** ister; $\mathcal{G}=\alpha/\rho_n$ istemez. Teorinin $\rho_n(\Sigma_{bar})$ bağıntısını nicel vermesi, bu sınavı işaret kontrolünden ölçüme çevirecek açık iştir.
 
-## 10.7.5 Zincirin özeti
+## 10.7.5 Tutarlılık kümesinin kimliği: kafes, atom çekirdeğidir
+
+*(Türetim ve hesap: `CALISMA/SINIF_CALISMASI/85_TUTARLILIK_YASASI/NC_TURETIM.md`)*
+
+Rastgele yürüyüşün bağımsız birimi nedir? Cevap $\ell_\omega$'nın fiziksel anlamından çıkar: komşunun hissettiği dolanım/pulsasyon alan oranı $v_t/v_r=d/\ell_\omega$'dir — $\ell_\omega$, yönsüz pulsasyon bölgesinden yönlü dolanım bölgesine **geçiş yarıçapıdır.** Ve ölçülen 35,7 fm, doğanın bir ölçek boşluğuna düşer: en büyük çekirdek 7,4 fm, çekirdekler arası mesafe her fazda (beyaz cüce dahil) $\geq2{,}7\times10^3$ fm. Dolayısıyla **aynı çekirdeğin nükleonları daima korele, farklı çekirdekler daima bağımsızdır: tutarlılık kümesi atom çekirdeğidir** — maddenin fazından bağımsız olarak (gaz-kafes sınavının null'unun öngörüye dönüşmesi; 10.6.1).
+
+Rastgele yürüyüş çekirdekler üzerinden işleyince $\Gamma_{etkin}=\gamma_n\sqrt{N_c N}$, $M_{tut}=N_c m_n$ ve pencere parametresiz çıkar:
+
+$$N_c\in[\,X,\;\langle A\rangle\,]\approx[\,0{,}71\,;\;2{,}2\,]$$
+
+(taban: eşlenme sönmesi — çift-çift çekirdekler sıfırlanır, kalan hidrojen kütle kesri $X$; tavan: tam iç uyum, $\langle A\rangle=\sum X_jA_j$.)
+
+![Sınıf bandının mekanizma taraması — hedefler, kanal ayrımı, yasa denemesi](Gorseller/k10_tutarlilik.png)
+
+**Sınav — üç isabet:** (a) morfolojik sınıf bandının tamamı (Im 0,65 … Sd 1,55) pencerenin içindedir — 10.2.4'ün "açıklanmamış bandı" çekirdek istatistiğinin izin verdiği aralık çıkar; (b) tabanın keskin öngörüsü $M_{tut}=X\,m_n\approx0{,}72\,m_n$, ölçülen 0,84 ile **%15 içinde** — 10.7.2'nin kapanmayan farkının ana kalemi; (c) en çalkantılı sınıf (Im) tam tabanda oturur ($\lambda\approx0$), ana sınıflar kısmi hizalanma kesri $\lambda=0{,}14$–$0{,}68$ ile pencere içindedir.
+
+**$\lambda$'nın yeri de türetilmiştir** (`85_TUTARLILIK_YASASI/LAMBDA_TURETIM.md`): enerji kilidi ($\sim$MeV'e karşı $\sim$500 eV) $\lambda$'yı çekirdek-içi olmaktan çıkarır — o, ortamın **çekirdekler-arası dolanım muhasebesidir.** Ortalama polarizasyonun ölçümden gelen sınırı ($\varepsilon<3\times10^{-35}$; $\ell_\omega^{mikro}$'nun 3,8 mertebelik kütle-değişmezliği) $\sqrt{N}$ yasasını dolanım korunumunun **teoremi** yapar. Belirleyici aday, ortamın kaskad karakteridir: kalın/3B çalkantı söndürür ($\lambda\to0$ — Im tam tabanda), ince/soğuk yarı-2B disk korur ve disk ekseni boyunca örgütler ($\lambda>0$ — tavan Sd, literatürün "süper-ince" sınıfı). Bu çerçevede $\lambda\leq1$ zorunludur. **HI-$\sigma$ eşleştirme sınavının ilk turu koşulmuştur** (THINGS + VLA-ANGST + LITTLE THINGS, 18 galaksi; `SIGMA_SINAVI.md`): Spearman $+0{,}49$ (tek yönlü $p=0{,}019$), kaldıraç tam öngörülen yerde — en çalkantılı sistemler en küçük çarpanları taşıyor. Ardışık-analiz çekincesiyle bu bir **ilk anlamlı işarettir**, doğrulama değil. **Açık kalanlar:** nicel $\lambda$(incelik) bağıntısı, $n\gtrsim40$'lık kayıt-öncesi doğrulama ve uçların (S0/BCD, $\lambda\approx1{,}6$; $n=3$–4) temiz örneklemde 1'in altına inip inmediği.
+
+![σ sınavı — k, diskin dinamik soğukluğunu izliyor (18 galaksi)](Gorseller/k10_vsigma.png)
+
+## 10.7.6 Zincirin özeti
 
 | Halka | Önce | Sonra |
 |---|---|---|
 | $\ell_\omega$'nın kuruluşu | toplam kütle (tutarsız) | **yerel $M_{kaps}(R)$** — yarıçap izi sıfır |
-| $\ell_\omega$'nın doğası | "sabit değil, yayılıyor" | **mikro sabit** (35,7 fm) × $\sqrt{N}$ |
-| $M_{tut}$ | tanımsız | **$=m_n$, türetilmiş**; ölçülen 0,84 $m_n$ |
+| $\ell_\omega$'nın doğası | "sabit değil, yayılıyor" | **mikro sabit** (35,7 fm) × $\sqrt{N}$; fiziksel anlamı: alan geçiş yarıçapı |
+| $M_{tut}$ | tanımsız | **$=N_c m_n$, türetilmiş**; taban $X\,m_n\approx0{,}72$ — ölçülen 0,84 (%15) |
+| Tutarlılık kümesi | varsayım (saf rastgele) | **atom çekirdeği** — pencere $[X,\langle A\rangle]$, sınıf bandı içinde |
 | $a_0$ | kalibre ivme, mikro karşılıksız | **biçimi türetilmiş**: $\mathcal{G}m_n/\ell_\omega^2$; değişmez |
-| Kalan serbestlik | $a_0$ (1 sayı) | $q_n/\gamma_n$ (1 sayı) — **adresi teorinin kendi yapısında** |
+| Kalan serbestlik | $a_0$ (1 sayı) | $q_n/\gamma_n$ (1 sayı) + pencere-içi konum $\lambda$ — **ikisinin de adresi teorinin kendi yapısında** |
