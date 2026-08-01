@@ -8,7 +8,7 @@
 
 ## 10.3.1 Erken Spiral (Sa–Sab) — 12 galaksi, 632 nokta
 
-<iframe src="Simulasyon/kisim10/panel_01_erken_spiral.html" style="width:100%;height:740px;border:1px solid #333;border-radius:8px;background:#0d0d0f" loading="lazy" title="Erken spiral etkileşimli panel"></iframe>
+<p style="margin:20px 0;padding:16px;border:1px solid #22c55e;border-radius:10px;background:rgba(34,197,94,0.07)"><a href="Simulasyon/kisim10/panel_01_erken_spiral.html" target="_blank" rel="noopener" style="display:inline-block;padding:12px 22px;background:#166534;color:#ffffff;border-radius:8px;font-weight:700;text-decoration:none;font-size:1.05em">&#9654;&#65039; ETKİLEŞİMLİ ANİMASYONU AÇ — Erken spiral (Sa–Sab) (12 galaksi)</a><br><span style="color:#a1a1aa;font-size:0.9em;display:inline-block;margin-top:8px">Tarayıcıda ayrı sayfada, tam ekran açılır. Galaksi galaksi gezinme (ok tuşları), &#9654; Oynat ile sıralı animasyon ve katman açma/kapatma düğmeleri sayfanın içindedir.</span></p>
 
 ![Erken spiral — öngörü mü, fit mi (12 galaksi)](Gorseller/k10_ongoru_01_erken_spiral.png)
 
@@ -26,7 +26,7 @@
 
 ## 10.3.2 Orta Spiral (Sb–Sbc) — 29 galaksi, 640 nokta
 
-<iframe src="Simulasyon/kisim10/panel_02_orta_spiral.html" style="width:100%;height:740px;border:1px solid #333;border-radius:8px;background:#0d0d0f" loading="lazy" title="Orta spiral etkileşimli panel"></iframe>
+<p style="margin:20px 0;padding:16px;border:1px solid #22c55e;border-radius:10px;background:rgba(34,197,94,0.07)"><a href="Simulasyon/kisim10/panel_02_orta_spiral.html" target="_blank" rel="noopener" style="display:inline-block;padding:12px 22px;background:#166534;color:#ffffff;border-radius:8px;font-weight:700;text-decoration:none;font-size:1.05em">&#9654;&#65039; ETKİLEŞİMLİ ANİMASYONU AÇ — Orta spiral (Sb–Sbc) (29 galaksi)</a><br><span style="color:#a1a1aa;font-size:0.9em;display:inline-block;margin-top:8px">Tarayıcıda ayrı sayfada, tam ekran açılır. Galaksi galaksi gezinme (ok tuşları), &#9654; Oynat ile sıralı animasyon ve katman açma/kapatma düğmeleri sayfanın içindedir.</span></p>
 
 ![Orta spiral — öngörü mü, fit mi (29 galaksi)](Gorseller/k10_ongoru_02_orta_spiral.png)
 
@@ -42,7 +42,7 @@ Orta spiraller, kütleli uçta teorinin en dengeli sınıfıdır: dış sapma y�
 
 ## 10.3.3 Geç Spiral (Sc–Scd) — 30 galaksi, 730 nokta
 
-<iframe src="Simulasyon/kisim10/panel_03_gec_spiral.html" style="width:100%;height:740px;border:1px solid #333;border-radius:8px;background:#0d0d0f" loading="lazy" title="Geç spiral etkileşimli panel"></iframe>
+<p style="margin:20px 0;padding:16px;border:1px solid #22c55e;border-radius:10px;background:rgba(34,197,94,0.07)"><a href="Simulasyon/kisim10/panel_03_gec_spiral.html" target="_blank" rel="noopener" style="display:inline-block;padding:12px 22px;background:#166534;color:#ffffff;border-radius:8px;font-weight:700;text-decoration:none;font-size:1.05em">&#9654;&#65039; ETKİLEŞİMLİ ANİMASYONU AÇ — Geç spiral (Sc–Scd) (30 galaksi)</a><br><span style="color:#a1a1aa;font-size:0.9em;display:inline-block;margin-top:8px">Tarayıcıda ayrı sayfada, tam ekran açılır. Galaksi galaksi gezinme (ok tuşları), &#9654; Oynat ile sıralı animasyon ve katman açma/kapatma düğmeleri sayfanın içindedir.</span></p>
 
 ![Geç spiral — öngörü mü, fit mi (30 galaksi)](Gorseller/k10_ongoru_03_gec_spiral.png)
 

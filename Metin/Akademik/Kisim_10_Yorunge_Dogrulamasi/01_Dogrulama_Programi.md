@@ -70,9 +70,23 @@ Her sayı bir **rozet** taşır ve etkileşimli paneller bu rozetleri her galaks
 - **Gereken $a_0$ çarpanı**: sınıfın dış yarı sapmasını sıfırlayan küresel çarpan, **sayısal çözülür** (kapalı formül tam denklemde geçersizdir; F1 terimi ölçeklenmez).
 - **Öngörü yarışı**: galaksi başına, hangi öngörünün RMS'i daha küçük.
 
-### 10.1.6 Etkileşimli paneller
+### 10.1.6 Etkileşimli paneller (animasyonlar)
 
-Her sınıf için (ve BTFR ile erken tip galaksiler için) tek dosyalık, dış bağımlılıksız bir etkileşimli panel üretilmiştir; bu kitapta ilgili bölümün içine gömülüdür. Panellerde galaksi galaksi gezilir, dokuz eğri katmanı (ölçüm, iki öngörü, iki fit, baryon bileşenleri) ayrı ayrı açılıp kapatılır ve **öngörünün tam olarak hangi sayılardan üretildiği** rozetleriyle okunur. Paneller kiraz toplamaya izin verir ama **topladığını gösterir**: kurulum teoriyi kayıran ya da haksız cezalandıran bir hâle getirildiğinde ekrana kırmızı uyarı basılır.
+Her sınıf için (ve BTFR ile erken tip galaksiler için) tek dosyalık, dış bağımlılıksız bir etkileşimli panel üretilmiştir; her biri, ilgili bölümdeki yeşil düğmeyle **tarayıcıda ayrı sayfada, tam ekran açılır** (rahat kullanım için gömülü değildir). Panellerde galaksi galaksi gezilir (ok tuşları ve "▶ Oynat" ile sırayla animasyon), dokuz eğri katmanı (ölçüm, iki öngörü, iki fit, baryon bileşenleri) ayrı ayrı açılıp kapatılır ve **öngörünün tam olarak hangi sayılardan üretildiği** rozetleriyle okunur. Paneller kiraz toplamaya izin verir ama **topladığını gösterir**: kurulum teoriyi kayıran ya da haksız cezalandıran bir hâle getirildiğinde ekrana kırmızı uyarı basılır.
+
+Dokuz animasyonun tamamı (ayrı sayfada açmak için tıklayın):
+
+<ul>
+<li><a href="Simulasyon/kisim10/panel_01_erken_spiral.html" target="_blank" rel="noopener">▶️ Erken spiral (Sa–Sab) — 12 galaksi</a></li>
+<li><a href="Simulasyon/kisim10/panel_02_orta_spiral.html" target="_blank" rel="noopener">▶️ Orta spiral (Sb–Sbc) — 29 galaksi</a></li>
+<li><a href="Simulasyon/kisim10/panel_03_gec_spiral.html" target="_blank" rel="noopener">▶️ Geç spiral (Sc–Scd) — 30 galaksi</a></li>
+<li><a href="Simulasyon/kisim10/panel_04_cok_gec_spiral.html" target="_blank" rel="noopener">▶️ Çok geç spiral (Sd) — 16 galaksi</a></li>
+<li><a href="Simulasyon/kisim10/panel_05_macellan.html" target="_blank" rel="noopener">▶️ Macellan (Sdm–Sm) — 28 galaksi</a></li>
+<li><a href="Simulasyon/kisim10/panel_06_duzensiz.html" target="_blank" rel="noopener">▶️ Düzensiz (Im) — 26 galaksi</a></li>
+<li><a href="Simulasyon/kisim10/panel_99_KARMASIK.html" target="_blank" rel="noopener">▶️ Karmaşık küme (denetim) — 32 galaksi</a></li>
+<li><a href="Simulasyon/kisim10/panel_btfr.html" target="_blank" rel="noopener">▶️ Baryonik Tully-Fisher paneli — 121 galaksi</a></li>
+<li><a href="Simulasyon/kisim10/panel_etg.html" target="_blank" rel="noopener">▶️ Erken tip galaksiler paneli — 16 galaksi + 2693 disk noktası</a></li>
+</ul>
 
 ### 10.1.7 Bu kısmın haritası
 

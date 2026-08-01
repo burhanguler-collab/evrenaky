@@ -8,7 +8,7 @@
 
 Tip dağılımı: Im 12 · Sm 8 · BCD 5 · S0 3 · Sc 2 · Sab 1 · Sbc 1. Gerekçeler: $Q=3$ düşük kalite (12), eğiklik $i<30°$ (12), $N<6$ nokta (10), tipinde 5'ten az galaksi (8; örtüşmeler var).
 
-<iframe src="Simulasyon/kisim10/panel_99_KARMASIK.html" style="width:100%;height:740px;border:1px solid #333;border-radius:8px;background:#0d0d0f" loading="lazy" title="Karmaşık küme etkileşimli panel"></iframe>
+<p style="margin:20px 0;padding:16px;border:1px solid #22c55e;border-radius:10px;background:rgba(34,197,94,0.07)"><a href="Simulasyon/kisim10/panel_99_KARMASIK.html" target="_blank" rel="noopener" style="display:inline-block;padding:12px 22px;background:#166534;color:#ffffff;border-radius:8px;font-weight:700;text-decoration:none;font-size:1.05em">&#9654;&#65039; ETKİLEŞİMLİ ANİMASYONU AÇ — Karmaşık küme (denetim) (32 galaksi)</a><br><span style="color:#a1a1aa;font-size:0.9em;display:inline-block;margin-top:8px">Tarayıcıda ayrı sayfada, tam ekran açılır. Galaksi galaksi gezinme (ok tuşları), &#9654; Oynat ile sıralı animasyon ve katman açma/kapatma düğmeleri sayfanın içindedir.</span></p>
 
 ![Karmaşık küme — öngörü mü, fit mi (32 galaksi)](Gorseller/k10_ongoru_99_KARMASIK.png)
 

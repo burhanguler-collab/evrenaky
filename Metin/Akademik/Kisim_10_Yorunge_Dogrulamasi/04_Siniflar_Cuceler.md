@@ -8,7 +8,7 @@ Bu üç sınıf, örneklemin gaz-zengin, düşük yüzey parlaklıklı ucudur: 7
 
 ## 10.4.1 Çok Geç Spiral (Sd) — 16 galaksi, 300 nokta
 
-<iframe src="Simulasyon/kisim10/panel_04_cok_gec_spiral.html" style="width:100%;height:740px;border:1px solid #333;border-radius:8px;background:#0d0d0f" loading="lazy" title="Çok geç spiral etkileşimli panel"></iframe>
+<p style="margin:20px 0;padding:16px;border:1px solid #22c55e;border-radius:10px;background:rgba(34,197,94,0.07)"><a href="Simulasyon/kisim10/panel_04_cok_gec_spiral.html" target="_blank" rel="noopener" style="display:inline-block;padding:12px 22px;background:#166534;color:#ffffff;border-radius:8px;font-weight:700;text-decoration:none;font-size:1.05em">&#9654;&#65039; ETKİLEŞİMLİ ANİMASYONU AÇ — Çok geç spiral (Sd) (16 galaksi)</a><br><span style="color:#a1a1aa;font-size:0.9em;display:inline-block;margin-top:8px">Tarayıcıda ayrı sayfada, tam ekran açılır. Galaksi galaksi gezinme (ok tuşları), &#9654; Oynat ile sıralı animasyon ve katman açma/kapatma düğmeleri sayfanın içindedir.</span></p>
 
 ![Çok geç spiral — öngörü mü, fit mi (16 galaksi)](Gorseller/k10_ongoru_04_cok_gec_spiral.png)
 
@@ -24,7 +24,7 @@ Sd, sınıf bandının üst ucudur: teorinin itim bütçesi bu sınıfta %8 eksi
 
 ## 10.4.2 Macellan (Sdm–Sm) — 28 galaksi, 423 nokta
 
-<iframe src="Simulasyon/kisim10/panel_05_macellan.html" style="width:100%;height:740px;border:1px solid #333;border-radius:8px;background:#0d0d0f" loading="lazy" title="Macellan etkileşimli panel"></iframe>
+<p style="margin:20px 0;padding:16px;border:1px solid #22c55e;border-radius:10px;background:rgba(34,197,94,0.07)"><a href="Simulasyon/kisim10/panel_05_macellan.html" target="_blank" rel="noopener" style="display:inline-block;padding:12px 22px;background:#166534;color:#ffffff;border-radius:8px;font-weight:700;text-decoration:none;font-size:1.05em">&#9654;&#65039; ETKİLEŞİMLİ ANİMASYONU AÇ — Macellan (Sdm–Sm) (28 galaksi)</a><br><span style="color:#a1a1aa;font-size:0.9em;display:inline-block;margin-top:8px">Tarayıcıda ayrı sayfada, tam ekran açılır. Galaksi galaksi gezinme (ok tuşları), &#9654; Oynat ile sıralı animasyon ve katman açma/kapatma düğmeleri sayfanın içindedir.</span></p>
 
 ![Macellan — öngörü mü, fit mi (28 galaksi)](Gorseller/k10_ongoru_05_macellan.png)
 
@@ -40,7 +40,7 @@ Macellan sınıfında iki öngörü medyanda neredeyse eşittir; teorinin dış 
 
 ## 10.4.3 Düzensiz (Im) — 26 galaksi, 272 nokta
 
-<iframe src="Simulasyon/kisim10/panel_06_duzensiz.html" style="width:100%;height:740px;border:1px solid #333;border-radius:8px;background:#0d0d0f" loading="lazy" title="Düzensiz etkileşimli panel"></iframe>
+<p style="margin:20px 0;padding:16px;border:1px solid #22c55e;border-radius:10px;background:rgba(34,197,94,0.07)"><a href="Simulasyon/kisim10/panel_06_duzensiz.html" target="_blank" rel="noopener" style="display:inline-block;padding:12px 22px;background:#166534;color:#ffffff;border-radius:8px;font-weight:700;text-decoration:none;font-size:1.05em">&#9654;&#65039; ETKİLEŞİMLİ ANİMASYONU AÇ — Düzensiz (Im) (26 galaksi)</a><br><span style="color:#a1a1aa;font-size:0.9em;display:inline-block;margin-top:8px">Tarayıcıda ayrı sayfada, tam ekran açılır. Galaksi galaksi gezinme (ok tuşları), &#9654; Oynat ile sıralı animasyon ve katman açma/kapatma düğmeleri sayfanın içindedir.</span></p>
 
 ![Düzensiz — öngörü mü, fit mi (26 galaksi)](Gorseller/k10_ongoru_06_duzensiz.png)
 

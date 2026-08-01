@@ -14,7 +14,7 @@ $$v^4=\mathcal{G}\,M_{bar}\,a_0$$
 
 çıkar. **Teori BTFR'yi varsaymaz, türetir** — hem eğimini hem normalizasyonunu.
 
-<iframe src="Simulasyon/kisim10/panel_btfr.html" style="width:100%;height:740px;border:1px solid #333;border-radius:8px;background:#0d0d0f" loading="lazy" title="BTFR etkileşimli panel"></iframe>
+<p style="margin:20px 0;padding:16px;border:1px solid #22c55e;border-radius:10px;background:rgba(34,197,94,0.07)"><a href="Simulasyon/kisim10/panel_btfr.html" target="_blank" rel="noopener" style="display:inline-block;padding:12px 22px;background:#166534;color:#ffffff;border-radius:8px;font-weight:700;text-decoration:none;font-size:1.05em">&#9654;&#65039; ETKİLEŞİMLİ ANİMASYONU AÇ — Baryonik Tully-Fisher (121 galaksi)</a><br><span style="color:#a1a1aa;font-size:0.9em;display:inline-block;margin-top:8px">Tarayıcıda ayrı sayfada, tam ekran açılır. Galaksi galaksi gezinme (ok tuşları), &#9654; Oynat ile sıralı animasyon ve katman açma/kapatma düğmeleri sayfanın içindedir.</span></p>
 
 | Kaynak | BTFR eğimi | Normalizasyon |
 |---|---|---|
@@ -65,7 +65,7 @@ biçimindedir ve biçim sabittir: $a_0$ yanlış kalibre olsaydı bütün noktal
 
 Erken tip galaksilerin HI halkalarında Lelli ve ark. (2017) galaksi başına yalnız **iki** ivme noktası verir: halkanın iç ve dış kenarı. İki nokta, sıfır serbestlik — ayar yapılacak yer yoktur. Üstelik teorinin öngörüsünde $R$ sadeleşir: formülde ne yarıçap, ne $\Upsilon_*$, ne kütle vardır; $g_{bar}$ ölçülen büyüklüktür.
 
-<iframe src="Simulasyon/kisim10/panel_etg.html" style="width:100%;height:740px;border:1px solid #333;border-radius:8px;background:#0d0d0f" loading="lazy" title="Erken tip galaksiler etkileşimli panel"></iframe>
+<p style="margin:20px 0;padding:16px;border:1px solid #22c55e;border-radius:10px;background:rgba(34,197,94,0.07)"><a href="Simulasyon/kisim10/panel_etg.html" target="_blank" rel="noopener" style="display:inline-block;padding:12px 22px;background:#166534;color:#ffffff;border-radius:8px;font-weight:700;text-decoration:none;font-size:1.05em">&#9654;&#65039; ETKİLEŞİMLİ ANİMASYONU AÇ — Erken tip galaksiler (16 galaksi + 2693 disk noktası)</a><br><span style="color:#a1a1aa;font-size:0.9em;display:inline-block;margin-top:8px">Tarayıcıda ayrı sayfada, tam ekran açılır. Galaksi galaksi gezinme (ok tuşları), &#9654; Oynat ile sıralı animasyon ve katman açma/kapatma düğmeleri sayfanın içindedir.</span></p>
 
 | Küme | Medyan artık | Saçılma |
 |---|---|---|
