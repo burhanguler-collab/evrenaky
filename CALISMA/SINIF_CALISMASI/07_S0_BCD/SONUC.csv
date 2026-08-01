@@ -1,0 +1,9 @@
+Galaksi,Tip,N,Q,temiz_ornek,99_KARMASIK_gerekcesi,L36_1e9Lsun,ONG_evr_rms,ONG_lcdm_rms,ONG_evr_chi2ind,ONG_lcdm_chi2ind,ONG_evr_hataici,ONG_lcdm_hataici,FIT_evr_Ystar,FIT_lcdm_Ystar,DIS_evr_sapma_yuzde,F4_payi,carpan_DOGRU_sayisal,l_omega_kpc,g_bar_dis_nokta_ms2,g_bar_medyan_ms2
+NGC4138,S0,7,2,evet,"tip S0: kendi sinifinda N<5, istatistik tasimaz",44.111,15.15,12.19,2.344,2.173,0.71,0.57,0.602,0.666,-7.5,0.614,1.6313,5.05,1.079e-11,3.285e-11
+UGC02487,S0,17,1,evet,"tip S0: kendi sinifinda N<5, istatistik tasimaz",489.955,96.03,153.44,702.974,2925.144,0.00,0.00,1.004,1.037,-25.7,0.648,5.1300,17.71,6.716e-12,2.685e-11
+UGC06786,S0,45,1,evet,"tip S0: kendi sinifinda N<5, istatistik tasimaz",73.407,27.88,30.74,160.353,156.082,0.09,0.13,0.258,0.670,-14.8,0.574,2.7128,9.87,5.865e-12,1.328e-10
+NGC1705,BCD,14,3,HAYIR,"SPARC kalite bayragi Q=3 (dusuk) ; tip BCD: kendi sinifinda N<5, istatistik tasimaz",0.533,19.05,14.00,17.332,11.191,0.00,0.14,0.884,1.910,-27.6,0.839,4.3721,1.05,2.127e-12,6.371e-12
+NGC2915,BCD,30,2,evet,"tip BCD: kendi sinifinda N<5, istatistik tasimaz",0.641,24.88,15.50,11.709,4.040,0.07,0.10,0.506,0.291,-29.5,0.850,4.8071,1.49,1.728e-12,3.319e-12
+NGC6789,BCD,4,2,HAYIR,"N=4 < 6 nokta (egri sinanamaz) ; tip BCD: kendi sinifinda N<5, istatistik tasimaz",0.100,16.10,15.70,6.717,6.412,0.00,0.25,0.050,0.050,-39.4,0.659,13.0908,0.33,1.685e-11,1.895e-11
+PGC51017,BCD,6,3,HAYIR,"SPARC kalite bayragi Q=3 (dusuk) ; tip BCD: kendi sinifinda N<5, istatistik tasimaz",0.155,19.04,26.23,101.433,193.788,0.00,0.17,0.641,0.347,+125.4,0.820,0.0003,0.69,2.739e-12,5.774e-12
+UGCA281,BCD,7,3,HAYIR,"SPARC kalite bayragi Q=3 (dusuk) ; tip BCD: kendi sinifinda N<5, istatistik tasimaz",0.194,2.95,6.09,3.988,13.076,0.29,0.00,0.095,0.324,+9.2,0.752,0.6180,0.35,7.171e-12,1.052e-11

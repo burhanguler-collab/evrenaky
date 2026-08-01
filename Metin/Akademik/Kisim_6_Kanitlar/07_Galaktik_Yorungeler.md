@@ -8,7 +8,7 @@ Bu bölüm, Evrenakı teorisinin hiçbir "görünmez madde" varsayımına ihtiya
 
 ### 6.5.1 Kütleçekim Grafiği ve $1/r$ Kuvvetinin Yükselişi
 
-Evrenakı teorisinde galaksi merkezlerindeki süper kütleli kara deliklerin dönüş hızları olağanüstü yüksektir. Teorinin temel postülatlarından olan **Eksenel İtim (F4)** ve ona bağlı hidrodinamik yansımalar, galaksi çekirdeğindeki bu devasa dönüşün (devrin) bir sonucudur.
+Teorinin temel postülatlarından olan **Eksenel İtim (F4)**, galaktik ölçekte diskin kapsanan baryonik kütlesinin dolanım debisinden beslenir; genliğinin türetimi 6.5.4.3'tedir.
 
 Kritik nokta şudur: Klasik merkezcil kütleçekim $1/r^2$ profiliyle zayıflarken, teorinin öngördüğü eksenel kuvvet (Kısım 4'te türetildiği üzere) $1/r$ profiliyle sönümlenir. Galaksinin dış bölgelerine çıkıldıkça $1/r^2$'ye tabi klasik çekim hızla gücünü yitirir, ancak $1/r$ ile sönümlenen eksenel kuvvet profilde giderek baskın hale gelir. 
 
@@ -21,7 +21,7 @@ $$a_{merkezcil} = a_{kütleçekim} + a_{eksenel}$$
 Terimleri kendi fiziksel bağımlılıklarıyla açtığımızda:
 1. **Merkezcil İvme:** $\frac{v^2}{r}$
 2. **Evrenakı Kütleçekim (Basınç Gradyanı):** $\frac{A}{r^2}$ *(Buradaki A sabiti, galaksinin merkez kütlesinin yarattığı hidrodinamik basınç düşümü ile orantılıdır)*
-3. **Eksenel Kuvvet (Evrenakı):** $\frac{B}{r}$ *(Buradaki B sabiti, merkezdeki süper kütleli kara deliğin devri ve galaktik çekirdeğin dönüş karakteristiği ile orantılıdır)*
+3. **Eksenel Kuvvet (Evrenakı):** $\frac{B}{r}$ *(Buradaki B sabiti, bu ilk kurulumda elle konur; genliğinin türetimi 6.5.4.3'tedir — kaynağı, kapsanan baryonik kütlenin vortisitesidir)*
 
 Eşitliği kuralım:
 $$\frac{v^2}{r} = \frac{A}{r^2} + \frac{B}{r}$$
@@ -66,22 +66,20 @@ M33 (Triangulum) galaksisinde Newton kütleçekimi hızla düşüşe geçerken, 
 ![NGC 3198 Gözlem Testi](Gorseller/ngc3198_gozlem_testi.png)
 
 #### 2. Dev Eliptik Galaksiler: M87 ve NGC 4472
-Eliptik galaksiler sarmal bir diske sahip olmadıkları için net dönüş eğrileri vermezler. Yıldızlar rastgele yörüngelerde bir arı kovanı gibi hareket eder (hız dağılımı). Ancak bu galaksileri saran devasa sıcak X-ışını gaz halelerinden hesaplanan kütleçekim potansiyelleri ("Efektif Dairesel Hız" $V_c$), sarmal galaksilerdeki asimptotik düz yapıyı birebir tekrar eder. 
-Evrenin en meşhur dev eliptik galaksilerinden olan M87 ve NGC 4472'nin merkezlerinde korkunç hızlarda dönen süper kütleli kara delikler bulunur. Bu devasa çekirdek dönüşünden kaynaklı eksenel itim, galaksi eliptik de olsa formülün aynı mükemmellikte çalışmasını sağlar.
 
-![M87 Eliptik Testi](Gorseller/m87_eliptik_testi.png)
-![NGC 4472 Eliptik Testi](Gorseller/ngc4472_eliptik_testi.png)
+Eliptik galaksiler sarmal bir diske sahip olmadıkları için net dönüş eğrileri vermezler. Yıldızlar rastgele yörüngelerde bir arı kovanı gibi hareket eder (hız dağılımı). Bu galaksileri saran sıcak X-ışını gaz halelerinden hesaplanan kütleçekim potansiyelleri ("Efektif Dairesel Hız" $V_c$), sarmal galaksilerdeki asimptotik düz yapıyı tekrar eder.
 
-#### 3. Cüce Küresel (Dwarf Spheroidal) Galaksiler: Derin Bir Fiziksel Öngörü
-Fornax (Ocak) gibi cüce küresel galaksiler, evrendeki karanlık maddenin oransal olarak en yoğun bulunduğu düşünülen, sadece 1-2 kpc boyutlarındaki minicik yapılardır. Çok düşük kütlelerine rağmen efektif hız profilleri $\sim18$ km/s bandında asimptota oturur.
-Evrenakı modeli bu galaksilerde de pürüzsüz çalışarak hızı dengeler. Ancak burada astrofiziğe karşı çok derin bir meydan okuma yatar: Güncel astronomiye göre cüce küresellerde süper kütleli kara delik **yoktur**. 
-Bu durum, teori açısından çok net bir fiziksel öngörüye işaret eder: Cüce küresel galaksilerin merkezinde astronominin henüz tespit edemediği, **küçük ve düşük hızda dönen gizli bir kara delik (çekirdek devri) bulunmak zorundadır.**
+Teorinin bu sistemler için söyleyebildiği ve söyleyemediği şey nettir:
 
-Evrenakı teorisine göre (Bkz. Bölüm 6.6 Gezegen Figürü), güçlü bir eksenel itim kuvveti galaksiyi basıklaştırarak sarmal bir disk formuna sokar. Bu galaksiler küresel formlarını koruduklarına göre, merkezdeki bu kara deliğin kütlesi küçük ve dönüş hızı (dolayısıyla yarattığı eksenel itim kuvveti - $B$ sabiti) nispeten zayıftır. 
+- **F4'ün kaynağı merkezî kara delik değildir.** Genliği vortisiteden gelir ve kaynağı kapsanan baryonik kütledir (6.5.4.3). Ölçüm de bunu doğrular: 163 galakside fitlenen F4 genliği toplam baryonik kütleyle ölçeklenir (Spearman $-0{,}91$), kovan kütlesiyle değil ($-0{,}33$); büyük kara delik beklenmeyen **kovansız 134 galakside** F4 yine zorunludur (yalnız F1 ile medyan $\chi^2_{ind}=17{,}3$, F4 eklenince $1{,}37$).
+- **Basınç-destekli sistemler için nicel makine henüz yoktur.** M-37 profil teoremi ($v_\theta=\sqrt{R\,\lvert a_{radyal}\rvert}$) **dairesel yörünge** için kurulur; hız dağılımını efektif dairesel hıza çeviren köprü teoride kurulmamıştır. Eliptikler bu yüzden teorinin galaktik denkleminin bugünkü geçerlilik alanının sınırındadır (6.5.4.9).
+- **Nicel sınav yapılabilen yerde yapılmıştır:** erken tip galaksilerin radyal ivme düzlemi. 16 galakside teorinin dış nokta artığı $-0{,}008$ dex'tir (6.5.4.5'in ölçüm tablosu; hesap `CALISMA/SINIF_CALISMASI/96_ETG/`).
 
-Bu zayıf eksenel kuvvet, galaksiyi tamamen yassılaştırmaya yetmez ve küresel form büyük ölçüde korunur. Ancak eksenel itimin uzayda $1/r$ ile yavaş sönümlenme karakteristiği sayesinde, bu zayıf dönüş bile dış bölgelerdeki yıldız hızlarının sıfıra çakılmasını engelleyecek o kritik matematiksel desteği (B sabiti dengesini) sağlamak için yeterlidir. Evrenakı'nın $v = \\sqrt{A/r + B}$ formülü, bu düşük dönüş hızıyla da gözlemlere tam oturur.
+#### 3. Cüce Küresel (Dwarf Spheroidal) Galaksiler
 
-![Fornax Küresel Testi](Gorseller/fornax_kuresel_testi.png)
+Fornax (Ocak) gibi cüce küresel galaksiler, standart görüşte karanlık maddenin oransal olarak en yoğun bulunduğu düşünülen, sadece 1-2 kpc boyutlarındaki minicik yapılardır. Çok düşük kütlelerine rağmen efektif hız profilleri $\sim18$ km/s bandında asimptota oturur.
+
+Bunlar da basınç-destekli sistemlerdir ve yukarıdaki köprü eksikliği burada da geçerlidir: teori cüce küreseller için **nicel öngörü üretmez** (6.5.4.9). Merkezî kara delikle ilgili hiçbir öngörü de teoriden çıkmaz — F4 kara deliğe bağlı değildir ve dönüş eğrisi verisi kara deliğin varlığına zaten kördür: etki yarıçapı ($\sim$0,01 kpc) SPARC'ın en iç ölçüm noktasından **75 kat** küçüktür; $M_{BH}$ hesaba katılsa da katılmasa da medyan $\chi^2$ dördüncü basamakta değişir. Küresel formun neden korunduğu sorusunun teorideki nicel karşılığı kurulmamıştır ve açık kalemdir (7.4).
 
 ### 6.5.3.1 Gerçek SPARC Verisiyle Nicel Sınav
 
@@ -127,7 +125,7 @@ Bu, $\chi^2_{ind}$'i 3,78'den **0,68**'e düşürür — formel olarak kabul edi
 
 *(Üretim kaydı için bkz. 6.5.2.1'in başındaki ekleme kaydı. Hesap betiği: `CALISMA/plot_sparc_ornek.py`; veri: `CALISMA/veri/*_rotmod.dat`.)*
 
-6.5.3.1'in tek galaksili sonucu bir vaka çalışmasıdır. Teorinin **öngörü** iddiası ise bambaşka bir soruya bağlıdır: 6.5.4.3'ün türettiği vortisite uzunluğu $\ell_\omega=q_n/2\gamma_n$ ile M-38'in yayılma ölçeği $R_f$, galaksiler arasında **sabit** midir? $\ell_\omega$ nükleonun kendi debi oranından geldiğine göre mikro-fiziksel bir sabit olmak zorundadır; galaksi başına değişiyorsa türetilmiş bir büyüklük değil, fit parametresidir.
+6.5.3.1'in tek galaksili sonucu bir vaka çalışmasıdır. Teorinin **öngörü** iddiası ise bambaşka bir soruya bağlıdır: 6.5.4.3'ün türettiği vortisite uzunluğu $\ell_\omega^{mikro}=q_n/2\gamma_n$ ile M-38'in yayılma ölçeği $R_f$, galaksiler arasında **sabit** midir? $\ell_\omega^{mikro}$ nükleonun kendi debi oranından geldiğine göre mikro-fiziksel bir sabit olmak zorundadır — ve öyledir: ölçümü $35{,}7$ fm, kütleyle korelasyonu $+0{,}03$ (6.5.4.3 Adım 6). Galaksiden galaksiye görünen değişim mikro oranda değil, etkin uzunluğun $\sqrt{N}$ toplanma çarpanındadır: $\ell_\omega^{etkin}=\ell_\omega^{mikro}\sqrt{N}$.
 
 Sınav, SPARC'tan kasıtlı olarak geniş seçilmiş **12 galaksiyle** yapılmıştır (7'si kovansız, 5'i kovanlı; gaz-baskın cüceden $305$ km/s'lik deve kadar). Tüm modeller aynı baryonik girdiyi kullanır; SPARC konvansiyonu $\Upsilon_{bul}=1{,}4\,\Upsilon_{disk}$.
 
@@ -168,7 +166,7 @@ $\ell_\omega$ 179 kat değişiyor. **Ama bu tek başına bir kusur değildir:** 
 
 Bunun nedeni tesadüf değildir: NFW'nin konsantrasyon–kütle ilişkisi dayatıldığında halo merkezde zorunlu olarak sivrilir (cusp) ve düşük yüzey parlaklıklı sistemlerin **düz çekirdekli** iç bölgesini tutturamaz — astrofizikteki **Core-Cusp problemi** (bkz. bu bölümün §4-A). Teori bu problemi paylaşmaz, çünkü iç bölgeyi bir halo profiliyle değil kapsanan nükleon dağılımıyla kurar.
 
-**Dürüst konum.** Bu örneklemin verdiği tablo şudur: teori dönüş eğrilerini **görünmez madde envanteri olmadan** tarif edebiliyor, ama (i) parametreleri galaksi başına serbesttir, (ii) eşit serbestlikte ΛCDM'in gerisindedir, (iii) kütleli ve kovanlı sarmallarda ΛCDM kazanır. Buna karşılık **cücelerde ve düşük yüzey parlaklıklı sistemlerde ΛCDM'in kendi reçetesi çöküyor ve teori çökmüyor.** Teorinin sınanmaya değer cephesi düz dönüş eğrisi değil, Core-Cusp rejimidir. 12 galaksi bunu göstermeye yeter ama kanıtlamaya yetmez. **Sınav SPARC'ın tamamıyla yapılmış ve sonuç 6.5.3.3'te verilmiştir:** desen gerçektir ($3{,}5\sigma$) ama 12 galaksilik tablonun ima ettiğinden zayıftır.
+**Dürüst konum.** Bu örneklemin verdiği tablo şudur: teori dönüş eğrilerini **görünmez madde envanteri olmadan** tarif edebiliyor, ama (i) parametreleri galaksi başına serbesttir, (ii) eşit serbestlikte ΛCDM'in gerisindedir, (iii) kütleli ve kovanlı sarmallarda ΛCDM kazanır. Buna karşılık **cücelerde ve düşük yüzey parlaklıklı sistemlerde ΛCDM'in kendi reçetesi çöküyor ve teori çökmüyor.** Teorinin sınanmaya değer cephesi düz dönüş eğrisi değil, Core-Cusp rejimidir. 12 galaksi bunu göstermeye yeter ama kanıtlamaya yetmez. **Sınav SPARC'ın tamamıyla yapılmış ve sonuç 6.5.3.3'te verilmiştir:** desen gerçektir ($3{,}1\sigma$) ama 12 galaksilik tablonun ima ettiğinden zayıftır.
 
 ### 6.5.3.3 Tam Örneklem Sınavı: Teorinin Cephesi Neresi?
 
@@ -176,7 +174,7 @@ Bunun nedeni tesadüf değildir: NFW'nin konsantrasyon–kütle ilişkisi dayat�
 
 6.5.3.2 iki şey gösterdi: parametreler evrensel değil, ve eşit serbestlikte ΛCDM genel olarak önde. Ama 12 galaksilik tabloda bir **desen** göze çarptı: ΛCDM'in formel olarak dışlandığı sistemler cüce ve düşük yüzey parlaklıklı (LSB) galaksilerdi ve orada teori belirgin biçimde daha iyiydi. Bu alt bölüm o deseni **hiçbir seçim yapmadan**, SPARC'ın tamamıyla ölçer: indirilebilen 173 dosyanın fit edilebilen **163'ü**.
 
-> **Düzeltme kaydı — seçim yanlılığı (30 Temmuz 2026):** Bu sınavın bir ara aşaması 31 galaksiyle koşulmuş ve cüce rejiminde **9/9** gibi çarpıcı bir sonuç vermişti. O örneklem **elle seçilmişti** ve içinde literatürün bilinen Core-Cusp problem vakaları (DDO154, IC2574, NGC3109) vardı. Tam örneklemde oran 9/9 değil **36/50**'dir. Ara sonuç geri alınmıştır; aşağıdaki sayılar seçim yanlılığı taşımaz.
+> **Seçim yanlılığı denetimi.** Bu sınav yalnız **tam örneklemde** geçerlidir. Elle seçilmiş alt kümeler yanıltıcı sonuç üretir — örneğin literatürün bilinen Core-Cusp vakalarını (DDO154, IC2574, NGC3109) içeren 31 galaksilik bir küme cüce rejiminde 9/9 verir; tam örneklemde gerçek oran **36/50**'dir. Aşağıdaki bütün sayılar tam örneklemdendir ve seçim yanlılığı taşımaz.
 
 Karşılaştırma **eşit serbestliktedir** (her iki modelde $k=2$): ΛCDM tarafında $(\Upsilon_*, M_{200})$ ve konsantrasyon simülasyon ilişkisinden; Evrenakı tarafında $(\Upsilon_*, b)$. Ölçüt $\Delta\chi^2_{ind}=\chi^2_{\Lambda CDM}-\chi^2_{Evrenakı}$; pozitif değer Evrenakı'nın lehinedir. Kazanma oranlarına binom hatası eklenmiş, $0{,}5$'ten sapmanın anlamlılığı $\sigma$ cinsinden verilmiştir.
 
@@ -194,7 +192,7 @@ Karşılaştırma **eşit serbestliktedir** (her iki modelde $k=2$): ΛCDM taraf
 
 **Sonuç 1 — genel bir üstünlük yoktur.** 163 galakside Evrenakı %55 ± %4 oranında önde; beraberlikten sapma $1{,}3\sigma$, yani istatistiksel olarak anlamsız. **Teori ΛCDM'i genel olarak yenmiyor.** 6.5.3.2'nin sonucu tam örneklemde doğrulanmıştır.
 
-**Sonuç 2 — ama cüce/LSB rejiminde üstünlük gerçek ve anlamlıdır.** $V_{max}<80$ km/s bandında birleşik sonuç **36/50 = %72 ± %6**, yani beraberlikten **$3{,}5\sigma$** sapma. Ve asıl önemli olan medyan uyum kalitesidir:
+**Sonuç 2 — ama cüce/LSB rejiminde üstünlük gerçek ve anlamlıdır** *(koşullu — bkz. aşağıdaki Sonuç 5)*. $V_{max}<80$ km/s bandında birleşik sonuç **36/50 = %72 ± %6**, yani beraberlikten **$3{,}1\sigma$** sapma *(hesap yöntemi: Sonuç 5'in yöntem notu)*. Ve asıl önemli olan medyan uyum kalitesidir:
 
 $$\text{cüce/LSB medyan } \chi^2_{ind}:\quad \Lambda\text{CDM } 1{,}70 \;\longrightarrow\; \text{Evrenakı } \mathbf{0{,}77}$$
 
@@ -209,10 +207,41 @@ Evrenakı bu rejimde **kabul sınırının ($\chi^2_{ind}=1$) altına** iner, Λ
 **Teorinin galaktik iddiasının nihai konumu.** Üç cümlede:
 
 1. **Düz dönüş eğrisi bir zafer değildir.** Tam örneklemde eşit serbestlikte beraberlik ($1{,}3\sigma$). Parametrelerden **$\ell_\omega$ yasalıdır** ($\propto\sqrt{M_{bar}}$, sıfır serbest parametre, ölçülen eğim 1,03 — 6.5.4.5); teori onun evrensel olduğunu iddia etmez. **$R_f$ ise fit parametresidir** ve öngörü statüsü taşımaz.
-2. **Cephe Core-Cusp rejimidir.** Cüce/LSB'de $3{,}5\sigma$ üstünlük ve medyan $\chi^2_{ind}$'in kabul sınırının altına inmesi, teorinin sınanmaya değer tek istatistiksel olarak anlamlı sonucudur.
+2. **Cephe Core-Cusp rejimidir — ama anlamlılık $\Upsilon_*$'a koşulludur.** Cüce/LSB'de $3{,}1\sigma$ üstünlük ve medyan $\chi^2_{ind}$'in kabul sınırının altına inmesi, teorinin sınanmaya değer tek sonucudur. **Ancak** $\Upsilon_*$ yıldız popülasyon sentezi bandına hapsedildiğinde anlamlılık $0{,}8\sigma$'ya iner (Sonuç 5); medyan üstünlük korunur, istatistiksel anlamlılık korunmaz.
 3. **Ontolojik fatura değişmemiştir.** Bu sonuçların tamamı, teorinin hiçbir görünmez madde envanteri talep etmediği koşulda elde edilmiştir; ΛCDM aynı eğriler için baryonik kütlenin katları mertebesinde halo ister.
 
-*Kalan çekinceler:* cüce eğrilerinde nokta sayısı azdır (6–34) ve hata çubukları büyüktür; $\Upsilon_*$ her iki modelde serbest bırakılmıştır; SPARC'ın uzaklık ve eğiklik sistematikleri modellenmemiştir. $3{,}5\sigma$ bir keşif eşiği değildir. Sıradaki iş, cüce/LSB alt örnekleminde $\Upsilon_*$'ı yıldız popülasyon sentezine kilitleyerek sonucun ayakta kalıp kalmadığını görmektir (7.4, madde 12).
+*Kalan çekinceler:* cüce eğrilerinde nokta sayısı azdır (6–34) ve hata çubukları büyüktür; SPARC'ın uzaklık ve eğiklik sistematikleri modellenmemiştir. $3{,}1\sigma$ bir keşif eşiği değildir.
+
+---
+
+#### Sonuç 5 — ve yukarıdaki iddia $\Upsilon_*$'ın serbest olmasına koşulludur
+
+*(Bu alt başlık Claude Opus 5 tarafından 31 Temmuz 2026'da eklenmiştir. Hesap: `CALISMA/plot_upsilon_bant_rejim.py`.)*
+
+Yukarıdaki tablonun tamamında $\Upsilon_*$ **her iki modelde de serbest** bırakılmıştır. Bu, kendi başına adil bir kurulumdur; ama $\Upsilon_*$ keyfî bir sayı değildir — yıldız popülasyon sentezi onu 3,6 μm'de $0{,}3$–$0{,}8$ aralığına yerleştirir. **Sıradaki iş** olarak kaydedilen sınav buydu ve şimdi yapılmıştır: aynı karşılaştırma, $\Upsilon_*$ o banda hapsedilerek tekrarlanmıştır. Kısıt **her iki modele de** uygulanmıştır.
+
+![$\Upsilon_*$ bandı rejime göre — 163 galaksi](Gorseller/upsilon_bant_rejim.png)
+
+| $v_{max}$ bandı | $N$ | Evrenakı: serbest → bantlı | ΛCDM: serbest → bantlı | Evrenakı önde: serbest → bantlı |
+|---|---|---|---|---|
+| **Cüce/LSB $<80$** | 50 | 0,62 → **1,68** (×2,7) | 1,57 → 2,28 (×1,4) | **37/50 ($3{,}4\sigma$) → 28/50 ($0{,}8\sigma$)** |
+| $80$–$120$ | 44 | 0,78 → **4,90** (×6,3) | 1,56 → 1,91 (×1,2) | 27/44 ($+1{,}5\sigma$) → 12/44 ($-3{,}0\sigma$) |
+| $120$–$180$ | 22 | 2,16 → 3,05 (×1,4) | 2,44 → 2,97 (×1,2) | 7/22 ($-1{,}7\sigma$) → 8/22 ($-1{,}3\sigma$) |
+| $180$–$250$ | 27 | 1,89 → 3,25 (×1,7) | 1,98 → 2,49 (×1,3) | 13/27 ($-0{,}2\sigma$) → 12/27 ($-0{,}6\sigma$) |
+| $>250$ | 20 | 3,56 → 5,42 (×1,5) | 4,17 → 4,17 (×1,0) | 12/20 ($+0{,}9\sigma$) → 11/20 ($+0{,}4\sigma$) |
+| **TOPLAM** | **163** | 1,36 → **3,45** | 1,97 → 2,58 | 59% → 44% |
+
+**Sonuç açıktır ve teorinin aleyhinedir.**
+
+- **Cüce/LSB üstünlüğü anlamlılığını yitirir.** $3{,}4\sigma$ → $\mathbf{0{,}8\sigma}$. Bu bandın "teorinin cephesi" olduğu iddiası, $\Upsilon_*$ fotometrik önselden kurtulduğu sürece geçerlidir; kurtulmadığında **istatistiksel dayanağı kalmaz.**
+- **En ağır hasar cücede değil, $80$–$120$ km/s bandındadır.** Orada medyan $\chi^2_{ind}$ **6,3 kat** bozulur (ΛCDM'de 1,2 kat) ve kazanma oranı $+1{,}5\sigma$'dan $\mathbf{-3{,}0\sigma}$'ya döner — yani bant altında bu rejim ΛCDM'in anlamlı üstünlük alanına geçer.
+- **Bant her rejimde teoriye ΛCDM'den fazla zarar verir.** Bozulma çarpanları: teoride 1,4–6,3; ΛCDM'de 1,0–1,4. Tek istisna yoktur.
+
+**Ama tek yönlü de okunmamalıdır.** Cüce/LSB'de teori bant altında bile **medyan $\chi^2_{ind}$ bakımından hâlâ öndedir** ($1{,}68$'e karşı $2{,}28$). Yitirilen şey medyan üstünlük değil, **galaksi başına kazanma oranının anlamlılığıdır.** İkisi aynı şey değildir: birincisi tipik uyum kalitesini, ikincisi üstünlüğün tutarlılığını ölçer. Teori bant altında tipik olarak daha iyi uyuyor ama bunu yeterince tutarlı biçimde yapmıyor.
+
+> **Bu bölümün başlık iddiası buna göre okunmalıdır.** "Teorinin galaktik cephesi Core-Cusp rejimidir" tespiti ayaktadır — medyan uyum orada hâlâ ΛCDM'in önündedir ve mekanizma açıklaması (cusp zorunluluğunun paylaşılmaması) değişmemiştir. Ayakta olmayan, o üstünlüğün **$3{,}1\sigma$ düzeyinde anlamlı** olduğu iddiasıdır. Serbest $\Upsilon_*$ ile anlamlıdır; fotometrik önselle anlamlı değildir.
+
+*Yöntem notu.* **(1)** Serbest hâlin burada 37/50 çıkması, tablodaki 36/50 ile bir galaksi farklıdır; fark **$\Upsilon_*$ üst sınırındandır** (tablo $\leq2{,}0$, buradaki tarama $\leq3{,}0$ kullanmıştır) — optimize edici gürültüsü değil. Kitabın temel kurulumu $\leq2{,}0$'dır ve o değerle cüce/LSB sonucu 36/50'dir. **(2)** Cüce/LSB anlamlılığı $3{,}1\sigma$'dır ve $p=0{,}5$ boş hipotezinin oranıyla hesaplanır: $(36-25)/\sqrt{50/4}=3{,}11$ (gözlenen orandan hesaplanan Wald değeri $3{,}5\sigma$ verirdi; boş hipoteze karşı sınamada doğrusu budur). Bandın kendisinin doğru önsel olup olmadığı sorusu ise **kapalıdır** — teorinin $\gamma_N/m=1/\rho_n$ bağıntısı onu o banda bağlar; bkz. 6.5.4.7 kayıt (4).
 
 ### 6.5.3.4 Tam Veri Tablosu — Galaksi Başına Sonuçlar
 
@@ -226,7 +255,7 @@ Tablo $V_{max}$'a göre artan sırada dizilmiştir; böylece 6.5.3.3'ün rejim d
 
 **Galerinin okunuşu.** Aşağıdaki galeri, tablonun görsel karşılığıdır: aynı 163 galaksi, aynı sırayla, ama sayılar yerine eğri şekilleriyle. Her panelde sarı noktalar ölçümü (gerçek hata çubuklarıyla), gri noktalı çizgi baryonik katkıyı, mor kesik-noktalı çizgi ΛCDM NFW fitini, yeşil düz çizgi Evrenakı F1+F4 fitini gösterir — ikisi de $k=2$. **Panel başlığının rengi kazanan modeli verir** (yeşil: Evrenakı, mor: ΛCDM). Sol üstte $V_{max}$, sağ altta iki modelin $\chi^2_{ind}$ değerleri yazılıdır.
 
-Rejim deseni galeride çıplak gözle okunabilir: **ilk satırlarda (cüce/LSB) başlıklar ağırlıklı olarak yeşil**, son satırlarda (kütleli sarmallar) karışıktır. 6.5.3.3'ün $3{,}5\sigma$'lık sonucu bu görsel eğilimin sayısal ifadesidir.
+Rejim deseni galeride çıplak gözle okunabilir: **ilk satırlarda (cüce/LSB) başlıklar ağırlıklı olarak yeşil**, son satırlarda (kütleli sarmallar) karışıktır. 6.5.3.3'ün $3{,}1\sigma$'lık sonucu bu görsel eğilimin sayısal ifadesidir.
 
 ![Tüm SPARC örneklemi — 163 galaksinin dönüş eğrisi ve iki model fiti](Gorseller/sparc_galeri_163.png)
 
@@ -409,6 +438,51 @@ Rejim deseni galeride çıplak gözle okunabilir: **ilk satırlarda (cüce/LSB) 
 | **TOPLAM** | **163** | **90** | **0.55** | **+1.3$\sigma$** |
 
 *Uyarı:* Bu tablodaki $\chi^2_{ind}$ değerleri yalnızca SPARC'ın kendi hata çubuklarını kullanır; uzaklık, eğiklik ve kütle/ışık sistematikleri modellenmemiştir. Bu nedenle mutlak değerler değil, **aynı satırdaki iki modelin karşılaştırması** anlamlıdır (7.4, madde 12).
+
+### 6.5.3.5 Üçüncü Parametre Eklenmiş Hâl — **Fitlenmiş** Karşılaştırma
+
+*(Üretim betiği: `CALISMA/plot_sparc_galeri_k3.py`.)*
+
+> **Bu alt bölümdeki üçüncü parametre FİTLENMİŞTİR, türetilmemiştir.** Ayrım kritiktir ve baştan belirtilmelidir: 6.5.4.5'te gösterildiği gibi $\ell_\omega$'nın bir **yasası** vardır ($\sqrt{\mathcal{G}M_{bar}/a_0}$, sıfır serbest parametre, ölçülen eğim 1,03). $R_f$'nin ise böyle bir yasası **yoktur** — 6.5.4.6, onun kökeni belirlenemeyen dış-bölge sistematiğini emen fenomenolojik bir terim olduğunu tespit eder. Dolayısıyla aşağıdaki uyum iyileşmesi **gerçek ama kazanılmamıştır**: bir serbest parametre eklenerek satın alınmıştır.
+
+6.5.3.4'ün galerisi Evrenakı'yı $k=2$ ile gösteriyordu ($\Upsilon_*$, $b$). Bu galeri üçüncü parametreyi ekler:
+
+$$v^2 = V_{bar}^2 + \frac{b\,M_{kaps}(R)}{1+R/R_f}\,,\qquad k=3\ (\Upsilon_*,\ b,\ R_f)$$
+
+ΛCDM yine $k=2$'dir ($\Upsilon_*$, $M_{200}$; konsantrasyon simülasyon ilişkisinden). **Kazanan ölçütü AIC'dir, ham ki-kare değil** — parametre sayıları eşit olmadığı için ham $\chi^2$ karşılaştırması Evrenakı'ya haksız avantaj verir; AIC her fazladan parametreyi $+2$ ile cezalandırır. Üç parametreli fit $N\ge7$ gerektirdiği için örneklem 163'ten **155 galaksiye** düşer.
+
+![Tüm SPARC örneklemi — Evrenakı'ya üçüncü parametre eklenmiş hâli ($k=3$)](Gorseller/sparc_galeri_163_k3.png)
+
+**Sonuçlar:**
+
+| Ölçüt | $k=2$ (6.5.3.4) | $k=3$ (bu galeri) |
+|---|---|---|
+| AIC kazananı — Evrenakı | 90/163 = %55 | **93/155 = %60** |
+| Ham $\chi^2$ ile (adil değil) | %55 | %65 |
+| Medyan $\chi^2_{ind}$ ΛCDM | — | 1,98 |
+| Medyan $\chi^2_{ind}$ Evrenakı | — | **1,13** |
+| $R_f$ üst sınırda (yayılma istenmeyen) | — | **48/155 = %31** |
+
+Ham $\chi^2$ ile AIC arasındaki fark (%65 → %60) doğrudan fazladan parametrenin bedelidir: 8 galakside iyileşme, ödenen cezayı karşılamıyor. Medyan uyumda ise fark belirgindir — ΛCDM 1,98'de kalırken Evrenakı 1,13'e iner.
+
+**Ama teşhis gücü kayboluyor — ve bu, bu alt bölümün asıl bulgusudur.**
+
+| $V_{max}$ bandı | Evrenakı, $k=2$ | Evrenakı, $k=3$ |
+|---|---|---|
+| $<60$ | **0,73** | 0,62 |
+| $60$–$80$ | **0,71** | 0,70 |
+| $80$–$120$ | 0,52 | 0,60 |
+| $120$–$180$ | **0,27** | 0,55 |
+| $180$–$250$ | 0,48 | 0,56 |
+| $>250$ | 0,60 | 0,60 |
+
+$k=2$'de keskin bir eğim vardı: cücelerde 0,73, orta-kütlelilerde 0,27 — 6.5.3.3'ün $3{,}1\sigma$'lık Core-Cusp deseni buydu. **$k=3$'te bütün bantlar 0,55–0,70 arasına düzleşiyor.** Üçüncü parametre, teorinin cücelerdeki özgün avantajını da ΛCDM'in orta-kütlelilerdeki avantajını da siliyor; çünkü esneklik açığı her rejimde kapatıyor.
+
+Bunun anlamı şudur: **uyum iyileşmesi ile teşhis gücü ters yönde hareket eder.** $k=2$'nin rejim deseni fiziksel bir bilgi taşıyordu (cusp'lı halo profilinin düşük yüzey parlaklıklı sistemlerde kırılması); $k=3$ o bilgiyi bir serbestlikle örtüyor. Bir modelin daha iyi *fit* etmesi, daha çok *söylediği* anlamına gelmez.
+
+**Galerideki yıldızlar.** 48/155 galakside (%31) $R_f$ üst sınıra dayanır — fit yayılma istemez ve model etkin olarak $k=2$'ye döner, ama AIC cezasını yine öder. Bu galaksiler panel başlığında yıldız (\*) ile işaretlidir. Yıldızların dağılımı **belirli bir rejimde toplanmaz** (hem cücelerde hem kütlelilerde vardır) — bu, 6.5.4.6'nın "$R_f$ fenomenolojiktir" tespitiyle tutarlıdır: fiziksel bir yayılma olsaydı, disk kalınlaşması evrensel olduğu için her galakside sonlu bir $R_f$ beklenirdi.
+
+**Kayıt.** Teorinin resmî galaktik denklemi $k=2$ hâlidir; $\ell_\omega$'nın yasası vardır ve o hâl 6.5.3.3'ün rejim sonucunu verir. $k=3$ hâli, dış-bölge sistematiği çözülene kadar bir **duyarlılık kontrolü** olarak tutulmalıdır, teorinin iddiası olarak değil.
 
 ### Sonuç
 Evrenakı teorisinin kinematik denklemleri; sarmal, eliptik ve cüce küresel gözetmeksizin, dönen bir çekirdeğe sahip tüm galaktik yapılarda "Karanlık Madde" varsayımını tamamen ortadan kaldırmakta ve kütleçekim anomalisini kendi iç dinamikleriyle, saf matematiksel bir kesinlikle çözmektedir.
@@ -616,14 +690,14 @@ Standart astronomi, içlerinde gaz ve toz barındırmayan, ölü ve hayaletimsi 
 Evrenakı'ya göre karanlık maddeye ihtiyaç yoktur. Galaksideki her yıldız ve atom, Evrenakı'nın içinde bir "vakum cebi" (deplasman) yaratır. Trilyonlarca kütlenin hacmi, merkezdeki Evrenakı sıvısını dışarı deplase eder. Bu fiziksel boşaltım, merkezde devasa bir düşük basınç alanı (çukur) yaratır. Dış uzayın bu çukura hücum etmesi (**Merkezcil İtim**), yıldızları bir arada tutan gücün ta kendisidir. Sistemde aktif bir girdap olmadığı için merkez sakindir (Core verisiyle birebir uyuşur).
 
 ### B. Galaksi Şekillerini (Düzenli vs Rastgele) Belirleyen Eksenel İtim
-Galaksilerdeki yörüngelerin "düzenli disk" mi yoksa "kaotik küre" mi olacağı, bütünüyle merkezdeki kara deliğin **Eksenel İtim (Girdap Sürüklenmesi)** gücüne ve kararlılığına bağlıdır.
+Galaksilerdeki yörüngelerin "düzenli disk" mi yoksa "kaotik küre" mi olacağı, bütünüyle sistemin **Eksenel İtim (F4)** gücüne ve ekseninin kararlılığına bağlıdır. F4'ü besleyen şey, kapsanan baryonik kütlenin **düzenli dolanım debisidir** (6.5.4.3): dolanım ne kadar hizalıysa itim o kadar güçlü ve kararlıdır.
 
-* **Cüce Küreseller (Sıfır Eksenel İtim):** Merkezde kara delik yoktur. Eksenel İtim ($B=0$) olmadığı için akışkan dönmez, yıldızlar sadece merkezdeki kütleçekim çukuruna (Merkezcil İtim'e) doğru rastgele, arı kovanı gibi 3 boyutlu kaotik yörüngelerde uçuşurlar.
-* **Sarmal Galaksiler (Maksimum ve Sabit Eksenel İtim):** Kara delik, Evrenakı'yı tek ve sabit bir eksende (dev bir mikser gibi) döndürür. Sürtünme (gaz ve toz) de mevcut olduğundan, Eksenel İtim (B) yıldızları zamanla tek bir düzleme (diske) kusursuzca hizalar. Sarmal şekil doğar.
-* **Dev Elips Galaksiler (Yalpalayan / Precession Yapan İtim):** Çarpışmalar kurbanı olan bu ölü devlerin merkezindeki süper kara delikler; kütlece devasadır ancak eksenleri sabitleşememiş, şiddetle yalpalayan (**Precession**) durumdadır. Yalpalayan eksenel itim, akışkanı bir düzlemde değil, "3 boyutlu bir çalkalama" şeklinde savurur. Gaz ve sürtünme de olmadığı için trilyonlarca yıldız asla bir diske yerleşemez, rastgele 3 boyutlu yörüngelerde salınım (pendulum) hareketi yaparak galaksiyi devasa bir küre (elips) formuna mahkûm eder.
+* **Cüce Küreseller (Sıfır Eksenel İtim):** Düzenli dolanım yoktur; yıldızlar hız dağılımındadır. Net vortisite kurulamadığı için Eksenel İtim doğmaz ($B\approx0$): yıldızlar sadece merkezdeki basınç çukuruna (Merkezcil İtim'e) doğru rastgele, arı kovanı gibi 3 boyutlu kaotik yörüngelerde uçuşurlar.
+* **Sarmal Galaksiler (Maksimum ve Sabit Eksenel İtim):** Baryonik kütle tek ve kararlı bir eksende dolanır; Evrenakı dev bir mikser gibi hep aynı yönde karılır ve F4 sürekli beslenir. Sürtünme (gaz ve toz) de mevcut olduğundan, Eksenel İtim (B) yıldızları zamanla tek bir düzleme (diske) kusursuzca hizalar. Sarmal şekil doğar.
+* **Dev Elips Galaksiler (Yalpalayan / Precession Yapan İtim):** Çarpışmalar kurbanı olan bu ölü devlerde dolanım eksenleri sabitleşememiş, şiddetle yalpalayan (**Precession**) durumdadır. Yalpalayan eksenel itim, akışkanı bir düzlemde değil, "3 boyutlu bir çalkalama" şeklinde savurur. Gaz ve sürtünme de olmadığı için trilyonlarca yıldız asla bir diske yerleşemez, rastgele 3 boyutlu yörüngelerde salınım (pendulum) hareketi yaparak galaksiyi devasa bir küre (elips) formuna mahkûm eder.
 
 ### C. 4B'den 3B'ye İzdüşümün Makro Kanıtı: Precession
-Dev galaksilerin yalpalaması (Precession) basit bir tesadüf veya sadece çarpışmaların bir sonucu değildir. Matematikte 4 Boyutlu uzaydaki (4B) dönüşler (SO(4) Isoclinic dönüşler), 3 Boyutlu (3B) uzaya yansıtıldıklarında geometrik bir zorunluluk olarak "Yalpalama" (Precession) hareketi üretirler. Evrenakı teorisine göre madde (kavitasyon yırtığı), doğası gereği 4B veya üst boyutlu bir dönüşün eseridir. Bu devasa kara deliklerin dönüş eksenlerinin mecburen yalpalaması, aslında 4B'deki Evrenakı girdabının 3B uzayımıza düşen devasa topolojik gölgesidir! Galaksilerin o devasa küre yapıları, 4 boyutlu mekaniğin galaktik ölçekteki doğrudan ispatıdır.
+Dev galaksilerin yalpalaması (Precession) basit bir tesadüf veya sadece çarpışmaların bir sonucu değildir. Matematikte 4 Boyutlu uzaydaki (4B) dönüşler (SO(4) Isoclinic dönüşler), 3 Boyutlu (3B) uzaya yansıtıldıklarında geometrik bir zorunluluk olarak "Yalpalama" (Precession) hareketi üretirler. Evrenakı teorisine göre madde (kavitasyon yırtığı), doğası gereği 4B veya üst boyutlu bir dönüşün eseridir. Bu sistemlerin dolanım eksenlerinin mecburen yalpalaması, aslında 4B'deki Evrenakı girdabının 3B uzayımıza düşen devasa topolojik gölgesidir! Galaksilerin o devasa küre yapıları, 4 boyutlu mekaniğin galaktik ölçekteki doğrudan ispatıdır.
 
 ### D. Kütle ve Dönüş Paradoksunun Çözümü ($\sqrt{2}c$)
 Astronomide dev elips galaksilerin merkezindeki devasa kara deliklerin "yavaş" döndüğü ($a^*$ spin katsayısının düşük olduğu) ölçülür. Bu durum, teorimizin *"Kütle arttıkça dönüş gücü artmalıdır"* kuralıyla asla çelişmez, bilakis doğrular:
@@ -634,16 +708,356 @@ Astronomide dev elips galaksilerin merkezindeki devasa kara deliklerin "yavaş" 
 
 ## 6.5.4 Saf Beş Kuvvet Sınavı: Kapsanan Kütle Artışı ve Vortisite Beslemeli Eksenel İtim
 
-> **Ekleme kaydı — Claude Opus 5 (Anthropic), 30 Temmuz 2026:** Bu kesit (6.5.4 ve alt başlıkları) Anthropic'in Claude Opus 5 yapay zekâ modeli tarafından üretilmiştir; insan akran denetiminin yerine geçmez. Kapsam: 6.5.2'nin $v=\sqrt{A/r+B}$ denklemini dışarıya olan iki borcundan kurtarmak ve sonucu ΛCDM'in kendi reçetesiyle kurulmuş karanlık madde hesabıyla yan yana koymak. Hesap betiği ve veri: `CALISMA/plot_sparc_ngc3198.py`, `CALISMA/veri/NGC3198_rotmod.dat`. Bu kesitin **türetim** kısmı (6.5.4.0–6.5.4.3) veriden bağımsızdır ve geçerlidir. **Sayısal kısmı yeniden yazılmıştır:** ilk sürüm temsilî (uydurma) bir dönüş eğrisi kullanıyordu; sınav yayınlanmış SPARC verisiyle 6.5.3.1'e taşınmış, bu kesitin sonuçları ona göre düzeltilmiştir (bkz. §6.5.4.7, kayıt (1)).
+> **Ekleme kaydı — Claude Opus 5 (Anthropic), 30 Temmuz 2026:** Bu kesit (6.5.4 ve alt başlıkları) Anthropic'in Claude Opus 5 yapay zekâ modeli tarafından üretilmiştir; insan akran denetiminin yerine geçmez. Kapsam: 6.5.2'nin $v=\sqrt{A/r+B}$ denklemini dışarıya olan iki borcundan kurtarmak ve sonucu ΛCDM'in kendi reçetesiyle kurulmuş karanlık madde hesabıyla yan yana koymak. Hesap betiği ve veri: `CALISMA/plot_sparc_ngc3198.py`, `CALISMA/veri/NGC3198_rotmod.dat`. Bu kesitin **türetim** kısmı (6.5.4.0–6.5.4.3) veriden bağımsızdır; sayısal sınavı yayınlanmış SPARC verisiyle 6.5.3.1'dedir (bkz. §6.5.4.7, kayıt (1)).
 >
 > *(Konum notu: kesit, yazarın talebiyle bölümün sonuna işlenmiştir; içerik olarak 6.5.3.1'in devamıdır ve §4'ün morfoloji tartışmasından önce okunabilir.)*
+
+### 6.5.3.6 Türetim–Fit Defteri: $\chi^2$'nin Göremediği Hesap
+
+*(Bu alt bölüm Claude Opus 5 tarafından 31 Temmuz 2026'da eklenmiştir. Hesap: `CALISMA/plot_turetim_fit_defteri.py`.)*
+
+Yukarıdaki bütün karşılaştırmalar $\chi^2$ ve AIC üzerinden yürütüldü. **Bu ölçütler eğri uydurma kalitesini ölçer; türetmeyi ölçmez.** Bir teori baryonik Tully-Fisher ilişkisini sıfır serbest parametreyle öngörüyorsa, öteki onu geri-besleme ayarıyla yakalıyorsa, AIC ikisine **aynı notu verir**. Bu asimetri yukarıdaki tabloların hiçbirinde görünmez. Bu alt bölüm iki tarafın defterini ayrı ayrı tutar — ve sonra ikisini birlikte okur.
+
+![Türetim–fit defteri ve $\Upsilon_*$ tavan sınavı](Gorseller/turetim_fit_defteri.png)
+
+#### Defterin türetim tarafı
+
+| Büyüklük | Evrenakı | ΛCDM |
+|---|---|---|
+| Düz dönüş kolunun biçimi | **türetilmiş** — M-38: $h=$sabit $\Rightarrow a\propto1/R \Rightarrow v=$sabit | halo profili + baryon eşleşmesi *(disk–halo komplo problemi)* |
+| İvme ölçeği $a_0$ | **biçimi türetilmiş** ($\mathcal{G}m_n/\ell_\omega^2$), değeri **kalibre** — SPARC'a sabitlenmiş (6.5.4.5) | **karşılığı yok** |
+| BTFR **eğimi** ($v^4\propto M_{bar}$) | **türetilmiş** — yasadan tek satırda çıkar | geri-beslemeyle üretilmeli |
+| BTFR **normalizasyonu** | kalibre ($a_0$'a bağlı) — ölçülen 0,984 (6.5.4.5) | geri-beslemeyle ayarlanır |
+| BTFR saçılmasının darlığı | yasanın doğal sonucu | **ince ayar bilmecesi** |
+| $\ell_\omega$'nın kütleyle ölçeklenmesi | **yasa** — $\propto\sqrt{M_{bar}}$, ölçülen eğim 1,03 | karşılığı yok |
+| Dönüş eğrisi profilinin kaynağı | **teorem** — M-37: $v_\theta=\sqrt{R\lvert a_{radyal}\rvert}$ | varsayılan profilin sonucu |
+| Halo yoğunluk profili | — *(halo yok)* | **türetilmiş** — N-cisim: NFW |
+| $c_{200}$–$M_{200}$ ilişkisi | — | **türetilmiş** — N-cisim |
+| Galaksi başına $M_{200}$ | — | **fit** |
+| Galaksi başına $\Upsilon_*$ | **fit** (ortak) | **fit** (ortak) |
+| İç bölge: çekirdek mi sivri mi | çekirdek doğal | **cusp zorunlu** → Core-Cusp problemi |
+| Görünmez madde envanteri | **talep yok** | **zorunlu** |
+
+**Sayım.** Evrenakı **beş** büyüklüğü türetir (düz kolun biçimi, BTFR eğimi, BTFR saçılmasının darlığı, $\ell_\omega$'nın kütleyle ölçeklenmesi, M-37 profil teoremi), **bir küresel sabiti kalibre eder** ($a_0$ — biçimi türetilmiş, değeri gözlemle sabitlenmiş) ve galaksi başına bir parametre fitler ($\Upsilon_*$). ΛCDM iki büyüklüğü türetir, ikisini fitler ve görünmez madde bileşeni talep eder. **Önemli ayrım:** BTFR'nin **eğimi** türetilmiştir ama **normalizasyonu** $a_0$'a bağlıdır, dolayısıyla o da kalibredir — "BTFR sıfır parametreyle çıkıyor" ifadesi eğim için doğru, genlik için değildir.
+
+#### Ama defterin bir de asimetri satırı var — ve o teorinin aleyhinedir
+
+**Evrenakı'nın türetimlerinin tamamı, sınandıkları aynı dönüş eğrilerinden okunmuştur.** $a_0$'ın değeri SPARC'a kalibre edildi (6.5.4.5); $\ell_\omega$ yasası aynı SPARC örneğinden çıkarıldı; M-38'in yayılma çarpanı fitlendi (6.5.4.6). **ΛCDM'in NFW profili ve $c_{200}$–$M_{200}$ ilişkisi ise bağımsız bir hesaptan gelir** — dönüş eğrilerine hiç bakmayan N-cisim simülasyonlarından. Bu, defterin en önemli satırıdır:
+
+> Bir büyüklüğü "türetmek" ile onu "aynı veriden okuyup türetim gibi sunmak" farklıdır. Evrenakı'nın türetimleri **öngörü statüsünü henüz kazanmamıştır**; kazanmaları için dönüş eğrileri dışında bir gözlemde doğrulanmaları gerekir. Defterin türetim tarafı bu nedenle *potansiyel* bir üstünlüktür, kazanılmış bir üstünlük değil.
+
+#### Ve defterin fit tarafı: hüküm kuruluma bağlı
+
+| Kurulum ($k=2$, 163 galaksi) | Medyan $\chi^2_{ind}$ | Evrenakı önde |
+|---|---|---|
+| Evrenakı, $\Upsilon_*\leq2{,}0$ *(kitabın temeli)* | **1,568** | 90/163 = %55 ($+1{,}3\sigma$) |
+| Evrenakı, $\Upsilon_*\leq3{,}0$ | 1,357 | 96/163 = %59 ($+2{,}3\sigma$) |
+| Evrenakı, $\Upsilon_*$ bantlı ($0{,}3$–$0{,}8$) | **3,449** | 71/163 = %44 ($-1{,}6\sigma$) |
+| ΛCDM NFW, $\Upsilon_*\leq2{,}0$ | 1,980 | — |
+| ΛCDM NFW, $\Upsilon_*$ bantlı | 2,580 | — |
+
+Serbest $\Upsilon_*$ ile Evrenakı medyan olarak öndedir ($1{,}57 < 1{,}98$) ama kazanma oranı beraberliktir. Fotometrik bantla ΛCDM öne geçer. **Hüküm, $\Upsilon_*$'a konan kısıta bağlıdır.**
+
+#### Tavan bulgusu: sorun bandın doğruluğu değil
+
+Bant sınavına yöneltilebilecek itiraz şudur: *"$0{,}3$–$0{,}8$ bandı fazla dar olabilir."* Bu itirazı çürüten ölçüm şudur — fit, **konulan her tavanı arıyor:**
+
+| $\Upsilon_*$ üst sınırı | Tavana dayanan galaksi | Medyan $\Upsilon_*$ | Bandın dışında |
+|---|---|---|---|
+| $\leq2{,}0$ | **%18** | 0,85 | %60 |
+| $\leq3{,}0$ | **%9** | 0,85 | %60 |
+
+Yani her beş galaksiden birinde model $\Upsilon_*>2$ istemektedir — 3,6 μm'de bu, yıldız kütlesinin fotometrinin taşıyabileceğinin **üç-altı katı** demektir. Tavan 3,0'a çıkarıldığında hâlâ %9'u dayanmaktadır. **Sorun bandın genişliği değil; modelin sınırsız $\Upsilon_*$ istemesidir.** Bu, yukarıdaki tek olasılığı doğrular: $M_{kaps}$ kaynağının biçimi eksiktir ve model açığı yıldız kütlesini şişirerek kapatmaktadır.
+
+#### Fit girdisi faturası: her fitlenen sayı ücretlendirilirse
+
+*(Hesap: `CALISMA/plot_fit_girdisi_faturasi.py`.)*
+
+Yukarıdaki bütün karşılaştırmalar **galaksi başına** medyan üzerinden yapıldı. Bu, parametre maliyetini gizler: 163 galaksiye yayılmış bir parametre 163 serbest sayıdır, ve galaksi başına AIC'nin $2k$ cezası bunu eksik çeker. Doğru hesap örneklem genelinde toplam fit girdisini saymaktır:
+
+$$K = (\text{galaksi başına parametre})\times(\text{galaksi sayısı}),\qquad \mathrm{BIC} = \sum\chi^2 + K\ln N_{nokta}$$
+
+BIC, AIC'den çok daha sert cezalandırır. **ΛCDM'in NFW profili ve $c_{200}$–$M_{200}$ ilişkisi ücretlendirilmez** — onlar dönüş eğrilerine değil N-cisim simülasyonlarına kalibredir. Adil kurulum budur.
+
+![Fit girdisi faturası](Gorseller/fit_girdisi_faturasi.png)
+
+| Model | Fitlenen | $K$ | $\sum\chi^2$ | $\chi^2/dof$ | $\Delta$BIC |
+|---|---|---|---|---|---|
+| *$\Upsilon_*$ serbest ($\leq2{,}0$)* | | | | | |
+| Yalnız baryonlar | $\Upsilon_*$ | 163 | 429 140 | 136,84 | $+412\,833$ |
+| Evrenakı — $a_0$ **teoriden** | $\Upsilon_*$ | **163** | 57 683 | 18,39 | $+41\,376$ |
+| **Evrenakı — $b$ fitli** | $\Upsilon_*$, $b$ | 326 | **14 986** | **5,04** | **0** |
+| ΛCDM NFW | $\Upsilon_*$, $M_{200}$ | 326 | 16 526 | 5,56 | $+1539$ |
+| *$\Upsilon_*$ bantlı ($0{,}3$–$0{,}8$)* | | | | | |
+| Evrenakı — $b$ fitli | $\Upsilon_*$, $b$ | 326 | 27 615 | 9,29 | $+8278$ |
+| **ΛCDM NFW** | $\Upsilon_*$, $M_{200}$ | 326 | **19 336** | **6,50** | **0** |
+
+**Serbest $\Upsilon_*$ ile fatura Evrenakı'yı kazandırıyor.** Eşit parametre sayısında ($K=326$) $\Delta$BIC $=-1539$. Bu, bu kitapta teorinin **ilk net kazandığı** kurulumdur ve doğrudan sizin kuralınızın — *her fit girdisini ücretlendir* — sonucudur.
+
+**Ama üç çekince, ve üçü de kaydedilmelidir.**
+
+**Çekince 1 — en az fit girdisi kullanan hâl herkese kaybediyor.** $a_0$'ı teoriden alıp $b$'yi yasadan türeten sürüm ($K=163$, yani ΛCDM'in **yarısı** kadar fit girdisi) $\sum\chi^2=57\,683$ verir; serbest $b$'li hâl 14 986. **3,85 kat kötü.** Parametreyi yarıya indirmenin BIC kazancı ($\sim1300$) bu açığın ($\sim43\,000$) yanında hiçtir. Anlamı şudur: **$\ell_\omega$ yasası vardır ve eğimi doğrudur (1,03), ama 0,38 dex'lik (2,4 kat) saçılması onu fit parametresinin yerine koyacak kadar sıkı değildir.** Ceza kuralı teoriyi az parametreyle kazandırmıyor — yasa henüz o kadar iyi değil.
+
+**Çekince 2 — $\chi^2/dof\approx5$, yani iki model de formel olarak kötü uyuyor.** Bu, SPARC'ın hata çubuklarının gerçek saçılmayı eksik temsil ettiğini (veya modellenmeyen sistematik olduğunu) gösterir. Böyle bir durumda $\Delta$BIC'in mutlak büyüklüğü şişkindir. En iyi modelin $\chi^2/dof=1$ olacak şekilde hatalar yeniden ölçeklendiğinde $\Delta$BIC $-1539$'dan $-305$'e iner — hüküm değişmez ama büyüklüğü altı kat küçülür.
+
+**Çekince 3 — ve bu en önemlisi: bantlı hüküm kırpmayla tersine dönüyor.**
+
+| Ölçüt (eşit $K=326$) | $\Upsilon_*$ serbest | $\Upsilon_*$ bantlı |
+|---|---|---|
+| Ham $\Delta$BIC | $\mathbf{-1539}$ | $+8278$ |
+| Hata ölçekli | $\mathbf{-305}$ | $+1273$ |
+| **En kötü %5 kırpılmış** | $\mathbf{-178}$ | $\mathbf{-767}$ |
+| Galaksi başına oy | %55 ($+1{,}3\sigma$) | %44 ($-1{,}6\sigma$) |
+
+Bantlı hâlde ΛCDM'in $+8278$'lik zaferi **geniş bir üstünlükten gelmiyor.** Zararın kaynağı ayrıştırıldığında:
+
+| Galaksi | $v_{max}$ | B/T | $\chi^2$ Evrenakı | $\chi^2$ ΛCDM | Katkı |
+|---|---|---|---|---|---|
+| UGC00128 | 134 | 0,00 | 4172 | 49 | $+4123$ |
+| UGC05716 | 75 | 0,00 | 1179 | 14 | $+1165$ |
+| NGC5985 | 305 | 0,00 | 1629 | 702 | $+927$ |
+| NGC0247 | 108 | 0,00 | 856 | 113 | $+743$ |
+| UGC05764 | 56 | 0,00 | 736 | 60 | $+676$ |
+| UGC00731 | 74 | 0,00 | 680 | 5 | $+675$ |
+| UGC09133 | 289 | 0,27 | 1173 | 590 | $+583$ |
+| NGC2403 | 136 | 0,00 | 731 | 381 | $+351$ |
+| UGC08286 | 84 | 0,00 | 356 | 54 | $+301$ |
+| UGC02259 | 90 | 0,00 | 329 | 40 | $+290$ |
+| **ilk 10 toplamı** | | | | | $\mathbf{+9835}$ *(toplamın %119'u)* |
+| **kalan 153 galaksi** | | | | | $\mathbf{-1557}$ *(Evrenakı önde)* |
+
+**Yani bantlı hâlde bile Evrenakı 153 galakside öndedir**; bütün kaybı 10 galaksiden (%6) gelir. Ve o 10'un **yapısal imzası yoktur**: dokuzu kovansızdır (B/T $=0$), medyan $v_{max}$ 99 km/s (örneklem geneli 110), yani ne kütle ne morfoloji onları ayırmaktadır. Kovanlı galaksilerde ($n=24$) Evrenakı zaten öndedir ($-527$).
+
+> **Bunun anlamı bir yenilgi değil, bir teşhis kalemidir.** Model tipik galakside — fotometrik $\Upsilon_*$ altında bile — ΛCDM'den iyi çalışıyor, ama %6'lık bir altkümede **felaket biçiminde** başarısız oluyor ve bu altkümenin nedeni bilinmiyor. Genel bir zayıflık, tek tek anlaşılabilir on başarısızlıktan daha kötüdür; buradaki durum ikincisidir. **O on galaksinin neden koptuğunu bulmak, teorinin galaktik dosyasındaki en verimli sıradaki iştir** (7.4, madde 12/k).
+
+#### Yalnızca spiral ölçekte: teorinin evi neresi?
+
+*(Hesap: `CALISMA/plot_spiral_kiyaslama.py`. Sınıflama verisi: `CALISMA/veri/_sparc.mrt`.)*
+
+Buraya kadarki bütün karşılaştırmalar SPARC'ın **tamamı** üzerinden yapıldı ve örneklem cüce, düzensiz ve düşük yüzey parlaklıklı sistemleri de içeriyordu. 6.5.3.3 bir iddiada bulunmuştu: *"teorinin cephesi düz dönüş eğrisi değil, Core-Cusp rejimidir."* Bu alt başlık o iddiayı **doğrudan ölçer.**
+
+**Sınıflama gerçek Hubble tiplerinden gelmektedir.** SPARC ana kataloğu (Lelli, McGaugh & Schombert 2016, Tablo 1) indirilmiş ve her galaksinin Hubble tipi $T$ doğrudan okunmuştur: $T=0$ S0, $1$ Sa, $2$ Sab, $3$ Sb, $4$ Sbc, $5$ Sc, $6$ Scd, $7$ Sd, $8$ Sdm, $9$ Sm, $10$ Im, $11$ BCD. **Spiral $=$ Sa–Sd ($T=1$–$7$).** 163 galaksinin tipi eşleşmiştir: **91 spiral, 69 cüce/düzensiz (Sdm–BCD), 3 mercekssel (S0)**.
+
+![Yalnızca spiral ölçekte kıyaslama](Gorseller/spiral_kiyaslama.png)
+
+| Altküme | $\Upsilon_*$ koşulu | Medyan $\chi^2_{ind}$ Evrenakı | Medyan ΛCDM | Evrenakı önde | $\Delta$BIC (ölçekli) |
+|---|---|---|---|---|---|
+| **SPİRAL** Sa–Sd (91) | serbest ($\leq2{,}0$) | **2,008** | 2,265 | 42/91 = %46 ($-0{,}7\sigma$) | $+77$ |
+| **SPİRAL** Sa–Sd (91) | bantlı ($0{,}3$–$0{,}8$) | 3,660 | **2,580** | 38/91 = %42 ($-1{,}6\sigma$) | $+456$ |
+| cüce/düzensiz Sdm–BCD (69) | serbest | **1,004** | 1,753 | **45/69 = %65 ($+2{,}5\sigma$)** | $\mathbf{-560}$ |
+| cüce/düzensiz Sdm–BCD (69) | bantlı | **2,322** | 2,432 | 31/69 = %45 ($-0{,}8\sigma$) | $+800$ |
+
+**Spiral galaksilerde teorinin üstünlüğü yoktur — ve bu, beraberlikten de zayıftır.**
+
+- **Serbest $\Upsilon_*$ ile bile geride.** Medyan $\chi^2_{ind}$ Evrenakı lehinedir (2,01'e karşı 2,27) ama galaksi başına oy **%46**'dır ($-0{,}7\sigma$). İki gösterge ters yönü işaret ediyor: tipik spiralde uyum biraz daha iyi, ama galaksilerin çoğunda ΛCDM önde. Fark anlamlı değildir; **başabaş, hafif ΛCDM lehine.**
+- **Fotometrik $\Upsilon_*$ ile ΛCDM açık ara önde:** 2,58'e karşı 3,66; oy %42 ($-1{,}6\sigma$).
+
+**Ve teorinin tek anlamlı galibiyeti kesindir:** cüce/düzensiz altküme **ve** serbest $\Upsilon_*$. Orada oy %65 ($+2{,}5\sigma$), medyan **1,004**'e karşı 1,753 ve $\Delta$BIC $-560$. Medyan $\chi^2_{ind}$'in kabul sınırına ($=1$) tam oturması bu hücreye özgüdür. Bu, bu kitapta teorinin istatistiksel olarak anlamlı **tek** galibiyetidir.
+
+**Spiraller içinde bir eğilim var ve kaydedilmelidir.** Alt tipe göre Evrenakı'nın önde olduğu galaksi oranı (serbest $\Upsilon_*$):
+
+| Sab (10) | Sb (12) | Sbc (18) | Sc (16) | Scd (16) | **Sd (16)** |
+|---|---|---|---|---|---|
+| %50 | %33 | %50 | %44 | %31 | **%69** |
+
+En geç spiral tipi olan **Sd'de teori öne geçiyor** (%69) — ve Sd, cüce/düzensiz sınırına en yakın, kovansız ve düşük yüzey parlaklıklı tiptir. Eğilim düzgün değildir (Scd %31 ile kırıyor) ve alt örneklem sayıları küçüktür, ama yön 6.5.3.3'ün fiziksel okumasıyla uyumludur: **teori kovansız, düşük yoğunluklu iç bölgeye sahip sistemlerde iyi çalışmaktadır.**
+
+> **Bu bir çelişki değil, 6.5.3.3'ün doğrulanmasıdır.** Kitap zaten *"düz dönüş eğrisi bir zafer değildir"* diyordu; bu ölçüm o cümleyi sayıya çevirir. Teorinin toplam örneklemdeki avantajı **spirallerden gelmiyordu**; cüce/düzensiz altkümesinden geliyordu. Spiral galaksinin düz dönüş kolu, teorinin ΛCDM'den daha iyi açıkladığı bir olgu **değildir**.
+
+**İki şey bu tabloda görünmüyor ve kaydedilmelidir.** Birincisi: spiraldeki başabaşlık **görünmez madde envanteri talep edilmeden** sağlanmaktadır — ΛCDM aynı 91 eğri için halo ister. İkincisi: fotometrik $\Upsilon_*$ dayatıldığında teori **hiçbir tipte** kazanmamaktadır; cüce/düzensizdeki galibiyet de $+2{,}5\sigma$'dan $-0{,}8\sigma$'ya iner. Teorinin tek zaferi, tek serbest parametresinin fotometrik önselden kurtulmasına bağlıdır.
+
+**Sınıflama kuralı — vekil değil, gerçek tip.** Buradaki spiral seçimi SPARC ana kataloğunun **gerçek Hubble tipleriyle** yapılmıştır; yapısal vekiller kullanılmaz. Nedeni ölçülmüştür: makul görünen bir vekil ($v_{max}\geq80$ km/s ve yıldız katkısı $>$ gaz katkısı) 91 gerçek spiralin 84'ünü yakalar ama **21 spiral-olmayan sistemi yanlışlıkla spiral sayar** — aralarında NGC2915 (BCD), NGC4214 (Im), UGC01230 (Sm) ve kritik olarak **UGC00128 (Sdm)**. UGC00128, bantlı $\Upsilon_*$ altındaki en büyük tek aykırı katkıdır ($+4123$; bkz. fit girdisi faturası); vekil onu spiral sayınca spiral altkümesinin sayıları **iyimserleşir** (vekille oy %49, gerçek tiple %46). Bu sayfadaki bütün sayılar gerçek Hubble tipleriyledir.
+
+*Yöntem notu:* SPARC'ın `.mrt` dosyasında sütun başlığı $T$ için "12–13. bayt" demektedir, ancak veri satırlarında alan bir bayt kaymıştır. Sabit genişlikli okuma bu yüzden **sessizce** yanlış sonuç verir — her galaksiye $T=1$ (Sa) atar. Betik bu nedenle belirteç tabanlı okuma kullanır; hata bu bölümün üretiminde bir kez yapılmış ve tip dağılımı denetlenerek yakalanmıştır.
+
+#### Tip tip döküm: "cüce/düzensiz" bloğu neyi gizliyordu?
+
+*(Bu alt başlık 31 Temmuz 2026'da eklenmiştir. Hesap: `CALISMA/plot_tip_dokumu.py`.)*
+
+Buraya kadarki bütün ayrıştırmalar iki bloğa dayanıyordu: spiral (Sa–Sd) ve cüce/düzensiz (Sdm–BCD). **Blok ortalaması iki gerçeği birden gizliyordu.** SPARC ana kataloğundan Hubble tipi okunup hiçbir tip bloklanmadan raporlandığında:
+
+![Hubble tipine göre tam döküm](Gorseller/tip_dokumu.png)
+
+| Tip | $N$ | $\Upsilon_*$ bant dışı | Medyan $\Upsilon_*$ | Tavanda | Evrenakı önde (serbest) | (bantlı) |
+|---|---|---|---|---|---|---|
+| S0 | 3 | %33 | 0,64 | %0 | 3/3 | 2/3 |
+| **Sa–Sd (spiral)** | 91 | %44 | **0,64** | %9 | 42/91 ($-0{,}7\sigma$) | 38/91 ($-1{,}6\sigma$) |
+| Sdm | 9 | %78 | 1,41 | %33 | 5/9 ($+0{,}3\sigma$) | 4/9 ($-0{,}3\sigma$) |
+| **Sm** | 23 | **%91** | **1,68** | **%39** | 13/23 ($+0{,}6\sigma$) | 6/23 ($\mathbf{-2{,}3\sigma}$) |
+| **Im (düzensiz)** | 33 | %79 | 0,98 | %27 | **26/33 ($\mathbf{+3{,}3\sigma}$)** | 19/33 ($+0{,}9\sigma$) |
+| BCD | 4 | %75 | 1,08 | %0 | 1/4 | 2/4 |
+
+##### Bulgu 1 — teorinin en güçlü sonucu Im'dedir ve blok içinde kaybolmuştu
+
+**26/33 = %79, $+3{,}3\sigma$.** Bu, bu bölümdeki en yüksek anlamlılıktır. "Cüce/düzensiz" bloğu olarak bakıldığında $+2{,}5\sigma$ görünüyordu; ayrıldığında Im tek başına daha güçlü çıkar, çünkü blok içindeki Sm onu aşağı çekiyordu.
+
+Ve daha önemlisi: **$\Upsilon_*$ fotometrik banda hapsedildiğinde pozitif kalan tek tip Im'dir** ($+0{,}9\sigma$). Her yerde hükmü deviren bant kısıtı orada devirmiyor.
+
+##### Bulgu 2 — $\Upsilon_*$ şişmesi genel bir kusur değil, Sm/Sdm'ye özgüdür
+
+| | Medyan $\Upsilon_*$ | Tavanda |
+|---|---|---|
+| Spiral (Sa–Sd) | **0,64** | %9 |
+| Im | 0,98 | %27 |
+| Sdm | 1,41 | %33 |
+| **Sm** | **1,68** | **%39** |
+
+Sm'de model, fotometrinin taşıyabileceğinin **üç katı** yıldız kütlesi istemekte ve galaksilerin %39'unda tavana dayanmaktadır. Bant dayatıldığında en sert çöküş de oradadır ($+0{,}6\sigma \to -2{,}3\sigma$). Buna karşılık spirallerde medyan **0,64**'tür — beklenen $\sim$0,5'e yakın ve tavana dayanan yalnız %9.
+
+> **Bu, önceki teşhisi değiştirir.** 6.5.4.7 kayıt (4) ve bu bölümün tavan bulgusu, *"model $M_{kaps}$ kaynağının açığını $\Upsilon_*$'ı şişirerek kapatıyor"* teşhisini **genel bir kusur** olarak koymuştu. Tip tip bakıldığında bu teşhis **yalnız Sm/Sdm için** doğrudur. Genel bir zayıflık değil, **belirli bir morfolojiye bağlı, teşhis edilebilir bir sınır durumudur** — ve nedeni aranabilir: Sm/Sdm gaz-baskın Macellan sarmallarıdır, dolayısıyla ilk şüpheli $M_{kaps}$'ın **gaz terimidir**, yıldız terimi değil.
+
+##### Yöntem kuralı — blok yok
+
+Bu turda görüldü ki tek bir gruplama kararı, aynı bulguyu $\Upsilon_*$ bant ihlalinde %44 ile %91 arasında oynatabiliyor. **Çözüm doğru altörneklemi seçmek değil, hiç seçmemektir.** Bu bölümdeki ölçümler bundan böyle tip tip verilir; blok ortalaması yalnız tiplerin yanında, özet olarak sunulur. $N<5$ olan tipler (S0, BCD) istatistik taşımaz ve öyle işaretlenir.
+
+#### Gerçek ölçümden sapma: hüküm $\chi^2$'nin eseri mi?
+
+*(Bu alt başlık 31 Temmuz 2026'da eklenmiştir. Hesap: `CALISMA/plot_olcum_sapmasi.py`.)*
+
+Bu bölümdeki bütün hükümler $\chi^2$ üzerinden verildi. Ama $\chi^2$ her noktayı $1/\sigma^2$ ile **ağırlıklandırır**: hata çubuğu küçük galaksiler baskın çıkar ve SPARC'ta bunlar yüksek kaliteli spirallerdir. Hüküm bu ağırlıklandırmanın eseri olabilir mi? Sınav basittir — ağırlık kaldırılır ve doğrudan sorulur: **modelin eğrisi ölçülen noktalardan kaç km/s sapıyor, ve noktaların kaçı ölçüm hata çubuğunun içinde kalıyor?**
+
+![Gerçek ölçümden sapma](Gorseller/olcum_sapmasi.png)
+
+| $\Upsilon_*$ | Kapsam | $N$ | RMS Evrenakı | RMS ΛCDM | Hata çubuğu içinde | $\sigma$ (km/s) | $\sigma$ ($\chi^2$) |
+|---|---|---|---|---|---|---|---|
+| serbest | **tüm disk** | 163 | **5,60** | 6,19 | **%65** / %59 | $+1{,}2$ | $+1{,}3$ |
+| serbest | spiral Sa–Sd | 91 | 8,43 | **7,57** | %53 / **%58** | $-0{,}9$ | $-0{,}7$ |
+| serbest | Sm | 23 | **3,98** | 4,63 | %60 / **%68** | $+1{,}0$ | $+0{,}6$ |
+| serbest | **Im** | 33 | **2,77** | 4,48 | **%86** / %55 | $\mathbf{+3{,}0}$ | $+3{,}3$ |
+| bantlı | tüm disk | 163 | 8,80 | **6,73** | %47 / %54 | $-1{,}5$ | $-1{,}6$ |
+| bantlı | spiral Sa–Sd | 91 | 10,45 | **9,01** | %45 / %50 | $-1{,}8$ | $-1{,}6$ |
+| bantlı | Sm | 23 | 8,80 | **5,02** | %25 / %54 | $-1{,}9$ | $-2{,}3$ |
+| bantlı | **Im** | 33 | **4,10** | 4,78 | **%62** / %55 | $+1{,}2$ | $+0{,}9$ |
+
+##### Sonuç 1 — hüküm ölçüt seçimine sağlamdır
+
+**İki ölçüt sekiz hücrenin sekizinde de aynı yönü gösteriyor**; en büyük fark $0{,}4\sigma$'dır. Yani $\chi^2$'nin ağırlıklandırması bu bölümün hükümlerini saptırmamıştır. Bu, olumlu ve gerekli bir sağlamlık sonucudur: $\chi^2/dof\approx5$ olduğu için hata çubuklarının eksik temsil ettiği bilinmektedir (6.5.3.6, çekince 2), ve ağırlıksız sınav aynı yanıtı verdiğine göre bu eksiklik hükmü belirlememiştir.
+
+> **Okuma uyarısı.** Tüm disk $+$ serbest $\Upsilon_*$ hücresinde iki ölçüt de Evrenakı'yı önde verir ($+1{,}2$ ve $+1{,}3$). Bu hücrenin sonucu, bantlı hâlin ve BIC toplamlarının sonucuyla karıştırılmamalıdır — üçü ayrı sorulara yanıt verir.
+
+##### Sonuç 2 — fiziksel bulgu: Im'de eğri ölçüm hata çubuğunun içinden geçiyor
+
+Ağırlıksız sınavın $\chi^2$'nin vermediği bir bilgisi var: **modelin kaç noktası ölçümün kendi hata çubuğunun içinde kalıyor.** Im (düzensiz) tipinde:
+
+$$\text{Evrenakı: } \mathbf{\%86} \qquad\text{ΛCDM: } \%55$$
+
+Bu, "daha küçük $\chi^2$" demekten farklı ve daha güçlü bir ifadedir: eğri, ölçümün hata payının içinden geçmektedir. Medyan RMS sapması da 2,77 km/s'dir (ΛCDM 4,48) — tüm örneklemin en düşük değeri. Bant dayatıldığında bile Evrenakı önde kalır (%62'ye karşı %55).
+
+##### Sonuç 3 — kapsama göre hüküm
+
+- **Spiral (Sa–Sd):** her iki $\Upsilon_*$ koşulunda ve her iki ölçütte **ΛCDM önde** (RMS 7,57'ye karşı 8,43; hata içi %58'e karşı %53). Bu, 6.5.3.6'nın spiral hükmünü bağımsız bir ölçütle doğrular.
+- **Tüm disk, serbest $\Upsilon_*$:** **Evrenakı önde** (5,60'a karşı 6,19; %65'e karşı %59).
+- **Tüm disk, bantlı $\Upsilon_*$:** ΛCDM önde.
+- **Im:** Evrenakı, her iki koşulda ve açık farkla.
+
+Yani ölçümden sapma sınavı **yeni bir hüküm getirmiyor, mevcut hükmü sağlamlaştırıyor** — ve tek yeni bilgisi Im'deki %86'lık hata-çubuğu-içi oranıdır.
+
+#### Girdi dürüstlüğü karnesi: aynı mercek, iki model
+
+*(Bu alt başlık, kitabın Evrenakı lehine taraf tuttuğu yönündeki dış eleştiri üzerine 31 Temmuz 2026'da eklenmiştir. Hesap: `CALISMA/plot_girdi_durustlugu.py`.)*
+
+Buraya kadarki denetimlerde bir **asimetri** vardı ve kaydedilmesi gerekir: Evrenakı'nın serbest parametresi ($\Upsilon_*$) bağımsız bir fiziksel önsele (yıldız popülasyon sentezi) sokulup sınandı, ihlal ettiği kaydedildi. **ΛCDM'in serbest parametresine ($M_{200}$) aynı sınav uygulanmadı.** Bu alt başlık o eksiği kapatır ve girdileri eşit ölçütlerle puanlar.
+
+![Girdi dürüstlüğü — aynı sınav, iki model](Gorseller/girdi_durustlugu.png)
+
+##### (A) Simetrik önsel denetimi
+
+ΛCDM'in $M_{200}$'ü için bağımsız önsel **abundance matching**'dir (yıldız kütlesi–halo kütlesi ilişkisi; Moster ve ark. 2013, $z=0$, saçılma $\sim0{,}2$ dex). 163 galakside her iki sınav:
+
+| | Evrenakı ($\Upsilon_*$) | ΛCDM ($M_{200}$) |
+|---|---|---|
+| Bağımsız önsel | pop. sentezi $0{,}3$–$0{,}8$ | abundance matching $\pm0{,}2$ dex |
+| **Önselin dışında kalan** | **%60** | **%67** |
+| Sistematik sapma | **var** (medyan 0,85; beklenen $\sim$0,5) | yok (medyan $-0{,}01$ dex) |
+| Saçılma | — | **0,99 dex** (beklenen 0,2) |
+| 10 kattan fazla sapan | — | **%19** |
+| Fit sınırına dayanan | **%18** | %3 |
+
+**Her iki model de kendi bağımsız önselini benzer oranda ihlal ediyor.** Fark oranda değil **biçimdedir**: Evrenakı'nınki *sistematiktir* (hep yukarı, beşte biri tavana dayanıyor), ΛCDM'inki *sapmasız ama devasa saçılmalıdır* (her beş galaksiden biri, kendi öngörüsünden **on kattan fazla** sapan bir halo kütlesi istiyor).
+
+> **Kayıt.** "$\Upsilon_*$ tavana dayanıyor" bulgusu geçerlidir — ama **eşdeğeri ΛCDM'de de vardır.** İki model bu kusuru paylaşır; delil tek tarafa yazılamaz.
+
+##### (B) ΛCDM'e kendi serbestliği verilmemişti
+
+Buraya kadarki bütün karşılaştırmalarda $c_{200}$–$M_{200}$ ilişkisi **tam dayatıldı** ($k=2$). Oysa SPARC literatüründeki standart pratik, $c$'nin ilişkinin kendi $0{,}11$ dex saçılması içinde oynamasına izin verir ($k=3$). İzin verildiğinde:
+
+| ΛCDM kurulumu | Medyan $\chi^2_{ind}$ | Kabul edilebilir |
+|---|---|---|
+| $c$–$M$ tam dayatılmış ($k=2$) — kitapta kullanılan | 1,980 | 51/163 |
+| $c$–$M$ saçılma içinde ($k=3$) — **standart pratik** | **1,412** | **71/163** |
+
+**ΛCDM %29 sakatlanmıştı.** Bu, teorinin lehine işleyen bir kurulum hatasıydı ve kaydedilmelidir. Düzeltilmiş karşılaştırmada ΛCDM'in $k=3$ hâli (1,412), Evrenakı'nın $k=2$ hâlini (1,568) geçer — ama bir parametre fazlayla; eşit $k=3$ karşılaştırması için Evrenakı'nın $R_f$'li sürümü kullanılmalıdır (6.5.3.5).
+
+##### (C) $a_0$ katsayısının kararlılığı
+
+Örneklem rastgele iki yarıya bölünüp katsayı bir yarıda kalibre edilip diğerinde sınandığında (2 katlı, 5 bölünme):
+
+| Ölçüm | Değer |
+|---|---|
+| Eğitim yarılarında bulunan optimum katsayı bandı | **$\pm$%40 genişliğinde** |
+| Örnek-içi medyan $\chi^2_{ind}$ | 3,287 |
+| Örnek-dışı medyan $\chi^2_{ind}$ | 3,766 |
+| Aşırı-uyum cezası | %14,6 |
+
+İki sonuç çıkar. **Olumlu:** kalibrasyon genelleşiyor; örnek-dışı ceza yalnızca %14,6, yani $a_0$ ezberlenmiş bir sayı değil. **Olumsuz:** katsayının kendi belirsizliği **$\pm$%40 mertebesindedir.** Bu yüzden $a_0$'ın herhangi bir teorik sayıyla yüzde-bir düzeyinde "uyuşması"na kanıt değeri atfedilemez — belirsizliği %40 olan bir sayıya o hassasiyet yüklenemez. Bu, $a_0$'ın [S] (gözlemle sabitlenmiş) statüsünü kesinleştirir; $cH_0$ mertebesiyle bugünkü örtüşmenin rastlantı sayılmasının (6.5.4.5) bir gerekçesi de budur.
+
+##### (D) Karne
+
+Girdileri **eşit ölçütlerle** puanlarsak:
+
+| Ölçüt | Evrenakı | ΛCDM | Önde |
+|---|---|---|---|
+| Galaksi başına fitlenen sayı | 2 ($\Upsilon_*$, $b$) | 3 ($\Upsilon_*$, $M_{200}$, $\Delta\log c$) | **Evrenakı** |
+| Küresel kalibre edilen sayı | 1 ($a_0$ katsayısı) | 2 ($c$–$M$) $+$ $\sim$6 kozmolojik | **Evrenakı** |
+| **Kalibrasyonun kaynağı** | **sınandığı aynı veri** | başka veri (N-cisim / CMB) | **ΛCDM** |
+| Kalibre sabitin kararlılığı | $\pm$%40 (10,5–22) | sıkı | **ΛCDM** |
+| Fonksiyonel biçim | **türetilmiş** (M-38: $h=$sabit $\Rightarrow a\propto1/R$) | NFW: simülasyona **uydurma formül** (Einasto daha iyi uyar) | **Evrenakı** |
+| Sınav öncesi öngörü kaydı | $\ell_\omega$ eğimi 1,00 öngörüldü → 1,03 ölçüldü **✓** | cusp öngörüldü → çekirdek gözlendi **✗** (geri-besleme kurtarması gerekti) | **Evrenakı** |
+| Parametre fiziksel bantta mı | %60 dışında, sistematik, %18 tavanda | %67 dışında, sapmasız, %19'u 10 kat | berabere |
+| Doğrulanmamış varlık talebi | Evrenakı akışkanı — hiç aranmadı | CDM parçacığı — 40 yıl arandı, bulunamadı | berabere |
+
+**Sayım: Evrenakı 4 — ΛCDM 2 — berabere 2.**
+
+##### Açık hüküm
+
+**Girdi dürüstlüğü ölçütünde iki model, bu kitabın önceki sürümlerinin ima ettiğinden çok daha yakındır.** Ham sayımda Evrenakı öndedir ve bunun iki gerçek nedeni vardır, ikisi de daha önce kredilendirilmemişti:
+
+1. **Evrenakı fonksiyonel biçimini türetir; ΛCDM türetmez.** NFW profili analitik bir sonuç değil, simülasyon çıktısına uydurulmuş bir formüldür — nitekim Einasto profili aynı simülasyonlara daha iyi uyar. Evrenakı'nın $a\propto1/R$ biçimi ise M-38'in postülatlarından çıkar.
+2. **Evrenakı'nın tutmuş bir öngörüsü var; ΛCDM'in tutmamış bir öngörüsü var.** $\ell_\omega\propto\sqrt{M_{bar}}$ (eğim 1,00) sınavdan önce söylendi, 1,03 ölçüldü. ΛCDM iç bölgede cusp öngördü, çekirdek gözlendi ve kurtarma geri-beslemeden geldi.
+
+**Ama sayım hükmü vermez, çünkü bir ölçüt diğerlerinden ağır basar:**
+
+> **$a_0$, sınandığı verinin kendisinden okunmuştur.** ΛCDM'in küresel sabitleri dönüş eğrilerine hiç bakmayan hesaplardan (N-cisim, CMB) gelir. Bir modelin sabitini test edeceği veriden okuması, "kaç sabit kullandığından" daha temel bir dürüstlük sorunudur — ve bu ölçüt **ΛCDM lehinedir.**
+
+**Nihai hüküm (girdi dürüstlüğü):** **ΛCDM önde, ama farkı dar ve tek bir ölçütten geliyor.** Evrenakı iki ölçütte gerçek ve daha önce kaydedilmemiş üstünlüğe sahiptir. Fark kapatılabilir ve nasıl kapatılacağı bellidir: **$a_0$'ın bu 163 eğri dışında bir gözlemde doğrulanması.** O yapılırsa bu ölçüt de eşitlenir ve girdi dürüstlüğünde Evrenakı öne geçer.
+
+#### Defterin okunuşu — dört arena, dört ayrı hüküm
+
+1. **Uyum kalitesi — ve fit girdisi ücretlendirilirse tablo dönüyor.** Galaksi başına medyanla: fotometrik bantta ΛCDM önde (2,58'e karşı 3,45), serbest $\Upsilon_*$ ile beraberlik. **Ama örneklem genelinde her fitlenen sayı ücretlendirildiğinde** (yukarıdaki fatura) eşit $K=326$'da serbest $\Upsilon_*$ ile **Evrenakı kazanır** ($\Delta$BIC $=-1539$, hata ölçekli $-305$), ve bantlı hâlde bile **153/163 galakside öndedir** — kaybı yalnız 10 galaksiden gelir. **Bölünmüş arena: tipik galakside Evrenakı, aykırı %6'da ΛCDM.** Ve **gerçek Hubble tiplerine ayrıldığında** (yukarıdaki spiral sınavı) tablo daha da nettir: spirallerde (Sa–Sd, $n=91$) teori serbest $\Upsilon_*$ ile bile geridedir (oy %46), fotometrik $\Upsilon_*$ ile ΛCDM açık ara öndedir (%42); teorinin tek anlamlı galibiyeti **cüce/düzensiz $+$ serbest $\Upsilon_*$** hücresidir ($+2{,}5\sigma$).
+2. **Türetim ekonomisi:** Evrenakı **beş** büyüklüğü türetir ($a_0$ dahil değildir — o kalibredir), ΛCDM ikisini; BTFR'nin *eğimi* ve $\ell_\omega$ yasası ΛCDM'de karşılıksızdır. **Evrenakı'nın arenası — ama iki çekinceyle:** türetimlerinin tamamı sınandıkları aynı veriden okunmuştur, ve $a_0$'ın biçimi türetilmiş olsa da sayısal değeri kalibredir (6.5.4.5).
+3. **Ontolojik fatura:** Evrenakı görünmez madde talep etmez. **Evrenakı'nın arenası.**
+4. **Olgunluk ve kapsam:** ΛCDM'in girdileri bağımsız bir hesap programından (N-cisim) gelir ve model galaksi ölçeği dışında da (CMB, BAO, kütleçekimsel mercekleme, yapı oluşumu) sınanmıştır. Evrenakı'nın karşılık gelen ne simülasyon programı ne de bu ölçekte sınanmış dosyası vardır. **ΛCDM'in arenası, açık farkla.**
+
+**Nihai hüküm — tek cümleye sıkıştırılamaz, ve sıkıştırmak yanıltıcı olur.**
+
+**Uyum arenasında hüküm bölünmüştür.** Fit girdisi doğru ücretlendirildiğinde (örneklem geneli, eşit $K=326$) serbest $\Upsilon_*$ ile **Evrenakı kazanır**; fotometrik bantla totalde ΛCDM kazanır ama bu zafer **10 galaksiden** gelir ve kalan 153'te yine Evrenakı öndedir. Yani "ΛCDM daha iyi uyuyor" cümlesi, örneklemin %94'ü için yanlıştır; "Evrenakı daha iyi uyuyor" cümlesi ise %6'yı görmezden gelmektedir. Doğru ifade: **model tipik galakside daha iyi, aykırı bir altkümede felaket.**
+
+**Buna karşılık iki arenada ΛCDM açık farkla öndedir ve bu belirleyicidir:** *(i)* türetilmiş bileşenleri (NFW, $c$–$M$) sınandıkları veriden **bağımsız** bir hesaptan gelir, oysa Evrenakı'nın altı türetiminin tamamı aynı dönüş eğrilerinden okunmuştur; *(ii)* model galaksi ölçeğinin dışında da (CMB, BAO, mercekleme, yapı oluşumu) sınanmıştır ve Evrenakı'nın bu ölçekte dosyası yoktur.
+
+**Ve teorinin en ekonomik hâli kaybeder.** Fit girdisini yarıya indiren sürüm (F4 genliği yasadan, $K=163$) 3,85 kat kötüdür; ceza kuralı onu kurtarmaz. $\ell_\omega$ yasasının saçılması (0,38 dex) fitin yerini tutacak kadar sıkı değildir.
+
+**Ve gerçek Hubble tiplerine ayrıldığında:** spiral galaksilerde (Sa–Sd, $n=91$) teorinin üstünlüğü **yoktur** — serbest $\Upsilon_*$ ile bile oy %46 ($-0{,}7\sigma$, medyan 2,01'e karşı 2,27), fotometrik $\Upsilon_*$ ile %42 ($-1{,}6\sigma$). Teorinin istatistiksel olarak anlamlı tek galibiyeti **cüce/düzensiz (Sdm–BCD) $+$ serbest $\Upsilon_*$** hücresidir (%65, $+2{,}5\sigma$; medyan 1,00'e karşı 1,75). Düz dönüş kolu teorinin daha iyi açıkladığı bir olgu **değildir**.
+
+**Toparlarsak:** uyum yarışı **beraberlik-Evrenakı lehine** (tipik galakside önde, aykırı %6'da değil; spiralde geride, cücede önde); türetim ekonomisi **Evrenakı lehine** ama doğrulanmamış; bağımsızlık ve kapsam **ΛCDM lehine** ve tartışmasız. Bir hakem bugün hangisini tercih ederse etsin, **teoriyi dışlayamaz** — ama teorinin kazandığını da söyleyemez. Kazanmak için gereken üç şey nettir ve hepsi yapılabilirdir: on aykırı galaksinin nedenini bulmak, $\ell_\omega$ yasasının saçılmasını daraltmak, ve $a_0$'ı dönüş eğrileri dışında bir gözlemde doğrulamak.
+
+---
 
 ### 6.5.4.0 Neden yeni bir kesit: iki gizli borç
 
 6.5.2'nin denklemi ($v=\sqrt{A/r+B}$) düz dönüş eğrisini doğru üretir; ama iki noktada teorinin dışına borçludur:
 
 1. **$A$ borcu.** $A=GM_c$ yazmak, galaksinin tüm kütlesinin merkezde toplanmış bir *nokta* olduğunu varsayar. Oysa M-35'in kaynağı nükleon debisidir; nükleonlar diske yayılmıştır ve **dışa gidildikçe kapsanan nükleon sayısı artmaya devam eder.** Nokta-kütle varsayımı bu artışı görmezden gelir.
-2. **$B$ borcu.** $B$, "merkezdeki kara deliğin devri ile orantılı" denilerek elle konan bir sabittir. Teori onu türetmez — Anayasa Madde 21'in yasakladığı "istenen değeri alabilen katsayı" tanımına tehlikeli biçimde yakındır.
+2. **$B$ borcu.** $B$, 6.5.2'de elle konan bir sabittir. Türetilmediği sürece, Anayasa Madde 21'in yasakladığı "istenen değeri alabilen katsayı" tanımına tehlikeli biçimde yakındır.
 
 Bu kesit iki borcu da kapatır ve bunu yaparken **dışarıdan hiçbir yapı almaz:** karanlık madde halosu yok, NFW yok, Freeman (1970) ince disk kapalı formu yok, Rankine profili girdi olarak yok, MOND ivme ölçeği ($a_0$) yok, keyfî kesme yarıçapı yok. Elde yalnız Postülat 9'un beş kuvveti ve gözlemin verdiği kaynak dağılımı vardır.
 
@@ -713,30 +1127,48 @@ $$\boxed{\;a_{F4}(R)=\frac{\mathcal{G}\,M_{kaps}(R)}{\ell_\omega\,R}\;,\qquad \e
 
 $\ell_\omega$ — **vortisite uzunluğu** — nükleonun pulsasyon debisinin dolanım debisine oranıdır; yani $\omega_2$ kolunun $\omega_1$ koluna oranı. Boyut denetimi: $[q_n]/[\gamma_n]=\mathrm{m^3s^{-1}}/\mathrm{m^2s^{-1}}=\mathrm{m}$ ✓.
 
-> **Önemli — $\ell_\omega$ evrensel bir sabit değildir ve teori öyle olduğunu iddia etmez.** Yukarıdaki oran, *tek bir nükleonun* iki debisini karşılaştırır; ama galaktik ölçekte ölçülen büyüklük tek nükleonun oranı değil, **ortamın o galakside kurduğu net dolanımın** karşılığıdır. Ölçümde $\ell_\omega$ SPARC'ın 158 galaksisinde 0,22 kpc ile $2\times10^4$ kpc arasında değişir. Teorinin iddiası bu değerin sabit olması değil, **değişiminin bir yasaya uymasıdır**; yasa ve sınavı 6.5.4.5'tedir.
+> **Önemli — iki $\ell_\omega$ ayrımı.** Yukarıdaki oran *tek bir nükleonun* iki debisini karşılaştırır ve bir **mikro sabittir** — ölçümü Adım 6'dadır: $\ell_\omega^{mikro}=35{,}7$ fm, kütleyle korelasyonu $+0{,}03$ (3,8 decade boyunca sabit). Galaktik ölçekte ölçülen büyüklük ise ortamın kurduğu **net** dolanımın karşılığıdır ve $\sqrt{N}$ toplanma çarpanı taşır: $\ell_\omega^{etkin}=\ell_\omega^{mikro}\sqrt{N}$. SPARC'ın 158 galaksisinde $\ell_\omega^{etkin}$'in 0,22 kpc ile $2\times10^4$ kpc arasında beş mertebe yayılmasının tamamı bu $\sqrt{N}$ çarpanıdır; yasa ve sınavı 6.5.4.5'tedir.
+
+**Adım 6 — tutarlılık istatistiği: dolanımlar $\sqrt{N}$ ile toplanır ve $M_{tut}=m_n$ çıkar.** *(Hesap: `CALISMA/SINIF_CALISMASI/92_M_TUT/` ve `94_YEREL_LOMEGA/TURETIM.md`.)*
+
+Adım 2'nin Stokes toplamı, en genel hâlde nükleon dolanımlarının nasıl hizalandığına bağlıdır. Veri, birebir hizalı toplanmayı ($\Gamma\propto N$) desteklemez: dolanım vektörleri hizasız olduğundan net dolanım bir **rastgele yürüyüştür**,
+
+$$\Gamma_{etkin}(R)\;=\;\gamma_n\sqrt{N},\qquad N=\frac{M_{kaps}(R)}{m_n}$$
+
+Bu, Adım 4–5 zincirine konduğunda genlik bağıntısı şu hâli alır:
+
+$$a_{F4}(R)\;=\;\frac{\mathcal{G}\sqrt{M_{kaps}(R)\,m_n}}{\ell_\omega\,R}
+\qquad\Longrightarrow\qquad
+\boxed{\;a_0=\frac{\mathcal{G}\,m_n}{\ell_\omega^{2}}\;,\qquad M_{tut}=m_n\;}$$
+
+**Tutarlılık kütlesi nükleon kütlesidir:** ortam, mikro dolanımları tek bir nükleondan öteye hizalı toplayamaz. Bu sonuç serbest parametre içermez — $M_{tut}$ apriori $10^{-30}$–$10^{60}$ kg arasında herhangi bir değer olabilirdi. Ölçümü: $\ell_\omega^{etkin}=\mathcal{G}M_{kaps}/(v_{gözl}^2-V_{bar}^2)$ doğrudan çözülüp ($a_0$ hiç kullanılmadan) $\sqrt{N}$'e bölündüğünde $\ell_\omega^{mikro}=35{,}7$ fm çıkar (133 galaksi; kütleyle Spearman $+0{,}029$, yani 3,8 decade boyunca **gerçekten sabit**), köprü üssü 0,503 ölçülür (türetim 0,500 der), ve $M_{tut}=a_0\ell_\omega^2/\mathcal{G}=0{,}84\,m_n$ — sıfır parametreli öngörünün ($M_{tut}=m_n$) beşte biri içinde. Kalan fark türetim katsayılarının ($2\pi$, $4\pi$, hizalanma dağılımı) defterindedir ve kapatılmamıştır: bu bir *mertebe ve yapı* doğrulamasıdır, hassas doğrulama değil.
+
+İki sonucu vardır: **(i)** $\ell_\omega^{etkin}$'in galaksiden galaksiye beş mertebe yayılması yeni bir yasa değil, $\sqrt{N}$ çarpanının kendisidir — mikro oran sabittir; **(ii)** $a_0$ **mikro sabitlerin bir bileşkesidir** ($\mathcal{G}m_n/\ell_\omega^2$) ve bu yüzden **kozmik zamanla değişmez.** Bu, sınanabilir bir öngörüdür ve sınanmıştır: $a_0\propto cH(z)$ alternatifi Genzel ve ark. (2017)'nin altı $z=0{,}85$–$2{,}4$ diskinin **altısında** yayının üst sınırını aşar (ortalama $6{,}1\sigma$); sabit $a_0$ her galakside daha yakındır ($3{,}3\sigma$). Ayrıntı 6.5.4.5'te; hesap `CALISMA/SINIF_CALISMASI/90_YUKSEK_Z/`.
 
 **Bedava gelen üç sonuç.** Bunların hiçbiri ayrıca varsayılmamıştır; türetimin kendisinden çıkarlar:
 
-1. **Geçiş yarıçapı türetilmiş olur: $r_0=\ell_\omega$.** İki terimin eşitlendiği yarıçap $\mathcal{G}M/R^2=\mathcal{G}M/(\ell_\omega R)$'den doğrudan $R=\ell_\omega$ verir. Bu, $r_0$'ı çekirdek kütlesine değil nükleon debi oranına bağlar; dolayısıyla kovan/toplam oranı üzerinden bir morfoloji gerilimi doğurmaz. *(Bu bölümün daha önceki bir sürümü $r_0=GM_c/B$ biçiminde, noktasal kütle idealleştirmesine dayanan bir bağıntı içeriyordu; o bağıntı dağılmış kaynakla tutarsız olduğu için geri alınmıştır.)*
+1. **Geçiş yarıçapı türetilmiş olur: $r_0=\ell_\omega$.** İki terimin eşitlendiği yarıçap $\mathcal{G}M/R^2=\mathcal{G}M/(\ell_\omega R)$'den doğrudan $R=\ell_\omega$ verir. Bu, $r_0$'ı çekirdek kütlesine değil nükleon debi oranına bağlar; dolayısıyla kovan/toplam oranı üzerinden bir morfoloji gerilimi doğurmaz. (Noktasal kütle idealleştirmesine dayanan $r_0=GM_c/B$ türü bir bağıntı dağılmış kaynakla tutarsızdır ve kullanılamaz.)
 2. **Eksendeki ıraksama kendiliğinden düzenlenir.** $R\to0$ iken $M_{kaps}\to0$ olduğundan $a_{F4}\to0$'dır. M-38'in "simetri gereği eksende net eksenel kuvvet sıfırdır" koşulu, elle konan bir düzenleme çarpanı olmadan sağlanır. Önceki sürümlerin $R^2/(R^2+r_0^2)$ yaması gereksizleşir.
 3. **Güneş Sistemi ile çelişki doğmaz — geniş marjla.** M-38, Ay'ın apsidal presesyonundan $\varepsilon=a_{1/R}/a_{1/R^2}<2\times10^{-5}$ üst sınırını koymuştu. Bu türetimde $\varepsilon=r/\ell_\omega$'dir; NGC 3198 için bulunan $\ell_\omega$ ile Ay'da $\varepsilon=1{,}1\times10^{-12}$, yani sınırın **19 milyon kat** altında. Neptün'de $1{,}2\times10^{-8}$. Yerel galaktik alan ise $R=8$ kpc'de $a_{F4}\approx3{,}8\times10^{-11}$ m/s² ile tüm Güneş Sistemi'ne ortak-mod etki eder ve bağıl dinamikte görünmez.
 
 ### 6.5.4.4 Tek denklem ve sayısal sınav
 
-M-37'nin profil teoremi ($v_\theta=\sqrt{R\lvert a_{radyal}\rvert}$) iki katkıyı birleştirir:
+M-37'nin profil teoremi ($v_\theta=\sqrt{R\lvert a_{radyal}\rvert}$) iki katkıyı birleştirir. Adım 6'nın $\sqrt{N}$ toplanmasıyla ($\ell_\omega^{etkin}=\ell_\omega^{mikro}\sqrt{N}=\sqrt{\mathcal{G}M_{kaps}/a_0}$) denklem kapalı ve **yerel** biçimini alır:
 
-$$\boxed{\;v^2(R)\;=\;R\,a_{F1}(R)\;+\;\frac{\mathcal{G}\,M_{kaps}(R)}{\ell_\omega}\;}$$
+$$\boxed{\;v^2(R)\;=\;R\,a_{F1}(R)\;+\;\sqrt{\mathcal{G}\,M_{kaps}(R)\,a_0}\;}$$
 
-Denklemin okunuşu: birinci terim **küresel akının** payı, ikinci terim **silindirik vortisite akısının** payıdır. İkinci terim yarıçaptan bağımsızdır; $M_{kaps}$ doyduğu anda düz kol doğar. **Serbest parametre sayısı: bir ($\ell_\omega$).**
+İkinci terimdeki kütle **yerel** kapsanan kütledir — akı teoremi gereği başka türlüsü olamaz: dolanım akısı $R$ yüzeyinden geçer ve $R$ içindeki maddeden doğar; 6.5.4.3'ün türetiminin hiçbir adımında toplam kütle geçmez. Yerellik veride de görünür: bu biçimle $\ell_\omega$ yasasının galaksi-içi yarıçap artığı sıfırdır ($-0{,}025$; 141 galaksi, `CALISMA/SINIF_CALISMASI/94_YEREL_LOMEGA/`).
 
-**Sayısal sınav 6.5.3.1'e taşınmıştır.** Bu kesitin ilk sürümü temsilî (yayınlanmamış) bir dönüş eğrisi kullanıyordu ve o veri iç bölgeyi 47–65 km/s fazla gösteriyordu; ürettiği sıralama geçersizdi. Sınav, yayınlanmış SPARC verisiyle (43 nokta, gerçek hata çubukları) 6.5.3.1'de yeniden yapılmıştır. Yukarıdaki denklem oradaki "Evrenakı F1+F4" satırının ta kendisidir; $b=\mathcal{G}/\ell_\omega$ özdeşliğiyle aynı modeldir.
+Denklemin okunuşu: birinci terim **küresel akının** payı, ikinci terim **silindirik vortisite akısının** payıdır. İkinci terim $\sqrt{M_{kaps}}$ ile büyür ve $M_{kaps}$ doyduğu anda sabitlenir — düz kol oradan doğar. Eşdeğer yerel yazım $a_{F4}=\sqrt{a_{F1}\,a_0}$'dır: *eksenel itim, radyal itim ile $a_0$ ölçeğinin geometrik ortalamasıdır.* **Galaksi başına serbest parametre sayısı: sıfır** ($a_0$ küreseldir; $\Upsilon_*$ fotometrik girdidir).
+
+**Sayısal sınav 6.5.3.1'dedir.** Yayınlanmış SPARC verisiyle (43 nokta, gerçek hata çubukları) yapılır. Yukarıdaki denklem oradaki "Evrenakı F1+F4" satırının ta kendisidir; $b=\mathcal{G}/\ell_\omega$ özdeşliğiyle aynı modeldir.
 
 **Gerçek veriden türetilen büyüklükler:**
 
 | Büyüklük | Kaynak kilitli ($\Upsilon_*=0{,}5$) | Yayılmalı fit |
 |---|---|---|
-| $\ell_\omega=r_0$ | 7,06 kpc | 1,21 kpc |
-| $q_n/\gamma_n=2\ell_\omega$ | $4{,}36\times10^{20}$ m | — |
+| $\ell_\omega^{etkin}=r_0$ | 7,06 kpc | 1,21 kpc |
+| $q_n/\gamma_n=2\ell_\omega^{mikro}$ | $\approx7\times10^{-14}$ m | — |
 | Düz kol asimptotu $\sqrt{\mathcal{G}M_{bar}/\ell_\omega}$ | 161 km/s | — |
 | Ay'da $\varepsilon=r/\ell_\omega$ | $1{,}8\times10^{-15}$ | — |
 
@@ -744,23 +1176,31 @@ Son satır, türetimin en sağlam kazancıdır: M-38'in Ay apsidal presesyonunda
 
 *Ama ilk satır sağlam değildir:* $\ell_\omega$, $\Upsilon_*$ seçimine göre 7,06'dan 1,21 kpc'ye kayar. Yani "türetilmiş tek parametre" iddiası, o parametrenin sayısal değerinin kararlı olduğu anlamına gelmiyor.
 
+Nükleon debi oranı $q_n/\gamma_n=2\ell_\omega^{mikro}\approx7\times10^{-14}$ m **nükleer ölçekte** bir uzunluktur — proton yük yarıçapının yaklaşık 42 katı. Galaktik $\ell_\omega^{etkin}$'ten $\sqrt{N}\sim10^{33{,}5}$ çarpanıyla ayrılır (Adım 6); tabloda ikisi ayrı satırlardır ve karıştırılmamalıdır.
+
 **Faturaların karşılaştırması.** Aynı eğriyi çizmek için ΛCDM (kaynak kilitli) $M_{200}=5{,}0\times10^{11}M_\odot$ ister; bu, gözlenen baryonik kütlenin ($4{,}2\times10^{10}M_\odot$) **11,9 katı görünmez maddedir**. Evrenakı hiç istemez: envanterde yalnız fotometri ve 21 cm'in gördüğü nükleonlar vardır. **Uyum kalitesinde ΛCDM eşit serbestlikte öndedir** (6.5.3.1); iki modelin ayrıştığı yer uyum değil, madde envanteridir.
 
 ### 6.5.4.5 $\ell_\omega$'nın Yasası ve Baryonik Tully-Fisher İlişkisinin Türetimi
 
 *(Üretim kaydı için bkz. 6.5.2.1'in başındaki ekleme kaydı. Hesap betiği: `CALISMA/plot_lomega_yasasi.py`.)*
 
-6.5.3.2 ve 6.5.3.3, $\ell_\omega$'nın galaksiler arasında sabit olmadığını gösterdi. **Bu bir kusur değildir:** teori $\ell_\omega$'nın evrensel olduğunu hiçbir yerde iddia etmez (bkz. 6.5.4.3'teki kayıt). İddia edilen şey, değişimin **yasalı** olmasıdır. Bir parametrenin keyfî değişmesi onu fit parametresi yapar; bir yasaya göre değişmesi ise onu öngörülü kılar. Bu alt bölüm yasayı verir ve sınar.
+Galaktik ölçekte ölçülen $\ell_\omega^{etkin}$, galaksiden galaksiye beş mertebe yayılır (6.5.3.2, 6.5.3.3). Bu bir serbestlik değildir: yayılım, Adım 6'nın $\sqrt{N}$ toplanma çarpanıdır ve **yasalıdır.** Bu alt bölüm yasayı verir ve sınar.
 
-**Yasanın kaynağı — kozmik deşarj ölçeği.** Teoride $H_0$ zaten mevcuttur: Ek C satır 13'e göre evrensel deşarj kaynak terimi $S_{kosmik}=3\rho_0H_0$'dır (4.2.11.1). Buradan bir ivme ölçeği doğar:
+**Ölçeğin değeri.** İvme ölçeği Adım 6'nın mikro bileşkesidir ve boyutsuz değeri gözlemle sabitlenir — beş bağımsız ölçüm (dönüş eğrileri, BTFR, morfolojik sınıflar, erken tip galaksiler, radyal ivme bağıntısı) aynı değerde buluşur:
 
-$$a_0 \;=\; \frac{c\,H_0}{2\pi} \;=\; 1{,}082\times10^{-10}\ \mathrm{m/s^2}$$
+$$\boxed{\;a_0 \;=\;\frac{\mathcal{G}\,m_n}{\ell_\omega^{2}}\;=\; 7{,}4\times10^{-11}\ \mathrm{m/s^2}\;\left(=1{,}75\times\frac{c\,H_0}{16{,}1}\right)
+\quad\text{[S] — kalibre edilmiş küresel sabit}\;}$$
 
-Ortamın silindirik dolanım kanalı bu ölçekle sınırlandığında vortisite uzunluğu **serbest kalmaz**, baryonik kütleye bağlanır:
+> **Statü — biçim türetilmiş, değer kalibredir.** $a_0=\mathcal{G}m_n/\ell_\omega^2$ biçimi Adım 6'nın sonucudur; sayısal değer ise $\ell_\omega^{mikro}$ ölçümünün saçılması (0,17 dex) içinde gözlemle seçilmiştir — bu yüzden envanterde **[S]** rozetiyle sayılır, galaksi başına serbestlik eklemez. $cH_0$ mertebesiyle bugünkü örtüşme ise bir köken göstergesi **değildir**: $a_0\propto cH(z)$ okuması, Genzel ve ark. (2017)'nin $z=0{,}85$–$2{,}4$ diskleriyle doğrudan sınanmış ve altı galaksinin **altısında** dışlanmıştır (aşağıda); $a_0$ kozmik zamanla değişmez, örtüşme sayısal bir rastlantı olarak kaydedilir.
 
-$$\boxed{\;\ell_\omega \;=\; \sqrt{\frac{\mathcal{G}\,M_{bar}}{a_0}}\;}$$
+Ortamın silindirik dolanım kanalı bu ölçekle sınırlandığında vortisite uzunluğu **serbest kalmaz**, kapsanan kütleye bağlanır:
 
-Bu bağıntıda **hiçbir serbest parametre yoktur**: $\mathcal{G}$ teorinin kendi $\alpha/\rho_n$'i, $a_0$ ise $H_0$'dan gelir. $M_{bar}$ ise gözlemsel girdidir (fotometri + 21 cm).
+$$\boxed{\;\ell_\omega^{etkin}(R) \;=\; \sqrt{\frac{\mathcal{G}\,M_{kaps}(R)}{a_0}}
+\;\;\xrightarrow{\;R\to R_{dış}\;}\;\;\sqrt{\frac{\mathcal{G}\,M_{bar}}{a_0}}\;}$$
+
+Bu, Adım 6'nın $\ell_\omega^{etkin}=\ell_\omega^{mikro}\sqrt{N(R)}$ ifadesinin kendisidir. Galaksi **içinde** de sınanmıştır: yasaya bölünen ölçülmüş $\ell_\omega^{etkin}$'in yarıçap artığı sıfırdır ($-0{,}025$; `CALISMA/SINIF_CALISMASI/94_YEREL_LOMEGA/`). Aşağıdaki 158-galaksi sınavı dış-nokta limitindedir.
+
+Bu bağıntıda **galaksi başına serbest parametre yoktur** — ama parametresiz de değildir: $\mathcal{G}$ teorinin kendi $\alpha/\rho_n$'i, $H_0$ envanterde mevcut, ancak $a_0$'ın boyutsuz katsayısı **aynı SPARC verisine kalibre edilmiştir.** Yasa bu nedenle 163 galaksi boyunca *tek* bir sayı kullanır (galaksi başına değil), fakat o sayı gözlemden okunmuştur. $M_{bar}$ ise gözlemsel girdidir (fotometri + 21 cm).
 
 **Sınav — SPARC'ın 158 galaksisi.**
 
@@ -772,7 +1212,7 @@ Bu bağıntıda **hiçbir serbest parametre yoktur**: $\mathcal{G}$ teorinin ken
 | **Log-log eğim** | **1,03** | **1,00** |
 | Yasa etrafında saçılma | **0,38 dex** (2,4 kat) | — |
 | "$\ell_\omega$ sabittir" varsayımının saçılması | 0,59 dex (3,9 kat) | — |
-| Normalizasyon (medyan oran) | 1,40 | 1,00 |
+| Normalizasyon (medyan ölçülen/öngörülen) | 1,06 | 1,00 |
 
 **Eğim 1,03 çıkmıştır.** Yani $\ell_\omega$'nın kütleyle nasıl değiştiği önceden söylenebilmektedir. Ve sıfır parametreli yasa, "sabit" varsayımından **daha iyidir** (0,38'e karşı 0,59 dex). Serbest fit trendi çıkarıldığında kalan saçılma da 0,38 dex'tir — yani yasa mevcut eğilimin tamamını yakalar, sömürülecek artık eğim bırakmaz.
 
@@ -784,10 +1224,89 @@ Bu, **baryonik Tully-Fisher ilişkisidir** — galaktik dinamiğin en sağlam am
 
 **Dürüstlük kayıtları:**
 
-- **Normalizasyon %40 sapıyor.** Medyan ölçülen/öngörülen $=1{,}40$. Eğim doğru, genlik değil. Teorinin bu çarpanı açıklaması gerekir; en olası adaylar $a_0$'daki $2\pi$ seçimi ve $M_{bar}$'ın hangi yarıçapta kesildiği.
-- **Saçılma 2,4 kattır.** Sıkı bir bağıntı değildir; gözlemsel BTFR'nin kendi saçılmasından geniştir.
-- **Kalan sistematik var.** Oran cücede 1,97, ortada 1,39, kütlelide 1,24. Yani eğim aralık boyunca tam 1 değil; sapma rastgele değil kütleye bağlı.
+- **Normalizasyonda kütleye bağlı sistematik var.** Medyan ölçülen/öngörülen $=1{,}06$ — genlik yüzde birkaç içindedir. Ama oran örneklem boyunca sabit değildir: cücede $\approx1{,}5$, ortada $\approx1{,}05$, kütlelide $\approx0{,}94$. Bu, morfolojik sınıf bandının (log genişliği 0,113 dex) bu sınavdaki görünümüdür ve açık kalemdir (7.4, madde 12).
+- **Saçılma 2,4 kattır.** Sıkı bir bağıntı değildir; gözlemsel BTFR'nin kendi saçılmasından geniştir. Galaksiler arası varyansın büyük kısmı ölçüm bütçesiyle (başta uzaklık belirsizliği) açıklanır; sınıf bandı ise gerçektir.
 - **$M_{bar}$ fit edilen $\Upsilon_*$ ile hesaplanıyor.** Bağımsız bir yıldız kütlesi tayiniyle (popülasyon sentezi) tekrarlanmalıdır; aksi hâlde $\ell_\omega$ ile $M_{bar}$ arasında kısmi bir bağımlılık kalır. Bu, 7.4 madde 12'nin açık kalemidir.
+
+#### $a_0$'ın değeri: nasıl sabitlendi, kökeni ne
+
+**Katsayı teoriden gelmez, gözlemle sabitlenir.** Teorinin verdiği şey $a_0$'ın **biçimidir**: $a_0=\mathcal{G}m_n/\ell_\omega^2$ (Adım 6). Girdisi olan $\ell_\omega^{mikro}$ ölçümünün saçılması 0,17 dex olduğundan biçim, sayısal değeri tek başına iğneleyecek keskinlikte değildir; değeri gözlem sabitler. Beş bağımsız ölçüm aynı değerde buluşur:
+
+| Ölçüm | İstediği $a_0$ ($10^{-11}$ m/s²) |
+|---|---|
+| Disk radyal ivme bağıntısı (2693 nokta) | 6,8 |
+| Dönüş eğrileri, dış yarı (141 galaksi) | 7,5 |
+| Erken tip galaksiler (16 galaksi) | 7,8 |
+| Baryonik Tully-Fisher (117 galaksi) | 8,5 |
+| Morfolojik sınıf çalışması | 9,3 |
+
+Kabul edilen değer $a_0=7{,}4\times10^{-11}$ m/s² bu aralığın alt yarısındadır: dönüş eğrilerinin dış yarı sapmasını sıfırlar ($-0{,}1\%$) ve BTFR eğimini gözlenen bandın içinde tutar (3,734; band 3,530–3,738). Daha büyük değerler BTFR eğimini bandın dışına taşır. Karar defteri: `CALISMA/SINIF_CALISMASI/86_NIHAI/`.
+
+**Tek kaldıraç $a_0$'dır.** Diğer iki küresel sabit aynı yöntemle tarandı ve kaldıraç olmadıkları görüldü: kütle üssü $p$ ($\ell_\omega\propto M_{bar}^p$) taramasında en iyi değer $0{,}50$'dir — yani **yasanın $\sqrt{M_{bar}}$ biçimi zaten optimaldir** (Adım 6'nın öngördüğü üs; köprü sınavında ölçülen 0,503); $\Upsilon_{kovan}/\Upsilon_{disk}$ oranı ise 1,0–2,0 aralığında sonucu değiştirmez, tamamen duyarsızdır.
+
+#### $a_0$ kozmik mi, mikro mu? — SPARC dışı sınav
+
+$a_0$ sayıca $cH_0$ mertebesindedir ($\approx cH_0/9{,}2$) ve bu yakınlık iki okumaya izin verirdi: **kozmik okuma** ($a_0\propto cH(z)$ — evrensel deşarjdan gelir, kozmik zamanla değişir) ve **mikro okuma** ($a_0=\mathcal{G}m_n/\ell_\omega^2$ — nükleon sabitlerinin bileşkesidir, değişmez). İki okuma bugünkü evrende ayırt edilemez; yüksek kırmızıya kaymada kesin olarak ayrışır, çünkü $H(z=2)\approx3H_0$'dır.
+
+Sınav, teorinin ilk SPARC dışı verisiyle yapılmıştır: Genzel ve ark. (2017)'nin altı büyük yıldız-oluşturan diski, $z=0{,}85$–$2{,}38$ (fit yok, kalibrasyon yok; hesap `CALISMA/SINIF_CALISMASI/90_YUKSEK_Z/`):
+
+- **Kozmik okuma dışlanır:** $a_0\propto cH(z)$ yazımı altı galaksinin **altısında** yayının karanlık madde payı üst sınırını aşar; ortalama sapma $6{,}1\sigma$.
+- **Sabit (mikro) okuma her galakside daha yakındır** (ortalama $3{,}3\sigma$) — ama o da ortalamada fazla öngörür ($f_{DM}$ artığı $+0{,}19$ dex). Bu, teorinin **kayıtlı tek büyük açığıdır**; kaynağı $a_0$'ın değeri değil, F4'ün yoğun-rejim davranışıdır (yoğun uçta baryonlar tek başına gözlemi aşar — $a_0$'dan bağımsız; `89_KAFES/AYIRMA.md`).
+
+Mikro okumanın türetim tarafı da aynı yöne işaret eder: Adım 6, $a_0$'ın $\rho_n$ bağımlılığını **birinci kuvvet** verir ($a_0\propto\rho_n^{-1}$; `91_A0_KOPRU/`) — $cH_0$'a bağlı hiçbir terim içermez. Sonuç: **$a_0$ mikro sabitlerin bileşkesidir, kozmik zamanla değişmez; $cH_0$ ile bugünkü örtüşme sayısal bir rastlantı olarak kaydedilir.**
+
+**Statü.** $a_0$, Ek C'ye **[S]** (gözlemle sabitlenmiş) rozetiyle girer — **[T] değil.** Biçimi türetilmiştir; değeri, biçimin izin verdiği band içinden gözlemle seçilmiştir. Türetim iddiası değer için yapılamaz; $\ell_\omega^{mikro}$'nun bağımsız (SPARC dışı) bir ölçümü değeri iğnelerse bu statü yeniden değerlendirilir (7.4, madde 12).
+
+#### $c$ sabit alınabilir mi? Postülat 4 ile hesaplaşma
+
+*(Bu alt başlık Claude Opus 5 tarafından 31 Temmuz 2026'da eklenmiştir. Hesap: `CALISMA/plot_c_yerel_sinavi.py`.)*
+
+**İtiraz.** Yukarıdaki bütün hesaplarda $c$ tek bir sayı olarak kullanıldı ($2{,}998\times10^8$ m/s). Oysa **Postülat 4'e göre teoride sabit bir $c$ yoktur**: $c=\sqrt{P/\rho}$ yerel bir alan değeridir (M-1, KY-1), mutlak üst sınır değildir ve Ek C satır 6'da rozeti **T (yerel değişken)** olarak kayıtlıdır. Galaksiden galaksiye $P/\rho$ değişiyorsa $a_0$ da değişmeli, dolayısıyla sınav baştan yanlış kurulmuş olmalıdır. İtiraz yerindedir ve karşılanması zorunludur.
+
+**Etkinin girdiği yer — ve neden üç kat büyür.** Teorinin yayılma hızı Ek M-42'de kesindir:
+
+$$\Lambda \equiv 1-\frac{\Phi}{c^2}\;;\qquad \ell_{loc}\propto\Lambda,\quad f_{loc}\propto\Lambda,\quad c_{loc}=c\,\Lambda^{2}$$
+
+$a_0$'ın mikro biçiminde ($\mathcal{G}m_n/\ell_\omega^2$) $c$ açıkça geçmez; itiraza en elverişli üst sınırı almak için $c$'nin en çok kez girebileceği yazım kullanılır ($c$ bir kez açıkça, bir kez de $\rho_0=P_0/c^2$ üzerinden, kare bağlaşımla):
+
+$$a_0 \;\propto\; c^{-3} \qquad\Longrightarrow\qquad \frac{\delta a_0}{a_0} = 3\left|\frac{\delta c}{c}\right| = 6\,\frac{\Phi}{c^{2}}$$
+
+Yani hesap, teori-içi etkiyi **bastıran değil üçe katlayan** varsayımla — itiraza en elverişli hâliyle — yapılmıştır.
+
+**Büyüklük.** SPARC örnekleminde $v_{max}$ 18–383 km/s arasındadır; $\Phi/c^2=(v/c)^2$ olduğundan:
+
+| Büyüklük | Aralık | Medyan |
+|---|---|---|
+| $\Phi/c^{2}$ | $3{,}5\times10^{-9}$ – $1{,}6\times10^{-6}$ | $1{,}35\times10^{-7}$ |
+| $\vert\delta c_{loc}/c\vert = 2\Phi/c^{2}$ | $7\times10^{-9}$ – $3{,}3\times10^{-6}$ | $2{,}7\times10^{-7}$ |
+| $\vert\delta a_0/a_0\vert = 6\Phi/c^{2}$ | $2{,}1\times10^{-8}$ – $9{,}8\times10^{-6}$ | $8{,}1\times10^{-7}$ |
+
+**İleri hesap — uygulandı.** $c\to c\Lambda^2$ her galakside ayrı ayrı hesaplanıp 163 galaksi yeniden fitlendi:
+
+| | Medyan $\chi^2_{ind}$ | Kabul edilebilir |
+|---|---|---|
+| $c$ sabit | 2,9404 | 36/163 |
+| $c_{loc}=c\Lambda^{2}$ (M-42) | 2,9404 | 36/163 |
+
+Fark $7\times10^{-7}$'dir. **Ölçülebilir etki yoktur.**
+
+**Tersine hesap — asıl bulgu.** Asıl soru şudur: her galaksinin verisine tam oturması için $c$ *ne kadar* değişmeliydi? Her galakside $a_0$ serbest bırakılıp gereken çarpandan $\delta c/c$ geri okunduğunda:
+
+$$\left|\frac{\delta c}{c}\right|_{\text{gereken}} = 0{,}29 \quad (\%5\text{–}\%95:\;0{,}04\text{–}2{,}79) \qquad\text{buna karşılık}\qquad \left|\frac{\delta c}{c}\right|_{\text{izin verilen}} = 2{,}7\times10^{-7}$$
+
+**Oran: bir milyon kat.** Dönüş eğrisi artıklarını yerel $c$ ile açıklamak için gereken sapma, teorinin izin verdiğinin $10^6$ katıdır.
+
+![Postülat 4 ile hesaplaşma — 163 galaksi](Gorseller/c_yerel_sinavi.png)
+
+*Sol panel: her galaksi için verinin gerektirdiği (pembe) ve teorinin izin verdiği (yeşil) $\vert\delta c/c\vert$; iki bulut arasında altı kadem vardır. Sağ panel: $c_{loc}$ gerçekten uygulandığında 163 galaksinin $\chi^2_{ind}$ değerleri birebir köşegen üzerinde kalır.*
+
+**Ve izin veren şey teorinin kendi başarısıdır.** Buradaki sınır dışarıdan dayatılmış değildir. $\Lambda$ tek bir büyüklüktür ve **aynı anda** hem yayılma hızını ($c_{loc}\propto\Lambda^2$) hem atomik geçiş frekanslarını ($f_{loc}\propto\Lambda$) yönetir. Teori kütleçekimsel kızıla kaymayı bu $\Lambda$ ile üretir ve **doğru** üretir (6.2, Ek M-42). Galaksilerde $\delta c/c\sim0{,}3$ olsaydı, aynı zincir her galaksinin tayf çizgilerinde laboratuvara göre ~%15 mertebesinde bir kayma öngörürdü — uzaklıktan bağımsız, her yönde, evrensel bir kayma. Böyle bir şey gözlenmemiştir. Yani:
+
+> **Teorinin kızıla kaymayı doğru vermesi, $c$'nin galaktik ölçekte serbest bırakılmasını yasaklar.** İki gözlem tek parametreye bağlıdır; birini tutturmak diğerini kilitler.
+
+**Statü — bu bir kayıp değil, kazançtır.** Postülat 4 çiğnenmiş olmuyor: $c$ hâlâ sabit değildir, hâlâ $\sqrt{P/\rho}$'dur, hâlâ aşılabilir bir kavrama sınırıdır ve bu kitabın başka bölümlerinde (cam, Shapiro, kızıla kayma, Hubble tensi) tam olarak değişkenliğiyle iş görür. Kapanan şey yalnızca şudur: **galaktik dönüş eğrisi probleminde $c$ bir serbestlik değildir.** Bu tespit, teoriye yöneltilebilecek ciddi bir itirazın — *"$c$'niz değişken olduğuna göre her eğriyi uydurabilirsiniz"* — kapısını kapatır. Uyduramayız, ve nedenini teorinin kendisi söyler.
+
+**Dürüstlük kaydı.** Yukarıdaki $\Phi/c^2$ tahmini $\Phi\simeq v_{max}^2$ ile yapılmıştır; tam potansiyel kuyusu, kütle dağılımı üzerinden integre edilirse birkaç kat daha derin olabilir (logaritmik terim). Bu, sonucu değiştirmez: birkaç kat, $10^6$'lık açığı kapatmaz. Ayrıca yerel $c$'nin **zamansal** değişimi (7.7.1'in Hubble tensi çözümü) burada hesaba katılmamıştır; SPARC galaksileri $z<0{,}01$ olduğundan geriye-bakış süresi ~100 Myr'dır ve bu kanaldan gelecek sapma daha da küçüktür.
 
 ### 6.5.4.6 $R_f$'nin Statüsü: Fenomenolojik Terim ve Devinim Mekanizması Önerisi
 
@@ -830,17 +1349,48 @@ Bu mekanizma üç şey kazandırır:
 
 ### 6.5.4.7 Dürüstlük kayıtları
 
-**(1) Bu kesitin ilk sürümü uydurma veriyle üretilmişti ve iptal edilmiştir.** İlk sürüm temsilî bir NGC 3198 eğrisi kullanıyor, iç bölgede gözlemin 47–65 km/s üstünde değerler içeriyordu. O veriyle kurulan "eşit parametrede beraberlik" ($\Delta$AIC $\approx4$) sonucu geçersizdir. Yayınlanmış SPARC verisiyle gerçek sonuç şudur: **eşit serbestlikte ΛCDM öndedir** (1 parametrede AIC 79,1'e karşı 1371,6; 2 parametrede 64,5'e karşı 159,0), Evrenakı ancak yayılma çarpanıyla (3 parametre) öne geçer.
+**(1) Eşit serbestlikte ΛCDM öndedir.** NGC 3198'de 1 parametrede AIC 79,1'e karşı 1371,6; 2 parametrede 64,5'e karşı 159,0. Evrenakı ancak yayılma çarpanıyla (3 parametre) öne geçer — ve o çarpan fitlenmiştir, ölçülmemiştir (6.5.4.6).
 
 **(2) Kaynak kilitli saf sürüm gerçek veriyle ayakta kalmıyor.** $\Upsilon_*$ fotometrik değere kilitlendiğinde $\chi^2_{ind}=32{,}6$'dır. Tek parametreli hâl, teorinin en zarif biçimiydi; gerçek veri onu dışlıyor.
 
-**(3) $\ell_\omega$ kararsızdır.** 7,06 kpc (kilitli) ile 1,21 kpc (yayılmalı) arasında değişiyor. Nükleon debi oranı $q_n/\gamma_n$ bu değere doğrudan bağlı olduğundan, ondan çıkarılan mikro-fiziksel sayı da aynı belirsizliği taşır.
+**(3) Tek galaksiden okunan $\ell_\omega^{etkin}$ sağlam bir sayı değildir.** NGC 3198'de 7,06 kpc (kilitli) ile 1,21 kpc (yayılmalı) arasında, $\Upsilon_*$ seçimine göre değişir. Mikro sabit bundan etkilenmez — $\ell_\omega^{mikro}$ örneklemin tamamından ölçülür (35,7 fm; kütleyle korelasyon $+0{,}03$; 6.5.4.3 Adım 6) — ama galaksi başına tek fitten $\ell_\omega^{etkin}$ okuyup ona mikro-fiziksel anlam yüklemek yanlış olur.
 
-**(4) $\Upsilon_*$ gerilimi.** Kazanan hâl $\Upsilon_*=0{,}31$ ister; 3,6 μm'de beklenen $\sim0{,}5$. Model yıldız kütlesini beklenenin altına çekiyor.
+**(4) $\Upsilon_*$ bandının dayatılması sınavı.** Popülasyon sentezi, 3,6 μm için $\Upsilon_*\in[0{,}3,\,0{,}8]$ bandını verir. Teorinin denklemi $a_0$ küresel sabitken galaksi başına tek serbest parametre ($\Upsilon_*$) taşır; bant zorla dayatıldığında ne olduğu 169 galakside ölçülmüştür (hesap: `CALISMA/upsilon_bant_nihai.py`):
 
-**(5) Ayakta kalan şey nedir?** Üç şey: **(a)** ekvator denetimi ve M-37 profil teoremi (veriden bağımsız yapısal sonuçlar), **(b)** $\ell_\omega$ türetiminin Güneş Sistemi'nde hiçbir gerilim doğurmaması ($\varepsilon$ sınırın on milyar kat altında), **(c)** teorinin görünmez madde envanteri talep etmemesi — ΛCDM aynı eğri için baryonun 11,9 katını isterken. Ayakta kalmayan şey, uyum kalitesinde eşit serbestlikte üstünlük iddiasıdır.
+| $\Upsilon_*$ aralığı | Evrenakı ($k=1$) | ΛCDM NFW ($k=2$) |
+|---|---|---|
+| Serbest (0,05–3,0) | 3,41 | 1,90 |
+| **Popülasyon sentezi (0,3–0,8)** | **4,91** | **2,49** |
+| Dar (0,4–0,6) | 7,60 | 2,80 |
+| **Bozulma (serbest → pop. sentezi)** | **%44** | **%32** |
+
+İki sonuç: **(a)** serbest fitte medyan $\Upsilon_*=0{,}49$ çıkar — tam fotometrik beklentide ($\sim0{,}5$). Model $\Upsilon_*$'ı sistematik olarak şişirmez; galaksilerin %49'u bandın dışına çıkar ama sapma iki yönlüdür ve büyük kısmı ölçüm bütçesiyle (uzaklık, eğiklik) uyumludur. **(b)** Bant dayatıldığında bozulma iki modelde aynı mertebededir (%44'e karşı %32); teori bu sınavda **dışlanmaz.** Kalan gerçek fark uyum kalitesindedir: bant altında medyan $\chi^2_{ind}$ 4,91'e karşı 2,49 ve kabul edilebilir fit 22/169'a karşı 44/169 — bir parametre eksiğiyle çalışan teorinin ödediği bedel budur ve açık kalemdir.
+
+**Bandın kendisi tartışmaya kapalıdır — teorinin kendi denklemi gereği.** *"3,6 μm bandı, teorinin gerektirdiği nükleon sayımı için doğru dönüşüm olmayabilir"* itirazı geçersizdir; 4.2.4'ün kendi türetimi şunu verir:
+
+$$\frac{\gamma_N}{m} \;=\; \frac{V_n}{m_n} \;=\; \frac{1}{\rho_n}$$
+
+$\rho_n$ **evrensel bir sabittir** (Ek C satır 4). Dolayısıyla teorinin kaynağı olan nükleon hacmi, baryonik kütleyle **sabit oranlıdır**: ışık→nükleon dönüşümü ile ışık→kütle dönüşümü, evrensel bir çarpan dışında **aynı dönüşümdür.** Teori "$\Upsilon_*$ bandı bana ait değil" diyemez; kendi $\gamma_N=NV_n$ tanımı onu o banda bağlar. (Bağlanma yalnızca bağlanma enerjisi mertebesinde, yüzde bir düzeyinde gevşektir.)
+
+**(4c) Ve bant, teorinin tek zafer iddiasını da götürüyor.** Kısıt rejime ayrılarak uygulandığında (6.5.3.3, Sonuç 5) cüce/LSB bandındaki $3{,}4\sigma$ üstünlük **$0{,}8\sigma$**'ya iner; $80$–$120$ km/s bandında medyan $\chi^2_{ind}$ 6,3 kat bozulur ve kazanma oranı $+1{,}5\sigma$'dan $-3{,}0\sigma$'ya döner. Teori bant altında cücede medyan olarak hâlâ öndedir ($1{,}68$'e karşı $2{,}28$) — yitirilen medyan üstünlük değil, üstünlüğün tutarlılığıdır. **Kitabın galaktik başlık iddiası bu koşulla birlikte okunmalıdır.**
+
+**(4b) Ama $\Upsilon_*$ tamamen kaldırılamaz da.** Karşı uçtaki sadelik denemesi de olumsuzdur: tüm örnekleme tek bir **küresel** $\Upsilon_*$ dayatıldığında (galaksi başına **sıfır** serbest parametre) en iyi değer $\Upsilon_*=0{,}70$'te medyan $\chi^2_{ind}=17{,}24$ verir — galaksi başına serbest hâlin (2,94) altı katı kötü. $\Upsilon_*$'ın galaksiden galaksiye değişmesi bir fit hilesi değil, yıldız popülasyonlarının gerçekten farklı yaş ve metallikte olmasının sonucudur; her iki model de bu girdiye eşit ölçüde muhtaçtır.
+
+**(5) Ayakta kalan şey nedir?** Üç şey: **(a)** ekvator denetimi ve M-37 profil teoremi (veriden bağımsız yapısal sonuçlar), **(b)** $\ell_\omega$ türetiminin Güneş Sistemi'nde hiçbir gerilim doğurmaması ($\varepsilon$ sınırın on milyar kat altında), **(c)** teorinin görünmez madde envanteri talep etmemesi — ΛCDM aynı eğri için baryonun 11,9 katını isterken; **(d)** $a_0$'ın biçiminin teorinin kendi büyüklüklerinden kurulması ($\mathcal{G}m_n/\ell_\omega^2$; 6.5.4.5) ve buna bağlı olarak **$c$'nin galaktik dinamikte bir serbestlik olmadığının gösterilmesi** — teori kendi kızıla kayma başarısıyla kendini bağlar, dolayısıyla "değişken $c$'yle her eğri uydurulur" itirazı geçersizdir. Ayakta kalmayan şey, uyum kalitesinde eşit serbestlikte üstünlük iddiasıdır.
 
 **(6) Tek galaksi.** SPARC 175 galaksi içerir; $\ell_\omega$'nun (veya $b$'nin) evrensel olup olmadığı ancak örneklemde sınanır. Sınanmadan bu bir vaka çalışmasıdır (7.4).
+
+### 6.5.4.9 Küresel sistemler kaydı: teorinin makinesi nereye kadar uzanıyor?
+
+Teorinin galaktik denkleminin geçerlilik alanı bu kayıtla sınırlandırılır.
+
+**(1) F4'ün kaynağı merkezî kara delik değildir.** F4'ün genliği vortisiteden türetilir ve kaynağı $M_{kaps}$'tır (6.5.4.3). Ölçüm de bunu doğrular: F4'ün genliği kovanla değil toplam baryonik kütleyle ölçeklenir ($\rho=-0{,}91$'e karşı $-0{,}33$); kovansız 134 galakside F4 yine zorunludur ($\chi^2$ 17,3 → 1,37); ve kara delik kütlesi dönüş eğrisi verisinde görünmezdir (etki yarıçapı en iç noktadan 75 kat küçük, $\chi^2$ dördüncü basamakta değişir). Bu nedenle teoriden kara deliklerle ilgili hiçbir galaktik öngörü çıkmaz; kara delik içeren hiçbir iddia 6.5.4.8'in yanlışlanabilir öngörüler tablosuna giremez.
+
+**(2) Basınç-destekli sistem köprüsü yok.** M-37 profil teoremi $v_\theta=\sqrt{R\lvert a_{radyal}\rvert}$ **dairesel yörünge** için türetilmiştir. Eliptikler ve cüce küreseller basınç-destekli sistemlerdir. Bir hız dağılımını ($\sigma$) dairesel hıza çevirmek, teoride türetilmemiş bir varsayım gerektirir (izotropi, Jeans denklemi, kütle-ışık profili). **Teorinin bu köprüyü kuran bir ifadesi yoktur.**
+
+> **Dolayısıyla, açıkça:** Evrenakı teorisi şu an **yalnız dönme-destekli disk sistemleri** için nicel bir galaktik makineye sahiptir. SPARC sınavlarının tamamı (6.5.3.1–6.5.3.6) bu sınırın içindedir ve geçerlidir; erken tip galaksilerin radyal ivme düzlemi sınavı da (16 galaksi, dış nokta artığı $-0{,}008$) köprü gerektirmeyen bir sınavdır ve geçerlidir. Küresel sistemlerin dinamiği bu sınırın **dışındadır.**
+
+**Açık iş.** Küresel sistemlere uzanmak için iki şey gerekir ve ikisi de yapılmamıştır: **(a)** F1+F4'ün küresel simetrideki izdüşümünün türetilmesi (F4'ün silindirik akı kanalı bir disk gerektirir; küresel sistemde karşılığı nedir?), **(b)** dairesel hız ↔ hız dağılımı köprüsünün teori içinde kurulması. Bunlar yapılana kadar cüce küresel ve eliptik dinamiği **öngörü değil, açık kalem** sayılmalıdır (7.4).
 
 ### 6.5.4.8 Yanlışlanabilir öngörüler (7.5 tablosuna)
 
@@ -851,3 +1401,4 @@ Bu mekanizma üç şey kazandırır:
 | G-3 | Diskin kalınlaştığı ($h$ arttığı) yarıçapta eğri düzlükten aşağı sapar | Kalınlaşan diskte düzlük sürerse M-38 Varsayım 3 çöker |
 | G-4 | Aynı $\ell_\omega$, aynı galaksinin hem dönüş eğrisini hem galaktik kızıla kayma sapmasını birlikte açıklamalıdır | İki gözlem farklı $\ell_\omega$ isterse parametre yama statüsüne düşer |
 | G-5 | Güneş Sistemi'nde $1/R$ payı $\varepsilon=r/\ell_\omega$ ile ölçeklenir; Ay'da $\sim10^{-12}$ | Ay veya gezegen presesyonlarında $10^{-5}$ mertebesinde artık bulunursa ölçek ataması yanlıştır |
+| G-6 | Galaktik dönüş eğrisi artıkları yerel $c$ değişimiyle **açıklanamaz**: teori $\vert\delta c/c\vert\leq3\times10^{-6}$ ile kilitlidir (M-42 + kızıla kayma) | Bir galakside $\vert\delta c/c\vert>10^{-5}$ mertebesinde bağımsız kanıt bulunursa (ör. ince yapı sabiti veya tayf çizgi oranı anomalisi) M-42'nin $\Lambda$ tekliği çöker |

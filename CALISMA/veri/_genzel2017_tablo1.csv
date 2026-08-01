@@ -1,0 +1,16 @@
+# Genzel R. et al. 2017, Nature 543, 397 — "Strongly baryon-dominated disk galaxies
+# at the peak of galaxy formation ten billion years ago" · arXiv:1703.04310
+# Tablo 1'den ELLE aktarilmistir (PDF'ten okundu, 5. sayfa). Degistirilmemistir.
+# fDM_alt / fDM_ust : yayinin verdigi +-2rms araligi ya da ust sinir.
+#   "0.21 (+-0.1)"  -> alt 0.11  ust 0.31
+#   "0.17 (<0.38)"  -> alt 0.00  ust 0.38   (ust sinir)
+# Mbar_fit : "Mbaryon(gas+stars, including bulge)" — FIT sonucu (prior degil)
+# R_half   : "R1/2(n=1)" — fit sonucu, kpc
+# vc       : "vc(R1/2)" — asimetrik surukleme duzeltmesi DAHIL, km/s
+Galaksi,z,Mbar_fit_1e11Msun,R_half_kpc,vc_kms,sigma0_kms,Mbulge_bolu_Mbar,fDM,fDM_alt,fDM_ust,fDM_ust_sinir_mi
+COS4_01351,0.854,1.7,7.3,276,39,0.20,0.21,0.11,0.31,hayir
+D3a_6397,1.500,2.3,7.4,310,73,0.35,0.17,0.00,0.38,evet
+GS4_43501,1.613,1.0,4.9,257,39,0.40,0.19,0.10,0.28,hayir
+zC_406690,2.196,1.7,5.5,301,74,0.60,0.00,0.00,0.08,evet
+zC_400569,2.242,1.7,3.3,364,34,0.37,0.00,0.00,0.07,evet
+D3a_15504,2.383,2.1,6.0,299,76,0.15,0.12,0.00,0.26,evet
