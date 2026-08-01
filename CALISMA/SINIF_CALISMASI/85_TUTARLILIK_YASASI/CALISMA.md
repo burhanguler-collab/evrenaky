@@ -93,4 +93,4 @@ Sınıf düzeyi (8 nokta; $n=8$'de ~anlamlılık eşiği $|\rho|\gtrsim0{,}74$):
 | ~~2~~ | ~~$v/\sigma$ verisi ekle, o eksende tara~~ → [SIGMA_SINAVI.md](SIGMA_SINAVI.md) | ✅ **yapıldı:** 18 galakside $+0{,}49$ ($p=0{,}019$) — öngörülen yönde **ilk anlamlı işaret**; doğrulama $n\gtrsim40$ kayıt-öncesi kip bekliyor |
 | 3 | S0/BCD örneklemini büyüt (literatürden HI'lı mercek/tıkız cüce) | uçlar bandı domine ediyor ama $n=3$–4; G-8'in $\lambda<1$ çağrısının sınavı |
 | 4 | Kanal sınavını iç-bölge artık **profiliyle** (tek RMS yerine yarıçap yarıçap) keskinleştir | md. 5.3 — kılpayı farkları ayrıştırabilir; Adım 7'nin "yalnız F4" öngörüsüyle gerilimi çözer |
-| 5 | $\lambda$–incelik doğrulaması: $n\gtrsim40$, önceden ilan edilmiş tek kip (kayıt-öncesi) | SIGMA_SINAVI md. "sıradaki iş" — ardışık-analiz çekincesini kaldırmanın tek yolu |
+| 5 | $\lambda$–incelik doğrulaması: $n\gtrsim40$, kayıt-öncesi kip → [KAYIT_ONCESI_PROTOKOL.md](KAYIT_ONCESI_PROTOKOL.md) | ⏳ **ilk deneme kapıda durdu:** W-farkı kestiricisi geçerlilik kapısını geçemedi ($-0{,}50$), sınav "uygulanamaz" ilan edildi; 99 galaksilik boru hattı hazır, geçerli σ/kalınlık kataloğu bekliyor |

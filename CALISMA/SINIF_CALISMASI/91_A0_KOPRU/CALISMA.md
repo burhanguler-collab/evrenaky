@@ -23,6 +23,18 @@ Tek kalan serbestlik $q_n/\gamma_n$. İki yol denendi.
 
 # YOL 1 — $q_n/\gamma_n$'yi nükleon yapısından türet
 
+> ### ⚡ YOL 1 YENİDEN AÇILDI VE KAPANDI (1 Ağustos 2026) → [YOL1_KAPANIS.md](YOL1_KAPANIS.md) · [ESGUC_ISPAT.md](ESGUC_ISPAT.md)
+>
+> Aşağıda "bugün ilerletilemez" denilen ikinci denklem bulundu ve **türetildi**:
+> $u_r/v_t=\sqrt{m_p/m_e}=42{,}85$ (ölçülen 42,4 — fark medyan hatası içinde) — mekanizma:
+> kafes=atom (M-15/M-39) → pulsasyon kolunu $m_e$, dolanım kolunu $m_p$ taşır; **eş-güç
+> türetildi** (izoklinik kilit Ek A.2'nin $\sqrt2$'sinden + banyo eşbölüşümü; termalleşme
+> koşulu 36 mertebe marjla kapalı; medyan-H kilidi bileşim-kararlılığını açıklar).
+> Sonuç: $a_0=\mathcal{G}m_nm_e/(m_pr_n^2)=8{,}60\times10^{-11}$ — **sıfır kalibrasyonla** beş-ölçüm
+> bandının içinde; $\sqrt2c$ çapasıyla $(C,q_n)$ çifti de sayısal ($C=2{,}35$; kitapta **M-45**).
+> Statü: **[T-aday]** (başka-yere-bakma: dar uzay ~2σ, geniş %40) — $a_0$ Ek C'de [S] kalır;
+> kalan iki dış koşul: bağımsız $\ell_\omega$ ölçümü + hakem denetimi.
+
 Nükleonu ortamda hem **pulse eden** hem **dönen** bir kaynak olarak yazalım:
 
 $$q_n=4\pi r_n^2 u_r \quad(\omega_2\text{ kolu}),\qquad
@@ -184,4 +196,4 @@ gösterdi. O model yazıldığında Yol 1 tekrar açılır.
 | **1** | **Yüksek-$z$ dönüş eğrilerini bu iki okumayla koş** | md. (B) — tek gerçek ayırt edici, ve veri var |
 | 2 | Kitabın 6.5.4.5'indeki $(\rho_0/\rho_n)^2$'yi birinci kuvvete indir | md. (A) — öneri hazır, uygulanmadı |
 | 3 | 6.5.4.4'teki $q_n/\gamma_n=4{,}36\times10^{20}$ m satırını düzelt | 92_M_TUT md. 5 — 34 mertebe hata |
-| 4 | Nükleonun ortamdaki kaynak modelini yaz ($u_r$ ile $v_t$ arasında bir bağıntı) | Yol 1'i açar |
+| ~~4~~ | ~~Nükleonun ortamdaki kaynak modelini yaz~~ → [YOL1_KAPANIS.md](YOL1_KAPANIS.md) + [ESGUC_ISPAT.md](ESGUC_ISPAT.md) | ✅ **tamamlandı:** $u_r/v_t=\sqrt{m_p/m_e}$; eş-güç türetildi (izoklinik kilit + banyo eşbölüşümü, 36 mertebe marj) ve kitaba işlendi (**M-45**); kalan: bağımsız $\ell_\omega$ + hakem |

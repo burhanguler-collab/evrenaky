@@ -36,4 +36,8 @@ Hesap: `../../vsigma_sinavi.py` · Çıktılar: [`VSIGMA.csv`](VSIGMA.csv) · [`
 
 ## Hüküm ve sıradaki iş
 
-G-8'in $\lambda$–incelik ayağı **"sınanmamış"tan "ilk anlamlı işaret"e** ilerledi: yön doğru, büyüklük eşikte, iki bağımsız kip (temiz, sınıf-medyanı) aynı yönde. Kayıt-öncesi doğrulama için: (1) örneklemi bağımsız kaynaklarla $n\gtrsim40$'a çıkar ve **bu kez tek, önceden ilan edilmiş kiple** koş; (2) kenardan-görünüm kalınlık ölçüsüyle paralel sınav; (3) NGC1705/BCD ucunu temiz veriyle çöz.
+G-8'in $\lambda$–incelik ayağı **"sınanmamış"tan "ilk anlamlı işaret"e** ilerledi: yön doğru, büyüklük eşikte, iki bağımsız kip (temiz, sınıf-medyanı) aynı yönde.
+
+**$n\gtrsim40$ kayıt-öncesi denemesi yapıldı ve kapıda durdu** ([KAYIT_ONCESI_PROTOKOL.md](KAYIT_ONCESI_PROTOKOL.md)): Lelli+2019 çizgi-genişliği farkından $\sigma$ kestirimi, örneklemi 99'a çıkarıyordu; ama önceden ilan edilen geçerlilik kapısı ($\sigma_{est}$↔doğrudan $\sigma$, eşik $+0{,}4$) $-0{,}50$ vererek **çöktü** — karışık $W$ tanımları türbülansı değil profil biçimini izliyor. Protokol gereği sınav "uygulanamaz" ilan edildi; sonuç raporlanmadı. Boru hattı (99 galaksilik $k$ + eşleşme) hazır bekliyor.
+
+Kalan işler: (1) **geçerli** bir büyük-$n$ $\sigma$ kaynağı (MHONGOOSE/Apertif ikinci-moment, süper-profil genişletmesi) ya da doğrudan **kalınlık** ölçüsü (kenardan-görünüm katalogları) ile aynı protokolü koş; (2) NGC1705/BCD ucunu temiz veriyle çöz.

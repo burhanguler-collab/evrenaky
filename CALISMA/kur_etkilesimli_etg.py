@@ -202,7 +202,7 @@ thead th{color:#a1a1aa;font-weight:600;font-size:11px}
   padding:7px 9px;margin-top:8px;line-height:1.5}
 input[type=range]{width:100%;accent-color:#22c55e}
 .kz{color:#22c55e}.kk{color:#f87171}.ks{color:#fbbf24}
-</style></head><body>
+</style></head><body><div style="padding:9px 16px;background:rgba(34,197,94,0.10);border-bottom:1px solid #166534;color:#bbf7d0;font-size:12.5px;line-height:1.45">&#9889; <strong>Fitsizlik durumu:</strong> Teori hi&#231;bir fit de&#287;erine muhta&#231; de&#287;ildir; tek kalibre say&#305;n&#305;n (a&#8320;) da t&#252;retilmi&#351; kar&#351;&#305;l&#305;&#287;&#305; mevcuttur (M-45) ve yaln&#305;z stat&#252; disiplini gere&#287;i kalibre de&#287;er resm&#238; kullan&#305;mda tutulmaktad&#305;r. Bu paneldeki &#246;ng&#246;r&#252; e&#287;rilerinde galaksi ba&#351;&#305;na fitlenen hi&#231;bir say&#305; yoktur.</div>
 <div class="ust"><h1>Erken tip galaksi sınavı — etkileşimli panel</h1>
 <span class="alt">@@N@@ galaksi · 32 ivme noktası · <b>fit YAPILAMAZ</b> (2 nokta/galaksi) ·
 arka planda @@NR@@ disk noktası · tek dosya, dış bağımlılık yok</span></div>

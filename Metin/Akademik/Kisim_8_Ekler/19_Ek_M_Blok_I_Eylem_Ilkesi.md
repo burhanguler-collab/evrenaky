@@ -92,7 +92,7 @@ $$\boxed{\;P=P(\rho,\chi)\;;\qquad \left(\frac{\partial P}{\partial\rho}\right)_
 
 Bu blok, programın tamamlandığını değil **başladığını** kaydeder. Yukarıdaki yapı dört şeyi vermez:
 
-1. **Kütle-itimin $1/r^2$'si çıkmaz.** Statik limitte Bernoulli cebirseldir; barotropik bir akışkan eyleminde statik basınç kuyularının $1/r$ kuyruğu yoktur. $\chi$ alanının **neden $1/r$ ile yayıldığı** — yani deplasman alanının kendi denkleminin ne olduğu — eylemde henüz yoktur. **Bloğun en büyük açık ucudur.**
+1. ~~Kütle-itimin $1/r^2$'si çıkmaz~~ → **M-46 ile kapandı:** $\chi$'nin yayılım terimi yazılmıştır ($\nabla^2\chi=-q_nn_m$), profil ve $1/r^2$ eylemden çıkar; kalan, $C=-(\partial P/\partial\chi)_\rho$ katsayısının **değerinin** mikro türetimidir (aşağıda md. 2 ile birleşir).
 2. **İki kısmi türevin ortak mikro-modeli yoktur.** Adiyabatik tepkinin neden tam stiff, deplasmanın neden tam yoğunluk-korumalı olduğu ayrı ayrı ifade düzeyindedir; ikisini tek bir mikro-yapıdan (nükleonun vakum cepli girdap yapısı) türetmek yapılmamıştır.
 3. **$\omega_1/\omega_2$ çift dönüşü temsil edilemez.** Skaler $\varphi$, $\rho$, $\chi$ ile 4B çift dönüş yazılamaz; beş kuvvetin köken haritası eylemin dışındadır. 4B genişletme ya da bir yönelim/direktör alanı gerekir.
 4. **$\Lambda$ ölçeklemesi çıkmaz.** Cetvellerin ve saatlerin neden tam $\Lambda$ ile ölçeklendiği (M-42'nin $\gamma_\ell=-1$'i) maddenin ortam içindeki bağlı yapısının modelini gerektirir.
@@ -101,7 +101,7 @@ Ayrıca kohezyon ($\Sigma$) da bu eylemde yoktur: barotropik $u$ çekme dayanım
 
 ### Açık Uçlar
 
-- **$\chi$ alanının denklemi (öncelik 1).** Deplasman alanının $1/r$ ile yayılmasını veren terim nedir? Bu bulunursa M-35'in $P(r)=P_0-\alpha M/r$ profili eylemden çıkar ve kütle-itim türetilmiş olur.
+- ~~$\chi$ alanının denklemi (öncelik 1)~~ → **çözüldü: M-46.** Terim yazıldı ($\nabla^2\chi=-q_nn_m$ + kohezyon-taşıyıcılı zaman sektörü), M-35'in profili ve kütle-itim eylemden çıktı; öncelik artık $C$'nin **değerinin** mikro türetimindedir (M-46 Açık Uçlar).
 - **İki kısmi türevin birleşik mikro-türetimi.** Nükleonun vakum cebi ve girdap zarfı, hem stiff adiyabatik tepkiyi hem yoğunluk-korumalı deplasmanı birlikte vermeli.
 - **Kohezyonun perdelemesiz eklenmesi.** $\Sigma$ ve $v_{kav}$'ı $1/r$ kuyruğunu bozmadan üretecek terim.
 - **Dönüsüz-olmayan genişletme.** Clebsch veya Lin kısıtıyla vortisiteli akış; makro-vorteks kolunun (M-22, M-30) eyleme bağlanması buna bağlıdır.
@@ -117,4 +117,51 @@ Bu girdinin ilk sürümü hatalıydı ve düzeltilmesi bir sınavla geldi. İlk 
 
 ---
 
-*Blok I, matematik programının Faz 1–6'sı sonrası açılmış olup tek girdiyle başlar. Sonraki girdiler eylemin genişletilmesiyle eklenecektir.*
+---
+
+## M-46 · $\chi$-Yayılım Terimi: Kütle-İtimin Eylemden Çıkışı · **[T (yapı) / F ($C$ değeri)]**
+
+**Kullanıldığı bölümler:** M-44 (Geçerlilik Sınırı md. 1 — bloğun en büyük açık ucu), M-35, M-28, 6.5.4. Bağlı katalog: M-2, M-45, Ek A.3 ($v_m$). Hesap ve köprü: `CALISMA/SINIF_CALISMASI/91_A0_KOPRU/C_HAL_KOPRUSU.md`.
+
+M-44 kendi eksiğini kaydetmişti: *"$\chi$ alanının neden $1/r$ ile yayıldığı eylemde henüz yoktur."* Bu girdi o terimi yazar; kütle-itim ($1/r^2$) eylemden çıkar ve $C$'nin kimliği hâl denkleminin ikinci katsayısı olarak kesinleşir.
+
+### Varsayımlar
+
+1. **$\chi$ deplasman potansiyelidir** ve kaynağı, birim hacim başına hacim-enjeksiyon debisidir: nükleon sayı yoğunluğu $n_m$ olan madde, ortama $q_n n_m$ (s⁻¹) debisi boşaltır (M-35'in kaynağıyla aynı). Boyutu $[\chi]=$ m²/s.
+2. **Eyleme iki yeni terim eklenir** (M-44'ün $S$'sine):
+$$\Delta S=\int dt\,d^3x\left[\frac{1}{2v_m^2}(\partial_t\chi)^2-\frac{1}{2}(\nabla\chi)^2+\chi\,q_n\,n_m\right]$$
+Zaman teriminin taşıyıcısı **kohezyon kanalıdır**: $v_m=c\sqrt{\Sigma/P_0}>10^4c$ (Ek A.3) — deplasman alanı, ortamın yırtılmaz iskeleti üzerinden ayarlanır.
+3. **Hâl denkleminin doğrusallaştırılması** (M-44'ün iki kanalı): $\delta P=\left(\frac{\partial P}{\partial\rho}\right)_\chi\delta\rho+\left(\frac{\partial P}{\partial\chi}\right)_\rho\delta\chi$; deplasman kanalında $\delta\rho=0$ ($k=0$, M-44) ve ikinci katsayı tanımlanır: $\left(\frac{\partial P}{\partial\chi}\right)_\rho\equiv-C$.
+
+### Adımlar
+
+1. **Statik alan denklemi** ($\delta\Delta S/\delta\chi=0$, durağan): $\nabla^2\chi=-q_n n_m$ — Poisson. Noktasal $N$ nükleon için
+$$\chi(r)=\frac{Nq_n}{4\pi r}$$
+**$1/r$ yayılımı eylemden çıkar** (boyut denetimi: $[\nabla^2\chi]=$ s⁻¹ $=[q_nn_m]$ ✓).
+2. **Basınç profili** (Varsayım 3): $\delta P=-C\chi\Rightarrow P(r)=P_0-\dfrac{CNq_n}{4\pi r}$ — **M-28/M-35'in profili birebir** ($dP/dr=C\,\Phi_q$ ✓; $[C\chi]=$ Pa ✓).
+3. **Kütle-itim** (M-2): $\vec a=-\dfrac{1}{\rho_n}\nabla P=-\dfrac{Cq_n}{4\pi\rho_n m_n}\dfrac{M}{r^2}\hat r$ — $1/r^2$ ve $\mathcal{G}=\dfrac{Cq_n}{4\pi\rho_n m_n}$ **eylemden türetilmiş olur** — $\mathcal{G}=\alpha/\rho_n$ yereldir, evrensel sabit değildir (Postülat 4); arka plan değeriyle sayısal denetim: $6{,}70\times10^{-11}$ — ölçülenin %0,4 içinde ✓.
+4. **Zaman sektörü ve nedensellik:** $\chi$ dalgaları $v_m>10^4c$'de yayılır — statik alanın ayar hızı budur ve Bell-tipi sınırların ($\Sigma/P_0>10^8$, Salart) kanalıyla **aynıdır.** Standart fiziğin "kütleçekim dalgası" dediği gözlemler ise $\rho$-sektöründedir ve **yerel** $c$'de yayılır (M-44'ün stiff kanalı) — GW170817 uyumu bozulmaz. **Ayrışabilir öngörü:** statik alan ayarı ile dalga yayılımı iki ayrı hızdır.
+
+### Sonuç
+
+$$\boxed{\;\nabla^2\chi=-q_nn_m\;;\qquad \left(\frac{\partial P}{\partial\chi}\right)_\rho=-C\;;\qquad
+\vec a=-\frac{Cq_n}{4\pi\rho_nm_n}\frac{M}{r^2}\hat r\;\;\Rightarrow\;\;\mathcal{G}=\frac{Cq_n}{4\pi\rho_nm_n}\;}$$
+
+**$C$'nin kimliği kesinleşir:** hâl denkleminin **iki** tepki katsayısı vardır ve ikisi tam olarak $(A,C)$'dir — $A=(\partial P/\partial\rho)_\chi=c^2$ (dalga sertliği), $C=-(\partial P/\partial\chi)_\rho$ (deplasman direnci). M-35'in "ikisi bağımsız olamaz" kaydı ile `C_HAL_KOPRUSU`'nun $4{,}2\times10^{-39}$'luk empedans oranı, artık tek cümledir: *kütle-itimin zayıflığı, hâl denkleminin iki kısmi türevinin oranıdır.* Kazançlar: **(i)** M-44'ün 1 numaralı eksiği kapanır — kütle-itim eylemden çıkar; **(ii)** M-35'in [T (yapı)] statüsü eylem-temelli olur; **(iii)** korunum programı (Noether) kütle-itim sektörü için açılır.
+
+### Geçerlilik Sınırı
+
+- **$C$'nin değeri türetilmemiştir** — yapı [T], değer [F]: $10^{-39}$'luk hiyerarşinin mikro-modeli (nükleonun vakum-cepli girdap yapısından $(\partial P/\partial\chi)_\rho$'nun hesabı) M-44'ün 2 numaralı eksiğiyle birleşerek bloğun kalan işi olur.
+- Doğrusallaştırılmış rejim ($\delta P\ll P_0$): galaktik ve Güneş Sistemi alanları için $\delta P/P_0\lesssim10^{-9}$ — bol marj; güçlü-alan davranışı yazılmamıştır.
+- Dönüsüz akış kısıtı ve $\omega_1/\omega_2$ temsilsizliği (M-44 md. 3) burada da sürer; kaynak terimi izotropik pulsasyon koludur, dolanım kolu ($\gamma_n$, F4) eylemin hâlâ dışındadır.
+
+### Açık Uçlar
+
+- $(\partial P/\partial\chi)_\rho=-C$'nin mikro türetimi (hedef: $C\ell_\omega/\rho_0c=4{,}2\times10^{-39}$) → $G$ tamamen türetilmiş olur.
+- F4/dolanım kolunun eyleme bağlanması (yönelim alanı; M-44 md. 3 ile ortak).
+- Noether akımlarının hesabı: $\chi$-sektörünün korunumları ve M-38'in silindirik akısının türetilmesi.
+- $v_m$-sektörünün gözlemsel ayrıştırılması: statik alan ayar hızı ile GW hızının farklı olduğu bir düzenek (öneri: yakın çift kütlelerde alan-gecikme imzası).
+
+---
+
+*Blok I, matematik programının Faz 1–6'sı sonrası açılmıştır. M-44 hâl denklemini ve eylemi kurar; M-46 deplasman alanının yayılım terimini ekleyerek kütle-itimi eyleme bağlar. Sonraki girdiler eylemin genişletilmesiyle eklenecektir.*

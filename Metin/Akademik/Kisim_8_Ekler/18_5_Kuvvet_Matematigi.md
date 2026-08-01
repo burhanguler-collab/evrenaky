@@ -79,8 +79,9 @@ $$[\alpha] = \frac{[\mathrm{kg\,m^{-3}s^{-1}}]\cdot[\mathrm{m^3 s^{-1}}]}{[\math
 
 ### Açık Uçlar
 
-- $q_n$'nin $\omega_2$ frekansı ve nükleon deplasman hacminden hesabı → $\alpha$ tamamen türetilmiş olur.
-- $C$ ile M-1'in hâl katsayısı $A$ arasındaki ilişki (ikisi bağımsız olamaz).
+- $q_n$'nin $\omega_2$ frekansı ve nükleon deplasman hacminden hesabı → $\alpha$ tamamen türetilmiş olur. *(Aday kapanış M-45'tedir: $q_n=4\pi r_n^2\sqrt2c\sqrt{m_p/m_e}=1{,}62\times10^{-19}$ m³/s.)*
+- ~~$C$ ile M-1'in hâl katsayısı $A$ arasındaki ilişki~~ → **kimlik kuruldu** *(hesap: `91_A0_KOPRU/C_HAL_KOPRUSU.md`)*: $A=P_0/\rho_0=c^2$ (dalga kanalının sertliği) ve iki kanalın empedans oranı kapalı biçimde $\dfrac{C\,\ell_\omega}{\rho_0c}=2\sqrt2\,\dfrac{\mathcal{G}m_n/c^2}{r_n}=4{,}2\times10^{-39}$'dur — kütle-itimin zayıflık hiyerarşisi tek boyutsuz sayıda. $\chi$-yayılım terimi **M-46'da yazılmıştır** — profil ve kütle-itim artık eylemden çıkar, $C$'nin kimliği hâl denkleminin ikinci katsayısıdır ($-(\partial P/\partial\chi)_
+ho$); kalan iş yalnız $C$'nin **değerinin** mikro türetimidir ($G$'nin türetimine eşdeğer). *(Tuzak kaydı: $C\approx3{,}8\rho_nH_0$ görünümü $a_0\sim cH_0$ rastlantısının aynısıdır; yüksek-$z$ sınavı kozmik okumayı dışlamıştır — $C$, $H_0$'a bağlanamaz.)*
 
 ---
 
@@ -997,6 +998,53 @@ Sönüm zamanı $\tau\equiv v/|\dot v|$ iki yazımda farklı ölçeklenir:
 
 ---
 
+## M-45 · İki Kolun Güç Eşbölüşümü: $q_n/\gamma_n$ Oranı ve $a_0$'ın Aday Kapanışı · **[T (yapı) / T-aday (eşbölüşüm)]**
+
+**Kullanıldığı bölümler:** 6.5.4.3 (Adım 6–7), 6.5.4.5 (a₀'ın değeri), Kısım X 10.7. Bağlı katalog: M-15/M-39 (kafes=atom), M-35 (açık ucu), Ek A.2 ($\sqrt2c$). Hesap: `CALISMA/SINIF_CALISMASI/91_A0_KOPRU/YOL1_KAPANIS.md`.
+
+M-35'in açık ucu şuydu: *"$q_n$'nin $\omega_2$ frekansı ve nükleon deplasman hacminden hesabı → $\alpha$ tamamen türetilmiş olur."* Bu türetim o ucu, iki kolun oranı üzerinden **aday** düzeyinde kapatır.
+
+### Varsayımlar
+
+1. **Tek kaynak, iki izdüşüm** (H.0 köken haritası): $\gamma_n$ ($\omega_1$, 3B-içi dönüş) ve $q_n$ ($\omega_2$, W-eksenli pulsasyon), nükleonun tek 4B çift dönüşünün iki düzlem izdüşümüdür.
+2. **İzoklinik eş-güç — türetilmiştir** *(tam akıl yürütme ve hesap: `91_A0_KOPRU/ESGUC_ISPAT.md`)*: **(2a)** Ek A.2'nin $\sqrt2c$'si izoklinik kilidin doğrudan ifadesidir — kararlılık her iki değişmez düzlemi ayrı ayrı kavrama sınırında ($c$) doyurur, $\sqrt{c^2+c^2}=\sqrt2c$; iki kanal **tek ortak frekansta** sürülür ve çekirdeğin düzlem enerjileri eşit kilitlenir. **(2b)** Dejenere iki mod, ortak Zerre banyosuyla sürekli alışverişte olduğundan kararlı hâlde mod başına ortalama enerji eşitlenir (eşbölüşüm; değiş-tokuş/vuru yoluyla da aynı sonuç). **(2c)** Eşbölüşümün geçerlilik koşulu hesaplanmış ve kapanmıştır: kanal enerjisi $E=m_pc^2$, sızıntı gücü (alan-kurma işi, üst sınır) $\Delta P\cdot q_n=5{,}8\times10^{-24}$ W → boşalma süresi $\sim0{,}8$ milyon yıl; banyo teması dönüş periyodu ölçeğindedir ($10^{-23}$ s) — $t_{term}/t_{sızıntı}\lesssim10^{-30}$, **36 mertebe marj.** Aynı hesap bir düzeltme de getirir: ışıma düzeltmesi $10^{-30}$ mertebesindedir, dolayısıyla ölçülen %1'lik fark (42,4'e karşı 42,85) fiziksel bir açık değil, medyanın kendi ölçüm hatasının (%3,5) içidir — **oran, ölçüm hassasiyeti neye izin veriyorsa o kadar tam $\sqrt{m_p/m_e}$ olmalıdır** (keskinleşen öngörü; G-9).
+3. **Taşıyıcı ayrımı:** dolanım kolunun süredurumunu nükleon özü taşır ($m_p$, yarıçap $r_n$); pulsasyon kolu **deplasman kafesinin** nefesidir ve kafes atomun tamamıdır (M-15/M-39) — kafesin oynak süredurumunu zarfın en hafif bileşeni, elektron kütlesi ($m_e$) taşır. Tür-ayrımlı genel hâl $u_r/v_t=\sqrt{Am_p/(Zm_e)}$'dir (H: 42,85 · He/metaller: 60,6); nükleonların yarıdan fazlası hidrojen olduğundan ($X>0{,}5$) **medyan her ortamda H değerine kilitlenir** — $\ell_\omega$ medyanının bileşimden etkilenmemesini (kütleyle korelasyon $+0{,}03$) bu kilit açıklar ve tür-ayrımlı ikinci bir mod ($\ell\approx51$ fm) öngörür.
+4. **Kürsel kaynak yazımı:** $q_n=4\pi r_n^2 u_r$, $\gamma_n=2\pi r_n v_t$ ($u_r$: radyal pulsasyon hızı, $v_t$: teğetsel dolanım hızı).
+
+### Adımlar
+
+1. Eş enerji (Varsayım 2+3): $\tfrac12 m_e u_r^2=\tfrac12 m_p v_t^2 \Rightarrow u_r/v_t=\sqrt{m_p/m_e}=42{,}85$.
+2. Vortisite uzunluğu: $\ell_\omega=\dfrac{q_n}{2\gamma_n}=r_n\dfrac{u_r}{v_t}=r_n\sqrt{\dfrac{m_p}{m_e}}=36{,}05$ fm.
+3. İvme ölçeği (6.5.4.3 Adım 6 ile): $a_0=\dfrac{\mathcal{G}m_n}{\ell_\omega^2}=\dfrac{\mathcal{G}\,m_n\,m_e}{m_p\,r_n^{2}}=8{,}60\times10^{-11}$ m/s².
+4. **Mutlak debiler** (Ek A.2 çapasıyla — kararlı vakum-cepli girdap duvarını $\sqrt2c$'de döndürür → $v_t=\sqrt2c$):
+$$\gamma_n=2\pi r_n\sqrt2c=2{,}24\times10^{-6}\ \mathrm{m^2/s},\qquad
+q_n=4\pi r_n^2\sqrt2c\sqrt{m_p/m_e}=1{,}62\times10^{-19}\ \mathrm{m^3/s}$$
+$u_r\approx61c$'dir — çelişki değildir: pulsasyon cephesi kohezyon kanalında taşınır ($v_m>10^4c$; Ek A.3) ve $c$ mutlak sınır değildir (Postülat 4).
+5. $C$–$q_n$ dejenerasyonu kırılır: $C=\dfrac{4\pi \mathcal{G}\rho_n m_n}{q_n}=2{,}35$ kg·m⁻³·s⁻¹ (denetim: $\alpha=Cq_n/4\pi m_n=1{,}80\times10^{7}$ s⁻², $\mathcal{G}=\alpha/\rho_n$ birebir geri çıkar ✓).
+
+### Sonuç
+
+$$\boxed{\;\frac{u_r}{v_t}=\sqrt{\frac{m_p}{m_e}}\;\Longrightarrow\;
+\ell_\omega=r_n\sqrt{\frac{m_p}{m_e}}\;\Longrightarrow\;
+a_0=\frac{\mathcal{G}\,m_n\,m_e}{m_p\,r_n^{2}}\;}$$
+
+**Gözlemle karşılaştırma:** $u_r/v_t$ ölçülen 42,4 (öngörü 42,85 — %1,1); $\ell_\omega$ ölçülen 35,7 fm (öngörü 36,05 — %1,0; medyanın kendi hatası %3,5); $a_0$ öngörüsü, galaktik beş bağımsız ölçümün bandının ($6{,}8$–$9{,}3\times10^{-11}$) içinde — **sıfır kalibrasyonla.** Blok H'nin "tek serbest çift" dediği $(C,q_n)$ kalemi, bu türetimle **iki ayrı sayıya** çözülür.
+
+### Geçerlilik Sınırı
+
+- **Türetimin iç zinciri tamamlanmıştır** (izoklinik kilit + banyo eşbölüşümü + 36 mertebelik marj hesabı); kalan yapısal vekiller: $m_e$ ataması kafes-atomu okumasına bağlıdır, $r_n$ olarak proton yük yarıçapı vekildir. Başka-yere-bakma hesabı dar aday uzayında ~$2\sigma$, geniş uzayda %40 verir (`YOL1_KAPANIS.md` md. 3) — bu yüzden **bağımsız $\ell_\omega$ ölçümü ve hakem denetimi gelene dek** Ek C'de $a_0$'ın rozeti **[S] kalır**, buradaki kapanış **[T-aday]** olarak kayıtlıdır.
+- Yanlışlanabilir sonuçları G-9'dadır: bağımsız $\ell_\omega$ ölçümü 36,0 fm'e yakınsamalı; oran $r_p$ revizyonlarını izlemeli; $a_0^{etkin}$ hiçbir ortamda $X\cdot a_0^{M45}\approx6{,}3\times10^{-11}$ tabanının altına inmemeli.
+
+### Açık Uçlar
+
+- **Mutlak çapa seçimi:** $v_t$ bileşke duvar hızı mı ($\sqrt2c$ — burada kullanılan) düzlem-başına hız mı ($c$)? Oranı ve $a_0$'ı etkilemez; $(\gamma_n,q_n,C)$ mutlakları ortak $\sqrt2$ çarpanıyla oynar. Ek C satır 8'in ekvator-hızı bütçesiyle birlikte çözülmelidir.
+- **Banyo temas kesrinin ($\eta$) ilk-ilkelerden hesabı:** eşbölüşüm koşulu $\eta$'nın her fiziksel değerinde sağlanır (2c'nin 36 mertebelik marjı); yine de $\eta$'nın kendisi Zerre-çarpışma modelinden hesaplanırsa marj bir ölçüme döner.
+- ~~$C=2{,}35$'in M-1'in hâl katsayısı $A$ ile ilişkisi~~ → **kimlik kuruldu** (`91_A0_KOPRU/C_HAL_KOPRUSU.md`; M-35 Açık Uçlar): $C\ell_\omega/\rho_0c=2\sqrt2(\mathcal{G}m_n/c^2)/r_n=4{,}2\times10^{-39}$; $\chi$-yayılım terimi M-46'da yazıldı (kütle-itim eylemden çıkar; $C=-(\partial P/\partial\chi)_
+ho$); kalan: $C$'nin değerinin mikro türetimi — yapılırsa $G$ türetilmiş olur.
+- $u_r$ taşınımının M-4/M-43 eşik yapısıyla tam tutarlılık hesabı; tür-ayrımlı ikinci modun ($\ell\approx51$ fm) galaksi-içi ince yapıda aranması; kalıcı bir yüzde-düzeyi oran sapması bulunursa $m_e$-etkin süredurumu / $r_n$ vekili hesabı.
+
+---
+
 ## H.1 Blok Özeti: Ölçek Haritası ve Bağımlılık Zinciri
 
 | No | Kuvvet | Köken | Akı geometrisi | Uzaklık yasası | Baskın ölçek | Statü |
@@ -1010,6 +1058,7 @@ Sönüm zamanı $\tau\equiv v/|\dot v|$ iki yazımda farklı ölçeklenir:
 | M-41 | Dönme sürüklenmesi — yörünge düzlemi | $\omega_1$ | aynı alan, Coriolis kuvveti | $2GJ/c^2a^3$ | uydu yörüngeleri | **[T]** — yeni parametre yok |
 | M-42 | *(kuvvet değil)* ölçek yapısı $\Lambda$ | $\omega_2$ potansiyeli | — (skaler ölçekleme) | $\Lambda=1-\Phi/c^2$; $c_{loc}\propto\Lambda^2$ | tüm ışık yolu gözlemleri | **[T]** — yeni parametre yok |
 | M-43 | *(kuvvet değil)* artık kuplajın rejimi | — (ortam tepkisi) | altkritik bastırma | $F\propto\rho_0v^2A\,(v/v_{kav})^{3}$ | tüm sürükleme/sönüm hesapları | [T (yapı)]/**[S ($n$)]** — $\eta_E$'yi kaldırır |
+| M-45 | *(kuvvet değil)* iki kolun eş-gücü | $\omega_1\!\leftrightarrow\!\omega_2$ | — (kaynak simetrisi) | $u_r/v_t=\sqrt{m_p/m_e}$ → $a_0=\mathcal{G}m_nm_e/(m_pr_n^2)$ | galaktik ivme ölçeği; $(C,q_n)$ çifti çözülür | **[T-aday]** — eş-güç ispatı açık |
 
 M-42 bir kuvvet türetmez; diğer altısının **ölçüm çerçevesini** sabitler. Bu yüzden tablodaki her uzaklık yasası ona bağımlıdır: $\Phi$'nin cetvel ve saatle birlikte nasıl ölçeklendiği bilinmeden hiçbirinin sayısal büyüklüğü gözlemle karşılaştırılamaz.
 
@@ -1019,7 +1068,7 @@ M-42 bir kuvvet türetmez; diğer altısının **ölçüm çerçevesini** sabitl
 
 $$\underbrace{q_n,\;C}_{\text{tek serbest çift}} \Rightarrow \alpha \Rightarrow \underbrace{\text{M-35}}_{1/r^2} \Rightarrow \underbrace{\text{M-36}}_{\partial(\text{M-35})} \qquad\qquad \underbrace{a_{radyal}}_{\text{M-35}+\text{M-38}} \Rightarrow \underbrace{v_\theta(R)}_{\text{M-37}} \Rightarrow \underbrace{v_e}_{\text{M-39}}$$
 
-M-36 tamamen M-35'e, M-37 ve M-39 radyal yasaya **bağımlıdır**. Bağımsız serbest kalemler yalnız üçtür: $(Cq_n)$, $r_0$, $\kappa_5$ — artı M-43'ün altkritik bastırma üssü $n$ (boyutsuz, tek gözlemden). M-40'ın $\xi$'si ise artık **türetilmiştir** ([T]): $\xi=(I/MR^2)\,|\delta c_{loc}/c| = (I/MR^2)(2\Phi/c^2)$, ve $|\delta c_{loc}/c|$ M-42'de ışık bükülmesinden sabitlenmiştir — yani bloğa parametre eklemez, **çıkarır.** $\eta_E$ de M-43 ile boyutlu serbest parametre olmaktan çıkmıştır.
+M-36 tamamen M-35'e, M-37 ve M-39 radyal yasaya **bağımlıdır**. Bağımsız serbest kalemler yalnız üçtür: $(Cq_n)$, $r_0$, $\kappa_5$ — artı M-43'ün altkritik bastırma üssü $n$ (boyutsuz, tek gözlemden). $(Cq_n)$ çifti için M-45'in aday kapanışı kayıtlıdır: eş-güç türetilmiştir (izoklinik kilit + banyo eşbölüşümü, termalleşme koşulu 36 mertebe marjla kapalı) ve $\sqrt2c$ çapasıyla $q_n=1{,}62\times10^{-19}$ m³/s, $C=2{,}35$ kg·m⁻³·s⁻¹ — **[T-aday]**; bağımsız $\ell_\omega$ ölçümü ve hakem denetimi gelene dek çift Ek C'de [F] sayılmaya devam eder. M-40'ın $\xi$'si ise artık **türetilmiştir** ([T]): $\xi=(I/MR^2)\,|\delta c_{loc}/c| = (I/MR^2)(2\Phi/c^2)$, ve $|\delta c_{loc}/c|$ M-42'de ışık bükülmesinden sabitlenmiştir — yani bloğa parametre eklemez, **çıkarır.** $\eta_E$ de M-43 ile boyutlu serbest parametre olmaktan çıkmıştır.
 
 **İki eşik, iki kanal (blokun kapanış ilkesi).** Ortamın $c$'yi aşan iki tepki kanalı ayrı eşiklere bağlıdır ve karıştırılmamalıdır:
 
