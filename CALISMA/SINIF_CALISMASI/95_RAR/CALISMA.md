@@ -1,5 +1,9 @@
 # 95_RAR — Radyal İvme Bağıntısı: teorinin **biçimi** sınanıyor · Çalışma dosyası
 
+> ### 🪟 PENCERE RESMİLEŞMESİ (M-47)
+>
+> Resmî denklem artık Rankine penceresini içerir: $v_{F4}^2=\sqrt{\mathcal{G}M_{kaps}a_0}\cdot\min(1,a_0/g_{kaps})$, $a_0=7{,}67\times10^{-11}$ m/s². Bu dosyanın sayıları penceresiz kurulumun kaydıdır; pencereli yeniden koşum: `CALISMA/pencere_sinavi.py` → `87_ETKIN_YASA/SONUC_PENCERE.csv`. Bu sınavın özel güncellemesi: aynı 2693 noktada pencereli biçim eğimi **+0,0002 ≈ 0** (penceresiz +0,051) — md. 2–3'ün 'geçiş biçimi yanlış' bulgusu M-47 ile kapanmıştır; md. 9 iş 1 kapalıdır.
+
 > ### ⚡ NİHAİ KURULUM (1 Ağustos 2026 · karar: [86_NIHAI](../86_NIHAI/CALISMA.md))
 >
 > Bu dosyanın analizi **eski (A) kurulumla** yapıldı ve tarihsel kayıt olarak duruyor.

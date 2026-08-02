@@ -1,5 +1,9 @@
 # 97_BTFR — Teorinin en güçlü türetim iddiası, fit yapmadan · Çalışma dosyası
 
+> ### 🪟 PENCERE RESMİLEŞMESİ (M-47)
+>
+> Resmî denklem artık Rankine penceresini içerir: $v_{F4}^2=\sqrt{\mathcal{G}M_{kaps}a_0}\cdot\min(1,a_0/g_{kaps})$, $a_0=7{,}67\times10^{-11}$ m/s². Bu dosyanın sayıları penceresiz kurulumun kaydıdır; pencereli yeniden koşum: `CALISMA/pencere_sinavi.py` → `87_ETKIN_YASA/SONUC_PENCERE.csv`. Bu sınavın özel güncellemesi — **TAM BORU HATTI v3 KOŞULDU** (`btfr_sinavi.py`, pencereli resmî $a_0$ ve $W$; çıktılar yenilendi: `SONUC.csv` artık `W_pencere` kolonu taşır, `btfr.png` v3): **eğim 3,717** (gözlenen band 3,530–3,738'in içinde), **normalizasyon 0,978** (hız açığı −%2,2), saçılma 0,058 dex, **gereken $a_0$ çarpanı ×1,11** (yarıçap duyarlılığı ×1,00–1,11 — bire oturdu; kurulum-A kaydı ×2,02 idi). Yedi hız tanımı: $V_f$ ×1,11 · $V_{2R_{eff}}$ ×1,02 · $V_{max}$ ×1,34 · W-tanımları ×1,5–2,6 (bilinen tanım gerilimleri). Aşağıdaki gövde, kurulum-A/nihai dönemin tarihsel kaydıdır.
+
 > ### ⚡ NİHAİ KURULUM (1 Ağustos 2026 · karar: [86_NIHAI](../86_NIHAI/CALISMA.md))
 >
 > Bu dosyanın analizi **eski (A) kurulumla** yapıldı ve tarihsel kayıt olarak duruyor.

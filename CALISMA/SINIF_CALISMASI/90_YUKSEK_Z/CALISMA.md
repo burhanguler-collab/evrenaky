@@ -1,5 +1,9 @@
 # 90_YUKSEK_Z — Teorinin **ilk SPARC dışı sınavı** · Çalışma dosyası
 
+> ### 🪟 PENCERE RESMİLEŞMESİ (M-47)
+>
+> Resmî denklem artık Rankine penceresini içerir: $v_{F4}^2=\sqrt{\mathcal{G}M_{kaps}a_0}\cdot\min(1,a_0/g_{kaps})$, $a_0=7{,}67\times10^{-11}$ m/s². Bu dosyanın sayıları penceresiz kurulumun kaydıdır; pencereli yeniden koşum: `CALISMA/pencere_sinavi.py` → `87_ETKIN_YASA/SONUC_PENCERE.csv`. Bu sınavın özel güncellemesi: pencereli öngörü 6 diskin 5'inde bant içinde (medyan artık −0,072); üç üst-sınır galaksisi de sağlanır; kozmik okuma pencereyle daha da keskin dışlanır ($f_{DM}\propto a_0^{3/2}$).
+
 > ### ⚡ NİHAİ KURULUM (1 Ağustos 2026 · karar: [86_NIHAI](../86_NIHAI/CALISMA.md))
 >
 > Bu dosyanın analizi **eski (A) kurulumla** yapıldı ve tarihsel kayıt olarak duruyor.

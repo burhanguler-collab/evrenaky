@@ -85,7 +85,8 @@ H0_SI = 70e3 / 3.0857e22
 ACC = 1e6 / 3.0856776e19
 CH0 = (C_SI * H0_SI) / ACC
 KATSAYI = 16.1
-A0 = CH0 / KATSAYI
+A0_TARIHSEL = CH0 / KATSAYI                  # kurulum A (ilk surum)
+A0 = 1.75 * 1.038 * A0_TARIHSEL              # v3: PENCERELI RESMI (M-47) = 7,67e-11 m/s^2
 RHO_CRIT = 3 * 0.07 ** 2 / (8 * np.pi * G)
 H_RED, RB, UPS = 0.7, 1.4, 0.50
 KESIM_T = -np.log10(G * A0)
@@ -159,12 +160,14 @@ Rout = np.array([ROT[n]['R'][-1] for n in AD])
 Vbar2out = np.array([max(ROT[n]['Vb2'][-1], 0.0) for n in AD])
 lom = np.sqrt(G * Mb / A0)
 F4 = np.sqrt(G * Mb * A0)                 # = G M_b / l_omega
+gkout = G * Mb / Rout ** 2                # g_kaps (M_bar yaklasimi; md. 6.8)
+Wout = np.minimum(1.0, A0 / gkout)        # M-47 Rankine penceresi
 v_f4 = F4 ** 0.5                          # yalniz F4 (asimptot)
-v_tam = np.sqrt(Vbar2out + F4)            # TAM: F1 + F4
+v_tam = np.sqrt(Vbar2out + F4 * Wout)     # PENCERELI RESMI: F1 + F4*W (M-47)
 print('eslesen: %d galaksi · l_omega/R_dis medyan %.2f · asimptot ulasilmayan %d'
       % (len(AD), np.median(lom / Rout), int((lom > Rout).sum())))
 
-def a0_carpani(vb2, f4, vgoz, asimptot=False):
+def a0_carpani(vb2, f4, vgoz, gk=None, asimptot=False):
     """Medyan sapmayi kapatan a_0 carpani k.
 
     a_0 -> k a_0 olunca F4 = sqrt(G M a_0) terimi sqrt(k) ile olceklenir,
@@ -173,7 +176,11 @@ def a0_carpani(vb2, f4, vgoz, asimptot=False):
     """
     if asimptot:
         return 10 ** (-4 * np.median(np.log10(np.sqrt(f4) / vgoz)))
-    fk = lambda k: np.median(np.log10(np.sqrt(vb2 + np.sqrt(k) * f4) / vgoz))
+    if gk is None:
+        fk = lambda k: np.median(np.log10(np.sqrt(vb2 + np.sqrt(k) * f4) / vgoz))
+    else:                                     # M-47: W carpanla birlikte olceklenir
+        fk = lambda k: np.median(np.log10(np.sqrt(
+            vb2 + np.sqrt(k) * f4 * np.minimum(1.0, k * A0 / gk)) / vgoz))
     a, b = 1e-3, 1e3
     if fk(a) > 0 or fk(b) < 0:
         return np.nan
@@ -196,9 +203,9 @@ print('SURUM KARSILASTIRMASI  (%d galaksi, R = son olcum noktasi)' % len(AD))
 print('  %-38s %11s %9s %8s %12s %11s'
       % ('kurulum', 'v_ong/v_olc', 'sacilma', 'egim', 'gereken a_0', '(naif form.)'))
 K_ASI = a0_carpani(Vbar2out, F4, Vf, asimptot=True)
-K_TAM = a0_carpani(Vbar2out, F4, Vf)
+K_TAM = a0_carpani(Vbar2out, F4, Vf, gk=gkout)
 for nm, v, kk, na in [('yalniz F4 asimptot (ILK SURUM)', v_f4, K_ASI, ''),
-                      ('V_bar(F1) + F4  (BU SURUM)', v_tam, K_TAM,
+                      ('V_bar(F1) + F4*W  (PENCERELI RESMI, M-47)', v_tam, K_TAM,
                        '%.2fx' % 10 ** (-4 * np.median(np.log10(v_tam / Vf))))]:
     d = np.log10(v / Vf)
     e = np.polyfit(np.log10(v), lMb, 1)[0]
@@ -206,7 +213,7 @@ for nm, v, kk, na in [('yalniz F4 asimptot (ILK SURUM)', v_f4, K_ASI, ''),
           % (nm, 10 ** np.median(d), np.std(d), e, kk, na))
 print('  NOT: naif formul 10^(-4*fark) yalniz saf-F4 asimptotunda gecerlidir;')
 print('       TAM formulde k sayisal cozulur (F4 payi medyan %.2f).'
-      % np.median(F4 / (Vbar2out + F4)))
+      % np.median(F4 * Wout / (Vbar2out + F4 * Wout)))
 eg_g, ke_g = np.polyfit(np.log10(Vf), lMb, 1)
 w = 1 / np.maximum(elMb, .02) ** 2
 A = np.vstack([np.log10(Vf), np.ones_like(Vf)]).T
@@ -222,10 +229,12 @@ for nm, fn in [('son nokta (kullanilan)', lambda r: -1),
                ('son noktanin bir icerisi', lambda r: -2),
                ('dis yarinin ortasi', lambda r: len(r) - max(1, len(r) // 4) - 1)]:
     vb = np.array([max(ROT[n]['Vb2'][fn(ROT[n]['R'])], 0.0) for n in AD])
-    v = np.sqrt(vb + F4)
+    Ri = np.array([ROT[n]['R'][fn(ROT[n]['R'])] for n in AD])
+    gki = G * Mb / Ri ** 2
+    v = np.sqrt(vb + F4 * np.minimum(1.0, A0 / gki))
     d = np.log10(v / Vf)
     print('  %-26s %11.3f %8.3f %11.2fx' % (nm, 10 ** np.median(d),
-          np.polyfit(np.log10(v), lMb, 1)[0], a0_carpani(vb, F4, Vf)))
+          np.polyfit(np.log10(v), lMb, 1)[0], a0_carpani(vb, F4, Vf, gk=gki)))
 
 # ---- yedi hiz tanimi ----
 print('\n' + '=' * 96)
@@ -242,14 +251,16 @@ for k, ek, ad in HIZ:
     el = np.array([B[n]['elMb'] for n in g])
     m = np.array([10 ** B[n]['lMb'] for n in g])
     vb = np.array([max(ROT[n]['Vb2'][-1], 0.0) for n in g])
-    vt = np.sqrt(vb + np.sqrt(G * m * A0))
+    Rg = np.array([ROT[n]['R'][-1] for n in g])
+    gkg = G * m / Rg ** 2
+    vt = np.sqrt(vb + np.sqrt(G * m * A0) * np.minimum(1.0, A0 / gkg))
     vk = v / 2 if k.startswith('W') else v
     d = np.log10(vt / vk)
     Aa = np.vstack([np.log10(v), np.ones_like(v)]).T
     ww = 1 / np.maximum(el, .02) ** 2
     eg = np.linalg.solve(Aa.T @ np.diag(ww) @ Aa, Aa.T @ np.diag(ww) @ lm)[0]
     art = lm - np.polyval(np.polyfit(np.log10(v), lm, 1), np.log10(v))
-    kk = a0_carpani(vb, np.sqrt(G * m * A0), vk)
+    kk = a0_carpani(vb, np.sqrt(G * m * A0), vk, gk=gkg)
     sonuc[k] = dict(ad=ad, n=len(g), eg=eg, sac=np.std(art), med=np.median(d),
                     carp=kk, naif=10 ** (-4 * np.median(d)), W=k.startswith('W'))
     print('  %-8s %5d | %8.3f %9.3f | %+11.3f %10.2fx %9.2fx%s'
@@ -278,7 +289,7 @@ with open(os.path.join(CIK, 'SONUC.csv'), 'w', encoding='utf-8', newline='') as 
     w2.writerow(['Galaksi', 'Tip', 'YAY_logMb', 'YAY_elogMb'] +
                 sum([['YAY_' + k, 'YAY_e' + k] for k, _, _ in HIZ], []) +
                 ['R_dis_kpc', 'Vbar_dis_kms', 'l_omega_kpc', 'l_om_bolu_R',
-                 'TEORI_v_yalnizF4', 'TEORI_v_TAM', 'FARK_dex_TAM', 'LCDM_Vmax_kms'])
+                 'TEORI_v_yalnizF4', 'TEORI_v_TAM', 'FARK_dex_TAM', 'W_pencere', 'LCDM_Vmax_kms'])
     for n in sorted(B, key=lambda x: -B[x]['lMb']):
         b = B[n]
         t = TIPAD.get(int(K[n]['T']), '') if n in K else ''
@@ -290,12 +301,14 @@ with open(os.path.join(CIK, 'SONUC.csv'), 'w', encoding='utf-8', newline='') as 
             lo = np.sqrt(G * m / A0)
             vb = max(ROT[n]['Vb2'][-1], 0.0)
             f4 = np.sqrt(G * m * A0)
-            vt = np.sqrt(vb + f4)
+            wr = min(1.0, A0 * ROT[n]['R'][-1] ** 2 / (G * m))     # M-47
+            vt = np.sqrt(vb + f4 * wr)
             row += ['%.2f' % ROT[n]['R'][-1], '%.1f' % np.sqrt(vb), '%.2f' % lo,
                     '%.3f' % (lo / ROT[n]['R'][-1]), '%.1f' % f4 ** .5, '%.1f' % vt,
-                    '%+.3f' % (np.log10(vt / b['Vf'])) if b['Vf'] > 0 else '']
+                    '%+.3f' % (np.log10(vt / b['Vf'])) if b['Vf'] > 0 else '',
+                    '%.3f' % wr]
         else:
-            row += [''] * 7
+            row += [''] * 8
         row += ['%.1f' % v_max_nfw(Mhalo_am(UPS * K[n]['L36'] * 1e9))
                 if (n in K and K[n]['L36'] > 0) else '']
         w2.writerow(row)
@@ -312,7 +325,7 @@ xx = np.linspace(lv.min() - .08, lv.max() + .08, 50)
 et_ = np.polyfit(np.log10(v_tam), lMb, 1)
 a1.scatter(np.log10(v_tam), lMb, s=40, marker='D', facecolors='none',
            edgecolors='#16a34a', linewidths=1.4, zorder=7,
-           label='EVRENAKI TAM: $V_{bar}^2+\\mathcal{G}M/\\ell_\\omega$  (galaksi başına)')
+           label='EVRENAKI RESMİ (M-47): $V_{bar}^2+\\sqrt{\\mathcal{G}Ma_0}\\cdot W$  (galaksi başına)')
 a1.plot(xx, np.polyval(et_, xx), '-', color='#16a34a', lw=2.2, alpha=.6, zorder=6,
         label='  └ eğilimi (eğim %.2f)' % et_[0])
 a1.plot(xx, 4 * xx + KESIM_T, ':', color='#4ade80', lw=1.8, zorder=6,
@@ -323,7 +336,7 @@ a1.plot(np.log10(vL), lmL, '.', color='#7c3aed', ms=7, zorder=3, alpha=.85,
         label='ΛCDM zinciri (eğim %.2f)' % egL)
 a1.set_xlabel('$\\log V_f$   (km/s)', fontsize=11)
 a1.set_ylabel('$\\log M_{bar}$   ($M_\\odot$, $\\Upsilon_*{=}0{,}5$)', fontsize=11)
-a1.set_title('Baryonik Tully-Fisher — F1 dahil edilmiş tam formül', fontsize=12.5,
+a1.set_title('Baryonik Tully-Fisher — pencereli resmî denklem (M-47)', fontsize=12.5,
              color='white', pad=9)
 a1.legend(fontsize=8.4, framealpha=.2, loc='upper left')
 a1.grid(alpha=.13)
@@ -336,7 +349,7 @@ a1.text(.97, .05, ('TAM formül:\n  $v_{öng}/v_{ölç}$ = %.3f\n  gereken $a_0$
         family='monospace')
 
 a2.set_facecolor('#121212')
-et = ['ilk sürüm\nyalnız F4', 'BU SÜRÜM\n$V_{bar}$+F4', 'gözlenen\n(ağırlıksız)',
+et = ['ilk sürüm\nyalnız F4', 'RESMİ (M-47)\n$V_{bar}$+F4·W', 'gözlenen\n(ağırlıksız)',
       'gözlenen\n(ağırlıklı)', 'ΛCDM\nzinciri']
 vv = [np.polyfit(np.log10(v_f4), lMb, 1)[0], np.polyfit(np.log10(v_tam), lMb, 1)[0],
       eg_g, eg_ga, egL]
@@ -354,16 +367,15 @@ a2.grid(alpha=.13, axis='y')
 a2.text(.98, .955, 'sarı bant = gözlenen aralık', transform=a2.transAxes, ha='right',
         fontsize=9, color='#fbbf24')
 
-fig.suptitle('BTFR Sınavı (v2): F1 Atılmıştı — Düzeltilmiş Hâl', fontsize=14, color='white', y=.985)
-fig.text(.5, .042, 'İlk sürüm teoriyi yalnız F4\'ün asimptotik limitiyle sınadı ($v^4=\\mathcal{G}M a_0$). '
-                   'Ama $\\ell_\\omega/R_{dış}$ medyan 0,36\'dır ve 6 galakside $>1$ — asimptot ulaşılmamış. '
-                   'F1 (SPARC ayrıştırmasından $V_{bar}$) eklenmiştir.', ha='center',
+fig.suptitle('BTFR Sınavı (v3): Pencereli Resmî Denklem (M-47)', fontsize=14, color='white', y=.985)
+fig.text(.5, .042, 'v3: Rankine penceresi (M-47) ve pencereli resmî $a_0=7{,}67\\times10^{-11}$ m/s$^2$ ile. '
+                   '$\ell_\omega/R_{dış}$ medyan %.2f; $R_{dış}$'"'"'ta çoğu galakside $W=1$ — pencere BTFR yapısını değiştirmez. '
+                   'F1 (SPARC ayrıştırmasından $V_{bar}$) dahildir.' % np.median(lom / Rout), ha='center',
          fontsize=9.2, color='#a1a1aa')
 vg = lambda x: ('%.2f' % x).replace('.', ',')
-fig.text(.5, .012, 'Gereken $a_0$ çarpanı ×%s\'ten ×%s\'ye iner — kitabın BTFR gerilimi kaydıyla (×2,26) '
-                   'örtüşür. Çarpan sayısal çözülmüştür; naif $10^{-4\\Delta}$ yalnız saf-F4 '
-                   'asimptotunda geçerlidir. Fit yoktur.'
-                   % (vg(K_ASI), vg(K_TAM)),
+fig.text(.5, .012, 'Gereken $a_0$ çarpanı ×%s (yarıçap duyarlılığı ×1,00–×1,11) — pencereli resmî kalibrasyonla '
+                   'kurulum-A döneminin ×2,02 gerilimi kapanmıştır. Çarpan sayısal çözülmüştür; fit yoktur.'
+                   % vg(K_TAM),
          ha='center', fontsize=9.2, color='#a1a1aa')
 plt.tight_layout(rect=[0, .072, 1, .955])
 plt.savefig(os.path.join(CIK, 'btfr.png'), dpi=150, facecolor=fig.get_facecolor(), edgecolor='none')

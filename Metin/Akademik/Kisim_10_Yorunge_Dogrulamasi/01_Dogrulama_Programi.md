@@ -14,7 +14,7 @@ Kitapta bugüne kadar her iki model de galaksi başına parametre fitledi ve kar
 
 | Eğri | Serbest parametre | Girdiler |
 |---|---|---|
-| **Evrenakı öngörüsü** | **0** | $v^2=V_{bar}^2+\sqrt{a_0\,\mathcal{G}M_{kaps}(R)}$; $a_0=7{,}39\times10^{-11}$ m/s² (küresel sabit); $\Upsilon_*=0{,}50$ |
+| **Evrenakı öngörüsü** | **0** | $v^2=V_{bar}^2+\sqrt{a_0\,\mathcal{G}M_{kaps}(R)}\cdot W$, $W=\min(1,a_0/g_{kaps})$ (M-47); $a_0=7{,}67\times10^{-11}$ m/s² (küresel sabit); $\Upsilon_*=0{,}50$ |
 | **Standart bilim öngörüsü** | **0** | $M_{200}\leftarrow$ abundance matching (Moster ve ark. 2013); $c_{200}\leftarrow$ Dutton & Macciò (2014); NFW; $\Upsilon_*=0{,}50$ |
 | Evrenakı fit | 2 | $\Upsilon_*$, $b$ |
 | ΛCDM fit | 2 | $\Upsilon_*$, $M_{200}$ |

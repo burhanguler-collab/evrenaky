@@ -79,7 +79,7 @@ $k=0$ özel hâlinde $P_0 \approx 6{,}1\times10^{33}$ Pa ve $\rho_0 \approx 6{,}
 ### Açık Uçlar
 - **Kalibrasyon kaynağı notu (M-42):** $P_0$ artık kütleçekimsel kızıla kaymadan değil, **ışık bükülmesinden** ($1{,}751''$) sabitlenir — 2 çarpanını veren gözlem odur. Kızıla kayma bu zincirde serbest kalır ve **öngörü** konumuna geçer ($\delta f/f = -\Phi/c^2$); dolayısıyla GPS/Pound–Rebka artık girdi değil, bağımsız doğrulamadır. Ayrıntı ve muhasebe: **M-42**.
 - $k$'nın SN 1987A gecikme bütçesiyle (2.4.4) bağımsız çapraz kontrolü (Ek C satır 3; 7.4).
-- Bağımsızlık notu: $G$'nin türetimi (M-28) yalnızca gradyan bağlaşımına ($\alpha$) dayanır ve $P_0$'ın mutlak değerinden bağımsızdır — bu sabitleme onu etkilemez; iki zincirin ayrıklığının açıkça belgelenmesi.
+- Bağımsızlık notu: $\mathcal{G}$'nin türetimi (M-28) yalnızca gradyan bağlaşımına ($\alpha$) dayanır ve $P_0$'ın mutlak değerinden bağımsızdır — bu sabitleme onu etkilemez; iki zincirin ayrıklığının açıkça belgelenmesi.
 
 ---
 

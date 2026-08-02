@@ -51,7 +51,7 @@ CH0 = (C_SI * H0_SI) / ACC
 KATSAYI = 16.1
 A0_ESKI = CH0 / KATSAYI               # kitabin eski degeri (tarihsel)
 # NIHAI KURULUM (karar: 86_NIHAI/CALISMA.md): a_0 = 1,75 x cH_0/16,1
-A0 = 1.75 * A0_ESKI
+A0 = 1.75 * 1.038 * A0_ESKI        # pencereli resmi kalibrasyon (M-47) = 7,67e-11 m/s^2
 A0_SI = A0 * ACC
 RHO_CRIT = 3 * 0.07 ** 2 / (8 * np.pi * G)
 H_RED, RB, UPS = 0.7, 1.4, 0.50
@@ -214,7 +214,7 @@ thead th{color:#a1a1aa;font-weight:600;font-size:11px}
   padding:7px 9px;margin-top:8px;line-height:1.5}
 input[type=range]{width:100%;accent-color:#22c55e}
 .kz{color:#22c55e}.kk{color:#f87171}.ks{color:#fbbf24}
-</style></head><body><div style="padding:9px 16px;background:rgba(34,197,94,0.10);border-bottom:1px solid #166534;color:#bbf7d0;font-size:12.5px;line-height:1.45">&#9889; <strong>Fitsizlik durumu:</strong> Teori hi&#231;bir fit de&#287;erine muhta&#231; de&#287;ildir; tek kalibre say&#305;n&#305;n (a&#8320;) da t&#252;retilmi&#351; kar&#351;&#305;l&#305;&#287;&#305; mevcuttur (M-45) ve yaln&#305;z stat&#252; disiplini gere&#287;i kalibre de&#287;er resm&#238; kullan&#305;mda tutulmaktad&#305;r. Bu paneldeki &#246;ng&#246;r&#252; e&#287;rilerinde galaksi ba&#351;&#305;na fitlenen hi&#231;bir say&#305; yoktur.</div>
+</style></head><body><div style="padding:9px 16px;background:rgba(34,197,94,0.10);border-bottom:1px solid #166534;color:#bbf7d0;font-size:12.5px;line-height:1.45">&#9889; <strong>Fitsizlik durumu:</strong> Teori hi&#231;bir fit de&#287;erine muhta&#231; de&#287;ildir; tek kalibre say&#305;n&#305;n (a&#8320;) da t&#252;retilmi&#351; kar&#351;&#305;l&#305;&#287;&#305; mevcuttur (M-45) ve yaln&#305;z stat&#252; disiplini gere&#287;i kalibre de&#287;er resm&#238; kullan&#305;mda tutulmaktad&#305;r. Bu paneldeki &#246;ng&#246;r&#252; e&#287;rilerinde galaksi ba&#351;&#305;na fitlenen hi&#231;bir say&#305; yoktur. &#214;ng&#246;r&#252; e&#287;rileri, M-47 penceresini i&#231;eren <strong>pencereli resm&#238; denklemle</strong> hesaplan&#305;r (W = min(1, a&#8320;/g<sub>kaps</sub>) &#8212; Rankine i&#231; kolu, parametresiz).</div>
 <div class="ust"><h1>BTFR sınavı — etkileşimli panel</h1>
 <span class="alt">@@N@@ galaksi · fit yok, iki taraf da sıfır serbest parametre ·
 her seçim bir düğmeye bağlı · tek dosya, dış bağımlılık yok</span></div>
@@ -285,7 +285,9 @@ const vobs=g=>(hiz[0]==='W'&&w2)?g.v[hiz]/2:g.v[hiz];
 /* Teorinin ongordugu hiz — M-37 merkezcil dengesi F1 ve F4'u BIRDEN alir.
     Tek kurulum vardir; secenek yok. (Yalniz-F4 asimptotik kurulum panelden
     KALDIRILDI: yanlis hesapti. Kayit: CALISMA.md duzeltme kaydi.) */
-function vong(g,m){return Math.sqrt(g.vb2[yar]+Math.sqrt(m)*g.F4);}
+function vong(g,m){const gk=Math.max(g.vb2[yar],1e-9)/g.R[yar];      /* g_bar vekili, (km/s)^2/kpc */
+ const Wp=Math.min(1, m*S.A0/gk);                                     /* M-47 penceresi */
+ return Math.sqrt(g.vb2[yar]+Math.sqrt(m)*g.F4*Wp);}
 
 /* dogrusal fit: y = a x + b  (w verilirse agirlikli) */
 function fit(x,y,w){let sw=0,sx=0,sy=0,sxx=0,sxy=0;
@@ -455,7 +457,7 @@ function ciz(){
    fx(vt[i],1)+' / '+fx(vobs(g),1)+' km/s  ('+(vt[i]<vobs(g)?'':'+')+
    fx(100*(vt[i]/vobs(g)-1),1)+'%)</b></div>';
  q('#dnk').innerHTML='v² = V<sub>bar</sub>²(Υ*) + 𝒢·M<sub>bar</sub>/ℓ<sub>ω</sub>'+
-  ' = V<sub>bar</sub>² + √(𝒢M<sub>bar</sub>a₀)';
+  ' = V<sub>bar</sub>² + √(𝒢M<sub>bar</sub>a₀)·W, &nbsp;W = min(1, a₀/g<sub>bar</sub>) — M-47 penceresi (g<sub>kaps</sub> yerine g<sub>bar</sub> vekili)';
  q('#grl').innerHTML=g.Vmax_l
   ? st('Υ* (aynı girdi)', fx(S.UPS,2),'O')+
     st('M<sub>*</sub> = Υ*·L[3,6]', us(g.Mstar)+' M☉','O')+

@@ -37,4 +37,4 @@
 Birinci kısımda postülaları verdik, ikinci kısımda zerre boyutundaki mikro mekaniği, bu kısımda ise galaktik boyuttaki makro mekaniği (kütle-itim) modelledik.
 
 Ancak akıllarda devasa bir soru var: *Suyu iten bu kütleler ile, suyun içinde bir damla gibi yüzen ışık (Zerre) nerede birleşecek?* 
-İşte Kısım 4'te (Bilimin Tekilliği), şu ana kadar ayrı ayrı inşa ettiğimiz mikro ve makro mekanizmaların matematiksel sentezine tanık olacağız: $G$ sabitinin akışkan parametrelerinden türetimini, beş hidrodinamik etkinin gözlemsel karşılıklarını ve Kütleçekimsel Merceklenmenin optik yorumunu keşfedeceğiz.
+İşte Kısım 4'te (Bilimin Tekilliği), şu ana kadar ayrı ayrı inşa ettiğimiz mikro ve makro mekanizmaların matematiksel sentezine tanık olacağız: "kütleçekim sabiti" $G$'nin akışkan parametrelerinden türetimini (teoride yerel $\mathcal{G}=\alpha/\rho_n$), beş hidrodinamik etkinin gözlemsel karşılıklarını ve Kütleçekimsel Merceklenmenin optik yorumunu keşfedeceğiz.

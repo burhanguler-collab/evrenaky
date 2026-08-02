@@ -70,7 +70,7 @@
 
 ## 3. TEMEL KUVVETLER VE MADDE ANATOMİSİ OLGULARI
 
-### 3.1 Kütleçekimin Tek Yönlü İtme (Push-Gravity) Doğası
+### 3.1 "Kütleçekim" Denen Etkinin Tek Yönlü İtme (Push-Gravity) Doğası
 * **Standart Fiziğin Çıkmazı:** Kütlelerin birbirini soyut bir şekilde "çekmesi" veya uzay-zamanın bükülmesi.
 * **Evrenakı Mekanik Çözümü:** Çekim yoktur; kütle-itim vardır. Nükleon merkezindeki "Vakum Cebi" ve çeperdeki "Evrenakı Rampası" nedeniyle cisimler yüksek basınca sahip dış ortamdan düşük basınca doğru itilir ($\vec a = -\nabla P / \rho$).
 

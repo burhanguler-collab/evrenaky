@@ -41,8 +41,8 @@ ACC = 1e6 / 3.0856776e19
 CH0 = (C_SI * H0_SI) / ACC
 KATSAYI = 16.1
 A0 = CH0 / KATSAYI                    # kitabin eski degeri (tarihsel)
-# NIHAI KURULUM (karar: 86_NIHAI/CALISMA.md): yerel l_omega + a_0 x1,75
-A0N = 1.75 * A0
+# NIHAI KURULUM (86_NIHAI) + PENCERELI RESMI KALIBRASYON (M-47; 87_ETKIN_YASA/PENCERE_TURETIMI.md)
+A0N = 1.75 * 1.038 * A0            # = 7,67e-11 m/s^2
 A0_SI = A0N * ACC
 RHO_CRIT = 3 * 0.07 ** 2 / (8 * np.pi * G)
 H_RED, RB, UPS_PS = 0.7, 1.4, 0.50
@@ -96,8 +96,11 @@ olc = lambda d, mv, k: dict(
 def fitle(d, tur):
     if tur == 'evr':
         # NIHAI bicimin fiti: v^2 = Vbar^2(Y) + (10^lb) sqrt(M_kaps(Y))
+        # pencereli bicim (M-47): a0_fit = (10^lb)^2/G, W = min(1, a0_fit R^2 / (G Mkaps))
         f = lambda R, Y, lb, _d=d: np.sqrt(np.maximum(Vbar2(_d, Y), 1e-9)
-                                           + (10 ** lb) * np.sqrt(np.maximum(Mkaps(_d, Y), 1e-9)))
+                                           + (10 ** lb) * np.sqrt(np.maximum(Mkaps(_d, Y), 1e-9))
+                                           * np.minimum(1.0, (10 ** lb) ** 2 * R ** 2
+                                                        / (G * G * np.maximum(Mkaps(_d, Y), 1e-9))))
         p0, lo, hi = [0.5, -6.4], [YLO, -12], [YHI, -1]
     else:
         f = lambda R, Y, lg, _d=d: np.sqrt(np.maximum(Vbar2(_d, Y), 1e-9) + v_nfw2(R, 10 ** lg))
@@ -115,7 +118,9 @@ for d in GAL:
     M = Mkaps(d, UPS_PS)
     Mb = float(max(M[-1], 1e-6))
     lom = float(np.sqrt(G * Mb / A0N))
-    eo = np.sqrt(np.maximum(Vbar2(d, UPS_PS), 1e-9) + np.sqrt(A0N * G * np.maximum(M, 1e-9)))
+    gkap = G * np.maximum(M, 1e-9) / d['R'] ** 2
+    Wp = np.minimum(1.0, A0N / gkap)                   # M-47 penceresi
+    eo = np.sqrt(np.maximum(Vbar2(d, UPS_PS), 1e-9) + np.sqrt(A0N * G * np.maximum(M, 1e-9)) * Wp)
     Ms = UPS_PS * d['L36']
     M200 = Mhalo_am(Ms)
     lo_ = np.sqrt(np.maximum(Vbar2(d, UPS_PS), 1e-9) + v_nfw2(d['R'], M200))
@@ -197,7 +202,7 @@ thead th{color:#a1a1aa;font-weight:600;font-size:11px}
   font-family:ui-monospace,Consolas,monospace;color:#93c5fd;line-height:1.7}
 .not{font-size:11.5px;color:#71717a;margin-top:9px;line-height:1.5}
 .kz{color:#22c55e}.kk{color:#f87171}
-</style></head><body><div style="padding:9px 16px;background:rgba(34,197,94,0.10);border-bottom:1px solid #166534;color:#bbf7d0;font-size:12.5px;line-height:1.45">&#9889; <strong>Fitsizlik durumu:</strong> Teori hi&#231;bir fit de&#287;erine muhta&#231; de&#287;ildir; tek kalibre say&#305;n&#305;n (a&#8320;) da t&#252;retilmi&#351; kar&#351;&#305;l&#305;&#287;&#305; mevcuttur (M-45) ve yaln&#305;z stat&#252; disiplini gere&#287;i kalibre de&#287;er resm&#238; kullan&#305;mda tutulmaktad&#305;r. Bu paneldeki &#246;ng&#246;r&#252; e&#287;rilerinde galaksi ba&#351;&#305;na fitlenen hi&#231;bir say&#305; yoktur.</div>
+</style></head><body><div style="padding:9px 16px;background:rgba(34,197,94,0.10);border-bottom:1px solid #166534;color:#bbf7d0;font-size:12.5px;line-height:1.45">&#9889; <strong>Fitsizlik durumu:</strong> Teori hi&#231;bir fit de&#287;erine muhta&#231; de&#287;ildir; tek kalibre say&#305;n&#305;n (a&#8320;) da t&#252;retilmi&#351; kar&#351;&#305;l&#305;&#287;&#305; mevcuttur (M-45) ve yaln&#305;z stat&#252; disiplini gere&#287;i kalibre de&#287;er resm&#238; kullan&#305;mda tutulmaktad&#305;r. Bu paneldeki &#246;ng&#246;r&#252; e&#287;rilerinde galaksi ba&#351;&#305;na fitlenen hi&#231;bir say&#305; yoktur. &#214;ng&#246;r&#252; e&#287;rileri, M-47 penceresini i&#231;eren <strong>pencereli resm&#238; denklemle</strong> hesaplan&#305;r (W = min(1, a&#8320;/g<sub>kaps</sub>) &#8212; Rankine i&#231; kolu, parametresiz).</div>
 <div class="ust"><h1>@@SINIF_AD@@ — etkileşimli panel</h1>
 <span class="alt">@@N@@ galaksi · SPARC ölçümü + iki parametresiz öngörü + iki fit ·
 tek dosya, dış bağımlılık yok</span></div>
@@ -309,7 +314,7 @@ function ciz(){
    '</span><b>'+b+'</b></div>';
  q('#grd').innerHTML=
   sat('𝒢 = α/ρ<sub>n</sub>', us(S.G)+' kpc(km/s)²/M☉','T')+
-  sat('a₀ = 1,75·cH₀/'+S.KATSAYI+' (nihai)', us(S.A0_SI)+' m/s²','S')+
+  sat('a₀ (pencereli resmî kalibrasyon — M-47)', us(S.A0_SI)+' m/s²','S')+
   sat('Υ* (popülasyon sentezi)', fx(gi.Ups,2),'S')+
   sat('M<sub>bar</sub> (kapsanan, son nokta)', us(gi.Mbar)+' M☉','O')+
   '<div style="border-bottom:none;padding-top:6px"><span>— yıldız / gaz payı</span><b>'+
@@ -318,7 +323,7 @@ function ciz(){
   '<div style="border-bottom:none;padding-top:8px;color:#a1a1aa;font-size:11.5px">'+
    'fit karşılaştırması için: Υ*<sub>fit</sub>='+(gi.Ups_fit==null?'—':fx(gi.Ups_fit,3))+
    ' · a₀<sub>fit</sub>/a₀='+(gi.lom_fit==null?'—':fx(gi.lom_fit,2))+'</div>';
- q('#dnk').innerHTML='v²(R) = V<sub>bar</sub>²(Υ*) + √(𝒢·M<sub>kaps</sub>(R)·a₀)'+'<br><span style="color:#71717a">ℓ<sub>ω</sub> YEREL kütleden — nihai kurulum</span>';
+ q('#dnk').innerHTML='v²(R) = V<sub>bar</sub>²(Υ*) + √(𝒢·M<sub>kaps</sub>(R)·a₀)·W, &nbsp;W = min(1, a₀/g<sub>kaps</sub>)'+'<br><span style="color:#71717a">ℓ<sub>ω</sub> YEREL kütleden — pencereli resmî denklem (M-47)</span>';
  q('#grl').innerHTML=
   sat('Υ* (aynı girdi)', fx(S.UPS_PS,2),'S')+
   sat('M<sub>*</sub> = Υ*·L[3,6]', us(S.UPS_PS*g.L36)+' M☉','O')+

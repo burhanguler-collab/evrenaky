@@ -33,7 +33,7 @@ Bu nedenle, kitabın bu bölümünde Evrenakı'nın sadece "temel matematiği ve
 
 ## 4.2.15 G Sabiti Paradigmasının Sınırları ve Klasik Fiziğin İtirazlarına Cevaplar
 
-Kütle-itimin salt bir Evrenakı basıncı ($G = \alpha/\rho_n$, bkz. 4.2.4) olduğunu gösterdikten sonra, klasik fiziğin ana akım savunucularından gelebilecek en sert 5 eleştiriyi ve bu eleştirilerin Evrenakı mekaniğiyle nasıl karşılandığını incelemek şarttır:
+Kütle-itimin salt bir Evrenakı basıncı ($\mathcal{G} = \alpha/\rho_n$, bkz. 4.2.4) olduğunu gösterdikten sonra, klasik fiziğin ana akım savunucularından gelebilecek en sert 5 eleştiriyi ve bu eleştirilerin Evrenakı mekaniğiyle nasıl karşılandığını incelemek şarttır:
 
 ### İtiraz 1: "Eğer $G$ sabit değilse ($\alpha/\rho_n$ ise), neden Güneş sistemindeki yörüngeler kusursuzca $6.67 \times 10^{-11}$ sabitine uyuyor?"
 

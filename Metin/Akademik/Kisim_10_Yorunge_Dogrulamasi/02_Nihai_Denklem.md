@@ -6,15 +6,20 @@
 
 Doğrulama programının bütün sınavları teorinin şu galaktik denklemine karşı yapılır:
 
-$$\boxed{\;v^2(R)=V_{bar}^2(\Upsilon_*)\;+\;\sqrt{\mathcal{G}\,M_{kaps}(R)\,a_0}\;,
-\qquad a_0=\frac{\mathcal{G}m_n}{\ell_\omega^{2}}=7{,}39\times10^{-11}\ \mathrm{m/s^2}\;}$$
+$$\boxed{\;v^2(R)=V_{bar}^2(\Upsilon_*)\;+\;\sqrt{\mathcal{G}\,M_{kaps}(R)\,a_0}\cdot W(R)\;,
+\qquad W=\min\!\Big(1,\;\frac{a_0}{g_{kaps}}\Big),\quad g_{kaps}=\frac{\mathcal{G}M_{kaps}}{R^2},
+\qquad a_0=\frac{\mathcal{G}m_n}{\ell_\omega^{2}}=7{,}67\times10^{-11}\ \mathrm{m/s^2}\;}$$
 
 Birinci terim F1'dir (pulsasyon itimi, küresel akı — baryonik katkı $\Upsilon_*$ ile), ikinci terim F4'tür (eksenel itim, silindirik akı). Denklemin türetimi Kısım 6'dadır (6.5.4.0–6.5.4.4); iki yapısal özelliği burada da kayda geçmelidir:
 
 1. **$\ell_\omega$ yereldir.** F4'ün vortisite uzunluğu kapsanan kütleden kurulur: $\ell_\omega^{etkin}(R)=\sqrt{\mathcal{G}M_{kaps}(R)/a_0}$. Akı teoremi gereği başka türlüsü olamaz — $R$ yüzeyinden geçen akı $R$ içindeki maddeden doğar. Bu biçimin galaksi içindeki sınavı 10.7'dedir (yarıçap artığı $-0{,}025$, yani sıfır).
 2. **$a_0$ mikro sabitlerin bileşkesidir.** Biçimi türetilmiştir ($\mathcal{G}m_n/\ell_\omega^2$; girdisi ölçülen mikro sabit $\ell_\omega^{mikro}=35{,}7$ fm — 10.7); sayısal değeri gözlemle sabitlenir ve beş bağımsız ölçüm aynı değerde buluşur (6.5.4.5). Kozmik zamanla **değişmez** — bu bir öngörüdür ve 10.9'da sınanmıştır.
 
+3. **Pencere $W$, M-30'un Rankine yapısıdır (M-47).** Girdabın iç çekirdeğinde kuvvet $\propto R$'dir (katı-cisim kolu); $r_0=\ell_\omega^{etkin}$ özdeşleştirmesiyle bu, $g_{kaps}>a_0$ bölgesinde F4'ün $(a_0/g_{kaps})$ ile bastırılmasına denk gelir — **parametresiz**. $g_{kaps}\leq a_0$'da $W=1$: derin limit, BTFR ve ölçek değişmezliği dokunulmamış kalır. Türetim ve aşağı-akış koşumları: M-47; `CALISMA/SINIF_CALISMASI/87_ETKIN_YASA/PENCERE_TURETIMI.md`.
+
 **Galaksi başına serbest parametre sayısı: sıfır.** Denklemin galaksiden galaksiye değişen tek girdisi, o galaksinin kendi ölçülmüş baryon dağılımıdır ($M_{kaps}(R)$, $V_{bar}$); $\Upsilon_*=0{,}50$ ortak fotometrik girdidir.
+
+> **Etkin yasa kimliği.** Denklemin ivme yazımı $g=g_{bar}+\sqrt{g_{bar}\,a_0}$, standart fiziğin MOND programında (Milgrom, 1983) bilinen $\nu(y)=1+y^{-1/2}$ ailesidir — ama burada bir geçiş fonksiyonu seçilmez, biçim F1+F4 toplamından çıkar; pencereyle (M-47) aile parçalı hâle gelir: $y>1$'de $\nu=1+y^{-3/2}$ (türetilmiş, daha dik sönüm). MOND'un ampirik kazanımı bu kimlikle teorinin mirasıdır (BTFR/RAR ölçümleri 10.6'da); üç yapısal farkı — sabit $G$ yerine yerel $\mathcal{G}$, evrensel $a_0$ yerine ortam kanalı, sabit $c$ yerine yerel $c$ — ayrışma sınavlarını doğurur (10.10.3 madde 8; kimlik ve ayrışma defteri: `CALISMA/SINIF_CALISMASI/87_ETKIN_YASA/`).
 
 ## 10.2.2 Toplu defter — dokuz ölçüt, tek kurulum
 
@@ -22,23 +27,23 @@ Denklemin nihai biçimi, programın dokuz bağımsız ölçütünde eski (toplam
 
 | Ölçüt | Nihai kurulum | ΛCDM zinciri |
 |---|---|---|
-| Dönüş eğrisi RMS (141 galaksi) | **12,79 km/s** | 14,56 km/s |
-| Dış yarı sapması | **−0,1 %** (sıfır) | — |
-| BTFR eğimi (117 galaksi) | **3,734** — gözlenen bandın (3,530–3,738) **içinde** | 2,716 — bandın dışında |
-| BTFR normalizasyonu | **0,984** | 1,027 |
-| Radyal ivme bağıntısı, medyan artık | **−0,003 dex** | — |
-| Radyal ivme bağıntısı, biçim eğimi | +0,051 dex/dex (açık kalem) | — |
+| Dönüş eğrisi RMS (141 galaksi) | **12,48 km/s** (pencereli; penceresiz 12,79) | 14,56 km/s |
+| Dış yarı sapması | **+0,0 %** (sıfır) | — |
+| BTFR eğimi (121 galaksi) | **3,717** (pencereli resmî, tam boru hattı v3) — gözlenen bandın (3,530–3,738) **içinde** | 2,716 — bandın dışında |
+| BTFR normalizasyonu | **0,978** (pencereli resmî, tam boru hattı v3; gereken $a_0$ çarpanı ×1,11, yarıçap duyarlılığıyla ×1,00–1,11) | 1,027 |
+| Radyal ivme bağıntısı, medyan artık | **+0,014 dex** (pencereli; penceresiz −0,003) | — |
+| Radyal ivme bağıntısı, biçim eğimi | **+0,0002 ≈ 0** (M-47 ile kapandı; penceresiz +0,051) | — |
 | Erken tip galaksiler, dış nokta (16 gal.) | **−0,008 dex** | +0,045 dex |
 | S0+BCD RMS (8 galaksi) | 19,0 km/s | — |
-| Yüksek-$z$ $f_{DM}$ artığı | **+0,186 (açık kalem)** | — |
+| Yüksek-$z$ $f_{DM}$ artığı | **−0,072 medyan; 5/6 bant içi** (M-47 ile kapandı; penceresiz +0,186) | — |
 
-![Toplu defter — dört kurulum, dokuz ölçüt](Gorseller/k10_toplu_defter.png)
+![Toplu defter — beş kurulum, dokuz ölçüt; P: pencereli resmî (M-47), A→P: 8 iyileşti / 1 kötüleşti. Kötüleşen tek kalem defter kestiricisinin BTFR eğimidir; tam 97 boru hattı (v3) eğimi 3,717 ile bandın içindedir.](Gorseller/k10_toplu_defter.png)
 
-**Sıfır serbest parametrede teori ΛCDM zincirini geçmektedir:** dönüş eğrisi RMS'inde 12,79'a karşı 14,56; erken tip galaksilerin dış noktasında $|-0{,}008|$'e karşı $|+0{,}045|$; BTFR eğiminde bandın içinde kalarak. Öngörü yarışında 141 galaksinin **79'unda** teorinin eğrisi ölçüme daha yakındır.
+**Sıfır serbest parametrede teori ΛCDM zincirini geçmektedir:** dönüş eğrisi RMS'inde 12,48'e karşı 14,56; erken tip galaksilerin dış noktasında $|-0{,}008|$'e karşı $|+0{,}045|$; BTFR eğiminde bandın içinde kalarak. Öngörü yarışında 141 galaksinin **79'unda** teorinin eğrisi ölçüme daha yakındır.
 
 ## 10.2.3 $a_0$'ın değeri nasıl seçildi
 
-Türetim, $\ell_\omega^{mikro}$ ölçümünün saçılması (0,17 dex) nedeniyle $a_0$'ın değerine bir **band** bırakır. Gözlem bandın alt ucunu seçer: kabul edilen değerde dönüş eğrilerinin dış yarı sapması tam sıfırlanır ($-0{,}1\%$), BTFR eğimi 3,734 ile gözlenen bandın içinde kalır ve normalizasyon 0,984 olur. Daha büyük değerler BTFR eğimini bandın dışına taşır. Aynı değer, yerel-$\ell_\omega$ sınavının bağımsız sayısal çözümüyle de örtüşür (10.7).
+Türetim, $\ell_\omega^{mikro}$ ölçümünün saçılması (0,17 dex) nedeniyle $a_0$'ın değerine bir **band** bırakır. Gözlem bandın alt ucunu seçer: kabul edilen değerde (pencereli kalibrasyon $7{,}67\times10^{-11}$; $\ell_\omega$ eşleniği 38,2 fm — ölçülen 35,7 fm'e penceresiz değerden daha yakın) dönüş eğrilerinin dış yarı sapması tam sıfırlanır, BTFR eğimi 3,717 ile gözlenen bandın içinde kalır ve normalizasyon 0,978 olur (tam boru hattı v3; `CALISMA/btfr_sinavi.py`). Daha büyük değerler BTFR eğimini bandın dışına taşır. Aynı değer, yerel-$\ell_\omega$ sınavının bağımsız sayısal çözümüyle de örtüşür (10.7).
 
 ## 10.2.4 Sınıf sınıf görünüm
 
@@ -46,15 +51,17 @@ Nihai kurulumun morfolojik sınıflardaki dökümü (ayrıntılar 10.3–10.5):
 
 | Sınıf | n | Öngörü RMS (km/s) | ΛCDM öngörü RMS | Dış sapma | Gereken $a_0$ çarpanı | Öngörü yarışı |
 |---|---|---|---|---|---|---|
-| Sa–Sab | 12 | 25,82 | 30,69 | −2,1 % | ×1,16 | 6/12 |
-| Sb–Sbc | 29 | 27,35 | 33,36 | +1,3 % | ×0,90 | 18/29 |
-| Sc–Scd | 30 | 16,65 | 13,39 | −1,3 % | ×1,08 | 17/30 |
-| Sd | 16 | 10,12 | 7,70 | −8,2 % | ×1,53 | 4/16 |
-| Sdm–Sm | 28 | 9,89 | 9,97 | −2,0 % | ×1,12 | 12/28 |
-| Im | 26 | 8,12 | 11,76 | +7,9 % | ×0,65 | 22/26 |
-| **Toplam** | **141** | **12,79** | **14,56** | **−0,1 %** | — | **79/141** |
+| Sa–Sab | 12 | 24,90 | 30,69 | −3,5 % | ×1,24 | 6/12 |
+| Sb–Sbc | 29 | 21,21 | 33,36 | +1,2 % | ×0,94 | 18/29 |
+| Sc–Scd | 30 | 14,77 | 13,39 | −0,6 % | ×1,04 | 17/30 |
+| Sd | 16 | 9,93 | 7,70 | −7,5 % | ×1,47 | 4/16 |
+| Sdm–Sm | 28 | 9,93 | 9,97 | −1,3 % | ×1,08 | 12/28 |
+| Im | 26 | 8,46 | 11,76 | +8,7 % | ×0,63 | 22/26 |
+| **Toplam** | **141** | **12,48** | **14,56** | **+0,0 %** | — | **79/141**† |
 
-Dört sınıfın gereken çarpanı **×0,90–1,16** aralığındadır — bire oturmuştur. Uçlar Sd (×1,53) ve Im (×0,65)'tir; sınıf bandının log genişliği **0,113 dex**'tir ve açık kalemdir (10.10). $a_0$'ın küresel ölçeklenmesi bandı kaydırır ama daraltmaz — yani band, $a_0$'ın değerinden bağımsız, gerçek bir yapıdır.
+† *Öngörü yarışı (ΛCDM'e karşı galaksi başına) penceresiz kurulumla ölçülmüştür; pencere RMS'i iyileştirdiğinden 79/141 alt sınırdır.*
+
+Dört sınıfın gereken çarpanı **×0,94–1,24** aralığındadır — bire oturmuştur. Uçlar Sd (×1,47) ve Im (×0,63)'tür; sınıf bandının log genişliği **0,115 dex**'tir (pencere bandı pratikte değiştirmez: galaksi başına çarpanlar $r=0{,}98$ ile korunur, cüce sınıflarda birebir aynıdır — λ kanalı penceresiz kayıtlarıyla geçerli kalır) ve açık kalemdir (10.10). $a_0$'ın küresel ölçeklenmesi bandı kaydırır ama daraltmaz — yani band, $a_0$'ın değerinden bağımsız, gerçek bir yapıdır.
 
 ## 10.2.5 Dürüstlük kayıtları
 

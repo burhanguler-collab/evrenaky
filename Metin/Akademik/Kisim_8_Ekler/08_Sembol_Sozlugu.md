@@ -102,7 +102,7 @@ Bu ek, kitabın tamamında geçerli sembol standardını tanımlar. Her sembol k
 | $I$ | Atalet momenti *(ışık şiddeti için ayrı sembol: metinde "şiddet" veya $S_ş$)* | — |
 | $A$ | Dalga genliği ($I_ş \propto A^2$) *(eski yazım: $E$ — 2.7.1)* | — |
 | $E$ | Enerji (yalnız enerji) | — |
-| $\Phi$ | İş fonksiyonu (fotoelektrik) / kütleçekim potansiyeli (Ek B bağlamında, $\Phi/c^2 \approx 7\times10^{-10}$) | — |
+| $\Phi$ | İş fonksiyonu (fotoelektrik) / standart fiziğin "kütleçekim potansiyeli" — yalnız ölçülen genlik girdisi olarak (Ek B bağlamında, $\Phi/c^2 \approx 7\times10^{-10}$) | — |
 | $D_{toplam}=D_{zarf}+D_{yol}$ | SN 1987A gecikme bütçesi bileşenleri | ~3 saat |
 | $\chi$ | Evrenakı dispersiyon katsayısı (fenomenolojik) | $5\times10^{-4}$ |
 | $g^{(2)}(0)$, $S$ | Standart kuantum optik ölçütleri (anti-demetlenme; CHSH istatistiği) | — |
@@ -127,7 +127,7 @@ Bu ek, kitabın tamamında geçerli sembol standardını tanımlar. Her sembol k
 | $\gamma$ | Lorentz / çapraz-yol uzama çarpanı $= 1/\sqrt{1-v^2/c^2}$ |
 | $\gamma_{ortam}$, $\gamma_{standart}$, $\gamma_{toplam}$ | Sönüm oranları (Bölüm 3.10.4) |
 | $\gamma_N$ | Cismin etkileşim hacmi $= NV_n$ *(eski yazım: $\gamma$ — 4.2.4)* |
-| $G$ | Kütleçekim sabiti; teoride türetilmiş: $G = \alpha/\rho_n$ *(kesme modülü için $G_s$)* |
+| $G$, $\mathcal{G}$ | Yerleşik adıyla "kütleçekim sabiti"; teoride türetilmiş ve **yerel** (Postülat 4): $\mathcal{G} = \alpha/\rho_n$ (M-28). Teori kendi denklemlerinde $\mathcal{G}$ yazar; düz $G$ yalnız standart-fizik aktarımında, Newton-kalibrasyon bağlamında (M-27) ve ölçülen yerel değer/$GM$ çarpımı bağlamında kalır *(kesme modülü için $G_s$)* |
 | $\alpha$ | Gradyan bağlaşım sabiti [s⁻²]; $P(r) = P_0 - \alpha M/r$ *(ince yapı sabiti: $\alpha_{is}$ veya açık yazım)* |
 | $H_0$ | Hubble sabiti $= S_{kozmik}/3\rho$ |
 | $\xi$ | **Dönme sürüklenme kesri:** ortamın gövde dönüşüne tutunma oranı, $\vec\Omega_{ortam} = \xi\,\vec\omega_{gövde}$. Türetilmiştir — ortam bir cismi ancak kavrama hızının bozulduğu ölçüde tutar: $\xi = \dfrac{I}{MR^2}\left\lvert\dfrac{\delta c_{loc}}{c}\right\rvert = \dfrac{I}{MR^2}\dfrac{2\Phi}{c^2}$. Dünya: $4{,}605\times10^{-10}$; nötron yıldızı: $\sim0{,}1$. Ötelemedeki *tam* sürüklenmeden (Postülat 7) ayrıdır — bu neredeyse tam **patinajdır** | **Ek M-40**; girdisi Ek M-42 |

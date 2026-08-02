@@ -96,7 +96,7 @@ Kitap boyunca denklemlerde geçen çekirdek semboller aşağıda topluca verilmi
 |---|---|
 | $w$, W | Dördüncü uzay ekseni; uzayımız $w=0$ kesiti |
 | $\Omega_{yör}$ | Yerel yörünge (girdap) açısal frekansı |
-| $G$ | Kütleçekim sabiti; teoride türetilmiş büyüklük: $G=\alpha/\rho_n$ |
+| $G$, $\mathcal{G}$ | Standart fiziğin "kütleçekim sabiti" dediği yerleşik büyüklük; teoride sabit değil, türetilmiş ve **yereldir** (Postülat 4): $\mathcal{G}=\alpha/\rho_n$. Ölçülen $G$, $\mathcal{G}$'nin Güneş Sistemi'ndeki yerel değeridir |
 | $\alpha$ | Gradyan bağlaşım sabiti ($P(r)=P_0-\alpha M/r$) [s⁻²] |
 | $\chi$ | Evrenakı dispersiyon katsayısı (fenomenolojik, $5\times10^{-4}$) |
 | $\Xi$ | Kuyu iskeleti gücü / baryonik öz-çekim oranı ($\approx 5$) |

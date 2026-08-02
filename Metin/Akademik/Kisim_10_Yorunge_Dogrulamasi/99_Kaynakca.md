@@ -34,3 +34,14 @@ Bu kısımdaki bütün dönüş eğrisi verileri, gözlemsel noktalar ve baryoni
 * **Oh, S.-H., ve ark.** (2015). *The HI Kinematics of the LITTLE THINGS Dwarf Galaxy Sample.* AJ, 149, 180.
 * **Mogotsi, K. M., ve ark.** (2016). *HI and CO Velocity Dispersions in Nearby Galaxies.* AJ, 151, 15.
 * **Iorio, G., ve ark.** (2017). *LITTLE THINGS in 3D: robust determination of the circular velocity of dwarf irregular galaxies.* MNRAS, 466, 4159. [arXiv:1611.03865] — cüce medyan $\sigma$.
+
+## Etkin yasa karşılaştırması (MOND literatürü — 10.2.1, 10.10.3 madde 8)
+
+* **Milgrom, M.** (1983). *A modification of the Newtonian dynamics as a possible alternative to the hidden mass hypothesis.* The Astrophysical Journal, 270, 365–370. — MOND programının kuruluşu; nihai denklemin etkin-yasa kimliği bu ailenin üyesidir.
+* **Famaey, B., & McGaugh, S. S.** (2012). *Modified Newtonian Dynamics (MOND): Observational Phenomenology and Relativistic Extensions.* Living Reviews in Relativity, 15, 10. — MOND fenomenolojisinin ve görelilik uzantılarının derlemesi.
+* **McGaugh, S. S., Lelli, F., & Schombert, J. M.** (2016). *Radial Acceleration Relation in Rotationally Supported Galaxies.* Physical Review Letters, 117(20), 201101. — fitli $g_\dagger$ geçiş eğrisi; radyal ivme karşılaştırmasının referansı.
+* **Chae, K.-H., Lelli, F., Desmond, H., McGaugh, S. S., Li, P., & Schombert, J. M.** (2020). *Testing the Strong Equivalence Principle: Detection of the External Field Effect in Rotationally Supported Galaxies.* The Astrophysical Journal, 904(1), 51. — dış alan etkisi örneklemi; açık kalem (n1)'in sınav verisi.
+* **Chae, K.-H., Lelli, F., Desmond, H., McGaugh, S. S., Li, P., & Schombert, J. M.** (2021a). *Erratum: "Testing the Strong Equivalence Principle: Detection of the External Field Effect in Rotationally Supported Galaxies".* The Astrophysical Journal, 910(1), 81. — Tablo 2'nin düzeltilmiş $e_{\rm env}$ eşleşmesi; EFE sınavının veri kaynağı (`87_ETKIN_YASA/veri_chae2021_tablo2.txt`).
+* **Chae, K.-H., Desmond, H., Lelli, F., McGaugh, S. S., & Schombert, J. M.** (2021b). *Testing the Strong Equivalence Principle. II. Relating the External Field Effect in Galaxy Rotation Curves to the Large-scale Structure of the Universe.* The Astrophysical Journal, 921(1), 104. — genişletilmiş çevre kestirimleri; yeni EFE protokolünün aday verisi.
+* **Chae, K.-H.** (2023). *Breakdown of the Newton–Einstein Standard Gravity at Low Acceleration in Internal Dynamics of Wide Binary Stars.* The Astrophysical Journal, 952(2), 128. — geniş çiftlerde artış iddiası (G-10'un bir ucu).
+* **Banik, I., Pittordis, C., Sutherland, W., Famaey, B., Ibata, R., Mieske, S., & Zhao, H.** (2024). *Strong constraints on the gravitational law from Gaia DR3 wide binaries.* Monthly Notices of the Royal Astronomical Society, 527(3), 4573–4615. — geniş çiftlerde Newton lehine sınır (G-10'un öbür ucu).

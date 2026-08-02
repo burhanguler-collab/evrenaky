@@ -30,7 +30,7 @@ Kısacası Evrenakı maddeyi uzaktan soyut bir çekim kuvvetiyle hareket ettirme
 | $\gamma_N$ | Cismin akışkanla aerodinamik etkileşim katsayısı ($\gamma_N = N V_n$) (eski yazım: $\gamma$; Kısım 6'daki Lorentz çarpanı $\gamma$ ile karışmaması için $\gamma_N$) | 4.2.4 |
 | $N$, $V_n$, $m_n$ | Nükleon sayısı, tekil nükleon etkileşim hacmi ve kütlesi | 4.2.4 |
 | $\rho_n$ | Nükleon öz yoğunluğu ($m_n / V_n$) | 4.2.4 |
-| $G = \alpha/\rho_n$ | Türetilen kütleçekim "sabiti" | 4.2.4 |
+| $\mathcal{G} = \alpha/\rho_n$ | Türetilen **yerel** kütle-itim katsayısı (yerleşik adıyla kütleçekim "sabiti" $G$) | 4.2.4 |
 | $J_2$ | Dünya'nın basıklık (kütle dağılımı) katsayısı | 4.2.7 (Bölüm II) |
 | $v_\theta$ | Teğetsel (dönüş) hızı | 4.2.9 (Bölüm III) |
 | $H_0$ | Hubble sabiti | 4.2.11 (Bölüm III) |
@@ -60,7 +60,7 @@ $$ \rho \left( \frac{\partial \mathbf{v}}{\partial t} + (\mathbf{v} \cdot \nabla
 Bu denklemin sağ tarafı, hareketi dikte eden **Basınç Gradyanını ($-\nabla P$)** ifade eder. Göksel hareketlerin ve yörünge dinamiklerinin itici gücü bu basınç gradyanı vektörüdür.
 Kütle (örneğin Güneş), kendi hacmiyle Evrenakı ortamını dışarıya doğru iter (Deplasman Etkisi). Bu durum, yıldızın merkezinde bir Evrenakı seyrelmesi yaratırken, derin uzayda maksimum arka plan basıncı ($P_0$; eski yazım: $P_\infty$) oluşturur.
 
-## 4.2.4 Kütleçekim Sabiti ($G$)'nin Doğası: Basınç Alanı Çözümü
+## 4.2.4 "Kütleçekim Sabiti" ($G$)'nin Doğası: Basınç Alanı Çözümü ve Yerel $\mathcal{G}$
 *(Bu türetim, katalogda **M-28** olarak numaralanmıştır; boyut analizi ve kuyu-konvansiyonlu yazımı için oraya bakınız.)*
 
 Kütlenin uzayda yarattığı "Deplasman Etkisi", Evrenakı akışkanında radyal bir hız/batış alanı oluşturur. Merkezi ve tekil bir kütle ($M$), çevresindeki Cosmofluid ortamında simetrik ve radyal bir basınç bozulumu yaratır.
@@ -84,12 +84,12 @@ $$ \frac{\gamma_N}{m} = \frac{V_n}{m_n} = \frac{1}{\rho_n} $$
 **Newton Limiti ve G Sabiti:**
 Bu bağıntıyı yerleştirirsek, parçacığa etkiyen kuvvet:
 $$ F = \left(\frac{\gamma_N}{m}\right) \frac{\alpha M m}{r^2} = \frac{\alpha}{\rho_n} \frac{M m}{r^2} $$
-Bu denklem, Newton'un ünlü evrensel kütleçekim formülüyle ($F = G \frac{M m}{r^2}$) birebir örtüşür. Buradan, klasik kütleçekim sabiti ($G$) şu şekilde tanımlanır:
-$$ G = \frac{\alpha}{\rho_n} $$
+Bu denklem, Newton'un ünlü evrensel kütleçekim formülüyle ($F = G \frac{M m}{r^2}$) birebir örtüşür. Buradan, klasik kütleçekim sabitinin ($G$) teorideki karşılığı tanımlanır — teori yazımıyla $\mathcal{G}$:
+$$ \mathcal{G} = \frac{\alpha}{\rho_n} $$
 
-Bu sonuca göre, fizikte evrensel ve temel bir sabit olarak kabul edilen $G$, aslında Cosmofluid'in arka plan potansiyel sabiti ($\alpha$) ile baryonik maddenin (nükleonun) evrensel öz yoğunluğunun ($\rho_n$) oranıdır. [^3] Kütle-itimin kökeni "uzaktan etki" değil, bizzat ortamın dinamik basınç dağılımıdır. Bu durum, Galileo'nun meşhur serbest düşme yasasını mekanik olarak açıklar: Cisimlerin ivmesi ($a = F/m = G M/r^2$), kütlelerinden bağımsız olarak nükleon yoğunluğu ($\rho_n$) sabit olduğu için hepsi için eşittir.
+Bu sonuca göre, fizikte evrensel ve temel bir sabit olarak kabul edilen $G$, aslında Cosmofluid'in arka plan potansiyel sabiti ($\alpha$) ile baryonik maddenin (nükleonun) evrensel öz yoğunluğunun ($\rho_n$) oranıdır. [^3] Pay ortamın, payda maddenin sabitidir; ortam koşulları değiştiğinde $\mathcal{G}$ de değişir — teoride evrensel bir sabit değil, **yerel bir büyüklüktür** (Postülat 4). Güneş Sistemi'nde ölçülen $G$, $\mathcal{G}$'nin buradaki yerel değeridir. Kütle-itimin kökeni "uzaktan etki" değil, bizzat ortamın dinamik basınç dağılımıdır. Bu durum, Galileo'nun meşhur serbest düşme yasasını mekanik olarak açıklar: Cisimlerin ivmesi ($a = F/m = \mathcal{G} M/r^2$), kütlelerinden bağımsız olarak nükleon yoğunluğu ($\rho_n$) sabit olduğu için hepsi için eşittir.
 
-[^3]: **Boyutsal Analiz Notu:** Newton mekaniğinde $G$ sabitinin birimi $[\text{m}^3 \text{ kg}^{-1} \text{ s}^{-2}]$'dir. Evrenakı modelinde $P(r) = P_0 - \frac{\alpha M}{r}$ denkleminden türetilen potansiyel sabiti $\alpha$'nın boyutu $[\text{s}^{-2}]$, nükleon öz yoğunluğu $\rho_n$'in boyutu ise $[\text{kg/m}^3]$'tür. Bu iki fiziksel parametrenin oranı ($G = \alpha / \rho_n$), klasik kütleçekim sabitinin birimini ($[\text{m}^3 \text{ kg}^{-1} \text{ s}^{-2}]$) kusursuz şekilde sağlar.
+[^3]: **Boyutsal Analiz Notu:** Newton mekaniğinde $G$ sabitinin birimi $[\text{m}^3 \text{ kg}^{-1} \text{ s}^{-2}]$'dir. Evrenakı modelinde $P(r) = P_0 - \frac{\alpha M}{r}$ denkleminden türetilen potansiyel sabiti $\alpha$'nın boyutu $[\text{s}^{-2}]$, nükleon öz yoğunluğu $\rho_n$'in boyutu ise $[\text{kg/m}^3]$'tür. Bu iki fiziksel parametrenin oranı ($\mathcal{G} = \alpha / \rho_n$), klasik kütleçekim sabitinin birimini ($[\text{m}^3 \text{ kg}^{-1} \text{ s}^{-2}]$) kusursuz şekilde sağlar.
 
 ### 4.2.4.1 1/r² Davranışı ve Gauss Teoremi
 Modern fizikte $1/r^2$ sönümlemesi evrensel bir yasa olarak görülürken, Evrenakı modelinde bu durum yalnızca belirli koşullar sağlandığında ortaya çıkan geometrik bir zorunluluktur. Güneş Sistemi ölçeğinde yoğunluk ($\rho$) homojene yakın kabul edilebilir. Homojen bir ortamda, dışarı yayılan basınç akısı, Gauss teoremi (Gauss, 1813) gereği $A = 4\pi r^2$ yüzey alanına dağılır. Toplam akı korunduğu için, gradyan $1/r^2$ oranında azalmak zorundadır. Bu davranış mistik bir yasa değil, homojen Evrenakı'nın 3-boyutlu dağılımının doğal sonucudur. *(katalog: **Ek M-29**)*

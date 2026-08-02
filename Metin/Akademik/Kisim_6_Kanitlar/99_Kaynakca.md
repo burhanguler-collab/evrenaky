@@ -9,10 +9,13 @@
 * Aprile, E., et al. (XENON Collaboration) (2018). *Dark Matter Search Results from a One Ton-Year Exposure of XENON1T*. Physical Review Letters, 121, 111302. (Doğrudan karanlık madde aramasının boş sonucu — Bölüm 6.0, §2.3).
 * Aspect, A., Dalibard, J., & Roger, G. (1982). *Experimental Test of Bell's Inequalities Using Time-Varying Analyzers*. Physical Review Letters, 49(25), 1804-1807. (Bell eşitsizliği ihlali — Bölüm 6.0, §1.4).
 * Ashby, N. (2003). *Relativity in the Global Positioning System*. Living Reviews in Relativity, 6, 1. (GPS saat kayması — Bölüm 6.2.8).
+* Banik, I., Pittordis, C., Sutherland, W., Famaey, B., Ibata, R., Mieske, S., & Zhao, H. (2024). *Strong constraints on the gravitational law from Gaia DR3 wide binaries*. Monthly Notices of the Royal Astronomical Society, 527(3), 4573-4615. (Geniş çiftlerde Newton lehine sınır — Bölüm 6.5.4.5, G-10).
 * Barnett, S. M. (2010). *Resolution of the Abraham-Minkowski Dilemma*. Physical Review Letters, 104(7), 070401. (Kinetik/kanonik momentum ayrımı — Bölüm 6.4).
 * Bell, J. S. (1964). *On the Einstein Podolsky Rosen paradox*. Physics Physique Fizika, 1(3), 195-200. (Yerel gizli değişkenler teoremi — Bölüm 6.0, §1.4).
 * Burnham, K. P., & Anderson, D. R. (2002). *Model Selection and Multimodel Inference: A Practical Information-Theoretic Approach* (2. baskı). Springer. (AIC ile model seçimi ve $\Delta$AIC > 10 dışlama eşiği — Bölüm 6.5.3.1).
 * Bradley, J. (1729). *A Letter... giving an Account of a new discovered Motion of the Fix'd Stars*. Philosophical Transactions, 35(406), 637-661. (Yıldız sapması / aberasyon gözlemi — Bölüm 6.0, §1.3).
+* Chae, K.-H. (2023). *Breakdown of the Newton–Einstein Standard Gravity at Low Acceleration in Internal Dynamics of Wide Binary Stars*. The Astrophysical Journal, 952(2), 128. (Geniş çiftlerde artış iddiası — Bölüm 6.5.4.5, G-10).
+* Chae, K.-H., Lelli, F., Desmond, H., McGaugh, S. S., Li, P., & Schombert, J. M. (2020). *Testing the Strong Equivalence Principle: Detection of the External Field Effect in Rotationally Supported Galaxies*. The Astrophysical Journal, 904(1), 51. (Dış alan etkisi örneklemi — Bölüm 6.5.4.5; 7.4 madde 12n). 
 * Ciufolini, I., & Pavlis, E. C. (2004). *A confirmation of the general relativistic prediction of the Lense-Thirring effect*. Nature, 431(7011), 958-960. (LAGEOS eksen kayması ölçümleri — Bölüm 6.3.3).
 * Clowe, D., et al. (2006). *A Direct Empirical Proof of the Existence of Dark Matter*. The Astrophysical Journal Letters, 648(2), L109-L113. (Bullet Cluster zayıf merceklenme haritası — Bölüm 6.0, §2.2).
 * Delva, P., et al. (2018). *Gravitational Redshift Test Using Eccentric Galileo Satellites*. Physical Review Letters, 121, 231101. (Galileo uydularıyla kütleçekimsel kızıla kayma testi — Bölüm 6.2.8).
@@ -22,6 +25,7 @@
 * Einstein, A. (1915). *Erklärung der Perihelbewegung des Merkur aus der allgemeinen Relativitätstheorie*. Sitzungsberichte der Preussischen Akademie der Wissenschaften. (Genel Görelilik ve kütleçekimsel kayma — Bölüm 6.2.1).
 * Einstein, A., Podolsky, B., & Rosen, N. (1935). *Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?* Physical Review, 47(10), 777-780. (EPR — "uzaktan gizemli etki" — Bölüm 6.0, §1.4).
 * Everitt, C. W. F., et al. (2011). *Gravity Probe B: Final Results of a Space Experiment to Test General Relativity*. Physical Review Letters, 106(22), 221101. (GP-B jiroskop ölçümleri — Bölüm 6.3.3).
+* Famaey, B., & McGaugh, S. S. (2012). *Modified Newtonian Dynamics (MOND): Observational Phenomenology and Relativistic Extensions*. Living Reviews in Relativity, 15, 10. (MOND fenomenolojisinin derlemesi — Bölüm 6.5.4.5).
 * Goldreich, P., & Tremaine, S. (1979). *Towards a theory for the Uranian rings*. Nature, 277, 97-99. (Çoban uydu (shepherd moon) mekanizması — Bölüm 6.0, §2.7).
 * Hensen, B., et al. (2015). *Loophole-free Bell inequality violation using electron spins separated by 1.3 kilometres*. Nature, 526, 682-686. (Açıksız Bell deneyi — Bölüm 6.0, §1.4).
 * Higgs, P. W. (1964). *Broken Symmetries and the Masses of Gauge Bosons*. Physical Review Letters, 13(16), 508-509. (Kütle kazandıran alan — Bölüm 6.0, §1.5).
@@ -30,7 +34,9 @@
 * Lorentz, H. A. (1904). *Electromagnetic phenomena in a system moving with any velocity smaller than that of light*. Proceedings of the Royal Netherlands Academy of Arts and Sciences, 6, 809-831. (Esir teorisinde gözlemlenemezlik — Bölüm 6.1.3).
 * Lelli, F., McGaugh, S. S., & Schombert, J. M. (2016). *SPARC: Mass Models for 175 Disk Galaxies with Spitzer Photometry and Accurate Rotation Curves*. The Astronomical Journal, 152, 157. (NGC 3198 dönüş eğrisi ve baryonik ayrıştırma; kovan kataloğu $L_{bul}=0$ — Bölüm 6.5.3.1 ve 6.5.4).
 * Markevitch, M., et al. (2004). *Direct Constraints on the Dark Matter Self-Interaction Cross Section from the Merging Galaxy Cluster 1E 0657-56*. The Astrophysical Journal, 606(2), 819-824. (Bullet Cluster — X-ışını gazı ile kütle merkezinin ayrışması — Bölüm 6.0, §2.2).
+* McGaugh, S. S., Lelli, F., & Schombert, J. M. (2016). *Radial Acceleration Relation in Rotationally Supported Galaxies*. Physical Review Letters, 117(20), 201101. (Radyal ivme bağıntısı ve fitli $g_\dagger$ geçiş eğrisi — Bölüm 6.5.4.5).
 * Michelson, A. A., & Morley, E. W. (1887). *On the Relative Motion of the Earth and the Luminiferous Ether*. American Journal of Science, 34(203), 333-345. (Sıfır sonucu — Bölüm 6.0, §1.3).
+* Milgrom, M. (1983). *A modification of the Newtonian dynamics as a possible alternative to the hidden mass hypothesis*. The Astrophysical Journal, 270, 365-370. (MOND programının kuruluşu; etkin yasa kimliği — Bölüm 6.5.4.5).
 * Minkowski, H. (1908). *Die Grundgleichungen für die elektromagnetischen Vorgänge in bewegten Körpern*. Nachrichten von der Gesellschaft der Wissenschaften zu Göttingen, 53-111. (Işığın dielektrik ortamdaki momentumu — Bölüm 6.4).
 * Navarro, J. F., Frenk, C. S., & White, S. D. M. (1996). *The Structure of Cold Dark Matter Halos*. The Astrophysical Journal, 462, 563-575. (NFW profili ve merkezdeki cusp ölçütü — Bölüm 6.5.3.1 ve 6.5.4-A).
 * Navier, C.-L. M. H. (1823). *Mémoire sur les lois du mouvement des fluides*. Mémoires de l'Académie Royale des Sciences de l'Institut de France, 6, 389-440. (Navier–Stokes denklemleri — Bölüm 6.3.3).

@@ -1,5 +1,9 @@
 # 86_NIHAI — Nihai kurulum kararı ve toplu defter · **1 Ağustos 2026**
 
+> ### 🪟 PENCERE RESMİLEŞMESİ (M-47)
+>
+> Resmî denklem artık Rankine penceresini içerir: $v_{F4}^2=\sqrt{\mathcal{G}M_{kaps}a_0}\cdot\min(1,a_0/g_{kaps})$, $a_0=7{,}67\times10^{-11}$ m/s². Bu dosyanın sayıları penceresiz kurulumun kaydıdır; pencereli yeniden koşum: `CALISMA/pencere_sinavi.py` → `87_ETKIN_YASA/SONUC_PENCERE.csv`. Defter güncellemesi: RMS 12,79→12,48; RAR biçim eğimi +0,051→+0,0002; yüksek-z +0,19→−0,07 (5/6 bant içi). **Toplu defter yeniden üretildi** (`toplu_defter.py`, P sütunu; `_HESAPLAR/toplu_defter.csv/png` → `Gorseller/k10_toplu_defter.png`): A→P **8 iyileşti / 1 kötüleşti** — tek kötüleşen, defter kestiricisinin BTFR eğimiydi (3,750); **tam 97 boru hattı (v3) bayrağı çözdü**: eğim 3,717 — bandın içinde, norm 0,978, gereken çarpan ×1,11.
+
 Hesap: `../../toplu_defter.py` · Çıktılar: [`../_HESAPLAR/toplu_defter.csv`](../_HESAPLAR/toplu_defter.csv) ·
 [`../_HESAPLAR/toplu_defter.png`](../_HESAPLAR/toplu_defter.png)
 

@@ -18,7 +18,7 @@ $$v^4=\mathcal{G}\,M_{bar}\,a_0$$
 
 | Kaynak | BTFR eğimi | Normalizasyon |
 |---|---|---|
-| **Teori (öngörü, sıfır parametre)** | **3,734** | **0,984** |
+| **Teori (öngörü, sıfır parametre; pencereli resmî boru hattı v3)** | **3,717** | **0,978** |
 | Gözlenen band ($V_f$; ağırlıksız–ağırlıklı) | 3,530 – 3,738 | 1 |
 | ΛCDM zinciri (abundance matching + NFW) | 2,716 | 1,027 |
 
@@ -39,7 +39,7 @@ Panel, bu sınavın bütün duyarlılıklarını düğmelere bağlar ve iki öl�
 
 Bu sınav ölçeği değil **biçimi** sorar. Erken tip dahil her sistemde teorinin yerel öngörüsü
 
-$$g_{öng}=g_{bar}+\sqrt{g_{bar}\,a_0}$$
+$$g_{öng}=g_{bar}+\sqrt{g_{bar}\,a_0}\cdot W,\qquad W=\min\!\Big(1,\;\frac{a_0}{g_{bar}}\Big)$$
 
 biçimindedir ve biçim sabittir: $a_0$ yanlış kalibre olsaydı bütün noktalar aynı miktarda kayardı ama artıkta ivmeye bağlı **eğilim** oluşmazdı. 2693 nokta ve dört decade, bunu ayırt edecek güçtedir.
 
@@ -47,8 +47,8 @@ biçimindedir ve biçim sabittir: $a_0$ yanlış kalibre olsaydı bütün noktal
 
 | Ölçüt | Değer |
 |---|---|
-| Medyan artık (fit yok) | **−0,003 dex** |
-| Artığın ivmeyle eğimi (biçim sınavı) | **+0,051 dex/dex — açık kalem** |
+| Medyan artık (fit yok) | **+0,014 dex** (pencereli; penceresiz −0,003) |
+| Artığın ivmeyle eğimi (biçim sınavı) | **+0,0002 ≈ 0** — pencereli resmî denklemle (M-47) **kapandı** (penceresiz +0,051) |
 | Gözlenen saçılma | 0,146 dex |
 | Bildirilen ölçüm bütçesi | 0,126 dex (saçılmanın ~%74'ü) |
 | **İç saçılma** | **~0,08 dex** |
@@ -56,7 +56,7 @@ biçimindedir ve biçim sabittir: $a_0$ yanlış kalibre olsaydı bütün noktal
 Üç sonuç:
 
 1. **Ölçek doğrudur:** medyan artık sıfırdır ve iki asimptot da doğru yerdedir — derin limitte $\sqrt{g_{bar}a_0}$, Newton limitinde $g_{bar}$.
-2. **Geçiş biçiminde küçük ama gerçek bir artık kalır:** $+0{,}051$ dex/dex. Bu, $a_0$'ın değeriyle kapatılamaz (değeri oynatmak ortayı düzeltir, iki ucu birden bozar); F1 ile F4'ün **toplanma biçiminin** türetilmesini bekleyen açık kalemdir (10.10).
+2. **Geçiş biçimi kapanmıştır (M-47):** penceresiz kurulumun $+0{,}051$ dex/dex'lik sürüklenmesi $a_0$ ile kapatılamıyordu; Rankine penceresi türetilip resmîleştikten sonra aynı 2693 noktada eğim $+0{,}0002pprox0$'dır. Kalan tek iç borç galaksi-içi $-0{,}033$ eğimidir (10.10).
 3. **"Tek yasa" iddiasının sayısal karşılığı:** gözlenen saçılmanın dörtte üçü bildirilen ölçüm hatasıdır; fitsiz bir eğri 2693 noktayı ~0,08 dex'lik iç saçılmayla toplar.
 
 *(Yöntem kaydı: noktalar bağımsız değildir — 2693 nokta 153 galaksiden gelir ve veri kümesi galaksi kimliği içermediği için kümeleme yapılamamıştır; bütün "n" değerleri bu yüzden iyimserdir. Ayrıca F4 payı 0,25'in altına düşen yüksek-ivme kuşaklarında "gereken $a_0$" tersine çözümü kötü koşullanmıştır ve raporlanmaz — bkz. 10.6.3'ün kuralı.)*
@@ -69,7 +69,7 @@ Erken tip galaksilerin HI halkalarında Lelli ve ark. (2017) galaksi başına ya
 
 | Küme | Medyan artık | Saçılma |
 |---|---|---|
-| **Teori — ETG dış nokta** | **−0,008 dex** | ~0,15 |
+| **Teori — ETG dış nokta** | **−0,003 dex** (pencereli; penceresiz −0,008) | ~0,15 |
 | ΛCDM — ETG dış nokta | +0,045 dex | ~0,14 |
 
 ![Erken tip galaksiler — radyal ivme düzlemi](Gorseller/k10_etg.png)

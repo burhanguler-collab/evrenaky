@@ -2,6 +2,8 @@
 
 *(Hesap: `CALISMA/yuksek_z_sinavi.py` · veri: `CALISMA/veri/_genzel2017_tablo1.csv` — Genzel ve ark. 2017, Nature 543, 397'nin Tablo 1'inden elle aktarılmış · kayıt: `90_YUKSEK_Z/`)*
 
+> **⚡ PENCERE GÜNCELLEMESİ (M-47):** Aşağıdaki sayılar penceresiz kurulumun tarihsel kaydıdır; o kurulumda sabit okuma bile ortalamada fazla öngörüyordu ($f_{DM}$ artığı $+0{,}19$). Rankine penceresi resmîleştikten sonra sınav yeniden koşulmuştur (`CALISMA/pencere_sinavi.py` md. 5): pencereli öngörü **altı diskin beşinde yayın bandının içindedir** (medyan artık $-0{,}072$); üç üst-sınır galaksisinin üçü de sağlanır; tek dışarı kalan GS4_43501'dir (alt sınırın altında). Kozmik-okuma dışlaması değişmez — pencereli rejimde $f_{DM}\propto a_0^{3/2}$ olduğundan kozmik okuma daha da keskin dışlanır.
+
 ## 10.9.1 Bu sınav neden özel
 
 Programın bütün diğer sonuçları tek bir veri ailesinden okunur: SPARC ve türevleri. Kitabın kendi en ağır özeleştirisi de budur (7.4 madde 12: türetimler sınandıkları veriden okunuyor; öngörü statüsü kazanılmadı). Genzel ve ark. (2017)'nin altı büyük yıldız-oluşturan diski ($0{,}85<z<2{,}38$) bu programa **hiç girmemiştir**: kalibrasyon yok, fit yok, ayar yok. Teori ne diyorsa o.

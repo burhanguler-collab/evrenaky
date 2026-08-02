@@ -46,7 +46,7 @@ ACC = 1e6 / 3.0856776e19
 KATSAYI = 16.1
 A0_ESKI = (C_SI * H0_SI) / ACC / KATSAYI   # kitabin eski degeri (tarihsel)
 # NIHAI KURULUM (86_NIHAI): a_0 = 1,75 x cH_0/16,1
-A0 = 1.75 * A0_ESKI
+A0 = 1.75 * 1.038 * A0_ESKI        # pencereli resmi kalibrasyon (M-47) = 7,67e-11 m/s^2
 A0_SI = A0 * ACC                          # m/s^2
 RHO_CRIT = 3 * 0.07 ** 2 / (8 * np.pi * G)
 H_RED = 0.7
@@ -202,13 +202,13 @@ thead th{color:#a1a1aa;font-weight:600;font-size:11px}
   padding:7px 9px;margin-top:8px;line-height:1.5}
 input[type=range]{width:100%;accent-color:#22c55e}
 .kz{color:#22c55e}.kk{color:#f87171}.ks{color:#fbbf24}
-</style></head><body><div style="padding:9px 16px;background:rgba(34,197,94,0.10);border-bottom:1px solid #166534;color:#bbf7d0;font-size:12.5px;line-height:1.45">&#9889; <strong>Fitsizlik durumu:</strong> Teori hi&#231;bir fit de&#287;erine muhta&#231; de&#287;ildir; tek kalibre say&#305;n&#305;n (a&#8320;) da t&#252;retilmi&#351; kar&#351;&#305;l&#305;&#287;&#305; mevcuttur (M-45) ve yaln&#305;z stat&#252; disiplini gere&#287;i kalibre de&#287;er resm&#238; kullan&#305;mda tutulmaktad&#305;r. Bu paneldeki &#246;ng&#246;r&#252; e&#287;rilerinde galaksi ba&#351;&#305;na fitlenen hi&#231;bir say&#305; yoktur.</div>
+</style></head><body><div style="padding:9px 16px;background:rgba(34,197,94,0.10);border-bottom:1px solid #166534;color:#bbf7d0;font-size:12.5px;line-height:1.45">&#9889; <strong>Fitsizlik durumu:</strong> Teori hi&#231;bir fit de&#287;erine muhta&#231; de&#287;ildir; tek kalibre say&#305;n&#305;n (a&#8320;) da t&#252;retilmi&#351; kar&#351;&#305;l&#305;&#287;&#305; mevcuttur (M-45) ve yaln&#305;z stat&#252; disiplini gere&#287;i kalibre de&#287;er resm&#238; kullan&#305;mda tutulmaktad&#305;r. Bu paneldeki &#246;ng&#246;r&#252; e&#287;rilerinde galaksi ba&#351;&#305;na fitlenen hi&#231;bir say&#305; yoktur. &#214;ng&#246;r&#252; e&#287;rileri, M-47 penceresini i&#231;eren <strong>pencereli resm&#238; denklemle</strong> hesaplan&#305;r (W = min(1, a&#8320;/g<sub>kaps</sub>) &#8212; Rankine i&#231; kolu, parametresiz).</div>
 <div class="ust"><h1>Erken tip galaksi sınavı — etkileşimli panel</h1>
 <span class="alt">@@N@@ galaksi · 32 ivme noktası · <b>fit YAPILAMAZ</b> (2 nokta/galaksi) ·
 arka planda @@NR@@ disk noktası · tek dosya, dış bağımlılık yok</span></div>
 <div class="kap">
  <div class="bl"><h2>Teorinin öngörüsü</h2>
-  <div class="dnk" style="margin-top:0">g<sub>öng</sub> = g<sub>bar</sub> + √(g<sub>bar</sub>·a₀)</div>
+  <div class="dnk" style="margin-top:0">g<sub>öng</sub> = g<sub>bar</sub> + √(g<sub>bar</sub>·a₀)·W, &nbsp;W = min(1, a₀/g<sub>bar</sub>) — M-47</div>
   <p class="et" style="margin-top:6px">M-37 merkezcil dengesinde 𝒢M = g<sub>bar</sub>R²
   konunca <b>R sadeleşir</b>. Formülde ne yarıçap, ne Υ*, ne kütle var.
   g<sub>bar</sub> <b>ölçülen</b> büyüklüktür.</p>
@@ -250,7 +250,7 @@ const CZ=[
  {k:'rar', ad:'disk RAR bulutu ('+S.nrar+' nokta)', c:'#52525b', t:'nokta', on:1},
  {k:'new', ad:'g_öng = g_bar (Newton)',             c:'#71717a', t:'nokta_c', on:1},
  {k:'amp', ad:'ampirik RAR uyumu (fitlenmiş g†)',   c:'#f87171', t:'kesik', on:1},
- {k:'evr', ad:'EVRENAKI  g_bar+√(g_bar a₀)',        c:'#16a34a', t:'kalin', on:1},
+ {k:'evr', ad:'EVRENAKI  g_bar+√(g_bar a₀)·W (M-47)',  c:'#16a34a', t:'kalin', on:1},
  {k:'evk', ad:'└ a₀ × (gereken çarpan)',            c:'#4ade80', t:'kesik', on:1},
  {k:'dis', ad:'ETG dış nokta (HI halkası dışı)',    c:'#ffcc00', t:'', on:1},
  {k:'ic',  ad:'ETG iç nokta (HI halkası içi)',      c:'#fb923c', t:'k', on:1},
@@ -270,9 +270,9 @@ const sd=a=>{const m=a.reduce((p,r)=>p+r,0)/a.length;
  return Math.sqrt(a.reduce((p,r)=>p+(r-m)*(r-m),0)/a.length);};
 
 /* TEORI: F1 olceklenmez, yalniz F4 sqrt(k) ile olceklenir. */
-const ongoru=(gb,k)=>gb+Math.sqrt(k*S.A0*gb);
+const ongoru=(gb,k)=>gb+Math.sqrt(k*S.A0*gb)*Math.min(1,k*S.A0/gb);  /* M-47 penceresi */
 /* F4'un ongoruye katkisi = gereken a_0'in KALDIRACI. Dusukse carpan okunmaz. */
-const pay=gb=>Math.sqrt(S.A0*gb)/ongoru(gb,1);
+const pay=gb=>Math.sqrt(S.A0*gb)*Math.min(1,S.A0/gb)/ongoru(gb,1);
 /* ampirik RAR uyumu — Lelli+2017, g_dagger FITLENMISTIR (teorinin degil) */
 const ampirik=gb=>gb/(1-Math.exp(-Math.sqrt(gb/S.GD)));
 
@@ -389,7 +389,7 @@ function ciz(){
     (b>a?'':'+')+fx(100*(ongoru(g.gb[j],mult)/g.go[j]-1),1)+'%',cx+11,(a+b)/2);});}
 
  /* ---- olcut tablosu ---- */
- const sat=[['EVRENAKI  g_bar+√(g_bar a₀)',P.length,
+ const sat=[['EVRENAKI  g_bar+√(g_bar a₀)·W (M-47)',P.length,
    (med(dtx)<0?'':'+')+fx(med(dtx),3),fx(sd(dtx),3),
    isNaN(gerek)?'—':'×'+fx(gerek,2),1]];
  sat.push(['ΛCDM (Υ*='+ups.replace('.',',')+', yarıçap kurulmuş)',P.length,
@@ -449,13 +449,13 @@ function ciz(){
   st('eğiklik i', fx(g.inc,0)+'° ± '+fx(g.einc,0),'O')+
   st('g<sub>bar</sub> ('+etk+')', us(g.gb[j])+' m/s²','O')+
   st('g<sub>obs</sub> ('+etk+')', us(g.go[j])+' m/s² ± '+fx(g.ego[j],2)+' dex','O')+
-  st('F4 = √(g<sub>bar</sub>·a₀)', us(Math.sqrt(mult*S.A0*g.gb[j]))+' m/s²','T')+
+  st('F4 = √(g<sub>bar</sub>·a₀)·W', us(Math.sqrt(mult*S.A0*g.gb[j])*Math.min(1,mult*S.A0/g.gb[j]))+' m/s²','T')+
   st('F4\'ün payı', fx(100*pay(g.gb[j]),0)+'%'+(pay(g.gb[j])<.25?' ⚠':''),'T')+
   '<div style="border-bottom:none;padding-top:6px"><span>öngörü / ölçüm</span><b>'+
    fx(Math.log10(ongoru(g.gb[j],mult)),2)+' / '+fx(g.lgo[j],2)+'  ('+
    (ongoru(g.gb[j],mult)<g.go[j]?'':'+')+
    fx(100*(ongoru(g.gb[j],mult)/g.go[j]-1),1)+'%)</b></div>';
- q('#dnk').innerHTML='g<sub>öng</sub> = g<sub>bar</sub> + √(g<sub>bar</sub>·a₀)'+
+ q('#dnk').innerHTML='g<sub>öng</sub> = g<sub>bar</sub> + √(g<sub>bar</sub>·a₀)·W'+
   '<br><span style="color:#71717a">R sadeleşti — yarıçap, Υ*, kütle YOK</span>';
  q('#grl').innerHTML=
   st('Υ* (seçili)', fx(+ups,2),'S')+

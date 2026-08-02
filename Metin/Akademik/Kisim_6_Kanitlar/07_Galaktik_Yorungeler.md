@@ -6,7 +6,7 @@ Ancak 1970'lerde Vera Rubin ve meslektaşları tarafından yapılan hassas gözl
 
 Bu bölüm, Evrenakı teorisinin hiçbir "görünmez madde" varsayımına ihtiyaç duymadan, sadece kendi yerel mekanik postülatlarıyla bu kozmolojik anomalinin üstesinden nasıl geldiğini ve düz dönüş eğrilerini doğal yollarla nasıl türettiğini göstermektedir.
 
-### 6.5.1 Kütleçekim Grafiği ve $1/r$ Kuvvetinin Yükselişi
+### 6.5.1 İvme Grafiği ve $1/r$ Kuvvetinin Yükselişi
 
 Teorinin temel postülatlarından olan **Eksenel İtim (F4)**, galaktik ölçekte diskin kapsanan baryonik kütlesinin dolanım debisinden beslenir; genliğinin türetimi 6.5.4.3'tedir.
 
@@ -14,13 +14,13 @@ Kritik nokta şudur: Klasik merkezcil kütleçekim $1/r^2$ profiliyle zayıflark
 
 ### 6.5.2 Matematiksel İspat: Düz Dönüş Eğrisinin Türetilmesi
 
-Dairesel yörüngede dönen bir yıldızın dengede kalabilmesi için Merkezcil İvme'nin, kütleçekim ivmesi ile teorinin öngördüğü eksenel ivmenin toplamına eşit olması şarttır:
+Dairesel yörüngede dönen bir yıldızın dengede kalabilmesi için Merkezcil İvme'nin, radyal kütle-itim ivmesi (F1) ile teorinin öngördüğü eksenel ivmenin (F4) toplamına eşit olması şarttır:
 
-$$a_{merkezcil} = a_{kütleçekim} + a_{eksenel}$$
+$$a_{merkezcil} = a_{radyal} + a_{eksenel}$$
 
 Terimleri kendi fiziksel bağımlılıklarıyla açtığımızda:
 1. **Merkezcil İvme:** $\frac{v^2}{r}$
-2. **Evrenakı Kütleçekim (Basınç Gradyanı):** $\frac{A}{r^2}$ *(Buradaki A sabiti, galaksinin merkez kütlesinin yarattığı hidrodinamik basınç düşümü ile orantılıdır)*
+2. **Radyal Kütle-İtim (F1, Basınç Gradyanı):** $\frac{A}{r^2}$ *(Buradaki A sabiti, galaksinin merkez kütlesinin yarattığı hidrodinamik basınç düşümü ile orantılıdır)*
 3. **Eksenel Kuvvet (Evrenakı):** $\frac{B}{r}$ *(Buradaki B sabiti, bu ilk kurulumda elle konur; genliğinin türetimi 6.5.4.3'tedir — kaynağı, kapsanan baryonik kütlenin vortisitesidir)*
 
 Eşitliği kuralım:
@@ -72,14 +72,14 @@ Eliptik galaksiler sarmal bir diske sahip olmadıkları için net dönüş eğri
 Teorinin bu sistemler için söyleyebildiği ve söyleyemediği şey nettir:
 
 - **F4'ün kaynağı merkezî kara delik değildir.** Genliği vortisiteden gelir ve kaynağı kapsanan baryonik kütledir (6.5.4.3). Ölçüm de bunu doğrular: 163 galakside fitlenen F4 genliği toplam baryonik kütleyle ölçeklenir (Spearman $-0{,}91$), kovan kütlesiyle değil ($-0{,}33$); büyük kara delik beklenmeyen **kovansız 134 galakside** F4 yine zorunludur (yalnız F1 ile medyan $\chi^2_{ind}=17{,}3$, F4 eklenince $1{,}37$).
-- **Basınç-destekli sistemler için nicel makine henüz yoktur.** M-37 profil teoremi ($v_\theta=\sqrt{R\,\lvert a_{radyal}\rvert}$) **dairesel yörünge** için kurulur; hız dağılımını efektif dairesel hıza çeviren köprü teoride kurulmamıştır. Eliptikler bu yüzden teorinin galaktik denkleminin bugünkü geçerlilik alanının sınırındadır (6.5.4.9).
+- **Basınç-destekli köprü artık kuruludur (M-48):** küresel sistem diskle aynı radyal yasaya uyar ve $v_c=\sqrt2\,\sigma$ köprüsü Jeans'ten türer; eliptiklerin dış bölgesi geçerlilik alanına girmiştir (6.5.4.9; nicel dış-σ sınavı veri bekler, G-12).
 - **Nicel sınav yapılabilen yerde yapılmıştır:** erken tip galaksilerin radyal ivme düzlemi. 16 galakside teorinin dış nokta artığı $-0{,}008$ dex'tir (6.5.4.5'in ölçüm tablosu; hesap `CALISMA/SINIF_CALISMASI/96_ETG/`).
 
 #### 3. Cüce Küresel (Dwarf Spheroidal) Galaksiler
 
 Fornax (Ocak) gibi cüce küresel galaksiler, standart görüşte karanlık maddenin oransal olarak en yoğun bulunduğu düşünülen, sadece 1-2 kpc boyutlarındaki minicik yapılardır. Çok düşük kütlelerine rağmen efektif hız profilleri $\sim18$ km/s bandında asimptota oturur.
 
-Bunlar da basınç-destekli sistemlerdir ve yukarıdaki köprü eksikliği burada da geçerlidir: teori cüce küreseller için **nicel öngörü üretmez** (6.5.4.9). Merkezî kara delikle ilgili hiçbir öngörü de teoriden çıkmaz — F4 kara deliğe bağlı değildir ve dönüş eğrisi verisi kara deliğin varlığına zaten kördür: etki yarıçapı ($\sim$0,01 kpc) SPARC'ın en iç ölçüm noktasından **75 kat** küçüktür; $M_{BH}$ hesaba katılsa da katılmasa da medyan $\chi^2$ dördüncü basamakta değişir. Küresel formun neden korunduğu sorusunun teorideki nicel karşılığı kurulmamıştır ve açık kalemdir (7.4).
+Bunlar da basınç-destekli sistemlerdir. Köprü artık kuruludur (M-48) ve mertebesi tutar: $M_*\sim10^7$ için köprü $v_c=\sqrt2\,\sigma\approx17{,}8$ km/s verir — yukarıdaki $\sim18$ km/s. MW uydusu cüceler **dış-alan-baskın** sistemlerdir ve dış alan terimi artık türetilmiştir (M-49): $W_{dış}=\min(1,\sqrt{g_{kaps}/g_{ext}})$. MW alanıyla birlikte köprü Fornax için $\sigma=10{,}5$–14,9 km/s verir (gözlenen ~11–12) — EFE terimi yalıtık değeri gözleme doğru çeker. Statü [T-aday]: $M_*$/anizotropi/MW-alanı belirsizlikleri $O(1)$'dir, izole↔baskın dSph karşılaştırması asıl sınavdır (G-13). Merkezî kara delikle ilgili hiçbir öngörü de teoriden çıkmaz — F4 kara deliğe bağlı değildir ve dönüş eğrisi verisi kara deliğin varlığına zaten kördür: etki yarıçapı ($\sim$0,01 kpc) SPARC'ın en iç ölçüm noktasından **75 kat** küçüktür; $M_{BH}$ hesaba katılsa da katılmasa da medyan $\chi^2$ dördüncü basamakta değişir. Küresel formun neden korunduğu sorusunun teorideki nicel karşılığı kurulmamıştır ve açık kalemdir (7.4).
 
 ### 6.5.3.1 Gerçek SPARC Verisiyle Nicel Sınav
 
@@ -485,7 +485,7 @@ Bunun anlamı şudur: **uyum iyileşmesi ile teşhis gücü ters yönde hareket 
 **Kayıt.** Teorinin resmî galaktik denklemi $k=2$ hâlidir; $\ell_\omega$'nın yasası vardır ve o hâl 6.5.3.3'ün rejim sonucunu verir. $k=3$ hâli, dış-bölge sistematiği çözülene kadar bir **duyarlılık kontrolü** olarak tutulmalıdır, teorinin iddiası olarak değil.
 
 ### Sonuç
-Evrenakı teorisinin kinematik denklemleri; sarmal, eliptik ve cüce küresel gözetmeksizin, dönen bir çekirdeğe sahip tüm galaktik yapılarda "Karanlık Madde" varsayımını tamamen ortadan kaldırmakta ve kütleçekim anomalisini kendi iç dinamikleriyle, saf matematiksel bir kesinlikle çözmektedir.
+Evrenakı teorisinin kinematik denklemleri; sarmal, eliptik ve cüce küresel gözetmeksizin, dönen bir çekirdeğe sahip tüm galaktik yapılarda "Karanlık Madde" varsayımını tamamen ortadan kaldırmakta ve dönüş-hızı anomalisini kendi iç dinamikleriyle, saf matematiksel bir kesinlikle çözmektedir.
 
 ### İnteraktif Galaktik Yörünge Simülatörü
 
@@ -1173,11 +1173,11 @@ Pencere parametresizdir ve üç ölçümle sınanmıştır: **(a)** morfolojik s
 
 M-37'nin profil teoremi ($v_\theta=\sqrt{R\lvert a_{radyal}\rvert}$) iki katkıyı birleştirir. Adım 6'nın $\sqrt{N}$ toplanmasıyla ($\ell_\omega^{etkin}=\ell_\omega^{mikro}\sqrt{N}=\sqrt{\mathcal{G}M_{kaps}/a_0}$) denklem kapalı ve **yerel** biçimini alır:
 
-$$\boxed{\;v^2(R)\;=\;R\,a_{F1}(R)\;+\;\sqrt{\mathcal{G}\,M_{kaps}(R)\,a_0}\;}$$
+$$\boxed{\;v^2(R)\;=\;R\,a_{F1}(R)\;+\;\sqrt{\mathcal{G}\,M_{kaps}(R)\,a_0}\cdot W(R)\;,\qquad W=\min\!\Big(1,\;\frac{a_0}{g_{kaps}}\Big),\quad g_{kaps}=\frac{\mathcal{G}M_{kaps}}{R^2}\;}$$
 
 İkinci terimdeki kütle **yerel** kapsanan kütledir — akı teoremi gereği başka türlüsü olamaz: dolanım akısı $R$ yüzeyinden geçer ve $R$ içindeki maddeden doğar; 6.5.4.3'ün türetiminin hiçbir adımında toplam kütle geçmez. Yerellik veride de görünür: bu biçimle $\ell_\omega$ yasasının galaksi-içi yarıçap artığı sıfırdır ($-0{,}025$; 141 galaksi, `CALISMA/SINIF_CALISMASI/94_YEREL_LOMEGA/`).
 
-Denklemin okunuşu: birinci terim **küresel akının** payı, ikinci terim **silindirik vortisite akısının** payıdır. İkinci terim $\sqrt{M_{kaps}}$ ile büyür ve $M_{kaps}$ doyduğu anda sabitlenir — düz kol oradan doğar. Eşdeğer yerel yazım $a_{F4}=\sqrt{a_{F1}\,a_0}$'dır: *eksenel itim, radyal itim ile $a_0$ ölçeğinin geometrik ortalamasıdır.* **Galaksi başına serbest parametre sayısı: sıfır** ($a_0$ küreseldir; $\Upsilon_*$ fotometrik girdidir).
+Denklemin okunuşu: birinci terim **küresel akının** payı, ikinci terim **silindirik vortisite akısının** payıdır. İkinci terim $\sqrt{M_{kaps}}$ ile büyür ve $M_{kaps}$ doyduğu anda sabitlenir — düz kol oradan doğar. Üçüncü çarpan $W$ **penceredir** (M-47): M-30'un Rankine iç kolunun bu denklemdeki ifadesi ($r_0=\ell_\omega^{etkin}$ özdeşleştirmesiyle, parametresiz) — $g_{kaps}\leq a_0$ bölgesinde $W=1$ (derin limit ve BTFR'ye dokunmaz), içte kuvvet Rankine'in $\propto R$ koluna döner; radyal ivme bağıntısının biçim sürüklenmesini sıfırlar ve yüksek-$z$ yoğun-rejim açığını kapatır (M-47; `CALISMA/SINIF_CALISMASI/87_ETKIN_YASA/PENCERE_TURETIMI.md`). Yerel yazım $a_{F4}=\sqrt{a_{F1}\,a_0}$'dır: *eksenel itim, radyal itim ile $a_0$ ölçeğinin geometrik ortalamasıdır.* **Şerh:** bu özdeşlik yalnız küresel simetride tamdır; yassı diskte $V_{bar}^2\neq\mathcal{G}M_{kaps}/R$ olduğundan iki okuma sayısal olarak ayrışır ve ayrışma ölçülmüştür (besleme sınavı: `CALISMA/SINIF_CALISMASI/87_ETKIN_YASA/BESLEME_SINAVI.md` — $g_{bar}$-besleme dönüş eğrisi RMS'inde hafifçe öndedir ama biçim borcunu kapatmaz; tek-üslü tarama kısmi ağırlıkta sığ bir minimum bulur, `VORTISITE_KARARI.md`). İki kalıcı sonuç kaydedilmiştir: **öz-tutarlı besleme** — girdabı toplam akışın dolanımının beslemesi — yapısal bir ivme tabanı dayattığı için gözlemle **kesin dışlanmıştır** (en düşük gözlenen nokta tabanın 22 kat altında): F4'ün kaynağı *maddenin* dolanımıdır, sürüklenen akışın kendisi değil — akı gerekçesinin verili doğrulaması. Resmî denklem $M_{kaps}$ beslemesinde kalır; doğru beslemenin (ve kısmi-ağırlık adayının) türetimi F4'ün açık işidir (7.4 madde 12h). **Pencere kaydı [T-aday]:** M-30'un Rankine iç kolu bu denkleme uygulandığında ($r_0=\ell_\omega^{etkin}$ özdeşleştirmesiyle $W=\min(1,a_0/g_{kaps})$, parametresiz) radyal ivme bağıntısının biçim sürüklenmesi sıfıra iner ve uyum iyileşir; pencere **resmî denkleme alınmıştır** (M-47) ve bütün aşağı-akış sınavları yeniden koşulmuştur (`CALISMA/SINIF_CALISMASI/87_ETKIN_YASA/PENCERE_TURETIMI.md` ve `SONUC_PENCERE.csv`; defter: 10.2). **Galaksi başına serbest parametre sayısı: sıfır** ($a_0$ küreseldir; $\Upsilon_*$ fotometrik girdidir).
 
 **Sayısal sınav 6.5.3.1'dedir.** Yayınlanmış SPARC verisiyle (43 nokta, gerçek hata çubukları) yapılır. Yukarıdaki denklem oradaki "Evrenakı F1+F4" satırının ta kendisidir; $b=\mathcal{G}/\ell_\omega$ özdeşliğiyle aynı modeldir.
 
@@ -1206,7 +1206,7 @@ Galaktik ölçekte ölçülen $\ell_\omega^{etkin}$, galaksiden galaksiye beş m
 
 **Ölçeğin değeri.** İvme ölçeği Adım 6'nın mikro bileşkesidir ve boyutsuz değeri gözlemle sabitlenir — beş bağımsız ölçüm (dönüş eğrileri, BTFR, morfolojik sınıflar, erken tip galaksiler, radyal ivme bağıntısı) aynı değerde buluşur:
 
-$$\boxed{\;a_0 \;=\;\frac{\mathcal{G}\,m_n}{\ell_\omega^{2}}\;=\; 7{,}4\times10^{-11}\ \mathrm{m/s^2}\;\left(=1{,}75\times\frac{c\,H_0}{16{,}1}\right)
+$$\boxed{\;a_0 \;=\;\frac{\mathcal{G}\,m_n}{\ell_\omega^{2}}\;=\; 7{,}67\times10^{-11}\ \mathrm{m/s^2}\;\left(=1{,}82\times\frac{c\,H_0}{16{,}1}\right)
 \quad\text{[S] — kalibre edilmiş küresel sabit}\;}$$
 
 > **Statü — biçim türetilmiş, değer kalibredir.** $a_0=\mathcal{G}m_n/\ell_\omega^2$ biçimi Adım 6'nın sonucudur; sayısal değer ise $\ell_\omega^{mikro}$ ölçümünün saçılması (0,17 dex) içinde gözlemle seçilmiştir — bu yüzden envanterde **[S]** rozetiyle sayılır, galaksi başına serbestlik eklemez. $cH_0$ mertebesiyle bugünkü örtüşme ise bir köken göstergesi **değildir**: $a_0\propto cH(z)$ okuması, Genzel ve ark. (2017)'nin $z=0{,}85$–$2{,}4$ diskleriyle doğrudan sınanmış ve altı galaksinin **altısında** dışlanmıştır (aşağıda); $a_0$ kozmik zamanla değişmez, örtüşme sayısal bir rastlantı olarak kaydedilir.
@@ -1245,6 +1245,14 @@ Bu, **baryonik Tully-Fisher ilişkisidir** — galaktik dinamiğin en sağlam am
 - **Normalizasyonda kütleye bağlı sistematik var.** Medyan ölçülen/öngörülen $=1{,}06$ — genlik yüzde birkaç içindedir. Ama oran örneklem boyunca sabit değildir: cücede $\approx1{,}5$, ortada $\approx1{,}05$, kütlelide $\approx0{,}94$. Bu, morfolojik sınıf bandının (log genişliği 0,113 dex) bu sınavdaki görünümüdür ve açık kalemdir (7.4, madde 12).
 - **Saçılma 2,4 kattır.** Sıkı bir bağıntı değildir; gözlemsel BTFR'nin kendi saçılmasından geniştir. Galaksiler arası varyansın büyük kısmı ölçüm bütçesiyle (başta uzaklık belirsizliği) açıklanır; sınıf bandı ise gerçektir.
 - **$M_{bar}$ fit edilen $\Upsilon_*$ ile hesaplanıyor.** Bağımsız bir yıldız kütlesi tayiniyle (popülasyon sentezi) tekrarlanmalıdır; aksi hâlde $\ell_\omega$ ile $M_{bar}$ arasında kısmi bir bağımlılık kalır. Bu, 7.4 madde 12'nin açık kalemidir.
+
+#### Etkin yasa kimliği: Milgrom programı (MOND) ile ilişki ve ayrışma
+
+Bu türetimin ivme yazımı ($g=g_{bar}+\sqrt{g_{bar}\,a_0}$ — 6.5.4.4'ün eşdeğer yerel biçimi), standart fiziğin MOND programında (Milgrom, 1983) $\nu(y)=1+y^{-1/2}$, $y=g_{bar}/a_0$ geçiş-fonksiyonu ailesi olarak bilinir; pencereyle (M-47) aile parçalıdır — $y>1$'de $\nu=1+y^{-3/2}$, türetilmiş daha dik sönüm. MOND, Newton'un "kütleçekim" yasasını düşük ivmede değiştiren ampirik bir reçetedir; galaktik ölçekteki başarısı (BTFR, radyal ivme bağıntısı, baryon-deseni↔eğri-deseni yerelliği) gerçek ve keskin biçimde belgelenmiştir (Famaey & McGaugh, 2012; McGaugh ve ark., 2016). Teori bu başarıyı **miras alır, çünkü aynı etkin yasayı üretir** — ama bir geçiş fonksiyonu *seçerek* değil, iki gerçek kuvvetin (F1 küresel akı + F4 silindirik vortisite akısı) toplamından *türeterek.* Kepler yasalarının Newton mekaniğine oranı neyse, MOND'un bu denkleme oranı odur: doğru yakalanmış, mekanizmasız bir etkin yasa. Miras ölçülmüştür ve yukarıdaki BTFR/RAR sonuçlarının kendisidir; konsolide defter `CALISMA/SINIF_CALISMASI/87_ETKIN_YASA/` dosyasındadır.
+
+MOND'un açıklamasız bıraktığı üç öğenin üçü de burada adreslidir: $\nu$'nün biçimi (F1+F4 toplamı), $a_0$'ın kökeni (mikro bileşke $\mathcal{G}m_n/\ell_\omega^2$; aday kapanış M-45) ve ölçütün neden *ivme* olduğu (M-37 profil teoremi + M-45 eş-güç). Üç yapısal varsayımı ise teoride yoktur ve ayrışma buradan doğar: MOND **sabit $G$**, **evrensel $a_0$** ve (görelilik uzantılarında) **sabit $c$** çerçevesinde kurulur; teoride $\mathcal{G}$ yereldir (Postülat 4), $a_0$ ortam kanallıdır ($\lambda$; morfolojik sınıf bandı — MOND bandı üretemez, G-8'in $+0{,}49$'luk ilk işareti tam bu kanaldandır) ve $c$ yerel bir büyüklüktür. Ayrışmanın bugünkü karnesi: (i) MOND'un görelilik uzantısı TeVeS, GW170817'nin "kütleçekim dalgası" hız kısıtıyla düşmüştür — teoride dalga kanalı yerel $c$'de olduğundan (M-44) kısıt otomatik sağlanır; (ii) MOND folklorunun $a_0\sim cH_0$ kozmik okuması yüksek-$z$'de 6/6 dışlanmıştır (aşağıda) — mikro köken ayakta; (iii) MOND'un kalıcı küme açığı (≈ 2 kat), teoride sirkülasyon-kuyuları programının hesap kalemidir (3.7.4; 7.4). Sıradaki iki ayırt edici sınav öngörü tablosuna yazılmıştır: geniş çift yıldızlar (G-10; literatür çekişmelidir — Chae, 2023 ↔ Banik ve ark., 2024) ve $a_0(z)$ sabitliği (G-11).
+
+**Dürüstlük kaydı — devralınamayan parça ve öncelik hakkı.** MOND'un veriye *fitlenmiş* geçiş eğrisi ($g_\dagger=1{,}20\times10^{-10}$ m/s²; McGaugh ve ark., 2016) RAR artığını düz bırakır; teorinin **penceresiz** toplamsal biçimi $+0{,}051$ dex/dex'lik artık eğim bırakıyordu — pencereyle (M-47) eğim aynı 2693 noktada $+0{,}0002\approx0$'dır; devralınamayan parça türetimle kapanmıştır (7.4 madde 12h). $g_\dagger$ ile $a_0$ ayrı sabitler olarak kalır (oran 1,56). Bu fark $a_0$ ile kapatılamaz — iki uç ayrı yöne ister; kapanışın adresi F1 ile F4'ün toplanma biçiminin (ve geçiş yarıçapı $r_0$'ın, Blok H) türetimidir. $g_\dagger$ ile $a_0$ aynı sabit değildir (oran 1,62; biçimler farklı olduğundan sayılar biçimden bağımsız karşılaştırılamaz). Ve BTFR/RAR düzenliliklerini ampirik olarak bulup keskinleştiren Milgrom–McGaugh–Lelli çizgisidir; teorinin katkısı bağıntıların kendisi değil, mekanizması, türetimi ve ayrışma öngörüleridir.
 
 #### $a_0$'ın değeri: nasıl sabitlendi, kökeni ne
 
@@ -1410,11 +1418,11 @@ Teorinin galaktik denkleminin geçerlilik alanı bu kayıtla sınırlandırılı
 
 **(1) F4'ün kaynağı merkezî kara delik değildir.** F4'ün genliği vortisiteden türetilir ve kaynağı $M_{kaps}$'tır (6.5.4.3). Ölçüm de bunu doğrular: F4'ün genliği kovanla değil toplam baryonik kütleyle ölçeklenir ($\rho=-0{,}91$'e karşı $-0{,}33$); kovansız 134 galakside F4 yine zorunludur ($\chi^2$ 17,3 → 1,37); ve kara delik kütlesi dönüş eğrisi verisinde görünmezdir (etki yarıçapı en iç noktadan 75 kat küçük, $\chi^2$ dördüncü basamakta değişir). Bu nedenle teoriden kara deliklerle ilgili hiçbir galaktik öngörü çıkmaz; kara delik içeren hiçbir iddia 6.5.4.8'in yanlışlanabilir öngörüler tablosuna giremez.
 
-**(2) Basınç-destekli sistem köprüsü yok.** M-37 profil teoremi $v_\theta=\sqrt{R\lvert a_{radyal}\rvert}$ **dairesel yörünge** için türetilmiştir. Eliptikler ve cüce küreseller basınç-destekli sistemlerdir. Bir hız dağılımını ($\sigma$) dairesel hıza çevirmek, teoride türetilmemiş bir varsayım gerektirir (izotropi, Jeans denklemi, kütle-ışık profili). **Teorinin bu köprüyü kuran bir ifadesi yoktur.**
+**(2) Basınç-destekli sistem köprüsü KURULDU (M-48, [T-aday]).** İki parçayla: *(i)* **küresel izdüşüm lemması** — silindirik F4 kuvvetinin radyal bileşeni her enlemde tam $\sqrt{\mathcal{G}M_{kaps}a_0}/r$'dir ($\sin\theta$'lar sadeleşir; kutup, M-47'nin Rankine koluyla düzenlidir): küresel sistem diskle **aynı radyal yasaya** uyar; kaynak tarafında $\sqrt N$ teoremi düzenli dönme istemez (dolanım korunumu yeter), dispersiyon-destekli kütle F4'ü birinci mertebede tam besler. *(ii)* **Jeans köprüsü** — izotropik dış bölgede $\sigma^2=\sqrt{\mathcal{G}M_{bar}a_0}/\alpha$; izotermal $\alpha=2$ ile $v_c=\sqrt2\,\sigma$ ve Faber–Jackson türer: $\sigma^4=\mathcal{G}M_{bar}a_0/4$ (BTFR'nin kardeşi, aynı sabitlerle). Mertebe denetimi: Fornax $M_*\sim10^7$ için $v_c=17{,}8$ km/s — aşağıdaki $\sim18$ km/s kaydıyla örtüşür (dış-alan şerhiyle). Türetim: `CALISMA/SINIF_CALISMASI/87_ETKIN_YASA/KOPRU_TURETIMI.md`.
 
-> **Dolayısıyla, açıkça:** Evrenakı teorisi şu an **yalnız dönme-destekli disk sistemleri** için nicel bir galaktik makineye sahiptir. SPARC sınavlarının tamamı (6.5.3.1–6.5.3.6) bu sınırın içindedir ve geçerlidir; erken tip galaksilerin radyal ivme düzlemi sınavı da (16 galaksi, dış nokta artığı $-0{,}008$) köprü gerektirmeyen bir sınavdır ve geçerlidir. Küresel sistemlerin dinamiği bu sınırın **dışındadır.**
+> **Güncel sınır:** M-48 ile küresel sistemlerin **dış bölgesi** türetim kapsamına girmiştir ($a_r$ diskle aynı; $v_c=\sqrt2\sigma$). Kapsam dışında kalanlar açıkça sınırlıdır: **dış-alan-baskın cüce küreseller** (MW uyduları — EFE terimi türetilene dek nicel öngörü verilmez) ve anizotropinin $O(1)$ bandı. SPARC sınavları ve 96_ETG zaten köprüsüz geçerliydi; M-48 onları değiştirmez, 96_ETG'nin başarısını **açıklar.**
 
-**Açık iş.** Küresel sistemlere uzanmak için iki şey gerekir ve ikisi de yapılmamıştır: **(a)** F1+F4'ün küresel simetrideki izdüşümünün türetilmesi (F4'ün silindirik akı kanalı bir disk gerektirir; küresel sistemde karşılığı nedir?), **(b)** dairesel hız ↔ hız dağılımı köprüsünün teori içinde kurulması. Bunlar yapılana kadar cüce küresel ve eliptik dinamiği **öngörü değil, açık kalem** sayılmalıdır (7.4).
+**Açık iş (güncel).** (a) ve (b) türetilmiştir (M-48). Kalanlar: dış-$\sigma$ kataloğuyla ilk nicel sınav (G-12; [T-aday]→[T] koşulu), sıcak bileşenin λ'ının türetimi (ikinci-mertebe kovan düzeltmesi) ve EFE teriminin türetimi (cüce küresellere nicel uzanımın anahtarı; 7.4).
 
 ### 6.5.4.8 Yanlışlanabilir öngörüler (7.5 tablosuna)
 
@@ -1429,3 +1437,21 @@ Teorinin galaktik denkleminin geçerlilik alanı bu kayıtla sınırlandırılı
 | G-7 | Tutarlılık kümesi atom çekirdeğidir (Adım 7): temiz hiçbir galakside gereken $a_0$ çarpanı $[X,\langle A\rangle]\approx[0{,}7;\,2{,}2]$ penceresinin belirgin dışına çıkamaz; $M_{tut}$ hidrojen kütle kesrini izler; bağımsız her $\ell_\omega^{mikro}$ ölçümü 7,4 fm – $2{,}7\times10^3$ fm ölçek boşluğunda kalmalıdır | Pencere dışı temiz bir ölçüm ($k>3$ ya da $k<0{,}5$), $X$'ten bağımsız bir $M_{tut}$, ya da boşluk dışı bir $\ell_\omega$ Adım 7'yi çürütür |
 | G-8 | Dolanım korunumu + kaskad okuması (Adım 7): $\ell_\omega^{mikro}$ hiçbir kütle aralığında sistematik eğim göstermez (polarizasyon tam sıfır); $\lambda\leq1$ — temiz-büyük S0/BCD örnekleminde pencere-üstü çarpanlar 1'in altına inmek zorundadır; $\lambda$ diskin inceliği/dinamik soğukluğuyla ($v/\sigma$) artmalıdır *(ilk sınav, 18 galaksi: $+0{,}49$, $p=0{,}019$ — işaret öngörülen yönde; kesin doğrulama $n\gtrsim40$ kayıt-öncesi kipte bekliyor)* | $\ell_\omega^{mikro}$'da kütle eğimi, temiz uçlarda kalıcı $\lambda>1$, ya da $\lambda$–incelik ilişkisinin büyük örneklemde ters çıkması Adım 7'nin muhasebe çerçevesini çürütür |
 | G-9 | $a_0$'ın aday kapanışı (6.5.4.5, M-45): $\ell_\omega/r_n=\sqrt{m_p/m_e}$ — bağımsız her $\ell_\omega^{mikro}$ ölçümünün **medyanı** $36{,}0$ fm'e ($\pm\%5$) yakınsamalı (medyan-H kilidi: $X>0{,}5$); tür-ayrımlı dağılımda He/metal nükleonlarının $\ell\approx51$ fm'lik ikinci modu bulunmalı; oran $r_p$ revizyonlarıyla birlikte hareket etmeli; hiçbir ortamda $a_0^{etkin}<X\cdot\mathcal{G}m_nm_e/(m_pr_n^2)\approx6{,}3\times10^{-11}$ m/s² ölçülmemeli | Medyanın 36 fm'den sapması, ikinci modun yokluğu/yanlış yerde çıkması, oranın $r_p$'yi izlememesi ya da tabanın altında bir $a_0$ aday kapanışı çürütür |
+| G-10 | Etkin yasa ayrışması — geniş çift yıldızlar (6.5.4.5): F4 yerel dolanımdan/kapsanan kütleden beslenir ve galaktik F4 çift ölçeğinde düzgün alandır → çiftin **iç** dinamiği Newton'a yakın kalmalıdır; MOND-tipi evrensel ~%20 hız artışı görülmemeli *(hesap yapıldı — `87_ETKIN_YASA/GENIS_CIFT.md`: sapma ≲$10^{-4}$, baskın terim galaktik gelgit; koşul: F4'ün taşıyıcısı koherent disk dolanımı — karşı-olgusal öz-F4 kanalı %24–158 verirdi, sınav ikilidir)* | Gaia geniş çiftlerinde kalıcı, sistematik MOND-tipi artışın kesinleşmesi F4'ün yerel-kaynak okumasını çürütür |
+| G-12 | Basınç-destekli köprü (M-48): dönme-destekli olmayan küresel sistemlerin dış $\sigma$-profilleri düzleşmeli ve düz değer $\sigma^4=\mathcal{G}M_{bar}a_0/4$'e oturmalı; hem $\sigma$ hem bağımsız $v_c$ veren sistemlerde dış bölgede $v_c/\sigma\to\sqrt2$ | Dış-$\sigma$ düzlüğünün yokluğu, FJ sıfır noktasının $a_0$'dan sistematik sapması ya da $v_c/\sigma$'nın $\sqrt2$'den kalıcı ayrılması M-48'i çürütür (izotropi/EFE şerhleriyle) |
+| G-13 | EFE terimi (M-49): dış-alan-baskın sistemlerde iç dinamik yarı-Newton'dur ve tek evrensel çarpan taşır — $\mathcal{G}_{etkin}/\mathcal{G}=1+\sqrt{a_0/g_{ext}}$ (aynı $g_{ext}$'te aynı); disklerde eğri düşüşü tam $g_{kaps}=g_{ext}$ yarıçapında başlamalı ve düşüş bölgesinde $v^2-V_{bar}^2\propto1/R$; izole cüceler aynı $M_*$'daki baskın-alan eşleniklerinden yüksek $\sigma$ taşımalı | Çarpanın $g_{ext}$'le $\sqrt{}$ dışı bir bağımlılık göstermesi, düşüşün yanlış yarıçapta başlaması ya da izole↔baskın farkının yokluğu M-49'u çürütür |
+| G-11 | Etkin yasa ayrışması — $a_0$ kozmik zamanla değişmez (mikro köken, M-45): genişleyen yüksek-$z$ dönüş eğrisi örneklemlerinde $a_0(z)$ eğimi sıfır kalmalı; $a_0\propto cH(z)$ dışlanmış kalmalı *(ilk sınav: $z=0{,}85$–$2{,}4$'te 6/6 dışlama)* | Yüksek-$z$'de $H(z)$'yi izleyen sistematik $a_0$ kayması mikro kökeni ve M-45 zincirini çürütür |
+
+### 6.5.5 Kapanış beyanı: makine tamam, program tanımlı
+
+Galaktik yörünge probleminin **teorik makinesi tamamlanmıştır** — denklemde türetilmemiş öğe
+kalmamıştır: F1 ve F4'ün biçimleri (M-35, M-37/M-38), toplanma (lineer süperpozisyon,
+[T-koşullu]), geçiş penceresi (M-47), küresel sistemlere uzanım ve $v_c=\sqrt2\,\sigma$
+köprüsü (M-48), dış alan terimi (M-49); $a_0$'ın biçimi türetilmiş, değeri [S] rozetiyle
+kalibre ve aday kapanışı (M-45) kayıtlıdır. **Kanıt programı ise tanımlı ve açıktır:** dört
+[T-aday] rozetin her birinin bağımsız-veri sınavı bellidir — M-45: SPARC-dışı
+$\ell_\omega$ ölçümü + hakem denetimi; M-47: örneklem-dışı HI kinematik koşumu (sabit
+$a_0$, sıfır yeniden-kalibrasyon); M-48: eliptik dış-$\sigma$ katalogları (G-12); M-49:
+izole↔baskın cüce küresel karşılaştırması (G-13). Bu bir "kapandı" ilanı değildir ve
+olamaz: her sınav çift taraflıdır — beyanın gücü, yanlışlanabilir ve hakem önünde
+savunulabilir olmasındadır.

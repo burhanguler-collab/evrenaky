@@ -67,7 +67,7 @@ Boyut kontrolü: $[\text{Pa/m}]/[\text{kg/m}^3] = \text{m/s}^2$ ✓. $\rho_n$ ev
 Denklem, cismin sürüklenme zarfı içindeki bağıl hızının sıfır olduğu (Postülat 7) ve $\rho_n$'nin sabit kaldığı standart madde için geçerlidir.
 
 ### Açık Uçlar
-- $\gamma_N$'nin nükleon başına etkin hacminin ($V_n$) bağımsız belirlenmesi; $G = \alpha/\rho_n$ türetimiyle bağı için bkz. M-28.
+- $\gamma_N$'nin nükleon başına etkin hacminin ($V_n$) bağımsız belirlenmesi; $\mathcal{G} = \alpha/\rho_n$ türetimiyle bağı için bkz. M-28.
 
 ---
 

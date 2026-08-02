@@ -61,13 +61,13 @@ $$a_r = -\frac{1}{\rho_n}\frac{dP}{dr} = -\frac{C\,N q_n}{4\pi \rho_n r^2}$$
 
 $$\boxed{\;a_r = -\left(\frac{C\,q_n}{4\pi\,\rho_n\,m_n}\right)\frac{M}{r^2}\;}$$
 
-M-28 zaten $P(r)=P_0-\alpha M/r$ ve $G=\alpha/\rho_n$ vermişti; $\alpha$ orada **[S]** statüsündeydi. Bu türetim onu ayrıştırır:
+M-28 zaten $P(r)=P_0-\alpha M/r$ ve $\mathcal{G}=\alpha/\rho_n$ vermişti; $\alpha$ orada **[S]** statüsündeydi. Bu türetim onu ayrıştırır:
 
-$$\boxed{\;\alpha = \frac{C\,q_n}{4\pi\,m_n}\;,\qquad G = \frac{\alpha}{\rho_n} = \frac{C\,q_n}{4\pi\,\rho_n\,m_n}\;}$$
+$$\boxed{\;\alpha = \frac{C\,q_n}{4\pi\,m_n}\;,\qquad \mathcal{G} = \frac{\alpha}{\rho_n} = \frac{C\,q_n}{4\pi\,\rho_n\,m_n}\;}$$
 
 **Boyut denetimi** (Ek D, $\alpha$ için $[\mathrm{s^{-2}}]$):
 
-$$[\alpha] = \frac{[\mathrm{kg\,m^{-3}s^{-1}}]\cdot[\mathrm{m^3 s^{-1}}]}{[\mathrm{kg}]} = \mathrm{s^{-2}}\;\checkmark \qquad [G] = \frac{\mathrm{s^{-2}}}{\mathrm{kg\,m^{-3}}} = \mathrm{m^3 kg^{-1}s^{-2}}\;\checkmark$$
+$$[\alpha] = \frac{[\mathrm{kg\,m^{-3}s^{-1}}]\cdot[\mathrm{m^3 s^{-1}}]}{[\mathrm{kg}]} = \mathrm{s^{-2}}\;\checkmark \qquad [\mathcal{G}] = \frac{\mathrm{s^{-2}}}{\mathrm{kg\,m^{-3}}} = \mathrm{m^3 kg^{-1}s^{-2}}\;\checkmark$$
 
 İki bağımsız yoldan gelen boyutların birebir tutması, ayrıştırmanın temel desteğidir. **Kazanç:** $\alpha$ artık fenomenolojik bir katsayı değil, nükleon-ölçeği bir debinin makro izdüşümüdür — M-28'in açık ucunun cevabı.
 
@@ -80,8 +80,7 @@ $$[\alpha] = \frac{[\mathrm{kg\,m^{-3}s^{-1}}]\cdot[\mathrm{m^3 s^{-1}}]}{[\math
 ### Açık Uçlar
 
 - $q_n$'nin $\omega_2$ frekansı ve nükleon deplasman hacminden hesabı → $\alpha$ tamamen türetilmiş olur. *(Aday kapanış M-45'tedir: $q_n=4\pi r_n^2\sqrt2c\sqrt{m_p/m_e}=1{,}62\times10^{-19}$ m³/s.)*
-- ~~$C$ ile M-1'in hâl katsayısı $A$ arasındaki ilişki~~ → **kimlik kuruldu** *(hesap: `91_A0_KOPRU/C_HAL_KOPRUSU.md`)*: $A=P_0/\rho_0=c^2$ (dalga kanalının sertliği) ve iki kanalın empedans oranı kapalı biçimde $\dfrac{C\,\ell_\omega}{\rho_0c}=2\sqrt2\,\dfrac{\mathcal{G}m_n/c^2}{r_n}=4{,}2\times10^{-39}$'dur — kütle-itimin zayıflık hiyerarşisi tek boyutsuz sayıda. $\chi$-yayılım terimi **M-46'da yazılmıştır** — profil ve kütle-itim artık eylemden çıkar, $C$'nin kimliği hâl denkleminin ikinci katsayısıdır ($-(\partial P/\partial\chi)_
-ho$); kalan iş yalnız $C$'nin **değerinin** mikro türetimidir ($G$'nin türetimine eşdeğer). *(Tuzak kaydı: $C\approx3{,}8\rho_nH_0$ görünümü $a_0\sim cH_0$ rastlantısının aynısıdır; yüksek-$z$ sınavı kozmik okumayı dışlamıştır — $C$, $H_0$'a bağlanamaz.)*
+- ~~$C$ ile M-1'in hâl katsayısı $A$ arasındaki ilişki~~ → **kimlik kuruldu** *(hesap: `91_A0_KOPRU/C_HAL_KOPRUSU.md`)*: $A=P_0/\rho_0=c^2$ (dalga kanalının sertliği) ve iki kanalın empedans oranı kapalı biçimde $\dfrac{C\,\ell_\omega}{\rho_0c}=2\sqrt2\,\dfrac{\mathcal{G}m_n/c^2}{r_n}=4{,}2\times10^{-39}$'dur — kütle-itimin zayıflık hiyerarşisi tek boyutsuz sayıda. $\chi$-yayılım terimi **M-46'da yazılmıştır** — profil ve kütle-itim artık eylemden çıkar, $C$'nin kimliği hâl denkleminin ikinci katsayısıdır ($-(\partial P/\partial\chi)_\rho$); kalan iş yalnız $C$'nin **değerinin** mikro türetimidir ($\mathcal{G}$'nin — dolayısıyla yerel ölçülen $G$ değerinin — türetimine eşdeğer). *(Tuzak kaydı: $C\approx3{,}8\rho_nH_0$ görünümü $a_0\sim cH_0$ rastlantısının aynısıdır; yüksek-$z$ sınavı kozmik okumayı dışlamıştır — $C$, $H_0$'a bağlanamaz.)*
 
 ---
 
@@ -93,7 +92,7 @@ ho$); kalan iş yalnız $C$'nin **değerinin** mikro türetimidir ($G$'nin türe
 
 ### Varsayımlar
 
-1. M-35'in alanı geçerlidir: $P(r)=P_0-\alpha M/r$, dolayısıyla $a_r=-GM/r^2$.
+1. M-35'in alanı geçerlidir: $P(r)=P_0-\alpha M/r$, dolayısıyla $a_r=-\mathcal{G}M/r^2$.
 2. Test cismi noktasal değil, yarıçapı $b\ll r$ olan uzanımlı gövdedir.
 3. Kaynaktan uzakta ortam kaynaksızdır: $\nabla^2 P=0$ (M-28 Varsayım 1).
 
@@ -106,17 +105,17 @@ $$\Delta a_i(\vec\xi) = \frac{\partial a_i}{\partial x_j}\xi_j + O(\xi^2),\qquad
 Gelgit tensörü, basınç alanının **ikinci** türevidir.
 
 **(a) Eksenel bileşen:**
-$$T_\parallel = \frac{da_r}{dr} = \frac{d}{dr}\left(-\frac{GM}{r^2}\right) = +\frac{2GM}{r^3} \;\Longrightarrow\; \Delta a_\parallel = +\frac{2GM}{r^3}\xi_\parallel$$
+$$T_\parallel = \frac{da_r}{dr} = \frac{d}{dr}\left(-\frac{\mathcal{G}M}{r^2}\right) = +\frac{2\mathcal{G}M}{r^3} \;\Longrightarrow\; \Delta a_\parallel = +\frac{2\mathcal{G}M}{r^3}\xi_\parallel$$
 Pozitif: uzak uç da yakın uç da merkezden **dışa** kaçar → eksen boyunca iki taraflı kabarma ✓
 
 **(b) Yanal bileşenler:** Kaynaksız bölgede iz sıfırdır:
 $$\mathrm{tr}\,T = -\frac{1}{\rho_n}\nabla^2 P = 0 \;\Longrightarrow\; T_\parallel + 2T_\perp = 0$$
-$$T_\perp = -\frac{T_\parallel}{2} = -\frac{GM}{r^3} \;\Longrightarrow\; \Delta a_\perp = -\frac{GM}{r^3}\xi_\perp$$
+$$T_\perp = -\frac{T_\parallel}{2} = -\frac{\mathcal{G}M}{r^3} \;\Longrightarrow\; \Delta a_\perp = -\frac{\mathcal{G}M}{r^3}\xi_\perp$$
 Negatif: yanal doğrultularda hareket merkez hattına doğru → **sıkıştırma** ✓
 
 ### Sonuç
 
-$$\boxed{\;\left(T_\parallel,\;T_\perp,\;T_\perp\right) = \frac{GM}{r^3}\,(+2,\,-1,\,-1)\;,\qquad \textstyle\sum\lambda_i = 0\;}$$
+$$\boxed{\;\left(T_\parallel,\;T_\perp,\;T_\perp\right) = \frac{\mathcal{G}M}{r^3}\,(+2,\,-1,\,-1)\;,\qquad \textstyle\sum\lambda_i = 0\;}$$
 
 ### Teori açısından anlamı — iz sıfırlığı bir muhasebe ifadesidir
 
@@ -193,7 +192,7 @@ $$\boxed{\;v_\theta(R) = \sqrt{R\,\bigl|a_{radyal}(R)\bigr|}\;}$$
 | Radyal rejim | $\lvert a_{radyal}\rvert$ | Çıkan profil | Gözlem | Katalog |
 |---|---|---|---|---|
 | Rankine iç çekirdek | $\propto R$ | $v_\theta \propto R$ (katı-cisim) | yükselen iç kol | M-30 |
-| Kepler (küresel akı, M-35) | $GM/R^2$ | $v_\theta=\sqrt{GM/R}\propto R^{-1/2}$ | Kepler yörüngeleri | **M-25** ✓ |
+| Kepler (küresel akı, M-35) | $\mathcal{G}M/R^2$ | $v_\theta=\sqrt{\mathcal{G}M/R}\propto R^{-1/2}$ | Kepler yörüngeleri | **M-25** ✓ |
 | Logaritmik kuyu (silindirik akı, M-38) | $v_0^2/R$ | $v_\theta = v_0$ (sabit) | **düz dönüş eğrisi** | **M-30** ✓ |
 
 Sayısal kontrol: Dünya yörüngesi için $\sqrt{R\lvert a\rvert} = 29{,}79$ km/s, gözlenen $29{,}78$ km/s ✓
@@ -1039,9 +1038,106 @@ a_0=\frac{\mathcal{G}\,m_n\,m_e}{m_p\,r_n^{2}}\;}$$
 
 - **Mutlak çapa seçimi:** $v_t$ bileşke duvar hızı mı ($\sqrt2c$ — burada kullanılan) düzlem-başına hız mı ($c$)? Oranı ve $a_0$'ı etkilemez; $(\gamma_n,q_n,C)$ mutlakları ortak $\sqrt2$ çarpanıyla oynar. Ek C satır 8'in ekvator-hızı bütçesiyle birlikte çözülmelidir.
 - **Banyo temas kesrinin ($\eta$) ilk-ilkelerden hesabı:** eşbölüşüm koşulu $\eta$'nın her fiziksel değerinde sağlanır (2c'nin 36 mertebelik marjı); yine de $\eta$'nın kendisi Zerre-çarpışma modelinden hesaplanırsa marj bir ölçüme döner.
-- ~~$C=2{,}35$'in M-1'in hâl katsayısı $A$ ile ilişkisi~~ → **kimlik kuruldu** (`91_A0_KOPRU/C_HAL_KOPRUSU.md`; M-35 Açık Uçlar): $C\ell_\omega/\rho_0c=2\sqrt2(\mathcal{G}m_n/c^2)/r_n=4{,}2\times10^{-39}$; $\chi$-yayılım terimi M-46'da yazıldı (kütle-itim eylemden çıkar; $C=-(\partial P/\partial\chi)_
-ho$); kalan: $C$'nin değerinin mikro türetimi — yapılırsa $G$ türetilmiş olur.
+- ~~$C=2{,}35$'in M-1'in hâl katsayısı $A$ ile ilişkisi~~ → **kimlik kuruldu** (`91_A0_KOPRU/C_HAL_KOPRUSU.md`; M-35 Açık Uçlar): $C\ell_\omega/\rho_0c=2\sqrt2(\mathcal{G}m_n/c^2)/r_n=4{,}2\times10^{-39}$; $\chi$-yayılım terimi M-46'da yazıldı (kütle-itim eylemden çıkar; $C=-(\partial P/\partial\chi)_\rho$); kalan: $C$'nin değerinin mikro türetimi — yapılırsa $\mathcal{G}$ (dolayısıyla yerel ölçülen $G$ değeri) türetilmiş olur.
 - $u_r$ taşınımının M-4/M-43 eşik yapısıyla tam tutarlılık hesabı; tür-ayrımlı ikinci modun ($\ell\approx51$ fm) galaksi-içi ince yapıda aranması; kalıcı bir yüzde-düzeyi oran sapması bulunursa $m_e$-etkin süredurumu / $r_n$ vekili hesabı.
+
+---
+
+## M-47 · F4 Penceresi: Rankine İç Kolunun Galaktik Denklemdeki İfadesi · **[T-aday]**
+
+**Kullanıldığı bölümler:** 6.5.4.4 (resmî denklem), 10.2.1, 10.9. Bağlı katalog: M-30 (Rankine yapısı), M-38 (silindirik akı penceresi), Adım 6 ($\ell_\omega$ yasası).
+
+**Kilit tez:** Galaktik denklemin F4 terimi her yarıçapta açık değildir; M-30'un türetilmiş Rankine yapısı (içte katı-cisim, kuvvet $\propto R$; dışta $1/R$) denkleme uygulandığında **parametresiz** bir pencere çıkar.
+
+### Varsayımlar
+1. M-30'un bileşik girdap yapısı: $r<r_0$'da katı-cisim ($a\propto R$), $r>r_0$'da düz kol ($a\propto1/R$); iki kol $r_0$'da sürekli eklenir.
+2. Geçiş yarıçapı özdeşleştirmesi (6.5.4.4): $r_0=\ell_\omega^{etkin}(R)=\sqrt{\mathcal{G}M_{kaps}(R)/a_0}$ — koherent kolonun kendi uzunluğu.
+3. Yerel yasa (Adım 6): $M_{kaps}$ ve $\ell_\omega$ yereldir.
+
+### Adımlar
+1. Dış kolda F4 ivmesi $\sqrt{\mathcal{G}M_{kaps}a_0}/R$'dir (6.5.4.4). İç kolda kuvvet $\propto R$ olduğundan, $1/R$ biçimine göre çarpan $(R/r_0)^2$'dir; $R=r_0$'da süreklilik Rankine eklemesinin kendisidir.
+2. $r_0=\ell_\omega$ konur: $(R/\ell_\omega)^2=R^2a_0/(\mathcal{G}M_{kaps})=a_0/g_{kaps}$, $g_{kaps}\equiv\mathcal{G}M_{kaps}/R^2$.
+
+### Sonuç
+$$\boxed{\;v_{F4}^2=\sqrt{\mathcal{G}M_{kaps}\,a_0}\cdot W,\qquad W=\min\!\Big(1,\;\frac{a_0}{g_{kaps}}\Big)\;}$$
+
+İvme dilinde etkin aile parçalıdır: $\nu(y)=1+y^{-1/2}$ ($y\leq1$), $\nu(y)=1+y^{-3/2}$ ($y>1$) — yüksek ivmede türetilmiş, daha dik sönüm. **Kanal-arası okuma:** $g_{kaps}>a_0$ bölgesi kolonun *içidir*; silindirik uzak-alan yasası orada kurulmamıştır.
+
+**Sayısal sınavlar** (141 galaksi, adil kalibrasyon; `CALISMA/SINIF_CALISMASI/87_ETKIN_YASA/PENCERE_TURETIMI.md` + `SONUC_PENCERE.csv`): radyal ivme biçim sürüklenmesi $-0{,}043\to-0{,}002$ (rotmod) ve $+0{,}051\to+0{,}0002$ (Lelli+2017, 2693 nokta); galaksi-içi eğim $-0{,}074\to-0{,}033$; medyan RMS $12{,}76\to12{,}48$; yüksek-$z$ $f_{DM}$ açığı kapanır (5/6 bant içi); sınıf bandı ve BTFR dokunulmaz. Üs-1 kontrolü daha kötüdür — biçim veriden ayarlanmamıştır.
+
+### Geçerlilik Sınırı
+- Koherent disk taşıyıcısı olan sistemler (galaktik diskler); basınç-destekli sistemlere uzanmaz (6.5.4.9).
+- Rankine eklemesi $R=\ell_\omega$'da büklümlüdür (türev süreksiz) — M-30'un kendi yapısı; yumuşak geçiş biçimi türetilmeden **eklenmeyecektir**.
+- $a_0$'ın pencereli kalibrasyonu $7{,}67\times10^{-11}$ m/s² verir ($\ell_\omega$ eşleniği 38,2 fm — ölçülen 35,7 fm'e penceresizden daha yakın).
+
+### Açık Uçlar
+- Galaksi-içi artık eğimi $-0{,}033$'te durur (aday adres: dış-bölge sistematiği, 6.5.4.6).
+- $r_0=\ell_\omega^{etkin}$ özdeşleştirmesinin bağımsız türetimi (bugün: tek-galaksi ölçümüyle desteklenen tespit) — [T-aday]→[T] geçişinin koşulu.
+- Sdm-Sm sınıfının $+0{,}07$'lik aykırı sınıf-içi eğimi pencere sonrası yeniden ölçülmeli.
+
+---
+
+## M-48 · Basınç-Destekli Köprü: Küresel İzdüşüm Lemması ve $v_c=\sqrt2\,\sigma$ · **[T-aday]**
+
+**Kullanıldığı bölümler:** 6.5.4.9 (kapsam kaydının kapanışı), 6.5.3 (eliptik/cüce küresel), 10.10.3 md. 5. Bağlı katalog: M-37/M-38 (silindirik akı), M-47 (pencere), Adım 6–7 ($\sqrt N$/λ).
+
+**Kilit tez:** Silindirik F4 yasası küresel sistemlerde de aynı radyal yasayı verir; Jeans denklemiyle $v_c\leftrightarrow\sigma$ köprüsü kurulur ve Faber–Jackson ($M\propto\sigma^4$) BTFR'nin kardeşi olarak türer.
+
+### Varsayımlar
+1. M-38'in ekseneselevkli kuvveti: büyüklük $\sqrt{\mathcal{G}M_{kaps}a_0}/R_{sil}$, yön $-\hat R_{sil}$; M-47 penceresi kolon içinde geçerli.
+2. Dispersiyon-destekli sistemde koherent kolon, $\sqrt N$ teoreminin **rastgele-yönlü kalıntı dolanımıdır** (85; düzenli dönme gerekmez — dolanım korunumu yeter).
+3. Köprü için: izotropik, durağan sistem; dış bölgede izotermal yapı ($\rho_*\propto r^{-2}$).
+
+### Adımlar
+1. **İzdüşüm lemması:** $\hat R_{sil}=\sin\theta\,\hat r+\cos\theta\,\hat\theta$ → radyal bileşen $\dfrac{\sqrt{\mathcal{G}M_{kaps}a_0}}{r\sin\theta}\sin\theta=\dfrac{\sqrt{\mathcal{G}M_{kaps}a_0}}{r}$ — **enlemden bağımsız.** $\hat\theta$-bileşeni kutupta M-47'nin Rankine koluyla sonlu kalır; rastgele-eksen ortalamasında sıfırlanır.
+2. **Jeans:** $d(\rho_*\sigma^2)/dr=-\rho_*g$; derin rejimde $g=\sqrt{\mathcal{G}M_{bar}a_0}/r$ → $\sigma^2=\sqrt{\mathcal{G}M_{bar}a_0}/\alpha$; izotermal $\alpha=2$.
+
+### Sonuç
+$$\boxed{\;a_r^{küresel}=\frac{\sqrt{\mathcal{G}M_{kaps}a_0}}{r}\;(\text{diskle aynı});\qquad v_c=\sqrt2\,\sigma;\qquad \sigma^4=\frac{\mathcal{G}M_{bar}a_0}{4}\;}$$
+
+Mertebe denetimleri (fit yok): Fornax $M_*\sim10^7$ için $v_c=17{,}8$ km/s — kitabın kendi $\sim18$ km/s kaydı (6.5.3); $L^*$ eliptik tabanı $\sigma\approx150$, gözlenen merkez 200–250 — merkez Newton rejimi tabana ekler, yön doğru. Kovanın F4'ü birinci mertebede TAM beslemesi bu lemmanın sonucudur (`87_ETKIN_YASA/KAYNAK_AYRIMI.md` bulgularını açıklar); 96_ETG'nin dış-nokta başarısı ($-0{,}003$) verili doğrulamadır.
+
+### Geçerlilik Sınırı
+- İzotropi: anizotropi $\alpha\to\alpha-2\beta_J$ kaydırır ($O(1)$ bandı).
+- **Dış-alan-baskın cüce küreseller** (MW uyduları) nicel kapsam dışıdır — EFE terimi türetilene dek (87 A5).
+- Merkez ($g_{kaps}>a_0$) M-47'nin parçalı rejimindedir; kutular dış bölge içindir.
+
+### Açık Uçlar
+- Dış-$\sigma$ kataloğuyla ilk nicel sınav (GC/PNe/X-ışını; G-12) — [T-aday]→[T] koşulu.
+- Sıcak bileşenin λ'ının (kaskad tutumu) türetimi — ikinci-mertebe kovan düzeltmesi.
+- EFE teriminin türetimi (cüce küresellere nicel uzanımın anahtarı).
+
+---
+
+## M-49 · Dış Alan Etkisi (EFE): Egemenlik Yarıçapı ve Sonlu-Kolon Uzak Alanı · **[T-aday]**
+
+**Kullanıldığı bölümler:** 6.5.4.9 (cüce küresellerin nicel uzanımı), 87 A5 programı. Bağlı katalog: M-47 (iç pencere — ayna simetriği), M-48 (Jeans köprüsü), M-38.
+
+**Kilit tez:** Ev sahibi alanı $g_{ext}$, alt sistemin koherent kolonunu **egemenlik yarıçapında** keser; sonlu kolonun uzak alanı $1/R\to1/r^2$'ye döndüğünden bastırma üssü geometriden çıkar.
+
+### Varsayımlar
+1. M-47 okuması: kolon, öz alanın $a_0$'a düştüğü yüzeye kadar uzanır (iç sınır).
+2. $g_{kaps}<g_{ext}$ bölgesinde ortamın örgütlenmesi ev sahibine aittir; alt sistemin kolonu orada kurulamaz.
+3. $g_{ext}$: ev sahibinin gözlenen toplam alanı ($V_{host}^2/D$) — ölçülebilir girdi.
+
+### Adımlar
+1. Egemenlik yarıçapı: $\mathcal{G}M_{kaps}/r_e^2=g_{ext}$ → $r_e=\sqrt{\mathcal{G}M_{kaps}/g_{ext}}$.
+2. Boyu $\sim r_e$ olan kolonun silindirik $1/R$ yasası $r>r_e$'de kompakt-kaynak $1/r^2$'sine döner → göreli bastırma $r_e/r$.
+
+### Sonuç
+$$\boxed{\;W_{dış}=\min\!\Big(1,\ \sqrt{g_{kaps}/g_{ext}}\Big);\qquad
+v_{F4}^2=\sqrt{\mathcal{G}M_{kaps}a_0}\cdot W_{iç}\cdot W_{dış}\;}$$
+
+Tam-baskın limitte $g=g_{bar}(1+\sqrt{a_0/g_{ext}})$ — **yarı-Newton**, $\mathcal{G}_{etkin}=\mathcal{G}(1+\sqrt{a_0/g_{ext}})$: güçlü eşdeğerlik ilkesinin ihlali türetilmiş sonuçtur (MOND'da varsayım; bizde geometri — ve bağımlılık biçimi farklı: $\sqrt{a_0/g_{ext}}$, ayırıştırıcı sınav). Disklerde $g_{kaps}<g_{ext}$ dış bölgesinde eğri düşüşü (Chae ve ark. 2020'nin imzası). Mertebe denetimi: MW alanındaki Fornax için $\sigma=10{,}5$–14,9 km/s (gözlenen ~11–12; yalıtık değer 13,8–16,9'dan gözleme doğru çeker). SPARC'ta süptillik türer: tipik $g_{ext}\approx4\times10^{-12}$ son noktaların çoğunda $W_{dış}=1$ bırakır. Türetim ve sayılar: `CALISMA/SINIF_CALISMASI/87_ETKIN_YASA/EFE_TURETIMI.md`.
+
+### Geçerlilik Sınırı
+- Gel-git etkisi ayrıdır (M-36, klasik); M-49 yalnız F4 kanalının dış-alan tepkisidir.
+- $\min$-eklemesi Rankine tarzı büklümlüdür; yumuşak geçiş türetilmeden eklenmez.
+- Geniş çiftlerde $g_{iç}>g_{ext}$ olduğundan bastırma doğmaz — G-10 hükmü değişmez.
+
+### Açık Uçlar
+- Doğrudan veri sınavı ([T-aday]→[T]): Chae+2020 düşen-eğri altkümesiyle nicel kayıt-öncesi protokol; izole↔baskın dSph karşılaştırması (G-13).
+- $g_{ext}$'in bileşen ayrıştırması (toplam-alan okumasının türetimi).
 
 ---
 
@@ -1050,7 +1146,7 @@ ho$); kalan: $C$'nin değerinin mikro türetimi — yapılırsa $G$ türetilmiş
 | No | Kuvvet | Köken | Akı geometrisi | Uzaklık yasası | Baskın ölçek | Statü |
 |---|---|---|---|---|---|---|
 | M-35 | Radyal kütle-itimi | $\omega_2$ | küresel, $4\pi r^2$ | $1/r^2$ | her ölçek; Güneş Sistemi'nde tekil hâkim | [T]/[F] |
-| M-36 | Diferansiyel sıkıştırma | $\omega_2$ | **M-35'in türevi** | $\frac{GM}{r^3}(+2,-1,-1)$ | yakın çiftler | **[T]** — yeni parametre yok |
+| M-36 | Diferansiyel sıkıştırma | $\omega_2$ | **M-35'in türevi** | $\frac{\mathcal{G}M}{r^3}(+2,-1,-1)$ | yakın çiftler | **[T]** — yeni parametre yok |
 | M-37 | Vorteks sürüklenmesi | $\omega_1$ | teğetsel akış | $v_\theta=\sqrt{R\lvert a_{radyal}\rvert}$ — **türetilmiş** | yörünge düzlemi | [T]/[A] |
 | M-38 | Eksenel itim | $\omega_1$ | silindirik, $2\pi Rh$ | $1/R$ (yalnız $r_0<R<R_{kesim}$) | galaktik disk | [T]/[A] |
 | M-39 | Yanal itim | $\omega_1$ | enlem gradyanı | $\sin2\theta$; oran $=\kappa_5\frac{\rho_0}{\rho_n}\phi^2$ **cisimden bağımsız** | gövde yüzeyi, disk oluşumu; imza $J_4$'te | [T]/[F], $\kappa_5\lesssim0{,}1$ |
@@ -1058,6 +1154,9 @@ ho$); kalan: $C$'nin değerinin mikro türetimi — yapılırsa $G$ türetilmiş
 | M-41 | Dönme sürüklenmesi — yörünge düzlemi | $\omega_1$ | aynı alan, Coriolis kuvveti | $2GJ/c^2a^3$ | uydu yörüngeleri | **[T]** — yeni parametre yok |
 | M-42 | *(kuvvet değil)* ölçek yapısı $\Lambda$ | $\omega_2$ potansiyeli | — (skaler ölçekleme) | $\Lambda=1-\Phi/c^2$; $c_{loc}\propto\Lambda^2$ | tüm ışık yolu gözlemleri | **[T]** — yeni parametre yok |
 | M-43 | *(kuvvet değil)* artık kuplajın rejimi | — (ortam tepkisi) | altkritik bastırma | $F\propto\rho_0v^2A\,(v/v_{kav})^{3}$ | tüm sürükleme/sönüm hesapları | [T (yapı)]/**[S ($n$)]** — $\eta_E$'yi kaldırır |
+| M-49 | *(kuvvet değil)* dış alan etkisi (EFE) | — | egemenlik yarıçapı + sonlu kolon | $W_{dış}=\min(1,\sqrt{g_{kaps}/g_{ext}})$; tam-baskında $\mathcal{G}_{etkin}=\mathcal{G}(1+\sqrt{a_0/g_{ext}})$ | uydu cüceler, yoğun çevre dış bölgeleri | **[T-aday]** — Chae altkümesi/dSph sınavı bekler |
+| M-48 | *(kuvvet değil)* basınç-destekli köprü | — | küresel izdüşüm + Jeans | $a_r$ diskle aynı; $v_c=\sqrt2\sigma$; $\sigma^4=\mathcal{G}M_{bar}a_0/4$ | eliptik/cüce küresel dış bölgesi | **[T-aday]** — dış-σ verisi bekler |
+| M-47 | *(kuvvet değil)* F4 penceresi | $\omega_1$ | Rankine iç kolu (M-30) | $W=\min(1,a_0/g_{kaps})$ — **parametresiz** | iç bölgeler ($g_{kaps}>a_0$) | **[T-aday]** — biçim türetildi, sürüklenme sıfırlandı |
 | M-45 | *(kuvvet değil)* iki kolun eş-gücü | $\omega_1\!\leftrightarrow\!\omega_2$ | — (kaynak simetrisi) | $u_r/v_t=\sqrt{m_p/m_e}$ → $a_0=\mathcal{G}m_nm_e/(m_pr_n^2)$ | galaktik ivme ölçeği; $(C,q_n)$ çifti çözülür | **[T-aday]** — eş-güç ispatı açık |
 
 M-42 bir kuvvet türetmez; diğer altısının **ölçüm çerçevesini** sabitler. Bu yüzden tablodaki her uzaklık yasası ona bağımlıdır: $\Phi$'nin cetvel ve saatle birlikte nasıl ölçeklendiği bilinmeden hiçbirinin sayısal büyüklüğü gözlemle karşılaştırılamaz.
@@ -1092,9 +1191,9 @@ Bu ayrım teorinin patinaj ilkesinin (2.4.2) dönme eksenine uygulanmasıdır; e
 
 | Öncelik | İş | Kazanç |
 |---|---|---|
-| **1** | $r_0$'ın gövde/disk parametrelerinden türetimi | Hem Ay sınırını hem galaktik eğriyi tek sayıyla kapatır |
+| **1** | ~~$r_0$'ın türetimi~~ → **büyük ölçüde kapandı (M-47)**: $r_0=\ell_\omega^{etkin}$ ile pencere parametresizce yazıldı ve sınavlardan geçti; kalan, özdeşleştirmenin bağımsız türetimi | Ay sınırı ve galaktik eğri tek yapıyla kapandı; [T-aday]→[T] için bağımsız türetim |
 | **1′** | $P(\Phi)$ hâl ilişkisinin $O(\Phi^2/c^4)$ terimi ⟹ $\beta$ (M-42 Açık Uçlar) | Merkür'ün 43″/yüzyıl'ını kapatır; GR'dan ayrışmanın aranacağı tek yer |
-| **2** | $q_n$'nin $\omega_2$ frekansı ve nükleon deplasman hacminden hesabı | $\alpha$, dolayısıyla $G$ **ve** M-36'nın tamamı türetilmiş olur |
+| **2** | $q_n$'nin $\omega_2$ frekansı ve nükleon deplasman hacminden hesabı | $\alpha$, dolayısıyla $\mathcal{G}$ **ve** M-36'nın tamamı türetilmiş olur |
 | **3** | $\kappa_5$'in **$J_4$**'ten kalibrasyonu (Juno, Cassini, jeodezi, Güneş) — $\phi$ girdisiyle | Çok-gözlemli, tek-parametreli yanlışlama sınavı; kompozisyon eksenini ($\phi$) de sınar |
 | **4** | $n$'nin retrograd popülasyondan **aşırı-belirlenmesi** (M-43) ve kuvvet-yasası ↔ üstel ayrımı | Tek gözlemden sabitlenmiş $n$'yi öngörüye çevirir; çerçeveyi yanlışlayabilir |
 | **5** | M-37'nin yörünge kuplajı ile 3.4.4'ün spin kavraması $g(R)$'nin ortak katsayıya indirgenmesi | İki fenomenoloji tek parametreye iner |

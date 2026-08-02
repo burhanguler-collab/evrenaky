@@ -157,7 +157,7 @@ $$\boxed{\;\nabla^2\chi=-q_nn_m\;;\qquad \left(\frac{\partial P}{\partial\chi}\r
 
 ### Açık Uçlar
 
-- $(\partial P/\partial\chi)_\rho=-C$'nin mikro türetimi (hedef: $C\ell_\omega/\rho_0c=4{,}2\times10^{-39}$) → $G$ tamamen türetilmiş olur.
+- $(\partial P/\partial\chi)_\rho=-C$'nin mikro türetimi (hedef: $C\ell_\omega/\rho_0c=4{,}2\times10^{-39}$) → $\mathcal{G}$ (dolayısıyla yerel ölçülen $G$ değeri) tamamen türetilmiş olur.
 - F4/dolanım kolunun eyleme bağlanması (yönelim alanı; M-44 md. 3 ile ortak).
 - Noether akımlarının hesabı: $\chi$-sektörünün korunumları ve M-38'in silindirik akısının türetilmesi.
 - $v_m$-sektörünün gözlemsel ayrıştırılması: statik alan ayar hızı ile GW hızının farklı olduğu bir düzenek (öneri: yakın çift kütlelerde alan-gecikme imzası).

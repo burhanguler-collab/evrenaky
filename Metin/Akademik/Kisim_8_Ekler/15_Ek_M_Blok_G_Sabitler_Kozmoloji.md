@@ -4,7 +4,7 @@
 
 ---
 
-## M-28 · Kütleçekim Sabitinin Türetimi: $G = \alpha/\rho_n$ · **[T (yapı) / S ($\alpha$ değeri)]**
+## M-28 · Kütle-İtim Katsayısının Türetimi (yerleşik adıyla "kütleçekim sabiti"): $\mathcal{G} = \alpha/\rho_n$ · **[T (yapı) / S ($\alpha$ değeri)]**
 
 **Kullanıldığı bölümler:** 4.2.4 (ana türetim), Postülat 6 (1.3), M-2 (ivme denklemi), 4.2.9.1, Ek C satır 2 ve 12.
 
@@ -26,14 +26,14 @@ $$\frac{\gamma_N}{m} = \frac{V_n}{m_n} = \frac{1}{\rho_n}$$
 — oran, cismin ne olduğundan bağımsız tek evrensel sayıdır.
 6. **Kuvvetin kapalı biçimi:**
 $$F = \frac{\gamma_N}{m}\cdot\frac{\alpha M m}{r^2} = \frac{\alpha}{\rho_n}\,\frac{Mm}{r^2}$$
-7. **Newton eşlemesi:** $F = G\,\dfrac{Mm}{r^2}$ biçimiyle birebir örtüşme, $G$'yi bileşik bir büyüklük olarak tanımlar.
+7. **Newton eşlemesi:** $F = G\,\dfrac{Mm}{r^2}$ biçimiyle birebir örtüşme, standart fiziğin $G$'sini bileşik bir büyüklük olarak tanımlar — teori yazımıyla $\mathcal{G}$.
 
 ### Sonuç
-$$\boxed{G = \frac{\alpha}{\rho_n}}$$
+$$\boxed{\mathcal{G} = \frac{\alpha}{\rho_n}}$$
 
-Kütleçekim sabiti $G$ (yerleşik ad), temel bir doğa sabiti değil; **ortamın bir sabiti** ($\alpha$) ile **maddenin bir sabitinin** ($\rho_n$) oranıdır. Kütle-itimin kökeni uzaktan etki değil, ortamın basınç dağılımıdır. Galileo'nun eşit-düşme gözlemi buradan teorem olarak çıkar: $a = F/m = GM/r^2$, $\rho_n$ evrensel olduğundan cisimden bağımsızdır (M-2).
+Kütleçekim sabiti $G$ (yerleşik ad), temel bir doğa sabiti değil; **ortamın bir sabiti** ($\alpha$) ile **maddenin bir sabitinin** ($\rho_n$) oranıdır — teori bu oranı $\mathcal{G}$ yazar ve onu evrensel değil **yerel** sayar (Postülat 4): ortam koşulları değiştiğinde $\mathcal{G}$ değişir, ölçülen $G$ onun Güneş Sistemi'ndeki yerel değeridir. Kütle-itimin kökeni uzaktan etki değil, ortamın basınç dağılımıdır. Galileo'nun eşit-düşme gözlemi buradan teorem olarak çıkar: $a = F/m = \mathcal{G}M/r^2$, $\rho_n$ evrensel olduğundan cisimden bağımsızdır (M-2).
 
-**Boyut analizi:** $[G] = \text{m}^3\,\text{kg}^{-1}\,\text{s}^{-2}$; sağ taraf $[\alpha]/[\rho_n] = [\text{s}^{-2}]/[\text{kg/m}^3] = \text{m}^3\,\text{kg}^{-1}\,\text{s}^{-2}$ ✓.
+**Boyut analizi:** $[\mathcal{G}] = \text{m}^3\,\text{kg}^{-1}\,\text{s}^{-2}$; sağ taraf $[\alpha]/[\rho_n] = [\text{s}^{-2}]/[\text{kg/m}^3] = \text{m}^3\,\text{kg}^{-1}\,\text{s}^{-2}$ ✓.
 
 ### Geçerlilik Sınırı
 - $S=0$, $\rho \approx$ sabit ve durağanlık varsayımlarının geçerli olduğu bölgeler (Güneş sistemi ölçeği; homojen rejim). Yoğunluğun değiştiği rejimde $1/r^2$ biçimi bozulur (bkz. M-29, M-30).

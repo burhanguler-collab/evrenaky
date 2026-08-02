@@ -75,7 +75,7 @@ const chapters = [
     { id: 'akademik_08_me', title: 'Ek M · Blok E — Doppler ve Kızıla Kayma (M-19..M-21)', file: 'Metin/Akademik/Kisim_8_Ekler/13_Ek_M_Blok_E_Doppler_Kizila_Kayma.md', group: 'akademik', part: 'Kısım VIII: Ekler' },
     { id: 'akademik_08_mf', title: 'Ek M · Blok F — Makro Evren Dinamiği (M-22..M-27)', file: 'Metin/Akademik/Kisim_8_Ekler/14_Ek_M_Blok_F_Makro_Dinamik.md', group: 'akademik', part: 'Kısım VIII: Ekler' },
     { id: 'akademik_08_mg', title: 'Ek M · Blok G — Sabitler ve Kozmoloji (M-28..M-34)', file: 'Metin/Akademik/Kisim_8_Ekler/15_Ek_M_Blok_G_Sabitler_Kozmoloji.md', group: 'akademik', part: 'Kısım VIII: Ekler' },
-    { id: 'akademik_08_mh', title: 'Ek M · Blok H — Beş Kuvvet, Ölçek Yapısı ve Kuplaj Rejimi (M-35..M-43, M-45)', file: 'Metin/Akademik/Kisim_8_Ekler/18_5_Kuvvet_Matematigi.md', group: 'akademik', part: 'Kısım VIII: Ekler' },
+    { id: 'akademik_08_mh', title: 'Ek M · Blok H — Beş Kuvvet, Ölçek Yapısı ve Kuplaj Rejimi (M-35..M-43, M-45, M-47–M-49)', file: 'Metin/Akademik/Kisim_8_Ekler/18_5_Kuvvet_Matematigi.md', group: 'akademik', part: 'Kısım VIII: Ekler' },
     { id: 'akademik_08_mi', title: 'Ek M · Blok I — Hâl Denklemi ve Eylem İlkesi (M-44, M-46)', file: 'Metin/Akademik/Kisim_8_Ekler/19_Ek_M_Blok_I_Eylem_Ilkesi.md', group: 'akademik', part: 'Kısım VIII: Ekler' },
     { id: 'akademik_09', title: '9.1 Doç. Dr. Rıza Demirbilek Değerlendirmesi', file: 'Metin/Akademik/Kisim_9_Hakem_Degerlendirmeleri/01_Doc_Dr_Riza_Demirbilek_Degerlendirmesi.md', group: 'akademik', part: 'Kısım IX: Hakem Değerlendirmeleri' },
     { id: 'akademik_09_99', title: '9.2 Hakemlik Standardı ve Kriterler', file: 'Metin/Akademik/Kisim_9_Hakem_Degerlendirmeleri/99_Hakemlik_Standarti.md', group: 'akademik', part: 'Kısım IX: Hakem Değerlendirmeleri' },
@@ -955,6 +955,7 @@ const EK_M_BLOK_MAP = [
     { min: 35, max: 43, id: 'akademik_08_mh' },
     { min: 44, max: 44, id: 'akademik_08_mi' },
     { min: 45, max: 45, id: 'akademik_08_mh' },
+    { min: 47, max: 49, id: 'akademik_08_mh' },
     { min: 46, max: 46, id: 'akademik_08_mi' },
 ];
 

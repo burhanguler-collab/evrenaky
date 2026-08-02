@@ -56,7 +56,8 @@ KPC = 3.0856776e19
 AD = {'01_erken_spiral': 'Sa–Sab', '02_orta_spiral': 'Sb–Sbc', '03_gec_spiral': 'Sc–Scd',
       '04_cok_gec_spiral': 'Sd', '05_macellan': 'Sdm–Sm', '06_duzensiz': 'Im'}
 KUR = [('A', 'MEVCUT', 'toplam', 1.0), ('B', 'yerel kütle', 'yerel', 1.0),
-       ('C', 'yerel+×2,08', 'yerel', KAT_C), ('F', 'NİHAİ ×1,75', 'yerel', 1.75)]
+       ('C', 'yerel+×2,08', 'yerel', KAT_C), ('F', 'NİHAİ ×1,75', 'yerel', 1.75),
+       ('P', 'PENCERELİ resmî (M-47)', 'pencere', 1.75 * 1.038)]
 
 RHO = 3 * 0.07 ** 2 / (8 * np.pi * G)
 mu = lambda x: np.log(1 + x) - x / (1 + x)
@@ -65,10 +66,14 @@ _Mh = 10 ** np.linspace(9.0, 15.0, 8000)
 _Ms = _Mh * 2 * _N / ((_Mh / 10 ** _lM1) ** -_be + (_Mh / 10 ** _lM1) ** _ga)
 
 
-def F4(Mk, Mb, tur, k):
+def F4(Mk, Mb, tur, k, R=None):
     if tur == 'toplam':
         return G * Mk / np.sqrt(G * Mb / (k * A0_K))
-    return np.sqrt(k * A0_K * G * np.maximum(Mk, 1e-9))
+    taban = np.sqrt(k * A0_K * G * np.maximum(Mk, 1e-9))
+    if tur == 'pencere':                      # M-47: W = min(1, a0/g_kaps)
+        gk = G * np.maximum(Mk, 1e-9) / R ** 2
+        return taban * np.minimum(1.0, k * A0_K / gk)
+    return taban
 
 
 def yukle(kls):
@@ -100,7 +105,8 @@ SAT = []          # defter satirlari
 
 
 def ekle(ad, birim, deg, yon, lcdm=None):
-    SAT.append(dict(ad=ad, birim=birim, A=deg[0], B=deg[1], C=deg[2], F=deg[3], yon=yon, lcdm=lcdm))
+    SAT.append(dict(ad=ad, birim=birim, A=deg[0], B=deg[1], C=deg[2], F=deg[3], P=deg[4],
+                    yon=yon, lcdm=lcdm))
 
 
 # ----------------------------------------------------- 1) donus egrisi
@@ -108,7 +114,7 @@ rms = {}; sap = {}
 for kod, _, tur, k in KUR:
     r, s = [], []
     for g in DISK:
-        v = np.sqrt(np.maximum(g['vb2'] + F4(g['Mk'], g['Mb'], tur, k), 1e-9))
+        v = np.sqrt(np.maximum(g['vb2'] + F4(g['Mk'], g['Mb'], tur, k, g['R']), 1e-9))
         r.append(np.sqrt(np.mean((v - g['Vo']) ** 2)))
         m = g['R'] > np.median(g['R'])
         s.append(100 * np.mean((v[m] - g['Vo'][m]) / g['Vo'][m]))
@@ -122,9 +128,9 @@ for g in DISK:
     r200 = (3 * g['M200'] / (4 * np.pi * 200 * RHO)) ** (1 / 3.)
     v = np.sqrt(np.maximum(g['vb2'] + G * g['M200'] / g['R'] * mu(g['R'] * c / r200) / mu(c), 1e-9))
     rl.append(np.sqrt(np.mean((v - g['Vo']) ** 2)))
-ekle('Dönüş eğrisi RMS (141 gal.)', 'km/s', [rms['A'], rms['B'], rms['C'], rms['F']], 'kucuk',
+ekle('Dönüş eğrisi RMS (141 gal.)', 'km/s', [rms['A'], rms['B'], rms['C'], rms['F'], rms['P']], 'kucuk',
      np.median(rl))
-ekle('Dış yarı sapması', '%', [sap['A'], sap['B'], sap['C'], sap['F']], 'sifir')
+ekle('Dış yarı sapması', '%', [sap['A'], sap['B'], sap['C'], sap['F'], sap['P']], 'sifir')
 
 # ----------------------------------------------------- 2) BTFR
 def mrt(y, al):
@@ -151,11 +157,11 @@ lMb = np.array([B19[n]['lMb'] for n in N]); Vf = np.array([B19[n]['Vf'] for n in
 eg, nor = {}, {}
 for kod, _, tur, k in KUR:
     v = np.array([np.sqrt(max(IX[n]['vb2'][-1]
-                  + F4(IX[n]['Mk'], IX[n]['Mb'], tur, k)[-1], 1e-9)) for n in N])
+                  + F4(IX[n]['Mk'], IX[n]['Mb'], tur, k, IX[n]['R'])[-1], 1e-9)) for n in N])
     eg[kod] = np.polyfit(np.log10(v), lMb, 1)[0]
     nor[kod] = 10 ** np.median(np.log10(v / Vf))
-ekle('BTFR eğimi (%d gal.)' % len(N), '', [eg['A'], eg['B'], eg['C'], eg['F']], 'band', 2.716)
-ekle('BTFR normalizasyonu', 'v_öng/v_ölç', [nor['A'], nor['B'], nor['C'], nor['F']], 'bir', 1.027)
+ekle('BTFR eğimi (%d gal.)' % len(N), '', [eg['A'], eg['B'], eg['C'], eg['F'], eg['P']], 'band', 2.716)
+ekle('BTFR normalizasyonu', 'v_öng/v_ölç', [nor['A'], nor['B'], nor['C'], nor['F'], nor['P']], 'bir', 1.027)
 
 # ----------------------------------------------------- 3) RAR
 gb = np.concatenate([g['vb2'] / g['R'] * ACC for g in DISK])
@@ -163,7 +169,7 @@ go = np.concatenate([g['Vo'] ** 2 / g['R'] * ACC for g in DISK])
 KEN = np.arange(-12.0, -8.5 + 1e-9, 0.25)
 med, bic = {}, {}
 for kod, _, tur, k in KUR:
-    gp = np.concatenate([(g['vb2'] + F4(g['Mk'], g['Mb'], tur, k)) / g['R'] * ACC
+    gp = np.concatenate([(g['vb2'] + F4(g['Mk'], g['Mb'], tur, k, g['R'])) / g['R'] * ACC
                          for g in DISK])
     m0 = (gb > 0) & (go > 0)
     med[kod] = np.median(np.log10(gp[m0] / go[m0]))
@@ -174,8 +180,8 @@ for kod, _, tur, k in KUR:
             continue
         xo.append((lo + hi) / 2); ao.append(np.median(np.log10(gp[mm] / go[mm])))
     bic[kod] = np.polyfit(xo, ao, 1)[0]
-ekle('RAR medyan artık', 'dex', [med['A'], med['B'], med['C'], med['F']], 'sifir')
-ekle('RAR BİÇİM eğimi', 'dex/dex', [bic['A'], bic['B'], bic['C'], bic['F']], 'sifir')
+ekle('RAR medyan artık', 'dex', [med['A'], med['B'], med['C'], med['F'], med['P']], 'sifir')
+ekle('RAR BİÇİM eğimi', 'dex/dex', [bic['A'], bic['B'], bic['C'], bic['F'], bic['P']], 'sifir')
 
 # ----------------------------------------------------- 4) ETG
 E = []
@@ -192,9 +198,10 @@ gb2, go2 = 10 ** E[:, 6], 10 ** E[:, 2]          # Ab2, Ao2 (dis nokta)
 etg = {}
 for kod, _, tur, k in KUR:
     # ETG'de yalniz RAR bicimi kullanilabilir (yaricap yok) -> yerel kurulum
-    gp = gb2 + np.sqrt(k * A0_K * ACC * gb2)
+    gp = gb2 + np.sqrt(k * A0_K * ACC * gb2) * (
+        np.minimum(1.0, k * A0_K * ACC / gb2) if tur == 'pencere' else 1.0)
     etg[kod] = np.median(np.log10(gp / go2))
-ekle('ETG dış nokta (16 gal.)', 'dex', [etg['A'], etg['B'], etg['C'], etg['F']], 'sifir', 0.045)
+ekle('ETG dış nokta (16 gal.)', 'dex', [etg['A'], etg['B'], etg['C'], etg['F'], etg['P']], 'sifir', 0.045)
 
 # ----------------------------------------------------- 5) S0+BCD
 SB = yukle(['99_KARMASIK'])
@@ -204,8 +211,8 @@ SB = [g for g in SB if GER.get(g['ad'], {}).get('Tip') in ('S0', 'BCD')]
 sb = {}
 for kod, _, tur, k in KUR:
     sb[kod] = np.median([np.sqrt(np.mean((np.sqrt(np.maximum(
-        g['vb2'] + F4(g['Mk'], g['Mb'], tur, k), 1e-9)) - g['Vo']) ** 2)) for g in SB])
-ekle('S0+BCD RMS (%d gal.)' % len(SB), 'km/s', [sb['A'], sb['B'], sb['C'], sb['F']], 'kucuk')
+        g['vb2'] + F4(g['Mk'], g['Mb'], tur, k, g['R']), 1e-9)) - g['Vo']) ** 2)) for g in SB])
+ekle('S0+BCD RMS (%d gal.)' % len(SB), 'km/s', [sb['A'], sb['B'], sb['C'], sb['F'], sb['P']], 'kucuk')
 
 # ----------------------------------------------------- 6) YUKSEK-z
 GZ = list(csv.DictReader(
@@ -216,68 +223,81 @@ for kod, _, tur, k in KUR:
     a0 = k * A0_K * ACC
     f = []
     for g in GZ:
-        b = np.sqrt(a0 * float(g['R_half_kpc']) * KPC) / (float(g['vc_kms']) * 1e3)
-        s = (-b + np.sqrt(b ** 2 + 4)) / 2
-        f.append(1 - s ** 2 - float(g['fDM']))
+        Rh = float(g['R_half_kpc']); vc = float(g['vc_kms'])
+        if tur == 'pencere':                  # M-47: oz-uyumlu s cozumu
+            a0u = k * A0_K
+            ss = 0.9
+            for _ in range(40):
+                vbar2 = (ss * vc) ** 2
+                Wp = min(1., a0u / max(vbar2 / Rh, 1e-12))
+                vF42 = np.sqrt(max(vbar2, 1e-9) * a0u * Rh) * Wp
+                ss = np.sqrt(max(vc ** 2 - vF42, 1e-9)) / vc
+            f.append(1 - ss ** 2 - float(g['fDM']))
+        else:
+            b = np.sqrt(a0 * Rh * KPC) / (vc * 1e3)
+            ss = (-b + np.sqrt(b ** 2 + 4)) / 2
+            f.append(1 - ss ** 2 - float(g['fDM']))
     hz[kod] = np.median(f)
-ekle('Yüksek-z f_DM artığı (6 gal.)', '', [hz['A'], hz['B'], hz['C'], hz['F']], 'sifir')
+ekle('Yüksek-z f_DM artığı (6 gal.)', '', [hz['A'], hz['B'], hz['C'], hz['F'], hz['P']], 'sifir')
 
 # ------------------------------------------------------------------ tablo
 print('\n' + '=' * 104)
-print('TOPLU DEFTER — A: mevcut · B: yerel · C: yerel+x2,08 · F: NIHAI yerel+x1,75')
+print('TOPLU DEFTER — A: mevcut · B: yerel · C: x2,08 · F: x1,75 · P: PENCERELI RESMI (M-47)')
 print('=' * 104)
-print('  %-30s %10s | %8s %8s %8s %8s | %8s %s'
-      % ('ölçüt', 'birim', 'A', 'B', 'C', 'F', 'A→F', 'ΛCDM'))
+print('  %-30s %10s | %8s %8s %8s %8s %8s | %8s %s'
+      % ('ölçüt', 'birim', 'A', 'B', 'C', 'F', 'P', 'A→P', 'ΛCDM'))
 IY = 0; KO = 0
 for s in SAT:
     if s['yon'] == 'kucuk':
-        iyi = s['F'] < s['A']; oran = '%+.0f%%' % (100 * (s['F'] / s['A'] - 1))
+        iyi = s['P'] < s['A']; oran = '%+.0f%%' % (100 * (s['P'] / s['A'] - 1))
     elif s['yon'] == 'sifir':
-        iyi = abs(s['F']) < abs(s['A'])
-        oran = '%+.0f%%' % (100 * (abs(s['F']) / max(abs(s['A']), 1e-9) - 1))
+        iyi = abs(s['P']) < abs(s['A'])
+        oran = '%+.0f%%' % (100 * (abs(s['P']) / max(abs(s['A']), 1e-9) - 1))
     elif s['yon'] == 'bir':
-        iyi = abs(s['F'] - 1) < abs(s['A'] - 1)
-        oran = '%+.3f' % (abs(s['F'] - 1) - abs(s['A'] - 1))
+        iyi = abs(s['P'] - 1) < abs(s['A'] - 1)
+        oran = '%+.3f' % (abs(s['P'] - 1) - abs(s['A'] - 1))
     else:                                    # band: 3,530-3,738
         d = lambda v: 0 if 3.530 <= v <= 3.738 else min(abs(v - 3.530), abs(v - 3.738))
-        iyi = d(s['F']) <= d(s['A']); oran = 'band' if d(s['F']) == 0 else '%+.3f' % d(s['F'])
+        iyi = d(s['P']) <= d(s['A']); oran = 'band' if d(s['P']) == 0 else '%+.3f' % d(s['P'])
     IY += iyi; KO += (not iyi)
-    print('  %-30s %10s | %8.3f %8.3f %8.3f %8.3f | %8s %s%s'
-          % (s['ad'], s['birim'], s['A'], s['B'], s['C'], s['F'], oran,
+    print('  %-30s %10s | %8.3f %8.3f %8.3f %8.3f %8.3f | %8s %s%s'
+          % (s['ad'], s['birim'], s['A'], s['B'], s['C'], s['F'], s['P'], oran,
              '' if s['lcdm'] is None else '%.3f' % s['lcdm'],
              '   <-- KOTULESTI' if not iyi else ''))
-print('\n  A -> F (NIHAI):  %d olcut IYILESTI · %d olcut KOTULESTI  (toplam %d)' % (IY, KO, len(SAT)))
+print('\n  A -> P (PENCERELI RESMI):  %d olcut IYILESTI · %d olcut KOTULESTI  (toplam %d)' % (IY, KO, len(SAT)))
 
 print('\nSINIF SINIF DONUS EGRISI RMS (km/s)')
-print('  %-9s %5s | %7s %7s %7s %7s | %8s' % ('sınıf', 'n', 'A', 'B', 'C', 'F', 'A→F'))
+print('  %-9s %5s | %7s %7s %7s %7s %7s | %8s' % ('sınıf', 'n', 'A', 'B', 'C', 'F', 'P', 'A→P'))
 for sn in sorted(AD):
     Lg = [g for g in DISK if g['tip'] == AD[sn]]
     v = []
     for kod, _, tur, k in KUR:
         v.append(np.median([np.sqrt(np.mean((np.sqrt(np.maximum(
-            g['vb2'] + F4(g['Mk'], g['Mb'], tur, k), 1e-9)) - g['Vo']) ** 2)) for g in Lg]))
-    print('  %-9s %5d | %7.2f %7.2f %7.2f %7.2f | %7.0f%%'
-          % (AD[sn], len(Lg), v[0], v[1], v[2], v[3], 100 * (v[3] / v[0] - 1)))
+            g['vb2'] + F4(g['Mk'], g['Mb'], tur, k, g['R']), 1e-9)) - g['Vo']) ** 2)) for g in Lg]))
+    print('  %-9s %5d | %7.2f %7.2f %7.2f %7.2f %7.2f | %7.0f%%'
+          % (AD[sn], len(Lg), v[0], v[1], v[2], v[3], v[4], 100 * (v[4] / v[0] - 1)))
 
 with open(os.path.join(CIK, 'toplu_defter.csv'), 'w', encoding='utf-8', newline='') as fh:
     w = csv.writer(fh)
     w.writerow(['olcut', 'birim', 'A_mevcut', 'B_yerel', 'C_yerel_x2_08',
-                'F_NIHAI_x1_75', 'iyi_yon', 'LCDM'])
+                'F_x1_75', 'P_PENCERELI_RESMI', 'iyi_yon', 'LCDM'])
     for s in SAT:
         w.writerow([s['ad'], s['birim'], '%.4f' % s['A'], '%.4f' % s['B'],
-                    '%.4f' % s['C'], '%.4f' % s['F'], s['yon'],
+                    '%.4f' % s['C'], '%.4f' % s['F'], '%.4f' % s['P'], s['yon'],
                     '' if s['lcdm'] is None else '%.4f' % s['lcdm']])
 
 # ------------------------------------------------------------------ grafik
-fig, ax = plt.subplots(2, 4, figsize=(17.2, 8.4), facecolor='#121212')
+fig, ax = plt.subplots(2, 5, figsize=(20.4, 8.4), facecolor='#121212')
 ax = ax.ravel()
 for a in ax:
     a.set_facecolor('#121212'); a.grid(alpha=.13)
-for i, s in enumerate(SAT[:8]):
+for a in ax[len(SAT):]:
+    a.axis('off')
+for i, s in enumerate(SAT[:10]):
     a = ax[i]
-    vv = [s['A'], s['B'], s['C'], s['F']]
-    cl = ['#7c3aed', '#a1a1aa', '#4ade80', '#16a34a']
-    a.bar(range(4), vv, .6, color=cl)
+    vv = [s['A'], s['B'], s['C'], s['F'], s['P']]
+    cl = ['#7c3aed', '#a1a1aa', '#4ade80', '#86efac', '#16a34a']
+    a.bar(range(5), vv, .62, color=cl)
     if s['lcdm'] is not None:
         a.axhline(s['lcdm'], color='#f87171', ls='--', lw=1.8, label='ΛCDM')
         a.legend(fontsize=8, framealpha=.3)
@@ -290,13 +310,13 @@ for i, s in enumerate(SAT[:8]):
     for j, v in enumerate(vv):
         a.text(j, v + (max(vv) - min(min(vv), 0)) * .04, ('%.3f' % v).replace('.', ','),
                ha='center', fontsize=9, color=cl[j], fontweight='bold')
-    a.set_xticks(range(4)); a.set_xticklabels(['A', 'B', 'C', 'F'], fontsize=10)
+    a.set_xticks(range(5)); a.set_xticklabels(['A', 'B', 'C', 'F', 'P'], fontsize=10)
     a.set_title('%s\n(%s)' % (s['ad'], s['birim'] or '—'), fontsize=10, color='white', pad=6)
-fig.suptitle('TOPLU DEFTER — A: mevcut · B: yerel · C: ×2,08 · F: NİHAİ ×1,75  ·  '
-             'A→F: %d iyileşti, %d kötüleşti' % (IY, KO), fontsize=14.6, color='white', y=.975)
-fig.text(.5, .015, 'NİHAİ (F): yerel $\\ell_\\omega$ + $a_0=1{,}75\\times cH_0/16{,}1$. '
-                   'Türetim ×1,75–2,08 bandı verir; gözlem alt ucu seçer (BTFR bandın '
-                   'içinde kalır). Sarı = hedef · kırmızı kesik = ΛCDM.',
+fig.suptitle('TOPLU DEFTER — A: mevcut · B: yerel · C: ×2,08 · F: ×1,75 · P: PENCERELİ RESMİ (M-47)  ·  '
+             'A→P: %d iyileşti, %d kötüleşti' % (IY, KO), fontsize=14.6, color='white', y=.975)
+fig.text(.5, .015, 'P (RESMİ, M-47): yerel $\\ell_\\omega$ + $a_0=7{,}67\\times10^{-11}$ m/s$^2$ '
+                   '+ Rankine penceresi $W=\\min(1,\\,a_0/g_{kaps})$ — parametresiz. '
+                   'Sarı = hedef · kırmızı kesik = ΛCDM.',
          ha='center', fontsize=9.4, color='#a1a1aa')
 fig.subplots_adjust(left=.045, right=.988, top=.885, bottom=.075, hspace=.42, wspace=.26)
 plt.savefig(os.path.join(CIK, 'toplu_defter.png'), dpi=140,
