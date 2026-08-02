@@ -158,7 +158,7 @@ async function preloadChapterTexts() {
     for (const chap of chapters) {
         if (!chapterTextsCache[chap.id]) {
             try {
-                const res = await fetch(chap.file);
+                const res = await fetch(chap.file + '?v=2.0');
                 if (res.ok) {
                     const text = await res.text();
                     // Store normalized lower-case text for fast search
@@ -864,7 +864,7 @@ async function loadChapterContent(chapter) {
 
     try {
         // Cache buster ekleyerek tarayıcı önbelleğini atlıyoruz (v=1.1)
-        const response = await fetch(chapter.file + '?v=1.1');
+        const response = await fetch(chapter.file + '?v=2.0');
         if (!response.ok) {
             throw new Error(`Yükleme hatası: ${response.statusText}`);
         }
