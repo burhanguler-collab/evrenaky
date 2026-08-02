@@ -6,20 +6,20 @@
 
 Doğrulama programının bütün sınavları teorinin şu galaktik denklemine karşı yapılır:
 
-$$\boxed{\;v^2(R)=V_{bar}^2(\Upsilon_*)\;+\;\sqrt{V_{bar}^2(R)\,R\,a_0}\cdot W(R)\;,
-\qquad W=\min\!\Big(1,\;\frac{a_0}{g_{bar}}\Big),\quad g_{bar}=\frac{V_{bar}^2}{R},
-\qquad a_0=\frac{\mathcal{G}m_n}{\ell_\omega^{2}}=7{,}39\times10^{-11}\ \mathrm{m/s^2}\;}$$
+$$\boxed{\;v^2(R)=V_{bar}^2(\Upsilon_*)\;+\;\sqrt{\mathcal{G}\,M_{kaps}(R)\,a_0}\cdot W(R)\;,
+\qquad W=\min\!\Big(1,\;\frac{a_0}{g_{kaps}}\Big),\quad g_{kaps}=\frac{\mathcal{G}M_{kaps}}{R^2},
+\qquad a_0=\frac{\mathcal{G}m_n}{\ell_\omega^{2}}=7{,}67\times10^{-11}\ \mathrm{m/s^2}\;}$$
 
 Birinci terim F1'dir (pulsasyon itimi, küresel akı — baryonik katkı $\Upsilon_*$ ile), ikinci terim F4'tür (eksenel itim, silindirik akı). Denklemin türetimi Kısım 6'dadır (6.5.4.0–6.5.4.4); iki yapısal özelliği burada da kayda geçmelidir:
 
-1. **$\ell_\omega$ yerel gradyana bağlıdır.** F4'ün vortisite uzunluğu, statik bir skaler kütleden ($M_{kaps}$) ziyade lokal akı yoğunluğundan (baryonik gradyan $g_{bar}$) kurulur: $\ell_\omega^{etkin}(R)=\sqrt{V_{bar}^2(R)\,R/a_0}$. Evrenakı bir uzay akışkanlığı teorisi olduğundan, silindirik akı (vortisite) diskin geometrisini doğrudan barındıran bu akışkan gradyanı üzerinden şekillenir.
+1. **$\ell_\omega$ yereldir.** F4'ün vortisite uzunluğu kapsanan kütleden kurulur: $\ell_\omega^{etkin}(R)=\sqrt{\mathcal{G}M_{kaps}(R)/a_0}$. Akı teoremi gereği başka türlüsü olamaz — $R$ yüzeyinden geçen dolanım $R$ içindeki maddeden doğar. Bu biçimin galaksi içindeki sınavı 10.7'dedir (yarıçap artığı $-0{,}025$, yani sıfır). *(Alternatif "gradyan" kurulumu — $\ell_\omega$'nın $g_{bar}$'dan kurulması — çalışma dizininde ölçülmüş bir aday olarak açık tutulmaktadır: `87_ETKIN_YASA/BESLEME_SINAVI.md` md. 6.)*
 2. **$a_0$ mikro sabitlerin bileşkesidir.** Biçimi türetilmiştir ($\mathcal{G}m_n/\ell_\omega^2$; girdisi ölçülen mikro sabit $\ell_\omega^{mikro}=35{,}7$ fm — 10.7); sayısal değeri gözlemle sabitlenir ve beş bağımsız ölçüm aynı değerde buluşur (6.5.4.5). Kozmik zamanla **değişmez** — bu bir öngörüdür ve 10.9'da sınanmıştır.
 
-3. **Pencere $W$, Kafes Kilitlenmesi (Lattice Locking) mekanizmasıdır.** İvme $a_0$ sınırını aştığında, uzay dokusundaki hücrelerin oluşturduğu kafes yapısı aşırı gerilim altında kilitlenir (Non-Newtonian akışkanlarda görülen faz değişimi benzeri). Bu kilitlenme, $g_{bar}>a_0$ bölgesinde enine akışı (F4 vortisitesini) sönümleyerek sistemi Newton kuralına indirger ($W=\min(1, a_0/g_{bar})$). Düşük ivmeli rejimde ($g_{bar}\leq a_0$) kafes serbestleşir ve $W=1$ olur: derin limit, BTFR ve ölçek değişmezliği korunur.
+3. **Pencere $W$ — "Kafes Kilitlenmesi" (M-47).** Girdabın iç çekirdeğinde ortam katı-cisim gibi davranır (M-30'un Rankine kolu, kuvvet $\propto R$); ivme $a_0$'ı aştığı bölgede ($g_{kaps}>a_0$) uzay kafesi aşırı gerilim altında kilitlenir ve enine akışı (F4 vortisitesini) $(a_0/g_{kaps})$ çarpanıyla keser — sistem Newton kuralına indirgenir. Bu, elle konmuş bir sönümleyici değildir: $r_0=\ell_\omega^{etkin}$ özdeşleştirmesiyle M-30'un türetilmiş yapısından **parametresiz** çıkar (M-47). Düşük ivmede ($g_{kaps}\leq a_0$) kafes serbesttir, $W=1$: derin limit, BTFR ve ölçek değişmezliği dokunulmamış kalır. Türetim ve aşağı-akış koşumları: `CALISMA/SINIF_CALISMASI/87_ETKIN_YASA/PENCERE_TURETIMI.md`.
 
 **Galaksi başına serbest parametre sayısı: sıfır.** Denklemin galaksiden galaksiye değişen tek girdisi, o galaksinin kendi ölçülmüş baryon dağılımıdır ($M_{kaps}(R)$, $V_{bar}$); $\Upsilon_*=0{,}50$ ortak fotometrik girdidir.
 
-> **MOND ile Teorik Karşılaştırma.** MOND (Milgrom, 1983) programında düşük ve yüksek ivme rejimlerini bağlamak için üstel bir geçiş fonksiyonu ($1 - e^{-\sqrt{g/a_0}}$) varsayılır. Evrenakı Gradyan yaklaşımında ise ($g=g_{bar}+\sqrt{g_{bar}\,a_0} \cdot W$) hiçbir ampirik interpolasyona ihtiyaç duyulmaz; denklem doğrudan F1 (küresel) ve F4 (silindirik) akıların vektörel toplanmasından türer. Yüksek ivmeli rejimlerdeki sönümlenme ihtiyacı ise, Kafes Kilitlenmesi ($W$) mantığı sayesinde uzay akışkanının analitik bir faz değişim kuralı olarak formülize edilir. MOND'un ampirik uyumu, Evrenakı'nın akışkanlar dinamiği ile analitik ve nedensel bir zemine oturtulmuş olur.
+> **MOND ile Teorik Karşılaştırma.** MOND (Milgrom, 1983) programında düşük ve yüksek ivme rejimlerini bağlamak için veriye fitlenmiş üstel bir geçiş fonksiyonu ($1-e^{-\sqrt{g/g_\dagger}}$) kullanılır. Evrenakı'da hiçbir ampirik interpolasyona ihtiyaç yoktur: denklem doğrudan F1 (küresel) ve F4 (silindirik) akıların toplanmasından türer ve yüksek-ivme sönümü, Kafes Kilitlenmesi'yle (M-47 — Rankine iç kolunun denklemdeki ifadesi, **parametresiz**) türetilir. Sonuç ölçülüdür: radyal ivme bağıntısının artık eğimi teoride $+0{,}0002\approx0$'dır — **fitli MOND eğrisinin bıraktığı artıktan bile düz.** MOND'un ampirik uyumu, Evrenakı'nın akışkanlar dinamiğinde analitik ve nedensel bir zemine oturur; üstel fonksiyonun yaptığı işi teoride türetilmiş bir faz-geçişi kuralı yapar.
 
 ## 10.2.2 Toplu defter — dokuz ölçüt, tek kurulum
 
@@ -27,10 +27,10 @@ Denklemin nihai biçimi, programın dokuz bağımsız ölçütünde eski (toplam
 
 | Ölçüt | Nihai kurulum | ΛCDM zinciri |
 |---|---|---|
-| Dönüş eğrisi RMS (141 galaksi) | **12,04 km/s** (Kafes kilitlenmeli gradyan) | 14,66 km/s |
+| Dönüş eğrisi RMS (141 galaksi) | **12,48 km/s** (Kafes Kilitlenmeli resmî denklem; penceresiz 12,79) | 14,56 km/s |
 | Dış yarı sapması | **+0,0 %** (sıfır) | — |
-| BTFR eğimi (121 galaksi) | **3,703** (Kafes kilitlenmeli gradyan) — gözlenen bandın (3,530–3,738) **içinde** | 2,716 — bandın dışında |
-| BTFR normalizasyonu | **1,005** (Kafes kilitlenmeli gradyan, %0,5 sapma) | 1,027 |
+| BTFR eğimi (121 galaksi) | **3,717** (tam boru hattı v3) — gözlenen bandın (3,530–3,738) **içinde** | 2,716 — bandın dışında |
+| BTFR normalizasyonu | **0,978** (tam boru hattı v3; gereken $a_0$ çarpanı ×1,00–×1,11 — bire oturdu) | 1,027 |
 | Radyal ivme bağıntısı, medyan artık | **+0,014 dex** (pencereli; penceresiz −0,003) | — |
 | Radyal ivme bağıntısı, biçim eğimi | **+0,0002 ≈ 0** (M-47 ile kapandı; penceresiz +0,051) | — |
 | Erken tip galaksiler, dış nokta (16 gal.) | **−0,008 dex** | +0,045 dex |
@@ -39,7 +39,7 @@ Denklemin nihai biçimi, programın dokuz bağımsız ölçütünde eski (toplam
 
 ![Toplu defter — beş kurulum, dokuz ölçüt; P: pencereli resmî (M-47), A→P: 8 iyileşti / 1 kötüleşti. Kötüleşen tek kalem defter kestiricisinin BTFR eğimidir; tam 97 boru hattı (v3) eğimi 3,717 ile bandın içindedir.](Gorseller/k10_toplu_defter.png)
 
-**Sıfır serbest parametrede teori ΛCDM zincirini geçmektedir:** dönüş eğrisi RMS'inde 12,04'e karşı 14,66; BTFR normalizasyonunda %0,5 sapma ile mükemmele yakın ölçüm sergileyerek standart bilimin öngörü kabiliyetini geride bırakmıştır. Öngörü yarışında Evrenakı, MOND interpolasyonunun uydurma doğasından bağımsız olarak, 141 galaksideki istatistiksel üstünlüğünü kanıtlamıştır.
+**Sıfır serbest parametrede teori ΛCDM zincirini açık farkla geçmektedir:** dönüş eğrisi RMS'inde 12,48'e karşı 14,56; BTFR eğiminde bandın içinde kalırken ΛCDM 0,81 dışarıdadır; normalizasyon 0,978 ile gereken $a_0$ çarpanı bire oturmuştur (×1,00–×1,11). Dahası, **kütleli spirallerde fitli MOND eğrisinin uyumu dahi geçilmiştir** (Sa–Sab 24,89'a karşı 27,08 · Sb–Sbc 21,19'a karşı 23,45) — ve bunu MOND fit kullanırken teori sıfır parametreyle yapmıştır.
 
 ## 10.2.3 $a_0$'ın değeri nasıl seçildi
 

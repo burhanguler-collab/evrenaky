@@ -372,6 +372,9 @@ function ciz(){
  x.fillText('log '+HAD[hiz]+'   (km/s)',(ml+W-mr)/2,H-12);
  x.save();x.translate(17,(mt+H-mb)/2);x.rotate(-Math.PI/2);x.textAlign='center';
  x.fillText('log M_bar   (M☉, Υ*=0,50)',0,0);x.restore();
+ /* fit damgasi — grafik uzerinde, her zaman gorunur */
+ x.font='600 13px system-ui';x.textAlign='left';
+ x.fillStyle='#4ade80';x.fillText('EVRENAKI FİT: 0 — model fiti yok, iki taraf da öngörü',ml+10,mt+20);
 
  const dogru=(a,b,c,dash,lw)=>{x.strokeStyle=c;x.lineWidth=lw||1.9;x.setLineDash(dash||[]);
   x.beginPath();x.moveTo(X(x0),Y(a*x0+b));x.lineTo(X(x1),Y(a*x1+b));x.stroke();x.setLineDash([]);};

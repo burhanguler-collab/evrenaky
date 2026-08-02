@@ -1043,7 +1043,7 @@ a_0=\frac{\mathcal{G}\,m_n\,m_e}{m_p\,r_n^{2}}\;}$$
 
 ---
 
-## M-47 · F4 Penceresi: Rankine İç Kolunun Galaktik Denklemdeki İfadesi · **[T-aday]**
+## M-47 · F4 Penceresi — "Kafes Kilitlenmesi": Rankine İç Kolunun Galaktik Denklemdeki İfadesi · **[T-aday]**
 
 **Kullanıldığı bölümler:** 6.5.4.4 (resmî denklem), 10.2.1, 10.9. Bağlı katalog: M-30 (Rankine yapısı), M-38 (silindirik akı penceresi), Adım 6 ($\ell_\omega$ yasası).
 

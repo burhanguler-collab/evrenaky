@@ -104,7 +104,7 @@ const V=[{"ad": "NGC3945", "D": 22.8, "eD": 5.7, "inc": 57.0, "einc": 5.0, "L36"
 const CZ=[
  {k:'rar', ad:'disk RAR bulutu ('+S.nrar+' nokta)', c:'#52525b', t:'nokta', on:1},
  {k:'new', ad:'g_öng = g_bar (Newton)',             c:'#71717a', t:'nokta_c', on:1},
- {k:'amp', ad:'ampirik RAR uyumu (fitlenmiş g† — arena dışı)', c:'#f87171', t:'kesik', on:0},
+ {k:'amp', ad:'ampirik RAR — FİTLİ, 1 parametre (g†; rakip taraf)', c:'#f87171', t:'kesik', on:0},
  {k:'evr', ad:'EVRENAKI  g_bar+√(g_bar a₀)·W (M-47)',  c:'#16a34a', t:'kalin', on:1},
  {k:'evk', ad:'└ a₀ × (gereken çarpan — duyarlılık)',   c:'#4ade80', t:'kesik', on:0},
  {k:'dis', ad:'ETG dış nokta (HI halkası dışı)',    c:'#ffcc00', t:'', on:1},
@@ -207,6 +207,10 @@ function ciz(){
  x.fillText('log g_bar   (m/s²) — ölçülen baryonik ivme',(ml+W-mr)/2,H-12);
  x.save();x.translate(19,(mt+H-mb)/2);x.rotate(-Math.PI/2);x.textAlign='center';
  x.fillText('log g_obs   (m/s²)',0,0);x.restore();
+ /* fit damgasi — grafik uzerinde, her zaman gorunur */
+ x.font='600 13px system-ui';x.textAlign='left';
+ x.fillStyle='#4ade80';x.fillText('EVRENAKI FİT: 0  (saf öngörü)',ml+10,mt+20);
+ if(acik['amp']){x.fillStyle='#f87171';x.fillText('ampirik RAR: 1 fit parametresi (g†)',ml+10,mt+38);}
 
  /* disk bulutu — once, en altta */
  if(acik['rar']){x.fillStyle='rgba(120,120,130,.42)';

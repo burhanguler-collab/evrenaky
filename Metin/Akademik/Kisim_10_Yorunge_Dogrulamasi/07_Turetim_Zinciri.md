@@ -6,9 +6,9 @@ Doğrulama programının amacı yalnız uyum ölçmek değildir: **kalibre edilm
 
 ## 10.7.1 $\ell_\omega$ yerel kütleden kurulur — ve galaksi içinde sınanır
 
-F4 teriminin vortisite uzunluğu $\ell_\omega=q_n/2\gamma_n$ bir **akı oranıdır**; Evrenakı'nın uzay akışkanlığı doğası gereği, bu akı oranı statik bir skaler kütleden ziyade uzayın o noktasındaki lokal gerilimden (baryonik gradyan $g_{bar}$) şekillenir. Dolayısıyla galaktik etkin uzunluk, diskin yassı geometrisini doğrudan içeren lokal gradyanla kurulur:
+F4 teriminin vortisite uzunluğu $\ell_\omega=q_n/2\gamma_n$ bir **akı oranıdır** ve galaktik etkin uzunluk, kapsanan kütleden kurulur — akı teoremi gereği: $R$ yüzeyinden geçen dolanım, $R$ içindeki maddeden doğar:
 
-$$\ell_\omega^{etkin}(R)=\sqrt{\frac{V_{bar}^2(R)\,R}{a_0}}\;\Longrightarrow\;v_{F4}^2=\sqrt{V_{bar}^2(R)\,R\,a_0}$$
+$$\ell_\omega^{etkin}(R)=\sqrt{\frac{\mathcal{G}M_{kaps}(R)}{a_0}}\;\Longrightarrow\;v_{F4}^2=\sqrt{\mathcal{G}M_{kaps}(R)\,a_0}$$
 
 Bu biçim üç bağımsız ölçümle sınanmıştır (141 galaksi, fit yok, yeni parametre yok):
 
@@ -91,7 +91,7 @@ $$N_c\in[\,X,\;\langle A\rangle\,]\approx[\,0{,}71\,;\;2{,}2\,]$$
 
 | Halka | Önce | Sonra |
 |---|---|---|
-| $\ell_\omega$'nın kuruluşu | yerel $M_{kaps}(R)$ | **baryonik gradyan ($g_{bar}$)** — diskin akışkan geometrisine tam uyum |
+| $\ell_\omega$'nın kuruluşu | toplam $M_{bar}$ | **yerel $M_{kaps}(R)$** — akı teoremi + galaksi-içi sınav (yarıçap artığı $-0{,}025$) |
 | $\ell_\omega$'nın doğası | "sabit değil, yayılıyor" | **mikro sabit** (35,7 fm) × $\sqrt{N}$; fiziksel anlamı: alan geçiş yarıçapı |
 | $M_{tut}$ | tanımsız | **$=N_c m_n$, türetilmiş**; taban $X\,m_n\approx0{,}72$ — ölçülen 0,84 (%15) |
 | Tutarlılık kümesi | varsayım (saf rastgele) | **atom çekirdeği** — pencere $[X,\langle A\rangle]$, sınıf bandı içinde |

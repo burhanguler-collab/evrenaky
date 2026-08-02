@@ -44,10 +44,10 @@ thead th{color:#a1a1aa;font-weight:600;font-size:11px}
   font-family:ui-monospace,Consolas,monospace;color:#93c5fd;line-height:1.7}
 .not{font-size:11.5px;color:#71717a;margin-top:9px;line-height:1.5}
 .kz{color:#22c55e}.kk{color:#f87171}
-</style></head><body><div style="padding:9px 16px;background:rgba(34,197,94,0.10);border-bottom:1px solid #166534;color:#bbf7d0;font-size:12.5px;line-height:1.45"><strong style="font-size:14px;letter-spacing:.3px">SERBEST PARAMETRE (galaksi ba&#351;&#305;na): <span style="color:#4ade80">EVRENAKI&nbsp;0</span> &nbsp;&#183;&nbsp; &#923;CDM (fit)&nbsp;2</strong> &#8212; fit bu kar&#351;&#305;la&#351;t&#305;rmada teorinin de&#287;il, rakip modelin ihtiyac&#305;d&#305;r. Bu panel <strong>öngörü arenas&#305;d&#305;r</strong>: fitli e&#287;riler arenaya girmez; fitli k&#305;yas defteri kitab&#305;n 6.5.3 b&#246;l&#252;m&#252;nde ve çal&#305;şma kay&#305;tlar&#305;ndad&#305;r.<br>&#9889; <strong>Fitsizlik durumu:</strong> Teori hi&#231;bir fit de&#287;erine muhta&#231; de&#287;ildir; tek kalibre say&#305;n&#305;n (a&#8320;) da t&#252;retilmi&#351; kar&#351;&#305;l&#305;&#287;&#305; mevcuttur (M-45) ve yaln&#305;z stat&#252; disiplini gere&#287;i kalibre de&#287;er resm&#238; kullan&#305;mda tutulmaktad&#305;r. Bu paneldeki &#246;ng&#246;r&#252; e&#287;rilerinde galaksi ba&#351;&#305;na fitlenen hi&#231;bir say&#305; yoktur. &#214;ng&#246;r&#252; e&#287;rileri, M-47 penceresini i&#231;eren <strong>pencereli resm&#238; denklemle</strong> hesaplan&#305;r (W = min(1, a&#8320;/g<sub>kaps</sub>) &#8212; Rankine i&#231; kolu, parametresiz).</div>
+</style></head><body><div style="padding:9px 16px;background:rgba(34,197,94,0.10);border-bottom:1px solid #166534;color:#bbf7d0;font-size:12.5px;line-height:1.45"><strong style="font-size:14px;letter-spacing:.3px">SERBEST PARAMETRE (galaksi ba&#351;&#305;na): <span style="color:#4ade80">EVRENAKI&nbsp;0</span> &nbsp;&#183;&nbsp; &#923;CDM (fit)&nbsp;2</strong> &#8212; fit bu kar&#351;&#305;la&#351;t&#305;rmada teorinin de&#287;il, rakip modelin ihtiyac&#305;d&#305;r. Bu panel <strong>öngörü arenas&#305;d&#305;r</strong>: teorinin fitli e&#287;risi <strong>yoktur — ihtiyac&#305; da yoktur</strong>.<br>&#9889; <strong>Fitsizlik durumu:</strong> Teori hi&#231;bir fit de&#287;erine muhta&#231; de&#287;ildir; tek kalibre say&#305;n&#305;n (a&#8320;) da t&#252;retilmi&#351; kar&#351;&#305;l&#305;&#287;&#305; mevcuttur (M-45) ve yaln&#305;z stat&#252; disiplini gere&#287;i kalibre de&#287;er resm&#238; kullan&#305;mda tutulmaktad&#305;r. Bu paneldeki &#246;ng&#246;r&#252; e&#287;rilerinde galaksi ba&#351;&#305;na fitlenen hi&#231;bir say&#305; yoktur. &#214;ng&#246;r&#252; e&#287;rileri, M-47 penceresini i&#231;eren <strong>pencereli resm&#238; denklemle</strong> hesaplan&#305;r (W = min(1, a&#8320;/g<sub>kaps</sub>) &#8212; Rankine i&#231; kolu, parametresiz).</div>
 <div class="ust"><h1>06 Duzensiz — etkileşimli panel</h1>
-<span class="alt">26 galaksi · SPARC ölçümü + iki parametresiz öngörü + iki fit ·
-tek dosya, dış bağımlılık yok</span></div>
+<span class="alt">26 galaksi · SPARC ölçümü + iki parametresiz öngörü (Evrenakı FİT: 0) ·
+rakibin fiti çentikle açılır · tek dosya, dış bağımlılık yok</span></div>
 <div class="kap">
  <div class="bl"><h2>Galaksi</h2><div class="gl" id="gl"></div>
   <div class="oyn"><button id="geri">◀</button><button id="oyna">▶ Oynat</button><button id="ileri">▶</button></div>
@@ -73,6 +73,7 @@ const CZ=[
  {k:'Vo', ad:'ÖLÇÜM (hata çubuklu)', c:'#ffcc00', t:'nokta', on:1},
  {k:'eo', ad:'EVRENAKI ÖNGÖRÜSÜ — FİT: 0', c:'#16a34a', t:'kalin', on:1},
  {k:'lo', ad:'ΛCDM zincir öngörüsü — FİT: 0', c:'#7c3aed', t:'kalin', on:1},
+ {k:'lf', ad:'ΛCDM FİT — 2 serbest parametre (M₂₀₀, Υ*)', c:'#a78bfa', t:'kesik', on:0},
  {k:'bar',ad:'Baryonlar toplam (Υ*=0,50)', c:'#71717a', t:'nokta_c', on:1},
  {k:'Vdisk',ad:'— bileşen: disk', c:'#38bdf8', t:'ince', on:0},
  {k:'Vbul', ad:'— bileşen: kovan', c:'#fb923c', t:'ince', on:0},
@@ -121,6 +122,11 @@ function ciz(){
  x.fillText('R  (kpc)',(ml+W-mr)/2,H-12);
  x.save();x.translate(16,(mt+H-mb)/2);x.rotate(-Math.PI/2);x.textAlign='center';
  x.fillText('V  (km/s)',0,0);x.restore();
+ /* fit damgasi — grafik uzerinde, her zaman gorunur */
+ x.font='600 13px system-ui';x.textAlign='right';
+ x.fillStyle='#4ade80';x.fillText('EVRENAKI FİT: 0  (saf öngörü)',W-mr-10,mt+20);
+ x.fillStyle='#a78bfa';
+ x.fillText(acik['lf']?'ΛCDM FİT: 2 parametre (M₂₀₀, Υ*)':'ΛCDM zincir FİT: 0',W-mr-10,mt+38);
  /* egriler */
  CZ.forEach(c=>{
   if(!acik[c.k]||c.k==='Vo'||!g[c.k])return;
@@ -138,10 +144,11 @@ function ciz(){
 
  /* olcut tablosu */
  const M=[['Yalnız baryonlar','bar',0],['ΛCDM zincir öngörüsü','lo',0],
-          ['EVRENAKI ÖNGÖRÜSÜ','eo',0]];  /* fitli satirlar arena disi — kiyas defteri: kitap 6.5.3 */
+          ['EVRENAKI ÖNGÖRÜSÜ','eo',0]];  /* yeşil yarış yalnız öngörü satırları arasında */
  let en=1e9,enk=null;M.forEach(([,k])=>{if(g.m[k]&&g.m[k].rms<en){en=g.m[k].rms;enk=k;}});
+ if(acik['lf']&&g.m.lf)M.push(['ΛCDM FİT (rakibin fiti — yarış dışı)','lf',2]);
  q('#tb tbody').innerHTML=M.map(([ad,k,kk])=>{const m=g.m[k];if(!m)return'';
-  const v=k===enk?' style="color:#22c55e;font-weight:600"':'';
+  const v=k===enk?' style="color:#22c55e;font-weight:600"':(k==='lf'?' style="color:#a78bfa"':'');
   return '<tr'+v+'><td>'+ad+'</td><td>'+kk+'</td><td>'+fx(m.rms,2)+'</td><td>'+fx(m.ci,2)+
    '</td><td>'+fx(100*m.ic,0)+'%</td></tr>';}).join('');
  const de=g.m.eo.rms,dl=g.m.lo.rms;
