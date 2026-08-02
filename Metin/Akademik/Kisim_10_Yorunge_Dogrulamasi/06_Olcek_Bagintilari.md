@@ -22,7 +22,7 @@ $$v^4=\mathcal{G}\,M_{bar}\,a_0$$
 | Gözlenen band ($V_f$; ağırlıksız–ağırlıklı) | 3,530 – 3,738 | 1 |
 | ΛCDM zinciri (abundance matching + NFW) | 2,716 | 1,027 |
 
-**Teorinin eğimi (3,717) gözlenen bandın içindedir; ΛCDM zinciri bandın 0,81 dışındadır.** ΛCDM hız aralığını gerer (kütleli galaksilerin hızını fazla tahmin eder) ve eğimi düşer. Dahası normalizasyon 0,978'dir ve gereken $a_0$ çarpanı bire oturmuştur (×1,00–×1,11; kurulum-A döneminin ×2,02 gerilimi kapanmıştır). Fit içermeyen bu zorlu sınavda teorinin akışkan yapısı BTFR'yi ampirik bir kural olmaktan çıkarıp, doğası gereği çözülen analitik bir **kütle-itim** limitine dönüştürmüştür; sıfır noktası SPARC dışında iki bağımsız ailede de doğrulanmıştır (10.10.3 md. 6).
+**Teorinin eğimi (3,717) gözlenen bandın içindedir; ΛCDM zinciri bandın 0,81 dışındadır.** ΛCDM hız aralığını gerer (kütleli galaksilerin hızını fazla tahmin eder) ve eğimi düşer. Dahası normalizasyon 0,978'dir ve gereken $a_0$ çarpanı bire oturmuştur (×1,00–×1,11; kurulum-A döneminin ×2,02 gerilimi kapanmıştır). Fit içermeyen bu zorlu sınavda teorinin akışkan yapısı BTFR'yi ampirik bir kural olmaktan çıkarıp, doğası gereği çözülen analitik bir **kütle-itim** limitine dönüştürmüştür; sıfır noktası SPARC dışında üç bağımsız ailede de doğrulanmıştır (10.10.3 md. 6).
 
 Panel, bu sınavın bütün duyarlılıklarını düğmelere bağlar ve iki ölçüm kaydı özellikle önemlidir:
 

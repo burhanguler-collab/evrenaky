@@ -381,7 +381,9 @@ function ciz(){
   if(acik['gfz'])dogru(egz,kgz,'#fca5a5',[7,5]);
  if(acik['gfa'])dogru(ega,kga,'#f87171',[7,5]);
  if(acik['tre'])dogru(etr,ktr,'#16a34a',[],2.3);
- if(acik['lcd']){x.fillStyle='#7c3aed';lcd.forEach((h,j)=>{x.beginPath();
+ if(acik['lcd']){
+  dogru(elc,klc,'#7c3aed',[5,5],1.8);
+  x.fillStyle='#7c3aed';lcd.forEach((h,j)=>{x.beginPath();
   x.arc(X(llc[j]),Y(h.lMb),3.2,0,7);x.fill();});}
  if(acik['olc']){x.strokeStyle='#ffcc00';x.fillStyle='#ffcc00';x.lineWidth=1;
   gs.forEach((h,j)=>{const cx=X(lv[j]);

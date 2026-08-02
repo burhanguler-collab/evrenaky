@@ -1077,7 +1077,7 @@ $$\boxed{\;v_{F4}^2=\sqrt{\mathcal{G}M_{kaps}\,a_0}\cdot W,\qquad W=\min\!\Big(1
 
 ---
 
-## M-48 · Basınç-Destekli Köprü: Küresel İzdüşüm Lemması ve $v_c=\sqrt2\,\sigma$ · **[T-aday]**
+## M-48 · Basınç-Destekli Köprü: Küresel İzdüşüm Lemması ve $v_c=\sqrt2\,\sigma$ · **[T]**
 
 **Kullanıldığı bölümler:** 6.5.4.9 (kapsam kaydının kapanışı), 6.5.3 (eliptik/cüce küresel), 10.10.3 md. 5. Bağlı katalog: M-37/M-38 (silindirik akı), M-47 (pencere), Adım 6–7 ($\sqrt N$/λ).
 
@@ -1103,7 +1103,8 @@ Mertebe denetimleri (fit yok): Fornax $M_*\sim10^7$ için $v_c=17{,}8$ km/s — 
 - Merkez ($g_{kaps}>a_0$) M-47'nin parçalı rejimindedir; kutular dış bölge içindir.
 
 ### Açık Uçlar
-- ~~İlk bağımsız-aile sınavı~~ → **GEÇİLDİ** (McConnachie 2012, 28 Yerel Grup cücesi; sıfır yeniden-kalibrasyonla medyan $+0{,}009$ dex — `87_ETKIN_YASA/DSPH_SINAVI.md`). [T] için ikinci aile: dış-$\sigma$ katalogları (GC/PNe/X-ışını; G-12).
+- ~~İlk bağımsız-aile sınavı~~ → **GEÇİLDİ** (McConnachie 2012, 28 Yerel Grup cücesi; sıfır yeniden-kalibrasyonla medyan $+0{,}009$ dex — `87_ETKIN_YASA/DSPH_SINAVI.md`).
+- ~~İkinci aile: dış-$\sigma$ katalogları (G-12)~~ → **GEÇİLDİ** (Forbes+2017 SLUGGS küresel-küme kinematiği, 22 eliptik/merceksi; medyan $+0{,}051$ dex, kovan konvansiyonuyla $-0{,}004$; 2–10 $R_{eff}$ yarıçapta düz — `87_ETKIN_YASA/ELIPTIK_SIGMA.md`) → **rozet [T]'ye yükseldi.** Kayıt: en kötü tekil küme-merkezlisi M87 ($-0{,}195$) — küme ortamı kapsam dışı (7.4/A7).
 - Sıcak bileşenin λ'ının (kaskad tutumu) türetimi — ikinci-mertebe kovan düzeltmesi.
 - EFE teriminin türetimi (cüce küresellere nicel uzanımın anahtarı).
 
@@ -1155,7 +1156,7 @@ Tam-baskın limitte $g=g_{bar}(1+\sqrt{a_0/g_{ext}})$ — **yarı-Newton**, $\ma
 | M-42 | *(kuvvet değil)* ölçek yapısı $\Lambda$ | $\omega_2$ potansiyeli | — (skaler ölçekleme) | $\Lambda=1-\Phi/c^2$; $c_{loc}\propto\Lambda^2$ | tüm ışık yolu gözlemleri | **[T]** — yeni parametre yok |
 | M-43 | *(kuvvet değil)* artık kuplajın rejimi | — (ortam tepkisi) | altkritik bastırma | $F\propto\rho_0v^2A\,(v/v_{kav})^{3}$ | tüm sürükleme/sönüm hesapları | [T (yapı)]/**[S ($n$)]** — $\eta_E$'yi kaldırır |
 | M-49 | *(kuvvet değil)* dış alan etkisi (EFE) | — | egemenlik yarıçapı + sonlu kolon | $W_{dış}=\min(1,\sqrt{g_{kaps}/g_{ext}})$; tam-baskında $\mathcal{G}_{etkin}=\mathcal{G}(1+\sqrt{a_0/g_{ext}})$ | uydu cüceler, yoğun çevre dış bölgeleri | **[T-aday]** — Chae altkümesi/dSph sınavı bekler |
-| M-48 | *(kuvvet değil)* basınç-destekli köprü | — | küresel izdüşüm + Jeans | $a_r$ diskle aynı; $v_c=\sqrt2\sigma$; $\sigma^4=\mathcal{G}M_{bar}a_0/4$ | eliptik/cüce küresel dış bölgesi | **[T-aday]** — dış-σ verisi bekler |
+| M-48 | *(kuvvet değil)* basınç-destekli köprü | — | küresel izdüşüm + Jeans | $a_r$ diskle aynı; $v_c=\sqrt2\sigma$; $\sigma^4=\mathcal{G}M_{bar}a_0/4$ | eliptik/cüce küresel dış bölgesi | **[T]** — iki bağımsız aile geçildi (dSph $+0{,}009$; SLUGGS $+0{,}051$/$-0{,}004$) |
 | M-47 | *(kuvvet değil)* F4 penceresi | $\omega_1$ | Rankine iç kolu (M-30) | $W=\min(1,a_0/g_{kaps})$ — **parametresiz** | iç bölgeler ($g_{kaps}>a_0$) | **[T-aday]** — biçim türetildi, sürüklenme sıfırlandı |
 | M-45 | *(kuvvet değil)* iki kolun eş-gücü | $\omega_1\!\leftrightarrow\!\omega_2$ | — (kaynak simetrisi) | $u_r/v_t=\sqrt{m_p/m_e}$ → $a_0=\mathcal{G}m_nm_e/(m_pr_n^2)$ | galaktik ivme ölçeği; $(C,q_n)$ çifti çözülür | **[T-aday]** — eş-güç ispatı açık |
 

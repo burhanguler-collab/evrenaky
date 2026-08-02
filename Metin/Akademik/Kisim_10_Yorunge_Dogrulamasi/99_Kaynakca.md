@@ -45,3 +45,9 @@ Bu kısımdaki bütün dönüş eğrisi verileri, gözlemsel noktalar ve baryoni
 * **Chae, K.-H., Desmond, H., Lelli, F., McGaugh, S. S., & Schombert, J. M.** (2021b). *Testing the Strong Equivalence Principle. II. Relating the External Field Effect in Galaxy Rotation Curves to the Large-scale Structure of the Universe.* The Astrophysical Journal, 921(1), 104. — genişletilmiş çevre kestirimleri; yeni EFE protokolünün aday verisi.
 * **Chae, K.-H.** (2023). *Breakdown of the Newton–Einstein Standard Gravity at Low Acceleration in Internal Dynamics of Wide Binary Stars.* The Astrophysical Journal, 952(2), 128. — geniş çiftlerde artış iddiası (G-10'un bir ucu).
 * **Banik, I., Pittordis, C., Sutherland, W., Famaey, B., Ibata, R., Mieske, S., & Zhao, H.** (2024). *Strong constraints on the gravitational law from Gaia DR3 wide binaries.* Monthly Notices of the Royal Astronomical Society, 527(3), 4573–4615. — geniş çiftlerde Newton lehine sınır (G-10'un öbür ucu).
+
+## Bağımsız-veri sınavları (SPARC dışı üç aile — 10.10.3 madde 6)
+
+* **McConnachie, A. W.** (2012). *The Observed Properties of Dwarf Galaxies in and around the Local Group.* The Astronomical Journal, 144(1), 4. — Yerel Grup cüceleri derlemesi; M-48/M-49 dSph sınavının verisi (`87_ETKIN_YASA/DSPH_SINAVI.md`).
+* **Ponomareva, A. A., et al.** (2021). *MIGHTEE-HI: the baryonic Tully–Fisher relation over the last billion years.* Monthly Notices of the Royal Astronomical Society, 508(1), 1195–1205. — örneklem-dışı HI BTFR sınavının verisi (`87_ETKIN_YASA/MIGHTEE_SINAVI.md`).
+* **Forbes, D. A., Alabi, A., Brodie, J. P., et al.** (2017). *The SLUGGS Survey: A Catalog of Over 4000 Globular Cluster Radial Velocities in 27 Nearby Early-type Galaxies.* The Astronomical Journal, 153(3), 114 (erratum: 2017, AJ, 154, 80). — eliptik dış-σ sınavının verisi (G-12; `87_ETKIN_YASA/ELIPTIK_SIGMA.md`).
