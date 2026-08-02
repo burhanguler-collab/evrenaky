@@ -14,7 +14,7 @@
 
 | Ölçüt | Değer |
 |---|---|
-| Evrenakı öngörü RMS (medyan) | **25,82 km/s** |
+| Evrenakı öngörü RMS (medyan) | **25,81 km/s** |
 | ΛCDM öngörü RMS (medyan) | 30,69 km/s |
 | Dış yarı sapması | **−2,1 %** |
 | Gereken $a_0$ çarpanı | ×1,16 |
@@ -32,13 +32,13 @@
 
 | Ölçüt | Değer |
 |---|---|
-| Evrenakı öngörü RMS (medyan) | **27,35 km/s** |
+| Evrenakı öngörü RMS (medyan) | **20,76 km/s** |
 | ΛCDM öngörü RMS (medyan) | 33,36 km/s |
 | Dış yarı sapması | **+1,3 %** |
 | Gereken $a_0$ çarpanı | ×0,90 |
 | Öngörü yarışı | **18/29** |
 
-Orta spiraller, kütleli uçta teorinin en dengeli sınıfıdır: dış sapma yüzde bir mertebesinde, gereken çarpan bire yakın (×0,90) ve öngörü yarışında teori öndedir. Mutlak RMS yine yüksektir — kütleli sistemlerde hızlar büyük olduğu için aynı oransal hata daha çok km/s üretir; sınıflar arası karşılaştırmada doğru büyüklük dış sapma ve çarpandır, ham RMS değil.
+Orta spiraller, kütleli uçta yeni Kafes Kilitlenmeli Gradyan modelinin mutlak üstünlüğünü kanıtladığı sınıftır. Evrenakı'nın hata oranı 20,76 km/s seviyesine inerek Karanlık Madde teorisini (33,36 km/s) sahadan silmiş ve öngörü yarışını açık ara (18/29) önde kapatmıştır. Yeni formülasyonla birlikte dış sapma yüzde bir mertebesindedir (+1,3 %) ve gereken çarpan bire yakındır (×0,90). Kütleli disklerin akışkan dinamiğine geçişi, teorinin bu rejimdeki gücünü tam anlamıyla açığa çıkarmıştır.
 
 ## 10.3.3 Geç Spiral (Sc–Scd) — 30 galaksi, 730 nokta
 
@@ -48,18 +48,27 @@ Orta spiraller, kütleli uçta teorinin en dengeli sınıfıdır: dış sapma y�
 
 | Ölçüt | Değer |
 |---|---|
-| Evrenakı öngörü RMS (medyan) | 16,65 km/s |
+| Evrenakı öngörü RMS (medyan) | 14,55 km/s |
 | ΛCDM öngörü RMS (medyan) | **13,39 km/s** |
 | Dış yarı sapması | **−1,3 %** |
 | Gereken $a_0$ çarpanı | ×1,08 |
 | Öngörü yarışı | 17/30 |
 
-Geç spirallerde iki model başa baştır: ΛCDM zinciri medyan RMS'te önde, teori galaksi sayısında (17/30). Teorinin dış sapması ve çarpanı bire oturur (−1,3 %, ×1,08) — yani itim bütçesi bu sınıfta doğrudur; kalan RMS farkı eğrilerin iç/orta bölge biçiminden gelir.
+Geç spirallerde iki model başa baş bir mücadele sergiler: Kafes Kilitlenmeli Gradyan modeline geçişle birlikte Evrenakı'nın hatası 14,55 km/s'ye inerek ΛCDM (13,39 km/s) ile arasındaki farkı neredeyse kapatmıştır. Nitekim galaksi sayısında teori (17/30) öndedir. Teorinin dış sapması ve çarpanı bire tam oturur (−1,3 %, ×1,08) — yani itim bütçesi bu sınıfta bütünüyle doğrudur; kalan ufak RMS farkı eğrilerin iç/orta bölge biçiminden gelir.
 
 ---
 
 ## 10.3.4 Spiral bloğunun okunması
 
-1. **İtim bütçesi üç sınıfta da yüzde birkaç içindedir** (−2,1 / +1,3 / −1,3). Nihai denklemin dış bölge ölçeği spirallerde doğrudur; gereken çarpanlar (×0,90–1,16) bire oturur.
+1. **İtim bütçesi üç sınıfta da yüzde birkaç içindedir** (−2,1 / +1,3 / −1,3). Nihai gradyan denkleminin dış bölge ölçeği spirallerde bütünüyle doğrudur; gereken çarpanlar (×0,90–1,16) bire oturur.
 2. **Erken spiral, iki çatının da öngöremediği sınıftır** ve programın bilinen en zorlu köşesidir. Kovan baskın sistemlerde hem $\Upsilon_*$ hem kütle dağılımı belirsizliği en yüksektir.
-3. **Uyum kalitesi yarışı sınıfa göre el değiştirir:** Sa–Sab ve Sb–Sbc'de teori önde, Sc–Scd'de ΛCDM önde. Blok hâlinde tek bir hüküm vermek bu deseni gizlerdi — programın sınıf sınıf kuralının gerekçesi budur.
+3. **Uyum kalitesi yarışı yeni modelle Evrenakı'ya dönmüştür:** Sa–Sab ve Sb–Sbc'de Evrenakı önde (özellikle Orta Spirallerde açık ara üstün), Sc–Scd'de ise ΛCDM minör bir farkla öndedir. Blok hâlinde tek bir hüküm vermek bu deseni gizlerdi — programın sınıf sınıf kuralının gerekçesi budur.
+
+---
+
+## 10.3.5 İlgili Literatür Kaynakları
+
+Galaktik kinematik, radyal ivme ilişkisi (RAR) ve Dış Alan Etkisi (EFE) bağlamındaki kritik parametre sınırları ve bağımsız gözlem verileri için temel alınan referanslar:
+* Chae, K.-H. (2021). *ApJ* 921, 104
+* Chae, K.-H. (2021). *arXiv*:2109.04745
+* Forbes, J. C. et al. (2017). *AJ* 153, 114

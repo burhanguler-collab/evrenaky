@@ -1444,7 +1444,7 @@ Teorinin galaktik denkleminin geçerlilik alanı bu kayıtla sınırlandırılı
 | G-13 | EFE terimi (M-49): dış-alan-baskın sistemlerde iç dinamik yarı-Newton'dur ve tek evrensel çarpan taşır — $\mathcal{G}_{etkin}/\mathcal{G}=1+\sqrt{a_0/g_{ext}}$ (aynı $g_{ext}$'te aynı); disklerde eğri düşüşü tam $g_{kaps}=g_{ext}$ yarıçapında başlamalı ve düşüş bölgesinde $v^2-V_{bar}^2\propto1/R$; izole cüceler aynı $M_*$'daki baskın-alan eşleniklerinden yüksek $\sigma$ taşımalı *(ilk sınav — McConnachie 2012, 28 sistem: büyük uydularda imza lehte, $+0{,}109\to+0{,}042$; küçük klasikler gelgit-karıştırıcılı, hüküm yok)* | Çarpanın $g_{ext}$'le $\sqrt{}$ dışı bir bağımlılık göstermesi, düşüşün yanlış yarıçapta başlaması ya da izole↔baskın farkının yokluğu M-49'u çürütür |
 | G-11 | Etkin yasa ayrışması — $a_0$ kozmik zamanla değişmez (mikro köken, M-45): genişleyen yüksek-$z$ dönüş eğrisi örneklemlerinde $a_0(z)$ eğimi sıfır kalmalı; $a_0\propto cH(z)$ dışlanmış kalmalı *(ilk sınav: $z=0{,}85$–$2{,}4$'te 6/6 dışlama)* | Yüksek-$z$'de $H(z)$'yi izleyen sistematik $a_0$ kayması mikro kökeni ve M-45 zincirini çürütür |
 
-### 6.5.5 Kapanış beyanı: makine tamam, program tanımlı
+### 6.5.5 Kapanış beyanı: makine tamam, program tanımlı ve dışa açık
 
 Galaktik yörünge probleminin **teorik makinesi tamamlanmıştır** — denklemde türetilmemiş öğe
 kalmamıştır: F1 ve F4'ün biçimleri (M-35, M-37/M-38), toplanma (lineer süperpozisyon,
@@ -1459,3 +1459,14 @@ $a_0$ üç bağımsız ailede sıfır ayarla doğrulanmış; galaksi başına se
 Bu bir "kapandı" ilanı değildir ve
 olamaz: her sınav çift taraflıdır — beyanın gücü, yanlışlanabilir ve hakem önünde
 savunulabilir olmasındadır.
+
+**Matematik cephesi bu kitapta kapanmıştır.** Denklemin her öğesi türetilmiştir; bundan sonraki
+hiçbir iş yeni bir türetim değil, veri işidir. Ve kanıt programı bilinçli olarak **dışa açık
+bırakılmıştır:** kalan her sınav — SPARC-dışı $\ell_\omega$ ölçümü, yarıçap-çözümlü HI koşumu,
+gelgit ayrıştırması, λ bağıntısı, küme ölçeği — verisi, betiği ve karar kuralı adresli biçimde
+tanımlıdır ve bağımsız araştırmacıların koşabileceği hâldedir. Kanıtların bir kısmını
+başkalarının bulacak olması bir eksik değil, **sınamanın ta kendisidir:** teori bütün
+doğrulamasını kendi eliyle tamamlasaydı, bu kitabın en sert özeleştirisi ("türetimler
+sınandıkları veriden okunuyor" — 7.4) yanıtsız kalırdı. Bağımsız elden gelen her geçer not,
+bizim koşacağımız bir koşumdan daha ağır tartar; gelecek her aleyhte sonuç da aynı defterde,
+aynı dürüstlükle kayda geçer. Makine tamamdır; hüküm verinindir.
