@@ -41,6 +41,8 @@ Yanlardan vuran kuvvetler ($\rho \cdot g \cdot d$), dikey eksendeki efektif ezme
 Bu eşitsizlik yüzünden yumuşak top, yanlardan (çembersel olarak) çok daha şiddetli sıkıştırılır. Hacmini koruyabilmek için, bu çembersel sıkışmadan kaçarak basıncın zayıf geldiği dikey yöne (aşağı-yukarı) doğru uzar. Top yukarı doğru uzamış bir **elipsoid** şeklini alır.
 
 İşte Dünya'nın uzay akışkanı (Evrenakı) içindeki durumu da tam olarak bu "suya batan top" anomalisidir. Dünyayı sıkan akışkan basıncı asimetrik hale geldiğinde (Ay'ın yarattığı hız farkından dolayı), Dünya'yı ekvatoral yörünge düzleminden sıkan **yan kuvvetler** baskın çıkar ve okyanuslar Ay eksenine doğru fışkırıp uzayarak elipsoid (gelgit) şeklini alır.
+ 
+> **Matematiksel Doğrulama (Ek M-36):** Buradaki "suya batan top" analojisi yalnızca nitel bir benzetme değildir. Teorinin matematiksel bloğunda (Bkz. **Ek M-36 · Gelgit Tensörü ve Denge Gelgiti**), bu diferansiyel yanal sıkıştırma $(+2, -1, -1)$ formunda bir hidrodinamik tensöre dönüştürülür. Standart fizikte soyut bir özellik olarak kabul edilen "tensörün izsizliği" ($\nabla^2 P = 0$), burada basit bir **akışkan korunum yasasıdır**: Evrenakı yaratılmaz veya yok edilmez, yandan sıkıştırılan hacim mecburen eksende uzar. Bu analitik temel, Dünya açık okyanuslarında Ay için $0{,}53$ m, Güneş için $0{,}25$ m'lik denge gelgiti (equilibrium tide) genliklerini serbest parametre olmaksızın, doğrudan basınç profili üzerinden nicel olarak türetir.
 
 ### 3.9.2.2 Gelgitte Ay ve Güneş Farkı (Akışkan Basınç Gradyanı)
 
@@ -52,7 +54,7 @@ Matematiksel olarak:
 *   **Toplam Akışkan Kuvveti:** Uzaklığın karesiyle ($1/r^2$) zayıflar.
 *   **Diferansiyel Sıkıştırma (Gelgit Gradyanı):** Uzaklığın **küpüyle ($1/r^3$)** zayıflar.
 
-Güneş, Ay'dan yaklaşık 27 milyon kat daha büyük bir kütleye sahip olmasına rağmen, bize Ay'dan **390 kat daha uzaktadır**. Akışkan mengenesinin (sıkıştırmanın) gücü uzaklığın küpüyle ($390^3 \approx 59.000.000$) zayıfladığı için; Güneş'in kütleden kazandığı 27 milyonluk avantaj, uzaklıktan kaybettiği 59 milyonluk dezavantaja yenik düşer. (Kütle ve uzaklık değerleri: NASA/JPL Planetary Fact Sheet, 2024; gelgit kuvvetinin $1/r^3$ ölçeklenmesi: Pugh & Woodworth, 2014.) Sonuç olarak Güneş'in Dünya üzerindeki çembersel sıkıştırma gücü, Ay'ın gücünün sadece **yarısı (%46'sı)** kadardır. *(oran hesabı: **Ek M-26**)*
+Güneş, Ay'dan yaklaşık 27 milyon kat daha büyük bir kütleye sahip olmasına rağmen, bize Ay'dan **390 kat daha uzaktadır**. Akışkan mengenesinin (sıkıştırmanın) gücü uzaklığın küpüyle ($390^3 \approx 59.000.000$) zayıfladığı için; Güneş'in kütleden kazandığı 27 milyonluk avantaj, uzaklıktan kaybettiği 59 milyonluk dezavantaja yenik düşer. (Kütle ve uzaklık değerleri: NASA/JPL Planetary Fact Sheet, 2024; gelgit kuvvetinin $1/r^3$ ölçeklenmesi: Pugh & Woodworth, 2014.) Sonuç olarak Güneş'in Dünya üzerindeki çembersel sıkıştırma gücü, Ay'ın gücünün sadece **yarısı (%46'sı)** kadardır. *(oran hesabı: **Ek M-26**, tensörel doğrulama: **Ek M-36**)*
 
 **Akışkan Dinamiği Açısından Anlamı:**
 Güneş o kadar uzaktadır ki, Dünya'nın ön yüzü ile arka yüzü arasındaki 12.700 kilometrelik fark, Güneş'in o uçsuz bucaksız akışkan denizinde "neredeyse dümdüz" kalır. Güneş'in akışkan basıncı Dünya'nın önüne de, arkasına da hemen hemen eşit vurur. Aradaki "fark" (diferansiyel) çok zayıftır. 
