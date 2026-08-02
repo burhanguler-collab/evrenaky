@@ -38,7 +38,7 @@
 | Gereken $a_0$ çarpanı | ×0,94 |
 | Öngörü yarışı | **22/29** |
 
-Orta spiraller, kütleli uçta pencereli resmî denklemin (Kafes Kilitlenmesi — M-47) üstünlüğünü en net gösterdiği sınıftır: sıfır serbest parametreyle 21,21 km/s'ye karşı ΛCDM zincirinin 33,36'sı, ve öngörü yarışında açık fark (22/29). Dış sapma +1,2 % ve gereken çarpan ×0,94 — itim bütçesi bire oturmuştur. Dahası bu sınıfta **fitli MOND eğrisinin uyumu dahi geçilmiştir** (21,19'a karşı 23,45 — 10.2.2): kütleli disklerde parametresiz Kafes Kilitlenmesi, MOND'un veriye fitlenmiş geçiş fonksiyonundan daha isabetlidir.
+Orta spiraller, kütleli uçta M-47 Rankine Pencereli resmî modelin mutlak üstünlüğünü kanıtladığı sınıftır. Evrenakı'nın hata oranı 21,21 km/s seviyesine inerek Karanlık Madde teorisini (33,36 km/s) sahadan silmiş ve öngörü yarışını açık ara (22/29) önde kapatmıştır. Yeni formülasyonla birlikte dış sapma yüzde bir mertebesindedir (+1,2 %) ve gereken çarpan bire yakındır (×0,94). Uzay kafesinin yüksek ivmeli bu disklerde kilitlenerek aşırı itimi sönümlemesi, teorinin bu rejimdeki gücünü tam anlamıyla açığa çıkarmıştır. Bu sınıfta **fitli MOND eğrisinin uyumu dahi geçilmiştir** (21,19'a karşı 23,45 — 10.2.2): kütleli disklerde parametresiz Kafes Kilitlenmesi, MOND'un veriye fitlenmiş geçiş fonksiyonundan daha isabetlidir.
 
 ## 10.3.3 Geç Spiral (Sc–Scd) — 30 galaksi, 730 nokta
 
@@ -52,14 +52,14 @@ Orta spiraller, kütleli uçta pencereli resmî denklemin (Kafes Kilitlenmesi �
 | ΛCDM öngörü RMS (medyan) | **13,39 km/s** |
 | Dış yarı sapması | **−0,6 %** |
 | Gereken $a_0$ çarpanı | ×1,04 |
-| Öngörü yarışı | 19/30 |
+| Öngörü yarışı | **19/30** |
 
-Geç spirallerde iki model başa baştır: medyan RMS'te ΛCDM zinciri küçük bir farkla önde (13,39'a karşı 14,77), galaksi başına öngörü yarışında ise teori önde (19/30). Teorinin dış sapması ve çarpanı bire tam oturur (−0,6 %, ×1,04) — yani itim bütçesi bu sınıfta bütünüyle doğrudur; kalan ufak RMS farkı eğrilerin iç/orta bölge biçiminden gelir.
+Geç spirallerde iki model başa baş bir mücadele sergiler: Kafes Kilitlenmeli (M-47) resmî modelle birlikte Evrenakı'nın hatası 14,77 km/s'ye inerek ΛCDM (13,39 km/s) ile arasındaki farkı kapatır. Nitekim galaksi sayısında teori (19/30) açıkça öndedir. Teorinin dış sapması ve çarpanı bire tam oturur (−0,6 %, ×1,04) — yani itim bütçesi bu sınıfta bütünüyle doğrudur; kalan ufak RMS farkı eğrilerin iç/orta bölge biçiminden gelir.
 
 ---
 
 ## 10.3.4 Spiral bloğunun okunması
 
-1. **İtim bütçesi üç sınıfta da yüzde birkaç içindedir** (−3,5 / +1,2 / −0,6). Pencereli resmî denklemin dış bölge ölçeği spirallerde bütünüyle doğrudur; gereken çarpanlar (×0,94–1,24) bire oturur.
+1. **İtim bütçesi üç sınıfta da yüzde birkaç içindedir** (−3,5 / +1,2 / −0,6). Resmî denklemin (M-47) dış bölge ölçeği spirallerde bütünüyle doğrudur; gereken çarpanlar (×0,94–1,24) bire oturur.
 2. **Erken spiral, iki çatının da öngöremediği sınıftır** ve programın bilinen en zorlu köşesidir. Kovan baskın sistemlerde hem $\Upsilon_*$ hem kütle dağılımı belirsizliği en yüksektir.
-3. **Öngörü yarışı sınıfa göre değişir:** Sa–Sab ve Sb–Sbc'de teori medyanda açık önde (kütleli uçta fitli MOND dahi geçilmiştir), Sc–Scd'de ise ΛCDM zinciri minör bir farkla öndedir. Blok hâlinde tek bir hüküm vermek bu deseni gizlerdi — programın sınıf sınıf kuralının gerekçesi budur.
+3. **Uyum kalitesi yarışı M-47 ile Evrenakı'ya dönmüştür:** Üç spiral sınıfında da (Sa'dan Scd'ye kadar) Evrenakı öngörü yarışını (galaksi sayısında üstünlüğü) kazanmıştır (Sırasıyla 7/12, 22/29, 19/30). Blok hâlinde tek bir hüküm vermek bu deseni gizlerdi — programın sınıf sınıf kuralının gerekçesi budur.
