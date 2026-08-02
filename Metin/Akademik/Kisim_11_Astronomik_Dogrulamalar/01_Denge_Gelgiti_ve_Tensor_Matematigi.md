@@ -2,11 +2,13 @@
 
 Kısım 3.9'da Dünya üzerindeki okyanusların (ve Ay'ın) hareketini, uzaydan gelen görünmez bir "çekme" kuvvetiyle değil, Evrenakı akıntısının yarattığı **asimetrik yanal sıkıştırmayla (squeeze)** açıklamıştık. 
 
-Bu bölümde; gelgit mekaniğini, radyal basınç alanının ikinci uzaysal türevi olan **Tensör** matematiğine taşıyacağız. Standart fizikte "izsiz tensör" olarak soyutlanan özelliğin, akışkanlar mekaniğinde **Evrenakı akı korunum yasası** olduğunu kanıtlayacak ve hiçbir serbest parametre kullanmadan okyanus gelgit genliğini ($\Delta\zeta$) ve Güneş/Ay gelgit oranını ($\%46$) türeteceğiz.
+Bu bölümde; gelgit mekaniğini, radyal basınç alanının ikinci uzaysal türevi olan **Tensör** matematiğine taşıyacağız. Standart fizikte "izsiz tensör" olarak soyutlanan özelliğin, akışkanlar mekaniğinde **Evrenakı akı korunum yasası** olduğunu kanıtlayacak ve hiçbir serbest parametre kullanmadan okyanus gelgit genliğini ($\Delta\zeta$) ve Güneş/Ay gelgit oranını ($\%46$) türeteceğiz. Gelgit, teoride yeni bir kuvvet değildir: **kütle-itim alanının (Ek M-35) uzaysal türevidir** ve tek bir yeni parametre bile gerektirmez.
+
+> **Bu bölümün sözü — peşinen dürüst kayıt.** Türetimin ürettiği her sayı ($1/r^3$ yasası, $(+2,-1,-1)$ oranı, %46, 0,535 m) klasik gelgit kuramınınkiyle **birebir aynıdır.** Bu bölüm bir ayırt edici sınav değil, bir **tutarlılık türetimidir**: iddia, gözlemi klasik kuramdan farklı açıklamak değil, aynı sonuca mekanizmalı bir yoldan varmaktır. Ayrışan üç yapısal nokta 11.1.7'de ayrıca toplanmış, teorinin bu alandaki ilk ayırt edici öngörü adayı ise 11.1.8'e açık kalem olarak yazılmıştır.
 
 ---
 
-### 11.1.1 Notasyon ve Temel Varsayımlar
+## 11.1.1 Notasyon ve Temel Varsayımlar
 
 **Notasyon:**
 *   $M$: Gelgiti yaratan kaynağın kütlesi (Ay veya Güneş)
@@ -27,7 +29,7 @@ Bu bölümde; gelgit mekaniğini, radyal basınç alanının ikinci uzaysal tür
 
 ---
 
-### 11.1.2 Çerçeve Adımı ve İtim Potansiyeli
+## 11.1.2 Çerçeve Adımı ve İtim Potansiyeli
 
 Kütle-itim yasası $\vec a=-\frac{1}{\rho_n}\nabla P$'dir. Nükleon yoğunluğu ($\rho_n$) sabit olduğundan, bu ifade tam bir itim potansiyeline indirgenir:
 $$\Phi \equiv \frac{P-P_0}{\rho_n} \;\Longrightarrow\; \vec a = -\nabla\Phi,\qquad \Phi(r)=-\frac{\mathcal{G}M}{r}$$
@@ -49,9 +51,19 @@ Tensör $\mathsf{T}$ simetrik olduğundan $\Delta\vec a(-\vec\xi)=-\Delta\vec a(
 
 ---
 
-### 11.1.3 Tensörün Bileşenleri ve Akı Korunumu
+## 11.1.3 Akı Korunumu ve Tensörün Bileşenleri
 
-Gelgit tensörünün üç bileşeni birbirinden bağımsız olarak şu şekilde türetilir:
+Önce ortamın korunum yasasını nicel biçime sokalım. Ek M-35'in ortam tepkisi $\dfrac{dP}{dr}=\dfrac{C\,Nq_n}{4\pi r^2}$ idi. Kaynağı çevreleyen herhangi bir $S$ küresi üzerinden basınç gradyanı akısı:
+
+$$\oint_S \nabla P\cdot d\vec A = \frac{C\,Nq_n}{4\pi r^2}\cdot 4\pi r^2 = C\,Nq_n = \text{sabit}$$
+
+Akı **yarıçaptan bağımsızdır.** Diverjans teoremiyle, kaynağı içermeyen herhangi bir küresel kabukta
+
+$$\int_V \nabla^2 P\,dV = \oint_{S_{dış}}\!\!\nabla P\cdot d\vec A \;-\; \oint_{S_{iç}}\!\!\nabla P\cdot d\vec A = 0 \;\Longrightarrow\; \nabla^2P=0$$
+
+Fiziksel okuma nettir: kaynaktan çıkan deplasman akısı yolda ne çoğalır ne eksilir. **Evrenakı yaratılmaz, yok edilmez; yalnızca yer değiştirir.**
+
+Bu sonucu şimdi *kullanmayacağız.* Tensörü ondan bağımsız kuracak, sonra iki yolun çakıştığını göstereceğiz. Gelgit tensörünün üç bileşeni şöyle türetilir:
 
 **(a) Eksenel Bileşen:** Doğrudan radyal ivmenin türevidir.
 $$T_\parallel = \frac{da_r}{dr} = \frac{d}{dr}\!\left(-\frac{\mathcal{G}M}{r^2}\right) = +\frac{2\mathcal{G}M}{r^3}$$
@@ -64,25 +76,41 @@ $$\mathrm{tr}\,\mathsf{T} = T_\parallel + 2T_\perp = \frac{2\mathcal{G}M}{r^3} -
 
 $$\boxed{\;(T_\parallel,\,T_\perp,\,T_\perp) = \frac{\mathcal{G}M}{r^3}\,(+2,\,-1,\,-1),\qquad \mathrm{tr}\,\mathsf{T}=0\;}$$
 
-İzsizlik, bir varsayım değil türetimin doğal sonucudur. Aynı zamanda $\mathrm{tr}\,\mathsf{T}=-\frac{1}{\rho_n}\nabla^2P$ olduğundan, $\nabla^2 P = 0$ sonucuna ulaşılır. Bu denklem uzay akışkanının **akı korunumunu** ifade eder: Kaynaktan çıkan deplasman akısı yolda ne çoğalır ne eksilir. Evrenakı yaratılmaz veya yok edilmez; ekvatordan sıkılan ($-1, -1$) hacim mecburen eksende uzar ($+2$).
+**İzsizlik bir varsayım değil, türetimin çıktısıdır.** Üç bileşen de bağımsız kuruldu ve iz kendiliğinden sıfır çıktı. Dahası $\mathrm{tr}\,\mathsf{T}=-\frac{1}{\rho_n}\nabla^2P$ olduğundan bu sonuç, bölümün başında akı korunumundan elde edilen $\nabla^2P=0$ ile **birebir aynı ifadedir**: iki bağımsız yol aynı sıfırı verir. Standart fizikte "gelgit tensörünün izsizliği" soyut bir alan özelliği olarak kaydedilir; burada iki yönden doğrulanmış bir **korunum teoremidir.** Yanaklardan sıkılan ($-1,-1$) hacim, eksende kabaran ($+2$) hacimle tam muhasebeleşir.
+
+| Özdeğer | Doğrultu | Fiziksel okuma |
+|---|---|---|
+| $-1$ (×2) | Yanal | **Neden:** Evrenakı çepeçevre yandan sıkar |
+| $+2$ | Eksenel | **Sonuç:** yandan sıkışan madde eksen boyunca iki yöne kabarır |
 
 ---
 
-### 11.1.4 Nedenselliğin İspatı (Basınç Okuması)
+## 11.1.4 Nedenselliğin İspatı (Basınç Okuması)
 
 Tensördeki $(+2,-1,-1)$ yapısı, tek başına yan sıkıştırmanın "neden" olduğunu kanıtlamaz. Nedensellik, fiziksel basınç alanına inilerek görülür. Taşınan bileşen ivmeden çıkarıldıktan sonra geriye kalan "artık potansiyel" açılımın ikinci mertebe terimidir:
 $$\Psi_T(\vec\xi) = -\tfrac12\left(T_\parallel\xi_\parallel^2 + T_\perp\xi_\perp^2\right) = -\frac{\mathcal{G}M}{2r^3}\left(2\xi_\parallel^2-\xi_\perp^2\right)$$
 $$\boxed{\;\Psi_T(\xi,\psi) = -\frac{\mathcal{G}M\xi^2}{2r^3}\left(3\cos^2\psi-1\right)\;}$$
 
-Bu ivme potansiyelini $\Phi=(P-P_0)/\rho_n$ üzerinden basınç alanına ($P_T$) çevirdiğimizde ve gövde yüzeyine ($\xi=b$) baktığımızda:
-*   **Yanaklarda ($\psi=90^\circ$):** Basınç $+P_T$ olur (Basınç fazlası).
-*   **Eksende ($\psi=0^\circ, 180^\circ$):** Basınç $-P_T$ olur (Basınç açığı).
+Bu ivme potansiyelini $\Phi=(P-P_0)/\rho_n$ üzerinden basınç alanına çevirelim — teorinin fiilen konuştuğu büyüklük budur:
 
-Akışkan daima yüksek basınçtan düşük basınca doğru akar ($-\nabla P$). Okyanus suları basınç fazlası olan yanaklardan, basınç açığı olan eksenlere doğru itilir. **Sıkıştırma nedendir, kabarma sonuçtur.**
+$$P_T(\xi,\psi) = \rho_n\Psi_T = -\frac{\rho_n\,\mathcal{G}M\,\xi^2}{2r^3}\left(3\cos^2\psi-1\right)$$
+
+Gövde yüzeyinde ($\xi=b$) iki uç değer:
+
+| Konum | $3\cos^2\psi-1$ | $P_T$ | Okuma |
+|---|---|---|---|
+| Eksen ($\psi=0^\circ,\,180^\circ$) | $+2$ | $-\dfrac{\rho_n\mathcal{G}Mb^2}{r^3}$ | **basınç açığı** |
+| Yanaklar ($\psi=90^\circ$) | $-1$ | $+\dfrac{\rho_n\mathcal{G}Mb^2}{2r^3}$ | **basınç fazlası** |
+
+Akışkan daima yüksek basınçtan düşük basınca doğru akar ($-\nabla P$). Okyanus suları basınç fazlası olan yanaklardan, basınç açığı olan eksenlere doğru itilir. **Sıkıştırma nedendir, kabarma sonuçtur.** Üstelik açık ile fazlanın oranının tam $2{:}1$ olması, $(+2,-1,-1)$ özdeğer yapısının basınç dilindeki birebir karşılığıdır. Klasik türetimde bu tabloya karşılık gelen hiçbir şey yoktur; orada basınç alanı yoktur, yalnız ivme farkı vardır.
+
+**Ek M-26 ile çapraz denetim.** Yanakların ekseni ne kadar aştığı:
+$$P_T(90^\circ)-P_T(0^\circ) = +\frac{3}{2}\cdot\frac{\rho_n\mathcal{G}Mb^2}{r^3} \;>\; 0$$
+M-26'nın "suya batan top"u, tamamen farklı bir yoldan — hidrostatik derinlik–basınç muhasebesinden — aynı işareti vermişti ($F_{yan}-F_{dikey}\propto\rho g r>0$). İki bağımsız argüman, aynı elipsoid.
 
 ---
 
-### 11.1.5 Denge Gelgiti Yüksekliği ve Güneş/Ay Oranı
+## 11.1.5 Denge Gelgiti Genliği ve Güneş/Ay Oranı
 
 Okyanus serbest yüzeyi ($\zeta$), toplam potansiyelin sabit olduğu yüzeydir. Hacim korunduğundan ($\langle\zeta\rangle=0$), bu sabit tam olarak sıfırdır. Serbest okyanus yüzeyinin deniz seviyesinden genliği şöyle hesaplanır:
 $$\zeta(\psi) = -\frac{\Psi_T}{g} = \frac{1}{2}\,\frac{M}{M_\oplus}\left(\frac{b}{r}\right)^3 b\,\left(3\cos^2\psi-1\right)$$
@@ -102,4 +130,68 @@ Bu formül, hiçbir serbest parametre barındırmaz. Gezegen yarıçapı $b=6{,}
 Güneş'in Dünya üzerindeki toplam itme kuvveti ($\mathcal{G}M/r^2$) Ay'dan $179$ kat büyüktür. Fakat gelgiti yaratan şey itme gücü değil, basınç farkı (gradyanıdır). Gelgit gradyanı küple ($1/r^3$) zayıfladığı için oran:
 $$\frac{\text{Güneş Gelgiti}}{\text{Ay Gelgiti}} = \frac{M_\odot/M_{Ay}}{(r_{Ay}/r_\odot)^3} = \frac{2{,}709\times10^7}{389{,}2^3} \approx 0{,}460$$
 
-Böylece, büyük Güneş kütlesine rağmen gelgitin %46'ya düşmesi ve okyanustaki 0.5 metrelik genlik, Evrenakı teorisinden milimetrik doğrulukla ve serbest parametresiz olarak türetilmiş olur.
+Aynı $0{,}460$ sayısı yukarıdaki tablodan da okunur ($0{,}246/0{,}535$): tensör oranı ile genlik oranı birbirini doğrular.
+
+**Büyük ve küçük gelgit.** İki kaynağın genlikleri, hizalanma durumuna göre toplanır veya çıkarılır:
+
+| Durum | Geometri | Hesap | Genlik |
+|---|---|---|---|
+| Büyük gelgit (*spring*) | Ay ve Güneş hizalı | $0{,}535+0{,}246$ | **0,781 m** |
+| Küçük gelgit (*neap*) | Ay ve Güneş dik | $0{,}535-0{,}246$ | **0,289 m** |
+| Oran | — | $0{,}781/0{,}289$ | **2,70** |
+
+Açık okyanusta ölçülen denge gelgiti genliği ~0,5 m mertebesindedir (Pugh & Woodworth, 2014) — türetilen 0,535 m bu mertebeyi serbest parametresiz karşılar. Kıyılarda görülen metrelerce genlik ise havza rezonansının yerel büyütmesidir; gök mekaniğine değil kıyı hidrodinamiğine aittir ve bu modelin kapsamı dışındadır.
+
+*Dürüstlük kaydı:* Buradaki uyum bir **mertebe ve yapı** doğrulamasıdır, hassas doğrulama değil. Denge gelgiti kuramı okyanus havzalarının geometrisini, derinliğini ve dinamik tepkisini içermez; gerçek okyanusta ölçülen yerel genlikler bu değerden düzenli olarak sapar. Doğrulanan şey, sıfır parametreli türetimin doğru mertebeyi ve doğru Güneş/Ay oranını vermesidir.
+
+---
+
+## 11.1.6 Eşdeğerlik İlkesi: Varsayım Değil, Sonuç
+
+Tensörün biçimine bir kez daha bakalım: $T_{ij}=-\frac{1}{\rho_n}\partial_i\partial_jP$. Buradaki $\rho_n$ **nükleon öz yoğunluğudur** — su, kaya, demir, cıva fark etmez; hepsi aynı nükleonlardan kuruludur ve hepsi aynı $\rho_n$'yi taşır. Dolayısıyla gelgit ivmesi, üzerine etki ettiği maddenin bileşiminden **zorunlu olarak** bağımsızdır.
+
+Klasik mekanikte bu bağımsızlık bir postülattır: eylemsiz kütle ile kütleçekimsel kütlenin eşitliği varsayılır, deneyle sınanır, fakat açıklanmaz. Burada türetilmiştir — tek bir evrensel $\rho_n$ olduğu için başka türlüsü yazılamaz.
+
+**Bunun bedeli ve sınavı.** İfade tersine de okunur: $\rho_n$'nin evrenselliği bozulsaydı gelgit bileşime bağlı olurdu. Bu, teoriyi eşdeğerlik ilkesi testlerine doğrudan bağlar. MICROSCOPE uydusunun titanyum–platin çifti için bildirdiği $\eta_{EP} \lesssim 10^{-15}$ sınırı (Touboul ve ark., 2022) ile Eöt-Wash burulma terazisi ölçümleri (Schlamminger ve ark., 2008), teoride $\rho_n$ evrenselliğinin sınavıdır: bu deneylerin null sonuçları, teorinin bir varsayımını değil bir **türetiminin girdisini** doğrular.
+
+---
+
+## 11.1.7 Newton'la Sınır: Nerede Aynı, Nerede Ayrı
+
+Dürüst kayıt özdeşlikten başlar:
+
+| Büyüklük | Bu türetim | Klasik gelgit kuramı |
+|---|---|---|
+| Uzaklık yasası | $1/r^3$ | $1/r^3$ — aynı |
+| Tensör özdeğerleri | $(+2,-1,-1)$ | $(+2,-1,-1)$ — aynı |
+| Güneş/Ay oranı | 0,460 | 0,460 — aynı |
+| Denge gelgiti genliği | 0,535 / 0,246 m | aynı |
+| Büyük/küçük oranı | 2,70 | aynı |
+
+**Tek bir sayı bile ayrışmaz.** Bu bölüm bir ayırt edici sınav değildir ve öyleymiş gibi sunulmaz; bir **tutarlılık türetimidir**. İddia, gözlemi klasik kuramdan farklı açıklamak değil, aynı sonuca mekanizmalı bir yoldan varmaktır. Ayrışma sayıda değil, üç yapısal noktadadır:
+
+1. **Çerçeve fizikseldir.** Merkez ivmesinin çıkarılması klasik türetimde eylemsiz çerçeveye geçmek için yapılan bir muhasebe adımıdır — meşrudur, ama fiziksel karşılığı gösterilmez. Burada Postülat 7'nin sürüklenme zarfının doğrudan sonucudur: çift şişkinlik, seçilmiş bir çerçevenin değil, **taşınan bir gövdenin** özelliğidir.
+2. **İzsizlik teoremdir.** Klasik kuramda $\mathrm{tr}\,\mathsf{T}=0$, Laplace denkleminin soyut bir özelliği olarak kaydedilir; burada deplasman akısının korunumudur (11.1.3).
+3. **Eşdeğerlik ilkesi sonuçtur.** Klasik mekanikte postüla, burada $\rho_n$ evrenselliğinin türevi (11.1.6).
+
+Bunlara mekanizmanın kendisi eklenir: teoride gelgiti yapan şey bir çekme değil, yapısı hesaplanabilen bir artık basınç alanıdır (yanakta $+\tfrac12$, eksende $-1$). Bu alan klasik kuramda mevcut değildir — fakat bugünkü gözlem çözünürlüğünde iki kuramı ayıran bir ölçüm de henüz tanımlanmamıştır. Teorinin gelgit alanındaki ilk gerçek ayırt edici adayı, aşağıdaki açık kalemdir.
+
+---
+
+## 11.1.8 Geçerlilik Sınırı ve Açık Kalemler
+
+**Geçerlilik sınırı.**
+
+- $b\ll r$ birinci mertebe açılımıdır; $O(\xi^2)$ terimleri ihmal edilmiştir. Ay için $b/r\approx0{,}017$, hata mertebesi ~%2.
+- İz sıfırlığı yalnız **kaynaksız** bölgede geçerlidir. Gövde içinde ($r<b$) akı sabit değildir, kapsanan nükleon sayısıyla büyür. Kaynak yoğunluğu $n_n=\rho_{madde}/m_n$ ile $\nabla^2P = C q_n \rho_{madde}/m_n$ olur; M-35'in $\mathcal{G}=\frac{Cq_n}{4\pi\rho_n m_n}$ ayrıştırması konduğunda tensör iz kazanır:
+
+$$\mathrm{tr}\,\mathsf{T}\big|_{i\varsigma} = -4\pi\mathcal{G}\,\rho_{madde}$$
+
+  Yani teori, gövde içinde Poisson denkleminin tam karşılığını üretir — yeni parametre girmeden, doğru katsayıyla. Bu bir öngörü değil, bir **tutarlılık kapanışıdır**: dışarıda sıfır, içeride $-4\pi\mathcal{G}\rho$.
+- Denge gelgiti *statik* tepkidir; gerçek gelgit gecikmeli ve dinamiktir.
+
+**Açık kalem — şişkinlik kayması.** Gözlenen şişkinlik ekseni Ay'ın doğrultusunda değil, yaklaşık $3^\circ$ önündedir (Bkz. 3.9.2). Standart kuram bunu okyanus sürtünmesine ve gövdenin $Q$ katsayısına bağlar. Teorinin kendi rotası farklıdır: kaymanın, ortamın artık kuplajından — Ek M-43'ün altkritik bastırma rejiminden — çıkması beklenir. Bu hesap henüz yapılmamıştır ve teorinin gelgit alanındaki **ilk ayırt edici öngörü adayıdır**: tutarsa kayma açısı serbest bir sönüm parametresi olmaktan çıkıp türetilmiş bir sayı olur; tutmazsa dürüst kayıt olarak yazılır.
+
+---
+
+Bir sonraki bölüm aynı basınç matematiğini dönen gövdenin kendi figürüne uygular: 11.2, yanal itimin $\sin2\theta$ yasasını türetir ve gezegen basıklığının klasik hidrostatik dengeden nerede ayrıldığını gösterir.

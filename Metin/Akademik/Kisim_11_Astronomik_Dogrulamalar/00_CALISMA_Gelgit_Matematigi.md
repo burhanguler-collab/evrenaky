@@ -350,11 +350,26 @@ $\zeta$ = serbest yüzey yükseltisi, **S-27 olarak Anayasa'ya kaydedildi**
 (`Matematik_Notasyon_Anayasasi.md`, Bölüm II). Gelgit genliği $\Delta\zeta$ ile yazılır;
 $\Delta h$ geçersizdir (S-4), $\Delta\eta$ kullanılmaz ($\eta_E$ ile çakışır).
 
-### 4.4 Ek D sembol sözlüğüne S-27 girdisi — İZİN BEKLİYOR
+### 4.4 Ek D sembol sözlüğü — ✔ İZİN VERİLDİ VE İŞLENDİ (2 Ağustos 2026)
 
-`Kisim_8_Ekler/08_Sembol_Sozlugu.md` Kısım 8'dedir, **dokunulmadı.** Anayasa'ya kaydedilen
-S-27'nin sözlükte karşılığı yoktur; senkron olması için tek satırlık bir girdi gerekir
-($\zeta$ — serbest yüzey yükseltisi, 11.1). 4.1'deki partiyle birlikte işlenebilir.
+Yazar `Kisim_8_Ekler/08_Sembol_Sozlugu.md` için özel izin verdi. **İşlenenler (D.4–D.5):**
+
+| Girdi | İşlem | Not |
+|---|---|---|
+| $\zeta$ | **yeni** — serbest yüzey yükseltisi, $\Delta\zeta$ genlik formülü, S-27 atfı | Δh ve Δη yasakları yazıldı |
+| $\mathsf{T}$, $T_{ij}$ | **yeni** — gelgit tensörü, $(+2,-1,-1)$, iç rejimde $-4\pi\mathcal{G}\rho$ | |
+| $\Psi_T$ | **yeni** — gelgit potansiyeli + artık basınç alanı $P_T=\rho_n\Psi_T$, 2:1 oranı | |
+| $\psi$ | **yeni** — gelgit açısı; $\Psi_{Evrenakı}$ ile karışmaması notu | |
+| $\vec\xi$ | **yeni + çakışma çözümü** | aşağıya bkz. |
+| $\Phi$ | **güncellendi** (ek kayıt) — $\Phi\equiv(P-P_0)/\rho_n$ olarak tanımlandığı, $\Lambda=1-\Phi/c^2$'deki $\Phi$ ile aynı büyüklük olduğu, farkın kökende olduğu | mevcut girdi silinmedi, üstüne eklendi |
+
+**Çözülen sembol çakışması ($\xi$).** Ek D'de $\xi$ zaten **dönme sürüklenme kesridir**
+(M-40, skaler). M-36 ve 11.1 ise $\vec\xi$'yi **gövde içi konum vektörü** olarak kullanıyor —
+R-1 (tek sembol tek anlam) ihlali, ve bu ihlal M-36'dan beri mevcuttu. Çözüm, dosyanın kendi
+emsaline uyduruldu ($\Gamma$ girdisindeki "bağlamla ayrılır" kaydı): gelgit bağlamında daima
+**vektörel $\vec\xi$**, sürüklenme bağlamında daima **skaler $\xi$**; ikisi hiçbir denklemde
+birlikte geçmez. Ayrım her iki girdiye de yazıldı. *Yeniden adlandırma yapılmadı — $\vec\xi$
+gelgit literatürünün ve M-36'nın yerleşik yazımıdır, değiştirmek M-36'ya dokunmayı gerektirirdi.*
 
 ---
 
@@ -386,3 +401,4 @@ Not: hesap M-43'ü *okumayı* gerektirir (serbest), *değiştirmeyi* gerektirmez
 |---|---|
 | 2 Ağustos 2026 | Dosya açıldı. M-36 arşiv kopyası alındı (Bölüm 1). Yeniden türetim yazıldı (Bölüm 2): çerçeve adımı, akı korunumu, bağımsız $T_\perp$, basınç nedenselliği, EP sonucu, hacim korunumuyla sabitlenen serbest yüzey. Sayısal denetim yapıldı — altı sonucun altısı da tuttu (Bölüm 3). M-36'nın ikinci açık ucu kapatıldı ($\mathrm{tr}\,\mathsf{T}|_{iç}=-4\pi\mathcal{G}\rho$). Kısım 8'e **dokunulmadı.** |
 | 2 Ağustos 2026 | Yazar kararları alındı: **(a)** tam türetim 11.1'de · **(b)** Bernoulli uzlaştırma kutusu 11.1'e, 3.9.2'ye dokunulmaz · **S-27** ($\zeta$) Anayasa'ya kaydedildi. Yeni izin kalemi açıldı: 4.4 (Ek D sembol sözlüğü senkronu). **(c)** hâlâ açık. |
+| 2 Ağustos 2026 | **11.1 yayına yazıldı** (11.1.1–11.1.8). Yazarın kendi taslağı korundu, üzerine eklendi: akı korunumunun bağımsız türetimi (Gauss), özdeğer tablosu, artık basınç alanı $P_T$ tablosu ve 2:1 oranı, M-26 çapraz denetimi, büyük/küçük gelgit (0,781 / 0,289 / 2,70), **11.1.6** eşdeğerlik ilkesi, **11.1.7** Newton'la sınır tablosu, **11.1.8** geçerlilik sınırı + iç rejim kapanışı + 3° açık kalemi. Düzeltilenler: "milimetrik doğruluk" iddiası → mertebe-ve-yapı doğrulaması dürüstlük kaydı; $\pm P_T$ muğlaklığı → sayısal tablo; "ekvatordan sıkılan" → "yanaklardan"; başlık düzeyi `###`→`##` (11.2/11.3 ile hizalandı); 11.1.5 başlığı "Yükseklik"→"Genlik". **Ek D izinle işlendi** (4.4), $\xi$ çakışması çözüldü. **Kaynakça:** Touboul 2022 ve Schlamminger 2008 eklendi (11.1.6'nın EP sınavı için). Kısım 10'a ve M-36'ya **dokunulmadı.** |
