@@ -332,9 +332,12 @@ function ciz(){
  let enf=null;if(acik['ef']&&acik['lf']&&g.m.ef&&g.m.lf)
   enf=g.m.ef.rms<g.m.lf.rms?'ef':'lf';
  q('#tb tbody').innerHTML=M.map(([ad,k,kk])=>{const m=g.m[k];if(!m)return'';
-  const v=k===enk?' style="color:#22c55e;font-weight:600"'
-   :(k===enf?' style="color:'+(k==='ef'?'#4ade80':'#a78bfa')+';font-weight:600"'
+  const KZN=c=>' style="color:'+c+';font-weight:800;font-size:14.5px;background:'+
+   (c==='#a78bfa'?'rgba(167,139,250,.14)':'rgba(34,197,94,.14)')+'"';
+  const v=k===enk?KZN('#22c55e')
+   :(k===enf?KZN(k==='ef'?'#4ade80':'#a78bfa')
    :(k==='lf'?' style="color:#a78bfa"':(k==='ef'?' style="color:#4ade80"':'')));
+  if(k===enk||k===enf)ad='🏆 '+ad;
   return '<tr'+v+'><td>'+ad+'</td><td>'+kk+'</td><td>'+fx(m.rms,2)+'</td><td>'+fx(m.ci,2)+
    '</td><td>'+fx(100*m.ic,0)+'%</td></tr>';}).join('');
  const de=g.m.eo.rms,dl=g.m.lo.rms;
