@@ -94,23 +94,43 @@ olc = lambda d, mv, k: dict(
 
 
 def fitle(d, tur):
+    """2 parametreli teshis fiti — COK BASLANGICLI: yerel minimuma takilip
+    'olcumden uzak' egri birakmasin diye 5 baslangictan en iyi chi2 alinir.
+    Iki taraf da ayni cozucuyu kullanir (adalet)."""
     if tur == 'evr':
-        # NIHAI bicimin fiti: v^2 = Vbar^2(Y) + (10^lb) sqrt(M_kaps(Y))
-        # pencereli bicim (M-47): a0_fit = (10^lb)^2/G, W = min(1, a0_fit R^2 / (G Mkaps))
+        # PENCERELI RESMI bicimin fiti: v^2 = Vbar^2(Y) + (10^lb) sqrt(M_kaps(Y)) * W
+        # a0_fit = (10^lb)^2/G,  W = min(1, a0_fit R^2 / (G Mkaps))  [M-47]
         f = lambda R, Y, lb, _d=d: np.sqrt(np.maximum(Vbar2(_d, Y), 1e-9)
                                            + (10 ** lb) * np.sqrt(np.maximum(Mkaps(_d, Y), 1e-9))
                                            * np.minimum(1.0, (10 ** lb) ** 2 * R ** 2
                                                         / (G * G * np.maximum(Mkaps(_d, Y), 1e-9))))
-        p0, lo, hi = [0.5, -6.4], [YLO, -12], [YHI, -1]
+        # DUZELTME KAYDI: eski ust sinir lb<=-1 idi; pencereli kalibrasyonda ongoru
+        # noktasi lb0=log10(sqrt(A0N*G))=-0,996 SINIRIN DISINDA kaliyordu -> fit F4
+        # genligine hic ulasamiyor, 'kotu fit' goruntusu veriyordu. Sinir acildi ve
+        # baslangiclardan biri TAM ongoru noktasidir (fit ongoruden kotu olamaz).
+        lb0 = float(np.log10(np.sqrt(A0N * G)))
+        p0s, lo, hi = [[0.5, lb0], [0.3, lb0], [0.9, lb0], [0.5, lb0 + 0.5], [0.5, lb0 - 1.0]], \
+            [YLO, -12], [YHI, 2]
     else:
         f = lambda R, Y, lg, _d=d: np.sqrt(np.maximum(Vbar2(_d, Y), 1e-9) + v_nfw2(R, 10 ** lg))
-        p0, lo, hi = [0.5, 11.0], [YLO, 7.0], [YHI, 13.5]
-    try:
-        p, _ = curve_fit(f, d['R'], d['Vo'], sigma=d['eV'], p0=p0, bounds=(lo, hi), maxfev=600000)
-    except Exception:
+        p0s, lo, hi = [[0.5, 11.0], [0.5, 12.0], [0.3, 11.5], [0.9, 10.5], [0.5, 12.8]], \
+            [YLO, 7.0], [YHI, 13.5]
+    iyi_p, iyi_ci = None, np.inf
+    for p0 in p0s:
+        try:
+            p, _ = curve_fit(f, d['R'], d['Vo'], sigma=d['eV'], p0=p0,
+                             bounds=(lo, hi), maxfev=600000)
+        except Exception:
+            continue
+        mv = f(d['R'], *p)
+        if not np.all(np.isfinite(mv)):
+            continue
+        ci = float(np.sum(((mv - d['Vo']) / d['eV']) ** 2))
+        if ci < iyi_ci:
+            iyi_ci, iyi_p = ci, p
+    if iyi_p is None:
         return None, None
-    mv = f(d['R'], *p)
-    return (mv, [float(x) for x in p]) if np.all(np.isfinite(mv)) else (None, None)
+    return f(d['R'], *iyi_p), [float(x) for x in iyi_p]
 
 
 VER = []
@@ -202,7 +222,7 @@ thead th{color:#a1a1aa;font-weight:600;font-size:11px}
   font-family:ui-monospace,Consolas,monospace;color:#93c5fd;line-height:1.7}
 .not{font-size:11.5px;color:#71717a;margin-top:9px;line-height:1.5}
 .kz{color:#22c55e}.kk{color:#f87171}
-</style></head><body><div style="padding:9px 16px;background:rgba(34,197,94,0.10);border-bottom:1px solid #166534;color:#bbf7d0;font-size:12.5px;line-height:1.45"><strong style="font-size:14px;letter-spacing:.3px">SERBEST PARAMETRE (galaksi ba&#351;&#305;na): <span style="color:#4ade80">EVRENAKI&nbsp;0</span> &nbsp;&#183;&nbsp; &#923;CDM (fit)&nbsp;2</strong> &#8212; fit bu kar&#351;&#305;la&#351;t&#305;rmada teorinin de&#287;il, rakip modelin ihtiyac&#305;d&#305;r. Bu panel <strong>öngörü arenas&#305;d&#305;r</strong>: teorinin fitli e&#287;risi <strong>yoktur — ihtiyac&#305; da yoktur</strong>.<br>&#9889; <strong>Fitsizlik durumu:</strong> Teori hi&#231;bir fit de&#287;erine muhta&#231; de&#287;ildir; tek kalibre say&#305;n&#305;n (a&#8320;) da t&#252;retilmi&#351; kar&#351;&#305;l&#305;&#287;&#305; mevcuttur (M-45) ve yaln&#305;z stat&#252; disiplini gere&#287;i kalibre de&#287;er resm&#238; kullan&#305;mda tutulmaktad&#305;r. Bu paneldeki &#246;ng&#246;r&#252; e&#287;rilerinde galaksi ba&#351;&#305;na fitlenen hi&#231;bir say&#305; yoktur. &#214;ng&#246;r&#252; e&#287;rileri, M-47 penceresini i&#231;eren <strong>pencereli resm&#238; denklemle</strong> hesaplan&#305;r (W = min(1, a&#8320;/g<sub>kaps</sub>) &#8212; Rankine i&#231; kolu, parametresiz).</div>
+</style></head><body><div style="padding:9px 16px;background:rgba(34,197,94,0.10);border-bottom:1px solid #166534;color:#bbf7d0;font-size:12.5px;line-height:1.45"><strong style="font-size:14px;letter-spacing:.3px">SERBEST PARAMETRE (galaksi ba&#351;&#305;na): <span style="color:#4ade80">EVRENAKI&nbsp;0</span> &nbsp;&#183;&nbsp; &#923;CDM (fit)&nbsp;2</strong> &#8212; fit bu kar&#351;&#305;la&#351;t&#305;rmada teorinin de&#287;il, rakip modelin ihtiyac&#305;d&#305;r. Bu panel <strong>öngörü arenas&#305;d&#305;r</strong>: teorinin öngörüsünde fit <strong>yoktur — ihtiyac&#305; da yoktur</strong>.<br>&#9889; <strong>Fitsizlik durumu:</strong> Teori hi&#231;bir fit de&#287;erine muhta&#231; de&#287;ildir; tek kalibre say&#305;n&#305;n (a&#8320;) da t&#252;retilmi&#351; kar&#351;&#305;l&#305;&#287;&#305; mevcuttur (M-45) ve yaln&#305;z stat&#252; disiplini gere&#287;i kalibre de&#287;er resm&#238; kullan&#305;mda tutulmaktad&#305;r. Bu paneldeki &#246;ng&#246;r&#252; e&#287;rilerinde galaksi ba&#351;&#305;na fitlenen hi&#231;bir say&#305; yoktur. &#214;ng&#246;r&#252; e&#287;rileri, M-47 penceresini i&#231;eren <strong>pencereli resm&#238; denklemle</strong> hesaplan&#305;r (W = min(1, a&#8320;/g<sub>kaps</sub>) &#8212; Rankine i&#231; kolu, parametresiz).</div>
 <div class="ust"><h1>@@SINIF_AD@@ — etkileşimli panel</h1>
 <span class="alt">@@N@@ galaksi · SPARC ölçümü + iki parametresiz öngörü (Evrenakı FİT: 0) ·
 rakibin fiti çentikle açılır · tek dosya, dış bağımlılık yok</span></div>
@@ -231,7 +251,8 @@ const CZ=[
  {k:'Vo', ad:'ÖLÇÜM (hata çubuklu)', c:'#ffcc00', t:'nokta', on:1},
  {k:'eo', ad:'EVRENAKI ÖNGÖRÜSÜ — FİT: 0', c:'#16a34a', t:'kalin', on:1},
  {k:'lo', ad:'ΛCDM zincir öngörüsü — FİT: 0', c:'#7c3aed', t:'kalin', on:1},
- {k:'lf', ad:'ΛCDM FİT — 2 serbest parametre (M₂₀₀, Υ*)', c:'#a78bfa', t:'kesik', on:0},
+ {k:'ef', ad:'EVRENAKI FİT — 2 parametre (Υ*, b); teşhis aracı', c:'#4ade80', t:'kesik', on:1},
+ {k:'lf', ad:'ΛCDM FİT — 2 parametre (M₂₀₀, Υ*); teşhis aracı', c:'#a78bfa', t:'kesik', on:1},
  {k:'bar',ad:'Baryonlar toplam (Υ*=0,50)', c:'#71717a', t:'nokta_c', on:1},
  {k:'Vdisk',ad:'— bileşen: disk', c:'#38bdf8', t:'ince', on:0},
  {k:'Vbul', ad:'— bileşen: kovan', c:'#fb923c', t:'ince', on:0},
@@ -282,7 +303,8 @@ function ciz(){
  x.fillText('V  (km/s)',0,0);x.restore();
  /* fit damgasi — grafik uzerinde, her zaman gorunur */
  x.font='600 13px system-ui';x.textAlign='right';
- x.fillStyle='#4ade80';x.fillText('EVRENAKI FİT: 0  (saf öngörü)',W-mr-10,mt+20);
+ x.fillStyle='#4ade80';
+ x.fillText('EVRENAKI ÖNGÖRÜ FİT: 0'+(acik['ef']?'  ·  FİT eğrisi: 2 (teşhis)':'  (saf öngörü)'),W-mr-10,mt+20);
  x.fillStyle='#a78bfa';
  x.fillText(acik['lf']?'ΛCDM FİT: 2 parametre (M₂₀₀, Υ*)':'ΛCDM zincir FİT: 0',W-mr-10,mt+38);
  /* egriler */
@@ -304,15 +326,22 @@ function ciz(){
  const M=[['Yalnız baryonlar','bar',0],['ΛCDM zincir öngörüsü','lo',0],
           ['EVRENAKI ÖNGÖRÜSÜ','eo',0]];  /* yeşil yarış yalnız öngörü satırları arasında */
  let en=1e9,enk=null;M.forEach(([,k])=>{if(g.m[k]&&g.m[k].rms<en){en=g.m[k].rms;enk=k;}});
- if(acik['lf']&&g.m.lf)M.push(['ΛCDM FİT (rakibin fiti — yarış dışı)','lf',2]);
+ if(acik['ef']&&g.m.ef)M.push(['EVRENAKI FİT (teşhis — yarış dışı)','ef',2]);
+ if(acik['lf']&&g.m.lf)M.push(['ΛCDM FİT (teşhis — yarış dışı)','lf',2]);
  q('#tb tbody').innerHTML=M.map(([ad,k,kk])=>{const m=g.m[k];if(!m)return'';
-  const v=k===enk?' style="color:#22c55e;font-weight:600"':(k==='lf'?' style="color:#a78bfa"':'');
+  const v=k===enk?' style="color:#22c55e;font-weight:600"':(k==='lf'?' style="color:#a78bfa"':(k==='ef'?' style="color:#4ade80"':''));
   return '<tr'+v+'><td>'+ad+'</td><td>'+kk+'</td><td>'+fx(m.rms,2)+'</td><td>'+fx(m.ci,2)+
    '</td><td>'+fx(100*m.ic,0)+'%</td></tr>';}).join('');
  const de=g.m.eo.rms,dl=g.m.lo.rms;
- q('#dpn').innerHTML='Öngörü yarışı: <b class="'+(de<dl?'kz':'kk')+'">'+
+ let dpn='Öngörü yarışı (0 parametre): <b class="'+(de<dl?'kz':'kk')+'">'+
   (de<dl?'Evrenakı':'ΛCDM')+'</b> daha yakın (RMS '+fx(Math.min(de,dl),1)+
-  ' / '+fx(Math.max(de,dl),1)+' km/s). Yeşil satır: en küçük RMS.';
+  ' / '+fx(Math.max(de,dl),1)+' km/s).';
+ if(g.m.ef&&g.m.lf){const fe=g.m.ef.rms,fl=g.m.lf.rms;
+  dpn+=' &nbsp;·&nbsp; Fit yarışı (2\'şer parametre, teşhis): <b class="'+(fe<fl?'kz':'kk')+'">'+
+   (fe<fl?'Evrenakı':'ΛCDM')+'</b> daha yakın (RMS '+fx(Math.min(fe,fl),1)+
+   ' / '+fx(Math.max(fe,fl),1)+' km/s).';}
+ dpn+=' Yeşil satır: öngörüler içinde en küçük RMS.';
+ q('#dpn').innerHTML=dpn;
 
  /* Evrenaki girdileri */
  const gi=g.girdi, sat=(a,b,r)=>'<div><span>'+a+(r?'<span class="rz r'+r+'">'+r+'</span>':'')+
@@ -356,4 +385,9 @@ HTML = (HTML.replace('@@VERI@@', json.dumps(VER, ensure_ascii=False))
         .replace('@@N@@', str(len(VER))))
 yol = os.path.join(HDIR, 'panel.html')
 open(yol, 'w', encoding='utf-8').write(HTML)
+kotu = [v['ad'] for v in VER if v['m']['ef'] and v['m']['ef']['rms'] > v['m']['eo']['rms']]
+kotu_ci = [v['ad'] for v in VER if v['m']['ef'] and v['m']['ef']['ci'] > v['m']['eo']['ci']]
 print('%s : %d galaksi -> HESAP/panel.html  (%.0f KB)' % (SINIF, len(VER), len(HTML) / 1024))
+print('  FIT KONTROL: RMS kotu %d/%d %s · chi2 kotu %d/%d %s'
+      % (len(kotu), len(VER), ('-> ' + ', '.join(kotu[:4])) if kotu else '',
+         len(kotu_ci), len(VER), ('-> ' + ', '.join(kotu_ci[:4])) if kotu_ci else ''))

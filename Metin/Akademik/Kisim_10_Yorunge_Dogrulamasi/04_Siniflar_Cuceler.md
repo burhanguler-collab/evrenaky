@@ -1,7 +1,5 @@
 # 10.4 Sınıf Sınıf Sonuçlar II — Cüceler ve Düzensizler (Sd–Im)
 
-*(Hesap: `CALISMA/sinif_ongoru_vs_fit.py <sınıf>` · ham çıktılar her sınıfın `HESAP/` klasöründe)*
-
 Bu üç sınıf, örneklemin gaz-zengin, düşük yüzey parlaklıklı ucudur: 70 galaksi, 995 ölçüm noktası. Karanlık madde probleminin en keskin olduğu rejim burasıdır — baryonlar tek başına gözlenen hızın küçük bir kesrini verir ve standart çatıda Core-Cusp problemi tam bu sistemlerde doğar. Teorinin çekirdek yapısı ise buradan doğal çıkar: iç bölge halo profiliyle değil kapsanan nükleon dağılımıyla kurulur.
 
 ---

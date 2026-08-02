@@ -1,8 +1,8 @@
 # Kısım X — Evrenakı Yörünge Doğrulaması
 
-## 10.1 Doğrulama Programı: Amaç, Veri ve Yöntem
+## 10.1 Galaktik Doğrulama Programı
 
-*(Bu kısım, `CALISMA/SINIF_CALISMASI/` altında yürütülen galaktik doğrulama programının kitap kaydıdır. Çalışma dizini yaşayan bir dizindir ve gelişmeye devam eder; bu kısım, programın bugünkü nihai sonuçlarını, bütün grafik ve etkileşimli panelleriyle birlikte tek yerde toplar. Her sayının üreten betiği ve ham çıktısı çalışma dizininde adresiyle durur — hiçbir sonuç yeniden üretilemez durumda değildir.)*
+Kısım 10, Evrenakı teorisinin (Kafes Kilitlenmeli Gradyan formülasyonu) SPARC galaksi veritabanına karşı uygulanan geniş kapsamlı doğrulama programını içerir.
 
 ### 10.1.1 Amaç — fit değil, öngörü
 
@@ -18,6 +18,8 @@ Kitapta bugüne kadar her iki model de galaksi başına parametre fitledi ve kar
 | **Standart bilim öngörüsü** | **0** | $M_{200}\leftarrow$ abundance matching (Moster ve ark. 2013); $c_{200}\leftarrow$ Dutton & Macciò (2014); NFW; $\Upsilon_*=0{,}50$ |
 | Evrenakı fit | 2 | $\Upsilon_*$, $b$ |
 | ΛCDM fit | 2 | $\Upsilon_*$, $M_{200}$ |
+
+*(Alt iki satır yarışçı değil, **teşhis aracıdır**: fitli koşumlar yalnız 6.5.3'ün eşit-serbestlik karşılaştırmasında ve öz-denetimde kullanılır — serbest fitin medyan $\Upsilon_*=0{,}49$ bulması, öngörünün 0,50 girdisinin bağımsız doğrulamasıdır. Bu kısmın hiçbir öngörü sonucu, paneli ve ölçek sınavı fit içermez; teorinin denkleminde galaksiye fitlenen sayı yoktur — 10.2.6.)*
 
 Öngörülerin ikisi de **dönüş eğrisine bakılmadan** kurulur. Ortak girdi $\Upsilon_*=0{,}50$ (3,6 μm popülasyon sentezi orta değeri) — adil olması için iki tarafta aynıdır.
 

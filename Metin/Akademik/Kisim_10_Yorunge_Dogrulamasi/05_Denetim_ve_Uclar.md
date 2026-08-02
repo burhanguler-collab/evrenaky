@@ -1,6 +1,4 @@
-# 10.5 Denetim Kümesi ve Uçlar — Karmaşık Küme, S0 ve BCD
-
-*(Hesaplar: `CALISMA/sinif_ongoru_vs_fit.py 99_KARMASIK` ve `CALISMA/s0_bcd_sinavi.py` · kayıtlar: `99_KARMASIK/`, `07_S0_BCD/`)*
+# 10.5 Galaktik Doğrulama: Uç Sınıflar ve Karışık Sistemler
 
 ## 10.5.1 Karmaşık küme neden var — seçim etkisi denetimi
 

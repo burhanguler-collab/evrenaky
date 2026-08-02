@@ -1,6 +1,4 @@
-# 10.6 Ölçek Bağıntıları — BTFR, Radyal İvme Bağıntısı, Erken Tip Galaksiler
-
-*(Hesaplar: `CALISMA/btfr_sinavi.py`, `CALISMA/rar_sinavi.py`, `CALISMA/etg_sinavi.py` · kayıtlar: `97_BTFR/`, `95_RAR/`, `96_ETG/`)*
+# 10.6 Ölçek Bağıntıları (Scaling Laws)
 
 Dönüş eğrileri galaksi galaksi sınavdır; bu bölümün üç sınavı ise galaktik dinamiğin **ölçek bağıntılarını** — literatürün en sağlam ampirik düzenliliklerini — teorinin denklemiyle karşılaştırır. Üçünde de fit yoktur; üçüncüsünde fit **yapılamaz**.
 

@@ -1,6 +1,4 @@
-# 10.7 Türetim Zinciri — $M_{tut}=m_n$, Mikro $\ell_\omega$, $a_0$'ın Biçimi, $\mathcal{G}$'nin Yerelliği
-
-*(Hesaplar: `CALISMA/yerel_lomega_sinavi.py`, `CALISMA/m_tut_sinavi.py`, `CALISMA/a0_kopru_sinavi.py`, `CALISMA/g_yerel_sinavi.py` · kayıtlar: `94_YEREL_LOMEGA/` (+`TURETIM.md`), `92_M_TUT/`, `91_A0_KOPRU/`, `93_G_YEREL/`)*
+# 10.7 Türetim Zincirinin Denetimi (Galaksi İçi)
 
 Doğrulama programının amacı yalnız uyum ölçmek değildir: **kalibre edilmiş her sayıyı teorinin kendi yapısından türetmeye** çalışmak ve türetilemeyenin yerini tam olarak söylemektir. Bu bölüm o zincirin dört halkasıdır.
 
@@ -50,7 +48,7 @@ Türetimle birlikte $a_0$'ın statüsü kesinleşir: **biçimi türetilmiştir**
 
 Teorinin kalan tek galaktik serbestliği artık adresiyle bellidir: **nükleonun iki kolunun debi oranı** $q_n/\gamma_n=2\ell_\omega^{mikro}\approx7\times10^{-14}$ m. Kürsel kaynak geometrisinde bu, radyal pulsasyon hızının teğetsel dolanım hızına oranına çevrilir: $u_r/v_t\approx42$.
 
-**Bu oran için aday kapanış kayıtlıdır** (`91_A0_KOPRU/YOL1_KAPANIS.md`; Blok H türetimi **M-45**): kafes-atomu kaydından (deplasman kafesi atomun tamamıdır) pulsasyon kolunu $m_e$, dolanım kolunu $m_p$ taşır; eş-güç **türetilmiştir** — izoklinik kilit Ek A.2'nin $\sqrt2$'sinden çıkar (iki düzlem ayrı ayrı kavrama sınırında doyar), medyan-H kilidi ($X>0{,}5$ → medyan hidrojen değerine kilitlenir) bileşim-kararlılığını açıklar, ve eşbölüşümün termalleşme koşulu **36 mertebe marjla** hesaplanıp kapanmıştır (kanal enerjisi $m_pc^2$; sızıntı ~0,8 milyon yıl; banyo teması $10^{-23}$ s — `ESGUC_ISPAT.md`). Sonuç: $u_r/v_t=\sqrt{m_p/m_e}=42{,}85$ — ölçülenle %1,1 (fark medyan hatasının içinde; **oran tam olmalı**); $\ell_\omega=36{,}05$ fm ve $a_0=\mathcal{G}m_nm_e/(m_pr_n^2)=8{,}6\times10^{-11}$ m/s², **sıfır kalibrasyonla** beş-ölçüm bandının içinde. $\sqrt2c$ çapasıyla mutlak debiler de sayısallaşır: $\gamma_n=2{,}24\times10^{-6}$ m²/s, $q_n=1{,}62\times10^{-19}$ m³/s, $C=2{,}35$ kg·m⁻³·s⁻¹ — Blok H'nin "tek serbest çift"i çözülür. Statüsü **[T-aday]**: başka-yere-bakma dar uzayda ~$2\sigma$, geniş uzayda %40 — [S] rozeti, kalan **iki dış koşula** kadar korunur: bağımsız $\ell_\omega$ ölçümü (medyan 36,0 fm + tür-ayrımlı ikinci mod ~51 fm) ve hakem denetimi (G-9).
+**Bu oran için aday kapanış kayıtlıdır** (Blok H türetimi **M-45**): kafes-atomu kaydından (deplasman kafesi atomun tamamıdır) pulsasyon kolunu $m_e$, dolanım kolunu $m_p$ taşır; eş-güç **türetilmiştir** — izoklinik kilit Ek A.2'nin $\sqrt2$'sinden çıkar (iki düzlem ayrı ayrı kavrama sınırında doyar), medyan-H kilidi ($X>0{,}5$ → medyan hidrojen değerine kilitlenir) bileşim-kararlılığını açıklar, ve eşbölüşümün termalleşme koşulu **36 mertebe marjla** hesaplanıp kapanmıştır (kanal enerjisi $m_pc^2$; sızıntı ~0,8 milyon yıl; banyo teması $10^{-23}$ s). Sonuç: $u_r/v_t=\sqrt{m_p/m_e}=42{,}85$ — ölçülenle %1,1 (fark medyan hatasının içinde; **oran tam olmalı**); $\ell_\omega=36{,}05$ fm ve $a_0=\mathcal{G}m_nm_e/(m_pr_n^2)=8{,}6\times10^{-11}$ m/s², **sıfır kalibrasyonla** beş-ölçüm bandının içinde. $\sqrt2c$ çapasıyla mutlak debiler de sayısallaşır: $\gamma_n=2{,}24\times10^{-6}$ m²/s, $q_n=1{,}62\times10^{-19}$ m³/s, $C=2{,}35$ kg·m⁻³·s⁻¹ — Blok H'nin "tek serbest çift"i çözülür. Statüsü **[T-aday]**: başka-yere-bakma dar uzayda ~$2\sigma$, geniş uzayda %40 — [S] rozeti, kalan **iki dış koşula** kadar korunur: bağımsız $\ell_\omega$ ölçümü (medyan 36,0 fm + tür-ayrımlı ikinci mod ~51 fm) ve hakem denetimi (G-9).
 
 ![a₀ köprüsü — mikro ve kozmik okuma](Gorseller/k10_a0_kopru.png)
 
@@ -67,9 +65,7 @@ Teoride $\mathcal{G}=\alpha/\rho_n$ ve $\rho_n$ ortamın yerel yoğunluğudur; s
 
 **İşaret teorinin öngördüğü işarettir** — ama iki kayıt hükmü sınırlar: (1) $\mathcal{G}$ ile $\Upsilon_*$ bu yöntemle **ayrılamaz** ve ayrılamama yapısaldır (F4'ün ihmal edilebilir olduğu bölge zaten yıldız-baskındır; gaz kaldıracı doğmaz). (2) Yine de iki açıklamadan biri fizikle uyumsuzdur: sapmayı $\Upsilon_*$ ile açıklamak, 3,6 μm'de yoğun bölgelerin daha yaşlı (daha yüksek $\Upsilon_*$'lı) olması gerçeğiyle **ters işaret** ister; $\mathcal{G}=\alpha/\rho_n$ istemez. Teorinin $\rho_n(\Sigma_{bar})$ bağıntısını nicel vermesi, bu sınavı işaret kontrolünden ölçüme çevirecek açık iştir.
 
-## 10.7.5 Tutarlılık kümesinin kimliği: kafes, atom çekirdeğidir
-
-*(Türetim ve hesap: `CALISMA/SINIF_CALISMASI/85_TUTARLILIK_YASASI/NC_TURETIM.md`)*
+## 10.7.5 Tutarlılık yasasının atom çekirdeği yapısı
 
 Rastgele yürüyüşün bağımsız birimi nedir? Cevap $\ell_\omega$'nın fiziksel anlamından çıkar: komşunun hissettiği dolanım/pulsasyon alan oranı $v_t/v_r=d/\ell_\omega$'dir — $\ell_\omega$, yönsüz pulsasyon bölgesinden yönlü dolanım bölgesine **geçiş yarıçapıdır.** Ve ölçülen 35,7 fm, doğanın bir ölçek boşluğuna düşer: en büyük çekirdek 7,4 fm, çekirdekler arası mesafe her fazda (beyaz cüce dahil) $\geq2{,}7\times10^3$ fm. Dolayısıyla **aynı çekirdeğin nükleonları daima korele, farklı çekirdekler daima bağımsızdır: tutarlılık kümesi atom çekirdeğidir** — maddenin fazından bağımsız olarak (gaz-kafes sınavının null'unun öngörüye dönüşmesi; 10.6.1).
 

@@ -1,7 +1,5 @@
 # 10.8 Eleme Zinciri — Açığın Anatomisi
 
-*(Hesaplar: `CALISMA/kafes_yogun_sinavi.py`, `CALISMA/acik_ayirma_sinavi.py`, `CALISMA/galaksi_acik_taramasi.py` · kayıtlar: `89_KAFES/` (+`AYIRMA.md`, `GOZLEMSEL.md`), `88_TARAMA/` (+`GURULTU.md`)*)
-
 Nihai denklemin kalan artığı iki bileşene ayrılır: yoğun rejimde tek yönlü bir **mutlak açık** (teori orada fazla itim üretir) ve galaksiden galaksiye bir **saçılma**. Bu bölüm, o iki bileşen için öne sürülebilecek bütün adayları tek tek sınayıp eler — ve elemeler, kalan açığın adresini bulgu düzeyinde daraltır.
 
 ## 10.8.1 Kafes yasası yoğun rejimde — iddia ölçülen yönde

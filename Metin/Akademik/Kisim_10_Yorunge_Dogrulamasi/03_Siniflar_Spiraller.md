@@ -1,7 +1,5 @@
 # 10.3 Sınıf Sınıf Sonuçlar I — Spiraller (Sa–Scd)
 
-*(Hesap: `CALISMA/sinif_ongoru_vs_fit.py <sınıf>` · her sınıfın ham çıktısı kendi `HESAP/` klasöründe: `SONUC.csv`, `YONTEM.md`)*
-
 Üç spiral sınıfı, örneklemin kütleli ve yıldız-baskın ucudur: 71 galaksi, 2002 ölçüm noktası. Her sınıf için önce etkileşimli panel, sonra sınıf galerisi ve sayılar verilir. Panellerde her galaksi tek tek gezilir; sağ panel, öngörü eğrisinin hangi sayılardan üretildiğini rozetleriyle döker.
 
 ---

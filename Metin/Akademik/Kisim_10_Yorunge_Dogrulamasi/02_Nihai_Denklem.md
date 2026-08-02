@@ -1,7 +1,5 @@
 # 10.2 Nihai Kurulum: Teorinin Galaktik Denklemi
 
-*(Karar defteri: `CALISMA/SINIF_CALISMASI/86_NIHAI/CALISMA.md` · toplu defter: `CALISMA/_HESAPLAR/toplu_defter.csv`)*
-
 ## 10.2.1 Tek denklem
 
 Doğrulama programının bütün sınavları teorinin şu galaktik denklemine karşı yapılır:
@@ -12,10 +10,10 @@ $$\boxed{\;v^2(R)=V_{bar}^2(\Upsilon_*)\;+\;\sqrt{\mathcal{G}\,M_{kaps}(R)\,a_0}
 
 Birinci terim F1'dir (pulsasyon itimi, küresel akı — baryonik katkı $\Upsilon_*$ ile), ikinci terim F4'tür (eksenel itim, silindirik akı). Denklemin türetimi Kısım 6'dadır (6.5.4.0–6.5.4.4); iki yapısal özelliği burada da kayda geçmelidir:
 
-1. **$\ell_\omega$ yereldir.** F4'ün vortisite uzunluğu kapsanan kütleden kurulur: $\ell_\omega^{etkin}(R)=\sqrt{\mathcal{G}M_{kaps}(R)/a_0}$. Akı teoremi gereği başka türlüsü olamaz — $R$ yüzeyinden geçen dolanım $R$ içindeki maddeden doğar. Bu biçimin galaksi içindeki sınavı 10.7'dedir (yarıçap artığı $-0{,}025$, yani sıfır). *(Alternatif "gradyan" kurulumu — $\ell_\omega$'nın $g_{bar}$'dan kurulması — çalışma dizininde ölçülmüş bir aday olarak açık tutulmaktadır: `87_ETKIN_YASA/BESLEME_SINAVI.md` md. 6.)*
+1. **$\ell_\omega$ yereldir.** F4'ün vortisite uzunluğu kapsanan kütleden kurulur: $\ell_\omega^{etkin}(R)=\sqrt{\mathcal{G}M_{kaps}(R)/a_0}$. Akı teoremi gereği başka türlüsü olamaz — $R$ yüzeyinden geçen dolanım $R$ içindeki maddeden doğar. Bu biçimin galaksi içindeki sınavı 10.7'dedir (yarıçap artığı $-0{,}025$, yani sıfır). *(Alternatif "gradyan" kurulumu — $\ell_\omega$'nın $g_{bar}$'dan kurulması — bağımsız ölçülmüş bir aday olarak açık tutulmaktadır.)*
 2. **$a_0$ mikro sabitlerin bileşkesidir.** Biçimi türetilmiştir ($\mathcal{G}m_n/\ell_\omega^2$; girdisi ölçülen mikro sabit $\ell_\omega^{mikro}=35{,}7$ fm — 10.7); sayısal değeri gözlemle sabitlenir ve beş bağımsız ölçüm aynı değerde buluşur (6.5.4.5). Kozmik zamanla **değişmez** — bu bir öngörüdür ve 10.9'da sınanmıştır.
 
-3. **Pencere $W$ — "Kafes Kilitlenmesi" (M-47).** Girdabın iç çekirdeğinde ortam katı-cisim gibi davranır (M-30'un Rankine kolu, kuvvet $\propto R$); ivme $a_0$'ı aştığı bölgede ($g_{kaps}>a_0$) uzay kafesi aşırı gerilim altında kilitlenir ve enine akışı (F4 vortisitesini) $(a_0/g_{kaps})$ çarpanıyla keser — sistem Newton kuralına indirgenir. Bu, elle konmuş bir sönümleyici değildir: $r_0=\ell_\omega^{etkin}$ özdeşleştirmesiyle M-30'un türetilmiş yapısından **parametresiz** çıkar (M-47). Düşük ivmede ($g_{kaps}\leq a_0$) kafes serbesttir, $W=1$: derin limit, BTFR ve ölçek değişmezliği dokunulmamış kalır. Türetim ve aşağı-akış koşumları: `CALISMA/SINIF_CALISMASI/87_ETKIN_YASA/PENCERE_TURETIMI.md`.
+3. **Pencere $W$ — "Kafes Kilitlenmesi" (M-47).** Girdabın iç çekirdeğinde ortam katı-cisim gibi davranır (M-30'un Rankine kolu, kuvvet $\propto R$); ivme $a_0$'ı aştığı bölgede ($g_{kaps}>a_0$) uzay kafesi aşırı gerilim altında kilitlenir ve enine akışı (F4 vortisitesini) $(a_0/g_{kaps})$ çarpanıyla keser — sistem Newton kuralına indirgenir. Bu, elle konmuş bir sönümleyici değildir: $r_0=\ell_\omega^{etkin}$ özdeşleştirmesiyle M-30'un türetilmiş yapısından **parametresiz** çıkar (M-47). Düşük ivmede ($g_{kaps}\leq a_0$) kafes serbesttir, $W=1$: derin limit, BTFR ve ölçek değişmezliği dokunulmamış kalır.
 
 **Galaksi başına serbest parametre sayısı: sıfır.** Denklemin galaksiden galaksiye değişen tek girdisi, o galaksinin kendi ölçülmüş baryon dağılımıdır ($M_{kaps}(R)$, $V_{bar}$); $\Upsilon_*=0{,}50$ ortak fotometrik girdidir.
 
@@ -43,7 +41,7 @@ Denklemin nihai biçimi, programın dokuz bağımsız ölçütünde eski (toplam
 
 ## 10.2.3 $a_0$'ın değeri nasıl seçildi
 
-Türetim, $\ell_\omega^{mikro}$ ölçümünün saçılması (0,17 dex) nedeniyle $a_0$'ın değerine bir **band** bırakır. Gözlem bandın alt ucunu seçer: kabul edilen değerde (pencereli kalibrasyon $7{,}67\times10^{-11}$; $\ell_\omega$ eşleniği 38,2 fm — ölçülen 35,7 fm'e penceresiz değerden daha yakın) dönüş eğrilerinin dış yarı sapması tam sıfırlanır, BTFR eğimi 3,717 ile gözlenen bandın içinde kalır ve normalizasyon 0,978 olur (tam boru hattı v3; `CALISMA/btfr_sinavi.py`). Daha büyük değerler BTFR eğimini bandın dışına taşır. Aynı değer, yerel-$\ell_\omega$ sınavının bağımsız sayısal çözümüyle de örtüşür (10.7).
+Türetim, $\ell_\omega^{mikro}$ ölçümünün saçılması (0,17 dex) nedeniyle $a_0$'ın değerine bir **band** bırakır. Gözlem bandın alt ucunu seçer: kabul edilen değerde (pencereli kalibrasyon $7{,}67\times10^{-11}$; $\ell_\omega$ eşleniği 38,2 fm — ölçülen 35,7 fm'e penceresiz değerden daha yakın) dönüş eğrilerinin dış yarı sapması tam sıfırlanır, BTFR eğimi 3,717 ile gözlenen bandın içinde kalır ve normalizasyon 0,978 olur (tam boru hattı v3). Daha büyük değerler BTFR eğimini bandın dışına taşır. Aynı değer, yerel-$\ell_\omega$ sınavının bağımsız sayısal çözümüyle de örtüşür (10.7).
 
 ## 10.2.4 Sınıf sınıf görünüm
 
@@ -59,7 +57,7 @@ Nihai kurulumun morfolojik sınıflardaki dökümü (ayrıntılar 10.3–10.5):
 | Im | 26 | 8,46 | 11,76 | +8,7 % | ×0,63 | 22/26 |
 | **Toplam** | **141** | **12,48** | **14,56** | **+0,0 %** | — | **87/141**† |
 
-† *Öngörü yarışı (ΛCDM'e karşı galaksi başına), tablonun bütün sütunlarıyla aynı pencereli resmî kurulumla ölçülmüştür (`CALISMA/sinif_ongoru_vs_fit.py`); penceresiz eski kayıt 79/141 idi — pencere yarışı da iyileştirir.*
+† *Öngörü yarışı (ΛCDM'e karşı galaksi başına), tablonun bütün sütunlarıyla aynı pencereli resmî kurulumla ölçülmüştür; penceresiz eski kayıt 79/141 idi — pencere yarışı da iyileştirir.*
 
 Dört sınıfın gereken çarpanı **×0,94–1,24** aralığındadır — bire oturmuştur. Uçlar Sd (×1,47) ve Im (×0,63)'tür; sınıf bandının log genişliği **0,115 dex**'tir (pencere bandı pratikte değiştirmez: galaksi başına çarpanlar $r=0{,}98$ ile korunur, cüce sınıflarda birebir aynıdır — λ kanalı penceresiz kayıtlarıyla geçerli kalır) ve açık kalemdir (10.10). $a_0$'ın küresel ölçeklenmesi bandı kaydırır ama daraltmaz — yani band, $a_0$'ın değerinden bağımsız, gerçek bir yapıdır.
 
