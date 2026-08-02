@@ -863,7 +863,8 @@ async function loadChapterContent(chapter) {
     lucide.createIcons({ attrs: { class: 'loader-spinner animate-spin' } });
 
     try {
-        const response = await fetch(chapter.file);
+        // Cache buster ekleyerek tarayıcı önbelleğini atlıyoruz (v=1.1)
+        const response = await fetch(chapter.file + '?v=1.1');
         if (!response.ok) {
             throw new Error(`Yükleme hatası: ${response.statusText}`);
         }

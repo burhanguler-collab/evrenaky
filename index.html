@@ -75,7 +75,7 @@
     <meta name="theme-color" content="#030712">
     
     <!-- Custom Style Sheet -->
-    <link rel="stylesheet" href="index.css?v=6">
+    <link rel="stylesheet" href="index.css?v=7">
 </head>
 <body class="dark-theme">
     
@@ -731,13 +731,208 @@
                 <div style="font-size: 0.78rem; color: var(--text-muted); border-top: 1px solid var(--border-color); padding-top: 12px;">
                     <p style="margin: 0 0 6px 0;"><strong>Telif Hakkı © 2026 Burhan Güler. Tüm hakları saklıdır.</strong></p>
                     <p style="margin: 0;">Bu eserin tüm telif ve yayın hakları yazarına aittir. Yazarın yazılı izni olmadan içeriğin tamamı veya bir kısmı kopyalanamaz, çoğaltılamaz veya başka sistemlere aktarılamaz.</p>
+            <div class="auth-divider"><span>VEYA</span></div>
+            <div class="social-login">
+                <button class="btn btn-secondary btn-social" onclick="loginWithOAuth('google')">
+                    <i data-lucide="globe" class="social-google"></i> Google ile Katıl
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- New Thread Modal -->
+    <div id="new-thread-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h2>Yeni Tartışma Konusu Aç</h2>
+                <button class="btn-icon" onclick="closeNewThreadModal()"><i data-lucide="x"></i></button>
+            </div>
+            <form id="form-new-thread" onsubmit="handleNewThreadSubmit(event)">
+                <div class="form-group">
+                    <label for="thread-title">Konu Başlığı</label>
+                    <input type="text" id="thread-title" required placeholder="Başlık yazın...">
+                </div>
+                <div class="form-group">
+                    <label for="thread-category">Kategori</label>
+                    <select id="thread-category" required>
+                        <option value="genel">Genel Tartışma</option>
+                        <option value="fizik">Fizik & Matematik</option>
+                        <option value="deneyler">Deney Yorumları</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="thread-content">İçerik / Detaylar</label>
+                    <textarea id="thread-content" required placeholder="Açıklamanızı yazın..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Konuyu Aç</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- New Peer Review Submission Modal -->
+    <div id="peer-review-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h2 style="display: flex; align-items: center; gap: 8px; font-family: var(--font-heading); color: var(--neon-blue);">
+                    <i data-lucide="shield-check"></i> Akademik Değerlendirme Sun
+                </h2>
+                <button class="btn-icon" onclick="closePeerReviewModal()"><i data-lucide="x"></i></button>
+            </div>
+            <form id="form-peer-review" onsubmit="handlePeerReviewSubmit(event)">
+                <div class="form-group-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                    <div class="form-group">
+                        <label for="review-reviewer-name">Adınız Soyadınız</label>
+                        <input type="text" id="review-reviewer-name" required placeholder="Örn: Prof. Dr. Ahmet Yılmaz">
+                    </div>
+                    <div class="form-group">
+                        <label for="review-academic-title">Akademik Ünvanınız</label>
+                        <input type="text" id="review-academic-title" required placeholder="Örn: Profesör, Doçent, Araştırmacı">
+                    </div>
+                </div>
+                <div class="form-group-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 8px;">
+                    <div class="form-group">
+                        <label for="review-institution">Çalıştığınız Kurum</label>
+                        <input type="text" id="review-institution" required placeholder="Örn: ODTÜ, Boğaziçi Üni.">
+                    </div>
+                    <div class="form-group">
+                        <label for="review-expertise">Uzmanlık Alanınız</label>
+                        <input type="text" id="review-expertise" required placeholder="Örn: Astrofizik, Yüksek Enerji Fiziği">
+                    </div>
+                </div>
+                <div class="form-group-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 8px;">
+                    <div class="form-group">
+                        <label for="review-email">E-posta Adresiniz</label>
+                        <input type="email" id="review-email" required placeholder="Örn: mehmet@universite.edu.tr">
+                    </div>
+                    <div class="form-group">
+                        <label for="review-orcid">ORCID ID (Opsiyonel)</label>
+                        <input type="text" id="review-orcid" placeholder="Örn: 0000-0002-1825-0097">
+                    </div>
+                </div>
+                <div class="form-group" style="margin-top: 8px;">
+                    <label for="review-text">Değerlendirme Raporu / Eleştiri Metni</label>
+                    <textarea id="review-text" required placeholder="Teori hakkındaki değerlendirmelerinizi, formülasyon eleştirilerinizi veya destekleyici görüşlerinizi detaylıca yazın..." style="height: 140px;"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="margin-top: 12px; width: 100%;">Değerlendirmeyi Gönder (Onaya İlet)</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Admin Statistics Modal -->
+    <div id="stats-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-card stats-modal-card">
+            <div class="modal-header">
+                <h2 style="display: flex; align-items: center; gap: 8px; font-family: var(--font-heading); color: var(--neon-blue);">
+                    <i data-lucide="bar-chart-2"></i> İstatistikler & Analiz
+                </h2>
+                <button class="btn-icon" onclick="closeStatsModal()"><i data-lucide="x"></i></button>
+            </div>
+            
+            <div class="stats-summary-grid">
+                <div class="stat-box">
+                    <span class="stat-val" id="stat-total-visits">0</span>
+                    <span class="stat-lbl">Toplam Oturum</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-val" id="stat-total-views">0</span>
+                    <span class="stat-lbl">Sayfa Gösterimi</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-val" id="stat-avg-duration">0s</span>
+                    <span class="stat-lbl">Ort. Kalış Süresi</span>
+                </div>
+            </div>
+
+            <div class="stats-detail-section">
+                <h3>Bölüm Okunma Dağılımı</h3>
+                <div class="stats-list" id="stats-chapters-list">
+                    <!-- Dynamic stats will load here -->
+                </div>
+            </div>
+
+            <div class="stats-detail-section" style="margin-top: 20px;">
+                <h3>Genel Portal Özeti</h3>
+                <div class="stats-list-horizontal">
+                    <div class="stat-item-sub"><strong>Üye:</strong> <span id="stat-total-users">0</span></div>
+                    <div class="stat-item-sub"><strong>Yorum:</strong> <span id="stat-total-comments">0</span></div>
+                    <div class="stat-item-sub"><strong>Forum Konusu:</strong> <span id="stat-total-threads">0</span></div>
+                </div>
+            </div>
+
+            <!-- Admin Peer Review Moderation Section -->
+            <div class="stats-detail-section" id="admin-reviews-section" style="margin-top: 20px; display: none;">
+                <h3 style="color: var(--neon-magenta); border-bottom-color: rgba(255, 0, 127, 0.15);">Bekleyen Hakem Değerlendirmeleri</h3>
+                <div id="admin-pending-reviews-list" class="admin-reviews-list">
+                    <!-- Pending reviews will be loaded here dynamically -->
+                </div>
+            </div>
+            
+            <div class="stats-info-footer" style="margin-top: 20px; font-size: 0.75rem; color: var(--text-muted); display: flex; align-items: center; gap: 6px; border-top: 1px solid var(--border-color); padding-top: 12px;">
+                <i data-lucide="info" style="width: 14px; height: 14px; color: var(--neon-blue);"></i> 
+                <span>Bu veriler yerel modda tarayıcı önbelleğinizden (localStorage), canlı modda ise doğrudan Supabase bulut veritabanınızdan anlık çekilmektedir.</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Publication Metadata & ISBN Modal -->
+    <div id="kunya-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-card" style="max-width: 650px;">
+            <div class="modal-header">
+                <h2 style="display: flex; align-items: center; gap: 8px; font-family: var(--font-heading); color: var(--neon-blue);">
+                    <i data-lucide="book-marked"></i> Yayın Künyesi & Resmî Bilgiler
+                </h2>
+                <button class="btn-icon" onclick="closeKunyaModal()"><i data-lucide="x"></i></button>
+            </div>
+            
+            <div class="kunya-content" style="font-size: 0.92rem; line-height: 1.6; color: var(--text-primary);">
+                <div style="background: rgba(0, 240, 255, 0.05); border: 1px solid rgba(0, 240, 255, 0.2); border-radius: 8px; padding: 16px; margin-bottom: 18px;">
+                    <h3 style="margin:0 0 4px 0; color: var(--neon-blue); font-size: 1.1rem;">EVRENAKİ TEORİSİ</h3>
+                    <p style="margin:0; color: var(--text-muted); font-size: 0.85rem;">4 Boyutlu Hidrodinamik Evren Modeli & Kozmik Girdap Mekaniği</p>
+                </div>
+
+                <table style="width: 100%; border-collapse: collapse; margin-bottom: 18px; font-size: 0.88rem;">
+                    <tbody>
+                        <tr style="border-bottom: 1px solid var(--border-color);">
+                            <td style="padding: 8px 0; font-weight: 600; color: var(--text-muted); width: 140px;">Yazar / Müellif:</td>
+                            <td style="padding: 8px 0;">Burhan Güler</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border-color);">
+                            <td style="padding: 8px 0; font-weight: 600; color: var(--text-muted);">Yayın Dili:</td>
+                            <td style="padding: 8px 0;">Türkçe</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border-color);">
+                            <td style="padding: 8px 0; font-weight: 600; color: var(--text-muted);">Kategori / Konu:</td>
+                            <td style="padding: 8px 0;">Kuramsal Fizik & Kozmoloji (Dewey: 530 / 523.1)</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border-color);">
+                            <td style="padding: 8px 0; font-weight: 600; color: var(--text-muted);">Yayın Tarihi:</td>
+                            <td style="padding: 8px 0;">Temmuz 2026 (1. Baskı)</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border-color);">
+                            <td style="padding: 8px 0; font-weight: 600; color: var(--text-muted);">ISBN Status:</td>
+                            <td style="padding: 8px 0;">
+                                <span style="display: inline-flex; align-items: center; gap: 4px; background: rgba(255, 176, 32, 0.15); color: #ffb020; padding: 2px 8px; border-radius: 12px; font-size: 0.8rem; font-weight: 600;">
+                                    <i data-lucide="clock" style="width: 12px; height: 12px;"></i> Başvuru Hazırlık Aşamasında
+                                </span>
+                            </td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border-color);">
+                            <td style="padding: 8px 0; font-weight: 600; color: var(--text-muted);">Resmî Portal:</td>
+                            <td style="padding: 8px 0;"><a href="https://evrenaky.org" target="_blank" style="color: var(--neon-blue); text-decoration: none;">evrenaky.org</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div style="font-size: 0.78rem; color: var(--text-muted); border-top: 1px solid var(--border-color); padding-top: 12px;">
+                    <p style="margin: 0 0 6px 0;"><strong>Telif Hakkı © 2026 Burhan Güler. Tüm hakları saklıdır.</strong></p>
+                    <p style="margin: 0;">Bu eserin tüm telif ve yayın hakları yazarına aittir. Yazarın yazılı izni olmadan içeriğin tamamı veya bir kısmı kopyalanamaz, çoğaltılamaz veya başka sistemlere aktarılamaz.</p>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- App Logic -->
-    <script src="app.js?v=20"></script>
+    <script src="app.js?v=21"></script>
     <!-- Firebase: Authentication (üyelik) + Firestore (yorum/forum/istatistik) -->
     <script type="module" src="firebase-client.js?v=9"></script>
 </body>

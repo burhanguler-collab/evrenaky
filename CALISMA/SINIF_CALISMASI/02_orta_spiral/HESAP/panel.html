@@ -73,8 +73,8 @@ const CZ=[
  {k:'Vo', ad:'ÖLÇÜM (hata çubuklu)', c:'#ffcc00', t:'nokta', on:1},
  {k:'eo', ad:'EVRENAKI ÖNGÖRÜSÜ — FİT: 0', c:'#16a34a', t:'kalin', on:1},
  {k:'lo', ad:'ΛCDM zincir öngörüsü — FİT: 0', c:'#7c3aed', t:'kalin', on:1},
- {k:'ef', ad:'EVRENAKI FİT — 2 parametre (Υ*, b); teşhis aracı', c:'#4ade80', t:'kesik', on:1},
- {k:'lf', ad:'ΛCDM FİT — 2 parametre (M₂₀₀, Υ*); teşhis aracı', c:'#a78bfa', t:'kesik', on:1},
+ {k:'ef', ad:'EVRENAKI FİT — 2 parametre (Υ*, b)', c:'#4ade80', t:'kesik', on:1},
+ {k:'lf', ad:'ΛCDM FİT — 2 parametre (M₂₀₀, Υ*)', c:'#a78bfa', t:'kesik', on:1},
  {k:'bar',ad:'Baryonlar toplam (Υ*=0,50)', c:'#71717a', t:'nokta_c', on:1},
  {k:'Vdisk',ad:'— bileşen: disk', c:'#38bdf8', t:'ince', on:0},
  {k:'Vbul', ad:'— bileşen: kovan', c:'#fb923c', t:'ince', on:0},
@@ -126,7 +126,7 @@ function ciz(){
  /* fit damgasi — grafik uzerinde, her zaman gorunur */
  x.font='600 13px system-ui';x.textAlign='right';
  x.fillStyle='#4ade80';
- x.fillText('EVRENAKI ÖNGÖRÜ FİT: 0'+(acik['ef']?'  ·  FİT eğrisi: 2 (teşhis)':'  (saf öngörü)'),W-mr-10,mt+20);
+ x.fillText('EVRENAKI ÖNGÖRÜ FİT: 0'+(acik['ef']?'  ·  FİT: 2 parametre':'  (saf öngörü)'),W-mr-10,mt+20);
  x.fillStyle='#a78bfa';
  x.fillText(acik['lf']?'ΛCDM FİT: 2 parametre (M₂₀₀, Υ*)':'ΛCDM zincir FİT: 0',W-mr-10,mt+38);
  /* egriler */
@@ -148,10 +148,15 @@ function ciz(){
  const M=[['Yalnız baryonlar','bar',0],['ΛCDM zincir öngörüsü','lo',0],
           ['EVRENAKI ÖNGÖRÜSÜ','eo',0]];  /* yeşil yarış yalnız öngörü satırları arasında */
  let en=1e9,enk=null;M.forEach(([,k])=>{if(g.m[k]&&g.m[k].rms<en){en=g.m[k].rms;enk=k;}});
- if(acik['ef']&&g.m.ef)M.push(['EVRENAKI FİT (teşhis — yarış dışı)','ef',2]);
- if(acik['lf']&&g.m.lf)M.push(['ΛCDM FİT (teşhis — yarış dışı)','lf',2]);
+ if(acik['ef']&&g.m.ef)M.push(['EVRENAKI FİT (2 param.)','ef',2]);
+ if(acik['lf']&&g.m.lf)M.push(['ΛCDM FİT (2 param.)','lf',2]);
+ /* fit yarisinin kazanani — iki fit de aciksa */
+ let enf=null;if(acik['ef']&&acik['lf']&&g.m.ef&&g.m.lf)
+  enf=g.m.ef.rms<g.m.lf.rms?'ef':'lf';
  q('#tb tbody').innerHTML=M.map(([ad,k,kk])=>{const m=g.m[k];if(!m)return'';
-  const v=k===enk?' style="color:#22c55e;font-weight:600"':(k==='lf'?' style="color:#a78bfa"':(k==='ef'?' style="color:#4ade80"':''));
+  const v=k===enk?' style="color:#22c55e;font-weight:600"'
+   :(k===enf?' style="color:'+(k==='ef'?'#4ade80':'#a78bfa')+';font-weight:600"'
+   :(k==='lf'?' style="color:#a78bfa"':(k==='ef'?' style="color:#4ade80"':'')));
   return '<tr'+v+'><td>'+ad+'</td><td>'+kk+'</td><td>'+fx(m.rms,2)+'</td><td>'+fx(m.ci,2)+
    '</td><td>'+fx(100*m.ic,0)+'%</td></tr>';}).join('');
  const de=g.m.eo.rms,dl=g.m.lo.rms;
@@ -159,10 +164,10 @@ function ciz(){
   (de<dl?'Evrenakı':'ΛCDM')+'</b> daha yakın (RMS '+fx(Math.min(de,dl),1)+
   ' / '+fx(Math.max(de,dl),1)+' km/s).';
  if(g.m.ef&&g.m.lf){const fe=g.m.ef.rms,fl=g.m.lf.rms;
-  dpn+=' &nbsp;·&nbsp; Fit yarışı (2\'şer parametre, teşhis): <b class="'+(fe<fl?'kz':'kk')+'">'+
+  dpn+=' &nbsp;·&nbsp; Fit yarışı (2\'şer parametre): <b class="'+(fe<fl?'kz':'kk')+'">'+
    (fe<fl?'Evrenakı':'ΛCDM')+'</b> daha yakın (RMS '+fx(Math.min(fe,fl),1)+
    ' / '+fx(Math.max(fe,fl),1)+' km/s).';}
- dpn+=' Yeşil satır: öngörüler içinde en küçük RMS.';
+ dpn+=' Kalın satırlar iki yarışın kazananlarıdır — fark, fitin etkisidir.';
  q('#dpn').innerHTML=dpn;
 
  /* Evrenaki girdileri */
