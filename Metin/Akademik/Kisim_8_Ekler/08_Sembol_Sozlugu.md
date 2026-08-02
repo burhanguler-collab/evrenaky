@@ -102,7 +102,7 @@ Bu ek, kitabın tamamında geçerli sembol standardını tanımlar. Her sembol k
 | $I$ | Atalet momenti *(ışık şiddeti için ayrı sembol: metinde "şiddet" veya $S_ş$)* | — |
 | $A$ | Dalga genliği ($I_ş \propto A^2$) *(eski yazım: $E$ — 2.7.1)* | — |
 | $E$ | Enerji (yalnız enerji) | — |
-| $\Phi$ | İş fonksiyonu (fotoelektrik) / standart fiziğin "kütleçekim potansiyeli" — yalnız ölçülen genlik girdisi olarak (Ek B bağlamında, $\Phi/c^2 \approx 7\times10^{-10}$) | — |
+| $\Phi$ | İş fonksiyonu (fotoelektrik) / standart fiziğin "kütleçekim potansiyeli" — yalnız ölçülen genlik girdisi olarak (Ek B bağlamında, $\Phi/c^2 \approx 7\times10^{-10}$). *(Ek kayıt, 11.1: potansiyel bağlamındaki $\Phi$ teoride ödünç alınmaz, **tanımlanır** — $\Phi \equiv (P-P_0)/\rho_n$, dolayısıyla $\vec a = -\nabla\Phi$ ve dış alanda $\Phi = -\mathcal{G}M/r$. $\Lambda = 1-\Phi/c^2$'deki $\Phi$ ile aynı büyüklüktür; fark kökendedir, değerde değil.)* | — |
 | $D_{toplam}=D_{zarf}+D_{yol}$ | SN 1987A gecikme bütçesi bileşenleri | ~3 saat |
 | $\chi$ | Evrenakı dispersiyon katsayısı (fenomenolojik) | $5\times10^{-4}$ |
 | $g^{(2)}(0)$, $S$ | Standart kuantum optik ölçütleri (anti-demetlenme; CHSH istatistiği) | — |
@@ -135,6 +135,11 @@ Bu ek, kitabın tamamında geçerli sembol standardını tanımlar. Her sembol k
 | $\tau_{ret}(r,e,i)$ | Retrograd sönüm zaman ölçeği *(eski yazım: $\tau$ — 3.6.1)*. Stokes yazımında $2\rho_c a_b^2/9\eta_E$ (hızdan bağımsız); altkritik yazımda $\propto \rho_c a_b v_{bağıl}^{-4}$ — **iki yazımı ayıran sınav budur** (Ek M-43) |
 | $f(\theta_e)$ | Hizalanma verimi ($\theta_e$: eksen eğikliği; türetilmemiş) |
 | $J_2$ | Dünya basıklık (kuadrupol) katsayısı |
+| $\mathsf{T}$, $T_{ij}$ | **Gelgit tensörü:** $T_{ij} \equiv \partial a_i/\partial x_j = -\dfrac{1}{\rho_n}\partial_i\partial_j P$ — kütle-itim alanının ikinci türevi. Kaynaksız bölgede özdeğerleri $\dfrac{\mathcal{G}M}{r^3}(+2,-1,-1)$ ve **izi sıfırdır** (türetilmiş sonuç, varsayım değil); gövde içinde $\mathrm{tr}\,\mathsf{T} = -4\pi\mathcal{G}\rho_{madde}$ | Bölüm 11.1, Ek M-36 |
+| $\vec\xi$ | **Gövde içi konum vektörü:** gelgit açılımında gövde merkezinden ölçülen yer değiştirme, $\lvert\xi\rvert \le b$. *(Bağlam ayrımı: indissiz skaler $\xi$ dönme sürüklenme kesridir — yukarıya bkz. İkisi hiçbir denklemde birlikte geçmez; gelgit bağlamında daima vektörel $\vec\xi$, sürüklenme bağlamında daima skaler $\xi$ yazılır.)* | Bölüm 11.1, Ek M-36 |
+| $\psi$ | Gelgit açısı: $\vec\xi$ ile gövde–kaynak ekseni arasındaki açı *(kuantum dalga fonksiyonu $\psi$ ile ilgisizdir — bkz. D.2 $\Psi_{Evrenakı}$)* | Bölüm 11.1 |
+| $\Psi_T$ | **Gelgit potansiyeli:** taşınan gövde çerçevesinde, ortak taşınma terimi çıkarıldıktan sonra kalan artık potansiyel. $\Psi_T(\xi,\psi) = -\dfrac{\mathcal{G}M\xi^2}{2r^3}(3\cos^2\psi-1)$. Artık **basınç** alanı $P_T = \rho_n\Psi_T$'dir: eksende açık, yanaklarda fazla, oran $2{:}1$ | Bölüm 11.1, Ek M-36 |
+| $\zeta$ | **Serbest yüzey yükseltisi** (denge gelgiti). Gelgit **genliği** (tepe–çukur) $\Delta\zeta = \tfrac32\dfrac{M}{M_\oplus}\left(\dfrac{b}{r}\right)^3 b$ — bir *yükseklik değil*, tam genliktir: tepe $+A$, çukur $-A/2$. *(Eski yazım $\Delta h$ **geçersizdir** — S-4 gereği $h$ yalnız Planck sabitidir. $\Delta\eta$ kullanılmaz, $\eta_E$ ile çakışır.)* Anayasa **S-27** | Bölüm 11.1, Ek M-36 |
 | $R_p$, $R_\oplus$, $R_s$ | Proton yarıçapı ($0{,}84$ fm); Dünya yarıçapı; yüzey yarıçapı |
 | $\lambda_s$ | Bending-wave sönüm mesafesi $= v_{grup}/\gamma_{toplam}$ *(eski yazım: $\lambda$ — 3.10.5)* |
 | $\lambda_z$ | Dispersiyon türetimindeki Zerre aralığı *(eski yazım: $\Lambda$ — bu sembol artık madde ölçeğine ayrılmıştır; bkz. D.3 ve Ek M-42)* |
