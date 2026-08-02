@@ -4,7 +4,7 @@ Kısım 3.9'da okyanusların hareketini, uzaydan gelen görünmez bir "çekme" k
 
 Gelgit, teoride yeni bir kuvvet değildir: **Kuvvet 1'in (kütle-itim, Ek M-35) uzaysal türevidir** ve tek bir yeni parametre bile gerektirmez.
 
-> **Bu bölümün sözü — peşinen dürüst kayıt.** Türetimin ürettiği her sayı ($1/r^3$ yasası, $(+2,-1,-1)$ oranı, %46, 0,535 m) klasik gelgit kuramınınkiyle **birebir aynıdır** — fakat bu özdeşliğin sessiz bir koşulu vardır: **kaynağın kilitli olması.** Ay kilitlidir; Güneş değildir. Teoride dönen bir kaynağın gelgit tensörü kilitli olanınkinden **yapıca** farklıdır (özdeğer oranı $2{:}{-}1$ olmaktan çıkar, iz boşlukta sıfır olmaktan çıkar); Newton'da ise kaynağın dönme durumu dış alana hiç girmez. Dünya iki kaynağı da aynı anda ve aynı aletlerle ölçtüğü için bu, hâlihazırda işleyen **doğal bir diferansiyel deneydir.** Bölüm 11.1.8 sınavı iki kanalda kurar: %46 oranının genlik kanalı ve — asıl keskin olan — Güneş'in dönme eksenine kilitli simetri kırılması.
+> **Bu bölümün sözü — peşinen dürüst kayıt.** Türetimin ürettiği her sayı ($1/r^3$ yasası, $(+2,-1,-1)$ oranı, %46, 0,535 m) klasik gelgit kuramınınkiyle **birebir aynıdır** — fakat bu özdeşliğin sessiz bir koşulu vardır: **kaynağın kilitli olması.** Ay kilitlidir; Güneş değildir. Teoride dönen bir kaynağın gelgit tensörü kilitli olanınkinden **yapıca** farklıdır: yanal dejenerasyon kırılır (F4'ün silindirik geometrisi) ve boşluktaki iz sıfır olmaktan çıkar (F5'in meridyenel geometrisi). Newton'da ise kaynağın dönme durumu dış alana hiç girmez ve boşlukta iz $\nabla^2\Phi=0$ gereği **tam olarak sıfırdır.** Dünya iki kaynağı da aynı anda ve aynı aletlerle ölçtüğü için bu, hâlihazırda işleyen **doğal bir diferansiyel deneydir** — kilitli Ay kontrol, dönen Güneş numunedir. Kuruluşu 11.1.8'dedir.
 >
 > Sınavın **yapısı** türetilmiştir ve parametresizdir; **genliği** öngörülmemiştir ($\kappa_5$ serbest kalemdir). Bölüm bunu bir "şu sayı çıkmalı" öngörüsü olarak değil, iki yönlü keskin bir sınav olarak sunar. Şişkinlik kayması (11.1.9) bu sınava dâhil değildir: kaynağı atomik sürtünmedir ve hesabı standart kuramla ortaktır.
 
@@ -231,7 +231,7 @@ $$\frac{\text{Güneş gelgiti}}{\text{Ay gelgiti}} = \frac{M_\odot}{M_{Ay}}\left
 
 Aynı $0{,}460$ sayısı genlik tablosundan da okunur ($0{,}246/0{,}535$): tensör oranı ile genlik oranı birbirini doğrular. Güneş toplam itimde $179$ kat üstün, gelgitte Ay'ın yarısından azdır. $1/r^2$ ile $1/r^3$ arasındaki farkın bütün gücü buradadır (ayrıntılı tartışma: 3.9.2.2).
 
-> **Bu sayı yalnız bir doğrulama değildir.** Yukarıdaki $0{,}4602$, iki kaynağın da saf Kuvvet 1 taşıdığı varsayımıyla hesaplanmıştır. Ay için bu doğrudur (kilitli), Güneş için değildir (dönüyor). Ölçülen oranın bu değerden sapması, doğrudan Güneş'in F4+F5 karışım payını verir — bölümün ayırt edici sınavının birinci kanalı budur. Kuruluşu 11.1.8'dedir.
+> **Bir koşul kaydı.** Yukarıdaki $0{,}4602$, iki kaynağın da saf Kuvvet 1 taşıdığı varsayımıyla hesaplanmıştır. Ay için bu doğrudur (kilitli), Güneş için değildir (dönüyor). Güneş tarafındaki F4+F5 payı, gelgit tensörünü yalnız ölçekleyerek değil **yapısını değiştirerek** etkiler; bu yüzden bölümün ayırt edici sınavı bu skaler oranda değil, tensörün özdeğerlerinin ayrı ayrı okunmasındadır. Kuruluşu 11.1.8'dedir.
 
 **Büyük ve küçük gelgit.** İki kaynağın genlikleri hizalanma durumuna göre toplanır veya çıkarılır:
 
@@ -281,62 +281,67 @@ Fakat bu üç madde de yorum düzeyindedir. Asıl soru şudur: **iki kuramı ay�
 
 ### Sınavın kaynağı: tablo yalnız *kilitli* kaynak için geçerlidir
 
-Özdeşlikler, 11.1.2'nin kuvvet envanterine dayanır: Ay kilitli olduğu için $\omega_1$ kolu kapalıdır ve gelgit saf Kuvvet 1'den gelir. **Güneş kilitli değildir.** Dönme kolu açıktır; Güneş'in Dünya'ya uyguladığı alan yalnız Kuvvet 1 değil, ona eklenen Kuvvet 4 ve Kuvvet 5'i de taşır.
+Özdeşlikler, 11.1.2'nin kuvvet envanterine dayanır: Ay kilitli olduğu için $\omega_1$ kolu kapalıdır ve gelgit saf Kuvvet 1'den gelir. **Güneş kilitli değildir.** Dönme kolu açıktır — ve bu kol bütün hâlinde açılır: F4 varsa F5 de vardır, ikisi de $\omega_1$'in ürünüdür.
 
-Karışımın tensöre etkisi türetilebilir. Radyal yasa $a=A/r^{2}+B/r$ ve karışım oranı $\varepsilon\equiv Br/A$ ile:
+Burada kritik olan, bu iki kuvvetin **geometrisidir**. Hiçbiri Kuvvet 1 gibi küresel-radyal değildir:
 
-$$T_\parallel = \frac{da}{dr}\Big|_{\text{büyüklük}} = \frac{A}{r^3}(2+\varepsilon),\qquad T_\perp = -\frac{a}{r} = -\frac{A}{r^3}(1+\varepsilon)$$
+| Kuvvet | Geometri | Yön | Yasa |
+|---|---|---|---|
+| **F1** | küresel | $-\hat r$ (küresel yarıçap) | $1/r^2$ |
+| **F4** | **silindirik** | $-\hat R$ (dönme eksenine dik) | $1/R$ (Ek M-38) |
+| **F5** | **meridyenel** | $-\hat\theta$ (ekvatora doğru) | $\propto\sin2\theta$ (Ek M-39) |
 
-$$\boxed{\;(T_\parallel,\,T_\perp,\,T_\perp)=\frac{A}{r^{3}}\bigl(2+\varepsilon,\;-(1+\varepsilon),\;-(1+\varepsilon)\bigr),\qquad \mathrm{tr}\,\mathsf{T}=-\varepsilon\,\frac{A}{r^{3}}\;}$$
+Her ikisi de kaynağın **kendi dönme eksenine** göre tanımlıdır. Gelgit tensörü alanın türevi olduğuna göre, bu geometrileri de miras alır.
 
-İki sonuç birlikte gelir: **özdeğer oranı $2{:}{-}1$ olmaktan çıkar** ve **iz, boşlukta sıfır olmaktan çıkar.** İkisi de tek bir sayıya, $\varepsilon$'a bağlıdır ve $\varepsilon$ kaynağın dönme durumuyla belirlenir. Yeni parametre yoktur; tensör, radyal yasanın türevi olduğu için yasanın taşıdığı her şeyi miras alır.
+### Karışımın tensörü
+
+Dünya, Güneş'in ekvator düzlemine yakındır (heliografik enlem $\pm7{,}25^\circ$). Üç katkı bu noktada üst üste konduğunda tensörün özvektörleri şunlardır: **(1)** gelgit ekseni (Güneş–Dünya doğrultusu), **(2)** yörünge doğrultusu (ekliptik içinde, gelgit eksenine dik), **(3)** ekliptiğe dik (Güneş'in dönme ekseni doğrultusu). Özdeğerler:
+
+$$\boxed{\;(T_1,T_2,T_3)=\frac{A}{r^{3}}\Bigl(2+\beta,\;\;-(1+\beta),\;\;-(1+\gamma)\Bigr),\qquad \mathrm{tr}\,\mathsf{T}=-\gamma\,\frac{A}{r^{3}}\;}$$
+
+$$\beta \equiv \frac{Br}{A}\ \ (\text{F4 payı}),\qquad \gamma \equiv \frac{2a_5 r^{2}}{A}\ \ (\text{F5 payı})$$
+
+İki katkı **iki ayrı imza** üretir ve birbirine karışmaz:
+
+**(a) F4 → dejenerasyon kırılır, iz korunur.** Silindirik $1/R$ alanı tek başına $(+1,-1,0)$ verir; izi sıfırdır (iki boyutlu akı korunumu). Fakat özdeğerleri dejenere değildir. F1 ile toplandığında yanal çiftin eşitliği bozulur: ekliptik içindeki yanal özdeğer $-(1+\beta)$ olurken ekliptiğe dik olan $-1$'de kalır. **Sıkıştırma kuşağı artık çember değil, elipstir.**
+
+**(b) F5 → iz ihlal edilir.** Meridyenel $\sin2\theta$ alanının ıraksaması ekvator düzleminde sıfır değildir: $\nabla\!\cdot\!\vec a_5 = -2a_5/r$. *(Kuvvetin kendisi ekvatorda sıfırdır — $\sin2\theta|_{\theta=0}=0$ — ama tensöre giren şey kuvvet değil türevidir ve $d(\sin2\theta)/d\theta$ tam orada maksimumdur.)* Bu sonuç F5'in radyal yasasından **bağımsızdır**; hangi kuvvetle uzaklaşırsa uzaklaşsın iz bağıntısı aynı kalır.
 
 ### Newton bunu üretemez
 
-Klasik kuramda bir kaynağın **dönüp dönmediği dış alanına girmez.** Dönme, dış alana ancak gövdenin kendi basıklığı üzerinden ($J_2$) ve tamamen farklı bir açısal yapıyla katılır; gelgit tensörünün boşluktaki izi ise $\nabla^2\Phi=0$ gereği **her kaynak için, her uzaklıkta, istisnasız sıfırdır.** Newton'da kilitli bir uydu ile hızlı dönen bir yıldızın gelgit tensörü aynı yapıdadır.
+Klasik kuramda bir kaynağın **dönüp dönmediği dış alanına girmez.** İki imzanın Newton'daki karşılığı:
 
-Teoride değildir:
+| İmza | Newton | Teori |
+|---|---|---|
+| **Yanal dejenerasyonun kırılması** | Yalnız gövdenin basıklığından ($J_2$). Güneş için $J_2(R_\odot/r)^2 = 2{,}2\times10^{-7}\times(4{,}65\times10^{-3})^2 \approx 5\times10^{-12}$ | $\beta$ — apsidal presesyon üst sınırı $\lesssim10^{-9}$ |
+| **Boşlukta iz** | $\nabla^2\Phi=0$ gereği **tam olarak sıfır** — her kaynak, her uzaklık, her çokkutuplu mertebe | $-\gamma A/r^3 \ne 0$ |
 
-| Kaynak | Açık kollar | Gelgit tensörü | İz |
-|---|---|---|---|
-| **Ay** — kilitli | yalnız F1 | $(+2,\,-1,\,-1)$ | $0$ — **saf** |
-| **Güneş** — dönüyor | F1 + F4 + F5 | $(2{+}\varepsilon_\odot,\,-(1{+}\varepsilon_\odot),\,-(1{+}\varepsilon_\odot))$ | $-\varepsilon_\odot A/r^3 \ne 0$ |
+Birinci satırda Newton'un bir arka planı vardır ama **200 kat aşağıdadır** — arada gerçek bir keşif penceresi kalır. İkinci satırda ise arka plan **tam sıfırdır**: boşlukta ölçülen sıfırdan farklı bir gelgit izi, Newton'un kendi denklemini ihlal eder. İkinci kanal bu yüzden temizdir.
 
-**Dünya bu iki kaynağı aynı anda, aynı aletlerle ölçmektedir.** Kilitli olan kontrol, dönen olan numunedir — sınav için kurulması gereken bir düzenek değil, hâlihazırda işleyen doğal bir diferansiyel deneydir.
+Ve iki imzanın da **yönü bellidir**: özvektörler Güneş'in dönme eksenine kilitlidir. Newton'un noktasal kaynak alanında böyle bir ayrıcalıklı yön yoktur.
 
-### Sınav 1 — genlik kanalı: %46 artık bir ölçümdür
+### Doğal diferansiyel deney
 
-Ay tarafında $\varepsilon\simeq0$ olduğundan paydada düzeltme yoktur; oran doğrudan Güneş'in karışım payını verir:
+| Kaynak | Açık kollar | Gelgit tensörü |
+|---|---|---|
+| **Ay** — kilitli | yalnız F1 | $(+2,\,-1,\,-1)$ · iz $=0$ · **dejenerasyon kusursuz** |
+| **Güneş** — dönüyor | F1 + F4 + F5 | $(2{+}\beta,\,-(1{+}\beta),\,-(1{+}\gamma))$ · **iz $\ne0$** · **dejenerasyon kırık** |
 
-$$\frac{\text{Güneş gelgiti}}{\text{Ay gelgiti}} = 0{,}4602\times\Bigl(1+\frac{\varepsilon_\odot}{2}\Bigr) \;\Longrightarrow\; \boxed{\;\varepsilon_\odot = 2\left(\frac{R_{ölçülen}}{0{,}4602}-1\right)\;}$$
-
-Duyarlılık zinciri doğrudandır: orandaki bağıl ölçüm hassasiyeti $\sigma_R/R$ ise, $\varepsilon_\odot$ üzerindeki sınır $\approx4{,}3\,\sigma_R/R$ olur. Yani binde birlik bir oran ölçümü $\varepsilon_\odot\lesssim2\times10^{-3}$; Ek M-38'in Ay için apsidal presesyondan kurduğu $\varepsilon_{Ay}<2\times10^{-5}$ düzeyine inmek ise oranda $\sim5\times10^{-6}$ bağıl hassasiyet ister.
-
-Bu kanal M-38'in sınırından **bağımsızdır**: orası birinci türevi (ivme) Ay yörüngesinde sınırlar, burası ikinci türevi (tensör) 1 AU'da ve **Güneş** için sınarlar.
-
-### Sınav 2 — simetri kanalı: asıl keskin olan
-
-Genlik kanalı bir sayının kaçıncı hanesine bakar; ikinci kanal ise **olmaması gereken bir yapının varlığına** bakar ve çok daha keskindir.
-
-Kuvvet 5'in $\sin2\theta$ yasasındaki $\theta$, **kaynağın kendi dönme ekseninden** ölçülür — gelgit ekseninden değil (Bkz. 11.2 ve Ek M-39). Sonuç:
-
-- **Ay'ın gelgit alanı, gelgit ekseni etrafında tam simetriktir.** $-1$ özdeğeri kusursuz dejeneredir; azimuta hiçbir bağımlılık yoktur.
-- **Güneş'in alanı değildir.** F5 katkısı Güneş'in ekvator düzlemine bağlı bir yapı taşır; dejenerasyon kırılır ve iki yanal özdeğer ayrışır.
-
-Dünya, Güneş'in heliografik enlemlerinde yıl boyunca $\pm7{,}25^\circ$ salındığından bu, gelgit zorlamasında **yıllık dönemli, fazı Güneş'in dönme eksenine kilitli** bir yan bant üretmelidir. Aranan şey $S_2$ harmoniğinin genliği değil, $S_2$'de bulunmaması gereken bu yan bandın varlığı ve fazıdır.
-
-**Bu bir genlik farkı değil, bir simetri kırılmasıdır.** Newton hiçbir genlikte üretemez: klasik dış alanda kaynağın dönme ekseni diye bir ayrıcalıklı yön yoktur.
+**Dünya bu iki kaynağı aynı anda, aynı aletlerle ölçmektedir.** Kilitli olan kontrol, dönen olan numunedir — kurulması gereken bir düzenek değil, hâlihazırda işleyen bir deneydir. Aranan gözlemsel büyüklük, gelgit tensörünün **üç özdeğerinin ayrı ayrı** çıkarılmasıdır (gradyometri); Ay ve Güneş bileşenleri frekansta zaten ayrıktır.
 
 ### Sınavın dürüst statüsü
 
 | | |
 |---|---|
-| **Yapı** | türetilmiş, parametresiz — $(2{+}\varepsilon,-(1{+}\varepsilon),-(1{+}\varepsilon))$ radyal yasanın türevidir |
-| **Genlik ($\varepsilon_\odot$)** | öngörülmemiş. F4 payı Ek M-38'de galaktik kolektif vortekse atanır ve Güneş Sistemi Kepler rejiminde tutulur; F5'in katsayısı $\kappa_5$ ise serbest kalemdir (Ek M-39) |
-| **Dolayısıyla sınavın biçimi** | "şu sayı çıkmalı" değil; **"şu yapı bulunmalı, yoksa $\varepsilon_\odot$ ve $\kappa_5$ şundan küçüktür"** |
-| **İki yönlü keskinlik** | Yapı bulunursa Newton'un boşlukta izsizliği ihlal edilmiş olur — teori lehine kesin ayrım. Bulunmazsa $\kappa_5$ üzerindeki sınır her ölçüm turunda daralır ve F5 kanalı bu ölçekte sıkışır |
+| **Yapı** | türetilmiş, parametresiz. $(2{+}\beta,-(1{+}\beta),-(1{+}\gamma))$ ve $\mathrm{tr}=-\gamma A/r^3$, alanların geometrisinden çıkar |
+| **İz bağıntısı** | F5'in radyal yasasından bağımsız — bu, sonucun en sağlam kısmıdır |
+| **Genlikler ($\beta,\gamma$)** | **öngörülmemiştir.** $\beta$: F4 payı Ek M-38'de galaktik kolektif vortekse atanır, Güneş yavaş döndüğü için yerel pay küçüktür; apsidal presesyon $\beta\lesssim10^{-9}$ verir. $\gamma$: $\kappa_5$ serbest kalemdir (Ek M-39, [F]) |
+| **Sınavın biçimi** | "şu sayı çıkmalı" değil; **"şu iki yapı bulunmalı, yoksa $\beta$ ve $\kappa_5$ şundan küçüktür"** |
+| **İki yönlü keskinlik** | Sıfırdan farklı bir boşluk izi bulunursa Newton'un vakum denklemi ihlal edilir — kesin ayrım. Bulunmazsa $\kappa_5$ üzerindeki sınır her ölçüm turunda daralır |
 
-**Ölçüm duyarlılığının nicel değerlendirmesi bu bölümde yapılmamıştır** ($S_2/M_2$ oranının gravimetrik $\delta$ çarpanlarından ve okyanus yükleme ayrıştırmasından bağımsız olarak hangi hassasiyetle çekilebildiği ayrı bir iştir) ve 7.4'ün hesap kalemine yazılmıştır. Burada kurulan şey sınavın **yapısı** ve hangi büyüklüğün hangi kanaldan sınırlandığıdır.
+**Ölçüm duyarlılığının nicel değerlendirmesi bu bölümde yapılmamıştır** (gelgit tensörünün üç özdeğerini ayrı ayrı çekmek için gereken gradyometri hassasiyeti, okyanus yükleme ve $J_2$ arka planından ayrıştırma dâhil) ve 7.4'ün hesap kalemine yazılmıştır. Burada kurulan şey sınavın **yapısı** ve hangi büyüklüğün hangi kanaldan sınırlandığıdır.
+
+> **Ölçek kaydı — neden Güneş'te zayıf, galakside belirleyici.** F4 ve F5 dönüş kolundan beslenir ve kolun gücü ortamın dönme hızıyla ölçeklenir. Güneş çok yavaş döner; yerel payı ölçülebilir mertebeye ancak yaklaşır, belirleyici olamaz. Galaktik ölçekte ise aynı iki kuvvet **baskın** hâle gelir ve düz dönüş eğrilerini üreten şey olur (Bkz. Kısım 10). İki ortamın Evrenakı dönme hızları kıyaslanabilir büyüklükler değildir — bu yüzden Kepler yasası Güneş Sistemi'nde çalışır, galakside çalışmaz. Kepler evrensel bir yasa değil, **belirli bir kol dengesinin** yerel sonucudur.
 
 ---
 
