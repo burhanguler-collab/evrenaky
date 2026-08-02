@@ -1244,7 +1244,7 @@ Bu, **baryonik Tully-Fisher ilişkisidir** — galaktik dinamiğin en sağlam am
 
 **Dürüstlük kayıtları:**
 
-- **Normalizasyonda kütleye bağlı sistematik var.** Medyan ölçülen/öngörülen $=1{,}06$ — genlik yüzde birkaç içindedir. Ama oran örneklem boyunca sabit değildir: cücede $\approx1{,}5$, ortada $\approx1{,}05$, kütlelide $\approx0{,}94$. Bu, morfolojik sınıf bandının (log genişliği 0,113 dex) bu sınavdaki görünümüdür ve açık kalemdir (7.4, madde 12).
+- **Normalizasyonda kütleye bağlı sistematik var.** Medyan ölçülen/öngörülen $=1{,}06$ — genlik yüzde birkaç içindedir. Ama oran örneklem boyunca sabit değildir: cücede $\approx1{,}5$, ortada $\approx1{,}05$, kütlelide $\approx0{,}94$. Bu, morfolojik sınıf bandının (log genişliği 0,115 dex) bu sınavdaki görünümüdür ve açık kalemdir (7.4, madde 12).
 - **Saçılma 2,4 kattır.** Sıkı bir bağıntı değildir; gözlemsel BTFR'nin kendi saçılmasından geniştir. Galaksiler arası varyansın büyük kısmı ölçüm bütçesiyle (başta uzaklık belirsizliği) açıklanır; sınıf bandı ise gerçektir.
 - **$M_{bar}$ fit edilen $\Upsilon_*$ ile hesaplanıyor.** Bağımsız bir yıldız kütlesi tayiniyle (popülasyon sentezi) tekrarlanmalıdır; aksi hâlde $\ell_\omega$ ile $M_{bar}$ arasında kısmi bir bağımlılık kalır. Bu, 7.4 madde 12'nin açık kalemidir.
 

@@ -54,9 +54,9 @@ G = 4.300917e-6
 C_SI = 2.99792458e8
 ACC = 1e6 / 3.0856776e19
 A0_ESKI = (C_SI * (70e3 / 3.0857e22)) / ACC / 16.1
-# NIHAI KURULUM (86_NIHAI): yerel l_omega + a_0 x1,75. Oz denetim ve carpanlar
+# PENCERELI RESMI KALIBRASYON (M-47): a_0 = 1,75 x 1,038 x cH0/16,1. Oz denetim ve carpanlar
 # artik NIHAI kuruluma goredir (SONUC.csv nihai boru hattiyla yenilendi).
-A0 = 1.75 * A0_ESKI
+A0 = 1.75 * 1.038 * A0_ESKI
 RB = 1.4
 UPS = 0.50
 PAY_ESIK = 0.25        # 96_ETG md.3 / 95_RAR md.4 ile ayni esik
@@ -81,21 +81,25 @@ def yukle(sn):
         Vbar2 = np.sign(Vg) * Vg ** 2 + UPS * Vd ** 2 + RB * UPS * Vb ** 2
         Mgas = np.maximum(R * np.sign(Vg) * Vg ** 2 / G, 0.0)
         Mkaps = UPS * L(SBd) + RB * UPS * L(SBb) + Mgas
+        GKAP = G * np.maximum(Mkaps, 1e-9) / R ** 2
+        AMP = np.sqrt(A0 * G * np.maximum(Mkaps, 1e-9))
         out.append(dict(g=ad, R=R, Vo=Vo, Vbar2=Vbar2,
-                        F4=np.sqrt(A0 * G * np.maximum(Mkaps, 1e-9)),   # NIHAI: yerel
+                        F4=AMP * np.minimum(1.0, A0 / GKAP),            # M-47 pencereli
+                        AMP=AMP, GKAP=GKAP,
                         lom=float(np.sqrt(G * max(Mkaps[-1], 1e-6) / A0)),
                         L36=float(kat[ad]['L36_1e9Lsun']) * 1e9))
     return out
 
 
-def carpan(vb2, f4, vo):
+def carpan(vb2, amp, gkap, vo):
     """mean((v_ong - v_olc)/v_olc) = 0 kokunu ikiye bolmeyle cozer.
 
     NOT: sinif calismasi sapmayi ORANLARIN ORTALAMASI olarak tanimlar
-    (medyan log degil). Karsilastirilabilirlik icin ayni tanim korundu.
+    (medyan log degil). a_0 -> k a_0 alinirken PENCERE DE yeniden olceklenir:
+    W(k) = min(1, k A0/g_kaps) — resmi (10.2.4) konvansiyon budur.
     """
-    fk = lambda k: float(np.mean((np.sqrt(np.maximum(vb2 + np.sqrt(k) * f4, 1e-9))
-                                  - vo) / vo))
+    fk = lambda k: float(np.mean((np.sqrt(np.maximum(
+        vb2 + np.sqrt(k) * amp * np.minimum(1.0, k * A0 / gkap), 1e-9)) - vo) / vo))
     a, b = 1e-4, 1e4
     if fk(a) > 0 or fk(b) < 0:
         return np.nan
@@ -125,7 +129,7 @@ for sn in sorted(AD):
         e = 100 * float(np.mean((np.sqrt(np.maximum(vb2 + f4, 1e-9)) - vo) / vo))
         ref = float(kayit[d['g']]['DIS_evr_sapma_yuzde'])
         EN_KOTU = max(EN_KOTU, abs(e - ref))
-        k = carpan(vb2, f4, vo)
+        k = carpan(vb2, d['AMP'][m], d['GKAP'][m], vo)
         p = float(np.median(f4 / np.maximum(vb2 + f4, 1e-9)))
         kn.append(naif(ref)); kd.append(k); pay_.append(p); sap.append(ref)
         gb_dis.append(d['Vbar2'][-1] / d['R'][-1] * ACC)

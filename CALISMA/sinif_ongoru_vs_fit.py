@@ -75,7 +75,7 @@ A0 = CH0 / 16.1                       # kitabin eski kalibre degeri (tarihsel ka
 #    olcumu 35,7 fm) x1,75-x2,08 bandi verir; gozlem alt ucu secer:
 #    x1,75'te dis sapma 0,0, BTFR egimi 3,734 (band ICI), RMS 12,8 < LCDM 14,6.
 #    x2,08 BTFR egimini band disina (3,754) tasiyordu. Kayit: toplu_defter.
-A0N = 1.75 * A0                       # NIHAI a_0
+A0N = 1.75 * 1.038 * A0               # PENCERELI RESMI kalibrasyon (M-47) = 7,67e-11 m/s^2
 RHO_CRIT = 3 * 0.07 ** 2 / (8 * np.pi * G)
 H_RED = 0.7
 RB = 1.4                              # Y_kovan / Y_disk (SPARC kurali)
@@ -125,15 +125,17 @@ Mkaps = lambda d, Y: Y * d['Ld'] + RB * Y * d['Lb'] + Mgas(d)
 
 
 def evr_ongoru(d):
-    """Sifir serbest parametre — NIHAI kurulum: yerel l_omega + a_0 nihai.
+    """Sifir serbest parametre — PENCERELI RESMI denklem (M-47).
 
-    v^2 = V_bar^2 + sqrt(A0N G M_kaps(R))     [eski: + G M_kaps / l_om(M_bar)]
+    v^2 = V_bar^2 + sqrt(A0N G M_kaps(R)) * W,  W = min(1, A0N/g_kaps)
     Rapor kolonu icin l_omega dis noktada verilir: l_om = sqrt(G M_bar/A0N).
     """
     M = np.maximum(Mkaps(d, UPS_PS), 1e-9)
     Mb = max(M[-1], 1e-6)
     lom = np.sqrt(G * Mb / A0N)
-    return np.sqrt(np.maximum(Vbar2(d, UPS_PS), 1e-9) + np.sqrt(A0N * G * M)), \
+    gkap = G * M / d['R'] ** 2
+    Wp = np.minimum(1.0, A0N / gkap)
+    return np.sqrt(np.maximum(Vbar2(d, UPS_PS), 1e-9) + np.sqrt(A0N * G * M) * Wp), \
         dict(lom=lom, Mbar=Mb)
 
 

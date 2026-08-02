@@ -51,15 +51,15 @@ Nihai kurulumun morfolojik sınıflardaki dökümü (ayrıntılar 10.3–10.5):
 
 | Sınıf | n | Öngörü RMS (km/s) | ΛCDM öngörü RMS | Dış sapma | Gereken $a_0$ çarpanı | Öngörü yarışı |
 |---|---|---|---|---|---|---|
-| Sa–Sab | 12 | 24,90 | 30,69 | −3,5 % | ×1,24 | 6/12 |
-| Sb–Sbc | 29 | 21,21 | 33,36 | +1,2 % | ×0,94 | 18/29 |
-| Sc–Scd | 30 | 14,77 | 13,39 | −0,6 % | ×1,04 | 17/30 |
+| Sa–Sab | 12 | 24,90 | 30,69 | −3,5 % | ×1,24 | 7/12 |
+| Sb–Sbc | 29 | 21,21 | 33,36 | +1,2 % | ×0,94 | 22/29 |
+| Sc–Scd | 30 | 14,77 | 13,39 | −0,6 % | ×1,04 | 19/30 |
 | Sd | 16 | 9,93 | 7,70 | −7,5 % | ×1,47 | 4/16 |
-| Sdm–Sm | 28 | 9,93 | 9,97 | −1,3 % | ×1,08 | 12/28 |
+| Sdm–Sm | 28 | 9,93 | 9,97 | −1,3 % | ×1,08 | 13/28 |
 | Im | 26 | 8,46 | 11,76 | +8,7 % | ×0,63 | 22/26 |
-| **Toplam** | **141** | **12,48** | **14,56** | **+0,0 %** | — | **79/141**† |
+| **Toplam** | **141** | **12,48** | **14,56** | **+0,0 %** | — | **87/141**† |
 
-† *Öngörü yarışı (ΛCDM'e karşı galaksi başına) penceresiz kurulumla ölçülmüştür; pencere RMS'i iyileştirdiğinden 79/141 alt sınırdır.*
+† *Öngörü yarışı (ΛCDM'e karşı galaksi başına), tablonun bütün sütunlarıyla aynı pencereli resmî kurulumla ölçülmüştür (`CALISMA/sinif_ongoru_vs_fit.py`); penceresiz eski kayıt 79/141 idi — pencere yarışı da iyileştirir.*
 
 Dört sınıfın gereken çarpanı **×0,94–1,24** aralığındadır — bire oturmuştur. Uçlar Sd (×1,47) ve Im (×0,63)'tür; sınıf bandının log genişliği **0,115 dex**'tir (pencere bandı pratikte değiştirmez: galaksi başına çarpanlar $r=0{,}98$ ile korunur, cüce sınıflarda birebir aynıdır — λ kanalı penceresiz kayıtlarıyla geçerli kalır) ve açık kalemdir (10.10). $a_0$'ın küresel ölçeklenmesi bandı kaydırır ama daraltmaz — yani band, $a_0$'ın değerinden bağımsız, gerçek bir yapıdır.
 
@@ -67,6 +67,73 @@ Dört sınıfın gereken çarpanı **×0,94–1,24** aralığındadır — bire 
 
 1. **$a_0$'ın değeri bir kalibrasyondur.** Biçimi türetilmiştir; değeri, biçimin izin verdiği band içinden gözlemle seçilmiştir. "$a_0$ türetildi" cümlesi ancak "biçimi türetildi, değeri gözlemle sabitlendi" olarak kurulabilir.
 2. **Yüksek-$z$ açığı bu kurulumda büyüktür** ($f_{DM}$ artığı +0,19). Kaynağı $a_0$'ın değeri değil, F4'ün yoğun-rejim davranışıdır (10.8, 10.9) — ama sayı olarak teorinin kayıtlı tek büyük açığıdır.
-3. **Nihai kurulum her sınıfı iyileştirmez; medyanı iyileştirir.** Sb–Sbc ve Im sınıflarında öngörü RMS'i toplam-kütleli kuruluma göre bir miktar daha yüksektir. Sınıf bandı (0,113 dex) hiç daralmamıştır.
+3. **Nihai kurulum her sınıfı iyileştirmez; medyanı iyileştirir.** Sb–Sbc ve Im sınıflarında öngörü RMS'i toplam-kütleli kuruluma göre bir miktar daha yüksektir. Sınıf bandı (0,115 dex) hiç daralmamıştır.
 4. **BTFR eğimi bandın içinde ama kenara yakındır** (3,734; üst sınır 3,738) ve bandın ölçümü ağırlıklandırmaya duyarlıdır (3,530–3,738). Rahatlık payı küçüktür.
 5. **Değer, sınandığı SPARC örnekleminden seçilmiştir.** 7.4'teki "türetimler sınandıkları veriden okunuyor" özeleştirisi bu karar için de geçerlidir; bağımsız doğrulama SPARC dışı veridedir (10.9) ve orada teorinin açığı vardır.
+
+## 10.2.6 Teoriye Sadakat Karşılaştırması: hesap zinciri nereden geliyor?
+
+Bir modelin veriye uyumu tek başına eksik bir ölçüdür; ikinci ve daha az sorulan soru şudur:
+**hesap zincirindeki her halka, modelin kendi ilk ilkelerinden mi türüyor, yoksa gözleme veya
+simülasyona fitlenmiş bir yamadan mı geliyor?** Bu bölümdeki bütün karşılaştırmaların iki tarafı
+bu soruya farklı cevap verir ve fark, uyum sayılarından daha yapısaldır.
+
+| Zincir halkası | **Evrenakı** | **ΛCDM — "zincir öngörüsü"** (bu kitapta kullanılan) | **ΛCDM — literatür pratiği** |
+|---|---|---|---|
+| Kuvvet yasası | F1+F4, akışkan postülatlarından türetilmiş (M-35, M-37/M-38) | Newton + görünmez bileşen **varsayımı** | aynı |
+| Yoğunluk/hız profili | silindirik kolon $1/R$ + Rankine penceresi — **türetilmiş** (M-38, M-47) | NFW — teoriden değil, **N-cisim simülasyonu çıktısından** (Navarro+1996) | NFW gözlemle çelişince (cusp–çekirdek) fit ile gevşetilir |
+| Galaksi–kütle bağı | $M_{kaps}$: doğrudan **ölçülen** baryon dağılımı | abundance matching — gözlemsel istatistiğe **eşleştirme/fit** (Moster+2013) | $M_{200}$ galaksi başına **serbest fit** |
+| İkinci halo parametresi | — (yok) | $c_{200}(M)$ — **simülasyon fiti** (Dutton & Macciò 2014) | $c$ serbest ya da önselli fit |
+| Geçiş fonksiyonu | $W$ — parametresiz **türetilmiş** (M-47) | — | — |
+| Evrensel ölçek | $a_0$: biçim **[T]**, değer [S], aday mikro kapanış (M-45) | evrensel ölçek yok — her halo kendi iki sayısını taşır | — |
+| Galaksi başına fit | **0** | 0 (ama zincirin halkaları fit-kökenli) | **2–3** |
+| Öngörü çuvallayınca | dürüstlük defterine **kayıt** (bu kısmın her bölümü) | baryonik geribesleme yamaları (cusp–çekirdek, eksik uydular, "too big to fail") | fitin başarısı teorinin başarısı sayılır |
+
+**Asıl zaaf, tablodaki son sütundur ve yapısaldır.** Karanlık madde çerçevesinde parçacık
+bilinmediği için, tek bir galaksinin dinamiğini teorinin ilk ilkelerinden hesaplamak **ilkesel
+olarak mümkün değildir**: her galaksi kendi halo kütlesini ve konsantrasyonunu, açıklaması
+beklenen gözlemin — dönüş eğrisinin — kendisinden alır. Açıklanacak veri, açıklamanın girdisi
+olur. Bu, teorinin MOND'a yönelttiği "ampirik" eleştirisinin daha ağırıdır: MOND hiç değilse
+**tek ve evrensel** bir $a_0$ ile bir geçiş fonksiyonu fitler ve onunla her galaksiyi öngörür
+(10.2.1'in kutusu); karanlık madde pratiği ise **galaksi başına** 2–3 sayı fitler. Evrenakı'da
+fit, panellerin cümlesiyle, **teorinin değil rakip modelin ihtiyacıdır.**
+
+**Bilim felsefesi çapası: yanlışlanma riski (Popper).** Bir teorinin gücü, açıklayabildikleriyle
+değil, aldığı **yanlışlanma riskiyle** ölçülür (Popper, 1959). Bu ölçüte vurulduğunda tablo
+asimetriktir. Sıfır-parametreli denklem her yeni galakside sınava girer: tek bir dönüş eğrisi
+onu çürütebilir, ve 10.10'un açık kalemleri bu riskin retorik değil gerçek olduğunun kanıtıdır.
+Galaksi başına fitlenen karanlık madde pratiğinde ise risk neredeyse sıfıra iner: fit tutarsa
+teori doğrulanmış sayılır; tutmazsa — ki kendi kaydımızda 169 galaksinin 125'inde iki parametreyle
+bile kabul edilebilir fit çıkmaz (6.5.4.7) — suç teoriye değil, baryonik geribesleme modellerine
+yazılır. Yanlışlanabilirlik biçimsel olarak ortadan kalkmaz; ama **hiçbir gözlemsel sonucun
+teoriye karşı sayılmadığı** bir pratikte fiilen askıya alınır. Galaktik ölçekte geriye kalan,
+Popper'ın ölçütüyle, yanlışlanma riski alan bir yasa değil bir eğri-betimleme pratiğidir.
+*(Kayıt: bu hüküm galaktik dinamikle sınırlıdır — madde 1'deki kapsam şerhi burada da geçerlidir;
+ve simetrik olarak teoriyi de bağlar: G-1'den G-13'e kadar her öngörü, çürütme koşuluyla birlikte
+ilan edilmiştir — 6.5.4.8.)*
+
+Aynı zaaf **sadakatsizlik** olarak da okunur: ΛCDM'in kendi ilk-ilke öngörüsü NFW cusp'ıdır;
+gözlem çekirdek gösterince hesap, teorinin denkleminden çıkmayan baryonik geribesleme
+modelleriyle düzeltilir. Evrenakı'nın bu kitaptaki kuralı bunun tam tersidir: denklem ne
+veriyorsa o basılır; sapma bulunduğunda formül galaksiye göre esnetilmez, sapmanın kendisi
+kayda geçer (10.10'un açık kalemleri). **Hesapta teoriye sadakat, bu programın fit kadar
+ölçülebilir bir karnesidir:** teorinin zincirinde gözleme fitlenmiş halka sayısı sıfırdır;
+"zincir" ΛCDM'inde iki halka (abundance matching, $c$–$M$) fit-kökenlidir; pratik ΛCDM'de
+zincir diye bir şey yoktur.
+
+**Dürüstlük kayıtları:**
+
+1. **Kapsam:** Bu kıyas yalnız galaktik dinamik hesabınındır. ΛCDM'in kozmolojik başarıları
+   (CMB, BAO, büyük ölçek istatistiği) bu tablonun dışındadır; teori o cephedeki kendi
+   sınavlarını 7. kısımda ve kozmoloji bölümlerinde ayrıca verir.
+2. **Zincir kurmak ΛCDM'e yapılmış bir iyiliktir:** literatür pratiği galaksi başına fit iken,
+   bu kitap ΛCDM'i sıfır-fitli bir zincirle (Moster+2013 + Dutton & Macciò 2014 + NFW) yarışa
+   soktu — yani karşılaştırmalar rakibin **en sadık** hâline karşı yapıldı ve teori yine öndedir
+   (12,48'e karşı 14,56; band içi eğime karşı band dışı).
+3. **Eşit-serbestlik uyum yarışı gizlenmez:** iki taraf da fitlendiğinde ΛCDM uyum kalitesinde
+   öndedir (kabul edilebilir fit 44/169'a karşı 22/169 — 6.5.4.7). Sadakat kıyası bu kaydı
+   silmez; onunla birlikte okunur: fit serbestliği arttıkça uyum kazanan taraf, ilk ilkeden
+   öngörü gerektiğinde kaybeden taraftır.
+4. Evrenakı'nın kendi kalibre sayısı ($a_0$'ın değeri, [S]) ve açık kalemleri (sınıf bandının
+   λ bağıntısı, galaksi-içi $-0{,}033$) bu tabloda örtülmez; fark "kusursuzluk" değil,
+   **zincirin kaynağıdır.**

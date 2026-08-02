@@ -38,7 +38,7 @@ Açığın varyansının üçte ikisi galaksiler arasıdır. Bu pay, gözlemsel 
 
 ![Gözlemsel bütçe ayrıştırması](Gorseller/k10_gozlemsel.png)
 
-Aynı ayrıştırma iki aday açıklamayı da eler: **basınç desteği** elenmiştir (öngördüğü radyal imza ters işaretli çıkar) ve **eğiklik** yetersizdir. **Sınıf bandı ise gerçektir:** uzaklık hatası onun yalnız %26'sını açıklar. Yani galaksi başına saçılmanın büyük kısmı ölçüm gürültüsüdür; sınıftan sınıfa sistematik band (0,113 dex) fiziksel bir kalem olarak kalır.
+Aynı ayrıştırma iki aday açıklamayı da eler: **basınç desteği** elenmiştir (öngördüğü radyal imza ters işaretli çıkar) ve **eğiklik** yetersizdir. **Sınıf bandı ise gerçektir:** uzaklık hatası onun yalnız %26'sını açıklar. Yani galaksi başına saçılmanın büyük kısmı ölçüm gürültüsüdür; sınıftan sınıfa sistematik band (0,115 dex) fiziksel bir kalem olarak kalır.
 
 ## 10.8.4 On dört değişken taraması — null sonuç
 

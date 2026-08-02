@@ -14,13 +14,13 @@ Bu üç sınıf, örneklemin gaz-zengin, düşük yüzey parlaklıklı ucudur: 7
 
 | Ölçüt | Değer |
 |---|---|
-| Evrenakı öngörü RMS (medyan) | 10,12 km/s |
+| Evrenakı öngörü RMS (medyan) | 9,93 km/s |
 | ΛCDM öngörü RMS (medyan) | **7,70 km/s** |
-| Dış yarı sapması | **−8,2 %** |
-| Gereken $a_0$ çarpanı | **×1,53** |
+| Dış yarı sapması | **−7,5 %** |
+| Gereken $a_0$ çarpanı | **×1,47** |
 | Öngörü yarışı | 4/16 |
 
-Sd, sınıf bandının üst ucudur: teorinin itim bütçesi bu sınıfta %8 eksik kalır ve gereken çarpan ×1,53'tür — altı sınıfın en büyüğü. Öngörü yarışında ΛCDM zinciri açık öndedir. Sınıf bandı tartışması 10.10'dadır; Sd onun bir ucunu tanımlar.
+Sd, sınıf bandının üst ucudur: teorinin itim bütçesi bu sınıfta %7–8 eksik kalır ve gereken çarpan ×1,47'dir — altı sınıfın en büyüğü. Öngörü yarışında ΛCDM zinciri açık öndedir. Sınıf bandı tartışması 10.10'dadır; Sd onun bir ucunu tanımlar.
 
 ## 10.4.2 Macellan (Sdm–Sm) — 28 galaksi, 423 nokta
 
@@ -30,13 +30,13 @@ Sd, sınıf bandının üst ucudur: teorinin itim bütçesi bu sınıfta %8 eksi
 
 | Ölçüt | Değer |
 |---|---|
-| Evrenakı öngörü RMS (medyan) | **9,89 km/s** |
+| Evrenakı öngörü RMS (medyan) | **9,93 km/s** |
 | ΛCDM öngörü RMS (medyan) | 9,97 km/s |
-| Dış yarı sapması | **−2,0 %** |
-| Gereken $a_0$ çarpanı | ×1,12 |
-| Öngörü yarışı | 12/28 |
+| Dış yarı sapması | **−1,3 %** |
+| Gereken $a_0$ çarpanı | ×1,08 |
+| Öngörü yarışı | 13/28 |
 
-Macellan sınıfında iki öngörü medyanda neredeyse eşittir; teorinin dış sapması −2,0 % ile bire yakındır. Bu sınıf, gaz kesrinin en yüksek olduğu kümelerden biridir — F4'ün kaynağının **toplam** baryonik kütle olduğu (gaz dahil; 10.6'daki gaz-kafes sınavı) burada doğrudan iş görür.
+Macellan sınıfında iki öngörü medyanda neredeyse eşittir; teorinin dış sapması −1,3 % ile bire yakındır. Bu sınıf, gaz kesrinin en yüksek olduğu kümelerden biridir — F4'ün kaynağının **toplam** baryonik kütle olduğu (gaz dahil; 10.6'daki gaz-kafes sınavı) burada doğrudan iş görür.
 
 ## 10.4.3 Düzensiz (Im) — 26 galaksi, 272 nokta
 
@@ -46,18 +46,18 @@ Macellan sınıfında iki öngörü medyanda neredeyse eşittir; teorinin dış 
 
 | Ölçüt | Değer |
 |---|---|
-| Evrenakı öngörü RMS (medyan) | **8,12 km/s** |
+| Evrenakı öngörü RMS (medyan) | **8,46 km/s** |
 | ΛCDM öngörü RMS (medyan) | 11,76 km/s |
-| Dış yarı sapması | +7,9 % |
-| Gereken $a_0$ çarpanı | ×0,65 |
+| Dış yarı sapması | +8,7 % |
+| Gereken $a_0$ çarpanı | ×0,63 |
 | Öngörü yarışı | **22/26** |
 
-**Im, teorinin en güçlü sınıfıdır: 26 galaksinin 22'sinde öngörü ΛCDM zincirinden daha yakındır.** Bu sistemlerde ΛCDM'in cusp zorunluluğu gözlenen düz çekirdeklerle çatışırken teorinin iç bölgesi doğal çekirdeklidir. Madalyonun öbür yüzü: teorinin itimi bu sınıfta %8 **fazladır** (çarpan ×0,65) — Sd ile Im, sınıf bandının iki ucunu ters yönlerde tanımlar.
+**Im, teorinin en güçlü sınıfıdır: 26 galaksinin 22'sinde öngörü ΛCDM zincirinden daha yakındır.** Bu sistemlerde ΛCDM'in cusp zorunluluğu gözlenen düz çekirdeklerle çatışırken teorinin iç bölgesi doğal çekirdeklidir. Madalyonun öbür yüzü: teorinin itimi bu sınıfta %9 **fazladır** (çarpan ×0,63) — Sd ile Im, sınıf bandının iki ucunu ters yönlerde tanımlar.
 
 ---
 
 ## 10.4.4 Cüce bloğunun okunması
 
 1. **Cüce/düşük-yüzey-parlaklığı rejimi teorinin cephesidir** — özellikle Im'de (22/26). Bu, fitli analizin de bulduğu desendir (6.5.3.3): Core-Cusp rejiminde teori tipik galakside daha iyidir.
-2. **Ama cephe tekdüze değildir:** Sd sınıfı aynı rejimde teorinin en zayıf sınıfıdır (4/16, çarpan ×1,53). Sd ile Im neredeyse aynı tipik ivmede oturur; çarpanlarının zıt yönde sapması, sınıf bandının basit bir ivme etkisi olmadığını gösterir (10.6, 10.10).
+2. **Ama cephe tekdüze değildir:** Sd sınıfı aynı rejimde teorinin en zayıf sınıfıdır (4/16, çarpan ×1,47). Sd ile Im neredeyse aynı tipik ivmede oturur; çarpanlarının zıt yönde sapması, sınıf bandının basit bir ivme etkisi olmadığını gösterir (10.6, 10.10).
 3. **Mutlak RMS'ler küçüktür** (8–10 km/s) — bu sistemlerde hızlar küçüktür ve ölçüm hata çubukları görecelidir; sınıflar arası karşılaştırma yine dış sapma ve çarpan üzerinden yapılmalıdır.

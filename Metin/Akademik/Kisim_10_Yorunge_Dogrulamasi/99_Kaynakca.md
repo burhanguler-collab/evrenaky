@@ -46,6 +46,10 @@ Bu kısımdaki bütün dönüş eğrisi verileri, gözlemsel noktalar ve baryoni
 * **Chae, K.-H.** (2023). *Breakdown of the Newton–Einstein Standard Gravity at Low Acceleration in Internal Dynamics of Wide Binary Stars.* The Astrophysical Journal, 952(2), 128. — geniş çiftlerde artış iddiası (G-10'un bir ucu).
 * **Banik, I., Pittordis, C., Sutherland, W., Famaey, B., Ibata, R., Mieske, S., & Zhao, H.** (2024). *Strong constraints on the gravitational law from Gaia DR3 wide binaries.* Monthly Notices of the Royal Astronomical Society, 527(3), 4573–4615. — geniş çiftlerde Newton lehine sınır (G-10'un öbür ucu).
 
+## Bilim felsefesi (10.2.6)
+
+* **Popper, K. R.** (1959). *The Logic of Scientific Discovery.* Hutchinson, Londra (özgün: *Logik der Forschung*, 1934). — yanlışlanabilirlik ölçütü; 10.2.6'nın sadakat/risk karşılaştırmasının felsefi çapası.
+
 ## Bağımsız-veri sınavları (SPARC dışı üç aile — 10.10.3 madde 6)
 
 * **McConnachie, A. W.** (2012). *The Observed Properties of Dwarf Galaxies in and around the Local Group.* The Astronomical Journal, 144(1), 4. — Yerel Grup cüceleri derlemesi; M-48/M-49 dSph sınavının verisi (`87_ETKIN_YASA/DSPH_SINAVI.md`).

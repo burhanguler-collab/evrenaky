@@ -14,15 +14,15 @@
 
 | Ölçüt | Değer |
 |---|---|
-| Evrenakı öngörü RMS (medyan) | **25,81 km/s** |
+| Evrenakı öngörü RMS (medyan) | **24,90 km/s** |
 | ΛCDM öngörü RMS (medyan) | 30,69 km/s |
-| Dış yarı sapması | **−2,1 %** |
-| Gereken $a_0$ çarpanı | ×1,16 |
-| Öngörü yarışı | 6/12 |
+| Dış yarı sapması | **−3,5 %** |
+| Gereken $a_0$ çarpanı | ×1,24 |
+| Öngörü yarışı | 7/12 |
 
-**Bu sınıfın ana bulgusu iki tarafın da aleyhinedir: erken spiralleri hiçbir model öngöremiyor.** Öngörülerin RMS'i 26–31 km/s — ölçüm hata çubuklarının çok üstünde; fitlendiğinde iki model de 14–15 km/s'ye iner. Yani erken spiral dönüş eğrileri, her iki çatıda da ancak galaksi başına ayar yapılarak üretilebilmektedir; "teori/ΛCDM erken spirali öngörüyor" cümlesi kurulamaz.
+**Bu sınıfın ana bulgusu iki tarafın da aleyhinedir: erken spiralleri hiçbir model öngöremiyor.** Öngörülerin RMS'i 25–31 km/s — ölçüm hata çubuklarının çok üstünde; fitlendiğinde iki model de 14–15 km/s'ye iner. Yani erken spiral dönüş eğrileri, her iki çatıda da ancak galaksi başına ayar yapılarak üretilebilmektedir; "teori/ΛCDM erken spirali öngörüyor" cümlesi kurulamaz. Yine de fitli MOND eğrisinin uyumu bu kütleli sınıfta geride kalmıştır (24,89'a karşı 27,08 — 10.2.2).
 
-İkinci bulgu, iki öngörünün **ters yönde** hata yapmasıdır: teorinin itim bütçesi bu sınıfta hafifçe eksik kalırken (dış sapma −2,1 %), ΛCDM zinciri sistematik olarak fazla halo verir — abundance matching, bu ışıma değerlerine gereğinden büyük $M_{200}$ atar (panellerde UGC02953, UGC09133, UGC05253'te mor eğrinin dışa fırlaması budur).
+İkinci bulgu, iki öngörünün **ters yönde** hata yapmasıdır: teorinin itim bütçesi bu sınıfta hafifçe eksik kalırken (dış sapma −3,5 %), ΛCDM zinciri sistematik olarak fazla halo verir — abundance matching, bu ışıma değerlerine gereğinden büyük $M_{200}$ atar (panellerde UGC02953, UGC09133, UGC05253'te mor eğrinin dışa fırlaması budur).
 
 ## 10.3.2 Orta Spiral (Sb–Sbc) — 29 galaksi, 640 nokta
 
@@ -32,13 +32,13 @@
 
 | Ölçüt | Değer |
 |---|---|
-| Evrenakı öngörü RMS (medyan) | **20,76 km/s** |
+| Evrenakı öngörü RMS (medyan) | **21,21 km/s** |
 | ΛCDM öngörü RMS (medyan) | 33,36 km/s |
-| Dış yarı sapması | **+1,3 %** |
-| Gereken $a_0$ çarpanı | ×0,90 |
-| Öngörü yarışı | **18/29** |
+| Dış yarı sapması | **+1,2 %** |
+| Gereken $a_0$ çarpanı | ×0,94 |
+| Öngörü yarışı | **22/29** |
 
-Orta spiraller, kütleli uçta yeni Kafes Kilitlenmeli Gradyan modelinin mutlak üstünlüğünü kanıtladığı sınıftır. Evrenakı'nın hata oranı 20,76 km/s seviyesine inerek Karanlık Madde teorisini (33,36 km/s) sahadan silmiş ve öngörü yarışını açık ara (18/29) önde kapatmıştır. Yeni formülasyonla birlikte dış sapma yüzde bir mertebesindedir (+1,3 %) ve gereken çarpan bire yakındır (×0,90). Kütleli disklerin akışkan dinamiğine geçişi, teorinin bu rejimdeki gücünü tam anlamıyla açığa çıkarmıştır.
+Orta spiraller, kütleli uçta pencereli resmî denklemin (Kafes Kilitlenmesi — M-47) üstünlüğünü en net gösterdiği sınıftır: sıfır serbest parametreyle 21,21 km/s'ye karşı ΛCDM zincirinin 33,36'sı, ve öngörü yarışında açık fark (22/29). Dış sapma +1,2 % ve gereken çarpan ×0,94 — itim bütçesi bire oturmuştur. Dahası bu sınıfta **fitli MOND eğrisinin uyumu dahi geçilmiştir** (21,19'a karşı 23,45 — 10.2.2): kütleli disklerde parametresiz Kafes Kilitlenmesi, MOND'un veriye fitlenmiş geçiş fonksiyonundan daha isabetlidir.
 
 ## 10.3.3 Geç Spiral (Sc–Scd) — 30 galaksi, 730 nokta
 
@@ -48,27 +48,18 @@ Orta spiraller, kütleli uçta yeni Kafes Kilitlenmeli Gradyan modelinin mutlak 
 
 | Ölçüt | Değer |
 |---|---|
-| Evrenakı öngörü RMS (medyan) | 14,55 km/s |
+| Evrenakı öngörü RMS (medyan) | 14,77 km/s |
 | ΛCDM öngörü RMS (medyan) | **13,39 km/s** |
-| Dış yarı sapması | **−1,3 %** |
-| Gereken $a_0$ çarpanı | ×1,08 |
-| Öngörü yarışı | 17/30 |
+| Dış yarı sapması | **−0,6 %** |
+| Gereken $a_0$ çarpanı | ×1,04 |
+| Öngörü yarışı | 19/30 |
 
-Geç spirallerde iki model başa baş bir mücadele sergiler: Kafes Kilitlenmeli Gradyan modeline geçişle birlikte Evrenakı'nın hatası 14,55 km/s'ye inerek ΛCDM (13,39 km/s) ile arasındaki farkı neredeyse kapatmıştır. Nitekim galaksi sayısında teori (17/30) öndedir. Teorinin dış sapması ve çarpanı bire tam oturur (−1,3 %, ×1,08) — yani itim bütçesi bu sınıfta bütünüyle doğrudur; kalan ufak RMS farkı eğrilerin iç/orta bölge biçiminden gelir.
+Geç spirallerde iki model başa baştır: medyan RMS'te ΛCDM zinciri küçük bir farkla önde (13,39'a karşı 14,77), galaksi başına öngörü yarışında ise teori önde (19/30). Teorinin dış sapması ve çarpanı bire tam oturur (−0,6 %, ×1,04) — yani itim bütçesi bu sınıfta bütünüyle doğrudur; kalan ufak RMS farkı eğrilerin iç/orta bölge biçiminden gelir.
 
 ---
 
 ## 10.3.4 Spiral bloğunun okunması
 
-1. **İtim bütçesi üç sınıfta da yüzde birkaç içindedir** (−2,1 / +1,3 / −1,3). Nihai gradyan denkleminin dış bölge ölçeği spirallerde bütünüyle doğrudur; gereken çarpanlar (×0,90–1,16) bire oturur.
+1. **İtim bütçesi üç sınıfta da yüzde birkaç içindedir** (−3,5 / +1,2 / −0,6). Pencereli resmî denklemin dış bölge ölçeği spirallerde bütünüyle doğrudur; gereken çarpanlar (×0,94–1,24) bire oturur.
 2. **Erken spiral, iki çatının da öngöremediği sınıftır** ve programın bilinen en zorlu köşesidir. Kovan baskın sistemlerde hem $\Upsilon_*$ hem kütle dağılımı belirsizliği en yüksektir.
-3. **Uyum kalitesi yarışı yeni modelle Evrenakı'ya dönmüştür:** Sa–Sab ve Sb–Sbc'de Evrenakı önde (özellikle Orta Spirallerde açık ara üstün), Sc–Scd'de ise ΛCDM minör bir farkla öndedir. Blok hâlinde tek bir hüküm vermek bu deseni gizlerdi — programın sınıf sınıf kuralının gerekçesi budur.
-
----
-
-## 10.3.5 İlgili Literatür Kaynakları
-
-Galaktik kinematik, radyal ivme ilişkisi (RAR) ve Dış Alan Etkisi (EFE) bağlamındaki kritik parametre sınırları ve bağımsız gözlem verileri için temel alınan referanslar:
-* Chae, K.-H. (2021). *ApJ* 921, 104
-* Chae, K.-H. (2021). *arXiv*:2109.04745
-* Forbes, J. C. et al. (2017). *AJ* 153, 114
+3. **Öngörü yarışı sınıfa göre değişir:** Sa–Sab ve Sb–Sbc'de teori medyanda açık önde (kütleli uçta fitli MOND dahi geçilmiştir), Sc–Scd'de ise ΛCDM zinciri minör bir farkla öndedir. Blok hâlinde tek bir hüküm vermek bu deseni gizlerdi — programın sınıf sınıf kuralının gerekçesi budur.

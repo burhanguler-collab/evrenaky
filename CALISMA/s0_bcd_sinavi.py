@@ -50,8 +50,8 @@ G = 4.300917e-6
 C_SI = 2.99792458e8
 ACC = 1e6 / 3.0856776e19
 A0_ESKI = (C_SI * (70e3 / 3.0857e22)) / ACC / 16.1
-# NIHAI KURULUM (86_NIHAI): yerel l_omega + a_0 x1,75 — SONUC.csv de nihai
-A0 = 1.75 * A0_ESKI
+# PENCERELI RESMI KALIBRASYON (M-47): a_0 = 1,75 x 1,038 x cH0/16,1 = 7,67e-11 m/s^2
+A0 = 1.75 * 1.038 * A0_ESKI
 RB, UPS = 1.4, 0.50
 PAY_ESIK = 0.25
 mu = lambda x: np.log(1 + x) - x / (1 + x)
@@ -63,11 +63,12 @@ def v_nfw2(R, M200, c200):
     return G * M200 / R * mu(R * c200 / r200) / mu(c200)
 
 
-def carpan(vb2, f4, vo):
+def carpan(vb2, amp, gkap, vo):
     """mean((v_ong - v_olc)/v_olc) = 0 kokunu ikiye bolmeyle cozer.
-    sinif_carpan_duzeltme.py ile AYNI tanim (oranlarin ortalamasi)."""
-    fk = lambda k: float(np.mean((np.sqrt(np.maximum(vb2 + np.sqrt(k) * f4, 1e-9))
-                                  - vo) / vo))
+    sinif_carpan_duzeltme.py ile AYNI tanim; a_0 -> k a_0 alinirken pencere de
+    yeniden olceklenir: W(k) = min(1, k A0/g_kaps) — resmi (10.2.4) konvansiyon."""
+    fk = lambda k: float(np.mean((np.sqrt(np.maximum(
+        vb2 + np.sqrt(k) * amp * np.minimum(1.0, k * A0 / gkap), 1e-9)) - vo) / vo))
     a, b = 1e-4, 1e4
     if fk(a) > 0 or fk(b) < 0:
         return np.nan
@@ -105,7 +106,8 @@ for ad in SEC:
     Mgas = np.maximum(R * np.sign(Vg) * Vg ** 2 / G, 0.0)
     Mkaps = UPS * L(SBd) + RB * UPS * L(SBb) + Mgas
     lom = np.sqrt(G * max(Mkaps[-1], 1e-6) / A0)          # rapor kolonu
-    F4 = np.sqrt(A0 * G * np.maximum(Mkaps, 1e-9))        # NIHAI: yerel
+    gkap = G * np.maximum(Mkaps, 1e-9) / R ** 2
+    F4 = np.sqrt(A0 * G * np.maximum(Mkaps, 1e-9)) * np.minimum(1.0, A0 / gkap)  # M-47 pencereli
     v_evr = np.sqrt(np.maximum(Vbar2, 1e-9) + F4)
     s = SON[ad]
     v_lcd = np.sqrt(np.maximum(Vbar2, 1e-9) +
@@ -118,7 +120,7 @@ for ad in SEC:
         ad=ad, tip=GER[ad]['Tip'], N=len(R), Q=int(GER[ad]['Q']),
         gerekce=GER[ad]['Gerekce'], R=R, Vo=Vo, eV=eV,
         vbar=np.sqrt(np.maximum(Vbar2, 0)), v_evr=v_evr, v_lcd=v_lcd,
-        k=carpan(Vbar2[m], F4[m], Vo[m]),
+        k=carpan(Vbar2[m], np.sqrt(A0 * G * np.maximum(Mkaps, 1e-9))[m], gkap[m], Vo[m]),
         pay=float(np.median(F4[m] / np.maximum(Vbar2[m] + F4[m], 1e-9))),
         gb_dis=Vbar2[-1] / R[-1] * ACC,
         gb_med=float(np.median(Vbar2 / R)) * ACC,
