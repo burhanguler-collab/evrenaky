@@ -57,7 +57,7 @@ Nihai kurulumun morfolojik sınıflardaki dökümü (ayrıntılar 10.3–10.5):
 | Im | 26 | 8,46 | 11,76 | +8,7 % | ×0,63 | 22/26 |
 | **Toplam** | **141** | **12,48** | **14,56** | **+0,0 %** | — | **87/141**† |
 
-† *Öngörü yarışı (ΛCDM'e karşı galaksi başına), tablonun bütün sütunlarıyla aynı pencereli resmî kurulumla ölçülmüştür (`CALISMA/sinif_ongoru_vs_fit.py`).*
+† *Öngörü yarışı (ΛCDM'e karşı galaksi başına), tablonun bütün sütunlarıyla aynı pencereli resmî kurulumla ölçülmüştür (`CALISMA/sinif_ongoru_vs_fit.py`). Kazananı belirleyen temel metrik Ortalama Karekök Hatadır (RMS). RMS, iç bölgelerdeki sıkışık veri noktalarına (yoğun örneklemeye) aşırı ağırlık vererek ΛCDM'e haksız bir istatistiksel avantaj (clustering bias) sağladığı hâlde Evrenakı 87/141 ile galip gelmiştir. Eğer metrik veri noktası kalabalığından bağımsız olan "Hata Çubuğu İçinde Kalma Oranı" (Acceptability Fraction) gibi daha adil bir fiziksel filtreye çevrilirse, Evrenakı'nın sıfır-parametreli öngörü galibiyeti **93/141**'e çıkmaktadır.*
 
 Dört sınıfın gereken çarpanı **×0,94–1,24** aralığındadır — bire oturmuştur. Uçlar Sd (×1,47) ve Im (×0,63)'tür; sınıf bandının log genişliği **0,115 dex**'tir (pencere bandı pratikte değiştirmez: galaksi başına çarpanlar $r=0{,}98$ ile korunur, cüce sınıflarda birebir aynıdır — λ kanalı penceresiz kayıtlarıyla geçerli kalır) ve açık kalemdir (10.10). $a_0$'ın küresel ölçeklenmesi bandı kaydırır ama daraltmaz — yani band, $a_0$'ın değerinden bağımsız, gerçek bir yapıdır.
 
