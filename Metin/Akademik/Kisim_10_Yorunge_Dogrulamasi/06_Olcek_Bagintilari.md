@@ -29,7 +29,7 @@ Panel, bu sınavın bütün duyarlılıklarını düğmelere bağlar ve iki öl�
 
 ![BTFR sınavı — ölçüm kaydı](Gorseller/k10_btfr.png)
 
-**Gaz-kafes denetimi.** "Gazda kafes yapısı yok, F4'e katkısı az olmalı" hipotezi ayrıca sınanmıştır (`97_BTFR/GAZ_KAFES.md`): BTFR artığı ile gaz kesri arasında korelasyon **sıfırdır** (Spearman $+0{,}01$; gaz oranı 47 kat değişirken artık sabit). Doğru okuma teorinin lehinedir: **F4'ün kaynağı, bileşiminden bağımsız olarak toplam baryonik kütledir** — yıldız da gaz da aynı nükleon debisini taşır.
+**Gaz-kafes denetimi.** "Gazda kafes yapısı yok, F4'e katkısı az olmalı" hipotezi ayrıca sınanmıştır: BTFR artığı ile gaz kesri arasında korelasyon **sıfırdır** (Spearman $+0{,}01$; gaz oranı 47 kat değişirken artık sabit). Doğru okuma teorinin lehinedir: **F4'ün kaynağı, bileşiminden bağımsız olarak toplam baryonik kütledir** — yıldız da gaz da aynı nükleon debisini taşır.
 
 ![Gaz-kafes denetimi](Gorseller/k10_gaz_kafes.png)
 

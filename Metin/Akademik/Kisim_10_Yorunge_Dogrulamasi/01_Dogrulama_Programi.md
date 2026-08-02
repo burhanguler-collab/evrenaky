@@ -92,15 +92,15 @@ Dokuz animasyonun tamamı (ayrı sayfada açmak için tıklayın):
 
 ### 10.1.7 Bu kısmın haritası
 
-| Bölüm | İçerik | Çalışma kaydı |
-|---|---|---|
-| 10.2 | Nihai kurulum: tek denklem ve toplu defter | `86_NIHAI/` |
-| 10.3 | Spiraller (Sa–Scd): üç sınıf, paneller | `01_… 02_… 03_…` |
-| 10.4 | Cüceler ve düzensizler (Sd–Im): üç sınıf | `04_… 05_… 06_…` |
-| 10.5 | Denetim kümesi ve uçlar (karmaşık, S0, BCD) | `99_KARMASIK/`, `07_S0_BCD/` |
-| 10.6 | Ölçek bağıntıları: BTFR, radyal ivme, erken tipler | `97_BTFR/`, `95_RAR/`, `96_ETG/` |
-| 10.7 | Türetim zinciri: $M_{tut}$, mikro $\ell_\omega$, $a_0$'ın biçimi, $\mathcal{G}$'nin yerelliği, tutarlılık kümesi ($N_c$, $\lambda$, σ sınavı) | `92_M_TUT/`, `94_YEREL_LOMEGA/`, `91_A0_KOPRU/`, `93_G_YEREL/`, `85_TUTARLILIK_YASASI/` |
-| 10.8 | Eleme zinciri: açığın anatomisi | `89_KAFES/`, `88_TARAMA/` |
-| 10.9 | SPARC dışı sınav: yüksek kırmızıya kayma | `90_YUKSEK_Z/` |
-| 10.10 | Kod doğrulaması, açık kalemler ve sonuç | `98_KOD_DOGRULAMA/` |
-| 10.11 | Kaynakça | `KAYNAKCA.md` |
+| Bölüm | İçerik |
+|---|---|
+| 10.2 | Nihai kurulum: tek denklem ve toplu defter |
+| 10.3 | Spiraller (Sa–Scd): üç sınıf, paneller |
+| 10.4 | Cüceler ve düzensizler (Sd–Im): üç sınıf |
+| 10.5 | Denetim kümesi ve uçlar (karmaşık, S0, BCD) |
+| 10.6 | Ölçek bağıntıları: BTFR, radyal ivme, erken tipler |
+| 10.7 | Türetim zinciri: $M_{tut}$, mikro $\ell_\omega$, $a_0$'ın biçimi, $\mathcal{G}$'nin yerelliği, tutarlılık kümesi ($N_c$, $\lambda$, σ sınavı) |
+| 10.8 | Eleme zinciri: açığın anatomisi |
+| 10.9 | SPARC dışı sınav: yüksek kırmızıya kayma |
+| 10.10 | Kod doğrulaması, açık kalemler ve sonuç |
+| 10.11 | Kaynakça |

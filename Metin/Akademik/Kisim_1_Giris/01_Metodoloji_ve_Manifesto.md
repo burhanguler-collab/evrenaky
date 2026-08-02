@@ -34,3 +34,7 @@ Bu kuram, evrende gözlemlenen pek çok olguyu — ışığın kıvrılmasından
 Kuramımız, dördüncü boyuttaki bu kök motorun *neden* dönmeye başladığıyla değil; durmaksızın döndüğü için Evrenakı okyanusunda hangi devasa hidrodinamik süreçleri tetiklediğiyle ve evrenin fiziksel işleyişini nasıl şekillendirdiğiyle ilgilenir. Evrenakı ve 4 Boyutlu Dönüş — biri yoksa diğeri sessizliğe gömülür; bu iki kavramdan herhangi birinin eksikliği, elinizdeki çalışmanın sayfalarının sonsuza dek boş kalması anlamına gelirdi.
 
 Hedefimiz, bu kitabın son sayfasına ulaştığınızda zihninizde evrenin nasıl işlediğine dair mekanik bir boşluk kalmamasıdır; bu hedefe ne ölçüde ulaştığımızın yargıcı okuyucudur. Ancak her durumda geriye kalacak muamma şudur: *Evrenakı denizini durmaksızın çırpan bu dördüncü boyuttaki kusursuz dönüşün asıl kaynağı nedir?*
+
+## 1.1.4 Yapay Zekâ Katkı Beyanı
+
+Bu kitabın matematiksel formülasyonlarında ve sayısal sınavların tasarımı ile koşumunda yapay zekâ modellerinden (Anthropic Claude ailesi, Google Gemini) faydalanılmış; modeller ayrıca editoryal ve akademik katkı sağlamıştır. Kısım 9'daki hakem değerlendirmeleri de bu modellere yaptırılmıştır. **Teori — postülatları, kavramları ve fiziksel iddialarıyla — bütünüyle yazarın eseridir;** bütün metinler yazarın denetiminden geçer, son biçimine yazarın eliyle kavuşur; editoryal sorumluluk yazara aittir. Yapay zekâ çıktıları insan akran denetiminin yerine geçmez.

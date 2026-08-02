@@ -80,7 +80,7 @@ $$[\alpha] = \frac{[\mathrm{kg\,m^{-3}s^{-1}}]\cdot[\mathrm{m^3 s^{-1}}]}{[\math
 ### Açık Uçlar
 
 - $q_n$'nin $\omega_2$ frekansı ve nükleon deplasman hacminden hesabı → $\alpha$ tamamen türetilmiş olur. *(Aday kapanış M-45'tedir: $q_n=4\pi r_n^2\sqrt2c\sqrt{m_p/m_e}=1{,}62\times10^{-19}$ m³/s.)*
-- ~~$C$ ile M-1'in hâl katsayısı $A$ arasındaki ilişki~~ → **kimlik kuruldu** *(hesap: `91_A0_KOPRU/C_HAL_KOPRUSU.md`)*: $A=P_0/\rho_0=c^2$ (dalga kanalının sertliği) ve iki kanalın empedans oranı kapalı biçimde $\dfrac{C\,\ell_\omega}{\rho_0c}=2\sqrt2\,\dfrac{\mathcal{G}m_n/c^2}{r_n}=4{,}2\times10^{-39}$'dur — kütle-itimin zayıflık hiyerarşisi tek boyutsuz sayıda. $\chi$-yayılım terimi **M-46'da yazılmıştır** — profil ve kütle-itim artık eylemden çıkar, $C$'nin kimliği hâl denkleminin ikinci katsayısıdır ($-(\partial P/\partial\chi)_\rho$); kalan iş yalnız $C$'nin **değerinin** mikro türetimidir ($\mathcal{G}$'nin — dolayısıyla yerel ölçülen $G$ değerinin — türetimine eşdeğer). *(Tuzak kaydı: $C\approx3{,}8\rho_nH_0$ görünümü $a_0\sim cH_0$ rastlantısının aynısıdır; yüksek-$z$ sınavı kozmik okumayı dışlamıştır — $C$, $H_0$'a bağlanamaz.)*
+- ~~$C$ ile M-1'in hâl katsayısı $A$ arasındaki ilişki~~ → **kimlik kuruldu**: $A=P_0/\rho_0=c^2$ (dalga kanalının sertliği) ve iki kanalın empedans oranı kapalı biçimde $\dfrac{C\,\ell_\omega}{\rho_0c}=2\sqrt2\,\dfrac{\mathcal{G}m_n/c^2}{r_n}=4{,}2\times10^{-39}$'dur — kütle-itimin zayıflık hiyerarşisi tek boyutsuz sayıda. $\chi$-yayılım terimi **M-46'da yazılmıştır** — profil ve kütle-itim artık eylemden çıkar, $C$'nin kimliği hâl denkleminin ikinci katsayısıdır ($-(\partial P/\partial\chi)_\rho$); kalan iş yalnız $C$'nin **değerinin** mikro türetimidir ($\mathcal{G}$'nin — dolayısıyla yerel ölçülen $G$ değerinin — türetimine eşdeğer). *(Tuzak kaydı: $C\approx3{,}8\rho_nH_0$ görünümü $a_0\sim cH_0$ rastlantısının aynısıdır; yüksek-$z$ sınavı kozmik okumayı dışlamıştır — $C$, $H_0$'a bağlanamaz.)*
 
 ---
 
@@ -999,14 +999,14 @@ Sönüm zamanı $\tau\equiv v/|\dot v|$ iki yazımda farklı ölçeklenir:
 
 ## M-45 · İki Kolun Güç Eşbölüşümü: $q_n/\gamma_n$ Oranı ve $a_0$'ın Aday Kapanışı · **[T (yapı) / T-aday (eşbölüşüm)]**
 
-**Kullanıldığı bölümler:** 6.5.4.3 (Adım 6–7), 6.5.4.5 (a₀'ın değeri), Kısım X 10.7. Bağlı katalog: M-15/M-39 (kafes=atom), M-35 (açık ucu), Ek A.2 ($\sqrt2c$). Hesap: `CALISMA/SINIF_CALISMASI/91_A0_KOPRU/YOL1_KAPANIS.md`.
+**Kullanıldığı bölümler:** 6.5.4.3 (Adım 6–7), 6.5.4.5 (a₀'ın değeri), Kısım X 10.7. Bağlı katalog: M-15/M-39 (kafes=atom), M-35 (açık ucu), Ek A.2 ($\sqrt2c$).
 
 M-35'in açık ucu şuydu: *"$q_n$'nin $\omega_2$ frekansı ve nükleon deplasman hacminden hesabı → $\alpha$ tamamen türetilmiş olur."* Bu türetim o ucu, iki kolun oranı üzerinden **aday** düzeyinde kapatır.
 
 ### Varsayımlar
 
 1. **Tek kaynak, iki izdüşüm** (H.0 köken haritası): $\gamma_n$ ($\omega_1$, 3B-içi dönüş) ve $q_n$ ($\omega_2$, W-eksenli pulsasyon), nükleonun tek 4B çift dönüşünün iki düzlem izdüşümüdür.
-2. **İzoklinik eş-güç — türetilmiştir** *(tam akıl yürütme ve hesap: `91_A0_KOPRU/ESGUC_ISPAT.md`)*: **(2a)** Ek A.2'nin $\sqrt2c$'si izoklinik kilidin doğrudan ifadesidir — kararlılık her iki değişmez düzlemi ayrı ayrı kavrama sınırında ($c$) doyurur, $\sqrt{c^2+c^2}=\sqrt2c$; iki kanal **tek ortak frekansta** sürülür ve çekirdeğin düzlem enerjileri eşit kilitlenir. **(2b)** Dejenere iki mod, ortak Zerre banyosuyla sürekli alışverişte olduğundan kararlı hâlde mod başına ortalama enerji eşitlenir (eşbölüşüm; değiş-tokuş/vuru yoluyla da aynı sonuç). **(2c)** Eşbölüşümün geçerlilik koşulu hesaplanmış ve kapanmıştır: kanal enerjisi $E=m_pc^2$, sızıntı gücü (alan-kurma işi, üst sınır) $\Delta P\cdot q_n=5{,}8\times10^{-24}$ W → boşalma süresi $\sim0{,}8$ milyon yıl; banyo teması dönüş periyodu ölçeğindedir ($10^{-23}$ s) — $t_{term}/t_{sızıntı}\lesssim10^{-30}$, **36 mertebe marj.** Aynı hesap bir düzeltme de getirir: ışıma düzeltmesi $10^{-30}$ mertebesindedir, dolayısıyla ölçülen %1'lik fark (42,4'e karşı 42,85) fiziksel bir açık değil, medyanın kendi ölçüm hatasının (%3,5) içidir — **oran, ölçüm hassasiyeti neye izin veriyorsa o kadar tam $\sqrt{m_p/m_e}$ olmalıdır** (keskinleşen öngörü; G-9).
+2. **İzoklinik eş-güç — türetilmiştir**: **(2a)** Ek A.2'nin $\sqrt2c$'si izoklinik kilidin doğrudan ifadesidir — kararlılık her iki değişmez düzlemi ayrı ayrı kavrama sınırında ($c$) doyurur, $\sqrt{c^2+c^2}=\sqrt2c$; iki kanal **tek ortak frekansta** sürülür ve çekirdeğin düzlem enerjileri eşit kilitlenir. **(2b)** Dejenere iki mod, ortak Zerre banyosuyla sürekli alışverişte olduğundan kararlı hâlde mod başına ortalama enerji eşitlenir (eşbölüşüm; değiş-tokuş/vuru yoluyla da aynı sonuç). **(2c)** Eşbölüşümün geçerlilik koşulu hesaplanmış ve kapanmıştır: kanal enerjisi $E=m_pc^2$, sızıntı gücü (alan-kurma işi, üst sınır) $\Delta P\cdot q_n=5{,}8\times10^{-24}$ W → boşalma süresi $\sim0{,}8$ milyon yıl; banyo teması dönüş periyodu ölçeğindedir ($10^{-23}$ s) — $t_{term}/t_{sızıntı}\lesssim10^{-30}$, **36 mertebe marj.** Aynı hesap bir düzeltme de getirir: ışıma düzeltmesi $10^{-30}$ mertebesindedir, dolayısıyla ölçülen %1'lik fark (42,4'e karşı 42,85) fiziksel bir açık değil, medyanın kendi ölçüm hatasının (%3,5) içidir — **oran, ölçüm hassasiyeti neye izin veriyorsa o kadar tam $\sqrt{m_p/m_e}$ olmalıdır** (keskinleşen öngörü; G-9).
 3. **Taşıyıcı ayrımı:** dolanım kolunun süredurumunu nükleon özü taşır ($m_p$, yarıçap $r_n$); pulsasyon kolu **deplasman kafesinin** nefesidir ve kafes atomun tamamıdır (M-15/M-39) — kafesin oynak süredurumunu zarfın en hafif bileşeni, elektron kütlesi ($m_e$) taşır. Tür-ayrımlı genel hâl $u_r/v_t=\sqrt{Am_p/(Zm_e)}$'dir (H: 42,85 · He/metaller: 60,6); nükleonların yarıdan fazlası hidrojen olduğundan ($X>0{,}5$) **medyan her ortamda H değerine kilitlenir** — $\ell_\omega$ medyanının bileşimden etkilenmemesini (kütleyle korelasyon $+0{,}03$) bu kilit açıklar ve tür-ayrımlı ikinci bir mod ($\ell\approx51$ fm) öngörür.
 4. **Kürsel kaynak yazımı:** $q_n=4\pi r_n^2 u_r$, $\gamma_n=2\pi r_n v_t$ ($u_r$: radyal pulsasyon hızı, $v_t$: teğetsel dolanım hızı).
 
@@ -1031,14 +1031,14 @@ a_0=\frac{\mathcal{G}\,m_n\,m_e}{m_p\,r_n^{2}}\;}$$
 
 ### Geçerlilik Sınırı
 
-- **Türetimin iç zinciri tamamlanmıştır** (izoklinik kilit + banyo eşbölüşümü + 36 mertebelik marj hesabı); kalan yapısal vekiller: $m_e$ ataması kafes-atomu okumasına bağlıdır, $r_n$ olarak proton yük yarıçapı vekildir. Başka-yere-bakma hesabı dar aday uzayında ~$2\sigma$, geniş uzayda %40 verir (`YOL1_KAPANIS.md` md. 3) — bu yüzden **bağımsız $\ell_\omega$ ölçümü ve hakem denetimi gelene dek** Ek C'de $a_0$'ın rozeti **[S] kalır**, buradaki kapanış **[T-aday]** olarak kayıtlıdır.
+- **Türetimin iç zinciri tamamlanmıştır** (izoklinik kilit + banyo eşbölüşümü + 36 mertebelik marj hesabı); kalan yapısal vekiller: $m_e$ ataması kafes-atomu okumasına bağlıdır, $r_n$ olarak proton yük yarıçapı vekildir. Başka-yere-bakma hesabı dar aday uzayında ~$2\sigma$, geniş uzayda %40 verir — bu yüzden **bağımsız $\ell_\omega$ ölçümü ve hakem denetimi gelene dek** Ek C'de $a_0$'ın rozeti **[S] kalır**, buradaki kapanış **[T-aday]** olarak kayıtlıdır.
 - Yanlışlanabilir sonuçları G-9'dadır: bağımsız $\ell_\omega$ ölçümü 36,0 fm'e yakınsamalı; oran $r_p$ revizyonlarını izlemeli; $a_0^{etkin}$ hiçbir ortamda $X\cdot a_0^{M45}\approx6{,}3\times10^{-11}$ tabanının altına inmemeli.
 
 ### Açık Uçlar
 
 - **Mutlak çapa seçimi:** $v_t$ bileşke duvar hızı mı ($\sqrt2c$ — burada kullanılan) düzlem-başına hız mı ($c$)? Oranı ve $a_0$'ı etkilemez; $(\gamma_n,q_n,C)$ mutlakları ortak $\sqrt2$ çarpanıyla oynar. Ek C satır 8'in ekvator-hızı bütçesiyle birlikte çözülmelidir.
 - **Banyo temas kesrinin ($\eta$) ilk-ilkelerden hesabı:** eşbölüşüm koşulu $\eta$'nın her fiziksel değerinde sağlanır (2c'nin 36 mertebelik marjı); yine de $\eta$'nın kendisi Zerre-çarpışma modelinden hesaplanırsa marj bir ölçüme döner.
-- ~~$C=2{,}35$'in M-1'in hâl katsayısı $A$ ile ilişkisi~~ → **kimlik kuruldu** (`91_A0_KOPRU/C_HAL_KOPRUSU.md`; M-35 Açık Uçlar): $C\ell_\omega/\rho_0c=2\sqrt2(\mathcal{G}m_n/c^2)/r_n=4{,}2\times10^{-39}$; $\chi$-yayılım terimi M-46'da yazıldı (kütle-itim eylemden çıkar; $C=-(\partial P/\partial\chi)_\rho$); kalan: $C$'nin değerinin mikro türetimi — yapılırsa $\mathcal{G}$ (dolayısıyla yerel ölçülen $G$ değeri) türetilmiş olur.
+- ~~$C=2{,}35$'in M-1'in hâl katsayısı $A$ ile ilişkisi~~ → **kimlik kuruldu** (M-35 Açık Uçlar): $C\ell_\omega/\rho_0c=2\sqrt2(\mathcal{G}m_n/c^2)/r_n=4{,}2\times10^{-39}$; $\chi$-yayılım terimi M-46'da yazıldı (kütle-itim eylemden çıkar; $C=-(\partial P/\partial\chi)_\rho$); kalan: $C$'nin değerinin mikro türetimi — yapılırsa $\mathcal{G}$ (dolayısıyla yerel ölçülen $G$ değeri) türetilmiş olur.
 - $u_r$ taşınımının M-4/M-43 eşik yapısıyla tam tutarlılık hesabı; tür-ayrımlı ikinci modun ($\ell\approx51$ fm) galaksi-içi ince yapıda aranması; kalıcı bir yüzde-düzeyi oran sapması bulunursa $m_e$-etkin süredurumu / $r_n$ vekili hesabı.
 
 ---
@@ -1063,7 +1063,7 @@ $$\boxed{\;v_{F4}^2=\sqrt{\mathcal{G}M_{kaps}\,a_0}\cdot W,\qquad W=\min\!\Big(1
 
 İvme dilinde etkin aile parçalıdır: $\nu(y)=1+y^{-1/2}$ ($y\leq1$), $\nu(y)=1+y^{-3/2}$ ($y>1$) — yüksek ivmede türetilmiş, daha dik sönüm. **Kanal-arası okuma:** $g_{kaps}>a_0$ bölgesi kolonun *içidir*; silindirik uzak-alan yasası orada kurulmamıştır.
 
-**Sayısal sınavlar** (141 galaksi, adil kalibrasyon; `CALISMA/SINIF_CALISMASI/87_ETKIN_YASA/PENCERE_TURETIMI.md` + `SONUC_PENCERE.csv`): radyal ivme biçim sürüklenmesi $-0{,}043\to-0{,}002$ (rotmod) ve $+0{,}051\to+0{,}0002$ (Lelli+2017, 2693 nokta); galaksi-içi eğim $-0{,}074\to-0{,}033$; medyan RMS $12{,}76\to12{,}48$; yüksek-$z$ $f_{DM}$ açığı kapanır (5/6 bant içi); sınıf bandı ve BTFR dokunulmaz. Üs-1 kontrolü daha kötüdür — biçim veriden ayarlanmamıştır.
+**Sayısal sınavlar** (141 galaksi, adil kalibrasyon): radyal ivme biçim sürüklenmesi $-0{,}043\to-0{,}002$ (rotmod) ve $+0{,}051\to+0{,}0002$ (Lelli+2017, 2693 nokta); galaksi-içi eğim $-0{,}074\to-0{,}033$; medyan RMS $12{,}76\to12{,}48$; yüksek-$z$ $f_{DM}$ açığı kapanır (5/6 bant içi); sınıf bandı ve BTFR dokunulmaz. Üs-1 kontrolü daha kötüdür — biçim veriden ayarlanmamıştır.
 
 ### Geçerlilik Sınırı
 - Koherent disk taşıyıcısı olan sistemler (galaktik diskler); basınç-destekli sistemlere uzanmaz (6.5.4.9).
@@ -1095,7 +1095,7 @@ $$\boxed{\;v_{F4}^2=\sqrt{\mathcal{G}M_{kaps}\,a_0}\cdot W,\qquad W=\min\!\Big(1
 ### Sonuç
 $$\boxed{\;a_r^{küresel}=\frac{\sqrt{\mathcal{G}M_{kaps}a_0}}{r}\;(\text{diskle aynı});\qquad v_c=\sqrt2\,\sigma;\qquad \sigma^4=\frac{\mathcal{G}M_{bar}a_0}{4}\;}$$
 
-Mertebe denetimleri (fit yok): Fornax $M_*\sim10^7$ için $v_c=17{,}8$ km/s — kitabın kendi $\sim18$ km/s kaydı (6.5.3); $L^*$ eliptik tabanı $\sigma\approx150$, gözlenen merkez 200–250 — merkez Newton rejimi tabana ekler, yön doğru. Kovanın F4'ü birinci mertebede TAM beslemesi bu lemmanın sonucudur (`87_ETKIN_YASA/KAYNAK_AYRIMI.md` bulgularını açıklar); 96_ETG'nin dış-nokta başarısı ($-0{,}003$) verili doğrulamadır.
+Mertebe denetimleri (fit yok): Fornax $M_*\sim10^7$ için $v_c=17{,}8$ km/s — kitabın kendi $\sim18$ km/s kaydı (6.5.3); $L^*$ eliptik tabanı $\sigma\approx150$, gözlenen merkez 200–250 — merkez Newton rejimi tabana ekler, yön doğru. Kovanın F4'ü birinci mertebede TAM beslemesi bu lemmanın sonucudur; 96_ETG'nin dış-nokta başarısı ($-0{,}003$) verili doğrulamadır.
 
 ### Geçerlilik Sınırı
 - İzotropi: anizotropi $\alpha\to\alpha-2\beta_J$ kaydırır ($O(1)$ bandı).
@@ -1103,8 +1103,8 @@ Mertebe denetimleri (fit yok): Fornax $M_*\sim10^7$ için $v_c=17{,}8$ km/s — 
 - Merkez ($g_{kaps}>a_0$) M-47'nin parçalı rejimindedir; kutular dış bölge içindir.
 
 ### Açık Uçlar
-- ~~İlk bağımsız-aile sınavı~~ → **GEÇİLDİ** (McConnachie 2012, 28 Yerel Grup cücesi; sıfır yeniden-kalibrasyonla medyan $+0{,}009$ dex — `87_ETKIN_YASA/DSPH_SINAVI.md`).
-- ~~İkinci aile: dış-$\sigma$ katalogları (G-12)~~ → **GEÇİLDİ** (Forbes+2017 SLUGGS küresel-küme kinematiği, 22 eliptik/merceksi; medyan $+0{,}051$ dex, kovan konvansiyonuyla $-0{,}004$; 2–10 $R_{eff}$ yarıçapta düz — `87_ETKIN_YASA/ELIPTIK_SIGMA.md`) → **rozet [T]'ye yükseldi.** Kayıt: en kötü tekil küme-merkezlisi M87 ($-0{,}195$) — küme ortamı kapsam dışı (7.4/A7).
+- ~~İlk bağımsız-aile sınavı~~ → **GEÇİLDİ** (McConnachie 2012, 28 Yerel Grup cücesi; sıfır yeniden-kalibrasyonla medyan $+0{,}009$ dex).
+- ~~İkinci aile: dış-$\sigma$ katalogları (G-12)~~ → **GEÇİLDİ** (Forbes+2017 SLUGGS küresel-küme kinematiği, 22 eliptik/merceksi; medyan $+0{,}051$ dex, kovan konvansiyonuyla $-0{,}004$; 2–10 $R_{eff}$ yarıçapta düz) → **rozet [T]'ye yükseldi.** Kayıt: en kötü tekil küme-merkezlisi M87 ($-0{,}195$) — küme ortamı kapsam dışı (7.4/A7).
 - Sıcak bileşenin λ'ının (kaskad tutumu) türetimi — ikinci-mertebe kovan düzeltmesi.
 - EFE teriminin türetimi (cüce küresellere nicel uzanımın anahtarı).
 
@@ -1129,7 +1129,7 @@ Mertebe denetimleri (fit yok): Fornax $M_*\sim10^7$ için $v_c=17{,}8$ km/s — 
 $$\boxed{\;W_{dış}=\min\!\Big(1,\ \sqrt{g_{kaps}/g_{ext}}\Big);\qquad
 v_{F4}^2=\sqrt{\mathcal{G}M_{kaps}a_0}\cdot W_{iç}\cdot W_{dış}\;}$$
 
-Tam-baskın limitte $g=g_{bar}(1+\sqrt{a_0/g_{ext}})$ — **yarı-Newton**, $\mathcal{G}_{etkin}=\mathcal{G}(1+\sqrt{a_0/g_{ext}})$: güçlü eşdeğerlik ilkesinin ihlali türetilmiş sonuçtur (MOND'da varsayım; bizde geometri — ve bağımlılık biçimi farklı: $\sqrt{a_0/g_{ext}}$, ayırıştırıcı sınav). Disklerde $g_{kaps}<g_{ext}$ dış bölgesinde eğri düşüşü (Chae ve ark. 2020'nin imzası). Mertebe denetimi: MW alanındaki Fornax için $\sigma=10{,}5$–14,9 km/s (gözlenen ~11–12; yalıtık değer 13,8–16,9'dan gözleme doğru çeker). SPARC'ta süptillik türer: tipik $g_{ext}\approx4\times10^{-12}$ son noktaların çoğunda $W_{dış}=1$ bırakır. Türetim ve sayılar: `CALISMA/SINIF_CALISMASI/87_ETKIN_YASA/EFE_TURETIMI.md`.
+Tam-baskın limitte $g=g_{bar}(1+\sqrt{a_0/g_{ext}})$ — **yarı-Newton**, $\mathcal{G}_{etkin}=\mathcal{G}(1+\sqrt{a_0/g_{ext}})$: güçlü eşdeğerlik ilkesinin ihlali türetilmiş sonuçtur (MOND'da varsayım; bizde geometri — ve bağımlılık biçimi farklı: $\sqrt{a_0/g_{ext}}$, ayırıştırıcı sınav). Disklerde $g_{kaps}<g_{ext}$ dış bölgesinde eğri düşüşü (Chae ve ark. 2020'nin imzası). Mertebe denetimi: MW alanındaki Fornax için $\sigma=10{,}5$–14,9 km/s (gözlenen ~11–12; yalıtık değer 13,8–16,9'dan gözleme doğru çeker). SPARC'ta süptillik türer: tipik $g_{ext}\approx4\times10^{-12}$ son noktaların çoğunda $W_{dış}=1$ bırakır.
 
 ### Geçerlilik Sınırı
 - Gel-git etkisi ayrıdır (M-36, klasik); M-49 yalnız F4 kanalının dış-alan tepkisidir.
@@ -1137,7 +1137,7 @@ Tam-baskın limitte $g=g_{bar}(1+\sqrt{a_0/g_{ext}})$ — **yarı-Newton**, $\ma
 - Geniş çiftlerde $g_{iç}>g_{ext}$ olduğundan bastırma doğmaz — G-10 hükmü değişmez.
 
 ### Açık Uçlar
-- Doğrudan veri sınavı ([T-aday]→[T]): Chae+2020 düşen-eğri altkümesiyle nicel kayıt-öncesi protokol. dSph ilk sınavı yapıldı (G-13; `DSPH_SINAVI.md`): büyük uydularda **lehte işaret** ($+0{,}109\to+0{,}042$), küçük klasiklerde gelgit-karıştırıcılı aşırı-bastırma — ayrıştırma gelgit-ısınması hesabını bekler.
+- Doğrudan veri sınavı ([T-aday]→[T]): Chae+2020 düşen-eğri altkümesiyle nicel kayıt-öncesi protokol. dSph ilk sınavı yapıldı (G-13): büyük uydularda **lehte işaret** ($+0{,}109\to+0{,}042$), küçük klasiklerde gelgit-karıştırıcılı aşırı-bastırma — ayrıştırma gelgit-ısınması hesabını bekler.
 - $g_{ext}$'in bileşen ayrıştırması (toplam-alan okumasının türetimi).
 
 ---

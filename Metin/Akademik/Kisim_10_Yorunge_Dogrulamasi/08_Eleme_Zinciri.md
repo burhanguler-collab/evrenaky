@@ -32,7 +32,7 @@ $$D>v_{F4}\iff V_{bar}^2>v_{gözl}^2$$
 
 ## 10.8.3 Saçılmanın bütçesi — "%68 galaksiler arası"nın gerçek yüzü
 
-Açığın varyansının üçte ikisi galaksiler arasıdır. Bu pay, gözlemsel hata bütçesine karşı ölçülmüştür (`GURULTU.md`): **galaksiler arası varyansın ~%78'i ölçüm bütçesidir** — en büyük kalemi uzaklık belirsizliğidir (%59; $L\propto D^2$). Gerçek, fiziksel galaksiler-arası pay ~%15'e iner.
+Açığın varyansının üçte ikisi galaksiler arasıdır. Bu pay, gözlemsel hata bütçesine karşı ölçülmüştür: **galaksiler arası varyansın ~%78'i ölçüm bütçesidir** — en büyük kalemi uzaklık belirsizliğidir (%59; $L\propto D^2$). Gerçek, fiziksel galaksiler-arası pay ~%15'e iner.
 
 ![Gözlemsel bütçe ayrıştırması](Gorseller/k10_gozlemsel.png)
 
