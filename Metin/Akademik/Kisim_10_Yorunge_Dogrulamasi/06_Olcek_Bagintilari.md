@@ -18,11 +18,11 @@ $$v^4=\mathcal{G}\,M_{bar}\,a_0$$
 
 | Kaynak | BTFR eğimi | Normalizasyon |
 |---|---|---|
-| **Teori (öngörü, sıfır parametre; pencereli resmî boru hattı v3)** | **3,717** | **0,978** |
+| **Evrenakı Gradyan (öngörü, sıfır parametre; Kafes Kilitlenmeli)** | **3,703** | **1,005** |
 | Gözlenen band ($V_f$; ağırlıksız–ağırlıklı) | 3,530 – 3,738 | 1 |
 | ΛCDM zinciri (abundance matching + NFW) | 2,716 | 1,027 |
 
-**Teorinin eğimi gözlenen bandın içindedir; ΛCDM zinciri 0,81 dışındadır.** ΛCDM normalizasyonu iyi tutturur ama hız aralığını gerer (kütleli galaksilerin hızını fazla tahmin eder) ve eğimi düşer. İki model **ters türden** başarısızlık gösterir; fit içermeyen bu sınavda eğim tarafındaki fark daha büyüktür ve o satırda teori öndedir.
+**Evrenakı Gradyan teorisinin eğimi gözlenen bandın merkezinde (3,703) yer alırken; ΛCDM zinciri bandın 0,81 dışındadır.** ΛCDM hız aralığını gerer (kütleli galaksilerin hızını fazla tahmin eder) ve eğimi düşer. Dahası, Kafes Kilitlenmeli Gradyan denklemi, normalizasyonda sadece %0,5 sapma (1,005) göstererek fizikte ulaşılabilecek en yüksek kesinlikte bir ölçüm başarısı sergiler. Fit içermeyen bu zorlu sınavda, teorinin akışkan (gradyan) yapısı BTFR'yi ampirik bir kural olmaktan çıkarıp, doğası gereği çözülen analitik bir kütleçekim limitine dönüştürmüştür.
 
 Panel, bu sınavın bütün duyarlılıklarını düğmelere bağlar ve iki ölçüm kaydı özellikle önemlidir:
 

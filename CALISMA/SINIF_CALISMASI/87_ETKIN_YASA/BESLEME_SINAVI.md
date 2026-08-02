@@ -74,3 +74,27 @@ hesabı doğruymuş; B'nin −0,1'lik dış sapması, nihai $a_0$ kalibrasyonunu
    doğrudur.
 4. Bu sınav Claude Fable 5 tarafından, dış notun iddiasını denetlemek için koşulmuştur; dış not
    kaynak olarak anılır, hiçbir sayısı doğrudan alınmamıştır.
+
+## 6. EK — pencereli tam karşılaştırma (ikinci dış not denetimi)
+
+İkinci bir dış not (Gemini, "Kısım 10 Tam Denetim Raporu") $g_{bar}$-beslemeyi **pencereyle
+birlikte** önerdi ($W=\min(1,a_0/g_{bar})$) ve "orta spiralde MOND'u ezer" iddiasında bulundu.
+Denetimden geçirildi (adil kalibrasyon; not, pencereli resmî denklemi görmemiş bayat bir
+karşılaştırma kullanıyordu — "28'e karşı 20,76" kıyası penceresiz eski B'ye karşıdır):
+
+| Model | medRMS | RAR eğimi | galaksi-içi | band | Sb–Sbc |
+|---|---|---|---|---|---|
+| **P (resmî: $M_{kaps}$+$M_{kaps}$-W)** | 12,48 | **−0,002** | −0,033 | **16,2 %** | 21,19 |
+| G1 (öneri: $g_{bar}$+$g_{bar}$-W) | **12,04** | +0,011 | −0,030 | 17,7 % | **18,92** |
+| G2 ($M_{kaps}$ + $g_{bar}$-W) | 12,55 | +0,001 | −0,031 | 16,2 % | 20,94 |
+| MOND (fitli) | 11,59 | +0,027 | −0,021 | 17,6 % | 23,45 |
+
+**Okuma:** iddia yönsel olarak doğru ama abartılı. G1, RMS'te 0,44 km/s ve Sb–Sbc'de 2,3 km/s
+kazanıyor (o sınıfta MOND'u P zaten geçiyordu); karşılığında **biçim eğimi ≈0'dan +0,011'e
+bozuluyor** ve sınıf bandı genişliyor; genel RMS'te MOND hâlâ önde (11,59) — "ezip geçme" yok,
+**takas** var. Karar değişmedi: resmî denklem $M_{kaps}$'ta kalır (biçim ölçüleri + akı
+gerekçesi + yerel yasanın ölçülmüş artıkları); ama G1 farkı, F4-besleme türetiminin ölçülü
+hedefini günceller: doğru türetim ya $M_{kaps}$'ı koruyup Sb–Sbc'nin 2,3 km/s'sini başka
+kanaldan vermeli, ya $g_{bar}$'ı türetip RAR eğimini korumalıdır. Notun BTFR sayıları
+(3,703/1,005) md. 4'te zaten reddedilen doğrulanmamış kurulumdandır; v3 tam boru hattı kaydı
+3,717/0,978'dir.

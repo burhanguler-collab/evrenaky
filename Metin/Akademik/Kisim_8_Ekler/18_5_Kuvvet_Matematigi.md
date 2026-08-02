@@ -1103,7 +1103,7 @@ Mertebe denetimleri (fit yok): Fornax $M_*\sim10^7$ için $v_c=17{,}8$ km/s — 
 - Merkez ($g_{kaps}>a_0$) M-47'nin parçalı rejimindedir; kutular dış bölge içindir.
 
 ### Açık Uçlar
-- Dış-$\sigma$ kataloğuyla ilk nicel sınav (GC/PNe/X-ışını; G-12) — [T-aday]→[T] koşulu.
+- ~~İlk bağımsız-aile sınavı~~ → **GEÇİLDİ** (McConnachie 2012, 28 Yerel Grup cücesi; sıfır yeniden-kalibrasyonla medyan $+0{,}009$ dex — `87_ETKIN_YASA/DSPH_SINAVI.md`). [T] için ikinci aile: dış-$\sigma$ katalogları (GC/PNe/X-ışını; G-12).
 - Sıcak bileşenin λ'ının (kaskad tutumu) türetimi — ikinci-mertebe kovan düzeltmesi.
 - EFE teriminin türetimi (cüce küresellere nicel uzanımın anahtarı).
 
@@ -1136,7 +1136,7 @@ Tam-baskın limitte $g=g_{bar}(1+\sqrt{a_0/g_{ext}})$ — **yarı-Newton**, $\ma
 - Geniş çiftlerde $g_{iç}>g_{ext}$ olduğundan bastırma doğmaz — G-10 hükmü değişmez.
 
 ### Açık Uçlar
-- Doğrudan veri sınavı ([T-aday]→[T]): Chae+2020 düşen-eğri altkümesiyle nicel kayıt-öncesi protokol; izole↔baskın dSph karşılaştırması (G-13).
+- Doğrudan veri sınavı ([T-aday]→[T]): Chae+2020 düşen-eğri altkümesiyle nicel kayıt-öncesi protokol. dSph ilk sınavı yapıldı (G-13; `DSPH_SINAVI.md`): büyük uydularda **lehte işaret** ($+0{,}109\to+0{,}042$), küçük klasiklerde gelgit-karıştırıcılı aşırı-bastırma — ayrıştırma gelgit-ısınması hesabını bekler.
 - $g_{ext}$'in bileşen ayrıştırması (toplam-alan okumasının türetimi).
 
 ---

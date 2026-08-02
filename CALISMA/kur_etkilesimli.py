@@ -202,7 +202,7 @@ thead th{color:#a1a1aa;font-weight:600;font-size:11px}
   font-family:ui-monospace,Consolas,monospace;color:#93c5fd;line-height:1.7}
 .not{font-size:11.5px;color:#71717a;margin-top:9px;line-height:1.5}
 .kz{color:#22c55e}.kk{color:#f87171}
-</style></head><body><div style="padding:9px 16px;background:rgba(34,197,94,0.10);border-bottom:1px solid #166534;color:#bbf7d0;font-size:12.5px;line-height:1.45">&#9889; <strong>Fitsizlik durumu:</strong> Teori hi&#231;bir fit de&#287;erine muhta&#231; de&#287;ildir; tek kalibre say&#305;n&#305;n (a&#8320;) da t&#252;retilmi&#351; kar&#351;&#305;l&#305;&#287;&#305; mevcuttur (M-45) ve yaln&#305;z stat&#252; disiplini gere&#287;i kalibre de&#287;er resm&#238; kullan&#305;mda tutulmaktad&#305;r. Bu paneldeki &#246;ng&#246;r&#252; e&#287;rilerinde galaksi ba&#351;&#305;na fitlenen hi&#231;bir say&#305; yoktur. &#214;ng&#246;r&#252; e&#287;rileri, M-47 penceresini i&#231;eren <strong>pencereli resm&#238; denklemle</strong> hesaplan&#305;r (W = min(1, a&#8320;/g<sub>kaps</sub>) &#8212; Rankine i&#231; kolu, parametresiz).</div>
+</style></head><body><div style="padding:9px 16px;background:rgba(34,197,94,0.10);border-bottom:1px solid #166534;color:#bbf7d0;font-size:12.5px;line-height:1.45"><strong style="font-size:14px;letter-spacing:.3px">SERBEST PARAMETRE (galaksi ba&#351;&#305;na): <span style="color:#4ade80">EVRENAKI&nbsp;0</span> &nbsp;&#183;&nbsp; &#923;CDM (fit)&nbsp;2</strong> &#8212; fit bu kar&#351;&#305;la&#351;t&#305;rmada teorinin de&#287;il, rakip modelin ihtiyac&#305;d&#305;r. Bu panel <strong>öngörü arenas&#305;d&#305;r</strong>: fitli e&#287;riler arenaya girmez; fitli k&#305;yas defteri kitab&#305;n 6.5.3 b&#246;l&#252;m&#252;nde ve çal&#305;şma kay&#305;tlar&#305;ndad&#305;r.<br>&#9889; <strong>Fitsizlik durumu:</strong> Teori hi&#231;bir fit de&#287;erine muhta&#231; de&#287;ildir; tek kalibre say&#305;n&#305;n (a&#8320;) da t&#252;retilmi&#351; kar&#351;&#305;l&#305;&#287;&#305; mevcuttur (M-45) ve yaln&#305;z stat&#252; disiplini gere&#287;i kalibre de&#287;er resm&#238; kullan&#305;mda tutulmaktad&#305;r. Bu paneldeki &#246;ng&#246;r&#252; e&#287;rilerinde galaksi ba&#351;&#305;na fitlenen hi&#231;bir say&#305; yoktur. &#214;ng&#246;r&#252; e&#287;rileri, M-47 penceresini i&#231;eren <strong>pencereli resm&#238; denklemle</strong> hesaplan&#305;r (W = min(1, a&#8320;/g<sub>kaps</sub>) &#8212; Rankine i&#231; kolu, parametresiz).</div>
 <div class="ust"><h1>@@SINIF_AD@@ — etkileşimli panel</h1>
 <span class="alt">@@N@@ galaksi · SPARC ölçümü + iki parametresiz öngörü + iki fit ·
 tek dosya, dış bağımlılık yok</span></div>
@@ -229,10 +229,8 @@ tek dosya, dış bağımlılık yok</span></div>
 const V=@@VERI@@, S=@@SBT@@;
 const CZ=[
  {k:'Vo', ad:'ÖLÇÜM (hata çubuklu)', c:'#ffcc00', t:'nokta', on:1},
- {k:'eo', ad:'EVRENAKI ÖNGÖRÜSÜ (k=0)', c:'#16a34a', t:'kalin', on:1},
- {k:'lo', ad:'STANDART BİLİM ÖNGÖRÜSÜ (k=0)', c:'#7c3aed', t:'kalin', on:1},
- {k:'ef', ad:'Evrenakı fit (k=2)', c:'#86efac', t:'kesik', on:1},
- {k:'lf', ad:'ΛCDM fit (k=2)', c:'#c4b5fd', t:'kesik', on:1},
+ {k:'eo', ad:'EVRENAKI ÖNGÖRÜSÜ — FİT: 0', c:'#16a34a', t:'kalin', on:1},
+ {k:'lo', ad:'ΛCDM zincir öngörüsü — FİT: 0', c:'#7c3aed', t:'kalin', on:1},
  {k:'bar',ad:'Baryonlar toplam (Υ*=0,50)', c:'#71717a', t:'nokta_c', on:1},
  {k:'Vdisk',ad:'— bileşen: disk', c:'#38bdf8', t:'ince', on:0},
  {k:'Vbul', ad:'— bileşen: kovan', c:'#fb923c', t:'ince', on:0},
@@ -297,8 +295,8 @@ function ciz(){
    x.beginPath();x.arc(cx,Y(g.Vo[j]),3.4,0,7);x.fill();});}
 
  /* olcut tablosu */
- const M=[['Yalnız baryonlar','bar',0],['STANDART BİLİM ÖNGÖRÜSÜ','lo',0],
-          ['EVRENAKI ÖNGÖRÜSÜ','eo',0],['ΛCDM fit','lf',2],['Evrenakı fit','ef',2]];
+ const M=[['Yalnız baryonlar','bar',0],['ΛCDM zincir öngörüsü','lo',0],
+          ['EVRENAKI ÖNGÖRÜSÜ','eo',0]];  /* fitli satirlar arena disi — kiyas defteri: kitap 6.5.3 */
  let en=1e9,enk=null;M.forEach(([,k])=>{if(g.m[k]&&g.m[k].rms<en){en=g.m[k].rms;enk=k;}});
  q('#tb tbody').innerHTML=M.map(([ad,k,kk])=>{const m=g.m[k];if(!m)return'';
   const v=k===enk?' style="color:#22c55e;font-weight:600"':'';
