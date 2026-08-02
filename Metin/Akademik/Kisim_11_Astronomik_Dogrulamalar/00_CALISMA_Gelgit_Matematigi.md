@@ -388,10 +388,101 @@ yerde basıncın düştüğü bir Bernoulli profili olarak okunur. İki okuma ar
 sayılar statik gradyandan türetilir (Bölüm 3); Bernoulli okuması mekanizmanın yerel
 görünümüdür, ikinci bir hesap kalemi değildir.
 
-**(c) $\sim3°$ şişkinlik kayması — AÇIK.** Nicel zorlayalım mı? Standart kuram bunu okyanus
-sürtünmesi/$Q$'ya bağlar; teorinin kendi rotası M-43'ün altkritik bastırmasıdır. Tutarsa
-teorinin **ilk ayırt edici gelgit öngörüsü** olur; tutmazsa dürüst kayıt olarak yazılır.
-Not: hesap M-43'ü *okumayı* gerektirir (serbest), *değiştirmeyi* gerektirmez.
+**(c) $\sim3°$ şişkinlik kayması — ✔ ÇÖZÜLDÜ (2 Ağustos 2026), fakat beklenenden farklı sonuçla.**
+
+*Terk edilen rota.* Kaymanın Ek M-43'ün altkritik bastırmasından çıkacağını ve teorinin **ilk
+ayırt edici gelgit öngörüsü** olacağını yazmıştım. **Yanlıştı.** Yazar düzeltmesi: buradaki
+sürükleme atomiktir, Evrenakısal değil.
+
+*İkinci düzeltme — gerekçenin kendisi de yanlıştı.* İlk gerekçeyi "Evrenakı katı maddeyi engel
+görmez, geçtiği şeyi **sürükleyemez**, tutamağı yoktur" diye yazmıştım. Bu **kategorik inkâr
+Postülat 7 ile çelişir** ($\eta_E$ sıfıra yakın ama **kesinlikle sıfır değil**) ve teorinin
+$\eta_E$'yi kullandığı bütün olguları (retrograd sönüm, kilitlenme, halka bending-wave) havada
+bırakır. Yazar düzeltmesi: ortam sürükler, ama etkisi ancak **zaman genişliğinde** görünür.
+Gerekçe nicel zaman-ölçeği argümanına çevrildi:
+
+| Kanal | Gevşeme zamanı |
+|---|---|
+| Maddesel | $\tau_{madde}\simeq QP/2\pi \approx 8{,}5\times10^{4}$ s ($\approx24$ sa) |
+| Evrenakı | $\tau_E = 2\rho_cb^2/9\eta_E \approx 1{,}5\times10^{21}$ s ($\approx5\times10^{13}$ yıl = evren yaşının ~3500 katı) |
+| Oran | $\tau_E/\tau_{madde}\approx1{,}8\times10^{16}$ |
+
+12,4 saatlik bir zorlamaya, 16 mertebe daha yavaş bir kanal derece mertebesinde faz
+kazandıramaz. $\tau_E$ üstelik **en cömert** tahmindir (Stokes yazımı; M-43'ün altkritik
+bastırması daha da büyütür). İkinci gerekçe ölçülen ~3,7 TW yitimin sığ deniz taban
+sürtünmesinde olması. **İki kanal rakip değil, farklı zaman pencerelerinde çalışıyor** —
+hangisinin baskın olduğunu olgunun periyodu belirliyor.
+
+*Doğru muhasebe — iki ayrı rol.* Kaymayı **madde** yapar (okyanus–taban sürtünmesi);
+kayan şişkinliğin torkunu **Evrenakı** taşır (gradyan lobu, 3.9.4). Teorinin katkısı kaymayı
+üretmek değil, torku taşıyan aracıyı adlandırmaktır.
+
+*Hesap (yapıldı).* $\Gamma=\tfrac32k_2\sin(2\varepsilon)\,\mathcal{G}M_{Ay}^2R_\oplus^5/r^6 = dL/dt$,
+$L=M_{Ay}\sqrt{\mathcal{G}M_\oplus r}$, ölçülen $dr/dt=3{,}8$ cm/yıl:
+
+| | |
+|---|---|
+| $L$ | $2{,}88\times10^{34}$ kg·m²/s |
+| $dL/dt$ | $4{,}50\times10^{16}$ N·m |
+| $\mathcal{G}M_{Ay}^2R_\oplus^5/r^6$ | $1{,}17\times10^{18}$ N·m |
+| $k_2\sin2\varepsilon$ | $0{,}0256$ |
+| $\varepsilon$ ($k_2=0{,}35\ldots0{,}20$) | $2{,}10^\circ \ldots 3{,}68^\circ$ |
+| karşılık gelen $Q$ | $13{,}7 \ldots 7{,}8$ |
+
+Gözlenen $\sim3^\circ$ bandın içinde ✓; çıkan $Q\approx8\!-\!14$ Dünya'nın bağımsız bilinen
+gelgit $Q$'suyla (~12) örtüşüyor ✓. **Ama ayırt edici değil:** tork bağıntısı standart
+kuramla ortak, $k_2$ ve $Q$ malzeme özellikleri.
+
+*Kalan tek teoriye-özgü kalem — artık nicel.* Malzeme sürtünmesi sıfır olan bir gövdede
+standart kuram $\varepsilon=0$ der; teoride $\eta_E\ne0$ olduğu için sıfırlanmayan bir
+**artık kayma tabanı** kalır. Faz katkıları gevşeme zamanlarıyla ters orantılı olduğundan
+büyüklüğü yazılabilir:
+$$\varepsilon_E\approx\varepsilon_{madde}\frac{\tau_{madde}}{\tau_E}\approx3^\circ\times5{,}6\times10^{-17}\approx2\times10^{-16}\ \text{derece}$$
+Sayı ayrımın hem **gerçek** (sıfır değil, standart kuramdan farklı) hem **ölçülemez** olduğunu
+aynı anda söylüyor → bugün sınav değil. Ayırt edici sınav gelgitte değil, teorinin $\eta_E$'yi
+zaten kullandığı **uzun-pencere** olgularında aranmalı (retrograd göç, kilitlenme, halka sönümü
+— 11.3.2, M-43).
+
+*Doğan yeni bulgu — 3.9.4 ile gerilim.* Hesap uzaklaşmanın **tamamını** lob torkuna yüklüyor
+ve ancak öyle $\sim3^\circ$ veriyor. Kozmolojik seyrelme tabanı kayda değer bir pay taşısaydı
+açı gözlenenin altına düşerdi. Yani sonuç **lob teriminin baskın olduğunu** söylüyor —
+3.9.4'ün *karşı-kayıt* paragrafıyla uyumlu, aynı bölümün *açılış* paragrafındaki "uzaklaşmanın
+asıl kaynağı kozmolojiktir" ifadesiyle **çelişkili.** 3.9.4 Kısım 3'tedir (yazmaya açık) ama
+dokunulmadı — yazar kararı bekliyor.
+
+---
+
+## 5.1 Kuvvet envanteri — yazar düzeltmesi (2 Ağustos 2026)
+
+**Düzeltilen hata.** Türetimin ilk sürümü çerçeve adımını **Postülat 7'nin sürüklenme
+zarfına** dayandırıyordu. Bu yanlıştı: sürüklenme zarfı Kuvvet 3'ün (M-37, $\omega_1$ kolu)
+sıfırıncı mertebesidir, oysa **Ay kilitlidir ve makro-girdabı bastırılmıştır** — dönüş kolu
+kapalıdır. Kilitli bir kaynak Dünya'ya Kuvvet 3, 4 veya 5 uygulayamaz.
+
+**Doğrusu.** Çerçeve adımı zaten **Kuvvet 1'in kendisinden** çıkar: $\vec a=-\nabla P/\rho_n$
+ve $\rho_n$ evrensel olduğu için alanın ortak bileşeni her nükleona aynı ivmeyi verir, gövdeyi
+taşır ama deforme etmez. Postülat 7'ye hiç gerek yoktur.
+
+**Kazanç — kısıt değil, temizlik.** Düzeltme türetimi zayıflatmaz, güçlendirir:
+
+| Kuvvet | Kol | Kilitli kaynakta | 11.1'deki rolü |
+|---|---|---|---|
+| 1 — Radyal kütle-itim | $\omega_2$ | **açık** | tek girdi |
+| 2 — Diferansiyel sıkıştırma | $\omega_2$ | **açık** | çıktı (1'in türevi) |
+| 3 — Vorteks sürüklenmesi | $\omega_1$ | kapalı | yok |
+| 4 — Eksenel itim | $\omega_1$ | kapalı | yok |
+| 5 — Yanal itim | $\omega_1$ | kapalı | yok |
+
+Gelgitin tamamı **tek kuvvete** iner ve tensörün $(+2,-1,-1)$ yapısı $\omega_1$ kökenli hiçbir
+terimle karışmadan saf çıkar. 11.1.2'ye kutu, 11.1.1'e varsayım 5, 11.1.7'ye 3. madde olarak
+işlendi. 11.1.7'nin eski 1. maddesi ("çerçeve Postülat 7'den gelir") **kaldırıldı**; çerçeve
+adımı artık 2. maddenin ($\rho_n$ evrenselliği) altına, aynı kök olduğu kaydıyla yazıldı.
+
+**Açık soru — Güneş dönüyor.** Ay için envanter temiz, ama **Güneş kilitli değildir**:
+$\omega_1$ kolu açıktır, dolayısıyla Güneş'in Dünya'ya uyguladığı gelgite ilkece Kuvvet 4/5
+katkısı karışabilir. Gözlem bunun ölçülemez olduğunu söylüyor (Güneş/Ay oranı saf $1/r^3$'ün
+verdiği 0,460'tır, sapma yok). Bu bir **üst sınır** demektir ve muhtemelen $\kappa_5$'i
+sınırlar. Hesaplanmadı; 11.1'e de yazılmadı. Yazar kararı bekliyor.
 
 ---
 
@@ -401,4 +492,7 @@ Not: hesap M-43'ü *okumayı* gerektirir (serbest), *değiştirmeyi* gerektirmez
 |---|---|
 | 2 Ağustos 2026 | Dosya açıldı. M-36 arşiv kopyası alındı (Bölüm 1). Yeniden türetim yazıldı (Bölüm 2): çerçeve adımı, akı korunumu, bağımsız $T_\perp$, basınç nedenselliği, EP sonucu, hacim korunumuyla sabitlenen serbest yüzey. Sayısal denetim yapıldı — altı sonucun altısı da tuttu (Bölüm 3). M-36'nın ikinci açık ucu kapatıldı ($\mathrm{tr}\,\mathsf{T}|_{iç}=-4\pi\mathcal{G}\rho$). Kısım 8'e **dokunulmadı.** |
 | 2 Ağustos 2026 | Yazar kararları alındı: **(a)** tam türetim 11.1'de · **(b)** Bernoulli uzlaştırma kutusu 11.1'e, 3.9.2'ye dokunulmaz · **S-27** ($\zeta$) Anayasa'ya kaydedildi. Yeni izin kalemi açıldı: 4.4 (Ek D sembol sözlüğü senkronu). **(c)** hâlâ açık. |
-| 2 Ağustos 2026 | **11.1 yayına yazıldı** (11.1.1–11.1.8). Yazarın kendi taslağı korundu, üzerine eklendi: akı korunumunun bağımsız türetimi (Gauss), özdeğer tablosu, artık basınç alanı $P_T$ tablosu ve 2:1 oranı, M-26 çapraz denetimi, büyük/küçük gelgit (0,781 / 0,289 / 2,70), **11.1.6** eşdeğerlik ilkesi, **11.1.7** Newton'la sınır tablosu, **11.1.8** geçerlilik sınırı + iç rejim kapanışı + 3° açık kalemi. Düzeltilenler: "milimetrik doğruluk" iddiası → mertebe-ve-yapı doğrulaması dürüstlük kaydı; $\pm P_T$ muğlaklığı → sayısal tablo; "ekvatordan sıkılan" → "yanaklardan"; başlık düzeyi `###`→`##` (11.2/11.3 ile hizalandı); 11.1.5 başlığı "Yükseklik"→"Genlik". **Ek D izinle işlendi** (4.4), $\xi$ çakışması çözüldü. **Kaynakça:** Touboul 2022 ve Schlamminger 2008 eklendi (11.1.6'nın EP sınavı için). Kısım 10'a ve M-36'ya **dokunulmadı.** |
+| 2 Ağustos 2026 | **11.1 baştan yazıldı** (yazar talimatı: önceki taslak dikkate alınmadı, silindi). Nihai yapı 11.1.1–11.1.9: notasyon+varsayımlar · **kuvvet envanteri** (kilitli kaynak, $\omega_1$ kapalı) + 11.2 ayrım uyarısı · itim potansiyeli + çerçeve adımı (Kuvvet 1'den) + Bernoulli uzlaştırma kutusu · akı korunumu + üç bileşen + iz teoremi · basınç nedenselliği (2:1) + M-26 çapraz denetimi · genlik + Güneş/Ay + büyük/küçük + dürüstlük kaydı · eşdeğerlik ilkesi · Newton sınırı · geçerlilik + iç rejim kapanışı + 3° açık kalemi. |
+| 2 Ağustos 2026 | **Çembersellik açıkça yazıldı** (yazar düzeltmesi). Eksik: $-1$ özdeğerinin **iki katlı dejenere** olduğu yazılıydı ama bunun fiziksel anlamı — gradyan yapısının Ay'a bakmayan bütün yanlarda **eşit** olması, dolayısıyla sıkıştırmanın noktasal kıstırma değil **ekseni saran eşit basınçlı kuşak** olması — söylenmemişti. 11.1.4(b)'ye "Sıkıştırmanın çembersel olması" paragrafı, özdeğer tablosuna dejenerasyon etiketi, tabloya "Mekanizmanın üç adımı" özeti (ön–arka farkı → çembersel kuşak → çift kabarma) ve 11.1.5'e basınç dilindeki karşılığı ($P_T$ azimuttan bağımsız) eklendi. Ayrıca karşılıklılık notu: aynı geometri Ay'ı da sıkar, kilitli olduğu için orada kabarma magmada kalıcılaşır (mascon, 3.9.5). |
+| 2 Ağustos 2026 | **"Gelgit ekseni" terimi tanımlandı** (yazar düzeltmesi — kritik). Metinde "eksen" on yerde niteliksiz geçiyordu; 11.2 baştan sona **dönme ekseninden** bahsettiği için okurun ikisini birleştirmesi kaçınılmazdı. Terim notasyon tablosuna girdi, 11.1.3'e `[!CAUTION]` uyarı kutusu eklendi (üç gerekçe: yönelim · kuşak ekvator değildir · **günde iki gelgitin sebebi tam olarak bu ayrımdır**, ardışık tepeler arası 12 sa 25 dk; ayrıca günlük eşitsizlik aynı geometriden), ve niteliksiz geçen her "eksen" → "gelgit ekseni" olarak düzeltildi (11.1.3, 11.1.4 ×4, 11.1.5 ×3, 11.1.8, 11.1.9). Kutuya 11.2 ile ayrım cümlesi de kondu. |
+| 2 Ağustos 2026 | *(geçersiz — üstteki satırla değiştirildi)* İlk yazım turu (11.1.1–11.1.8). Yazarın kendi taslağı korundu, üzerine eklendi: akı korunumunun bağımsız türetimi (Gauss), özdeğer tablosu, artık basınç alanı $P_T$ tablosu ve 2:1 oranı, M-26 çapraz denetimi, büyük/küçük gelgit (0,781 / 0,289 / 2,70), **11.1.6** eşdeğerlik ilkesi, **11.1.7** Newton'la sınır tablosu, **11.1.8** geçerlilik sınırı + iç rejim kapanışı + 3° açık kalemi. Düzeltilenler: "milimetrik doğruluk" iddiası → mertebe-ve-yapı doğrulaması dürüstlük kaydı; $\pm P_T$ muğlaklığı → sayısal tablo; "ekvatordan sıkılan" → "yanaklardan"; başlık düzeyi `###`→`##` (11.2/11.3 ile hizalandı); 11.1.5 başlığı "Yükseklik"→"Genlik". **Ek D izinle işlendi** (4.4), $\xi$ çakışması çözüldü. **Kaynakça:** Touboul 2022 ve Schlamminger 2008 eklendi (11.1.6'nın EP sınavı için). Kısım 10'a ve M-36'ya **dokunulmadı.** |
