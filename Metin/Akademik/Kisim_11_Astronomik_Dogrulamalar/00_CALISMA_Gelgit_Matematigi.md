@@ -452,6 +452,33 @@ dokunulmadı — yazar kararı bekliyor.
 
 ---
 
+## 5.2 AYIRT EDİCİ SINAV — bölümün statüsü değişti (2 Ağustos 2026)
+
+**Yazar talimatı:** "sınava dönsün." Bölüm artık tutarlılık türetimi değil, **ayırt edici sınav** taşıyor.
+
+**Sınavın kaynağı (yazar tespiti):** *F4 Ay için kapalı, Güneş için değil; F5 de Güneş için açık.*
+Ay kilitli → saf F1 → tensör $(+2,-1,-1)$, iz $=0$. Güneş dönüyor → F1+F4+F5.
+
+**Türetim (parametresiz).** $a=A/r^2+B/r$, $\varepsilon\equiv Br/A$:
+$$(T_\parallel,T_\perp,T_\perp)=\frac{A}{r^3}\bigl(2+\varepsilon,\,-(1+\varepsilon),\,-(1+\varepsilon)\bigr),\qquad \mathrm{tr}\,\mathsf{T}=-\varepsilon A/r^3$$
+Özdeğer oranı **ve** iz, tek bir sayıya ($\varepsilon$) bağlı; $\varepsilon$ kaynağın dönme durumuyla belirleniyor.
+
+**Newton neden üretemez.** Klasik dış alanda kaynağın dönmesi yer almaz ($J_2$ hariç, o da farklı açısal yapı) ve boşlukta iz $\nabla^2\Phi=0$ gereği **her kaynak için, her uzaklıkta** sıfırdır. Newton'da kilitli uydu ile dönen yıldızın tensörü aynı yapıdadır.
+
+**İki kanal.**
+1. *Genlik:* $R=0{,}4602(1+\varepsilon_\odot/2)$ ⟹ $\varepsilon_\odot=2(R_{ölç}/0{,}4602-1)$. Duyarlılık zinciri: $\varepsilon_\odot$ sınırı $\approx4{,}3\,\sigma_R/R$. M-38'in $\varepsilon_{Ay}<2\times10^{-5}$ düzeyi için oranda $\sim5\times10^{-6}$ gerek. **M-38'den bağımsız kanal:** orası 1. türev/Ay, burası 2. türev/Güneş.
+2. *Simetri (asıl keskin):* F5'in $\sin2\theta$'sı **Güneş'in dönme ekseninden** ölçülür. Ay'ın alanı gelgit ekseni etrafında tam simetrik, Güneş'inki değil → yanal dejenerasyon kırılır. Dünya heliografik enlemde yıl boyu $\pm7{,}25^\circ$ salındığından: $S_2$'de **olmaması gereken, fazı Güneş dönme eksenine kilitli yıllık yan bant.** Genlik farkı değil, **simetri kırılması** — Newton hiçbir genlikte üretemez.
+
+**Dürüst statü:** yapı türetilmiş ve parametresiz; **genlik öngörülmemiş** ($\kappa_5$ serbest, M-39 [F]; F4 payı M-38'de galaktik vortekse atanmış). Sınavın biçimi "şu sayı çıkmalı" değil, **"şu yapı bulunmalı, yoksa $\varepsilon_\odot$ ve $\kappa_5$ şundan küçüktür."** İki yönlü keskin.
+
+**Yapılmayan:** $S_2/M_2$ oranının bağımsız ölçüm hassasiyetinin nicel değerlendirmesi (gravimetrik $\delta$ çarpanları + okyanus yükleme ayrıştırması). 7.4 hesap kalemine yazıldı.
+
+**Geri alınan hatam:** Ayırt ediciyi ilk denememde $r_t=\sqrt{\mathcal{G}M/a_0}$ geçiş yarıçapına ve **Oort bulutuna** bağlamıştım (Güneş için 8790 AU). **Yanlıştı:** Ek M-38 $1/R$ rejimini bireysel gövdelere değil **galaktik kolektif vortekse** atar ($r_0$ kpc mertebesi) ve Güneş Sistemi'ni açıkça Kepler rejiminde tutar. Doğru ayırt edici, uzaklık rejimi değil **kaynağın dönme durumudur.**
+
+**İşlendiği yerler:** 11.1 giriş kutusu (statü değişti) · 11.1.6 (%46 → ölçüm kanalı notu) · **11.1.8 baştan yazıldı** (başlık "Newton'la Sınır ve Ayırt Edici Sınav"; özdeşlik tablosuna "kilitli kaynak için" kaydı; karışım türetimi; iki kanal; dürüst statü tablosu) · 11.1.9 (kapsam kaydı: kayma kanalında sınav yok, sınav 11.1.8'de).
+
+---
+
 ## 5.1 Kuvvet envanteri — yazar düzeltmesi (2 Ağustos 2026)
 
 **Düzeltilen hata.** Türetimin ilk sürümü çerçeve adımını **Postülat 7'nin sürüklenme
