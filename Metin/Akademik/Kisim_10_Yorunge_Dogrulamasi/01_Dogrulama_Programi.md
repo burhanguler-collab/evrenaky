@@ -16,10 +16,10 @@ Kitapta bugüne kadar her iki model de galaksi başına parametre fitledi ve kar
 |---|---|---|
 | **Evrenakı öngörüsü** | **0** | $v^2=V_{bar}^2+\sqrt{a_0\,\mathcal{G}M_{kaps}(R)}\cdot W$, $W=\min(1,a_0/g_{kaps})$ (M-47 — Kafes Kilitlenmesi); $a_0=7{,}67\times10^{-11}$ m/s² (küresel sabit); $\Upsilon_*=0{,}50$ |
 | **Standart bilim öngörüsü** | **0** | $M_{200}\leftarrow$ abundance matching (Moster ve ark. 2013); $c_{200}\leftarrow$ Dutton & Macciò (2014); NFW; $\Upsilon_*=0{,}50$ |
-| Evrenakı fit | 2 | $\Upsilon_*$, $b$ |
+| Evrenakı fit | 2 | $\Upsilon_*$, $\delta_{mesafe}$ — **$a_0$ resmî değerinde kilitli**; $g_{kaps}$ $\delta$'dan bağımsız olduğundan $W$ penceresi fitle **bozulamaz** ($v^2=\delta\,[V_{bar}^2+F4\cdot W]$) |
 | ΛCDM fit | 2 | $\Upsilon_*$, $M_{200}$ |
 
-*(Alt iki satır yarışçı değil, **teşhis aracıdır**: fitli koşumlar yalnız 6.5.3'ün eşit-serbestlik karşılaştırmasında ve öz-denetimde kullanılır — serbest fitin medyan $\Upsilon_*=0{,}49$ bulması, öngörünün 0,50 girdisinin bağımsız doğrulamasıdır. Bu kısmın hiçbir öngörü sonucu, paneli ve ölçek sınavı fit içermez; teorinin denkleminde galaksiye fitlenen sayı yoktur — 10.2.6.)*
+*(Alt iki satır yarışçı değil, **teşhis aracıdır**: teorinin hiçbir öngörü sonucu, paneli ve ölçek sınavı fit içermez — 10.2.6. Teşhisin kendisi öğreticidir: serbest fitin medyan $\Upsilon_*=0{,}57$ ile fotometrik bandın içinde ve medyan $\delta=0{,}96\approx1$ ile **sistematik mesafe kayması olmadan** çıkması, öngörünün girdilerinin bağımsız doğrulamasıdır. Eşit serbestlikte yarış da kayıtlıdır: galaksi-başına RMS'te 109/64, medyan $\chi^2_{ind}$ 1,41'e karşı 1,97 Evrenakı lehine; 173 galaksinin 63'ünde $\delta$ katalog mesafe belirsizliğinin 3σ'sını aşar — panellerde ⚠ ile işaretlidir, gizlenmez.)*
 
 Öngörülerin ikisi de **dönüş eğrisine bakılmadan** kurulur. Ortak girdi $\Upsilon_*=0{,}50$ (3,6 μm popülasyon sentezi orta değeri) — adil olması için iki tarafta aynıdır.
 

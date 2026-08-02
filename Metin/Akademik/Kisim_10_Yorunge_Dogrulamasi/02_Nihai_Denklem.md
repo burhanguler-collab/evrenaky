@@ -57,7 +57,7 @@ Nihai kurulumun morfolojik sınıflardaki dökümü (ayrıntılar 10.3–10.5):
 | Im | 26 | 8,46 | 11,76 | +8,7 % | ×0,63 | 22/26 |
 | **Toplam** | **141** | **12,48** | **14,56** | **+0,0 %** | — | **87/141**† |
 
-† *Öngörü yarışı (ΛCDM'e karşı galaksi başına), tablonun bütün sütunlarıyla aynı pencereli resmî kurulumla ölçülmüştür; penceresiz eski kayıt 79/141 idi — pencere yarışı da iyileştirir.*
+† *Öngörü yarışı (ΛCDM'e karşı galaksi başına), tablonun bütün sütunlarıyla aynı pencereli resmî kurulumla ölçülmüştür (`CALISMA/sinif_ongoru_vs_fit.py`).*
 
 Dört sınıfın gereken çarpanı **×0,94–1,24** aralığındadır — bire oturmuştur. Uçlar Sd (×1,47) ve Im (×0,63)'tür; sınıf bandının log genişliği **0,115 dex**'tir (pencere bandı pratikte değiştirmez: galaksi başına çarpanlar $r=0{,}98$ ile korunur, cüce sınıflarda birebir aynıdır — λ kanalı penceresiz kayıtlarıyla geçerli kalır) ve açık kalemdir (10.10). $a_0$'ın küresel ölçeklenmesi bandı kaydırır ama daraltmaz — yani band, $a_0$'ın değerinden bağımsız, gerçek bir yapıdır.
 
@@ -101,9 +101,9 @@ değil, aldığı **yanlışlanma riskiyle** ölçülür (Popper, 1959). Bu öl�
 asimetriktir. Sıfır-parametreli denklem her yeni galakside sınava girer: tek bir dönüş eğrisi
 onu çürütebilir, ve 10.10'un açık kalemleri bu riskin retorik değil gerçek olduğunun kanıtıdır.
 Galaksi başına fitlenen karanlık madde pratiğinde ise risk neredeyse sıfıra iner: fit tutarsa
-teori doğrulanmış sayılır; tutmazsa — ki kendi kaydımızda 169 galaksinin 125'inde iki parametreyle
-bile kabul edilebilir fit çıkmaz (6.5.4.7) — suç teoriye değil, baryonik geribesleme modellerine
-yazılır. Yanlışlanabilirlik biçimsel olarak ortadan kalkmaz; ama **hiçbir gözlemsel sonucun
+teori doğrulanmış sayılır; tutmazsa — ki kendi kaydımızda 173 galaksinin 85'inde iki parametreyle
+bile kabul edilebilir uyum çıkmaz ($\chi^2_{ind}\leq2$; 10.1.1) — suç teoriye değil, baryonik
+geribesleme modellerine yazılır. Yanlışlanabilirlik biçimsel olarak ortadan kalkmaz; ama **hiçbir gözlemsel sonucun
 teoriye karşı sayılmadığı** bir pratikte fiilen askıya alınır. Galaktik ölçekte geriye kalan,
 Popper'ın ölçütüyle, yanlışlanma riski alan bir yasa değil bir eğri-betimleme pratiğidir.
 *(Kayıt: bu hüküm galaktik dinamikle sınırlıdır — madde 1'deki kapsam şerhi burada da geçerlidir;
@@ -128,10 +128,15 @@ zincir diye bir şey yoktur.
    bu kitap ΛCDM'i sıfır-fitli bir zincirle (Moster+2013 + Dutton & Macciò 2014 + NFW) yarışa
    soktu — yani karşılaştırmalar rakibin **en sadık** hâline karşı yapıldı ve teori yine öndedir
    (12,48'e karşı 14,56; band içi eğime karşı band dışı).
-3. **Eşit-serbestlik uyum yarışı gizlenmez:** iki taraf da fitlendiğinde ΛCDM uyum kalitesinde
-   öndedir (kabul edilebilir fit 44/169'a karşı 22/169 — 6.5.4.7). Sadakat kıyası bu kaydı
-   silmez; onunla birlikte okunur: fit serbestliği arttıkça uyum kazanan taraf, ilk ilkeden
-   öngörü gerektiğinde kaybeden taraftır.
+3. **Eşit-serbestlik uyum yarışı da gizlenmez:** iki taraf da 2'şer parametreyle fitlendiğinde
+   — teori tarafında $a_0$ resmî değerinde kilitli, ikinci parametre gözlemsel mesafe çarpanı
+   $\delta$ ($W$ penceresi $\delta$'dan matematiksel olarak bağımsızdır) — yarış 173 galakside
+   galaksi-başına RMS'te 109/64, medyan $\chi^2_{ind}$'de 1,41'e karşı 1,97, $\chi^2_{ind}\leq2$
+   oranında 110/173'e karşı 88/173 **Evrenakı lehinedir** (10.1.1; medyan $\delta=0{,}96$ —
+   sistematik mesafe kayması yok). Aleyhte kayıtlar yanında durur: Sb–Sbc medyanında ΛCDM
+   fit küçük farkla öndedir ve 63 galakside $\delta$ katalog belirsizliğinin 3σ'sını aşar
+   (panellerde işaretlidir). Ders iki yönlüdür: teori önceliğini fitten değil öngörüden alır —
+   ama biçimini bozmayan serbestlik verildiğinde fit yarışında da geri düşmez.
 4. Evrenakı'nın kendi kalibre sayısı ($a_0$'ın değeri, [S]) ve açık kalemleri (sınıf bandının
    λ bağıntısı, galaksi-içi $-0{,}033$) bu tabloda örtülmez; fark "kusursuzluk" değil,
    **zincirin kaynağıdır.**

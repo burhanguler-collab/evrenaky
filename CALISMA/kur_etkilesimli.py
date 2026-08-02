@@ -98,19 +98,21 @@ def fitle(d, tur):
     'olcumden uzak' egri birakmasin diye 5 baslangictan en iyi chi2 alinir.
     Iki taraf da ayni cozucuyu kullanir (adalet)."""
     if tur == 'evr':
-        # PENCERELI RESMI bicimin fiti: v^2 = Vbar^2(Y) + (10^lb) sqrt(M_kaps(Y)) * W
-        # a0_fit = (10^lb)^2/G,  W = min(1, a0_fit R^2 / (G Mkaps))  [M-47]
-        f = lambda R, Y, lb, _d=d: np.sqrt(np.maximum(Vbar2(_d, Y), 1e-9)
-                                           + (10 ** lb) * np.sqrt(np.maximum(Mkaps(_d, Y), 1e-9))
-                                           * np.minimum(1.0, (10 ** lb) ** 2 * R ** 2
-                                                        / (G * G * np.maximum(Mkaps(_d, Y), 1e-9))))
-        # DUZELTME KAYDI: eski ust sinir lb<=-1 idi; pencereli kalibrasyonda ongoru
-        # noktasi lb0=log10(sqrt(A0N*G))=-0,996 SINIRIN DISINDA kaliyordu -> fit F4
-        # genligine hic ulasamiyor, 'kotu fit' goruntusu veriyordu. Sinir acildi ve
-        # baslangiclardan biri TAM ongoru noktasidir (fit ongoruden kotu olamaz).
-        lb0 = float(np.log10(np.sqrt(A0N * G)))
-        p0s, lo, hi = [[0.5, lb0], [0.3, lb0], [0.9, lb0], [0.5, lb0 + 0.5], [0.5, lb0 - 1.0]], \
-            [YLO, -12], [YHI, 2]
+        # TEORIYE-SADIK FIT (Y*, delta_mesafe) — a_0 RESMI DEGERINDE KILITLI.
+        # Mesafe D -> delta*D alinirsa: Vbar^2 -> delta*Vbar^2, M_kaps -> delta^2*M_kaps,
+        # R -> delta*R; g_kaps = G M/R^2 DEGISMEZ -> W penceresi delta'dan bagimsizdir.
+        # Sonuc: v^2 = delta * [Vbar^2(Y) + sqrt(A0N G M_kaps(Y)) * W]  — teorinin yapisi
+        # hicbir noktada bozulmaz. ADALET KARARI (kullanici): rakibin M200 siniri
+        # [1e7,10^13.5] fiilen hic baglamaz; bu yuzden delta da SINIRSIZDIR (genis
+        # numerik band [0.2,5]). Durustluk kisit olarak degil BILGI olarak korunur:
+        # panelde her galaksinin delta'si katalog mesafe belirsizligi cinsinden
+        # (kac sigma_D) gosterilir; 3 sigma ustu kirmizi isaretlenir.
+        f = lambda R, Y, dl, _d=d: np.sqrt(dl * (
+            np.maximum(Vbar2(_d, Y), 1e-9)
+            + np.sqrt(A0N * G * np.maximum(Mkaps(_d, Y), 1e-9))
+            * np.minimum(1.0, A0N * R ** 2 / (G * np.maximum(Mkaps(_d, Y), 1e-9)))))
+        p0s, lo, hi = [[0.5, 1.0], [0.3, 1.0], [0.9, 1.0], [0.5, 1.6], [0.5, 0.6]], \
+            [YLO, 0.2], [YHI, 5.0]
     else:
         f = lambda R, Y, lg, _d=d: np.sqrt(np.maximum(Vbar2(_d, Y), 1e-9) + v_nfw2(R, 10 ** lg))
         p0s, lo, hi = [[0.5, 11.0], [0.5, 12.0], [0.3, 11.5], [0.9, 10.5], [0.5, 12.8]], \
@@ -147,8 +149,10 @@ for d in GAL:
     ef, ep = fitle(d, 'evr')
     lf, lp = fitle(d, 'lcdm')
     bar = np.sqrt(np.maximum(Vbar2(d, UPS_PS), 0))
-    # yeni fit parametresi b = sqrt(a0_fit G) -> ima edilen a0 carpani (A0N'e gore)
-    lom_fit = float((10 ** ep[1]) ** 2 / (G * A0N)) if ep else None
+    # fit parametresi delta = mesafe carpani; katalog belirsizligine gore kac sigma?
+    sD_ = max(d['eD'] / max(d['D'], 1e-6), 0.05)
+    del_fit = float(ep[1]) if ep else None
+    del_sig = float((ep[1] - 1.0) / sD_) if ep else None
     Mk_fit = Mkaps(d, ep[0]) if ep else M
     L = lambda a: [round(float(x), 4) for x in a]
     VER.append(dict(
@@ -163,8 +167,8 @@ for d in GAL:
         Mkaps=[float('%.4g' % x) for x in M], Mkaps_fit=[float('%.4g' % x) for x in Mk_fit],
         girdi=dict(Ups=UPS_PS, Mbar=Mb, lom=lom, Mgas=float(Mgas(d)[-1]),
                    Mstar=float(UPS_PS * (d['Ld'][-1] + RB * d['Lb'][-1])),
-                   Ups_fit=ep[0] if ep else None, b_fit=float(10 ** ep[1]) if ep else None,
-                   lom_fit=lom_fit, Mbar_fit=float(Mk_fit[-1]) if ep else None,
+                   Ups_fit=ep[0] if ep else None, del_fit=del_fit, del_sig=del_sig,
+                   Mbar_fit=float(Mk_fit[-1]) if ep else None,
                    M200_ong=M200, c200_ong=float(c200_dm14(M200)),
                    M200_fit=float(10 ** lp[1]) if lp else None,
                    Ups_lcdm_fit=lp[0] if lp else None),
@@ -251,7 +255,7 @@ const CZ=[
  {k:'Vo', ad:'ÖLÇÜM (hata çubuklu)', c:'#ffcc00', t:'nokta', on:1},
  {k:'eo', ad:'EVRENAKI ÖNGÖRÜSÜ — FİT: 0', c:'#16a34a', t:'kalin', on:1},
  {k:'lo', ad:'ΛCDM zincir öngörüsü — FİT: 0', c:'#7c3aed', t:'kalin', on:1},
- {k:'ef', ad:'EVRENAKI FİT — 2 parametre (Υ*, b)', c:'#4ade80', t:'kesik', on:1},
+ {k:'ef', ad:'EVRENAKI FİT — 2 param. (Υ*, δ_mesafe; a₀ kilitli)', c:'#4ade80', t:'kesik', on:1},
  {k:'lf', ad:'ΛCDM FİT — 2 parametre (M₂₀₀, Υ*)', c:'#a78bfa', t:'kesik', on:1},
  {k:'bar',ad:'Baryonlar toplam (Υ*=0,50)', c:'#71717a', t:'nokta_c', on:1},
  {k:'Vdisk',ad:'— bileşen: disk', c:'#38bdf8', t:'ince', on:0},
@@ -363,8 +367,11 @@ function ciz(){
    us(gi.Mstar)+' / '+us(gi.Mgas)+'</b></div>'+
   sat('ℓ<sub>ω</sub>(R<sub>dış</sub>) = √(𝒢M<sub>bar</sub>/a₀)', fx(gi.lom,2)+' kpc','T')+
   '<div style="border-bottom:none;padding-top:8px;color:#a1a1aa;font-size:11.5px">'+
-   'fit karşılaştırması için: Υ*<sub>fit</sub>='+(gi.Ups_fit==null?'—':fx(gi.Ups_fit,3))+
-   ' · a₀<sub>fit</sub>/a₀='+(gi.lom_fit==null?'—':fx(gi.lom_fit,2))+'</div>';
+   'fit (a₀ kilitli): Υ*<sub>fit</sub>='+(gi.Ups_fit==null?'—':fx(gi.Ups_fit,3))+
+   ' · δ<sub>mesafe</sub>='+(gi.del_fit==null?'—':
+   '<span style="color:'+(Math.abs(gi.del_sig)>3?'#f87171':'#a1a1aa')+'">'+fx(gi.del_fit,2)+
+   ' ('+(gi.del_sig<0?'−':'+')+fx(Math.abs(gi.del_sig),1)+'σ<sub>D</sub>'+
+   (Math.abs(gi.del_sig)>3?' ⚠':'')+')</span>')+'</div>';
  q('#dnk').innerHTML='v²(R) = V<sub>bar</sub>²(Υ*) + √(𝒢·M<sub>kaps</sub>(R)·a₀)·W, &nbsp;W = min(1, a₀/g<sub>kaps</sub>)'+'<br><span style="color:#71717a">ℓ<sub>ω</sub> YEREL kütleden — pencereli resmî denklem (M-47)</span>';
  q('#grl').innerHTML=
   sat('Υ* (aynı girdi)', fx(S.UPS_PS,2),'S')+
