@@ -70,7 +70,7 @@ Minkowski ve Abraham'ın ışığın momentumu konusunda bir asırdır tartışt
 
 ## 2.4.3 Evrenakı Gradyanı ve Küreden Diske Geçiş
 
-Patinaj etkisiyle dönüş enerjisi (spin) artan zerrenin formu sabit kalamaz. Dış basınç zayıfladığında zerre ciddi bir mekanik şekil değişimine uğrar. Düşük basınç gradyanına (deplasman havuzuna) giren zerre patinaj yaparken, artan merkezkaç kuvvetinin etkisiyle yassılaşır ve kusursuz bir küre formundan çıkarak bir "diske" dönüşür.
+Patinaj etkisiyle dönüş enerjisi (spin) artan zerrenin formu sabit kalamaz. Dış basınç zayıfladığında zerre ciddi bir mekanik şekil değişimine uğrar. Düşük basınç gradyanına (deplasman havuzuna) giren zerre patinaj yaparken, artan dönme hızıyla oluşan reel merkezkaç basıncının (M-22) etkisiyle dışa doğru esner ve kusursuz bir küre formundan çıkarak bir "diske" dönüşür.
 
 <div class="pol-widget">
 <style>
@@ -95,7 +95,7 @@ Patinaj etkisiyle dönüş enerjisi (spin) artan zerrenin formu sabit kalamaz. D
 <div class="pol-legend">
   * <b>Arka plan ve Akış çizgileri (Evrenakı):</b> Uzay boşluğunda (normal basınçta) zerre tam hızıyla ilerler (çizgiler hızlı akar). Zerre, makro kütlelerin yarattığı Evrenakı gradyanına (deplasman havuzuna) girdiğinde öteleme hızı yavaşlar. Rengin siyahtan açık eflatuna dönmesi, ortamdaki hidrodinamik basıncın ve yoğunluğun <b>azalışını</b> temsil eder.<br>
   * <b>Altın Sarısı Zerre (Ekvatoral Bakış):</b> Düşük basınca giren zerre "patinaj" yapmaya başlar; doğrusal hızı düşerken dönüş (spin) enerjisi artar. Ortam basıncı azaldıkça zerrenin kendi etrafındaki dönüşü dramatik şekilde hızlanır.<br>
-  * <b>Yassılaşma (Disk) Formu:</b> Dış Evrenakı basıncının <b>azalması</b>, zerreyi küresel tutan sıkıştırma kuvvetini zayıflatır. Dış basınç düştükçe ve spin hızlandıkça, zerre mükemmel <b>küre</b> formunu koruyamaz ve merkezkaç etkisiyle yatay eksende yassılaşarak bir <b>diske</b> (elipsoide) dönüşür.
+  * <b>Yassılaşma (Disk) Formu:</b> Dış Evrenakı basıncının <b>azalması</b>, zerreyi küresel tutan sıkıştırma kuvvetini zayıflatır. Dış basınç düştükçe ve spin hızlandıkça, zerre mükemmel <b>küre</b> formunu koruyamaz ve içsel merkezkaç basıncının (M-22) etkisiyle yatay eksende savrulup yassılaşarak bir <b>diske</b> (elipsoide) dönüşür.
 </div>
 
 <script>

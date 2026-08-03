@@ -2,17 +2,54 @@
 
 Standart gök mekaniği, Ay gibi uyduların neden gezegenlerine kilitlendiğini veya gezegenlerin eksenel dönüş hızlarının neden uzayla yavaşladığını "Gelgit Sönümlemesi" veya "Dinamik Sürtünme" ile modeller. Evrenakı teorisinde bu kilitlenme (senkronizasyon) ve uydu göçü, Zerre sürtünmesinin yarattığı **artık kuplaj** ve vorteks profil dengesinin kaçınılmaz matematiksel çıktısıdır (Bkz. Ek M-37).
 
-## 11.3.1 Vorteks Profil Teoremi
+## 11.3.1 İki Denge, İki Yoğunluk: "Madde Düşer, Ortam Dolaşır"
 
-Gezegen etrafındaki dönüş vorteksinin hızı serbest değildir. Kütlenin çevresinde sürtünme zarfı yaratan Evrenakı akışkanı (Zerre Katarı), merkezkaç ivmesiyle dışarı savrulmamak için kendi radyal dengesini sağlamak zorundadır:
+Kütle çevresindeki tek fiziksel alan basınçtır. Fakat aynı $\nabla P$ alanı **iki ayrı nesneye iki ayrı yoğunluk üzerinden** etki eder ve bu ayrım karıştırılmamalıdır (Ek M-9, Geçerlilik Sınırı):
 
-$$\frac{dP}{dR} = \rho\,\frac{v_\theta^2}{R} \quad\Longleftrightarrow\quad \bigl|a_{radyal}(R)\bigr| = \frac{v_\theta^2}{R}$$
+| | Denge denklemi | Bölen yoğunluk | Sonuç |
+|---|---|---|---|
+| **Madde** (nükleon: katı deplasman cebi) | $\vec a=-\dfrac{1}{\rho_n}\nabla P$ | $\rho_n$ — nükleon öz yoğunluğu | akıp dengelenemez, **bütün hâlde itilir → düşer** |
+| **Ortam** (Zerre akışkanı) | $\dfrac{1}{\rho_0}\dfrac{dP}{dR}=\dfrac{v_\theta^2}{R}$ | $\rho_0$ — arka plan yoğunluğu | gradyana düşerek değil **dolaşarak** cevap verir |
 
-Sürüklenme zarfı nedeniyle uydu bu akışkana hapsolur ($v_{y\ddot{o}r} = v_\theta$). Kepler rejiminde (radyal kütle-itim ivmesi $|a| = \frac{\mathcal{G}M}{R^2}$ alındığında) hız profili doğal olarak çözülür:
+### Maddenin yörüngesi: serbest düşme
 
-$$\boxed{\;v_\theta(R) = \sqrt{R\,\bigl|a_{radyal}(R)\bigr|} = \sqrt{\frac{\mathcal{G}M}{R}}\;}$$
+Yörüngedeki cismi taşıyan bir mekanizmaya gerek yoktur — cisim basınç gradyanında **düşer.** Dairesel yörünge şartı maddenin kendi ivmesiyle yazılır:
 
-Bu, klasik yörünge hız profilinin, kütleçekiminden bağımsız bir akışkan dengesi olarak yeniden türetilmesidir.
+$$\frac{v_{madde}^2}{R}=\bigl|a_{madde}\bigr|=\frac{1}{\rho_n}\frac{dP}{dR}=\frac{\mathcal{G}M}{R^2} \;\Longrightarrow\; \boxed{\;v_{madde}(R)=\sqrt{\frac{\mathcal{G}M}{R}}\;}$$
+
+Klasik yörünge hız profili, kütleçekiminden bağımsız bir basınç dengesi olarak böylece yeniden türetilir.
+
+### Ortamın dolaşımı: aynı alan, farklı yoğunluk
+
+Aynı $dP/dR$ ortamın kendi merkezcil ihtiyacını da karşılamak zorundadır (M-22'nin siklostrofik dengesi). Fakat ortam $\rho_0$ ile bölünür:
+
+$$v_\theta^2=\frac{R}{\rho_0}\frac{dP}{dR}=\frac{\rho_n}{\rho_0}\cdot\frac{\mathcal{G}M}{R} \;\Longrightarrow\; \boxed{\;v_\theta(R)=\sqrt{\frac{\rho_n}{\rho_0}}\;v_{madde}(R)=2\,v_{madde}(R)\;}$$
+
+$\rho_0=\frac{1-k}{4}\rho_n$ ve $k=0$ olduğundan (Ek M-8) oran **tam 2'dir** — serbest parametre içermez.
+
+> **Kritik ayrım — kapılış yörüngeyi sağlamaz.** Sürüklenme zarfı (Postülat 7) bir **taşıma mekanizması değil, yerel sürükleme bastırıcısıdır.** Zarfın içinde bağıl hız sıfıra iner ve klasik $F_d\propto\rho v^2$ sürüklemesi kaybolur; Michelson–Morley'in null sonucu bundandır. Ama gövdenin yörüngesi zarftan gelmez — basınç gradyanında serbest düşmeden gelir. Cisim ortamın hızına **kilitli olsaydı** $2v_{Kepler}$ ile dolanırdı; gözlem bunu kesin biçimde dışlar.
+>
+> *(Kayıt: bu bölümün önceki sürümü "sürüklenme zarfı nedeniyle uydu bu akışkana hapsolur, $v_{yör}=v_\theta$" yazıyor ve maddenin yörüngesini ortamın dengesinden çıkarıyordu — iki yoğunluk karışmıştı. Sonuç doğru, gerekçe yanlıştı. Aynı karışıklık Ek M-37'nin sıfırıncı mertebe tanımında da vardır ["sürüklenme... yörünge hareketinin kendisini sağlar"] ve Ek M-9 ile çelişir; düzeltmesi izin kalemi olarak kayıtlıdır.)*
+
+### Doğrudan bir öngörü: ortam–madde kayması
+
+İki hız arasındaki fark serbest bir sayı değildir; **her yarıçapta yörünge hızının kendisine eşittir:**
+
+$$\Delta v = v_\theta - v_{madde} = \left(\sqrt{\tfrac{\rho_n}{\rho_0}}-1\right)v_{madde} = v_{madde}$$
+
+| Sistem | $v_{madde}$ | $v_{ortam}$ | Kayma |
+|---|---|---|---|
+| Merkür | 47,9 | 95,8 | **47,9 km/s** |
+| Dünya yörüngesi | 29,8 | 59,6 | **29,8 km/s** |
+| Jüpiter | 13,1 | 26,1 | **13,1 km/s** |
+| Ay yörüngesi (Dünya çevresi) | 1,02 | 2,04 | **1,02 km/s** |
+| Güneş, galaktik yarıçap | 220 | 440 | **220 km/s** |
+
+Bu, $\rho_n/\rho_0=4$ oranının doğrudan sınavıdır ve hiçbir serbest kalem içermez. Ortam görünmez olduğu için kayma bugüne dek ölçülmemiştir; **açık kalem:** zarf gövdeyle birlikte giderken çevre ortam iki kat hızlı aktığından zarf sınırında bir **kayma tabakası** doğar. Bu tabakanın yitimi ve torku hesaplanmamıştır (Ek M-43'ün altkritik bastırması adaydır).
+
+### Galaktik zincire etkisi: yok
+
+Kısım 10'un ve 6.5.4'ün tüm galaktik zinciri **madde seviyesindedir** — $a_{F4}$ Ek M-38'de $C/\rho_n$ ile yazılır, dönüş eğrisi yasası $v^2=R\,a_{madde}$ biçimindedir. Dolayısıyla $a_0$, $\ell_\omega$ ve M-45'in mikro–makro kapanışı bu ayrımdan **etkilenmez.** Yukarıdaki 2 çarpanı yalnız ortamın kendi dolaşımına aittir ve gözlenen dönüş eğrilerine girmez.
 
 ## 11.3.2 Gevşeme Zamanı ($\tau_{ret}$) ve Sürüklenme Rejimi
 

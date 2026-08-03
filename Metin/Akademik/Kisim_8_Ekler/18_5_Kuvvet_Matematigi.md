@@ -86,7 +86,7 @@ $$[\alpha] = \frac{[\mathrm{kg\,m^{-3}s^{-1}}]\cdot[\mathrm{m^3 s^{-1}}]}{[\math
 
 ## M-36 · Gelgit Tensörü ve Denge Gelgiti · **[T]**
 
-**Kullanıldığı bölümler:** 3.2.1 (Kuvvet 2), 3.9.2–3.9.2.2. Bağlı katalog: M-26 (hidrostatik tepki tarafı), M-35.
+**Kullanıldığı bölümler:** 3.2.1 (Kuvvet 2), 3.9.2–3.9.2.2, **11.1** (tam türetim ve ayırt edici sınav). Bağlı katalog: M-26 (hidrostatik tepki tarafı), M-35, M-43 (kayma açısının rejimi).
 
 **Kilit tez:** Kuvvet 2 bağımsız bir kuvvet değildir; **M-35'in uzaysal türevidir.** Gelgit hiçbir yeni parametre gerektirmez.
 
@@ -94,24 +94,34 @@ $$[\alpha] = \frac{[\mathrm{kg\,m^{-3}s^{-1}}]\cdot[\mathrm{m^3 s^{-1}}]}{[\math
 
 1. M-35'in alanı geçerlidir: $P(r)=P_0-\alpha M/r$, dolayısıyla $a_r=-\mathcal{G}M/r^2$.
 2. Test cismi noktasal değil, yarıçapı $b\ll r$ olan uzanımlı gövdedir.
-3. Kaynaktan uzakta ortam kaynaksızdır: $\nabla^2 P=0$ (M-28 Varsayım 1).
+3. **Akı korunumu:** Kaynaktan uzakta deplasman akısı ne yaratılır ne yok edilir. *(Düzeltme kaydı, 3 Ağustos 2026: bu varsayımın önceki sürümü doğrudan "$\nabla^2P=0$" yazıyordu ve izsizlik girdi olarak kullanılıyordu; aşağıda hem türetiliyor hem bağımsız olarak doğrulanıyor.)*
+4. **Ortak taşınmanın çıkarılması:** Kuvvet 1, $\rho_n$ evrensel olduğu için gövdenin her nükleonuna aynı ivmeyi verir; alanın ortak bileşeni gövdeyi bir bütün olarak taşır, deforme etmez.
 
 ### Adımlar
 
-Gövde merkezi $r$'de, gövde üzerindeki nokta merkezden $\vec\xi$ kadar uzakta olsun:
+**Adım 0 — akı korunumu $\nabla^2P=0$'ı verir.** M-35'in ortam tepkisi $dP/dr=CNq_n/4\pi r^2$ ile, kaynağı çevreleyen herhangi bir küre üzerinden akı yarıçaptan bağımsızdır:
+$$\oint_S \nabla P\cdot d\vec A = \frac{CNq_n}{4\pi r^2}\cdot4\pi r^2 = CNq_n=\text{sabit} \;\Longrightarrow\; \int_V\nabla^2P\,dV=0 \;\Longrightarrow\; \nabla^2P=0$$
+Fiziksel okuma: kaynaktan çıkan deplasman akısı yolda ne çoğalır ne eksilir. Bu sonuç aşağıda **kullanılmayacak**; tensör ondan bağımsız kurulup iki yolun çakıştığı gösterilecektir.
+
+**Adım 1 — çerçeve.** Gövde merkezi $r$'de, gövde üzerindeki nokta merkezden $\vec\xi$ kadar uzakta olsun. Ortak ivme (Varsayım 4) çıkarıldığında geriye artık kalır:
 
 $$\Delta a_i(\vec\xi) = \frac{\partial a_i}{\partial x_j}\xi_j + O(\xi^2),\qquad T_{ij}\equiv\frac{\partial a_i}{\partial x_j} = -\frac{1}{\rho_n}\partial_i\partial_j P$$
 
-Gelgit tensörü, basınç alanının **ikinci** türevidir.
+Gelgit tensörü, basınç alanının **ikinci** türevidir. $\mathsf{T}$ simetrik olduğundan eksenin iki ucundaki artık ivmeler zıt yönlüdür — ikisi de merkezden dışa: **çift şişkinlik ek varsayım gerektirmez.**
 
 **(a) Eksenel bileşen:**
 $$T_\parallel = \frac{da_r}{dr} = \frac{d}{dr}\left(-\frac{\mathcal{G}M}{r^2}\right) = +\frac{2\mathcal{G}M}{r^3} \;\Longrightarrow\; \Delta a_\parallel = +\frac{2\mathcal{G}M}{r^3}\xi_\parallel$$
-Pozitif: uzak uç da yakın uç da merkezden **dışa** kaçar → eksen boyunca iki taraflı kabarma ✓
+Pozitif: uzak uç da yakın uç da merkezden **dışa** kaçar → gelgit ekseni boyunca iki taraflı kabarma ✓
 
-**(b) Yanal bileşenler:** Kaynaksız bölgede iz sıfırdır:
-$$\mathrm{tr}\,T = -\frac{1}{\rho_n}\nabla^2 P = 0 \;\Longrightarrow\; T_\parallel + 2T_\perp = 0$$
-$$T_\perp = -\frac{T_\parallel}{2} = -\frac{\mathcal{G}M}{r^3} \;\Longrightarrow\; \Delta a_\perp = -\frac{\mathcal{G}M}{r^3}\xi_\perp$$
-Negatif: yanal doğrultularda hareket merkez hattına doğru → **sıkıştırma** ✓
+**(b) Yanal bileşen — iz varsayımı kullanılmadan, saf geometriden.** Merkezden $\xi_\perp$ kadar yana kaymış noktada ivme yine kaynağa doğrudur ($r'=\sqrt{r^2+\xi_\perp^2}\simeq r$), fakat doğrultusu merkez hattından $\xi_\perp/r$ kadar sapar:
+$$a_\perp = -\frac{\mathcal{G}M}{r'^2}\cdot\frac{\xi_\perp}{r'} \simeq -\frac{\mathcal{G}M}{r^3}\xi_\perp \;\Longrightarrow\; T_\perp = -\frac{\mathcal{G}M}{r^3}$$
+Negatif: yanal doğrultularda hareket merkez hattına doğru → **sıkıştırma** ✓ Bu, $1/r^2$ alanının **yakınsama geometrisidir.**
+
+Hesapta $\xi_\perp$'nin hangi yanal doğrultu olduğu hiçbir yere girmedi: eksene dik bütün doğrultular kaynağa aynı uzaklıkta ve aynı açıyla baktığı için $-1$ özdeğeri **iki katlı dejeneredir.** Sıkıştırma tek yönden gelen bir kıstırma değil, gelgit eksenini saran **eşit basınçlı bir kuşaktır** — çembersel sıkıştırma. *(Kuşak gelgit eksenine diktir; gövdenin dönme eksenine veya ekvatoruna değil — bkz. 11.1.3 uyarısı.)*
+
+**(c) İz artık bir sonuçtur:**
+$$\mathrm{tr}\,\mathsf{T} = T_\parallel+2T_\perp = \frac{2\mathcal{G}M}{r^3}-\frac{2\mathcal{G}M}{r^3}=0$$
+Üç bileşen de bağımsız kuruldu ve iz kendiliğinden sıfır çıktı. $\mathrm{tr}\,\mathsf{T}=-\frac{1}{\rho_n}\nabla^2P$ olduğundan bu, Adım 0'ın akı korunumuyla **birebir aynı ifadedir** — iki bağımsız yol aynı sıfırı verir.
 
 ### Sonuç
 
@@ -123,7 +133,7 @@ $(+2,-1,-1)$ yapısı, 3.2.1'deki gelgit anlatısının birebir matematiksel kar
 
 | Özdeğer | Doğrultu | Fiziksel okuma |
 |---|---|---|
-| $-1$ (×2) | yanal | **Neden:** Evrenakı çepeçevre yandan sıkıştırır |
+| $-1$ (×2, **dejenere**) | gelgit eksenine dik **her** yön | **Neden:** Evrenakı, ekseni saran eşit basınçlı bir kuşakla çepeçevre sıkıştırır |
 | $+2$ | eksenel | **Sonuç:** sıkışan madde eksen boyunca iki yöne kabarır |
 
 İz sıfırlığı ($\nabla^2P=0$) tam olarak şunu söyler: **Evrenakı yaratılmaz, yok edilmez; yalnızca yer değiştirir.** Yandan sıkıştırılan hacim, eksende kabaran hacimle tam muhasebeleşir. Standart fizikte "gelgit tensörünün izsizliği" soyut bir özellik olarak kaydedilir; burada **korunum yasasının kendisidir**.
@@ -136,29 +146,43 @@ $$\frac{T_\odot}{T_{Ay}} = \frac{M_\odot}{M_{Ay}}\left(\frac{r_{Ay}}{r_\odot}\ri
 
 **%46** ✓ M-26'nın değeriyle birebir. Karşılaştırma için toplam kuvvet oranı $= 179$: Güneş toplam itimde Ay'ın 179 katı, gelgitte yarısından az. $1/r^2$ ile $1/r^3$ arasındaki farkın tüm gücü buradadır.
 
-### Nicel öngörü: denge gelgiti yüksekliği
+### Nicel öngörü: denge gelgiti genliği
 
-Gelgit potansiyeli $\Psi_T=-\frac{GMb^2}{2r^3}(3\cos^2\psi-1)$ ve serbest yüzey koşulu $g\,h+\Psi_T=$ sabit ile:
+Gelgit potansiyeli, ortak taşınma çıkarıldıktan sonra kalan ikinci mertebe terimdir ve teorinin kendi sembolüyle yazılır:
 
-$$\boxed{\;\Delta h = \frac{3}{2}\,\frac{M}{M_\oplus}\left(\frac{b}{r}\right)^{3} b\;}$$
+$$\Psi_T(\xi,\psi)=-\tfrac12\left(T_\parallel\xi_\parallel^2+T_\perp\xi_\perp^2\right)=-\frac{\mathcal{G}M\,\xi^2}{2r^3}\left(3\cos^2\psi-1\right)$$
 
-| Kaynak | $M/M_\oplus$ | $(b/r)^3$ | $\Delta h$ |
-|---|---|---|---|
-| Ay | $1{,}229\times10^{-2}$ | $4{,}553\times10^{-6}$ | **0,53 m** |
-| Güneş | $3{,}331\times10^{5}$ | $7{,}724\times10^{-14}$ | **0,25 m** |
+*(Notasyon kaydı, 3 Ağustos 2026: önceki sürüm $GM$ yazıyordu — Anayasa R-1/S-20 gereği teorinin kendi denkleminde $\mathcal{G}$ olmalıdır.)*
 
-Büyük gelgit (hizalı) $0{,}78$ m · küçük gelgit (dik) $0{,}29$ m · oran $2{,}7$. Açık okyanusta ölçülen denge gelgiti mertebesi ~0,5 m'dir ✓ (kıyıdaki metrelerce genlik havza rezonansının yerel büyütmesidir, modele ait değildir). Ay/Güneş oranı burada da 0,46 ✓ — üç ayrı yoldan aynı sayı.
+Artık **basınç** alanı $P_T=\rho_n\Psi_T$'dir ve gövde yüzeyinde ($\xi=b$) gelgit ekseninde $-\rho_n\mathcal{G}Mb^2/r^3$ (açık), kuşakta $+\rho_n\mathcal{G}Mb^2/2r^3$ (fazla) verir — oran tam $2{:}1$. Akışkan $-\nabla P$ yönünde, kuşaktan eksene akar: **sıkıştırma neden, kabarma sonuçtur.**
+
+Serbest yüzey koşulu $g\,\zeta+\Psi_T=$ sabit ile ($g=\mathcal{G}M_\oplus/b^2$), ve sabit **hacim korunumundan** sıfırlanarak ($\langle3\cos^2\psi-1\rangle=0$, Legendre $P_2$):
+
+$$\zeta(\psi)=\frac{1}{2}\frac{M}{M_\oplus}\left(\frac{b}{r}\right)^3 b\left(3\cos^2\psi-1\right) \;\Longrightarrow\; \boxed{\;\Delta\zeta = \frac{3}{2}\,\frac{M}{M_\oplus}\left(\frac{b}{r}\right)^{3} b\;}$$
+
+$\mathcal{G}$ sadeleşir: sonuç **sıfır parametrelidir.** Ve $3/2$ katsayısı etiketi belirler — $\Delta\zeta$ bir *yükseklik değil*, **tepe–çukur tam genliğidir** (tepe $+A$, çukur $-A/2$). *(Notasyon kaydı: eski yazım $\Delta h$ Anayasa S-4'e aykırıydı; $\zeta$ **S-27** olarak kayıtlıdır.)*
+
+| Kaynak | $M/M_\oplus$ | $(b/r)^3$ | tepe $+A$ | çukur $-A/2$ | genlik $\Delta\zeta$ |
+|---|---|---|---|---|---|
+| Ay | $1{,}229\times10^{-2}$ | $4{,}553\times10^{-6}$ | $+0{,}357$ m | $-0{,}178$ m | **0,535 m** |
+| Güneş | $3{,}331\times10^{5}$ | $7{,}724\times10^{-14}$ | $+0{,}164$ m | $-0{,}082$ m | **0,246 m** |
+
+Büyük gelgit (hizalı) $0{,}781$ m · küçük gelgit (dik) $0{,}289$ m · oran $2{,}70$. Açık okyanusta ölçülen denge gelgiti genliği ~0,5 m mertebesindedir ✓ (kıyıdaki metrelerce genlik havza rezonansının yerel büyütmesidir, modele ait değildir). Ay/Güneş oranı burada da 0,46 ✓ — üç ayrı yoldan aynı sayı. *(Dürüstlük kaydı: genlikteki uyum bir **mertebe ve yapı** doğrulamasıdır; hassas olan boyutsuz oranlardır — 0,460 ve 2,70.)*
 
 ### Geçerlilik Sınırı
 
 - $b\ll r$ birinci mertebe açılımı; $O(\xi^2)$ ihmal edildi (Ay için $b/r\approx0{,}017$, hata ~%2).
 - İz sıfırlığı yalnız **kaynaksız** bölgede geçerlidir; gövde içinde $\nabla^2P\ne0$ ve tensör iz kazanır.
-- Denge gelgiti *statik* tepkidir; gerçek gelgit gecikmeli ve dinamiktir (şişkinlik kayması ~3°, M-26).
+- Denge gelgiti *statik* tepkidir; gerçek gelgit gecikmeli ve dinamiktir (şişkinlik kayması ~3°, kaynağı **atomik sürtünme** — Açık Uçlar'a bkz.).
+- Yukarıdaki $(+2,-1,-1)$ yapısı **kilitli kaynak** içindir ($\omega_1$ kapalı). Hızlı dönen kaynakta F4/F5 katkıları tensörün yapısını değiştirir (11.1.8).
 
 ### Açık Uçlar
 
-- Şişkinlik kaymasının ($\sim3°$) $\eta_E$ ile bağı — kayma doğrudan sönümden gelir, M-37'nin $\eta_E$ sınırıyla çapraz kontrol edilebilir.
-- Gövde içi ($r<b$) rejimde tensör izinin, kütlenin kendi $q_n$ kaynak yoğunluğuyla ilişkisi.
+- ~~Şişkinlik kaymasının ($\sim3°$) $\eta_E$ ile bağı~~ → **kapandı (11.1.9):** kaymanın kaynağı **atomik (malzeme) sürtünmesidir**, ortam değil. Üç gerekçe: (i) gevşeme zamanları $\tau_E/\tau_{madde}\approx1{,}8\times10^{16}$ — 12,4 saatlik zorlamaya 16 mertebe yavaş kanal faz kazandıramaz; (ii) M-43'ün altkritik bastırması; (iii) ölçülen ~3,7 TW yitimin ezici çoğunluğu sığ deniz taban sürtünmesindedir. Kayma açısı Ay'ın uzaklaşmasından geri çözülür: $k_2\sin2\varepsilon=0{,}0256$ ⟹ $\varepsilon\approx2^\circ\!-\!3{,}5^\circ$, $Q\approx8\!-\!14$ ✓. Ortamın artık katkısı $\sim2\times10^{-16}$ derecedir — sıfır değil, ölçülemez.
+- ~~Gövde içi ($r<b$) rejimde tensör izinin $q_n$ kaynak yoğunluğuyla ilişkisi~~ → **kapandı:** akı gövde içinde kapsanan nükleon sayısıyla büyür, $\nabla^2P=Cq_n\rho_{madde}/m_n$, ve $\mathcal{G}=Cq_n/4\pi\rho_nm_n$ konduğunda
+  $$\mathrm{tr}\,\mathsf{T}\big|_{i\varsigma}=-4\pi\mathcal{G}\rho_{madde}$$
+  Teori gövde içinde **Poisson denkleminin tam karşılığını** üretir — yeni parametre girmeden, doğru katsayıyla. Öngörü değil, **tutarlılık kapanışı:** dışarıda sıfır, içeride $-4\pi\mathcal{G}\rho$.
+- **Yeni:** Kaynak dönüyorsa ($\omega_1$ açık) F4'ün silindirik ve F5'in meridyenel katkıları tensöre girer; yanal dejenerasyon kırılır ve boşlukta iz sıfır olmaktan çıkar. Kilitli kaynak (Ay) ile dönen kaynak (Güneş) arasındaki bu yapı farkı, bölümün ayırt edici sınavıdır (11.1.8). Genlikleri öngörülmemiştir ($\kappa_5$ serbest, $\beta$ apsidal presesyondan $\lesssim10^{-9}$).
 
 ---
 
@@ -167,7 +191,7 @@ Büyük gelgit (hizalı) $0{,}78$ m · küçük gelgit (dik) $0{,}29$ m · oran 
 **Kullanıldığı bölümler:** 3.2.2 (Kuvvet 3), 3.1.3-B, 3.4.4, 3.6.1. Bağlı katalog: M-22, M-25, M-27, M-30.
 
 Kuvvet 3'ün iki mertebesi karıştırılmamalıdır:
-- **Sıfırıncı mertebe (sürüklenme):** Cisim ortamla gider ($v_{bağıl}=0$). Kuvvet değil **taşınmadır**; yörünge hareketinin kendisini sağlar.
+- **Sıfırıncı mertebe (zarf):** Gövdeyi saran sürüklenme zarfı içinde bağıl hız sıfıra iner ve klasik $F_d\propto\rho v_{bağıl}^2$ sürüklemesi kaybolur — Michelson–Morley null'unun kaynağı budur. Bu bir **taşıma mekanizması değildir:** yörünge hareketini sağlayan şey zarf değil, maddenin basınç gradyanında **serbest düşmesidir** ($v_{madde}=\sqrt{\mathcal{G}M/R}$, M-2). Ortamın kendi dolaşımı bundan ayrıdır ve $\sqrt{\rho_n/\rho_0}=2$ kat hızlıdır (**M-9**: *"madde düşer, ortam dolaşır"*; M-22, M-25); zarf sınırında bir kayma tabakası kalır. *(Düzeltme kaydı, 3 Ağustos 2026: bu satırın önceki sürümü "Cisim ortamla gider ($v_{bağıl}=0$)… yörünge hareketinin kendisini sağlar" diyordu. O yazım M-9'un Geçerlilik Sınırı ile doğrudan çelişiyor ve literal alındığında gezegenleri $2v_{Kepler}$'e koyuyordu; gözlem onu dışlar. Zarfın rolü sürüklemeyi bastırmaktır, yörüngeyi üretmek değil. Birinci mertebe ve bu girdinin bütün sayısal sonuçları etkilenmez.)*
 - **Birinci mertebe (artık kuplaj):** Bağıl hız varsa ortam cismi eş-dönüşe **gevşetir**. Asıl "sürüklenme kuvveti" budur.
 
 ### Varsayımlar

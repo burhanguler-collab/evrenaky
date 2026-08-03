@@ -58,15 +58,22 @@
   </div>
 
   <div class="legend">
-    <span><span class="dot" style="background:#4d90c8;"></span>Evrenakı akıntısı (girdap)</span>
-    <span><span class="dot" style="background:#d7d9e0;"></span>Uydu — akıntıda sürüklenir</span>
+    <span><span class="dot" style="background:#4d90c8;"></span>Evrenakı akıntısı — <em>dolaşır</em>, uydudan 2× hızlı</span>
+    <span><span class="dot" style="background:#d7d9e0;"></span>Uydu — <em>düşer</em>, akıntıya kapılmaz</span>
     <span><span class="dot" style="background:#ffb454;"></span>Kütle-itim (yüksek→düşük basınç)</span>
     <span><span class="dot" style="background:#fff0a6;"></span>Işık zerresi — kütleye kıvrılır</span>
   </div>
 
   <footer>
-    Dönüş hızını 0'a çekince girdap durur, uydu sürüklenmesi ve merkezcil itim zayıflar
-    (Merkür/Venüs'ün uydusuz oluşu öngörüsü). B. Güler — <em>Plenum: Evrenakı Okyanusunda Bilim</em>.
+    <strong>Kaydırıcıyı 0'a çekin:</strong> girdap durur, ama <strong>uydu dolanmaya devam eder.</strong>
+    Yörüngeyi sağlayan şey akıntıya kapılma değil, maddenin basınç gradyanında serbest düşmesidir
+    (Kuvvet 1 / ω₂ pompa kolu). Kaydırıcı yalnız ω₁ kolunun kattığı burgacı ölçekler; Merkür/Venüs'ün
+    uydusuz oluşu öngörüsü de bu zayıf yerel girdabın Güneş girdabıyla rekabet edememesine dayanır
+    (Bkz. 3.4.4), yörüngenin yokluğuna değil.<br>
+    Ortam, uydudan <strong>tam iki kat</strong> hızlı dolaşır (&radic;(&rho;<sub>n</sub>/&rho;<sub>0</sub>) = 2) — <em>"madde düşer,
+    ortam dolaşır"</em> (Ek M-9). Gövdenin kendi devri ise ortamdan <strong>mertebelerce yavaştır</strong>
+    (Güneş: 439 kat — Bölüm 3.8.1.1); animasyonda bu oran görünürlük için sıkıştırılmıştır.
+    B. Güler — <em>Plenum: Evrenakı Okyanusunda Bilim</em>.
   </footer>
 </div>
 
@@ -91,7 +98,20 @@
   }
   bindTg('tPress','press'); bindTg('tPush','push'); bindTg('tLight','light');
 
-  function omegaAt(r, sn){ var K = 34000; var w = sn * K / (r*r); return Math.min(w, 7); }
+  // ---------------------------------------------------------------------------
+  // İKİ AYRI PROFİL — "madde düşer, ortam dolaşır" (Ek M-9, M-22, M-25)
+  //
+  // Maddenin yörüngesi Kuvvet 1'den (ω₂ pompa kolu) gelir ve gövdenin dönüşünden
+  // BAĞIMSIZDIR:   v_madde ∝ 1/√r   ⟹   ω_madde ∝ r^(−3/2)
+  // Ortam aynı gradyana düşerek değil dolaşarak cevap verir (siklostrofik denge)
+  // ve ρ₀ ile bölündüğü için TAM İKİ KAT hızlıdır:
+  //     v_ortam = √(ρ_n/ρ₀)·v_madde = 2·v_madde     (ρ₀ = ρ_n/4, Ek M-8, k=0)
+  // Kaydırıcı (spin) ω₁ kolunun kattığı ek burgacı ve içe sürüklenmeyi ölçekler;
+  // maddenin yörüngesine DOKUNMAZ — animasyonun asıl öğrettiği nokta budur.
+  // ---------------------------------------------------------------------------
+  var K_MADDE = 900;
+  function omegaMadde(r){ return Math.min(K_MADDE / Math.pow(r, 1.5), 3.5); }
+  function omegaOrtam(r, sn){ return 2 * omegaMadde(r) * (1 + sn); }
 
   var N = 320, P = [];
   var Rout = 330, Rin = 44;
@@ -128,7 +148,7 @@
     ctx.lineCap = 'round';
     for (var i=0;i<N;i++){
       var p = P[i];
-      var w = omegaAt(p.r, sn);
+      var w = omegaOrtam(p.r, sn);
       p.a += w * dt;
       p.r -= (4 + sn*22) * dt;
       p.sp = w * p.r;
@@ -171,7 +191,9 @@
   }
 
   function drawSatellite(sn, dt){
-    var w = omegaAt(sat.r, sn);
+    // Uydu ortama kapilmaz: yorungesi F1 gradyaninda serbest dusmeden gelir.
+    // Bu yuzden 'sn' PARAMETRESI KULLANILMAZ — donus sifirlansa da uydu dolanir.
+    var w = omegaMadde(sat.r);
     sat.a += w * dt;
     var x = cx + Math.cos(sat.a)*sat.r;
     var y = cy + Math.sin(sat.a)*sat.r*0.86;
@@ -190,9 +212,12 @@
 
   var massAngle = 0;
   function drawMass(sn, dt){
-    // Fiziksel gerçeklik: Pervane/Kütle, sürüklediği sıvıdan DAHA HIZLI dönmelidir. 
-    // Girdabın en iç noktasındaki açısal hız (omega) ~17.5 iken, kütleyi ~25.0 hızıyla döndürüyoruz.
-    massAngle += sn * dt * 25.0; 
+    // Fiziksel gercek TERSIDIR: govde, cevresindeki ortamdan cok DAHA YAVAS doner.
+    // Bolum 3.8.1.1: ortamin Gunes yuzeyindeki dolasimi 874 km/s, govdenin devri 1,99 km/s
+    // -> 439 kat. Ek M-25 ayni muhasebeyi Dunya-Ay icin 34 kat verir. Girdabin motoru
+    // govdenin mekanik devri DEGILDIR (dorduncu boyut cift donus desarji, 3.8.2).
+    // Animasyonda oran gorunurluk icin sikistirilmistir (~1/6, gercekte 1/439).
+    massAngle += sn * dt * 1.2; 
     ctx.save();
     ctx.translate(cx, cy);
     ctx.rotate(massAngle);

@@ -26,6 +26,8 @@ $$\boxed{\frac{dP}{dr} = \rho\,\frac{v_\theta^2}{r} \;>\; 0}$$
 
 Newton'un "çekim" (pull) soyutlaması yerine mekanik zemin: uzayın derinliklerindeki yüksek statik Evrenakı basıncı, kütle çevresindeki düşük basınç havzasına doğru cisimleri kesintisiz **iter** — kütle-itim, Euler denkleminin matematiksel zorunluluğudur.
 
+**Merkezkaç Kuvvetinin Mekanik Temeli:** Bu radyal basınç gradyanı, klasik mekanikte cismin eylemsizliğine (sanal bir etkiye) atfedilen "merkezkaç kuvvetinin" (centrifugal force) tam olarak akışkanlar dinamiğindeki **reel (fiziksel) karşılığıdır**. Merkezkaç soyut/sanal bir etki değil; dönen Evrenakı ortamının oluşturduğu dışa doğru gerçek bir basınç (itim) gradyanıdır. Klasik fizikteki "Çekim vs Merkezkaç" ikiliği, Evrenakı'da "F1 (İçeri itim) ile M-22 (Dışarı itim)" kavgası olarak gerçek bir hidrodinamik temele oturur.
+
 ### Geçerlilik Sınırı
 - Kararlı, eksenel simetrik, viskoz terimi ihmal edilmiş rejim.
 - **Rejim notu:** Hız profili denkleme dışarıdan girer ve iki rejim ayrışır. Güneş sistemi ölçeğindeki **lokal (Kepler) girdapta** $v_\theta \propto 1/\sqrt{r}$ (M-25) ile $dP/dr \propto 1/r^2$ çıkar — klasik gözlemle örtüşen kuyu. **Galaktik düz-hız rejiminde** ($v_\theta \approx$ sabit) ise $dP/dr \propto 1/r$, yani **logaritmik basınç kuyusu** doğar (4.2.9.2; tam türetim M-30'da).
@@ -119,19 +121,25 @@ $$\boxed{\omega_{gözlenen}(M,R) = \big[1-g(R)\big]\,\omega_{serbest}(M) + g(R)\
 **Kullanıldığı bölümler:** 3.8.1–3.8.1.1 (Güneş vorteksi + Açısal Momentum Paradoksu), 3.9.4 (Dünya-Ay muhasebesi), 3.8.2 (nedenselliğin tersinmesi), 3.4.4.
 
 ### Varsayımlar
-1. Gezegenler boşlukta dolanmaz; merkez kütlenin makro Evrenakı girdabının akıntı katmanlarına kapılmış (sürüklenme/entrainment) durumdadır (3.8.1).
+1. **Gezegen girdaba kapılmaz; aynı basınç alanında düşer.** Madde $\vec a=-\nabla P/\rho_n$ ile serbest dengede dolanır; ortam ise aynı alana düşerek değil **dolaşarak** cevap verir, $\nabla P/\rho_0=v_\theta^2/R$ (**M-9**: *"madde düşer, ortam dolaşır"*; M-22). *(Düzeltme kaydı, 3 Ağustos 2026: bu varsayımın önceki sürümü gezegenleri "akıntı katmanlarına kapılmış" sayıyordu; o yazım M-9 ile çelişiyor ve literal alındığında gezegenleri $2v_{Kepler}$'e koyuyordu.)*
 2. Kepler'in Üçüncü Yasası gözlemsel girdi olarak alınır: $T^2 \propto R^3$ (Kepler, 1619) **[S]**.
+3. $\rho_0=\frac{1-k}{4}\rho_n$ ve $k=0$ (M-8) ⟹ $\sqrt{\rho_n/\rho_0}=2$ **tam**.
 
 ### Adımlar
 1. Yörünge hızı tanımı $v = 2\pi R/T$, Kepler-3 ile birleştirilir:
-$$T \propto R^{3/2} \;\Longrightarrow\; v = \frac{2\pi R}{T} \propto \frac{R}{R^{3/2}} = \frac{1}{\sqrt{R}}$$
-Girdabın sürüklenme hız profili budur; içinde yüzen cisimlerin hızları bu profile oturur.
-2. **Muhasebe zinciri 1 — Güneş (girdilerin tümü [S]):** Güneş'in ekvator yüzey hızı 2 km/s'dir (Beck, 2000). Girdap yalnız yüzeyin mekanik dönüşüyle üretilseydi, profil 58 milyon km'deki Merkür yörüngesinde ~**0,2 km/s** öngörürdü. Gözlenen: **47,4 km/s** — Güneş yüzey dönüşünden **23 kat** hızlı. Profil geriye sarılırsa, girdabı üretecek merkez kaynağın **>430 km/s** dönmesi gerekir. SOHO g-mode verisi (Fossat ve ark., 2017) çekirdeği yüzeyin 4 katında (~8 km/s) bulur — gereken değerin elli kattan fazla altında. **Sonuç:** ne kabuk ne çekirdek; girdabın motoru gövdenin mekanik devri olamaz — motor, kütle nükleonlarının dördüncü boyut çift dönüş deşarjıdır (3.8.2).
-3. **Muhasebe zinciri 2 — Dünya-Ay (girdiler [S]):** Ay'ın yörünge hızı 1,02 km/s'dir. Aynı profil, girdabı Dünya'nın mekanik dönüşüne bağlayan varsayım altında ekvator hızını **7,93 km/s** gerektirir. Gerçek: **0,465 km/s** (R-6 bağlayıcı değeri) — açık **17 kat**. Sismolojik veri (PREM; Song & Richards, 1996; Vidale ve ark., 2000) iç çekirdeğin de neredeyse aynı yavaşlıkta döndüğünü gösterir: mekanik sürükleme muhasebesi her düzeyde çöker.
-4. İki zincirin ortak okuması: 23 ve 17 katlık açıklar teorinin açmazı değil **keşif aracıdır** — girdap hızı ile kütlenin mekanik devri arasındaki oran, motorun mekanik değil dördüncü-boyutsal olduğunun gözlemsel imzasıdır.
+$$T \propto R^{3/2} \;\Longrightarrow\; v_{madde} = \frac{2\pi R}{T} \propto \frac{1}{\sqrt{R}}$$
+Bu **maddenin** profilidir. Ortamın profili aynı biçimi taşır, genliği iki katlıdır:
+$$v_\theta(R)=\sqrt{\frac{\rho_n}{\rho_0}}\,v_{madde}(R)=2\sqrt{\frac{\mathcal{G}M}{R}}=2\,v_{kopma}(R)$$
+Yani ortamın herhangi bir yarıçaptaki dolaşım hızı, o yarıçaptaki **kopma hızının tam iki katıdır.** Muhasebe zincirleri bu türetilmiş profille yürütülür (eski sürüm maddenin hızını ortamın hızı sanıyordu; sayılar bu yüzden yarısı çıkıyordu).
+
+2. **Muhasebe zinciri 1 — Güneş (girdiler [S]):** Güneş'in ekvator yüzey hızı 2 km/s'dir (Beck, 2000). Ortamın Merkür yörüngesindeki dolaşım hızı $2\times47{,}4=$ **94,8 km/s**, Güneş yüzeyinde ise $2\sqrt{\mathcal{G}M_\odot/R_\odot}=$ **874 km/s**'dir. Mekanik sürükleme hipotezi bu devri gövdenin yüzeyinden talep eder: ölçülenin **439 katı.** SOHO g-mode verisi (Fossat ve ark., 2017) çekirdeği yüzeyin 4 katında (~8 km/s) bulur — gereken değerin **yüz kattan fazla** altında. **Sonuç:** ne kabuk ne çekirdek; girdabın motoru gövdenin mekanik devri olamaz — motor, kütle nükleonlarının dördüncü boyut çift dönüş deşarjıdır (3.8.2).
+
+3. **Muhasebe zinciri 2 — Dünya-Ay (girdiler [S]):** Ay'ın yörünge hızı 1,02 km/s'dir; ortam onun iki katı (2,04 km/s) ile dolaşır. Dünya yüzeyinde gereken dolaşım $2\sqrt{\mathcal{G}M_\oplus/R_\oplus}=$ **15,8 km/s**'dir. Gerçek ekvator hızı: **0,465 km/s** (R-6 bağlayıcı değeri) — açık **34 kat**. Sismolojik veri (PREM; Song & Richards, 1996; Vidale ve ark., 2000) iç çekirdeğin de neredeyse aynı yavaşlıkta döndüğünü gösterir: mekanik sürükleme muhasebesi her düzeyde çöker.
+
+4. **İki zincirin ortak okuması — ve muhasebeyi kavramsal olarak kapatan gözlem.** 439 ve 34 katlık açıklar teorinin açmazı değil **keşif aracıdır.** Dahası, gereken devirler her iki gövdede de **kopma hızının tam iki katıdır** (Güneş: 874 = 2×437; Dünya: 15,8 = 2×7,91) — çünkü $v_\theta=2v_{kopma}$ bağıntısı bunu zorunlu kılar. Yani mekanik hipotez yalnızca "çok hızlı" bir dönüş değil, **gövdeyi dağıtacak devrin iki katını** talep eder: girdabı üretebilecek devirde gövde var olamaz. Muhasebe böylece sayısal olarak değil, yapısal olarak kapanır.
 
 ### Sonuç
-$$\boxed{v(R) \propto \frac{1}{\sqrt{R}}\,, \qquad \frac{v_{girdap}}{v_{mekanik}}\bigg|_{Güneş} \approx 23\,, \qquad \frac{v_{gereken}}{v_{ekvator}}\bigg|_{Dünya} = \frac{7{,}93}{0{,}465} \approx 17}$$
+$$\boxed{v_{madde}(R) \propto \frac{1}{\sqrt{R}}\,,\quad v_\theta(R)=2\,v_{madde}(R)=2v_{kopma}(R)\,,\quad \frac{v_{gereken}}{v_{mekanik}}\bigg|_{Güneş}\!\!=\frac{874}{1{,}99}\approx439\,,\quad \bigg|_{Dünya}\!\!=\frac{15{,}8}{0{,}465}\approx34}$$
 
 ### Geçerlilik Sınırı
 Profil, merkez kütlenin baskın olduğu lokal (Kepler) girdap rejimi içindir; galaktik düz-hız rejimi (4.2.9.2, M-30) bu profilin dışındadır. Muhasebe zincirleri profili varsaymaz-doğrular döngüsüne düşmez: profil gözlemsel Kepler-3'ten, açıklar bağımsız hız ölçümlerinden gelir.

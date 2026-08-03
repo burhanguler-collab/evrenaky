@@ -90,10 +90,14 @@ Ay, adeta akışkan mekaniğindeki bir sörfçü gibi, Güneş ve Dünya girdapl
 
 Güneş'in devasa Evrenakı girdabının gezegenleri nasıl kusursuz bir matematiksel uyumla ($v \propto \frac{1}{\sqrt{R}}$) sürüklediğini Bölüm 3.8.1'de görmüştük. Peki aynı akışkan matematiğini **Dünya-Ay sistemine** uygularsak ne olur? Ortaya, girdabı kütlenin mekanik dönüşüne bağlayan varsayımı kesin biçimde çürüten ve teorinin gerçek motorunu açığa çıkaran bir hesap çıkar.
 
-Hesaplamayı yapalım: Ay'ın yörünge hızı saniyede yaklaşık **1.02 km'dir**. Eğer girdabı üreten şey Dünya'nın *mekanik* dönüşü olsaydı, aynı uzaklık/hız formülüne göre Dünya ekvatorunun saniyede **7.93 km** hızla dönmesi gerekirdi.
+Hesaplamayı yapalım. Ay'ın yörünge hızı saniyede yaklaşık **1,02 km'dir** — fakat hesaba girmesi gereken sayı bu değil, **ortamın** hızıdır: Ay girdaba kapılmış değil, aynı basınç alanında düşmektedir; ortam ise M-9'un siklostrofik dengesi gereği onun **iki katı** hızla dolaşır (Bkz. 3.8.1 kutusu). Ay yörüngesinde ortam $2\times1{,}02=2{,}04$ km/s ile döner, ve Dünya yüzeyinde:
 
-Ancak Dünya ekvatoru, saniyede sadece **0.465 km** hızla döner! 
-Yani Dünya, Ay'ı o hızda çevirebilecek bir girdap üretmek için gerekenden tam **17 kat daha yavaş** dönmektedir. *(katalog: **Ek M-25**)*
+$$v_\theta(R_\oplus)=2\sqrt{\frac{\mathcal{G}M_\oplus}{R_\oplus}}=2\times7{,}91=\mathbf{15{,}8\ km/s}$$
+
+Ancak Dünya ekvatoru, saniyede sadece **0,465 km** hızla döner!
+Yani Dünya, bu girdabı mekanik olarak üretebilmek için gerekenden tam **34 kat daha yavaş** dönmektedir. *(katalog: **Ek M-25**; sayıların M-9 ile güncellenmesi izin kalemi olarak kayıtlıdır.)*
+
+Ve burada da sayı çifte imkânsızdır: 15,8 km/s, Dünya'nın **kopma hızının (7,91 km/s) tam iki katıdır** — mekanik hipotez, gövdeyi dağıtacak devrin iki katını talep eder. Aynı yapı Güneş'te de görülür (3.8.1.1: 874 km/s = kopma hızının iki katı); yani bu bir tesadüf değil, $v_\theta=2\sqrt{\mathcal{G}M/R}$ bağıntısının her gövdede aynı biçimde okunmasıdır.
 
 Mekanik model burada son bir sığınak deneyebilir: belki motor, yavaş yüzey değil hızlı dönen çekirdektir? (Oysa Güneş'te bile 4 katlık çekirdek hızının mekanik açığı kapatmaya yetmediğini 3.8.1.1'de görmüştük.) Yine de soralım: Dünya'nın çekirdeği için durum nedir?
 
@@ -104,7 +108,7 @@ Modern sismolojik deprem verileri (PREM; Dziewonski & Anderson, 1981) bu son ka�
 **Bu Rakamsal Çöküşün Evrenakı Açısından Anlamı:**
 1. Ay'ı 380.000 km öteden yörüngesinde taşıyan girdabın motoru, Dünya'nın ne kabuğunun ne de çekirdeğinin mekanik devridir; Dünya kütlesini oluşturan nükleonların **dördüncü boyuttan gelen çift dönüş deşarjıdır** (Bkz. 3.4.4 ve 3.8.2). Viskozitesi mertebelerce küçük olan Evrenakı, bu deşarjla, sürtünmeli kütlenin görünen devrinden kat kat hızlı döner; Dünya'nın makro-girdabı Ay'ı taşımaya bu sayede yeter.
 2. Dünya'nın saniyede 0.46 km'lik dönüşü bir "motor arızası" değil, dördüncü boyut dönüşlerinin, içinde yüzdüğümüz Güneş girdabı ortamında izin verdiği **denge ifadesidir** (girdap rekabeti için Bkz. 3.4.4). Klasik teorinin bu yavaşlığı Ay'ın frenlemesine bağlaması ikincil bir okumadır: kütle oranı gözetildiğinde, Dünya'nın yaklaşık onda biri kütledeki Mars'ın neredeyse aynı devri (24.6 saat) serbestçe sergilemesi, dönüş hızını asıl belirleyenin uydu freni değil bu denge yasası olduğunu gösterir.
-3. Dolayısıyla 17 katlık açık, teorinin bir açmazı değil **keşif aracıdır**: girdap hızı ile kütlenin mekanik devri arasındaki bu devasa oran, motorun mekanik değil dördüncü-boyutsal olduğunun doğrudan gözlemsel imzasıdır.
+3. Dolayısıyla 34 katlık açık, teorinin bir açmazı değil **keşif aracıdır**: girdap hızı ile kütlenin mekanik devri arasındaki bu devasa oran, motorun mekanik değil dördüncü-boyutsal olduğunun doğrudan gözlemsel imzasıdır.
 
 **Sonuç: Ay Neden Uzaklaşıyor? (Lunar Recession)**
 Madem Dünya'nın girdabı Ay'ı taşımaya yetmektedir, Ay neden her yıl bizden **3.8 cm** uzaklaşmaktadır (Ay Lazer Menzillemesi ölçümü: Dickey ve ark., 1994)? Cevap yerel bir kusurda değil, kozmolojik bir süreçtedir: **evren genişlemekte ve Evrenakı yoğunluğu azalmaktadır** (basınç gevşemesi süreci için Bkz. Bölüm 3.7). Ortam seyreldikçe, Ay'ı yörüngesinde tutan çembersel sıkıştırmanın (mengene basıncının) şiddeti çağlar boyunca kademeli olarak düşer ve yörünge yavaşça dışa açılır. Aynı seyrelme, dördüncü boyut motorunun akışkandaki ifadesini de zayıflattığından iki eşlik eden imza daha üretir: **Dünya'nın kendi ekseni etrafındaki dönüşü çağlar içinde yavaşlar** (günlerin jeolojik ve paleontolojik kayıtlarda gözlenen uzaması) ve girdabın sürüklediği **Ay'ın yörünge hızı da buna koşut olarak düşer**. Klasik teorinin ayrı ayrı gelgit-sürtünmesi muhasebesine yüklediği bu üç olgu — uzaklaşma, gün uzaması ve yörünge hızındaki yavaşlama — teoride tek kozmolojik sürecin üç yüzüdür. Ay kütlesinin Dünya girdabında yarattığı pürüzün karşılıklı frenlemesi (Bkz. 3.9.1) bu tabloya yalnızca ikincil bir katkı yapar. Bu açıklama teoriyi yanlışlanabilir kılar: seyrelme Dünya-Ay sistemine özgü olmadığından, bu kozmolojik taban imzanın diğer yörüngelerde de aranmasını öngörür. Ancak taban terimi tek başına işareti belirlemez; her uydunun net kaderini, hemen aşağıda kurulan gradyan lobu işaret kuralı tayin eder.

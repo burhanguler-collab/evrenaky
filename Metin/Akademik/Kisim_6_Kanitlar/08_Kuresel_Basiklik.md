@@ -10,10 +10,13 @@ Evrenakı teorisinde bir gezegenin figürü, şu dört kuvvetin ortak sonucudur:
 
 | Şişmeye Karşı Çalışanlar (Baskılayıcı) | Şişme Yönünde Çalışanlar (Şişirici) |
 | :--- | :--- |
-| **1. Radyal Kütle-İtim (F1):** Klasik kütleçekimiyle sayısal olarak özdeştir. | **3. Merkezkaç Kuvveti:** Klasik atalet etkisidir, reddedilmez. |
+| **1. Radyal Kütle-İtim (F1):** Klasik kütleçekimiyle sayısal olarak özdeştir. | **3. Merkezkaç Kuvveti (M-22):** Klasik fizikteki gibi "sanal bir atalet" değildir; dönen Evrenakı girdabının yarattığı dışa doğru olan **reel basınç gradyanıdır** ($dP/dR=\rho v_\theta^2/R$). |
 | **2. Eksenel İtim (F4):** Kutuplardan ekvatora doğru, dönüş eksenine paralel baskı yapan hidrodinamik kuvvet. | **4. Yanal İtim (F5):** Ekvator düzleminde dışa doğru savrulmayı destekleyen dinamik akı. |
 
-Radyal itim (F1) kütleçekimiyle birebir aynı matematiksel ağırlığı taşıdığı için, hidrostatik hesapta merkezkaça karşı zaten dengelenmiştir. Dolayısıyla teorinin gezegen figürüne kattığı temel imza, klasik fizik modellerinde bulunmayan **F4 (Eksenel İtim)** ve **F5 (Yanal İtim)** kuvvetlerinin net etkisidir.
+Radyal itim (F1) kütleçekimiyle birebir aynı matematiksel ağırlığı taşıdığı için, hidrostatik hesapta merkezkaça karşı dengelenmesinin tabanını oluşturur. Teorinin gezegen figürüne kattığı temel imza ise, klasik fizik modellerinde bulunmayan **F4 (Eksenel İtim)** ve **F5 (Yanal İtim)** kuvvetleridir. 
+
+**Kopma Sınırları ve Kararlılık Garantisi:** 
+Eksenel İtim (F4) ile Merkezkaç (M-22), aynı dönme hareketinin iki farklı yüzü olarak doğduklarından, Evrenakı teorisinde bu ikisinin birbirine oranı ($F_4 / F_{merkezkaç} = \lambda$) dönüş hızından **bağımsız sabit bir sayıdır**. Klasik fizikte yıldızlar çok hızlı döndüğünde merkezkaç sonsuza gidip yıldızı parçalamakla tehdit ederken, Evrenakı'da merkezkaç ne kadar artarsa onu dengeleyen F4 baskısı da tam aynı oranda artar. Bu sayede nötron yıldızları ve devasa kara delikler gibi astronomik hızlarda dönen cisimler parçalanmadan kararlılıklarını (stability) koruyabilirler.
 
 ### 6.6.2 Multipol Ayrıştırması ve Jeodezik Kanıtlar ($J_4$ İmzası)
 

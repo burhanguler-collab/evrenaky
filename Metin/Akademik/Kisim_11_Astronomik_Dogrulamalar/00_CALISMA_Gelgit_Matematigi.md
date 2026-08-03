@@ -320,7 +320,28 @@ ama M-36'ya işlemek izin gerektirir; bkz. 4.1.)*
 
 ---
 
-## 4. İzin bekleyen kalemler (Kısım 8 — DOKUNULMADI)
+## 4. İzin kalemleri — ✅ TAMAMI İŞLENDİ (3 Ağustos 2026, "kilitler açıldı")
+
+> **Kapanış kaydı.** Yazar kilitleri açtı. Aşağıdaki 4.1'in altı önerisi, 4.4'ün Ek D senkronu,
+> 5.5.5'in M-37 düzeltmesi ve 5.6.4'ün M-25 güncellemesi **tek partide işlendi.** Kısım 3 ile
+> Ek M arasındaki bilinçli sayı sapması **kalmadı** (grep doğrulamalı: eski $\Delta h$, $GMb^2$,
+> "23 kat", "17 kat", "430 km", "7,93 km" hiçbir yerde geçmiyor).
+>
+> **M-36'ya işlenenler:** Varsayım 3 → akı korunumu · Adım 0 (Gauss ile $\nabla^2P=0$) ·
+> Adım 1 çerçeve (Kuvvet 1'den, Postülat 7'den değil) · $T_\perp$ geometriden bağımsız türetim ·
+> çembersellik + dejenerasyon · iz **sonuç** olarak · $\Psi_T$'de $G\to\mathcal{G}$ ·
+> $\Delta h\to\Delta\zeta$ + genlik etiketi + hacim korunumu · artık basınç alanı ve 2:1 oranı ·
+> iki açık uç **kapatıldı** (3° atomik sürtünme; iç rejim $-4\pi\mathcal{G}\rho$) · yeni açık uç
+> (dönen kaynak, 11.1.8) · özdeğer tablosu · geçerlilik sınırı · "Kullanıldığı bölümler"e 11.1.
+>
+> **M-37:** sıfırıncı mertebe "zarf" olarak yeniden yazıldı (taşıma değil, sürükleme bastırıcısı).
+>
+> **M-25:** Varsayım 1 (kapılış → serbest düşme), Adım 1'e ortam profili $v_\theta=2v_{kopma}$,
+> iki muhasebe zinciri (874 km/s · 439 kat · 15,8 km/s · 34 kat), Adım 4'e "kopma hızının iki
+> katı" kapanışı, kutulu sonuç.
+
+<details>
+<summary>Arşiv — işlenmeden önceki izin listesi</summary>
 
 Aşağıdakilerin hiçbiri uygulanmamıştır. Onay verilirse tek partide işlenir.
 
@@ -343,6 +364,8 @@ geçirildiği emsal vardır ("Bunun bilinen bedeli" kaydı). Sapma bu dosyada tu
 
 Yok. M-26'nın hidrostatik argümanı bağımsız bir yoldur ve 2.6'nın çapraz denetiminde
 **doğrulanmıştır** — dokunmaya gerek yok, yalnız 11.1'den atıf verilecek.
+
+</details>
 
 ### 4.3 $\zeta$ sembolü — ✔ ÇÖZÜLDÜ (yazar kararı, 2 Ağustos 2026)
 
@@ -452,6 +475,370 @@ dokunulmadı — yazar kararı bekliyor.
 
 ---
 
+## 5.7 ANİMASYON VE BETİK SWEEP'İ — kod içindeki virüs (3 Ağustos 2026)
+
+Yazar talimatı: *"galaktik animasyonlara ve galaktik çalışmalara da bunları işle."* Virüs bir
+yerde **kodun içinde** çıktı ve animasyon kitabın tam tersini öğretiyordu.
+
+### 5.7.1 `Simulasyon/evrenaki_girdap_animasyonu.html` — üç hata, üçü düzeltildi
+
+| # | Bulunan | Düzeltme |
+|---|---|---|
+| 1 | `drawSatellite`: `var w = omegaAt(sat.r, sn)` — **uydunun açısal hızı girdap profilinden ve spin'den alınıyordu** | `omegaMadde(sat.r)` — Kepler profili, **spin'den bağımsız.** Kaydırıcı 0'a çekilse de uydu dolanır. |
+| 2 | `drawMass`: yorum *"Pervane/Kütle, sürüklediği sıvıdan DAHA HIZLI dönmelidir"*, kod gövdeyi girdaptan hızlı döndürüyordu (25,0 ↔ 17,5) | **Ters çevrildi** (1,2 ↔ 7,75). Yorum 3.8.1.1'in 439 katına ve 3.8.2'nin motoruna atıfla yeniden yazıldı; görünürlük sıkıştırması etiketlendi. |
+| 3 | Tek profil (`omegaAt`) hem ortam hem uydu için kullanılıyordu | **İki ayrı profil:** `omegaMadde(r) ∝ r^(−3/2)` (F1, spin'den bağımsız) ve `omegaOrtam(r,sn) = 2·omegaMadde(r)·(1+sn)` — M-9'un tam 2 çarpanı tabanda, ω₁ katkısı kaydırıcıda. |
+
+Efsane ve altyazı da yeniden yazıldı: *"Uydu — akıntıda sürüklenir"* → *"Uydu — **düşer**, akıntıya
+kapılmaz"*; altyazı artık kaydırıcıyı 0'a çekmeyi bir **sınav** olarak sunuyor ve Merkür/Venüs
+öngörüsünü doğru mekanizmaya (3.4.4 girdap rekabeti) bağlıyor, yörüngenin yokluğuna değil.
+
+**Doğrulama (konsolda, kaynak fonksiyonlar birebir yeniden kurularak):** uydunun $\omega$'sı
+spin'den bağımsız ✓ · spin=0'da ortam/uydu oranı **tam 2,000** ✓ · hız profili üssü **−0,500**
+($v\propto1/\sqrt r$, kitabın türettiği) ✓ · gövde devri ortamdan yavaş ✓. Konsol hatasız.
+*(Görsel doğrulama yapılamadı — Browser pane kapalıyken `requestAnimationFrame` duruyor.)*
+
+### 5.7.2 Temiz çıkanlar
+
+| Dosya / grup | Denetim |
+|---|---|
+| **Kısım 10** metni (10 dosya) | virüs yok ✓ — zincir zaten madde seviyesinde |
+| `Simulasyon/kisim10/panel_*.html` | yasa değişmedi ($v^2=v_{bar}^2+\sqrt{\mathcal{G}Ma_0}$), güncelleme gerekmiyor ✓ |
+| **Galaktik betikler** (`CALISMA/*.py`) | madde seviyesinde fit; tek eşleşme `gozlemsel_ayirma_sinavi.py`'de "asimetrik sürükleme" — elenmiş basınç desteği adayı, ayrı konu ✓ |
+| `dokuz_postulat_turu.html` | *"lokal zarfı kendileriyle birlikte sürüklerler"* — bu **doğru** okuma (zarf eş-hareketli, sürtünme yok); dokunulmadı ✓ |
+| `ay_yorunge_dengesi.html` | yörünge **düzlemini** anlatıyor (3.9.3), hızını değil ✓ |
+| `ay_gelgit_sirali.html` | gelgit mekanizması; kapılışla ilgisi yok ✓ |
+
+### 5.7.3 Üretim durumu
+
+Değişiklikler **birikmiş durumda**; `firebase_update_site.py` / site üretimi **çalıştırılmadı**
+([[toplu-uretim-kurali]]: yazar "set bitti" demeden koşum yok).
+
+---
+
+## 5.6 GALAKTİK CEPHE KAPANDI — tam sweep ve düzeltmeler (3 Ağustos 2026)
+
+Yazar talimatı: *"her şeyi hallet bu galaktik problem olmaktan çıksın."* Kitap baştan sona
+tarandı; virüsün bulunduğu her yer ve M-9 ile değişen her sayı düzeltildi.
+
+### 5.6.1 Virüsün bulunduğu yerler
+
+| Yer | Durum | Ne yapıldı |
+|---|---|---|
+| **3.8.1** — *"akıntı katmanlarına kapılmış… boşlukta düşmediğini"* | ✅ düzeltildi | Yörünge anlatısı yeniden yazıldı: gezegen kapılmaz, **aynı alanda düşer.** İki denge/iki yoğunluk kutusu eklendi; iki profilin **biçimi** aynı, **genliği** iki katlı. Eski yazımın kaydı düşüldü. |
+| **11.3.1** — *"uydu bu akışkana hapsolur"* | ✅ düzeltildi (§5.5) | Başlık dahil baştan yazıldı |
+| **Ek M-37** sıfırıncı mertebe | ⛔ **izin bekliyor** | Düzeltme metni 5.5.5'te hazır |
+
+### 5.6.2 M-9 ile ikiye katlanan sayılar
+
+Ortamın hızı artık türetiliyor: $v_\theta(R)=2\sqrt{\mathcal{G}M/R}$ — yani **o gövdenin kopma
+hızının tam iki katı.** Mekanik sürükleme hipotezinin talebi böylece iki katına çıkıyor ve
+argüman **güçleniyor:**
+
+| Yer | Eski | Yeni | Ek kazanç |
+|---|---|---|---|
+| **3.8.1.1** (Güneş) | 430 km/s · 23 kat | **874 km/s · 439 kat** | 874 = **2× kopma hızı** (437) → çifte imkânsız |
+| 3.8.1.1 (çekirdek notu) | "430'un elli katı altında" | "874'ün **yüz katı** altında" | — |
+| 3.8.1.1 (soru cümlesi) | "katbekat hızlı" | "dört yüz kattan fazla hızlı" | — |
+| **3.9.4** (Dünya-Ay) | 7,93 km/s · 17 kat | **15,8 km/s · 34 kat** | 15,8 = **2× kopma hızı** (7,91) |
+| 3.9.4 md.3 | "17 katlık açık" | "34 katlık açık" | — |
+| **Ek M-25** (katalog) | 23 ve 17 kat | 47 ve 34 olmalı | ⛔ **izin bekliyor** |
+
+**Yeni ve genel sonuç:** her gövde için ortamın yüzey hızı $=2v_{kopma}$. Mekanik hipotez
+gövdenin **kopma hızının iki katında** dönmesini talep eder — yani girdabı üretebilecek devirde
+gövde var olamaz. Bu bir tesadüf değil, $v_\theta=2\sqrt{\mathcal{G}M/R}$'nin her yerde aynı
+okunuşudur. 3.8.1.1 ve 3.9.4'e işlendi.
+
+### 5.6.3 Etkilenmediği doğrulananlar
+
+| Kalem | Denetim |
+|---|---|
+| $a_0$, $\ell_\omega$, BTFR, M-45 %12 kapanışı | M-38 Adım 4'te $C/\rho_n$ **açıkça** yazılı; yasa $v^2=R\,a_{madde}$ biçiminde ⟹ zincir madde seviyesinde ✓ |
+| 173 galaksi fit kalitesi | dokunulmadı, medyan RMS 12,6 km/s ✓ |
+| Kepler, $P_0$, R-5, M-42, ışık bükülmesi | dokunulmadı ✓ |
+| 3.4.1 kütle-itim ispatı | M-22 geçerli (M-9 sahip çıkıyor) ⟹ ayakta ✓ |
+| Simülasyon/HTML dosyaları | R-8 taraması: hiçbir fizik sayısı koda gömülü değil ✓ (bulunan "430" değerleri CSS/SVG koordinatı) |
+| Anayasa, kitap özeti | eski sayı geçmiyor ✓ |
+
+### 5.6.4 Galaktik cephede kalan: iki izin kalemi
+
+1. **Ek M-37** sıfırıncı mertebe tanımı (metin 5.5.5'te hazır) — risk yok, sayısal sonuç değişmiyor.
+2. **Ek M-25** muhasebe zincirleri: 23 → 47 ve 17 → 34; kutulu sonuçtaki
+   $v_{girdap}/v_{mekanik}$ oranları ve "iki zincirin ortak okuması" cümlesi.
+
+Bu ikisi işlenene kadar Kısım 3 ile Ek M arasında **bilinçli bir sayı sapması** vardır ve burada
+kayıtlıdır. Onun dışında galaktik cephe kapanmıştır.
+
+---
+
+## 5.5 ÇARPAN SORUNU ÇÖZÜLDÜ — çarpan hata değil, virüs başka yerde (3 Ağustos 2026)
+
+### 5.5.1 Kitap çarpanı zaten yazmış: Ek M-9
+
+M-9'un Geçerlilik Sınırı, kelimesi kelimesine:
+
+> *"Kütle çevresindeki gradyan bölgesinde ortam tepkisiz değildir — Euler denklemi gereği
+> gradyana cevap verir; ama cevabı düşmek değil **dolaşmaktır**: $\dfrac{\nabla P}{\rho_0}=\dfrac{v_\theta^2}{r}$
+> ... Katı deplasman cebi (nükleon) ise akıp dengelenemez; bütün hâlde itilir.*
+> **Madde düşer, ortam dolaşır.**"
+
+$\rho_0$ **açıkça** yazılı. Yani $\rho_0/\rho_n=1/4$ ve ondan doğan 2 çarpanı teorinin **kasıtlı
+yapısıdır**, hata değil. Sonuç: $P_0$'a, R-5'e, M-42'ye, ışık bükülmesine **dokunmaya gerek yok.**
+
+**Yazarın "merkezkaç reel olmalı" tezi böylece tam olarak doğrulanmıştır** — M-22 gerçek bir
+denge ve M-9 ona $\rho_0$ ile açıkça sahip çıkıyor.
+
+### 5.5.2 Newtonyen virüs: "kapılış yörüngeyi sağlar"
+
+İki yerde, aynı hastalık:
+
+| Yer | Metin | Sorun |
+|---|---|---|
+| **Ek M-37**, sıfırıncı mertebe | *"Cisim ortamla gider ($v_{bağıl}=0$). Kuvvet değil taşınmadır; **yörünge hareketinin kendisini sağlar**"* | M-9 ile doğrudan çelişir |
+| **11.3.1** | *"Sürüklenme zarfı nedeniyle uydu bu akışkana hapsolur ($v_{yör}=v_\theta$)"* → $v_\theta=\sqrt{\mathcal{G}M/R}$ | iki yoğunluğu karıştırır |
+
+**Virüsün cinsi:** *"gezegeni yörüngede ne tutuyor?"* sorusuna bir **taşıyıcı** aramak. Bu
+Newtonyen bir soru kalıbıdır; teoride cevap taşıyıcı değil, **madde düşer.** Taşıma mekanizması
+aramak, yörüngeyi bir kuvvet dengesi sanmaktan gelir.
+
+**Gözlem M-9'u seçiyor:** gezegenler $\sqrt{\mathcal{G}M/r}$ hızında dolanır. Kapılış yörüngeyi
+sağlıyor olsaydı $2v_{Kepler}$'de olurlardı.
+
+**Postülat 7'nin doğru okunuşu:** sürüklenme zarfı bir taşıma mekanizması değil, **yerel
+sürükleme bastırıcısıdır.** M&M null'u zarfın içinden gelir; yörünge zarftan değil serbest
+düşmeden gelir. Zarf bir sınır tabakasıdır, akışın tamamı değil.
+
+### 5.5.3 Zincirin tamamı kapandı
+
+| Kalem | Durum |
+|---|---|
+| Galaktik zincir ($a_0$, $\ell_\omega$, BTFR, M-45 %12) | ✓ madde seviyesinde, **dokunulmaz** |
+| Kepler | ✓ madde serbest düşer |
+| M-22 / merkezkaçın reelliği | ✓ geçerli, M-9 sahip çıkıyor |
+| $\rho_0/\rho_n=1/4$, $P_0$, ışık bükülmesi | ✓ dokunulmaz |
+| 3.4.1'in kütle-itim ispatı | ✓ ayakta (5.4.4'ün endişesi kalktı) |
+| **Kapılış hipotezi** | ✗ **reddedildi** — M-9 ve gözlem birlikte dışlıyor |
+| **M-37 sıfırıncı mertebe + 11.3.1** | ✗ düzeltilecek (11.3.1 yapıldı; M-37 izin bekliyor) |
+
+### 5.5.4 Kazanç: 2 çarpanı bir öngörüye dönüştü
+
+$$\Delta v=v_\theta-v_{madde}=\left(\sqrt{\rho_n/\rho_0}-1\right)v_{madde}=v_{madde}$$
+
+**Kayma, yörünge hızının kendisine eşittir** — her yarıçapta, her sistemde, serbest parametresiz.
+Merkür 47,9 · Dünya 29,8 · Jüpiter 13,1 · Ay yörüngesi 1,02 · Güneş galaktik yarıçap 220 km/s.
+$\rho_n/\rho_0=4$'ün doğrudan sınavı. 11.3.1'e tablo olarak işlendi.
+
+**Yeni açık kalem:** zarf gövdeyle giderken çevre ortam iki kat hızlı aktığından zarf sınırında
+bir **kayma tabakası** doğar; yitimi ve torku hesaplanmamıştır (M-43 altkritik bastırma adayı).
+
+### 5.5.5 M-37 için hazırlanan düzeltme — İZİN BEKLİYOR
+
+`Kisim_8_Ekler/18_5_Kuvvet_Matematigi.md`, M-37'nin "iki mertebe" kutusu. **Mevcut:**
+
+> - **Sıfırıncı mertebe (sürüklenme):** Cisim ortamla gider ($v_{bağıl}=0$). Kuvvet değil
+>   **taşınmadır**; yörünge hareketinin kendisini sağlar.
+
+**Önerilen:**
+
+> - **Sıfırıncı mertebe (zarf):** Gövdeyi saran zarf içinde bağıl hız sıfıra iner ve klasik
+>   $F_d\propto\rho v_{bağıl}^2$ sürüklemesi kaybolur (M&M null'unun kaynağı). Bu bir **taşıma
+>   mekanizması değildir** — yörünge hareketini sağlayan şey zarf değil, maddenin basınç
+>   gradyanında serbest düşmesidir ($v_{madde}=\sqrt{\mathcal{G}M/R}$). Ortamın kendi dolaşımı
+>   bundan ayrıdır ve $\sqrt{\rho_n/\rho_0}=2$ kat hızlıdır (**M-9**, "madde düşer, ortam
+>   dolaşır"); zarf sınırında bir kayma tabakası kalır.
+
+**Gerekçe:** mevcut yazım M-9'un Geçerlilik Sınırı ile doğrudan çelişiyor ve literal alındığında
+gezegenleri $2v_{Kepler}$'e koyuyor. **Risk:** yok — M-37'nin birinci mertebesi ($\eta_E$, artık
+kuplaj, $\tau_{ret}$) ve bütün sayısal sonuçları değişmiyor.
+
+*(Aynı partide 4.1'in altı önerisi ve 4.4'ün Ek D senkronu da var.)*
+
+---
+
+## 5.4 $\rho_0$ ↔ $\rho_n$ ÇARPANI — bulundu, galakside sınandı, karantinaya alındı (3 Ağustos 2026)
+
+### 5.4.1 Sorun
+
+Aynı $dP/dr$'yi iki denklem tarif ediyor ve farklı yoğunluklara bölüyor:
+
+$$\text{M-22 (ortam):}\ \ \frac{dP}{dr}=\rho_0\frac{v_\theta^2}{r} \qquad\qquad \text{M-2/M-35 (madde):}\ \ \frac{dP}{dr}=\rho_n\frac{\mathcal{G}M}{r^2}$$
+
+Eşitlenince $v_\theta=\sqrt{\rho_n/\rho_0}\,\sqrt{\mathcal{G}M/r}=\mathbf{2}\sqrt{\mathcal{G}M/r}$.
+Çarpan **tam** ($\rho_0/\rho_n=1/4$, R-5'ten türeme) ve **rejimden bağımsız** — düz dönüş
+rejiminde de aynı 2 çıkıyor. 11.3.1 ise $|a_{radyal}|=v_\theta^2/R$ yazarak $dP/dR$'yi $\rho_0$'a
+bölüp sonucu $\rho_n$'ye bölünmüş ivmeye eşitliyor: **iki yoğunluk karışmış.**
+
+### 5.4.2 Galaktik sınav — 173 galaksi, SPARC rotmod
+
+Çarpan galaktik zincire girseydi $v_{F4}$ ortamın hızı olurdu, yıldızlarınki yarısı, $v^2$'de
+dörtte biri, dolayısıyla $a_0$ **16'ya bölünürdü**. Tüm örnekleme koşuldu
+($v^2=v_{bar}^2+\sqrt{a_0\mathcal{G}M_{kaps}}$, $Y_{disk}=0{,}5$, $Y_{bulge}=0{,}7$, 3345 nokta):
+
+| Senaryo | $a_0$ [m/s²] | Medyan RMS | Talebe oran |
+|---|---|---|---|
+| **Galaksilerin talebi** (ortak fit) | $6{,}7\times10^{-11}$ | **12,6 km/s** | 1,00 |
+| Kitabın kalibresi | $7{,}67\times10^{-11}$ | 12,9 | 1,15 ✓ |
+| M-45 türetimi | $8{,}60\times10^{-11}$ | 13,6 | 1,28 ✓ |
+| **M-45/16 (çarpan doğruysa)** | $5{,}38\times10^{-12}$ | **27,6** | **0,08 ✗** |
+
+Talep bandı (%10 RMS toleransı): $5{,}1\times10^{-11}$ – $8{,}6\times10^{-11}$.
+Çarpan senaryosu bandın **on kat altında**; medyan RMS ikiye katlanıyor ve **173 galaksinin
+132'si kötüleşiyor.**
+
+$$\boxed{\text{Galaksiler } \rho_0/\rho_n \text{ çarpanının galaktik zincire girmesini dışlıyor.}}$$
+
+### 5.4.3 Bunun anlamı — Kısım 10 güvende, hata yerel
+
+Galaksiler, teorinin galaktik zincirindeki hızın **maddenin yörünge hızı** olduğunu söylüyor;
+ortamınki değil. Dolayısıyla:
+
+- **Kısım 10'un hiçbir sonucu etkilenmiyor.** $a_0$, $\ell_\omega$, BTFR, M-45 kapanışı — hepsi
+  yerinde. Dünkü "14 kat sapma" endişesi galaktik veriyle **çürütüldü.**
+- Hata, sonuçta değil **gerekçede**: 11.3.1'in profil teoreminin *sonucu* doğru
+  ($v_*=\sqrt{\mathcal{G}M/R}$ — bu zaten maddenin dairesel yörünge şartı), ama *türetimi* yanlış.
+  M-22 üzerinden gitmek gereksiz ve yanlış; doğru türetim tek satır: madde $a_{madde}$ altında
+  dairesel yörüngede ise $v^2=R\,a_{madde}$. M-22'ye hiç gerek yok.
+- Geriye M-22'nin **kendi** iddiası kalıyor: ortam saf dönüşteyse 2× döner. Bu bir yörünge
+  iddiası değil, **ortam hakkında ayrı bir iddia** — ve tek gözlemsel sonucu Güneş yarıçapında
+  220 km/s'lik Evrenakı rüzgârı olurdu.
+
+### 5.4.4 Kalan iki kalem
+
+1. **11.3.1 / M-37'nin gerekçesi düzeltilmeli** (sonuç değil). Kısım 11 açık, Ek M kapalı.
+2. **M-22 kütle çevresinde geçerli mi?** Varsayım 2 "saf teğetsel akış" der; M-35'in pompası
+   radyal akı üretir. Geçerli değilse hem 2× ortam dönüşü hem 220 km/s rüzgâr iddiası düşer,
+   **ama 3.4.1'in "kütle-itim Euler'in zorunluluğudur" ispatı da dayanağını kaybeder.**
+   *(Not: pompa salınımlıysa net radyal akı sıfırdır ve çelişki kalkar — $q_n$'nin sürekli mi
+   salınımlı mı olduğu belirleyici, doğrulanmadı.)*
+
+---
+
+## 5.3 DİFERANSİYEL DÖNÜŞ HATTI VE MERKEZKAÇ ENTEGRASYONU — ✔ RESMİ OLARAK ENTEGRE EDİLDİ (3 Ağustos 2026)
+
+> **Entegrasyon Kaydı (3 Ağustos 2026):** Merkezkaç kuvvetinin "sanal eylemsizlik" olmaktan çıkarılıp, dönen ortamın dışa dönük radyal basıncı olan **M-22** ile resmen özdeşleştirilmesi kitaba (Ek M, Kısım 6.6, Kısım 3, vs.) işlenmiştir. Bu entegrasyonun **Galaktik Düz Dönüş Eğrisini** bozmadığı, aksine $v_{yildiz} = v_{ortam} \sqrt{\rho_{ortam}/\rho_n}$ ilişkisiyle yıldızın hızını sabit $v_{ortam}$ profiline kilitleyerek düz eğriyi doğrudan türettiği ispatlanmıştır.
+
+> **Statü uyarısı.** Bu bölüm 11.1'e **işlenmemiştir** ve olduğu gibi işlenemez. Kapsamı
+> 11.1'i aşar (11.2 gezegen figürü, 3.8 Güneş girdabı, 6.6 Sınav 1). Burada tutulan şey
+> bir tez, dayanakları, ve **karşısındaki nicel engel**dir. Yazar kararı bekliyor.
+
+### 5.3.1 Tez (yazar)
+
+1. Güneş **diferansiyel** döner; etki ekvator düzeyinde yoğunlaşır.
+2. Ekvator düzleminde oluşan **eksenel itim (F4)** hem F5'i hem **merkezkaçı** yener.
+3. Ekvatoral hız arttıkça F4 de onunla birlikte artar.
+4. Dönen cisimlerin parçalanmamasının sebebi budur — **neredeyse tüm hızlarda.**
+5. Kuvvet düzgün silindirik olsaydı başka sonuç verirdi; F4'ü ekvatorda aşırı büyüten şey
+   **diferansiyel dönüştür.**
+6. Güneş'in $J_2$'si sade hidrostatik olduğu için değil, **iki büyük terim birbirini yediği
+   için** küçüktür.
+7. Merkezkaç bu teoride sanal değil **reel** olmalıdır ve Evrenakı'da karşılığı bulunmalıdır;
+   ikisi aynı kaynaktan beslendiği için ölçeklemelerinin **berabere** olması beklenir.
+
+### 5.3.2 Merkezkaçın Evrenakı karşılığı zaten yazılı: M-22
+
+$$\frac{dP}{dR}=\rho\,\frac{v_\theta^{2}}{R}$$
+
+Dönen ortam kendi merkezkaç gereksinimini basınç gradyanıyla karşılar. Yani merkezkaç sanal
+kuvvet değil, **dönen ortamın radyal basınç dengesidir.** F4 de aynı dönen ortamdan doğar.
+Tek kaynak ⟹ aynı $\rho v^2$ ölçeklemesi ⟹ **beraberlik zorunlu, tercih değil.**
+
+### 5.3.3 Yapısal sonuç: oran hızdan bağımsız
+
+$$\lambda \equiv \frac{F_4}{F_{merkezka\varsigma}} = \text{sabit},\qquad \lambda\ne\lambda(\omega)$$
+
+| Sonuç | İfade |
+|---|---|
+| **Hıza bağlı kopma eşiği yok** | Newton'da $\omega$ arttıkça merkezkaç/çekim oranı büyür ve 1'i aşar. Burada oran $\omega$ ile büyümez: **bir hızda kararlı olan her hızda kararlıdır.** |
+| **Tavan kalkmaz, yükselir** | $v_{kopma}^{etkin}=v_{kopma}^{Newton}/\sqrt{1-\lambda}$; $\lambda\to1$'de tamamen kalkar |
+| **$\lambda$ ölçülebilir** | $\lambda = 1-\dfrac{J_2^{ölçülen}}{J_2^{Newton,hidrostatik}}$ — her dönen gövde bir veri noktası |
+
+Bu, 11.2'yi bir açıklamadan **Güneş Sistemi çapında bir $\lambda$ ölçümüne** çevirir.
+
+### 5.3.4 Sınav 1 (Bölüm 6.6.2) tezi KISMEN DOĞRULUYOR
+
+Kitapta zaten yapılmış ve **kitaba işlenmemiş** bir sınav var. İki bulgusu tezi destekliyor:
+
+| Bulgu | 6.6.2'nin sözü | Tez açısından |
+|---|---|---|
+| **F4'ün işareti** | *"F4'ün pozitif $P_2$'si $J_2$'yi **azaltır** — yani şişmeye karşı çalışır ✓"* | **Tam olarak tezin dediği.** F4 merkezkaçın zıddına çalışıyor |
+| **İmzanın yeri** | *"imza F5'te değil **F4**'te"* · $J_4$ kanalı açık, işaret doğru, %4–8 | Tezin "F4 baskın" vurgusuyla uyumlu |
+| **F5 elendi** | $\kappa_5\lesssim0{,}02$ — *"yanal itim, gezegen figüründe ölçülebilir etki bırakmıyor"* | 11.2.3'ün $\kappa_5=0{,}5$ çalışma değeri **25 kat fazla**; Dünya'nın %0,42 fazlasını F5'e yüklemek artık savunulamaz |
+
+**Bu, 11.2.3'ün "$\phi\approx0$, yanal itim sıfırlanır" cümlesinin neden yanlış olduğunun ikinci
+ve bağımsız kanıtıdır:** F5 zaten her yerde görünmez ($\kappa_5\lesssim0{,}02$); Güneş'e özel bir
+iptal gerekçesi uydurmaya gerek yoktu. Ve iptal gerekçesi olarak seçilen $\phi\approx0$,
+Güneş'in girdabını da iptal ettiği için teorinin kendi omurgasını kesiyordu.
+
+### 5.3.5 ⚠ İDDİA EDİLEN ENGEL DENETLENDİ — GEÇERSİZ
+
+6.6.2 şunu diyor: *"F4, yüzeyde merkezkaçtan $10^{4}$ kat zayıftır"* · *"F4, F5'i götürecek
+güçte değildir — dört mertebe yetersiz."* Bunu ilk turda tezin karşısındaki nicel engel olarak
+kaydetmiştim. **Denetim sonucu: bu sayı kurulmamıştır ve engel sayılamaz.** Beş bulgu:
+
+**(1) Aritmetik doğru.** $A_4=20{,}7$ m²/s², $\varepsilon_{yüzey}=3{,}3\times10^{-7}$,
+merkezkaç/$g=3{,}45\times10^{-3}$, oran $9{,}6\times10^{-5}$ — hepsi birebir yeniden üretildi.
+Hata hesapta değil zincirdedir.
+
+**(2) Üst sınır, değer gibi yazılmış.** Girdi $\varepsilon_{Ay}<2\times10^{-5}$ bir **sınırdır**;
+çıktı da sınırdır. "…$10^4$ kat zayıftır" bir ölçüm beyanıdır. "F4 F5'i götürecek güçte değildir"
+cümlesi bu yanlış statüyü miras alır.
+
+**(3) Rejim tutarsızlığı — asıl hata.** Aynı adım $r_0>1{,}9\times10^{13}$ m $\approx$ **128 AU**
+veriyor. Bu, Ay yörüngesini **49.000 kat**, Dünya yüzeyini **3 milyon kat** $r_0$'ın *içinde*
+bırakır. M-38 ise açıkça $r_0$'ın içinde yasanın $a\propto1/R$ değil **Rankine çekirdeği
+$a\propto R$** olduğunu yazar. Hesap, kendi sonucunun geçersiz ilan ettiği bölgede dış rejim
+yasasını kullanıyor — **döngüsel.**
+
+İç rejimde yeniden kurulduğunda iki şey birden değişir:
+- $\varepsilon_{yüzey}/\varepsilon_{Ay}=(R_\oplus/r_{Ay})^3=4{,}6\times10^{-6}$
+  ⟹ $F_4/F_{merkezkaç}<2{,}6\times10^{-8}$ (dört değil **sekiz** mertebe), **ama**
+- Ay $r_0$'ın içindeyse Ay'ın $A_4$ üzerindeki sınırı da buharlaşır:
+  $\varepsilon_{Ay}=A_4r_{Ay}^3/(GMr_0^2)$ ile aynı gözlem $A_4\lesssim5\times10^{10}$ verir —
+  $20{,}7$'ye göre **2,4 milyar kat gevşek.**
+
+Yani $10^{-4}$ ne lehte ne aleyhte bir sayıdır; **kurulmamıştır.**
+
+**(4) Kategori hatası.** $\Delta\varpi\simeq-\pi\varepsilon$ bağıntısı $a=A/r^2+B/r$ **merkezi**
+yasası için türetilmiştir. F4 silindiriktir ($\hat R$, $\hat r$ değil) ve Ay'ın yörüngesi Dünya
+ekvatoruna **18°–29° eğiktir** — orada F4 merkezi değildir, düzlem dışı bileşeni vardır ve
+apsidal presesyonun yanı sıra **düğüm gerilemesi** üretir. Pertürbasyon analizi silindirik
+geometri ve eğik yörünge için yeniden yapılmadan bu sınır F4'e ait değildir.
+
+**(5) Dünya'nın sayısı, öznesiz cümleyle evrenselleştirilmiş.** "yüzeyde" = *Dünya'nın*
+yüzeyinde; sınır *Ay'ın* yörüngesinden geliyor. Dünya neredeyse katı-cisim döner. Tez F4'ü
+**diferansiyel dönüşün** beslediğini söylediğine göre bu sayı Güneş'e taşınamaz.
+
+**Sonuç:** Tezin karşısında nicel bir engel yoktur — çünkü niceliğin kendisi yoktur. $A_4$
+gerçekten serbesttir ve serbestliği 6.6.2'nin sandığından mertebelerce geniştir. Bu, tezi
+doğrulamaz; **önündeki yolu açar.** Gerçek iş 5.3.6'daki iki kalemdir.
+
+### 5.3.6 Açık uçlar — tezin yaşaması için kapatılması gerekenler
+
+1. **$A_4$'ün genliği serbesttir.** 6.6.2: *"F4'ün genliği $A_4$'e, o da $1/R$ rejiminin iç kesim
+   yarıçapı $r_0$'a bağlıdır — ve $r_0$'ın gezegen ölçeğindeki değeri teoride sabitlenmiş
+   değildir."* Yani $10^{-4}$ türetilmiş değil, kalibre edilmiştir. Ama serbest bir parametreyi
+   büyütmek öngörü üretmez; **$r_0$ türetilmeden bu hat sınav olamaz.** (M-38'in kendi "Açık
+   Uçlar" listesinde de bu, bloğun *kalan tek yapısal boşluğu* olarak yazılıdır.)
+2. **Diferansiyel dönüşün F4 geometrisine girişi türetilmemiştir.** M-38 düzgün silindirik akı
+   varsayar ($h=$ sabit). Enleme bağlı $v_e(\theta)$ profilinin akı geometrisini nasıl değiştirdiği
+   yazılmalı. Bu yapılmadan "diferansiyel dönüş F4'ü ekvatorda aşırı büyütür" bir hipotezdir.
+3. **İşaret dağılımı çözülmeli.** F4 basıklığı azaltır (6.6.2 ✓), F5 artırır. 11.2.3 Dünya'da
+   **fazla** ölçüyor; F5 elendiyse ($\kappa_5\lesssim0{,}02$) o fazla ne? Jeofizik zaten bağımsız
+   açıklıyor olabilir — 6.6.2 bunu açıkça yazıyor: *"O açıklama fazlanın tamamını hesaba katarsa
+   teorinin payı sıfıra iner."*
+4. **Sınav 1'in kitaba işlenmemiş olması.** Anayasa'nın devam notu bunu bilinçli bir karar olarak
+   kaydediyor ve bedelini de yazıyor: Ek M-39 hâlâ *"imza $J_4$'tedir"* ve *"$\kappa_5\lesssim0{,}1$"*
+   diyor, ikisi de düzeltilmeli. Bu hat yazılacaksa o karar da açılmalı.
+
+### 5.3.7 Değerlendirme
+
+**Tezin yönü doğru, dayanağı kısmen hazır, niceliği açık.** Sınav 1 F4'ün işaretini bağımsız
+olarak doğrulamış ve imzanın F4'te olduğunu söylemiştir — tez buraya oturur. Fakat $10^4$'lük
+açık, "F4 merkezkaçı yener" ifadesini bugünkü sayılarla **taşımaz**; taşıması $r_0$'ın
+türetilmesine bağlıdır. Bu yüzden hat, 11.1'e bir sonuç olarak değil, **Kısım 11'e ayrı bir
+araştırma kalemi** ya da 6.6'nın devamı olarak girmelidir.
+
+---
+
 ## 5.2 AYIRT EDİCİ SINAV — bölümün statüsü değişti (2 Ağustos 2026)
 
 **Yazar talimatı:** "sınava dönsün." Bölüm artık tutarlılık türetimi değil, **ayırt edici sınav** taşıyor.
@@ -459,19 +846,62 @@ dokunulmadı — yazar kararı bekliyor.
 **Sınavın kaynağı (yazar tespiti):** *F4 Ay için kapalı, Güneş için değil; F5 de Güneş için açık.*
 Ay kilitli → saf F1 → tensör $(+2,-1,-1)$, iz $=0$. Güneş dönüyor → F1+F4+F5.
 
-**Türetim (parametresiz).** $a=A/r^2+B/r$, $\varepsilon\equiv Br/A$:
-$$(T_\parallel,T_\perp,T_\perp)=\frac{A}{r^3}\bigl(2+\varepsilon,\,-(1+\varepsilon),\,-(1+\varepsilon)\bigr),\qquad \mathrm{tr}\,\mathsf{T}=-\varepsilon A/r^3$$
-Özdeğer oranı **ve** iz, tek bir sayıya ($\varepsilon$) bağlı; $\varepsilon$ kaynağın dönme durumuyla belirleniyor.
+### GEOMETRİ DÜZELTMESİ (yazar) — ilk türetimim yanlıştı
+
+**Hatam:** F4'ü küresel-radyal $B/r$ terimi olarak aldım ve "iz sıfırdan çıkar" sonucunu buna
+dayandırdım. **F4 küresel değil silindiriktir** (M-38: akı silindir yanağından geçer,
+$a\propto1/R$, $R$ = dönme eksenine dik uzaklık). Ayrıca **F4 varsa F5 de vardır** (yazar
+kuralı — ikisi de $\omega_1$ ürünü); F5 meridyeneldir ($-\hat\theta$, $\sin2\theta$).
+
+**Doğru türetim** (sayısal Jacobian ile doğrulandı, ekvator düzleminde):
+
+| Alan | Geometri | Tek başına tensör | İz |
+|---|---|---|---|
+| F1 | küresel $1/r^2$ | $(+2,-1,-1)$ | $0$ |
+| F4 | silindirik $1/R$ | $(+1,-1,0)$ | $0$ |
+| F5 | meridyenel $\sin2\theta$ | $(0,0,-2a_5/r)$ | $-2a_5/r$ |
+
+$$(T_1,T_2,T_3)=\frac{A}{r^3}\bigl(2+\beta,\,-(1+\beta),\,-(1+\gamma)\bigr),\qquad \mathrm{tr}\,\mathsf{T}=-\gamma A/r^3$$
+$\beta\equiv Br/A$ (F4), $\gamma\equiv2a_5r^2/A$ (F5). Özvektörler: gelgit ekseni · yörünge
+doğrultusu · ekliptiğe dik.
+
+**İki ayrı imza, iki ayrı kuvvetten:**
+- **F4 → dejenerasyon kırılır, iz KORUNUR.** (İlk yazdığımın tersi.) Kuşak çember değil elips.
+- **F5 → iz İHLAL EDİLİR.** $\nabla\!\cdot\!\vec a_5=-2a_5/r$ ekvatorda sıfır değil; kuvvetin
+  kendisi orada sıfır ama türevi maksimum. **Bağıntı F5'in radyal yasasından bağımsız**
+  ($n=1,2,3$ için sayısal olarak doğrulandı) — sonucun en sağlam kısmı.
+
+**Newton arka planı:**
+- Dejenerasyon kırılması: Newton'da $J_2$'den gelir, Güneş için $J_2(R_\odot/r)^2\approx5\times10^{-12}$;
+  $\beta$'nın presesyon üst sınırı $10^{-9}$ → **200 kat keşif penceresi.**
+- Boşlukta iz: Newton'da $\nabla^2\Phi=0$ gereği **tam sıfır**, her mertebede → **arka plan yok.**
+  Temiz kanal budur.
 
 **Newton neden üretemez.** Klasik dış alanda kaynağın dönmesi yer almaz ($J_2$ hariç, o da farklı açısal yapı) ve boşlukta iz $\nabla^2\Phi=0$ gereği **her kaynak için, her uzaklıkta** sıfırdır. Newton'da kilitli uydu ile dönen yıldızın tensörü aynı yapıdadır.
 
-**İki kanal.**
-1. *Genlik:* $R=0{,}4602(1+\varepsilon_\odot/2)$ ⟹ $\varepsilon_\odot=2(R_{ölç}/0{,}4602-1)$. Duyarlılık zinciri: $\varepsilon_\odot$ sınırı $\approx4{,}3\,\sigma_R/R$. M-38'in $\varepsilon_{Ay}<2\times10^{-5}$ düzeyi için oranda $\sim5\times10^{-6}$ gerek. **M-38'den bağımsız kanal:** orası 1. türev/Ay, burası 2. türev/Güneş.
-2. *Simetri (asıl keskin):* F5'in $\sin2\theta$'sı **Güneş'in dönme ekseninden** ölçülür. Ay'ın alanı gelgit ekseni etrafında tam simetrik, Güneş'inki değil → yanal dejenerasyon kırılır. Dünya heliografik enlemde yıl boyu $\pm7{,}25^\circ$ salındığından: $S_2$'de **olmaması gereken, fazı Güneş dönme eksenine kilitli yıllık yan bant.** Genlik farkı değil, **simetri kırılması** — Newton hiçbir genlikte üretemez.
+**Terk edilen kanal — skaler genlik.** Önce %46 oranını ölçüm kanalı yapmıştım
+($\varepsilon_\odot=2(R_{ölç}/0{,}4602-1)$). **Apsidal presesyon bunu öldürüyor:** M-38'in
+$\Delta\varpi\simeq-\pi\varepsilon$ bağıntısı, Merkür'ün $0{,}1''$/yy kalıntısıyla
+$\varepsilon(\text{Merkür})<3{,}7\times10^{-10}$, 1 AU'ya taşınınca $\lesssim10^{-9}$ verir
+(işaret de ters: $-\pi\varepsilon$ geri presesyondur, Merkür anomalisi ileri). Oranda beklenen
+sapma $\sim5\times10^{-10}$ → ölçülemez. Skaler oran **sınav değil, tutarlılık sınırıdır.**
 
-**Dürüst statü:** yapı türetilmiş ve parametresiz; **genlik öngörülmemiş** ($\kappa_5$ serbest, M-39 [F]; F4 payı M-38'de galaktik vortekse atanmış). Sınavın biçimi "şu sayı çıkmalı" değil, **"şu yapı bulunmalı, yoksa $\varepsilon_\odot$ ve $\kappa_5$ şundan küçüktür."** İki yönlü keskin.
+**Kalan gerçek kanal — tensörün özdeğerleri ayrı ayrı.** Sınav skaler bir sayıda değil,
+tensörün **yapısında**. İki bağımsız imza (yukarıdaki geometri düzeltmesine bkz.):
+dejenerasyon kırılması ($\beta$, F4) ve boşlukta iz ($\gamma$, F5). Gözlemsel karşılığı
+gradyometri: Ay ve Güneş bileşenleri frekansta zaten ayrık, kilitli Ay kontrol görevi görüyor.
 
-**Yapılmayan:** $S_2/M_2$ oranının bağımsız ölçüm hassasiyetinin nicel değerlendirmesi (gravimetrik $\delta$ çarpanları + okyanus yükleme ayrıştırması). 7.4 hesap kalemine yazıldı.
+**Dürüst statü:** yapı türetilmiş ve parametresiz; iz bağıntısı F5'in radyal yasasından bile
+bağımsız. **Genlikler öngörülmemiş** ($\kappa_5$ serbest [F]; $\beta$ presesyonla $\lesssim10^{-9}$).
+Biçim: "şu sayı çıkmalı" değil, **"şu iki yapı bulunmalı, yoksa $\beta$ ve $\kappa_5$ şundan küçüktür."**
+
+**Yapılmayan:** üç özdeğeri ayrı ayrı çekmek için gereken gradyometri hassasiyetinin
+değerlendirmesi ($J_2$ ve okyanus yükleme arka planından ayrıştırma dâhil). 7.4 kalemine yazıldı.
+
+**Ölçek kaydı (yazar):** F4/F5 dönüş kolundan beslenir; Güneş çok yavaş döndüğü için yerel pay
+ölçülebilire yaklaşır ama belirleyici olamaz. Galakside aynı iki kuvvet baskındır. İki ortamın
+Evrenakı dönme hızları kıyaslanabilir değildir — **Kepler evrensel yasa değil, belirli bir kol
+dengesinin yerel sonucudur.** 11.1.8'in sonuna kutu olarak işlendi.
 
 **Geri alınan hatam:** Ayırt ediciyi ilk denememde $r_t=\sqrt{\mathcal{G}M/a_0}$ geçiş yarıçapına ve **Oort bulutuna** bağlamıştım (Güneş için 8790 AU). **Yanlıştı:** Ek M-38 $1/R$ rejimini bireysel gövdelere değil **galaktik kolektif vortekse** atar ($r_0$ kpc mertebesi) ve Güneş Sistemi'ni açıkça Kepler rejiminde tutar. Doğru ayırt edici, uzaklık rejimi değil **kaynağın dönme durumudur.**
 
@@ -522,4 +952,11 @@ sınırlar. Hesaplanmadı; 11.1'e de yazılmadı. Yazar kararı bekliyor.
 | 2 Ağustos 2026 | **11.1 baştan yazıldı** (yazar talimatı: önceki taslak dikkate alınmadı, silindi). Nihai yapı 11.1.1–11.1.9: notasyon+varsayımlar · **kuvvet envanteri** (kilitli kaynak, $\omega_1$ kapalı) + 11.2 ayrım uyarısı · itim potansiyeli + çerçeve adımı (Kuvvet 1'den) + Bernoulli uzlaştırma kutusu · akı korunumu + üç bileşen + iz teoremi · basınç nedenselliği (2:1) + M-26 çapraz denetimi · genlik + Güneş/Ay + büyük/küçük + dürüstlük kaydı · eşdeğerlik ilkesi · Newton sınırı · geçerlilik + iç rejim kapanışı + 3° açık kalemi. |
 | 2 Ağustos 2026 | **Çembersellik açıkça yazıldı** (yazar düzeltmesi). Eksik: $-1$ özdeğerinin **iki katlı dejenere** olduğu yazılıydı ama bunun fiziksel anlamı — gradyan yapısının Ay'a bakmayan bütün yanlarda **eşit** olması, dolayısıyla sıkıştırmanın noktasal kıstırma değil **ekseni saran eşit basınçlı kuşak** olması — söylenmemişti. 11.1.4(b)'ye "Sıkıştırmanın çembersel olması" paragrafı, özdeğer tablosuna dejenerasyon etiketi, tabloya "Mekanizmanın üç adımı" özeti (ön–arka farkı → çembersel kuşak → çift kabarma) ve 11.1.5'e basınç dilindeki karşılığı ($P_T$ azimuttan bağımsız) eklendi. Ayrıca karşılıklılık notu: aynı geometri Ay'ı da sıkar, kilitli olduğu için orada kabarma magmada kalıcılaşır (mascon, 3.9.5). |
 | 2 Ağustos 2026 | **"Gelgit ekseni" terimi tanımlandı** (yazar düzeltmesi — kritik). Metinde "eksen" on yerde niteliksiz geçiyordu; 11.2 baştan sona **dönme ekseninden** bahsettiği için okurun ikisini birleştirmesi kaçınılmazdı. Terim notasyon tablosuna girdi, 11.1.3'e `[!CAUTION]` uyarı kutusu eklendi (üç gerekçe: yönelim · kuşak ekvator değildir · **günde iki gelgitin sebebi tam olarak bu ayrımdır**, ardışık tepeler arası 12 sa 25 dk; ayrıca günlük eşitsizlik aynı geometriden), ve niteliksiz geçen her "eksen" → "gelgit ekseni" olarak düzeltildi (11.1.3, 11.1.4 ×4, 11.1.5 ×3, 11.1.8, 11.1.9). Kutuya 11.2 ile ayrım cümlesi de kondu. |
+| 2 Ağustos 2026 | **Diferansiyel dönüş hattı açıldı → §5.3** (yazar tezi). Merkezkaçın Evrenakı karşılığı M-22'de bulundu; $\lambda=F_4/F_{merkezkaç}$'ın hızdan bağımsızlığı ve kopma tavanının yükselmesi türetildi; $\lambda$'nın $J_2$'den ölçülebilirliği kuruldu. **6.6.2 (Sınav 1) taraması yapıldı:** F4'ün işareti bağımsız doğrulanmış (şişmeye karşı ✓), imza F4'te, $\kappa_5\lesssim0{,}02$ ile F5 elenmiş — bu, 11.2.3'ün "$\phi\approx0$" cümlesinin ikinci bağımsız çürütmesi. **Ama $10^4$'lük nicel açık kaydedildi** ($\lambda_\oplus\approx10^{-4}$); diferansiyel dönüş bunu kapatmıyor. Hat 11.1'e **işlenmedi**, ayrı araştırma kalemi olarak duruyor. |
+| 2 Ağustos 2026 | **§5.3.5 denetlendi ve geri alındı.** 6.6.2'nin *"F4 merkezkaçtan $10^4$ kat zayıftır"* sayısı tezin karşısındaki engel diye kaydedilmişti; denetimde **kurulmamış** olduğu çıktı (5 bulgu: üst sınır değer gibi yazılmış · **rejim tutarsızlığı** — $r_0>128$ AU kendi zincirini geçersiz kılıyor, Ay 49.000 kat içeride · iç rejimde $A_4$ sınırı 2,4 milyar kat gevşiyor · apsidal formül merkezi yasa için, F4 silindirik + Ay yörüngesi 18–29° eğik · Dünya'nın sayısı öznesiz evrenselleştirilmiş). **Tezin önünde nicel engel yok**; gerçek iş 5.3.6'daki $r_0$ türetimi. |
+| 3 Ağustos 2026 | **$\rho_0/\rho_n$ çarpanı bulundu ve galakside sınandı → §5.4.** M-22 ile M-2 aynı $dP/dr$'yi farklı yoğunluklara bölüyor; tam 2 çarpanı, rejimden bağımsız. **173 SPARC galaksisinde test edildi** (3345 nokta): galaksiler $a_0=6{,}7\times10^{-11}$ talep ediyor, çarpan senaryosu ($5{,}4\times10^{-12}$) bandın 10 kat altında, medyan RMS 12,6→27,6 km/s, 132/173 kötüleşiyor. **Çarpan galaktik zincire girmiyor — Kısım 10 güvende.** Hata sonuçta değil gerekçede: 11.3.1'in profil teoremi doğru sonucu yanlış yoldan çıkarıyor. Kalan: M-22'nin kütle çevresinde geçerliliği (3.4.1'in ispatı buna bağlı). |
+| 3 Ağustos 2026 | **ÇARPAN SORUNU KAPANDI → §5.5.** Ek M-8 ve M-9 okundu. **M-9 çarpanı zaten yazmış:** *"Madde düşer, ortam dolaşır"*, $\nabla P/\rho_0=v_\theta^2/r$ — $\rho_0$ açıkça. Yani 2 çarpanı hata değil, teorinin kasıtlı yapısı; $P_0$/R-5/M-42/ışık bükülmesi **dokunulmadı**. Newtonyen virüs başka yerde: **"kapılış yörüngeyi sağlar"** (M-37 sıfırıncı mertebe + 11.3.1) — *"gezegeni ne tutuyor?"* sorusuna taşıyıcı aramak. Gözlem M-9'u seçiyor. **Kapılış hipotezi reddedildi.** Galaktik zincir, Kepler, M-45, 3.4.1 hepsi ayakta. **11.3.1 yeniden yazıldı** (iki denge/iki yoğunluk, serbest düşme türetimi, Postülat 7'nin doğru okunuşu, kayma tablosu, galaktik zincire etkisizlik). Çarpan bir **öngörüye** dönüştü: $\Delta v=v_{madde}$, parametresiz. M-37 düzeltmesi 5.5.5'te izin bekliyor. |
+| 3 Ağustos 2026 | **GALAKTİK CEPHE KAPANDI → §5.6.** Tam sweep: virüs 3.8.1'de bulundu (yörünge anlatısının tamamını taşıyordu) ve düzeltildi. M-9 ile ikiye katlanan sayılar güncellendi: **3.8.1.1** 430→**874 km/s**, 23→**439 kat**; **3.9.4** 7,93→**15,8 km/s**, 17→**34 kat**. Yeni genel sonuç: ortamın yüzey hızı $=2v_{kopma}$ ⟹ mekanik hipotez gövdenin kopma hızının iki katında dönmesini talep eder, **çifte imkânsız** — argüman güçlendi. Etkilenmediği doğrulananlar: $a_0$/$\ell_\omega$/M-45/BTFR (M-38 Adım 4'te $C/\rho_n$ açık), 173 galaksi fiti, $P_0$/R-5/M-42, 3.4.1, simülasyonlar (R-8 taraması temiz). Kalan: **M-37 ve M-25** izin bekliyor. |
+| 3 Ağustos 2026 | **KİLİTLER AÇILDI — bütün izin kalemleri tek partide işlendi.** Ek M-36 (altı öneri + iki açık uç kapatıldı + yeni açık uç), Ek M-37 (sıfırıncı mertebe → "zarf"), Ek M-25 (kapılış→serbest düşme, ortam profili $v_\theta=2v_{kopma}$, 874/439 ve 15,8/34, kopma-hızı kapanışı). Ek D zaten yapılmıştı. **Kısım 3 ↔ Ek M sapması kalmadı** (grep doğrulamalı). Galaktik cephe tamamen kapandı. |
+| 3 Ağustos 2026 | **Animasyon/betik sweep'i → §5.7.** Virüs `evrenaki_girdap_animasyonu.html`'de **kodun içinde** bulundu: uydunun açısal hızı girdap profilinden ve spin'den alınıyor, gövde girdaptan hızlı döndürülüyordu (*"pervane sürüklediği sıvıdan daha hızlı dönmelidir"*) — kitabın tam tersi. İki ayrı profile ayrıldı (`omegaMadde` spin'den bağımsız, `omegaOrtam = 2×` M-9 tabanı), gövde devri ters çevrildi, efsane ve altyazı yeniden yazıldı. Konsolda doğrulandı: oran tam 2,000 · profil üssü −0,500 · uydu spin'den bağımsız ✓. Kısım 10, panel'ler, galaktik betikler ve diğer animasyonlar **temiz** çıktı. Üretim koşulmadı (toplu üretim kuralı). |
 | 2 Ağustos 2026 | *(geçersiz — üstteki satırla değiştirildi)* İlk yazım turu (11.1.1–11.1.8). Yazarın kendi taslağı korundu, üzerine eklendi: akı korunumunun bağımsız türetimi (Gauss), özdeğer tablosu, artık basınç alanı $P_T$ tablosu ve 2:1 oranı, M-26 çapraz denetimi, büyük/küçük gelgit (0,781 / 0,289 / 2,70), **11.1.6** eşdeğerlik ilkesi, **11.1.7** Newton'la sınır tablosu, **11.1.8** geçerlilik sınırı + iç rejim kapanışı + 3° açık kalemi. Düzeltilenler: "milimetrik doğruluk" iddiası → mertebe-ve-yapı doğrulaması dürüstlük kaydı; $\pm P_T$ muğlaklığı → sayısal tablo; "ekvatordan sıkılan" → "yanaklardan"; başlık düzeyi `###`→`##` (11.2/11.3 ile hizalandı); 11.1.5 başlığı "Yükseklik"→"Genlik". **Ek D izinle işlendi** (4.4), $\xi$ çakışması çözüldü. **Kaynakça:** Touboul 2022 ve Schlamminger 2008 eklendi (11.1.6'nın EP sınavı için). Kısım 10'a ve M-36'ya **dokunulmadı.** |

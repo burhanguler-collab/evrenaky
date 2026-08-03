@@ -18,24 +18,49 @@ $$ v \propto \frac{1}{\sqrt{R}} $$
 **Bu matematiksel bağıntının Evrenakı açısından anlamı şudur:**
 Güneş Sistemi'ndeki tüm gezegenlerin yörünge hızları, Güneş'e olan uzaklıklarının karekökü ile ters orantılı olarak kusursuz bir uyumla azalır. Merkür (en yakın) saniyede 47,4 km hızla savrulurken, en uzaktaki Neptün saniyede sadece 5.4 km hızla ilerler (yörünge hızları: NASA/JPL Planetary Fact Sheet, 2024).
 
-Standart fizik bunu "uzaktan etki eden kütleçekim kuvveti" olarak soyutlaştırırken, Evrenakı teorisi bunu **Akışkanlar Dinamiği** ile somutlaştırır:
-Gezegenler boş uzayda kendi motorlarıyla veya sihirli bir iple dolanmazlar. Güneş'in dönüşüyle oluşan dev **Güneş Vorteksi'nin** akıntı katmanlarına kapılmış (sürüklenme/entrainment) durumdadırlar. Akışkan mekaniğinde bu profil (hızın merkeze uzaklığın karekökü oranında düşmesi) tam bir akışkan davranışıdır. Güneş girdabının akış hızı uzaklaştıkça $\frac{1}{\sqrt{R}}$ oranında düştüğü için, o girdabın içinde yüzen gezegenlerin hızları da bu akışkanın hız profiline %100 uyum sağlar. 
+Standart fizik bunu "uzaktan etki eden kütleçekim kuvveti" olarak soyutlaştırırken, Evrenakı teorisi bunu **Akışkanlar Dinamiği** ile somutlaştırır: gezegenler boş uzayda sihirli bir iple değil, **Güneş'in açtığı basınç gradyanında düşerek** dolanır. Akışkan mekaniğinde $1/\sqrt{R}$ profili tam bir akışkan davranışıdır ve burada **tek bir alandan iki ayrı sonuç** olarak doğar.
 
-Kısacası bu matematiksel bağıntı; gezegenlerin boşlukta düşmediğini, somut bir "Güneş girdabı" ile sürüklendiklerini kanıtlayan muazzam bir akışkanlar dinamiği uyumudur.
+> [!IMPORTANT]
+> **Gezegen girdaba kapılmaz — aynı alanda düşer.** Bu ayrım teorinin kendi yapısından gelir (Ek M-9): kütle çevresindeki tek fiziksel alan basınçtır, fakat aynı $\nabla P$ **iki ayrı yoğunluğa** bölünür.
+>
+> | | Denge | Bölen | Sonuç |
+> |---|---|---|---|
+> | **Gezegen** (katı deplasman cebi) | $\vec a=-\nabla P/\rho_n$ | $\rho_n$ | akıp dengelenemez → **düşer**, $v=\sqrt{\mathcal{G}M/R}$ |
+> | **Ortam** (Zerre akışkanı) | $\nabla P/\rho_0=v_\theta^2/R$ | $\rho_0$ | düşmez → **dolaşır**, $v_\theta=2\sqrt{\mathcal{G}M/R}$ |
+>
+> $\rho_0=\rho_n/4$ olduğundan (Ek M-8, $k=0$) ortam gezegenlerden **tam iki kat hızlı** döner. M-9'un tek cümlelik ifadesiyle: **"madde düşer, ortam dolaşır."**
+>
+> Dolayısıyla iki profilin **biçimi** aynıdır ($1/\sqrt R$ — ikisi de aynı $1/R^2$ alanından çıkar), **genlikleri** ise iki katlı farklıdır. Gezegenlerin hız profilinin akışkanın profiliyle örtüşmesi bir kapılma değil, **aynı alanın iki okunuşudur** — ve aradaki 2 çarpanı serbest parametresiz bir öngörüdür (kayma tablosu: 11.3.1).
+>
+> *(Kayıt: bu bölümün önceki sürümü gezegenlerin "akıntı katmanlarına kapılmış" olduğunu ve "boşlukta düşmediğini" yazıyordu. Bu yazım M-9 ile çelişir ve literal alındığında gezegenleri $2v_{Kepler}$'e koyar; gözlem onu dışlar. Sürüklenme zarfı bir **taşıma mekanizması değil**, yerel sürükleme bastırıcısıdır — Michelson–Morley null'unun kaynağı odur, yörüngenin değil.)*
+
+Kısacası bu matematiksel bağıntı, gezegen yörüngelerinin soyut bir uzaktan-etkinin değil, **somut bir basınç alanının** eseri olduğunu gösteren bir akışkanlar dinamiği uyumudur; aynı alan gezegeni düşürürken ortamı dolaştırır.
 
 ### 3.8.1.1 Açısal Momentum Paradoksu ve Çekirdek Hızı (Bilimsel Keşif)
 
 Evrenakı akıntısının Güneş'ten başlayarak kesintisiz bir $v \propto \frac{1}{\sqrt{R}}$ hız profiliyle yayıldığını gördük. Ancak burada standart astrofiziği de yıllarca şaşkına çeviren devasa bir "Açısal Momentum Paradoksu" ortaya çıkar. 
 
-Güneş'in (ekvator) yüzey hızı saniyede sadece **2 km**'dir (yüzey diferansiyel dönüş ölçümleri: Beck, 2000). Eğer Güneş, Evrenakı girdabını sadece yüzeyindeki bu yavaş dönüşle (mekanik sürtünme) üretiyor olsaydı, Güneş'ten 58 milyon km uzaktaki Merkür yörüngesinde akışkan hızının çok daha düşük (0.2 km/s civarı) olması gerekirdi. Oysa Merkür, saniyede **47.4 km** hızla, yani Güneş'in yüzeyinin kendi etrafındaki dönüşünden tam **23 kat daha hızlı** dolanmaktadır! Eğer Merkür'ün bu hız profilini geriye, Güneş'e doğru sararsak, girdabı üreten merkez kaynağın (Güneş'in) saniyede 430 km'den daha hızlı dönmesi gerektiği matematiksel bir zorunluluk olarak ortaya çıkar. *(zincirin adım dökümü: **Ek M-25**)*
+Güneş'in (ekvator) yüzey hızı saniyede sadece **2 km**'dir (yüzey diferansiyel dönüş ölçümleri: Beck, 2000). Eğer Güneş, Evrenakı girdabını sadece yüzeyindeki bu yavaş dönüşle (mekanik sürtünme) üretiyor olsaydı, Güneş'ten 58 milyon km uzaktaki Merkür yörüngesinde akışkan hızının çok daha düşük (0,2 km/s civarı) olması gerekirdi.
 
-Peki Güneş 2 km/s hızla dönerken, kendisinden katbekat daha hızlı dönen devasa bir Evrenakı akıntısını nasıl yaratabiliyor?
+Oysa ortamın hızı **tahmin edilmez, türetilir.** M-9'un siklostrofik dengesi ($\nabla P/\rho_0=v_\theta^2/R$) ortamın profilini her yarıçapta verir:
 
-**Çözüm:** Bu paradoks, girdabı kütlenin mekanik dönüşüne bağlayan sürükleme varsayımının çöküşüdür. Vorteksi döndüren ana motor, Güneş'in ne yavaş dış yüzeyi ne de mekanik olarak dönen herhangi bir katmanıdır; Güneş kütlesini oluşturan nükleonların **dördüncü boyuttan gelen çift dönüş deşarjıdır** (Bkz. 3.4.4; mekanizmanın tam işlenişi için 3.8.2). Viskozitesi kütleninkinden mertebelerce küçük olan Evrenakı, bu deşarjla, sürtünmeli ve hantal kütlenin görünen devrinden kat kat hızlı döndürülür. Dolayısıyla "saniyede 430 km dönme gerekliliği" teorinin bir sorunu değil, mekanik sürükleme muhasebesinin iflas belgesidir.
+$$v_\theta(R)=\sqrt{\frac{\rho_n}{\rho_0}}\sqrt{\frac{\mathcal{G}M}{R}}=2\sqrt{\frac{\mathcal{G}M}{R}}$$
+
+Merkür yörüngesinde bu **95 km/s**'dir (Merkür'ün kendi yörünge hızı 47,4 km/s; ortam onun iki katı hızla dolaşır). Güneş **yüzeyinde** ise:
+
+$$v_\theta(R_\odot)=2\sqrt{\frac{\mathcal{G}M_\odot}{R_\odot}}=2\times436{,}7=\mathbf{874\ km/s}$$
+
+Yani mekanik sürükleme hipotezi, Güneş'in yüzeyinin saniyede **874 km** hızla dönmesini gerektirir — ölçülenin **439 katı.** *(zincirin adım dökümü: **Ek M-25**; sayıların M-9 ile güncellenmesi izin kalemi olarak kayıtlıdır.)*
+
+> **Ve buradaki sayı çifte imkânsızdır.** 874 km/s, Güneş'in **kopma hızının ($\sqrt{\mathcal{G}M_\odot/R_\odot}=437$ km/s) tam iki katıdır.** Mekanik hipotez yalnızca "çok hızlı" bir dönüş değil, **cismi dağıtacak hızın iki katını** talep eder. Muhasebe böylece sayısal olarak değil, kavramsal olarak da kapanır: girdabı gövdenin mekanik devri üretemez, çünkü onu üretebilecek devirde gövde var olamaz.
+
+Peki Güneş 2 km/s hızla dönerken, kendisinden dört yüz kattan fazla hızlı dönen devasa bir Evrenakı akıntısını nasıl yaratabiliyor?
+
+**Çözüm:** Bu paradoks, girdabı kütlenin mekanik dönüşüne bağlayan sürükleme varsayımının çöküşüdür. Vorteksi döndüren ana motor, Güneş'in ne yavaş dış yüzeyi ne de mekanik olarak dönen herhangi bir katmanıdır; Güneş kütlesini oluşturan nükleonların **dördüncü boyuttan gelen çift dönüş deşarjıdır** (Bkz. 3.4.4; mekanizmanın tam işlenişi için 3.8.2). Viskozitesi kütleninkinden mertebelerce küçük olan Evrenakı, bu deşarjla, sürtünmeli ve hantal kütlenin görünen devrinden kat kat hızlı döndürülür. Dolayısıyla "saniyede 874 km dönme gerekliliği" teorinin bir sorunu değil, mekanik sürükleme muhasebesinin iflas belgesidir.
 
 2017 yılında SOHO (Solar and Heliospheric Observatory) uydusundan alınan içsel salınım kipi (g-modes) verileriyle beklenmedik bir keşif yapıldı: **Güneş'in çekirdeği, yüzeyinden tam 4 kat daha hızlı dönüyordu!** (Fossat ve ark., 2017.)
 
-Bu keşif teorinin tablosuna tam oturur; ancak dikkatle okunmalıdır: çekirdeğin 4 katlık hızı bile (yaklaşık 8 km/s), mekanik modelin gerektirdiği 430 km/s'nin elli kattan fazla altındadır. Yani hızlı çekirdek dahi girdabın motoru olamaz; keşfin gerçek anlamı, iç bölgelerin dördüncü boyut motorunun serbest ifadesine dış kabuktan daha yakın kalmış olmasıdır:
+Bu keşif teorinin tablosuna tam oturur; ancak dikkatle okunmalıdır: çekirdeğin 4 katlık hızı bile (yaklaşık 8 km/s), mekanik modelin gerektirdiği 874 km/s'nin **yüz kattan fazla** altındadır. Yani hızlı çekirdek dahi girdabın motoru olamaz; keşfin gerçek anlamı, iç bölgelerin dördüncü boyut motorunun serbest ifadesine dış kabuktan daha yakın kalmış olmasıdır:
 Güneş Sistemi ilk oluştuğunda (Proto-Yıldız evresi) Güneş ve onun etrafındaki Evrenakı girdabı muazzam hızlarda dönüyordu. Milyarlarca yıl içinde Güneş'in dış plazma yüzeyi, güneş rüzgarları ve içsel frenlemeler yüzünden yavaşlayarak hantal bir kabuğa dönüştü. Ancak içerideki o ultra-yoğun çekirdek ve uzay boşluğundaki devasa Evrenakı girdabı, 4.6 milyar yıl önceki o devasa **"kalıntı (fosil) momentumlarını"** korumaya devam ettiler. 
 
 Yani bugün gezegenleri saniyede onlarca kilometre hızlarla çeviren devasa Evrenakı girdabının ana kaynağı, Güneş'in ne yavaş dış kabuğu ne de görece hızlı çekirdeğidir; bizzat kütlesinin dördüncü boyut mikro-motorlarıdır. Görece hızlı çekirdek ile ultra-düşük viskoziteli uzayda çağlar boyunca korunabilen fosil momentum, bu motorun frenlenmemiş ifadesinin iki ayrı **göstergesi** olarak tabloyu tamamlar.
