@@ -92,7 +92,7 @@ const chapters = [
     { id: 'akademik_10_kaynakca', title: '10.11 Kaynakça', file: 'Metin/Akademik/Kisim_10_Yorunge_Dogrulamasi/99_Kaynakca.md', group: 'akademik', part: 'Kısım X: Evrenakı Yörünge Doğrulaması' },
     { id: 'akademik_11_01', title: '11.1 Gelgit Tensörü ve Denge Gelgiti', file: 'Metin/Akademik/Kisim_11_Astronomik_Dogrulamalar/01_Denge_Gelgiti_ve_Tensor_Matematigi.md', group: 'akademik', part: 'Kısım XI: Astronomik Doğrulamalar' },
     { id: 'akademik_11_02', title: '11.2 Yanal İtim ve Küresel Basıklık', file: 'Metin/Akademik/Kisim_11_Astronomik_Dogrulamalar/02_Kuresel_Basiklik_ve_Jeoit_Formu.md', group: 'akademik', part: 'Kısım XI: Astronomik Doğrulamalar' },
-    { id: 'akademik_11_03', title: '11.3 Kütle-Dönüş İlişkisi ve Senkronizasyon', file: 'Metin/Akademik/Kisim_11_Astronomik_Dogrulamalar/03_Kutle_Donus_Iliskisi_ve_Senkronizasyon.md', group: 'akademik', part: 'Kısım XI: Astronomik Doğrulamalar' },
+    { id: 'akademik_11_03', title: '11.3 Kütle-Dönüş (Spin) İlişkisi: Zarf Rejimleri', file: 'Metin/Akademik/Kisim_11_Astronomik_Dogrulamalar/03_Kutle_Spin_Iliskisi_ve_Zarf_Rejimleri.md', group: 'akademik', part: 'Kısım XI: Astronomik Doğrulamalar' },
     { id: 'akademik_11_04', title: '11.4 Satürn Halkaları ve Dikey Salınım', file: 'Metin/Akademik/Kisim_11_Astronomik_Dogrulamalar/04_Saturn_Halkalari_ve_Dikey_Salinim.md', group: 'akademik', part: 'Kısım XI: Astronomik Doğrulamalar' },
     { id: 'akademik_11_kaynakca', title: '11.5 Kaynakça', file: 'Metin/Akademik/Kisim_11_Astronomik_Dogrulamalar/99_Kaynakca.md', group: 'akademik', part: 'Kısım XI: Astronomik Doğrulamalar' },
     { id: 'populer_01', title: '1. Uzay Boş Değil!', file: 'Metin/Populer/populer_01.md', group: 'populer' },
