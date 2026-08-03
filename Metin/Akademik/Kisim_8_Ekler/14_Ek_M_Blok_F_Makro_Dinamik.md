@@ -4,9 +4,11 @@
 
 ---
 
-## M-22 · Radyal Momentum Dengesi: $dP/dr = \rho v_\theta^2/r$ · **[T]**
+## M-22 · Radyal Momentum Dengesi: $dP/dr = \rho v_\theta^2/r$ · **[T]** · *DENGE YASASI (kuvvet değil)*
 
-**Kullanıldığı bölümler:** 3.4.1 (kütle-itim ispatı), 3.10.2 (işaret zemini / düzeltme kaydı), 3.6.2 (atmosferik burulma zemini), 4.2.9.2 (galaktik rejime geçiş).
+> **Kategori kaydı (3 Ağustos 2026).** Bu girdi bir **kuvvet değil, denge yasasıdır**: alanı üretmez, alana verilen **tepkiyi** belirler. Beş hidrodinamik kuvvetin içindeki rolü ve ondan çıkan **Ortam–Madde Kayma Yasası** ($v_\theta=2v_{madde}$), Blok H'nin *"Denge Yasaları — kuvvet değil, tepki"* bölümünde (M-39'dan sonra, **DY-1**) kurulmuştur. Kuvvetlerle **toplanmaz:** F1 gradyanı kurar, M-22 o gradyanın ortamın dönüşüyle dengede olduğunu söyler — ikisi **aynı gradyandır.**
+
+**Kullanıldığı bölümler:** 3.4.1 (kütle-itim ispatı), 3.10.2 (işaret zemini / düzeltme kaydı), 3.6.2 (atmosferik burulma zemini), 4.2.9.2 (galaktik rejime geçiş), **11.3.1** (iki denge / iki yoğunluk). Bağlı katalog: **M-9** (ortamın dolaşma teoremi), M-8 ($\rho_0=\rho_n/4$), M-25 (muhasebe zincirleri).
 
 ### Varsayımlar
 1. Evrenakı, Navier-Stokes denklemine tabi sıkıştırılabilir bir akışkandır (Postülat 1); viskozitesi sıfıra çok yakındır: $0 < \mu \ll 1$ (Postülat 7; $\mu$ sembolü yalnız bu standart alıntıda geçer, teorinin kendi viskozite parametresi $\eta_E$'dir — S-19).
@@ -26,7 +28,28 @@ $$\boxed{\frac{dP}{dr} = \rho\,\frac{v_\theta^2}{r} \;>\; 0}$$
 
 Newton'un "çekim" (pull) soyutlaması yerine mekanik zemin: uzayın derinliklerindeki yüksek statik Evrenakı basıncı, kütle çevresindeki düşük basınç havzasına doğru cisimleri kesintisiz **iter** — kütle-itim, Euler denkleminin matematiksel zorunluluğudur.
 
-**Merkezkaç Kuvvetinin Mekanik Temeli:** Bu radyal basınç gradyanı, klasik mekanikte cismin eylemsizliğine (sanal bir etkiye) atfedilen "merkezkaç kuvvetinin" (centrifugal force) tam olarak akışkanlar dinamiğindeki **reel (fiziksel) karşılığıdır**. Merkezkaç soyut/sanal bir etki değil; dönen Evrenakı ortamının oluşturduğu dışa doğru gerçek bir basınç (itim) gradyanıdır. Klasik fizikteki "Çekim vs Merkezkaç" ikiliği, Evrenakı'da "F1 (İçeri itim) ile M-22 (Dışarı itim)" kavgası olarak gerçek bir hidrodinamik temele oturur.
+### Merkezkaçın Mekanik Temeli — ve maddenin ortama tutunamaması
+
+Klasik mekanikte merkezkaç, dönen çerçevede tanımlanan **sanal** bir etkidir. Evrenakı'da karşılığı sanal değildir: dönen ortamın **ataleti gerçektir** ve onu dengeleyen **basınç gradyanı da gerçektir.** M-22 tam olarak bu dengeyi yazar. İki tarafın yönü karıştırılmamalıdır:
+
+| Terim | Yön | Nedir |
+|---|---|---|
+| $\rho_0\,v_\theta^2/r$ | **dışa** | ortamın kendi **ataleti** (dönüşün merkezcil gereksinimi) |
+| $-\,dP/dr$ | **içe** | basınç gradyanının kuvveti |
+
+$dP/dr>0$ olması basıncın **dışa doğru arttığı** anlamına gelir; kuvvet ise daima $-\nabla P$'dir, dolayısıyla **içe** bakar. Dönen kovada suyun kenarda yükselmesi gibi: kenarda basınç yüksektir ve suyu dairede tutan şey kenardan eksene doğru olan **içe** gradyandır. Klasik "Çekim vs Merkezkaç" ikiliği burada iki rakip kuvvet değil, **tek bir gradyanın tek bir atalete karşı dengesidir.**
+
+**Dengenin ikinci sonucu — gerçek dışa savrulma.** Aynı gradyan, ortama $\rho_0$ ile, maddeye $\rho_n$ ile etki eder (M-2). M-8'in sonucuyla $\rho_n = 4\rho_0$ olduğundan — *madde, okyanusun yalnızca ~4 kat sıkışmış girdap fazıdır* — maddenin aynı noktada eline geçen ivme ortamınkinin dörtte biridir:
+
+$$a_{madde}=\frac{1}{\rho_n}\frac{dP}{dr}=\frac{\rho_0}{\rho_n}\cdot\frac{v_\theta^2}{r}=\frac{1}{4}\cdot\frac{v_\theta^2}{r}$$
+
+Madde, ortamın dolaşım hızında dönmeye kalksaydı gereken merkezcil ivmenin ancak **dörtte birini** alırdı — yetersiz merkezcil kuvvet demektir, **dışa savrulur.** Ancak kendi ataletinin gradyanın verebildiğine eşitlendiği hızda dengeye oturur:
+
+$$\frac{v_{madde}^2}{r}=\frac{1}{4}\frac{v_\theta^2}{r} \;\Longrightarrow\; \boxed{\;v_{madde}=\frac{v_\theta}{2}\;}$$
+
+Santrifüjde yoğun maddenin dışa çökmesiyle **aynı mekanizmadır**: madde ortama göre fazla yoğun olduğu için dolaşıma tutunamaz. Bu, **M-9**'un *"madde düşer, ortam dolaşır"* ifadesinin mekanik nedenidir ve 2 çarpanını görmenin üçüncü bağımsız yoludur (diğerleri: M-9'un doğrudan ifadesi ve M-25'in muhasebe zincirleri).
+
+> **Sonuç — kapılış yörüngeyi sağlamaz.** Madde ortamın hızına kilitli olsaydı dışa savrulurdu; gözlem gezegenleri $v_{madde}=\sqrt{\mathcal{G}M/r}$'de, yani ortamın **yarı hızında** bulur. Sürüklenme zarfının rolü (Postülat 7) yörüngeyi üretmek değil, **yerel bağıl hızı sıfırlayarak sürüklemeyi bastırmaktır** (M-37 sıfırıncı mertebe; M&M null'unun kaynağı). *(Düzeltme kaydı, 3 Ağustos 2026: bu bölümün bir ara sürümü gradyanı "dışa doğru itim" sayıyor ve F1 ile M-22'yi iki rakip kuvvet gibi yazıyordu. İkisi de yanlıştı: gradyan içe iter ve M-22 rakip bir kuvvet değil, F1'in kurduğu gradyanın ortamın dönüşüyle dengede olduğunu söyleyen bir **denge koşuludur.** Yazarın "merkezkaç reel olmalı" tezi geçerlidir — reellik gradyanın yönünden değil, ataletin gerçekliğinden ve iki yoğunluğun farkından gelir.)*
 
 ### Geçerlilik Sınırı
 - Kararlı, eksenel simetrik, viskoz terimi ihmal edilmiş rejim.

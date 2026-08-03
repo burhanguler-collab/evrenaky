@@ -475,6 +475,391 @@ dokunulmadı — yazar kararı bekliyor.
 
 ---
 
+## 5.14 KATEGORİ AYRIMI KURULDU — beş kuvvet + denge yasaları (3 Ağustos 2026)
+
+### 5.14.1 Yazarın önerisi ve benim karşı çıkışım
+
+Yazar M-22'yi **altıncı kuvvet** ("Evrenakı Merkezkaç Kuvveti") yapmayı önerdi. Karşı çıktım,
+üç gerekçeyle — üçüncüsü belirleyici:
+
+1. **M-22 bir kaynak değil, denge koşulu.** F1–F5 alanı üretir; M-22 var olan alanla ortamın
+   dönüşünün uyumlu olduğunu söyler.
+2. **Postülat 9'un köken haritasına sığmıyor.** Ne $\omega_1$'den ne $\omega_2$'den doğuyor.
+3. **Çift sayma tehlikesi — ve bunu bugün zaten düzelttik.** §5.8.1'de yazarın M-22 paragrafındaki
+   *"F1 (içeri) ile M-22 (dışarı) kavgası"* ifadesini tam bu yüzden düzeltmiştim. F6 yapılırsa hata
+   geri gelir ve somut bir bug üretir: $F_1+F_6$ yazan biri **aynı gradyanı iki kez sayar.**
+
+Maliyet ölçümü: "beş kuvvet" 11 dosyada 26 yerde geçiyor + Postülat 9. Yapılabilirdi — sorun
+maliyette değil, doğrulukta.
+
+### 5.14.2 Ama sezilen boşluk gerçekti
+
+Yeni olan şey *"merkezkaç bir kuvvettir"* değil; **ortamın maddeden ayrı kendine ait bir
+dinamiği olduğu ve bunun ölçülebilir bir şey öngördüğü** ($2\times$ kayma). Ve bunun **evi yoktu:**
+M-22 Blok F'de "radyal momentum dengesi" diye duruyordu, oysa Blok H'nin her yerinde kullanılıyor.
+
+### 5.14.3 Çözüm: kategori ekle, kuvvet sayısını değiştirme
+
+**Yazarın yerleştirme fikri benim varsayılanımdan daha iyiydi.** Ben H.0'a bir atıf satırı
+koyacaktım; yazar *"beş kuvvetin altında işle"* dedi. Haklı: Blok H'yi okuyanın M-22'nin
+varlığından haberi yoktu, ve kategori ayrımı ancak kuvvetlerin sayıldığı yerde görünürse öğretir.
+Beş kuvvetten **sonra** koymak da mantıksal sırayı kodlar: önce üreten, sonra tepki veren.
+
+**Tek düzeltmem:** M-22 girdisi taşınmadı (12 dosyada ~25 atıf, M-numaraları bloğa kilitli).
+**Rolü ve kategorisi** Blok H'ye, **türetimi** Blok F'de kaldı, çapraz bağlandı.
+
+### 5.14.4 İşlenenler
+
+| Yer | Ne yapıldı |
+|---|---|
+| **Blok H, H.0** | Yeni *"İki kategori: kuvvetler ve denge yasaları"* tablosu + `[!WARNING]` çift sayma uyarısı. Köken haritası "beş kuvvet" olarak etiketlendi; denge yasalarının haritada yer almadığı yazıldı |
+| **Blok H, M-39'dan sonra** | **Yeni bölüm: "DENGE YASALARI — kuvvet değil, tepki"**. **DY-1** (M-22: siklostrofik denge, yön tablosu, "kuvvet olmadığının kanıtı", merkezkaçın neden sanal olmadığı ama altıncı kuvvet de olmadığı). **DY-2** (iki yoğunluk ayrımı + **Ortam–Madde Kayma Yasası**, kutulu $v_\theta=2v_{madde}$, beş sistemlik kayma tablosu, savrulma mekanizması, 2 çarpanının **dört** bağımsız yolu, kayma tabakası açık kalemi) |
+| **Blok H kapsam cümlesi** | *"iki kuvvet-olmayan girdiyle kapanır"* → **yanlıştı**, artık altı tane var (M-42, 43, 45, 47, 48, 49). İki türe ayrıldı: **(a)** denge yasaları, **(b)** çerçeve/rejim girdileri |
+| **Blok F, M-22 başlığı** | Başlığa *"DENGE YASASI (kuvvet değil)"* etiketi + kategori kutusu + DY-1'e geri bağlantı + "toplanmaz" uyarısı |
+
+**Postülat 9, "beş kuvvet" adı ve 26 geçiş: dokunulmadı.** Çift sayma kapısı kapalı.
+
+---
+
+## 5.13 M-37 ADIMLAR A — kaçırılmış kalıntı düzeltildi (3 Ağustos 2026)
+
+**Kaynak: dış denetim (Gemini/antigravity).** Bulgu **doğru ve benim gözden kaçırdığım bir
+yerdi:** §5.5.2'de M-37'nin *sıfırıncı-mertebe kutusunu* düzeltmişim, ama **hemen altındaki
+türetim basamaklarını** bırakmışım.
+
+**Çelişki:** Adımlar A'nın 2. adımı *"Sürüklenme zarfı gereği cisim ortamla eş hızlıdır:
+$v_{yör}=v_\theta$"* diyor ve tek bir profil çözüyordu — yani girdinin kendi düzeltme kaydıyla,
+M-9 ile ve 11.3.1 ile çelişiyordu.
+
+**Düzeltme (fatura: sıfır).** Adım kaldırıldı; iki profil baştan ayrı türetildi:
+
+$$v_{yör}=\sqrt{R\,|a_{madde}|}\,,\qquad v_\theta=\sqrt{\tfrac{\rho_n}{\rho_0}}\,v_{yör}=2\,v_{yör}$$
+
+**Hiçbir gözlemsel sayı değişmedi**, yalnız etiketler ayrıştı:
+
+| | Madde (gözlenen) | Ortam (öngörü) |
+|---|---|---|
+| Dünya yörüngesi | **29,79 km/s** ✓ (ölçüm 29,78) | 59,58 km/s |
+| Düz rejim | **220 km/s** ✓ | 440 km/s |
+
+**Kazanç:** M-9'un *"madde düşer, ortam dolaşır"* kuralı artık bu bloğun **içinde** matematiksel
+olarak da kuruluyor — dışarıdan getirilmiş bir kural değil, aynı $\nabla P$'nin iki yoğunlukla
+okunmasının sonucu. Bu, çarpanı görmenin **dördüncü** bağımsız yolu.
+
+### Dış denetimin atladığı üç yan kalem (birlikte düzeltildi)
+
+Gemini yalnız 2. adımı işaret etti ve *"3-4 satırlık formül metni"* dedi. Aynı bölümün üç ardıl
+yeri de eski adıma dayanıyordu:
+
+| # | Yer | Sorun | Düzeltme |
+|---|---|---|---|
+| 1 | Üç-rejim tablosu | Tek "çıkan profil" kolonu; düz rejim satırı gözlenen $v_0$'ı ortamın hızı sayıyordu | **İki kolon**: madde (gözlenen) / ortam (öngörü); *"gözlenen daima orta kolondur"* notu |
+| 2 | Sonuç paragrafı | *"Serbest kalan… yalnız geçiş yarıçapı $r_0$'dır (Ek C P1 buna göre daraltılmalıdır)"* | $r_0$ **M-38'de türetildi** (§5.10); cümle güncellendi |
+| 3 | Kapanış alıntısı | Düz eğriyi üç öğeden çıkarıyor, üçüncüsü **"sürüklenme zarfı"** | Üçüncü öğe **maddenin serbest düşmesi (M-2)** oldu; zarfın türetimde yer almadığı açıkça yazıldı |
+| 4 | Geçerlilik Sınırı | *"Adımlar A'nın 2. adımı tam sürüklenme varsayar…"* — kaldırılmış bir adıma atıf | İki gerçek koşula indirildi: dairesel yörünge + kararlı eksenel simetrik dönüş |
+
+**Sweep sonucu temiz:** kitapta `v_yör=v_θ`, "ortamla eş hızlı", "akışkana hapsolur" kalıntısı
+kalmadı (düzeltme kayıtları hariç); galaktik zincirde (Kısım 6/7/10) düz dönüş eğrisini zarfa
+bağlayan hiçbir atıf yok.
+
+---
+
+## 5.12 $h$ KAPANDI — ve Sınav 3'ün başarısızlığı yeniden açıldı (3 Ağustos 2026)
+
+### 5.12.1 Soru yanlış kurulmuştu
+
+M-38'in Adım 3'ü zaten *"$h$ sadeleşir"* diyor. Yani $h$'ın **değeri** sonuca hiç girmiyor.
+Gereken tek şey, akının enjekte edildiği kalınlık ile $R$'deki yanağın kalınlığının aynı olması:
+
+$$\text{akı yoğunluğu}\propto\frac{\Gamma(R)}{2\pi R}\cdot\frac{h_{inj}}{h(R)}$$
+
+Soru "$h$ kaçtır?" değil, **"tabaka dışa giderken dikeyde yayılır mı?"**
+
+### 5.12.2 Türetim: yayılamaz — Postülat 7'den, 22 mertebe marjla
+
+Dolanım taşıyan tabakanın kalınlığı ideal akışkanda değişmez (Helmholtz/Kelvin); yalnız viskoz
+difüzyonla yayılır: $\delta\sim\sqrt{\nu_E t}$, $\nu_E=\eta_E/\rho_0\approx4{,}9\times10^{-22}$ m²/s.
+
+| Sistem | $t=R/v$ | $\delta$ | $h$ | Marj |
+|---|---|---|---|---|
+| Samanyolu (10 kpc) | $1{,}4\times10^{15}$ s | $8{,}3\times10^{-4}$ m | $9\times10^{18}$ m | $10^{22}$ |
+| Dev disk (50 kpc) | $6{,}2\times10^{15}$ s | $1{,}7\times10^{-3}$ m | $3\times10^{19}$ m | $2\times10^{22}$ |
+
+**Ve sonuç $\eta_E$'ye duyarlı değil:** koşulun bozulması için $\eta_E\gtrsim4\times10^{39}$ Pa·s
+gerekir — kullanılan değerin $10^{44}$ katı. **Varsayım 3 artık teorem.**
+
+### 5.12.3 İkinci sonuç: tabakalar İÇ İÇE — ve Sınav 3 yanlış geometriyle koşulmuş
+
+Difüzyon yoksa $z$'deki nükleonun akısı $z$'de kalır ⟹ $a_{F4}(R,z)\propto\rho_*(z)$: **dikey
+profil kaynağın dikey kütle profilini izler.** Sınav 3 (6.6.4) ise **tek ve düzgün** bir tüp
+($h_0=0{,}15$ kpc) varsayıp **basamak** öngörmüş ve şu gerekçeyle başarısız ilan edilmişti:
+*"sorun genlikte değil fonksiyonun biçiminde: teori basamak, gözlem rampa veriyor."*
+
+İç içe resim **rampa** verir. NGC 891 kaba yeniden hesap ($h_z\approx1{,}5$ kpc):
+
+| $\lvert z\rvert$ (kpc) | Gözlenen | Tek tabaka | **İç içe** |
+|---|---|---|---|
+| 0,15 | 228 | 146 | **223** |
+| 0,5 | 222 | 146 | **210** |
+| 1 | 215 | 146 | **194** |
+| 2 | 200 | 146 | **172** |
+
+Sapma **54–82 → 2–28 km/s**; biçim düzeliyor.
+
+### 5.12.4 ⚠ Bu bir geçilmiş sınav DEĞİL
+
+Üç eksik açıkça kaydedildi: **(i)** $h_z=1{,}5$ kpc **varsayıldı**, NGC 891'in gerçek dikey kütle
+profili kullanılmadı; **(ii)** $v_{bar}$'ın $z$ bağımlılığı ihmal edildi; **(iii)** düzlem dışı
+gazın dairesel yörüngede olup olmadığı denetlenmedi — Sınav 3'ün kendi 2. sonucu gazın baryonik
+Kepler tabanının **altına** indiğini bulmuştu, ki bu gazın dairesel yörüngede *olmadığının*
+işaretidir (fountain) ve o durumda M-37 zaten uygulanamaz (10.6.3 kapsam kaydı).
+
+**İddia yalnızca şu:** Sınav 3 **yanlış geometriyle** yürütülmüştür ve **yeniden koşulmalıdır.**
+Yeni koşum serbest parametre eklemez — $h_z$ NGC 891 için 21 cm/optik veriden bağımsızca bilinir.
+Sınavın yeni statüsü: **açık, yeniden koşum bekliyor.** *(Anayasa'nın "Sınav 3 başarısız" kaydı
+bu nedenle yeniden değerlendirmeye açılmıştır.)*
+
+### 5.12.5 Üçüncü sonuç: flaring öngörüsü düzeltildi
+
+Eski kutu, baryonik diskin kalınlaşmasının akı tüpünü de kalınlaştırıp dönüş eğrisini
+düşüreceğini varsayıyordu. **Difüzyon olmadığına göre yanlış:** iç diskten gelen akı dış diskin
+kalınlaşmasından etkilenmez. $1/R$'yi bozan şey, dış bölgede **kalın katmana enjekte edilen yeni
+kütlenin** akısının daha geniş alana dağılmasıdır ⟹ dış kolda F4, ham kapsanan kütleyi değil
+**dikey kalınlıkla ağırlıklanmış** kütleyi izlemelidir. Bu, **Sınav 2'nin** ("yayılan disk")
+başarısızlığının da yeniden okunmasını gerektirir — 7.4'e kalem olarak yazıldı.
+
+### 5.12.6 İşlenen yerler
+
+M-38: Varsayım 3'e "artık teorem" kaydı · yeni bölüm *"$h$'ın $R$-Bağımsızlığının Türetimi"*
+(marj tablosu, $\eta_E$ duyarsızlığı, iç içe tabaka sonucu, NGC 891 yeniden hesabı, üç eksik
+kaydı, flaring düzeltmesi) · Açık Uçlar'da $h$ kalemi kapatıldı.
+
+---
+
+## 5.11 3.9.4 ÇELİŞKİSİ ÇÖZÜLDÜ — açısal momentum bütçesiyle (3 Ağustos 2026)
+
+### 5.11.1 Çelişki
+
+3.9.4 aynı bölüm içinde iki zıt şey söylüyordu:
+
+| Paragraf | İddia |
+|---|---|
+| **Açılış** | *"Ay'ın 3,8 cm uzaklaşmasının **asıl kaynağı** kozmolojik bir süreçtir"*; uzaklaşma + gün uzaması + yörünge yavaşlaması = *"tek kozmolojik sürecin **üç yüzü**"*; gelgit frenlemesi *"yalnızca ikincil bir katkı"* |
+| **Karşı-kayıt** | *"Kozmolojik seyrelme… bu tablonun üzerine binen, işaretten bağımsız ve **çok daha yavaş bir taban terimidir**; uydunun net kaderini lob teriminin işareti belirler"* |
+
+### 5.11.2 Ayırt edici muhasebe — iki bağımsız ölçüm
+
+| Ölçüm | Kaynak | Değer |
+|---|---|---|
+| Ay'ın kazandığı $dL/dt$ | LLR, $dr/dt=3{,}8$ cm/yıl | $+4{,}50\times10^{16}$ kg·m²/s² |
+| Dünya'nın kaybettiği $dL/dt$ | gün uzaması 2,3 ms/yüzyıl (gelgit bileşeni) | $-4{,}93\times10^{16}$ |
+| **Denge** | — | **%91** |
+
+**Bütçe gelgit aktarımıyla tek başına kapanıyor.** Kozmolojik terime kalan pay $\lesssim$%10.
+
+### 5.11.3 Neden bu tuzağa düşülmüş — ve ikinci ölçüm nasıl kesiyor
+
+Kozmolojik tahminin mertebesi **tesadüfen çok yakın:** $r_{Ay}H_0=2{,}75$ cm/yıl, gözlenenin
+**%72'si.** Bu yakınlık gerçek ve yanıltıcı.
+
+Ayrımı kesen ikinci ölçüm **kayma açısı**:
+
+| Senaryo | $k_2\sin2\varepsilon$ | $\varepsilon$ ($k_2=0{,}30$) |
+|---|---|---|
+| Lob %100 | 0,0256 | **2,45°** — gözlenen ~3° ✓ |
+| Kozmolojik %72 | 0,0072 | **0,68°** — gözlenenin ¼'ü ✗ |
+
+### 5.11.4 Karar ve işlenen yerler
+
+**Lob torku baskın; kozmolojik seyrelme taban terimi ($\lesssim$%10).** Ve **gün uzaması ayrı bir
+imza değil** — aynı aktarımın öteki ucu. "Üç yüz" iddiası ikiye iner ve ikisi tek olguya bağlanır.
+
+| Yer | Ne yapıldı |
+|---|---|
+| **3.9.4 sonuç paragrafı** | Baştan yazıldı: iki aday, bütçe tablosu, "neden karıştırılmaya açık" kutusu ($rH_0$ tesadüfü), kayma açısıyla ayrım, karar + iki alt sonuç, düzeltme kaydı |
+| **3.9.1** | *"asıl kaynağı bu yerel sürtünme değil, kozmolojik"* → **aktarım**, %91 bütçe, kozmoloji taban |
+| **3.9.7 (arşiv paragrafı)** | *"gün uzaması seyrelmenin üç imzasından biri"* → arşivin **aradığı şey değişti**: birincil sınav aktarım bütçesinin çağlar boyunca kapanması, kozmolojik taban ikincil ve hassasiyet altında. **Dürüst kayıt eklendi:** paleontolojik gün-uzunluğu kayıtlarının bilinen gerilimi, teorinin de standart açıklamayı kullandığı ve **ayrı öngörüsü olmadığı** yazıldı |
+| **11.1.9 açık kalem** | "Açık kalem" → **"Kapanmış kalem"**; 3.9.4 ile gerilim kaydı kaldırıldı, yerine bütçe sayıları |
+
+### 5.11.5 Dürüstlük kaydı — bu bir kazanım değil, bir düzeltme
+
+Bu tur teoriye yeni bir öngörü **kazandırmadı**; tersine **bir iddiayı geri aldı.** Uzaklaşma ve
+gün uzaması artık standart gelgit muhasebesiyle **ortak** açıklanıyor ve teorinin bu iki olguda
+ayrışan bir sözü yok. Kazanç yalnızca tutarlılıkta: iç çelişki kalktı ve kozmolojik taban
+gerçekçi (ölçülemez) konumuna indi.
+
+---
+
+## 5.10 $r_0$ TÜRETİLDİ — serbest parametre değildi, kitap onu zaten ölçüyordu (3 Ağustos 2026)
+
+### 5.10.1 Türetim
+
+F4'ün genliği ve F1 ile kesişme yarıçapı, 6.5.4.3'ün kendi zincirinden **kapalı biçimde** çıkar.
+İki ivme:
+
+$$a_{F1}=\frac{\mathcal{G}M}{r^2}\,,\qquad a_{F4}=\frac{\mathcal{G}M}{\ell_\omega^{etkin}\,R} \quad\text{(6.5.4.3 Adım 5+6, }\ \ell_\omega^{etkin}=\ell_\omega\sqrt N)$$
+
+Eşitlendiğinde geçiş yarıçapı doğrudan düşer:
+
+$$\boxed{\;r_0=\ell_\omega^{etkin}=\ell_\omega\sqrt{\frac{M}{m_n}}=\sqrt{\frac{\mathcal{G}M}{a_0}}\;,\qquad A_4=\frac{\mathcal{G}M}{r_0}=\sqrt{\mathcal{G}M\,a_0}\;}$$
+
+*(Son eşitlik $a_0=\mathcal{G}m_n/\ell_\omega^2$ tanımıyla özdeştir; iki yazım arasındaki %6 fark
+$a_0$'ın kalibre değeri ile M-45 türetimi arasındaki bilinen %12'nin karekökü.)*
+
+**Ve bu ifade kitapta zaten var:** 10.7.1'in ölçüm formülü $\ell_\omega^{etkin}(R)=\sqrt{\mathcal{G}M_{kaps}(R)/a_0}$'dır — yani **$r_0\equiv\ell_\omega^{etkin}$.** Kitap $r_0$'ı serbest
+parametre sanarken aslında onu 141 galakside ölçüyordu.
+
+### 5.10.2 Doğrulama — zaten yapılmış
+
+| Ölçüt | Ölçülen | Türetim |
+|---|---|---|
+| Kütle üssü ($r_0\propto M^p$) | **0,506** | 0,500 ✓ |
+| Yarıçap izi (galaksi içi sistematik) | **−0,025** (saçılma 0,091 dex) | 0 ✓ |
+| Samanyolu $r_0$ | — | **10,4 kpc** — düz dönüş eğrisinin başladığı yer ✓ |
+
+$r_0$'ın galaksiden galaksiye beş mertebe yayılmasının tamamı $\sqrt M$ çarpanıdır. **Serbest
+kalem listesinden çıkar** ($A_4$ ile birlikte): Blok H'nin "üç bağımsız serbest kalem"i
+($(Cq_n)$, $r_0$, $\kappa_5$) **ikiye** iner.
+
+### 5.10.3 Ama gezegen ölçeğinde bir yanlışlama üretiyor
+
+Türetilen yasa $\varepsilon(r)\equiv a_{F4}/a_{F1}=r/r_0$ verir. Dünya için $r_0=15{,}2$ AU:
+
+| | Değer |
+|---|---|
+| $\varepsilon_{Ay}=r_{Ay}/r_0$ | $1{,}69\times10^{-4}$ |
+| Apsidal katkı ($\Delta\varpi=-\pi\varepsilon$/yörünge) | $-0{,}406^\circ$/yıl |
+| Gözlenen apsidal presesyon | $+40{,}7^\circ$/yıl |
+| **Pay** | **%1,00** |
+
+Ay kuramı LLR ile milimetre/mas mertebesinde modellenmiştir; **%1'lik modellenmemiş bir terim
+kesin olarak dışlanır.** Ayrıca M-38'in kendi $\varepsilon_{Ay}<2\times10^{-5}$ sınırı 8,4 kat
+ihlal edilir. Yani **F4 gezegen ölçeğinde işliyor olsaydı, Ay verisi teoriyi yanlışlardı.**
+
+### 5.10.4 Kaçış zaten kitabın geçerlilik alanı — ve Ay verisi onu DOĞRULUYOR
+
+M-38'in kendi koşulu: $1/R$ yasası **yalnız $h(R)=$ sabit** ise çıkar; yayılan (flaring) akı
+tüpünde yasa $1/R^2$'ye döner ve *"küresel durumdan hiçbir ayrım kalmaz."* Sabit kalınlıklı akı
+tüpü ise **dönerek desteklenen bir disk** gerektirir.
+
+- **Galaksi:** diski var → F4 var → $r_0=10{,}4$ kpc ✓
+- **Yalıtılmış gezegen/uydu:** disk yok → akı küresel → **F4'ün $1/R$ rejimi yok** → $\varepsilon=0$ ✓
+
+Ve bu kısıt **uydurma değil, kitapta zaten ilan edilmiş.** 10.6.3'ün kapsam kaydı:
+
+> *"bu 16 galaksi HI halkası olan, **dönen** erken tiplerdir… Basınç-destekli sistemler —
+> eliptiklerin yıldız kinematiği, cüce küreseller — teorinin bugünkü **geçerlilik alanının
+> dışındadır**."*
+
+**Kazanç:** M-38'in $h=$ sabit varsayımı, "sessiz varsayım"dan **gözlemsel olarak gerekli
+koşula** yükselir. Ay'ın apsidal presesyonu artık bir yanlışlama değil, disk koşulunun
+**bağımsız doğrulamasıdır**: F4 disksiz de işliyor olsaydı %1'lik anomali görülürdü, görülmüyor.
+
+### 5.10.5 Bedel: §5.3 diferansiyel dönüş hattı gezegen ölçeğinde ölüyor
+
+Türetilmiş $A_4=\sqrt{\mathcal{G}Ma_0}=174{,}8$ m²/s² ile Dünya yüzeyinde
+$\lambda=a_{F4}/a_{merkezkaç}=8{,}1\times10^{-4}$ — 6.6.2'nin $10^{-4}$'ünden **8 kat büyük**,
+ama $\lambda\to1$ hedefinden hâlâ **1200 kat** uzak. Ve disk koşulu uygulanırsa gezegen ölçeğinde
+$\lambda$ **tam sıfırdır.**
+
+**Sonuç:** *"F4 merkezkaçı yener, dönen cisimler bu yüzden parçalanmaz"* tezi, **yalıtılmış
+gövdeler için kapanmıyor** — çünkü F4'ün $1/R$ rejimi orada mevcut değil. Tezin yaşayabileceği
+yer disk-destekli sistemlerdir; oradaki karşılığı ise gezegen figürü değil, **disk kararlılığı**
+olur. §5.3 bu kapsamla yeniden çerçevelenmelidir.
+
+### 5.10.6 İşlenen yerler (3 Ağustos 2026)
+
+| Dosya | Ne yapıldı |
+|---|---|
+| **Ek M-38** | Açık uç 1 kapatıldı; yeni bölüm *"$r_0$'ın Türetimi — serbest parametre değildir"* (kesişim türetimi, $r_0\equiv\ell_\omega^{etkin}$ kimliği, 141-galaksi doğrulama tablosu, Ay apsidal denetimi, disk koşulunun gözlemsel zorunluluğu). Kalan boşluk **$h$** olarak yeniden tanımlandı. |
+| **Blok H parametre tablosu** | $r_0$: **F** → **T**, "Ek C P1 ile bağlı" kaydı kaldırıldı |
+| **Blok H kapanış zinciri** | *"bağımsız serbest kalemler yalnız **üçtür**: $(Cq_n)$, $r_0$, $\kappa_5$"* → **ikidir**: $(Cq_n)$, $\kappa_5$ |
+| **Ek C** (1.3) | **Yeni satır 21** — $r_0$, rozet **[T]**, türetim + doğrulama + geçerlilik alanı |
+| **Ek C.1 dürüst sayım** | Yeni gerekçe **(0)**: $r_0$ ve $A_4$ türetildi, P1 bağı koptu, Blok H sayımı üçten ikiye indi. *(Ek C'nin 5 skaler + 2 profil başlık sayımı değişmez — $r_0$ orada zaten ayrı kalem değildi.)* |
+| **Ek D** | $\ell_\omega^{etkin}$ girdisine **$\equiv r_0$** kimliği eklendi — nicelik zaten **[T]** rozetliydi, eksik olan tek şey $r_0$'ın o nicelik olduğunun görülmesiydi. $v_0,r_0$ girdisi ve bilanço notu güncellendi. |
+| **Blok G** | *"$v_0$ ve $r_0$ … **serbesttir** [Ek C, P1]"* → türetildi, P1'in kalan içeriği yalnız yoğunluk profilinin biçimi |
+| **6.6.2 (Sınav 1)** | $r_0$'ın serbest olduğunu varsayan paragrafa güncelleme kutusu: türetilmiş $A_4$ kalibre sınırın 8,4 katı → Ay apsidal presesyonu %1 → F4 gezegen ölçeğinde yok → **aşağıdaki F4 payı hesabı gezegen figürü için geçersiz**, dolayısıyla $\kappa_5\lesssim0{,}02$ sınırı bu tarafta **güçleniyor** |
+
+**Beklenmedik teyit:** Ek D, $\ell_\omega^{etkin}$'i baştan beri **"türetilmiş (T)"** diye
+işaretlemiş. Yani nicelik zaten türetilmiş sayılıyordu; kitabın kaçırdığı tek şey $r_0$'ın
+**o niceliğin ta kendisi** olduğuydu. Türetim yeni bir sonuç üretmedi — mevcut iki kaydın aynı
+şey olduğunu gösterdi.
+
+### 5.10.7 Kalan tek açık uç
+
+$h$'ı ne belirler? Disk kalınlığı gözlemden bilinir (21 cm), ama teoriden türetilmemiştir — ve
+Güneş Sistemi'nin kendi gezegen diskinin "disk" sayılıp sayılmayacağı da tanımlanmamıştır. Bu,
+M-38'in kalan **tek** yapısal boşluğudur ve artık $r_0$ değil, **$h$**'tır. *(M-38'in
+"flaring öngörüsü" bunu kısmen sınanabilir kılıyor: $h$ arttığı yarıçapta dönüş eğrisi düzlükten
+sapmalı; 21 cm kalınlık profili ile dış kol birlikte fit edilmelidir.)*
+
+---
+
+## 5.9 M-39 SINAV 1 İLE HİZALANDI — Anayasa'nın bekleyen bedeli kapandı (3 Ağustos 2026)
+
+Anayasa'nın devam notu şunu kayda geçirmişti: *"Ek M-39 şu an hâlâ 'imza $J_4$'tedir' ve
+'$\kappa_5\lesssim0{,}1$' diyor; Sınav 1 ikisinin de düzeltilmesi gerektiğini gösterdi."*
+**İkisi de düzeltildi**, altı yerde:
+
+| # | Yer | Eski | Yeni |
+|---|---|---|---|
+| 1 | M-39 başlık bölümü | *"İmza $J_2$'de değil $J_4$'tedir"* | *"İmza F5'te değil F4'tedir — ve $\kappa_5$ elenmiştir"* |
+| 2 | M-39 gövde | profil farkından $J_4$ imzası çıkarımı | **çürütüldü:** kuvvet profillerinin farkı potansiyelin multipolünü belirlemez; F5'in potansiyeli **saf $P_2$**, hiçbir harmonikte imza yok. Kutulu $\Phi_{yanal}/\Phi_{merkezkaç}=2\kappa_5(\rho_0/\rho_n)\phi^2$ eklendi |
+| 3 | M-39 sınır | $\kappa_5\lesssim0{,}1$ ($\rho_0/\rho_n=\tfrac18$, $k=\tfrac12$, %0,5) | **$\kappa_5\lesssim0{,}02$** ($\tfrac14$, $k=0$ Sınav 4, %0,42) — çalışma değeri **on kat** fazla; Sınav 1↔4 bağımlılığı kaydedildi |
+| 4 | M-39 Açık Uç 1 | *"$\kappa_5$'in $J_4$'ten kalibrasyonu (öncelikli iş)"* — 4 cisimden tek $\kappa_5$ | **YÜRÜTÜLEMEZ** ilan edildi; Güneş satırının $\phi_\odot\approx0$ hatası ayrıca kaydedildi. **Yerine:** aynı çok-cisimli sınav **F4** üzerinden — engel $A_4$/$r_0$'ın türetilmemiş olması (M-38'in kalan boşluğu) |
+| 5 | M-39 Geçerlilik + H.0 parametre tablosu + H.3 kısıt satırı | $\lesssim0{,}1$ | $\lesssim0{,}02$, gerekçesiyle |
+| 6 | H.1 özet tablosu | *"imza $J_4$'te"* | *"figür harmoniklerinde imza YOK (saf $P_2$) — kalan tek imza 45° deseni"* |
+
+**Yeni bölüm eklendi: "$J_4$ kanalı gerçekten açık — ama F4 için."** Merkezkaç $J_4$'e birinci
+mertebede katkı vermez, F4 verir; indüklenen $J_4$ %4–8, **işaret kontrolü geçti** (F4'ün $P_4$
+katsayısı pozitif → negatif $J_4$; gözlenen de negatif ve hidrostatikten derin). Ayrıca F4'ün
+$P_2$ katkısı $J_2$'yi **azaltır** — şişmeye karşı çalışır, 11.2.3'ün aday mekanizması. Dürüst
+sınır da yazıldı: hidrostatik referans ~%10 belirsiz, manto katkısı ayrıştırılmamış → *"olumsuz
+olmayan ilk sonuç"*, geçilmiş sınav değil.
+
+**Sonuç:** F5 çürütülmedi ama **görünmez** oldu — gözlemsel içeriği yalnız 45° desenine kaldı.
+Anayasa'nın "bilinen bedel" kaydı artık geçerli değil; M-39 ile gövde metni (11.2) hizalı.
+
+---
+
+## 5.8 M-22'ye MERKEZKAÇ PARAGRAFI + 11.2 DÜZELTMESİ (3 Ağustos 2026)
+
+### 5.8.1 M-22 — yazarın paragrafı düzeltilerek işlendi
+
+Yazar M-22'ye bir "Merkezkaç Kuvvetinin Mekanik Temeli" paragrafı eklemişti. **Tez doğru
+(merkezkaç sanal değil), gerekçesi iki yerde hatalıydı:**
+
+| Hata | Doğrusu |
+|---|---|
+| *"dönen ortamın oluşturduğu **dışa doğru** basınç gradyanı"* | $dP/dr>0$ basıncın dışa **arttığı** anlamına gelir; kuvvet $-\nabla P$ olduğundan **içe** bakar. Gradyan merkezcildir. |
+| *"F1 (içeri itim) ile M-22 (dışarı itim) **kavgası**"* | F1 ile M-22 iki rakip kuvvet değil, **aynı gradyan.** F1 gradyanı kurar; M-22 o gradyanın ortamın dönüşüyle dengede olduğunu söyler — bir **denge koşulu.** |
+
+**Ama yazarın sezgisi gerçek bir dışa-savrulma etkisini yakalıyordu** ve o etki bulundu:
+gradyanın yönü değil, **iki yoğunluğun farkı.** Madde aynı gradyanı $\rho_n$ ile hisseder ve
+$\rho_n=4\rho_0$ olduğundan ortamın hızında dönmeye kalksa gereken merkezcil ivmenin ancak
+dörtte birini alır → **dışa savrulur**, ancak $v_\theta/2$'de dengeye oturur. Santrifüjde yoğun
+maddenin dışa çökmesiyle aynı mekanizma.
+
+**Bu, 2 çarpanını görmenin ÜÇÜNCÜ bağımsız yolu** (diğerleri: M-9'un doğrudan ifadesi,
+M-25'in muhasebe zincirleri) ve M-9'un *"madde düşer, ortam dolaşır"* cümlesinin **mekanik
+nedeni.** M-22'ye yön tablosu, döner-kova analojisi, savrulma türetimi, kutulu
+$v_{madde}=v_\theta/2$ ve düzeltme kaydı olarak işlendi; "Kullanıldığı bölümler"e 11.3.1 ve
+bağlı katalog (M-9, M-8, M-25) eklendi.
+
+### 5.8.2 Bölüm 11.2 — üç yerde düzeltme
+
+| Yer | Düzeltme |
+|---|---|
+| **11.2.3** ("Plazma ve Yıldızlar") | *"Tam iyonize plazmada $\phi\approx0$, yanal itim sıfırlanır"* **kaldırıldı.** Üç gerekçeyle: (i) kavrama nükleon düzeyindedir, iyonizasyon elektronu söker — kavramayı kimyasal bağa yüklemek "Evrenakı için katı madde yoktur" kuralıyla da çelişir; (ii) $\phi_\odot\approx0$ Güneş'in makro girdabını iptal eder ve Kısım 3.8'in tamamını yıkar; (iii) iki satır aşağıda **iyonize metalik hidrojenli** Jüpiter'e en yüksek $\phi$ verilir. Ayrıca istisna **gereksizdi**: Sınav 1 $\kappa_5\lesssim0{,}02$ ile F5'i her yerde görünmez buldu. Yerine: Güneş $J_2$'si uyumlu ama $\phi$ ölçümü **değil** ($\phi_\odot\lesssim0{,}9$), ve küçük çıkışı **iki büyük terimin birbirini yemesinden** olabilir (F4 merkezkaçın zıddına — 6.6.2 işaret kontrolü ✓). |
+| **11.2.3** (yeni kazanç) | Oranın $\omega$'dan bağımsızlığı yazıldı: **bir hızda kararlı olan cisim her hızda kararlıdır** — dönen cisimlerin parçalanmaması için ayrı mekanizma gerekmiyor. Ayrıca $\rho_0/\rho_n=\tfrac14$'ün serbest olmadığı (M-8) kaydı. |
+| **11.2 girişi + 11.2.4** | $J_4$ imzası F5'e atfediliyordu. Sınav 1: F5 **saf $P_2$**, hiçbir harmonikte ayrı imzası yok; imza **F4'te** (%4–8, işaret doğru). İkisi de düzeltildi, dürüst sınırlarıyla (hidrostatik referansın ~%10 belirsizliği, hidrostatik-olmayan manto katkısı). |
+
+**Kalan (Ek M-39):** girdi hâlâ *"imza $J_4$'tedir"* ve *"$\kappa_5\lesssim0{,}1$"* diyor. Anayasa
+bunu bilinen bedel olarak kaydetmişti; artık gövde metni düzeltildiği için **M-39 ile Kısım 11
+arasında sapma var.** Sıradaki kalem.
+
+---
+
 ## 5.7 ANİMASYON VE BETİK SWEEP'İ — kod içindeki virüs (3 Ağustos 2026)
 
 Yazar talimatı: *"galaktik animasyonlara ve galaktik çalışmalara da bunları işle."* Virüs bir

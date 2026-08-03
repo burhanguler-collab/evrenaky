@@ -16,7 +16,7 @@ Standart bilimin "Tidal Locking (Gelgit Kilidi)" adıyla nicel biçimde modelled
 
 Bölüm 3.6.1'de kurduğumuz "girdabı durdurmaya çalışırsak frenleniriz" (hidrodinamik direnç / entrainment) mantığı burada kusursuz işler. Ay kendi ekseni etrafında dönmeye (kendi mini girdabını yaratmaya) çalışsa da, içinde bulunduğu Dünya'nın devasa ve baskın Evrenakı akıntısı buna müthiş bir **hidrodinamik direnç (fren)** uygular. Tıpkı güçlü bir nehir akıntısına bırakılan büyük bir kütüğün kendi etrafında serbestçe dönemeyip akıntının yönüne kilitlenmesi gibi, Ay'ın dönüşü de bu akışkan sürtünmesiyle tamamen frenlenmiş ve durdurulmuştur. Sonuç olarak Ay, hidrodinamik olarak en az direnç göreceği pozisyona kilitlenir ve bize hep aynı yüzünü gösterir.
 
-Ayrıca bu etkileşim tek taraflı değildir: Ay'ın devasa kütlesi de Dünya'nın girdabı içinde bir "pürüz" oluşturarak karşılıklı bir hidrodinamik sürtünme yaratır. Ancak Ay'ın her yıl bizden 3.8 cm uzaklaşmasının asıl kaynağı bu yerel sürtünme değil, kozmolojik bir süreçtir: evren genişledikçe Evrenakı yoğunluğu azalır ve Ay'ı tutan çembersel sıkıştırma çağlar boyunca kademeli olarak gevşer; Dünya'nın dönüşünün çağlar içinde yavaşlaması (gün uzaması) da aynı seyrelmenin sonucudur (Bkz. Bölüm 3.7; nicel tartışma için 3.9.4).
+Ayrıca bu etkileşim tek taraflı değildir: Ay'ın devasa kütlesi de Dünya'nın girdabı içinde bir "pürüz" oluşturarak karşılıklı bir hidrodinamik sürtünme yaratır. Ay'ın her yıl bizden 3,8 cm uzaklaşmasının kaynağı da budur — daha kesin söylemek gerekirse, öne kaymış gelgit şişkinliğinin taşıdığı **gradyan lobunun** Ay'a verdiği teğetsel itki. Bu bir **aktarımdır**: Dünya'nın dönüşünden çıkan açısal momentum, Ay'ın yörüngesine girer; iki ucun bağımsız ölçümü bütçeyi **%91 doğrulukla** kapatır (3.9.4'ün muhasebesi). Kozmolojik seyrelme (Bkz. 3.7) bu tablonun üzerine binen, çok daha yavaş bir **taban terimidir** ($\lesssim$%10) — ve Dünya'nın dönüşünün yavaşlaması ayrı bir kozmolojik imza değil, aynı aktarımın öteki ucudur. *(Nicel muhasebe ve düzeltme kaydı: 3.9.4.)*
 
 ## 3.9.2 Gel-Git Problemi (Diferansiyel Çembersel Sıkıştırma)
 
@@ -111,7 +111,33 @@ Modern sismolojik deprem verileri (PREM; Dziewonski & Anderson, 1981) bu son ka�
 3. Dolayısıyla 34 katlık açık, teorinin bir açmazı değil **keşif aracıdır**: girdap hızı ile kütlenin mekanik devri arasındaki bu devasa oran, motorun mekanik değil dördüncü-boyutsal olduğunun doğrudan gözlemsel imzasıdır.
 
 **Sonuç: Ay Neden Uzaklaşıyor? (Lunar Recession)**
-Madem Dünya'nın girdabı Ay'ı taşımaya yetmektedir, Ay neden her yıl bizden **3.8 cm** uzaklaşmaktadır (Ay Lazer Menzillemesi ölçümü: Dickey ve ark., 1994)? Cevap yerel bir kusurda değil, kozmolojik bir süreçtedir: **evren genişlemekte ve Evrenakı yoğunluğu azalmaktadır** (basınç gevşemesi süreci için Bkz. Bölüm 3.7). Ortam seyreldikçe, Ay'ı yörüngesinde tutan çembersel sıkıştırmanın (mengene basıncının) şiddeti çağlar boyunca kademeli olarak düşer ve yörünge yavaşça dışa açılır. Aynı seyrelme, dördüncü boyut motorunun akışkandaki ifadesini de zayıflattığından iki eşlik eden imza daha üretir: **Dünya'nın kendi ekseni etrafındaki dönüşü çağlar içinde yavaşlar** (günlerin jeolojik ve paleontolojik kayıtlarda gözlenen uzaması) ve girdabın sürüklediği **Ay'ın yörünge hızı da buna koşut olarak düşer**. Klasik teorinin ayrı ayrı gelgit-sürtünmesi muhasebesine yüklediği bu üç olgu — uzaklaşma, gün uzaması ve yörünge hızındaki yavaşlama — teoride tek kozmolojik sürecin üç yüzüdür. Ay kütlesinin Dünya girdabında yarattığı pürüzün karşılıklı frenlemesi (Bkz. 3.9.1) bu tabloya yalnızca ikincil bir katkı yapar. Bu açıklama teoriyi yanlışlanabilir kılar: seyrelme Dünya-Ay sistemine özgü olmadığından, bu kozmolojik taban imzanın diğer yörüngelerde de aranmasını öngörür. Ancak taban terimi tek başına işareti belirlemez; her uydunun net kaderini, hemen aşağıda kurulan gradyan lobu işaret kuralı tayin eder.
+
+Madem Dünya'nın girdabı Ay'ı taşımaya yetmektedir, Ay neden her yıl bizden **3,8 cm** uzaklaşmaktadır (Ay Lazer Menzillemesi ölçümü: Dickey ve ark., 1994)? İki aday mekanizma vardır ve **muhasebe hangisinin baskın olduğunu kesin biçimde söyler.**
+
+**Aday 1 — gelgit aktarımı (lob torku).** Öne kaymış gelgit şişkinliği, taşıdığı gradyan lobuyla Ay'a teğetsel itki verir; Ay açısal momentum kazanır, Dünya kaybeder (mekanizma: 3.9.2 ve aşağıdaki lob-işaret kuralı).
+
+**Aday 2 — kozmolojik seyrelme.** Evren genişledikçe Evrenakı yoğunluğu azalır (Bkz. 3.7); Ay'ı yörüngesinde tutan çembersel sıkıştırma gevşer ve yörünge yavaşça dışa açılır.
+
+**Muhasebe: açısal momentum bütçesi tek başına kapanıyor.** İki uç bağımsız olarak ölçülmüştür:
+
+| Ölçüm | Değer | Bağıntı |
+|---|---|---|
+| Ay'ın kazandığı | $+4{,}50\times10^{16}$ kg·m²/s² | $dr/dt=3{,}8$ cm/yıl (LLR) |
+| Dünya'nın kaybettiği | $-4{,}93\times10^{16}$ kg·m²/s² | gün uzaması 2,3 ms/yüzyıl (gelgit bileşeni) |
+| **Denge** | **%91 uyum** | — |
+
+Dünya'nın dönüşünden çıkan açısal momentum, Ay'ın yörüngesine giren açısal momentumu **onda dokuz doğrulukla** karşılamaktadır. Yani uzaklaşma bir **aktarımdır**: bütçe gelgit torkuyla kapanır ve kozmolojik terime ancak ~%10'luk bir pay kalır.
+
+> **Neden bu iki aday karıştırmaya bu kadar açık?** Çünkü kozmolojik tahminin mertebesi tesadüfen çok yakındır: yörünge ortamla birlikte genişleseydi beklenen hız $r_{Ay}H_0=2{,}75$ cm/yıl olurdu — gözlenenin **%72'si.** Sayısal yakınlık gerçektir ve bu bölümün bir ara sürümü tam bu yüzden uzaklaşmanın *"asıl kaynağının kozmolojik olduğunu"* yazıyordu.
+>
+> **Ama ikinci bir ölçüm ayrımı keser: şişkinlik kayma açısı.** Lob torku uzaklaşmanın tamamını taşıyorsa kayma açısı $\varepsilon\approx2{,}5^\circ$ çıkar (gözlenen ~$3^\circ$ ✓). Kozmolojik terim %72'yi taşısaydı lob'a kalan pay 3,6 kat azalır ve $\varepsilon\approx0{,}7^\circ$ olurdu — gözlenenin dörtte biri. *(Hesap: $\Gamma=\tfrac32k_2\sin2\varepsilon\,\mathcal{G}M_{Ay}^2R_\oplus^5/r^6=dL/dt$; 11.1.9.)* Gözlem birinci seçeneği söylüyor.
+
+**Karar ve sonucu.** Uzaklaşmayı yapan şey **lob torkudur**; kozmolojik seyrelme bu tablonun üzerine binen, işaretten bağımsız ve **çok daha yavaş bir taban terimidir** ($\lesssim$%10). Bunun iki alt sonucu vardır:
+
+1. **Gün uzaması ayrı bir imza değildir.** Aynı bütçenin öteki ucudur: Dünya'nın dönüşü yavaşlıyor **çünkü** Ay'ın yörüngesi besleniyor. İkisi tek aktarımın iki ucu; iki ayrı kozmolojik yüz değil.
+2. **Kozmolojik taban yine yanlışlanabilir bir öngörü bırakır** — ama daha zayıf bir konumda: seyrelme Dünya-Ay sistemine özgü olmadığından, gelgit muhasebesi kapatıldıktan sonra kalan **artık** her yörüngede aynı işaretli ve $\propto rH_0$ mertebesinde olmalıdır. Bugünkü hassasiyetle bu artık Dünya-Ay sisteminde bütçenin %9'luk kapanma payının içindedir; ayrıştırılması ayrı bir iştir (7.4).
+
+*(Düzeltme kaydı, 3 Ağustos 2026: bu paragrafın önceki sürümü uzaklaşmanın **asıl** kaynağını kozmolojik seyrelmeye veriyor, gelgit frenlemesini "yalnızca ikincil bir katkı" sayıyor ve uzaklaşma + gün uzaması + yörünge yavaşlamasını *"tek kozmolojik sürecin üç yüzü"* olarak sunuyordu. Aynı bölümün karşı-kayıt paragrafı ise tersini — kozmolojik terimin **taban** olduğunu — söylüyordu; iki paragraf çelişiyordu. Açısal momentum bütçesi ve kayma açısı, karşı-kaydın doğru olduğunu gösterdi.)*
 
 **Karşı Gözlem ve Cevap: Phobos İçe Düşerken Ay Neden Uzaklaşıyor? (Gradyan Lobu ve Senkron Yarıçap)**
 
@@ -198,7 +224,12 @@ Saros'un "mucizesi" de bu okumada çözülür: standart mekanikte üç ay-ritmin
 
 Ve işte bu noktada 3.9.4'ün kozmolojik seyrelme anlatısı, "mucizeyi" durağan bir rastlantı olmaktan çıkarıp **geçen bir pencereye** çevirir: Evrenakı seyreldikçe Ay dışa süzülmektedir; geçmişte koni tepesi yüzeyin derinine iniyordu (daha geniş gölge kuşakları, daha uzun tam tutulmalar), gelecekte tepe yüzeyden tamamen kalkacak ve gökyüzünde yalnız halkalı tutulmalar kalacaktır. Kusursuz örtüşme, evrenin bize özel ayarlanmış bir sahnesi değil; milyarlarca yıllık yavaş bir sürüklenmenin, tam **denge anından geçmekte olan** bugünkü kesitidir. Biz bu pencerenin içinde yaşıyoruz.
 
-**Arşiv Hâlihazırda Toplanmış Test Verisidir.** Bu bölümün iddiaları, astronominin en eski veri setiyle sınanabilir durumdadır. Babil ve Çin kayıtlarından bugüne uzanan antik tutulma arşivi, modern astronomide Dünya dönüşünün çağlar içindeki yavaşlamasını (ΔT) ölçmenin ana aracıdır (Stephenson & Morrison, 1995; güncel derleme: Stephenson ve ark., 2016): binlerce yıl önceki bir tutulmanın "yanlış" boylamda kaydedilmiş görünmesi, aradan geçen yüzyıllarda günlerin uzadığını doğrudan belgeler. Gün uzamasını 3.9.4'te seyrelmenin üç imzasından biri olarak ortaya koymuştuk; demek ki antik tutulma arşivi, teorinin kozmolojik seyrelme öngörüsü için **hâlihazırda toplanmış** bir test verisidir. Teorinin ayrışan iddiası da nettir: uzaklaşmanın ve gün uzamasının çağlar içindeki temposu, sabit gelgit-sürtünmesi modelinin değil, Evrenakı seyrelme profilinin çizelgesini izlemelidir. Antik tutulma arşivi, Ay Lazer Menzillemesi ve tam tutulma sürelerinin uzun dönemli istatistiği yan yana konduğunda bu iki çizelge birbirinden ayrıştırılabilir. Davetimiz buradaki en yalın hâliyle şudur: bu karşılaştırma yapılsın — teori ya bu masada yanlışlansın ya da gök mekaniğinin "tesadüfler" hanesine yazdığı en görkemli olgu, tek bir akışkan sürecin takvimine bağlansın.
+**Arşiv Hâlihazırda Toplanmış Test Verisidir.** Bu bölümün iddiaları, astronominin en eski veri setiyle sınanabilir durumdadır. Babil ve Çin kayıtlarından bugüne uzanan antik tutulma arşivi, modern astronomide Dünya dönüşünün çağlar içindeki yavaşlamasını (ΔT) ölçmenin ana aracıdır (Stephenson & Morrison, 1995; güncel derleme: Stephenson ve ark., 2016): binlerce yıl önceki bir tutulmanın "yanlış" boylamda kaydedilmiş görünmesi, aradan geçen yüzyıllarda günlerin uzadığını doğrudan belgeler. 3.9.4'te gün uzamasının **kozmolojik bir imza değil**, gelgit aktarımının öteki ucu olduğunu kurmuştuk (bütçe %91 kapanıyor). Bu, antik arşivin değerini düşürmez — **aradığı şeyi değiştirir.** Arşivin sınadığı iki büyüklük şudur:
+
+1. **Aktarımın tutarlılığı (birincil).** Antik tutulmalardan çıkan ΔT, Ay Lazer Menzillemesi'nin ölçtüğü uzaklaşmayla **aynı bütçenin iki ucudur** ve çağlar boyunca öyle kalmalıdır. İkisi arasındaki denge geçmişe doğru bozuluyorsa lob torku modeli yanlışlanır. *(Bilinen bir gerilim burada zaten kayıtlıdır: paleontolojik gün-uzunluğu kayıtları, sabit gelgit torkunun ima ettiğinden daha yavaş bir geçmiş yavaşlama gösterir — standart kuram bunu kıta konumlarının ve okyanus rezonansının değişmesiyle açıklar. Teori aynı açıklamayı kullanır; **ayrı bir öngörüsü yoktur.**)*
+2. **Kozmolojik taban (ikincil, zayıf).** Gelgit muhasebesi kapatıldıktan sonra kalan **artık**, $\propto rH_0$ mertebesinde ve her yörüngede aynı işaretli olmalıdır. Dünya-Ay sisteminde bu artık bugün bütçenin ~%9'luk kapanma payının içindedir — yani **ölçüm hassasiyetinin altında.** Ayrıştırılması ayrı bir iştir (7.4).
+
+Davetimiz bu yüzden daha dar ama daha dürüst bir hâl alır: antik tutulma arşivi, Ay Lazer Menzillemesi ve paleontolojik gün-uzunluğu kayıtları yan yana konarak **aktarım bütçesinin çağlar boyunca kapandığı** sınanmalıdır; kozmolojik taban ise ancak bu bütçe yeterli hassasiyetle kapatıldıktan sonra aranabilir. *(Düzeltme kaydı, 3 Ağustos 2026: bu paragrafın önceki sürümü gün uzamasını "seyrelmenin üç imzasından biri" sayıyor ve arşivi doğrudan kozmolojik öngörünün testi olarak sunuyordu; 3.9.4'ün muhasebesi bu sıralamayı tersine çevirdi.)*
 
 ---
 

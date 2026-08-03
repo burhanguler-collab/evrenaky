@@ -105,7 +105,9 @@ $$\boxed{\;\kappa_5\lesssim0{,}02\;}$$
 
 ### F4 ne kadar götürüyor? — $r_0$ yeni varsayım gerektirmeden çıkıyor
 
-F4 zıt yönde çalıştığı için yukarıdaki sınır ancak F4'ün payı bilinirse $\kappa_5$'e ait olur. F4'ün genliği $A_4$'e, o da $1/R$ rejiminin iç kesim yarıçapı $r_0$'a bağlıdır — ve $r_0$'ın gezegen ölçeğindeki değeri teoride sabitlenmiş değildir.
+F4 zıt yönde çalıştığı için yukarıdaki sınır ancak F4'ün payı bilinirse $\kappa_5$'e ait olur. F4'ün genliği $A_4$'e, o da rejim geçiş yarıçapı $r_0$'a bağlıdır.
+
+> **GÜNCELLEME (3 Ağustos 2026) — $r_0$ artık türetilmiştir.** Bu paragrafın yazıldığı sırada $r_0$ serbest sayılıyordu. Ek M-38'de iki kanalın ivmesinin kesişiminden kapalı biçimde çıktı: $r_0=\sqrt{\mathcal{G}M/a_0}=\ell_\omega^{etkin}$, dolayısıyla $A_4=\sqrt{\mathcal{G}Ma_0}$. Dünya için $A_4=174{,}8$ m²/s² — aşağıda kalibre edilen 20,7 üst sınırının **8,4 katı.** Bu çelişki iki şeyi birden söylüyor: **(a)** aşağıdaki Ay-tabanlı kalibrasyon rejim tutarsızlığı taşıyor (kendi sonucu $r_0>128$ AU, oysa dış rejim yasasını Ay'da kullanıyor); **(b)** daha önemlisi, türetilmiş $A_4$ ile Ay'ın apsidal presesyonunda %1'lik modellenmemiş bir terim doğuyor ve bu **kesin olarak dışlanır** — yani F4 gezegen ölçeğinde işlemiyor. Çıkış M-38'in kendi Varsayım 3'üdür: $1/R$ yasası $h=$ sabit, yani **dönen bir disk** ister; yalıtılmış gezegen/uydu sisteminde akı küreseldir ve F4'ün $1/R$ rejimi yoktur. Bu, teorinin ilan edilmiş geçerlilik alanıyla birebir örtüşür (10.6.3 kapsam kaydı). **Sonuç: aşağıdaki F4 payı hesabı gezegen figürü için geçersizdir — F4'ün payı sıfırdır, dolayısıyla $\kappa_5\lesssim0{,}02$ sınırı fiilen $\kappa_5$'e aittir ve bu tarafta güçlenir.**
 
 **Ama sabitlenmesine gerek yok: mevcut bir tutarlılık koşulu onu zaten bağlıyor.** Ek M-38'in Ay sınırı, eksenel payın radyal paya oranını ölçer ve bu oran yarıçapla **doğrusaldır**:
 

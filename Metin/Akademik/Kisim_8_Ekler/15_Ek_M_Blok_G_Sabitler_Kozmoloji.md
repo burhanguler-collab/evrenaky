@@ -118,7 +118,7 @@ $$\boxed{P(r) = \begin{cases} P_{merkez} + \tfrac{1}{2}\rho\,\omega^2 r^2\,, & r
 
 ### Açık Uçlar
 - **Kesim yarıçapı:** Log kuyunun dış kesimde $P_0$'a nasıl bağlandığı (profilin kapanışı) modellenmemiştir.
-- $v_0$ ve $r_0$ merkez motor parametrelerinden nicel türetilmemiştir; **serbesttir** [Ek C, P1]. P1 programı bu profili dönüş eğrisi + galaktik kızıla kayma sapmasının ortak fitiyle sabitleyecektir (7.4 madde 1 ve 5).
+- $r_0$ **türetilmiştir** (Ek M-38, 3 Ağustos 2026): $r_0=\sqrt{\mathcal{G}M/a_0}=\ell_\omega^{etkin}$, iki kanalın ivmesinin kesişiminden; onunla birlikte $v_0^2=A_4=\sqrt{\mathcal{G}Ma_0}$ de kapanır. İkisi de artık serbest kalem değildir ve Ek C'de **satır 21 [T]** olarak kayıtlıdır. *(Önceki kayıt bunları P1'e bağlayıp serbest sayıyordu.)* P1'in kalan içeriği yalnız yoğunluk profilinin biçimidir.
 
 ---
 
