@@ -475,6 +475,133 @@ dokunulmadı — yazar kararı bekliyor.
 
 ---
 
+## 5.15 DENETİM — beş katmanlı, sayısal ve tam (3 Ağustos 2026)
+
+### Katman 1 — Sayısal: 61 değer sıfırdan yeniden hesaplandı
+
+Turun ürettiği/değiştirdiği **her** kutulu sonuç ve tablo değeri bağımsız bir betikle sıfırdan
+hesaplanıp metindekiyle karşılaştırıldı: $\rho_0/\rho_n$ · ortam yüzey hızları (874, 439, 15,8, 34,
+kopma özdeşliği) · gelgit genlikleri (0,357 / −0,178 / 0,535 / 0,164 / 0,246 / 0,781 / 0,289 / 2,70 /
+0,460 / 179) · kayma açısı zinciri ($L$, $dL/dt$, $k_2\sin2\varepsilon$, dört $k_2$ değeri) ·
+$\eta_E$ zaman ölçekleri ($\tau_E/\tau_{madde}$, $2\times10^{-16}$) · $r_0$ (4 gövde) ve $A_4$ ·
+$\varepsilon_{Ay}$ ve %1 · $\lambda$ · $h$ türetimi ($\nu_E$, iki $\delta$, iki marj, $\eta_E$
+kırılma eşiği) · açısal momentum bütçesi (%91, $rH_0$, %72, 0,68°) · kayma tablosu (5 sistem) ·
+$\phi_\oplus$ ve $\kappa_5$ · animasyon (oran 2,000, üs −0,500).
+
+**Sonuç: 60 geçti, 1 not.**
+
+| Kalem | Bulgu | Önem |
+|---|---|---|
+| $\kappa_5$ sınırı | Girdilerle **tam değer 0,0233**; metinde $\lesssim0{,}02$ | **Düşük.** Bir üst sınır için yuvarlama yönü ters — türetilenden **daha sıkı** bir şey iddia ediyor. Kaynağı 6.6.2, bu turda eklenmedi. Öneri: $\lesssim0{,}023$ yazmak ya da yuvarlama olduğunu belirtmek |
+
+### Katman 2 — Kayıt ↔ denklem tutarlılığı (M-37 dersinin sistematiği)
+
+Bugün 20 düzeltme kaydı yazıldı. M-37'de kaçırılan hatanın dersi şuydu: *kayıt yazılan yerin
+**altındaki** basamaklar ayrıca denetlenmeli.* On tehlike sınıfı tarandı:
+
+kapılış/eş hız kalıntısı · M-22'de $\rho_n$ ile bölen denklem · $r_0$ serbest diyen ifade ·
+$J_4$ imzasını F5'e veren ifade · eski gelgit yazımı ($\Delta h$, $GMb^2$) · "$h=$ sabit hâlâ
+varsayım" · M-22'yi kuvvet olarak toplayan ifade · "kozmolojik asıl kaynak" · eski yarım sayılar
+(430, 7,93, 23 kat, 17 kat) · eski $\kappa_5$ sınırı.
+
+**Sonuç: 10/10 TEMİZ.**
+
+### Katman 3 — Dosyalar arası sayı tutarlılığı
+
+20 kilit sayının hangi dosyalarda geçtiği çıkarıldı; çelişen varyant yok. İki yanlış pozitif
+soruşturuldu: "874" (Kısım 7 kaynakçasında **dergi cilt numarası**, ApJL 874) ve "%91"
+(Kısım 6/10'da ilgisiz yüzdeler).
+
+**Bu katmanın en değerli bulgusu:** Kısım 7'de "59,6" araması, **7.4 md.13'ü** ortaya çıkardı —
+kitabın 2 çarpanı sorununu **zaten kaydettiği** ve bugün bağımsız olarak bulduğum üç çözüm
+seçeneğini sıraladığı madde. Madde bayattı ve denetim sırasında **kapatıldı** (§5.15.1).
+
+### Katman 4 — Yapısal bütünlük
+
+| Kontrol | Sonuç |
+|---|---|
+| Tablo kolon tutarlılığı (100 dosya) | **7 bozuk satır bulundu ve düzeltildi** — Ek D'nin D.5 tablosunda. 3'ü bu turda benim eklediğim ($\zeta$, $\Psi_T$, $\mathsf{T}$, $\psi$, $\vec\xi$), 4'ü **önceden** bozuktu ($\xi$, $\kappa_5$). Markdown fazla kolonları **düşürür** — o satırlar katalog atıflarını sessizce kaybediyordu. Kitap çapında şimdi 0 sorunlu blok |
+| LaTeX `$`/`$$` dengesi | Temiz. İşaretlenen tek dosyadaki dengesizlik, gömülü animasyondaki bir **JavaScript template literal** (`${r_bg}`) — yanlış pozitif |
+
+### Katman 5 — Kayıt dürüstlüğü
+
+Çalışma dosyasında "işlendi" denen **22 değişikliğin 22'si** hedef dosyada doğrulandı.
+
+### 5.15.1 Denetim sırasında kapatılan kalem: 7.4 md.13
+
+Kalem şöyle diyordu: *"M-37 … $\rho_0=\tfrac14\rho_n$ alındığında Dünya'nın yörünge hızını 2 kat
+fazla verir (59,6 yerine 29,79)"* ve üç seçenek sıralıyordu. **Hiçbirine başvurulmadan kapandı:**
+çözüm denklemi *ya ortamın ya cismin* dengesi saymak yerine **ikisini birden** kabul etmekti.
+Üç endişenin akıbeti maddeye tablo olarak yazıldı: manşet zayıflamadı **ikiye katlandı** ·
+Postülat 7 kırılmadı (zarf **yerel**) · $\rho_0=\rho_n$ denendi ve **reddedildi** (173 galaksi +
+ışık bükülmesi çapası). Kalan dar kalem: **kayma tabakası** (zarf sınırı, P2/Gaia bağı, M-43 adayı).
+
+### 5.15.2 Denetimin KAPSAMADIĞI şeyler — dürüst kayıt
+
+1. **Bu turun dışındaki mevcut sayılar denetlenmedi.** Yalnız 3 Ağustos'ta dokunulan değerler.
+2. **Türetimlerin fiziği bağımsız olarak denetlenmedi** — aritmetik ve iç tutarlılık düzeyindedir.
+3. **Animasyonun görsel doğrulaması yapılamadı** (Browser pane kapalı; `requestAnimationFrame`
+   duruyor). Mantık konsolda sayısal olarak doğrulandı, görsel değil.
+4. **NGC 891 iç içe tabaka hesabı bir sınav değildir** ve öyle kaydedilmedi (§5.12.4).
+
+### 5.15.3 İki kalem kapatıldı — ve biri daha büyük bir kalıntı çıkardı
+
+**Kalem 1 — $\kappa_5$ yuvarlaması. Düzeltirken daha ciddi bir bayat sayı bulundu.**
+
+Tam aritmetik: $2\kappa_5(\rho_0/\rho_n)\phi^2\le0{,}0042$ ile $\kappa_5\le\mathbf{0{,}0233}$.
+Metinde $\lesssim0{,}02$ yazıyordu — bir üst sınır için türetilenden daha sıkı bir iddia.
+**Ama asıl bulgu şu:** aynı paragraflardaki *"$\tfrac12$ çalışma değeri **on kat** fazladır"* ve
+*"tam Bernoulli'nin en fazla **%10**'u"* ifadeleri de **bayattı:**
+
+| $\rho_0/\rho_n$ | $\kappa_5$ sınırı | $\tfrac12$'nin kaç katı | Bernoulli'nin yüzdesi |
+|---|---|---|---|
+| $\tfrac18$ ($k=\tfrac12$, **eski**) | 0,047 | **10,7** | %9,3 |
+| $\tfrac14$ ($k=0$, **güncel**) | **0,0233** | **21,4** | **%4,7** |
+
+*"On kat / %10"* ifadeleri **bir önceki sürümün $\tfrac18$ sınırına aitti**; sınır 6.6.2'de
+$0{,}023$'e sıkıştırılırken oran güncellenmemiş. **Ve ben o bayat oranı 6.6.2'den M-39'a
+taşımıştım** — yani kalıntıyı yaymışım.
+
+**Düzeltildi (7 yerde):** sınır $0{,}02\to\mathbf{0{,}023}$ ve oran "on kat / %10" →
+**"yirmi kattan fazla / %5"**. Dosyalar: M-39 (kutulu sınır + oran cümlesi + geçerlilik satırı),
+Blok H H.0 parametre tablosu, H.1 özet tablosu, H.3 kısıt satırı, Ek D $\kappa_5$ hücresi,
+11.2 girişi ve 11.2.3, 6.6.2 (kaynak — iki kutulu sınır + oran cümlesi, düzeltme kaydıyla).
+Yuvarlama kaydı da eklendi: girdilerin O(1) belirsizliği nedeniyle sınır mertebe düzeyindedir,
+$0{,}023$ aritmetiğin tam sonucudur.
+
+**Kalem 2 — 7.4 numaralandırma çakışması: düzeltildi.**
+
+Liste `1…13, 12, 13, 14` gidiyordu (iki 12, iki 13). Yeniden numaralandırmadan önce **bütün
+atıflar hedeflerine göre doğrulandı:**
+
+| Atıf | Hedefi | Sonuç |
+|---|---|---|
+| "7.4 madde 12" (10.9'da ×6) + "7.4 md. 12" (Ek C) | satır 87, **galaktik sınav** | doküman sırasında zaten 12 — **değişmedi** ✓ |
+| "7.4 md.13" (Kısım 6.3 ve M-43 başlığı) | satır 123, **$\eta_E$ rejim sorunu** | 13 → **15**, iki atıf güncellendi |
+| "7.4 md.14" (Blok B ve Blok I) | satır 141, **eylem ilkesi** | 14 → **16**, iki atıf güncellendi |
+| "7.4 md.10" (Blok A'da ×37), "madde 11" | satır 83/85 | değişmedi ✓ |
+
+Sonuç: liste **1…16, tek numara tek madde**; kitapta kırık atıf yok (grep doğrulamalı).
+*(Anayasa — proje kökündeki süreç günlüğü — kendi tarihsel md.12/13/14/15 kayıtlarını taşır;
+o bir süreç kaydı olduğu için yeniden yazılmadı, burada notu düşüldü.)*
+
+### 5.15.4 Denetim sonrası yeniden koşum
+
+| Katman | Sonuç |
+|---|---|
+| Sayısal (61 değer) | **61/61 geçti, 0 sapma** |
+| Tablo kolon tutarlılığı (kitap çapı) | **0 sorunlu blok** |
+| 7.4 atıf bütünlüğü | kırık atıf **yok** |
+
+### 5.15.5 Karar bekleyen kalem yok
+
+1. **$\kappa_5$ yuvarlaması:** $\lesssim0{,}023$ mü yazılsın, yoksa 0,02 "yuvarlanmış" notuyla mı kalsın?
+2. **7.4 numaralandırma çakışması (önceden var):** açık kalemler listesinde **iki tane 12 ve iki
+   tane 13** var (satır 97 "M-37 radyal denge yoğunluğu" = 13, satır 99 "İkinci mertebe tepki" = 12,
+   satır 105 "Artık kuplaj" = 13). Yeniden numaralandırma gerekir; bu turda dokunulmadı.
+
+---
+
 ## 5.14 KATEGORİ AYRIMI KURULDU — beş kuvvet + denge yasaları (3 Ağustos 2026)
 
 ### 5.14.1 Yazarın önerisi ve benim karşı çıkışım

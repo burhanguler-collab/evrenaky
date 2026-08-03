@@ -1,4 +1,6 @@
-# 6.5 Kısım Özeti: Ne Öğrendik?
+# 6.7 Kısım Özeti: Ne Öğrendik?
+
+> *Numara kaydı (3 Ağustos 2026): bu bölüm daha önce "6.5" numarasıyla yazılıydı; oysa **6.5 Galaktik Yörüngeler** bölümüne aittir ve numara iki kez kullanılıyordu. Sol menüyle hizalandı. Eski "6.5 = Kanıtların Statüsü / kanıt taksonomisi" atıfları artık **6.7**'yi gösterir.*
 
 Bu kısımda teorinin "kâğıt üzerinde" kanıtlarını topladık: yalnızca Evrenakı'nın mekanik ilkelerle ele aldığı gözlemlerin toplu matrisi, standart fiziğin en hassas ölçümlerle doğrulanmış sonuçlarının Evrenakı postülatlarından yeniden türetilmesi ve teorinin ayrıştığı sınanabilir noktaların belirlenmesi.
 

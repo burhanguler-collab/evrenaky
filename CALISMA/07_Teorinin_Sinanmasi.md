@@ -99,7 +99,7 @@ $$2\kappa_5\left(\frac{\rho_0}{\rho_n}\right)\phi^{2}\le0{,}0042$$
 
 $\phi_\oplus\approx0{,}6$ ($\phi^2=0{,}36$) ve $\rho_0/\rho_n=\tfrac{1-k}{4}=\tfrac14$ ($k=0$; Sınav 4'te sabitlendi) ile:
 
-$$\boxed{\;\kappa_5\lesssim0{,}02\;}$$
+$$\boxed{\;\kappa_5\lesssim0{,}023\;}$$
 
 > *Kayıt: bu sınırın ilk sürümü $\rho_0/\rho_n=\tfrac18$ ($k=\tfrac12$) kullanıp $\kappa_5\lesssim0{,}05$ veriyordu. **Sınav 4** $k=\tfrac12$'yi yanlışlayıp $k=0$'ı sabitledi; sınır iki buçuk kat sıkıldı. Sınav 1 ile Sınav 4'ün bu bağımlılığı, sınavların birbirinden bağımsız olmadığının kaydıdır.*
 
@@ -107,7 +107,7 @@ $$\boxed{\;\kappa_5\lesssim0{,}02\;}$$
 
 F4 zıt yönde çalıştığı için yukarıdaki sınır ancak F4'ün payı bilinirse $\kappa_5$'e ait olur. F4'ün genliği $A_4$'e, o da rejim geçiş yarıçapı $r_0$'a bağlıdır.
 
-> **GÜNCELLEME (3 Ağustos 2026) — $r_0$ artık türetilmiştir.** Bu paragrafın yazıldığı sırada $r_0$ serbest sayılıyordu. Ek M-38'de iki kanalın ivmesinin kesişiminden kapalı biçimde çıktı: $r_0=\sqrt{\mathcal{G}M/a_0}=\ell_\omega^{etkin}$, dolayısıyla $A_4=\sqrt{\mathcal{G}Ma_0}$. Dünya için $A_4=174{,}8$ m²/s² — aşağıda kalibre edilen 20,7 üst sınırının **8,4 katı.** Bu çelişki iki şeyi birden söylüyor: **(a)** aşağıdaki Ay-tabanlı kalibrasyon rejim tutarsızlığı taşıyor (kendi sonucu $r_0>128$ AU, oysa dış rejim yasasını Ay'da kullanıyor); **(b)** daha önemlisi, türetilmiş $A_4$ ile Ay'ın apsidal presesyonunda %1'lik modellenmemiş bir terim doğuyor ve bu **kesin olarak dışlanır** — yani F4 gezegen ölçeğinde işlemiyor. Çıkış M-38'in kendi Varsayım 3'üdür: $1/R$ yasası $h=$ sabit, yani **dönen bir disk** ister; yalıtılmış gezegen/uydu sisteminde akı küreseldir ve F4'ün $1/R$ rejimi yoktur. Bu, teorinin ilan edilmiş geçerlilik alanıyla birebir örtüşür (10.6.3 kapsam kaydı). **Sonuç: aşağıdaki F4 payı hesabı gezegen figürü için geçersizdir — F4'ün payı sıfırdır, dolayısıyla $\kappa_5\lesssim0{,}02$ sınırı fiilen $\kappa_5$'e aittir ve bu tarafta güçlenir.**
+> **GÜNCELLEME (3 Ağustos 2026) — $r_0$ artık türetilmiştir.** Bu paragrafın yazıldığı sırada $r_0$ serbest sayılıyordu. Ek M-38'de iki kanalın ivmesinin kesişiminden kapalı biçimde çıktı: $r_0=\sqrt{\mathcal{G}M/a_0}=\ell_\omega^{etkin}$, dolayısıyla $A_4=\sqrt{\mathcal{G}Ma_0}$. Dünya için $A_4=174{,}8$ m²/s² — aşağıda kalibre edilen 20,7 üst sınırının **8,4 katı.** Bu çelişki iki şeyi birden söylüyor: **(a)** aşağıdaki Ay-tabanlı kalibrasyon rejim tutarsızlığı taşıyor (kendi sonucu $r_0>128$ AU, oysa dış rejim yasasını Ay'da kullanıyor); **(b)** daha önemlisi, türetilmiş $A_4$ ile Ay'ın apsidal presesyonunda %1'lik modellenmemiş bir terim doğuyor ve bu **kesin olarak dışlanır** — yani F4 gezegen ölçeğinde işlemiyor. Çıkış M-38'in kendi Varsayım 3'üdür: $1/R$ yasası $h=$ sabit, yani **dönen bir disk** ister; yalıtılmış gezegen/uydu sisteminde akı küreseldir ve F4'ün $1/R$ rejimi yoktur. Bu, teorinin ilan edilmiş geçerlilik alanıyla birebir örtüşür (10.6.3 kapsam kaydı). **Sonuç: aşağıdaki F4 payı hesabı gezegen figürü için geçersizdir — F4'ün payı sıfırdır, dolayısıyla $\kappa_5\lesssim0{,}023$ sınırı fiilen $\kappa_5$'e aittir ve bu tarafta güçlenir.**
 
 **Ama sabitlenmesine gerek yok: mevcut bir tutarlılık koşulu onu zaten bağlıyor.** Ek M-38'in Ay sınırı, eksenel payın radyal paya oranını ölçer ve bu oran yarıçapla **doğrusaldır**:
 
@@ -126,11 +126,11 @@ $A_4=\varepsilon_{yüzey}\,g\,R_\oplus\approx20{,}7$ m²/s². Buradan $P_2$ katk
 
 **F4, F5'i götürecek güçte değildir — dört mertebe yetersiz.** Dolayısıyla yukarıdaki sınır fiilen $\kappa_5$'e aittir ve ayakta kalır:
 
-$$\boxed{\;\kappa_5\lesssim0{,}02\;}\qquad(k=0\text{, Sınav 4})$$
+$$\boxed{\;\kappa_5\lesssim0{,}023\;}\qquad(k=0\text{, Sınav 4})$$
 
 ### Sonuç 1: $\kappa_5$ elendi, F5 gözlemsel içerikten yoksun
 
-**Teori yanlışlanmadı, ama çalışma değeri elendi.** $\kappa_5$ Ek C'de baştan beri serbest kalemdi ($[F]$) ve $\kappa_5=\tfrac12$ yalnızca "Bernoulli biçimini veren" bir çalışma seçimiydi. Sınav bu seçimin **on kat fazla** olduğunu gösteriyor: dönüşüm, tam Bernoulli'nin en fazla %10'u kadar verimli.
+**Teori yanlışlanmadı, ama çalışma değeri elendi.** $\kappa_5$ Ek C'de baştan beri serbest kalemdi ($[F]$) ve $\kappa_5=\tfrac12$ yalnızca "Bernoulli biçimini veren" bir çalışma seçimiydi. Sınav bu seçimin **yirmi kattan fazla** olduğunu gösteriyor ($0{,}5/0{,}023=21{,}4$): dönüşüm, tam Bernoulli'nin en fazla **%5'i** kadar verimli. *(Düzeltme, 3 Ağustos 2026: bu cümle \"on kat / %10\" diyordu; o oran bir önceki sürümün $\rho_0/\rho_n=\tfrac18$ sınırına ($0{,}047$) aitti ve sınır $0{,}023$'e sıkışınca güncellenmemişti.)*
 
 **Ama tek yönlü bir rahatlık değil.** Dünya'nın %0,42'lik fazlası jeofizikte bağımsız modellenmiştir. O açıklama fazlanın tamamını hesaba katarsa teorinin payı sıfıra iner. Dahası F5 saf $P_2$ olduğu için hiçbir harmonikte ayrı imzası yoktur. **Sonuç: yanal itim, gezegen figüründe ölçülebilir bir etki bırakmıyor** — çürütülmedi, *görünmez*. Bir kuvvetin çürütülmesi ile gözlemsel içeriğinin olmaması farklı şeylerdir; ikincisi daha rahatsız edicidir, çünkü kuvvet olsa da olmasa da hiçbir ölçüm değişmez.
 
@@ -187,7 +187,7 @@ Bu çarpımı iki farklı biçimde bölmek mümkündür ve **ikisi de aynı kıs
 | 0,61 ($n_{kayaç}\approx1{,}6$, M-15'in $\phi=1-1/n^2$ bağıntısı) | 0,02 | teorinin kendi bağıntısı |
 | 0,18 | 0,26 | — |
 
-İkinci satır **teorinin kendi bağıntısıyla çelişir**: $\phi=0{,}18$ için $n=1{,}10$ gerekir, ki bu bir **gaz** kırılma indisidir. Kayaç $n\approx1{,}6$ ile $\phi=0{,}61$, su ise $n=1{,}33$ ile $\phi=0{,}44$ verir — yani kayaç sudan **daha fazla** deplase eder, daha az değil. Metalik fazlar da daha az değil daha çok beklenir. Dolayısıyla teorinin iç tutarlılığı $\phi_\oplus\approx0{,}6$ ve $\kappa_5\lesssim0{,}02$ tarafındadır; ama vurgulanmalı ki **bu bir ölçüm değil, bir tercih**: gözlem yalnız çarpımı bağlar.
+İkinci satır **teorinin kendi bağıntısıyla çelişir**: $\phi=0{,}18$ için $n=1{,}10$ gerekir, ki bu bir **gaz** kırılma indisidir. Kayaç $n\approx1{,}6$ ile $\phi=0{,}61$, su ise $n=1{,}33$ ile $\phi=0{,}44$ verir — yani kayaç sudan **daha fazla** deplase eder, daha az değil. Metalik fazlar da daha az değil daha çok beklenir. Dolayısıyla teorinin iç tutarlılığı $\phi_\oplus\approx0{,}6$ ve $\kappa_5\lesssim0{,}023$ tarafındadır; ama vurgulanmalı ki **bu bir ölçüm değil, bir tercih**: gözlem yalnız çarpımı bağlar.
 
 **(ii) Dünya bir sınav değildir.** Ölçek Dünya'dan kuruluyor; aynı cismi sonra "uyum" diye saymak döngüseldir. Tek evrensel $\kappa_5$ ve cisme özgü $\phi$ ile $N$ cisim en fazla $N-1$ bağımsız ilişki sınar.
 
@@ -216,7 +216,7 @@ Dört cismin muhasebesi: **bir kalibrasyon** (Dünya), **bir hassasiyet yetersiz
 
 Bunun üç somut sonucu vardır:
 
-1. **$\kappa_5$ ve $\phi$ ayrı ayrı alıntılanamaz.** Yalnız $\kappa_5\phi^2\le0{,}0084$ bağlıdır. Teorinin iç bağıntısı $\phi_\oplus\approx0{,}6$'yı destekler ($\Rightarrow\kappa_5\lesssim0{,}02$), ama bu gözlemden değil M-15'ten gelir.
+1. **$\kappa_5$ ve $\phi$ ayrı ayrı alıntılanamaz.** Yalnız $\kappa_5\phi^2\le0{,}0084$ bağlıdır. Teorinin iç bağıntısı $\phi_\oplus\approx0{,}6$'yı destekler ($\Rightarrow\kappa_5\lesssim0{,}023$), ama bu gözlemden değil M-15'ten gelir.
 2. **Sıralama öngörüsü (plazma ≪ yoğun madde) bir *öngörü* olarak durur, *sonuç* değil.** Gözlenen anomali sıralamasıyla uyumlu olması dikkate değer, ama gaz devlerinin sapmalarının bağımsız açıklaması olduğu için kanıt sayılamaz.
 3. **Bu bulgu Sonuç 1'i pekiştiriyor:** yanal itimin gezegen figüründe ölçülebilir imzası yok. Kompozisyon ekseni bir kaçış yolu olabilirdi; hesap yapılınca o da kapalı çıktı.
 
@@ -566,7 +566,7 @@ Bu turda öngörü tablosunun **sınanabilir kalemleri tüketilmiştir.** Kitab�
 
 | Öngörü | Durum |
 |---|---|
-| Yanal itim ↔ gezegen figürü | **Sınav 1** — sınır verdi ($\kappa_5\lesssim0{,}02$); F5 için ayırt edici imza yok, F4 için $J_4$ kanalı açık |
+| Yanal itim ↔ gezegen figürü | **Sınav 1** — sınır verdi ($\kappa_5\lesssim0{,}023$); F5 için ayırt edici imza yok, F4 için $J_4$ kanalı açık |
 | $v_\theta\propto h^{-1/2}$ (yayılan disk) | **Sınav 2** — başarısız |
 | Düzlem dışı gaz gecikmesi | **Sınav 3** — başarısız |
 | $k=\tfrac12$ / sıkışma kanalı hızı | **Sınav 4** — yanlışlandı; ayrıca temel bir mengene açtı |
@@ -584,7 +584,7 @@ Yeni sınavlar ancak iki yoldan doğar: (i) teorinin yeni ve erişilebilir bir �
 **Sınanan ve geçilen:** Yok. Bu bölümün yazıldığı tarihte teorinin **ayırt edici** bir sınavı henüz geçilmemiştir.
 
 **Sınanan ve sonuç veren:** Üç sınav.
-- **Sınav 1 (gezegen figürü, dört terimli):** İki ayrı sonuç. **(a) Yanal itim (F5) için olumsuz:** $\kappa_5\lesssim0{,}02$ (çalışma değeri $\tfrac12$ **yirmi beş kat** fazlaydı, elendi) ve F5 saf $P_2$ olduğu için hiçbir harmonikte ayrı imzası yok — çürütülmedi, *görünmez*. **(b) Eksenel itim (F4) için açık kanal:** merkezkaç $J_4$'e birinci mertebede katkı vermediği için F4'ün $P_4$'ü görünür hale geliyor; genliği ölçülen $J_4$'ün **%4–8'i** ve **işareti doğru** (gözlemi derinleştiriyor, hidrostatik referansın da eksik kaldığı yön). Mevcut hassasiyet ne doğruluyor ne dışlıyor — **sınav programının olumsuz olmayan ilk sonucu.**
+- **Sınav 1 (gezegen figürü, dört terimli):** İki ayrı sonuç. **(a) Yanal itim (F5) için olumsuz:** $\kappa_5\lesssim0{,}023$ (çalışma değeri $\tfrac12$ **yirmi beş kat** fazlaydı, elendi) ve F5 saf $P_2$ olduğu için hiçbir harmonikte ayrı imzası yok — çürütülmedi, *görünmez*. **(b) Eksenel itim (F4) için açık kanal:** merkezkaç $J_4$'e birinci mertebede katkı vermediği için F4'ün $P_4$'ü görünür hale geliyor; genliği ölçülen $J_4$'ün **%4–8'i** ve **işareti doğru** (gözlemi derinleştiriyor, hidrostatik referansın da eksik kaldığı yön). Mevcut hassasiyet ne doğruluyor ne dışlıyor — **sınav programının olumsuz olmayan ilk sonucu.**
 - **Sınav 2 (yayılan disk): BAŞARISIZ.** $v_\theta\propto h^{-1/2}$ öngörüsü 3,4 kat düşüş isterken gözlenen 1,13 kattır; uyuşmazlık hızda 2,2, ölçek yüksekliğinde 4,7 kat. $h=$ sabit varsayımı gaz katmanıyla özdeşleştirildiği biçimiyle **çelişir** ve M-38'in $1/R$ rejimi bu haliyle düz dönüş eğrisini açıklayamaz.
 - **Sınav 3 (düzlem dışı gaz gecikmesi): BAŞARISIZ.** Teori $\lvert z\rvert\approx h_0/2\approx0{,}07$ kpc'de basamak öngörüyor; gözlem 0,5 kpc'de hâlâ 222 km/s (teori 146) — uyuşmazlık **76–82 km/s**, ve biçim yanlış (basamak ↔ rampa). Ayrıca yüksek $z$ gazı Kepler tabanının **altına** indiği için dairesel yörüngede değildir: asimptot ayağı **sınanamaz**. Sınav 2'nin (a) çıkışı böylece kendi öngörüsünü de kaybetmiştir.
 

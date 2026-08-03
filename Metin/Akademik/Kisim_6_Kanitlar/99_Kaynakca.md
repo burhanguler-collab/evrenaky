@@ -1,4 +1,6 @@
-# 6.6 Kaynakça
+# 6.8 Kaynakça
+
+> *Numara kaydı (3 Ağustos 2026): bu bölüm daha önce "6.6" numarasıyla yazılıydı; oysa **6.6 Küresel Basıklık ve Gezegen Figürü** bölümüne aittir ve numara iki kez kullanılıyordu. Sol menüyle hizalandı. Eski "6.6 Kaynakça" atıfları artık **6.8**'i gösterir.*
 
 *Kısım VI — Kanıtlar* bölümündeki Doppler türetimi, kütleçekimsel kızıla kayma, ekvatoral vorteks/yörünge anomalileri ve camdaki hız geri kazanımı (Abraham-Minkowski) konuları aşağıdaki başlıca kaynaklara dayanır. Girdiler, bölüm metinlerindeki metin-içi atıflarla eşleştirilmiştir.
 

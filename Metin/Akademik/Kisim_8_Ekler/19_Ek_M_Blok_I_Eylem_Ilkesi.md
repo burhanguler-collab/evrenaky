@@ -8,7 +8,7 @@
 
 ## M-44 · Ortamın İki Değişkenli Hâl Denklemi ve Akışkan Eylemi · **[T]**
 
-**Kullanıldığı bölümler:** Ek B.3 ($k$'nın anlamı ve değeri), 2.4.2 (Yön Kuralı), 7.4 md.14. Bağlı katalog: M-1 (Kavrama Yasası), M-3 ($\sqrt2c$), M-7/M-8 ($P_0$), M-9 (kararlılık), M-15 (G2 deplasman aksiyomu), M-30 (galaktik profil varsayımı).
+**Kullanıldığı bölümler:** Ek B.3 ($k$'nın anlamı ve değeri), 2.4.2 (Yön Kuralı), 7.4 md.16. Bağlı katalog: M-1 (Kavrama Yasası), M-3 ($\sqrt2c$), M-7/M-8 ($P_0$), M-9 (kararlılık), M-15 (G2 deplasman aksiyomu), M-30 (galaktik profil varsayımı).
 
 ### Sorunun kurulumu: iki ifade bir arada duramıyordu
 

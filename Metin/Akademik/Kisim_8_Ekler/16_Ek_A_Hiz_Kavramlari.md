@@ -170,6 +170,31 @@ $$c \;<\; \underbrace{\sqrt{2}\,c}_{v_{denge}\;\approx\;v_{ekvator}} \;<\; \unde
 | $v_{kav}$ | Sağlam akışkanı yırtma (kavitasyon) eşiği | $\sqrt{2}\,c\sqrt{1+\Sigma/P_0}\approx\sqrt2\,v_m$ | $\gg c$ ($\Sigma\gg P_0$) |
 | $v_{saf}$ | Temel alt-bileşenlerin saf dönüş hızları | $>v_{kav}$ | $\gg c$ |
 
+#### Ek A.4 — Makro hızlar: madde düşer, ortam dolaşır
+
+Yukarıdaki merdiven **mikro/relativistik** merdivendir: hepsi $c$ mertebesindedir ve maddenin *iç*
+yapısını yönetir. Teorinin bir de **makro** hız çifti vardır ($\ll c$); bunlar merdivene girmez ama
+sözlüğe girer, çünkü karıştırılmaları kitabın kaydettiği en yaygın hatadır *(katalog: **M-9**;
+denge yasası: **DY-2**)*:
+
+| Hız | Kime ait? | Formülü | Yorum |
+|---|---|---|---|
+| $v_{y\ddot{o}r}$ | **maddeye** (yıldız, gezegen, tanecik) | $\sqrt{R\lvert a_{radyal}\rvert}=\sqrt{\mathcal{G}M/R}$ | **Gözlenen** yörünge/dönüş hızı. Madde katı bir deplasman cebi olduğu için akıp dengelenemez; bütün hâlde **düşer** |
+| $v_\theta$ | **ortama** (Evrenakı girdabı) | $\sqrt{\rho_n/\rho_0}\;v_{y\ddot{o}r}=2\,v_{y\ddot{o}r}$ | Ortam aynı gradyanda düşmez, **dolaşır**: siklostrofik denge $dP/dR=\rho_0v_\theta^2/R$ (M-22 / DY-1). Ortamın tepkisi $\rho_0$ ile, maddenin tepkisi $\rho_n$ ile ölçülür |
+
+$$\boxed{\;\frac{v_\theta}{v_{y\ddot{o}r}}=\sqrt{\frac{\rho_n}{\rho_0}}=\sqrt{4}=2\qquad\text{(R-5: }\rho_0=\tfrac14\rho_n\text{, }k=0)\;}$$
+
+> [!IMPORTANT]
+> **İki tuzak.** **(1)** $v_\theta$ **yörünge hızı değildir** — yörüngeyi ortamın sürüklemesi
+> kurmaz, maddenin serbest düşmesi kurar (M-2). Sürüklenme yükü $\eta_E$ üzerinden taşınır ve
+> yörünge zaman ölçeğinde etkisizdir ($\tau_E/\tau_{madde}\approx1{,}8\times10^{16}$).
+> **(2)** Ek D'nin tanımı bağlayıcıdır: $v_\theta$ *"girdabın teğetsel hızı"*, yani **ortamın**
+> hızıdır. Gözlenen bir eğriyi $v_\theta$ ile adlandırmak R-1'i ihlal eder; doğru sembol
+> $v_{y\ddot{o}r}$'dür.
+>
+> Bu $2\times$ fark teorinin **parametresiz bir öngörüsüdür** (karnede S-7): ortam ile maddenin
+> arasında kalıcı bir kayma tabakası bulunmalıdır, ve büyüklüğü tam olarak $v_{y\ddot{o}r}$'dür.
+
 <div class="pol-widget-135" id="animasyon-135-merdiven">
 <style>
 .pol-widget-135 { --pol-blue:#00f0ff; --pol-magenta:#ff00e5; background:#0b0f19; border:1px solid rgba(0,240,255,0.2); border-radius:10px; padding:16px; font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif; color:#f3f4f6; max-width:900px; margin:1.5em auto; box-shadow: 0 4px 20px rgba(0,0,0,0.5); }

@@ -38,17 +38,25 @@ Astronomların teleskoplarla gözlemlediği meşhur **"Düz Dönüş Eğrisi" (F
 
 ### 6.5.2.1 Beş Kuvvetin Ekvator Düzlemine İzdüşümü
 
-6.5.2'nin $v=\sqrt{A/r+B}$ denklemi bir ansatz değildir: teorinin **beş hidrodinamik kuvvetinin ekvator düzlemine izdüşümünün tamamıdır.** Denetimin ayrıntısı 6.5.4.1'de verilmiştir; özeti şudur: küresel akı taşıyan **F1** ($a\propto1/r^2$) ile silindirik akı taşıyan **F4** ($a\propto1/R$) çalışır; **F5**'in $\sin2\theta$ yasası $\theta=90°$'de kaybolur, **F2** iz-sıfır gelgit tensörü olduğu için nokta yıldıza net radyal kuvvet vermez, **F3** ise ayrı bir kuvvet değil profil teoreminin mekanizmasıdır. İki terimli yapı bir tercih değil, izdüşümün zorunlu sonucudur.
+6.5.2'nin $v=\sqrt{A/r+B}$ denklemi bir ansatz değildir: teorinin **beş hidrodinamik kuvvetinin ekvator düzlemine izdüşümünün tamamıdır.** Denetimin ayrıntısı 6.5.4.1'de verilmiştir; özeti şudur: küresel akı taşıyan **F1** ($a\propto1/r^2$) ile silindirik akı taşıyan **F4** ($a\propto1/R$) çalışır; **F5**'in $\sin2\theta$ yasası $\theta=90°$'de kaybolur, **F2** iz-sıfır gelgit tensörü olduğu için nokta yıldıza net radyal kuvvet vermez, **F3** ise düzlemde sessizdir — yörüngeyi kuran sürüklenme değil, maddenin serbest düşmesidir (M-2). İki terimli yapı bir tercih değil, izdüşümün zorunlu sonucudur.
 
 **Ana denklem — M-37 profil teoremi.** Dönüş eğrisi bağımsız bir girdi değildir:
 
-$$\boxed{\;v_\theta(R)=\sqrt{R\,\bigl|a_{radyal}(R)\bigr|}\;}$$
+$$\boxed{\;v_{y\ddot{o}r}(R)=\sqrt{R\,\bigl|a_{radyal}(R)\bigr|}\;}$$
 
-Bağıntı, ortamın kendi radyal dengesinden ve Postülat 7'nin sürüklenme zarfından çıkar; dönüş profili radyal itim yasasının **çıktısıdır**.
+Bağıntı **maddenin serbest düşmesinden** çıkar (M-2): yıldız, ortamın kurduğu radyal basınç gradyanında dairesel yörüngeyi tutacak hıza oturur. Dönüş profili, radyal itim yasasının **çıktısıdır**.
+
+> [!WARNING]
+> **Düzeltme kaydı (3 Ağustos 2026) — bir arada duran iki hata.** Bu blok önceden $v_\theta(R)=\sqrt{R|a|}$ yazıyor ve bağıntıyı *"Postülat 7'nin sürüklenme zarfından"* çıkarıyordu. İkisi de yanlıştı:
+>
+> 1. **Mekanizma.** Yörünge sürüklenmeyle değil **serbest düşmeyle** kurulur (M-2). Ortamın sürükleme yükü $\eta_E$ üzerinden taşınır ve yörünge zaman ölçeğinde etkisizdir ($\tau_E/\tau_{madde}\approx1{,}8\times10^{16}$; M-37, 3.8.1). Yörüngeyi sürüklenmeye bağlamak, teorinin kendi kuvvet envanterini atlayıp gözlemi mekanizmasız bir kabule yüklemekti.
+> 2. **Sembol (R-1 ihlali).** Ek D $v_\theta$'yı *"girdabın teğetsel hızı"* — yani **ortamın** hızı — olarak tanımlar. Ortam ise maddenin **iki katı** hızla dolaşır (DY-2: $v_\theta=2v_{y\ddot{o}r}$, çarpan $\sqrt{\rho_n/\rho_0}=2$). Gözlenen dönüş eğrisi maddenin hızı olduğuna göre bu bölümün doğru sembolü $v_{y\ddot{o}r}$'dür; $v_\theta$ yazmak aynı sembole iki anlam yüklüyordu.
+>
+> **Sayısal içerik değişmemiştir.** 6.5.4'ün sınavı ve 173 galaksilik tarama baştan beri *maddenin* hızıyla koşulmuştu; değişen yalnız o hızın adı ve gerekçesidir. (Bu ayrımın galaktik zincire girmediğinin bağımsız kanıtı: çarpanı zincire sokan senaryo $a_0$ bandının 10 katı dışına düşer ve RMS'i ikiye katlar.)
 
 **Düz eğrinin gerçek türetimi — Rankine gerekmez.** Ek M-30'un 5. maddesi bunu açıkça kaydeder: düz kolun türetimi Rankine profilini girdi almaktan geçmez, **M-38+M-37 zinciridir**:
 
-$$\underbrace{h=\text{sabit}}_{\text{M-38 Varsayım 3}}\;\Rightarrow\;\underbrace{a\propto1/R}_{\text{silindirik akı geometrisi}}\;\Rightarrow\;\underbrace{v_\theta=\sqrt{R|a|}=v_0}_{\text{M-37 profil teoremi}}$$
+$$\underbrace{h=\text{sabit}}_{\text{M-38 Varsayım 3}}\;\Rightarrow\;\underbrace{a\propto1/R}_{\text{silindirik akı geometrisi}}\;\Rightarrow\;\underbrace{v_{y\ddot{o}r}=\sqrt{R|a|}=v_0}_{\text{M-37 profil teoremi}}$$
 
 4.2.9.2'nin bileşik girdap kurgusu basınç profilini (logaritmik kuyu) verir; düz eğriyi **öngörü statüsünde** üreten yol ise budur.
 
@@ -717,7 +725,7 @@ Yukarıdaki bütün karşılaştırmalar $\chi^2$ ve AIC üzerinden yürütüld�
 | BTFR **normalizasyonu** | kalibre ($a_0$'a bağlı) — ölçülen 0,984 (6.5.4.5) | geri-beslemeyle ayarlanır |
 | BTFR saçılmasının darlığı | yasanın doğal sonucu | **ince ayar bilmecesi** |
 | $\ell_\omega$'nın kütleyle ölçeklenmesi | **yasa** — $\propto\sqrt{M_{bar}}$, ölçülen eğim 1,03 | karşılığı yok |
-| Dönüş eğrisi profilinin kaynağı | **teorem** — M-37: $v_\theta=\sqrt{R\lvert a_{radyal}\rvert}$ | varsayılan profilin sonucu |
+| Dönüş eğrisi profilinin kaynağı | **teorem** — M-37: $v_{y\ddot{o}r}=\sqrt{R\lvert a_{radyal}\rvert}$ | varsayılan profilin sonucu |
 | Halo yoğunluk profili | — *(halo yok)* | **türetilmiş** — N-cisim: NFW |
 | $c_{200}$–$M_{200}$ ilişkisi | — | **türetilmiş** — N-cisim |
 | Galaksi başına $M_{200}$ | — | **fit** |
@@ -1048,11 +1056,11 @@ Yörünge düzlemi, beş kuvvetin çoğunu kendiliğinden eler. Sınavın ilk ad
 |---|---|---|
 | **F1** — Radyal kütle-itimi | M-35 | **Etkin.** Küresel pulsasyon akısı $4\pi r^2$'de seyrelir $\Rightarrow a\propto1/r^2$ |
 | **F2** — Diferansiyel sıkıştırma | M-36 | **Dairesel hıza net katkı yok.** İz-sıfır gelgit tensörü; yörünge hızını değil diskin *kalınlığını* belirler |
-| **F3** — Vorteks sürüklenmesi | M-37 | **Ayrı bir kuvvet değil, kapanış şartıdır:** sürüklenme zarfı gereği $v_{yörünge}=v_{ortam}$, dolayısıyla $v_\theta=\sqrt{R\lvert a_{radyal}\rvert}$ |
+| **F3** — Vorteks sürüklenmesi | M-37 | **Yörünge hızına katkısı yok.** Yörüngeyi kuran sürüklenme değil, maddenin **serbest düşmesidir** (M-2): $v_{y\ddot{o}r}=\sqrt{R\lvert a_{radyal}\rvert}$. F3, ortamın kendi dolaşımını ($v_\theta=2v_{y\ddot{o}r}$, DY-2) ve $\eta_E$ ile yalnızca çok uzun ölçekli sürüklenmeyi taşır |
 | **F4** — Eksenel itim | M-38 | **Etkin.** Silindirik akı $2\pi Rh$'de seyrelir $\Rightarrow a\propto1/R$ |
 | **F5** — Yanal itim | M-39 | Düzlemde $\sin2\theta\rvert_{90°}=0$, yani **sıfır**. Ama diski ekvatora bastıran kuvvet odur |
 
-Son satır bedava bir iç kapanıştır ve kayda değer: **M-38'in en kırılgan varsayımı olan "$h=$ sabit" koşulunu sağlayan kuvvet, F5'tir.** Yanal itim diski ekvator düzlemine bastırmasa akı tüpü yayılır, $1/R$ yasası $1/R^2$'ye döner ve galaktik ayak çöker. Beş kuvvetten ikisi hesaba girer, üçüncüsü hesabın *çerçevesini* kurar, dördüncüsü kaynağın *geometrisini* tutar. Hiçbiri fazlalık değildir.
+Son satır bedava bir iç kapanıştır ve kayda değer: **M-38'in en kırılgan varsayımı olan "$h=$ sabit" koşulunu sağlayan kuvvet, F5'tir.** Yanal itim diski ekvator düzlemine bastırmasa akı tüpü yayılır, $1/R$ yasası $1/R^2$'ye döner ve galaktik ayak çöker. Beş kuvvetten **ikisi hesaba girer** (F1, F4), **biri kaynağın geometrisini tutar** (F5), **ikisi düzlemde sessizdir** (F2, F3). Hesabın *çerçevesini* kuran şey ise bir kuvvet değil, maddenin serbest düşmesidir (M-2). Hiçbiri fazlalık değildir.
 
 ### 6.5.4.2 Birinci borcun kapanışı: kaynak, kapsanan nükleon kütlesidir
 
@@ -1149,7 +1157,7 @@ Pencere parametresizdir ve üç ölçümle sınanmıştır: **(a)** morfolojik s
 
 ### 6.5.4.4 Tek denklem ve sayısal sınav
 
-M-37'nin profil teoremi ($v_\theta=\sqrt{R\lvert a_{radyal}\rvert}$) iki katkıyı birleştirir. Adım 6'nın $\sqrt{N}$ toplanmasıyla ($\ell_\omega^{etkin}=\ell_\omega^{mikro}\sqrt{N}=\sqrt{\mathcal{G}M_{kaps}/a_0}$) denklem kapalı ve **yerel** biçimini alır:
+M-37'nin profil teoremi ($v_{y\ddot{o}r}=\sqrt{R\lvert a_{radyal}\rvert}$) iki katkıyı birleştirir. Adım 6'nın $\sqrt{N}$ toplanmasıyla ($\ell_\omega^{etkin}=\ell_\omega^{mikro}\sqrt{N}=\sqrt{\mathcal{G}M_{kaps}/a_0}$) denklem kapalı ve **yerel** biçimini alır:
 
 $$\boxed{\;v^2(R)\;=\;R\,a_{F1}(R)\;+\;\sqrt{\mathcal{G}\,M_{kaps}(R)\,a_0}\cdot W(R)\;,\qquad W=\min\!\Big(1,\;\frac{a_0}{g_{kaps}}\Big),\quad g_{kaps}=\frac{\mathcal{G}M_{kaps}}{R^2}\;}$$
 

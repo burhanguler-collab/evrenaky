@@ -6,10 +6,46 @@ Bu akışkan modelinin en belirgin kanıtı, Ekvatoral (yatay) yörüngeler ile 
 
 ## 6.3.1 Ekvatoral Yörünge ile Kutup Yörüngesi Arasındaki Hidrodinamik Fark
 
-Ekvator bölgesinde Dünya saniyede yaklaşık 460 metre gibi devasa bir çizgisel hızla döner. Bu dönüş, Ekvator çevresindeki Evrenakı akışkanını da kendisiyle birlikte şiddetle sürükleyerek dışa doğru yayılan güçlü bir **Ekvatoral Girdap** yaratır. Kutuplarda ise dönüş hızı sıfıra yakındır; bu nedenle kutup üstlerinde akışkan sürüklenmesi (vorteks) çok zayıftır ve uzaydan gelen "Yanal İtim" (statik basınç) radyal olarak merkeze doğru çok daha baskındır.
+### Hangi girdap? — iki dönme alanının ayrılması
 
-* **Ekvatoral Yörüngeler:** Ekvator düzleminde dolanan bir uydu, dönen bir akışkan nehrinin (vorteksin) içindedir. Eğer uydu Dünya ile aynı yönde (doğuya doğru) dönüyorsa akıntıyı arkasına alır; ters yönde dönüyorsa akıntıya karşı kürek çeker ve ek bir hidrodinamik dirence maruz kalır. Bu direncin büyüklüğü ise küçüktür: Juno üst sınırı (6.3.2) gereği alçak yörüngede atmosferik sürüklemenin çok altında kalır ve ayırt edici imzası mutlak değil **diferansiyeldir** (prograd/retrograd sönüm farkı; Bkz. 3.6.1 ve 7.5 tablosu, satır 15).
-* **Kutup Yörüngeleri:** Kutup noktalarında akışkan görece durgundur. Kutup yörüngesindeki bir uydu (polar orbit), turu boyunca kutupların durgun akışkanından çıkıp Ekvatorun fırtınalı nehrine dalmak zorundadır. Uydu her Ekvator geçişinde, Dünya'nın dönüşünden kaynaklı Evrenakı vorteksinin yanal akıntısıyla **dikine (çapraz) kesişir**. 
+Bir kütlenin çevresinde **iki ayrı dönme alanı** vardır. Bunlar ne aynı kaynaktan gelir, ne aynı yasaya uyar, ne de aynı mertebededir; karıştırılmaları bu bölümün önceki sürümünün hatasıydı (aşağıdaki düzeltme kaydına bkz.):
+
+| | **Kuyu dolaşımı** — *bu bölümün konusu* | **Spin sürüklenmesi** |
+|---|---|---|
+| Kaynak | Basınç kuyusunun kendi radyal dengesi | Gövdenin dönüşünün ortama momentum aktarımı |
+| Katalog | **M-22** (siklostrofik denge, DY-1) | **M-40** ($\xi$ kesri) |
+| Yasa | $dP/dr = \rho_0 v_\theta^2/r \;\Rightarrow\; v_\theta = 2\,v_{madde}$ | $\vec\Omega_{ortam} = \xi\,\vec\omega_{gövde}$, $\xi = 4{,}6\times10^{-10}$ |
+| Dünya çevresinde (LEO, 400 km) | **15,3 km/s** | $2\times10^{-7}$ m/s |
+| Gözlemsel statü | Doğrudan ölçülmemiş; imzası dolaylı | GP-B ve LAGEOS'ta ölçülmüş (6.3.3) |
+
+Aradaki fark **on bir mertebedir** ($\sim\!10^{11}$). Bu yüzden ekvatoral nehri gövdenin dönüşünün sürüklemesine bağlamak mümkün değildir: Dünya'nın ekvatordaki 465 m/s'lik çizgisel hızı, patinaj ilkesi (2.4.2) gereği ortamda ancak mikrometre/saniye altı bir teğetsel iz bırakır. Ortam gövdeyle eş-dönseydi GP-B ölçülenin $10^{10}$ katını görürdü — mutlak dışlanır (6.3.3, "Dönme Patinajı").
+
+**Nehri yaratan, kütlenin kendi basınç kuyusudur.** M-22 bir kuvvet değil bir **denge yasasıdır** ve şunu söyler: kütlenin kurduğu basınç gradyanı ancak ortam dolaşıyorsa dengede kalabilir; kuyu dolaşımsız duramaz. Ortam bu dengeyi $\rho_0$ ile, madde ise $\rho_n = 4\rho_0$ ile karşıladığından (M-2 ↔ M-22 yoğunluk ayrımı) ortam, aynı yarıçaptaki maddenin **tam iki katı** hızla dolaşır. Alçak yörüngede uydu 7,7 km/s ile giderken içinden geçtiği ortam 15,3 km/s ile akmaktadır — nehir buradadır, serbest parametre içermez.
+
+**Gövdenin dönüşünün rolü, nehri sürüklemek değil ona düzlem vermektir.** Dönen kütlenin ekvator kuşağı, maksimum çizgisel hızı nedeniyle Evrenakı'yı düzlem boyunca dışa **deplase eder** (M-38, Varsayım 1). Deplasman bir akı olayıdır; ortamın gövdeye teğetsel olarak tutunmasını gerektirmez, dolayısıyla patinajla çelişmez. Bu akıdan doğan iki kuvvet dolaşımın geometrisini kilitler: **F4** eksenel itim ($\propto 1/R$, dönme eksenine doğru; M-38) ve **F5** yanal itim ($\propto \sin 2\theta$, ekvator düzlemine doğru; M-39). Sonuç, dönme eksenine kilitli **disk biçimli** bir dolaşımdır. Ekvator/kutup asimetrisi böylece varsayım olmaktan çıkıp geometrik zorunluluğa iner:
+
+* **Ekvator düzlemi:** dolaşımın tam hızı, $v_\theta = 2v_{madde}$.
+* **Kutup üstü:** girdabın **ekseni**; teğetsel hız tanım gereği sıfıra gider ve orada yalnız radyal itim kalır.
+
+### İki yörünge sınıfı
+
+* **Ekvatoral Yörüngeler.** Ekvator düzlemindeki uydu, kendisinden iki kat hızlı akan prograd bir nehrin içindedir. Prograd uyduyu ortam **arkadan geçer**; bağıl hız $|2v - v| = v$'dir. Retrograd uydu ise nehri **karşıdan** kesişir; bağıl hız $|2v + v| = 3v$ olur. $v_\theta = 2v_{madde}$ serbest parametre içermediği için bu oran her yarıçapta ve her sistemde aynıdır:
+
+  $$\frac{v_{rel}^{ret}}{v_{rel}^{pro}} = 3 \qquad\Longrightarrow\qquad \boxed{\;\frac{(v_{rel}^{ret})^2}{(v_{rel}^{pro})^2} = 9\;}$$
+
+  | Yörünge | $v_{madde}$ | Ortam ($2v$) | Prograd bağıl | Retrograd bağıl |
+  |---|---|---|---|---|
+  | LEO (400 km) | 7,67 km/s | 15,35 km/s | 7,67 km/s | **23,02 km/s** |
+  | LAGEOS (12.270 km) | 5,70 km/s | 11,40 km/s | 5,70 km/s | **17,10 km/s** |
+  | Ay yörüngesi | 1,02 km/s | 2,04 km/s | 1,02 km/s | **3,06 km/s** |
+
+  Bu, 7.5 tablosu satır 15'in prograd/retrograd diferansiyel sönüm öngörüsüne **sayı** kazandırır: fark artık "bir miktar daha fazla" değil, kesme kuvveti $v_{rel}^2$ ile ölçekleniyorsa **dokuz kat**tır. İşaret de belirlidir — retrograd uydu yavaşlar, prograd uydu ileri itilir.
+
+* **Kutup Yörüngeleri.** Kutup yörüngesindeki uydu (polar orbit), turu boyunca girdap ekseninin durgun bölgesinden çıkıp ekvatorun 15,3 km/s'lik akıntısına dalar ve onu **dikine keser**: her ekvator geçişinde bağıl hız $\sqrt{v^2 + (2v)^2} = \sqrt5\,v \approx 17{,}2$ km/s'ye çıkar, fakat tamamı **yörünge-dik** doğrultudadır. Tam tur boyunca ortalandığında yol-boyu (seküler) bileşen simetri gereği sıfırlanır; geriye kalan, düzlem üzerinde bir tork — yani düğüm devinimi — ve turda iki kez tekrarlayan bir **modülasyondur.** Güneş-senkron uyduların onlarca yıldır kararlı uçması bu yüzden kuralın ihlali değil beklenen sonucudur (3.6.1'in kalibrasyonu): karşıdan gelen sürekli bir rüzgâra değil, dik kesilen bir akıntıya maruzdurlar.
+
+> **Mutlak genlik ayrı bir sorudur.** Yukarıdaki bağıl hızlar ortamın **çevre** akışıdır; her cisim aynı zamanda kendi sürüklenme zarfını taşır (Postülat 7) ve zarf yerel bağıl hızı sıfırlar — Michelson–Morley'in sıfır sonucu budur. Zarfın çevre akışla arasında doğan **kayma tabakasının** yitimi ve torku teoride henüz hesaplanmamıştır (M-39/DY-1 açık kalemi; bastırma çarpanının mertebesi $\sim10^{28}$, Bölüm 7.4 md.15). Bu yüzden bu bölümün öngördüğü şey mutlak bir sürükleme değil, **oranı sabit bir diferansiyeldir**; mutlak genliğin üst sınırını Juno'nun sıfır sonucu koyar (6.3.2) ve o sınır alçak yörüngede atmosferik sürüklemenin mertebelerce altındadır.
+
+> **Düzeltme kaydı — girdabın kaynağı (3 Ağustos 2026).** Bu bölümün önceki sürümü ekvatoral girdabı *"Dünya'nın 460 m/s'lik çizgisel hızının akışkanı şiddetle sürüklemesi"* olarak tanımlıyordu. Bu **yanlıştı** ve aynı bölümün 6.3.3'teki dönme patinajı kaydıyla ($\xi = 4{,}6\times10^{-10}$) doğrudan çelişiyordu: o kesirle 465 m/s'lik spin, ortamda $2\times10^{-7}$ m/s'lik bir iz bırakır — "nehir" değil. Girdabın kaynağı entrainment değil, kuyunun **siklostrofik dengesidir** (M-22); gövdenin dönüşü nehrin hızını değil yalnızca **düzlemini** belirler (M-38/M-39 deplasman kolu). Düzeltme iddiayı zayıflatmaz, güçlendirir: nehrin şiddeti $10^{-7}$ m/s'den 15,3 km/s'ye çıkar ve prograd/retrograd farkı serbest parametresiz bir **9 çarpanı** kazanır. *(Aynı düzeltme Bölüm 3.6.1'in giriş paragrafında da gereklidir; oradaki "Makro-Vorteks Sürüklenmesi (Entrainment)" adlandırması bu ayrıma göre yeniden yazılacaktır.)*
 
 **Girdabın İzi Yörünge Verisinde Nerede? (Hassas Yörünge Belirleme ile Yüzleşme)**
 Bu asimetri iddiasının en sert sınavı, uzay çağının en hassas veri setidir: binlerce uydunun santimetre düzeyindeki rutin yörünge belirlemesi (GNSS/SLR/DORIS izleme; GRACE/GOCE gravite haritaları), gözlenen tüm sapmaları bilinen terimlerle kapatır ve modellenmemiş bir "girdap artığı" bırakmaz; "donmuş yörünge" tasarımlı kutupsal uydular, dairesel-yakın yörüngelerini yıllarca korur. Teorinin cevabı bu veriyi reddetmek değil, **sahiplenmektir** — iki katmanda:
@@ -17,7 +53,7 @@ Bu asimetri iddiasının en sert sınavı, uzay çağının en hassas veri setid
 1. **Verinin en büyük düzeltme terimi olan $J_2$ düğüm gerilemesinin kendisi, teoride girdabın imzasıdır.** Dünya'nın ekvatoral şişkinliği dönüşün — teorideki okumayla girdap/deplasman dengesinin — eseridir; dolayısıyla standart fiziğin "kütle geometrisinin basıklık terimi" diye etiketlediği $J_2$ alanı, Evrenakı okumasında **ekvatoral girdabın şekillendirdiği kalıcı basınç deseninin ta kendisidir.** Kutup yörüngesinin düzlem devinimi, tam da bu desenin dikte ettiği harekettir: girdabın izi hassas yörünge verisinde "eksik" değil, verinin en büyük modellenen teriminin **içindedir.** Donmuş yörüngelerin işlemesi de bundandır — tasarım, bu kalıcı desenle çalışır.
 2. **Kalıcı desenin ötesindeki ayrık girdap-kesme artığı ise teoride Lense-Thirring mertebesindedir ve ölçülmüştür:** GP-B ve LAGEOS'un mas/yıl düzeyindeki eksen kaymaları (6.3.3). Teori, hassas yörünge belirlemede bundan büyük, modellenmemiş bir artık **öngörmez**; Juno geçişinin sıfır sonucundan gelen kesme üst sınırı (6.3.2) da bu beklentiyle tutarlıdır (bir sıfır sonuç beklentiyi doğrulamaz; yalnızca ondan büyük etkileri dışlayarak sınırlar).
 
-Böylece iki ontoloji — "kütle geometrisi + metrik burulması" ile "girdabın basınç deseni + akışkan kesmesi" — aynı ölçüm setini paylaşır; bu bir yeniden-yorum durumudur (Kanıtların Statüsü, 6.5) ve ayrıştırıcı yük, 7.4'te senetli nicel türetimler ile 7.5'teki ayrık öngörülere biner.
+Böylece iki ontoloji — "kütle geometrisi + metrik burulması" ile "girdabın basınç deseni + akışkan kesmesi" — aynı ölçüm setini paylaşır; bu bir yeniden-yorum durumudur (Kanıtların Statüsü, 6.7) ve ayrıştırıcı yük, 7.4'te senetli nicel türetimler ile 7.5'teki ayrık öngörülere biner.
 
 ## 6.3.2 Flyby (Yakın Geçiş) Anomalisi: Kanıttan Sınır Koşuluna
 
@@ -145,7 +181,7 @@ Bu sonuç, teoriyi Genel Görelilik'ten **ayırt etmez**; onunla yapısal olarak
 
 **Kapanan açık kalem (28 Temmuz 2026).** Bu paragrafın önceki sürümü şunu kaydediyordu: *"$\xi$ Ek C'de [S], gözlemle sabitlenmiş; $\xi\propto\Phi/c^2$ ilişkisi eşleştirmeyle elde edilmiştir."* İlişki artık **türetilmiştir** (Ek M-40, "$\xi$'nin Türetimi"). Ortam bir cismi ancak kavrama hızının bozulduğu ölçüde tutar; bozulmanın kesri Ek M-42'de ışık bükülmesinden sabitlenmiştir ve dönme kütleyi $r^2$ ile ağırlıklandırır:
 $$\xi = \frac{I}{MR^{2}}\left|\frac{\delta c_{loc}}{c}\right| = \frac{I}{MR^{2}}\cdot\frac{2\Phi}{c^{2}} = 0{,}3307\times1{,}392\times10^{-9} = 4{,}605\times10^{-10}$$
-Serbest sayısal katsayı yoktur ve sonuç, Lense–Thirring'e eşlemeyle bulunanın birebir aynısıdır. Dolayısıyla **GP-B artık bir girdi değil, bir öngörüdür**: zincir ışık bükülmesinden başlar ($1{,}751''$ → $c_{loc}=c\Lambda^2$ → $\delta c/c=2\Phi/c^2$ → $\xi$ → 41,0 mas/yıl) ve $37{,}2\pm7{,}2$ ölçümü bu zinciri **sınar** (0,52σ). Ek M-40'ın rozeti [T]'ye yükselmiştir. *Kalan incelik:* bağıntı birinci mertebedir; $\xi\to1$ yaklaşırken (nötron yıldızı, ergosfer) doğrusal biçim geçerliliğini yitirir (Bölüm 7.4 md.13).
+Serbest sayısal katsayı yoktur ve sonuç, Lense–Thirring'e eşlemeyle bulunanın birebir aynısıdır. Dolayısıyla **GP-B artık bir girdi değil, bir öngörüdür**: zincir ışık bükülmesinden başlar ($1{,}751''$ → $c_{loc}=c\Lambda^2$ → $\delta c/c=2\Phi/c^2$ → $\xi$ → 41,0 mas/yıl) ve $37{,}2\pm7{,}2$ ölçümü bu zinciri **sınar** (0,52σ). Ek M-40'ın rozeti [T]'ye yükselmiştir. *Kalan incelik:* bağıntı birinci mertebedir; $\xi\to1$ yaklaşırken (nötron yıldızı, ergosfer) doğrusal biçim geçerliliğini yitirir (Bölüm 7.4 md.15).
 
 **Sonuç**
 Gravity Probe B ve LAGEOS ölçümleri, uzayın bir hiçlik (veya metrik kumaş) olmadığını; Dünya'nın etrafında Ekvator hizasında dönen fiziksel bir "Uzay Nehri" (Evrenakı Vorteksi) okumasıyla uyumlu bir sürüklenme bulunduğunu göstermektedir — ve bu nehrin şiddeti artık sayıyla bellidir ($\xi\approx4\times10^{-10}$). Flyby verisi ise — sonraki geçişlerin sıfır sonuçları nedeniyle — bu nehre üst sınır koyan bir ölçüm olarak kayıttadır (6.3.2).

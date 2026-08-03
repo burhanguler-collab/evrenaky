@@ -179,7 +179,7 @@ $$\boxed{\theta(\lambda) = \theta_0\left[1 + \chi\,\frac{\lambda-\lambda_0}{\lam
 Standart görelilikte bu fark tam sıfırdır; sıfırdan farklı herhangi bir kromatik sapma ölçümü ayrım gücü taşır. Kuazar mikro-merceklenme boyut anomalisinin (4.3.4) çözümü de aynı parametrizasyonun geriye dönük uygulamasıdır.
 
 ### Geçerlilik Sınırı
-- **Bu bir parametrizasyondur, türetim değildir** — rozet bu yüzden [K]'dir. $\chi$, gradyan mekaniğinden hesaplanmamış; fenomenolojik olarak konmuştur. 6.5 taksonomisinde statüsü **kalibrasyon**dur; "kanıt" statüsü ancak $\chi$ bağımsız kalibre edildikten sonra ileriye dönük testle kazanılabilir. Bölümün mevcut kanıt değeri niteldir: öngörünün *kromatik olması* (GR'de özdeş sıfır).
+- **Bu bir parametrizasyondur, türetim değildir** — rozet bu yüzden [K]'dir. $\chi$, gradyan mekaniğinden hesaplanmamış; fenomenolojik olarak konmuştur. 6.7 taksonomisinde statüsü **kalibrasyon**dur; "kanıt" statüsü ancak $\chi$ bağımsız kalibre edildikten sonra ileriye dönük testle kazanılabilir. Bölümün mevcut kanıt değeri niteldir: öngörünün *kromatik olması* (GR'de özdeş sıfır).
 - Doğrusal biçim, $|\lambda-\lambda_0|/\lambda_0 \lesssim O(1)$ görünür bant çevresinde geçerli yerel açılımdır.
 
 ### Açık Uçlar

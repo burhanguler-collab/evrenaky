@@ -90,7 +90,7 @@ Zerre asimetrik bir sürtünmeyle karşılaşır, kendi ekseninde dönmeye zorla
 
 ## 4.3.4 Aday Açıklama: Kuazar Mikro-Merceklenme Boyut Anomalisi
 
-> *Statü notu (6.5 taksonomisi):* Bu bölümün önerdiği çözüm, bilinen bir anomaliye serbest bir katsayı ($\chi$, bkz. 4.3.5) üzerinden geriye dönük uyumdur — kanıt sınıflandırmasında **kalibrasyon** kategorisindedir. "Kanıt" statüsü, ancak $\chi$ bağımsız kalibre edildikten sonra yapılacak ileriye dönük testle kazanılabilir; bölümün asıl kanıt değeri, öngörünün **kromatik olması** gibi nitel ve çift taraflı ayrımdadır (GR'de fark tam sıfırdır).
+> *Statü notu (6.7 taksonomisi):* Bu bölümün önerdiği çözüm, bilinen bir anomaliye serbest bir katsayı ($\chi$, bkz. 4.3.5) üzerinden geriye dönük uyumdur — kanıt sınıflandırmasında **kalibrasyon** kategorisindedir. "Kanıt" statüsü, ancak $\chi$ bağımsız kalibre edildikten sonra yapılacak ileriye dönük testle kazanılabilir; bölümün asıl kanıt değeri, öngörünün **kromatik olması** gibi nitel ve çift taraflı ayrımdadır (GR'de fark tam sıfırdır).
 
 Peki Kütleçekimsel Merceklenmenin uzay-zaman eğriliği (Einstein) değil de Evrenakı optik kırılması (Akışkanlar Mekaniği) olduğunu nasıl kanıtlarız? 
 Kozmolojinin 100 yıllık kör noktası olan **"Kuazar Boyut Anomalisi"** bu sorunun kesin cevabıdır:

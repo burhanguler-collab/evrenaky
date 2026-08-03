@@ -187,6 +187,34 @@ $$\omega_{\text{gözlenen}}(M,R) \;=\; \big[1-g(R)\big]\,\omega_{\text{serbest}}
 
 *(katalog ve kalibrasyon kaydı: **Ek M-24**)*
 
+> **Dürüst kayıt — iki fit, bir saçılma tabanı ve $g$'nin geçerlilik alanı (3 Ağustos 2026).** Yukarıdaki sayılar denetlendi ve **üretilebilir** çıktı; fakat üç kaydın açıkça yazılması zorunludur.
+>
+> **(i) İki ayrı fit kullanılıyor.** Şekil 3.4.1'de bildirilen üs ($v_{ekv}\propto M^{0{,}54}$, $R^2=0{,}98$) beş gövdenin **tümü** (Mars, Dünya, Neptün, Satürn, Jüpiter) fitlendiğinde çıkar — denetimde $0{,}536$ / $R^2=0{,}980$ bulundu. Buna karşılık yukarıdaki $g$ değerleri, ölçülen gövdenin **dışlandığı** (leave-one-out) doğruya göre hesaplanmıştır; Dünya dışlanınca $v_{ekv}=738{,}6\,(M/M_\oplus)^{0{,}512}$ m/s çıkar ve buradan Merkür $g=0{,}982$, Venüs $g=1{,}003$, Dünya $g=0{,}370$ ($T_{serbest}=15{,}1$ sa) gelir — metindeki %97,7 / %100,3 / 0,39 / ~14,5 sa değerleriyle uyumlu. **Leave-one-out zorunludur:** bir gövdenin bastırılmasını, o gövdenin kendisinin tanımladığı doğruya karşı ölçmek daireseldir. Bu ayrım yapılmadığında *"klif Dünya'nın 24 saatini kendiliğinden üretir"* ifadesi bir öngörü değil, bir fit artığı olarak okunur.
+>
+> **(ii) Saçılma tabanı ±%30'dur.** Beş-gövde fitinin artıkları: Mars $+\%24$, Dünya $-\%27$, Jüpiter $-\%10$, Satürn $+\%35$, Neptün $-\%8$. $R^2=0{,}98$ sıkılıktan değil, kütlenin **3,5 mertebelik** menzilinden gelir; log–log uzayında bu menzil $R^2$'yi şişirir. Dolayısıyla "tek bir doğruya oturur" ifadesi fazla güçlüdür ve "tek bir güç yasası eğilimini paylaşır" olarak okunmalıdır.
+>
+> **(iii) $g$ yalnız etkinin saçılmayı bastırdığı yerde anlamlıdır.** Tam fitle Mars $g=-0{,}24$, Satürn $g=-0{,}35$ çıkar; oysa $g(R)=1/(1+(R/R_c)^p)$ tanımı gereği $(0,1)$ aralığındadır ve **negatif değer üretemez.** Geçerlilik alanı bu nedenle açıkça sınırlanır:
+>
+> | Gövde | $g$ | Statü |
+> |---|---|---|
+> | Merkür, Venüs | $0{,}98$ · $1{,}00$ | **sağlam** — etki saçılmadan çok büyük |
+> | Dünya | $0{,}37$ | **telkin edici** — saçılmayla aynı mertebede |
+> | Mars, Jüpiter, Satürn, Neptün | $\lesssim$ saçılma | **sıfırdan ayırt edilemez** |
+>
+> Kavrama klifinin kanıt yükü bu yüzden Merkür ve Venüs'e biner; Dünya'nın 24 saati klifle **uyumludur**, ama klif tarafından *kanıtlanmış* değildir. Klifin $p$ ve $R_c$ parametrelerini iki sağlam noktayla sabitlemek ise aşırı-belirlenmemiş bir fittir — rozetin **[K]** kalmasının nedeni budur (Ek M-24'ün peşin dürüstlük kutusu).
+
+> **Tanım alanı — yasa yıldızlara ve çökmüş kalıntılara uygulanamaz (3 Ağustos 2026).** $v_{ekv}\propto M^{0{,}54}$ doğrusu **yerinde oluşmuş gezegenler** için kurulmuştur ve bu sınır açıkça yazılmalıdır; Kısım 11 §11.2.7'de yapılan sınav üç kademede başarısız olur:
+>
+> | Gövde | Yasanın $v_{serbest}$'i | Gözlenen | Durum |
+> |---|---|---|---|
+> | Güneş kütleli yıldız, **1 Myr** (T Tauri) | 497 km/s | ~25 km/s | yasa **20 kat** yüksek — *doğumda bile* |
+> | Beyaz cüce | 382 km/s | ~0,5 km/s | tanım alanı dışı |
+> | **Nötron yıldızı** | 590 km/s | $7{,}5\times10^4$ km/s | yasa **127 kat aşılıyor** |
+>
+> Nötron yıldızı satırı sınırı kanıtlar: çökmüş kalıntıların dönüşü 4B motorun ifadesinden değil, çökme sırasındaki **açısal momentum korunumundan** gelir ($R$ $10^5$ kat küçülür, $\omega$ $10^{10}$ kat büyür) — yasanın öngördüğü tavanı aşmaları bu yüzden ihlal değil, kapsam dışıdır. Yıldızlar ise ayrı bir nedenle dışarıdadır: dönüşleri **yaşla** belirlenir (Skumanich, $\omega\propto t^{-1/2}$; açık kümelerde %6–19 içinde doğrulanmıştır), yani sabit kütlede tek bir "serbest" değer yoktur. Yasanın Güneş'e ekstrapolasyonunun kopma hızına %14 içinde denk düşmesi de bu nedenle anlamlı bir sonuç değil, ölçek rastlantısıdır (§11.2.7, gerekçe 3).
+>
+> *Bu kayıt, Güneş'in yavaş dönüşünü açıklamak için önerilen "sızma kesri $\varepsilon$" parametresinin sınanıp **geri çekilmesinin** kalıcı çıktısıdır (§11.2.7). Evrenakı manyetik frenlemeyi dışlamadığından — Kısım 6 §6.3.2'nin Pioneer/ısıl geri tepme kaydıyla aynı ilke — güneş açısal momentum problemi için teoriye ek parametre gerekmez.*
+
 Motorun ifadesi tam yutulduğunda cisim durmaz; girdabın **yerel ritmine** oturur. İlk iki kilit modu ($+1$ ve $+\tfrac{3}{2}$) ayrıca serbest parametre de değildir: kavrama klifi çok dik olduğundan pençe fiilen **günberide** kavrar ve kalıntı, günberideki girdap ritmine oturur:
 
 $$\frac{\omega_{\text{kilit}}}{\Omega_{\text{yör}}} \;=\; \frac{\sqrt{1+e}}{(1-e)^{3/2}} \;\longrightarrow\; \text{en yakın kararlı oran}.$$
