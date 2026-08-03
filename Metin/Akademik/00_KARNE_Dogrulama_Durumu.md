@@ -29,7 +29,7 @@ Bu iki şeyi karıştırmamak bu dosyanın varlık sebebidir.*
 
 | # | Sınav | Statü | Kitaba işlendi mi? | Not |
 |---|---|---|---|---|
-| **S-1** | Gezegen figürü (dört terimli) | ⚠️ **Kısmi olumsuz** | Kısmen (3 Ağu 2026) | F5 **gözlemsel içerikten yoksun** ($\kappa_5\lesssim0{,}014$, saf $P_2$ ⟹ hiçbir harmonikte imza yok). F4 kanalı **açık ve işareti doğru** (%4–8) ama sinyal gürültünün içinde (hidrostatik referans ~%10 belirsiz) |
+| **S-1** | Gezegen figürü (dört terimli) | ⚠️ **Kısmi olumsuz** | Kısmen (3 Ağu 2026) | F5 **gözlemsel içerikten yoksun** ($\kappa_5\lesssim0{,}014$–$0{,}017$, saf $P_2$ ⟹ hiçbir harmonikte imza yok). F4 kanalı **açık ve işareti doğru** (%4–8) ama sinyal gürültünün içinde (hidrostatik referans ~%10 belirsiz) |
 | **S-2** | Yayılan disk | ❌ **Başarısız** | Hayır | $h=$ sabit çürütülmüştü. **Ama 3 Ağu 2026'da $h$'ın $R$-bağımsızlığı türetildi** (difüzyon yok, marj $10^{22}$) — sınav **yanlış geometriyle** koşulmuş olabilir. → **yeniden okunmalı** |
 | **S-3** | Düzlem dışı gaz (NGC 891) | ❌ **Başarısız** → 🔄 **yeniden koşum bekliyor** | Hayır | Başarısızlık gerekçesi *"teori basamak, gözlem rampa"* idi. İç içe tabaka geometrisi **rampa** verir; kaba hesap sapmayı 54–82 → 2–28 km/s'ye indiriyor. **Geçilmiş sınav değil** — gerçek dikey kütle profili ve $v_{bar}(z)$ ile yeniden koşulmalı |
 | **S-4** | $k=\tfrac12$ / sıkışma hızı | ✅ **Yanlışlandı, mengene çözüldü** | **Evet**, tümüyle yayıldı | $k=0$ sabitlendi; tek geçilmiş yapısal düzeltme |
@@ -44,7 +44,7 @@ Bu iki şeyi karıştırmamak bu dosyanın varlık sebebidir.*
 | Kalem | Statü | Kapanma yolu |
 |---|---|---|
 | $(Cq_n)$ | **F** (tek çift olarak sayılır) | M-45'in [T-aday] kapanışı; iki dış koşul bekliyor: bağımsız $\ell_\omega$ ölçümü + hakem denetimi |
-| $\kappa_5$ | **F**, $\lesssim0{,}014$ | Gezegen figüründe **görünmez**; kalan tek imza 45° deseni |
+| $\kappa_5$ | **F**, $\lesssim0{,}014$–$0{,}017$ | Gezegen figüründe **görünmez**; kalan tek imza 45° deseni |
 | $\Sigma$, $n$, $\kappa_d$, $\tau$, $\delta$ | **F** (5 skaler) | Ek C'nin sabitleme programı |
 | $\rho(r)$, rampa | **F** (2 profil) | P1: dönüş eğrisi + galaktik kızıla kayma ortak fiti · P2: Gaia µas |
 | ~~$r_0$, $A_4$~~ | ✅ **T** (3 Ağu 2026) | M-38: $r_0=\sqrt{\mathcal{G}M/a_0}=\ell_\omega^{etkin}$; 141 galakside ölçülü (üs 0,506 ↔ 0,500) |
@@ -127,10 +127,10 @@ olarak sunar ve dört gövde için ✅ verir. **Üç sorun var:**
    kafes yok)* — bu cümle 11.2.3'ten **üç bağımsız gerekçeyle** kaldırıldı (kavrama nükleon
    düzeyindedir · Güneş'in makro girdabını iptal eder · Jüpiter'e en yüksek $\phi$ veren kendi
    paragrafıyla çelişir). Kısım 6'da **aynen duruyor.**
-2. **Sınav ayırt edici olamaz.** $\kappa_5\lesssim0{,}014$ (6.6.2) ile F5 gezegen figüründe
+2. **Sınav ayırt edici olamaz.** $\kappa_5\lesssim0{,}014$–$0{,}017$ (6.6.2) ile F5 gezegen figüründe
    **her yerde** ölçülemez. Dört öngörü de $\approx0$'sa dördünün "uyması" bilgi taşımaz.
 3. **Çifte kullanım.** Dünya'nın %0,42'lik $J_2$ fazlası 6.6.2'de **üst sınır** olarak kullanılır
-   ($\kappa_5\lesssim0{,}014$); 6.6.3'te aynı fazla $\phi_\oplus\approx0{,}18$'i **ölçmek** için
+   ($\kappa_5\lesssim0{,}014$–$0{,}017$); 6.6.3'te aynı fazla $\phi_\oplus\approx0{,}18$'i **ölçmek** için
    kullanılıyor. Aynı veri hem sınır hem ölçüm olamaz.
 
 **Karar gereken:** 6.6.3 (a) tümüyle kaldırılsın mı, (b) "başarı" iddiasından çıkarılıp $\phi$
