@@ -562,7 +562,7 @@ Kozmolojik seyrelme, bu tablonun üzerine binen ve **çok daha yavaş bir taban 
 Bu alt bölüm, klasik diferansiyel kütleçekim (tidal force) türevinin standart Newton mekaniği çerçevesinde dahi **nedensellik kırığı** içerdiğini göstermekte; söz konusu kırığın hem koordinat analizi hem de iş-enerji ilkesi üzerinden kapatılamaz olduğunu ortaya koymaktadır. Argüman Evrenakı'ya özgü bir önerme içermez: tümüyle klasik mekaniğin kendi araçlarıyla yürütülmüştür.
 
 
-<iframe src="/animasyonlar/gelgit_vektör.html" width="100%" height="340" style="border:none;border-radius:12px;display:block;margin:24px auto;" title="Şekil 11.1.11-A — Klasik Modelin Vektör Çelişkisi ve Basınç Modeli Çözümü" loading="lazy"></iframe>
+<iframe src="/animasyonlar/gelgit_vektor.html" width="100%" height="340" style="border:none;border-radius:12px;display:block;margin:24px auto;" title="Şekil 11.1.11-A — Klasik Modelin Vektör Çelişkisi ve Basınç Modeli Çözümü" loading="lazy"></iframe>
 
 
 
