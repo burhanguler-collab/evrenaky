@@ -770,7 +770,7 @@ const simulationsList = [
         category: 'gok',
         badgeClass: 'badge-yellow',
         badgeText: 'GÖK MEKANİĞİ',
-        file: 'animasyonlar/gelgit_vektör.html',
+        file: 'animasyonlar/gelgit_vektor.html',
         chapterId: 'akademik_11_01',
         chapterName: '11.1 Gelgit Tensörü ve Denge Gelgiti',
         desc: 'Klasik Newton diferansiyel çekim modeli ile Evrenakı hidrostatik basınç modelinin karşılaştırmalı vektör analizi.'
