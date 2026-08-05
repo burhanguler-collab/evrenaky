@@ -41,7 +41,9 @@ Kısmın en önemli tek cümlesi şudur: **gelgit ve basıklık iki kuramı ayı
 
 ## Açık Kalemler
 
-Kısım kapanırken beş kalem açıkta bırakılmıştır ve hiçbiri gizlenmemiştir: **(i)** dönen kaynağın tensör genlikleri $\beta$ ve $\gamma$ öngörülmemiştir ($\kappa_5$ serbest kalemdir, 11.1.8); **(ii)** Uranüs'ün iç dönme dönemi ölçülmemiştir ve her figür kuramını aynı ölçüde etkiler (11.2.6); **(iii)** kütle–spin yasasının üretici mekanizması kurulmamış, iki aday elenmiş, $\kappa=\tfrac12$ türetilmemiştir (11.3.7); **(iv)** $\mathcal{A}_0$'ın kalibrasyon setinin iki üyesi ölçülen kütle tabanının altındadır (Sınav 6b); **(v)** Satürn'ün deplasman yüzeyi $R_\phi$'nin ekvator yarıçapına taşınması %18'lik bir sistematik taşır ve bölümün Satürn genliğindeki en büyük tek belirsizliğidir (11.4.1). Tümü ilgili bölümlerde nicel olarak kaydedilmiştir.
+Kısım kapanırken dört kalem açıkta bırakılmıştır ve hiçbiri gizlenmemiştir: **(i)** dönen kaynağın tensör genlikleri $\beta$ ve $\gamma$ öngörülmemiştir ($\kappa_5$ serbest kalemdir, 11.1.8); **(ii)** Uranüs'ün iç dönme dönemi ölçülmemiştir ve her figür kuramını aynı ölçüde etkiler (11.2.6); **(iii)** kütle–spin yasasının üretici mekanizması kurulmamış, iki aday elenmiş, $\kappa=\tfrac12$ türetilmemiştir (11.3.7); **(iv)** $\mathcal{A}_0$'ın kalibrasyon setinin iki üyesi ölçülen kütle tabanının altındadır (Sınav 6b). Tümü ilgili bölümlerde nicel olarak kaydedilmiştir.
+
+> **Kapanan kalem — referans yarıçap.** Deplasman yüzeyinin hangi yarıçapa göre ölçüleceği bir süre açık bırakılmıştı. Kapanışı metodolojiktir ve 11.4.1'de türetilmiştir: **basıklığın nedenini arayan bir hesap, basılmış gövdenin kendi ekvator yarıçapını girdi olarak kullanamaz** — kullanırsa aradığı sonucu varsaymış olur. Başlangıç, hacmi eşdeğer ideal küredir ($R_{ort}=R_e(1-f)^{1/3}$) ve zincir $R_\phi/R_e=(R_\phi/R_{ort})\cdot(1-f)^{1/3}$ olarak serbest parametresiz kapanır. Sonucu Satürn genliklerini %18 küçültmüş, pay sıralamasının başını Satürn'den **Uranüs**'e taşımıştır; aynı kural karasal cisimlerde $(1-f)^2$'ye indiği için Dünya tarafını (dolayısıyla $\kappa_5$ sınırını) %0,7 içinde bırakır.
 
 ## Kısmın Kapanışı
 

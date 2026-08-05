@@ -1,9 +1,9 @@
-# Taslak: Klasik Gelgit Açmazı ve Evrenakı Çözümü
+# Gelgit: Klasik Diferansiyel Anlatı ve Evrenakı'nın Hidrodinamik Çözümü
 
-Bu taslak belge, klasik (Newton) fiziğin gelgiti açıklarken düştüğü kavramsal açmazı — özellikle kuvvet vektörlerinin yönü ile sıvının fiziksel davranışı arasındaki uyumsuzluğu — ve Evrenakı teorisinin Kuvvet 1 (Gradyan) ve Kuvvet 2 (Sıkıştırma) ile sunduğu kusursuz hidrodinamik çözümü karşılaştırmak için hazırlanmıştır. Ana metinlere yedirmeden önce üzerinde çalışabilmemiz için taslak olarak oluşturulmuştur.
+Bu bölüm, gelgit olgusunu iki ayrı çerçevede inceler. Önce klasik (Newton) formülasyonun hangi niceliği hesapladığı, bu niceliğin işaretinin nereden geldiği ve kabarmayı fiilen hangi kuvvetin ürettiği adım adım ayrıştırılır. Ardından Evrenakı kuramının Kuvvet 1 (gradyan) ve Kuvvet 2 (taban sıkıştırma) çiftiyle aynı olguyu tek adımda nasıl verdiği gösterilir. Amaç, klasik matematiğin sayısal doğruluğunu tartışmak değil; o sayıların ardındaki **nedensellik zincirini** ve suyu kaldıran gerçek faili açığa çıkarmaktır.
 
 <div style="background: #121212; padding: 20px; border-radius: 12px; border: 1px solid #404040; box-shadow: 0 10px 30px rgba(0,0,0,0.8); margin: 20px 0; text-align: center;">
-<h3 style="margin-top: 0; margin-bottom: 20px; color: #fff; font-weight: 600; letter-spacing: 1px; text-shadow: 0 0 10px rgba(0, 229, 255, 0.5);">Animasyon: Newton'un "Çekim" Çelişkisi vs Evrenakı'nın "Basınç" Çözümü</h3>
+<h3 style="margin-top: 0; margin-bottom: 20px; color: #fff; font-weight: 600; letter-spacing: 1px; text-shadow: 0 0 10px rgba(0, 229, 255, 0.5);">Animasyon: Klasik "Çekim" Anlatısının Açık Sorusu vs Evrenakı'nın "Basınç" Çözümü</h3>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" style="max-width: 800px; background: #050505; border: 1px solid #333; border-radius: 8px;">
 <defs>
 <marker id="okKirmizi" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
@@ -23,7 +23,7 @@ Bu taslak belge, klasik (Newton) fiziğin gelgiti açıklarken düştüğü kavr
 <line x1="400" y1="50" x2="400" y2="380" stroke="#333" stroke-width="1.5" stroke-dasharray="5 5"/>
 <!-- SOL PANEL: NEWTON (ABSÜRT TABLO) -->
 <text x="200" y="30" fill="#ef4444" font-family="sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Klasik Fizik (Newton)</text>
-<text x="200" y="50" fill="#9ca3af" font-family="sans-serif" font-size="12" text-anchor="middle">Çekim (Pull) Yanılgısı</text>
+<text x="200" y="50" fill="#9ca3af" font-family="sans-serif" font-size="12" text-anchor="middle">Çekim (Pull) Anlatısı</text>
 <!-- Ay (Sol Panel) -->
 <circle cx="360" cy="220" r="15" fill="url(#ayGlow)" />
 <circle cx="360" cy="220" r="6" fill="#e2e8f0" />
@@ -88,12 +88,12 @@ Bu taslak belge, klasik (Newton) fiziğin gelgiti açıklarken düştüğü kavr
 </svg>
 </div>
 
-## Metinsel Argüman: Klasik Model Neden Yanlışlanmalıdır?
+## Metinsel Argüman: Kabarmanın Faili Kimdir?
 
-### 1. Newton'un "Çekim" Açmazı
-Klasik fiziğe göre kütleçekim tek yönlü bir **çekme (pull)** kuvvetidir. Gelgitte ön yüz Ay'a doğru kabarır çünkü "daha çok çekilir". Ancak arka yüzdeki okyanusun kabarması bu mantıkla açıklanamaz: Ay'ın arka yüzdeki suyu uzaya doğru **itmesi** fiziksel olarak imkansızdır. Newton fiziği bu saçmalığı şu kinematik illüzyonla yamamaya çalışır: *"Ay arka yüzdeki suyu değil, Dünya'nın katı gövdesini suyun altından çeker. Su geride kaldığı için uzaya kabarmış gibi görünür."*
+### 1. Klasik Anlatının Zayıf Halkası
+Klasik fizikte kütleçekim tek yönlü bir **çekme (pull)** kuvvetidir. Gelgitte ön yüzün Ay'a doğru kabarması bu çerçeveye sorunsuz oturur: orası "daha çok çekilir". Zorluk arka yüzdedir. Ay'ın arka yüzdeki suyu uzaya doğru **itmesi** mümkün olmadığına göre, oradaki kabarma neyle açıklanacaktır? Popüler ve ders kitabı anlatısının verdiği cevap kinematiktir: *"Ay arka yüzdeki suyu değil, Dünya'nın katı gövdesini suyun altından çeker. Su geride kaldığı için uzaya kabarmış gibi görünür."*
 
-Bu açıklama hidrodinamiğin temel yasalarını yok sayar. Yönü Ay'a dönük olan bir vektör (daha zayıf da olsa çekim kuvveti), bir sıvı bloğunu zıt yöne fışkırtamaz. Klasik modelin gelgit tensörü matematiksel olarak tutarlı rakamlar verse de, **vektörlerin nedenselliği tamamen yanlıştır.**
+Bu cümlenin sorunu yanlış hesap yapması değildir — klasik gelgit tensörü sayısal olarak doğrudur ve gözlemle uyuşur. Sorun, cümlenin **faili göstermemesidir.** Yönü Ay'a dönük bir vektör, tek başına bir sıvı bloğunu ters yöne yükseltemez; suyu metrelerce kaldıran iş başka bir şey tarafından yapılmak zorundadır. Bu bölümün izini sürdüğü soru budur: o "başka şey" nedir, ve klasik anlatı onu neden adlandırmaz?
 
 ### 2. Evrenakı'nın Kusursuz Hidrolik Çözümü
 Evrenakı kuramında çekim yoktur, **basınç ve gradyan** vardır.
@@ -103,13 +103,13 @@ Evrenakı kuramında çekim yoktur, **basınç ve gradyan** vardır.
 **Nasıl Kabarır?**
 Yanlardan (kutuplar ve ekvatordan) içeri doğru tam güçle bastıran Kuvvet 2, Ay-Dünya ekseninde (ön ve arka) zayıflar. Elinizle ortasından sıktığınız bir su balonu nasıl yanlardan ezilip uçlardan fışkırırsa, Dünya'nın okyanusları da tam olarak böyle davranır. 
 
-**Sonuç:** Arka yüzdeki su uzaya doğru "çekildiği" veya "geride kaldığı" için değil, yanlardan ezilen suyun gidecek başka hiçbir yeri olmadığı için (basınç açığına doğru) **hidrolik olarak itildiği/pompalandığı** için kabarır. Vektörler absürt bir şekilde uzaya doğru çeken kancalar değil, sıvıyı uçlara doğru süpüren akışkan basınçlarıdır.
+**Sonuç:** Arka yüzdeki su uzaya doğru "çekildiği" veya "geride kaldığı" için değil, yanlardan ezilen suyun gidecek başka hiçbir yeri olmadığı için (basınç açığına doğru) **hidrolik olarak itildiği/pompalandığı** için kabarır. Vektörler uzaya doğru çeken kancalar değil, sıvıyı uçlara doğru süpüren akışkan basınçlarıdır.
 
 ---
 
-## 3. Matematiksel Çarpışma: "Gerçek Vektörler" vs "Matematiksel Hile"
+## 3. Matematiksel Çarpışma: "Gerçek Vektörler" vs "Çerçeveye Bağlı Vektörler"
 
-Newton fiziğinin gelgit açıklamasındaki asıl skandal, kendi kütleçekim formüllerini uyguladığınızda çıkan **gerçek vektörler** ile, gelgiti kurtarmak için uydurdukları **göreli vektörler** arasındaki uçurumdur. Şimdi bu savunmayı kendi vektörleriyle ve fiziğin en temel ilkesiyle (İş ve Enerji) ezip geçelim. Kesin olarak savunabilecekleri hiçbir şey kalmayacak.
+Klasik gelgit anlatısındaki asıl kırılma noktası, kütleçekim formüllerini eylemsiz çerçevede uyguladığınızda çıkan **gerçek vektörler** ile, gelgiti anlatmak için kullanılan **göreli vektörler** arasındaki farktır. Bu farkı önce kendi vektörleriyle, sonra fiziğin en temel ilkesiyle (İş ve Enerji) ortaya koyalım.
 
 ### Newton'un Kendi Vektörlerindeki Gerçek (Eylemsiz Sistem Hesaplaması)
 Dünya'nın merkezini orijin $(0,0,0)$ alalım. Ay'ı $+x$ yönünde (sağda) $r$ uzaklığına yerleştirelim. Arka yüzdeki (Ay'a zıt) bir damla suyun koordinatı $x = -b$'dir.
@@ -124,27 +124,30 @@ Dünya'nın merkezini orijin $(0,0,0)$ alalım. Ay'ı $+x$ yönünde (sağda) $r
 
 Gördüğünüz gibi, arka yüzdeki bir damla suyun üzerindeki İKİ gerçek kütleçekim ivmesi de **ARTI (+) işaretlidir ve İÇERİ (Ay'a) DOĞRU** bakmaktadır. Dışarı (uzaya) yani eksi $(-x)$ yönüne bakan HİÇBİR vektör yoktur!
 
-Peki Newtoncular bu içeri bakan (+) vektörlerden nasıl dışarı doğru (-) bir kabarma çıkarırlar?
-Şu matematiksel hileyle: Ay, arka taraftaki suyu Dünya'nın merkezinden daha zayıf çektiği için ($\frac{GM}{(r+b)^2} < \frac{GM}{r^2}$), suyun $+x$ yönündeki ivmesi Dünya'nın $+x$ yönündeki ivmesinden küçüktür. 
-Sisteme fiktif bir merkezkaç kuvveti ekleyerek Dünya'nın merkez ivmesini ($\frac{GM_{Ay}}{r^2}$) denklemlerden çıkartırlar:
+Peki bu içeri bakan (+) vektörlerden nasıl dışarı doğru (-) bir kabarma çıkarılır?
+Şu adımla: Ay, arka taraftaki suyu Dünya'nın merkezinden daha zayıf çektiği için ($\frac{GM}{(r+b)^2} < \frac{GM}{r^2}$), suyun $+x$ yönündeki ivmesi Dünya'nın $+x$ yönündeki ivmesinden küçüktür. Referans Dünya'nın merkezine sabitlenir ve merkez ivmesi ($\frac{GM_{Ay}}{r^2}$) denklemden çıkarılır:
 $$ \vec{a}_{göreli} = \mathbf{+} \frac{GM_{Ay}}{(r+b)^2} \hat{x} \mathbf{-} \frac{GM_{Ay}}{r^2} \hat{x} \approx \mathbf{-} \frac{2GM_{Ay}b}{r^3} \hat{x} $$
 
-İşte suyu uzaya doğru ittiği varsayılan o sihirli **EKSİ (-)** ivme budur. Gerçekte uzaya iten hiçbir fiziksel kuvvet yoktur; o eksi işaret, denklemde büyük bir pozitif sayıyı küçük bir pozitif sayıdan çıkardıkları için (sırf referansı merkeze sabitlemek uğruna) ortaya çıkan matematiksel bir illüzyondur.
+İşte suyu uzaya doğru ittiği varsayılan o **EKSİ (-)** ivme budur. Bu nicelik uydurma değildir; Dünya yüzeyine göre suyun gerçekten yükseldiğini doğru biçimde betimler. Ancak betimlediği şey bir **ayrışmadır** — suya etkiyen itici bir kuvvet değil. Eksi işaret, eylemsiz çerçevede hiçbir yerde bulunmaz; yalnızca referans Dünya'nın merkezine sabitlendiğinde, iki pozitif ivmenin farkı olarak doğar. Kısacası bu vektörün işareti fizikten değil, **çerçeve seçiminden** gelir.
 
-### Öldürücü Darbe: "Kuvvet Eksikliği" İş Yapamaz!
-Fiziğin en temel yasasıdır: Milyarlarca ton okyanus suyunu yerçekimine karşı metrelerce yukarı kaldırmak (potansiyel enerji kazandırmak) için fiziksel bir **İŞ (Work)** yapılmalıdır. İş yapmak için ise gerçek bir fiziksel kuvvetin suyu itmesi veya çekmesi gerekir ($W = F \cdot x$).
+### Kritik Soru: Suyu Fiilen Kaldıran Kuvvet Hangisidir?
+Fiziğin en temel yasasıdır: Milyarlarca ton okyanus suyunu metrelerce yukarı kaldırmak (potansiyel enerji kazandırmak) için fiziksel bir **İŞ (Work)** yapılmalıdır ve iş yapan şey gerçek bir kuvvet olmak zorundadır ($W = F \cdot x$). O halde soru nettir: klasik modelde bu işi **hangi kuvvet** yapmaktadır?
 
-Newton matematiğinin itiraf ettiği şey şudur: Arka yüzdeki suyun kabarmasının sebebi Ay'ın onu çekmesi değil, Ay'ın onu **YETERİNCE ÇEKMEMESİDİR** (kuvvet zafiyeti). 
-İşte Newton modelinin iflas ettiği nokta tam burasıdır: **Bir kuvvetin "eksikliği" veya "yokluğu" fiziksel bir iş yapamaz!** Sizi itmeyen bir el, sizi havaya kaldıramaz. Dünya suyun altından kayıyor demek, kinematik bir illüzyondur. Suyu yukarı kaldırıp kabartacak enerjiyi (basıncı) üretecek aktif bir fiziksel kuvvet Newton'un denkleminde yoktur. Sırf ivmelerin farkını aldılar diye, ortaya çıkan o hayali "eksi vektör" okyanusu kaldıran bir enerjiye dönüşemez.
+Klasik modelin dürüst cevabı, popüler anlatının verdiği cevap değildir. Suyu fiilen kaldıran, "uzaya doğru çeken eksi vektör" değil, **okyanustaki basınç gradyanıdır.** Ay'ın çekiminin okyanus boyunca farklı şiddette olması sıvıda bir gerilme yaratır; sıvı bu gerilmeyi basınç farkına çevirir; suyu yükselten de bu basınçtır. Yani klasik model kabarmayı **iki adımda** kurar:
 
-* **Klasik matematik** *"Su (Dünya altından kaydığı için) uzaya doğru çekilir"* der ki bu absürt bir paradokstur.
-* **Evrenakı matematiği** *"Su, yanlardan (F2) uygulanan artmış basınçtan kaçmak için, direncin düştüğü uçlardan (F1 gradyanı) dışarı pompalanır"* der. Hem matematiği hem vektörleri fiziksel nedenselliğe %100 oturur.
+1. Merkezin ivmesi çıkarılarak bir **fark** niceliği elde edilir (eksi vektör). Bu nicelik gerçektir, ama bir kuvvet değil, iki düşüşün farkıdır ve işareti seçilen çerçeveye bağlıdır.
+2. Okyanus bu farkı, suyu gerçekten kaldıran şeye — **basınca** — dönüştürür.
+
+Modelin zayıf yeri, işin yapılmaması değildir; iş yapılır. Zayıf yer, **birinci adımın anlatıya kuvvet diye sokulmasıdır.** Ders kitabı cümlesi olan *"Ay arka yüzü daha az çektiği için su uzaya kabarır"*, bir kuvveti değil bir defter kaydını fail gibi göstermektedir. Sizi itmeyen bir el sizi kaldırmaz — sizi kaldıran, o elin altındaki basınçtır; klasik model de bunu yapar, ama adını ikinci adıma saklar.
+
+* **Klasik model:** İki adım. İlk adımın işareti çerçeveye bağlıdır; kaldıran kuvvet ancak ikinci adımda ortaya çıkar ve anlatıda görünmez.
+* **Evrenakı:** Tek adım. Su, yanlardan (F2) uygulanan artmış basınçtan kaçarak, direncin düştüğü uçlardan (F1 gradyanı) dışarı pompalanır. Kaldıran kuvvet baştan itibaren basınçtır; ara nicelik, çerçeve seçimi ve işaret dönüşümü gerekmez.
 
 ---
 
-## 4. Düşünce Deneyi: "Üç Cisim Paradoksu" ve Newton'un Anti-Yerçekimi İllüzyonu
+## 4. Düşünce Deneyi: Üç Cisim — Eksi İşaret Neyi Betimler?
 
-Newton fiziğinin gelgit matematiğindeki (referans kaydırarak çıkarma yapma) mantık hatasını bir düşünce deneyiyle tamamen çıplak bırakalım. 
+Klasik gelgit matematiğindeki çıkarma işleminin **ne verdiğini ve ne vermediğini** basit bir düşünce deneyiyle netleştirelim. 
 
 Uzayın derinliklerinde, yan yana dizilmiş 3 tane devasa asteroit (kütle) hayal edin:
 **(Cisim 1) ----- (Cisim 2 - Merkez) ----- (Cisim 3 - Çekici Büyük Kütle)**
@@ -159,19 +162,21 @@ Kütleleri somutlaştıralım. Büyük Cisim 3 kütlesi $M$, Cisim 2 ve Cisim 1 
 * Cisim 1'in Cisim 3'e göre ivmesi: $a_1 = \frac{GM}{(2d)^2} = \frac{GM}{4d^2}$ *(Sağa doğru, +x)*
 * Cisim 2'nin Cisim 3'e göre ivmesi: $a_2 = \frac{GM}{d^2}$ *(Sağa doğru, +x)*
 
-Her iki ivme de **artı (+), yani sağa (Cisim 3'e) doğrudur.** Newton'un kütleçekimi bu iki cismi de aynı yöne çekmektedir. Gerçek fizik net: **Hiçbiri diğerinden uzaklaşmaz.**
+Her iki ivme de **artı (+), yani sağa (Cisim 3'e) doğrudur.** Kütleçekim bu iki cismi de aynı yöne çekmektedir; **hiçbiri diğerini geriye doğru itmez.** Ancak düşüş şiddetleri eşit değildir — Cisim 2 daha hızlı düşer. Bu farkın sonucunu şimdi görelim.
 
 Şimdi klasik gelgit matematiğini uygulayalım — Cisim 2'yi referans alalım ve onun ivmesini çıkaralım:
 $$\vec{a}_{göreli,1} = a_1 - a_2 = \frac{GM}{4d^2} - \frac{GM}{d^2} = \frac{GM}{d^2}\left(\frac{1}{4} - 1\right) = \mathbf{-}\frac{3GM}{4d^2}$$
 
 Formülden çıkan sonuç **EKSİ (-)** yani sola (Cisim 3'ten uzağa) doğrudur. Oysa Cisim 3'ün kütleçekimi, Cisim 1'i hâlâ sağa doğru çekmektedir! **Gerçek vektörler sağa bakarken, Newton'un gelgit matematiği sola bakmaktadır.**
 
-Yani bu matematiksel çıkarma işlemi, gerçekte Cisim 3'e doğru koşan Cisim 1'in, sanki Cisim 2'den "kaçıyor" veya "itiliyormuş" gibi davrandığını söyler. Bu, kütleçekiminin kendisini inkâr etmektir.
+Bu sonucun ne olduğunu ve ne olmadığını kesin ayırmak gerekir. Eksi işaret **yanlış değildir**: Cisim 1 ile Cisim 2 arasındaki mesafe gerçekten büyümektedir ve bu, çerçeveden bağımsız, ölçülebilir bir gerçektir. Eksi işaretin doğru okunuşu budur — *ayrışma*.
+
+Yanlış olan, bu ayrışmanın **"Cisim 2, Cisim 1'i kendinden uzağa itiyor"** diye anlatılmasıdır. Ortada iten hiçbir şey yoktur; her üç cisim de Cisim 3'e doğru, farklı hızlarda düşmektedir. Ayrışma, iki düşüşün *farkıdır* — bir kuvvetin yönü değil. Klasik gelgit anlatısı tam bu noktada, ayrışmayı betimleyen bir niceliği, suyu kaldıran aktif bir kuvvetmiş gibi sunmaktadır.
 
 Aynı hesabı Cisim 2'nin ön tarafına (Cisim 3'e daha yakın bir Cisim 0) yaparsak:
 $$\vec{a}_{göreli,0} = a_0 - a_2 = \frac{GM}{(0.5d)^2} - \frac{GM}{d^2} = \frac{4GM}{d^2} - \frac{GM}{d^2} = \mathbf{+}\frac{3GM}{d^2}$$
 
-Ön taraftaki cisim Cisim 2'den **pozitif (+) yani ayrışır** şekilde çıkıyor. Newton'un kendi matematiğine göre ortadaki cisim (Dünya/Cisim 2), hem önündeki hem de arkasındaki cisimleri kendinden **uzağa doğru iter.** Kütleçekiminin sadece çektiği bir evrende bu sonuç fiziksel bir saçmalıktır; salt koordinat hilesi budur.
+Ön taraftaki cisim de Cisim 2'den **ayrışır** ($+$). Yani ortadaki cisim, hem önündeki hem arkasındaki cisimden uzaklaşmaktadır — ve bu, gerçekten olan şeydir. Ancak "ortadaki cisim ikisini de kendinden **itiyor**" cümlesi, aynı olgunun yanlış anlatımıdır: kütleçekimi yalnızca çekmektedir, ayrışmayı doğuran şey çekimin *farklı şiddetleridir*. Gelgit matematiğinin verdiği nicelik ayrışma hızıdır; itme kuvveti değildir.
 
 ---
 
@@ -179,26 +184,41 @@ $$\vec{a}_{göreli,0} = a_0 - a_2 = \frac{GM}{(0.5d)^2} - \frac{GM}{d^2} = \frac
 
 Bu noktada klasik fizikçilerin yapacağı tek savunma şudur: *"Non-inertial (ivmeli/dönüşümlü) referans sisteminde çalışmak meşrudur. Dünya serbest düşmede olduğu için, merkezkaç (fiktif/sözde) kuvvetler ortaya çıkar ve bu fiziksel olarak kabul edilebilir."*
 
-Bu savunmayı üç ayrı silahla kapatıyoruz:
+Bu savunmayı iki ayrı silahla kapatıyoruz:
 
 ### Silah 1: Fiktif Kuvvet Beyan Edilmeli
-Fizik pratiğinde non-inertial sistemlerde çalışmak meşrudur **ancak** bu durumda denkleme eklenen fiktif (merkezkaç) kuvvetin açıkça beyan edilmesi zorunludur. Klasik gelgit anlatısı bunu yapmaz. Ders kitaplarında ve popüler anlatılarda "Ay arka tarafı daha az çektiği için okyanus uzaya doğru kabarır" diye öğretilir; fiktif kuvvetten söz edilmez. Bu, fiziksel bir illüzyonu, gerçek bir kuvvetmiş gibi sunmaktır.
+Fizik pratiğinde non-inertial sistemlerde çalışmak meşrudur **ancak** bu durumda denkleme eklenen fiktif (merkezkaç) kuvvetin açıkça beyan edilmesi zorunludur. Klasik gelgit anlatısı bunu yapmaz. Ders kitaplarında ve popüler anlatılarda "Ay arka tarafı daha az çektiği için okyanus uzaya doğru kabarır" diye öğretilir; fiktif kuvvetten söz edilmez. Bu, çerçeveye bağlı bir muhasebe terimini, gerçek bir kuvvetmiş gibi sunmaktır.
 
-### Silah 2: Fiktif Kuvvet Enerji Üretemez
-Fiktif (sözde) kuvvetler, yalnızca koordinat dönüşümünün matematiksel bir yapay ürünüdür. Gerçek bir enerji kaynağına sahip değildirler. Milyarlarca ton okyanus suyunu yerçekimine karşı metrelerce kaldırmak için gerçek bir enerji kaynağı şarttır. Eğer "enerjiyi Ay sağlıyor" derlerse o zaman şunu sorun: Ay, arka taraftaki suyu çekmek için gerçek anlamda iş yapmaktadır ama yönü içeri (Ay'a doğru) değil midir? Ay'a doğru çekilen su nasıl oluyor da tam ters yönde yukarı kalkıyor? Yanıt veremezmler.
+### Silah 2: Enerji Defteri Ancak Basınca Dönülünce Kapanır
+Fiktif kuvvetler seçilen çerçeveye bağlı muhasebe terimleridir; ivmeli bir çerçevede iş yapıyormuş gibi görünebilirler, ama enerji defteri yalnızca eylemsiz çerçeveye dönüldüğünde kapanır. Eylemsiz çerçevede ise ortada tek bir itici vektör yoktur: bütün kütleçekim vektörleri Ay'a doğrudur (§3).
 
-### Silah 3: Gerçek Gözlem Testi — Geoid Çelişkisi
-Eğer Newton'un modeli doğruysa (Ay, Dünya'nın katı gövdesini suyun altından çekiyor), o zaman uzun vadede Dünya'nın katı kabuğunun da Ay yönünde hafifçe yükselmesi ve Ay'ın zıt tarafında da kabarması beklenir. Ancak Dünya'nın gerçek şekli olan **Geoid** ölçüldüğünde şu tablo ortaya çıkar: Dünya'nın şekli, katı kabuk üzerindeki **yerçekimi potansiyeli yüzeyi** tarafından belirlenir ve bu yüzey, sıvı basıncına göre şekillenir. Jeodezi bize, gelgidin Dünya'nın katı kabuğunu gerçekten deforme ettiğini göstermektedir, fakat bu deformasyon milimetre mertebesindedir ve Ay'ın sözde "eksi vektörle uzağa ittiği" yönde değil, doğrudan **Ay'a doğru** çekme yönündedir. Newton modeli bu gözlemle bile çelişir: Katı kabuğu Ay yönünde çeken kuvvet de eksi değil artı olduğu için Geoid şekli Newton'un gelgit modeliyle değil, gerçek kütleçekim potansiyeliyle açıklanmaktadır.
+O halde arka yüzdeki suyu kaldıran gerçek fail nedir? Bu soruya klasik modelin verebileceği tek tutarlı cevap **basınç gradyanıdır** — yani suyu kaldıran şey, anlatıda öne sürülen "eksi vektör" değil, okyanusun kendi içinde ilettiği kuvvettir. Bu cevap verildiği anda tartışma biter: kabarmanın faili basınçtır. Evrenakı da tam olarak bunu söyler, ama basıncı ara bir çerçeve dönüşümüne gerek kalmadan, doğrudan Kuvvet 1 ve Kuvvet 2'den üretir. Klasik model doğru faile ancak ikinci adımda ulaşır; Evrenakı işe oradan başlar.
 
 ---
 
-## 6. Kesin Özet: Newton'un Savunabileceği Hiçbir Şey Kalmadı
+## 6. Özet: Neyi Reddediyoruz, Neyi Reddetmiyoruz
 
-| İddia | Newton'un Cevabı | Çürütme |
+Aşağıdaki tablo, tartışmanın sınırını kesin biçimde çizer. Reddedilen, klasik hesabın sayıları veya tutarlılığı değildir; reddedilen, o sayıların üzerine kurulan **mekanizma anlatısıdır.**
+
+| İddia | Klasik Cevap | Değerlendirme |
 |---|---|---|
-| Arka yüzdeki su neden kabarıyor? | "Dünya suyun altından Ay'a kaçıyor" | Kuvvet eksikliği iş yapamaz ($W = F \cdot x$, $F=0$ ise $W=0$) |
-| Vektör işareti neden eksi (-)? | "Non-inertial referans, fiktif kuvvet" | Fiktif kuvvet enerji üretemez; ve hiçbir zaman açıkça beyan edilmez |
-| Matematiksel tutarlılık? | "Diferansiyel kütleçekim tensörü tutarlı" | Aynı matematiği 3 cisme uygulayınca kütleçekimi birbirinden uzaklaştırır — saçmalık |
+| Arka yüzdeki su neden kabarıyor? | "Dünya suyun altından Ay'a kaçıyor" | Suyu kaldıran iş, bu kinematik ifadeyle değil, ancak **basınç gradyanıyla** yapılabilir ($W = F \cdot x$); anlatı faili atlıyor |
+| Vektör işareti neden eksi (-)? | "Non-inertial referans, fiktif kuvvet" | İşaret çerçeveye bağlıdır ve eylemsiz çerçevede kaybolur; üstelik popüler anlatıda fiktif kuvvet hiçbir zaman beyan edilmez |
+| Matematiksel tutarlılık? | "Diferansiyel kütleçekim tensörü tutarlı" | Matematik tutarlıdır; verdiği nicelik **ayrışmadır**, itme kuvveti değil. Tutarsız olan matematik değil, ona giydirilen "uzaya itiliyor" anlatısıdır |
 | Gözlemsel kanıt? | "Gelgit gözlemleniyor" | Gözlem var ama **açıklama** yanlış; aynı gözlemi Evrenakı sıfır paradoksla açıklıyor |
 
-**Sonuç:** Klasik kütleçekim modelinde gelgiti açıklamak için kullanılan diferansiyel (fark) ivme matematiği, eylemsiz bir referans sisteminde uygulandığında sıfır eksi vektör üretir. Eksi vektörü elde etmek için sisteme fiktif bir kuvvet eklenmesi zorunludur; bu da enerjisiz bir koordinat hilesidir. Aynı matematiksel operasyon keyfi 3 cisme uygulandığında kütleçekiminin birbirini itmesine yol açar. Bu, Newton'un gelgit açıklamasının fiziksel bir temeli olmadığını, koordinat matematiğinin gözlemi yamama girişiminden ibaret olduğunu kesin ve tartışmasız biçimde kanıtlar.
+**Sonuç:** Klasik gelgit matematiğinin ürettiği eksi vektör, eylemsiz çerçevede hiçbir yerde görünmez; ancak Dünya merkezi referans alınıp merkezin serbest düşme ivmesi çıkarıldığında doğar. Bu nicelik gerçektir ve ayrışmayı doğru betimler — ama betimlediği şey bir **fark**tır, suyu kaldıran aktif bir kuvvet değil. Kaldırma işini klasik modelde de sonuçta okyanustaki **basınç gradyanı** yapar; fark niceliği yalnızca o gradyana giden ara bir defter kaydıdır ve kendi başına bir enerji kaynağı değildir.
+
+Evrenakı'nın üstünlük iddiası bu nedenle "onların eksi işareti sahtedir" değildir. İddia şudur: klasik model kabarmayı iki adımda kurar ve ilk adımı, fiziksel karşılığı yalnızca seçilen çerçevede tanımlı bir farktır; Evrenakı ise aynı kabarmayı tek adımda, baştan basınç olarak üretir. Kuvvet 2'nin yanlardan uyguladığı taban sıkıştırması ile Kuvvet 1'in açtığı gradyan, ön ve arka uçtaki iki kabarmayı da tek ve aynı hidrodinamik mekanizmadan, ek varsayım veya çerçeve seçimi gerektirmeden verir.
+
+---
+
+## Kaynakça
+
+1. Newton, I. (1687). *Philosophiæ Naturalis Principia Mathematica*, Kitap III — gelgitlerin ilk diferansiyel ele alınışı.
+2. Butikov, E. I. (2002). "A dynamical picture of the oceanic tides." *American Journal of Physics*, 70(9), 1001–1011. — Gelgit kabarmalarının, radyal bileşenden çok teğetsel bileşen ve akış tarafından belirlendiğini gösteren çalışma.
+3. Cartwright, D. E. (1999). *Tides: A Scientific History.* Cambridge University Press. — Gelgit açıklamalarının tarihsel gelişimi ve klasik anlatının yerleşmesi.
+4. Melchior, P. (1983). *The Tides of the Planet Earth*, 2. baskı. Pergamon Press. — Katı Dünya ve okyanus gelgitlerinin ölçüm temelli incelenmesi.
+5. Agnew, D. C. (2015). "Earth Tides." *Treatise on Geophysics*, Cilt 3, Elsevier. — Gelgit potansiyeli ve gözlemsel karşılıkları.
+6. Misner, C. W., Thorne, K. S. & Wheeler, J. A. (1973). *Gravitation.* W. H. Freeman. — Jeodezik sapma ve gelgit tensörünün çerçeveden bağımsız niteliği.
+7. Lowrie, W. (2007). *Fundamentals of Geophysics*, 2. baskı. Cambridge University Press. — Gelgit kuvvetlerinin jeofiziksel formülasyonu.

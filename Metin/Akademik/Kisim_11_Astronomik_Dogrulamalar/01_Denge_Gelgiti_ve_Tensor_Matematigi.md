@@ -130,7 +130,13 @@ $$\boxed{\;\Delta\vec a_1(\vec\xi) \equiv \vec a_1(\vec r+\vec\xi) - \vec a_1(\v
 
 Bu, Kuvvet 1'in kendi gradyan tensörüdür — **henüz gelgit tensörü değildir.** Gelgidi üreten, bu gradyanın Kuvvet 2'nin tabanını yerel olarak nasıl değiştirdiğidir; ilişki 11.1.4'te kurulur.
 
-$\Delta\vec a_1$ ifadesi $\vec\xi$'de **doğrusal** olduğundan $\Delta\vec a_1(-\vec\xi)=-\Delta\vec a_1(\vec\xi)$ geçerlidir: gelgit ekseninin iki ucundaki artık ivmeler zıt yönlüdür, yani **ikisi de merkezden dışa** bakar. **Dünya'nın her iki yüzündeki — Ay'a bakan ve Ay'ın tam zıttındaki — çift okyanus şişkinliği, hiçbir ek varsayım olmadan doğrudan bu $\vec\xi\to-\vec\xi$ tekliğinden çıkar.**
+$\Delta\vec a_1$ ifadesi $\vec\xi$'de doğrusaldır, dolayısıyla **tektir**: $\Delta\vec a_1(-\vec\xi)=-\Delta\vec a_1(\vec\xi)$. Fakat gelgidi üreten nicelik bu vektörün kendisi değildir — 11.1.4'te görüleceği gibi hesaba giren şey onun **dışa normal üzerindeki izdüşümüdür**, ve o izdüşüm **çifttir.** Küresel yüzeyde $\hat n=\hat\xi$ olduğundan:
+
+$$\boxed{\;\hat n\cdot\Delta\vec a_1(\vec\xi)\Big|_{\lvert\xi\rvert=b} = b\,\bigl(\hat n\cdot\mathsf{T}_1\cdot\hat n\bigr)\;}$$
+
+Sağ taraf $\hat n$'de bir **karesel formdur** ve $\hat n\to-\hat n$ altında değişmez. Gelgit ekseninin iki ucunda bu izdüşüm birebir aynı değeri alır ($+2\mathcal{G}Mb/r^3$); kuşağın her yerinde yine tek bir değer ($-\mathcal{G}Mb/r^3$).
+
+**Çift şişkinliğin kaynağı budur.** Dünya'nın her iki yüzündeki — Ay'a bakan ve Ay'ın tam zıttındaki — kabarma, hiçbir ek varsayım olmadan bu **çift** yapıdan çıkar: bir vektörün iki uçta yön değiştirmesinden değil, **bir skalerin iki uçta eşit miktarda düşmesinden.** Ayrım bu bölümün mekanizma iddiasının merkezindedir ve 11.1.4'te niceliğe dökülür.
 
 > [!CAUTION]
 > **Gelgit ekseni ≠ dönme ekseni.** Bu bölümde geçen her "eksen" sözcüğü, gövde merkezini kaynağa bağlayan **Dünya–Ay doğrultusunu** gösterir. Dünya'nın kendi dönme eksenini (ve dolayısıyla ekvatoru) göstermez; ikisi ne çakışıktır ne de paraleldir. Ayrım üç yüzden zorunludur:
@@ -200,6 +206,22 @@ $$a_{net}(\vec\xi) \;=\; a_2 \;-\; \hat n\cdot\Delta\vec a_1(\vec\xi)$$
 | Kuşak ($\hat n=\hat\xi_\perp$) | $-\mathcal{G}Mb/r^3$ (içe) | $a_2+\dfrac{\mathcal{G}Mb}{r^3}$ | **taban pekişir** — madde içeri iter |
 
 Bu, 3.9.2'de sözle kurulan mekanizmanın niceliğe dökülmüş hâlidir: gelgit ekseninde Kuvvet 1'in farkı tabandan **çıkarılır**, kuşakta ise tabana **eklenir** — kuşaktaki net sıkışma büyük kaldığı (aslında bir miktar da arttığı) için gevşeyen eksene doğru akış olur.
+
+### Hiçbir yön tersine dönmez: işaret-belirliliği
+
+11.1.3'ün karesel form sonucu buraya konduğunda $a_{net}$'in kapalı biçimi çıkar:
+
+$$\boxed{\;a_{net}(\hat n) \;=\; a_2 \;-\; b\,\bigl(\hat n\cdot\mathsf{T}_1\cdot\hat n\bigr)\;}$$
+
+Bu bir **skalerdir** ve gövdenin her noktasında **içe doğrudur**; $\hat n$'ye bağlı olan tek şey büyüklüğüdür. Yön hiçbir yerde değişmez — ne eksende, ne kuşakta, ne aradaki hiçbir enlemde. Koşul, tabanın azami gevşemeyi karşılamasıdır:
+
+$$a_2 \;>\; b\,\lambda_{maks}(\mathsf{T}_1) \;=\; \frac{2\mathcal{G}Mb}{r^{3}} \;=\; 1{,}10\times10^{-6}\ \mathrm{m/s^2}\quad(\text{Ay})$$
+
+Sayı, herhangi bir fiziksel taban için **fazlasıyla** sağlanır: Dünya'nın kendi yüzey itiminin ($9{,}8$ m/s²) yedi mertebe altındadır. Dolayısıyla gelgit, işaret değiştiren bir alanın değil, **daima içe bakan tek bir sıkışmanın enlemsel modülasyonudur**; madde $a_{net}$'in büyük olduğu kuşaktan küçük olduğu eksene akar.
+
+> **Kuvvet 2'nin ikinci ve asıl işi budur.** Taban, aşağıda gösterileceği gibi şekil hesabından **iptal olur** — genliğe hiçbir katkısı yoktur. Ama iptal olması onu gereksiz kılmaz: $a_2$, $a_{net}$'i işaret-belirli tutan niceliktir. Onsuz eksende kalan şey dışa bakan bir artık olurdu ve mekanizma, teorinin reddettiği "çekme" resmine geri düşerdi. **Taban büyüklüğüyle değil, varlığıyla iş görür** — ve yaptığı iş bir sayı değil, bir işarettir.
+
+*(Kayıt: bu, hiçbir sayısal öngörüyü değiştirmez. Şekli belirleyen $a_{net}$'in kendisi değil, iki bölge arasındaki **farkıdır** ve farkta $a_2$ düşer — aşağıdaki satır. Değişen, mekanizmanın ne olduğudur, ne öngördüğü değil.)*
 
 **Taban iptal olur, fark kalır.** Kuşak ile eksen arasındaki net sıkışma farkında $a_2$ **düşer**:
 
@@ -344,15 +366,17 @@ Dürüst kayıt özdeşlikten başlar. Aşağıdaki tablo, bu bölümün türeti
 | Denge gelgiti genliği | 0,535 / 0,246 m | aynı |
 | Büyük/küçük oranı | 2,70 | aynı |
 
-**Tek bir sayı bile ayrışmaz.** Bu bölüm bir ayırt edici sınav değildir ve öyleymiş gibi sunulmaz. Ayrışma sayıda değil, üç yapısal noktadadır:
+**Tek bir sayı bile ayrışmaz.** Bu bölüm bir ayırt edici sınav değildir ve öyleymiş gibi sunulmaz. Ayrışma sayıda değil, dört yapısal noktadadır:
 
 1. **İzsizlik teoremdir.** Klasik kuramda $\mathrm{tr}\,\mathsf{T}=0$, Laplace denkleminin soyut bir özelliği olarak kaydedilir; burada deplasman akısının korunumudur ve türetimin hiçbir adımında varsayılmadan, yakınsama geometrisinden çıkar (11.1.4). *(Bunun "iki bağımsız ispat" olmadığı, aynı içeriğin iki okunuşu olduğu 11.1.4'ün bağımsızlık kaydında tartılmıştır — ayrışma ispat sayısında değil, sıfırın hangi ilkeye bağlandığındadır.)*
 2. **Eşdeğerlik ilkesi sonuçtur.** Klasik mekanikte postüla, burada $\rho_n$ evrenselliğinin türevi (11.1.7). Çerçeve adımı da aynı köke bağlıdır: ortak ivmenin gövdeyi deforme etmemesi, klasik türetimde eylemsiz çerçeve seçiminin sonucudur; burada Kuvvet 1'in her nükleona aynı ivmeyi vermesinin sonucudur. *(İki maddeyi ayrı saymıyoruz — kökleri aynı.)*
 3. **Kuvvet envanteri kapalıdır.** Kilitli kaynağın dönüş kolu bastırılmış olduğundan gelgit, beş kuvvetten yalnız pompa koluna — Kuvvet 2'nin tabanı ile Kuvvet 1'in gradyanının üst üste binmesine — iner (11.1.2, 11.1.4). Sayısal sonucun tek bir gradyana inmesi bir kolaylık kabulü değil, türetilmiş bir sonuçtur: tabanın $\ell=0$ payı hacmi, $\ell=1$ payı konumu değiştirir, $\ell=2$ payı ise açılımın bir üst mertebesindedir (11.1.3). Klasik kuramda böyle bir envanter sorusu yoktur; teoride bu, tensörün saflığının gerekçesidir.
 
+4. **Deforme eden nesne farklı türdendir — işaret-belirlilik.** Klasik türetimde gelgidi yapan nicelik, gövde boyunca **işaret değiştiren bir vektör alanıdır**: serbest düşen çerçevede artık ivme gelgit ekseninde dışa, kuşakta içe bakar. Burada ise deforme eden nicelik **hiçbir yerde yön değiştirmeyen bir skalerdir** — $a_{net}(\hat n)=a_2-b(\hat n\cdot\mathsf{T}_1\cdot\hat n)$ her noktada içe doğrudur, yalnız büyüklüğü enleme göre modüle olur (11.1.4). Çift şişkinlik bir vektörün ters dönmesinden değil, bu skalerin eksenin iki ucunda eşit miktarda düşmesinden çıkar; matematiksel gerekçesi, hesaba giren şeyin $\Delta\vec a_1$ değil onun dışa normal üzerindeki **karesel formu** olmasıdır (11.1.3). Klasik kuramın böyle bir tabanı yoktur, dolayısıyla işaret-belirliliği de yoktur.
+
 Bunlara mekanizmanın kendisi eklenir: teoride gelgiti yapan şey bir çekme değil, gövdenin zaten içinde bulunduğu bir taban sıkışmanın (Kuvvet 2) yönlü bir gradyanla (Kuvvet 1) yeniden dağılmasıdır — kuşakta pekişme, gelgit ekseninde gevşeme (11.1.3–11.1.4). Bu iki-aktörlü mekanizma klasik kuramda mevcut değildir; orada tek aktör potansiyelin kendisidir.
 
-Fakat bu üç madde de yorum düzeyindedir. Asıl soru şudur: **iki kuramı ayıran bir ölçüm var mıdır?** Vardır — ve yukarıdaki özdeşlik tablosunun sessiz koşulunda saklıdır.
+Fakat bu dört madde de yorum düzeyindedir — hiçbiri farklı bir sayı öngörmez. Asıl soru şudur: **iki kuramı ayıran bir ölçüm var mıdır?** Vardır — ve yukarıdaki özdeşlik tablosunun sessiz koşulunda saklıdır.
 
 ### Sınavın kaynağı: tablo yalnız *kilitli* kaynak için geçerlidir
 

@@ -111,13 +111,15 @@ $b_i$ van der Waals dışlanan hacmidir ($b=4N_Av$, molekülün sert-küre hacmi
 
 $$\rho_*^{Satürn} = \left(\frac{0{,}86}{303}+\frac{0{,}13}{675}+\frac{0{,}01}{1968}\right)^{-1} = \mathbf{329\ kg/m^3} \qquad\Longrightarrow\qquad \rho_{kafes}=0{,}47\times329=\mathbf{155\ kg/m^3}$$
 
-Profil bu yoğunluğu $r=0{,}935\,R_e$'de geçer. Ve kritik sonuç şudur:
+Profil bu yoğunluğu $r=0{,}9356\,R_{ort}$'ta geçer. **Buradaki yarıçap seçimi keyfî değildir ve bir sonraki alt başlıkta türetilir.** Ve kritik sonuç şudur:
 
 | Nicelik | Satürn | Jüpiter | Uranüs | Neptün |
 |---|---|---|---|---|
 | $\rho_*$ (kg/m³) | 329 | 329 | 379 | 379 |
 | $\rho_{kafes}$ (kg/m³) | 155 | 155 | 178 | 178 |
-| **Deplasman yüzeyi $R_\phi/R_e$** | **0,935** | **0,966** | **0,959** | **0,968** |
+| **Deplasman yüzeyi $R_\phi/R_{ort}$** (ideal küre) | **0,9356** | **0,9657** | **0,9590** | **0,9679** |
+| Hacim eşdeğerlik çarpanı $(1-f)^{1/3}$ | 0,9662 | 0,9779 | 0,9923 | 0,9943 |
+| **$R_\phi/R_e$** (gözlem birimine geçiş) | **0,9040** | **0,9444** | **0,9516** | **0,9624** |
 | Doygun **olmayan** hacim | %18,1 | %9,9 | %11,8 | %9,3 |
 | Doygun **olmayan** kütle | **%1,96** | **%0,57** | **%0,81** | **%0,50** |
 | $\langle\phi\rangle_V$ (hacim ağırlıklı) | **0,426** | 0,446 | 0,442 | 0,448 |
@@ -135,9 +137,9 @@ Profil bu yoğunluğu $r=0{,}935\,R_e$'de geçer. Ve kritik sonuç şudur:
 
 **Deplasman yüzeyi $R_\phi$.** Ortam gövdede 1 bar seviyesinde durmaz; onu *taşıyan* şey bağlı kafestir ve kafes ancak temas ettiğinde ($\rho>\rho_{kafes}$) ortamı sürükler. Üstündeki seyreltik gaz, ortamı sürüklemek için fazla incedir; oradaki ortam pratik olarak dıştaki ortamla süreklidir. Dolayısıyla **F5'in dış alanının sınır koşulu $R_e$'de değil $R_\phi$'de kurulur.** Sonuçları:
 
-1. **Rankine tepesi $R_\phi$'ye kayar** (11.4.2): Satürn'de $0{,}935\,R_e$, yani 1 bar seviyesinin ~3.900 km altına.
-2. **Dış alan genliği $(R_\phi/R_e)^{2s+2}$ ile azalır.** $s=2$ (11.4.3) ile bu $(R_\phi/R_e)^6$'dır: Satürn $0{,}668$ · Jüpiter $0{,}813$ · Uranüs $0{,}778$ · Neptün $0{,}823$.
-3. **Kavram karasal cisimlerde görünmezdir.** Dünya'nın yüzeyi katı silikattır ($\rho=2700\gg\rho_{kafes}^{silikat}=0{,}68\times4732=3218$… sınırda, kabuk altında hemen aşılır), dolayısıyla $R_\phi\simeq R_e$ ve çarpan 1'dir. **Ayrım yalnız gaz ve buz devlerinde devreye girer**; karasal cisimlerde deplasman yüzeyi ile ekvator yarıçapı çakışır.
+1. **Rankine tepesi $R_\phi$'ye kayar** (11.4.2): Satürn'de $0{,}904\,R_e$, yani ekvatorda 1 bar seviyesinin ~5.800 km altına.
+2. **Dış alan genliği $(R_\phi/R_e)^{2s+2}$ ile azalır.** $s=2$ (11.4.3) ile bu $(R_\phi/R_e)^6$'dır: Satürn $0{,}546$ · Jüpiter $0{,}709$ · Uranüs $0{,}743$ · Neptün $0{,}795$. *(Ring yarıçapları $R_e$ biriminde ölçüldüğü için ön çarpan bu birime taşınır; fizik $R_\phi$'nin mutlak değerindedir.)*
+3. **Kavram karasal cisimlerde görünmezdir.** Dünya'nın yüzeyi katı silikattır ($\rho=2700\gg\rho_{kafes}^{silikat}=0{,}68\times4732=3218$… sınırda, kabuk altında hemen aşılır), dolayısıyla deplasman yüzeyi gövdenin kendi yüzeyidir: $R_\phi/R_{ort}=1$ ve çarpan $(1-f)^2$'ye iner — Dünya'da $0{,}9933$, yani birden %0,7 ayrı. **Ayrım yalnız gaz ve buz devlerinde belirleyicidir**; karasal cisimlerde ihmal edilebilir kalır.
 
 **Faz kuralının ikinci sonucu: Satürn ↔ Dünya oranı öngörülür.** Dünya'nın yüzeyi kristal katıdır ($\phi_{doy}=0{,}68$), Satürn'ünki yoğun akışkandır ($\phi_{doy}=0{,}47$); faz kuralı oranı doğrudan verir:
 
@@ -157,7 +159,11 @@ Benimsenen değerlerle ($\phi_{Satürn}=0{,}45$, $\phi_\oplus=0{,}70$) oran $0{,
 
 > **Dürüst kayıt — metalik hidrojen tek gerçek belirsizlik.** Satürn'ün iç zarfında H₂ ayrışıp basınçla iyonlaşır; orada "atom" yoktur, protonlar ve dejenere bir elektron denizi vardır. M-39 iki şey söyler ve ikisi bu noktada gerilir: *(i)* kavrama nükleon düzeyindedir ve iyonizasyonla çökmez; *(ii)* kafes nükleon değil **atomdur** — elektron kabuğu kütlesel olarak boş, Evrenakı açısından doludur. Metalik fazda elektronlar hâlâ oradadır (bağlı değil, ama var), dolayısıyla hacim yine deplase edilir; fakat *ne kadarı* türetilmemiştir. Tablo bandı bunu ölçer: metalik faz da akışkan gibi paketlenme-sınırlıysa $\langle\phi\rangle_M=0{,}467$; elektron denizi hacmi tümüyle doldurursa $0{,}861$. **Ana değer alt uçtur** — çünkü Blok D'nin geçerlilik sınırı ($\phi\to1$ fiziksel değil, geometrik paketlenme bağlar) ve M-39'un nötron maddesi kaydı ($\phi\approx0{,}7$–$0{,}9$, *asimptotik*) ikisi de üst ucu dışlar: hidrojen plazması nötron maddesinden **daha** dolu olamaz. Kalan iş, elektron yoğunluğu eşiğinin ilk-ilkelerden konulmasıdır → §7.4 kalem **11.4-iv′**.
 
-> **Yarıçap kaydı — hangi $R$'ye göre.** Politrop küresel modeldir ve profil **ortalama yarıçap** üzerinde çözülür ($R_{ort}=5{,}823\times10^{7}$ m); yukarıdaki $0{,}935$ oranı bu çözümden gelir. Dış alan çarpanında ise oran ekvator yarıçapına taşınır — yani deplasman yüzeyinin gövdeyle **aynı basıklığı paylaştığı** varsayılır. Varsayım düşürülüp $R_\phi$ küresel değerinde bırakılırsa $R_\phi/R_e=0{,}904$ olur ve $(R_\phi/R_e)^6$ çarpanı $0{,}668$'den $0{,}55$'e iner; Satürn genlikleri %18 küçülür. Bu, $\phi_{doy}$'un $\pm$%6'lık bandının üç katıdır ve **bölümün Satürn genliğindeki en büyük tek sistematiğidir**; kaydedilir, kapatılmaz.
+> **Referans yarıçap türetilir, seçilmez — ve seçim ideal küredir.** Bu, hesabın en kolay yanlış kurulan adımıdır ve gerekçesi metodolojiktir: **basıklığın nedenini arayan bir hesap, basılmış gövdenin kendi ekvator yarıçapını girdi olarak kullanamaz.** Kullanırsa aradığı sonucu varsaymış olur. Deplasman yüzeyi, gövdenin henüz basılmamış — yani hacmi eşdeğer **ideal küre** — hâlinde nerede duruyorsa oradadır; politrop da zaten o küre üzerinde çözülür. İdeal kürenin yarıçapı hacim eşitliğinden tektir:
+> $$R_{ort}=R_e\,(1-f)^{1/3}$$
+> Satürn için $6{,}0268\times10^{7}\times0{,}96622=5{,}8232\times10^{7}$ m — tabloda kullanılan değerin ta kendisi. Zincir bu yüzden iki adımlıdır ve ikisi de türetilmiştir:
+> $$\boxed{\;\frac{R_\phi}{R_e}=\underbrace{\frac{R_\phi}{R_{ort}}}_{\text{politrop, ideal küre}}\times\underbrace{(1-f)^{1/3}}_{\text{hacim eşdeğerliği}}\;}$$
+> Satürn: $0{,}9356\times0{,}9662=0{,}9040$. **Serbest parametre yoktur**; $f$ ölçülmüş, politrop çözümü analitiktir. Doygun yüzeyli (karasal) bir gövdede $R_\phi/R_{ort}=1$ olduğundan çarpan $(1-f)^2$'ye iner — kural her iki sınıfta da aynıdır, yalnız birinci çarpan farklıdır.
 >
 > **İki ek dürüst kayıt.** *(a)* $n=1$ politropu Satürn'ün ağır element çekirdeğini hafife alır ($C/MR^2$ politropta $0{,}261$, gözlem $\approx0{,}21$); ama çekirdek $\rho\sim10^4$ kg/m³ ile $\rho_{kafes}$'in **60 katındadır**, yani zaten doygun daldadır ve $\langle\phi\rangle$'a $\phi_{doy}$ değerinden başka bir şey katmaz. Model duyarlılığı bu yüzden zayıftır. *(b)* $R_\phi$'de rijit dönüş varsayılmıştır; Satürn'ün ekvatoral zonal rüzgârı $+450$ m/s ile $\omega R_e$'nin %4,6'sıdır ve genliği $\pm$%9 oynatır — banda dahildir.
 
@@ -214,7 +220,7 @@ Kalemin F5 üzerindeki asıl sonucu olumsuzlama değil, **karantinadır.** F5'in
 
 Aradaki basınç farkı **30–60 kattır.** $R_\phi$'de madde tartışmasız moleküler H₂/He akışkanıdır ve orada $\phi_{doy}=0{,}47$ sağlamdır. Metalik fazın $\phi$'si F5'in genliğine **hiç girmez.**
 
-$$\boxed{\;\hat{\mathcal{Q}}_{et}^{Satürn} = 5{,}46\times10^{-5}\quad\text{— bant yok}\;}$$
+$$\boxed{\;\hat{\mathcal{Q}}_{et}^{Satürn} = 4{,}46\times10^{-5}\quad\text{— bant yok}\;}$$
 
 Sınav 11.4-A'nın öngörüsü bu yüzden **tek değerlidir:** metalik fazın $\phi$ belirsizliği (11.4.1-(5)'in geniş bandı) genliğe hiç girmez, çünkü sınır koşulu $R_\phi$'de kurulur ve orası moleküler akışkandır. Kalan belirsizlik yalnız $\phi_{doy}$'un akışkan değerindedir ($0{,}47\pm0{,}03$, $\pm$%6).
 
@@ -306,7 +312,7 @@ $$|f_{yanal}| = \kappa_5\phi_{doy}\rho_0\,\frac{\omega^2R_\phi^2}{r}\left(\frac{
 
 $$\boxed{\;|f_{yanal}|\propto r \;\;(r<R_\phi) \qquad\qquad |f_{yanal}|\propto r^{-(2s+1)} \;\;(r>R_\phi) \qquad\Longrightarrow\qquad \text{maksimum } r=R_\phi \text{'de}\;}$$
 
-**Sonuç.** F5 kuvvet yoğunluğu **deplasman yüzeyinde maksimumdur**; içeride $+1$ eğimle yükselir, dışarıda $-(2s+1)$ eğimle düşer. "Önce artar sonra azalır" davranışı böylece türetilmiş olur ve tepe noktası **serbest parametre içermez** — 11.4.1-(4)'te iç yoğunluk profilinden türetilir: karasal cisimlerde $R_\phi=R_e$ (ekvator yarıçapı), Satürn'de $0{,}935\,R_e$, Jüpiter'de $0{,}966\,R_e$.
+**Sonuç.** F5 kuvvet yoğunluğu **deplasman yüzeyinde maksimumdur**; içeride $+1$ eğimle yükselir, dışarıda $-(2s+1)$ eğimle düşer. "Önce artar sonra azalır" davranışı böylece türetilmiş olur ve tepe noktası **serbest parametre içermez** — 11.4.1-(4)'te iç yoğunluk profilinden türetilir: karasal cisimlerde $R_\phi\simeq R_e$, Satürn'de $0{,}904\,R_e$, Jüpiter'de $0{,}944\,R_e$.
 
 ### (c) Maksimumun geometrisi: bir tepe *noktası* değil, iki **halka sırtı**
 
@@ -314,9 +320,9 @@ $|f_{yanal}|$ hem $r$'de hem $\theta$'da maksimumlanır. İki koşul birlikte al
 
 $$r=R_\phi,\qquad \theta=\pm45°$$
 
-yani gövdenin çevresinde, kuzey ve güney orta enlemlerde **iki eş merkezli halka**. F5 alanının en şiddetli olduğu yer ne kutup, ne ekvator, ne merkez — **45° enlem çemberidir.** Satürn için bu sırttaki değer ($R_\phi=0{,}935R_e$, $\omega R_\phi=9\,313$ m/s, $\phi_{doy}=0{,}47$, referans $\kappa_5=2{,}1\times10^{-3}$):
+yani gövdenin çevresinde, kuzey ve güney orta enlemlerde **iki eş merkezli halka**. F5 alanının en şiddetli olduğu yer ne kutup, ne ekvator, ne merkez — **45° enlem çemberidir.** Satürn için bu sırttaki değer ($R_\phi=0{,}904R_e$, $\omega R_\phi=9\,004$ m/s, $\phi_{doy}=0{,}47$, referans $\kappa_5=2{,}1\times10^{-3}$):
 
-$$|f_{yanal}|_{max} = \kappa_5\phi_{doy}\rho_0\,\omega^2R_\phi = 1{,}03\times10^{14}\ \mathrm{N/m^3} \qquad(a_{yanal}=3{,}80\times10^{-4}\ \mathrm{m/s^2})$$
+$$|f_{yanal}|_{max} = \kappa_5\phi_{doy}\rho_0\,\omega^2R_\phi = 9{,}91\times10^{13}\ \mathrm{N/m^3} \qquad(a_{yanal}=3{,}67\times10^{-4}\ \mathrm{m/s^2})$$
 
 Bu, M-39'un 2. Açık Ucu olan **45° imzasının** geometrik adresidir: F5'in ölçülebilir doğrudan izi, gövdenin 45° enlem kuşağında beklenmelidir — atmosferik akış deseni veya manto gerilmesi olarak.
 
@@ -348,7 +354,7 @@ Bu, M-39'un 2. Açık Ucu olan **45° imzasının** geometrik adresidir: F5'in �
 </svg>
 </div>
 
-*Şekil 11.4.1: F5'in radyal profili bir Rankine yapısıdır. İç kolda kaynağın katı-cisim dönüşü ($V=\omega r$), dış kolda korunumlu seyrelme ($V\propto r^{-s}$). Tepe, deplasman yüzeyi $R_\phi$'de — serbest parametresiz, iç yoğunluk profilinden türetilir (11.4.1-(4)). Satürn için $R_\phi=0{,}935\,R_e$; karasal cisimlerde $R_\phi=R_e$.*
+*Şekil 11.4.1: F5'in radyal profili bir Rankine yapısıdır. İç kolda kaynağın katı-cisim dönüşü ($V=\omega r$), dış kolda korunumlu seyrelme ($V\propto r^{-s}$). Tepe, deplasman yüzeyi $R_\phi$'de — serbest parametresiz, iç yoğunluk profilinden türetilir (11.4.1-(4)). Satürn için $R_\phi=0{,}904\,R_e$; karasal cisimlerde $R_\phi\simeq R_e$.*
 
 > **Bu M-30'un Rankine profilinin F5 karşılığıdır.** M-30 vorteks *hızı* için aynı yapıyı verir (iç çekirdek $v\propto R$, dış kol $v\propto1/R$). Buradaki ek adım, aynı yapının **enlemsel kuvvet yoğunluğuna** taşınmasıdır: F5, kaynağın Rankine profilini karesiyle ve bir ek $1/r$ metrik çarpanıyla miras alır.
 
@@ -414,7 +420,7 @@ Ekvatoral kararlı denge çevresinde ($z\ll r$) $\sin2\theta\simeq2z/r$ konulur.
 
 $$\ddot z = -\nu^2 z,\qquad \boxed{\;\frac{\nu^2}{\Omega^2} = 1 \;+\; \underbrace{3J_2\!\left(\frac{R_e}{r}\right)^{\!2}}_{\text{figür (madde kanalı)}} \;+\; \underbrace{\hat{\mathcal{Q}}_{et}\!\left(\frac{R_e}{r}\right)^{\!3}}_{\text{F5 (ortam kanalı)}} \;+\;\cdots\;}$$
 
-$$\hat{\mathcal{Q}}_{et}\;=\;\frac{\kappa_5\,\phi_{doy}\,\mathcal{S}}{2}\,\mathcal{Q}\left(\frac{R_\phi}{R_e}\right)^{\!6}\;=\;5{,}46\times10^{-5}\quad(\text{Satürn})$$
+$$\hat{\mathcal{Q}}_{et}\;=\;\frac{\kappa_5\,\phi_{doy}\,\mathcal{S}}{2}\,\mathcal{Q}\left(\frac{R_\phi}{R_e}\right)^{\!6}\;=\;4{,}46\times10^{-5}\quad(\text{Satürn})$$
 
 $\nu$ dikey (bending) frekansı, $\Omega$ yörünge frekansıdır. **Halka tanecikleri bu frekansta yukarı-aşağı harmonik salınım yapar** ve kararlı düzlem $z=0$'dır.
 
@@ -431,27 +437,27 @@ Halka sismolojisi (kronosismoloji) $\nu(r)$'yi Satürn halkalarındaki bükülme
 
 ### Nicel öngörü: Satürn halka kuşağı
 
-$\kappa_5=2{,}1\times10^{-3}$, $\phi_{doy}=0{,}47$, $\mathcal{S}=1{,}0508$, $\mathcal{Q}_S=0{,}1576$, $(R_\phi/R_e)^6=0{,}668$ ile:
+$\kappa_5=2{,}1\times10^{-3}$, $\phi_{doy}=0{,}47$, $\mathcal{S}=1{,}0508$, $\mathcal{Q}_S=0{,}1576$, $(R_\phi/R_e)^6=0{,}546$ ile:
 
 | Bölge | $r/R_e$ | $\mathcal{F}_5$ | $\delta\nu/\nu$ | $J_2$ terimi | **F5 payı** |
 |---|---|---|---|---|---|
-| D halkası (iç) | 1,110 | $3{,}99\times10^{-5}$ | $2{,}00\times10^{-5}$ | $3{,}97\times10^{-2}$ | **%0,101** |
-| C halkası (iç) | 1,239 | $2{,}87\times10^{-5}$ | $1{,}44\times10^{-5}$ | $3{,}18\times10^{-2}$ | **%0,090** |
-| B halkası (iç) | 1,527 | $1{,}53\times10^{-5}$ | $7{,}67\times10^{-6}$ | $2{,}10\times10^{-2}$ | **%0,073** |
-| B/A orta | 1,750 | $1{,}02\times10^{-5}$ | $5{,}09\times10^{-6}$ | $1{,}60\times10^{-2}$ | **%0,064** |
-| A halkası (dış) | 2,269 | $4{,}67\times10^{-6}$ | $2{,}34\times10^{-6}$ | $9{,}49\times10^{-3}$ | **%0,049** |
-| F halkası | 2,326 | $4{,}34\times10^{-6}$ | $2{,}17\times10^{-6}$ | $9{,}03\times10^{-3}$ | **%0,048** |
+| D halkası (iç) | 1,110 | $3{,}26\times10^{-5}$ | $1{,}63\times10^{-5}$ | $3{,}97\times10^{-2}$ | **%0,082** |
+| C halkası (iç) | 1,239 | $2{,}34\times10^{-5}$ | $1{,}17\times10^{-5}$ | $3{,}18\times10^{-2}$ | **%0,074** |
+| B halkası (iç) | 1,527 | $1{,}25\times10^{-5}$ | $6{,}26\times10^{-6}$ | $2{,}10\times10^{-2}$ | **%0,060** |
+| B/A orta | 1,750 | $8{,}32\times10^{-6}$ | $4{,}16\times10^{-6}$ | $1{,}60\times10^{-2}$ | **%0,052** |
+| A halkası (dış) | 2,269 | $3{,}82\times10^{-6}$ | $1{,}91\times10^{-6}$ | $9{,}49\times10^{-3}$ | **%0,040** |
+| F halkası | 2,326 | $3{,}54\times10^{-6}$ | $1{,}77\times10^{-6}$ | $9{,}03\times10^{-3}$ | **%0,039** |
 
 **İki okuma:**
 
-1. **F5, halka kuşağı boyunca $J_2$ kanalının %0,048–0,101'idir.** Küçük ama sıfır değil, ve *radyal olarak yapılandırılmış*: pay $(R_e/r)$ ile **içe doğru artar** — D halkasında A halkasının iki katı. En güçlü sinyal en iç halkalarda beklenir.
-2. **Mutlak büyüklük $\delta\nu/\nu = 2{,}2\times10^{-6}$–$2{,}0\times10^{-5}$**'tür. Bükülme dalgası rezonans konumları Satürn halkalarında km mertebesinde ölçülür ($\delta r/r\sim10^{-5}$); iç halkalardaki $2\times10^{-5}$'lik frekans kayması bu hassasiyetin **ancak iki katıdır**, dış halkalarda ise altına iner. Sınav bu yüzden yürütülebilir durumdadır ama marjı dardır — ve ya F5 görülür, ya $\kappa_5$ bir mertebe daha aşağı iner. *(Ölçüm C ve D halkalarına ağırlık vermeli, dış halkaları dışarıda bırakmalıdır.)*
+1. **F5, halka kuşağı boyunca $J_2$ kanalının %0,039–0,082'sidir.** Küçük ama sıfır değil, ve *radyal olarak yapılandırılmış*: pay $(R_e/r)$ ile **içe doğru artar** — D halkasında A halkasının iki katı. En güçlü sinyal en iç halkalarda beklenir.
+2. **Mutlak büyüklük $\delta\nu/\nu = 1{,}8\times10^{-6}$–$1{,}6\times10^{-5}$**'tür. Bükülme dalgası rezonans konumları Satürn halkalarında km mertebesinde ölçülür ($\delta r/r\sim10^{-5}$); iç halkalardaki $1{,}6\times10^{-5}$'lik frekans kayması bu hassasiyetin **ancak 1,6 katıdır**, dış halkalarda ise altına iner. Sınav bu yüzden yürütülebilir durumdadır ama marjı dardır — ve ya F5 görülür, ya $\kappa_5$ bir mertebe daha aşağı iner. *(Ölçüm C ve D halkalarına ağırlık vermeli, dış halkaları dışarıda bırakmalıdır.)*
 
 ### Sınav protokolü (yürütülmeyi bekliyor)
 
 > **Sınav 11.4-A · Halka bükülme dalgalarında tek-parite artığı.**
 > **Yöntem:** Satürn'ün ölçülü bükülme-dalgası ve düğüm-rezonans yarıçapları, (i) yalnız çift üsler ($J_2,J_4,J_6,J_8$) ve (ii) çift üsler + tek bir $(R_e/r)^3$ terimi ile uyumlanır. İkinci uyumlamanın $\chi^2$ kazancı ve $(R_e/r)^3$ katsayısının işareti okunur.
-> **Öngörü:** Katsayı **pozitif** olmalıdır (F5 dikey geri çağırmayı *artırır*, düzlemi sıkılaştırır) ve değeri $\hat{\mathcal{Q}}_{et} = \mathbf{5{,}5\times10^{-5}}$ (referans üst sınır $\kappa_5=2{,}1\times10^{-3}$ ile; bant yok — metalik-faz belirsizliği 11.4.1-(5)'te karantinaya alındı) civarında çıkmalıdır.
+> **Öngörü:** Katsayı **pozitif** olmalıdır (F5 dikey geri çağırmayı *artırır*, düzlemi sıkılaştırır) ve değeri $\hat{\mathcal{Q}}_{et} = \mathbf{4{,}5\times10^{-5}}$ (referans üst sınır $\kappa_5=2{,}1\times10^{-3}$ ile; bant yok — metalik-faz belirsizliği 11.4.1-(5)'te karantinaya alındı) civarında çıkmalıdır.
 > **Yanlışlanma:** Negatif katsayı veya $\lesssim10^{-5}$ üst sınır. İkinci durumda $\kappa_5\lesssim4\times10^{-4}$ olur ve F5 gözlemsel olarak tamamen susar.
 > **Neden sadece Satürn:** Bükülme dalgalarını çözecek optik derinlikte ve genişlikte halka yalnız Satürn'de vardır (11.4.6).
 
@@ -558,21 +564,21 @@ Soru S4: *halkalar neden Satürn'de belirgin, diğer gaz devlerinde değil?* Cev
 
 | Cisim | $v_e$ (m/s) | $\mathcal{Q}$ | $\mathcal{S}$ | $\phi_{doy}$ | $(R_\phi/R_e)^6$ | $J_2$ | $\mathcal{Q}/J_2$ | $\hat{\mathcal{Q}}_{et}$ | $\mathcal{F}_5(1{,}6R_e)$ | $\mathcal{P}_5(1{,}6R_e)$ |
 |---|---|---|---|---|---|---|---|---|---|---|
-| **Satürn** | 9 962 | **0,1576** | **1,0508** | 0,47 | 0,668 | 0,016291 | **9,68** ① | **$5{,}46\times10^{-5}$** ① | **$1{,}33\times10^{-5}$** ① | **%0,0698** ② |
-| Jüpiter | 12 572 | 0,0892 | 1,0332 | 0,47 | 0,813 | 0,014697 | 6,07 ④ | $3{,}70\times10^{-5}$ ② | $9{,}02\times10^{-6}$ ② | %0,0524 ④ |
-| Uranüs | 2 588 | 0,0295 | 1,0116 | 0,47 | 0,778 | 0,003343 | 8,83 ② | $1{,}15\times10^{-5}$ ③ | $2{,}80\times10^{-6}$ ③ | **%0,0715** ① |
-| Neptün | 2 683 | 0,0261 | 1,0086 | 0,47 | 0,823 | 0,003411 | 7,64 ③ | $1{,}07\times10^{-5}$ ④ | $2{,}60\times10^{-6}$ ④ | %0,0652 ③ |
-| Dünya | 465 | 0,00346 | 1,0017 | **0,70** | 1,000 | 0,001083 | 3,20 ⑤ | $2{,}55\times10^{-6}$ ⑤ | $6{,}23\times10^{-7}$ ⑤ | %0,0490 ⑤ |
+| **Satürn** | 9 962 | **0,1576** | **1,0508** | 0,47 | 0,546 | 0,016291 | **9,68** ① | **$4{,}46\times10^{-5}$** ① | **$1{,}09\times10^{-5}$** ① | %0,0570 ③ |
+| Jüpiter | 12 572 | 0,0892 | 1,0332 | 0,47 | 0,709 | 0,014697 | 6,07 ④ | $3{,}23\times10^{-5}$ ② | $7{,}88\times10^{-6}$ ② | %0,0457 ⑤ |
+| Uranüs | 2 588 | 0,0295 | 1,0116 | 0,47 | 0,743 | 0,003343 | 8,82 ② | $1{,}09\times10^{-5}$ ③ | $2{,}67\times10^{-6}$ ③ | **%0,0682** ① |
+| Neptün | 2 683 | 0,0261 | 1,0086 | 0,47 | 0,795 | 0,003411 | 7,65 ③ | $1{,}03\times10^{-5}$ ④ | $2{,}52\times10^{-6}$ ④ | %0,0630 ② |
+| Dünya | 465 | 0,00346 | 1,0017 | **0,70** | 0,993 | 0,001083 | 3,20 ⑤ | $2{,}53\times10^{-6}$ ⑤ | $6{,}18\times10^{-7}$ ⑤ | %0,0487 ④ |
 
 *(① = sıralamada birinci. $\phi_{doy}$ ve $R_\phi$ **11.4.1-(4)'te iç yoğunluk profilinden türetilmiştir**; $\kappa_5=2{,}1\times10^{-3}$ (11.4.3'ün referans üst sınırı). Satürn dönüş periyodu, 11.2 ve 11.3 ile uyumlu olarak Cassini halka sismolojisinin değeridir (10ˢ 33ᵈ 38ˢⁿ).)*
 
-> **İki sıralamanın başı farklı — ve bu tesadüf değil.** Mutlak ezmede ($\hat{\mathcal{Q}}_{et}$) Satürn birincidir; **payda ($\mathcal{P}_5$) ise Uranüs** (%0,0715 ↔ Satürn %0,0698). Sebep deplasman yüzeyinin derinliğidir: Satürn'ün $R_\phi$'si $0{,}935\,R_e$'de olduğu için $(R_\phi/R_e)^6$ cezasını en çok o öder. İki sıralamanın ayrışması bir zayıflık değil, **ilk gerçek ayırt edici öngörüdür** — aşağıya bakınız.
+> **İki sıralamanın başı farklı — ve bu tesadüf değil.** Mutlak ezmede ($\hat{\mathcal{Q}}_{et}$) Satürn birincidir; **payda ($\mathcal{P}_5$) ise Uranüs** (%0,0682 ↔ Satürn %0,0570). Sebep deplasman yüzeyinin derinliğidir: Satürn'ün $R_\phi$'si ideal küre içinde en derinde, üstelik gövdesi en basık olduğu için $(R_\phi/R_e)^6$ cezasını iki koldan da en çok o öder ($0{,}904\,R_e$). İki sıralamanın ayrışması bir zayıflık değil, **ilk gerçek ayırt edici öngörüdür** — aşağıya bakınız.
 
 ### Üç ayrı ifade, tek sonuç
 
 **(i) Mutlak ezme sıralaması, halka sahibi gezegenleri seçer.** $\hat{\mathcal{Q}}$: Satürn $>$ Jüpiter $>$ Uranüs $>$ Neptün $\gg$ Dünya. Halka sistemi olan **dört gezegen listenin ilk dördüdür**; Dünya beşinciye 6 kat aşağıda düşer ve Mars, Venüs ($\mathcal{Q}\sim10^{-5}$–$10^{-8}$) tabloya girmez bile. Bu, F5'in halka için **gerekli koşulu** kurduğunun kaydıdır.
 
-**(ii) Pay sıralaması: Satürn ile Uranüs başa baş — ve bunun sebebi $\phi$ türetiminden çıktı.** $\mathcal{P}_5$ iki zıt çarpanın ürünüdür:
+**(ii) Pay sıralamasında Satürn birinci değildir — ve sebebi deplasman yüzeyinin türetiminden çıkar.** $\mathcal{P}_5$ iki zıt çarpanın ürünüdür:
 
 $$\mathcal{P}_5 \;\propto\; \underbrace{\frac{\mathcal{Q}}{J_2}}_{\text{dönüşün figüre soğurulmayan payı}}\;\times\;\underbrace{\left(\frac{R_\phi}{R_e}\right)^{6}}_{\text{deplasman yüzeyinin derinlik cezası}}$$
 
@@ -580,17 +586,17 @@ Birinci çarpanda Satürn açık birincidir:
 
 > **Satürn, dönüşünü kendi figürüne en az soğuran gezegendir.** $J_2/\mathcal{Q}$ hidrostatik figür tepki fonksiyonudur ve merkezî yoğunlaşmayla azalır: Dünya 0,313 · Jüpiter 0,165 · Neptün 0,131 · Uranüs 0,113 · **Satürn 0,103**. Satürn en yoğunlaşmış devdir (en düşük ortalama yoğunluk, en kalın H/He zarfı), dolayısıyla dönüş sinyalinin en büyük kesri **maddede değil ortamda** kalır.
 
-İkinci çarpanda ise Satürn **son**dur: en düşük ortalama yoğunluğa sahip olduğu için deplasman doygunluğuna en derinde ulaşır ($R_\phi=0{,}935\,R_e$; Neptün'de $0{,}968$) ve $(R_\phi/R_e)^6$ cezası en büyüktür ($0{,}668$ ↔ $0{,}823$). İki çarpan neredeyse tam olarak birbirini götürür:
+İkinci çarpanda ise Satürn **son**dur, hem de iki kez: en düşük ortalama yoğunluğa sahip olduğu için deplasman doygunluğuna ideal küre içinde **en derinde** ulaşır ($R_\phi/R_{ort}=0{,}9356$; Neptün'de $0{,}9679$), **ve** en basık dev olduğu için hacim eşdeğerlik çarpanı da onu en çok aşağı çeker ($(1-f)^{1/3}=0{,}9662$ ↔ Neptün $0{,}9943$). İki etki birleşince $(R_\phi/R_e)^6$ cezası belirgin biçimde en büyüktür ($0{,}546$ ↔ $0{,}795$) ve Satürn'ün $\mathcal{Q}/J_2$ üstünlüğünü fazlasıyla yer:
 
 | | Satürn | Uranüs | Neptün | Jüpiter | Dünya |
 |---|---|---|---|---|---|
-| $\mathcal{P}_5(1{,}6R_e)$ | %0,0698 | **%0,0715** | %0,0652 | %0,0524 | %0,0490 |
+| $\mathcal{P}_5(1{,}6R_e)$ | %0,0570 | **%0,0682** | %0,0630 | %0,0457 | %0,0487 |
 
-> **Dürüst kayıt — bu sıralama sağlam değildir.** Satürn ile Uranüs arasındaki fark **%2**'dir ve $\phi$'nin metalik/iyonik faz belirsizliği (11.4.1-(4)'ün bandı, $\pm$%40) bunun on katıdır. Doğru ifade: **Satürn, Uranüs ve Neptün pay bakımından başa baştır; Jüpiter ve Dünya belirgin biçimde altta.** Pay sıralamasında tek bir birinci ilan edilemez — $\phi$'nin türetimi bu ayrımı taşıyacak hassasiyette değildir.
+> **Dürüst kayıt — sıralama sağlam, mutlak değerler değil.** Payda **Uranüs birincidir** (%0,0682), Neptün ikinci (%0,0630), Satürn üçüncü (%0,0570); Jüpiter ve Dünya altta kalır. Sıralamanın kendisi $\phi_{doy}$'un ortak çarpan olması sayesinde sağlamdır — beş gövdede de aynı değer kullanıldığı için oranlarda sadeleşir. **Mutlak değerler ise sağlam değildir**: $\phi$'nin faz bandı ($\pm$%6) ve $\mathcal{A}$–$\kappa_5$ belirsizliği hepsini birlikte kaydırır. Satürn'ün payda üçüncü, mutlak ezmede ($\hat{\mathcal{Q}}$) birinci olması bir çelişki değil, iki farklı sorunun iki farklı cevabıdır.
 >
-> **Ve bu bir kayıp değil — kitabın ilk gerçek *ayırt edici* F5 öngörüsüdür.** İki çarpanın birbirini götürmesi tesadüf değil: yoğunluk hem $\mathcal{Q}/J_2$'yi yükseltir hem $R_\phi$'yi derinleştirir. Sonuç, F5'in payının **gezegenden gezegene neredeyse sabit** (%0,049–0,072) olmasıdır. Standart fizikte $J_2$ payı böyle bir evrensellik göstermez. Yani F5 varsa, dört devin bükülme dalgalarında **birbirine yakın** bir $(R_e/r)^3$ katsayısı çıkmalıdır; farklı çıkarsa $\phi$'nin faz kuralı yanlıştır.
+> **Ve bu bir kayıp değil — kitabın ilk gerçek *ayırt edici* F5 öngörüsüdür.** İki çarpanın birbirini götürmesi tesadüf değil: yoğunluk hem $\mathcal{Q}/J_2$'yi yükseltir hem $R_\phi$'yi derinleştirir. Sonuç, F5'in payının **gezegenden gezegene 1,5 kat içinde kalması**dır (%0,046–0,068). Standart fizikte $J_2$ payı böyle bir evrensellik göstermez. Yani F5 varsa, dört devin bükülme dalgalarında **birbirine yakın** bir $(R_e/r)^3$ katsayısı çıkmalıdır; farklı çıkarsa $\phi$'nin faz kuralı yanlıştır.
 
-**(iii) Ve yalnız Satürn'de okunabilir.** F5'in imzası (11.4.4) bükülme dalgası rezonans konumlarından okunur; bu, optik olarak kalın, radyal olarak geniş ve dalga taşıyan bir disk gerektirir. Jüpiter'in ana halkası ($\tau\sim10^{-6}$, toz), Uranüs'ün dar halkaları ve Neptün'ün yaylar hâlindeki halkaları bu ölçümü kaldırmaz. Ölçülebilirlik farkı $\hat{\mathcal{Q}}$'nun 1,8 katı değil, **$10^3$–$10^5$ katıdır** ve F5'ten değil, halkanın kendi optik derinliğinden gelir.
+**(iii) Ve yalnız Satürn'de okunabilir.** F5'in imzası (11.4.4) bükülme dalgası rezonans konumlarından okunur; bu, optik olarak kalın, radyal olarak geniş ve dalga taşıyan bir disk gerektirir. Jüpiter'in ana halkası ($\tau\sim10^{-6}$, toz), Uranüs'ün dar halkaları ve Neptün'ün yaylar hâlindeki halkaları bu ölçümü kaldırmaz. Ölçülebilirlik farkı $\hat{\mathcal{Q}}$'nun 1,4 katı değil, **$10^3$–$10^5$ katıdır** ve F5'ten değil, halkanın kendi optik derinliğinden gelir.
 
 ### Dürüst sınır — F5 halkaların *parlaklığını* açıklamaz
 
@@ -932,7 +938,7 @@ Ve burada belirleyici bir olgu devreye girer: **Oort limiti Güneş komşuluğun
 | 0,50 | $1{,}6\times10^{-3}$ | 1,3 kat sıkı |
 | 0,70 | $1{,}2\times10^{-3}$ | 1,8 kat sıkı |
 
-**Sonuç: Oort limiti bağlayıcı sınır değildir.** Güneş çemberinde $\mathcal{A}\lesssim0{,}3$ olduğu sürece Ay'ın düğüm gerilemesi ($\kappa_5\lesssim2{,}1\times10^{-3}$) kitaptaki en sıkı kısıt olarak kalır ve galaktik kanal **hiçbir öngörüyü küçültmez.** Sınav 11.4-A $\hat{\mathcal{Q}}_{et}=5{,}5\times10^{-5}$, $\delta\nu/\nu=2{,}0\times10^{-5}$ ile ayaktadır; 11.4-B 0,10 mas/yıl ile LLR eşiğindedir.
+**Sonuç: Oort limiti bağlayıcı sınır değildir.** Güneş çemberinde $\mathcal{A}\lesssim0{,}3$ olduğu sürece Ay'ın düğüm gerilemesi ($\kappa_5\lesssim2{,}1\times10^{-3}$) kitaptaki en sıkı kısıt olarak kalır ve galaktik kanal **hiçbir öngörüyü küçültmez.** Sınav 11.4-A $\hat{\mathcal{Q}}_{et}=4{,}5\times10^{-5}$, $\delta\nu/\nu=1{,}6\times10^{-5}$ ile ayaktadır; 11.4-B 0,10 mas/yıl ile LLR eşiğindedir.
 
 > **$\mathcal{A}$ neden bu işi yapıyor.** Tesadüf değil, yapısal: $\mathcal{F}_5\propto\mathcal{A}$, yani **F5 ancak F4'ün güçlü olduğu yerde güçlüdür** — ikisi aynı deplasman basıncının iki izdüşümü olduğu için zorunlu. Oort limiti baryon-baskın iç diskte ölçülür (F4 zayıf ⟹ F5 zayıf ⟹ kısıt gevşek); §6.5.4.1'in $h=$ sabit koşuluna ihtiyacı ise F4'ün $1/R$ rejiminin işlediği dış diskte doğar (F4 güçlü ⟹ F5 güçlü ⟹ mekanizma var). **Aynı $\mathcal{A}(R)$ profili iki zıt ihtiyacı birlikte karşılıyor ve arada tek bir ayar yok.**
 
@@ -1009,9 +1015,9 @@ Sağlanırsa yörünge **zorlanmış düzleme** (F5'in düzlemi) sönümlenir; s
 | 8 | **Korunumlu kuvvet teoremi:** $h=\sigma_z/\nu$ — kuvvetler $\nu$'yü, enerji bütçesi $\sigma_z$'yi belirler. $\Psi_5$ potansiyeli olduğu için F5 tek başına inceltemez; aynısı Kepler ve $J_2$ için de geçerli | **[T]** |
 | 9 | Halka inceliği çarpışmalı sönümdendir; F5'in payı 10 metrede 0,1 mm altında | **[T]** |
 | 10 | $\mathcal{Q}/J_2$ = dönüşün figüre soğurulmayan payı; Satürn birinci (9,68) | **[T]** |
-| 11 | $\mathcal{P}_5$ gezegenden gezegene yakın-sabit (%0,049–0,072): $\mathcal{Q}/J_2$ ile $(R_\phi/R_e)^6$ birbirini götürür — $J_2$ kanalının göstermediği bir evrensellik | **[T]** · ayırt edici öngörü |
+| 11 | $\mathcal{P}_5$ gezegenden gezegene 1,5 kat içinde (%0,046–0,068): $\mathcal{Q}/J_2$ ile $(R_\phi/R_e)^6$ büyük ölçüde birbirini götürür — $J_2$ kanalının göstermediği bir evrensellik. Payda birinci **Uranüs**, mutlak ezmede **Satürn** | **[T]** · ayırt edici öngörü |
 | 12 | **$\phi$ iç yoğunluk profilinden türetildi:** $\phi(\rho)=\min(\rho/\rho_*,\phi_{doy})$; $\rho_*$ dışlanan hacimden, $\phi_{doy}$ **fazdan**. Su ve manto üzerinde $\pm$%13 kalibre. $\phi_\oplus=0{,}70$, $\phi_{Satürn}=0{,}45\pm0{,}03$ | **[T]** |
-| 13 | **Deplasman yüzeyi $R_\phi$** — F5'in dış alan sınır koşulunun kurulduğu derinlik; Satürn $0{,}935R_e$, Jüpiter $0{,}966$, Uranüs $0{,}959$, Neptün $0{,}968$; karasal cisimlerde $R_e$ | **[T]** · yeni kavram |
+| 13 | **Deplasman yüzeyi $R_\phi$ ve referans yarıçapın türetimi.** Basıklığın *nedenini* arayan hesap basılmış gövdenin $R_e$'sini kullanamaz; başlangıç hacmi eşdeğer **ideal küredir** ($R_{ort}=R_e(1-f)^{1/3}$). Zincir: $R_\phi/R_e=(R_\phi/R_{ort})\cdot(1-f)^{1/3}$ — Satürn $0{,}9040$, Jüpiter $0{,}9444$, Uranüs $0{,}9516$, Neptün $0{,}9624$; doygun yüzeyli gövdede çarpan $(1-f)^2$ | **[T]** · serbest parametre yok |
 | 14 | Metalik/plazma fazda $\phi=1-\delta$, $\delta\lesssim10^{-13}$; iyonizasyon $\phi$'yi **artırır** ve geçiş süreklidir | **[T]** |
 | 15 | **$10^{28}$'lik kanal ayrımı:** M-43'ün $v^4$ bastırması + DY-2'nin kayma yasası ⟹ ortam kuplajı yörünge kanalında dikey kanaldan $1{,}5\times10^{28}$ kat etkin ($r_t$ sadeleşir, parametresiz) | **[T]** |
 | 16 | Ortamın orbital torku **daima dışa**dır ⟹ halka yağmuru bu kanalın işi değildir; standart mekanizmalardan ayrışma yönden ve profilden gelir, tanecik boyundan değil | **[T]** |
@@ -1042,7 +1048,7 @@ Sağlanırsa yörünge **zorlanmış düzleme** (F5'in düzlemi) sönümlenir; s
 
 | # | Sınav | Durum |
 |---|---|---|
-| **11.4-A** | Satürn bükülme dalgalarında tek-parite $(R_e/r)^3$ artığı; öngörülen katsayı $\hat{\mathcal{Q}}_{et}=5{,}5\times10^{-5}$ | Veri hazır (Cassini); analiz yapılmadı. **F5'in ilk yürütülebilir doğrudan sınavı** |
+| **11.4-A** | Satürn bükülme dalgalarında tek-parite $(R_e/r)^3$ artığı; öngörülen katsayı $\hat{\mathcal{Q}}_{et}=4{,}5\times10^{-5}$ | Veri hazır (Cassini); analiz yapılmadı. **F5'in ilk yürütülebilir doğrudan sınavı** |
 | **11.4-B** | Ay'ın düğüm artığında **0,10 mas/yıl** bileşeni (LLR, 50+ yıllık seri) | Öngörü eşikte |
 | **11.4-C** | 45° enlem sırtı: gaz devi atmosferlerinde orta enlem akış deseni, Dünya mantosunda gerilme imzası | Aranmadı |
 | **11.4-D** | Saydam iletkende Fizeau: ara bölge taşıyıcı yoğunluğu $n_c\gtrsim6{,}8\times10^{27}$ m⁻³'yi geçince $f>1-1/n^2$. En iyi şeffaf iletken oksitler eşiğin 7 kat altında ⟹ onlarda etki beklenmez | Metal/plazma $\phi\to1$ tezinin tek laboratuvar sınavı |
@@ -1067,7 +1073,7 @@ Sağlanırsa yörünge **zorlanmış düzleme** (F5'in düzlemi) sönümlenir; s
 
 Bölümü kapatmadan önce, 11.4.7'nin bıraktığı soru doğrudan sorulmalıdır: **F5 halkanın nerede başlayıp nerede bittiğini belirler mi?** Cevap hayırdır, ve gerekçesi üç kalemde niceldir. Kalem, 11.4.10'un açık kalemler listesinde **11.4-i** olarak zaten kayıtlıdır; burada yalnız sınırın nereden geldiği gösterilir.
 
-**1. Dış sınır Roche kuşağıdır ve F1'in hanesindedir.** A halkasının dış kenarı ($2{,}269\,R_e$), kütle-itim gradyanının bir gövdeyi kendi bağından hızlı ayırdığı yarıçaptır — 11.4.7'de hesaplandı: $r_{Roche}=2{,}23\,R_e$, gözlenenle **%2 içinde**. Bu sınır tümüyle F1'in ve taneciklerin kendi bağının işidir. F5'in oradaki katkısı $\mathcal{F}_5=4{,}7	imes10^{-6}$'dır, yani Kepler geri çağırmasının milyonda beşi; radyal bir bağ kurma ya da koparma kapasitesi yoktur.
+**1. Dış sınır Roche kuşağıdır ve F1'in hanesindedir.** A halkasının dış kenarı ($2{,}269\,R_e$), kütle-itim gradyanının bir gövdeyi kendi bağından hızlı ayırdığı yarıçaptır — 11.4.7'de hesaplandı: $r_{Roche}=2{,}23\,R_e$, gözlenenle **%2 içinde**. Bu sınır tümüyle F1'in ve taneciklerin kendi bağının işidir. F5'in oradaki katkısı $\mathcal{F}_5=3{,}8\times10^{-6}$'dır, yani Kepler geri çağırmasının milyonda dördü; radyal bir bağ kurma ya da koparma kapasitesi yoktur.
 
 **2. İç sınırı da teori koymaz — ve bunu 11.4.8 zaten kapatmıştır.** D halkasının iç kenarında ($1{,}110\,R_e$) madde gezegenin üst atmosferine dökülür (*halka yağmuru*). Ortamın artık kuplajının torku ise **daima dışadır** (DY-2: ortam her yarıçapta maddeyi önden geçer), yani işareti gözlenen akışın tersidir. Dolayısıyla iç sınır Evrenakı kanallarının ürünü olamaz; standart mekanizmalara aittir — manyetosfer–iyonosfer kuplajı, plazma sürüklemesi, mikrometeorit bombardımanı.
 
