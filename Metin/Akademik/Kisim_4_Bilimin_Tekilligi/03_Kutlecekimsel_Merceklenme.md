@@ -107,7 +107,7 @@ Bu astronomik test, öngörünün doğrulanması hâlinde, uzay-zaman eğriliği
 
 ## 4.3.5 Nicel Kestirim (serbest $\chi$ ile): Renksel Sapma Açısı ve $318\ \mu\text{as}$ Fark
 
-Peki bu bükülmenin formülü nedir? Güneş'in radyal basınç gradyanı ($\nabla P_r$) altında ilerleyen Zerre dizisinin sapma açısı ($\theta_{sap}$; eski yazım: $\theta$ — silindirik koordinat açısıyla karışmaması için), yerel ışık hızı frekansa (renge) bağlı olduğu için dalga boyuna bağlıdır. Sayısal kestirimin gerçekte kullandığı parametrizasyon şudur:
+Peki bu bükülmenin formülü nedir? Güneş'in radyal basınç gradyanı ($\nabla P_r$) altında ilerleyen Zerre dizisinin sapma açısı ($\theta_{sap}$ — silindirik koordinat açısı $\theta$ ile çakışmaması için indislenir), yerel ışık hızı frekansa (renge) bağlı olduğu için dalga boyuna bağlıdır. Sayısal kestirimin gerçekte kullandığı parametrizasyon şudur:
 
 $$\theta_{sap}(\lambda) = \theta_{sap,0}\left[1 + \chi\,\frac{\lambda-\lambda_0}{\lambda_0}\right]$$
 

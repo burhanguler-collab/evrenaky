@@ -23,11 +23,11 @@ Kısacası Evrenakı maddeyi uzaktan soyut bir çekim kuvvetiyle hareket ettirme
 | $\rho$ | Evrenakı (Cosmofluid) yoğunluk alanı | 4.2.1 |
 | $\vec{v}$ | Evrenakı hız alanı | 4.2.1 |
 | $P$ | Evrenakı basınç alanı | 4.2.1 |
-| $P_0$ | Derin uzaydaki (arka plan) maksimum basınç (eski yazım: metnin önceki sürümlerinde $P_\infty$ da kullanılıyordu; tek sembolde birleştirildi) | 4.2.3–4.2.4 |
+| $P_0$ | Derin uzaydaki (arka plan) maksimum basınç | 4.2.3–4.2.4 |
 | $S(x,t)$ | Süreklilik denklemindeki kaynak/kuyu terimi | 4.2.2 |
 | $M$, $m$ | Merkezi kütle ve test kütlesi | 4.2.4 |
 | $\alpha$ | Cosmofluid potansiyel sabiti (boyutu $[\text{s}^{-2}]$) | 4.2.4 |
-| $\gamma_N$ | Cismin akışkanla aerodinamik etkileşim katsayısı ($\gamma_N = N V_n$) (eski yazım: $\gamma$; Kısım 6'daki Lorentz çarpanı $\gamma$ ile karışmaması için $\gamma_N$) | 4.2.4 |
+| $\gamma_N$ | Cismin akışkanla aerodinamik etkileşim katsayısı ($\gamma_N = N V_n$; Kısım 6'daki Lorentz çarpanı $\gamma$ ile çakışmaması için indislenir) | 4.2.4 |
 | $N$, $V_n$, $m_n$ | Nükleon sayısı, tekil nükleon etkileşim hacmi ve kütlesi | 4.2.4 |
 | $\rho_n$ | Nükleon öz yoğunluğu ($m_n / V_n$) | 4.2.4 |
 | $\mathcal{G} = \alpha/\rho_n$ | Türetilen **yerel** kütle-itim katsayısı (yerleşik adıyla kütleçekim "sabiti" $G$) | 4.2.4 |
@@ -58,7 +58,7 @@ Kinematik viskozite sıfıra çok yakın olduğundan ($0 < \mu \ll 1$), viskozit
 $$ \rho \left( \frac{\partial \mathbf{v}}{\partial t} + (\mathbf{v} \cdot \nabla)\mathbf{v} \right) = -\nabla P $$
 
 Bu denklemin sağ tarafı, hareketi dikte eden **Basınç Gradyanını ($-\nabla P$)** ifade eder. Göksel hareketlerin ve yörünge dinamiklerinin itici gücü bu basınç gradyanı vektörüdür.
-Kütle (örneğin Güneş), kendi hacmiyle Evrenakı ortamını dışarıya doğru iter (Deplasman Etkisi). Bu durum, yıldızın merkezinde bir Evrenakı seyrelmesi yaratırken, derin uzayda maksimum arka plan basıncı ($P_0$; eski yazım: $P_\infty$) oluşturur.
+Kütle (örneğin Güneş), kendi hacmiyle Evrenakı ortamını dışarıya doğru iter (Deplasman Etkisi). Bu durum, yıldızın merkezinde bir Evrenakı seyrelmesi yaratırken, derin uzayda maksimum arka plan basıncı ($P_0$) oluşturur.
 
 ## 4.2.4 "Kütleçekim Sabiti" ($G$)'nin Doğası: Basınç Alanı Çözümü ve Yerel $\mathcal{G}$
 *(Bu türetim, katalogda **M-28** olarak numaralanmıştır; boyut analizi ve kuyu-konvansiyonlu yazımı için oraya bakınız.)*
@@ -75,7 +75,7 @@ Burada $P_0$ derin uzaydaki (arka plan) maksimum Evrenakı basıncını, $\alpha
 Bu basınç alanının gradyanını alırsak, merkeze doğru iten vektörel basıncı buluruz:
 $$ \nabla P = \frac{\alpha M}{r^2} $$
 
-Sistemdeki bir test parçacığının (örneğin gezegenin) Cosmofluid ile aerodinamik etkileşim/sürtünme (drag) katsayısına $\gamma_N$ dersek (eski yazım: $\gamma$; Kısım 6'daki Lorentz çarpanı $\gamma$ ile karışmaması için $\gamma_N$), parçacığa etkiyen kuvvet doğrudan bu basınç gradyanından türer ($\vec{F} = - \gamma_N \nabla P$):
+Sistemdeki bir test parçacığının (örneğin gezegenin) Cosmofluid ile aerodinamik etkileşim/sürtünme (drag) katsayısına $\gamma_N$ dersek (Kısım 6'daki Lorentz çarpanı $\gamma$ ile çakışmaması için indislenir), parçacığa etkiyen kuvvet doğrudan bu basınç gradyanından türer ($\vec{F} = - \gamma_N \nabla P$):
 $$ \mathbf{F} = -\gamma_N \frac{\alpha M}{r^2} \mathbf{\hat{r}} $$
 
 Burada nesnenin efektif aerodinamik kesit/sürtünme katsayısı $\gamma_N$, onu oluşturan nükleonların (proton/nötron) toplam etkileşim hacmiyle doğru orantılıdır ($\gamma_N = N V_n$). Nesnenin kütlesi ise nükleon sayısı ile tekil nükleon kütlesinin çarpımıdır ($m = N m_n$). Dolayısıyla sürtünme katsayısının cismin kütlesine oranı, nükleon öz yoğunluğunun ($\rho_n = m_n / V_n$) tersine eşittir:

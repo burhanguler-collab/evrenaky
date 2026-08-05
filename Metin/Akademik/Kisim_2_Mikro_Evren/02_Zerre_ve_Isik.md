@@ -28,7 +28,7 @@ kadardır — pinpon topunun bovling topuna çarpması gibi, mermi enerjisinin n
 
 $$\Phi + E_{ke} = N \cdot \eta \cdot \frac{1}{2} m_z \left(c^2 + k_a \cdot v_{cev}^2\right)$$
 
-Burada $N$, rezonans penceresindeki (sökülme anına kadarki) ardışık mermi sayısı; $\eta$, yukarıda tanımlanan tek-vuruş aktarım verimi; $v_{cev}$, tüm Zerreler için evrensel sabit olan **ekvatoral (çevresel) hız**; $k_a$ ise Zerre'nin kütle dağılım geometrisine bağlı **atalet katsayısıdır** (homojen katı bir küre için $k_a = 2/5$; eski yazım: $k$ — Ek B.3'ün eşlik oranı $k$'sıyla karışmaması için ayrıldı). Parantez içindeki toplam, her Zerre'nin öteleme ($\tfrac{1}{2}m_z c^2$) ve dönme ($\tfrac{1}{2}k_a\, m_z v_{cev}^2$) enerjilerinin birlikte taşındığını ifade eder. *(tam türetim ve sayısal zincir: **Ek M-10**)*
+Burada $N$, rezonans penceresindeki (sökülme anına kadarki) ardışık mermi sayısı; $\eta$, yukarıda tanımlanan tek-vuruş aktarım verimi; $v_{cev}$, tüm Zerreler için evrensel sabit olan **ekvatoral (çevresel) hız**; $k_a$ ise Zerre'nin kütle dağılım geometrisine bağlı **atalet katsayısıdır** (homojen katı bir küre için $k_a = 2/5$; Ek B.3'ün eşlik oranı $k$'sıyla çakışmaması için indislenir). Parantez içindeki toplam, her Zerre'nin öteleme ($\tfrac{1}{2}m_z c^2$) ve dönme ($\tfrac{1}{2}k_a\, m_z v_{cev}^2$) enerjilerinin birlikte taşındığını ifade eder. *(tam türetim ve sayısal zincir: **Ek M-10**)*
 
 **Sayısal çözüm:** Postülat 4'ün evrensel $m_z$ değeriyle tek Zerre'nin öteleme enerjisi $\tfrac{1}{2}m_z c^2 \approx 4.1$ eV'dir; tipik bir sökme işlemi için gereken vuruş sayısı $N \approx 1.5 \times 10^4$ mertebesindedir ve morötesi ışığın vuruş ritminde bu birikim yaklaşık on pikosaniyede tamamlanır. *(adım adım hesap: **Ek M-10**)*
 
@@ -36,7 +36,7 @@ Burada $N$, rezonans penceresindeki (sökülme anına kadarki) ardışık mermi 
 
 **Zerrenin Nümerik Boyutları:**
 Teorinin 4. Postülasında sabitlendiği üzere, Zerreler sıradan elektron veya protonlardan bile küçüktür; ancak atom çekirdeğiyle (nükleon) aynı aşırı sıkışmış girdap fazına sahiptirler. Bu nedenle Zerre'nin öz yoğunluğu, çekirdek yoğunluğuna eşittir:
-* **Öz Yoğunluk ($\rho_n$; eski yazım: $\rho_z$ — Zerre ve nükleon öz yoğunluğu aynı evrensel sabittir):** $\approx 2.7 \times 10^{17} \text{ kg/m}^3$
+* **Öz Yoğunluk ($\rho_n$ — Zerre ve nükleon öz yoğunluğu aynı evrensel sabittir):** $\approx 2.7 \times 10^{17} \text{ kg/m}^3$
 * **Kütle ($m_z$):** $\approx 1.47 \times 10^{-35} \text{ kg}$
 
 Bu iki temel veriden yola çıkarak Zerre'nin fiziksel **hacmini ($V_z$)** ve yarıçapını kesin bir Newtonyen mantıkla ($V = m/\rho$) hesaplayabiliriz:

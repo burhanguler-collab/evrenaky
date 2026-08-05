@@ -30,7 +30,7 @@ $c$ evrensel bir sabit değil, **yerel ve türetilmiş** bir büyüklüktür; ar
 - **Oran biçimi ($c^2 = P/\rho$) resmî biçimdir** ve kitap boyunca kullanılır. Diferansiyel biçim yalnızca kararlılık argümanlarında (M-9) geçer ve **oran biçiminden türetilir, ona eşit değildir.** Eşlik oranının tanımı ($\delta\rho/\rho_0 = k\,\delta P/P_0$, Ek B.3) integre edilince $\rho \propto P^{k}$, yani $P \propto \rho^{1/k}$ elde edilir; buradan
 $$\frac{dP}{d\rho} = \frac{1}{k}\cdot\frac{P}{\rho} = \frac{c^2}{k}$$
   İki biçim yalnız $k=1$'de özdeştir ($P\propto\rho$); $k<1$ olduğu sürece diferansiyel biçim daima **$1/k$ kat büyüktür.** Bu ayrışma genliğe değil yalnız $k$'ya bağlıdır — sabit $k$ için her sıkışma genliğinde aynı çarpanla geçerlidir. Kitabın bütün fenomenolojisinde (Yön Kuralı, $P_0$ sabitlemesi, kızıla kayma) oran biçimi esas alınır.
-  *(Düzeltme kaydı, 28 Temmuz 2026: bu maddenin önceki sürümü $P\propto\rho$ hâlini $k\ll1$ ile eşliyordu; doğrusu $k=1$'dir. Etiket karışıklığı M-9'un kararlılık çekincesine taşınmıştı, orada da giderildi.)*
+  *(Etiket uyarısı: $P\propto\rho$ hâli $k=1$'e karşılık gelir, $k\ll1$'e değil. M-9'un kararlılık çekincesi de bu etiketle okunur.)*
 - Yasa, Zerre'nin *çizgisel öteleme* hızını sınırlar; kohezyon kanalının elastik sinyal hızını ($v_m$, M-5) sınırlamaz. $c$ mutlak bir üst sınır değildir (Postülat 4).
 
 ### Açık Uçlar
@@ -230,7 +230,7 @@ $\Sigma$ şu an yalnızca alttan sınırlıdır (Bell deneyleri üzerinden, bkz.
 ### Varsayımlar
 1. Sürekli ortamlar mekaniğinde iki bağımsız sinyal kanalı vardır: **sıkışma** (hız: $\sqrt{dP/d\rho}$) ve **kesme/gerilme** (hız: $\sqrt{G_s/\rho}$, $G_s$: kesme modülü).
 2. Evrenakı'da sıkışma kanalının direnci $P_0$ (ve eşlik oranı $k$), kesme/kohezyon kanalının direnci $\Sigma$'dır (M-4). İki kanal **bağımsız modüllerden** beslenir; bu bağımsızlık aşağıdaki türetimin dayanağıdır.
-   *(Düzeltme kaydı, 28 Temmuz 2026: bu varsayımın önceki sürümü "sıkışma kanalının hızı $c$'dir" diyordu. Doğrusu $\sqrt{dP/d\rho} = c/\sqrt{k}$'dır — M-9. $c=\sqrt{P/\rho}$ Zerre'nin **öteleme** sınırıdır, ortamın akustik dalga hızı değil; M-1'in Geçerlilik Sınırı bu ayrımı kurar. Aşağıdaki $v_m$ türetimi bu düzeltmeden **etkilenmez**, çünkü yalnız $\rho_0=P_0/c^2$ oran biçimini kullanır.)*
+   *(Kanal ayrımı: sıkışma kanalının hızı $\sqrt{dP/d\rho} = c/\sqrt{k}$'dır — M-9. $c=\sqrt{P/\rho}$ Zerre'nin **öteleme** sınırıdır, ortamın akustik dalga hızı değil; M-1'in Geçerlilik Sınırı bu ayrımı kurar. Aşağıdaki $v_m$ türetimi ayrımdan **etkilenmez**, çünkü yalnız $\rho_0=P_0/c^2$ oran biçimini kullanır.)*
 
 ### Adımlar
 1. Kohezyon kanalının elastik sinyal hızı, kesme-hızı formunun $G_s \to \Sigma$ karşılığıdır:

@@ -26,14 +26,14 @@ Teoride madde, içinde vakum cebi (yırtık) taşıyan ve dengede dönen bir gir
 
 $$P(r)=P_0-\tfrac{1}{2}\rho_0\, v_\theta^2(r)$$
 
-Cep duvarında ($r=r_{cep}$; vakum cebi yarıçapı — eski yazım: $a$) basınç, cebin iç basıncına (vakum, $P\approx0$) inmek zorundadır:
+Cep duvarında ($r=r_{cep}$; vakum cebi yarıçapı) basınç, cebin iç basıncına (vakum, $P\approx0$) inmek zorundadır:
 
 $$P_0-\tfrac{1}{2}\rho_0\, v_{duvar}^2=0 \;\;\Longrightarrow\;\; v_{duvar}=\sqrt{\frac{2P_0}{\rho_0}}=\boxed{\sqrt{2}\,c\approx 4{,}24\times10^8\ \text{m/s}}$$
 
 Bu sonucun üç kritik özelliği vardır:
 
 1. **Evrensellik.** $v_{duvar}=\sqrt{2}\,c$ sonucu cebin yarıçapına bağlı değildir; sirkülasyon $\Gamma$ yalnızca cebin *boyutunu* belirler ($r_{cep}=\Gamma/2\pi\sqrt{2}c$), duvar hızını değil. Üstelik bu bir denge çekim noktasıdır: zarf daha hızlı dönerse cep genişler, genişleyen yarıçapta çevresel hız düşer ve duvar $\sqrt{2}\,c$'ye geri oturur. **Her kararlı vakum-cepli girdap — boyutu ne olursa olsun — duvarını tam $\sqrt{2}\,c$'de döndürür.** Tüm nükleonların (ve onlarla aynı sıkışmış girdap fazını taşıyan Zerre'nin) yüzey hızının evrenselliği buradan çıkar.
-2. **Sayısal uyum.** Postülat 5'in bağımsız yoldan (Compton frekansı × proton yarıçapı: $2\pi\nu_c R_p$; proton yarıçapı için $R_p$ — eski yazım: $R$) verdiği kompozit ekvator hızı $\approx5\times10^8$ m/s'dir; türetilen $\sqrt{2}\,c=4{,}24\times10^8$ m/s ile fark ~%18'dir. Ters okuma da tutarlıdır: $\nu=\sqrt{2}c/2\pi R_p$ bağıntısı, $R_p=0{,}84$ fm için $\nu\approx8\times10^{22}$ Hz verir — postüladaki $\sim10^{23}$ Hz ile aynı mertebe. Bu uyum **kesin eşitlik değil, mertebe + $O(1)$ uyumudur:** türetim, sıkıştırılamaz Bernoulli, iki boyutlu ideal girdap ve tam-sıfır cep basıncı varsayımlarını kullanır; sıkıştırılabilirlik (zarf bölgesinde yoğunluk artışı), dört boyutlu çift dönüşün üç boyuta izdüşümü ve zarfın sonlu kalınlığı $O(1)$ düzeltmeler getirir (açık hesap: Bölüm 7.4).
+2. **Sayısal uyum.** Postülat 5'in bağımsız yoldan (Compton frekansı × proton yarıçapı: $2\pi\nu_c R_p$; proton yarıçapı için $R_p$) verdiği kompozit ekvator hızı $\approx5\times10^8$ m/s'dir; türetilen $\sqrt{2}\,c=4{,}24\times10^8$ m/s ile fark ~%18'dir. Ters okuma da tutarlıdır: $\nu=\sqrt{2}c/2\pi R_p$ bağıntısı, $R_p=0{,}84$ fm için $\nu\approx8\times10^{22}$ Hz verir — postüladaki $\sim10^{23}$ Hz ile aynı mertebe. Bu uyum **kesin eşitlik değil, mertebe + $O(1)$ uyumudur:** türetim, sıkıştırılamaz Bernoulli, iki boyutlu ideal girdap ve tam-sıfır cep basıncı varsayımlarını kullanır; sıkıştırılabilirlik (zarf bölgesinde yoğunluk artışı), dört boyutlu çift dönüşün üç boyuta izdüşümü ve zarfın sonlu kalınlığı $O(1)$ düzeltmeler getirir (açık hesap: Bölüm 7.4).
 3. **Zorunluluk.** Protonun ekvator hızının $c$'yi aşması bir istisna ya da savunulması gereken bir pürüz değil, **yapısal bir zorunluluktur.** Duvarı $c$'nin altında dönen bir zarf, cebindeki vakuma karşı gereken basınç açığını ($\tfrac12\rho_0 v^2<P_0$) üretemez ve cep çöker. Kısacası: **yüzeyi $c$-altı hızda dönen madde var olamaz.** Postülat 5'in "ışık hızını aşan ekvator hızı" ifadesi, böylece Kavrama Yasası'nın doğrudan bir sonucu hâline gelir.
 
 #### Ek A.3 — Kavitasyon Eşiği ve Kohezyon Dayanımı ($\Sigma$): Yaratma ile Sürdürme Ayrımı

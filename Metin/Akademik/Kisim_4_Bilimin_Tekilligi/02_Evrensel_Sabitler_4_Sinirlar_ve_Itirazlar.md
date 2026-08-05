@@ -10,7 +10,7 @@ Geliştirilen bu matematiksel model:
 Ancak bilimsel standartlar gereği modelin limitleri dikkate alınmalıdır:
 * Klasik Görelilik (Relativity) teorisinin soyut uzay-zaman geometrisinin, Evrenakı'nın somut hidrodinamik stres tensörlerine (matematiksel tercümesine) dönüştürülmesi üzerine daha fazla analitik çalışma yapılmalıdır.
 * İleri sürülen hidrodinamik etkiler, bağımsız kozmolojik gözlemlerle test edilmelidir.
-* $\alpha$ ve $\gamma_N$ (eski yazım: $\gamma$) gibi parametrelerin fiziksel doğası daha detaylı analitik modellere oturtulmalıdır.
+* $\alpha$ ve $\gamma_N$ gibi parametrelerin fiziksel doğası daha detaylı analitik modellere oturtulmalıdır.
 
 ## 4.2.13 Özet: Rejim-Bağımlı Fiziksel Çerçeve
 Gözlemlediğimiz yörünge mekaniği, içinde bulunduğumuz Evrenakı ölçeğinin yerel bir tepkisidir.
@@ -18,7 +18,7 @@ Gözlemlediğimiz yörünge mekaniği, içinde bulunduğumuz Evrenakı ölçeği
 | **Rejim (Ölçek)** | **Fiziksel Koşul** | **Evrenakı Yoğunluk Profili ($\rho$)** | **Cosmofluid Net Etki Eğilimi** | **Gözlemsel Sonuç** |
 | :--- | :--- | :--- | :--- | :--- |
 | **Güneş Sistemi** | Homojen, Kaynaksız, Radyal Simetrik | $\rho \approx$ Sabit | $F \propto 1/r^2$ (Gauss Yüzey Dağılımı) | Kepler Yörüngeleri |
-| **Spiral Galaksiler** | Bileşik (Rankine-tipi) Girdap, Asimetrik Sürüklenme | $\rho \approx$ Sabit (eski yazım: $\rho_E$; $k \ll 1$; bkz. 4.2.9.2) | iç: $F \propto r$; dış: $F \propto 1/r$ (Logaritmik Çukur) | Yükselen iç kol + Düz Rotasyon Eğrisi |
+| **Spiral Galaksiler** | Bileşik (Rankine-tipi) Girdap, Asimetrik Sürüklenme | $\rho \approx$ Sabit ($k \ll 1$; bkz. 4.2.9.2) | iç: $F \propto r$; dış: $F \propto 1/r$ (Logaritmik Çukur) | Yükselen iç kol + Düz Rotasyon Eğrisi |
 | **Kozmik Ağ** | Global Diverjans, Basınç Gevşemesi | Hacimsel Genleşme | $v \propto r$ (Merkezkaç Genişleme) | Hubble Akışı |
 
 **Sonuç:** Evrenakı modelinde kuvvetler evrensel sabitlerle değil, ortamın yerel dinamiğiyle belirlenir. Sistem, içinde bulunulan Euler ve Süreklilik rejimine göre gözlemlenen itim davranışını otomatik olarak üretir.
@@ -52,7 +52,7 @@ Göktaşları (veya herhangi bir atomik kütle), kendi kütle enerjisiyle hareke
 
 Oysa Zerre'nin (Işığın) kendine ait "canlı" ve tutunmaya dayalı bir hareket mekanizması vardır. Zerre ilerlemek için Evrenakı'ya "diş geçirmek" (grip) zorundadır. Az yoğun bir ortama girdiğinde göktaşının aksine rahatlamaz; tutunmasını kaybeder, doğrusal hızını yitirir ve boşa dönerek **patinaj yapmaya** başlar. Kütleler seyrek uzayda eylemsizliğini korurken, Zerre seyrek uzayda hız kaybına uğrar; göktaşının savrulma katsayısı bozulmazken Zerre'nin hantallığı kırılır ve radyal basıncın mengenesine düşer. Bu mekanizma, kütle ile hidrodinamik Zerre katarı arasındaki en kusursuz ayrım çizgisidir.
 
-**2 çarpanının nicel kaynağı (türetildi).** Bu bölümün önceki sürümü "virajı iki kat keskin döner" ifadesini analojiyle bırakıyordu. Çarpan artık türetilmiştir ve kaynağı, teorinin ölçek yapısıdır (**Ek M-42**): madde ölçeği $\Lambda = 1-\Phi/c^2$ cetvel ve saatleri yönetirken, Zerre'nin arka plandaki yayılma hızı $\Lambda$'nın **karesiyle** ölçeklenir:
+**2 çarpanının nicel kaynağı (türetildi).** "Virajı iki kat keskin döner" ifadesi bir analoji değildir; çarpan türetilmiştir ve kaynağı teorinin ölçek yapısıdır (**Ek M-42**): madde ölçeği $\Lambda = 1-\Phi/c^2$ cetvel ve saatleri yönetirken, Zerre'nin arka plandaki yayılma hızı $\Lambda$'nın **karesiyle** ölçeklenir:
 
 $$c_{loc} = c\,\Lambda^2 \quad\Longrightarrow\quad n_{eff} = \frac{1}{\Lambda^2} = 1 + \frac{2\Phi}{c^2}$$
 

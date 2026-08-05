@@ -180,7 +180,7 @@ Klasik mekanik gök cisimlerinin yörüngelerini tek bir "yerçekimi" vektörü 
   <text x="300" y="380" fill="#9ca3af" font-family="sans-serif" font-size="13" text-anchor="middle">3. Yanal bileşeni (F_x) ise disk boyunca makro kütleye doğru sürekli bir itim uygular.</text>
 </svg>
 </div>
-3. **Radyal (Merkezcil) Etki:** Uzayın yüksek basıncından ($P_0$; eski yazım: $P_\infty$), yıldıza doğru her yönden küresel olarak içe bastıran kuvvetler. *(Kaynak: Makroskobik cisme bakıldığında dönüşten bağımsız görünse de, temelde **kütleyi oluşturan sayısız atom altı parçacığın kendi mikro-dönüşlerinin (kuantum spin/vorteks)** Evrenakı'yı yerel olarak tüketmesiyle/dışlamasıyla oluşan küresel basınç çukuru (sink), $\nabla P_r$)*
+3. **Radyal (Merkezcil) Etki:** Uzayın yüksek basıncından ($P_0$), yıldıza doğru her yönden küresel olarak içe bastıran kuvvetler. *(Kaynak: Makroskobik cisme bakıldığında dönüşten bağımsız görünse de, temelde **kütleyi oluşturan sayısız atom altı parçacığın kendi mikro-dönüşlerinin (kuantum spin/vorteks)** Evrenakı'yı yerel olarak tüketmesiyle/dışlamasıyla oluşan küresel basınç çukuru (sink), $\nabla P_r$)*
 
 <div style="background: #121212; padding: 20px; border-radius: 12px; border: 1px solid #404040; box-shadow: 0 10px 30px rgba(0,0,0,0.8); margin: 20px 0; text-align: center;">
   <h3 style="margin-top: 0; margin-bottom: 20px; color: #fff; font-weight: 600; letter-spacing: 1px; text-shadow: 0 0 10px rgba(0, 229, 255, 0.5);">Animasyon 4.2.3: Mikro Kütleden Makro Kütleye Radyal Etki</h3>
@@ -333,7 +333,7 @@ Klasik mekanik gök cisimlerinin yörüngelerini tek bir "yerçekimi" vektörü 
 
 
 ### 4.2.5.1 Vektörel Gradyan Açılımı
-Bir nesneye etkiyen net itim, basınç gradyanının etkin süpürme hacmiyle çarpımıdır: $\mathbf{F}_{Net} = -\gamma_N\,\nabla P$ ($\gamma_N = NV_n$; eski yazım: $\gamma$; bu ifade, cismin N nükleonunun her birinin kendi konumundaki $V_n\nabla P$ katkısının toplamıdır).
+Bir nesneye etkiyen net itim, basınç gradyanının etkin süpürme hacmiyle çarpımıdır: $\mathbf{F}_{Net} = -\gamma_N\,\nabla P$ ($\gamma_N = NV_n$; bu ifade, cismin N nükleonunun her birinin kendi konumundaki $V_n\nabla P$ katkısının toplamıdır).
 $\nabla P$ vektörünü silindirik koordinatlarda açarsak bu 5 etkinin matematiksel bileşenlerini görürüz:
 $$ \nabla P = \frac{\partial P}{\partial r} \mathbf{\hat{r}} + \frac{1}{r} \frac{\partial P}{\partial \theta} \mathbf{\hat{\theta}} + \frac{\partial P}{\partial z} \mathbf{\hat{z}} $$
 - **Merkezcil Etki:** Denklemin radyal kısmıdır ($\mathbf{\hat{r}}$).

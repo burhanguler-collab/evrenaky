@@ -4,13 +4,13 @@ Bu ek, kitabın tamamında geçerli sembol standardını tanımlar. Her sembol k
 
 ## D.1 Notasyon Kuralları
 
-1. **Tek sembol, tek anlam.** Çakışan tarihsel kullanımlar aşağıdaki tabloda "eski yazım" sütununda kayıtlıdır.
+1. **Tek sembol, tek anlam.** Bir sembol kitabın her yerinde aynı fiziksel büyüklüğü gösterir; standart fizikten gelen bir sembolle çakışma varsa indislenir ve gerekçesi tanımlandığı yerde belirtilir.
 2. **Frekans daima $\nu$** ile gösterilir. $f$ sembolü yalnızca Fizeau sürükleme katsayısı ($f = 1 - 1/n^2$) için ayrılmıştır.
-3. **Kavrama Yasası eşitliktir ve aynı zamanda hâl denklemidir:** $c=\sqrt{P/\rho}$, yani $P=c^2\rho$. Bu, **stiff (Zel'dovich) akışkan** hâl denklemidir ve dalga kanalında geçerlidir (deplasman alanı sabit): $(\partial P/\partial\rho)_\chi=c^2$, dolayısıyla **akustik dalga hızı tam $c$**'dir. Ortamın $c$'yi aşan tepkisi sıkışmada değil **kohezyon kanalındadır** ($v_m$, M-5). *(Ek B.3'ün $k$'sı bu kanala ait değildir; o, sabit yoğunlukta işleyen **deplasman** sürecinin katsayısıdır ve $k=0$'dır — Ek M-44. Bir ara kayıt akustik hızı $c/\sqrt k$ yazıyordu; kategori hatasıydı, düzeltildi.)*
+3. **Kavrama Yasası eşitliktir ve aynı zamanda hâl denklemidir:** $c=\sqrt{P/\rho}$, yani $P=c^2\rho$. Bu, **stiff (Zel'dovich) akışkan** hâl denklemidir ve dalga kanalında geçerlidir (deplasman alanı sabit): $(\partial P/\partial\rho)_\chi=c^2$, dolayısıyla **akustik dalga hızı tam $c$**'dir. Ortamın $c$'yi aşan tepkisi sıkışmada değil **kohezyon kanalındadır** ($v_m$, M-5). *(Ek B.3'ün $k$'sı bu kanala ait değildir; o, sabit yoğunlukta işleyen **deplasman** sürecinin katsayısıdır ve $k=0$'dır — Ek M-44. Akustik hızı $c/\sqrt k$ biçiminde yazmak kategori hatasıdır.)*
 4. **İşaret (kuyu) konvansiyonu:** Kütle çevresinde $dP/dr > 0$; itim ivmesi $\vec a = -\tfrac{1}{\rho_n}\nabla P$. $\nabla P$ tek başına "kuvvet" değildir; kuvvet $-\nabla P$ yönündedir. Skaler basınç farkı $\Delta P$ ile yazılır.
-5. **Arka plan basıncı:** $P_0 = \tfrac14\rho_n c^2 = 6{,}07\times10^{33}$ Pa. Türetim zincirinde genel biçim $\tfrac{1-k}{4}\rho_nc^2$ yazılabilir, ama **$k=0$ artık türetilmiştir** (deplasman süreci yoğunluğu korur — Ek M-44), dolayısıyla sonuç kesindir; "$k$'ya duyarlı" kaydı geçersizdir. (Formülün $\tfrac{1-k}{2}$'li eski hâli, $\delta c/c=\delta f/f$ varsayımına dayanıyordu; ölçek yapısı $\delta c/c = 2\,\delta f/f$ verdiği için 1/4'e indi — bkz. Ek M-42.)
+5. **Arka plan basıncı:** $P_0 = \tfrac14\rho_n c^2 = 6{,}07\times10^{33}$ Pa. Türetim zincirinde genel biçim $\tfrac{1-k}{4}\rho_nc^2$ yazılabilir, ama **$k=0$ artık türetilmiştir** (deplasman süreci yoğunluğu korur — Ek M-44), dolayısıyla sonuç kesindir; "$k$'ya duyarlı" kaydı geçersizdir. (Katsayı $\tfrac14$'tür çünkü ölçek yapısı $\delta c/c = 2\,\delta f/f$ verir — bkz. Ek M-42.)
 6. **Ondalık:** metin gövdesinde virgül; LaTeX bloklarında nokta kabul edilir.
-7. **Ölçek ayrımı ($\Lambda$ ↔ $c_{loc}$):** "Yerel ışık hızı" tek büyüklük değildir. **Saat, cetvel ve atomik frekans** bağlamında daima madde ölçeği $\Lambda = 1-\Phi/c^2$ yazılır; **yayılım, bükülme, Shapiro ve $n_{eff}$** bağlamında daima yayılma hızı $c_{loc} = c\Lambda^2$ yazılır. Tek büyüklüğe indiren eski yazım ($c_{yerel}$) terk edilmiştir — bkz. Ek M-42.
+7. **Ölçek ayrımı ($\Lambda$ ↔ $c_{loc}$):** "Yerel ışık hızı" tek büyüklük değildir. **Saat, cetvel ve atomik frekans** bağlamında daima madde ölçeği $\Lambda = 1-\Phi/c^2$ yazılır; **yayılım, bükülme, Shapiro ve $n_{eff}$** bağlamında daima yayılma hızı $c_{loc} = c\Lambda^2$ yazılır. İkisini tek büyüklüğe indirmek kategori hatasıdır — bkz. Ek M-42.
 
 8. **İki eşik, iki kanal.** Ortamın $c$'yi aşan tepkileri **tek** bir eşiğe bağlanamaz; hangi olgunun hangi eşiğe ait olduğu karıştırılmamalıdır:
 
@@ -27,17 +27,17 @@ Bu ek, kitabın tamamında geçerli sembol standardını tanımlar. Her sembol k
 |---|---|---|---|
 | $P$ | Yerel Evrenakı basıncı | Pa | Postülat 1, 6 |
 | $P_0$ | Arka plan (derin uzay) basıncı; $\nabla P_0 = 0$ | $\tfrac14\rho_n c^2 = 6{,}07\times10^{33}$ Pa ($k=0$, Ek M-44) | Ek B.3 |
-| $P_{ref}$ | Galaktik log-profilde $r_0$'daki referans basınç *(eski yazım: $P_0$ — 4.2.9.2)* | Pa | 4.2.9.2 |
+| $P_{ref}$ | Galaktik log-profilde $r_0$'daki referans basınç *(4.2.9.2)* | Pa | 4.2.9.2 |
 | $\bar P_m$ | Madde içinde hacimce ortalanmış basınç $= P_0(1-\phi)$ | Pa | 3.4.6.3 |
 | $\Delta P$ | Basınç açığı/farkı; Dünya merkezi için $\approx 0{,}83\times10^{25}$ Pa | Pa | Ek B.2 |
 | $\nabla P$ | Basınç gradyanı; $\nabla P_r$ radyal, $\nabla P_{spin}$ dönme kaynaklı bileşen | Pa/m | Postülat 6, Ek B.1 |
-| $\rho$ | Yerel Evrenakı yoğunluğu *(eski yazım: $\rho_E$)* | kg/m³ | Postülat 1 |
+| $\rho$ | Yerel Evrenakı yoğunluğu | kg/m³ | Postülat 1 |
 | $\rho_0$ | Arka plan yoğunluğu $= P_0/c^2 = \tfrac14\rho_n$ | $6{,}8\times10^{16}$ kg/m³ | Ek B.3 |
-| $\rho_n$ | Nükleon/Zerre öz yoğunluğu (evrensel sabit) *(eski yazım: $\rho_z$, $\rho_{zerre}$)* | $\approx 2{,}7\times10^{17}$ kg/m³ | Postülat 4 |
+| $\rho_n$ | Nükleon/Zerre öz yoğunluğu (evrensel sabit) | $\approx 2{,}7\times10^{17}$ kg/m³ | Postülat 4 |
 | $\bar\rho_m$ | Madde içinde hacimce ortalanmış yoğunluk ($=\rho_0$, korunum) | kg/m³ | 3.4.6.3 |
 | $\rho(r)$ | Galaktik vorteks yoğunluk profili (serbest profil fonksiyonu, Ek C P1) | — | 4.2.9 |
 | $\Sigma$ | Kohezyon (çekme) dayanımı | $\Sigma/P_0 > 10^8$ | Ek A.3 |
-| $\eta_E$ | Artık kuplaj katsayısı, Stokes biçiminde parametrize *(eski yazım: $\eta_z$ — Bölüm 3.10; $\mu$ yalnız standart Navier-Stokes alıntısında)*. **Evrensel akışkan sabiti değildir:** $\eta_E^{etkin} = C_D\rho_0 a_b v^{1+n}/12v_{kav}^{n}$ ile cisme ve bağıl hıza bağlıdır; Phoebe için $3{,}3\times10^{-5}$ Pa·s | türetilmiş (T), M-43 | Postülat 7, Ek M-37, **Ek M-43** |
+| $\eta_E$ | Artık kuplaj katsayısı, Stokes biçiminde parametrize *($\mu$ yalnız standart Navier-Stokes alıntısında kullanılır)*. **Evrensel akışkan sabiti değildir:** $\eta_E^{etkin} = C_D\rho_0 a_b v^{1+n}/12v_{kav}^{n}$ ile cisme ve bağıl hıza bağlıdır; Phoebe için $3{,}3\times10^{-5}$ Pa·s. **En sıkı sınır Satürn halkasından gelir: $\lesssim2{,}3\times10^{-11}$ Pa·s** (11.4.8) | türetilmiş (T), M-43 | Postülat 7, Ek M-37, **Ek M-43** |
 | $n$ | **Altkritik bastırma üssü:** $F_{artık} = \tfrac12 C_D\rho_0 v^2 A\,(v/v_{kav})^{n}$. Süper-akışkanda kritik hız altındaki kuplaj bastırmasının üssü; $\eta_E$'nin yerini alan boyutsuz serbest kalem | $n\simeq3$ (S — Phoebe'den) | **Ek M-43** |
 | $C$ | Ortamın deplasman→basınç direnç katsayısı; gözleme yalnız $Cq_n$ çarpımı bağlanır | kg·m⁻³·s⁻¹, serbest (F). **[T-aday]** değer: $2{,}35$ (M-45, $\sqrt2c$ çapasıyla) | Ek M-35, **M-45** |
 | $q_n$ | **Nükleon başına pulsasyon hacim debisi** ($\omega_2$ pompasının kaynak şiddeti). $\alpha = Cq_n/4\pi m_n$ ile gradyan bağlaşım sabitini, dolayısıyla $G$'yi üretir | m³·s⁻¹, serbest (F) — gözleme yalnız $Cq_n$ çarpımı ($G$) ve $q_n/2\gamma_n=\ell_\omega^{mikro}$ oranı bağlanır. **[T-aday]** değer: $1{,}62\times10^{-19}$ (M-45) | **Ek M-35**, 6.5.4.3, **M-45** |
@@ -51,7 +51,7 @@ Bu ek, kitabın tamamında geçerli sembol standardını tanımlar. Her sembol k
 | $S_{kozmik}$ | Evrensel deşarj kaynak terimi $= 3\rho_0 H_0$ | — | 4.2.11 |
 | $k$ | **Deplasman** sürecinde $\rho$'nun $P$'ye eşlik oranı — maddenin ortamı dışlaması yoğunluğu değil basıncı değiştirir. **Dalga kanalının adiyabatik katsayısıyla karıştırılmamalıdır** (o, $(\partial P/\partial\rho)_\chi=c^2$'dir). | **$k=0$**, türetilmiş (T): M-15 G2 + M-30 Varsayım 1 | Ek B.3, **Ek M-44** |
 | $\chi$ | **Deplasman alanı** — maddenin doğurduğu, kütle-itim kuyusunu taşıyan ikinci durum değişkeni. Hâl denklemi $P=P(\rho,\chi)$; nükleonlar $\chi$'nin kaynağıdır ve $\chi$ kütlenin dışında da sıfır değildir | — | **Ek M-44** |
-| $\phi$ | **Deplasman hacim kesri** — maddenin Evrenakı'yı deplase ettiği hacim oranı; $\phi=1-1/n^2$ (M-15). **İki rolü vardır:** (i) Fizeau sürükleme katsayısı $f=\phi$ (M-16), (ii) **kavrama kesri** $\mathcal{R}=\phi$ — cismin ortamını ne kadar döndürdüğü, $v_e=\phi\,\omega R$ (M-39, M-40). Kütleyle değil **hacimle** ölçeklenir: su için $\phi=0{,}437$ iken $\rho_{su}/\rho_n=3{,}7\times10^{-15}$; deplasman kafesi bare nükleon değil **atomun tamamıdır** | su: 0,437 · kayaç: ~0,6 · iyonize plazma: $\sim10^{-15}$ · nötron maddesi: ~0,7–0,9 | M-15, M-16, **M-39**, **M-40** |
+| $\phi$ | **Deplasman hacim kesri** — maddenin Evrenakı'yı deplase ettiği hacim oranı. **Tanımı geometrik, ölçümü optiktir:** $\phi$ daima hacim kesridir, $\phi=1-1/n^2$ (M-15) yalnız saydam ortamdaki ters okumasıdır. **Doğrudan hesaplanır:** $\phi(\rho)=\min(\rho/\rho_*,\phi_{doy})$ — 11.4.1-(4)–(5). **İki rolü vardır:** (i) Fizeau sürükleme katsayısı $f=\phi$ (M-16), (ii) **kavrama kesri** $\mathcal{R}=\phi$ (M-39, M-40) — *genliğe girer, hıza değil: $v_e=\phi\,\omega R$ yazımı M-39'da terk edildi, $p=1$ türetildi.* Kütleyle değil **hacimle** ölçeklenir: su için $\phi\approx0{,}42$ iken $\rho_{su}/\rho_n=3{,}7\times10^{-15}$; deplasman kafesi bare nükleon değil **atomun tamamıdır** | su: 0,42 · kristal katı (kayaç): **0,70** · yoğun akışkan (gaz devi zarfı): **0,45** · **metal / iyonize plazma: $1-\delta$, $\delta\lesssim10^{-13}$** · nötron maddesi: ~0,7–0,9 *(elektron gazı yok ⟹ paketlenme-sınırlı)* | M-15, M-16, **M-39**, **M-40**, **11.4.1-(4)–(5)** |
 | $\mathcal{R}$ | İç kavrama kesri $=\phi$ (kafesin içindeki ortamı yönetir). Gövdenin *dışındaki* dipolar alanı yöneten $\xi$'den **ayrı büyüklüktür**; sınırda eşleşmeleri gerekmez — sınır kafesin bittiği yerdir | $=\phi$ | **Ek M-40** ("İki kavrama kanalı") |
 | $\Xi$ | Kuyu iskeleti gücü / baryonik öz-çekim oranı | $\approx 5$ | 3.7.4 |
 | $\Psi_{Evrenakı}$ | Toplam Evrenakı alanı $= \Psi_0 + \sum_i \psi_i$ (kuantum dalga fonksiyonu $\psi$ ile ilgisizdir) | — | 1.3.1 |
@@ -63,9 +63,9 @@ Bu ek, kitabın tamamında geçerli sembol standardını tanımlar. Her sembol k
 | $c$ | Yerel ışık hızı = Kavrama (patinaj/sonik) sınırı: $c = \sqrt{P/\rho}$; mutlak üst sınır **değildir** | arka planda $2{,}998\times10^8$ m/s |
 | $\Lambda$ | **Madde ölçeği:** $\Lambda \equiv 1 - \Phi/c^2$. Cetvelleri ($\ell_{loc}\propto\Lambda$), saatleri ve **atomik geçiş frekanslarını** ($\nu_{tik}\propto\Lambda$) yöneten ortak çarpan. Kızıla kayma ve Zerre-Saati bağıntılarında geçen büyüklük budur (Ek M-21, M-42). *(Standart kozmolojinin kozmolojik sabiti gerektiğinde **$\Lambda_{kozm}$** yazılır; indissiz $\Lambda$ daima madde ölçeğidir. "$\Lambda\text{CDM}$" birleşik model adı olarak dokunulmaz. Anayasa S-11/R-10.)* | $1-\Phi/c^2$; Dünya yüzeyi için $1 - 7\times10^{-10}$ |
 | $c_{loc} = c\Lambda^2$ | Zerre'nin arka plan (düz) uzayda ölçülen **yayılma hızı**. Işık bükülmesi, Shapiro gecikmesi ve etkin kırılma indisinde ($n_{eff} = 1/\Lambda^2$) geçen büyüklük budur (Ek M-42). Saat/frekans bağlamında $c_{loc}$ **kullanılmaz** — orada $\Lambda$ geçer. | — |
-| $c_{loc,kaynak}$, $c_{loc,alıcı}$ | Konuma bağlı yayılma hızı değerleri (Doppler'in uzaysal/Zerre Aralığı çarpanı) *(eski yazım: $c_{kaynak}$, $c_{alıcı}$)* | — |
-| $\Lambda_{kaynak}$, $\Lambda_{alıcı}$, $\Lambda_{ref}$ | Konuma bağlı madde ölçeği değerleri (kızıla kayma zinciri) *(eski yazım: $c_{yerel}$, $c_{kaynak}$, $c_{alıcı}$, $c_{ref}$ — M-42 öncesi tek büyüklük sayılıyordu)* | — |
-| $c_f$ | Fiber içi ışık hızı *(eski yazım: $C$ — 5.2.9.2)* | $\approx 1{,}794\times10^8$ m/s |
+| $c_{loc,kaynak}$, $c_{loc,alıcı}$ | Konuma bağlı yayılma hızı değerleri (Doppler'in uzaysal/Zerre Aralığı çarpanı)  | — |
+| $\Lambda_{kaynak}$, $\Lambda_{alıcı}$, $\Lambda_{ref}$ | Konuma bağlı madde ölçeği değerleri (kızıla kayma zinciri)  | — |
+| $c_f$ | Fiber içi ışık hızı *(5.2.9.2)* | $\approx 1{,}794\times10^8$ m/s |
 | $\sqrt{2}\,c$ | Girdap zarfının denge yüzey hızı ($v_{denge}$) | $4{,}24\times10^8$ m/s |
 | $v_{ekvator}$ | Protonun kompozit ekvator hızı $= 2\pi\nu_c R_p$ | $\approx 5\times10^8$ m/s $\approx 1{,}67c$ |
 | $v_m$ | Kohezyon kanalı sinyal hızı $= \sqrt{\Sigma/\rho_0} = c\sqrt{\Sigma/P_0}$ | $> 10^4\,c$ |
@@ -74,7 +74,7 @@ Bu ek, kitabın tamamında geçerli sembol standardını tanımlar. Her sembol k
 | $v_{bağıl}$ | Cisim–Evrenakı bağıl hızı (sürüklenme zarfı içinde $\approx 0$) | — |
 | $v_\theta(r)$ | Girdabın teğetsel hızı; ideal girdapta $\Gamma/2\pi r$ | — |
 | $v_0$, $r_0$ | Bileşik girdapta düz-hız değeri ve **rejim geçiş yarıçapı**. **Türetilmiştir** (Ek M-38): $r_0=\sqrt{\mathcal{G}M/a_0}=\ell_\omega^{etkin}$, $v_0^2=\sqrt{\mathcal{G}Ma_0}$ — serbest kalem değil (Ek C satır 21 [T]). $r_0$, küresel akı geometrisinin ($1/R^2$) silindirik geometriye ($1/R$) döndüğü yarıçaptır — Güneş Sistemi'nin Kepler'de kalmasını ve galaktik düz dönüş eğrisini aynı sayı belirler (türetilmemiş; serbest F, Ek C P1) | — |
-| $u_{ort}$ | Momentum-ağırlıklı ortalama sürüklenme hızı $= \phi u$ *(eski yazım: $w$ — 3.4.6.3)* | — |
+| $u_{ort}$ | Momentum-ağırlıklı ortalama sürüklenme hızı $= \phi u$ *(3.4.6.3)* | — |
 | $u$ | Akan ortamın (ör. suyun) hızı — Fizeau bağlamı; Doppler'de alıcı hızı | — |
 | $\beta$ | $v/c$ | — |
 
@@ -85,7 +85,7 @@ Bu ek, kitabın tamamında geçerli sembol standardını tanımlar. Her sembol k
 | $m_z$ | Zerre kütlesi (evrensel sabit) | $\approx 1{,}47\times10^{-35}$ kg |
 | $V_z$, $r_z$ | Zerre hacmi ve yarıçapı | $5{,}44\times10^{-53}$ m³; $2{,}35\times10^{-18}$ m |
 | $\lambda$ | **Zerre Aralığı:** ardışık iki Zerre arası fiziksel mesafe ("dalga boyu" yalnız standart fizik aktarımında tırnak içinde kullanılır) | — |
-| $\nu$ | Frekans: **tek katarın içindeki** ardışık Zerrelerin birim zamanda hedefe çarpma ritmi; rengi belirler *(eski yazım: $f$ — 2.2.3)* | — |
+| $\nu$ | Frekans: **tek katarın içindeki** ardışık Zerrelerin birim zamanda hedefe çarpma ritmi; rengi belirler *(Fizeau katsayısı $f$ ile çakışmaması için; 2.2.3)* | — |
 | şiddet ($S_ş$) | Işık şiddeti (parlaklık): **birim alana düşen Zerre katarı sayısı** — frekans katarın içini, şiddet katarların sayısını sayar (Bölüm 2.2.3, 2.3.5) | — |
 | $\nu_c$ | Compton frekansı | $\approx 10^{23}$ Hz |
 | $h$ | Planck sabiti; mekanik özdeşliği $h = \delta\tau$ | — |
@@ -94,13 +94,13 @@ Bu ek, kitabın tamamında geçerli sembol standardını tanımlar. Her sembol k
 | $\tau$ | Kopma penceresi | serbest (F) |
 | $N$ | Kopma penceresindeki vuruş sayısı $= \nu\tau$ | $\approx 1{,}5\times10^4$ |
 | $\eta$ | Tek-vuruş elastik aktarım verimi $\approx 4m_z/m_e$ | $\approx 6{,}5\times10^{-5}$ |
-| $k_a$ | Zerre atalet (kütle dağılımı) katsayısı *(eski yazım: $k$ — 2.2.2)* | $2/5$ (homojen küre) |
+| $k_a$ | Zerre atalet (kütle dağılımı) katsayısı *(Ek B.3'ün eşlik oranı $k$ ile çakışmaması için indislenir; 2.2.2)* | $2/5$ (homojen küre) |
 | $v_{cev}$ | Zerre'nin evrensel çevresel dönüş hızı | belirlenmemiş (açık iş) |
 | $\varphi$ | Katar ritmi ile rampa çevrimi arasındaki göreli faz | — |
 | $n$ | Kırılma indisi; $1/n^2 = 1-\phi$ *(paket tam sayısı için $N_p$ kullanılır)* | — |
 | $\phi$ | Moleküllerin hacim kesri = Fizeau katsayısı $f = 1 - 1/n^2$ — **tam kayıt ve ikinci rolü (kavrama kesri) için bkz. D.2** | su: $0{,}437$ |
 | $I$ | Atalet momenti *(ışık şiddeti için ayrı sembol: metinde "şiddet" veya $S_ş$)* | — |
-| $A$ | Dalga genliği ($I_ş \propto A^2$) *(eski yazım: $E$ — 2.7.1)* | — |
+| $A$ | Dalga genliği ($I_ş \propto A^2$) *(enerji $E$ ile çakışmaması için; 2.7.1)* | — |
 | $E$ | Enerji (yalnız enerji) | — |
 | $\Phi$ | İş fonksiyonu (fotoelektrik) / standart fiziğin "kütleçekim potansiyeli" — yalnız ölçülen genlik girdisi olarak (Ek B bağlamında, $\Phi/c^2 \approx 7\times10^{-10}$). *(Ek kayıt, 11.1: potansiyel bağlamındaki $\Phi$ teoride ödünç alınmaz, **tanımlanır** — $\Phi \equiv (P-P_0)/\rho_n$, dolayısıyla $\vec a = -\nabla\Phi$ ve dış alanda $\Phi = -\mathcal{G}M/r$. $\Lambda = 1-\Phi/c^2$'deki $\Phi$ ile aynı büyüklüktür; fark kökendedir, değerde değil.)* | — |
 | $D_{toplam}=D_{zarf}+D_{yol}$ | SN 1987A gecikme bütçesi bileşenleri | ~3 saat |
@@ -116,23 +116,27 @@ Bu ek, kitabın tamamında geçerli sembol standardını tanımlar. Her sembol k
 | $\omega_2$ | Çift dönüşün yavaş bileşeni (W eksenli düzlemde; devinim kaynağı) |
 | $\omega_Z$ | Zitterbewegung frekansı $\approx 2mc^2/\hbar$ |
 | $\Omega_{yör}$ | Yerel yörünge (girdap) açısal frekansı |
-| $\Omega_{dön}$ | Gök cisminin dönüş açısal hızı *(eski yazım: $\Omega$ — 3.6.3)* |
-| $\Omega_z$ | Halka parçacığının dikey salınım frekansı $= \sqrt{GM/r^3}$ *(eski yazım: $\Omega$ — 3.10.3)* |
-| $\vec\omega_v$ | Vortisite $= \nabla\times\vec v$; rotasyon vektörü $= \tfrac12\nabla\times\vec v$ *(eski yazım: $\vec\Omega$)* |
+| $\Omega_{dön}$ | Gök cisminin dönüş açısal hızı *(3.6.3)* |
+| $\Omega_z$ | Halka parçacığının dikey salınım frekansı $= \sqrt{GM/r^3}$ *(3.10.3)* |
+| $\vec\omega_v$ | Vortisite $= \nabla\times\vec v$; rotasyon vektörü $= \tfrac12\nabla\times\vec v$ |
 | $\Gamma$ | Girdap sirkülasyonu *(3.4.4'teki termal tutamaç şiddeti $\Gamma$ bağlamla ayrılır)* |
-| $r_{cep}$ | Vakum cebi yarıçapı $= \Gamma/2\pi\sqrt{2}c$ *(eski yazım: $a$ — Ek A.2)* |
-| $r_t$ | Tanecik yarıçapı (Stokes sönümü $\gamma_{ortam} \sim 6\pi\eta_E r_t/m$) *(eski yazım: $a$ — 3.10.4.2)* |
+| $r_{cep}$ | Vakum cebi yarıçapı $= \Gamma/2\pi\sqrt{2}c$ *(Ek A.2)* |
+| $r_t$ | Tanecik yarıçapı (Stokes sönümü $\gamma_{ortam} \sim 6\pi\eta_E r_t/m$) *(3.10.4.2)* |
 | $g$, $g(R)$, $R_c$, $p$, $q$, $q_{peri}(e)$ | Kavrama/kilitlenme parametreleri (Bölüm 3.4.4) |
 | $e$ | Yörünge basıklığı; kilit modu eşiği $e \approx 0{,}125$ |
 | $\gamma$ | Lorentz / çapraz-yol uzama çarpanı $= 1/\sqrt{1-v^2/c^2}$ |
 | $\gamma_{ortam}$, $\gamma_{standart}$, $\gamma_{toplam}$ | Sönüm oranları (Bölüm 3.10.4) |
-| $\gamma_N$ | Cismin etkileşim hacmi $= NV_n$ *(eski yazım: $\gamma$ — 4.2.4)* |
+| $\gamma_N$ | Cismin etkileşim hacmi $= NV_n$ *(Lorentz çarpanı $\gamma$ ile çakışmaması için indislenir; 4.2.4)* |
 | $G$, $\mathcal{G}$ | Yerleşik adıyla "kütleçekim sabiti"; teoride türetilmiş ve **yerel** (Postülat 4): $\mathcal{G} = \alpha/\rho_n$ (M-28). Teori kendi denklemlerinde $\mathcal{G}$ yazar; düz $G$ yalnız standart-fizik aktarımında, Newton-kalibrasyon bağlamında (M-27) ve ölçülen yerel değer/$GM$ çarpımı bağlamında kalır *(kesme modülü için $G_s$)* |
 | $\alpha$ | Gradyan bağlaşım sabiti [s⁻²]; $P(r) = P_0 - \alpha M/r$ *(ince yapı sabiti: $\alpha_{is}$ veya açık yazım)* |
 | $H_0$ | Hubble sabiti $= S_{kozmik}/3\rho$ |
 | $\xi$ | **Dönme sürüklenme kesri:** ortamın gövde dönüşüne tutunma oranı, $\vec\Omega_{ortam} = \xi\,\vec\omega_{gövde}$. Türetilmiştir — ortam bir cismi ancak kavrama hızının bozulduğu ölçüde tutar: $\xi = \dfrac{I}{MR^2}\left\lvert\dfrac{\delta c_{loc}}{c}\right\rvert = \dfrac{I}{MR^2}\dfrac{2\Phi}{c^2}$. Dünya: $4{,}605\times10^{-10}$; nötron yıldızı: $\sim0{,}1$. Ötelemedeki *tam* sürüklenmeden (Postülat 7) ayrıdır — bu neredeyse tam **patinajdır** *(**Ek M-40**; girdisi Ek M-42)* |
-| $\kappa_5$ | **Yanal itim deplasman kapanış katsayısı:** $f_{yanal}(\theta) = -\dfrac{\kappa_5\,\rho\,v_e^2}{r}\sin2\theta$ [N/m³]. Ekvatordan kutba deplasman muhasebesini kapatan boyutsuz çarpan *(boyutsuz, serbest (F), **$\lesssim0{,}014$–$0{,}017$** (Sınav 1: Dünya basıklığı + $k=0$ + $p=1$, $\phi$ sistematiği — Ek M-39); $\tfrac12$ çalışma değeri **otuz kattan fazla** · **Ek M-39**)* |
-| $\tau_{ret}(r,e,i)$ | Retrograd sönüm zaman ölçeği *(eski yazım: $\tau$ — 3.6.1)*. Stokes yazımında $2\rho_c a_b^2/9\eta_E$ (hızdan bağımsız); altkritik yazımda $\propto \rho_c a_b v_{bağıl}^{-4}$ — **iki yazımı ayıran sınav budur** (Ek M-43) |
+| $\kappa_5$ | **Yanal itim deplasman kapanış katsayısı:** $f_{yanal}(\theta) = -\dfrac{\kappa_5\,\rho\,v_e^2}{r}\sin2\theta$ [N/m³]. Ekvatordan kutba deplasman muhasebesini kapatan boyutsuz çarpan *(boyutsuz, serbest (F), **$\lesssim2{,}1\times10^{-3}$** (Ay'ın düğüm gerilemesi, LLR — **11.4.3**); figür sınırı $\lesssim0{,}0114$–$0{,}0131$ (Sınav 1: Dünya basıklığı + $k=0$ + $p=1$ + $\phi_\oplus=0{,}70$ — Ek M-39); $\tfrac12$ çalışma değeri **kırk kattan fazla**. Gözlemin sabitlediği nicelik çarpımdır: $\kappa_5\phi\lesssim1{,}5\times10^{-3}$ · **Ek M-39**, 11.4)* |
+| $\phi_{doy}$ | **Deplasman doygunluk kesri:** kafesler temas ettikten sonra $\phi$'nin kilitlendiği değer; yoğunluktan değil **fazdan** gelir — kristal katı $0{,}68\pm0{,}06$ (bcc $0{,}680$, fcc/hcp $0{,}7405$), yoğun akışkan $0{,}47\pm0{,}03$ (sert-küre donma sınırı $\eta_f=0{,}494$), açık yapılı sıvı $0{,}36$–$0{,}42$, **metal/plazma $1-\delta$, $\delta\lesssim10^{-13}$** (delokalize elektron gazı; kalan pay 30 protonluk boşluk gerektirir — 11.4.1-(5)) *(boyutsuz, **T** — 11.4.1-(4)–(5); türetilmiş değerler $\phi_\oplus=0{,}70$, $\phi_{Satürn}=0{,}45\pm0{,}03$)* |
+| $R_\phi$ | **Deplasman yüzeyi:** gövdede $\rho=\phi_{doy}\rho_*$ koşulunun sağlandığı derinlik; F5'in dış alanının sınır koşulu burada kurulur ve Rankine tepesi buradadır. Karasal cisimlerde $R_\phi=R_e$; gaz devlerinde $0{,}93$–$0{,}97\,R_e$ (Satürn $0{,}935$, Jüpiter $0{,}966$, Uranüs $0{,}959$, Neptün $0{,}968$) *(m, **T** — 11.4.1-(4))* |
+| $n_e^{eşik}$ | **Deplasman kafesi sınır yoğunluğu:** $\phi$'nin kafes hacmini tanımlayan elektron yoğunluğu eş-yüzeyi, $\simeq0{,}001$ a.u. $=6{,}75\times10^{27}$ e/m³ (deneysel vdW hacimlerini üreten standart değer). İki ayrı sonucu birden yönetir: (i) $\rho_*$'ların değerleri, (ii) metalik/plazma fazında ara bölgenin dolu olması. **Tek noktadan sınanabilirlik:** bu sabit şişerse ikisi birlikte bozulur *(a.u., kalibre — 11.4.1-(4)–(5))* |
+| $\rho_*$ | **Tam dolgu yoğunluğu:** kafeslerin uzayı tümüyle doldurduğu yoğunluk, $\rho_*=m/v$ ile $v=b_{vdW}/4N_A$ (ya da iyonik hacimler). H₂ 303 · He 675 · H₂O 2363 · silikat (forsterit) 4732 kg/m³ *(kg/m³, **T** — 11.4.1-(4))* |
+| $\tau_{ret}(r,e,i)$ | Retrograd sönüm zaman ölçeği *(kopma penceresi $\tau$ ile çakışmaması için indislenir; 3.6.1)*. Stokes yazımında $2\rho_c a_b^2/9\eta_E$ (hızdan bağımsız); altkritik yazımda $\propto \rho_c a_b v_{bağıl}^{-4}$ — **iki yazımı ayıran sınav budur** (Ek M-43) |
 | $f(\theta_e)$ | Hizalanma verimi ($\theta_e$: eksen eğikliği; türetilmemiş) |
 | $J_2$ | Dünya basıklık (kuadrupol) katsayısı |
 | $\mathsf{T}$, $T_{ij}$ | **Gelgit tensörü:** $T_{ij} \equiv \partial a_i/\partial x_j = -\dfrac{1}{\rho_n}\partial_i\partial_j P$ — kütle-itim alanının ikinci türevi. Kaynaksız bölgede özdeğerleri $\dfrac{\mathcal{G}M}{r^3}(+2,-1,-1)$ ve **izi sıfırdır** (türetilmiş sonuç, varsayım değil); gövde içinde $\mathrm{tr}\,\mathsf{T} = -4\pi\mathcal{G}\rho_{madde}$ *(Bölüm 11.1, Ek M-36)* |
@@ -141,8 +145,8 @@ Bu ek, kitabın tamamında geçerli sembol standardını tanımlar. Her sembol k
 | $\Psi_T$ | **Gelgit potansiyeli:** taşınan gövde çerçevesinde, ortak taşınma terimi çıkarıldıktan sonra kalan artık potansiyel. $\Psi_T(\xi,\psi) = -\dfrac{\mathcal{G}M\xi^2}{2r^3}(3\cos^2\psi-1)$. Artık **basınç** alanı $P_T = \rho_n\Psi_T$'dir: eksende açık, yanaklarda fazla, oran $2{:}1$ *(Bölüm 11.1, Ek M-36)* |
 | $\zeta$ | **Serbest yüzey yükseltisi** (denge gelgiti). Gelgit **genliği** (tepe–çukur) $\Delta\zeta = \tfrac32\dfrac{M}{M_\oplus}\left(\dfrac{b}{r}\right)^3 b$ — bir *yükseklik değil*, tam genliktir: tepe $+A$, çukur $-A/2$. *(Eski yazım $\Delta h$ **geçersizdir** — S-4 gereği $h$ yalnız Planck sabitidir. $\Delta\eta$ kullanılmaz, $\eta_E$ ile çakışır.)* Anayasa **S-27** *(Bölüm 11.1, Ek M-36)* |
 | $R_p$, $R_\oplus$, $R_s$ | Proton yarıçapı ($0{,}84$ fm); Dünya yarıçapı; yüzey yarıçapı |
-| $\lambda_s$ | Bending-wave sönüm mesafesi $= v_{grup}/\gamma_{toplam}$ *(eski yazım: $\lambda$ — 3.10.5)* |
-| $\lambda_z$ | Dispersiyon türetimindeki Zerre aralığı *(eski yazım: $\Lambda$ — bu sembol artık madde ölçeğine ayrılmıştır; bkz. D.3 ve Ek M-42)* |
+| $\lambda_s$ | Bending-wave sönüm mesafesi $= v_{grup}/\gamma_{toplam}$ *(Zerre aralığı $\lambda_z$ ile çakışmaması için indislenir)* |
+| $\lambda_z$ | Dispersiyon türetimindeki Zerre aralığı *($\Lambda$ madde ölçeğine ayrılmıştır; bkz. D.3 ve Ek M-42)* |
 
 ## D.6 Statü Kodları (Ek C ile ortak)
 

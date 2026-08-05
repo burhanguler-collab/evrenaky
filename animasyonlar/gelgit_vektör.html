@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gelgit Kuvvet Analizi</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#05080f;font-family:'Segoe UI',sans-serif;overflow:hidden}
+canvas{display:block}
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<script>
+const canvas = document.getElementById('c');
+const ctx = canvas.getContext('2d');
+
+function resize(){
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+resize();
+window.addEventListener('resize', resize);
+
+let t = 0;
+
+// ── Helpers ────────────────────────────────────────────────────
+function arrow(x1,y1,x2,y2,color,width,headSize){
+  const dx=x2-x1, dy=y2-y1, len=Math.sqrt(dx*dx+dy*dy);
+  if(len<2) return;
+  const ux=dx/len, uy=dy/len;
+  ctx.save();
+  ctx.strokeStyle=color; ctx.fillStyle=color;
+  ctx.lineWidth=width;
+  ctx.lineCap='round';
+  ctx.beginPath(); ctx.moveTo(x1,y1); ctx.lineTo(x2-ux*headSize,y2-uy*headSize); ctx.stroke();
+  ctx.beginPath();
+  ctx.moveTo(x2,y2);
+  ctx.lineTo(x2-ux*headSize-uy*headSize*0.5, y2-uy*headSize+ux*headSize*0.5);
+  ctx.lineTo(x2-ux*headSize+uy*headSize*0.5, y2-uy*headSize-ux*headSize*0.5);
+  ctx.closePath(); ctx.fill();
+  ctx.restore();
+}
+
+function label(text, x, y, color, size, bold, align){
+  ctx.save();
+  ctx.font = (bold?'bold ':'')+size+'px "Segoe UI"';
+  ctx.fillStyle = color;
+  ctx.textAlign = align||'center';
+  ctx.fillText(text, x, y);
+  ctx.restore();
+}
+
+function drawEarth(cx, cy, R){
+  // Atmosphere glow
+  const glow = ctx.createRadialGradient(cx,cy,R*0.8,cx,cy,R*1.5);
+  glow.addColorStop(0,'rgba(29,78,216,0.15)');
+  glow.addColorStop(1,'rgba(29,78,216,0)');
+  ctx.fillStyle=glow; ctx.beginPath(); ctx.arc(cx,cy,R*1.5,0,Math.PI*2); ctx.fill();
+  // Ocean
+  const ocean = ctx.createRadialGradient(cx-R*0.3,cy-R*0.3,0,cx,cy,R);
+  ocean.addColorStop(0,'#1e40af');
+  ocean.addColorStop(1,'#0f172a');
+  ctx.fillStyle=ocean; ctx.beginPath(); ctx.arc(cx,cy,R,0,Math.PI*2); ctx.fill();
+  // Land patches
+  ctx.fillStyle='#166534';
+  [[0.3,0.1,0.22],[−0.2,−0.15,0.18],[0.1,0.3,0.15]].forEach(([ox,oy,r])=>{
+    ctx.beginPath(); ctx.arc(cx+ox*R,cy+oy*R,r*R,0,Math.PI*2); ctx.fill();
+  });
+  // Rim
+  ctx.strokeStyle='rgba(96,165,250,0.4)'; ctx.lineWidth=1.5;
+  ctx.beginPath(); ctx.arc(cx,cy,R,0,Math.PI*2); ctx.stroke();
+}
+
+function drawMoon(cx,cy,R){
+  const g = ctx.createRadialGradient(cx-R*0.3,cy-R*0.3,0,cx,cy,R);
+  g.addColorStop(0,'#e2e8f0'); g.addColorStop(1,'#94a3b8');
+  ctx.fillStyle=g; ctx.beginPath(); ctx.arc(cx,cy,R,0,Math.PI*2); ctx.fill();
+  // craters
+  [[−0.2,−0.1,0.12],[0.1,0.2,0.08]].forEach(([ox,oy,r])=>{
+    ctx.fillStyle='rgba(0,0,0,0.18)';
+    ctx.beginPath(); ctx.arc(cx+ox*R,cy+oy*R,r*R,0,Math.PI*2); ctx.fill();
+  });
+  // glow
+  ctx.shadowColor='rgba(226,232,240,0.3)'; ctx.shadowBlur=20;
+  ctx.strokeStyle='rgba(226,232,240,0.2)'; ctx.lineWidth=1;
+  ctx.beginPath(); ctx.arc(cx,cy,R,0,Math.PI*2); ctx.stroke();
+  ctx.shadowBlur=0;
+}
+
+function drawOceanBulge(cx,cy,R,bulgeX,bulgeY,strength,color){
+  // Draw an ellipse-like distorted ocean ring
+  ctx.save();
+  ctx.strokeStyle=color; ctx.lineWidth=2.5;
+  ctx.setLineDash([4,3]);
+  ctx.globalAlpha=0.7+0.2*Math.sin(t*3);
+  ctx.beginPath();
+  ctx.ellipse(cx+bulgeX*strength, cy+bulgeY*strength,
+              R*(1+Math.abs(bulgeX)*strength*0.015),
+              R*(1+Math.abs(bulgeY)*strength*0.015), 0,0,Math.PI*2);
+  ctx.stroke();
+  ctx.setLineDash([]);
+  ctx.restore();
+}
+
+// ── DRAW FRAME ─────────────────────────────────────────────────
+function draw(){
+  const W=canvas.width, H=canvas.height;
+  ctx.clearRect(0,0,W,H);
+
+  // Background gradient
+  const bg = ctx.createLinearGradient(0,0,W,H);
+  bg.addColorStop(0,'#05080f'); bg.addColorStop(1,'#080c18');
+  ctx.fillStyle=bg; ctx.fillRect(0,0,W,H);
+
+  // Divider line
+  ctx.strokeStyle='rgba(48,54,61,0.8)'; ctx.lineWidth=1;
+  ctx.beginPath(); ctx.moveTo(W*0.5,20); ctx.lineTo(W*0.5,H-10); ctx.stroke();
+
+  // ── Title bar ──
+  ctx.fillStyle='rgba(13,17,23,0.9)';
+  ctx.beginPath();
+  ctx.roundRect(W*0.05, 8, W*0.9, 36, 8);
+  ctx.fill();
+  label('Şekil 11.1.11-A — Klasik Gelgit Modeli (sol) ve Evrenakı Basınç Modeli (sağ)',
+        W*0.5, 32, '#8b949e', 11.5, false);
+
+  // ══════════════════════════════════════════════════
+  // LEFT PANEL — NEWTON
+  // ══════════════════════════════════════════════════
+  const Lx = W*0.25, Ly = H*0.47;
+  const RE = Math.min(W*0.085, H*0.17);
+  const RM = RE*0.33;
+  const moonX = Lx + RE*2.5;
+
+  // Panel bg
+  ctx.fillStyle='rgba(24,8,8,0.35)';
+  ctx.beginPath();
+  ctx.roundRect(W*0.01, 52, W*0.48, H-62, 10);
+  ctx.fill();
+
+  // Panel title
+  label('NEWTON — Diferansiyel Çekim', Lx, 78, '#f85149', 14, true);
+  label('Tüm gerçek kuvvetler +x̂ (Ay\'a doğru) yönündedir', Lx, 97, '#8b949e', 11, false);
+
+  // Ocean bulge — Newton: horizontal bulge (both sides along x)
+  const nBulge = 6 + 5*Math.sin(t*1.5);
+  // Left side (arka yüz — should NOT bulge according to real forces)
+  ctx.save();
+  ctx.globalAlpha = 0.5 + 0.3*Math.sin(t*1.8);
+  ctx.strokeStyle='#f87171'; ctx.lineWidth=2; ctx.setLineDash([3,3]);
+  ctx.beginPath();
+  ctx.ellipse(Lx - nBulge*0.8, Ly, RE + nBulge, RE*0.88, 0, Math.PI*0.5, Math.PI*1.5);
+  ctx.stroke();
+  ctx.setLineDash([]);
+  ctx.restore();
+  // Right side (ön yüz)
+  ctx.save();
+  ctx.globalAlpha = 0.5 + 0.3*Math.sin(t*1.8 + Math.PI);
+  ctx.strokeStyle='#60a5fa'; ctx.lineWidth=2; ctx.setLineDash([3,3]);
+  ctx.beginPath();
+  ctx.ellipse(Lx + nBulge*0.8, Ly, RE + nBulge, RE*0.88, 0, -Math.PI*0.5, Math.PI*0.5);
+  ctx.stroke();
+  ctx.setLineDash([]);
+  ctx.restore();
+
+  drawEarth(Lx, Ly, RE);
+  drawMoon(moonX, Ly, RM);
+
+  // Moon label
+  label('Ay', moonX, Ly+RM+16, '#94a3b8', 10, false);
+
+  // ── Newton force arrows — ALL pointing right (+x) ──
+  const arrowColor = '#ef4444';
+  const arrowPoints = [
+    [Lx+RE, Ly, 'Güçlü'],
+    [Lx, Ly, null],
+    [Lx-RE, Ly, 'Zayıf'],
+    [Lx+RE*0.7, Ly-RE*0.7, null],
+    [Lx+RE*0.7, Ly+RE*0.7, null],
+  ];
+  arrowPoints.forEach(([ax,ay,lbl],i)=>{
+    const strength = i===0?52 : i===2?22 : i===1?38 : 30;
+    const alpha = i===2?0.45 : i===3||i===4?0.6 : 1;
+    ctx.globalAlpha=alpha;
+    arrow(ax, ay, ax+strength, ay, arrowColor, 2.5, 8);
+    ctx.globalAlpha=1;
+    if(lbl){
+      label(lbl, ax+strength*0.5, ay-12, arrowColor, 10, false);
+    }
+  });
+
+  // ── CONTRADICTION: Back side has NO real force outward ──
+  // Back water bulge with question mark
+  const qx = Lx - RE - nBulge - 22;
+  const qr = 20;
+  ctx.save();
+  ctx.globalAlpha = 0.6 + 0.35*Math.sin(t*2);
+  ctx.strokeStyle='#f59e0b'; ctx.lineWidth=2;
+  ctx.setLineDash([4,3]);
+  ctx.beginPath(); ctx.arc(qx, Ly, qr, 0, Math.PI*2); ctx.stroke();
+  ctx.setLineDash([]);
+  label('?', qx, Ly+6, '#f59e0b', 20, true);
+  ctx.restore();
+
+  // Contradiction box
+  const boxY = Ly + RE + 28;
+  ctx.fillStyle='rgba(239,68,68,0.1)';
+  ctx.strokeStyle='rgba(239,68,68,0.3)'; ctx.lineWidth=1;
+  ctx.beginPath(); ctx.roundRect(Lx-W*0.19, boxY, W*0.38, 88, 8); ctx.fill(); ctx.stroke();
+  label('⚠  NEDENSELLIK KIRIGI', Lx, boxY+22, '#f85149', 12, true);
+  label('Ay\'ın arka yüze uyguladığı kuvvet vektörü:', Lx, boxY+42, '#fca5a5', 10, false);
+  label('F⃗ₐᵣₖₐ = +' + String.fromCodePoint(0x2007) + 'GM·m/(r+b)²  x̂  (Ay\'a doğru, +x)', Lx, boxY+59, '#fcd34d', 11, true);
+  label('Gerçek fizik: arka su da içeri çekilir. Dışarı iten kuvvet: SIFIR.', Lx, boxY+76, '#f87171', 10, false);
+
+  // ── Phase label ──
+  label('Eylemsiz sistemde gerçek net ivme = +(F_Dünya + F_Ay) x̂', Lx, boxY+118, '#6b7280', 10, false);
+
+  // ══════════════════════════════════════════════════
+  // RIGHT PANEL — EVRENAKI
+  // ══════════════════════════════════════════════════
+  const Rx = W*0.75, Ry = H*0.47;
+  const moonRx = Rx + RE*2.5;
+
+  // Panel bg
+  ctx.fillStyle='rgba(4,15,30,0.35)';
+  ctx.beginPath(); ctx.roundRect(W*0.51, 52, W*0.48, H-62, 10); ctx.fill();
+
+  label('EVRENAKı — Basınç Modeli', Rx, 78, '#38bdf8', 14, true);
+  label('F₂ (Taban Sıkıştırma) + F₁ (Kütle Gradyanı)', Rx, 97, '#8b949e', 11, false);
+
+  // ── F2 side pressure — animated squeezing from top/bottom ──
+  const squeeze = 0.18 + 0.08*Math.sin(t*2);
+  const squeezeLen = RE*0.55 + 8*Math.sin(t*2);
+
+  // Top arrows (F2)
+  for(let i=-1; i<=1; i++){
+    const ax = Rx + i*RE*0.5;
+    const ay0 = Ry - RE - squeezeLen - 10;
+    const ay1 = Ry - RE*1.05;
+    const alpha = 0.6 + 0.35*Math.sin(t*2 + i*0.5);
+    ctx.globalAlpha=alpha;
+    arrow(ax, ay0, ax, ay1, '#0ea5e9', 2.5, 8);
+    ctx.globalAlpha=1;
+  }
+  label('F₂  Taban Sıkıştırma', Rx, Ry - RE - squeezeLen - 18, '#0ea5e9', 11, true);
+
+  // Bottom arrows (F2)
+  for(let i=-1; i<=1; i++){
+    const ax = Rx + i*RE*0.5;
+    const ay0 = Ry + RE + squeezeLen + 10;
+    const ay1 = Ry + RE*1.05;
+    const alpha = 0.6 + 0.35*Math.sin(t*2 + i*0.5 + Math.PI);
+    ctx.globalAlpha=alpha;
+    arrow(ax, ay0, ax, ay1, '#0ea5e9', 2.5, 8);
+    ctx.globalAlpha=1;
+  }
+  label('F₂  Taban Sıkıştırma', Rx, Ry + RE + squeezeLen + 28, '#0ea5e9', 11, true);
+
+  // ── Ocean bulge: vertical squeeze → horizontal fışkırma ──
+  const evBulge = 9 + 7*Math.sin(t*1.5);
+  // Ön yüz (right bulge — Ay tarafı)
+  ctx.save();
+  ctx.globalAlpha=0.55+0.3*Math.sin(t*1.5);
+  ctx.strokeStyle='#34d399'; ctx.lineWidth=2.5; ctx.setLineDash([3,3]);
+  ctx.beginPath();
+  ctx.ellipse(Rx + evBulge*0.7, Ry, RE + evBulge, RE*0.85, 0, -Math.PI*0.5, Math.PI*0.5);
+  ctx.stroke(); ctx.setLineDash([]); ctx.restore();
+  // Arka yüz (left bulge)
+  ctx.save();
+  ctx.globalAlpha=0.55+0.3*Math.sin(t*1.5+Math.PI);
+  ctx.strokeStyle='#34d399'; ctx.lineWidth=2.5; ctx.setLineDash([3,3]);
+  ctx.beginPath();
+  ctx.ellipse(Rx - evBulge*0.7, Ry, RE + evBulge, RE*0.85, 0, Math.PI*0.5, Math.PI*1.5);
+  ctx.stroke(); ctx.setLineDash([]); ctx.restore();
+
+  drawEarth(Rx, Ry, RE);
+  drawMoon(moonRx, Ry, RM);
+  label('Ay', moonRx, Ry+RM+16, '#94a3b8', 10, false);
+
+  // ── F1 pressure gradient arrows (yellow, outward on axis) ──
+  const gAlpha = 0.55 + 0.35*Math.sin(t*1.8);
+  // Back (left) — dışarı fışkırma
+  ctx.globalAlpha=gAlpha;
+  arrow(Rx-RE*1.05, Ry, Rx-RE*2.1, Ry, '#fbbf24', 2.5, 8);
+  ctx.globalAlpha=1;
+  label('Basınç Yırtığı', Rx-RE*1.6, Ry-14, '#fbbf24', 10, false);
+  label('(F₁ gradyanı)', Rx-RE*1.6, Ry+22, '#d97706', 9, false);
+
+  // Front (right) — dışarı fışkırma
+  ctx.globalAlpha=gAlpha;
+  arrow(Rx+RE*1.05, Ry, Rx+RE*1.95, Ry, '#fbbf24', 2.5, 8);
+  ctx.globalAlpha=1;
+  label('Basınç Çukuru', Rx+RE*1.58, Ry-14, '#fbbf24', 10, false);
+  label('(Ay tarafı, F₁)', Rx+RE*1.58, Ry+22, '#d97706', 9, false);
+
+  // ── Explanation box ──
+  const rboxY = Ry + RE + 28;
+  ctx.fillStyle='rgba(16,185,129,0.08)';
+  ctx.strokeStyle='rgba(16,185,129,0.3)'; ctx.lineWidth=1;
+  ctx.beginPath(); ctx.roundRect(Rx-W*0.19, rboxY, W*0.38, 110, 8); ctx.fill(); ctx.stroke();
+
+  label('✓  HİDROLİK ÇÖZÜM', Rx, rboxY+22, '#34d399', 12, true);
+  label('F₂ her yönden sıkıştırır → yanlar en çok ezilir', Rx, rboxY+42, '#6ee7b7', 10, false);
+  label('F₁ Ay ekseni boyunca basınç farkı yaratır', Rx, rboxY+57, '#6ee7b7', 10, false);
+  label('Su; yüksek basınçtan (yan) düşük basınca (eksen ucu) akar', Rx, rboxY+72, '#a7f3d0', 10.5, false);
+  label('→ Ön + arka yüzlerde gerçek hidrolik pompalama ←', Rx, rboxY+89, '#fcd34d', 11, true);
+  label('W = F · Δr  ✓  (gerçek kuvvet, gerçek iş)', Rx, rboxY+107, '#9ca3af', 9.5, false);
+
+  // ── Step counter / cycle indicator ──
+  const phase = ((t*0.25) % 1);
+  const step = Math.floor(phase*4);
+  const steps = ['① F₂ tüm yönlerden sıkıştırıyor','② Yan basınç zirveye ulaşıyor','③ Su eksene doğru kaçıyor','④ Ön ve arka yüzler şişiyor'];
+  ctx.fillStyle='rgba(13,17,23,0.85)';
+  ctx.beginPath(); ctx.roundRect(Rx-W*0.19, H-38, W*0.38, 26, 6); ctx.fill();
+  label(steps[step], Rx, H-21, '#38bdf8', 10.5, true);
+
+  // Bottom legend
+  ctx.fillStyle='rgba(13,17,23,0.8)';
+  ctx.beginPath(); ctx.roundRect(W*0.01, H-38, W*0.48, 26, 6); ctx.fill();
+  label('Newton modeli: arka yüzü dışarı iten GERÇEK kuvvet YOKTUR — koordinat hilesi', Lx, H-21, '#6b7280', 10, false);
+
+  t += 0.016;
+  requestAnimationFrame(draw);
+}
+
+draw();
+</script>
+</body>
+</html>

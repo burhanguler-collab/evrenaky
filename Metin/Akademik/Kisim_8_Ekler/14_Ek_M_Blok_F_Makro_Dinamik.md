@@ -8,7 +8,7 @@
 
 > **Kategori kaydı (3 Ağustos 2026).** Bu girdi bir **kuvvet değil, denge yasasıdır**: alanı üretmez, alana verilen **tepkiyi** belirler. Beş hidrodinamik kuvvetin içindeki rolü ve ondan çıkan **Ortam–Madde Kayma Yasası** ($v_\theta=2v_{madde}$), Blok H'nin *"Denge Yasaları — kuvvet değil, tepki"* bölümünde (M-39'dan sonra, **DY-1**) kurulmuştur. Kuvvetlerle **toplanmaz:** F1 gradyanı kurar, M-22 o gradyanın ortamın dönüşüyle dengede olduğunu söyler — ikisi **aynı gradyandır.**
 
-**Kullanıldığı bölümler:** 3.4.1 (kütle-itim ispatı), 3.10.2 (işaret zemini / düzeltme kaydı), 3.6.2 (atmosferik burulma zemini), 4.2.9.2 (galaktik rejime geçiş), **11.3.1** (iki denge / iki yoğunluk). Bağlı katalog: **M-9** (ortamın dolaşma teoremi), M-8 ($\rho_0=\rho_n/4$), M-25 (muhasebe zincirleri).
+**Kullanıldığı bölümler:** 3.4.1 (kütle-itim ispatı), 3.10.2 (işaret zemini), 3.6.2 (atmosferik burulma zemini), 4.2.9.2 (galaktik rejime geçiş), **11.3.1** (iki denge / iki yoğunluk). Bağlı katalog: **M-9** (ortamın dolaşma teoremi), M-8 ($\rho_0=\rho_n/4$), M-25 (muhasebe zincirleri).
 
 ### Varsayımlar
 1. Evrenakı, Navier-Stokes denklemine tabi sıkıştırılabilir bir akışkandır (Postülat 1); viskozitesi sıfıra çok yakındır: $0 < \mu \ll 1$ (Postülat 7; $\mu$ sembolü yalnız bu standart alıntıda geçer, teorinin kendi viskozite parametresi $\eta_E$'dir — S-19).
@@ -49,7 +49,7 @@ $$\frac{v_{madde}^2}{r}=\frac{1}{4}\frac{v_\theta^2}{r} \;\Longrightarrow\; \box
 
 Santrifüjde yoğun maddenin dışa çökmesiyle **aynı mekanizmadır**: madde ortama göre fazla yoğun olduğu için dolaşıma tutunamaz. Bu, **M-9**'un *"madde düşer, ortam dolaşır"* ifadesinin mekanik nedenidir ve 2 çarpanını görmenin üçüncü bağımsız yoludur (diğerleri: M-9'un doğrudan ifadesi ve M-25'in muhasebe zincirleri).
 
-> **Sonuç — kapılış yörüngeyi sağlamaz.** Madde ortamın hızına kilitli olsaydı dışa savrulurdu; gözlem gezegenleri $v_{madde}=\sqrt{\mathcal{G}M/r}$'de, yani ortamın **yarı hızında** bulur. Sürüklenme zarfının rolü (Postülat 7) yörüngeyi üretmek değil, **yerel bağıl hızı sıfırlayarak sürüklemeyi bastırmaktır** (M-37 sıfırıncı mertebe; M&M null'unun kaynağı). *(Düzeltme kaydı, 3 Ağustos 2026: bu bölümün bir ara sürümü gradyanı "dışa doğru itim" sayıyor ve F1 ile M-22'yi iki rakip kuvvet gibi yazıyordu. İkisi de yanlıştı: gradyan içe iter ve M-22 rakip bir kuvvet değil, F1'in kurduğu gradyanın ortamın dönüşüyle dengede olduğunu söyleyen bir **denge koşuludur.** Yazarın "merkezkaç reel olmalı" tezi geçerlidir — reellik gradyanın yönünden değil, ataletin gerçekliğinden ve iki yoğunluğun farkından gelir.)*
+> **Sonuç — kapılış yörüngeyi sağlamaz.** Madde ortamın hızına kilitli olsaydı dışa savrulurdu; gözlem gezegenleri $v_{madde}=\sqrt{\mathcal{G}M/r}$'de, yani ortamın **yarı hızında** bulur. Sürüklenme zarfının rolü (Postülat 7) yörüngeyi üretmek değil, **yerel bağıl hızı sıfırlayarak sürüklemeyi bastırmaktır** (M-37 sıfırıncı mertebe; M&M null'unun kaynağı). *(İki yaygın hata: gradyanı "dışa doğru itim" saymak, ve F1 ile M-22'yi iki rakip kuvvet gibi yazmak. Gradyan **içe** iter; M-22 rakip bir kuvvet değil, F1'in kurduğu gradyanın ortamın dönüşüyle dengede olduğunu söyleyen bir **denge koşuludur.** "Merkezkaç reel olmalı" tezi geçerlidir — reellik gradyanın yönünden değil, ataletin gerçekliğinden ve iki yoğunluğun farkından gelir.)*
 
 ### Geçerlilik Sınırı
 - Kararlı, eksenel simetrik, viskoz terimi ihmal edilmiş rejim.
@@ -144,7 +144,7 @@ $$\boxed{\omega_{gözlenen}(M,R) = \big[1-g(R)\big]\,\omega_{serbest}(M) + g(R)\
 **Kullanıldığı bölümler:** 3.8.1–3.8.1.1 (Güneş vorteksi + Açısal Momentum Paradoksu), 3.9.4 (Dünya-Ay muhasebesi), 3.8.2 (nedenselliğin tersinmesi), 3.4.4.
 
 ### Varsayımlar
-1. **Gezegen girdaba kapılmaz; aynı basınç alanında düşer.** Madde $\vec a=-\nabla P/\rho_n$ ile serbest dengede dolanır; ortam ise aynı alana düşerek değil **dolaşarak** cevap verir, $\nabla P/\rho_0=v_\theta^2/R$ (**M-9**: *"madde düşer, ortam dolaşır"*; M-22). *(Düzeltme kaydı, 3 Ağustos 2026: bu varsayımın önceki sürümü gezegenleri "akıntı katmanlarına kapılmış" sayıyordu; o yazım M-9 ile çelişiyor ve literal alındığında gezegenleri $2v_{Kepler}$'e koyuyordu.)*
+1. **Gezegen girdaba kapılmaz; aynı basınç alanında düşer.** Madde $\vec a=-\nabla P/\rho_n$ ile serbest dengede dolanır; ortam ise aynı alana düşerek değil **dolaşarak** cevap verir, $\nabla P/\rho_0=v_\theta^2/R$ (**M-9**: *"madde düşer, ortam dolaşır"*; M-22). *(Gezegenleri "akıntı katmanlarına kapılmış" saymak M-9 ile çelişir ve literal alındığında onları $2v_{Kepler}$'e koyar.)*
 2. Kepler'in Üçüncü Yasası gözlemsel girdi olarak alınır: $T^2 \propto R^3$ (Kepler, 1619) **[S]**.
 3. $\rho_0=\frac{1-k}{4}\rho_n$ ve $k=0$ (M-8) ⟹ $\sqrt{\rho_n/\rho_0}=2$ **tam**.
 
@@ -179,7 +179,7 @@ Profil, merkez kütlenin baskın olduğu lokal (Kepler) girdap rejimi içindir; 
 
 ### Varsayımlar
 1. Gelgit bir "çekme" değil, Ay'ın Dünya-Ay arası Evrenakı akıntısını hızlandırmasıyla (Bernoulli, 1738: hız artan yerde iç basınç düşer) doğan **asimetrik yanal sıkıştırmadır** (squeeze).
-2. Mekanizmanın hidrostatik analoğu: derinliği $d$ olan suya batırılmış, yarıçapı $r$ olan yumuşak top. *(Notasyon kaydı: kaynak metinde derinlik $h$ ile yazılıdır; Anayasa S-4 gereği $h$ yalnız Planck sabitidir — katalogda derinlik **$d$**.)*
+2. Mekanizmanın hidrostatik analoğu: derinliği $d$ olan suya batırılmış, yarıçapı $r$ olan yumuşak top. *(Derinlik $d$ ile gösterilir; $h$ Planck sabitine ayrılmıştır — Anayasa S-4.)*
 
 ### Adımlar
 1. Hidrostatik kuvvetler ($P = \rho g \cdot \text{derinlik}$):
@@ -210,7 +210,7 @@ Hidrostatik analoji $r \ll d$ (cisim boyutu ≪ karakteristik uzaklık) limitind
 **Kullanıldığı bölümler:** 3.10.2–3.10.7 (Satürn halka dinamiği), 6.3 (GPB tutarlılık uyarısı), Ek C satır 14 ($\eta_E$ parametre statüsü).
 
 ### Varsayımlar
-1. Uzay, sıkıştırılabilir süperakışkan Zerre ortamıdır; hareketi sıkıştırılabilir Euler denklemiyle (Euler, 1757) tarif edilir. *(Notasyon kaydı: kaynak metinde $\rho_z$, $P_z$ yazılıdır; Anayasa S-17/S-18 gereği katalogda yerel alanlar $\rho$, $P$ ile gösterilir — Zerre basınç alanı ile madde/gaz basıncı iki ayrı alandır.)*
+1. Uzay, sıkıştırılabilir süperakışkan Zerre ortamıdır; hareketi sıkıştırılabilir Euler denklemiyle (Euler, 1757) tarif edilir. *(Yerel alanlar $\rho$, $P$ ile gösterilir — Anayasa S-17/S-18; Zerre basınç alanı ile madde basıncı ayrı alanlardır.)*
 2. Halka parçacıkları quasi-statik rejimdedir: $\partial\vec v/\partial t \to 0$, $(\vec v\cdot\nabla)\vec v$ ihmal edilebilir.
 3. Kuyu konvansiyonu (M-2, M-22): kütle bir basınç çukurudur, $dP/dr>0$; itim $-\nabla P$'den gelir.
 4. Ortam viskozitesi sıfıra yakın ama **tam sıfır değildir** (Postülat 7): $\eta_E > 0$ (dinamik viskozite, Pa·s — S-19).

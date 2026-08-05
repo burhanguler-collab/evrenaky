@@ -33,7 +33,7 @@ $$\boxed{\Phi + E_{ke} = N \cdot \eta \cdot \tfrac{1}{2} m_z \left(c^2 + k_a\, v
 
 ### Geçerlilik Sınırı
 - Rozet **[S]**: $m_z$ değeri ilk-ilkelerden türetilmemiştir; fotoelektrik veri ($\Phi$, $E_{ke}$, $\nu$) ile Postülat 4'ün evrensel $m_z$ değerinin tutarlılığı üzerinden **gözlemle sabitlenir**. $N$–$m_z$ kombinasyonu bu veriyle bağlıdır.
-- **Kalibrasyon varsayımı — açıkça (eklendi 30 Temmuz 2026, Claude Opus 5):** Yukarıdaki kutulu denklem $\eta = 4m_z/m_e$ yerine konduğunda
+- **Kalibrasyon varsayımı — açıkça:** Yukarıdaki kutulu denklem $\eta = 4m_z/m_e$ yerine konduğunda
   $$\Phi + E_{ke} = \frac{2N m_z^2}{m_e}\left(c^2 + k_a\, v_{cev}^2\right)$$
   hâlini alır: **bir denklem, üç bilinmeyen** ($N$, $m_z$, $v_{cev}$; $k_a=2/5$ alınmıştır). Bu denklem $m_z$'yi tek başına belirlemez. Çizelgedeki $m_z \approx 1{,}47\times10^{-35}$ kg değerini sabitleyen, yukarıdaki sayısal zincirin ilk halkasında örtük duran şu ek koşuldur ve bir **varsayım** olarak kayda geçirilmelidir:
   $$\tfrac12 m_z c^2 \;\simeq\; \Phi \;\approx\; 4\ \text{eV}$$

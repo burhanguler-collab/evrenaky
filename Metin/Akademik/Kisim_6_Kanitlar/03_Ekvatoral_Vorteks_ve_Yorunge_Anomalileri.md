@@ -8,7 +8,7 @@ Bu akışkan modelinin en belirgin kanıtı, Ekvatoral (yatay) yörüngeler ile 
 
 ### Hangi girdap? — iki dönme alanının ayrılması
 
-Bir kütlenin çevresinde **iki ayrı dönme alanı** vardır. Bunlar ne aynı kaynaktan gelir, ne aynı yasaya uyar, ne de aynı mertebededir; karıştırılmaları bu bölümün önceki sürümünün hatasıydı (aşağıdaki düzeltme kaydına bkz.):
+Bir kütlenin çevresinde **iki ayrı dönme alanı** vardır. Bunlar ne aynı kaynaktan gelir, ne aynı yasaya uyar, ne de aynı mertebededir; karıştırılmaları bu bölümün en kolay düşülen hatasıdır:
 
 | | **Kuyu dolaşımı** — *bu bölümün konusu* | **Spin sürüklenmesi** |
 |---|---|---|
@@ -45,7 +45,7 @@ Aradaki fark **on bir mertebedir** ($\sim\!10^{11}$). Bu yüzden ekvatoral nehri
 
 > **Mutlak genlik ayrı bir sorudur.** Yukarıdaki bağıl hızlar ortamın **çevre** akışıdır; her cisim aynı zamanda kendi sürüklenme zarfını taşır (Postülat 7) ve zarf yerel bağıl hızı sıfırlar — Michelson–Morley'in sıfır sonucu budur. Zarfın çevre akışla arasında doğan **kayma tabakasının** yitimi ve torku teoride henüz hesaplanmamıştır (M-39/DY-1 açık kalemi; bastırma çarpanının mertebesi $\sim10^{28}$, Bölüm 7.4 md.15). Bu yüzden bu bölümün öngördüğü şey mutlak bir sürükleme değil, **oranı sabit bir diferansiyeldir**; mutlak genliğin üst sınırını Juno'nun sıfır sonucu koyar (6.3.2) ve o sınır alçak yörüngede atmosferik sürüklemenin mertebelerce altındadır.
 
-> **Düzeltme kaydı — girdabın kaynağı (3 Ağustos 2026).** Bu bölümün önceki sürümü ekvatoral girdabı *"Dünya'nın 460 m/s'lik çizgisel hızının akışkanı şiddetle sürüklemesi"* olarak tanımlıyordu. Bu **yanlıştı** ve aynı bölümün 6.3.3'teki dönme patinajı kaydıyla ($\xi = 4{,}6\times10^{-10}$) doğrudan çelişiyordu: o kesirle 465 m/s'lik spin, ortamda $2\times10^{-7}$ m/s'lik bir iz bırakır — "nehir" değil. Girdabın kaynağı entrainment değil, kuyunun **siklostrofik dengesidir** (M-22); gövdenin dönüşü nehrin hızını değil yalnızca **düzlemini** belirler (M-38/M-39 deplasman kolu). Düzeltme iddiayı zayıflatmaz, güçlendirir: nehrin şiddeti $10^{-7}$ m/s'den 15,3 km/s'ye çıkar ve prograd/retrograd farkı serbest parametresiz bir **9 çarpanı** kazanır. *(Aynı düzeltme Bölüm 3.6.1'in giriş paragrafında da gereklidir; oradaki "Makro-Vorteks Sürüklenmesi (Entrainment)" adlandırması bu ayrıma göre yeniden yazılacaktır.)*
+> **Girdabın kaynağı entrainment değildir.** Ekvatoral girdabı "Dünya'nın 460 m/s'lik çizgisel hızının akışkanı şiddetle sürüklemesi" olarak okumak, aynı bölümün 6.3.3'teki dönme patinajı kaydıyla ($\xi = 4{,}6\times10^{-10}$) doğrudan çelişir: o kesirle 465 m/s'lik spin, ortamda yalnızca $2\times10^{-7}$ m/s'lik bir iz bırakır — "nehir" değil. Girdabın kaynağı kuyunun **siklostrofik dengesidir** (M-22); gövdenin dönüşü nehrin hızını değil yalnızca **düzlemini** belirler (M-38/M-39 deplasman kolu). Ayrım iddiayı zayıflatmaz, güçlendirir: nehrin şiddeti $10^{-7}$ m/s yerine 15,3 km/s'dir ve prograd/retrograd farkı serbest parametresiz bir **9 çarpanı** kazanır. *(Bölüm 3.6.1'deki "Makro-Vorteks Sürüklenmesi (Entrainment)" adlandırması bu ayrım gözetilerek okunmalıdır: ad sürükleme bastırımını anlatır, taşımayı değil.)*
 
 **Girdabın İzi Yörünge Verisinde Nerede? (Hassas Yörünge Belirleme ile Yüzleşme)**
 Bu asimetri iddiasının en sert sınavı, uzay çağının en hassas veri setidir: binlerce uydunun santimetre düzeyindeki rutin yörünge belirlemesi (GNSS/SLR/DORIS izleme; GRACE/GOCE gravite haritaları), gözlenen tüm sapmaları bilinen terimlerle kapatır ve modellenmemiş bir "girdap artığı" bırakmaz; "donmuş yörünge" tasarımlı kutupsal uydular, dairesel-yakın yörüngelerini yıllarca korur. Teorinin cevabı bu veriyi reddetmek değil, **sahiplenmektir** — iki katmanda:
@@ -84,9 +84,9 @@ $$\left|\frac{d\Omega_{düğüm}}{dt}\right| = \frac{2GJ_\oplus}{c^2a^3(1-e^2)^{
 
 *(Tam türetim: **Ek M-41**.)* Bu, türetilmiş $\xi$'nin bağımsız ikinci sınavıdır: tek bir sürüklenme kesri, iki farklı deneyi (jiroskop spini ve yörünge düzlemi) birden karşılar. İki sonucun geometrik çarpanları farklıdır (jiroskopta $\tfrac12$, düğümde $2$) ve bu fark mekanizma ayrımından gelir — paralel taşıma ↔ kuvvet.
 
-> **Düzeltme kaydı — eğiklik:** Düğüm sürüklenme hızı, formülde görüldüğü üzere **eğiklikten bağımsızdır**. LAGEOS'un 109,8°'lik eğikliği etkinin *büyüklüğünü* belirlemez; iki farklı eğiklikteki uydunun birlikte kullanılması, bu etkiyi kendisinden $10^7$ kat büyük olan Newtonyen $J_2$ düğüm gerilemesinden (~126°/yıl) *ayrıştırabilmek* içindir.
+> **Eğiklik kaydı:** Düğüm sürüklenme hızı, formülde görüldüğü üzere **eğiklikten bağımsızdır**. LAGEOS'un 109,8°'lik eğikliği etkinin *büyüklüğünü* belirlemez; iki farklı eğiklikteki uydunun birlikte kullanılması, bu etkiyi kendisinden $10^7$ kat büyük olan Newtonyen $J_2$ düğüm gerilemesinden (~126°/yıl) *ayrıştırabilmek* içindir.
 
-Fizikçiler bu değerleri kurgusal "uzay-zaman kumaşının burulması" ile açıklarken, Evrenakı Navier–Stokes denklemlerinden (Navier, 1823; Stokes, 1845) yola çıkarak bunu bizzat lokal Evrenakı akışkanının yerel rotasyon vektörü ($\vec{\Omega}_{rot}$; eski yazım: $\vec{\Omega}$) üzerinden hesaplar:
+Fizikçiler bu değerleri kurgusal "uzay-zaman kumaşının burulması" ile açıklarken, Evrenakı Navier–Stokes denklemlerinden (Navier, 1823; Stokes, 1845) yola çıkarak bunu bizzat lokal Evrenakı akışkanının yerel rotasyon vektörü ($\vec{\Omega}_{rot}$) üzerinden hesaplar:
 
 $$\vec{\Omega}_{rot} = \frac{1}{2} \nabla \times \vec{v}_{vorteks}$$
 
@@ -179,7 +179,7 @@ Jeodetik (de Sitter) presesyon, çerçeve sürüklenmesinden 169 kat büyük ve 
 
 Bu sonuç, teoriyi Genel Görelilik'ten **ayırt etmez**; onunla yapısal olarak özdeştir (aynı dürüstlük Bölüm 3.10.3'ün dikey salınım kaydında da vardır). Kazanç iki yerdedir: (i) teori, kendi akışkan denklemlerinden GR'ın sayısını ek serbest parametre üretmeden veriyor; (ii) $\Phi/c^2$'nin iki bağımsız yolla aynı çıkması, teorinin iç tutarlılığının sınanmış bir noktası hâline geliyor.
 
-**Kapanan açık kalem (28 Temmuz 2026).** Bu paragrafın önceki sürümü şunu kaydediyordu: *"$\xi$ Ek C'de [S], gözlemle sabitlenmiş; $\xi\propto\Phi/c^2$ ilişkisi eşleştirmeyle elde edilmiştir."* İlişki artık **türetilmiştir** (Ek M-40, "$\xi$'nin Türetimi"). Ortam bir cismi ancak kavrama hızının bozulduğu ölçüde tutar; bozulmanın kesri Ek M-42'de ışık bükülmesinden sabitlenmiştir ve dönme kütleyi $r^2$ ile ağırlıklandırır:
+**$\xi$ türetilmiştir** (Ek M-40, "$\xi$'nin Türetimi") — gözlemle sabitlenmiş bir uydurma değildir. Ortam bir cismi ancak kavrama hızının bozulduğu ölçüde tutar; bozulmanın kesri Ek M-42'de ışık bükülmesinden sabitlenmiştir ve dönme kütleyi $r^2$ ile ağırlıklandırır:
 $$\xi = \frac{I}{MR^{2}}\left|\frac{\delta c_{loc}}{c}\right| = \frac{I}{MR^{2}}\cdot\frac{2\Phi}{c^{2}} = 0{,}3307\times1{,}392\times10^{-9} = 4{,}605\times10^{-10}$$
 Serbest sayısal katsayı yoktur ve sonuç, Lense–Thirring'e eşlemeyle bulunanın birebir aynısıdır. Dolayısıyla **GP-B artık bir girdi değil, bir öngörüdür**: zincir ışık bükülmesinden başlar ($1{,}751''$ → $c_{loc}=c\Lambda^2$ → $\delta c/c=2\Phi/c^2$ → $\xi$ → 41,0 mas/yıl) ve $37{,}2\pm7{,}2$ ölçümü bu zinciri **sınar** (0,52σ). Ek M-40'ın rozeti [T]'ye yükselmiştir. *Kalan incelik:* bağıntı birinci mertebedir; $\xi\to1$ yaklaşırken (nötron yıldızı, ergosfer) doğrusal biçim geçerliliğini yitirir (Bölüm 7.4 md.15).
 

@@ -42,6 +42,7 @@ Su için $n=1{,}333$ ters okunursa $\phi = 1-1/n^2 = 0{,}437$ çıkar. Sıvı su
 - Homojenleştirme, ışık ölçeği ≫ molekül aralığı koşuluna bağlıdır; molekül-ölçeğine inen yapılar (ör. nanofotonik boşluklar) için ortalama alma geçersizleşir.
 - Türetim tek frekanslıdır; $n$'nin renge bağlılığı (dispersiyon) burada değil, M-17'de ve 7.4 md.7'de ele alınır.
 - $\phi \to 1$ limiti ($n\to\infty$) fiziksel değildir; moleküler paketlenmenin geometrik üst sınırları $\phi$'yi 1'in belirgin altında tutar.
+  > **Kapsam: bu yasak yalnız *tikel kafesler* içindir.** Argüman özdeş, geçilmez kürelerin paketlenme sınırına dayanır ($\pi/\sqrt{18}=0{,}7405$) ve moleküler/iyonik maddede geçerlidir. **Delokalize bir elektron gazına uygulanamaz:** metalik ve tam iyonize fazlarda kafes tikel değildir, elektron yoğunluğu ara hacmi de doldurur ve $\phi\to1$ **fiziksel hâle gelir** (11.4.1-(5): eşik altı bir cep için metalik hidrojende 30, Güneş plazmasında 3.000–11.000 protonluk boşluk gerekir ⟹ $\phi=1-\delta$, $\delta\lesssim10^{-13}$). Nötron maddesinde ise elektron gazı yoktur ve yasak **geçerli kalır** ($\phi\approx0{,}7$–$0{,}9$, paketlenme-sınırlı).
 
 ### Açık Uçlar
 - $\phi$'nin (molekül başına etkin deplasman hacminin) birinci-ilkelerle, molekül girdap yapısından hesabı (7.4 md.7).
@@ -62,7 +63,7 @@ Su için $n=1{,}333$ ters okunursa $\phi = 1-1/n^2 = 0{,}437$ çıkar. Sıvı su
 1. **Bileşenlerin yoğunluk payları.** Hacim kesirleriyle ağırlıklandırılır: durgun arka plan $(1-\phi)$ kesrini, moleküllerle birlikte akan deplasman payı $\phi$ kesrini kaplar. Her ikisinin yoğunluğu $\rho_0$ olduğundan payları $\rho_0(1-\phi)$ (hız 0) ve $\rho_0\phi$ (hız $u$), toplamı ise **tam olarak $\rho_0$**'dır — M-15'in $\rho=\rho_0$ kabulüyle birebir aynı muhasebe.
 2. **Momentum-ağırlıklı ortalama hız.** Zerre'nin gördüğü etkin ortam hızı, momentum ağırlıklı ortalamadır:
 $$u_{ort}=\frac{\rho_0(1-\phi)\cdot 0+\rho_0\phi\cdot u}{\rho_0(1-\phi)+\rho_0\phi}=\frac{\rho_0\phi\,u}{\rho_0}=\phi\,u$$
-*(Düzeltme kaydı, 28 Temmuz 2026: bu adımın önceki sürümü payları $\rho_0$ ve $\rho_0\phi/(1-\phi)$ alıyordu; toplamı $\rho_0/(1-\phi)>\rho_0$ çıktığı için madde içinde arka plandan **daha yoğun** bir ortam ima ediyordu — M-15'in "molekül = düşük basınç cebi" aksiyomuyla ve $\rho=\rho_0$ kullanımıyla çelişiyordu. Hacim kesri ağırlıklandırması bu çelişkiyi kaldırır; **sonuç $u_{ort}=\phi u$ değişmez.**)*
+*(Ağırlıklandırma uyarısı: paylar $\rho_0$ ve $\rho_0\phi/(1-\phi)$ alınamaz — toplamı $\rho_0/(1-\phi)>\rho_0$ çıkar ve madde içinde arka plandan **daha yoğun** bir ortam ima eder; bu, M-15'in "molekül = düşük basınç cebi" aksiyomuyla ve $\rho=\rho_0$ kullanımıyla çelişir. Doğru olan hacim kesri ağırlıklandırmasıdır; **sonuç $u_{ort}=\phi u$'dur.**)*
 *(Notasyon notu: bu büyüklük gövde metninde — 3.4.6.3 — $w$ olarak yazılıdır; Anayasa S-12 gereği katalogda $u_{ort}$ kullanılır.)*
 3. **Galile toplamı.** Laboratuvar hızı: $v_{lab}=\dfrac{c}{n}+u_{ort}=\dfrac{c}{n}+\phi\,u$; sürükleme katsayısı tanım gereği $f=\phi$.
 4. **M-15 ile birleştirme.** $\phi = 1-1/n^2$ ikamesi kapalı formu verir.
@@ -72,13 +73,13 @@ $$\boxed{\,f=\phi=1-\frac{1}{n^2}\,}$$
 
 Katsayı yalnızca $n$'ye bağlıdır; boru uzunluğundan ve akış geometrisinin ayrıntısından bağımsızdır (Zeeman'ın uzunluk-bağımsızlık gözlemiyle uyumlu).
 
-> **$\phi$'nin ikinci rolü: kavrama kesri (Ek M-39, M-40).** Bu türetimin sonucu optikle sınırlı değildir. Elde edilen şey genel bir ifadedir: **maddenin sürüklediği ortam kesri $\phi$'dir, $(1-\phi)$ taşınmaz.** Aynı kesir, gök cisimlerinin kendi ortamını ne kadar döndürdüğünü de yönetir ($v_e=\phi\,\omega R$, M-39) ve M-40'ın iç kavrama kanalını tanımlar ($\mathcal{R}=\phi$).
+> **$\phi$'nin ikinci rolü: kavrama kesri (Ek M-39, M-40).** Bu türetimin sonucu optikle sınırlı değildir. Elde edilen şey genel bir ifadedir: **maddenin sürüklediği ortam kesri $\phi$'dir, $(1-\phi)$ taşınmaz.** Aynı kesir, gök cisimlerinin deplasman genliğini de yönetir ve M-40'ın iç kavrama kanalını tanımlar ($\mathcal{R}=\phi$). **$\phi$ hıza değil genliğe girer:** iki-fazlı taşıma muhasebesi $\Delta P=-\kappa_5(\phi\rho_0)v^2$ ile $p=1$ verir (M-39, Varsayım 4).
 >
 > Bunun iki sonucu vardır:
 > - **Kavrama kütleyle değil hacimle ölçeklenir.** Su için $\phi=0{,}437$ iken $\rho_{su}/\rho_n=3{,}7\times10^{-15}$'tir — 14 mertebe fark. Deplasman kafesi bare nükleon değil **atomun tamamıdır**: elektron kabuğu kütlesel olarak boş, Evrenakı açısından doludur. Fizeau'nun ölçtüğü $0{,}434\pm0{,}020$ bunu doğrudan doğrular — kütle ölçeklemesi geçerli olsaydı akan su ışığı hiç sürüklemezdi.
 > - **Çapraz-ölçek iddiası.** Laboratuvarda akan sudaki ışık sürüklenmesi ile gezegen basıklığının $J_4$ imzası, teoride **tek bir büyüklüğün** iki ölçekteki tezahürüdür. Bu, 3.4.6.4'ün "tek mekanizma, iki ölçek" iddiasının üçüncü ayağıdır ve bağımsızca sınanabilir.
 >
-> *Sınır:* $\phi=1-1/n^2$ saydam ortamlar için türetildi. Opak/metalik fazlarda ($n$ karmaşık) ve iyonize plazmada okunması ayrı argüman gerektirir — bağlı kafes çözülünce $\phi$ çöker (M-39, Geçerlilik Sınırı).
+> *Sınır:* $\phi=1-1/n^2$ saydam ortamlar için türetildi. Opak/metalik fazlarda ($n$ karmaşık) ve iyonize plazmada okunması ayrı argüman gerektirir; o argüman **11.4.1-(4)–(5)**'te kurulmuştur ve hacim kesri her fazda tanımlı kalır. *(Dikkat: "bağlı kafes çözülünce $\phi$ çöker" biçimindeki yaygın okuma **yanlıştır ve işareti terstir.** Kafes çözülünce $\phi$ çökmez; delokalize elektron gazı ara hacmi doldurduğu için **1'e çıkar.**)*
 
 ### Doğrulama Tablosu
 | Ortam | $n$ | Öngörü $f=1-1/n^2$ | Ölçüm | Durum |

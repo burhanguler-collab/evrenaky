@@ -104,7 +104,7 @@ Yani her yoğunluk pürüzü **tam $c$ hızında** yayılan bir basınç dalgas�
 
 Bu, ortamın **stiff (Zel'dovich) akışkan** olması demektir — ses hızının ışık hızına tam eşit olduğu, nedensel olarak en katı hâl. Gözlemsel karşılığı doğrudandır: GW170817'nin kütleçekim dalgası ↔ ışık eşitliği ($10^{-15}$ hassasiyet) bu kanalı bağlar ve **otomatik olarak sağlanır**.
 
-> *Düzeltme kaydı (29 Temmuz 2026): bu adımın bir ara sürümü dağılma hızını $c/\sqrt k$ yazıyordu. O yazım, Ek B.3'ün **deplasman** bağıntısını bir hâl denklemi sanan bir türetime dayanıyordu ve GW170817 ile 6,5 mertebe çelişiyordu. Ek M-44 iki kanalı ayırınca ($\chi$ sabit ↔ $\rho$ sabit) sıkışma hızının **tam $c$** olduğu görüldü — yani bu girdinin özgün metni doğruydu.*
+> *Kanal uyarısı: dağılma hızı $c/\sqrt k$ **değildir.** O okuma, Ek B.3'ün **deplasman** bağıntısını bir hâl denklemi sanmaktan doğar ve GW170817 ile 6,5 mertebe çelişir. Ek M-44 iki kanalı ayırır ($\chi$ sabit ↔ $\rho$ sabit) ve sıkışma hızı **tam $c$** çıkar.*
 
 Postülat 4 ile çelişki yoktur: $c$ Zerre'nin çizgisel öteleme sınırıdır ve sıkışma kanalı da tam orada durur; ortamın $c$'yi **aşan** kanalı ayrıdır ve kohezyon kanalıdır ($v_m=c\sqrt{\Sigma/P_0}$, M-5).
 3. **Vakum kararlılığı (kendiliğinden madde doğumu yok).** Arka planın "kaynayıp" kendiliğinden girdap-madde üretmesi için yerel akışın $v_{kav} = \sqrt{2}\,c\,\sqrt{1+\Sigma/P_0}$ eşiğine ulaşması gerekir (M-4); $\Sigma \gg P_0$ kohezyonlu süper-akışkanda rastgele dalgalanmalar bu eşiğe ulaşamaz. Uzayın durup dururken maddeye dönüşmemesi aynı çerçevenin bedava sonucudur.
@@ -116,7 +116,7 @@ $$\boxed{\nabla P_0 = 0 \;\Rightarrow\; \text{homojen arka plan kuvvetsiz, karar
 - Teorem homojen arka plan içindir. Kütle *çevresindeki* gradyan bölgesinde ortam tepkisiz değildir — Euler denklemi gereği gradyana cevap verir; ama cevabı düşmek değil **dolaşmaktır**: gradyan, dolaşımın merkezcil ivmesiyle siklostrofik dengede taşınır,
 $$\frac{\nabla P}{\rho_0} = \frac{v_\theta^2}{r}$$
 (Postülat 7–8'in sürüklenme ve vorteks alanları). Katı deplasman cebi (nükleon) ise akıp dengelenemez; bütün hâlde itilir. **Madde düşer, ortam dolaşır.**
-- 2. adımın dalga-dağılma bacağı, $dP/d\rho = c^2/k$ türetimi sayesinde **$k$'nın izinli tüm aralığında ve her sıkışma genliğinde** geçerlidir; ayrı bir "güçlü sıkışma rejimi" çekincesi gerekmez. *(Düzeltme kaydı, 28 Temmuz 2026: bu satırın önceki sürümü kanıtı $k\ll1$ ile sınırlıyordu. Sınırlama, M-1'in uzlaştırma notundaki $k$ etiketi karışıklığından doğan bir yanılgıydı — $P\propto\rho$ hâli $k=1$'e karşılık gelir, $k\ll1$'e değil. Etiket düzeltilince çekinceye gerek kalmadı.)*
+- 2. adımın dalga-dağılma bacağı, $dP/d\rho = c^2/k$ türetimi sayesinde **$k$'nın izinli tüm aralığında ve her sıkışma genliğinde** geçerlidir; ayrı bir "güçlü sıkışma rejimi" çekincesi gerekmez. *(Kanıtı $k\ll1$ ile sınırlamak gerekmez: $P\propto\rho$ hâli $k=1$'e karşılık gelir, $k\ll1$'e değil — M-1'in uzlaştırma notundaki $k$ etiketi bu ayrımla okunur.)*
 - Kanıtlanan şey, **çöküşe karşı kararlılıktır** (Jeans tipi geri-besleme yok, $dP/d\rho>0$). Tam doğrusal-olmayan kararlılık — şok oluşumu, türbülans başlangıcı — ortamın hareket denklemlerinin bir eylem ilkesinden türetilmesini gerektirir; bu, teorinin bilinen ve ayrıca kayıtlı açığıdır (7.4).
 - Kozmolojik biçimin cevabı (1. adım) bir **tutarlılık** sonucudur: $\rho_0$ ile kritik yoğunluk arasındaki 43 mertebelik farkın çelişki olmadığını gösterir, CMB/ilksel bolluk oranlarını üretmez.
 

@@ -32,7 +32,7 @@ Standart fizik bunu "uzaktan etki eden kütleçekim kuvveti" olarak soyutlaştı
 >
 > Dolayısıyla iki profilin **biçimi** aynıdır ($1/\sqrt R$ — ikisi de aynı $1/R^2$ alanından çıkar), **genlikleri** ise iki katlı farklıdır. Gezegenlerin hız profilinin akışkanın profiliyle örtüşmesi bir kapılma değil, **aynı alanın iki okunuşudur** — ve aradaki 2 çarpanı serbest parametresiz bir öngörüdür (kayma tablosu: 11.3.1).
 >
-> *(Kayıt: bu bölümün önceki sürümü gezegenlerin "akıntı katmanlarına kapılmış" olduğunu ve "boşlukta düşmediğini" yazıyordu. Bu yazım M-9 ile çelişir ve literal alındığında gezegenleri $2v_{Kepler}$'e koyar; gözlem onu dışlar. Sürüklenme zarfı bir **taşıma mekanizması değil**, yerel sürükleme bastırıcısıdır — Michelson–Morley null'unun kaynağı odur, yörüngenin değil.)*
+> *(Kapsam kaydı: gezegenler akıntı katmanlarına **kapılmış değildir.** Kapılma literal alındığında gezegenleri $2v_{Kepler}$'e koyar ve gözlem bunu dışlar; M-9 ile de çelişir. Sürüklenme zarfı bir **taşıma mekanizması değil**, yerel sürükleme bastırıcısıdır — Michelson–Morley null'unun kaynağı odur, yörüngenin değil.)*
 
 Kısacası bu matematiksel bağıntı, gezegen yörüngelerinin soyut bir uzaktan-etkinin değil, **somut bir basınç alanının** eseri olduğunu gösteren bir akışkanlar dinamiği uyumudur; aynı alan gezegeni düşürürken ortamı dolaştırır.
 

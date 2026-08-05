@@ -47,12 +47,12 @@ $$\boxed{\;v_{y\ddot{o}r}(R)=\sqrt{R\,\bigl|a_{radyal}(R)\bigr|}\;}$$
 Bağıntı **maddenin serbest düşmesinden** çıkar (M-2): yıldız, ortamın kurduğu radyal basınç gradyanında dairesel yörüngeyi tutacak hıza oturur. Dönüş profili, radyal itim yasasının **çıktısıdır**.
 
 > [!WARNING]
-> **Düzeltme kaydı (3 Ağustos 2026) — bir arada duran iki hata.** Bu blok önceden $v_\theta(R)=\sqrt{R|a|}$ yazıyor ve bağıntıyı *"Postülat 7'nin sürüklenme zarfından"* çıkarıyordu. İkisi de yanlıştı:
+> **İki yaygın hata bir arada.** $v_\theta(R)=\sqrt{R|a|}$ yazmak ve bağıntıyı *"Postülat 7'nin sürüklenme zarfından"* çıkarmak — ikisi de yanlıştır:
 >
 > 1. **Mekanizma.** Yörünge sürüklenmeyle değil **serbest düşmeyle** kurulur (M-2). Ortamın sürükleme yükü $\eta_E$ üzerinden taşınır ve yörünge zaman ölçeğinde etkisizdir ($\tau_E/\tau_{madde}\approx1{,}8\times10^{16}$; M-37, 3.8.1). Yörüngeyi sürüklenmeye bağlamak, teorinin kendi kuvvet envanterini atlayıp gözlemi mekanizmasız bir kabule yüklemekti.
 > 2. **Sembol (R-1 ihlali).** Ek D $v_\theta$'yı *"girdabın teğetsel hızı"* — yani **ortamın** hızı — olarak tanımlar. Ortam ise maddenin **iki katı** hızla dolaşır (DY-2: $v_\theta=2v_{y\ddot{o}r}$, çarpan $\sqrt{\rho_n/\rho_0}=2$). Gözlenen dönüş eğrisi maddenin hızı olduğuna göre bu bölümün doğru sembolü $v_{y\ddot{o}r}$'dür; $v_\theta$ yazmak aynı sembole iki anlam yüklüyordu.
 >
-> **Sayısal içerik değişmemiştir.** 6.5.4'ün sınavı ve 173 galaksilik tarama baştan beri *maddenin* hızıyla koşulmuştu; değişen yalnız o hızın adı ve gerekçesidir. (Bu ayrımın galaktik zincire girmediğinin bağımsız kanıtı: çarpanı zincire sokan senaryo $a_0$ bandının 10 katı dışına düşer ve RMS'i ikiye katlar.)
+> **Ayrım galaktik zincire girmez.** 6.5.4'ün sınavı ve 173 galaksilik tarama *maddenin* hızıyla koşulur. Bağımsız kanıtı: çarpanı zincire sokan senaryo $a_0$ bandının 10 katı dışına düşer ve RMS'i ikiye katlar.
 
 **Düz eğrinin gerçek türetimi — Rankine gerekmez.** Ek M-30'un 5. maddesi bunu açıkça kaydeder: düz kolun türetimi Rankine profilini girdi almaktan geçmez, **M-38+M-37 zinciridir**:
 
@@ -1007,7 +1007,7 @@ Girdileri **eşit ölçütlerle** puanlarsak:
 
 ##### Açık hüküm
 
-**Girdi dürüstlüğü ölçütünde iki model, bu kitabın önceki sürümlerinin ima ettiğinden çok daha yakındır.** Ham sayımda Evrenakı öndedir ve bunun iki gerçek nedeni vardır, ikisi de daha önce kredilendirilmemişti:
+**Girdi dürüstlüğü ölçütünde iki model birbirine yakındır.** Ham sayımda Evrenakı öndedir ve bunun iki gerçek nedeni vardır:
 
 1. **Evrenakı fonksiyonel biçimini türetir; ΛCDM türetmez.** NFW profili analitik bir sonuç değil, simülasyon çıktısına uydurulmuş bir formüldür — nitekim Einasto profili aynı simülasyonlara daha iyi uyar. Evrenakı'nın $a\propto1/R$ biçimi ise M-38'in postülatlarından çıkar.
 2. **Evrenakı'nın tutmuş bir öngörüsü var; ΛCDM'in tutmamış bir öngörüsü var.** $\ell_\omega\propto\sqrt{M_{bar}}$ (eğim 1,00) sınavdan önce söylendi, 1,03 ölçüldü. ΛCDM iç bölgede cusp öngördü, çekirdek gözlendi ve kurtarma geri-beslemeden geldi.
@@ -1055,12 +1055,12 @@ Yörünge düzlemi, beş kuvvetin çoğunu kendiliğinden eler. Sınavın ilk ad
 | Kuvvet | Katalog | Ekvator düzlemindeki durumu |
 |---|---|---|
 | **F1** — Radyal kütle-itimi | M-35 | **Etkin.** Küresel pulsasyon akısı $4\pi r^2$'de seyrelir $\Rightarrow a\propto1/r^2$ |
-| **F2** — Diferansiyel sıkıştırma | M-36 | **Dairesel hıza net katkı yok.** İz-sıfır gelgit tensörü; yörünge hızını değil diskin *kalınlığını* belirler |
+| **F2** — Diferansiyel sıkıştırma | M-36 | **Dairesel hıza net katkı yok.** İz-sıfır gelgit tensörü; yörünge hızına girmez, dikey geri çağırma **frekansına** ($\nu$) katkı verir. Kalınlığın kendisini hiçbir kuvvet belirlemez: $h=\sigma_z/\nu$ — kuvvetler $\nu$'yü, enerji bütçesi $\sigma_z$'yi kurar (11.4.5) |
 | **F3** — Vorteks sürüklenmesi | M-37 | **Yörünge hızına katkısı yok.** Yörüngeyi kuran sürüklenme değil, maddenin **serbest düşmesidir** (M-2): $v_{y\ddot{o}r}=\sqrt{R\lvert a_{radyal}\rvert}$. F3, ortamın kendi dolaşımını ($v_\theta=2v_{y\ddot{o}r}$, DY-2) ve $\eta_E$ ile yalnızca çok uzun ölçekli sürüklenmeyi taşır |
 | **F4** — Eksenel itim | M-38 | **Etkin.** Silindirik akı $2\pi Rh$'de seyrelir $\Rightarrow a\propto1/R$ |
-| **F5** — Yanal itim | M-39 | Düzlemde $\sin2\theta\rvert_{90°}=0$, yani **sıfır**. Ama diski ekvatora bastıran kuvvet odur |
+| **F5** — Yanal itim | M-39 | Düzlemde $\sin2\theta\rvert_{90°}=0$, yani **sıfır**. Ama düzlemin *kendisini* seçen ve levhanın yayılmasına direnen kuvvet odur (11.4.9) |
 
-Son satır bedava bir iç kapanıştır ve kayda değer: **M-38'in en kırılgan varsayımı olan "$h=$ sabit" koşulunu sağlayan kuvvet, F5'tir.** Yanal itim diski ekvator düzlemine bastırmasa akı tüpü yayılır, $1/R$ yasası $1/R^2$'ye döner ve galaktik ayak çöker. Beş kuvvetten **ikisi hesaba girer** (F1, F4), **biri kaynağın geometrisini tutar** (F5), **ikisi düzlemde sessizdir** (F2, F3). Hesabın *çerçevesini* kuran şey ise bir kuvvet değil, maddenin serbest düşmesidir (M-2). Hiçbiri fazlalık değildir.
+Son satır bedava bir iç kapanıştır ve kayda değer: **M-38'in en kırılgan varsayımı olan "$h=$ sabit" koşulunun mekanik dayanağı F5'tir.** Akı tüpü yayılırsa $1/R$ yasası $1/R^2$'ye döner ve galaktik ayak çöker; levhayı yayılmaya karşı destekleyen kuvvet yanal itimdir. Payı önemsiz değildir ve **tam burada büyüktür**: bir levhada deplasman gradyanının ölçeği $R$ değil $h_z$ olduğu için F5'in dikey geri çağırmadaki oranı $\mathcal{F}_5=\tfrac{\mathcal{A}\kappa_5}{4}(R/h_z)^2$'dir; $\mathcal{A}$ ise bu bölümün kendi büyüklüğüdür — orta düzlemde radyal ivmenin **F4'ten gelen payı.** F4'ün $1/R$ akı tüpü rejimi dış disktedir, yani $\mathcal{A}$ oradadır en büyük: $R=25$ kpc'de $\mathcal{F}_5\simeq0{,}9$, iç diskte $\simeq0{,}1$ (11.4.9). **F5, F4'ün güçlü olduğu yerde güçlüdür** — ikisi aynı deplasman basıncının iki izdüşümü olduğu için zorunlu, ve akı tüpünün korunmasına ihtiyaç duyulan yer tam orasıdır. *(Koşul M-38 içinde bağımsızca da kurulur — viskoz difüzyonun ihmal edilebilirliği $10^{22}$ marj bırakır; F5 o marjı ikinci bir mekanizmayla destekler, tek başına taşımaz. Diski **kurmak** ise F5'in işi değildir: korunumlu bir kuvvet dikey enerji çekip alamaz, 11.4.5.)* Beş kuvvetten **ikisi hesaba girer** (F1, F4), **biri kaynağın geometrisini destekler** (F5), **ikisi düzlemde sessizdir** (F2, F3). Hesabın *çerçevesini* kuran şey ise bir kuvvet değil, maddenin serbest düşmesidir (M-2). Hiçbiri fazlalık değildir.
 
 ### 6.5.4.2 Birinci borcun kapanışı: kaynak, kapsanan nükleon kütlesidir
 
@@ -1068,7 +1068,7 @@ M-29 (Gauss argümanı) $1/r^2$'yi bir akı korunumu olarak kurar. Akı korunumu
 
 $$a_{F1}(R) \;=\; \mathcal{G}\int\!\!\!\int \Sigma(R')\,R'\,\frac{R-R'\cos\varphi}{\left(R^2+R'^2-2RR'\cos\varphi+h_z^2\right)^{3/2}}\,\mathrm{d}\varphi\,\mathrm{d}R'$$
 
-Burada $\mathcal{G}\equiv\alpha/\rho_n=Cq_n/4\pi\rho_n m_n$ **M-35'in genliğidir** — sayısal değeri Güneş Sistemi ölçeğinde sabitlenmiştir (Ek C satır 12), ama teoriye "Newton'un $G$'si" olarak değil, nükleon debisinin makro izdüşümü olarak girer. $h_z$ bileşenin ölçek yüksekliğidir; razor-thin idealleştirmesi yapılmaz, çünkü kalınlığı F5 tutar (§6.5.4.1).
+Burada $\mathcal{G}\equiv\alpha/\rho_n=Cq_n/4\pi\rho_n m_n$ **M-35'in genliğidir** — sayısal değeri Güneş Sistemi ölçeğinde sabitlenmiştir (Ek C satır 12), ama teoriye "Newton'un $G$'si" olarak değil, nükleon debisinin makro izdüşümü olarak girer. $h_z$ bileşenin ölçek yüksekliğidir ve **gözlemsel girdidir**; razor-thin idealleştirmesi yapılmaz, çünkü levhanın yayılmadan kalması F5 tarafından desteklenir (§6.5.4.1, 11.4.9).
 
 Bu integral **sayısal olarak** alınmıştır. Freeman'ın (1970) Bessel kapalı formu bilinçli olarak kullanılmamıştır: kapalı form matematiksel olarak aynı sonucu verir, ama teorinin kendi yasasını kendi kaynağı üzerinde topladığımızın gösterilmesi, bu kesitin bütün iddiasıdır.
 
@@ -1152,7 +1152,7 @@ Pencere parametresizdir ve üç ölçümle sınanmıştır: **(a)** morfolojik s
 **Bedava gelen üç sonuç.** Bunların hiçbiri ayrıca varsayılmamıştır; türetimin kendisinden çıkarlar:
 
 1. **Geçiş yarıçapı türetilmiş olur: $r_0=\ell_\omega$.** İki terimin eşitlendiği yarıçap $\mathcal{G}M/R^2=\mathcal{G}M/(\ell_\omega R)$'den doğrudan $R=\ell_\omega$ verir. Bu, $r_0$'ı çekirdek kütlesine değil nükleon debi oranına bağlar; dolayısıyla kovan/toplam oranı üzerinden bir morfoloji gerilimi doğurmaz. (Noktasal kütle idealleştirmesine dayanan $r_0=GM_c/B$ türü bir bağıntı dağılmış kaynakla tutarsızdır ve kullanılamaz.)
-2. **Eksendeki ıraksama kendiliğinden düzenlenir.** $R\to0$ iken $M_{kaps}\to0$ olduğundan $a_{F4}\to0$'dır. M-38'in "simetri gereği eksende net eksenel kuvvet sıfırdır" koşulu, elle konan bir düzenleme çarpanı olmadan sağlanır. Önceki sürümlerin $R^2/(R^2+r_0^2)$ yaması gereksizleşir.
+2. **Eksendeki ıraksama kendiliğinden düzenlenir.** $R\to0$ iken $M_{kaps}\to0$ olduğundan $a_{F4}\to0$'dır. M-38'in "simetri gereği eksende net eksenel kuvvet sıfırdır" koşulu, elle konan bir düzenleme çarpanı olmadan sağlanır. Elle konan bir $R^2/(R^2+r_0^2)$ yaması gereksizdir.
 3. **Güneş Sistemi ile çelişki doğmaz — geniş marjla.** M-38, Ay'ın apsidal presesyonundan $\varepsilon=a_{1/R}/a_{1/R^2}<2\times10^{-5}$ üst sınırını koymuştu. Bu türetimde $\varepsilon=r/\ell_\omega$'dir; NGC 3198 için bulunan $\ell_\omega$ ile Ay'da $\varepsilon=1{,}1\times10^{-12}$, yani sınırın **19 milyon kat** altında. Neptün'de $1{,}2\times10^{-8}$. Yerel galaktik alan ise $R=8$ kpc'de $a_{F4}\approx3{,}8\times10^{-11}$ m/s² ile tüm Güneş Sistemi'ne ortak-mod etki eder ve bağıl dinamikte görünmez.
 
 ### 6.5.4.4 Tek denklem ve sayısal sınav

@@ -54,9 +54,12 @@
 * **Verinin bugünkü durumu:** Pioneer ivmesi, sondaların ısıl ışınım geri tepmesiyle çözülmüştür (Turyshev ve ark., 2012); flyby sapmaları ise sonraki hassas geçişlerde (Rosetta 2009/2011, Juno 2013) gözlenmemiştir (Thompson ve ark., 2014).
 * **Evrenakı'nın konumu:** İki kalem de Karşı Kayıt ilkesi (Bölüm 1.1.2) gereği bu matristen çıkarılmıştır. Flyby verisi artık kanıt değil, ekvatoral girdabın kesme katsayısına üst sınır koyan bir ölçümdür (bkz. Bölüm 6.3.2). Bu satır, geri çekmenin kaydı olarak korunmaktadır.
 
-### 2.7 Satürn Halkalarının Keskin Sınırları ve "Ring Rain" Kütle Kaybı
+### 2.7 Satürn Halkaları — KISMEN GERİ ÇEKİLEN KALEM
 * **Standart Fiziğin Çıkmazı:** Halkaların dağılmadan korunması "çoban uydular" gibi geçici açıklamalarla geçiştirilir (Goldreich & Tremaine, 1979); halka yağmurunun kütle-kaybı ölçümü için bkz. O'Donoghue ve ark., 2019.
-* **Evrenakı Mekanik Çözümü:** Satürn etrafındaki hortum dinamikleri (Siklostrofik Denge) ve eksenel kütle-itim gradyanı.
+* **Evrenakı'nın konumu:** Bu kalem iki ayrı gözlemi bir arada sayıyordu; ikisinin akıbeti farklıdır.
+  * ~~**"Ring Rain" kütle kaybı**~~ → **MATRİSTEN ÇIKARILDI.** Kısım 11.4.8'in işaret denetimi: ortam her yarıçapta maddeyi **önden geçtiği** için (DY-2, $v_{ortam}=2v_{Kepler}$) artık kuplajın torku **dışa** dönüktür (M-37: kuplaj prograddır), oysa halka yağmuru **içe**dir. İşaret ters olduğu için **teorinin bu olguda ayrışan bir sözü yoktur;** içe akış standart mekanizmalara (plazma sürüklemesi, mikrometeorit bombardımanı, viskoz yayılma, elektromanyetik güdüm) aittir. Karşı Kayıt ilkesi (1.1.2) gereği çıkarılmıştır. *("Zarf içinde ortam gövdeyle eş-döner" biçimindeki kaçış yolu da kapalıdır: eş-dönüş bir **dönme** sürüklenmesi iddiasıdır ve M-40'ın $\xi=4{,}6\times10^{-10}$'uyla dışlanır — $\phi$ öteleme, $\xi$ dönme kanalıdır.)*
+  * **Halkanın ekvator düzleminde ve jilet inceliğinde kalması** → **kalır, ama gerekçesi değişti.** Mekanizma "hortum dinamikleri" değil, **F5 yanal itiminin düzlem seçimi**dir (11.4.2–11.4.4): ekvator, yanal itim alanının tek kararlı noktasıdır. Ve **inceliğin** kaynağı F5 değildir — korunumlu kuvvet kalınlığı belirlemez (11.4.5); onu çarpışmalı sönüm yapar. Teorinin bu kalemde ayrışan sözü **düzlemin kimliği** ve halka dikey frekansındaki **tek-parite $(R_e/r)^3$ imzasıdır** (Sınav 11.4-A) — ikisi de standart fizikte karşılığı olmayan, ölçülebilir ifadelerdir.
+  * **Kazanç kaydı:** Aynı denetim, kitaptaki **en sıkı $\eta_E$ sınırını** doğurdu — $\lesssim2{,}3\times10^{-11}$ Pa·s, Phoebe'den $1{,}4\times10^{6}$ kat sıkı (11.4.8). Bir iddia geri çekilirken bir sınır kazanıldı.
 
 ### 2.8 Güneş'in Galaktik Yunuslaması (Dikey Sinüs Salınımı)
 * **Standart Fiziğin Çıkmazı:** Düzlemden uzaklaşan yıldızı geri çağıran dikey kuvvet baryonik maddeyle üretilemez; görünmez karanlık maddeye dayanmak zorundadır (sürücü mekanizması yoktur).

@@ -91,10 +91,11 @@ const chapters = [
     { id: 'akademik_10_10', title: '10.10 Kod Doğrulaması, Açık Kalemler ve Sonuç', file: 'Metin/Akademik/Kisim_10_Yorunge_Dogrulamasi/10_Denetim_Acik_Kalemler_Sonuc.md', group: 'akademik', part: 'Kısım X: Evrenakı Yörünge Doğrulaması' },
     { id: 'akademik_10_kaynakca', title: '10.11 Kaynakça', file: 'Metin/Akademik/Kisim_10_Yorunge_Dogrulamasi/99_Kaynakca.md', group: 'akademik', part: 'Kısım X: Evrenakı Yörünge Doğrulaması' },
     { id: 'akademik_11_01', title: '11.1 Gelgit Tensörü ve Denge Gelgiti', file: 'Metin/Akademik/Kisim_11_Astronomik_Dogrulamalar/01_Denge_Gelgiti_ve_Tensor_Matematigi.md', group: 'akademik', part: 'Kısım XI: Astronomik Doğrulamalar' },
-    { id: 'akademik_11_02', title: '11.2 Yanal İtim ve Küresel Basıklık', file: 'Metin/Akademik/Kisim_11_Astronomik_Dogrulamalar/02_Kuresel_Basiklik_ve_Jeoit_Formu.md', group: 'akademik', part: 'Kısım XI: Astronomik Doğrulamalar' },
+    { id: 'akademik_11_02', title: '11.2 Küresel Basıklık ve Jeoit Formu', file: 'Metin/Akademik/Kisim_11_Astronomik_Dogrulamalar/02_Kuresel_Basiklik_ve_Jeoit_Formu.md', group: 'akademik', part: 'Kısım XI: Astronomik Doğrulamalar' },
     { id: 'akademik_11_03', title: '11.3 Kütle-Dönüş (Spin) İlişkisi: Zarf Rejimleri', file: 'Metin/Akademik/Kisim_11_Astronomik_Dogrulamalar/03_Kutle_Spin_Iliskisi_ve_Zarf_Rejimleri.md', group: 'akademik', part: 'Kısım XI: Astronomik Doğrulamalar' },
     { id: 'akademik_11_04', title: '11.4 Satürn Halkaları ve Dikey Salınım', file: 'Metin/Akademik/Kisim_11_Astronomik_Dogrulamalar/04_Saturn_Halkalari_ve_Dikey_Salinim.md', group: 'akademik', part: 'Kısım XI: Astronomik Doğrulamalar' },
-    { id: 'akademik_11_kaynakca', title: '11.5 Kaynakça', file: 'Metin/Akademik/Kisim_11_Astronomik_Dogrulamalar/99_Kaynakca.md', group: 'akademik', part: 'Kısım XI: Astronomik Doğrulamalar' },
+    { id: 'akademik_11_05', title: '11.5 Kısım Özeti: Ne Öğrendik?', file: 'Metin/Akademik/Kisim_11_Astronomik_Dogrulamalar/05_Ne_Ogrendik.md', group: 'akademik', part: 'Kısım XI: Astronomik Doğrulamalar' },
+    { id: 'akademik_11_kaynakca', title: '11.6 Kaynakça', file: 'Metin/Akademik/Kisim_11_Astronomik_Dogrulamalar/99_Kaynakca.md', group: 'akademik', part: 'Kısım XI: Astronomik Doğrulamalar' },
     { id: 'populer_01', title: '1. Uzay Boş Değil!', file: 'Metin/Populer/populer_01.md', group: 'populer' },
     { id: 'populer_02', title: '2. Elma Neden Düşmez, İtilir!', file: 'Metin/Populer/populer_02.md', group: 'populer' },
     { id: 'populer_03', title: '3. Işığın Gerçek Yüzü: Zerreler', file: 'Metin/Populer/populer_03.md', group: 'populer' },
@@ -762,6 +763,17 @@ const simulationsList = [
         chapterId: 'akademik_03_08',
         chapterName: '3.8 Makro-Girdabın Motoru',
         desc: 'Dönel kütlelerin Evrenakı akışkanında tork kilitlenmesi ve spin transferi.'
+    },
+    {
+        id: 'sim_gelgit_vektor',
+        title: 'Evrenakı Gelgit Basınç Modeli (Vektörel)',
+        category: 'gok',
+        badgeClass: 'badge-yellow',
+        badgeText: 'GÖK MEKANİĞİ',
+        file: 'animasyonlar/gelgit_vektör.html',
+        chapterId: 'akademik_11_01',
+        chapterName: '11.1 Gelgit Tensörü ve Denge Gelgiti',
+        desc: 'Klasik Newton diferansiyel çekim modeli ile Evrenakı hidrostatik basınç modelinin karşılaştırmalı vektör analizi.'
     }
 ];
 
@@ -880,8 +892,38 @@ async function loadChapterContent(chapter) {
         // Replacing relative paths: ../Gorseller/ -> Gorseller/
         markdownText = markdownText.replace(/\.\.\/Gorseller\//g, 'Gorseller/');
 
+        // Matematiği ve kodu marked'ın inline kurallarından koru.
+        // marked, KaTeX'ten ÖNCE çalıştığı için '_' çiftlerini italik sanıp LaTeX
+        // altçizgilerini yiyor: "\mathcal{A}_0}{\mathcal{G}_{yerel}" ifadesinde
+        // '}' sonrası iki '_' bir <em> çifti olarak eşleşip kayboluyor ve KaTeX'e
+        // bozuk LaTeX kalıyor. ('m_p' gibi kelime-içi altçizgiler CommonMark gereği
+        // zaten güvenli; kırılan yalnız '}' ardından gelenler.)
+        // Çözüm: kod ve matematik bloklarını yer tutucuya alıp marked'dan sonra
+        // birebir geri koymak. KaTeX yine DOM üzerinde çalışır, davranışı değişmez.
+        // Kod bölgeleri geçici olarak çekilir ki içindeki '$' matematik sanılmasın;
+        // marked'a GERİ VERİLİR, çünkü kod bloklarını doğru biçimlendiren o
+        // (KaTeX de <pre>/<code> içini zaten atlar).
+        const kodKasa = [];
+        const kodKoy = (s) => '@@KOD' + (kodKasa.push(s) - 1) + '@@';
+        // Matematik ise marked'ı BAŞTAN SONA atlar ve HTML'e kaçışlı geri konur.
+        const matKasa = [];
+        const matKoy = (s) => '@@MAT' + (matKasa.push(s) - 1) + '@@';
+        // '<' ve '&' kaçışlanmadan innerHTML'e verilirse tarayıcı LaTeX'i HTML
+        // sanır: "M<M_{\text{taban}}" bir etiket başlangıcı gibi ayrıştırılıp
+        // metin düğümü parçalanır ve KaTeX artık o ifadeyi göremez.
+        const htmlKacis = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+        const korunmus = markdownText
+            .replace(/```[\s\S]*?```/g, kodKoy)    // fenced kod
+            .replace(/`[^`\n]*`/g, kodKoy)         // satır içi kod
+            .replace(/\\\$/g, kodKoy)              // kaçışlı dolar
+            .replace(/\$\$[\s\S]+?\$\$/g, matKoy)  // görüntü matematiği
+            .replace(/\$[^$\n]+?\$/g, matKoy)      // satır içi matematik
+            .replace(/@@KOD(\d+)@@/g, (_, i) => kodKasa[Number(i)]);
+
         // Parse Markdown to HTML via marked.js
-        let htmlContent = marked.parse(markdownText);
+        let htmlContent = marked.parse(korunmus)
+            .replace(/@@MAT(\d+)@@/g, (_, i) => htmlKacis(matKasa[Number(i)]));
 
         // Inject content
         bodyContainer.innerHTML = htmlContent;
@@ -895,13 +937,12 @@ async function loadChapterContent(chapter) {
         // Post-process HTML for GitHub style alert boxes
         postProcessAlerts(bodyContainer);
 
-        // Process tooltips
-        postProcessTooltips(bodyContainer);
-
-        // [M-n] atıflarını Ek M katalog sayfalarına tıklanabilir bağlantıya çevir
-        linkifyEkMReferences(bodyContainer);
-
-        // Render mathematical formulas via KaTeX
+        // Matematik, sözlük/bağlantı işleyicilerinden ÖNCE render edilir.
+        // Sebep: postProcessTooltips metin düğümlerinde "Zerre", "Evrenakı" gibi
+        // terimleri <span>'e sarar. Ham LaTeX henüz metinse — ör.
+        // "\underbrace{...}_{\text{uzaysal (Zerre Aralığı)}}" — sarmalama formülün
+        // metin düğümünü böler ve KaTeX artık '$$...$$' çiftini eşleştiremez;
+        // formül sayfada ham LaTeX olarak kalır.
         renderMathInElement(bodyContainer, {
             delimiters: [
                 { left: '$$', right: '$$', display: true },
@@ -911,6 +952,12 @@ async function loadChapterContent(chapter) {
             ],
             throwOnError: false
         });
+
+        // Process tooltips
+        postProcessTooltips(bodyContainer);
+
+        // [M-n] atıflarını Ek M katalog sayfalarına tıklanabilir bağlantıya çevir
+        linkifyEkMReferences(bodyContainer);
 
         // Render mermaid diagrams (```mermaid code fences)
         renderMermaidDiagrams(bodyContainer);
@@ -2486,7 +2533,10 @@ function postProcessTooltips(container) {
     while (node = walker.nextNode()) {
         const parent = node.parentNode;
         if (!parent) continue;
-        if (parent.closest('a, code, pre, h1, h2, h3, h4, h5, h6, button, script, style, .evrenaki-tooltip, .alert, blockquote')) {
+        // .katex de atlanır: KaTeX'in MathML ek açıklaması LaTeX kaynağını metin
+        // olarak taşır ve içinde "Zerre" gibi sözlük terimleri geçebilir; sarmalamak
+        // formülün metin düğümünü böler.
+        if (parent.closest('a, code, pre, h1, h2, h3, h4, h5, h6, button, script, style, .evrenaki-tooltip, .alert, blockquote, .katex, .katex-display')) {
             continue;
         }
         nodesToReplace.push(node);

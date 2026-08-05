@@ -19,7 +19,7 @@ Teori iki şeyi birden söylüyordu ve tek sembolle yazıldıkları için çeli�
 
 Newton–Laplace bağıntısı ($v_{ses}^2=dP/d\rho$) altında bu ikisi tek bir hâl denkleminden çıkarılmaya çalışılırsa ancak $k=1$'de bir arada durur; $k=1$ ise $P_0=\frac{1-k}{4}\rho_nc^2\to0$ demektir ve M-7'nin yırtılmama tabanını ($1{,}6\times10^{25}$ Pa) altı buçuk mertebe ihlal eder.
 
-Çelişki fizikte değil, **muhasebededir**: iki farklı sürecin katsayısı aynı harfle yazılmıştı.
+Çelişki fizikte değil, **muhasebededir**: iki farklı süreç aynı harfi paylaşırsa çakışır.
 
 ### Varsayımlar
 
@@ -107,13 +107,13 @@ Ayrıca kohezyon ($\Sigma$) da bu eylemde yoktur: barotropik $u$ çekme dayanım
 - **Dönüsüz-olmayan genişletme.** Clebsch veya Lin kısıtıyla vortisiteli akış; makro-vorteks kolunun (M-22, M-30) eyleme bağlanması buna bağlıdır.
 - **Korunum yasaları.** Eylem tamamlandığında Noether akımları hesaplanmalı; elle konan korunumlar (M-38'in silindirik akısı) böylece türetilmiş olur.
 
-### Süreç Kaydı (28–29 Temmuz 2026)
+### Kritik Ayrım: Deplasman Bağıntısı Bir Hâl Denklemi Değildir
 
-Bu girdinin ilk sürümü hatalıydı ve düzeltilmesi bir sınavla geldi. İlk sürüm, Ek B.3'ün deplasman bağıntısını ($\delta\rho/\rho_0=k\,\delta P/P_0$) bir **hâl denklemi** sanıp integre ediyor ve $P=K\rho^{1/k}$ politropunu, oradan da "$k$ politrop indisin tersidir" sonucunu ve süper-akışkan yorumundan $k=\tfrac12$ öngörüsünü çıkarıyordu.
+Ek B.3'ün deplasman bağıntısı ($\delta\rho/\rho_0=k\,\delta P/P_0$) bir **hâl denklemi olarak okunamaz.** Öyle okunup integre edilirse $P=K\rho^{1/k}$ politropu, oradan "$k$ politrop indisin tersidir" sonucu ve süper-akışkan yorumundan $k=\tfrac12$ çıkar.
 
-**Bölüm 6.6.5'teki Sınav 4 bunu yanlışladı:** $k=\tfrac12$, kütleçekim dalgasının ışıktan 38,2 milyon yıl önce gelmesini gerektirir (gözlenen: 1,74 saniye sonra). Hata, söz konusu bağıntının bir hâl denklemi olmaması — maddenin eklenmesiyle ortam durumunun nasıl değiştiğini söyleyen bir ilişki olması — idi. Kategori hatası düzeltilince iki değişkenli yapı ortaya çıktı ve mengene kapandı.
+**Bölüm 6.6.5'teki Sınav 4 bu okumayı dışlar:** $k=\tfrac12$, kütleçekim dalgasının ışıktan 38,2 milyon yıl önce gelmesini gerektirir; gözlenen 1,74 saniye **sonra**dır. Bağıntı bir hâl denklemi değil, **maddenin eklenmesiyle ortam durumunun nasıl değiştiğini** söyleyen bir ilişkidir. Doğru okuma iki değişkenli yapıyı verir ($P=P(\rho,\chi)$, Ek M-44) ve $k=0$ türetilir.
 
-*Aynı düzeltmenin yan sonucu:* bir denetim turunda Ek M-5 ve M-9'un "sıkışma kanalının hızı $c$'dir" ifadeleri $c/\sqrt k$ diye değiştirilmişti. **O değişiklik hatalıydı; orijinal metin doğruydu** ve geri alınmıştır.
+*Sonuç:* Ek M-5 ve M-9'un "sıkışma kanalının hızı $c$'dir" ifadeleri geçerlidir; $c/\sqrt k$ okuması iki kanalın karıştırılmasından doğar (Ek M-44).
 
 ---
 

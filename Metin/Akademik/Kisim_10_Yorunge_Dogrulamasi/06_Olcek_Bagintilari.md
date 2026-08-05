@@ -24,7 +24,7 @@ $$v^4=\mathcal{G}\,M_{bar}\,a_0$$
 
 Panel, bu sınavın bütün duyarlılıklarını düğmelere bağlar ve iki ölçüm kaydı özellikle önemlidir:
 
-- **Hız tanımı hükmü oynatır:** gözlenen eğim, yedi hız tanımı arasında 2,58 ($V_{2{,}2R_d}$) ile 3,74 ($V_f$) arasında değişir. Teorinin $V_f$ ile karşılaştırılması keyfî değildir — yasa kütlenin tamamına bağlıdır, fiziksel karşılığı eğrinin **düz kısmıdır**; gerekçe yazılmıştır ve $V_f$ teori için en elverişli seçim de değildir.
+- **Hız tanımı hükmü oynatır:** gözlenen eğim, yedi hız tanımı arasında 2,58 ($V_{2{,}2R_d}$) ile 3,74 ($V_f$) arasında değişir. Teorinin $V_f$ ile karşılaştırılması keyfî değildir — yasa kütlenin tamamına bağlıdır, fiziksel karşılığı eğrinin **düz kısmıdır**; ve $V_f$ teori için en elverişli seçim de değildir.
 - **Çizgi genişliği tuzağı:** HI çizgi genişliği $W\approx2V_{rot}$ olduğundan, $W/2$ düzeltmesi yapılmadan kurulan karşılaştırma ~×99'luk sahte bir açık üretir. Düzeltmeyle aynı mertebeye iner. Çizgi genişliği satırları düzeltmesiz hiçbir yerde alıntılanmamalıdır.
 
 ![BTFR sınavı — ölçüm kaydı](Gorseller/k10_btfr.png)
@@ -54,7 +54,7 @@ biçimindedir ve biçim sabittir: $a_0$ yanlış kalibre olsaydı bütün noktal
 Üç sonuç:
 
 1. **Ölçek doğrudur:** medyan artık sıfırdır ve iki asimptot da doğru yerdedir — derin limitte $\sqrt{g_{bar}a_0}$, Newton limitinde $g_{bar}$.
-2. **Geçiş biçimi kapanmıştır (M-47):** penceresiz kurulumun $+0{,}051$ dex/dex'lik sürüklenmesi $a_0$ ile kapatılamıyordu; Rankine penceresi türetilip resmîleştikten sonra aynı 2693 noktada eğim $+0{,}0002pprox0$'dır. Kalan tek iç borç galaksi-içi $-0{,}033$ eğimidir (10.10).
+2. **Geçiş biçimi kapanmıştır (M-47):** penceresiz kurulumun $+0{,}051$ dex/dex'lik sürüklenmesi $a_0$ ile kapatılamıyordu; Rankine penceresi türetilip resmîleştikten sonra aynı 2693 noktada eğim $+0{,}0002\approx0$'dır. Kalan tek iç borç galaksi-içi $-0{,}033$ eğimidir (10.10).
 3. **"Tek yasa" iddiasının sayısal karşılığı:** gözlenen saçılmanın dörtte üçü bildirilen ölçüm hatasıdır; fitsiz bir eğri 2693 noktayı ~0,08 dex'lik iç saçılmayla toplar.
 
 *(Yöntem kaydı: noktalar bağımsız değildir — 2693 nokta 153 galaksiden gelir ve veri kümesi galaksi kimliği içermediği için kümeleme yapılamamıştır; bütün "n" değerleri bu yüzden iyimserdir. Ayrıca F4 payı 0,25'in altına düşen yüksek-ivme kuşaklarında "gereken $a_0$" tersine çözümü kötü koşullanmıştır ve raporlanmaz — bkz. 10.6.3'ün kuralı.)*

@@ -286,10 +286,11 @@ Dürüst kayıt: sürüklenme mekanizması tek bir deneyle değil, birbirini kı
 | Gözlem | Ölçülen | Sürüklenmeye dayattığı |
 |---|---|---|
 | Yıllık yıldız sapması (Bradley, 1728) | Her yıldız gökyüzünde 20,49″ yarıçaplı bir elips çizer | Işığın doğrultusu, gözlemcinin dış ortama göre hızını **taşımalı** |
-| Günlük sapma | $0{,}32''\cdot\cos\varphi_c$ (Dünya'nın kendi dönüşünden; $\varphi_c$: gözlemcinin coğrafi enlemi — eski yazım $\varphi$) | Yön etkisi, zarfın dönüşünden **etkilenmemeli** |
+| Günlük sapma | $0{,}32''\cdot\cos\varphi_c$ (Dünya'nın kendi dönüşünden; $\varphi_c$: gözlemcinin coğrafi enlemi — faz $\varphi$ ile çakışmaması için indislenir) | Yön etkisi, zarfın dönüşünden **etkilenmemeli** |
 | Su dolu teleskop (Airy, 1871) | Tüp suyla dolunca sapma **değişmez** | Sapma yerel ortamda/zarf sınırında **üretilemez** |
 | Kısmi sürükleme (Fizeau, 1851; Zeeman, 1914) | Akan su ışığı hızının $1-1/n^2$'si kadar sürükler | Sürükleme ne tam ne sıfır; **kırılma indisine kilitli** |
-| Michelson–Morley (1887) ve modern rezonatörler | Sıfır; yönsel $\Delta c/c < 10^{-17}$ | Yerel ortam laboratuvarla **birlikte hareket etmeli** |
+| Michelson–Morley (1887) ve modern **vakum** rezonatörler | Beklenenin $\lesssim1/20$'si; yönsel $\Delta c/c < 10^{-17}$ | **Kinematik ölçek terimi ile karşılanır:** madde $\Lambda_{kin}=\sqrt{1-V^2/c^2}$ ile kısalır, anizotropi tam sıfırlanır (3.4.6.2, 11.4.8.1). Zarfın tam kavraması gerekmez |
+| **Katı dielektrik rezonatörler** (safir WGM, kristal kovuk) | Yönsel $\Delta c/c<10^{-16}$ | Aynı mekanizmayla karşılanır. Kavrama yoluyla bastırma varsayılsaydı bu satır $1/n^4$ ile zayıf bir kısıt verirdi; $\Lambda_{kin}$ ile **her yol için tam sıfır** çıkar |
 
 Bu beş satır bir kıskaç kurar. Klasik dalga-esiri mantığında bir çıkış yoktur: birinci ve beşinci satır *tam sürüklenme* ister, ikinci ve üçüncü satır *hiç sürüklenme* ister, dördüncü satır ise *kısmi ve nicel* bir sürüklenme dayatır. Stokes'un (1845) tam sürüklenmeyi kurtarma girişimi, akışkan koşullarının aynı anda sağlanamaması nedeniyle çökmüştü; tarihsel çözüm Lorentz dönüşümlerine, yani göreliliğe giden yol oldu. Evrenakı, farklı ve mekanik bir çıkış sunar.
 
@@ -301,7 +302,12 @@ Bu tek ilke, kıskacın dört kolunu birden açar:
 
 * **Yıllık ve günlük sapma.** Zerre'nin doğrultusu balistik olarak korunduğundan, sapma tıpkı yağmurda koşan birinin şemsiyesini eğmesi gibi, saf kinematik bir sonuçtur. Dünya'nın dış ortama göre hızı (yörünge için ~30 km/s, dönüş için ~465 m/s) doğrultuya olduğu gibi yansır. Zarfın Dünya (hatta Ay'ı da içine alan gradyan) ile birlikte toplu hareketi, kavrama skaler olduğu için Zerre'nin yönüne karışmaz — bu yüzden zarfın varlığı sapmayı **silmez.**
 * **Airy'nin su dolu teleskobu.** Sapma, ışığın gözlemciye varış doğrultusunda zaten kodludur; teleskop içindeki ortam bu doğrultuyu değiştiremez. Skaler kavrama yalnızca tüp içindeki *sürati* düşürür, geliş *açısını* değil — bu yüzden açı değişmez.
-* **Michelson–Morley.** Sürat, yerel zarfa göre $c$'ye oturur; zarf laboratuvarla birlikte hareket ettiğinden, laboratuvar çerçevesinde ışık her yönde eşit hızlıdır. Sonuç sıfırdır.
+* **Michelson–Morley.** Sürat, **yerel ortama göre** $c=\sqrt{P/\rho}$'dur; laboratuvar çerçevesindeki sürat ise yerel ortamın hızıyla toplanır. Sonucun sıfır çıkması ortamın taşınmasından değil, **düzeneğin kendisinin kısalmasından** gelir: ortama göre $V$ ile giden madde, hareket doğrultusunda $\Lambda_{kin}=\sqrt{1-V^2/c^2}$ çarpanıyla kısalır ve saatleri aynı çarpanla yavaşlar (**11.4.8.1**'de sıkıştırılabilir ortamın alan denkleminden türetilir). Kısalma, anizotropiyi tam olarak götürür.
+  > **Zorunlu ilk adım Fizeau muhasebesidir:** ışık yolundaki ortalama ortam hızı $\phi\,v_{madde}+(1-\phi)\,v_{ambiyans}$'tır. Fizeau ile denetim: su $u$ ile akar, ambiyans durgundur ⟹ ortalama $\phi u$ ⟹ sürüklenme katsayısı $1-1/n^2$ ✓ Rezonatör geometrisinde düzenek durgun, ambiyans $V$ ile akar ⟹ ortalama $(1-\phi)V$; yani anizotropiyi yöneten çarpan $\phi$ değil **$(1-\phi)$**'dir ve vakum yolu ($\phi=0$) rüzgârın tamamını görür.
+  >
+  > **Bu anizotropi ortam taşınarak değil, madde kısalarak götürülür.** Kinematik ölçek terimi $\Lambda_{kin}=\sqrt{1-V^2/c^2}$ cetveli ve saati aynı çarpanla ölçekler; iki yönlü fark her yol için — vakum, hava, katı dielektrik — tam olarak sıfırlanır. Türetim, ortamın sıkıştırılabilir alan denkleminden çıkar ve yeni parametre eklemez (**11.4.8.1**). Sürüklenme zarfının tam kavraması bu satır için **gerekli değildir**; zarfın kalan işi yerel sürükleme bastırmasıdır ve onu M-43'ün altkritik rejimi taşır.
+  >
+  > *Sık yapılan bir hata, "kavrama skalerdir" ilkesini "ortamın bulk hızı sürate girmez" biçiminde okumaktır. Bu okuma yanlıştır: o doğru olsaydı **Fizeau hiçbir sürüklenme göstermezdi.** Skaler kavrama, ortamın **yoğunluğunun** ışığın *ortama göre* süratini belirlediğini söyler; ortamın **hızının** laboratuvar çerçevesine eklenmesini engellemez.*
 
 Geriye kıskacın tek sert kolu kalır: Fizeau'nun **kısmi** sürüklemesi. İşte teorinin nicel sınavı buradadır.
 
