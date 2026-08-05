@@ -130,7 +130,10 @@ function draw(){
   // LEFT PANEL — NEWTON
   // ══════════════════════════════════════════════════
   const Lx = W*0.25, Ly = H*0.47;
-  const RE = Math.min(W*0.085, H*0.17);
+  const RE = Math.min(W*0.085, H*0.13);
+  // Layout budget for the F2 arrows (right panel): use the MAX extent, not the
+  // animated one, so boxes never collide with arrows at the peak of the cycle.
+  const squeezeMax = RE*0.55 + 8;
   const RM = RE*0.33;
   const moonX = Lx + RE*2.5;
 
@@ -209,10 +212,10 @@ function draw(){
   ctx.fillStyle='rgba(239,68,68,0.1)';
   ctx.strokeStyle='rgba(239,68,68,0.3)'; ctx.lineWidth=1;
   ctx.beginPath(); ctx.roundRect(Lx-W*0.19, boxY, W*0.38, 88, 8); ctx.fill(); ctx.stroke();
-  label('⚠  NEDENSELLIK KIRIGI', Lx, boxY+22, '#f85149', 12, true);
+  label('⚠  KUVVET ENVANTERI', Lx, boxY+22, '#f85149', 12, true);
   label('Ay\'ın arka yüze uyguladığı kuvvet vektörü:', Lx, boxY+42, '#fca5a5', 10, false);
   label('F⃗ₐᵣₖₐ = +' + String.fromCodePoint(0x2007) + 'GM·m/(r+b)²  x̂  (Ay\'a doğru, +x)', Lx, boxY+59, '#fcd34d', 11, true);
-  label('Gerçek fizik: arka su da içeri çekilir. Dışarı iten kuvvet: SIFIR.', Lx, boxY+76, '#f87171', 10, false);
+  label('Arka su da içeri çekilir. Dışarı iten gerçek kuvvet: SIFIR.', Lx, boxY+76, '#f87171', 10, false);
 
   // ── Phase label ──
   label('Eylemsiz sistemde gerçek net ivme = +(F_Dünya + F_Ay) x̂', Lx, boxY+118, '#6b7280', 10, false);
@@ -244,7 +247,7 @@ function draw(){
     arrow(ax, ay0, ax, ay1, '#0ea5e9', 2.5, 8);
     ctx.globalAlpha=1;
   }
-  label('F₂  Taban Sıkıştırma', Rx, Ry - RE - squeezeLen - 18, '#0ea5e9', 11, true);
+  label('F₂  Taban Sıkıştırma', Rx, Math.max(118, Ry - RE - squeezeMax - 14), '#0ea5e9', 11, true);
 
   // Bottom arrows (F2)
   for(let i=-1; i<=1; i++){
@@ -256,7 +259,7 @@ function draw(){
     arrow(ax, ay0, ax, ay1, '#0ea5e9', 2.5, 8);
     ctx.globalAlpha=1;
   }
-  label('F₂  Taban Sıkıştırma', Rx, Ry + RE + squeezeLen + 28, '#0ea5e9', 11, true);
+  label('F₂  Taban Sıkıştırma', Rx, Ry + RE + squeezeMax + 20, '#0ea5e9', 11, true);
 
   // ── Ocean bulge: vertical squeeze → horizontal fışkırma ──
   const evBulge = 9 + 7*Math.sin(t*1.5);
@@ -296,7 +299,7 @@ function draw(){
   label('(Ay tarafı, F₁)', Rx+RE*1.58, Ry+22, '#d97706', 9, false);
 
   // ── Explanation box ──
-  const rboxY = Ry + RE + 28;
+  const rboxY = Ry + RE + squeezeMax + 30;
   ctx.fillStyle='rgba(16,185,129,0.08)';
   ctx.strokeStyle='rgba(16,185,129,0.3)'; ctx.lineWidth=1;
   ctx.beginPath(); ctx.roundRect(Rx-W*0.19, rboxY, W*0.38, 110, 8); ctx.fill(); ctx.stroke();
@@ -319,7 +322,7 @@ function draw(){
   // Bottom legend
   ctx.fillStyle='rgba(13,17,23,0.8)';
   ctx.beginPath(); ctx.roundRect(W*0.01, H-38, W*0.48, 26, 6); ctx.fill();
-  label('Newton modeli: arka yüzü dışarı iten GERÇEK kuvvet YOKTUR — koordinat hilesi', Lx, H-21, '#6b7280', 10, false);
+  label('Kabarma doğru hesaplanır; ama onu yapan etken iki adım sonra, basınçta adlanır', Lx, H-21, '#6b7280', 10, false);
 
   t += 0.016;
   requestAnimationFrame(draw);

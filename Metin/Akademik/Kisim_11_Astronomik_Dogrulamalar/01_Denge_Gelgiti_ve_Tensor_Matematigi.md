@@ -6,7 +6,7 @@ Dünya, Evrenakı denizinin içinde zaten her yönden sıkışmış hâldedir: b
 
 > **Bu bölümün sözü — peşinen dürüst kayıt.** Türetimin ürettiği her sayı ($1/r^3$ yasası, $(+2,-1,-1)$ oranı, %46, 0,535 m) klasik gelgit kuramınınkiyle **birebir aynıdır** — çünkü nihai büyüklük yalnız Kuvvet 1'in gradyanına bağlıdır. Kuvvet 2 hesaptan **iptal olur**, hiç ölçülmesi gerekmez ve sıfır yeni parametre ekler; üstelik bu iptal varsayılmaz, 11.1.3'te açısal mertebe ($\ell$) muhasebesiyle türetilir ve tabanın ne büyüklüğüne ne radyal yasasına bağlıdır. Aynı olmayan şey sayının kendisi değil, ona nasıl varıldığıdır: burada bir potansiyelin ikinci türevi soyut bir alan özelliği olarak değil, gerçek bir taban sıkışmanın (Kuvvet 2) yönlü bir gradyanla (Kuvvet 1) yeniden dağıtılması olarak okunur — iki adı konmuş kuvvet, iki ayrı mekanizma. Bu özdeşliğin de sessiz bir koşulu vardır: **kaynağın kilitli olması.** Ay kilitlidir — Dünya'ya göre hiç dönmez; Güneş değildir. Teoride Dünya'ya göre dönen bir kaynağın gelgit tensörü kilitli olanınkinden **yapıca** farklıdır: yanal dejenerasyon kırılır (F4'ün silindirik geometrisi) ve boşluktaki iz sıfır olmaktan çıkar (F5'in meridyenel geometrisi). Newton'da ise kaynağın dönme durumu dış alana hiç girmez ve boşlukta iz $\nabla^2\Phi=0$ gereği **tam olarak sıfırdır.** Dünya iki kaynağı da aynı anda ve aynı aletlerle ölçtüğü için bu, hâlihazırda işleyen **doğal bir diferansiyel deneydir** — kilitli Ay kontrol, dönen Güneş numunedir. Kuruluşu 11.1.8'dedir.
 >
-> Sınavın **yapısı** türetilmiştir ve parametresizdir; **genliği** öngörülmemiştir ($\kappa_5$ serbest kalemdir). Bölüm bunu bir "şu sayı çıkmalı" öngörüsü olarak değil, iki yönlü keskin bir sınav olarak sunar. Şişkinlik kayması (11.1.9) bu sınava dâhil değildir: kaynağı atomik sürtünmedir ve hesabı standart kuramla ortaktır.
+> Sınavın **yapısı** türetilmiştir ve parametresizdir; **genliği** öngörülmemiştir ($\kappa_5$ serbest kalemdir). Bölüm bunu bir "şu sayı çıkmalı" öngörüsü olarak değil, iki yönlü keskin bir sınav olarak sunar. İki kalem bu sınava **dâhil değildir**: şişkinlik kayması (11.1.9), çünkü kaynağı atomik sürtünmedir ve hesabı standart kuramla ortaktır; klasik türevin vektör okuması (11.1.11), çünkü orada tartışılan şey sayı değil, aynı sayının hangi fiziksel etkene yazıldığıdır — klasik türevin matematiğine bu bölümün hiçbir itirazı yoktur.
 
 ---
 
@@ -581,12 +581,12 @@ Kozmolojik seyrelme, bu tablonun üzerine binen ve **çok daha yavaş bir taban 
 
 ---
 
-## 11.1.11 Klasik Gelgit Türevinin Vektörel Tutarsızlığı
+## 11.1.11 Klasik Gelgit Türevinin Vektör Okuması: Doğru Kinematik, Sahipsiz Neden
 
-Bu alt bölüm, klasik diferansiyel kütleçekim (tidal force) türevinin standart Newton mekaniği çerçevesinde dahi **nedensellik kırığı** içerdiğini göstermekte; söz konusu kırığın hem koordinat analizi hem de iş-enerji ilkesi üzerinden kapatılamaz olduğunu ortaya koymaktadır. Argüman Evrenakı'ya özgü bir önerme içermez: tümüyle klasik mekaniğin kendi araçlarıyla yürütülmüştür.
+Bu alt bölüm, klasik diferansiyel gelgit türevini eylemsiz koordinat sisteminde vektör vektör okur ve itirazın sınırını baştan çizer — çünkü itirazın gücü, tam olarak neyi iddia *etmediğinde* yatar. Klasik türevin matematiğine sayısal ya da mantıksal bir itiraz yoktur: türev kinematik olarak tamdır ve bu bölümün bütün sayılarını aynen üretir (11.1.8'in özdeşlik tablosu). İtiraz iki katmandadır ve ikisi de sayıya değil okumaya ilişkindir: **(i)** yaygın anlatı, bağıl bir büyüklüğü arka yüze etki eden gerçek bir kuvvet gibi sunar — bu okuma Newton mekaniğinin *kendi içinde* yanlıştır ve aşağıda eylemsiz sistemin vektör envanteriyle çürütülür; **(ii)** doğru okunmuş klasik anlatı bile deformasyonu yapan yerel bir etkeni adlandırmaz — kabarma, bütünün düşüşünün muhasebesidir, yerinde bir neden değildir. Birinci katman klasik mekaniğin kendi araçlarıyla yürütülür ve Evrenakı'ya özgü hiçbir önerme içermez; ikincisi, 11.1.8'in 4. maddesindeki mekanizma ayrımının bu bölümdeki karşılığıdır.
 
 
-<iframe src="animasyonlar/gelgit_vektor.html" width="100%" height="340" style="border:none;border-radius:12px;display:block;margin:24px auto;" title="Şekil 11.1.11-A — Klasik Modelin Vektör Çelişkisi ve Basınç Modeli Çözümü" loading="lazy"></iframe>
+<iframe src="animasyonlar/gelgit_vektor.html" width="100%" height="600" style="border:none;border-radius:12px;display:block;margin:24px auto;" title="Şekil 11.1.11-A — Eylemsiz Sistemde Kuvvet Envanteri ve Basınç Modelinin Okuması" loading="lazy"></iframe>
 
 
 
@@ -601,15 +601,19 @@ $$\vec{a}_{D} = +\frac{\mathcal{G}M_\oplus}{b^2}\,\hat{x} \qquad \text{(Dünya'n
 
 $$\vec{a}_{A} = +\frac{\mathcal{G}M_{Ay}}{(r+b)^2}\,\hat{x} \qquad \text{(Ay'ın çekimi, Ay'a = } +\hat{x} \text{ yönünde)}$$
 
-Net gerçek ivme:
+Toplam gerçek ivme:
 
-$$\boxed{\vec{a}_{net}^{(P)} = \left[\frac{\mathcal{G}M_\oplus}{b^2} + \frac{\mathcal{G}M_{Ay}}{(r+b)^2}\right]\hat{x}}$$
+$$\boxed{\vec{a}_{top}^{(P)} = \left[\frac{\mathcal{G}M_\oplus}{b^2} + \frac{\mathcal{G}M_{Ay}}{(r+b)^2}\right]\hat{x}}$$
 
-**Her iki katkı da $+\hat{x}$ yönlüdür.** Eylemsiz sistemde $P$ noktasında $-\hat{x}$ yönünde (uzaya doğru) etki eden sıfır gerçek kuvvet bulunmaktadır.
+*(Simge kaydı: buradaki $\vec a_{top}$, eylemsiz çerçevedeki **toplam gerçek ivmedir** ve 11.1.4'ün $a_{net}(\hat n)$ niceliğiyle karıştırılmamalıdır — o, taban sıkışmanın enlemsel modülasyonunu veren bir skalerdir. İki nesne farklı çerçevelerde ve farklı işlerde kullanılır.)*
 
-### 11.1.11.2 Diferansiyel İvme Türevi ve İşaret Kırığı
+**Her iki katkı da $+\hat{x}$ yönlüdür.** Eylemsiz sistemde $P$ noktasında $-\hat{x}$ yönünde (uzaya doğru) etki eden gerçek kuvvet **yoktur** — ne büyük ne küçük, tam olarak sıfır.
 
-Klasik gelgit türevi, parçacık $P$'nin Dünya'nın kütle merkezine *göre* ivmesini hesaplamak için merkez ivmesini referans alır ve bağıl ivmeyi şöyle tanımlar:
+Bu envanterin kendisi tartışmalı değildir; yeni bir sonuç değil, klasik kuvvet listesinin olduğu gibi okunmasıdır. Aşağıdaki bütün argüman bu tek satıra dayanır.
+
+### 11.1.11.2 Bağıl İvme: Doğru Kinematik, Yanlış Cümle
+
+Klasik gelgit türevi, parçacık $P$'nin Dünya'nın kütle merkezine *göre* ivmesini hesaplamak için merkez ivmesini referans alır:
 
 $$\vec{a}_{bağıl}^{(P)} \equiv \vec{a}_{A}^{(P)} - \vec{a}_{A}^{(M)} = \frac{\mathcal{G}M_{Ay}}{(r+b)^2}\,\hat{x} - \frac{\mathcal{G}M_{Ay}}{r^2}\,\hat{x}$$
 
@@ -617,73 +621,74 @@ Taylor açılımıyla ($b \ll r$):
 
 $$\vec{a}_{bağıl}^{(P)} \approx -\frac{2\mathcal{G}M_{Ay}b}{r^3}\,\hat{x}$$
 
-Bu eksi işaret, klasik gelgit anlatısındaki "arka yüzeyin uzaya doğru kabarması" olgusunun matematiksel kaynağıdır. Ancak bu değerin fiziksel yorumu dikkatle incelenmelidir.
+**Bu sonuç doğrudur ve bu bölüm ona itiraz etmez.** Nicelik, gövdeyle birlikte düşen çerçevede $P$'nin merkeze göre nasıl hareket ettiğini tam olarak verir; 11.1.4'ün $T_\parallel=+2\mathcal{G}M/r^3$ özdeğeri bunun ta kendisidir ve bölümün bütün sayıları buradan da çıkar.
 
-**Önemli kayıt:** Yukarıdaki türev, gerçek bir kuvvetin $-\hat{x}$ yönünde etki ettiğini göstermez. Gösterdiği şey, Ay'ın arka yüzey parçacığını merkeze göre *görece* daha yavaş çektiğidir; merkez $a_{A}^{(M)} = \mathcal{G}M_{Ay}/r^2$ ivmesiyle Ay'a düşerken parçacık $a_{A}^{(P)} = \mathcal{G}M_{Ay}/(r+b)^2$ ivmesiyle daha yavaş düşmektedir. Negatif bağıl ivme, **her iki ivmenin de pozitif olduğu iki sayı arasındaki farktır**; fiziksel bir itme kuvvetinin değil, koordinat referans seçiminin ürünüdür.
+İtiraz, sayıya değil ona iliştirilen cümleye yöneliktir. Negatif bağıl ivme, **her ikisi de pozitif olan iki sayının farkıdır**: merkez $\mathcal{G}M_{Ay}/r^2$ ile Ay'a düşerken $P$ daha küçük bir ivmeyle, $\mathcal{G}M_{Ay}/(r+b)^2$ ile düşer. Eksi işaret, $P$'nin *daha yavaş yaklaştığını* söyler — uzaklaştığını değil. Buna karşın yaygın anlatı bu farkı çoğu kez "Ay arka yüzdeki suyu uzaya doğru bırakır / iter" biçiminde, arka yüze etki eden bir etken gibi sunar.
 
-### 11.1.11.3 İş-Enerji Testi: Kapatılamaz Enerji Açığı
+> **Kalıcı itiraz burada, ve tek bir cümlelik.** Bağıl bir büyüklük, gerçek bir kuvvete terfi ettirilemez. 11.1.11.1'in envanteri gereği arka yüzde $-\hat{x}$ yönlü gerçek kuvvet **sıfırdır**; dolayısıyla o yönde bir *etken* de yoktur. Bu, Evrenakı'nın Newton'a itirazı değil, **Newton'un kendi vektör envanterinin** o anlatıya itirazıdır — teoriye ait hiçbir önerme kullanılmadan kurulur.
 
-Gelgit kabarması fiziksel bir iştir: okyanus suyunun $\Delta h \approx 0{,}5$ m yükselmesi için hacim $V_{su} \sim 10^{17}$ m³ üzerinden yaklaşık $W \sim \rho g V \Delta h \sim 10^{20}$ J mertebe potansiyel enerji kazanılmaktadır.
+Ayrımın pratik bedeli de vardır: yükselen kolonu "dışa itilen su" olarak okuyan bir öğrenci, kabarmayı yerel bir kuvvet dengesi sanır ve kuşaktaki alçalmayı hesaptan düşürür. Oysa iki bölge tek bir muhasebenin iki yüzüdür — 11.1.6'nın $+A$ / $-A/2$ ayrışması.
 
-Klasik gelgit anlatısına göre bu enerji, Ay'ın arka yüzey suyunu "daha az çekmesinden" kaynaklanmaktadır. Ancak iş ilkesi gereği $W = \vec{F} \cdot \Delta\vec{r}$; kuvvetin yokluğu ya da azalması iş üretmez. Daha kesin ifadeyle:
+### 11.1.11.3 İtirazın Sınırı: Klasik Muhasebenin Kapandığı Yerler
 
-$$\Delta W_{arka} = \vec{a}_{bağıl}^{(P)} \cdot m\,\Delta\vec{r} = \left(-\frac{2\mathcal{G}M_{Ay}b}{r^3}\right)\cdot m\,\Delta r$$
+Yukarıdaki itiraz *okuma* düzeyindedir ve bu bölüm onu bundan fazlasına genişletmez. Klasik kuramın doğru kurulmuş hâli, sık sık ona yöneltilen iki ağır suçlamayı da fiilen karşılar; ikisini de açıkça kayda geçmek itirazın sınırını çizer.
 
-Koordinat dönüşümünden türeyen $\vec{a}_{bağıl}$ terimi, serbest düşen (eylemsiz olmayan) bir referans çerçevesine ait *sözde (fiktif) bir ivmedir*. Standart mekanik pratiğinde sözde kuvvetler koordinat bütçesini kapamak için meşru araçlardır; ancak şu koşullarla:
+**(i) İş–enerji muhasebesi açık vermez.** Kabarmanın bedelini "arka yüzde kuvvet yok, öyleyse iş de yok" diye sormak, muhasebeyi tek kolondan okumaktır. Denge şekli tek bir kolonun yükselmesi değildir: eksende $+A$ yükselen su, kuşakta $-A/2$ alçalan suyun yer değiştirmesidir ve hacim korunur (11.1.6). Yer değiştirmeyi yürüten kuvvetler yataydır — okyanustaki gerçek basınç gradyanları ile gelgit ivmesinin yüzeye teğet bileşeni. Dahası denge yüzeyi, hacim korunumu kısıtı altında toplam potansiyelin (öz alan + kaynağın alanı) **asgarisidir**; küreden elipsoide geçiş enerji *tüketmez*, serbest bırakır. Bir açık aramak yerine yönü tersine okumak gerekir: sistem oraya kendiliğinden gider.
 
-1. Sözde kuvvetin **açıkça fiktif olarak beyan edilmesi** zorunludur.
-2. Fiktif kuvvetlerin kendine özgü bir enerji kaynağı bulunmaz; enerji dengesi eylemsiz sistemde kurulmalıdır.
+Bu kaydın atlanamaz bir sebebi vardır: **aynı muhasebe teorinin kendi türetimidir.** 11.1.5'in akışı da kuşaktan eksene, yüksek basınçtan alçak basınca doğrudur ve kendiliğinden yürür. Klasik kurama enerji açığı yazan bir itiraz, aynı hükmü bu bölümün 11.1.5'ine de yazardı.
 
-Klasik ders kitabı anlatısında bu iki koşul sistematik biçimde karşılanmamakta, bağıl ivmenin "Ay'ın arka suyu uzaya doğru çektiği" biçiminde yorumlanmasına zemin hazırlanmaktadır. Bu yorum $W > 0$ ile bağdaşmaz: eylemsiz sistemde arka yüzeye uygulanan gerçek net kuvvet $+\hat{x}$ yönlüdür; dolayısıyla uzaya ($-\hat{x}$) doğru kaldırma işi için gerçek bir kaynak yoktur.
+**(ii) Diferansiyel ivme yöntemi genellemede kırılmaz.** Sıralı üç cisim ($C_1$, merkez $C_2$, uzaktaki büyük kütle $C_3$) için $C_2$ referanslı bağıl ivme
 
-### 11.1.11.4 Üç Cisim Genelleme Testi
+$$\vec{a}_{bağıl,1} = \frac{\mathcal{G}M_3}{4d^2} - \frac{\mathcal{G}M_3}{d^2} = -\frac{3\mathcal{G}M_3}{4d^2}\,\hat{x}$$
 
-Diferansiyel ivme yönteminin koordinat hilesi olduğu, aynı matematiğin keyfi bir sistemde ürettiği çelişki ile daha açık görülmektedir.
+verir. Bu ifade $C_1$'in $C_3$'ten uzaklaştığını söylemez — üç cisim de $C_3$'e doğru ivmelenmeye devam eder. Söylediği şey $C_1$'in **$C_2$'den** uzaklaştığıdır, çünkü daha geride olduğu için daha yavaş çekilir. Ve bu gerçekten olur: bir arada tutulmayan cisimler dizisi kaynağa düşerken **gerilir**. Olgunun adı gelgit gerilmesidir; Roche sınırı, Shoemaker–Levy 9 kuyruklu yıldızının 1992'de Jüpiter'e yaklaşırken parça parça kopması ve gelgitle bozunan uydular hep bunun gözlemidir. Yöntem burada çelişki üretmez, gözlemsel teyit alır.
 
-Uzayda sıralı üç cisim düşünelim: $C_1$, $C_2$ (merkez, Dünya rolü), $C_3$ (büyük çekici, Ay rolü). Aralarındaki eşit uzaklık $d$ olsun. Eylemsiz sistemde $C_3$'ün yarattığı gerçek ivmeler:
+> **Bu iki kalem neden bölümde duruyor?** Çünkü bir kuramın rakibine yönelttiği itirazın en kırılgan yeri, gereğinden fazlasını iddia ettiği yerdir. Yukarıdaki iki suçlama klasik kurama yazılamaz; yazılırsa itirazın geçerli çekirdeği de onlarla birlikte düşer. Kalan çekirdek tek ve sağlamdır: **bağıl ivme gerçek bir kuvvet değildir, dolayısıyla yerel bir neden de değildir.**
 
-$$a_1 = \frac{\mathcal{G}M_3}{(2d)^2} = \frac{\mathcal{G}M_3}{4d^2} > 0\,, \qquad a_2 = \frac{\mathcal{G}M_3}{d^2} > 0$$
+### 11.1.11.4 "Non-İnertial Referans Meşrudur" İtirazı
 
-Her iki ivme de $+\hat{x}$ (yani $C_3$'e doğru) yönlüdür. $C_1$, $C_3$'e doğru ivmelenmektedir.
+Standart karşı çıkış şudur: *"Hesap serbest düşen çerçevede yapılır; orada sözde kuvvetlerle çalışmak meşrudur."*
 
-Klasik diferansiyel ivme türevi $C_2$'yi referans alarak uygulansa:
+**Bu itiraz haklıdır.** İvmeli çerçevede çalışmak ve sözde kuvvet kullanmak mekaniğin yerleşik, tutarlı ve doğru sonuç veren aracıdır; koordinat dönüşümünün kendisi bir "hile" değildir. Bu bölüm çerçeve seçimine değil, çerçevenin beyan edilmemesine itiraz eder:
 
-$$\vec{a}_{bağıl,1} = a_1 - a_2 = \frac{\mathcal{G}M_3}{4d^2} - \frac{\mathcal{G}M_3}{d^2} = -\frac{3\mathcal{G}M_3}{4d^2}$$
+**Beyan zorunluluğu.** Sözde kuvvetle çalışan bir hesabın ivmeli çerçeveye ait olduğu ve ortaya çıkan terimin koordinat yapısı olduğu belirtilmelidir. Belirtildiğinde klasik türev kusursuzdur; belirtilmediğinde 11.1.11.2'nin cümlesi doğar. Bu bir matematik hatası değil, **anlatı hatasıdır** — fakat kuramın ne öngördüğüyle nasıl okunduğu arasındaki farkı taşıdığı için önemsiz değildir.
 
-Sonuç $-\hat{x}$ yönlüdür, yani yöntem $C_1$'in $C_3$'ten **uzaklaştığını** öngörmektedir. Oysa kütleçekimi yalnızca çeker; her iki cisim de birbirlerine ve $C_3$'e doğru ivmelenmektedir. $C_2$'nin ön tarafındaki bir $C_0$ cismi için aynı işlem:
+**Beyanla birlikte de kalan şey: bir adım sayısı.** Çerçeve doğru ilan edildiğinde klasik türev kusursuz çalışır, fakat kabarmayı **iki adımda** kurar:
 
-$$\vec{a}_{bağıl,0} = \frac{4\mathcal{G}M_3}{d^2} - \frac{\mathcal{G}M_3}{d^2} = +\frac{3\mathcal{G}M_3}{d^2}$$
+1. Merkezin ivmesi çıkarılarak bir **fark** niceliği elde edilir. Bu nicelik gerçektir ama bir kuvvet değildir; işareti seçilen çerçeveye bağlıdır.
+2. Okyanus bu farkı, suyu fiilen kaldıran şeye — **basınca** — çevirir.
 
-Bu kez de $+\hat{x}$, yani $C_0$ da $C_2$'den uzaklaşıyor görünmektedir. Yöntemin ürettiği tablo: ortadaki cisim ($C_2 \equiv$ Dünya), hem önündeki hem de arkasındaki cisimleri kendinden uzağa doğru itmektedir — kütleçekiminin yalnızca çekici olduğu bir evrende fiziksel olarak imkânsız bir önermedir.
+Klasik modelin dürüst cevabı da budur: suyu kaldıran "uzaya çeken eksi vektör" değil, okyanustaki basınç gradyanıdır. Zayıf yer işin yapılmaması değildir; iş yapılır. Zayıf yer, **birinci adımın anlatıya kuvvet diye sokulması ve ikinci adımın adının hiç anılmamasıdır.** Sizi itmeyen bir el sizi kaldırmaz — kaldıran, o elin altındaki basınçtır; klasik model de bunu yapar, ama adını ikinci adıma saklar.
 
-Bu sonuç, diferansiyel ivme türevinin **eylemsiz sistemde tek başına fiziksel vektör üretemeyeceğini** ve ancak serbest düşen referans çerçevesindeki koordinat dönüşümünün bir yapay ürünü olarak anlam taşıdığını kanıtlamaktadır.
+Teorinin farkı buradadır ve **tek adımdır**: su, kuşakta pekişen sıkışmadan kaçarak tabanın gevşediği eksen uçlarına pompalanır. Kaldıran etken baştan itibaren basınçtır; ne ara nicelik, ne çerçeve seçimi, ne işaret dönüşümü gerekir. Deforme eden nicelik gövdenin zaten içinde bulunduğu ve hiçbir yerde yön değiştirmeyen bir sıkışmadır ($a_{net}$): her noktada içe bakar, yalnız büyüklüğü enlemle modüle olur (11.1.4; 11.1.8, md. 4).
 
-### 11.1.11.5 "Non-İnertial Referans Meşrudur" İtirazının Sınırları
+> **İki kuram aynı sayıyı verir.** Farkı, o sayının sahibi olan fiziksel etkeni kaç adımda ve adını koyarak gösterip göstermediğidir. Bu bir öngörü farkı değildir ve bu bölüm onu öyle sunmaz — ayırt edici sınav 11.1.8'dedir.
 
-Yukarıdaki analiz karşısında yapılabilecek standart itiraz şudur: *"Serbest düşen (non-inertial) referans çerçevesinde merkezkaç terimi ortaya çıkar; bu fiziksel olarak meşrudur."*
+### 11.1.11.5 Katı Dünya Gelgiti: Gözlem İki Kuramı da Doğrular
 
-Bu itiraz kısmen doğrudur: non-inertial sistemlerde sözde (fiktif) kuvvetlerle çalışmak standart bir araçtır. Ancak bu meşruiyetin üç sınırı bulunmaktadır:
+Gelgit yalnız okyanusta değildir; katı Dünya da aynı $\ell=2$ yükü altında deforme olur. Genlik, denge gelgitinin radyal Love sayısıyla ölçeklenmiş hâlidir ($h_2\approx0{,}61$):
 
-**(i) Beyan zorunluluğu.** Sözde kuvvet kullanıldığında hesabın ivmeli referans çerçevesine ait olduğu ve ortaya çıkan kuvvetin koordinat yapısı olduğu açıkça belirtilmelidir. Klasik gelgit açıklamalarının büyük çoğunluğu bu ayrımı yapmaz ve bağıl ivme değerini doğrudan "Ay'ın arka taraftaki suyu uzaya itmesi" olarak yorumlar.
+$$\Delta_{katı} \simeq h_2\,\Delta\zeta = 0{,}61\times0{,}535\ \text{m} \approx 0{,}33\ \text{m}$$
 
-**(ii) Enerji kapanışı.** Sözde kuvvetlerin kendine özgü potansiyel enerji depolama kapasitesi yoktur. Bir kilogram suyun 0,5 m yükselmesi için ~5 J enerji gereklidir. Bu enerjinin eylemsiz sistemdeki kaynağı, sözde kuvvet çerçevesinde gösterilmelidir. Standart anlatı bu muhasebeden kaçınmaktadır.
+Bu deformasyon GNSS, VLBI ve süperiletken gravimetreyle rutin olarak ölçülür — jeodezik indirgemenin standart bir kalemidir (IERS Conventions, 2010) — ve **çift şişkinlik yapısıyla birlikte** doğrulanır: kabarma hem Ay'a bakan hem de zıt yüzde vardır, tepe/çukur oranı $2{:}1$'dir. Sonuç, $(+2,-1,-1)$ yapısının yalnız akışkanda değil katı gövdede de geçerli olduğunun doğrudan gözlemidir.
 
-**(iii) Genelleme kırığı.** Yukarıdaki üç cisim testi, aynı sözde kuvvet matematiğinin, kütleçekimi altında birbirine yaklaşan cisimlerin birbirinden uzaklaştığını "öngörmesine" yol açtığını göstermektedir. Sözde kuvvet bileşeni bu genelleme kırığını açıklamaz; yalnızca orijin seçiminin neden özel tutulması gerektiği sorusunu ertelemektedir.
+**Ayrım kaydı — katı gelgit ile kalıcı jeoit karıştırılmamalıdır.** Dünya'nın uzun dönemli ortalama figüründe (jeoit) Ay yönlü bir ikili şişkinlik *aranmaz*: gelgit ekseni yüzeye göre günlük olarak dolaştığı için yapı zaman ortalamasında silinir ve geriye yalnız sıfır-frekanslı kalıcı gelgit payı kalır — o da $J_2$'nin içine yazılır. Jeoit anomalilerinin kıtasal kütle dağılımı, izostatik ayarlama ve manto konveksiyonuyla açıklanması bu yüzden bir eksiklik değil, beklenen sonuçtur. Ölçülen katı gelgit, ortalama figürün üzerindeki **günlük salınımdır.**
 
-### 11.1.11.6 Geoid Gözlem Testi
+Bu bölümün 11.1.10'daki kaydıyla aynı hattır: ortalama figür 11.2'nin konusudur, gelgit onun üzerindeki artıktır. Ve buradaki gözlem bir ayırt edici sınav **değildir**: iki kuram aynı $0{,}33$ m'yi verir. Kayda geçirilme sebebi, bölümün mekanizma iddiasının akışkana özel bir kolaylığa dayanmadığını göstermesidir.
 
-Eğer klasik model tam doğru olsaydı ve Ay, Dünya'nın katı gövdesini suyun altından Ay yönünde çekiyor olsaydı, Dünya'nın uzun dönemli denge figüründe (Geoid) hem Ay'a bakan hemde Ay'a ters yüzlerde katı kabukta belirgin yükselmeler gözlemlenmeliydi. Jeodezi ölçümleri bunu desteklememektedir: Geoid anomalileri kıtasal kütle dağılımı, izostatik ayarlama ve manto konveksiyonuyla açıklanmakta; Ay yönlü bir ikili şişkinlik **katı kabukta** yalnızca ~30 mm mertebesinde tespit edilmekte ve bu değer doğrudan gelgit potansiyeliyle uyumludur. Söz konusu deformasyon, Dünya'nın katı kabuğunun Ay'a doğru *çekildiğini* (gerçek kuvvet: $+\hat{x}$) göstermekte; klasik anlatının ima ettiği arka yüzde özerk bir "eksi kuvvet" bileşeninin varlığına kanıt teşkil etmemektedir.
+### 11.1.11.6 Bölüm Özeti
 
-### 11.1.11.7 Bölüm Özeti
-
-| Soru | Klasik Yanıt | Analitik Kırık |
+| Soru | Klasik anlatı | Bu bölümün hükmü |
 |---|---|---|
-| Arka yüzdeki kabarmayı üreten kuvvet nedir? | Ay'ın arka suyu **daha az** çekmesi | Kuvvet eksikliği $-\hat{x}$ yönünde iş yapamaz: $W = F \cdot x$, $F_{\hat{x}} = 0 \Rightarrow W = 0$ |
-| Bağıl ivmedeki eksi işaretin kaynağı nedir? | Diferansiyel çekim | İki pozitif sayı arasındaki fark; eylemsiz sistemde $-\hat{x}$ yönlü gerçek kuvvet yoktur |
-| Non-inertial referans bunu kurtarır mı? | Evet, serbest düşen çerçevede sözde kuvvet meşrudur | Sözde kuvvet enerji üretmez; beyan edilmez; üç cisim genellemesinde kütleçekimini itici gösterir |
-| Gözlem uyumu nedir? | Gelgit gözlemlenmektedir | Gözlem gelgiti doğrular; açıklama mekanizmasını değil. Geoid, $-\hat{x}$ kuvvetini desteklememektedir |
+| Bağıl ivmenin türevi doğru mu? | $-2\mathcal{G}M b/r^3$ | ✅ **Doğru** — 11.1.4'ün $T_\parallel$'i ile birebir aynı; itiraz yok |
+| Arka yüzde $-\hat{x}$ yönlü gerçek kuvvet var mı? | (anlatıda ima edilir) | ❌ **Yok, tam sıfır.** Bağıl büyüklük gerçek kuvvete terfi ettirilemez — Newton'un kendi envanteri |
+| İş–enerji muhasebesi açık veriyor mu? | — | ✅ **Kapanır.** Eksende $+A$, kuşakta $-A/2$; denge şekli toplam potansiyelin asgarisidir. Açık iddiası **geçersizdir** |
+| Üç cisim genellemesi çelişki üretir mi? | — | ✅ **Üretmez.** Bağıl uzaklaşma $C_2$'ye göredir ve gerçektir: gelgit gerilmesi, Roche sınırı, SL9 |
+| Serbest düşen çerçeve meşru mu? | Evet | ✅ **Meşrudur.** Kalan tek koşul beyandır; kırık matematikte değil anlatıdadır |
+| Gözlem ne diyor? | Gelgit ve katı gelgit ölçülür | ✅ **İki kuramı da doğrular** (0,33 m, $2{:}1$). Ayırt edici değildir |
+| Öyleyse fark nerede? | Tek aktör: potansiyelin kendisi | Deforme eden etken **adlandırılır**: yönsüz taban sıkışmanın yönlü gradyanla yeniden dağılması (11.1.8, md. 4) |
 
-Klasik diferansiyel gelgit türevinin ürettiği negatif bağıl ivme değeri, eylemsiz koordinat sisteminde gerçek bir kuvvete karşılık gelmemektedir. Bu değer, orijinin serbestçe düşen Dünya merkezine sabitlenmesinin koordinat yapay ürünüdür. Söz konusu ayrımın farkında olunması, teorilerin hidrodinamik ve enerji muhasebesi testlerine karşı dürüstçe değerlendirilmesi açısından zorunludur.
+Klasik diferansiyel gelgit türevi matematiksel olarak tamdır ve bu bölümün bütün sayılarını üretir. Eleştiriye açık olan tek nokta, ürettiği negatif bağıl ivmenin eylemsiz sistemde bir gerçek kuvvet karşılığı bulunmamasına karşın sık sık öyle sunulmasıdır. Bu ayrım, iki kuramı sayısal olarak ayırmaz — **fiziksel etkenin adı konmuş olup olmadığında ayırır.** Bölümün ayırt edici sınavı bu okuma tartışmasında değil, 11.1.8'de kurulan kilitli/dönen kaynak tensör yapısındadır.
 
 ---
 
