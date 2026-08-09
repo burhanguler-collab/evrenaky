@@ -77,8 +77,18 @@ const chapters = [
     { id: 'akademik_08_mg', title: 'Ek M · Blok G — Sabitler ve Kozmoloji (M-28..M-34)', file: 'Metin/Akademik/Kisim_8_Ekler/15_Ek_M_Blok_G_Sabitler_Kozmoloji.md', group: 'akademik', part: 'Kısım VIII: Ekler' },
     { id: 'akademik_08_mh', title: 'Ek M · Blok H — Beş Kuvvet, Ölçek Yapısı ve Kuplaj Rejimi (M-35..M-43, M-45, M-47–M-49)', file: 'Metin/Akademik/Kisim_8_Ekler/18_5_Kuvvet_Matematigi.md', group: 'akademik', part: 'Kısım VIII: Ekler' },
     { id: 'akademik_08_mi', title: 'Ek M · Blok I — Hâl Denklemi ve Eylem İlkesi (M-44, M-46)', file: 'Metin/Akademik/Kisim_8_Ekler/19_Ek_M_Blok_I_Eylem_Ilkesi.md', group: 'akademik', part: 'Kısım VIII: Ekler' },
-    { id: 'akademik_09', title: '9.1 Doç. Dr. Rıza Demirbilek Değerlendirmesi', file: 'Metin/Akademik/Kisim_9_Hakem_Degerlendirmeleri/01_Doc_Dr_Riza_Demirbilek_Degerlendirmesi.md', group: 'akademik', part: 'Kısım IX: Hakem Değerlendirmeleri' },
-    { id: 'akademik_09_99', title: '9.2 Hakemlik Standardı ve Kriterler', file: 'Metin/Akademik/Kisim_9_Hakem_Degerlendirmeleri/99_Hakemlik_Standarti.md', group: 'akademik', part: 'Kısım IX: Hakem Değerlendirmeleri' },
+    { id: 'akademik_09_01', title: '9.1 Fizeau Katsayısı ve Kırılma İndisleri', file: 'Metin/Akademik/Kisim_9_Mikro_Dogrulamalar/01_Fizeau_Katsayisi_ve_Kirilma_Indisleri.md', group: 'akademik', part: 'Kısım IX: Mikro Doğrulamalar' },
+    { id: 'akademik_09_02', title: '9.2 Planck Sabiti ve Kuantum Eylemi', file: 'Metin/Akademik/Kisim_9_Mikro_Dogrulamalar/02_Planck_Sabiti_ve_Kuantum_Eylemi.md', group: 'akademik', part: 'Kısım IX: Mikro Doğrulamalar' },
+    { id: 'akademik_09_03', title: '9.3 Çift Yarık Geometrisinin Sayısal İspatı', file: 'Metin/Akademik/Kisim_9_Mikro_Dogrulamalar/03_Cift_Yarik_Geometrisinin_Sayisal_Ispati.md', group: 'akademik', part: 'Kısım IX: Mikro Doğrulamalar' },
+    { id: 'akademik_09_04', title: '9.4 Compton Saçılması ve Fotoelektrik', file: 'Metin/Akademik/Kisim_9_Mikro_Dogrulamalar/04_Compton_Sacilmasi_ve_Fotoelektrik.md', group: 'akademik', part: 'Kısım IX: Mikro Doğrulamalar' },
+    { id: 'akademik_09_05', title: '9.5 Casimir Etkisi ve Vakum Basıncı', file: 'Metin/Akademik/Kisim_9_Mikro_Dogrulamalar/05_Casimir_Etkisi_ve_Vakum_Basinci.md', group: 'akademik', part: 'Kısım IX: Mikro Doğrulamalar' },
+    { id: 'akademik_09_06', title: '9.6 Zitterbewegung ve İnce Yapı Sabiti', file: 'Metin/Akademik/Kisim_9_Mikro_Dogrulamalar/06_Zitterbewegung_ve_Ince_Yapi_Sabiti.md', group: 'akademik', part: 'Kısım IX: Mikro Doğrulamalar' },
+    { id: 'akademik_09_07', title: '9.7 Kuantum Optik Anomalileri', file: 'Metin/Akademik/Kisim_9_Mikro_Dogrulamalar/07_Kuantum_Optik_Anomalileri.md', group: 'akademik', part: 'Kısım IX: Mikro Doğrulamalar' },
+    { id: 'akademik_09_08', title: '9.8 Polarizasyon ve Gradyan İlişkisi', file: 'Metin/Akademik/Kisim_9_Mikro_Dogrulamalar/08_Polarizasyon_ve_Gradyan_Iliskisi.md', group: 'akademik', part: 'Kısım IX: Mikro Doğrulamalar' },
+    { id: 'akademik_09_09', title: '9.9 Tek Foton / Elektron ve Çift Yarık', file: 'Metin/Akademik/Kisim_9_Mikro_Dogrulamalar/09_Tek_Foton_Cift_Yarik_Deneyleri.md', group: 'akademik', part: 'Kısım IX: Mikro Doğrulamalar' },
+    { id: 'akademik_09_10', title: '9.10 "Foton"un İmkânsızlığı', file: 'Metin/Akademik/Kisim_9_Mikro_Dogrulamalar/10_Fotonun_Imkansizligi.md', group: 'akademik', part: 'Kısım IX: Mikro Doğrulamalar' },
+    { id: 'akademik_09_98', title: '9.11 Kısım Özeti: Ne Öğrendik?', file: 'Metin/Akademik/Kisim_9_Mikro_Dogrulamalar/98_Ne_Ogrendik.md', group: 'akademik', part: 'Kısım IX: Mikro Doğrulamalar' },
+    { id: 'akademik_09_99', title: '9.12 Kaynakça', file: 'Metin/Akademik/Kisim_9_Mikro_Dogrulamalar/99_Kaynakca.md', group: 'akademik', part: 'Kısım IX: Mikro Doğrulamalar' },
     { id: 'akademik_10_01', title: '10.1 Doğrulama Programı: Amaç, Veri ve Yöntem', file: 'Metin/Akademik/Kisim_10_Yorunge_Dogrulamasi/01_Dogrulama_Programi.md', group: 'akademik', part: 'Kısım X: Evrenakı Yörünge Doğrulaması' },
     { id: 'akademik_10_02', title: '10.2 Nihai Kurulum: Teorinin Galaktik Denklemi', file: 'Metin/Akademik/Kisim_10_Yorunge_Dogrulamasi/02_Nihai_Denklem.md', group: 'akademik', part: 'Kısım X: Evrenakı Yörünge Doğrulaması' },
     { id: 'akademik_10_03', title: '10.3 Sınıf Sınıf Sonuçlar I: Spiraller (Sa–Scd)', file: 'Metin/Akademik/Kisim_10_Yorunge_Dogrulamasi/03_Siniflar_Spiraller.md', group: 'akademik', part: 'Kısım X: Evrenakı Yörünge Doğrulaması' },
@@ -94,8 +104,14 @@ const chapters = [
     { id: 'akademik_11_02', title: '11.2 Küresel Basıklık ve Jeoit Formu', file: 'Metin/Akademik/Kisim_11_Astronomik_Dogrulamalar/02_Kuresel_Basiklik_ve_Jeoit_Formu.md', group: 'akademik', part: 'Kısım XI: Astronomik Doğrulamalar' },
     { id: 'akademik_11_03', title: '11.3 Kütle-Dönüş (Spin) İlişkisi: Zarf Rejimleri', file: 'Metin/Akademik/Kisim_11_Astronomik_Dogrulamalar/03_Kutle_Spin_Iliskisi_ve_Zarf_Rejimleri.md', group: 'akademik', part: 'Kısım XI: Astronomik Doğrulamalar' },
     { id: 'akademik_11_04', title: '11.4 Satürn Halkaları ve Dikey Salınım', file: 'Metin/Akademik/Kisim_11_Astronomik_Dogrulamalar/04_Saturn_Halkalari_ve_Dikey_Salinim.md', group: 'akademik', part: 'Kısım XI: Astronomik Doğrulamalar' },
-    { id: 'akademik_11_05', title: '11.5 Kısım Özeti: Ne Öğrendik?', file: 'Metin/Akademik/Kisim_11_Astronomik_Dogrulamalar/05_Ne_Ogrendik.md', group: 'akademik', part: 'Kısım XI: Astronomik Doğrulamalar' },
-    { id: 'akademik_11_kaynakca', title: '11.6 Kaynakça', file: 'Metin/Akademik/Kisim_11_Astronomik_Dogrulamalar/99_Kaynakca.md', group: 'akademik', part: 'Kısım XI: Astronomik Doğrulamalar' },
+    { id: 'akademik_11_05', title: '11.5 Oturma Yarıçapı ve Göç Yönü', file: 'Metin/Akademik/Kisim_11_Astronomik_Dogrulamalar/05_Oturma_Yaricapi_ve_Goc_Yonu.md', group: 'akademik', part: 'Kısım XI: Astronomik Doğrulamalar' },
+    { id: 'akademik_11_06', title: '11.6 İkili Sistemlerin Daralması ve Ayarlanma Ölçeği', file: 'Metin/Akademik/Kisim_11_Astronomik_Dogrulamalar/06_Ikili_Sistemlerin_Daralmasi.md', group: 'akademik', part: 'Kısım XI: Astronomik Doğrulamalar' },
+    { id: 'akademik_11_07', title: '11.7 Eksen Devinimi: İçkin Kanal ve Tork Kanalı', file: 'Metin/Akademik/Kisim_11_Astronomik_Dogrulamalar/07_Eksen_Devinimi.md', group: 'akademik', part: 'Kısım XI: Astronomik Doğrulamalar' },
+    { id: 'akademik_11_ozet', title: '11.8 Kısım Özeti: Ne Öğrendik?', file: 'Metin/Akademik/Kisim_11_Astronomik_Dogrulamalar/98_Ne_Ogrendik.md', group: 'akademik', part: 'Kısım XI: Astronomik Doğrulamalar' },
+    { id: 'akademik_11_kaynakca', title: '11.9 Kaynakça', file: 'Metin/Akademik/Kisim_11_Astronomik_Dogrulamalar/99_Kaynakca.md', group: 'akademik', part: 'Kısım XI: Astronomik Doğrulamalar' },
+    { id: 'akademik_12_01', title: '12.1 Doç. Dr. Rıza Demirbilek Değerlendirmesi', file: 'Metin/Akademik/Kisim_12_Hakem_Degerlendirmeleri/01_Doc_Dr_Riza_Demirbilek_Degerlendirmesi.md', group: 'akademik', part: 'Kısım XII: Hakem Değerlendirmeleri' },
+    { id: 'akademik_12_98', title: '12.2 Önceki Değerlendirmeler ve Tartışmalar', file: 'Metin/Akademik/Kisim_12_Hakem_Degerlendirmeleri/98_Hakem_Degerlendirmeleri.md', group: 'akademik', part: 'Kısım XII: Hakem Değerlendirmeleri' },
+    { id: 'akademik_12_99', title: '12.3 Hakemlik Standardı ve Kriterler', file: 'Metin/Akademik/Kisim_12_Hakem_Degerlendirmeleri/99_Hakemlik_Standarti.md', group: 'akademik', part: 'Kısım XII: Hakem Değerlendirmeleri' },
     { id: 'populer_01', title: '1. Uzay Boş Değil!', file: 'Metin/Populer/populer_01.md', group: 'populer' },
     { id: 'populer_02', title: '2. Elma Neden Düşmez, İtilir!', file: 'Metin/Populer/populer_02.md', group: 'populer' },
     { id: 'populer_03', title: '3. Işığın Gerçek Yüzü: Zerreler', file: 'Metin/Populer/populer_03.md', group: 'populer' },
@@ -164,7 +180,7 @@ async function preloadChapterTexts() {
     for (const chap of chapters) {
         if (!chapterTextsCache[chap.id]) {
             try {
-                const res = await fetch(chap.file + '?v=2.0');
+                const res = await fetch(chap.file + '?v=2.1');
                 if (res.ok) {
                     const text = await res.text();
                     // Store normalized lower-case text for fast search
@@ -881,7 +897,7 @@ async function loadChapterContent(chapter) {
 
     try {
         // Cache buster ekleyerek tarayıcı önbelleğini atlıyoruz (v=1.1)
-        const response = await fetch(chapter.file + '?v=2.0');
+        const response = await fetch(chapter.file + '?v=2.1');
         if (!response.ok) {
             throw new Error(`Yükleme hatası: ${response.statusText}`);
         }
