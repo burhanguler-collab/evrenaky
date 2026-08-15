@@ -31,7 +31,7 @@
                           Bunlar `?v=` ile sürümlendiği için bayatlama riski yok.
    ========================================================================== */
 
-const SW_SURUM  = '20260815-082701';          /* yayında otomatik damgalanır */
+const SW_SURUM  = '20260815-084427';          /* yayında otomatik damgalanır */
 const CACHE_NAME = 'evrenaki-' + SW_SURUM;
 
 /* Çevrimdışı iskelet. index.html BİLEREK burada — ama yalnız ÇEVRİMDIŞI

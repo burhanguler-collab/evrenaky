@@ -10,7 +10,7 @@ Teorinin kendi iç belgeleri (Postülatlar ve Ek M blokları) kaynakça dışıd
 
 ## 12.1 — Ortam ve Kut Oluşumu: Kavitasyon ve Sert Akışkan
 
-1. **Zel'dovich, Ya. B. (1961).** *The equation of state at ultrahigh densities and its relativistic limitations.* Soviet Physics JETP, 14(5), 1143–1147. (Sert hâl denklemi $P = c_0^2\rho$ ve ses hızının $c_0$'ye eşit olması; 12.1.1'in ortam tanımı.)
+1. **Zel'dovich, Ya. B. (1961).** *The equation of state at ultrahigh densities and its relativistic limitations.* Soviet Physics JETP, 14(5), 1143–1147. (Sert hâl denklemi $P = c_0^2\rho$ ve ses hızının $c_0$'ye eşit olması; 12.1.1'in ortam tanımı. Kaynaktan yalnız hâl denkleminin biçimi alınmıştır; makalenin görelilikçi nedensellik-tavanı yorumu teoriye alınmaz — açık beyan 12.1.1'dedir.)
 2. **Rayleigh, Lord (1917).** *On the pressure developed in a liquid during the collapse of a spherical cavity.* Philosophical Magazine, 34(200), 94–98. (Kavite dinamiğinin klasik kuruluşu; 12.1.2'nin kavitasyon eşiği okuması.)
 3. **Plesset, M. S., & Prosperetti, A. (1977).** *Bubble dynamics and cavitation.* Annual Review of Fluid Mechanics, 9, 145–185. (Kavitasyonun modern derlemesi; eşik, kararlılık ve çöküş; 12.1.2 ve 12.1.4.)
 4. **Brennen, C. E. (1995).** *Cavitation and Bubble Dynamics.* Oxford University Press. (Pervane ve pompa kavitasyonunun mühendislik tabanı; 12.1'in "laboratuvarda her gün görülen" ifadesinin dayanağı ve 12.5.2'nin birinci kalemi.)

@@ -71,6 +71,8 @@ $$P \sim \rho_0 c_0^3 \, a \, M^{7}$$
 
 **$n = 7$.** (3B kuadrupol $M^8$ verir; 2B bir mertebe daha verimlidir.)
 
+> **Geçerlilik notu.** $M^7$ bir **asimptotik ölçek yasasıdır**: klasik aeroakustik türetim küçük Mach açılımında kurulur ve nicel kesinliği $M \ll 1$'de en yüksektir. Bu bölümde yasa, $M \approx 0{,}94$'te bir **mertebe kestirimi** olarak kullanılır; kuadrupol önkatsayısı zaten hesaplanmamıştır (12.5.7). Bölümün taşıyıcı sonuçları — işaret yapısı, $1/d^5$ biçimi ve denge kökünün varlığı — önkatsayının nicel kesinliğine dayanmaz; yüksek Mach'ta değişebilecek olan şey yönlülük ve sayısal güçtür, işaret ve üstel yapı değil.
+
 **Enerji dengesi rateyi tam belirler — serbest parametre yoktur:**
 
 $$\dot d = \frac{dE/dt}{dE/dd} = \mp\frac{2\pi d P}{\rho\Gamma^2} \;\sim\; \mp\frac{K^5}{d^5}$$
@@ -97,7 +99,8 @@ almak bir yaklaşım değil, **hatadır**.
 > simetriktir**. Eksenel simetrik ve **kararlı** bir akışta $T_{ij}$ zamana bağlı
 > değildir; zamana bağlı çokkutup momenti yoksa **ışıma da yoktur** — hız ne kadar
 > süpersonik olursa olsun. Lighthill kaynağı $\partial^2 T_{ij}/\partial x_i\partial x_j$
-> bir **değişim** gerektirir, büyüklük değil.
+> bir **değişim** gerektirir, büyüklük değil. Bu cevap, $M^7$ yasasının o hızlardaki
+> geçerliliğinden de bağımsızdır: simetri argümanı kesindir, ölçek yasası gerektirmez.
 >
 > Işıma ancak simetri **kırılınca** doğar: iki Kut ortak merkez etrafında dönerken
 > kuadrupol momenti $2\Omega$ frekansıyla salınır (12.3.3'ün başı). Dolayısıyla
@@ -128,7 +131,7 @@ $$\boxed{\;d_{\text{denge}} = \left(\frac{\lambda K^5}{\kappa}\right)^{1/3}\;}$$
 
 **Ve $d_{\text{denge}}$ bir girdi değil, çıktıdır.** Küme aralığı artık bir **öngörüdür**.
 
-Kuvvet yasasının iki teriminin dışında bir terime gerek olmadığı da vurgulanmalıdır: kısa erimli ayrı bir itme kanalı fiziksel olarak temelsizdir. Boşluk düşük basınca — yani girdaba **doğru** — çekilir; "cepler iç içe geçemez" gerekçeli bir itme ise ölçek olarak tutarsız olurdu, çünkü cepler ($2{,}29\times10^{-5}\,r_e$) küme aralığından **65 000 kat** küçüktür. Dengeyi kuran itme, türetilmiş ışıma kanalıdır.
+Kuvvet yasasının iki teriminin dışında bir terime gerek olmadığı da vurgulanmalıdır: kısa erimli ayrı bir itme kanalı fiziksel olarak temelsizdir. Boşluk düşük basınca — yani girdaba **doğru** — çekilir; "cepler iç içe geçemez" gerekçeli bir itme ise ölçek olarak tutarsız olurdu, çünkü cepler ($2{,}29\times10^{-5}\,r_e$) küme aralığından ($\approx 1{,}4\,r_e$) yaklaşık **62 000 kat** küçüktür. Dengeyi kuran itme, türetilmiş ışıma kanalıdır.
 
 ---
 
@@ -150,12 +153,12 @@ Akışkanlar dinamiğinde eş yönlü girdaplar ancak **ayrım/çekirdek oranı 
 | | Değer |
 |---|---|
 | $R_{\text{cep}}$ | $2{,}294\times10^{-5}\,r_e$ |
-| Kümede tipik aralık | $\sim 1{,}4\,r_e$ |
-| **Oran** | **$\approx 6{,}5\times10^{4}$** |
-| Birleşme ölçütü | $< 3{,}2$ |
+| Kümede tipik aralık $d$ | $\sim 1{,}4\,r_e$ |
+| **Aralık/boşluk oranı** $d/R_{\text{cep}}$ | **$\approx 6{,}2\times10^{4}$** |
+| Birleşme ölçütü (ayrım/çekirdek) | $< 3{,}2$ |
 | **Eşikten uzaklık** | **$\sim 2\times10^{4}$ kat** |
 
-Boşluklar, aralarındaki mesafenin **65 binde biri** kadardır. Ve modelin kendi eşiği ($d_{\text{bir}} = 2R_{\text{cep}}$) akışkan ölçütüyle ($3{,}2R_{\text{cep}}$) yalnız **1,60 kat** farklıdır — biri *"boşluklar değince"*, öteki *"çekirdekler ~3 yarıçap yaklaşınca"* diyor. **İki bağımsız yol aynı yeri gösteriyor.**
+Boşluklar, aralarındaki mesafenin yaklaşık **62 binde biri** kadardır. Ve modelin kendi eşiği ($d_{\text{bir}} = 2R_{\text{cep}}$) akışkan ölçütüyle ($3{,}2R_{\text{cep}}$) yalnız **1,60 kat** farklıdır — biri *"boşluklar değince"*, öteki *"çekirdekler ~3 yarıçap yaklaşınca"* diyor. **İki bağımsız yol aynı yeri gösteriyor.**
 
 > **Teori açısından bu zorunludur:** Kut bölünmezdir; $g=2$ olan nesne artık Kut değildir. Bileşik sınır tabakası (12.3.7) ikilemi çözer — büyük yapılar kurulur, Kut bölünmez kalır.
 

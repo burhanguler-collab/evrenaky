@@ -12,7 +12,7 @@ $$R_{\text{cep}} = \frac{r_e}{\sqrt{1+\Sigma/P_0}} = 2{,}294\times10^{-5}\,r_e$$
 
 İlk dönmenin **kaynağı bilinmiyor** ve bu açıkça beyan edildi.
 
-**2 · $c_0$ bir tavan değil, ortamın ses hızıdır.** Sınır tabakasında akış süpersoniktir ($M = 1{,}414$), ama asıl mertebe daha içeridedir: **cep duvarında $\lvert v\rvert = 6{,}164\times10^{4}\,c_0$** — yani standart fiziğin $c$ değeriyle kıyaslanamaz. İki bağımsız yol aynı sayıyı verir ($\sqrt2\,c_0\,r_e/R_{\text{cep}} = \sqrt2\,c_0\sqrt{1+\Sigma/P_0} = v_{\text{kav}}$).
+**2 · $c_0$ bir tavan değil, ortamın ses hızıdır.** Sınır tabakasında akış süpersoniktir ($M = 1{,}414$), ama asıl mertebe daha içeridedir: **cep duvarında $\lvert v\rvert = 6{,}164\times10^{4}\,c_0$** — yani standart fiziğin $c$ değeriyle kıyaslanamaz. İfade kendi içinde kapalıdır: $\sqrt2\,c_0\,r_e/R_{\text{cep}} = \sqrt2\,c_0\sqrt{1+\Sigma/P_0} = v_{\text{kav}}$ — aynı bağıntının iki eşdeğer yazımı (cep duvarı tanım gereği kavitasyon hızında döner).
 
 Kıyas için: Zitterbewegung resminde **Compton dönüş hızı tam olarak $c$**'dir. Kut, onun **~62 bin katında** döner. Zerre ölçeğinde "hızlı" saydığımız her şey, Kut ölçeğinde yavaştır.
 
@@ -26,13 +26,13 @@ Kıyas için: Zitterbewegung resminde **Compton dönüş hızı tam olarak $c$**
 
 $$F(d) = \frac{\kappa\cos(\text{faz})}{d^2} - \lambda\,g_ig_j\,\frac{K^5}{d^5}$$
 
-İkincisi 2B kuadrupol akustik ışımadan çıktı ($P \sim \rho_0c^3aM^7$, enerji dengesi). **İşaret duyarlılığı elle konmadı**, $dE/dd$'nin işaretinden geldi.
+İkincisi 2B kuadrupol akustik ışımadan çıktı ($P \sim \rho_0c_0^3aM^7$ — asimptotik ölçek yasası, 12.3.3'teki geçerlilik notuyla; enerji dengesi). **İşaret duyarlılığı elle konmadı**, $dE/dd$'nin işaretinden geldi.
 
 **6 · Denge mesafesi bir çıktıdır:** $d_{\text{denge}} = (\lambda K^5/\kappa)^{1/3}$. Küme aralığı artık bir öngörüdür.
 
 **7 · Zıt yönlü çift için kök yoktur.** 210 parametre üçlüsünde istisnasız. Ters Kut bir yapıda **duramaz** — bu bir katsayı sonucu değil, işaret yapısının sonucudur.
 
-**8 · Eş yönlü Kutlar kümede birleşemez.** Boşluklar, aralarındaki mesafenin 65 binde biri kadardır; birleşme ölçütünün $\sim2\times10^4$ katı uzağındadırlar. Modelin kendi eşiği ile laboratuvar girdap ölçütü **1,60 kat** içinde uyuşuyor.
+**8 · Eş yönlü Kutlar kümede birleşemez.** Boşluklar, aralarındaki mesafenin yaklaşık 62 binde biri kadardır ($d/R_{\text{cep}} \approx 6{,}2\times10^4$); birleşme ölçütünün $\sim2\times10^4$ katı uzağındadırlar. Modelin kendi eşiği ile laboratuvar girdap ölçütü **1,60 kat** içinde uyuşuyor.
 
 **9 · Kümeleşme evrenseldir ve boyutu kendi bulur.** 12/12 denemede oluştu; 62/62 öbek $N \le 8$; ortalama 5,65 — bağımsız türetilen **Thomson sınırıyla** örtüşüyor.
 
@@ -77,7 +77,7 @@ Tesadüfi olan tek şey, **hangi** Kutların bir araya geldiğidir. Bir araya ge
 | Kuadrupol önkatsayısı $C = O(1)$ | Hesaplanmadı. Sonucu değiştirmiyor, sayısal güç için gerekli. |
 | İlk dönmenin kaynağı | Bilinmiyor, beyan edildi. |
 | Yakalama yarıçapı (simülasyonun öbek sayacındaki eşik) | Türetilmiş $d_{\text{denge}}$ ile ölçeklenmiyor; öbek sayacını büyük $\kappa$'da yanıltabiliyor. Ölçüm aracı sorunudur, fizik sorunu değil. |
-| Momentum darbesinin deseni | Radyal; gerçek akustik dipolde $v = \nabla\phi$ olmalı. Ayrıca kaynak süpersonik olduğu için emisyon **Mach konisi** olmalı (duvar hızında 45°). |
+| Momentum darbesinin deseni | Radyal; gerçek akustik dipolde $v = \nabla\phi$ olmalı. Ayrıca kaynak süpersonik olduğu için emisyon **Mach konisi** olmalı: sınır tabakasında ($M=\sqrt2$) açı 45°; cep duvarında ($M = 6{,}16\times10^4$) açı $\sim9\times10^{-4}$ dereceye iner. |
 | Çok-cisim sıkışması | $d_{\text{denge}}$ bir **iki-cisim** büyüklüğüdür; kümedeki gerçek aralık ondan ~%25 küçüktür. |
 
 ---

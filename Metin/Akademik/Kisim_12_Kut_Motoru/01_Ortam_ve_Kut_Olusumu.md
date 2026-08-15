@@ -16,7 +16,11 @@ Evrenakı'nın hâl denklemi teorinin kendi postülatlarından gelir:
 
 $$P = c_0^2\rho$$
 
-Bu, sıkıştırılabilir akışkanların en sert hâlidir — **Zel'dovich sınırı**. İki doğrudan sonucu vardır ve ikisi de bu kısımda sürekli kullanılacaktır:
+Bu, sıkıştırılabilir akışkanların en sert hâlidir — **Zel'dovich sınırı**.
+
+> **Kaynak kullanımına dair açık beyan.** Zel'dovich özgün çalışmasında bu hâl denklemini, ses hızının $c$'yi aşmaması gereğinden — yani görelilikçi nedensellik tavanından — hareketle kurar. Evrenakı bu denklemin yalnız **matematiksel biçimini** alır; nedensellik-tavanı yorumunu **almaz**. Teoride $c_0$ evrensel bir tavan değil, ortamın yerel ses hızıdır (Postülat 4) ve aşağıda gösterildiği gibi ortamda $c_0$'ı fersah fersah aşan hızlar vardır. Kaynak, teoriye görelilikçi yorumuyla değil, hâl denkleminin biçimiyle dayanak verir.
+
+Hâl denkleminin iki doğrudan sonucu vardır ve ikisi de bu kısımda sürekli kullanılacaktır:
 
 | Sonuç | İfade | Anlamı |
 |---|---|---|
@@ -60,8 +64,8 @@ $\lvert v\rvert = \sqrt2\,c_0\,(r_e/R)$ ve merkeze inildikçe hız hızla büyü
 | **$R_{\text{cep}}$ (cep duvarı)** | $\mathbf{6{,}164\times10^{4}\,c_0}$ | $\mathbf{6{,}16\times10^{4}}$ |
 
 **Cep duvarındaki hız, standart fiziğin $c$ değeriyle kıyaslanamayacak ölçüde yüksektir.**
-Ve bu sayı bağımsız olarak doğrulanır: $\sqrt2\,c_0\,(r_e/R_{\text{cep}}) = \sqrt2\,c_0\sqrt{1+\Sigma/P_0} = v_{\text{kav}}$ — yani cep duvarı, tanım gereği **kavitasyon
-hızında** döner. İki ayrı yoldan aynı sayı çıkar.
+İfade kendi içinde kapalıdır: $\sqrt2\,c_0\,(r_e/R_{\text{cep}}) = \sqrt2\,c_0\sqrt{1+\Sigma/P_0} = v_{\text{kav}}$ — yani cep duvarı, tanım gereği **kavitasyon
+hızında** döner. Bu iki ifade, $R_{\text{cep}}$ tanımı yerine konularak elde edilen **aynı bağıntının iki eşdeğer yazımıdır**; bağımsız bir doğrulama değil, bir tutarlılık denetimidir.
 
 **Compton kıyası.** Zitterbewegung resminde Compton dönüş hızı **tam olarak $c$**'dir
 ($\omega_C \cdot \hbar/m_ec = c$). Kut'un cep duvarı ise:
@@ -85,7 +89,7 @@ $$R_{\text{cep}} = 2{,}294\times10^{-5}\,r_e$$
 
 Bu sayı Kısım 12 boyunca defalarca karşımıza çıkacaktır, çünkü **Kut'un gerçek boşluğu budur.** $r_e$ ise boşluğun kendisi değil, çevresindeki yoğunluk profilinin e-katlanma yarıçapıdır — yani **sınır tabakasının ölçeğidir.**
 
-> **İkisini karıştırmak, bu kısımda yapılabilecek en pahalı hatadır.** $r_e$ ile $R_{\text{cep}}$ arasında **65 000 kat** vardır. 12.3'te gösterileceği gibi, Kutların birleşip birleşemeyeceği sorusunun cevabı tam olarak bu orandan çıkar.
+> **İkisini karıştırmak, bu kısımda yapılabilecek en pahalı hatadır.** $r_e$ ile $R_{\text{cep}}$ arasında yaklaşık **44 000 kat** vardır ($r_e/R_{\text{cep}} = 1/2{,}294\times10^{-5} \approx 4{,}36\times10^{4}$). 12.3'te gösterileceği gibi, Kutların birleşip birleşemeyeceği sorusunun cevabı bu orana dayanan aralık/boşluk oranından çıkar.
 
 Kavitasyon hızı da aynı orandan gelir:
 
