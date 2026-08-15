@@ -29,7 +29,7 @@ Uzak galaksilerden gelen ışığın kırmızıya kayması (Redshift), modern fi
 
 Evrenakı Teorisi, **Yorgun Işık (Tired Light) hipotezini hidrodinamik sınırları göstererek reddeder.** Kısım 6'da matematiksel sınırları çizilen "Akı Korunumu" ilkesi gereği; bir kaynaktan ateşlenen Zerre Katarı (ışık) yolda asla frekans kaybedemez. Sürtünme olsa bile bu sadece hızı düşürür (ki hızı düşen sabit frekanslı dalganın boyu kızıla değil, maviye kayacak şekilde sıkışır). Yani ışığın yoldaki macerası, gözlenen nihai frekansı değiştiremez; Evrenakı'da kızıla kayma **yoldan bağımsızdır (path-independent).**
 
-O halde kozmolojik ölçekteki bu devasa kızıla kaymanın Evrenakı'daki asıl sebebi nedir? Cevap, **Zamanla Değişen $c$** mekanizmasıdır:
+O halde kozmolojik ölçekteki bu devasa kızıla kaymanın Evrenakı'daki asıl sebebi nedir? Cevap, **Zamanla Değişen $c_0$** mekanizmasıdır:
 
 1. **Zamansal Basınç Farkı ($c_{geçmiş} / c_{bugün}$):** Yukarıda (3.7.2) anlattığımız deşarj mekanizmasıyla Evrenakı okyanusu hacim kazanıp şiştikçe, ortamın iç basıncı (yoğunluğu) milyarlarca yıllık periyotta giderek düşer. Uzak galaksiden bugün bize ulaşan o eski ışık, evrenin genç ve **yüksek basınçlı** olduğu milyarlarca yıl önceki bir dönemde, yani yerel ışık hızının ($c_{geçmiş}$) çok daha yüksek olduğu bir ortamda üretilmiştir.
 2. **Saatlerin Senkronizasyon Farkı:** Işık bugün Dünya'ya ulaştığında, alıcı o ışığı evrenin yaşlanmış, genişlemiş ve **basıncı düşmüş** bir dönemindeki ($c_{bugün} < c_{geçmiş}$) daha yavaş çalışan kendi yerel Zerre-Saati ile kıyaslar. 
@@ -72,7 +72,7 @@ Sonuç: merceklenme sinyalinin galaksileri izlemesi, teoride bir anomali değil 
 
 **Evrenakı okuması:** Teori sıcak başlangıcı savunur (3.7.1) ve bu ışımayı tam olarak standart modelin gördüğü yerde görür: **erken, yüksek basınçlı dönemin fosil denge ışıması.** İki noktada ayrışır:
 
-1. **Soğuma mekanizması:** Işımanın 2,725 K'ye inişi metrik genişlemeyle değil, teorinin kendi kızıla kayma mekanizmasıyla okunur: ışıma, yerel $c$'nin bugünkünden çok yüksek olduğu genç ve yüksek basınçlı evrende üretilmiştir; zamansal $c$ oranı (3.7.3) tayfı bugünkü soğuk değere taşır.
+1. **Soğuma mekanizması:** Işımanın 2,725 K'ye inişi metrik genişlemeyle değil, teorinin kendi kızıla kayma mekanizmasıyla okunur: ışıma, yerel $c_0$'nin bugünkünden çok yüksek olduğu genç ve yüksek basınçlı evrende üretilmiştir; zamansal $c_0$ oranı (3.7.3) tayfı bugünkü soğuk değere taşır.
 2. **Piklerin iskeleti:** Erken plazmanın salındığı kabul edilir — "evrenin ilk sesi" ifadesini en hakkıyla kullanacak teori, bütün olguları basınç ve akustikle okuyan teoridir. Standart modelin karanlık maddeye yüklediği rol, plazmayla birlikte **salınmayan** çekici bir iskelet sağlamaktır. Evrenakı'da bu iskelet hazırdır: **ilkel girdap kaskadının basınç kuyuları.** Plazma, okyanusun önceden var olan kuyu iskeletinin içinde salınmıştır; 3.7.4.2'deki kozmik ağı ören aynı iskelet, ışıma haritasında pik desenleri olarak iz bırakır.
 
 Bu okumanın iki doğrudan kazancı vardır. Birincisi, kuyular parçacık olmadığı için ışımaz, çarpışmaz ve dedektöre girmez: yeraltı doğrudan-arama deneylerinin onlarca yıllık boş sonuçları (LUX, XENON vb.) teoride açıklanması gereken bir gerilim değil, otomatik bir beklentidir. İkincisi, meşhur "görünür maddenin ~5 katı" oranı bir parçacık envanteri olmaktan çıkar; **kuyu iskeletinin gücünün** (ortam sirkülasyonunun baryonik öz-çekime oranının) gözlemsel ölçümü hâline gelir. Teori bu orana resmî bir ad verir: $\Xi\approx5$ (bkz. Ek C, satır 18).
@@ -90,7 +90,7 @@ Böylece karanlık maddenin dört kanıt sınıfı, teoride tek mekanizmaya iner
 
 MOND'un bu sınavlarda düşmesinin yapısal nedeni de görünür olur: MOND kuvvet yasasını değiştirir ama kuyuları taşıyacak bir **yapı** önermez; Evrenakı taşıyıcı yapıyı önerir ve aynı yapı dört gözlemde birden iş görür.
 
-**Dürüst kayıt:** Bu bölümün kurduğu açıklamalar mekanizma seviyesindedir; nicel türetimleri manüskriptin açık hesap kalemleridir (bkz. 7.4): kuyu derinliği–sirkülasyon ilişkisinin kütle-itim türetimiyle tek formülasyonda gösterilmesi, Bullet Cluster merceklenme haritasının nicel üretimi, kozmik ağ güç spektrumu ve CMB pik konum/oranlarının kuyu-iskeleti hesabından türetimi ile 2,725 K değerinin zamansal-$c$ soğuma bütçesinden hesabı.
+**Dürüst kayıt:** Bu bölümün kurduğu açıklamalar mekanizma seviyesindedir; nicel türetimleri manüskriptin açık hesap kalemleridir (bkz. 7.4): kuyu derinliği–sirkülasyon ilişkisinin kütle-itim türetimiyle tek formülasyonda gösterilmesi, Bullet Cluster merceklenme haritasının nicel üretimi, kozmik ağ güç spektrumu ve CMB pik konum/oranlarının kuyu-iskeleti hesabından türetimi ile 2,725 K değerinin zamansal-$c_0$ soğuma bütçesinden hesabı.
 
 ## 3.7.5 Makro Programın Yanlışlanma Taahhütleri (Popper Şartı)
 
@@ -98,7 +98,7 @@ Bir teorinin bilimsel geçerliliği, ne kadar çok şeyi açıkladığıyla değ
 
 Bu kısmın kurduğu makro program, Karl Popper'ın yanlışlanabilirlik ilkesine bütünüyle sadık kalacak şekilde şu keskin test sınırlarını taahhüt eder. Şayet bu testlerden herhangi biri negatif sonuçlanırsa, ilgili katmanın çöktüğü kayıtsız şartsız kabul edilecektir:
 
-1. **İnterferometrik Hız Değişimi:** Evrenakı'nın basıncının ve yoğunluğunun değiştiği derin uzay koşullarında veya çok yoğun kütle sistemlerinin yakın alanında (örneğin Güneş'in taç tabakasına yakın geçişlerde) ışık hızında (lokal $c$) hidrodinamiğin öngördüğü yavaşlama/hızlanma saptanamazsa, teori ampirik olarak geçersiz kılınacaktır.
+1. **İnterferometrik Hız Değişimi:** Evrenakı'nın basıncının ve yoğunluğunun değiştiği derin uzay koşullarında veya çok yoğun kütle sistemlerinin yakın alanında (örneğin Güneş'in taç tabakasına yakın geçişlerde) ışık hızında (lokal $c_0$) hidrodinamiğin öngördüğü yavaşlama/hızlanma saptanamazsa, teori ampirik olarak geçersiz kılınacaktır.
 2. **Akışkanlar Mekaniği Uyumsuzluğu:** Astrofiziksel gözlemlerden elde edilen yeni gezegensel yörünge/presesyon verileri, Kütle-İtim modelinin Evrenakı'nın ultra-akışkan davranışı (Tisza, 1938; Landau, 1941) ile türettiği **ultra-düşük viskozite** ($\eta_E \to 0^+$) matematiğiyle çelişirse, akışkanlar modelinin bu boyutu iptal olacaktır. (Bu sınama iki yönlüdür: ölçümler gezegensel yörüngelerde beklenenden *fazla* sönüm gösterirse $\eta_E$ öngörülen üst sınırın üzerindedir; hiçbir ölçekte — ne halka sönümünde ne kozmolojik deşarjda — sonlu bir viskoz etki bulunamazsa, $\eta_E = 0$ olur ve teorinin genişleme motoru ile ayırt edici sönüm öngörüsü birlikte çöker. Bkz. Bölüm 1.3, 7. postülat kutusu.)
 3. **Rejim Geçişinin İhlali:** Kütle-İtim konseptinden türetilen radyal "İtim" (Push) basınç gradyanı, Güneş sistemi gibi lokal girdaplarda Newton'un ters-kare yasasını ($1/r^2$) ve devasa sarmal galaksilerde logaritmik $\ln(r)$ basınç sönümlenmesini tek ve aynı diferansiyel denklem setinden (rejim geçişiyle) türetemezse, teorinin matematiksel tutarlılığı tümüyle reddedilecektir.
 

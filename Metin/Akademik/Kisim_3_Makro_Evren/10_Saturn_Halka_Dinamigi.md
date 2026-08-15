@@ -111,11 +111,11 @@ Bu bölümün $\gamma_{ortam}$ terimi ile Bölüm 6.3'teki frame-dragging, ortam
 | İddia | Durum |
 |---|---|
 | Dikey restoring force / salınım periyodu | Evrenakı = Newton = GR (ayırt edici değil, aksiyom gereği) |
-| Parçacık–parçacık çarpışma sönümü | Standart granüler fizikle aynı; halkanın **inceliğini** belirleyen budur (11.4.5) |
-| Ortam kuplajının **dikey** kanalı | **Ölçülemez** — çarpışmalı sönümün $10^{31}$ katı gerisinde; bükülme dalgası testi yürütülemez |
+| Parçacık–parçacık sönüm zinciri | Kapısı ve kesiti taneciklerin **pulsasyon rampasıdır** — alan aracılı karşılaşma, kesit $(r_H/a_b)^2$; temaslı çarpışma artığı ısıya çeviren son adımdır. Kalınlık kilidi parametresiz $h\simeq a_b$ (11.4.5) |
+| Ortam kuplajının **dikey** kanalı | **Ölçülemez** — rampa+temas zincirinin $10^{31}$ katı gerisinde; bükülme dalgası testi bu kanalla yürütülemez |
 | Ortam kuplajının **yörünge** kanalı | **Dışa** dönük tork; halka yağmurunu üretmez ama **$\eta_E$ üzerine kitaptaki en sıkı sınırı** verir ($\lesssim2{,}3\times10^{-11}$ Pa·s) |
 | Halka yağmuru (ring rain) kütle kaybı | **Teorinin kanalı değildir** — işaret ters; standart mekanizmalara aittir |
 | Halkada teorinin **ayırt edici** imzası | Dikey frekansta **tek paritede** $(R_e/r)^3$ terimi — hiçbir kütle çokkutbuyla taklit edilemez (11.4.4, Sınav 11.4-A) |
 | GP-B ile tutarlılık | **Sağlandı** — geometrik çarpan $\tfrac12$, 0,52σ uyum (6.3.3, Ek M-40) |
 
-**En dürüst ve en güçlü konumlandırma şudur:** Evrenakı, halka dinamiğinin dikey salınım kısmında Newton'la matematiksel olarak özdeştir ve bu bir zayıflık değil, tasarım gereğidir. Halkanın inceliği çarpışmalı sönümdendir; ortam kuplajı orada ölçülemez. Teorinin halkalarda kendine özgü iki sözü vardır ve ikisi de niceldir: **(i)** yörünge kanalındaki prograd tork, $\eta_E$'ye kitaptaki en sıkı sınırı koyar; **(ii)** yanal itimin (F5) dikey frekansta bıraktığı **tek pariteli** $(R_e/r)^3$ terimi, hiçbir kütle dağılımının üretemeyeceği bir imzadır ve Cassini verisinde aranabilir. Halka yağmuru bu listede yer almaz.
+**En dürüst ve en güçlü konumlandırma şudur:** Evrenakı, halka dinamiğinin dikey salınım kısmında Newton'la matematiksel olarak özdeştir ve bu bir zayıflık değil, tasarım gereğidir. Halkanın dikey sönümünün kapısı ve kesiti taneciklerin **pulsasyon rampasıdır**; temaslı çarpışma artığı yakan son adımdır, dış ortam kuplajı ise o hanede ölçülemez (11.4.5). Teorinin halkalarda kendine özgü iki sözü vardır ve ikisi de niceldir: **(i)** yörünge kanalındaki prograd tork, $\eta_E$'ye kitaptaki en sıkı sınırı koyar; **(ii)** yanal itimin (F5) dikey frekansta bıraktığı **tek pariteli** $(R_e/r)^3$ terimi, hiçbir kütle dağılımının üretemeyeceği bir imzadır ve Cassini verisinde aranabilir. Halka yağmuru bu listede yer almaz.

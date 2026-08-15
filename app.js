@@ -51,18 +51,18 @@ const chapters = [
     { id: 'akademik_05_04', title: '5.4 Eksenel Kütle İtim', file: 'Metin/Akademik/Kisim_5_Deneyler/04_Eksenel_Kutle_Itim.md', group: 'akademik', part: 'Kısım V: Deneyler' },
     { id: 'akademik_05_05', title: '5.5 Kısım Özeti: Ne Öğrendik?', file: 'Metin/Akademik/Kisim_5_Deneyler/05_Ne_Ogrendik.md', group: 'akademik', part: 'Kısım V: Deneyler' },
     { id: 'akademik_05_kaynakca', title: '5.6 Kaynakça', file: 'Metin/Akademik/Kisim_5_Deneyler/99_Kaynakca.md', group: 'akademik', part: 'Kısım V: Deneyler' },
-    { id: 'akademik_06', title: '6. Kanıtlara Giriş', file: 'Metin/Akademik/Kisim_6_Kanitlar/06_Kanitlar.md', group: 'akademik', part: 'Kısım VI: Kanıtlar' },
+    { id: 'akademik_06', title: '6. Kanıtlara Giriş', file: 'Metin/Akademik/Kisim_6_Kanitlar/00_Kanitlar_Giris.md', group: 'akademik', part: 'Kısım VI: Kanıtlar' },
     { id: 'akademik_06_00', title: '6.0 Yalnızca Evrenakı’nın Açıkladığı Gözlemler Matrisi', file: 'Metin/Akademik/Kisim_6_Kanitlar/00_Yalnizca_Evrenakinin_Acikladigi_Gozlemler.md', group: 'akademik', part: 'Kısım VI: Kanıtlar' },
     { id: 'akademik_06_01', title: '6.1 Evrenakı Kinematiğinden Doppler Türetimi', file: 'Metin/Akademik/Kisim_6_Kanitlar/01_Evrenaki_Doppler_Turetimi.md', group: 'akademik', part: 'Kısım VI: Kanıtlar' },
     { id: 'akademik_06_02', title: '6.2 Kütleçekimsel Kızıla Kayma ve Tek Mekanizmalı Çözüm', file: 'Metin/Akademik/Kisim_6_Kanitlar/02_Kutlecekimsel_Kizila_Kayma_Sentezi.md', group: 'akademik', part: 'Kısım VI: Kanıtlar' },
     { id: 'akademik_06_03', title: '6.3 Ekvatoral Vorteks ve Yörünge Anomalileri', file: 'Metin/Akademik/Kisim_6_Kanitlar/03_Ekvatoral_Vorteks_ve_Yorunge_Anomalileri.md', group: 'akademik', part: 'Kısım VI: Kanıtlar' },
     { id: 'akademik_06_04', title: '6.4 Camdaki Hız Geri Kazanımı ve Abraham-Minkowski', file: 'Metin/Akademik/Kisim_6_Kanitlar/04_Camdaki_Hiz_Geri_Kazanimi.md', group: 'akademik', part: 'Kısım VI: Kanıtlar' },
-    { id: 'akademik_06_05', title: '6.5 Galaktik Yörüngeler ve Karanlık Madde', file: 'Metin/Akademik/Kisim_6_Kanitlar/07_Galaktik_Yorungeler.md', group: 'akademik', part: 'Kısım VI: Kanıtlar' },
-    { id: 'akademik_06_06', title: '6.6 Küresel Basıklık ve Gezegen Figürü', file: 'Metin/Akademik/Kisim_6_Kanitlar/08_Kuresel_Basiklik.md', group: 'akademik', part: 'Kısım VI: Kanıtlar' },
-    { id: 'akademik_06_07', title: '6.7 Kısım Özeti: Ne Öğrendik?', file: 'Metin/Akademik/Kisim_6_Kanitlar/05_Ne_Ogrendik.md', group: 'akademik', part: 'Kısım VI: Kanıtlar' },
+    { id: 'akademik_06_05', title: '6.5 Galaktik Yörüngeler ve Karanlık Madde', file: 'Metin/Akademik/Kisim_6_Kanitlar/05_Galaktik_Yorungeler.md', group: 'akademik', part: 'Kısım VI: Kanıtlar' },
+    { id: 'akademik_06_06', title: '6.6 Küresel Basıklık ve Gezegen Figürü', file: 'Metin/Akademik/Kisim_6_Kanitlar/06_Kuresel_Basiklik.md', group: 'akademik', part: 'Kısım VI: Kanıtlar' },
+    { id: 'akademik_06_07', title: '6.7 Kısım Özeti: Ne Öğrendik?', file: 'Metin/Akademik/Kisim_6_Kanitlar/98_Ne_Ogrendik.md', group: 'akademik', part: 'Kısım VI: Kanıtlar' },
     { id: 'akademik_06_kaynakca', title: '6.8 Kaynakça', file: 'Metin/Akademik/Kisim_6_Kanitlar/99_Kaynakca.md', group: 'akademik', part: 'Kısım VI: Kanıtlar' },
-    { id: 'akademik_07', title: 'Kısım VII: Tartışma ve Sonuç', file: 'Metin/Akademik/Kisim_7_Tartisma_ve_Sonuc/06_Tartisma_ve_Sonuc.md', group: 'akademik', part: 'Kısım VII: Tartışma ve Sonuç' },
-    { id: 'akademik_07_03', title: '7.7 Modern Fiziğin Açık Krizleri ve Evrenakı Ufku', file: 'Metin/Akademik/Kisim_7_Tartisma_ve_Sonuc/03_Modern_Fizigin_Acik_Krizleri_ve_Evrenaki_Ufku.md', group: 'akademik', part: 'Kısım VII: Tartışma ve Sonuç' },
+    { id: 'akademik_07', title: 'Kısım VII: Tartışma ve Sonuç', file: 'Metin/Akademik/Kisim_7_Tartisma_ve_Sonuc/04_Tartisma_ve_Sonuc.md', group: 'akademik', part: 'Kısım VII: Tartışma ve Sonuç' },
+    { id: 'akademik_07_07', title: '7.7 Modern Fiziğin Açık Krizleri ve Evrenakı Ufku', file: 'Metin/Akademik/Kisim_7_Tartisma_ve_Sonuc/07_Modern_Fizigin_Acik_Krizleri_ve_Evrenaki_Ufku.md', group: 'akademik', part: 'Kısım VII: Tartışma ve Sonuç' },
     { id: 'akademik_07_kaynakca', title: 'Kaynakça', file: 'Metin/Akademik/Kisim_7_Tartisma_ve_Sonuc/99_Kaynakca.md', group: 'akademik', part: 'Kısım VII: Tartışma ve Sonuç' },
     { id: 'akademik_08', title: 'Kısım VIII: Ekler (Dizin)', file: 'Metin/Akademik/Kisim_8_Ekler/07_Matematiksel_Ekler.md', group: 'akademik', part: 'Kısım VIII: Ekler' },
     { id: 'akademik_08_eka', title: 'Ek A — Hız Kavramlarının Ayrıştırılması', file: 'Metin/Akademik/Kisim_8_Ekler/16_Ek_A_Hiz_Kavramlari.md', group: 'akademik', part: 'Kısım VIII: Ekler' },
@@ -87,8 +87,9 @@ const chapters = [
     { id: 'akademik_09_08', title: '9.8 Polarizasyon ve Gradyan İlişkisi', file: 'Metin/Akademik/Kisim_9_Mikro_Dogrulamalar/08_Polarizasyon_ve_Gradyan_Iliskisi.md', group: 'akademik', part: 'Kısım IX: Mikro Doğrulamalar' },
     { id: 'akademik_09_09', title: '9.9 Tek Foton / Elektron ve Çift Yarık', file: 'Metin/Akademik/Kisim_9_Mikro_Dogrulamalar/09_Tek_Foton_Cift_Yarik_Deneyleri.md', group: 'akademik', part: 'Kısım IX: Mikro Doğrulamalar' },
     { id: 'akademik_09_10', title: '9.10 "Foton"un İmkânsızlığı', file: 'Metin/Akademik/Kisim_9_Mikro_Dogrulamalar/10_Fotonun_Imkansizligi.md', group: 'akademik', part: 'Kısım IX: Mikro Doğrulamalar' },
-    { id: 'akademik_09_98', title: '9.11 Kısım Özeti: Ne Öğrendik?', file: 'Metin/Akademik/Kisim_9_Mikro_Dogrulamalar/98_Ne_Ogrendik.md', group: 'akademik', part: 'Kısım IX: Mikro Doğrulamalar' },
-    { id: 'akademik_09_99', title: '9.12 Kaynakça', file: 'Metin/Akademik/Kisim_9_Mikro_Dogrulamalar/99_Kaynakca.md', group: 'akademik', part: 'Kısım IX: Mikro Doğrulamalar' },
+    { id: 'akademik_09_11', title: '9.11 Atom Spektrumları: Çekirdek Geometrisinden Pencere Senkronizasyonuna', file: 'Metin/Akademik/Kisim_9_Mikro_Dogrulamalar/11_Atom_Spektrumlari_ve_Kesikli_Yorungeler.md', group: 'akademik', part: 'Kısım IX: Mikro Doğrulamalar' },
+    { id: 'akademik_09_98', title: '9.12 Kısım Özeti: Ne Öğrendik?', file: 'Metin/Akademik/Kisim_9_Mikro_Dogrulamalar/98_Ne_Ogrendik.md', group: 'akademik', part: 'Kısım IX: Mikro Doğrulamalar' },
+    { id: 'akademik_09_99', title: '9.13 Kaynakça', file: 'Metin/Akademik/Kisim_9_Mikro_Dogrulamalar/99_Kaynakca.md', group: 'akademik', part: 'Kısım IX: Mikro Doğrulamalar' },
     { id: 'akademik_10_01', title: '10.1 Doğrulama Programı: Amaç, Veri ve Yöntem', file: 'Metin/Akademik/Kisim_10_Yorunge_Dogrulamasi/01_Dogrulama_Programi.md', group: 'akademik', part: 'Kısım X: Evrenakı Yörünge Doğrulaması' },
     { id: 'akademik_10_02', title: '10.2 Nihai Kurulum: Teorinin Galaktik Denklemi', file: 'Metin/Akademik/Kisim_10_Yorunge_Dogrulamasi/02_Nihai_Denklem.md', group: 'akademik', part: 'Kısım X: Evrenakı Yörünge Doğrulaması' },
     { id: 'akademik_10_03', title: '10.3 Sınıf Sınıf Sonuçlar I: Spiraller (Sa–Scd)', file: 'Metin/Akademik/Kisim_10_Yorunge_Dogrulamasi/03_Siniflar_Spiraller.md', group: 'akademik', part: 'Kısım X: Evrenakı Yörünge Doğrulaması' },
@@ -109,9 +110,17 @@ const chapters = [
     { id: 'akademik_11_07', title: '11.7 Eksen Devinimi: İçkin Kanal ve Tork Kanalı', file: 'Metin/Akademik/Kisim_11_Astronomik_Dogrulamalar/07_Eksen_Devinimi.md', group: 'akademik', part: 'Kısım XI: Astronomik Doğrulamalar' },
     { id: 'akademik_11_ozet', title: '11.8 Kısım Özeti: Ne Öğrendik?', file: 'Metin/Akademik/Kisim_11_Astronomik_Dogrulamalar/98_Ne_Ogrendik.md', group: 'akademik', part: 'Kısım XI: Astronomik Doğrulamalar' },
     { id: 'akademik_11_kaynakca', title: '11.9 Kaynakça', file: 'Metin/Akademik/Kisim_11_Astronomik_Dogrulamalar/99_Kaynakca.md', group: 'akademik', part: 'Kısım XI: Astronomik Doğrulamalar' },
-    { id: 'akademik_12_01', title: '12.1 Doç. Dr. Rıza Demirbilek Değerlendirmesi', file: 'Metin/Akademik/Kisim_12_Hakem_Degerlendirmeleri/01_Doc_Dr_Riza_Demirbilek_Degerlendirmesi.md', group: 'akademik', part: 'Kısım XII: Hakem Değerlendirmeleri' },
-    { id: 'akademik_12_98', title: '12.2 Önceki Değerlendirmeler ve Tartışmalar', file: 'Metin/Akademik/Kisim_12_Hakem_Degerlendirmeleri/98_Hakem_Degerlendirmeleri.md', group: 'akademik', part: 'Kısım XII: Hakem Değerlendirmeleri' },
-    { id: 'akademik_12_99', title: '12.3 Hakemlik Standardı ve Kriterler', file: 'Metin/Akademik/Kisim_12_Hakem_Degerlendirmeleri/99_Hakemlik_Standarti.md', group: 'akademik', part: 'Kısım XII: Hakem Değerlendirmeleri' },
+    { id: 'akademik_12_01', title: '12.1 Ortam ve Kut Oluşumu', file: 'Metin/Akademik/Kisim_12_Kut_Motoru/01_Ortam_ve_Kut_Olusumu.md', group: 'akademik', part: 'Kısım XII: Kut Motoru' },
+    { id: 'akademik_12_02', title: '12.2 Kut Motoru: 4B Dönüşün 3B İzi', file: 'Metin/Akademik/Kisim_12_Kut_Motoru/02_Kut_Motoru_4B_Donusun_3B_Izi.md', group: 'akademik', part: 'Kısım XII: Kut Motoru' },
+    { id: 'akademik_12_03', title: '12.3 Bağlanma, Yapılanma ve Kararlılık', file: 'Metin/Akademik/Kisim_12_Kut_Motoru/03_Baglanma_Yapilanma_ve_Kararlilik.md', group: 'akademik', part: 'Kısım XII: Kut Motoru' },
+    { id: 'akademik_12_04', title: '12.4 Dönüşün Aktarımı: Kut’tan Yapıya', file: 'Metin/Akademik/Kisim_12_Kut_Motoru/04_Donusun_Aktarimi.md', group: 'akademik', part: 'Kısım XII: Kut Motoru' },
+    { id: 'akademik_12_05', title: '12.5 Ölçek Değişmezliği', file: 'Metin/Akademik/Kisim_12_Kut_Motoru/05_Olcek_Degismezligi_Ayni_Yasalar.md', group: 'akademik', part: 'Kısım XII: Kut Motoru' },
+    { id: 'akademik_12_06', title: '12.6 Kapsam ve Havale', file: 'Metin/Akademik/Kisim_12_Kut_Motoru/06_Kapsam_ve_Atomlarin_Isleyisine_Havale.md', group: 'akademik', part: 'Kısım XII: Kut Motoru' },
+    { id: 'akademik_12_ozet', title: '12.7 Kısım Özeti: Ne Öğrendik?', file: 'Metin/Akademik/Kisim_12_Kut_Motoru/98_Ne_Ogrendik.md', group: 'akademik', part: 'Kısım XII: Kut Motoru' },
+    { id: 'akademik_12_kaynakca', title: '12.8 Kaynakça', file: 'Metin/Akademik/Kisim_12_Kut_Motoru/99_Kaynakca.md', group: 'akademik', part: 'Kısım XII: Kut Motoru' },
+    { id: 'akademik_13_01', title: '13.1 Doç. Dr. Rıza Demirbilek Değerlendirmesi', file: 'Metin/Akademik/Kisim_13_Hakem_Degerlendirmeleri/01_Doc_Dr_Riza_Demirbilek_Degerlendirmesi.md', group: 'akademik', part: 'Kısım XIII: Hakem Değerlendirmeleri' },
+    { id: 'akademik_13_98', title: '13.2 Önceki Değerlendirmeler ve Tartışmalar', file: 'Metin/Akademik/Kisim_13_Hakem_Degerlendirmeleri/98_Hakem_Degerlendirmeleri.md', group: 'akademik', part: 'Kısım XIII: Hakem Değerlendirmeleri' },
+    { id: 'akademik_13_99', title: '13.3 Hakemlik Standardı ve Kriterler', file: 'Metin/Akademik/Kisim_13_Hakem_Degerlendirmeleri/99_Hakemlik_Standarti.md', group: 'akademik', part: 'Kısım XIII: Hakem Değerlendirmeleri' },
     { id: 'populer_01', title: '1. Uzay Boş Değil!', file: 'Metin/Populer/populer_01.md', group: 'populer' },
     { id: 'populer_02', title: '2. Elma Neden Düşmez, İtilir!', file: 'Metin/Populer/populer_02.md', group: 'populer' },
     { id: 'populer_03', title: '3. Işığın Gerçek Yüzü: Zerreler', file: 'Metin/Populer/populer_03.md', group: 'populer' },
@@ -180,7 +189,7 @@ async function preloadChapterTexts() {
     for (const chap of chapters) {
         if (!chapterTextsCache[chap.id]) {
             try {
-                const res = await fetch(chap.file + '?v=2.1');
+                const res = await fetch(chap.file + '?v=2.2');
                 if (res.ok) {
                     const text = await res.text();
                     // Store normalized lower-case text for fast search
@@ -897,7 +906,8 @@ async function loadChapterContent(chapter) {
 
     try {
         // Cache buster ekleyerek tarayıcı önbelleğini atlıyoruz (v=1.1)
-        const response = await fetch(chapter.file + '?v=2.1');
+        const response = await fetch(chapter.file + '?v=2.2');
+        
         if (!response.ok) {
             throw new Error(`Yükleme hatası: ${response.statusText}`);
         }
@@ -2579,3 +2589,4 @@ function postProcessTooltips(container) {
         }
     });
 }
+

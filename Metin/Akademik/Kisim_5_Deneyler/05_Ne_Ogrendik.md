@@ -12,7 +12,7 @@ Kısım 5 boyunca, teorinin öngördüğü etkileri doğrudan ölçmek üzere ta
 | 5.1.4 | Deney 4 | Attometer (fiber) | Fiber içi zaman-uçuş | Aynı yönde sapma |
 | 5.2 | Deneyler 1–3 | İnterferometre + ring osilatör + attometer | Yaklaştırılan kütle plakalarının ışık hızına etkisi | Deney 1: 250 g plaka → ~200 m/sn; Deney 2 (fiber osilatör): ~300 g plaka → ~4500 m/sn |
 | 5.3 | Deney 1 | Michelson interferometresi | 50 mm cam küpün iç gradyanı | Merkez-kenar arasında ~4650 m/sn fark |
-| 5.4 | Deney | Hassas terazi + vakumda 30.000 devirli disk | Eksenel kuvvet | ~0,00981 N itim (klasik beklenti: ~8×10⁻⁸ N) |
+| 5.4 | Deney | Hassas terazi + vakum kabininde 30.000 devirli disk | Eksenel kuvvet | ~0,00981 N itim (klasik beklenti: ~8×10⁻⁸ N) |
 
 ## Temel Kazanımlarımız
 

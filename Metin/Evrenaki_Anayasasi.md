@@ -13,8 +13,13 @@ Evren, tek bir süper-akışkandan ibarettir. Madde bu okyanustan ayrı bir şey
 **Madde 2 — Boşluk yoktur.**
 "Vakum" denilen şey hiçlik değil, Evrenakı'nın düşük basınç bölgesidir. Uzayın her noktası doludur.
 
+*Kullanım kuralı (Madde 3'ün "foton" kuralıyla aynı sınıftandır):* **"Vakum" teorinin kendi cümlesinde bir referans hâli olarak kullanılamaz.** Standart fiziğin *vakum dalga boyu*, *vakum enerjisi*, *vakum içinde* gibi ifadeleri yalnız o çatı aktarılırken, tırnak içinde anılabilir; teorinin kendi karşılığı **serbest Evrenakı**'dır (maddi ortamın deplasmanı çıkarılmış hâl). Sözcük yalnız **yırtılmış cebin adı** olarak teoriye aittir (kavitasyon cebi) — orada da hiçliği değil aşırı düşük basıncı adlandırır. Ve fark yalnız sözcükte değildir: standart çatı vakumu **evrensel** bir referans sayar, teoride $c_0$ yerel $\sqrt{P/\rho}$ ile değiştiği için (Madde 5) serbest-Evrenakı referansı **yereldir.**
+
 **Madde 3 — Foton yoktur.**
-Kütlesiz enerji paketi teoriye giremez. Işık; kütleli, bölünmez Zerre'lerin Katarları ve Paketleridir. "Foton" kelimesi yalnızca standart fiziğin terimi olarak, tırnak içinde anılabilir.
+Kütlesiz enerji paketi teoriye giremez. Işık; kütleli Zerre'lerin Katarları ve Paketleridir. Zerre en küçük **kararlı yapılanmadır**; mutlak bölünemezlik Zerre'nin değil, Kut'un özelliğidir (Madde 30). "Foton" kelimesi yalnızca standart fiziğin terimi olarak, tırnak içinde anılabilir.
+
+**Madde 30 — Bölünemez birim Kut'tur.**
+Tek tözün bölünemeyen en küçük kuantumlanmış birimi Kut'tur. Zerre de nötrino da Kutlardan kuruludur; hiçbiri ötekinden türememiştir, kardeştirler. Kut'un altında parçacık yoktur — bölünmemiş, sürekli Evrenakı vardır. Kut, bölünemez olduğu için sapacak bir iç kütle dağılımı taşımaz: atalet bakımından küreseldir ($\varepsilon=0$, $D_{XW}=0$), çift dönüşü **izoklindir** ($\omega_1=\omega_2$) ve üç boyuta düşen izi salt boyutsal salınımdır — eksen tam sabittir, devinim yoktur (**Salınımlı Dönme**). Aynı şekilde, ışığın mermisi olan **Zerre** de bileşik olmasına rağmen kusursuz eksenel simetriyle dizildiği için ekseni sabittir ve devinemez (polarizasyonunu bu şekilde korur). Buradan bir ölçüt çıkar (Oe-5): **devinim, iç asimetrinin (maddeleşmenin) imzasıdır; kusursuz simetrik olan (Kut ve Zerre) devinemez.** İç yapısı asimetrik olan her gövde — nükleon, elektron, gezegen — ideal küreden sapar ve devinir. Kural ölçekten bağımsızdır: devinim, gövdenin kendi figüründen doğar. Varlığın tabanı Kut, açıklamanın tabanı Zerre'dir: **Kut hiçbir hesaba girmez**, hiçbir denklemde görünmez. Kut'a yapılan atıf açıklama yerine geçmez; böyle bir durumda açıklama Zerre düzeyinde aranır (Madde 19).
 
 **Madde 4 — Her şey temas mekaniğidir.**
 Uzaktan etki, telepati, mekanizmasız bağ yoktur. Her kuvvet, her korelasyon, her "alan etkisi" ortam üzerinden temas zinciriyle taşınır.
@@ -30,17 +35,17 @@ Klasik akışkan veya çekim modellerinin aksine, Evrenakı basıncı kütleye y
 ## İKİNCİ BÖLÜM — IŞIK VE HIZ
 
 **Madde 5 — Işık hızı sabit değildir.**
-Teoride sabit bir $c$ yoktur; $c$ olabildiğince değişkendir. $c$, ortamın yerel basınç/yoğunluk oranından türeyen sonik (patinaj) hızıdır: $c=\sqrt{P/\rho}$. Bilinen değer ($2{,}998\times10^8$ m/s) yalnızca bizim bölgedeki arka plan değeridir. $c$ zamanla da değişir: genç, yüksek basınçlı evrende daha yüksekti (kozmolojik kızıla kaymanın kaynağı; 3.7.3).
+Teoride sabit bir $c_0$ yoktur; $c_0$ olabildiğince değişkendir. $c_0$, ortamın yerel basınç/yoğunluk oranından türeyen sonik (patinaj) hızıdır: $c_0=\sqrt{P/\rho}$. Bilinen değer ($2{,}998\times10^8$ m/s) yalnızca bizim bölgedeki arka plan değeridir. $c_0$ zamanla da değişir: genç, yüksek basınçlı evrende daha yüksekti (kozmolojik kızıla kaymanın kaynağı; 3.7.3).
 
-**Madde 6 — $c$ mutlak sınır değildir; her zaman, her yerde aşılabilir.**
-$c$ yalnızca Zerre'nin yola tutunma (kavrama) limitidir — havadaki ses hızı gibi. Işık tam-sonik, madde kalıcı süpersonik bir olgudur: yüzeyi $c$-altı hızda dönen madde var olamaz (Ek A). $>c$ değerler teorinin kusuru değil, kurucu özelliğidir.
+**Madde 6 — $c_0$ mutlak sınır değildir; her zaman, her yerde aşılabilir.**
+$c_0$ yalnızca Zerre'nin yola tutunma (kavrama) limitidir — havadaki ses hızı gibi. Işık tam-sonik, madde kalıcı süpersonik bir olgudur: yüzeyi $c_0$-altı hızda dönen madde var olamaz (Ek A). $>c_0$ değerler teorinin kusuru değil, kurucu özelliğidir.
 
 **Madde 7 — Hız merdiveni tektir ve formüllüdür.**
-$$c \;<\; \sqrt{2}\,c\ (v_{denge}) \;<\; v_m=c\sqrt{\Sigma/P_0} \;<\; v_{kav}\approx\sqrt2\,v_m \;\le\; v_{saf}$$
-Hiçbir hız iddiası bu merdivenin dışında, formülsüz bırakılamaz (Ek A, Ek C).
+$$c_0 \;<\; \sqrt{2}\,c_0\ (v_{denge}) \;<\; v_m=c_0\sqrt{\Sigma/P_0} \;<\; v_{kav}\approx\sqrt2\,v_m$$
+Hiçbir hız iddiası bu merdivenin dışında, formülsüz bırakılamaz (Ek A, Ek C). Merdiven $v_{kav}$'da biter: maddeyi doğuran dönüş bu eşiğin üzerindedir, ama taşıyıcısı Kut düzeyinde olduğu için ona sembol tahsis edilmez ve basamak açılmaz (Madde 21, 30). Teorinin niceliği yırtılmanın **eşiğidir**, eşiği aşan gövdenin hızı değil.
 
 **Madde 8 — Ortam iki kanaldan haber taşır.**
-Basınç (sıkışma) kanalı sinyalleri $c$ ile taşır: ışık ve —standart fiziğin "kütleçekim dalgası" adını verdiği— basınç salınımları bu kanaldadır. Kohezyon (yapı) kanalı, ortamın yapısal yeniden düzenlenmesini — gradyan ve topografya kurulumunu — $v_m\gg c$ ile taşır. İkisinin karıştırılması yasaktır (2.10.1).
+Basınç (sıkışma) kanalı sinyalleri $c_0$ ile taşır: ışık ve —standart fiziğin "kütleçekim dalgası" adını verdiği— basınç salınımları bu kanaldadır. Kohezyon (yapı) kanalı, ortamın yapısal yeniden düzenlenmesini — gradyan ve topografya kurulumunu — $v_m\gg c_0$ ile taşır. İkisinin karıştırılması yasaktır (2.10.1).
 
 ---
 
@@ -76,10 +81,10 @@ Moleküler ölçekten gezegensel ölçeğe kadar her kütlesel yapı, deplase et
 Sıcak, yüksek basınçlı başlangıç dönemi teorinin doğal parçasıdır. İtiraz olaya değil, standart modelin onu mekanik sebepsiz, salt matematiksel bırakmasınadır; Evrenakı aynı olaya hidrodinamik mekanizma kazandırır (3.7.1).
 
 **Madde 14 — CMB, erken dönemin fosil denge ışımasıdır.**
-2,725 K'ye inişi metrik genişlemeyle değil, zamansal $c$ oranıyla okunur. Akustik pikler, plazmanın ortamın ilkel kuyu iskeletinde salınmasının izidir; "görünür maddenin ~5 katı" oranı parçacık envanteri değil, kuyu iskeletinin gücünün ($\Xi\approx5$) ölçümüdür (3.7.4.3).
+2,725 K'ye inişi metrik genişlemeyle değil, zamansal $c_0$ oranıyla okunur. Akustik pikler, plazmanın ortamın ilkel kuyu iskeletinde salınmasının izidir; "görünür maddenin ~5 katı" oranı parçacık envanteri değil, kuyu iskeletinin gücünün ($\Xi\approx5$) ölçümüdür (3.7.4.3).
 
 **Madde 15 — Yorgun ışık reddedilir; kızıla kayma yoldan bağımsızdır.**
-Akı korunumu gereği ışık yolda frekans kaybedemez. Kozmolojik kızıla kaymanın kaynağı, ışığın $c$'nin yüksek olduğu geçmişte üretilmiş olmasıdır (3.7.3).
+Akı korunumu gereği ışık yolda frekans kaybedemez. Kozmolojik kızıla kaymanın kaynağı, ışığın $c_0$'nin yüksek olduğu geçmişte üretilmiş olmasıdır (3.7.3).
 
 ---
 
@@ -99,6 +104,18 @@ Elektrik yükü ($+ / -$) soyut bir kuantum sayısı değil; parçacık girdabı
 
 **Madde 29 — Nükleer kuvvetler temas rampa kilitlenmesidir.**
 Güçlü ve Zayıf Nükleer Kuvvetler bağımsız "temel etkileşimler" değildir. Femtometre ölçeğinde ($r < r_c$) parçacıkların Evrenakı Rampalarının iç içe geçmesi (rampa kilitlenmesi) ve ortak vakum cebi oluşturması hidrodinamiğidir.
+
+> **Seri içi uzlaşma hükmü — "Atom Geometrisi" ile bağ.**
+> Mai tezi serisinin ilk kitabı olan *Atom Geometrisi*, nükleer kuvveti ve bağlanma enerjisini reddeder. Bu ret, **olguya değil kaynağa** yöneliktir ve o kitap Evrenakı açıklanmadan önce yazıldığı için başka türlü kurulamazdı — kitabın kendi dipnotu ayrıntıların ancak ortam bilindiğinde açıklanabileceğini, işleyişin sonraki kitaba bırakıldığını söyler. O kitap bağın **varlığını** zaten kabul eder: kare katman geometrisinin tamamı protonların nötronlar aracılığıyla bağlanması üzerine kuruludur. Reddettiği şey, bağı **kaynağı gösterilmemiş bir kuvvete** yıkmaktır.
+>
+> **Madde 29 tam o kaynağı verir.** Dolayısıyla iki kitap çelişmez: biri soruyu kurar, öteki cevaplar. Bağlanma, Evrenakı'dan doğan bir kuvvet ve enerjidir; "nükleer" sıfatı yalnız standart fiziğin adlandırmasıdır.
+>
+> **Kütle–ağırlık ayrımı da bu hükümle kesinleşir.** *Atom Geometrisi*, çekirdek oluşurken gözlenen eksilme için "kütle kaybı değil, ağırlık kaybı" der; bununla standart fiziğin "kütle enerjiye dönüştü" okumasına direnir. Evrenakı bu direnişi doğrular ve adlandırılabilir kılar: **kütle, deplase edilen Evrenakı hacminin ölçüsüdür** (Madde 1, 24, 25). Sıkı kapanmış bir girdap, bileşenlerinin serbest hâlde iteceğinden daha az iter; azalan şey deplasmandır. Ağırlık ise bu deplasman açığının gradyandaki tepkisidir (Madde 10). Yani:
+> * Standart fiziğin "kütle → enerji dönüşümü" okuması **reddedilir** — ilk kitabın haklı olduğu nokta budur.
+> * Buna karşılık **kütle toplanabilir değildir**: bir kompozitin kütlesi, içindeki yapıtaşlarının kütleleri toplamının altındadır ve bileşen sayısı kütleden okunamaz, yalnız alt sınırı verilebilir.
+> * Bu iki cümle aynı olgunun iki yüzüdür; birbirini nakzetmez.
+>
+> **Yazım kuralı:** Bu uzlaşma örtük bırakılamaz. Serinin iki kitabı "bağlanma enerjisi yoktur" ve "bağlanma açığı vardır" cümlelerini yan yana taşıyacaksa, her iki metinde de neyin kastedildiği açıkça yazılır: reddedilen **kaynaksız kuvvet**, kabul edilen **Evrenakı kaynaklı bağ**.
 
 ---
 

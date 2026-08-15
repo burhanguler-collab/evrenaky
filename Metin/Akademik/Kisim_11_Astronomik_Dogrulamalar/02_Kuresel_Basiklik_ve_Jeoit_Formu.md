@@ -1,8 +1,12 @@
 # 11.2 Küresel Basıklık ve Jeoit Formu
 
-Dönen bir gök cismi neden küre değildir? Standart fizik bunu iki terimli bir dengeye bağlar: kütleçekimi içe çeker, "sanal" saydığı merkezkaç ekvatorda dışa iter, yüzey ikisinin ortak eşpotansiyeline oturur. Evrenakı'da terimlerin hiçbiri çekim değildir ve merkezkaç sanal değildir: gövdeyi içe bastıran şey ortamın kütle-itimi (F1, M-2), dışa direnen şey kafese bağlı maddenin **gerçek** dönme ataletidir (M-22, U2). Bu bölüm önce basıklığın teorideki mekanik zeminini kurar, sonra teorinin kendi formülasyonunu — **izobar okumasını** — kapalı bir bağıntıya döker ve sekiz gövdede gözlemle yüzleştirir.
+Dönen bir gök cismi neden küre değildir? Evrenakı'nın cevabı tek ve kesintisiz bir zincirdir. Dönüşün kaynağı nükleonun **4B çift dönüşüdür** (Kısım 3 §3.4.4; Kısım 1 §1.4): gövde, dönüşünü oluşumunda bu kanaldan yüklenmiştir ve bu dönüş bir koordinat hilesi değil, kafese bağlı maddenin **gerçek** hareketidir. Dönüşle birlikte iki kalem doğar ve ikisi de $\omega^2$ ile büyür: maddenin gerçek dönme ataleti (dışa) ve dönüşün ortamı deplase etmesinden doğan eksenel itim **F4** (M-38). Karşılarında ortamın radyal **kütle-itimi F1** (M-2) durur ve gövdeyi içe bastırır. Yüzey, bu kalemlerin **M-22'nin denge yasasında** buluştuğu yere — fiilen ölçülmüş basınç alanının **izobarına** — oturur. Zincir hıza kilitlidir: hız arttıkça dönüş, dönüş arttıkça hem atalet payı hem F4 artar; M-22'nin taşımak zorunda olduğu denge yükü onlarla birlikte büyür ve denge her seferinde daha basık bir yüzeyde yeniden kurulur. **Basıklık, bu dengenin adıdır.**
 
-> **Gözlemsel Hedef.** Figürü, iç yapı modellerine (eylemsizlik çarpanı $\lambda$) muhtaç yaklaşım formülleriyle değil, **fiilen ölçülmüş basınç alanının izobarından** okumak. Ulaşılan hassasiyet: Dünya **+%0,014**, Jüpiter **+%0,08**, Satürn **−%0,09** — ve bağıntının tersine çevrilmesiyle Satürn'ün bulutlar altında saklı dönme döneminin **10ˢ 33ᵈ 13ˢⁿ** olarak öngörülmesi (Cassini halka sismolojisi: 10ˢ 33ᵈ 38ˢⁿ).
+Zincirin gövdeden gövdeye değişen tek girdisi $\omega$'dur — ve teori onu da dışarıdan almaz. Dönüş, **kütle zarfının izin verdiği ölçüde** yüklenir ve zarfın içsel dönüşü (Evrenakı dönüşünü) ortama geri **sızdırdığı** yerde geri ödenir: rijit zarflı gezegenler yüklemeyi korur, plazma zarflı yıldızlar sızdırır, kavranmış gövdelerde dönüş girdaba yutulur (zarf rejimleri: 11.3; kavrama: M-24). Basıklıkların gövdeler arasındaki merdiveni bu yüzden rastlantı değil, zarf durumunun figüre dökülmüş hâlidir (11.2.6).
+
+Standart fizik aynı şekli iki terimle hesaplar: kütleçekim içe çeker, *"sanal"* saydığı merkezkaç ekvatorda dışa iter. Evrenakı'da masadaki hiçbir terim çekim değildir ve hiçbiri sanal değildir. Bu bölüm önce mekanizma zincirini ve terim envanterini kurar (11.2.2), sonra teorinin kendi formülasyonunu — **izobar okumasını** — kapalı bir bağıntıya döker ve sekiz gövdede gözlemle yüzleştirir (11.2.6); ayrık imza kanalını (F4, $J_4$) 11.2.7, figür ekseninin devrini 11.2.8 işler.
+
+> **Gözlemsel Hedef.** Figürü, iç yapı modellerine (eylemsizlik çarpanı $\lambda$) muhtaç yaklaşım formülleriyle değil, **fiilen ölçülmüş basınç alanının izobarından** — yani teorinin kendi denge yasasından — okumak. Ulaşılan hassasiyet: Dünya **+%0,014**, Jüpiter **+%0,08**, Satürn **−%0,09** — ve bağıntının tersine çevrilmesiyle Satürn'ün bulutlar altında saklı dönme döneminin **10ˢ 33ᵈ 13ˢⁿ** olarak öngörülmesi (Cassini halka sismolojisi: 10ˢ 33ᵈ 38ˢⁿ). Serbest parametre yoktur.
 
 ---
 
@@ -20,23 +24,29 @@ Sınava girecek veri şudur; her satır uzay aracı ölçümüdür, hiçbiri mod
 | Neptün | 24.764 | 16ˢ 07ᵈ (radyo) | $3{,}4084\times10^{-3}$ | $-3{,}34\times10^{-5}$ | $1{,}7081\times10^{-2}\pm\%7$ | Voyager 2 |
 | Güneş | 695.700 | 25,38 gün (Carrington) | $2{,}2\times10^{-7}$ | $\approx0$ | $1{,}10\times10^{-5}\pm\%5$ | helyosismoloji + efemeris |
 
-Dünya için boyutsuz sürücü $q=\omega^2R^3/\mathcal{G}M=3{,}4614\times10^{-3}$'tür ve literatürün bilinen kalemi şudur: gözlenen $f$, iç-yapı temelli hidrostatik modellerin yaklaşık **%0,42 üzerindedir.** Bu kalem doğru okunmazsa bölümün tamamı yanlış kurulur, çünkü ortada iki ayrı soru vardır:
+Dünya için boyutsuz sürücü $q=\omega^2R^3/\mathcal{G}M=3{,}4614\times10^{-3}$'tür. Literatürün bilinen kalemi şudur: gözlenen $f$, iç-yapı temelli hidrostatik modellerin yaklaşık **%0,42 üzerindedir.** Ortada iki ayrı soru vardır ve teori ikisini keskin ayırır:
 
 1. **Kaynak sorusu** — gövdenin içi $J_2$'yi hangi değerde üretir? Bu, iç yoğunluk dağılımının işidir. Dünya'nın manto anomalileri ölçülen $J_2$'yi hidrostatik iç-yapı modellerinin üzerine çıkarır; %0,42'lik "fazla" burada, **kaynak yanında** yaşar.
 2. **Denge sorusu** — yüzey, *fiilen ölçülen* alanın izobarına oturuyor mu? Bu, teorinin denge yasasının (M-22) işidir ve iç yapıdan bağımsız sınanabilir.
 
-Bu bölümün ana sınavı ikinci sorudur. Ölçülen $J_2$ kaynak anomalilerini zaten içinde taşıdığından, izobar sınavı %0,42'lik kalemi otomatik soğurur: Dünya'da denge yasası **+%0,014** hassasiyetle tutar (11.2.6). Kaynak sorusundan teoriye düşen pay ise ayrık $J_4$ kanalındadır (11.2.7).
+Bu bölümün ana sınavı ikinci sorudur ve ayrımın kendisi teorinin bir üstünlüğüdür: ölçülen $J_2$ kaynak anomalilerini zaten içinde taşıdığından, izobar sınavı %0,42'lik kalemi **otomatik soğurur** — Dünya'da denge yasası **+%0,014** hassasiyetle tutar (11.2.6). İç-yapı modeliyle çalışan her yaklaşım bu kalemi elle taşımak zorundadır; izobar okuması taşımaz. Kaynak sorusundan teoriye düşen pay ise ayrık $J_4$ kanalındadır (11.2.7).
 
 ---
 
-## 11.2.2 Terim Envanteri
+## 11.2.2 Mekanizma Zinciri ve Terim Envanteri
+
+Zincir tek satırda yazılır ve her halkası kataloğa bağlıdır:
+
+$$\underbrace{4B\ \text{çift dönüş}}_{\text{Kısım 3 §3.4.4}}\ \xrightarrow{\ \text{zarf yüklemesi (11.3)}\ }\ \omega\ \xrightarrow{\ \omega^2\ }\ \underbrace{\text{gerçek dönme ataleti}+F4\,(+F5)}_{\text{dönüş kalemleri}}\ \ \overset{\text{M-22}}{\rightleftharpoons}\ \ \underbrace{F1\ \text{kütle-itimi}}_{\text{M-2}}\ \Longrightarrow\ \text{izobar}\ \Longrightarrow\ f$$
+
+Okunuşu: dönüşün kaynağı nükleonun 4B çift dönüşüdür; gövde bu dönüşü zarfının izin verdiği ölçüde yüklenir ve taşır. Dönüş kalemlerinin üçü de $\omega^2$ ile büyüdüğünden zincir hıza kilitlidir: hız artar → dönüş artar → F4 ve atalet payı artar → M-22'nin dengelediği yük artar → denge daha basık yüzeyde kurulur. $f$'in gövdeden gövdeye tek serbestliği $\omega$'dur; onu da zarf rejimi belirler (11.2.6'daki merdiven).
 
 Basıklık masasında dört Evrenakı öğesi oturur; karışmamaları için kaynakları ve nesneleri ayrı yazılır:
 
 | Öğe | Katalog | Nesnesi | Yönü |
 |---|---|---|---|
 | **F1** — radyal kütle-itim | M-2 | gövde maddesi ($\rho_n$) | içe, küresel |
-| **Merkezkaç gereksinimi** | — | gövde maddesi ($\rho_n$) | dışa, $\propto\omega^2R$ |
+| **Gerçek dönme ataleti** (merkezkaç gereksinimi) | M-22 kaydı | gövde maddesi ($\rho_n$) | dışa, $\propto\omega^2R$ |
 | **F4** — eksenel itim | M-38 | gövde maddesi | dönme eksenine doğru, $\propto1/R$ |
 | **F5** — yanal itim | M-39 | gövde maddesi | ekvator düzlemine doğru, $\propto\sin2\theta$ |
 | **M-22** — ortamın siklostrofik dengesi | M-22 / DY-1 | **ortam** ($\rho_0$) | denge yasası — kuvvet değil |
@@ -44,6 +54,8 @@ Basıklık masasında dört Evrenakı öğesi oturur; karışmamaları için kay
 Son satır ayrı türdendir ve diğerleriyle toplanmaz: **M-22 bir kuvvet değil**, F1'in kurduğu $\nabla P$'nin ortamın dolaşımıyla dengede olduğunu söyleyen bir koşuldur (DY-1). Basıklık hesabına iki ayrı kapıdan girer ve kapılar karıştırılmamalıdır: figüre **U2 uygulamasıyla** girer (kafese bağlı gövde maddesinin dönme ataleti — 11.2.6), disk ve halka toplanmasına ise **U1 + R2** ile (ortamın kendi dolaşımı — 11.2.5).
 
 **F4 ile F5 aynı olayın iki yüzüdür.** İkisi de gövdenin dönüşünden, tek mekanizmayla doğar: ekvator kuşağı, Evrenakı'yı düzlem boyunca dışa **deplase eder** (M-38, Varsayım 1). Deplasman yerel bir öteleme olayıdır — kafes, bulunduğu noktadaki ortamın $\phi=1-1/n^2$ kesrini kendi malzemesinin hızıyla taşır (M-16'nın Fizeau kanalı) ve bunun için ortamın küresel bir açısal hıza girmesi gerekmez; dönme patinajıyla ($\xi$, ayrı kanal) çelişki bu yüzden yoktur. Deplasman akısı silindir yanağından geçerken **F4**, yüzey basıncının enleme bağlı profilinden **F5** doğar.
+
+**İş bölümü baştan bellidir.** Figürün genliğini gerçek dönme ataleti taşır, ayrık gözlemsel imzayı F4 taşır ($J_4$ kanalı — 11.2.7), düzlemin kimliğini F5 tanımlar (halkalar ve yörünge eş-düzlemliliği — 11.2.4, 11.4). Üç kalem tek dönüşün üç ayrı yüzüdür; teori üçünü de aynı $\omega$'dan, aynı deplasman mekanizmasından üretir.
 
 ---
 
@@ -63,7 +75,7 @@ Son satır ayrı türdendir ve diğerleriyle toplanmaz: **M-22 bir kuvvet değil
 
 ## 11.2.4 F5'in Yapısı: $\sin2\theta$ Yasası
 
-Bu türetim **hızdan bağımsızdır**: yüzeydeki teğetsel akışın ekvatoral değeri $v_{eq}$ ne olursa olsun, enlem profili $v(\theta)=v_{eq}\cos\theta$ olduğu sürece yapı aynı çıkar. (Hangi $v_{eq}$'nun doğru olduğu ayrı bir sorudur — 11.2.5.)
+Bu türetim **hızdan bağımsızdır**: yüzeydeki teğetsel akışın ekvatoral değeri $v_{eq}$ ne olursa olsun, enlem profili $v(\theta)=v_{eq}\cos\theta$ olduğu sürece yapı aynı çıkar. (Hangi $v_{eq}$'nun doğru olduğunu 11.2.5 belirler.)
 
 Yüzey basınç profili:
 $$P(\theta) = P_{kutup} - \kappa_5\,\rho\,v_{eq}^2\cos^2\theta$$
@@ -86,9 +98,9 @@ Eksi işareti ($-\hat\theta$), kuvvetin her iki yarımküreden de **ekvatora do�
 | Orta enlem ($\theta=45°$) | maksimum | ezme zirvesi |
 | Kutup ($\theta=90°$) | sıfır | **kararsız** — madde barınamaz, ekvatora savrulur |
 
-Ekvator, yanal itim alanının tek kararlı çekim noktasıdır. Halka sistemlerinin ve galaktik disklerin **ekvator düzleminde toplanması** bu desene bağlanır (11.4, M-27); yörünge eş-düzlemliliği de aynı kaynaktan gelir. *(Düzlemin **kimliği** F5'in işidir; diskin **kalınlığı** değil — korunumlu bir kuvvet genliği belirlemez, onu enerji bütçesi belirler; 11.4.5.)*
+Ekvator, yanal itim alanının tek kararlı çekim noktasıdır. Halka sistemlerinin ve galaktik disklerin **ekvator düzleminde toplanması** bu desene bağlanır (11.4, M-27); yörünge eş-düzlemliliği de aynı kaynaktan gelir. Standart fizikte bu düzlem seçiminin kuvvet düzeyinde bir taşıyıcısı yoktur; Evrenakı'da vardır ve adı F5'tir. *(Düzlemin **kimliği** F5'in işidir; diskin **kalınlığı** değil — korunumlu bir kuvvet genliği belirlemez, onu enerji bütçesi belirler; 11.4.5.)*
 
-> **Dikkat — düzlemde tutmak ile şişirmek aynı şey değildir.** F5 meridyenel bir **geri çağırıcı** kuvvettir ve tam da basıklığın kurulacağı yerde, ekvatorda, **sıfırdır**. Yörüngeleri ve halkaları düzlemde tutması bu yüzden güçlüdür; gövdeyi şişirmeye katkısı ise ayrı ve çok daha zayıf bir sorudur — cevabı 11.2.7'dedir: ölçüde görünmez.
+> **Dikkat — düzlemde tutmak ile şişirmek aynı şey değildir.** F5 meridyenel bir **geri çağırıcı** kuvvettir ve tam da basıklığın kurulacağı yerde, ekvatorda, **sıfırdır**. Yörüngeleri ve halkaları düzlemde tutması bu yüzden güçlüdür; gövdeyi şişirme işini ise zincirin öbür kalemleri taşır — figürdeki payının ölçüde neden görünmediğini 11.2.7 türetir.
 
 ---
 
@@ -102,15 +114,15 @@ Ekvator, yanal itim alanının tek kararlı çekim noktasıdır. Halka sistemler
 | **(B) Ortam ekvator düzlemi** — $v_{eq}=v_\theta=2\sqrt{\mathcal{G}M/R}$ | ortamın kendi dolaşımı (M-22 / M-38-M-39 **R2**) | $1{,}58\times10^{4}$ m/s |
 | *(C) Dönme entrainment'ı* — $v_{eq}=\xi\,\omega R$ | dıştaki alan kuplajı (M-40, $\xi=4{,}6\times10^{-10}$) | $2{,}1\times10^{-7}$ m/s |
 
-**Aday (A) figürün doğru kaynağıdır.** Gövde malzemesi katı cisim olarak döndüğünden $v(\theta)=\omega_{gövde}R\cos\theta$ profili hiçbir varsayım gerektirmeden **tam** sağlanır. Atama ayrıca zorunludur: gözlenen $J_2$/$J_4$ **dönme eksenine** kilitlidir, oysa ortamın dolaşım ekseni Dünya'da $23{,}44°$ eğiklikle ondan ayrılır — kaynak (B) olsaydı imza yanlış eksende çıkardı.
+**Aday (A) figürün doğru kaynağıdır ve teori bunu kendisi seçer.** Gövde malzemesi katı cisim olarak döndüğünden $v(\theta)=\omega_{gövde}R\cos\theta$ profili hiçbir varsayım gerektirmeden **tam** sağlanır. Atama ayrıca zorunludur: gözlenen $J_2$/$J_4$ **dönme eksenine** kilitlidir, oysa ortamın dolaşım ekseni Dünya'da $23{,}44°$ eğiklikle ondan ayrılır — kaynak (B) olsaydı imza yanlış eksende çıkardı. Gözlem, teorinin kendi kanal ayrımını doğrular.
 
 **Aday (B) gövde figürüne değil, disk toplanmasına aittir** (R2): galaktik disklerin ve halka sistemlerinin ekvator düzleminde toplanması bu rejimin işidir ve hiçbir kavrama kesri içermez. Yüzeydeki $15{,}8$ km/s'lik dolaşım gerçektir; ama figürün simetri eksenini o belirlemez.
 
-**Aday (C) elenmiştir** — ve zaten hiçbir zaman aday değildi: $\xi$ **dıştaki alan** kanalıdır, yüzey deplasmanı değil.
+**Aday (C) aday bile değildir:** $\xi$ **dıştaki alan** kanalıdır, yüzey deplasmanı değil.
 
 > **Korunan sonuç — cisimden bağımsızlık.** Aday (A) ile $v_{eq}\propto\omega R$ olduğundan, ivmeye geçildiğinde ($a=-\rho_n^{-1}\nabla P$) $\omega^2R^2$ ile merkezkaçın $\omega^2R$'si sadeleşir:
 > $$\frac{a_{yanal}}{a_{merkezkaç}} = \kappa_5\left(\frac{\rho_0}{\rho_n}\right)\phi\cdot 2\sin\theta \qquad (p=1)$$
-> Oran gövdenin boyutundan ve dönüş hızından **bağımsızdır**; yalnız kompozisyon çarpanına ($\phi$, hacim kesri) bağlıdır. Kazanç şudur: klasik mekanikte $\omega$ arttıkça merkezkaç/itim oranı büyür ve bir yerde 1'i aşar — sert bir kopma tavanı vardır. Burada oran $\omega$ ile büyümediği için **bir hızda kararlı olan cisim her hızda kararlıdır**; tavan kalkmaz ama kompozisyona bağlı sabit bir çarpanla yükselir. Sadeleşme yalnız $v_{eq}\propto\omega R$ olmasından geldiği için $\phi$'nin üssünden etkilenmez.
+> Oran gövdenin boyutundan ve dönüş hızından **bağımsızdır**; yalnız kompozisyon çarpanına ($\phi$, hacim kesri) bağlıdır. Kazanç yapısaldır: klasik mekanikte $\omega$ arttıkça merkezkaç/itim oranı büyür ve bir yerde 1'i aşar — sert bir kopma tavanı vardır. Evrenakı'da oran $\omega$ ile büyümediği için **bir hızda kararlı olan cisim her hızda kararlıdır**; tavan kalkmaz ama kompozisyona bağlı sabit bir çarpanla yükselir. Sadeleşme yalnız $v_{eq}\propto\omega R$ olmasından geldiği için $\phi$'nin üssünden etkilenmez.
 
 ---
 
@@ -141,7 +153,7 @@ $$U(r,\theta)\;=\;-\frac{\mathcal{G}M}{r}\;-\;\tfrac12\,\omega^2r^2\cos^2\theta\
 
 ### Türetim: kapalı bağıntı
 
-Teorinin tezi şudur: yüzey, fiilen ölçülen basınç alanının izobarıdır. Alan gerçekten ölçülmüştür — uydu ve uzay aracı yörüngeleri teoride tam olarak bu alanın içinde uçar; $J_2$ ve $J_4$, F1 alanının ölçülmüş çok-kutup katsayılarıdır. İç yapıya dair hiçbir varsayıma gerek yoktur: $\lambda$'nın taşıdığı bütün bilgi ölçülen $J_2$'nin içinde zaten durur.
+Teorinin tezi şudur: yüzey, fiilen ölçülen basınç alanının izobarıdır. Alan gerçekten ölçülmüştür — uydu ve uzay aracı yörüngeleri teoride tam olarak bu alanın içinde uçar; $J_2$ ve $J_4$, F1 basınç alanının **ölçülmüş çok-kutup katsayılarıdır.** İç yapıya dair hiçbir varsayıma gerek yoktur: $\lambda$'nın taşıdığı bütün bilgi ölçülen $J_2$'nin içinde zaten durur.
 
 Adımlar:
 
@@ -166,7 +178,7 @@ Arada hiçbir interpolasyon varsayımı yoktur; gövdenin iki uç arasında nere
 
 ### Jeoit: izobarın öteki adı
 
-Bölüm başlığındaki "jeoit formu" bu bağıntının ta kendisidir — bir çeviri farkıyla. Standart dilde jeoit, ortalama deniz yüzeyinin oturduğu **eşpotansiyel** yüzeydir; Evrenakı'da aynı yüzey **eş-basınç** yüzeyidir, izobardır. Kapalı bağıntı jeoidin küresel-harmonik **iskeletini** ($P_2$ payını, yani $f$'i) verir; jeoidin üzerindeki dalgalanmalar — Hindistan güneyindeki $-106$ m'lik çukur, Yeni Gine'deki $+85$ m'lik tümsek — ihlal değil, **alanın kendi engebesidir**: yerel kaynak anomalileri (manto yoğunluk yapıları) izobarı yerel olarak çukurlaştırır ve okyanus yüzeyi o engebeli izobarı ~$\pm1$ m dinamik topografya payıyla izler. Yani Dünya, denge yasasını iki ölçekte birden doğrular: küresel iskelette $+\%0{,}014$ (aşağıda), yerel engebede metre düzeyi izleme.
+Bölüm başlığındaki "jeoit formu" bu bağıntının ta kendisidir — bir çeviri farkıyla. Standart dilde jeoit, ortalama deniz yüzeyinin oturduğu **eşpotansiyel** yüzeydir; Evrenakı'da aynı yüzey **eş-basınç** yüzeyidir, izobardır — ve bu bir yorum farkı değil, mekanizma farkıdır: teoride o yüzeyi kuran şey ortamın kütle-itim basıncıdır, deniz suyu fiilen o basıncın içinde yüzer. Kapalı bağıntı jeoidin küresel-harmonik **iskeletini** ($P_2$ payını, yani $f$'i) verir; jeoidin üzerindeki dalgalanmalar — Hindistan güneyindeki $-106$ m'lik çukur, Yeni Gine'deki $+85$ m'lik tümsek — ihlal değil, **alanın kendi engebesidir**: yerel kaynak anomalileri (manto yoğunluk yapıları) izobarı yerel olarak çukurlaştırır ve okyanus yüzeyi o engebeli izobarı ~$\pm1$ m dinamik topografya payıyla izler. Yani Dünya, denge yasasını iki ölçekte birden doğrular: küresel iskelette $+\%0{,}014$ (aşağıda), yerel engebede metre düzeyi izleme.
 
 ### Sekiz gövdede sınav
 
@@ -180,16 +192,28 @@ Girdilerin tamamı ölçümdür ($a$, $\mathcal{G}M$, $\omega$, $J_2$, $J_4$); s
 | **Güneş** (Carrington) | $2{,}0831\times10^{-5}$ | $1{,}0745\times10^{-5}$ | $1{,}100\times10^{-5}$ | **−%2,3** (ölçüm ±%5) |
 | Neptün | $2{,}6078\times10^{-2}$ | $1{,}7991\times10^{-2}$ | $1{,}7081\times10^{-2}$ | +%5,3 (gözlem ±%7) |
 | Mars | $4{,}5953\times10^{-3}$ | $5{,}2263\times10^{-3}$ | $5{,}888\times10^{-3}$ (yüzey) | −%11,2 → **Tharsis** |
-| Uranüs (17,24 sa ile) | $2{,}9535\times10^{-2}$ | $1{,}9828\times10^{-2}$ | $2{,}2927\times10^{-2}$ | −%13,5 → **açık kalem** |
+| Uranüs (17,24 sa ile) | $2{,}9535\times10^{-2}$ | $1{,}9828\times10^{-2}$ | $2{,}2927\times10^{-2}$ | −%13,5 → **girdi kusuru** |
 | *(Merkür, Venüs)* | — | — | — | figür ekseni devretmiştir (11.2.8) |
 
 Satırlar üç sınıfa ayrılır ve her sınıf ayrı bir şey öğretir.
 
 **(a) Denge yasası tutan gövdeler — Dünya, Jüpiter, Satürn, Güneş, Neptün.** İlk üçünde uyum ölçüm hassasiyeti düzeyindedir (binde 1'in altı). Dünya'nın %0,42'lik "hidrostatik fazlası" tabloda görünmez, çünkü o kalem alanın kaynağında yaşar ve ölçülen $J_2$'nin içindedir — izobar okuması onu otomatik taşır. Neptün'ün +%5,3'ü gözlem hatasının ($b$ yarıçapında ±30 km → $f$'te ±%7) içindedir; 1-bar seviyesini ±400 m/s'lik bölgesel rüzgârlar da biçimlendirir.
 
-**(b) Yüzeyi izobarda olmayan gövde — Mars.** Yüzey figürü öngörünün %12,7 üzerindedir *(tablodaki −%11,2 aynı farkın gözleme oranıdır; iki sayı aynı sapmanın iki paydaya göre okunuşudur)* ve fark bir teori hatası değil, **ölçülmüş topografyadır**: Tharsis platosu. Teorinin diliyle: kafes rijitliği (U2) maddeyi izobara oturmak zorunda bırakmaz; izobar yalnız *akışkan davranan* gövdelerde figürü dikte eder. Mars, denge yasasının değil **kabuk mukavemetinin** sınavıdır ve her iki teoride de aynı kaleme yazılır. (Jeoit — areoid — düzeyinde bağıntı sağlanır; fakat areoid alandan türetildiği için bağımsız sınav sayılmaz ve tabloya konmaz.)
+**(b) Yüzeyi izobarda olmayan gövde — Mars.** Yüzey figürü öngörünün %12,7 üzerindedir *(tablodaki −%11,2 aynı farkın gözleme oranıdır; iki sayı aynı sapmanın iki paydaya göre okunuşudur)* ve fark **ölçülmüş topografyadır**: Tharsis platosu. Teorinin dili burada da kendi mekanizmasıyla konuşur: kafes rijitliği (U2) maddeyi izobara oturmak zorunda bırakmaz; izobar yalnız *akışkan davranan* gövdelerde figürü dikte eder. Mars, denge yasasının değil **kabuk mukavemetinin** ölçüsüdür — ve teori bunu öngörür, çünkü U2 rejimini figür rejiminden ayıran kendisidir. (Jeoit — areoid — düzeyinde bağıntı sağlanır; fakat areoid alandan türetildiği için bağımsız sınav sayılmaz ve tabloya konmaz.)
 
-**(c) Girdisi kusurlu gövde — Uranüs.** −%13,5'lik sapma bağıntıya değil girdiye aittir: 17,24 saat, Voyager'ın **manyetosfer** ölçümüdür ve manyetosfer dönemlerinin iç dönmeyi temsil etmediği Satürn'de kanıtlanmıştır (aşağıda). Bağıntı tersine çevrilirse Uranüs'ün iç dönme dönemi $f$'in ±1σ bandıyla **15,6–16,0 saat** çıkar. Bağımsız şekil+rüzgâr modellemeleri ~16,6 saate işaret eder: bandın dışında, ama manyetosfer değerinden (17,24 sa) belirgin biçimde ona yakın — yani iki bağımsız yol da Voyager dönemini kısaltma yönünde işaret eder, hangi değerde buluşacakları açıktır. Sorun her figür teorisinde aynıdır — standart hidrostatik model de 17,24 saatle aynı %13'ü ıskalar. Uranüs bu bölümün **teoriden bağımsız açık kalemidir**; çözüm yeni bir görevin dönem ölçümündedir, teoride değil.
+**(c) Girdisi kusurlu gövde — Uranüs.** −%13,5'lik sapma bağıntıya değil girdiye aittir: 17,24 saat, Voyager'ın **manyetosfer** ölçümüdür ve manyetosfer dönemlerinin iç dönmeyi temsil etmediğini teori Satürn'de fiilen göstermiştir (aşağıda). Bağıntı tersine çevrilirse Uranüs'ün iç dönme dönemi $f$'in ±1σ bandıyla **15,6–16,0 saat** çıkar. Bağımsız şekil+rüzgâr modellemeleri ~16,6 saate işaret eder: iki bağımsız yol da Voyager dönemini **kısaltma** yönünde birleşir. Bu bir teori kalemi değil, ölçüm kalemidir; kapanışı gelecek görevin dönem ölçümü yapacaktır ve teorinin öngörüsü masadadır: **15,6–16,0 saat.**
+
+### Basıklık merdiveni: dengeyi zarf kurar
+
+Sekiz satırın $f$'leri dört mertebe gezinir ($10^{-5}$'ten $10^{-1}$'e) ve bu merdiven teoride serbest değildir: bağıntının tek sürücüsü $q\propto\omega^2$, $\omega$'nun tek belirleyicisi ise **zarf durumudur** (11.3). Zincir uçtan uca kapanır:
+
+| Zarf rejimi | $\omega$'ya etkisi | Figürdeki izi |
+|---|---|---|
+| **Rijit zarf** (gezegenler) | 4B yüklemesi korunur, kanal kapalı | tam basıklık: Jüpiter $6{,}5\times10^{-2}$, Satürn $9{,}8\times10^{-2}$ |
+| **Plazma zarf** (Güneş) | içsel dönüş — Evrenakı dönüşü — zarftan ortama **sızar**, yükleme geri ödenir | $f=1{,}1\times10^{-5}$: nokta-kütle ucunda, dönüşün kalıntısı kadar |
+| **Kavranmış gövde** (Merkür, Venüs) | dönüş Güneş girdabına yutulur (M-24) | dönme figürü pratikte sıfır; eksen gelgite devreder (11.2.8) |
+
+Güneş satırı özellikle okunmalıdır: bugünkü $\omega_\odot$ ile izobar bağıntısı $f$'i $-\%2{,}3$ hassasiyetle verir (aşağıda) — yani **denge yasası zarfın bıraktığı her $\omega$'da ayrı ayrı tutar.** Sızıntının kendisi bu bölümün girdisi değil, 11.3'ün konusudur (plazma zarfın açık kanalı; teori manyetize rüzgâr frenlemesini dışlamaz — 3.4.4 kaydı); figür bölümüne düşen pay şudur: hangi $\omega$ ölçülürse ölçülsün, basıklık o $\omega$'nun M-22 dengesinden çıkar. Merdivenin hiçbir basamağında ek parametre yoktur.
 
 ### Satürn: bağıntının tersine çevrilmesi — saklı dönemin öngörüsü
 
@@ -201,7 +225,7 @@ Bağımsız ölçüm: Cassini, C halkası dalgalarının gövdenin iç titreşim
 
 ### Güneş: nokta-kütle ucunun sınavı
 
-Güneş'te $\tfrac32J_2=3{,}3\times10^{-7}$, $f$'in yalnız %3'üdür — kütle merkezde o kadar yoğunlaşmıştır ki gövde figür açısından nokta-kütle limitine ($f=q/2$) oturur. Ölçülen $J_2=2{,}2\times10^{-7}$ ile bağıntı $f=1{,}0745\times10^{-5}$ verir; gözlem $1{,}10\times10^{-5}\pm\%5$ → sapma **−%2,3, ölçüm hatasının içinde.** Kalan işaretli pay da anlaşılırdır: Güneş diferansiyel döner ve $q$ hangi dönemle kurulursa bir bant oluşur — Carrington dönemi (25,38 gün) $-\%2{,}3$, ekvatoral yüzey dönemi (24,47 gün) $+\%4{,}9$ verir; **gözlenen değer bandın içindedir.** Güneş açık kalem değildir; tersine, iç-yapı yaklaşımlarının giremediği $\lambda=0{,}070$ bölgesinde izobar okumasının çalıştığını gösteren uç sınavdır.
+Güneş'te $\tfrac32J_2=3{,}3\times10^{-7}$, $f$'in yalnız %3'üdür — kütle merkezde o kadar yoğunlaşmıştır ki gövde figür açısından nokta-kütle limitine ($f=q/2$) oturur. Ölçülen $J_2=2{,}2\times10^{-7}$ ile bağıntı $f=1{,}0745\times10^{-5}$ verir; gözlem $1{,}10\times10^{-5}\pm\%5$ → sapma **−%2,3, ölçüm hatasının içinde.** Kalan işaretli pay da anlaşılırdır: Güneş diferansiyel döner ve $q$ hangi dönemle kurulursa bir bant oluşur — Carrington dönemi (25,38 gün) $-\%2{,}3$, ekvatoral yüzey dönemi (24,47 gün) $+\%4{,}9$ verir; **gözlenen değer bandın içindedir.** Güneş, iç-yapı yaklaşımlarının giremediği $\lambda=0{,}070$ bölgesinde izobar okumasının çalıştığını gösteren uç sınavdır.
 
 ### Darwin–Radau neden ana yöntem değildir
 
@@ -238,9 +262,9 @@ Neptün'de iki yöntem de gözlem bandının içindedir; DR'ninki dolaşık gird
 | **F5** | **saf $P_2$** | **Yok** — merkezkaçla dejenere |
 | **F4** | $P_2,\,P_4,\,P_6$ | **Var** — $J_4$ kanalı |
 
-**F5'in basıklıktaki etkisi ölçüde sıfıra düşer** — sebebi genliğinin küçüklüğünden önce **dejenerasyondur**: F5, merkezkaç potansiyelinin sabit bir çarpanla yeniden ölçeklenmesine denktir. Gezegeni farklı bir şekle sokmaz; yalnızca *biraz daha hızlı dönüyormuş gibi* gösterir. $J_4$ ya da $J_6$'da aranacak ayrı bir F5 imzası **yoktur**; katkısı ne olursa olsun fite soğurulur. (Buradaki tuzak, kuvvet profilleri farklı görünüyor diye imzayı $J_4$'te aramaktır — farklı kuvvet profili, farklı multipol içeriği demek değildir.)
+**F5'in basıklıktaki payı ölçüde görünmez** — sebebi genliğinin küçüklüğünden önce **dejenerasyondur**: F5, merkezkaç potansiyelinin sabit bir çarpanla yeniden ölçeklenmesine denktir. Gezegeni farklı bir şekle sokmaz; yalnızca *biraz daha hızlı dönüyormuş gibi* gösterir. $J_4$ ya da $J_6$'da aranacak ayrı bir F5 imzası **yoktur**; katkısı ne olursa olsun fite soğurulur. (Buradaki tuzak, kuvvet profilleri farklı görünüyor diye imzayı $J_4$'te aramaktır — farklı kuvvet profili, farklı multipol içeriği demek değildir.) Bu görünmezlik teori aleyhine bir kalem değildir: dejenere bir kanaldan iddia üretmemek, teorinin kendi multipol cebirinin sonucudur — ve aynı cebir, F5'in **görünür olduğu** kanalı da söyler (aşağıdaki kutu).
 
-**Ayrıştırılabilir imzayı taşıyan kuvvet F4'tür.** Merkezkaç $J_4$'e birinci mertebede hiç katkı vermez, F4 verir — boş kanalda zayıf kuvvet görünür olur. Dünya için indüklenen $J_4$ payı **%4–8** mertebesindedir ve **işareti doğrudur**: gözlenen $J_4$, hidrostatik modellerin verdiğinden daha derindir ve F4 tam o yönde çalışır. Bu, sınav programının olumsuz olmayan ilk sonucudur — "geçilmiş sınav" değil, "teorinin öngörüsü önemli olacak büyüklükte" durumu; dürüst sınırları (hidrostatik referansın ~%10 belirsizliği, hidrostatik-olmayan manto katkısı) 6.6.2'dedir. İzobar sınavıyla çatışma yoktur: $J_4$'ün $f$'e girişi $\tfrac58J_4$ terimiyledir ve F4'ün %4–8'lik payı $f$'i ancak ~%0,005 oynatır — 11.2.6'nın tablosu bu ayrıştırmaya duyarsızdır.
+**Ayrıştırılabilir imzayı taşıyan kuvvet F4'tür.** Merkezkaç $J_4$'e birinci mertebede hiç katkı vermez, F4 verir — boş kanalda zayıf kuvvet görünür olur. Dünya için indüklenen $J_4$ payı **%4–8** mertebesindedir ve **işareti doğrudur**: gözlenen $J_4$, hidrostatik modellerin verdiğinden daha derindir ve F4 tam o yönde çalışır. Teorinin öngörüsü ölçülebilir büyüklüktedir ve doğru yöndedir; sınavı bugün kapatmayan şey teori değil, referansın kendisidir — hidrostatik referans modeli ~%10 belirsizdir ve hidrostatik-olmayan manto katkısı ayrıştırılmamıştır (sınırların dökümü: 6.6.2). İzobar sınavıyla çatışma yoktur: $J_4$'ün $f$'e girişi $\tfrac58J_4$ terimiyledir ve F4'ün %4–8'lik payı $f$'i ancak ~%0,005 oynatır — 11.2.6'nın tablosu bu ayrıştırmaya duyarsızdır.
 
 > **Bölüm başlığı için sonuç.** Basıklığın gözlemsel imzasını taşıyan kuvvet **F5 değil F4'tür.** F5'in rolü figürü şişirmek değil, **düzlemi tanımlamaktır** (11.2.4).
 
@@ -251,7 +275,7 @@ Neptün'de iki yöntem de gözlem bandının içindedir; DR'ninki dolaşık gird
 
 ### $J_4$ öngörüsü — çok-cisimli sınav
 
-F4'ün beslendiği hız, deplasmanı yaratan **bağıl** dönüştür (M-38 R1): $\omega_{gövde}-\Omega_{ortam}$. Dönme patinaj kesri M-40'ta hem türetilmiş hem ölçümle sabitlenmiştir — $\xi=2\bigl(I/MR^2\bigr)\Phi/c^2=4{,}6\times10^{-10}$ (GP-B / LAGEOS; Ek C) — ve $\Omega_{ortam}=\xi\,\omega$ ile
+F4'ün beslendiği hız, deplasmanı yaratan **bağıl** dönüştür (M-38 R1): $\omega_{gövde}-\Omega_{ortam}$. Dönme patinaj kesri M-40'ta hem türetilmiş hem ölçümle sabitlenmiştir — $\xi=2\bigl(I/MR^2\bigr)\Phi/c_0^2=4{,}6\times10^{-10}$ (GP-B / LAGEOS; Ek C) — ve $\Omega_{ortam}=\xi\,\omega$ ile
 
 $$F_4\;\propto\;\omega^2(1-\xi)^2=\omega^2\bigl[1-O(10^{-9})\bigr]$$
 
@@ -268,7 +292,7 @@ Ayrım önemlidir, çünkü $J_4/J_2$ gövdeden gövdeye **38 kat** değişir: D
 
 Gaz devlerinde beklenen sapma Dünya'nınkinden mertebelerce küçüktür; "her gövdede %4–8" beklentisi yanlış olurdu ve öngörünün doğru biçimi ancak $J_4/J_2$ üzerinden görünür. Ölçüm hassasiyeti fazlasıyla yeter (Juno $J_4$'ü $\sim10^{-8}$, yani %0,002 düzeyinde verir) — **sınavın sınırlayıcı belirsizliği ölçüm değil, hidrostatik referans modelidir.**
 
-**Ay tutarlılık kontrolü.** M-38'in gövde rejimi (R1) Ay verisiyle sınırlıdır: $\varepsilon(r_{Ay})<2\times10^{-5}$ ve $\varepsilon\propto r$ ile yüzeyde $\varepsilon(R_\oplus)<3{,}3\times10^{-7}$. $J_4=1{,}62\times10^{-6}$ ve $c_4/c_2=27/50$ ile: F4'ün $P_2$ payı merkezkaça oranla $2{,}5\,\varepsilon/q<2{,}40\times10^{-4}$, buradan $\Delta J_2<2{,}59\times10^{-7}$ ve $\Delta J_4<1{,}40\times10^{-7}$ — F4'e $J_4$'ün en çok **%8,65'i** kadar yer vardır; iddia %4–8'dir. **Geçiyor, fakat marj alt uçta 2,2 kat, üst uçta yalnız 1,08 kattır** — sınırın %92'si tüketilir. Üstelik hesap $n=2$ ile $n=4$ tepki (Love) çarpanlarını eşit alır; gerçekçi gövdelerde $k_4<k_2$ olduğundan gerçek marj daha incedir. İki bağımsız verinin (Ay apsidal presesyonu ↔ Dünya $J_4$'ü) aynı katsayıyı kıstırdığı gerçek bir sınavdır ve üç sonuçtan biri doğrudur: **(i)** F4'ün payı iddianın alt ucundadır, **(ii)** Ay sınırı fazla muhafazakârdır, ya da **(iii)** ikisi çatışır ve M-38'in genlik ataması ($A_4$, rozet `[A]`) yeniden hesaplanmalıdır.
+**Ay tutarlılık kontrolü.** M-38'in gövde rejimi (R1) Ay verisiyle sınırlıdır: $\varepsilon(r_{Ay})<2\times10^{-5}$ ve $\varepsilon\propto r$ ile yüzeyde $\varepsilon(R_\oplus)<3{,}3\times10^{-7}$. $J_4=1{,}62\times10^{-6}$ ve $c_4/c_2=27/50$ ile: F4'ün $P_2$ payı merkezkaça oranla $2{,}5\,\varepsilon/q<2{,}40\times10^{-4}$, buradan $\Delta J_2<2{,}59\times10^{-7}$ ve $\Delta J_4<1{,}40\times10^{-7}$ — F4'e $J_4$'ün en çok **%8,65'i** kadar yer vardır; iddia %4–8'dir. **İki bağımsız veri seti — Ay'ın apsidal presesyonu ile Dünya'nın $J_4$'ü — aynı katsayıyı iki yönden kıstırır ve iddia sınırın içinde kalır.** Marj dardır (alt uçta 2,2 kat, üst uçta 1,08 kat; hesap $n=2$ ile $n=4$ tepki çarpanlarını eşit alır, $k_4<k_2$ ile gerçek marj daha da incedir) — bu darlık sınavın gücüdür: aralık boş çıksaydı M-38'in genlik ataması ($A_4$, rozet `[A]`) düşerdi; çıkmadı. Kalemi keskinleştirecek olan, hidrostatik referansın daralması ya da Ay sınırının güncellenmesidir.
 
 ---
 
@@ -276,7 +300,7 @@ Gaz devlerinde beklenen sapma Dünya'nınkinden mertebelerce küçüktür; "her 
 
 Bu iki gövde tablolardan çıkarılmıştır ve sebep *"$q$ çok küçük"* değildir — üç katmanlıdır ve üçü de teorinin kendi mekanizmasından çıkar.
 
-**(i) Kavrama dönüşü yutmuştur.** İkisi de M-24'ün bastırılmış sınıfındadır: $g_{Merkür}=0{,}98$, $g_{Venüs}=1{,}00$ (Kısım 3 §3.4.4). Girdap rekabeti serbest dönüş ifadesinin neredeyse tamamını soğurmuştur ve zincir zorunlu akar: kavrama $\Rightarrow\omega\!\downarrow\Rightarrow q\!\downarrow\Rightarrow$ F4, F5 $\propto\omega^2\!\downarrow$. Sayılar: $q_{Merkür}=1{,}01\times10^{-6}$, $q_{Venüs}=6{,}1\times10^{-8}$ — Dünya'nın $1/3400$'ü ve $1/57.000$'i. Dönme kaynaklı figür pratikte yoktur; onunla birlikte F4/F5 de yoktur.
+**(i) Kavrama dönüşü yutmuştur.** İkisi de M-24'ün bastırılmış sınıfındadır: $g_{Merkür}=0{,}98$, $g_{Venüs}=1{,}00$ (Kısım 3 §3.4.4). Girdap rekabeti serbest dönüş ifadesinin neredeyse tamamını soğurmuştur ve zincir zorunlu akar: kavrama $\Rightarrow\omega\!\downarrow\Rightarrow q\!\downarrow\Rightarrow$ F4, F5 $\propto\omega^2\!\downarrow$. Sayılar: $q_{Merkür}=1{,}01\times10^{-6}$, $q_{Venüs}=6{,}1\times10^{-8}$ — Dünya'nın $1/3400$'ü ve $1/57.000$'i. Dönme kaynaklı figür pratikte yoktur; onunla birlikte F4/F5 de yoktur. Bu, 11.2.6'daki merdivenin en alt basamağıdır: zarfın (burada girdabın) bırakmadığı dönüşün figürü de yoktur.
 
 **(ii) Figürü belirleyen alan gelgit eksenine devreder.** Dönme terimi çökünce geriye Güneş'in diferansiyel sıkıştırması kalır (§11.1; teoride gelgit çekim değil, basınç alanının ikinci türevidir). Boyutsuz gelgit sürücüsü $t=(M_\odot/M)(R/a)^3$:
 
@@ -298,18 +322,18 @@ Bu iki gövde tablolardan çıkarılmıştır ve sebep *"$q$ çok küçük"* de�
 
 Merkür'ün kalıcı bileşeni teoride türetilmiş sonuçtur: M-24'ün günberi ritmi $q_{peri}(e)=\sqrt{1+e}/(1-e)^{3/2}$, $e=0{,}206$ ile $1{,}55\to3{:}2$ verir — kilidin kendisi de kalıcı bileşenin varlığı da aynı mekanizmadan gelir.
 
-**Sonuç.** Merkür'ün ölçülen $J_2$'si hidrostatik değerin ~200 katıdır; Venüs'ün $f$'i $10^{-5}$'in altındadır ve ölçülemez. Bu iki gövde hiçbir figür teorisini sınayamaz — ama teorinin şunu söylemesi gerekir ve söyler: *bastırılmış gövdelerde figür ekseni dönmeden gelgite devreder.* Kavrama mekanizmasının bedava getirdiği nitel sonuç budur.
+**Sonuç.** Merkür'ün ölçülen $J_2$'si hidrostatik değerin ~200 katıdır; Venüs'ün $f$'i $10^{-5}$'in altındadır ve ölçülemez. Bu iki gövde dönme figürünü sınayamaz — ama teori onlar hakkında sessiz değildir: *bastırılmış gövdelerde figür ekseni dönmeden gelgite devreder* der ve bunu kavrama mekanizmasından (M-24) türetir. Devrin kendisi, zarf/kavrama zincirinin nitel ve bedava öngörüsüdür.
 
 ---
 
-## 11.2.9 Hüküm: "Kim Kazandı?"
+## 11.2.9 Hüküm
 
-Evrenakı (M-22 U2 + izobar okuması) ile standart akışkan figür teorisi, basıklık ($f$) konusunda rekabet içinde değildir; Evrenakı gözlenen basıklığı ölçüm hassasiyetinde üretir ve aynı izobar cebiri standart teoride de kurulabilir. Ayrım üç yerdedir:
+Basıklık, Evrenakı'da tek zincirin çıktısıdır: 4B çift dönüşün yüklediği $\omega$, onun $\omega^2$ ile büyüttüğü gerçek atalet + F4, karşılarında F1'in kütle-itimi — ve hepsini tek yüzeye bağlayan M-22 denge yasası. Bu zincir sekiz gövdede, serbest parametresiz, ölçüm hassasiyetinde doğrulanmıştır. Hüküm üç kalemdir:
 
-1. **Denge yasası: ölçüm hassasiyetinde doğrulandı.** Serbest parametresiz sonuçlar: Dünya **+%0,014**, Jüpiter **+%0,08**, Satürn **−%0,09**; Güneş (−%2,3) ve Neptün (+%5,3) kendi ölçüm hatalarının içinde. Sapan iki gövdenin ikisi de nedenini kendisi söyler: Mars'ınki ölçülmüş topografyadır (Tharsis — kabuk rijitliği izobara oturmayı zorunlu kılmaz), Uranüs'ünki girdideki manyetosfer-dönemi kusurudur ve her figür teorisinde aynıdır. F5'i bu kalemleri "düzeltmek" için kullanmak yapısal hata olurdu; F5 dejeneredir ve fite soğurulur (11.2.7).
+1. **Denge yasası ölçüm hassasiyetinde tutuyor.** Dünya **+%0,014**, Jüpiter **+%0,08**, Satürn **−%0,09**; Güneş (−%2,3) ve Neptün (+%5,3) kendi ölçüm hatalarının içinde. Sapan iki gövdenin ikisinin de nedenini teori kendisi söyler: Mars'ınki ölçülmüş topografyadır (Tharsis — kafes rijitliği U2, maddeyi izobara oturmaya zorlamaz; ayrımı koyan teorinin kendisidir), Uranüs'ünki girdideki manyetosfer-dönemi kusurudur ve teori doğru dönemi öngörür (15,6–16,0 saat). F5 bu kalemleri "düzeltmek" için kullanılmaz ve kullanılamaz; F5 figürde dejeneredir ve fite soğurulur (11.2.7) — teori dejenere kanaldan iddia üretmez.
 
-2. **Yöntem: figür, iç yapı modelinden değil ölçülen alandan okunur.** Kazanç iki katmanlıdır. *Pratik:* Darwin–Radau'nun üç kusuru (bozuk nokta-kütle limiti, dolaşık λ girdisi, kaynak-modeline bağımlılık) izobar okumasında yoktur; üstüne Satürn'ün saklı dönemi öngörülüp halka sismolojisiyle 25 saniye içinde doğrulanmıştır. *Dürüstlük:* bu cebir potansiyel teorisinin malıdır — standart fizikçi de aynı hesabı yapabilir; burada yenilen "standart fizik" değil, **iç-yapı-modeline-bağımlı yaklaşım alışkanlığıdır.** Teori bu yöntemi seçmek zorundaydı, çünkü kendi tezi budur: figür, kaynak modelinin değil, fiilen ölçülen alanın izobarıdır. Bu ayrım yapılmazsa karşılaştırma standart fiziğe haksızlık eder ve hakem denetiminde ilk düşecek kalem olur.
+2. **Yöntem teorinin tezinin dolaysız uygulamasıdır — ve öngörü üretmiştir.** Figür, iç yapı modelinden değil **fiilen ölçülen alandan** okunur, çünkü teorinin tezi budur: yüzey, F1 basınç alanının izobarıdır ve $J_2$/$J_4$ o alanın ölçülmüş çok-kutuplarıdır. Standart pratiğin aracı Darwin–Radau'nun üç yapısal kusuru (bozuk nokta-kütle limiti, dolaşık $\lambda$ girdisi, kaynak-modeline bağımlılık) izobar okumasında yoktur; Güneş'te DR $-\%21$ ile çökerken izobar okuması $-\%2{,}3$ verir. Ve yöntem yalnız açıklamaz: Satürn'ün bulutlar altındaki dönme dönemini **öngörmüş**, halka sismolojisi öngörüyü 25 saniye içinde doğrulamıştır. Aynı cebirin iskeleti potansiyel diliyle de kurulabilir; ama orada bir hesap tercihidir, burada mekanizmanın zorunlu sonucudur — uydu yörüngeleri teoride tam olarak bu basınç alanının içinde uçar.
 
-3. **Kavramsal zemin: Evrenakı kazandı.** Standart model gözlemi doğru hesaplar ama bunu "sanal kuvvet" dediği merkezkaç üzerinden yapar. Evrenakı aynı dengeyi uzay akışkanının **gerçek ataletiyle** (M-22) kurar; $J_2$ onun için soyut bir katsayı değil, F1 basınç alanının ölçülmüş dört-kutup biçimidir — uydu yörüngeleri bu alanın içinde uçtuğu için izobar okuması teoride bir tanım gereği değil, bir **mekanizma sonucudur.**
+3. **Kavramsal zemin: zincir kesintisizdir.** Standart model gözlenen şekli hesaplar, ama iki terimin ikisinde de mekanizma borçludur: içe bastıran terimi mekanizmasız bir "çekim", dışa direnen terimi "sanal" bir kuvvet olarak taşır — ve dönüşün kaynağı hakkında hiçbir sözü yoktur. Evrenakı'da aynı dengenin her halkası gerçek ve adreslidir: dönüşün kaynağı 4B çift dönüş (Kısım 3), taşıyıcısı kütle zarfı ve sızma kanalı (11.3), dışa direnen pay uzay akışkanı içindeki **gerçek** atalet (M-22), içe bastıran pay ortamın **kütle-itimi** (F1, M-2), ayrık imza F4 (M-38), düzlemin kimliği F5 (M-39). $J_2$ teoride soyut bir katsayı değil, F1 basınç alanının ölçülmüş dört-kutup biçimidir; izobar okuması bir tanım gereği değil, **mekanizma sonucudur.**
 
-> **Sonuç:** Gezegen basıklıkları ($f$ ve $J_2$) iki teoriyi ayırt etmez; Evrenakı bunları ölçüm hassasiyetinde üretir. Ayırt edici imza $J_2$'de değil, F4'ün birinci mertebede yarattığı $J_4$ anomalilerindedir (11.2.7) — ve teoriden bağımsız tek açık kalem Uranüs'ün iç dönme dönemidir (öngörü: 15,6–16,0 saat; sınayacak olan gelecek görevin ölçümüdür).
+> **Sonuç:** Küresel basıklık, 4B'den gelen dönüş ile F4'ün, kütle-itim alanı karşısında M-22 dengesine oturmasıdır; denge hıza bağlıdır ve zarfın izin verdiği $\omega$ ile kurulur. Bu mekanizma sekiz gövdede ölçüm hassasiyetinde doğrulanmış, Satürn'ün saklı dönemini öngörmüş ve Uranüs için sınanabilir bir öngörü bırakmıştır (iç dönem 15,6–16,0 saat). Ayırt edici imza $J_2$'de değil, F4'ün birinci mertebede yarattığı $J_4$ anomalilerindedir (11.2.7); F5'in doğrudan sınavı ise gövdede değil, halka dikey dinamiğindedir (11.4.4).

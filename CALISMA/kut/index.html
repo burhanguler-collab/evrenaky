@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evrenakı - Kut Simülasyonu</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="ui-container">
+        <h1>KUT SİMÜLASYONU</h1>
+        <p class="subtitle">Evrenakı'nın Bölünemez Temel Birimi</p>
+        
+        <div class="info-panel">
+            <div class="stat-row">
+                <span class="label">Geometri:</span>
+                <span class="value highlight">Eksenel Simetrik (Basık)</span>
+            </div>
+            <div class="stat-row">
+                <span class="label">Dönüş Tipi:</span>
+                <span class="value">Salınımlı Dönme (Sabit Eksen)</span>
+            </div>
+            <div class="stat-row">
+                <span class="label">Ekvator Hızı:</span>
+                <span class="value glow-text">v = √2 · c₀</span>
+            </div>
+        </div>
+
+        <div class="controls">
+            <label>Dönüş Hızını Ayarla:</label>
+            <input type="range" id="speedSlider" min="0.1" max="5" step="0.1" value="1">
+            
+            <button id="toggleWireframe">Zarfı (Ağı) Göster/Gizle</button>
+        </div>
+        
+        <div class="footer-note">
+            Kut devinemez, iç yapısı bükülmez. Eksen tam sabittir.
+        </div>
+    </div>
+
+    <div id="labels-container">
+        <div class="view-label left-label">3B Görünüm (Sabit Hacim)</div>
+        <div class="view-label right-label">4B İzdüşüm (Boyutsal Salınım)</div>
+    </div>
+
+    <!-- Three.js (CDN) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

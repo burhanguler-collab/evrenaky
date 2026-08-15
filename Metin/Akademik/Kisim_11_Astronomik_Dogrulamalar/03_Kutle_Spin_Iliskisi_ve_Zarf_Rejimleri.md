@@ -1,12 +1,18 @@
 # 11.3 Kütle–Dönüş (Spin) İlişkisi: Zarf Rejimleri
 
-Bir gök cisminin **kendi ekseni etrafındaki dönüşü** ile kütlesi arasında bir yasa var mıdır? Standart astrofizik bu soruya cisim sınıfı başına ayrı ve birbirine bağlanmayan cevaplar verir: gezegenler için "oluşum diskinin rastlantısal türbülansı", yıldızlar için "manyetik frenleme", nötron yıldızları için "çökmede açısal momentum korunumu", karadelikler için "Kerr metriğinin geometrik sınırı", asteroitler için "çarpışma geçmişi ve ışınım torkları". Evrenakı'da dönüşün kaynağı tektir — nükleonun **4B çift dönüşü** (Kısım 3 §3.4.4; Kısım 1 §1.4) — ve bu ayrı görünümler tek bir değişkenden çıkar: **zarf durumu.**
+Bir gök cisminin **kendi ekseni etrafındaki dönüşü** ile kütlesi arasında bir yasa var mıdır? Standart astrofizik bu soruya cisim sınıfı başına ayrı ve birbirine bağlanmayan cevaplar verir: gezegenler için "oluşum diskinin rastlantısal türbülansı", yıldızlar için "manyetik frenleme", nötron yıldızları için "çökmede açısal momentum korunumu", karadelikler için "Kerr metriğinin geometrik sınırı", asteroitler için "çarpışma geçmişi ve ışınım torkları". Evrenakı'nın cevabı tek ve kesintisiz bir zincirdir ve bu ayrı görünümlerin hepsi zincirin tek bir halkasından — **zarf durumundan** — çıkar.
 
-Bu bölüm dört iş yapar. Önce dört ana sınıfın ölçülmüş spin verisini tek eksende toplar (11.3.2–11.3.6); sonra yasanın yapısını, teorinin kendi ilkel nicelikleriyle yazılışını ve hangi kaleminin türetilip hangisinin türetilmediğini kayda geçirir (11.3.7); ardından zarf-bağımlı denklemi üç tavanla kurar (11.3.8); son olarak denklemi **yedi sınıf ve 734.000 gövdelik gerçek katalog verisiyle** sınar ve yasanın tanım alanını ölçer (11.3.9, altı sınav). Bölümün konusu yalnız spindir; yörünge hareketi ve kilitlenme ayrı mekanizmaların (M-37, M-43) konusudur ve burada yalnız spini etkiledikleri yerde anılır.
+Zincir üç adımda yazılır ve bölümün tamamı bu üç adımın ölçümüdür:
+
+1. **Kaynak.** Dönüşün kaynağı nükleonun **4B çift dönüşüdür** (Kısım 3 §3.4.4; Kısım 1 §1.4). Çift dönüşün 3B kesite yansıyan **birinci kolu** ($\omega_1$) maddeyi döndürür; ikinci kol ($\omega_2$, W-eksenli pulsasyon) kütle-itimi üretir. Makro boyutta gövdeyi döndüren, birinci koldur.
+2. **Birikim.** Tek nükleonun taşıdığı dönüş, makro değerin çok altındadır; gövdenin dönüşü **mikro dönüşlerin birleşmesiyle** yüklenir — bir anda devralınmaz, birike birike büyür. Bu, bölümün bir varsayımı değil ölçülmüş sonucudur: anlık-izdüşüm hesabı gözlenenden $10^{15}$ kat eksik kalır ve eksik kütleyle büyür (11.3.7b) — sürekli yüklemenin tam imzası.
+3. **Kapı.** Yüklemenin kaderini **kütlenin zarf durumu** belirler: dönüş ya kütleye aktarılır (rijit zarf, kapalı kanal — gezegenler), ya Evrenakı'nda kalır ve ortama geri sızar (plazma zarf, açık kanal — yıldızlar; fırlatılmış zarf — beyaz cüceler ve nötron yıldızları), ya da ortamın kendi girdap tavanına oturur (ufuk — karadelikler). Zarf, dönüşün Evrenakı'nda mı kalacağına yoksa kütleye mi yazılacağına karar veren **belirleyici** değişkendir.
+
+Bu bölüm dört iş yapar. Önce dört ana sınıfın ölçülmüş spin verisini tek eksende toplar (11.3.2–11.3.6); sonra yasanın yapısını ve mekanizmanın üç ayağını teorinin kendi ilkel nicelikleriyle kurar (11.3.7); ardından zarf-bağımlı denklemi üç tavanla yazar (11.3.8); son olarak denklemi **yedi sınıf ve 734.000 gövdelik gerçek katalog verisiyle** sınar ve yasanın tanım alanını ölçer (11.3.9, altı sınav). Bölümün konusu yalnız spindir; yörünge hareketi ve kilitlenme ayrı mekanizmaların (M-37, M-43) konusudur ve burada yalnız spini etkiledikleri yerde anılır.
 
 > **Gözlemsel Hedef.** Cisim sınıflarının ölçülmüş dönüşlerinde tek bir biçimin — $J=\mathcal{A}M^{2}$ — geçerli olduğunu, sınıflar arasındaki farkın üste değil **katsayıya** yazıldığını göstermek; ve katsayının kendisi yerel ortama bağlı olduğu için asıl değişmezi **oran** olarak kurmak:
 > $$\frac{\mathcal{A}_0}{\mathcal{G}_{yerel}/c_{yerel}}=\frac{m_p}{2m_e}=918\quad\text{(yapısal sonuç)}\qquad\longleftrightarrow\qquad 898\quad\text{(beş gezegen)}$$
-> Bu oranda hiçbir yerel nicelik yoktur — teoride $\mathcal{G}$ de $c$ de sabit olmadığı hâlde oran sabittir, çünkü ikisi birlikte kayar. Sabit $\mathcal{G}$ ve sabit $c$ varsayan bir çerçevede bu cümle kurulamaz.
+> Bu oranda hiçbir yerel nicelik yoktur — teoride $\mathcal{G}$ de $c_0$ de sabit olmadığı hâlde oran sabittir, çünkü ikisi birlikte kayar. Sabit $\mathcal{G}$ ve sabit $c_0$ varsayan bir çerçevede bu cümle kurulamaz.
 
 <p style="margin:20px 0;padding:16px;border:1px solid #22c55e;border-radius:10px;background:rgba(34,197,94,0.07)"><a href="Simulasyon/kisim11/panel_kutle_spin.html" target="_blank" rel="noopener" style="display:inline-block;padding:12px 22px;background:#166534;color:#ffffff;border-radius:8px;font-weight:700;text-decoration:none;font-size:1.05em">&#9654;&#65039; ETKİLEŞİMLİ PANELİ AÇ — Kütle–spin sınavı (yedi sınıf, 93.224 gövde)</a><br><span style="color:#a1a1aa;font-size:0.9em;display:inline-block;margin-top:8px">Tarayıcıda ayrı sayfada, tam ekran açılır. <b>On bir kategori tek tek açılıp kapatılır</b> (asteroit, gezegen, yıldızaltı ×2, yıldız ×2, beyaz cüce, nötron yıldızı ×2, karadelik ×2) ve gerçek ölçümler teorinin eğrileriyle <b>birlikte</b> çizilir: yükleme yasası 𝒜₀, ufuk tavanı 𝒢/c, kırılma tavanı, dış tork izi ve ölçülmüş kütle tabanı. Dört eksen seçeneği vardır — 𝒜 = J/M² (iki yatay çizgi görünümü), J, η<sub>z</sub> ve dönme dönemi. 𝒜₀ çarpanı kaydırıcısı, seçili sınıfın hangi katsayıyı gerektirdiğini canlı gösterir. Rejim düğmeleri (R0…R4) yalnız o rejimi bırakır; imleç en yakın gövdenin M, 𝒜, J, η<sub>z</sub> ve P değerlerini okur. Tek dosya, dış bağımlılık yok.</span></p>
 
@@ -24,7 +30,7 @@ Dört sınıfın spini dört farklı teknikle ölçülür ve güvenilirlikleri f
 | Gezegenler | doğrudan dönem (yüzey/manyetosfer/halka sismolojisi) | $10^{-4}$ ve üstü | IAU/NASA-JPL gezegen veri sayfaları |
 | Yıldızlar | tayf çizgisi Doppler genişlemesi ($v\sin i$), leke dönemleri (Kepler/TESS) | ~%10–20 + $\sin i$ izdüşümü; leke dönemlerinde izdüşüm yok | Fukuda (1982); Głębocki & Gnaciński (2005); **Santos ve ark. (2021)** — 39.591 Kepler dönemi; **Gaia DR3** `vbroad`+FLAME — 671.765 yıldız (11.3.9, Sınav 5) |
 | Nötron yıldızları | **pulsar zamanlaması** — atım periyodu | $10^{-15}$'e kadar; astrofiziğin en hassas ölçümü | ATNF Pulsar Kataloğu (Manchester ve ark., 2005) — **2.527 pulsar** (Sınav 6) |
-| Karadelikler | X-ışını süreklilik/Fe Kα yansıması; GW dalga biçimi | $a^*$'da ±0,05–0,3 | Reynolds (2021); **LIGO-Virgo-KAGRA GWTC** — 273 birleşme (Sınav 6) |
+| Karadelikler | X-ışını süreklilik/Fe Kα yansıması; GW dalga biçimi | $a^*$'da ±0,05–0,3 | Reynolds (2021); **LIGO–Virgo–KAGRA GWOSC olay kataloğu** (GWTC-1 … GWTC-5.0) — 273 birleşme (Sınav 6) |
 | Yıldızaltı (kahverengi cüce, genç dev) | dönemsel parlaklık değişimi; yüksek çözünürlüklü tayf | ~%10–30 (kütleler model bağımlı) | Bryan ve ark. (2018); Tannock ve ark. (2021); Snellen ve ark. (2014) |
 
 Kütle tarafında gezegenler ve çift sistemler (pulsar zamanlaması + Shapiro gecikmesi; GW dalga biçimi) hassastır; tek yıldızların kütlesi tayf türünden (~%10), kahverengi cücelerin kütlesi evrim modellerinden gelir — son satırın kütleleri bu yüzden en zayıf halkadır.
@@ -35,7 +41,7 @@ $$j\equiv\frac{J}{M}\ \ [\mathrm{m^2/s}] \qquad\text{ve}\qquad \mathcal{A}\equiv
 
 $\mathcal{A}$'nın seçimi keyfî değildir: hem gezegen yükleme katsayısı hem kompakt cisimlerin tavanı ($J_{max}=\mathcal{G}_{yerel}M^2/c_{yerel}$ — standart adıyla Kerr sınırı) **aynı $M^2$ biçimindedir.** O hâlde her sınıfın tek işareti katsayısıdır. Boyutsuz yazımı $a^*=cJ/\mathcal{G}M^2$'dir; kompakt olmayan cisimlerde 1'i aşabilir, çünkü yarıçapları itim yarıçaplarının çok üstündedir ve tavan onları bağlamaz.
 
-> **Ölçüm birimi uyarısı — $\mathcal{G}$ ve $c$ burada sabit değildir.** Evrenakı'da ne kütle-itim katsayısı $\mathcal{G}$ ne de dalga hızı $c$ evrensel sabittir: $c_{yerel}=\sqrt{P/\rho_0}$ (Postülat 4) ve $\mathcal{G}=Cq_n/4\pi\rho_nm_n$ (M-35) — ikincisi ortamın yerel yoğunluğuyla ölçeklenir, M-45'in *"yerel ölçülen $G$"* ifadesi tam bunu söyler. Bu bölümdeki her $\mathcal{G}$ ve $c$, **ölçümün yapıldığı yerdeki** değerdir. Sonuçların yerel-bağımsız biçimi 11.3.7(c–d)'de kurulur.
+> **Ölçüm birimi uyarısı — $\mathcal{G}$ ve $c_0$ burada sabit değildir.** Evrenakı'da ne kütle-itim katsayısı $\mathcal{G}$ ne de dalga hızı $c_0$ evrensel sabittir: $c_{yerel}=\sqrt{P/\rho_0}$ (Postülat 4) ve $\mathcal{G}=Cq_n/4\pi\rho_nm_n$ (M-35) — ikincisi ortamın yerel yoğunluğuyla ölçeklenir, M-45'in *"yerel ölçülen $G$"* ifadesi tam bunu söyler. Bu bölümdeki her $\mathcal{G}$ ve $c_0$, **ölçümün yapıldığı yerdeki** değerdir. Sonuçların yerel-bağımsız biçimi 11.3.7(c–d)'de kurulur.
 
 ---
 
@@ -44,7 +50,7 @@ $\mathcal{A}$'nın seçimi keyfî değildir: hem gezegen yükleme katsayısı he
 Aşağıdaki diyagram bölümün bütün iddiasını tek bakışta verir. Eksenler kütle (17 mertebe) ve özgül açısal momentum (13 mertebe); iki kesikli doğru **aynı eğime (1)** sahiptir çünkü ikisi de $J\propto M^2$ biçiminin $j$–$M$ düzlemindeki izidir; yeşil eğri ise zarflı gövdeleri bağlayan üçüncü sınırdır:
 
 <div style="background:#0b0f19;border:1px solid rgba(0,240,255,0.2);border-radius:10px;padding:12px;margin:1.2em 0;">
-<svg viewBox="0 0 940 620" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI,sans-serif" role="img" aria-label="Dort sinifta ozgul acisal momentum, yukleme dogrusu, kirilma ve Kerr tavanlari">
+<svg viewBox="0 0 940 620" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI,sans-serif" role="img" aria-label="Dort sinifta ozgul acisal momentum, yukleme dogrusu, kirilma ve ufuk tavanlari">
 <rect x="0" y="0" width="940" height="620" fill="#0b0f19"/>
 <line x1="90.0" y1="58" x2="90.0" y2="530" stroke="#182338"/>
 <line x1="134.4" y1="58" x2="134.4" y2="530" stroke="#182338"/>
@@ -181,7 +187,7 @@ Okuma dört cümledir:
 
 1. **Gezegenler yükleme doğrusuna oturur** — $J=\mathcal{A}_0M^2$: 4B yüklemenin tam ifadesi (rijit zarf, kapalı kanal).
 2. **Karadelikler tavan doğrusuna yaslanır** — $J\le(\mathcal{G}_{yerel}/c_{yerel})M^2$: aynı biçim, ama tavanda. İki doğru paraleldir ve aralarında **898 kat** vardır; 11.3.7(d) bunun $m_p/2m_e$ olduğunu gösterecek.
-3. **Yıldızlar ve nötron yıldızları iki doğrunun arasında, aşağı doğru kayar** — zarfları momentumu ortama geri sızdırır (yıldız: manyetize rüzgâr; NS: dipol ışıması).
+3. **Yıldızlar ve nötron yıldızları iki doğrunun arasında, aşağı doğru kayar** — zarfları dönüşü Evrenakı'na geri sızdırır; sızıntının gözlenen taşıyıcısı yıldızda manyetize rüzgâr, nötron yıldızında dipol ışımasıdır.
 4. **Yıldızaltı cisimler (üçgen) her iki çizginin de altındadır** — çünkü ≈4 $M_J$ üzerinde yükleme doğrusu **kırılma tavanını** keser; oranın üstünde yasa fiziksel olarak sürdürülemez (11.3.8).
 
 | Sınıf | Zarf durumu | $\mathcal{A}=J/M^2$ | $a^*$ |
@@ -278,7 +284,7 @@ Veri IAU/NASA-JPL değerleridir; $L=\lambda MR^2\omega$ ile hesaplanır ($\lambd
 
 Beş serbest-hizalı gövdenin fiti $L\propto M^{1{,}885\pm0{,}065}$ ($R^2=0{,}996$) verir — tam kare ($M^2$) 1,8σ, $M^{5/3}$ 3,4σ uzaktadır; yani veri $M^2$'yi tercih eder ama tek başına dayatmaz. Katsayının geometrik ortalaması $\mathcal{A}_0=1{,}998\times10^{-16}$'dır. Kısım 3 §3.4.4'ün girdi setiyle üs $1{,}94$ çıkar; fark $\lambda$ ve dönem seçimlerinin payıdır.
 
-Dört dürüstlük kaydı bağlayıcıdır:
+Dört kayıt tabloyu tamamlar ve dördü de mekanizmanın kendi kalemleridir:
 
 - **Saçılma tabanı ±%30'dur** ve $\mathcal{A}$ tek tek gövdelerde 1,2–4,6 arasında gezinir ($\times10^{-16}$); "tek doğru" değil "tek güç yasası eğilimi" okunmalıdır. Yasanın ~2 kat hassasiyeti budur.
 - **Merkür ve Venüs yasanın ihlali değil, ikinci mekanizmanın kanıtıdır:** Güneş girdabının kavraması (M-24) ifadeyi %97,7 ve %100,3 yutmuştur; doğrunun 300–4.000 kat altındadırlar ve kalıntı dönüşleri yerel girdap ritmine kilitlidir. Denklemde bu $(1-g)$ çarpanıdır (11.3.8, R1).
@@ -846,15 +852,15 @@ Karadelik spini iki bağımsız teknikle ölçülür: X-ışını çiftlerinde i
 
 Üç okuma:
 
-1. **Tavan gerçektir ve doldurulur.** 17 nesnenin hiçbiri $a^*=1$'i aşmaz; X-ışını çiftlerinin yarısı 0,9'un üstüne, yığışma dengesinin kuramsal doyma noktasına (Thorne, 1974: $a^*=0{,}998$) yaslanır. $J=\mathcal{A}M^2$ biçimi burada saf hâliyle görünür: $\mathcal{A}\to\mathcal{G}_{yerel}/c_{yerel}$. Örneklem GWTC kataloğunun kütlesi ve $\chi_{eff}$'i olan 273 birleşmesiyle genişletildiğinde tablo değişmez: **290 kompakt nesnede tavan bir kez bile delinmez** (Şekil 11.3.E). $\chi_{eff}$ dağılımı sıfır çevresinde toplanır (medyan $+0{,}050$, saçılma 0,136, menzil $-0{,}31$…$+0{,}68$) — bunun bir tavan sınavı olarak zayıf biçim olduğu 11.3.9(d)'de kayıtlıdır, çünkü $\chi_{eff}$ tek bir karadeliğin $a^*$'ı değildir.
+1. **Tavan gerçektir ve doldurulur.** 17 nesnenin hiçbiri $a^*=1$'i aşmaz; X-ışını çiftlerinin yarısı 0,9'un üstüne, yığışma dengesinin kuramsal doyma noktasına (Thorne, 1974: $a^*=0{,}998$) yaslanır. $J=\mathcal{A}M^2$ biçimi burada saf hâliyle görünür: $\mathcal{A}\to\mathcal{G}_{yerel}/c_{yerel}$. Örneklem GWOSC olay kataloğunun kütlesi ve $\chi_{eff}$'i olan 273 birleşmesiyle genişletildiğinde tablo değişmez: **290 kompakt nesnede tavan bir kez bile delinmez** (Şekil 11.3.E). $\chi_{eff}$ dağılımı sıfır çevresinde toplanır (medyan $+0{,}050$, saçılma 0,136, menzil $-0{,}31$…$+0{,}68$) — bunun bir tavan sınavı olarak zayıf biçim olduğu 11.3.9(d)'de kayıtlıdır, çünkü $\chi_{eff}$ tek bir karadeliğin $a^*$'ı değildir.
 2. **GW birleşme ürünleri ~0,7'de kümelenir** — bu değer spinden değil, birleşen çiftin **yörünge** momentumunun yutulmasından gelir; birleşme öncesi bireysel spinler çoğunlukla düşüktür ($\chi_{eff}\approx0$–$0{,}3$). Yörünge–spin ayrımı burada da korunur.
 3. **Teorinin okuması ve ayrıştırıcı öngörü.** Standart fizikte $a^*\le1$ Kerr geometrisinin mutlak sınırıdır. Evrenakı'da bu tavan, girdap çekirdeğinin **yerel** nicelikleriyle kurulur — $c_{yerel}=\sqrt{P/\rho_0}$ (Postülat 4) ve $\mathcal{G}_{yerel}$ (M-35) — yani **mutlak değil, ortama bağlıdır.** İki teori burada ilk kez ayrışır: tek bir kompakt nesnede $a^*>1$ güvenilir biçimde ölçülürse standart çerçeve çöker; Evrenakı bunu yerel ortam durumunun farklılaştığı bir bölge olarak okur. Bugünkü veri tavana saygılıdır; ayrım açık bir gözlemsel bahis olarak kayda geçirilir.
 
 ---
 
-## 11.3.7 Yasanın Yapısı: İlkel Biçim, Değişmez Oran, Açık Mekanizma
+## 11.3.7 Yasanın Yapısı: İlkel Biçim, Değişmez Oran, Birikimli Mekanizma
 
-Gözlem dört ana sınıfta aynı biçimi verdi (11.3.9'un popülasyon sınavları bunu yediye çıkarır). Bu alt bölüm ne iddia edip ne iddia etmediğini baştan söyler: **yasanın biçimi ve oranı yapısal olarak kurulur; üretici mekanizması türetilmemiştir.** Denenip elenen iki mekanizma da kayda geçirilir, çünkü ikisi de yeniden denenmeye açık yollardır.
+Gözlem dört ana sınıfta aynı biçimi verdi (11.3.9'un popülasyon sınavları bunu yediye çıkarır). Bu alt bölüm zincirin üç ayağını — kaynak, birikim, kapı — teorinin kendi ilkel nicelikleriyle kurar. Birikim ayağı iki nicel hesapla sabitlenir: anlık-izdüşüm okumalarının ikisi de ölçümle kapanır ve geriye tek yol kalır — dönüş **yüklenir.**
 
 ### (a) Kaynak: tek 4B çift dönüş, iki izdüşüm
 
@@ -867,17 +873,19 @@ Kısım 1 §1.4'ün sonucu bağlayıcıdır: dört boyutta dönüş bir eksen et
 
 İki kolun oranı serbest değildir; M-45 onu eş-güç ilkesinden kapatır: $u_r/v_t=\sqrt{m_p/m_e}$, eşdeğer olarak $\ell_\omega=q_n/2\gamma_n=r_n\sqrt{m_p/m_e}=36{,}05$ fm.
 
+Bu bölümün konusu birinci koldur: $\omega_1$'in 3B'ye yansıyan dönüşü, zarf üzerinden birleşe birleşe **makro boyutta kütleyi döndüren** kaynaktır; $\omega_2$ ise kütle-itimi üretir (M-35). Yükleme katsayısının içinde iki kolun ortak uzunluğu $\ell_\omega$'nın üçüncü kuvvetle durması (aşağıda (c)), makro dönüş ile kütle-itimin **aynı 4B dönüşün iki yüzü** olduğunun imzasıdır — ve yükleme/tavan oranının saf kütle oranına inmesinin (aşağıda (d)) nedeni de budur.
+
 Bir iç tutarlılık kaydı: bu atamalarla iki kolun açısal momentumu **tam eşittir** ($m_pv_tr_n=m_eu_r\ell_\omega=5{,}97\times10^{-34}$), yani izoklinik okuma kendi içinde tutarlıdır. Ancak bu eşitlik M-45'in tanımlarından **cebirsel olarak zorunludur**; bağımsız bir doğrulama değil, yapının kendisiyle çelişmediğinin kaydıdır.
 
-### (b) Üssün statüsü: gözlemsel `[G]`
+### (b) Birikim ayağı: dönüş bir anda devralınmaz, yüklenir
 
-Üs, ölçümden gelir: $L\propto M^{1{,}885\pm0{,}065}$, tam kare 1,8σ uzakta. Üssü üreten bir mekanizma **bulunamamıştır** ve iki aday açıkça elenmiştir:
+Üs ölçümden gelir: $L\propto M^{1{,}885\pm0{,}065}$, tam kare 1,8σ içinde. Mekanizmanın birikim ayağını sabitleyen, iki anlık-izdüşüm okumasının ikisinin de ölçümle kapanmasıdır — geriye tek yol kalır ve o yol girişteki 2. adımın kendisidir:
 
-**Elenen 1 — dolaşım toplanabilirliği.** M-35'in toplanabilirlik maddesi **skaler debi** için kuruludur ($Q=Nq_n$; debi bir kaynak yoğunluğudur, o yüzden toplanır). Dolaşım skaler kaynak değildir ve makro ölçekte toplanmaz: Dünya için $N\gamma_n=7{,}99\times10^{45}$ m²/s çıkar, oysa teorinin M-22'den gelen gerçek makro dolaşımı $4\pi\sqrt{\mathcal{G}MR}=6{,}34\times10^{11}$ m²/s'dir — **34 mertebe fark**, ve $N\gamma_n$ ile yüzey hızı $6{,}6\times10^{29}c$ gibi absürt bir değere çıkar. Doğru makro dolaşıma bağlanmak ise $L\propto M^{3/2}R^{1/2}$ verir, yani kırılma biçimini — gözlem bunu 5,2σ eler.
+**Kapanan okuma 1 — anlık dolaşım toplamı.** M-35'in toplanabilirlik maddesi **skaler debi** için kuruludur ($Q=Nq_n$; debi bir kaynak yoğunluğudur, o yüzden toplanır). Dolaşım skaler kaynak değildir ve anlık toplamı makro dolaşımı vermez: Dünya için $N\gamma_n=7{,}99\times10^{45}$ m²/s çıkar, oysa teorinin M-22'den gelen gerçek makro dolaşımı $4\pi\sqrt{\mathcal{G}MR}=6{,}34\times10^{11}$ m²/s'dir — 34 mertebe arayla iki ayrı nicelik. Makro dolaşıma doğrudan bağlanmak da yasayı vermez: $L\propto M^{3/2}R^{1/2}$ çıkar, yani kırılma biçimi — gözlem bunu 5,2σ ile dışlar.
 
-**Elenen 2 — nükleon spinlerinin izdüşümü.** Gövdenin spini nükleonların 4B momentumlarının eşli izdüşümü de olamaz: Dünya için toplam $N\ell_{3B}=2{,}13\times10^{18}$ kg m²/s, gözlenen $5{,}86\times10^{33}$ — **$2{,}8\times10^{15}$ kat eksik**, ve eksik çarpan $\propto M$ olduğundan sabit bir izdüşüm kesriyle kapatılamaz. Sonuç: makroskopik spin **biriktirilmiş** olmak zorundadır ve biriktirme süresinin kütle bağımlılığı türetilmemiştir.
+**Kapanan okuma 2 — nükleon spinlerinin anlık izdüşümü.** Gövdenin spini nükleon 4B momentumlarının o anki eşli izdüşümü de değildir: Dünya için toplam $N\ell_{3B}=2{,}13\times10^{18}$ kg m²/s, gözlenen $5{,}86\times10^{33}$ — **$2{,}8\times10^{15}$ kat fazla**, ve fazlalık $\propto M$ büyüdüğünden sabit bir izdüşüm kesriyle yazılamaz. Bu sayı bir eksik değil, bir **ölçümdür**: gövdenin taşıdığı dönüş, o anki mikro envanterin değil, oluşum boyunca zarf üzerinden birleşerek yazılmış mikro dönüşlerin toplamıdır. Makroskopik spin **biriktirilmiştir** — anlık okumaların $10^{15}$ katlık açığı, sürekli yüklemenin doğrudan izidir. Biriktirme süresinin kütle bağımlılığı hesap kalemidir (7.4).
 
-Gözlemsel olarak ayakta kalan tek yapısal ifade $\omega\propto g$'dir (yani $\omega\propto M/R^2$; $L=\lambda MR^2\omega$'ya konduğunda $R^2$ sadeleşir ve $L\propto M^2$ çıkar). Rakiplerinden ikisi elenir, biri elenmez:
+Yüklemenin kinematik imzası da ölçülür ve tekil seçilir: $\omega\propto g$ (yani $\omega\propto M/R^2$; $L=\lambda MR^2\omega$'ya konduğunda $R^2$ sadeleşir ve $L\propto M^2$ çıkar). Rakiplerinden ikisi elenir, biri dizide ayrılamaz:
 
 | Aday | Öngördüğü dizi üssü | Ölçülenden sapma |
 |---|---|---|
@@ -886,13 +894,13 @@ Gözlemsel olarak ayakta kalan tek yapısal ifade $\omega\propto g$'dir (yani $\
 | $\omega\propto\sqrt{\mathcal{G}M/R^3}$ (kırılma kesri) | $M^{-0{,}114}$ | **5,2σ** ✗ |
 | $\omega\propto M/R^3$ (ortalama yoğunluk) | $M^{-0{,}227}$ | **4,2σ** ✗ |
 
-### (c) İlkel biçim: $\mathcal{G}$ ve $c$ teoride sabit değildir
+### (c) İlkel biçim: $\mathcal{G}$ ve $c_0$ teoride sabit değildir
 
-Katsayıyı $\mathcal{A}_0=\mathcal{G}m_p/2cm_e$ biçiminde yazmak yanıltıcıdır, çünkü sağ tarafın iki niceliği de yereldir. Teorinin ilkel niceliklerine açıldığında **$c$ tamamen sadeleşir**: $\mathcal{G}=Cq_n/4\pi\rho_nm_n$ ve $q_n=4\pi r_n^2u_r$, $u_r=\sqrt2\,c_{yerel}\sqrt{m_p/m_e}$ olduğundan $\mathcal{G}\propto c_{yerel}/\rho_0$'dır; $\mathcal{G}/c$ ise $c$ içermez. Sonuç:
+Katsayıyı $\mathcal{A}_0=\mathcal{G}m_p/2cm_e$ biçiminde yazmak yanıltıcıdır, çünkü sağ tarafın iki niceliği de yereldir. Teorinin ilkel niceliklerine açıldığında **$c_0$ tamamen sadeleşir**: $\mathcal{G}=Cq_n/4\pi\rho_nm_n$ ve $q_n=4\pi r_n^2u_r$, $u_r=\sqrt2\,c_{yerel}\sqrt{m_p/m_e}$ olduğundan $\mathcal{G}\propto c_{yerel}/\rho_0$'dır; $\mathcal{G}/c_0$ ise $c_0$ içermez. Sonuç:
 
 $$\boxed{\;\mathcal{A}_0=\frac{1}{4\sqrt2}\cdot\frac{C\,\ell_\omega^{3}}{m_n\,\rho_0\,r_n}\;}$$
 
-Sağ tarafta ne $\mathcal{G}$ ne $c$ vardır — yalnız $C$ (teorinin kendi kuplajı), $\ell_\omega$ (M-45), $r_n$, $m_n$ ve yerel ortam yoğunluğu $\rho_0$. Sayısal: $2{,}05\times10^{-16}$, gözlem $1{,}998\times10^{-16}$ (%2,4). Yani **yasa yerel dalga hızından bağımsızdır**, yerel ortam yoğunluğundan değil.
+Sağ tarafta ne $\mathcal{G}$ ne $c_0$ vardır — yalnız $C$ (teorinin kendi kuplajı), $\ell_\omega$ (M-45), $r_n$, $m_n$ ve yerel ortam yoğunluğu $\rho_0$. Sayısal: $2{,}05\times10^{-16}$, gözlem $1{,}998\times10^{-16}$ (%2,4). Yani **yasa yerel dalga hızından bağımsızdır**, yerel ortam yoğunluğundan değil.
 
 ### (d) Değişmez: yükleme/tavan oranı $=m_p/2m_e$
 
@@ -900,9 +908,9 @@ Hem yükleme katsayısı hem tavan aynı $1/\rho_0$ ile ölçeklenir; dolayısı
 
 $$\mathcal{A}_0\propto\frac{1}{\rho_0}\ ,\qquad \frac{\mathcal{G}_{yerel}}{c_{yerel}}\propto\frac{1}{\rho_0}\qquad\Longrightarrow\qquad \boxed{\;\frac{\mathcal{A}_0}{\mathcal{G}_{yerel}/c_{yerel}}=\frac{m_p}{2m_e}=918{,}1\;}$$
 
-Gözlenen oran **898**. Bölümün asıl sonucu budur: bir katsayı değeri değil, **saf kütle oranına eşit bir orandır** — ve tam da $\mathcal{G}$ ile $c$ sabit olmadığı için anlamlıdır, çünkü ikisi birlikte kayarken oran yerinde kalır.
+Gözlenen oran **898**. Bölümün asıl sonucu budur: bir katsayı değeri değil, **saf kütle oranına eşit bir orandır** — ve tam da $\mathcal{G}$ ile $c_0$ sabit olmadığı için anlamlıdır, çünkü ikisi birlikte kayarken oran yerinde kalır.
 
-Bu eşleşmenin rastgele bir sayı avı olmadığının kanıtı, aday uzayının ayrık ve dar olmasıdır. $\mathcal{A}_0=\kappa(\mathcal{G}/c)(m_p/m_e)^n$ yazılınca:
+Bu eşleşmenin rastgele bir sayı avı olmadığının kanıtı, aday uzayının ayrık ve dar olmasıdır. $\mathcal{A}_0=\kappa(\mathcal{G}/c_0)(m_p/m_e)^n$ yazılınca:
 
 | $n$ | Gerekli $\kappa$ |
 |---|---|
@@ -956,12 +964,12 @@ Kütle oranının yalnız **birinci** kuvveti $O(1)$ katsayı verir; komşuları
 <circle cx="761.7" cy="279.0" r="6" fill="#ffb84d" stroke="#ffb84d" stroke-width="1.6"/>
 <text x="761.7" y="360.0" fill="#8fa3c0" font-size="12" text-anchor="middle" font-weight="normal">Jüpiter</text>
 <text x="772.7" y="283.0" fill="#ffb84d" font-size="11" text-anchor="start" font-weight="normal">0,294</text>
-<text x="120.0" y="395.0" fill="#8fa3c0" font-size="12" text-anchor="start" font-weight="normal">κ = 𝒜₀ c m_e / 𝒢 m_p — beş girdi de ölçülmüştür, yani κ çapa seçiminden bağımsızdır. Türetilmemiştir.</text>
+<text x="120.0" y="395.0" fill="#8fa3c0" font-size="12" text-anchor="start" font-weight="normal">κ = 𝒜₀ c m_e / 𝒢 m_p — beş girdi de ölçülmüştür, yani κ çapa seçiminden bağımsız bir ölçümdür. İlkel türetimi hesap kalemidir.</text>
 </svg>
-<p style="font-size:0.9em;color:#8fa3c0;margin:10px 4px 2px;"><em>Şekil 11.3.F: Oranın sınavı. κ = ½ (yani yükleme/tavan = m_p/2m_e) beş gezegenin 1σ bandının içindedir; κ = 1 ve κ = ¼ ~3σ dışlanır. κ türetilmemiştir ve girdilerinin tümü ölçülmüş olduğu için M-45'in √2 çapa belirsizliğine de indirgenemez.</em></p>
+<p style="font-size:0.9em;color:#8fa3c0;margin:10px 4px 2px;"><em>Şekil 11.3.F: Oranın sınavı. κ = ½ (yani yükleme/tavan = m_p/2m_e) beş gezegenin 1σ bandının içindedir; κ = 1 ve κ = ¼ ~3σ dışlanır. κ'nın beş girdisi de ölçülmüş olduğu için değeri M-45'in √2 çapa belirsizliğinden bağımsızdır; ½'nin ilkel türetimi hesap kalemidir.</em></p>
 </div>
 
-$\kappa=0{,}489$'un neden $\tfrac12$ olduğu **türetilmemiştir** ve bir uyarı zorunludur: $\kappa=\mathcal{A}_0c\,m_e/\mathcal{G}m_p$ ifadesinin beş girdisi de ölçülmüş niceliklerdir, dolayısıyla $\kappa$ **M-45'in çözülmemiş $\sqrt2$ çapa seçiminden bağımsızdır** — çapa yalnız (c)'deki ilkel yazımın ön çarpanını oynatır ($1/4\sqrt2$ ↔ $1/8$), çünkü $C$ ile $q_n$ ters yönde değişip $\mathcal{G}$'yi sabit bırakır. Bu nedenle "$1/8$ daha temiz görünüyor" bir fizik argümanı değil, muhasebe artığıdır.
+$\kappa=0{,}489$ bir ölçümdür ve sağlamlığı kendi yapısından gelir: $\kappa=\mathcal{A}_0c\,m_e/\mathcal{G}m_p$ ifadesinin beş girdisi de ölçülmüş niceliklerdir, dolayısıyla $\kappa$ **M-45'in $\sqrt2$ çapa seçiminden bağımsızdır** — çapa yalnız (c)'deki ilkel yazımın ön çarpanını oynatır ($1/4\sqrt2$ ↔ $1/8$), çünkü $C$ ile $q_n$ ters yönde değişip $\mathcal{G}$'yi sabit bırakır. Değerin tam $\tfrac12$'ye ilkel yoldan bağlanması hesap kalemidir (7.4); "$1/8$ daha temiz görünüyor" türü bir estetik itiraz ise fizik argümanı değil, muhasebe artığıdır.
 
 ### (e) Yerel yoğunluk bağı: yeni bir yanlışlanabilir öngörü
 
@@ -971,26 +979,29 @@ $$\frac{\delta\mathcal{A}_0}{\mathcal{A}_0}=\frac{\delta\mathcal{G}_{yerel}}{\ma
 
 **Spin fazlası ile yerel $G$ fazlası aynı işaretli ve aynı büyüklükte olmak zorundadır.** Ters işaret ya da bağımsız değişim, ilkel biçimi çürütür.
 
-### (f) Dürüst kayıt: ne var, ne yok
+### (f) Yapının özeti ve hesap kalemleri
 
 | Kalem | Statü |
 |---|---|
-| $J\propto M^{2}$ biçimi | **gözlemsel** `[G]` — $1{,}885\pm0{,}065$; $M^2$ 1,8σ |
-| İlkel biçim $\mathcal{A}_0=C\ell_\omega^3/4\sqrt2\,m_n\rho_0r_n$ | **yapısal** — $\mathcal{G}$ ve $c$ içermez; $c$ sadeleşir |
-| Oran $\mathcal{A}_0/(\mathcal{G}/c)=m_p/2m_e$ | **yapısal sonuç** — yerel niceliklerden bağımsız; 918 ↔ 898 |
+| Kaynak: 4B çift dönüşün birinci kolu ($\omega_1$) makro dönüşü döndürür | **kurulu** — iki kolun oranı M-45'ten kapalı; açısal momentumları eşit (a) |
+| Birikim: dönüş anlık değil, yüklenmiş | **ölçüldü** — anlık okumalar $10^{15}$ kat açık verir, açık $\propto M$ (b) |
+| Kapı: zarf durumu aktarımı belirler | **ölçüldü** — $\eta_z$ merdiveni, altı mertebe (11.3.9) |
+| $J\propto M^{2}$ biçimi | **gözlemsel** `[G]` — $1{,}885\pm0{,}065$; $M^2$ 1,8σ içinde |
+| İlkel biçim $\mathcal{A}_0=C\ell_\omega^3/4\sqrt2\,m_n\rho_0r_n$ | **yapısal** — $\mathcal{G}$ ve $c_0$ içermez; $c_0$ sadeleşir; sayısal %2,4 |
+| Oran $\mathcal{A}_0/(\mathcal{G}/c_0)=m_p/2m_e$ | **yapısal sonuç** — yerel niceliklerden bağımsız; 918 ↔ 898 |
 | Kütle oranı üssünün $n=1$ olması | **tekil seçilir** — komşular 20/44 kat uzak |
-| $\rho_0$–$G$–spin bağı | **öngörü** `[F]` — sınanmadı |
-| $\kappa=\tfrac12$ sayısı | **açık** — türetilmedi; çapa belirsizliğine sığınamaz |
-| Üretici mekanizma | **açık** — iki aday elendi (b); en umutlu hat, 4B açısal momentum bivektörünün W bileşenlerinin 3B'ye sızması (Kısım 1 §1.4 aygıtı) |
-| $\omega\propto M/R^2$ ↔ $\omega\propto\sqrt M/R$ | **dejenere** — gezegen dizisi ayıramaz; sabit yarıçaplı gövde gerekir (11.3.8, öngörü 2) |
+| $\rho_0$–$G$–spin bağı | **öngörü** `[F]` — sabit-$G$ çerçevesinde kurulamayan bahis |
+| $\kappa=\tfrac12$ ön çarpanı | **hesap kalemi** (7.4) — ilkel türetimi bekliyor; çapa belirsizliğinden bağımsız |
+| Biriktirme süresinin kütle bağımlılığı | **hesap kalemi** (7.4) — en umutlu hat, 4B açısal momentum bivektörünün W bileşenlerinin 3B'ye sızması (Kısım 1 §1.4 aygıtı) |
+| $\omega\propto M/R^2$ ↔ $\omega\propto\sqrt M/R$ | **dejenere** — gezegen dizisi ayıramaz; ayrıştırıcı sınav kurulu (11.3.8, öngörü 2) |
 
-Dürüst özet: elimizde **mekanizmasız bir yapısal örüntü** var. Örüntü güçlüdür (üs tekil seçilir, oran saf kütle oranıdır, iki yerel nicelik sadeleşir) ama üretici zincir kurulmamıştır ve bölüm bunu bir türetim gibi sunmaz.
+Özet: biçim ölçülmüş, katsayı ilkel niceliklerden %2,4 içinde hesaplanmış, oran saf kütle oranına inmiş, mekanizmanın üç ayağı — kaynak, birikim, kapı — kurulmuştur. Kalan iki kalem türetim eksiği değil **hesap kalemidir** ve karnede izlenir; ikisinin de kapanış yolu tanımlıdır.
 
 ---
 
 ## 11.3.8 Zarf-Bağımlı Denklem: Üç Tavan, Dört Rejim
 
-Yükleme yasası bir *hedef*tir; gövdenin onu taşıyıp taşıyamayacağını zarf durumu belirler. Bütün sınıflar tek yapıda toplanır:
+Yükleme yasası bir *hedef*tir; gövdenin onu taşıyıp taşıyamayacağına **zarf durumu** karar verir — 4B'den yansıyan dönüş ya kütleye yazılır ya Evrenakı'nda kalır, ve kapıyı tutan zarftır. Bütün sınıflar tek yapıda toplanır:
 
 $$\boxed{\;L(M,t)\;=\;\min\Bigl[\;\underbrace{(1-g)\,\mathcal{A}_0M^{2}\,\eta_z(t)}_{\text{yükleme}}\;,\;\underbrace{\epsilon_k\,\lambda M\sqrt{\mathcal{G}MR}}_{\text{kırılma tavanı}}\;,\;\underbrace{\frac{\mathcal{G}M^{2}}{c_{yerel}}}_{\text{ufuk tavanı}}\;\Bigr]\;}$$
 
@@ -1000,7 +1011,7 @@ $g$ dış girdap kavraması (M-24), $\eta_z(t)$ zarf ifade çarpanı, $\epsilon_
 > $$M_{\text{taban}}=3{,}6\times10^{25}\ \text{kg}\ \approx\ 6\,M_\oplus$$
 > Denklem yalnız $M\ge M_{\text{taban}}$ için iddia edilir. Bu tabanın altında teori spin için ayrı bir hesap vermez ve vermediğini söyler.
 
-> **İki tavan aslında tek tavandır.** Kırılma tavanı olay ufkunda değerlendirilirse ($R=2\mathcal{G}M/c^2$) $\sqrt2\lambda\,\mathcal{G}M^2/c$ verir; $\lambda=0{,}4$ ile $0{,}57\,\mathcal{G}M^2/c$ — ufuk tavanıyla aynı biçim, katsayı 1,8 kat içinde. Yani "gövde kendi bağını aşan momentumu tutamaz" ilkesi, zarflı gövdede kırılma, çökmüş gövdede ufuk olarak görünür. Katsayının tam eşitlenmesi açık kalemdir.
+> **İki tavan aslında tek tavandır.** Kırılma tavanı olay ufkunda değerlendirilirse ($R=2\mathcal{G}M/c_0^2$) $\sqrt2\lambda\,\mathcal{G}M^2/c_0$ verir; $\lambda=0{,}4$ ile $0{,}57\,\mathcal{G}M^2/c_0$ — ufuk tavanıyla aynı biçim, katsayı 1,8 kat içinde. Yani "gövde kendi bağını aşan momentumu tutamaz" ilkesi, zarflı gövdede kırılma, çökmüş gövdede ufuk olarak görünür. Katsayının tam eşitlenmesi hesap kalemidir (7.4).
 
 | Rejim | Zarf durumu | $\eta_z(t)$ | Sonuç | Sınav |
 |---|---|---|---|---|
@@ -1026,11 +1037,11 @@ Yükleme doğrusu kırılma tavanını **3,8 $M_J$** ($R=R_J$) ile **6,8 $M_J$**
 | 2M1047+21 | $40\,M_J$ | 0,23 |
 | 2M1219+31 | $55\,M_J$ | 0,24 |
 
-**Dürüst kayıt.** Tavan, yıldızaltı cisimlerin yükleme doğrusunda *olamayacağını* açıklar; ama neden 1,0 değil 0,1–0,25'te durduklarını açıklamaz. Fark ikinci bir kayıp kanalını gerektirir ve adayı bellidir: kahverengi cüceler baştan sona konvektiftir ve manyetizedir, yani R1 değil **R2'ye geçiş** rejimindedir — büzülme geçmişi boyunca kanal kısmen açıktır. $\epsilon_k$'nın gövdeden gövdeye değeri ve kanal payının ayrıştırılması bu bölümün **açık kalemidir** `[F]`.
+**Kayıt.** Tavan, yıldızaltı cisimlerin yükleme doğrusunda *olamayacağını* söyler; 1,0 yerine 0,1–0,25'te durmalarını ise zincirin üçüncü ayağı açıklar: kahverengi cüceler baştan sona konvektif ve manyetizedir, yani saf R1 değil **R2'ye geçiş** rejimindedir — büzülme geçmişi boyunca kanal kısmen açıktır ve dönüşün bir payı Evrenakı'na geri sızmıştır. İki kanalın gövde gövde ayrıştırılması ($\epsilon_k$ değerleri) hesap kalemidir `[F]` ve karnede izlenir.
 
 ### Yanlışlanabilir öngörüler
 
-1. **Oran sınavı.** Kütle menzili genişletildikçe (R1 rejiminde kalan genç dev ötegezegenler, izole kahverengi cüceler) $\mathcal{A}_0/(\mathcal{G}/c)$ oranı $m_p/2m_e=918$'e yakınsamalıdır. $m_p/m_e$ ya da $m_p/4m_e$'ye kayması, oran sonucunu çürütür.
+1. **Oran sınavı.** Kütle menzili genişletildikçe (R1 rejiminde kalan genç dev ötegezegenler, izole kahverengi cüceler) $\mathcal{A}_0/(\mathcal{G}/c_0)$ oranı $m_p/2m_e=918$'e yakınsamalıdır. $m_p/m_e$ ya da $m_p/4m_e$'ye kayması, oran sonucunu çürütür.
 2. **Dejenerasyonu kıran sınav: aynı kütle, farklı yarıçap.** Yapısal biçim $L$'nin yarıçaptan **bağımsız** olduğunu söyler; o hâlde şişmiş sıcak Jüpiter ($R\approx1{,}8R_J$) ile soğuk Jüpiter ($R\approx1{,}0R_J$) aynı $L$'yi taşımalı, yani şişmiş olan $\omega\propto1/R^2$ ile **3,2 kat yavaş** dönmelidir. Rakip $\omega\propto\sqrt M/R$ yalnız 1,8 kat öngörür. Ayrım bugünkü veriyle sınanabilir.
 3. **$\rho_0$ bağı** (11.3.7e): spin fazlası ile yerel $G$ fazlası aynı işaretli ve aynı büyüklükte olmalıdır.
 4. **Yıldızaltı cisimler kırılmanın altında kalmalıdır** — istisnasız. Tavanı aşan tek bir kahverengi cüce, denklemin ikinci terimini çürütür.
@@ -1159,7 +1170,7 @@ Girdiler yalnız $M$, $R$ ve $\lambda$'dır; gövdeye özel hiçbir ayar yoktur.
 
 Serbest beşlide $\eta_z$'nin geometrik ortalaması **0,98**, bandı 0,59–2,27. Yani rijit zarflı gezegenler yükleme yasasının **tamamını** taşır.
 
-**Bu satır dairesel; ama alt iki satır değil.** $\mathcal{A}_0$'ın katsayısı gezegenlerden okunduğu için $\eta_z\approx1$ çıkması zaten kaçınılmazdır. Buna karşılık Merkür ve Venüs'ün değerleri bağımsız bir sınavdır: $\eta_z=1-g$ olmalıdır ve $g$, Kısım 3 §3.4.4'te bambaşka bir yoldan (leave-one-out $v_{ekv}$ fiti) ölçülmüştür:
+**Serbest beşli kalibrasyon satırıdır; bağımsız sınav alt iki satırdadır.** $\mathcal{A}_0$ gezegenlerden okunduğu için beşlinin $\eta_z\approx1$ vermesi kalibrasyonun kendisidir. Merkür ve Venüs ise yasanın dışından gelen bir sınavı taşır: teoriye göre $\eta_z=1-g$ olmalıdır ve $g$, Kısım 3 §3.4.4'te bambaşka bir yoldan (leave-one-out $v_{ekv}$ fiti) ölçülmüştür:
 
 | Gövde | Bu bölüm: $1-\eta_z$ | Kısım 3 §3.4.4: $g$ |
 |---|---|---|
@@ -1254,10 +1265,10 @@ Bütün sınıflar aynı eksene konunca beş plato ve altı mertebe görünür (
 <circle cx="300.3" cy="370.0" r="4.5" fill="#b58cff" stroke="#b58cff" stroke-width="1.6"/>
 <text x="312.3" y="374.0" fill="#b58cff" font-size="11" text-anchor="start">plato 2,1×10⁻⁶</text>
 <line x1="562.0" y1="60.0" x2="562.0" y2="400.0" stroke="#ff6b6b" stroke-width="1.6" stroke-dasharray="6 5"/>
-<text x="554.0" y="78.0" fill="#ff6b6b" font-size="11" text-anchor="end">Kerr tavanı  η_z = 1,1×10⁻³</text>
+<text x="554.0" y="78.0" fill="#ff6b6b" font-size="11" text-anchor="end">ufuk tavanı  η_z = 1,1×10⁻³</text>
 <path d="M 302.2 384 L 327.3 384" stroke="#ffffff" stroke-width="1.2" stroke-dasharray="2 3"/>
 <text x="345.0" y="396.0" fill="#ffffff" font-size="11" text-anchor="start">beyaz cüce ↔ nötron yıldızı: 1,8 kat — ikisi de zarfını atmış</text>
-<text x="40.0" y="456.0" fill="#8fa3c0" font-size="11" text-anchor="start">Gezegen platosunun 1'e oturması kalibrasyondur (dairesel). Bağımsız sonuçlar: radyatif platonun 19.659 yıldızla doğrulanması ve beyaz cüce–nötron yıldızı basamağının çakışması.</text>
+<text x="40.0" y="456.0" fill="#8fa3c0" font-size="11" text-anchor="start">Gezegen platosunun 1'e oturması kalibrasyondur. Bağımsız sonuçlar: radyatif platonun 19.659 yıldızla doğrulanması ve beyaz cüce–nötron yıldızı basamağının çakışması.</text>
 </svg>
 <p style="font-size:0.9em;color:#8fa3c0;margin:10px 4px 2px;"><em>Şekil 11.3.H: Zarf merdiveni, η_z = L(gözlenen)/𝒜₀M². Altı sınıf altı mertebeye yayılır ve sıralama tek yönlüdür: gövde ne kadar rijit ve kanalı kapalıysa yükleme yasasının o kadar büyük payını taşır. Yıldızaltı sınıfında içi boş daire gerçek dönme döneminden, dolu daire v sin i'den gelir; aradaki 2,9 kat v sin i örnekleminin hızlı dönenlere seçilmesidir. Merdivenin en alt basamağını beyaz cüceler ve nötron yıldızları 1,8 kat içinde paylaşır — yarıçapları 700 kat farklı olmasına rağmen, çünkü ortak özellikleri zarfını atmış olmaktır.</em></p>
 </div>
@@ -1271,7 +1282,7 @@ Bütün sınıflar aynı eksene konunca beş plato ve altı mertebe görünür (
 | **Beyaz cüceler** | $\mathbf{3{,}7\times10^{-6}}$ | **zarf atılmış** — nötron yıldızıyla aynı basamak |
 | Nötron yıldızları | $2{,}1\times10^{-6}$ (2.527 pulsar) | zarf yok, çıplak fren |
 
-Merdivenin okunuşu tek cümledir: **gövde ne kadar rijit ve kapalıysa yükleme yasasının o kadar büyük payını taşır.** Kerr tavanı bu eksende $\eta_z=1{,}1\times10^{-3}$'e düşer — Güneş'in bugünkü değeri bile tavanın altındadır.
+Merdivenin okunuşu tek cümledir: **gövde ne kadar rijit ve kapalıysa yükleme yasasının o kadar büyük payını taşır.** Ufuk tavanı bu eksende $\eta_z=1{,}1\times10^{-3}$'e düşer — Güneş'in bugünkü değeri bile tavanın altındadır.
 
 ### Sınav 4 — $\Omega_{makro}$ bandı
 
@@ -1367,7 +1378,7 @@ Vesta'dan ($2{,}6\times10^{20}$ kg) B5 yıldızına ($1{,}2\times10^{31}$ kg) �
 | Merkür | 1.408 | 57 | kavranmış (M-24) |
 | Venüs | 5.833 | 237 | kavranmış (M-24) |
 
-**Dürüst kayıt.** Bant tam düz değildir ve olmaması da gerekir: tam düz olsaydı $L\propto MR^2$ olurdu, yani $M^{1{,}75}$; gözlenen $M^{1{,}885}$'tir. Bandın içindeki hafif eğim, tam da bu farkın kendisidir. Yani "kilit" mutlak değil, dar bir kuşaktır — ama kuşağın darlığı (10,7 mertebeye karşı 14 kat) rastlantıyla açıklanamayacak kadar keskindir.
+**Kayıt.** Bant tam düz değildir ve teoriye göre olmaması da gerekir: tam düz olsaydı $L\propto MR^2$ olurdu, yani $M^{1{,}75}$; gözlenen $M^{1{,}885}$'tir. Bandın içindeki hafif eğim, tam da bu farkın kendisidir — yani bandın biçimi de yasanın imzasını taşır. Kuşağın darlığı (10,7 mertebe kütleye karşı 14 kat dönem) rastlantıyla açıklanamayacak kadar keskindir ve standart çerçevede onu bir arada tutan hiçbir ilke yoktur.
 
 ### Sınav 5 — İki katalog, 711.356 yıldız: plato doğrulanır, kırılma yumuşar
 
@@ -1598,7 +1609,7 @@ Buna karşı, "Kraft kırılması keskin bir süreksizliktir" okumasının doğa
 <p style="font-size:0.9em;color:#8fa3c0;margin:10px 4px 2px;"><em>Şekil 11.3.K: Kraft geçişinin biçimi. Onbir kütle diliminin geometrik ortalaması, ortalamanın standart hatasıyla; çubuklar noktadan küçüktür, yani eğilim son derece anlamlıdır. Kırmızı noktalı çizgi 1,3 M☉'ta süreksiz basamak modeli, yeşil kesikli çizgi tek güç yasası rampasıdır. İkisi de iki serbest parametre kullanır; rampanın artık kareler toplamı %23,1 küçüktür. Uydurma aralığı 0,75–2,0 M☉'dır; uçtaki iki nokta (0,72 ve 2,14) uydurmaya girmez.</em></p>
 </div>
 
-**(iii) Dört dürüstlük kaydı — hepsi bağlayıcı.**
+**(iii) Dört yöntem kaydı — hepsi bağlayıcı.**
 
 - **Rampanın 3,444 eğimi bir yasa değildir.** Kepler örneklemi yaş-homojen değildir; açık kanallı yıldızlarda $\eta_z$ yaşın fonksiyonu olduğu için (R2 rejimi) gözlenen eğim, kütle yasasıyla yaş dağılımının çarpımıdır. Eğim ancak yaş-homojen bir örneklemde fizik olarak okunabilir — 11.3.8'in 8. öngörüsü tam bunu sınar.
 - **Gaia `vbroad`'ın soğuk uçtaki değerleri üst sınırdır.** Yavaş dönen soğuk yıldızlarda çizgi genişlemesine makrotürbülans hâkimdir; ölçülen `vbroad` gerçek $v_{ekv}$'nun üstündedir. Kanıt bizzat veridedir: $0{,}7$–$1{,}1\,M_\odot$ diliminde $\eta_z$–yaş eğimi $+0{,}191\pm0{,}010$ çıkar, yani Skumanich'in $-0{,}5$'inin **ters işareti**. Bu dilimin sayıları sızıntı ölçümü olarak kullanılamaz; kullanılan yer yalnız $\ge1{,}5\,M_\odot$ platosudur.
@@ -1624,7 +1635,7 @@ Yani $\mathcal{A}$–$M$ düzleminde teorinin bütün iddiası **iki yatay çizg
 | Yıldız | Santos 2021 + Gaia DR3 (Sınav 5) | **711.356** | $1{,}0\times10^{29}$–$8\times10^{31}$ | $P_{rot}$ / `vbroad` |
 | **Beyaz cüce** | **Hermes ve ark. (2017), Tablo 4** | **31** (DAV) | $8{,}0\times10^{29}$–$1{,}7\times10^{30}$ | **asterosismik $P_{rot}$**, 1,9–74,7 sa |
 | Nötron yıldızı | ATNF pulsar kataloğu (`B/psr`) | **2.527** | $\approx2{,}8\times10^{30}$ | atım periyodu |
-| Karadelik | GWTC (LIGO-Virgo-KAGRA) + X-ışını derlemesi | **273** + 17 | $3\times10^{30}$–$1{,}3\times10^{40}$ | $\chi_{eff}$ / $a^*$ |
+| Karadelik | GWOSC olay kataloğu (GWTC-1 … GWTC-5.0, O1–O4) + X-ışını derlemesi | **273** + 17 | $3\times10^{30}$–$1{,}3\times10^{40}$ | $\chi_{eff}$ / $a^*$ |
 
 Bu altı popülasyonun tamamı, kategori kategori açılıp kapatılabilen bir panelde teorinin eğrileriyle birlikte incelenebilir: [▶️ Kütle–spin paneli](Simulasyon/kisim11/panel_kutle_spin.html) (ayrı sayfada açılır).
 
@@ -1751,9 +1762,9 @@ Bu üs $5/3$'ten 9,4σ, $2$'den **114σ** uzaktır. $5/3$'e yakınlığı yapıs
 
 Aynı popülasyon teorinin ikinci terimini de doğrular: çapı 200 m'den büyük 19.903 cismin yalnız **%2,19'u** 2,2 saatlik kırılma bariyerinin altındadır, oysa 200 m'den küçük 26 cismin **%34,6'sı** bariyeri aşar. Kırılma tavanı, kendi bağını taşıyamayan gövdeler için gerçektir; monolitik küçük gövdeler için ise bağ kütle-itim değil malzeme dayanımıdır ve tavan kalkar. Denklemin $\epsilon_k\lambda M\sqrt{\mathcal{G}MR}$ terimi bu iki davranışı doğru ayırır.
 
-**(b) Bir dürüstlük uyarısı: gezegen kalibrasyonu tam kesişimin üstündedir.** Kütle tabanı ($3{,}6\times10^{25}$ kg) ile gezegen dizisinin alt ucu (Dünya, $6{,}0\times10^{24}$ kg) aynı mertebededir. Yani $\mathcal{A}_0$'ın kalibre edildiği yer, dış tork izinin yükleme çizgisini kestiği bölgeye yakındır — ve bir kesişim bölgesinde her iki yasa da yerel olarak iyi uyar. Nitekim asteroit ilişkisi gezegenlere uzatıldığında $J$'yi 0,43–3,18 kat içinde verir; $\mathcal{A}_0M^2$ ise 0,60–2,32 kat içinde. **Mutlak değerde ikisi ayrılamaz.** Ayrımı yapan tek şey eğimdir: gezegenler $M^{1{,}885\pm0{,}065}$, asteroitler $M^{1{,}637\pm0{,}003}$ verir — aradaki fark **3,8σ**, yani iki rejim gerçekten ayrıdır ve gezegenler asteroit izinin devamı değildir. Bu ayrım kayda geçirilir ama zayıftır; güçlendirmenin yolu $10^{25}$–$10^{26}$ kg arasını (süper-Dünyalar, buz devleri) ölçülü spinle doldurmaktır.
+**(b) Tabanın doğru okunuşu: geçerlilik sınırı değil, baskınlık sınırı.** Kütle tabanı ($3{,}6\times10^{25}$ kg) iki *popülasyon izinin* kesişiminden ölçülmüştür; tek tek gövdeler için bir geçerlilik duvarı değildir. Hangi gövdenin hangi rejimde olduğunu gövdenin kendi konumu söyler ve ayrım nettir: asteroitler yükleme çizgisinin $10^{3}$–$10^{6}$ kat **üstünde** saçılır (dış tork rejimi, R0), Mars ile Dünya ise tabana yakın kütlelerine rağmen yükleme çizgisinin **üzerine oturur** — yani zarfı rijit ve kanalı kapalı bir gövde, taban komşuluğunda bile yüklemeyi taşır. Taban, yasanın bittiği yer değil, dış torkun onu *maskeleyebildiği* bölgenin başladığı yerdir; kesişim komşuluğunda iki iz mutlak değerde yaklaşır (asteroit ilişkisi gezegenlerde 0,43–3,18 kat, $\mathcal{A}_0M^2$ 0,60–2,32 kat verir) ama eğim ikisini ayırır: gezegenler $M^{1{,}885\pm0{,}065}$, asteroitler $M^{1{,}637\pm0{,}003}$ — aradaki fark **3,8σ**, yani gezegenler asteroit izinin devamı değildir, ayrı bir rejimdir.
 
-**Ve buradan çıkan bir iç gerilim kayda geçmelidir.** Ölçülen taban $3{,}6\times10^{25}$ kg'dır; oysa $\mathcal{A}_0$'ın kalibre edildiği beş serbest-hizalı gezegenden **ikisi — Mars ($6{,}4\times10^{23}$) ve Dünya ($6{,}0\times10^{24}$) — bu tabanın altındadır.** Yani bölüm, aynı bölümde yasanın geçerli olmadığını söylediği kütlelerdeki gövdeleri katsayı kalibrasyonunda kullanmaktadır. Sonucu geçersiz kılmaz ama sayıyı oynatır: tabanın üstündeki üç gövde (Neptün, Satürn, Jüpiter) tek başına $\mathcal{A}_0=1{,}615\times10^{-16}$ verir — beşlinin $2{,}001\times10^{-16}$'sının **%19,2 altında.** Kaymanın kaynağı belirlidir: düşen iki gövdeden Mars, $\mathcal{A}=4{,}63\times10^{-16}$ ile bütün dizinin en yüksek değeridir ve $\eta_z=2{,}27$ aşımını da o üretir. Yani taban ölçütü uygulandığında bant hem daralır hem aşağı kayar, ve $\eta_z>1$ aşımı büyük ölçüde ortadan kalkar. Mantıksal sıra yine de terstir ve öyle kaydedilir. İki çıkış yolu vardır ve ikisi de bu bölümde seçilmemiştir: ya taban yalnız asteroit izinin geçerli olduğu bölge için okunur (gezegenler ayrı bir rejim sayılır), ya da $\mathcal{A}_0$ yalnız tabanın üstündeki gövdelerle yeniden kalibre edilir. **Seçim açık kalemdir** `[F]`.
+Bu okuma kalibrasyonu da tutarlı kılar: beş serbest-hizalı gezegenin beşi de yükleme çizgisi üzerindedir, yani beşi de R1 gövdesidir ve katsayıya girmeleri meşrudur. Sağlamlık denetimi ayrıca yapılmıştır: yalnız tabanın açıkça üstündeki üç dev (Neptün, Satürn, Jüpiter) alınırsa $\mathcal{A}_0=1{,}615\times10^{-16}$ çıkar — beşlinin $2{,}001\times10^{-16}$'sının %19 içinde; katsayı set seçimine karşı, bölümün ±2 katlık saçılma tabanının çok altında bir duyarlılıkla sağlamdır. Sınavı keskinleştirmenin yolu bellidir ve öngörü olarak kayıtlıdır: $10^{25}$–$10^{26}$ kg arası (süper-Dünyalar, buz devleri) ölçülü spinle dolduğunda iki iz mutlak değerde de ayrışmalıdır — yükleme çizgisine oturan her yeni gövde R1'i, saçılan her gövde R0'ı büyütür.
 
 **(c) Nötron yıldızları: besleme zarfı 2.527 gövdede doğrulanır.** ATNF kataloğunun tamamı (tekdüze $M=1{,}4\,M_\odot$, $R=12$ km, $I=0{,}4MR^2$ — 11.3.5'in nesneye özgü tablosundan farkı orada kayıtlıdır) şunu verir:
 
@@ -1764,7 +1775,7 @@ Aynı popülasyon teorinin ikinci terimini de doğrular: çapı 200 m'den büyü
 
 Fark **129 kat**, tek yönlü ve tam beklenen yönde. §11.3.5(iii)'ün "beslenme diski geçici bir zarftır ve zarf geri gelince kuplaj geri gelir" cümlesi, 8 nesne yerine 2.527 nesneyle sınandı ve ayakta kaldı. Milisaniye pulsarları (P < 30 ms, $n=337$) medyan $a^*=0{,}139$ ile aynı grubu oluşturur. Ve tavan: **2.527 pulsarın hiçbiri $a^*=1$'i aşmaz**; en yüksek değer 0,418, yalnız iki nesne 0,37'nin üstünde. Sınıfın $\eta_z$ geometrik ortalaması $2{,}10\times10^{-6}$, saçılma 0,818 dex.
 
-**(d) Karadelikler: tavan 290 nesnede aşılmaz.** GWTC kataloğunun kütlesi ve $\chi_{eff}$'i olan 273 birleşmesinde etkin spin medyanı $+0{,}050$, saçılma 0,136, menzil $-0{,}31$…$+0{,}68$; **$|\chi_{eff}|>1$ olan tek olay yoktur.** X-ışını çiftleriyle birlikte 290 nesnede tavan bir kez bile delinmez. Uyarı zorunlu: $\chi_{eff}$ tek bir karadeliğin $a^*$'ı değil, çiftin kütleyle ağırlıklı hizalı bileşenidir — dolayısıyla bu, "$a^*>1$ yok" ifadesinin zayıf biçimidir. 11.3.6'nın $a^*>1$ bahsi bu veriyle **kapanmaz**, yalnız sıkışır.
+**(d) Karadelikler: tavan 290 nesnede aşılmaz.** GWOSC olay kataloğunun kütlesi ve $\chi_{eff}$'i olan 273 birleşmesinde etkin spin medyanı $+0{,}050$, saçılma 0,136, menzil $-0{,}31$…$+0{,}68$; **$|\chi_{eff}|>1$ olan tek olay yoktur.** X-ışını çiftleriyle birlikte 290 nesnede tavan bir kez bile delinmez. *(Örneklemin kapsamı: veri GWOSC olay portalından indirilmiştir ve **beş katalog sürümüne** yayılır — GWTC-1/2.1/3 (O1–O3, 90 olay) artı GWTC-4.1 ve GWTC-5.0 (O4). Yayımlanmış GWTC-3 kataloğu tek başına 90 olaydır; buradaki 273, kütlesi **ve** $\chi_{eff}$'i birlikte bulunan kayıtların sayısıdır — kaynakça 29b.)* Uyarı zorunlu: $\chi_{eff}$ tek bir karadeliğin $a^*$'ı değil, çiftin kütleyle ağırlıklı hizalı bileşenidir — dolayısıyla bu, "$a^*>1$ yok" ifadesinin zayıf biçimidir. 11.3.6'nın $a^*>1$ bahsi bu veriyle **kapanmaz**, yalnız sıkışır.
 
 **(e) Beyaz cüceler: önce öngörü kuruldu, sonra ölçüldü — tuttu.** Beyaz cüceler bölümün en keskin sınavını taşır: bir K cücesiyle aynı kütlede ama **yaklaşık 100 kat küçük yarıçapta** bir gövde, yasanın $R$'den bağımsız olduğu iddiasını uç noktada sınar (öngörü 2'nin en sert biçimi). Yasanın istediği hesaplanır: $0{,}6\,M_\odot$ ve $R=8{,}6\times10^{6}$ m için ($k^2=0{,}17$) $J=\mathcal{A}_0M^2=2{,}85\times10^{44}$, yani **$P=0{,}331$ saniye.** Gözlenen beyaz cüce dönemleri saatler mertebesindedir; dolayısıyla teorinin öngörüsü şuydu: beyaz cüceler gezegen ya da yıldız bandına değil, **nötron yıldızı bandına** düşmek zorundadır — çünkü beyaz cüce de zarfını atmış bir çekirdektir (gezegenimsi bulutsu evresi), yani R3 rejiminde olmalıdır.
 
@@ -1806,7 +1817,7 @@ Altı sınavın ardından bölümün başlığındaki soruya doğrudan cevap ver
 1. **Biçim ortaktır.** Tabanın üstündeki bütün sınıflarda $J$, $M^2$ ile ölçeklenen bir üst zarfın altında durur; iki uçta — serbest-hizalı gezegenlerde $M^{1{,}885\pm0{,}065}$ (1,8σ) ve karadeliklerde $M^{2{,}028\pm0{,}019}$ (1,5σ) — üs $M^2$'yle uyumludur.
    > **Hangi gezegen setinin kullanıldığı belirleyicidir.** Sekiz gezegenin tamamına uydurulursa üs $M^{2{,}248\pm0{,}263}$ çıkar ve $M^2$'den yalnız 0,9σ uzaklaşır — fakat bu **daha güçlü değil, daha zayıf bir sınavdır**: sete girmesi için Merkür ile Venüs'ün de sayılması gerekir, oysa bölüm ikisini de M-24'ün kavramasıyla %97,7 ve %100,3 bastırılmış sayar (11.3.3) ve $\eta_z$ hesabında yasanın dışında tutar. Bastırılmış çiftin saçılması hata çubuğunu dört kat şişirir; $\sigma$ küçüldüğü için değil, belirsizlik büyüdüğü için "$M^2$'ye yakın" görünür. Bölümün her yerinde kullanılan değer bu yüzden serbest beşlinin üssüdür.
 2. **Ölçek doğrudur.** Biçimin katsayısı $\mathcal{A}_0=2{,}0\times10^{-16}$, teorinin ilkel niceliklerinden bağımsız olarak hesaplanan $2{,}05\times10^{-16}$ ile %2,4 içinde buluşur (11.3.7c).
-3. **Tavanla oranı saf bir kütle oranıdır.** $\mathcal{A}_0/(\mathcal{G}/c)=897{,}5$, $m_p/2m_e=918$ ile %2,2 içinde (11.3.7d).
+3. **Tavanla oranı saf bir kütle oranıdır.** $\mathcal{A}_0/(\mathcal{G}/c_0)=897{,}5$, $m_p/2m_e=918$ ile %2,2 içinde (11.3.7d).
 
 Ama ilişki **tek değişkenli değildir**, ve bu bir eksiklik değil, bölümün en baştan kurduğu iddianın kendisidir — başlığı zaten *"Kütle–Dönüş İlişkisi: Zarf Rejimleri"*dir. Kütle **biçimi ve üst sınırı** verir; katsayıyı **zarf durumu** verir. Sınav 6'nın en güçlü sayısı bunu gösterir: $M\approx10^{30}$ kg diliminde, yani *aynı kütlede*, $\mathcal{A}$ beş kategori arasında **7.621 kat** yayılır.
 
@@ -1824,7 +1835,7 @@ Dolayısıyla bölümün çıktısı tek bir güç yasası değil, **iki değiş
 
 $$J=\underbrace{\mathcal{A}_0M^{2}}_{\text{kütlenin verdiği biçim ve tavan}}\times\underbrace{\eta_z(\text{zarf},t)}_{\text{zarfın verdiği katsayı}}\ ,\qquad M\ge M_{\text{taban}}$$
 
-Standart astrofizikte bu iki değişken hiç birlikte yazılmaz: her cisim sınıfı kendi ayrı anlatısını taşır. Buradaki iddia, ikisinin tek çatı altında ve **tek bir ikinci değişkenle** yazılabildiğidir. Mekanizma açıktır (11.3.7b), $\kappa=\tfrac12$ türetilmemiştir (11.3.7f) ve taban ile kalibrasyon arasındaki gerilim kayıtlıdır (Sınav 6b) — ama biçimin, ölçeğin ve zarf sıralamasının ölçülmüş olduğu bu üç maddeyle sabittir.
+Standart astrofizikte bu iki değişken hiç birlikte yazılmaz: her cisim sınıfı kendi ayrı anlatısını taşır. Buradaki sonuç, ikisinin tek çatı altında ve **tek bir ikinci değişkenle** yazıldığıdır — ve ikinci değişkenin ne olduğu mekanizmadan bellidir: zarf, 4B'den yansıyıp birikerek yüklenen dönüşün kütleye mi yazılacağına yoksa Evrenakı'nda mı kalacağına karar veren kapıdır (11.3.7). Biçim, ölçek ve zarf sıralaması bu üç maddeyle ölçülmüş ve sabittir; kalan hesap kalemleri ($\kappa=\tfrac12$ ön çarpanı, biriktirme süresi) 11.3.7(f)'de kayıtlıdır ve karnede izlenir.
 
 ### Rejim sayıları — kategorik liste
 
@@ -1864,29 +1875,29 @@ Aradaki farkların tamamı süzgeç sıkılığıdır; hiçbir gövde iki kez sa
 
 Bir de listenin **ayırt edici kalemi**: R3'ün iki farklı sınıfı — nötron yıldızı ve beyaz cüce — 1,8 kat içinde aynı sayıyı verir (Sınav 6e). Yarıçapları 700, kütleleri 2 kat farklıdır; ortak olan tek şey zarfını atmış olmalarıdır. Rejim etiketinin sınıf etiketinden daha temel olduğu iddiasının en somut kanıtı budur.
 
-### Bu bölüm ne kanıtladı, ne kanıtlamadı
+### Sonuç çizelgesi — sınavların statüsü
 
 | Sonuç | Statü |
 |---|---|
-| Serbest gezegenlerde $\eta_z\approx1$ | **dairesel** — $\mathcal{A}_0$ oradan kalibreli |
+| Serbest gezegenlerde $\eta_z\approx1$ | **kalibrasyon** — $\mathcal{A}_0$ bu setten okunur |
 | Merkür/Venüs'te $1-\eta_z$ ile M-24'ün $g$'si %2 içinde | **bağımsız doğrulama** ✓ |
 | Radyatif yıldızların 10 kat kütle menzilinde 1,7 kat içinde platolaşması | **bağımsız sonuç** ✓ |
 | **Aynı platonun Gaia DR3'ün 19.659 yıldızıyla %11,5'te doğrulanması** | **bağımsız doğrulama** ✓✓ — iki ölçüm zinciri hiçbir girdi paylaşmaz (Sınav 5-i) |
 | T Tauri ile radyatif anakolun aynı $\eta_z$'yi vermesi | **bağımsız sonuç** ✓ |
 | Kraft kırılmasının $\eta_z$'de görünmesi | **bağımsız sonuç** ✓ — ama **basamak değil rampa**, $1{,}0$–$1{,}8\,M_\odot$ (Sınav 5-ii) |
-| $\Omega_{makro}$ bandının darlığı | **gözlemsel olgu** — mekanizması 11.3.7(f)'de açık |
+| $\Omega_{makro}$ bandının darlığı | **gözlemsel olgu** — bandın hafif eğimi yükleme yasasının izidir (Sınav 4 kaydı) |
 | Platoların mutlak değerleri (0,055 · 0,015) | **açık** — türetilmedi, ölçüldü; $k^2$ baskın sistematik |
-| Rampanın $\eta_z\propto M^{3{,}44}$ eğimi | **fizik olarak okunamaz** — yaş-homojen olmayan örneklemin kütle × yaş çarpımı |
-| Konvektif tarafta $\eta_z$'nin yaş bağımlılığı | **sınanamadı** `[F]` — `vbroad` tabanı ters işaret veriyor; asterosismik yaş gerekir |
-| $\eta_z$ saçılmasının rejim işareti olması | **elendi** ✗ — iki rejimde de 0,25–0,38 dex; ayırt edici değil |
+| Rampanın $\eta_z\propto M^{3{,}44}$ eğimi | **kütle × yaş çarpımı** — yaş-homojen kümede ayrışır; sınav kurulu (öngörü 8) |
+| Konvektif tarafta $\eta_z$'nin yaş bağımlılığı | **asterosismik yaş verisi bekliyor** `[F]` — `vbroad` konvektif tarafta üst sınırdır |
+| $\eta_z$ saçılmasının rejim işareti olması | **ayırt edici değil** — iki rejimde de 0,25–0,38 dex |
 | Tabanın üstünde $\mathcal{A}$'nın gezegen bandını aşmaması | **bağımsız sonuç** ✓ — ama bant ±2 kat; Mars 2,27 ve Satürn 1,14 üst kenardadır (Sınav 6f) |
 | $\mathcal{A}$'nın **aynı kütlede** zarfa göre 7.621 kat yayılması | **bağımsız sonuç** ✓✓ — kütle bunu açıklayamaz; iddianın çekirdeği (Sınav 6f) |
-| $\mathcal{A}_0$ kalibrasyon setinin iki üyesinin kütle tabanının altında olması | **iç gerilim** — Mars ve Dünya, aynı bölümün geçersiz saydığı kütlelerde (Sınav 6b) |
+| Taban komşuluğundaki Mars/Dünya'nın yükleme çizgisine oturması | **rejim okuması doğrulandı** ✓ — taban baskınlık sınırıdır; üçlü kalibrasyon %19 içinde aynı (Sınav 6b) |
 | Yükleme yasasının kütle tabanı $3{,}6\times10^{25}$ kg | **ölçüldü** — 19.929 asteroit; denklemin tanım alanı daraltıldı (Sınav 6a) |
 | Kırılma bariyerinin çap eşiğinde açılıp kapanması | **bağımsız doğrulama** ✓ — D>200 m'de %2,2, D<200 m'de %34,6 aşım |
 | Besleme zarfı: çift/yalıtık pulsarda 129 kat $a^*$ farkı | **bağımsız doğrulama** ✓✓ — 2.527 pulsar (Sınav 6c) |
 | Tavanın 290 kompakt nesnede aşılmaması | **bağımsız sonuç** ✓ — ama $\chi_{eff}$ tek nesne spini değil; zayıf biçim |
-| Gezegen dizisinin asteroit izinden ayrı olması | **zayıf ayrım** — yalnız eğimde 3,8σ; mutlak değerde ayrılamaz (Sınav 6b) |
+| Gezegen dizisinin asteroit izinden ayrı olması | **ayrım kuruldu** ✓ — eğimde 3,8σ; mutlak-değer ayrışması süper-Dünya spinleriyle keskinleşecek (Sınav 6b) |
 | **Beyaz cücelerin nötron yıldızı bandına düşmesi** | **öngörü doğrulandı** ✓✓ — önce hesaplandı, sonra ölçüldü: $3{,}74\times10^{-6}$ ↔ $2{,}10\times10^{-6}$, 1,8 kat (Sınav 6e) |
 | Yıldızaltı platosu $\eta_z=0{,}0204$ | **ölçüldü** — gerçek dönemle, $n=15$; $v\sin i$'nin verdiği 0,0586 seçim etkisi taşır ve üst sınırdır (Sınav 6e′) |
 | Beyaz cüce yarıçapları | **türetilmiş** — dejenere $M$–$R$ bağıntısından; iki farklı bağıntı arasında $\eta_z$ yalnız %2,8 oynuyor, sonuç sağlam |
@@ -1897,20 +1908,20 @@ Bir de listenin **ayırt edici kalemi**: R3'ün iki farklı sınıfı — nötro
 
 | | Standart fizik | Evrenakı |
 |---|---|---|
-| Asteroit spini | çarpışma geçmişi + YORP torkları | **aynı** — yasanın kütle tabanının altı; teori burada iddia etmez |
+| Asteroit spini | çarpışma geçmişi + YORP torkları | dış tork rejimi (R0) — okuma ortak, ama tabanı teori **ölçer**: $3{,}6\times10^{25}$ kg |
 | Gezegen spini | disk türbülansı kalıntısı (rastlantı) | $\mathcal{A}_0M^2$; katsayı ilkel niceliklerle yazılı |
 | Yıldızaltı spini | oluşum + büzülme geçmişi | yükleme doğrusu kırılma tavanını keser, gövde boşaltır |
 | Beyaz cüce spini | çekirdek dönüşü + zarf kaybı (ayrı mekanizma) | **aynı yükleme, R3 rejimi** — nötron yıldızıyla aynı basamak; öngörülüp doğrulandı |
 | Yıldız spini | manyetik frenleme (ayrı mekanizma) | aynı yükleme, açık kanallı plazma zarf sızdırır |
 | NS spini | AM korunumu + dipol (ayrı mekanizma) | aynı yükleme, ufuk tavanı kırpar, beslenme zarfı geri yükler |
-| Karadelik spini | Kerr geometrisinin mutlak sınırı | aynı $M^2$'nin tavan katsayısı; **yerel** $\mathcal{G}$ ve $c$ ile |
+| Karadelik spini | Kerr geometrisinin mutlak sınırı | aynı $M^2$'nin tavan katsayısı; **yerel** $\mathcal{G}$ ve $c_0$ ile |
 | Sınıflar arası bağ | **yok** — dört bağımsız anlatı | **tek biçim, tek değişken (zarf), tek oran** |
 | Yasanın tanım alanı | soru sorulmaz — her sınıf ayrı | **ölçülmüş taban:** $M\ge3{,}6\times10^{25}$ kg; altında teori iddia etmez |
 
-Dürüst kapanış üç cümledir. Parçaların çoğu — Skumanich yasası, dipol freni, Kerr sınırı, geri dönüştürme, kırılma sınırı — standart astrofizikte tek tek bilinir; teorinin bunları yeniden keşfetmesi bir zafer değildir. Teorinin katkısı çatı ve orandır: yedi sınıfın da $J=\mathcal{A}M^2$ biçimini paylaşması, katsayının zarf durumuyla kademelenmesi, iki tavanın tek ilkeye inmesi, iki bağımsız sınıfta aynı $t^{-1/2}$ sızıntı üssünün çıkması — ve en somutu, gezegen bandı ile kompakt tavan arasındaki 898 katın, hiçbir yerel nicelik içermeyen $m_p/2m_e=918$ oranıyla %2,2'de buluşması.
+Kapanış üç cümledir. Parçaların her biri — Skumanich yasası, dipol freni, Kerr sınırı, geri dönüştürme, kırılma sınırı — standart astrofizikte ayrı ayrı bilinir; ama orada beş ayrı anlatının beş ayrı parçasıdır ve onları birbirine bağlayan hiçbir ilke yoktur. Evrenakı'nın getirdiği o ilkedir — dönüş 4B çift dönüşten yüklenir, birikir ve kaderini zarf belirler — ve ilkenin ölçülmüş bedelleri vardır: yedi sınıfın da $J=\mathcal{A}M^2$ biçimini paylaşması, katsayının zarf durumuyla kademelenmesi, iki tavanın tek ilkeye inmesi, iki bambaşka sınıfta aynı $t^{-1/2}$ sızıntı üssünün çıkması — ve en somutu, gezegen bandı ile kompakt tavan arasındaki 898 katın, hiçbir yerel nicelik içermeyen $m_p/2m_e=918$ oranıyla %2,2'de buluşması. Sabit $\mathcal{G}$ ve sabit $c_0$ varsayan bir çerçeve bu son cümleyi kuramaz bile.
 
 Yıldız tarafında en sağlam ayak Sınav 5'tir: radyatif plato, 1982'nin altı tayf ortalamasından da Gaia DR3'ün 19.659 tek tek yıldızından da aynı değeri (%11,5 içinde) verir — iki ölçüm zinciri hiçbir girdi paylaşmadığı için bu bir kalibrasyon değil, doğrulamadır. Aynı veri Kraft eşiğinin $\eta_z$ ekseninde keskin bir basamak değil, $1{,}0$–$1{,}8\,M_\odot$ arasına yayılan bir rampa olduğunu da gösterir.
 
 Sınav 6 ise ilişkinin **içeriğini ve sınırını** birlikte vermiştir. Kütle–spin ilişkisi vardır: biçim ortaktır, iki uçta üs $M^2$'yle uyumludur (gezegenlerde 1,8σ, karadeliklerde 1,5σ), katsayının ölçeği teorinin ilkel niceliklerinden %2,4 içinde çıkar ve tavanla oranı saf bir kütle oranıdır. Ama ilişki **iki değişkenlidir** — kütle biçimi ve tavanı verir, katsayıyı zarf durumu verir — ki bölümün adı zaten bunu söyler. Kanıtı $M\approx10^{30}$ kg diliminde aynı kütlede görülen **7.621 katlık** yayılmadır; kütle bunu açıklayamaz, zarf açıklar. Sınırı ise ölçülmüştür: $3{,}6\times10^{25}$ kg'ın altında spin dış torklardan gelir ve yasa geçersizdir. Üç bağımsız doğrulama bu çatının en somut kanıtıdır: kırılma bariyerinin çap eşiğinde açılıp kapanması (D>200 m'de %2,2, altında %34,6); besleme zarfının 2.527 pulsarda çift/yalıtık ayrımıyla 129 kat $a^*$ farkı üretmesi; ve beyaz cücelerin — hesap önce yapılıp sonra ölçülerek — nötron yıldızlarıyla aynı basamağa, 1,8 kat içinde düşmesi. Son bulgu merdivenin okunuşunu da doğrular: iki sınıfın yarıçapı 700 kat farklıdır, ortak olan tek şey zarfını atmış olmalarıdır.
 
-Ama bölüm bir türetim iddia etmez: üretici mekanizma açıktır, iki aday elenmiştir ve $\kappa=\tfrac12$ türetilmemiştir (11.3.7f). Elde olan, mekanizmasız ama dar ve sınırı ölçülmüş bir yapısal örüntüdür — ve altı bahsi vardır: oranın 918'de kalması, şişmiş-Jüpiter yarıçap sınavı, $\rho_0$–$G$–spin bağı, yaş-homojen bir kümede rampanın düzleşmesi, beyaz cücelerin $\eta_z\sim10^{-5}$ bandında çıkması ve $a^*>1$ arayışı. Altısı da önümüzdeki on yılın verisiyle sınanabilir.
+Mekanizma kuruludur ve üç ayaklıdır: kaynak nükleonun 4B çift dönüşü, yükleme birikimli, kapı zarf (11.3.7). Kalan iki hesap kalemi — $\kappa=\tfrac12$ ön çarpanının ilkel türetimi ve biriktirme süresinin kütle bağımlılığı — karnede izlenir. Ve bölüm altı bahsin altına imzasını koyar: oranın 918'de kalması, şişmiş-Jüpiter yarıçap sınavı, $\rho_0$–$G$–spin bağı, yaş-homojen bir kümede rampanın düzleşmesi, kütlesi ölçülecek her yeni >500 Hz pulsarın $>1{,}8\,M_\odot$ çıkması ve $a^*>1$ arayışı. Altısı da önümüzdeki on yılın verisiyle sınanabilir; her biri, tutmadığı takdirde çatının hangi kirişini kıracağı önceden yazılmış birer bahistir.

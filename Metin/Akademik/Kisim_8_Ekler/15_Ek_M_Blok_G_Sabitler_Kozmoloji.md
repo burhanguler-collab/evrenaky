@@ -18,9 +18,9 @@
 $$\nabla^2 P = 0$$
 2. **Küresel çözüm:** Sonsuzda arka plan değeri $P_0$'a yakınsayan, küresel simetrik tek fiziksel çözüm:
 $$P(r) = P_0 - \frac{\alpha M}{r}$$
-Burada $\alpha$ Cosmofluid gradyan bağlaşım sabitidir; boyutu $[\text{s}^{-2}]$ (Anayasa S-2).
+Burada $\alpha$ Cosmofluid gradyan bağlaşım sabitidir; boyutu $[\text{s}^{-2}]$ (Ek D · S-2).
 3. **Gradyan (kuyu konvansiyonu):** $\dfrac{\partial P}{\partial r} = +\dfrac{\alpha M}{r^2} > 0$ — basınç merkezden uzaklaştıkça artar (M-2'nin bağlayıcı işaret konvansiyonu). Kuvvetin yönü $-\hat r$'dir: cisim yüksek basınçtan alçak basınca, yani merkeze doğru **itilir**.
-4. **Kuvvet:** $\vec F = -\gamma_N \nabla P = -\gamma_N \dfrac{\alpha M}{r^2}\hat r$. Burada $\gamma_N = N V_n$, $N$ nükleonlu cismin toplam etkileşim hacmidir. *(Notasyon notu — Anayasa S-8: kaynak metin 4.2.4'te bu büyüklük $\gamma$ yazılıydı; Lorentz çarpanı $\gamma$ ile karışmaması için katalog yazımı $\gamma_N$'dir.)*
+4. **Kuvvet:** $\vec F = -\gamma_N \nabla P = -\gamma_N \dfrac{\alpha M}{r^2}\hat r$. Burada $\gamma_N = N V_n$, $N$ nükleonlu cismin toplam etkileşim hacmidir. *(Notasyon notu — Ek D · S-8: kaynak metin 4.2.4'te bu büyüklük $\gamma$ yazılıydı; Lorentz çarpanı $\gamma$ ile karışmaması için katalog yazımı $\gamma_N$'dir.)*
 5. **Cinsten bağımsızlık:** Kütle $m = N m_n$ olduğundan
 $$\frac{\gamma_N}{m} = \frac{V_n}{m_n} = \frac{1}{\rho_n}$$
 — oran, cismin ne olduğundan bağımsız tek evrensel sayıdır.
@@ -90,7 +90,7 @@ $$\frac{dP}{dr} = \rho\,\omega^2 r \;\Longrightarrow\; P(r) = P_{merkez} + \tfra
 2. **Dış bölge** ($r > r_0$): $v_\theta = v_0$ yerleştirilir:
 $$\frac{dP}{dr} = \rho\,\frac{v_0^2}{r} \;\Longrightarrow\; P(r) = P_{ref} + \rho\,v_0^2 \ln\!\left(\frac{r}{r_0}\right)$$
 — logaritmik basınç kuyusu. $\rho$ sabit olduğundan her iki integral meşrudur ve iki parça $r_0$'da sürekli eklenir.
-*(Notasyon notu — Anayasa S-17: buradaki $P_{ref}$, log profilin $r=r_0$'daki entegrasyon referansıdır; derin uzay arka plan basıncı $P_0$ ile **karıştırılmamalıdır**. Gövde metninde [4.2.9.2] bu referans için $P_0$ yazımı geçer; katalog yazımı $P_{ref}$'tir, gövde geçişi Faz 5'te yapılacaktır.)*
+*(Notasyon notu — Ek D · S-17: buradaki $P_{ref}$, log profilin $r=r_0$'daki entegrasyon referansıdır; derin uzay arka plan basıncı $P_0$ ile **karıştırılmamalıdır**. Gövde metninde [4.2.9.2] bu referans için $P_0$ yazımı geçer; katalog yazımı $P_{ref}$'tir, gövde geçişi Faz 5'te yapılacaktır.)*
 3. **Kepler tutarlılık denetimi** (4.2.9.1): Güneş sistemi rejiminde $v_\theta^2 = GM/r$ (Kepler) siklostrofik dengeye girdi olarak konursa $dP/dr = \rho\,GM/r^2$ çıkar. Dürüstlük gereği: bu bir *doğrulama* değil, **tutarlılık denetimidir** — Kepler girdi olduğundan $1/r^2$ çıktısı beklenen sonuçtur. Gösterdiği şey, siklostrofik dengenin Newton davranışıyla çelişmeden yaşayabildiğidir.
 4. **Gözlemle karşılaştırma — ve statüsünün dürüst kaydı.** Gözlenen galaktik dönüş eğrileri tam bu bileşik deseni çizer: içte hız $r$ ile yaklaşık doğrusal yükselir, $r_0$ civarında kırılıp düzleşir. Standart fizik iki kolu iki ayrı bileşenle (baryonik disk + karanlık madde halesi) fit etmek zorundadır; bileşik girdapta ikisi tek yapının iki bölgesidir — **kavramsal ekonomi buradadır.**
 
@@ -98,7 +98,7 @@ $$\frac{dP}{dr} = \rho\,\frac{v_0^2}{r} \;\Longrightarrow\; P(r) = P_{ref} + \rh
 
 5. **Düz kolun gerçek türetimi M-38+M-37 zinciridir.** Bu girdi Rankine profilini varsayar; ama teori düz eğriyi **türetebilir** ve o yol buradan geçmez:
 $$\underbrace{h=\text{sabit}}_{\text{M-38 Varsayım 3}}\;\Rightarrow\;\underbrace{a\propto1/R}_{\text{silindirik akı}}\;\Rightarrow\;\underbrace{v_\theta=\sqrt{R|a|}=v_0}_{\text{M-37 profil teoremi}}$$
-   Düz dönüş eğrisinin öngörü statüsü kazanması bu zincire bağlıdır; bu girdinin katkısı ise **basınç profilini** (logaritmik kuyu) ve iki kolun tek yapıda birleşmesini vermektir. Zincirin dayandığı $h=$ sabit koşulu ayrıca yanlışlanabilir bir sonuç doğurur: diskler dışa doğru kalınlaştığından ($h$ artar) dönüş eğrisi büyük $R$'de düzlükten **sapmalıdır** — $h(R)$ ile dönüş eğrisinin ortak fiti (M-38).
+   Düz dönüş eğrisinin öngörü statüsü kazanması bu zincire bağlıdır; bu girdinin katkısı ise **basınç profilini** (logaritmik kuyu) ve iki kolun tek yapıda birleşmesini vermektir. Zincirin dayandığı $h_d=$ sabit koşulu ayrıca yanlışlanabilir bir sonuç doğurur: diskler dışa doğru kalınlaştığından (enjeksiyon kalınlığı $h_{inj}(R)$ artar) dönüş eğrisi büyük $R$'de düzlükten **sapmalıdır** — $h_{inj}(R)$ ile dönüş eğrisinin ortak fiti (M-38).
 
 ### Sonuç
 $$\boxed{P(r) = \begin{cases} P_{merkez} + \tfrac{1}{2}\rho\,\omega^2 r^2\,, & r < r_0 \quad (v_\theta = \omega r) \\[4pt] P_{ref} + \rho\,v_0^2 \ln(r/r_0)\,, & r > r_0 \quad (v_\theta = v_0) \end{cases}}$$
@@ -161,7 +161,7 @@ Hubble sabiti $H_0$, mistik bir "metrik genişleme" oranı değil; Evrenakı'nı
 **Kullanıldığı bölümler:** 4.3.4–4.3.5 (ana metin), 6.5 (kanıt taksonomisi), 7.4 (açık işler).
 
 ### Varsayımlar
-1. Merceklenme, uzay-zaman eğriliği değil, kütle çevresindeki Evrenakı gradyanında hidrodinamik optik kırılmadır; yerel ışık hızı $c = \sqrt{P/\rho}$ konuma göre değişir.
+1. Merceklenme, uzay-zaman eğriliği değil, kütle çevresindeki Evrenakı gradyanında hidrodinamik optik kırılmadır; yerel ışık hızı $c_0 = \sqrt{P/\rho}$ konuma göre değişir.
 2. Kırılma bir ortam olayı olduğundan **kromatik** olmak zorundadır: farklı frekanslı Zerre katarları farklı patinaj yapar, sapma renge bağlıdır. (Standart görelilikte sapma akromatiktir; fark çift taraflı bir ayrım testidir.)
 
 ### Adımlar
@@ -197,7 +197,7 @@ Standart görelilikte bu fark tam sıfırdır; sıfırdan farklı herhangi bir k
 1. Fiber osilatör, yankı döngüsü ilkesiyle çalışır: ışığın fiberdeki uçuş süresi + elektroniğin tepki süresi, kendi kendini besleyen bir açma-kapama döngüsünün periyodunu belirler.
 2. Fiber boyu $l$ ve elektronik tepki süreleri ($t_r$, $t_f$) sabittir; frekans değişimi yalnızca fiber içi ışık hızındaki değişimi yansıtır.
 
-*(Notasyon notu — Anayasa S-15/S-16: kaynak metin 5.2.9.2'de fiber içi hız $C$, osilatör frekansı $f$ yazılıydı; katalog yazımı $c_f$ (fiber içi hız) ve $\nu_{osc}$ (osilatör frekansı)'tır.)*
+*(Notasyon notu — Ek D · S-15/S-16: kaynak metin 5.2.9.2'de fiber içi hız $C$, osilatör frekansı $f$ yazılıydı; katalog yazımı $c_f$ (fiber içi hız) ve $\nu_{osc}$ (osilatör frekansı)'tır.)*
 
 ### Adımlar
 1. **Döngü denklemi:** Bir osilasyon turunun süresi = uçuş süresi + devre tepkisi:
@@ -213,11 +213,11 @@ $$c_f = \frac{167.634.008}{0{,}93432556} \approx 1{,}794\times10^8 \text{ m/s}$$
 ### Sonuç
 $$\boxed{c_f = \frac{\nu_{osc}\, l}{1 - \nu_{osc}(t_r + t_f)} \approx 1{,}794\times10^8 \text{ m/s}}$$
 
-Deneyin amacı bu mutlak değer değil, **değişimlerin** izlenmesidir: $l$, $t_r$, $t_f$ sabitken her frekans değişimi doğrudan $c_f$ değişimidir. Düzenek çözünürlüğü $\Delta\nu \approx 1$ Hz karşılığı **33 m/s**'dir; raporlanan ~4500 m/s'lik kütle etkisi (5.2.11) bu gürültü tabanının ~136 katıdır.
+Deneyin amacı bu mutlak değer değil, **değişimlerin** izlenmesidir: $l$, $t_r$, $t_f$ sabitken her frekans değişimi doğrudan $c_f$ değişimidir. Düzenek çözünürlüğü $\Delta\nu \approx 1$ Hz karşılığı **35 m/s**'dir (payda karesi dahil tam duyarlılık; kaba $c_f/\nu_{osc}$ yaklaşımı 33 verir); raporlanan ~4500 m/s'lik kütle etkisi (5.2.11) bu gürültü tabanının ~128 katıdır.
 
 ### Geçerlilik Sınırı
 - Hesap, tüm devre gecikmesinin veri sayfası $t_r + t_f$ değerlerinden ibaret olduğunu varsayar; sistematik ek gecikmeler mutlak $c_f$ değerini kaydırır fakat *değişim* ölçümünü etkilemez.
-- **Dürüst kayıt:** Karşılık gelen etkin kırılma indisi $n = c/c_f \approx 1{,}67$, standart fiber camının $1{,}46$–$1{,}50$ aralığının **üzerindedir**. Olası nedenler: hesaba girmeyen ek elektronik gecikme (yükselteç/algılama katları) veya etkin olmayan kablo boyu. Bu fark, mutlak değerin değil değişim ölçümünün kanıt taşıdığının ayrıca gerekçesidir.
+- **Dürüst kayıt:** Karşılık gelen etkin kırılma indisi $n = c_0/c_f \approx 1{,}67$, standart fiber camının $1{,}46$–$1{,}50$ aralığının **üzerindedir**. Olası nedenler: hesaba girmeyen ek elektronik gecikme (yükselteç/algılama katları) veya etkin olmayan kablo boyu. Bu fark, mutlak değerin değil değişim ölçümünün kanıt taşıdığının ayrıca gerekçesidir.
 
 ### Açık Uçlar
 - $n \approx 1{,}67$ fazlalığının kaynak tayini: ek gecikme kalemlerinin bağımsız ölçümü (ör. kısa-fiber kalibrasyonu ile devre gecikmesinin ayrıştırılması).
@@ -229,8 +229,8 @@ Deneyin amacı bu mutlak değer değil, **değişimlerin** izlenmesidir: $l$, $t
 
 **Kullanıldığı bölümler:** Ek C (Kısım 1, Bölüm 1.3 sonu), Ek C.1 (dürüst sayım), 7.4 (sabitleme programı), bu kataloğun tüm rozetleri.
 
-Bu girdi bir türetim değil, **yönlendirme kaydıdır.** Teorinin 18 skaler + 2 profil parametresinin tam statü çizelgesi (T/S/A/F/G kodları, değerler ve her serbest parametreyi sabitleyecek gözlem) **Ek C**'dedir.
+Bu girdi bir türetim değil, **yönlendirme kaydıdır.** Teorinin 21 skaler + 2 profil satırlık tam statü çizelgesi (T/S/A/F/G kodları, değerler ve her serbest parametreyi sabitleyecek gözlem) **Ek C**'dedir.
 
 **Dürüst sayım (Ek C.1):** Gerçekten serbest kalem **5 skaler** ($\Sigma$'nın tam değeri, $n$, $\kappa_d$, $\tau$, $\delta$) **+ 2 profil fonksiyonu** ($\rho(r)$ galaktik profili, Rampa profili). *(28–29 Tem 2026: $\eta_E$ → $n$ — Ek M-43 boyutlu viskozite katsayısını boyutsuz bastırma üssüne çevirdi; **$k$ listeden çıktı** — Ek M-44 iki değişkenli hâl denklemiyle $k=0$'ı türetti; $\xi$ [S]→[T] — Ek M-40. Toplam 6 → 5.)* Karşılaştırma: Standart Model 19'dan fazla serbest parametre taşır; ΛCDM kozmolojisi bunlara 6 parametre daha ekler. Sayı azlığı avantaj *adayıdır*, kanıt değildir — avantaja dönüşmesi Ek C'nin son sütunundaki sabitleme programının yürütülmesine bağlıdır.
 
-Bu katalogdaki **[T]/[S]/[A]/[K]** rozetleri Ek C'nin statü kodlarıyla ortak dildedir. Her M-girdisinin dayandığı serbest parametreler, o girdinin kendi **Geçerlilik Sınırı / Açık Uçlar** bölümünde kayıtlıdır (bu blokta örn.: M-28 → $\alpha$ [S, Ek C satır 12]; M-30 → $v_0$, $r_0$ [F, Ek C satır P1]; M-31 → $S_{kozmik}$ [S, Ek C satır 13]; M-32 → $\chi$ [K, fenomenolojik]).
+Bu katalogdaki **[T]/[S]/[A]/[K]** rozetleri Ek C'nin statü kodlarıyla ortak dildedir. Her M-girdisinin dayandığı serbest parametreler, o girdinin kendi **Geçerlilik Sınırı / Açık Uçlar** bölümünde kayıtlıdır (bu blokta örn.: M-28 → $\alpha$ [S, Ek C satır 12]; M-30 → $\rho(r)$ profili [F, Ek C satır P1] — $r_0$ artık **türetilmiştir** [T, Ek C satır 21, M-38], $v_0$ genlik çapası [A]; M-31 → $S_{kozmik}$ [S, Ek C satır 13]; M-32 → $\chi$ [K, fenomenolojik]).

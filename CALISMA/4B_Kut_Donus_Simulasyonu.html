@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kut Kümelerinin 4B Dönüşü — 3B İzdüşüm Simülasyonu</title>
+<style>
+  :root{
+    --bg:#0b0f19; --panel:#111726; --line:#1f2937; --edge:rgba(0,240,255,0.20);
+    --cyan:#00e5ff; --orange:#ffb020; --grey:#8892b0; --light:#cbd5e1; --white:#f3f4f6;
+    --ok:#34d399; --bad:#f87171;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%;margin:0}
+  body{
+    background:var(--bg); color:var(--light);
+    font-family:"Segoe UI",Roboto,system-ui,sans-serif; font-size:13px;
+    overflow-y:hidden; overflow-x:auto;   /* dar pencerede sütunlar çökmesin, kaydırılsın */
+  }
+  /* Orta sütuna taban genişlik: aksi hâlde dar panelde tuval 0 piksele iner. */
+  #wrap{display:grid; grid-template-columns:296px minmax(380px,1fr) 330px;
+        height:100vh; gap:0; min-width:1010px}
+  .col{overflow-y:auto; overflow-x:hidden}
+  .col::-webkit-scrollbar{width:8px}
+  .col::-webkit-scrollbar-thumb{background:#243044;border-radius:4px}
+  #left,#right{background:var(--panel); padding:12px 13px 40px}
+  #left{border-right:1px solid var(--line)}
+  #right{border-left:1px solid var(--line)}
+  #center{position:relative; background:var(--bg)}
+  canvas#view{display:block; width:100%; height:100%}
+  h1{font-size:14px;color:var(--white);margin:0 0 2px;letter-spacing:.2px}
+  .sub{font-size:10.5px;color:var(--grey);margin:0 0 12px;line-height:1.45}
+  h2{font-size:11px;color:var(--cyan);text-transform:uppercase;letter-spacing:.9px;
+     margin:16px 0 8px;padding-bottom:5px;border-bottom:1px solid var(--line)}
+  h2:first-of-type{margin-top:6px}
+  label{display:block;font-size:11px;color:var(--grey);margin:9px 0 3px}
+  .val{color:var(--cyan);font-family:Consolas,monospace}
+  select,input[type=number]{
+    width:100%;background:#0c1220;color:var(--light);border:1px solid #26324a;
+    border-radius:5px;padding:5px 7px;font-size:12px;font-family:inherit}
+  input[type=range]{width:100%;margin:2px 0;accent-color:var(--cyan);height:16px}
+  .row{display:flex;gap:6px;align-items:center}
+  .row>*{flex:1}
+  button{
+    background:#182338;color:var(--light);border:1px solid #2b3a55;border-radius:5px;
+    padding:6px 8px;font-size:11.5px;cursor:pointer;font-family:inherit}
+  button:hover{background:#1f2c46;border-color:var(--cyan);color:var(--white)}
+  button.on{background:#0e3a44;border-color:var(--cyan);color:var(--cyan)}
+  .chk{display:flex;align-items:center;gap:7px;margin:7px 0;font-size:11.5px;color:var(--light);cursor:pointer}
+  .chk input{accent-color:var(--cyan);width:14px;height:14px;margin:0;cursor:pointer}
+  .note{font-size:10.5px;color:var(--grey);line-height:1.5;margin:7px 0;
+        border-left:2px solid #2b3a55;padding:2px 0 2px 8px}
+  .warn{border-left-color:var(--orange);color:#d3bb96}
+  table.kv{width:100%;border-collapse:collapse;font-size:11px;font-family:Consolas,monospace}
+  table.kv td{padding:3px 2px;border-bottom:1px solid #1a2233}
+  table.kv td:last-child{text-align:right;color:var(--white)}
+  .trace{width:100%;height:76px;display:block;background:#0c1220;border:1px solid #1e2940;border-radius:5px}
+  .tl{font-size:10px;color:var(--grey);margin:9px 0 3px;display:flex;justify-content:space-between}
+  #tests{font-size:10.5px;font-family:Consolas,monospace;line-height:1.55}
+  #tests div{display:flex;justify-content:space-between;gap:8px;padding:2px 0;border-bottom:1px solid #161e2e}
+  #tests span.s{flex:0 0 auto;font-weight:bold}
+  .pass{color:var(--ok)} .fail{color:var(--bad)}
+  #banner{padding:6px 8px;border-radius:5px;font-size:11px;margin-bottom:8px;text-align:center;font-weight:600}
+  #legend{position:absolute;left:14px;bottom:12px;font-size:10.5px;color:var(--grey);
+          background:rgba(11,15,25,.82);border:1px solid var(--line);border-radius:6px;padding:8px 10px;line-height:1.6}
+  #hud{position:absolute;right:14px;top:12px;font-size:10.5px;color:var(--grey);
+       background:rgba(11,15,25,.82);border:1px solid var(--line);border-radius:6px;padding:8px 10px;
+       font-family:Consolas,monospace;line-height:1.6;text-align:right}
+  .sw{display:inline-block;width:9px;height:9px;border-radius:2px;vertical-align:-1px;margin-right:5px}
+  code{font-family:Consolas,monospace;color:#9fe8f5;font-size:10.5px}
+  .eq{font-family:Consolas,monospace;font-size:10.5px;color:#9fe8f5;
+      background:#0c1220;border:1px solid #1e2940;border-radius:4px;padding:5px 7px;margin:5px 0;line-height:1.6;
+      overflow-x:auto;white-space:nowrap}
+</style>
+</head>
+<body>
+<div id="wrap">
+
+  <!-- ================= SOL: DENETİMLER ================= -->
+  <div id="left" class="col">
+    <h1>Kut Kümelerinin 4B Dönüşü</h1>
+    <p class="sub">Bir Kut kümesinin dört boyutlu dönüşünün, üç boyutlu uzayımıza
+    (<code>w = 0</code>) düşen izinin birebir kinematik hesabı. Kısım 1.4'ün epür
+    analizinin sayısal karşılığı.</p>
+
+    <h2>Gözlem modeli</h2>
+    <select id="model">
+      <option value="kesit">KESİT — uzayımız w=0 hiperdüzlemi</option>
+      <option value="golge">GÖLGE — w ekseni boyunca dik izdüşüm</option>
+    </select>
+    <p class="note" id="modelNote"></p>
+
+    <label>Kut'un 4B kalınlığı ε = <span class="val" id="epsV"></span></label>
+    <input type="range" id="eps" min="0.01" max="0.60" step="0.005" value="0.16">
+    <p class="note">KESİT modelinde her Kut, ε yarıçaplı bir 4-toptur. Uzayımızdaki
+    görünür yarıçapı <code>√(ε²−w²)</code>'dir; <code>|w|&gt;ε</code> olduğunda Kut
+    uzayımızdan <b>tamamen çıkar</b>. GÖLGE modelinde ε yalnız çizim boyutudur.</p>
+
+    <h2>Dönüş düzlemleri</h2>
+    <select id="pair">
+      <option value="0">XY + ZW  (kanonik çift dönüş, 1.4.7)</option>
+      <option value="1">XZ + YW</option>
+      <option value="2">YZ + XW  (saf W dönüşü için)</option>
+    </select>
+    <p class="note" id="pairNote"></p>
+
+    <label>ω₁ — 3B-içi düzlem = <span class="val" id="w1V"></span> tur/s</label>
+    <input type="range" id="w1" min="-1.2" max="1.2" step="0.01" value="0.25">
+    <label>ω₂ — W'li düzlem = <span class="val" id="w2V"></span> tur/s</label>
+    <input type="range" id="w2" min="-1.2" max="1.2" step="0.01" value="0.15">
+    <label class="chk"><input type="checkbox" id="iso">
+      <span>İzoklin kilit (ω₂ = ω₁) — nükleon hâli, 1.4.12</span></label>
+    <p class="note">İzoklin dönüş <b>her</b> vektörü aynı açıyla döndürür — sınanan ve
+    doğrulanan tanımlayıcı özellik budur. 1.4.12'ye göre nükleonda eş-güç kilidi
+    <code>ω₂=ω₁</code>'i dayatır. <b>Ama dikkat:</b> izoklinlik tek başına eksen
+    hareketini sıfırlamaz; onu sıfırlayan şey <code>δ=0</code>'dır (sağdaki tanıya
+    bak). Kitabın 1.4.7 kutusu da ölçütü δ üzerinden kurar; iki koşul karıştırılmamalıdır.</p>
+
+    <h2>Faz</h2>
+    <div class="row">
+      <button id="play">⏸ Duraklat</button>
+      <button id="reset">↺ Sıfırla</button>
+    </div>
+    <label class="chk"><input type="checkbox" id="manual">
+      <span>Manuel faz (zamanı durdur, φ'yi elle sür)</span></label>
+    <label>φ₂ (W düzlemi fazı) = <span class="val" id="phV"></span></label>
+    <input type="range" id="ph" min="0" max="360" step="0.25" value="0" disabled>
+
+    <h2>Kut kümesi</h2>
+    <label>Yapı</label>
+    <select id="kind">
+      <option value="bulut4b">Rastgele 4B bulut (4-top içinde düzgün)</option>
+      <option value="kabuk">3-küre kabuğu (S³ üzerinde düzgün)</option>
+      <option value="yassi">Yassı gövde (w = 0) — kitabın klasik durumu</option>
+      <option value="ikikume">İki küme — W'de ayrık (birleşme)</option>
+      <option value="girdap">Girdap halkası (XY torusu)</option>
+    </select>
+    <label>Kut sayısı N = <span class="val" id="nV"></span></label>
+    <input type="range" id="n" min="4" max="600" step="1" value="220">
+    <label>Küme yarıçapı R = <span class="val" id="RV"></span></label>
+    <input type="range" id="R" min="0.5" max="2.5" step="0.02" value="1.4">
+    <label>İki küme ayrımı (yalnız "İki küme") = <span class="val" id="sepV"></span>·R</label>
+    <input type="range" id="sep" min="0" max="1.5" step="0.01" value="0.7">
+    <label>Tohum (yeniden üretilebilirlik)</label>
+    <div class="row">
+      <input type="number" id="seed" value="20260811" step="1">
+      <button id="reseed">Yeni</button>
+    </div>
+    <p class="note warn"><b>Sayısal bulgu.</b> 4B'de <b>izotrop</b> yapılar (4-top
+    bulutu, S³ kabuğu) <b>hiç pulsasyon vermez</b> — gölgeleri her fazda aynıdır
+    (20 000 Kut'ta sapma binde birkaç, örneklem gürültüsü). Boyutsal salınım
+    dördüncü boyutun kendisinden değil, gövdenin <b>3B ↔ W bölünmesindeki
+    anizotropisinden</b> doğar. Yassı gövde tam yassılır (φ=90°'de uzanım 0),
+    W'de ayrık iki küme ise tersine <b>açılır</b>.</p>
+
+    <h2>W asimetrisi</h2>
+    <label>δ = D<sub>XW</sub>/D<sub>XX</sub> = <span class="val" id="dlV"></span></label>
+    <input type="range" id="dl" min="-0.6" max="0.6" step="0.002" value="0">
+    <p class="note">Kümeye <code>w ← w + δ·x</code> uygulanır. Bu, moment matrisinde
+    tam olarak <code>D<sub>XW</sub> = δ·D<sub>XX</sub></code> üretir (sağdaki ölçülen
+    değere bak). Oe-5 ölçütünün (1.4.7) niceliği budur: δ=0 ise gövdenin W dağılımı
+    simetriktir.</p>
+    <p class="note warn"><b>Kapsam kaydı:</b> bu sayfa <b>dayatılmış kinematiktir</b> —
+    dönüş verilir, izdüşümü hesaplanır. Serbest 4B cisim <b>dinamiği</b> (so(4)
+    Euler–Arnold) ve ondan çıkan <code>θ = 0,1806·δ</code> yasası burada
+    <b>koşulmamaktadır</b>. δ burada bir yapılandırma tanısıdır, bir hareket öngörüsü
+    değil.</p>
+
+    <h2>Kiral işaretçi</h2>
+    <label class="chk"><input type="checkbox" id="mk" checked>
+      <span>Sağ-el üçyüzlüsünü göster (ayna-terslenme ölçümü)</span></label>
+    <label>İşaretçi boyu L = <span class="val" id="mlV"></span></label>
+    <input type="range" id="ml" min="0.3" max="2.2" step="0.02" value="1.1">
+    <label>İşaretçinin W kalınlığı = <span class="val" id="mwV"></span></label>
+    <input type="range" id="mw" min="0" max="1.0" step="0.005" value="0">
+    <p class="note">İşaretlenmiş dört noktanın <b>işaretli hacmi</b>
+    <code>V = ⅙·det[b−a, c−a, d−a]</code> bir sözde-skalerdir: yansımada işaret
+    değiştirir. Ayna-terslenme imzasının ölçülebilir hâli budur.</p>
+
+    <h2>Görünüm</h2>
+    <label class="chk"><input type="checkbox" id="axes" checked><span>Eksen üçlüsü</span></label>
+    <label class="chk"><input type="checkbox" id="epur" checked><span>4B epür kadranı</span></label>
+    <label class="chk"><input type="checkbox" id="ghost"><span>KESİT'te uzayımız dışındaki Kutları soluk göster</span></label>
+    <label class="chk"><input type="checkbox" id="spin" checked><span>Kamera yavaş dönsün</span></label>
+    <label>Uzaklık = <span class="val" id="dV"></span></label>
+    <input type="range" id="dist" min="3" max="18" step="0.1" value="7.5">
+  </div>
+
+  <!-- ================= ORTA: GÖRÜNÜM ================= -->
+  <div id="center">
+    <canvas id="view"></canvas>
+    <div id="hud"></div>
+    <div id="legend">
+      <b style="color:var(--white)">Renk = dördüncü koordinat w</b><br>
+      <span class="sw" style="background:#00e5ff"></span>w &lt; 0 &nbsp;
+      <span class="sw" style="background:#e8f4f8"></span>w ≈ 0 &nbsp;
+      <span class="sw" style="background:#ffb020"></span>w &gt; 0<br>
+      <span style="color:#5b6a86">Sürükle: döndür &nbsp;·&nbsp; Tekerlek: yakınlaş</span>
+    </div>
+  </div>
+
+  <!-- ================= SAĞ: TANI ================= -->
+  <div id="right" class="col">
+    <div id="banner"></div>
+
+    <h2>Anlık ölçümler</h2>
+    <table class="kv">
+      <tr><td>Faz φ₁ (3B düzlem)</td><td id="m_ph1">—</td></tr>
+      <tr><td>Faz φ₂ (W düzlem)</td><td id="m_ph2">—</td></tr>
+      <tr><td>Uzayımızdaki Kut</td><td id="m_vis">—</td></tr>
+      <tr><td>Görünür X uzanımı</td><td id="m_ex">—</td></tr>
+      <tr><td>Görünür Y uzanımı</td><td id="m_ey">—</td></tr>
+      <tr><td>Görünür Z uzanımı</td><td id="m_ez">—</td></tr>
+      <tr><td>Kirallik V/V₀</td><td id="m_chi">—</td></tr>
+      <tr><td>Elcilik</td><td id="m_hand">—</td></tr>
+    </table>
+
+    <h2>Küme tanısı (gövde çerçevesi)</h2>
+    <table class="kv">
+      <tr><td>ölçülen δ = D<sub>XW</sub>/D<sub>XX</sub></td><td id="m_dl">—</td></tr>
+      <tr><td>D<sub>WW</sub>/D<sub>XX</sub> (W uzanımı)</td><td id="m_dw">—</td></tr>
+      <tr><td>Dönüş izoklin mi?</td><td id="m_iso">—</td></tr>
+      <tr><td>Her vektörün dönme açısı</td><td id="m_ang">—</td></tr>
+      <tr><td>Eksen hareketini belirleyen</td><td id="m_axc">—</td></tr>
+    </table>
+    <p class="note warn"><b>Sayısal olarak sınandı:</b> görünür eksenin oynayıp
+    oynamadığını <b>izoklinlik belirlemez, δ belirler.</b> Basık bir gövdede
+    δ=0 iken izoklin olsun olmasın eksen kıpırdamaz (kalan &lt;0,5° sonlu-N
+    gürültüsüdür); δ≠0 iken izoklin olsa bile oynar ve sapma δ ile
+    <b>doğrusaldır</b>. İki koşul bağımsızdır.</p>
+
+    <div class="tl"><span>KİRALLİK V(φ₂)/V₀</span><span id="tl_chi">yassı gövdede = cos φ₂</span></div>
+    <canvas class="trace" id="tr_chi"></canvas>
+
+    <div class="tl"><span>GÖRÜNÜR X UZANIMI</span><span>boyutsal salınım</span></div>
+    <canvas class="trace" id="tr_ext"></canvas>
+
+    <div class="tl"><span>UZAYIMIZDAKİ KUT SAYISI</span><span>yalnız KESİT modelinde</span></div>
+    <canvas class="trace" id="tr_vis"></canvas>
+
+    <h2>Kullanılan hesap</h2>
+    <div class="eq">R = R<sub>3B</sub>(φ₁) · R<sub>W</sub>(φ₂),&nbsp; p′ = R·p</div>
+    <div class="eq">KESİT: görünür ⟺ |p′<sub>w</sub>| &lt; ε,&nbsp; r = √(ε²−p′<sub>w</sub>²)</div>
+    <div class="eq">GÖLGE: her zaman görünür,&nbsp; konum = (p′<sub>x</sub>,p′<sub>y</sub>,p′<sub>z</sub>)</div>
+    <div class="eq">V = ⅙·det[b−a, c−a, d−a]&nbsp; (sözde-skaler)</div>
+    <div class="eq">D<sub>ij</sub> = Σ<sub>k</sub> m<sub>k</sub> p<sub>ki</sub> p<sub>kj</sub></div>
+
+    <h2>Öz-sınama <span id="testsum" style="float:right"></span></h2>
+    <div id="tests"></div>
+    <p class="note">Sınamalar sayfa yüklendiğinde koşar ve simülasyonun kullandığı
+    <b>aynı</b> fonksiyonları çağırır. Bir satır bile FAIL ise ekrandaki hiçbir
+    sonuca güvenilmemelidir.</p>
+  </div>
+</div>
+
+<script>
+'use strict';
+
+/* ============================================================================
+   ÇEKİRDEK — saf matematik, DOM'a hiç dokunmaz.
+   Bu blok Python'da bağımsız olarak yeniden uygulanıp çapraz doğrulanmıştır.
+   ============================================================================ */
+/* ===== CORE-BEGIN ===== */
+
+/* ---------- Belirlenimci rastgelelik (yeniden üretilebilirlik için) -------- */
+function mulberry32(a){
+  return function(){
+    a |= 0; a = (a + 0x6D2B79F5) | 0;
+    let t = Math.imul(a ^ (a >>> 15), 1 | a);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+function gauss(rnd){
+  let u = 0, v = 0;
+  while (u === 0) u = rnd();
+  while (v === 0) v = rnd();
+  return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * v);
+}
+
+/* ---------- 4B doğrusal cebir --------------------------------------------- */
+const X = 0, Y = 1, Z = 2, W = 3;
+
+function eye4(){
+  return [[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]];
+}
+/* (i,j) düzleminde θ açılı Givens dönüşü. i ekseni j eksenine doğru döner. */
+function rotPlane(i, j, th){
+  const M = eye4(), c = Math.cos(th), s = Math.sin(th);
+  M[i][i] =  c;  M[i][j] = -s;
+  M[j][i] =  s;  M[j][j] =  c;
+  return M;
+}
+function mul4(A, B){
+  const C = [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]];
+  for (let i = 0; i < 4; i++)
+    for (let j = 0; j < 4; j++){
+      let s = 0;
+      for (let k = 0; k < 4; k++) s += A[i][k] * B[k][j];
+      C[i][j] = s;
+    }
+  return C;
+}
+function apply4(M, v){
+  const o = [0,0,0,0];
+  for (let i = 0; i < 4; i++){
+    let s = 0;
+    for (let k = 0; k < 4; k++) s += M[i][k] * v[k];
+    o[i] = s;
+  }
+  return o;
+}
+function transp4(A){
+  const T = [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]];
+  for (let i = 0; i < 4; i++) for (let j = 0; j < 4; j++) T[i][j] = A[j][i];
+  return T;
+}
+function det3(m){
+  return m[0][0]*(m[1][1]*m[2][2] - m[1][2]*m[2][1])
+       - m[0][1]*(m[1][0]*m[2][2] - m[1][2]*m[2][0])
+       + m[0][2]*(m[1][0]*m[2][1] - m[1][1]*m[2][0]);
+}
+function minor3(A, ri, ci){
+  const m = [];
+  for (let i = 0; i < 4; i++){
+    if (i === ri) continue;
+    const row = [];
+    for (let j = 0; j < 4; j++){ if (j === ci) continue; row.push(A[i][j]); }
+    m.push(row);
+  }
+  return m;
+}
+function det4(A){
+  let d = 0;
+  for (let j = 0; j < 4; j++) d += ((j % 2 === 0) ? 1 : -1) * A[0][j] * det3(minor3(A, 0, j));
+  return d;
+}
+
+/* ---------- Dönüş düzlemi çiftleri ----------------------------------------
+   SO(4)'te bir çift dönüş, birbirine TAMAMEN DİK iki düzlemde gerçekleşir.
+   Dört eksenle tam üç böyle çift kurulabilir (kitap 1.4.3'ün tablosu).
+   Her çiftte ilk düzlem uzayımızın içindedir (ω₁), ikincisi W'yi içerir (ω₂).
+   Tamamen dik düzlemlerdeki dönüşler ayrık koordinat çiftlerine dokunduğu
+   için DEĞİŞMELİDİR (T6 bunu sınar); dolayısıyla çarpım sırası önemsizdir. */
+const PAIRS = [
+  { p3:[X,Y], pw:[Z,W], l3:'XY', lw:'ZW',
+    not:'Kanonik çift dönüş. XY bize normal dönüş olarak görünür; ZW ise Z doğrultusunu modüle eder.' },
+  { p3:[X,Z], pw:[Y,W], l3:'XZ', lw:'YW',
+    not:'Görünür dönüş Y ekseni etrafındadır; W bileşeni Y doğrultusunu modüle eder.' },
+  { p3:[Y,Z], pw:[X,W], l3:'YZ', lw:'XW',
+    not:'Kitabın B durumu. ω₁=0 yapılırsa geriye SAF W dönüşü kalır: X doğrultusunda boyutsal salınım ve ayna-terslenme.' }
+];
+function buildR(pi, ph3, phw){
+  const P = PAIRS[pi];
+  return mul4(rotPlane(P.p3[0], P.p3[1], ph3), rotPlane(P.pw[0], P.pw[1], phw));
+}
+
+/* ---------- Kut kümeleri ---------------------------------------------------
+   Her yapı gövde çerçevesinde bir kez üretilir; dönüş sonradan uygulanır.  */
+function dir4(rnd){
+  const a = gauss(rnd), b = gauss(rnd), c = gauss(rnd), d = gauss(rnd);
+  const n = Math.hypot(a, b, c, d) || 1;
+  return [a/n, b/n, c/n, d/n];
+}
+function makeCluster(kind, N, R, seed, delta, sep){
+  const rnd = mulberry32(seed >>> 0);
+  const pts = [];
+  for (let k = 0; k < N; k++){
+    let p;
+    if (kind === 'bulut4b'){
+      /* 4-top içinde DÜZGÜN: yarıçap u^(1/4) ile ölçeklenmelidir (4B hacim ∝ r⁴) */
+      const u = dir4(rnd), r = R * Math.pow(rnd(), 0.25);
+      p = [u[0]*r, u[1]*r, u[2]*r, u[3]*r];
+    } else if (kind === 'kabuk'){
+      const u = dir4(rnd);
+      p = [u[0]*R, u[1]*R, u[2]*R, u[3]*R];
+    } else if (kind === 'yassi'){
+      /* 3-top içinde düzgün, w = 0 : uzayımızın içinde yatan gövde */
+      const a = gauss(rnd), b = gauss(rnd), c = gauss(rnd);
+      const n = Math.hypot(a, b, c) || 1, r = R * Math.cbrt(rnd());
+      p = [a/n*r, b/n*r, c/n*r, 0];
+    } else if (kind === 'ikikume'){
+      const u = dir4(rnd), r = (R * 0.42) * Math.pow(rnd(), 0.25);
+      const s = (k % 2 === 0) ? 1 : -1;
+      p = [u[0]*r, u[1]*r, u[2]*r, u[3]*r + s * sep * R];
+    } else { /* girdap: XY düzleminde torus */
+      const th = 2*Math.PI*rnd(), ph = 2*Math.PI*rnd(), a = R * 0.28;
+      const rr = R + a * Math.cos(ph);
+      p = [rr*Math.cos(th), rr*Math.sin(th), a*Math.sin(ph), 0];
+    }
+    pts.push({ p: p, m: 1 });
+  }
+  /* W asimetrisi: w ← w + δ·x  ⟹  D_XW = D_XW⁰ + δ·D_XX
+     w⁰=0 olan yapılarda (yassı, girdap) ölçülen δ tam olarak slider değeridir. */
+  if (delta !== 0) for (const q of pts) q.p[3] += delta * q.p[0];
+  return pts;
+}
+
+/* ---------- Kiral işaretçi -------------------------------------------------
+   Sağ-el yönelimli dört nokta. İşaretli hacmi V₀ = L³/6 > 0.              */
+function makeMarker(L, wsp){
+  return [
+    [0, 0, 0, 0   ],
+    [L, 0, 0, wsp ],
+    [0, L, 0, 0   ],
+    [0, 0, L, 0   ]
+  ];
+}
+/* İşaretli hacim — sözde-skaler: yansımada işaret değiştirir. */
+function signedVol(a, b, c, d){
+  const u = [b[0]-a[0], b[1]-a[1], b[2]-a[2]];
+  const v = [c[0]-a[0], c[1]-a[1], c[2]-a[2]];
+  const w = [d[0]-a[0], d[1]-a[1], d[2]-a[2]];
+  return ( u[0]*(v[1]*w[2] - v[2]*w[1])
+         - u[1]*(v[0]*w[2] - v[2]*w[0])
+         + u[2]*(v[0]*w[1] - v[1]*w[0]) ) / 6;
+}
+
+/* ---------- Moment matrisi ------------------------------------------------- */
+function momentMatrix(pts){
+  const D = [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]];
+  for (const q of pts)
+    for (let i = 0; i < 4; i++)
+      for (let j = 0; j < 4; j++) D[i][j] += q.m * q.p[i] * q.p[j];
+  return D;
+}
+
+/* ---------- Gözlem modelleri ----------------------------------------------
+   KESİT : uzayımız w=0 hiperdüzlemi. Kut, ε yarıçaplı bir 4-toptur; kesiti
+           √(ε²−w²) yarıçaplı bir 3B küredir, |w|≥ε ise BOŞTUR.
+   GÖLGE : w ekseni boyunca dik izdüşüm; w atılır, her Kut daima görünür.   */
+function observe(p4, model, eps){
+  if (model === 'golge') return { vis: true, r: eps, pos: [p4[0], p4[1], p4[2]], w: p4[3] };
+  const aw = Math.abs(p4[3]);
+  if (aw >= eps) return { vis: false, r: 0, pos: [p4[0], p4[1], p4[2]], w: p4[3] };
+  return { vis: true, r: Math.sqrt(eps*eps - p4[3]*p4[3]), pos: [p4[0], p4[1], p4[2]], w: p4[3] };
+}
+
+/* ---------- ÖZ-SINAMALAR ---------------------------------------------------
+   Hepsi yukarıdaki fonksiyonların ta kendisini çağırır.                    */
+function selfTests(){
+  const T = [];
+  const add = (n, ok, e) => T.push({ n: n, ok: ok, e: e });
+  const TOL = 1e-11;
+
+  /* T1–T2: R gerçekten SO(4) üyesi mi? */
+  let mo = 0, md = 0;
+  for (let pi = 0; pi < 3; pi++)
+    for (let s = 0; s < 12; s++){
+      const R = buildR(pi, 0.7137*s + 0.1301, -1.9021*s + 0.4409);
+      const I = mul4(transp4(R), R);
+      for (let i = 0; i < 4; i++)
+        for (let j = 0; j < 4; j++) mo = Math.max(mo, Math.abs(I[i][j] - (i === j ? 1 : 0)));
+      md = Math.max(md, Math.abs(det4(R) - 1));
+    }
+  add('RᵀR = I  (ortogonal)', mo < TOL, mo);
+  add('det R = +1  (düzgün dönüş)', md < TOL, md);
+
+  /* T3: XW yarım turu 3B kesitte AYNALAMA verir: (x,y,z,0) → (−x,y,z,0) */
+  const v3 = apply4(rotPlane(X, W, Math.PI), [1.37, -2.41, 0.93, 0]);
+  const e3 = Math.max(Math.abs(v3[0] + 1.37), Math.abs(v3[1] + 2.41),
+                      Math.abs(v3[2] - 0.93), Math.abs(v3[3]));
+  add('XW yarım tur ⟹ x → −x  (ayna)', e3 < TOL, e3);
+
+  /* T4: aynalanan 3B dönüşümün determinantı −1'dir (O(3)∖SO(3)) —
+         yani 4B'de DÜZGÜN olan hareket, 3B'de DÜZGÜN DEĞİLDİR. */
+  const Rp = rotPlane(X, W, Math.PI);
+  const sub3 = [[Rp[0][0],Rp[0][1],Rp[0][2]],
+                [Rp[1][0],Rp[1][1],Rp[1][2]],
+                [Rp[2][0],Rp[2][1],Rp[2][2]]];
+  const e4 = Math.abs(det3(sub3) + 1);
+  add('3B blok determinantı = −1', e4 < TOL, e4);
+
+  /* T5: kirallik yasası — yassı (w=0) işaretçide V(φ₂) = V₀·cos φ₂.
+         Üç düzlem çiftinin HEPSİNDE ve φ₁'den BAĞIMSIZ olarak geçerlidir:
+         3B-içi dönüş düzgündür (det +1), işaretli hacmi korur; W'li dönüş ise
+         bir 3B eksenini cos φ₂ ile ölçekler ve determinantı o çarpanla çarpar. */
+  const M0 = makeMarker(1, 0);
+  const V0 = signedVol(M0[0], M0[1], M0[2], M0[3]);
+  let e5 = 0;
+  for (let pi = 0; pi < 3; pi++)
+    for (let s = 0; s <= 48; s++)
+      for (const ph1 of [0, 0.83, 2.7]){
+        const phi = 2*Math.PI*s/48;
+        const q = M0.map(p => apply4(buildR(pi, ph1, phi), p));
+        const V = signedVol(q[0], q[1], q[2], q[3]);
+        e5 = Math.max(e5, Math.abs(V - V0*Math.cos(phi)));
+      }
+  add('V(φ₂) = V₀·cos φ₂  (yassı gövde, 3 çift)', e5 < TOL, e5);
+
+  /* T6: tamamen dik düzlem dönüşleri değişmelidir */
+  let e6 = 0;
+  for (let pi = 0; pi < 3; pi++){
+    const P = PAIRS[pi];
+    const A = rotPlane(P.p3[0], P.p3[1], 0.813), B = rotPlane(P.pw[0], P.pw[1], -1.447);
+    const AB = mul4(A, B), BA = mul4(B, A);
+    for (let i = 0; i < 4; i++) for (let j = 0; j < 4; j++) e6 = Math.max(e6, Math.abs(AB[i][j] - BA[i][j]));
+  }
+  add('R₃(φ₁)·R_W(φ₂) = R_W(φ₂)·R₃(φ₁)', e6 < TOL, e6);
+
+  /* T7: KESİT kapalı biçimi. Bir nokta w = −x·tanφ ise XW dönüşünden sonra
+         tam olarak w′=0'a düşer ve 3B konumu x/cosφ olur. */
+  const xs = 0.73, phi7 = 0.9;
+  const p7 = apply4(rotPlane(X, W, phi7), [xs, 0.4, -0.2, -xs*Math.tan(phi7)]);
+  const e7 = Math.max(Math.abs(p7[3]), Math.abs(p7[0] - xs/Math.cos(phi7)));
+  add('kesit kapalı biçimi:  X = x/cos φ', e7 < TOL, e7);
+
+  /* T8: izoklin dönüş HER vektörü aynı açıyla döndürür (tanımlayıcı özellik) */
+  const Riso = buildR(0, 1.234, 1.234);
+  const rr = mulberry32(7);
+  let amin = Infinity, amax = -Infinity;
+  for (let s = 0; s < 300; s++){
+    const u = dir4(rr), q = apply4(Riso, u);
+    let d = 0; for (let i = 0; i < 4; i++) d += u[i]*q[i];
+    const a = Math.acos(Math.max(-1, Math.min(1, d)));
+    amin = Math.min(amin, a); amax = Math.max(amax, a);
+  }
+  const e8 = amax - amin;
+  add('izoklin ⟹ tüm vektörler eş açı', e8 < 1e-9, e8);
+
+  /* T9: NEGATİF DENETİM — izoklin olmayanda açı sabit OLMAMALIDIR */
+  const Rn = buildR(0, 1.234, 0.400);
+  const rr2 = mulberry32(7);
+  let bmin = Infinity, bmax = -Infinity;
+  for (let s = 0; s < 300; s++){
+    const u = dir4(rr2), q = apply4(Rn, u);
+    let d = 0; for (let i = 0; i < 4; i++) d += u[i]*q[i];
+    const a = Math.acos(Math.max(-1, Math.min(1, d)));
+    bmin = Math.min(bmin, a); bmax = Math.max(bmax, a);
+  }
+  const e9 = bmax - bmin;
+  add('negatif denetim: izoklin değil ⟹ açı yayılır', e9 > 0.1, e9);
+
+  /* T10: δ denetimi — w⁰=0 yapıda ölçülen D_XW/D_XX slider değerine eşittir */
+  const cl = makeCluster('yassi', 400, 1.4, 12345, 0.137, 0);
+  const D = momentMatrix(cl);
+  const e10 = Math.abs(D[X][W]/D[X][X] - 0.137);
+  add('ölçülen δ = dayatılan δ', e10 < 1e-12, e10);
+
+  /* T11: iki gözlem modeli φ=0 ve φ=π'de AYNI 3B konumları vermelidir */
+  let e11 = 0;
+  for (const phi of [0, Math.PI]){
+    const Rr = rotPlane(X, W, phi);
+    for (const p of M0){
+      const q = apply4(Rr, p);
+      const a = observe(q, 'kesit', 0.5), b = observe(q, 'golge', 0.5);
+      for (let i = 0; i < 3; i++) e11 = Math.max(e11, Math.abs(a.pos[i] - b.pos[i]));
+    }
+  }
+  add('φ=0 ve φ=π: kesit ≡ gölge', e11 < TOL, e11);
+
+  /* T12: KESİT'te 4-top kesit yarıçapı doğru mu?  r² + w² = ε² */
+  let e12 = 0;
+  for (let s = 0; s < 40; s++){
+    const w = -0.4 + 0.02*s, o = observe([0,0,0,w], 'kesit', 0.5);
+    if (o.vis) e12 = Math.max(e12, Math.abs(o.r*o.r + w*w - 0.25));
+  }
+  add('kesit yarıçapı:  r² + w² = ε²', e12 < TOL, e12);
+
+  return T;
+}
+/* ===== CORE-END ===== */
+
+
+/* ============================================================================
+   ARAYÜZ + ÇİZİM
+   ============================================================================ */
+const $ = id => document.getElementById(id);
+const cv = $('view'), ctx = cv.getContext('2d');
+
+const S = {
+  ph1: 0, ph2: 0, t: 0, playing: true,
+  cam: { az: 0.75, el: 0.42, d: 7.5 },
+  cluster: [], D: null, V0: 1,
+  trChi: new Float64Array(360).fill(NaN),
+  trExt: new Float64Array(360).fill(NaN),
+  trVis: new Float64Array(360).fill(NaN)
+};
+
+function clearTraces(){
+  S.trChi.fill(NaN); S.trExt.fill(NaN); S.trVis.fill(NaN);
+}
+
+/* ---------- Küme yeniden kurulumu ----------------------------------------- */
+function rebuild(){
+  S.cluster = makeCluster($('kind').value, +$('n').value, +$('R').value,
+                          +$('seed').value | 0, +$('dl').value, +$('sep').value);
+  S.D = momentMatrix(S.cluster);
+  const M = makeMarker(+$('ml').value, +$('mw').value);
+  S.V0 = signedVol(M[0], M[1], M[2], M[3]);
+  clearTraces();
+  paintDiag();
+}
+
+/* ---------- Kamera --------------------------------------------------------- */
+function camBasis(){
+  const ce = Math.cos(S.cam.el), se = Math.sin(S.cam.el);
+  const ca = Math.cos(S.cam.az), sa = Math.sin(S.cam.az);
+  const eye = [S.cam.d*ce*ca, S.cam.d*ce*sa, S.cam.d*se];
+  const f = [-ce*ca, -ce*sa, -se];                       /* birim ileri vektör */
+  let r = [f[1]*1 - f[2]*0, f[2]*0 - f[0]*1, f[0]*0 - f[1]*0];  /* f × (0,0,1) */
+  const rn = Math.hypot(r[0], r[1], r[2]) || 1;
+  r = [r[0]/rn, r[1]/rn, r[2]/rn];
+  const u = [r[1]*f[2] - r[2]*f[1], r[2]*f[0] - r[0]*f[2], r[0]*f[1] - r[1]*f[0]];
+  return { eye: eye, f: f, r: r, u: u };
+}
+function proj(p, B, foc, cx, cy){
+  const dx = p[0]-B.eye[0], dy = p[1]-B.eye[1], dz = p[2]-B.eye[2];
+  const vz = dx*B.f[0] + dy*B.f[1] + dz*B.f[2];
+  if (vz < 0.08) return null;
+  const vx = dx*B.r[0] + dy*B.r[1] + dz*B.r[2];
+  const vy = dx*B.u[0] + dy*B.u[1] + dz*B.u[2];
+  const s = foc/vz;
+  return { x: cx + vx*s, y: cy - vy*s, s: s, z: vz };
+}
+function lerp(a, b, t){ return a + (b-a)*t; }
+function wColor(w, wmax, al){
+  const t = Math.max(-1, Math.min(1, wmax > 0 ? w/wmax : 0));
+  let r, g, b;
+  if (t >= 0){ r = lerp(232,255,t); g = lerp(244,176,t); b = lerp(248,32,t); }
+  else       { const a = -t; r = lerp(232,0,a); g = lerp(244,229,a); b = lerp(248,255,a); }
+  return 'rgba(' + (r|0) + ',' + (g|0) + ',' + (b|0) + ',' + al + ')';
+}
+
+/* ---------- Ana çizim ------------------------------------------------------ */
+let lastT = performance.now();
+/* Bir karenin gövdesi. Sürücüsü ve hata kalkanı dosyanın sonundadır. */
+function frameBody(now){
+  const dt = Math.min(0.05, (now - lastT)/1000); lastT = now;
+  const manual = $('manual').checked;
+
+  if (S.playing && !manual){
+    S.ph1 += 2*Math.PI*(+$('w1').value)*dt;
+    S.ph2 += 2*Math.PI*(+$('w2').value)*dt;
+  }
+  if (manual) S.ph2 = (+$('ph').value) * Math.PI/180;
+  if ($('spin').checked && S.playing) S.cam.az += 0.09*dt;
+
+  const dpr = Math.min(2, window.devicePixelRatio || 1);
+  const wpx = cv.clientWidth, hpx = cv.clientHeight;
+  if (cv.width !== (wpx*dpr|0) || cv.height !== (hpx*dpr|0)){
+    cv.width = wpx*dpr|0; cv.height = hpx*dpr|0;
+  }
+  ctx.setTransform(dpr,0,0,dpr,0,0);
+  ctx.clearRect(0,0,wpx,hpx);
+  ctx.fillStyle = '#0b0f19'; ctx.fillRect(0,0,wpx,hpx);
+
+  const cx = wpx/2, cy = hpx/2, foc = Math.min(wpx,hpx)*0.95;
+  const B = camBasis();
+  const pi = +$('pair').value;
+  const model = $('model').value, eps = +$('eps').value;
+  const R = buildR(pi, S.ph1, S.ph2);
+
+  /* eksen üçlüsü */
+  if ($('axes').checked){
+    const L = 2.6, ax = [[L,0,0],[0,L,0],[0,0,L]], nm = ['X','Y','Z'];
+    const o = proj([0,0,0], B, foc, cx, cy);
+    for (let i = 0; i < 3; i++){
+      const q = proj(ax[i], B, foc, cx, cy);
+      if (!o || !q) continue;
+      ctx.strokeStyle = 'rgba(90,106,134,0.55)'; ctx.lineWidth = 1;
+      ctx.beginPath(); ctx.moveTo(o.x,o.y); ctx.lineTo(q.x,q.y); ctx.stroke();
+      ctx.fillStyle = '#5a6a86'; ctx.font = '11px Consolas'; ctx.textAlign = 'center';
+      ctx.fillText(nm[i], q.x, q.y - 4);
+    }
+  }
+
+  /* Kutları döndür, gözle, derinliğe göre sırala */
+  const wmax = Math.max(1e-9, +$('R').value * (model === 'golge' ? 1.25 : 1));
+  const draw = [];
+  let vis = 0, xmin = Infinity, xmax = -Infinity, ymin = Infinity, ymax = -Infinity,
+      zmin = Infinity, zmax = -Infinity;
+
+  for (const q of S.cluster){
+    const p4 = apply4(R, q.p);
+    const o = observe(p4, model, eps);
+    const sc = proj(o.pos, B, foc, cx, cy);
+    if (!sc) continue;
+    if (o.vis){
+      vis++;
+      if (o.pos[0] < xmin) xmin = o.pos[0];
+      if (o.pos[0] > xmax) xmax = o.pos[0];
+      if (o.pos[1] < ymin) ymin = o.pos[1];
+      if (o.pos[1] > ymax) ymax = o.pos[1];
+      if (o.pos[2] < zmin) zmin = o.pos[2];
+      if (o.pos[2] > zmax) zmax = o.pos[2];
+    } else if (!$('ghost').checked || model === 'golge') continue;
+    draw.push({ sc: sc, o: o, w: p4[3] });
+  }
+  draw.sort((a,b) => b.sc.z - a.sc.z);
+
+  for (const d of draw){
+    const rad = Math.max(0.7, (d.o.vis ? d.o.r : eps*0.30) * d.sc.s);
+    ctx.beginPath(); ctx.arc(d.sc.x, d.sc.y, rad, 0, 2*Math.PI);
+    ctx.fillStyle = wColor(d.w, wmax, d.o.vis ? 0.92 : 0.13);
+    ctx.fill();
+    if (d.o.vis && rad > 2.2){
+      ctx.strokeStyle = 'rgba(11,15,25,0.55)'; ctx.lineWidth = 0.8; ctx.stroke();
+    }
+  }
+
+  /* kiral işaretçi */
+  let Vn = NaN, mpos = null;
+  const M = makeMarker(+$('ml').value, +$('mw').value);
+  const mq = M.map(p => apply4(R, p));
+  mpos = mq.map(p => [p[0], p[1], p[2]]);
+  Vn = signedVol(mpos[0], mpos[1], mpos[2], mpos[3]) / (S.V0 || 1);
+
+  if ($('mk').checked){
+    const MC = ['#ffffff','#ff4d6d','#7cfc00','#4da3ff'];
+    const sp = mpos.map(p => proj(p, B, foc, cx, cy));
+    ctx.lineWidth = 1.8;
+    const E = [[0,1],[0,2],[0,3],[1,2],[2,3],[3,1]];
+    for (const e of E){
+      const a = sp[e[0]], b = sp[e[1]];
+      if (!a || !b) continue;
+      ctx.strokeStyle = (Vn >= 0) ? 'rgba(0,229,255,0.60)' : 'rgba(255,77,109,0.65)';
+      ctx.beginPath(); ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y); ctx.stroke();
+    }
+    for (let i = 0; i < 4; i++){
+      const a = sp[i]; if (!a) continue;
+      ctx.beginPath(); ctx.arc(a.x, a.y, 5.0, 0, 2*Math.PI);
+      ctx.fillStyle = MC[i]; ctx.fill();
+      ctx.strokeStyle = '#0b0f19'; ctx.lineWidth = 1.4; ctx.stroke();
+    }
+  }
+
+  if ($('epur').checked) drawEpur(wpx, pi);
+
+  /* --- ölçümler --- */
+  const P = PAIRS[pi];
+  const deg = a => (((a*180/Math.PI) % 360) + 360) % 360;
+  const ex = (vis ? xmax - xmin : 0), ey = (vis ? ymax - ymin : 0), ez = (vis ? zmax - zmin : 0);
+  $('m_ph1').textContent = deg(S.ph1).toFixed(1) + '°  (' + P.l3 + ')';
+  $('m_ph2').textContent = deg(S.ph2).toFixed(1) + '°  (' + P.lw + ')';
+  $('m_vis').textContent = vis + ' / ' + S.cluster.length;
+  $('m_ex').textContent = ex.toFixed(4);
+  $('m_ey').textContent = ey.toFixed(4);
+  $('m_ez').textContent = ez.toFixed(4);
+  $('m_chi').textContent = isFinite(Vn) ? Vn.toFixed(5) : '—';
+  $('m_hand').innerHTML = !isFinite(Vn) ? '—'
+      : (Vn >= 0 ? '<span style="color:#00e5ff">SAĞ-EL</span>'
+                 : '<span style="color:#ff4d6d">SOL-EL (terslendi)</span>');
+  $('phV').textContent = deg(S.ph2).toFixed(1) + '°';
+
+  /* --- izler: W düzlemi fazına göre bölmelenir --- */
+  const bin = Math.min(359, Math.max(0, Math.floor(deg(S.ph2))));
+  S.trChi[bin] = Vn;
+  S.trExt[bin] = ex;
+  S.trVis[bin] = vis / Math.max(1, S.cluster.length);
+
+  $('hud').innerHTML =
+      'model: <b style="color:#cbd5e1">' + (model === 'kesit' ? 'KESİT (w=0)' : 'GÖLGE') + '</b><br>'
+    + 'düzlemler: <b style="color:#cbd5e1">' + P.l3 + ' + ' + P.lw + '</b><br>'
+    + 'φ₁ ' + deg(S.ph1).toFixed(0) + '°  ·  φ₂ ' + deg(S.ph2).toFixed(0) + '°<br>'
+    + 'görünür: <b style="color:#cbd5e1">' + vis + '</b> / ' + S.cluster.length;
+
+  /* cos yasası yalnız işaretçi YASSI ise (w=0) beklenir; küme yapısından bağımsızdır */
+  const flat = (+$('mw').value === 0);
+  drawTrace($('tr_chi'), S.trChi, -1.15, 1.15, true, flat);
+  $('tl_chi').textContent = flat ? 'yassı işaretçi ⟹ = cos φ₂' : 'işaretçi W kalınlıklı ⟹ faz kayar';
+  drawTrace($('tr_ext'), S.trExt, 0, Math.max(0.001, +$('R').value*3.0), false, false);
+  drawTrace($('tr_vis'), S.trVis, 0, 1, false, false);
+}
+
+/* ---------- 4B epür kadranı ------------------------------------------------ */
+function drawEpur(wpx, pi){
+  const P = PAIRS[pi], x0 = 22, y0 = 22, rr = 30, gap = 84;
+  ctx.save();
+  ctx.fillStyle = 'rgba(11,15,25,0.82)';
+  ctx.strokeStyle = '#1f2937'; ctx.lineWidth = 1;
+  ctx.beginPath();
+  if (ctx.roundRect) ctx.roundRect(x0-10, y0-12, 2*gap+18, 2*rr+42, 8);
+  else ctx.rect(x0-10, y0-12, 2*gap+18, 2*rr+42);   /* eski tarayıcı yedeği */
+  ctx.fill(); ctx.stroke();
+  const dr = (cx0, lab, col, ph) => {
+    ctx.strokeStyle = col; ctx.lineWidth = 1.4; ctx.globalAlpha = 0.7;
+    ctx.beginPath(); ctx.arc(cx0, y0+rr+6, rr, 0, 2*Math.PI); ctx.stroke();
+    ctx.globalAlpha = 1;
+    ctx.beginPath();
+    ctx.arc(cx0 + rr*Math.cos(-ph), y0+rr+6 + rr*Math.sin(-ph), 4.2, 0, 2*Math.PI);
+    ctx.fillStyle = col; ctx.fill();
+    ctx.fillStyle = '#8892b0'; ctx.font = '10px Consolas'; ctx.textAlign = 'center';
+    ctx.fillText(lab, cx0, y0+2*rr+24);
+  };
+  dr(x0+rr, P.l3 + ' · ω₁', '#00e5ff', S.ph1);
+  dr(x0+rr+gap, P.lw + ' · ω₂', '#ffb020', S.ph2);
+  ctx.restore();
+}
+
+/* ---------- İz çizimi ------------------------------------------------------ */
+function drawTrace(c, arr, lo, hi, zero, showCos){
+  const dpr = Math.min(2, window.devicePixelRatio || 1);
+  const w = c.clientWidth, h = c.clientHeight;
+  if (w < 2 || h < 2) return;                        /* panel gizliyken çizme */
+  if (c.width !== (w*dpr|0) || c.height !== (h*dpr|0)){ c.width = w*dpr|0; c.height = h*dpr|0; }
+  const g = c.getContext('2d');
+  g.setTransform(dpr,0,0,dpr,0,0);
+  g.clearRect(0,0,w,h);
+  g.fillStyle = '#0c1220'; g.fillRect(0,0,w,h);
+  const yv = v => h - 4 - (v - lo)/(hi - lo)*(h - 8);
+
+  if (zero){
+    g.strokeStyle = '#243044'; g.lineWidth = 1;
+    g.beginPath(); g.moveTo(0, yv(0)); g.lineTo(w, yv(0)); g.stroke();
+  }
+  if (showCos){
+    g.strokeStyle = 'rgba(255,176,32,0.55)'; g.lineWidth = 1; g.setLineDash([3,3]);
+    g.beginPath();
+    for (let i = 0; i < 360; i++){
+      const x = i/359*w, y = yv(Math.cos(i*Math.PI/180));
+      if (i === 0) g.moveTo(x,y); else g.lineTo(x,y);
+    }
+    g.stroke(); g.setLineDash([]);
+  }
+  g.strokeStyle = '#00e5ff'; g.lineWidth = 1.6;
+  let pen = false;
+  g.beginPath();
+  for (let i = 0; i < 360; i++){
+    const v = arr[i];
+    if (!isFinite(v)){ pen = false; continue; }
+    const x = i/359*w, y = yv(Math.max(lo, Math.min(hi, v)));
+    if (!pen){ g.moveTo(x,y); pen = true; } else g.lineTo(x,y);
+  }
+  g.stroke();
+  g.fillStyle = '#4b5872'; g.font = '9px Consolas'; g.textAlign = 'left';
+  g.fillText('0°', 3, h-2); g.textAlign = 'right'; g.fillText('360°', w-3, h-2);
+}
+
+/* ---------- Tanı panelleri ------------------------------------------------- */
+function paintDiag(){
+  const D = S.D;
+  if (!D){ return; }
+  const dl = D[X][X] !== 0 ? D[X][W]/D[X][X] : 0;
+  const dw = D[X][X] !== 0 ? D[W][W]/D[X][X] : 0;
+  $('m_dl').textContent = dl.toFixed(6);
+  $('m_dw').textContent = dw.toFixed(4);
+  const w1 = +$('w1').value, w2 = +$('w2').value;
+  const isIso = Math.abs(Math.abs(w1) - Math.abs(w2)) < 1e-9 && Math.abs(w1) > 0;
+  $('m_iso').innerHTML = isIso
+      ? '<span style="color:#34d399">EVET</span>'
+      : '<span style="color:#8892b0">hayır</span>';
+  $('m_ang').textContent = isIso ? 'sabit — tüm vektörler eş açı' : 'vektöre göre değişir';
+  /* Eksen hareketini belirleyen şey izoklinlik DEĞİL, δ'dır (sayısal olarak sınandı).
+     Sonlu N'de rastgele bir kümenin ölçülen δ'sı sıfır çıkmaz: örneklem gürültüsü
+     ~1/√N mertebesindedir. Eşik bu gürültüye göre kurulur, yoksa "δ≠0" yanılgısı doğar. */
+  const gur = 3 / Math.sqrt(Math.max(1, S.cluster.length));
+  $('m_axc').innerHTML = Math.abs(dl) < gur
+      ? '<span style="color:#34d399">eksen sabit (δ, gürültü içinde)</span>'
+      : '<span style="color:#ffb020">eksen oynar (δ ≠ 0)</span>';
+  $('m_dl').textContent = dl.toFixed(6) + '  ±' + (gur/3).toFixed(3);
+}
+
+/* ---------- Öz-sınama paneli ----------------------------------------------- */
+function renderTests(){
+  const T = selfTests();
+  const box = $('tests');
+  box.innerHTML = '';
+  let bad = 0;
+  for (const t of T){
+    if (!t.ok) bad++;
+    const d = document.createElement('div');
+    d.innerHTML = '<span>' + t.n + '</span><span class="s ' + (t.ok ? 'pass' : 'fail') + '">'
+                + (t.ok ? 'PASS' : 'FAIL') + '</span>';
+    d.title = 'sapma = ' + t.e.toExponential(3);
+    box.appendChild(d);
+  }
+  $('testsum').innerHTML = '<span class="' + (bad ? 'fail' : 'pass') + '">'
+                         + (T.length - bad) + '/' + T.length + '</span>';
+  const b = $('banner');
+  if (bad){
+    b.style.background = '#3b1418'; b.style.color = '#fca5a5';
+    b.textContent = bad + ' SINAMA BAŞARISIZ — sonuçlara güvenmeyin';
+  } else {
+    b.style.background = '#0d2f26'; b.style.color = '#6ee7b7';
+    b.textContent = '✓ ' + T.length + ' öz-sınamanın tamamı geçti';
+  }
+}
+
+/* ---------- Bağlama --------------------------------------------------------- */
+function bindLabels(){
+  const L = [['eps','epsV',3],['w1','w1V',2],['w2','w2V',2],['n','nV',0],
+             ['R','RV',2],['sep','sepV',2],['dl','dlV',3],['ml','mlV',2],
+             ['mw','mwV',3],['dist','dV',1]];
+  for (const [id, out, dp] of L){
+    const f = () => { $(out).textContent = (+$(id).value).toFixed(dp); };
+    $(id).addEventListener('input', f); f();
+  }
+}
+function noteUpdate(){
+  $('modelNote').innerHTML = $('model').value === 'kesit'
+    ? 'Uzayımız dört boyutlu uzayın <b>w=0 kesitidir</b> (1.4.1\'in tanımı). Bir Kut yalnız uzayımıza <b>değdiği sürece</b> görünür; W\'de uzaklaşınca uzayımızdan <b>çıkar</b>. Kitabın tanımına sadık olan model budur.'
+    : 'W ekseni boyunca dik izdüşüm: her Kut daima görünür, w bilgisi atılır. Kitabın mevcut <code>5d_sim.html</code> animasyonunun ve "yassılan küre" anlatısının modeli budur. <b>Kesit modeliyle aynı şey değildir</b> — φ=0 ve φ=180°\'de örtüşürler, arada ayrışırlar.';
+  $('pairNote').textContent = PAIRS[+$('pair').value].not;
+}
+function reseed(){ $('seed').value = (Math.random()*1e9)|0; rebuild(); }
+
+['kind','n','R','seed','dl','sep'].forEach(id =>
+  $(id).addEventListener('input', rebuild));
+['ml','mw'].forEach(id => $(id).addEventListener('input', () => {
+  const M = makeMarker(+$('ml').value, +$('mw').value);
+  S.V0 = signedVol(M[0], M[1], M[2], M[3]);
+  clearTraces();
+}));
+['model','pair','eps'].forEach(id => $(id).addEventListener('input', clearTraces));
+$('model').addEventListener('input', noteUpdate);
+$('pair').addEventListener('input', () => { noteUpdate(); clearTraces(); });
+$('reseed').addEventListener('click', reseed);
+$('dist').addEventListener('input', () => { S.cam.d = +$('dist').value; });
+
+$('w1').addEventListener('input', () => {
+  if ($('iso').checked) $('w2').value = $('w1').value;
+  $('w2V').textContent = (+$('w2').value).toFixed(2);
+  clearTraces(); paintDiag();
+});
+$('w2').addEventListener('input', () => {
+  if ($('iso').checked){ $('w2').value = $('w1').value; $('w2V').textContent = (+$('w2').value).toFixed(2); }
+  clearTraces(); paintDiag();
+});
+$('iso').addEventListener('change', () => {
+  if ($('iso').checked){
+    $('w2').value = $('w1').value;
+    $('w2V').textContent = (+$('w2').value).toFixed(2);
+  }
+  clearTraces(); paintDiag();
+});
+$('manual').addEventListener('change', () => {
+  $('ph').disabled = !$('manual').checked;
+  clearTraces();
+});
+$('ph').addEventListener('input', clearTraces);
+$('play').addEventListener('click', () => {
+  S.playing = !S.playing;
+  $('play').textContent = S.playing ? '⏸ Duraklat' : '▶ Oynat';
+  $('play').classList.toggle('on', !S.playing);
+});
+$('reset').addEventListener('click', () => { S.ph1 = 0; S.ph2 = 0; clearTraces(); });
+
+/* fare ile yörünge */
+let drag = false, lx = 0, ly = 0;
+cv.addEventListener('mousedown', e => { drag = true; lx = e.clientX; ly = e.clientY; });
+window.addEventListener('mouseup', () => { drag = false; });
+window.addEventListener('mousemove', e => {
+  if (!drag) return;
+  S.cam.az -= (e.clientX - lx)*0.006;
+  S.cam.el = Math.max(-1.45, Math.min(1.45, S.cam.el + (e.clientY - ly)*0.006));
+  lx = e.clientX; ly = e.clientY;
+});
+cv.addEventListener('wheel', e => {
+  e.preventDefault();
+  S.cam.d = Math.max(3, Math.min(18, S.cam.d * (1 + Math.sign(e.deltaY)*0.08)));
+  $('dist').value = S.cam.d; $('dV').textContent = S.cam.d.toFixed(1);
+}, { passive: false });
+
+/* açılış */
+bindLabels();
+noteUpdate();
+renderTests();
+rebuild();
+S.cam.d = +$('dist').value;
+
+/* Çizim sürücüsü. Gömülü panellerde requestAnimationFrame kısılabilir
+   (sekme boyanmıyorsa hiç ateşlenmez); bir saniye içinde kare gelmezse
+   zamanlayıcıya düşülür. Normal tarayıcı penceresinde rAF kullanılır. */
+/* Not: değişken adı bilerek "frames" DEĞİL — o ad window.frames yerleşiğiyle çakışır. */
+let kareSayisi = 0, fallback = null;
+function frame(now){
+  kareSayisi++;
+  try { frameBody(now); }
+  catch (err){
+    const b = $('banner');
+    b.style.background = '#3b1418'; b.style.color = '#fca5a5';
+    b.textContent = 'ÇİZİM HATASI: ' + err.message;
+    console.error(err);
+  }
+  if (!fallback) requestAnimationFrame(frame);
+}
+requestAnimationFrame(frame);
+setTimeout(function(){
+  if (kareSayisi === 0){
+    fallback = setInterval(function(){ frame(performance.now()); }, 33);
+    console.warn('rAF ateşlenmedi; 30 fps zamanlayıcıya düşüldü.');
+  }
+}, 1000);
+</script>
+</body>
+</html>

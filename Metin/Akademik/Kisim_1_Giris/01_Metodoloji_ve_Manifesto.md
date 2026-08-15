@@ -29,11 +29,37 @@ Bu taahhüdün simetrik bir yüzü, kitap boyunca **Karşı Kayıt ilkesi** olar
 
 ## 1.1.3 Yazarın Açık Beyanı: Sınırın Dürüstçe Çizilmesi
 
-Bu kuram, evrende gözlemlenen pek çok olguyu — ışığın kıvrılmasından galaksi dönüş eğrilerine, kütlenin doğasından eksen devinimlerine kadar — tek bir hidrodinamik mekanizmayla açıklama iddiasındadır. Ancak tek bir soruya cevabımız yoktur ve bu ontolojik sınırın baştan dürüstçe çizilmesi gerekir: *atom altı parçacıkların o "4. boyuttaki temel çift-dönüşünü" başlatan ilk hareket ettirici (prime mover) nedir?* **Bunu bilmiyoruz.** 
+Bu kuram, evrende gözlemlenen pek çok olguyu — ışığın kıvrılmasından galaksi dönüş eğrilerine, kütlenin doğasından eksen devinimlerine kadar — tek bir hidrodinamik mekanizmayla açıklama iddiasındadır. Ancak tek bir noktada cevabımız yoktur ve bu ontolojik sınırın baştan dürüstçe çizilmesi gerekir: **Evrenakı'nın başlangıç durumu.**
 
-Kuramımız, dördüncü boyuttaki bu kök motorun *neden* dönmeye başladığıyla değil; durmaksızın döndüğü için Evrenakı okyanusunda hangi devasa hidrodinamik süreçleri tetiklediğiyle ve evrenin fiziksel işleyişini nasıl şekillendirdiğiyle ilgilenir. Evrenakı ve 4 Boyutlu Dönüş — biri yoksa diğeri sessizliğe gömülür; bu iki kavramdan herhangi birinin eksikliği, elinizdeki çalışmanın sayfalarının sonsuza dek boş kalması anlamına gelirdi.
+Bu sınırın iki yüzü vardır:
 
-Hedefimiz, bu kitabın son sayfasına ulaştığınızda zihninizde evrenin nasıl işlediğine dair mekanik bir boşluk kalmamasıdır; bu hedefe ne ölçüde ulaştığımızın yargıcı okuyucudur. Ancak her durumda geriye kalacak muamma şudur: *Evrenakı denizini durmaksızın çırpan bu dördüncü boyuttaki kusursuz dönüşün asıl kaynağı nedir?*
+* *Atom altı parçacıkların o "4. boyuttaki temel çift-dönüşünü" başlatan ilk hareket ettirici (prime mover) nedir?*
+* *Tek ve sürekli bir tözün neden bölünemeyen bir en küçük birimi (Kut; bkz. 1.6) vardır — bu taneliliği ne kuantumlar?*
+
+Biri dönüşü, öteki taneliliği sorar; ikisi de Evrenakı'nın **verili** hâlini sorar. **Bunu bilmiyoruz** — ve belki hiçbir zaman bilemeyeceğiz. 
+
+Kuramımız, bu kök durumun *neden* böyle olduğuyla değil; böyle olduğu için Evrenakı okyanusunda hangi devasa hidrodinamik süreçleri tetiklediğiyle ve evrenin fiziksel işleyişini nasıl şekillendirdiğiyle ilgilenir. Evrenakı, 4 boyutlu dönüş ve onun taneliliği — biri yoksa ötekiler sessizliğe gömülür; bu kavramlardan herhangi birinin eksikliği, elinizdeki çalışmanın sayfalarının sonsuza dek boş kalması anlamına gelirdi.
+
+Bu sınır, kitap boyunca bir yöntem kuralı olarak işler: **varlığın tabanı Kut, açıklamanın tabanı Zerre'dir.** Her şeyin Kut'tan kurulu olduğunu kabul ederiz; ancak Zerre'nin, elektronun, nükleonun veya nötrinonun Kutlardan **nasıl** kurulduğunu bu kitap açıklamaz ve açıklamayı üstlenmez. Açıklamalarımızın tamamı, bilinen yapıtaşlarının **gözlenen davranış ve özellikleri** üzerinden yürür. Bu bir eksiklik beyanı değil, bir yöntem beyanıdır: termodinamik atom keşfedilmeden, kimya kuark bilinmeden kuruldu; bir katmanın yasaları alt katmanın çözülmesini beklemez. Kuralın karşılığı şudur ve istisnası yoktur: **Kut hiçbir hesaba girmez** — hiçbir denklemde görünmez. Kut'a yapılan atıf, açıklama yerine geçmez; bir olguyu açıklamak için Kut'a başvurma ihtiyacı doğuyorsa bu, açıklamanın Zerre düzeyinde henüz kurulamadığı anlamına gelir ve çözüm orada aranır. Sınır, gözlemleri açıklama yükümlülüğünü hafifletmez; yalnızca yapıtaşlarının kendi iç kuruluşunu kapsam dışında tutar.
+
+**İkinci bir sınır daha vardır ve o ontolojik değil, sıralamaya ilişkindir.** Bu kitap Mai tezi serisinin bir halkasıdır. Serinin ilk kitabı *Atom Geometrisi*, atomun **geometrisini** kurmuş ve işleyişi ayrı bir kitaba bırakmayı açıkça taahhüt etmiştir: ayrıntıların açıklanabilmesi ortamın bilinmesine bağlı olduğundan, işleyiş *Atomların İşleyişi* adıyla yazılacaktır. Elinizdeki kitap o taahhüdün **ortam tarafını** kurar — Evrenakı'yı, kütle-itimi, ışığın mekaniğini, kozmolojiyi — ama işleyişin tamamını üstlenmez. Ayrım tek cümleyle şudur:
+
+> **Yapı ve geometri bu kitabın; ortamın ısıl ve elektromanyetik işleyişi sonraki kitabın konusudur.**
+
+Bu sınıra göre aşağıdaki konular **bilinçli olarak** *Atomların İşleyişi* kitabına bırakılmıştır. Burada sayılmaları, okurun neyi bu kitapta aramaması gerektiğini baştan bilmesi içindir:
+
+* **Sıcaklığın teori-içi tanımı, entropi, ikinci yasa ve denge istatistiği.** Bu kitap sıcaklığı ve Boltzmann ağırlığını **standart girdi** olarak kullanır ve kullandığı her yerde bunu açıkça yazar (ör. 9.2.4'ün karacisim zinciri). Teori-içi karşılığı — katar konfigürasyonlarının ve kovuk modlarının mekanik sayımı — sonraki kitaba aittir.
+* **Elektrik yükü dinamiği ve Maxwell denklemleri.** Bu kitap yükü hidrodinamik fazlar olarak adlandırır (proton Kaynak, elektron Kuyu/Disk, nötron kendi içinde kilitli sistem; 2.1) ama yük dinamiğinin tam hesabını yapmaz. Doğrudan sonuçları da aynı havaleye tabidir: Zeeman yarılması, Stern–Gerlach, kuantum Hall etkisi, süperiletkenlik.
+* **Çekirdeğin ve yıldızların enerji üretimi.** Füzyon ve fisyon, nükleosentez zincirleri, nükleer bağlanma enerjisi eğrisi ve demir zirvesi, radyoaktif bozunma ve yarı ömürler. Bu kitap yıldızları ve yoğun cisimleri **basınç dengesi** üzerinden modeller; enerjinin nereden geldiği sonraki kitabın konusudur.
+* **Nötrino lezzet salınımı.** Mekanizması bu kitapta adlandırılmıştır — nötrino yapısız bir mermi değil, Kutlardan kurulu **bileşik** bir yapıdır (Anayasa Madde 30; 2.1) ve bileşik bir gövdenin iç hâl değişimi salınımın mekanik karşılığıdır — ama niceliksel hesabı işleyiş konusudur. *(SN 1987A'nın kanıt değeri bundan etkilenmez: o kanıt varış sırasına dayanır, lezzete değil.)*
+* **Atom tayfının nicel hesabı.** Mekanizma zinciri bu kitapta kuruludur (9.11); havale edilen şey hesaptır. Kapsam: çizgi konumlarının hesabı, teori-içi uzunluk ölçeğinin kurulması, **atomdan Zerre salınımının mekanizması**, kapı geçişinin dinamiği, çizgi şiddetleri ve ince yapı. Gerekçe aşağıdaki kutudadır.
+* **Bileşik yapılar:** moleküllerin dönme ve titreşim tayfları ile yönlü kimyasal bağın geometrisi. Bileşikler iki ritmin birleşmesinden doğar; birleşmiş yapının davranışı ayrı bir katmandır. Kimyasal bağ için serinin ayrıca planlanan *Kimyasal Bağ* kitabı öngörülmüştür.
+
+**Bu havale, 19. maddenin ("teori hiçbir gözlemi açıklamasız bırakmaz") ihlali değildir.** Yasaklanan şey *"açıklayamıyoruz"* demektir; burada söylenen o değil — her kalemde **mekanizma adlandırılmış**, yalnız hesabı sıralanmıştır. Havale edilen kalemler, açık hesap kalemlerinden **ayrı bir başlık altında** 7.4'te de tutulur (md. 6-d); böylece hangi borcun hangi kitaba ait olduğu sayılabilir kalır.
+
+> **Havalenin ölçütü: mekanizma burada, hesap orada.** Bu kitap her havale edilen kalemde **mekanizmayı kurar** ve yalnız niceliksel işlenişi sonraki kitaba bırakır. Atom tayfı bunun en açık örneğidir: zincirin tamamı — çekirdeğin kare katman geometrisinden örgüye, örgüden elemente özgü desene, desenden ritmik pencerelere ve Zerre'nin senkron geçişine — bu kitapta kuruludur (9.11); havale edilen şey **hesaptır**, ve gerekçesi 9.11.8'de iki maddeyle yazılıdır: (i) elimizdeki bütün ölçüm tabanı standart fiziğin nicelikleriyle yazılıdır ve teori bu ailede kendi uzunluk ölçeğini henüz kurmamıştır — ödünç sabitle beslenen hesap girdiyi geri okur; (ii) **atomdan Zerre salınımının mekanizması** henüz açıklanmamıştır, oysa tayfın temeli odur. Bu iki eksik giderilmeden yapılacak matematik başarıya ulaşmaz; hesap bu yüzden **yapılamadığı için değil, bugün yapılırsa anlamsız olacağı için** bırakılmıştır.
+
+Hedefimiz, bu kitabın son sayfasına ulaştığınızda zihninizde evrenin nasıl işlediğine dair mekanik bir boşluk kalmamasıdır; bu hedefe ne ölçüde ulaştığımızın yargıcı okuyucudur. Ancak her durumda geriye kalacak muamma tektir: *Evrenakı'yı durmaksızın çırpan o kusursuz dönüş ve denizin en küçük tanesi — ikisi de nereden gelir?*
 
 ## 1.1.4 Yapay Zekâ Katkı Beyanı
 

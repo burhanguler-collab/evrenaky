@@ -5,14 +5,14 @@
 
 Geceleri gökyüzüne baktığınızda ne görüyorsunuz? Yıldızlar, gezegenler ve aralarındaki uçsuz bucaksız, kapkara bir **boşluk**, değil mi? Yüzyıllardır okullarda size uzayın devasa bir vakum, yani koca bir "hiçlik" olduğu öğretildi. Gezegenlerin bu hiçliğin içinde, hiçbir şeye tutunmadan, sebepsizce süzüldüğü söylendi.
 
-Şimdi rahat oturun, çünkü size on yıllardır ezberletilen bu varsayımın **eksik bir kavrayış** olduğunu söyleyeceğiz.
+Şimdi rahat oturun, çünkü size on yıllardır ezberletilen bu varsayımın koca bir **yanılgı** olduğunu söyleyeceğiz.
 
 > [!NOTE]
-> Daha 2.300 yıl önce Aristoteles *"Doğa boşluktan nefret eder"* (*horror vacui*) demişti. Adamın sezgisi modern fizikten daha sağlammış: Evren boşluğa asla tahammül etmez, edemez.
+> Daha 2.300 yıl önce Aristoteles *"Doğa boşluktan nefret eder"* (*horror vacui*) demişti. Adamın sezgisi, modern fiziğin "denklem uydurma" telaşından çok daha sağlammış: Evren boşluğa asla tahammül etmez, edemez.
 
 ## Balık Suyu Göremez
 
-Uzay bir hiçlik değildir. Tam tersine; gözle göremediğimiz, akıl almaz derecede yoğun, sıkıştırılabilen ve **sıfıra yakın sürtünmesi (ultra-düşük viskozitesi)** olan muazzam bir sıvıyla — bir tür "süper-akışkan" ile — ağzına kadar doludur. Biz bu sıvıya **Evrenakı** diyoruz. (Kadim çağların "esir/eter" diye arayıp bir türlü doğru tarif edemediği o efsanevi ortam da işte budur.)
+Uzay bir hiçlik değildir. Tam tersine; gözle göremediğimiz, akıl almaz derecede yoğun, sıkıştırılabilen ve **sıfıra yakın sürtünmesi (ultra-düşük viskozitesi)** olan muazzam bir sıvıyla — bir tür "süper-akışkan" ile — ağzına kadar doludur. Biz bu sıvıya **Evrenakı** diyoruz. (Kadim çağların "esir/eter" diye arayıp bir türlü doğru tarif edemediği, Einstein'ın bile önce çöpe atıp sonra usulca "haklı olabilirsiniz" dediği o ortam tam da budur.)
 
 Peki bu okyanus her yerdeyse, biz onu neden hissetmiyoruz? Cevap basit: **Balık suyu göremez.** Ömrü boyunca suyun içinde yüzen bir balığa "su" diye bir kavramı anlatamazsınız; çünkü su onun için "her yer"dir, dolayısıyla "hiçbir yer"dir. Biz de aynı balığız. Doğduğumuz andan beri bu Evrenakı okyanusunun içinde yüzüyoruz; o yüzden onu bir "boşluk" sanıyoruz.
 
@@ -120,27 +120,64 @@ Aşağıdaki etkileşimli okyanusta, "boş" sandığınız uzayın aslında gör
 
 ## "Peki Bu Sıvı Neden Bu Kadar Önemli?"
 
-Şöyle düşünün: Elinizde bir sürü çözülemeyen bilmece var. Elma neden düşüyor? Işık neden bazen dalga, bazen tanecik gibi davranıyor? Galaksiler neden dağılmıyor? Modern fizik bu soruların **her birine ayrı ayrı** birer yama uydurmuş: kütleçekim için "uzay-zaman bükülmesi", galaksiler için "karanlık madde", evrenin genişlemesi için "karanlık enerji"... Uydura uydura evrenin %95'ini "göremediğimiz, ölçemediğimiz, sadece denklem tutsun diye uydurduğumuz karanlık şeyler" ilan ettiler.
+Şöyle düşünün: Elinizde bir sürü çözülemeyen bilmece var. Elma neden düşüyor? Işık neden bazen dalga, bazen tanecik gibi davranıyor? Galaksiler neden dağılmıyor? Modern fizik (evet, o çok saygı duyduğumuz standart fizik) harika matematiğe sahip olsa da, iş bu sorulara fiziksel bir açıklama getirmeye gelince **her birine ayrı ayrı** birer yama uydurmuş. 
 
-Biz ise diyoruz ki: **Tek bir cevap var, o da bu sıvı.** Bütün o bilmeceler, uzayın devasa bir akışkan olduğunu görmezden gelmekten doğuyor. Suyu bir kez kabul ettiğinizde, gizem diye bir şey kalmıyor.
+Kütleçekim için "uzay-zaman çarşafı bükülüyor" dediler. Galaksiler için "karanlık madde" icat ettiler. Evrenin genişlemesi için "karanlık enerji" çıkardılar... Kırılan denklemi tutturmak için evrenin %95'ini "göremediğimiz, ölçemediğimiz, sadece denklemi kurtarsın diye icat edilmiş karanlık şeyler" ilan ettiler. Fizik değil, tesisatçılık! Kırık boruyu yalıtım bandıyla (Karanlık Madde) sardılar!
+
+Biz ise diyoruz ki: **Tek bir cevap var, o da bu sıvı.** Bütün o bilmeceler, uzayın devasa bir akışkan olduğunu görmezden gelmekten doğuyor. Suyu bir kez kabul ettiğinizde, uzaya bant yapıştırmanıza gerek kalmaz.
 
 ## Özetle
 
-Modern fiziğin size ezberlettiği ne varsa bir kenara koyun. Görelilik, bükülen uzay-zaman çarşafları, hayalet karanlık maddeler... Hepsinin altında yatan tek bir gerçek var: **Akışkanlar Mekaniği** — yani suyun, sıvının hareket kuralları. Evren devasa bir akvaryumdur; yıldızlar bu akvaryumu durmadan karıştıran dev pervanelerdir; biz de akıntıya kapılmış minik yosunlarız.
+Modern fiziğin size ezberlettiği ne varsa bir kenara koyun. Standart fiziğin denklemleri doğruydu, ama anlattıkları hikaye yanlıştı. Bükülen uzay-zaman çarşafları, hayalet karanlık maddeler... Hepsinin altında yatan tek bir fiziksel gerçek var: **Akışkanlar Mekaniği** — yani suyun, sıvının hareket kuralları. Evren devasa bir akvaryumdur; yıldızlar bu akvaryumu durmadan karıştıran dev pervanelerdir; biz de akıntıya kapılmış minik yosunlarız.
 
-Peki madem uzay bir sıvı, gezegenler birbirini nasıl "çekiyor"? Elma neden yere düşüyor? Sıkı durun — Newton'un da Einstein'ın da veremediği cevabı bir sonraki bölümde vereceğiz. **Kütle-İtimi** ile tanışmaya hazır olun.
+Peki madem uzay bir sıvı, gezegenler birbirini nasıl "çekiyor"? Elma neden yere düşüyor? Sıkı durun — Newton'un da Einstein'ın da veremediği o asıl cevabı bir sonraki bölümde vereceğiz. **Kütle-İtimi** ile tanışmaya hazır olun.
 
 > [!TIP]
 > Aşağıdaki "Sonraki Bölüm" butonuna tıklayarak *Elma Neden Düşer?* konusuna geçebilirsiniz.
-
 
 ---
 
 ## Bu Bölümde Ne Öğrendik?
 
 > [!NOTE]
-> - **Eski Fizik:** Uzay boş bir vakumdur; gezegenler bu hiçliğin içinde süzülür.
-> - **Evrenakı Teorisi:** Uzay, Evrenakı adı verilen ve sürtünmesi sıfıra çok yakın (ama sıfır olmayan) bir süper-akışkanla doludur. Gezegenler bu akışkanın içindeki devasa girdaplardır.
+> - **Eski Fizik (Yalıtım Bandı):** Uzay boş bir vakumdur; denklem tutmayınca %95'i Karanlık Madde/Enerji uydurulur.
+> - **Evrenakı Teorisi:** Uzay, Evrenakı adı verilen ve sürtünmesi sıfıra çok yakın olan bir süper-akışkanla doludur. Gezegenler bu akışkanın içindeki devasa küvet girdaplarıdır.
+
+### 🧠 Mini Sınav: Kendinizi Test Edin
+
+<div class="quiz-container" style="background: #111827; border: 1px solid #374151; padding: 20px; border-radius: 12px; margin-top: 15px;">
+  <p style="font-weight: bold; margin-bottom: 10px; color: #60a5fa;">Soru: Evrenakı Teorisine göre yıldızlar ve gezegenler uzayda tam olarak nedir?</p>
+  <button class="quiz-btn" onclick="checkAnswer(this, false)" style="display: block; width: 100%; text-align: left; padding: 10px; margin-bottom: 8px; background: #1f2937; border: 1px solid #4b5563; color: white; border-radius: 6px; cursor: pointer;">A) Uzay-zaman çarşafını büken ağır gülleler</button>
+  <button class="quiz-btn" onclick="checkAnswer(this, true)" style="display: block; width: 100%; text-align: left; padding: 10px; margin-bottom: 8px; background: #1f2937; border: 1px solid #4b5563; color: white; border-radius: 6px; cursor: pointer;">B) Evrenakı okyanusunu karıştıran devasa girdaplar (vorteks)</button>
+  <button class="quiz-btn" onclick="checkAnswer(this, false)" style="display: block; width: 100%; text-align: left; padding: 10px; margin-bottom: 8px; background: #1f2937; border: 1px solid #4b5563; color: white; border-radius: 6px; cursor: pointer;">C) Karanlık madde denizinde yüzen oyuncaklar</button>
+  <p class="quiz-feedback" style="display: none; margin-top: 15px; font-weight: bold; padding: 10px; border-radius: 6px;"></p>
+</div>
+
+<script>
+function checkAnswer(btn, isCorrect) {
+  const container = btn.parentElement;
+  const buttons = container.querySelectorAll('.quiz-btn');
+  const feedback = container.querySelector('.quiz-feedback');
+  
+  buttons.forEach(b => { b.disabled = true; b.style.opacity = '0.5'; });
+  btn.style.opacity = '1';
+  
+  feedback.style.display = 'block';
+  if (isCorrect) {
+    btn.style.background = '#059669';
+    btn.style.borderColor = '#10b981';
+    feedback.style.background = 'rgba(16, 185, 129, 0.2)';
+    feedback.style.color = '#34d399';
+    feedback.innerHTML = '🎉 Doğru! Evren devasa bir akvaryumdur ve biz o küvetin içindeki burgaçlarda yaşıyoruz.';
+  } else {
+    btn.style.background = '#dc2626';
+    btn.style.borderColor = '#ef4444';
+    feedback.style.background = 'rgba(239, 68, 68, 0.2)';
+    feedback.style.color = '#f87171';
+    feedback.innerHTML = '❌ Yanlış cevap! Çarşafları yatağa, karanlık maddeyi de çöpe bırakalım. Doğru cevap B olacaktı.';
+  }
+}
+</script>
 
 > [!TIP]
-> Bu bölümün matematiksel ispatlarını ve akademik dildeki detaylı açıklamalarını görmek için **[Akademik Sürüm Kısım 1'ye geçiş yapın](#akademik_01)**.
+> Bu bölümün matematiksel ispatlarını ve akademik dildeki detaylı açıklamalarını görmek için **[Akademik Sürüm Kısım 1'ye geçiş yapın](#akademik_01_01)**.

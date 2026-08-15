@@ -23,7 +23,7 @@ Kitapta bugüne kadar her iki model de galaksi başına parametre fitledi ve kar
 
 Öngörülerin ikisi de **dönüş eğrisine bakılmadan** kurulur. Ortak girdi $\Upsilon_*=0{,}50$ (3,6 μm popülasyon sentezi orta değeri) — adil olması için iki tarafta aynıdır.
 
-**Hiçbir "öngörü" saf değildir ve bu baştan kaydedilir:** Evrenakı'nın $a_0$'ı SPARC'a kalibredir (biçimi türetilmiştir — 6.5.4.3 Adım 6, 10.7); ΛCDM'in abundance matching ve $c$–$M$ ilişkileri de fitlenmiş ilişkilerdir. Bu, **kalibre öngörü ile kalibre öngörünün** karşılaştırmasıdır ve iki taraf bu bakımdan denktir.
+**Hiçbir "öngörü" saf değildir ve bu baştan kaydedilir:** Evrenakı'nın $a_0$'ı SPARC'a kalibredir (biçimi türetilmiştir — 6.5.4.3 Adım 6, 10.7); ΛCDM'in abundance matching ve $c_0$–$M$ ilişkileri de fitlenmiş ilişkilerdir. Bu, **kalibre öngörü ile kalibre öngörünün** karşılaştırmasıdır ve iki taraf bu bakımdan denktir.
 
 ### 10.1.2 Veri — SPARC, değiştirilmeden
 

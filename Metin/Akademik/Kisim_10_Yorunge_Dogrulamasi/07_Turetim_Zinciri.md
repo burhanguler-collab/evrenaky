@@ -54,7 +54,7 @@ Teorinin kalan tek galaktik serbestliği artık adresiyle bellidir: **nükleonun
 
 ## 10.7.4 $\mathcal{G}$ yerel mi? — işaret doğru, dejenerasyon yapısal
 
-Teoride $\mathcal{G}=\alpha/\rho_n$ ve $\rho_n$ ortamın yerel yoğunluğudur; sabit $c$'nin olmadığı bir kuramda (Postülat 4) $\mathcal{G}$ de evrensel sabit olamaz. Öngörü: yoğun bölgede $\mathcal{G}$ düşmelidir. Ölçüm (737 nokta, 110 galaksi, fit yok):
+Teoride $\mathcal{G}=\alpha/\rho_n$ ve $\rho_n$ ortamın yerel yoğunluğudur; sabit $c_0$'nin olmadığı bir kuramda (Postülat 4) $\mathcal{G}$ de evrensel sabit olamaz. Öngörü: yoğun bölgede $\mathcal{G}$ düşmelidir. Ölçüm (737 nokta, 110 galaksi, fit yok):
 
 | Ölçüt | Değer |
 |---|---|

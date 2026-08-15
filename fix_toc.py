@@ -19,8 +19,8 @@ new_toc = '''    { id: 'akademik_05', title: 'Kısım V: Deneyler', file: 'Metin
     { id: 'akademik_05_03', title: '5.3 Kütle İçi Evrenakı Gradyanları', file: 'Metin/Akademik/Kisim_5_Deneyler/03_Kutle_Ici_Evrenaki_Gradyanlari.md', group: 'akademik', part: 'Kısım V: Deneyler' },
     { id: 'akademik_05_04', title: '5.4 Eksenel Kütle İtim', file: 'Metin/Akademik/Kisim_5_Deneyler/04_Eksenel_Kutle_Itim.md', group: 'akademik', part: 'Kısım V: Deneyler' },
     { id: 'akademik_05_05', title: '5.5 Kısım Özeti: Ne Öğrendik?', file: 'Metin/Akademik/Kisim_5_Deneyler/05_Ne_Ogrendik.md', group: 'akademik', part: 'Kısım V: Deneyler' },
-    { id: 'akademik_06', title: 'Kısım VI: Kanıtlar', file: 'Metin/Akademik/Kisim_6_Kanitlar/06_Kanitlar.md', group: 'akademik', part: 'Kısım VI: Kanıtlar' },
-    { id: 'akademik_07', title: 'Kısım VII: Tartışma ve Sonuç', file: 'Metin/Akademik/Kisim_7_Tartisma_ve_Sonuc/06_Tartisma_ve_Sonuc.md', group: 'akademik', part: 'Kısım VII: Tartışma ve Sonuç' },
+    { id: 'akademik_06', title: 'Kısım VI: Kanıtlar', file: 'Metin/Akademik/Kisim_6_Kanitlar/00_Kanitlar_Giris.md', group: 'akademik', part: 'Kısım VI: Kanıtlar' },
+    { id: 'akademik_07', title: 'Kısım VII: Tartışma ve Sonuç', file: 'Metin/Akademik/Kisim_7_Tartisma_ve_Sonuc/04_Tartisma_ve_Sonuc.md', group: 'akademik', part: 'Kısım VII: Tartışma ve Sonuç' },
     { id: 'akademik_08', title: 'Kısım VIII: Ekler ve Hakem Değerlendirmeleri', file: 'Metin/Akademik/Kisim_8_Ekler_ve_Hakem_Degerlendirmeleri/07_Ekler.md', group: 'akademik', part: 'Kısım VIII: Ekler ve Hakem Değerlendirmeleri' },'''
 
 content = content.replace(old_toc, new_toc)

@@ -1,8 +1,8 @@
 # 9.8 Polarizasyon ve Gradyan İlişkisi: Ölçülebilir İmza
 
-Kısım 2 polarizasyonun mekanik zincirini kurmuştu: düşük basınç gradyanına giren Zerre patinajla spin kazanır ve küreden **diske** yassılaşır (2.4.3) — "polarizasyon" bu form değişiminin kendisidir; polarize disk, gradyan alanına açılı girdiğinde **basınç torkuyla** hizalanır (2.9.2) ve Malus yasası iki mekanik kesrin çarpımı olarak düşer (2.9.2.1; sınavı 9.7.3'te). Bu bölümün görevi zincirin son halkasıdır: disk yönelimini yöneten **vektörel kanalın** matematik çerçevesini kurmak, bilinen polarizasyon olgularını bu çerçeveye yerleştirmek ve bölümün adını taşıyan şeyi — doğada **ölçülebilir imzayı** — tanımlamak.
+Kısım 2 polarizasyonun mekanik zincirini kurmuştu: Zerre, kendi dönüşü nedeniyle kalıcı olarak **basık (disk)** gövdedir ($k_a=1/2$) — "polarizasyon" bu diskin **yönelimidir** (2.4.3); disk, gradyan alanına açılı girdiğinde **basınç torkuyla** hizalanır (2.9.2) ve Malus yasası iki mekanik kesrin çarpımı olarak düşer (2.9.2.1; sınavı 9.7.3'te). Bu bölümün görevi zincirin son halkasıdır: disk yönelimini yöneten **vektörel kanalın** matematik çerçevesini kurmak, bilinen polarizasyon olgularını bu çerçeveye yerleştirmek ve bölümün adını taşıyan şeyi — doğada **ölçülebilir imzayı** — tanımlamak.
 
-> **Kapsam ve tamamlanma notu:** Bu bölüm sınırlı kapsamla yazılmıştır: çerçeve, olguların yerleşimi ve imza öngörüsü. Derin katman — tork katsayısının girdap-disk mekaniğinden türetimi ve imza ölçüm programının raporu (Kısım 5 deney fazı, T-9) — 9.8.5'in açık kalemleri olarak 7.4 envanterine bağlıdır; kalemler kapandığında bölüm genişletilerek **tamamlanacaktır.**
+> **Kapsam ve tamamlanma notu:** Bu bölüm sınırlı kapsamla yazılmıştır: çerçeve, olguların yerleşimi ve imza öngörüsü. Derin katman — tork katsayısının girdap-disk mekaniğinden türetimi ve imza ölçüm programının raporu (Kısım 5 deney fazı, T-9) — 9.8.5'in açık kalemleri olarak 7.4 envanterine (md. 19) bağlıdır; kalemler kapandığında bölüm genişletilerek **tamamlanacaktır.**
 
 ## 9.8.1 Doğrulanacak Gözlem Envanteri
 
@@ -34,6 +34,16 @@ Dönme, yol boyu **enine basınç gradyanının integralidir**; $\kappa_t$ (tork
 
 Simetri kaydı çerçevenin lehinedir: optik aktivitede dönme yönü ışığın gidiş yönünden **bağımsızdır** (geri dönen ışık dönmeyi geri sarar), Faraday'da ise yön **alana kilitlidir** (geri dönen ışık dönmeyi ikiye katlar). Teoride bu ayrım doğaldır: kiral gradyan yapıya (moleküle) aittir ve ışıkla birlikte "ters okunur"; mıknatıs gradyanı dış eksene kilitlidir ve okunuş yönünden bağımsızdır. Standart optiğin iki ayrı fenomenolojisi, tek tork yasasının iki kaynak-simetrisidir.
 
+### 9.8.3.1 Standart Yorumun İç Kilidi: Polarizasyon ile Yerleşiklik Aynı Anda İstenemez
+
+Standart çatının polarizasyon okuması, taşıyıcıya iki niteliği birlikte yükler: nesnenin bir **polarizasyon durumu** vardır ve nesne polarizörde bir **yerde** bulunur. Bu bölümün kaydetmesi gereken tespit, iki niteliğin standart fiziğin kendi teoreminde birbirini dışladığıdır.
+
+Newton–Wigner yerelleştirilebilirlik sonucunun teknik içeriği şudur: konum operatörü, **kütlesiz ve spini 1/2'den büyük** parçacıklar için tanımlanamaz (9.10.5/a). Yasağın fiziksel nedeni de bellidir: kütlesiz spin-1 taşıyıcının, spininin izin verdiği bütün helisite modları yoktur — boyuna mod eksiktir — ve bu eksiklik onu daima yayılmış kılar. Buradaki "helisite yapısı", ışığın **polarizasyonunun kendisidir**.
+
+Sonuç tek cümlede toplanır: **standart çatı, ışığın polarize olabilmesi için ödediği bedeli, ışığın bir yerde bulunabilmesiyle ödemektedir.** Malus yasasının tekil-olay okuması ("tek fotonun polarizasyon durumu geçme olasılığını verir") bu nedenle hem öznesini kaybeder — o tek foton üretilemez (9.10.6) — hem de kendi içinde tutarsızlaşır: polarizasyonu olan şey, polarizör düzleminde bir noktada bulunamaz.
+
+Teorinin disk–tork mekaniği bu kilitten muaftır ve muafiyetin nedeni yapısaldır: **polarizasyonun taşıyıcısı kütlesiz bir soyutlama değil, kütleli ve yerleşik bir Zerre diskidir.** Disk bir yerdedir, yönelimi vardır, torku hesaplanabilir ve geçişi ölçülebilir bir gecikme imzası bırakır (9.7.3; ölçüm önerisi 9.7.6/iii). Yani standart okumanın çelişki ürettiği yerde teori, aynı olguyu tek bir mekanik büyüklükle — disk yönelimiyle — taşır.
+
 ## 9.8.4 Ölçülebilir İmza: Türev Kilidi
 
 Bölümün adını taşıyan imza, 5.3 ile bu bölümün kesişiminde durur. Kütle-içi Evrenakı gradyanı **tek alandır** ($P(r)$) ve ışığa iki dik kanaldan dokunur: skaler kanal değerini okur (5.3'ün ölçtüğü merkez-simetrik saçak kemeri), vektörel kanal eğimini okur (bu bölümün $\Delta\theta$'sı). Tek alandan iki okuma, aralarına pazarlıksız bir kilit koyar:
@@ -44,7 +54,7 @@ $$\Delta\theta(x)\;\propto\;\frac{d}{dx}\Big[\text{saçak profili}(x)\Big]$$
 
 ## 9.8.5 Açık Kalemler
 
-Tümü 7.4 envanterine bağlanır; bölüm bu kalemler kapandığında genişletilecektir:
+Tümü 7.4 envanterine (md. 19) bağlanır; bölüm bu kalemler kapandığında genişletilecektir:
 
 i. **$\kappa_t$'nin türetimi:** tork katsayısının disk atalet momenti ve gradyan bağlanımından ilk-ilke hesabı; türev-kilidi ölçümü (9.8.4) ve polariskop sınırıyla iki uçtan kıstırılması.
 ii. **Özgül çevirme:** kiral molekülün mikro-gradyan burulmasından, ölçülen çevirme güçlerinin (ör. kuvars, şeker çözeltisi) hesabı.
@@ -55,4 +65,4 @@ vi. **Şerit değişimi:** 2.9'un vektörel anlatımıyla 5.3'ün skaler ölçü
 
 ---
 
-**Bölüm özeti:** Polarizasyonun bütün "tuhaflıkları" teoride tek yasaya iner: disk yönelimi, yol boyu enine basınç gradyanının integraliyle döner ($\Delta\theta=\kappa_t\!\int(\nabla_{\!\perp}P)\,ds$). Malus polarizörün yapay gradyanı, optik aktivite kiral mikro-gradyan, fotoelastisite gerilmenin bozduğu gradyan haritası, Faraday mıknatıs-kilitli gradyan — dördü aynı tork yasasının dört kaynağıdır ve yön-simetri ayrımları (aktivite ↔ Faraday) çerçeveden bedavaya çıkar. Bölümün ölçülebilir imzası **türev kilididir**: kütle-içi gradyanın skaler okuması (5.3'ün saçak kemeri) ile vektörel okuması (antisimetrik dönme profili) tek alana kilitlidir — biçimi parametresiz, genliği $\kappa_t$'yi sayıya bağlayan, artefaktla taklit edilemez bir çapraz öngörü. Ölçüm programı ve derin katman 7.4/T-9'a bağlıdır; **bölüm o kalemler kapandığında tamamlanacaktır.**
+**Bölüm özeti:** Polarizasyonun bütün "tuhaflıkları" teoride tek yasaya iner: disk yönelimi, yol boyu enine basınç gradyanının integraliyle döner ($\Delta\theta=\kappa_t\!\int(\nabla_{\!\perp}P)\,ds$). Standart yorumun bu arenadaki iç kilidi ayrıca kaydedilmiştir: kütlesiz spin-1 taşıyıcıyı yerleşemez kılan şey tam da onun helisite yapısı, yani polarizasyonun kendisidir — polarizasyon ile yerleşiklik aynı nesneden aynı anda istenemez (9.8.3.1); teorinin disk mekaniği bu kilitten muaftır, çünkü polarizasyonun taşıyıcısı kütleli ve yerleşik bir Zerre diskidir. Malus polarizörün yapay gradyanı, optik aktivite kiral mikro-gradyan, fotoelastisite gerilmenin bozduğu gradyan haritası, Faraday mıknatıs-kilitli gradyan — dördü aynı tork yasasının dört kaynağıdır ve yön-simetri ayrımları (aktivite ↔ Faraday) çerçeveden bedavaya çıkar. Bölümün ölçülebilir imzası **türev kilididir**: kütle-içi gradyanın skaler okuması (5.3'ün saçak kemeri) ile vektörel okuması (antisimetrik dönme profili) tek alana kilitlidir — biçimi parametresiz, genliği $\kappa_t$'yi sayıya bağlayan, artefaktla taklit edilemez bir çapraz öngörü. Ölçüm programı ve derin katman 7.4/T-9'a bağlıdır; **bölüm o kalemler kapandığında tamamlanacaktır.**

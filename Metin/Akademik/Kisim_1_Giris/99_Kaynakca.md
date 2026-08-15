@@ -14,7 +14,7 @@
 * Casimir, H. B. G. (1948). *On the Attraction Between Two Perfectly Conducting Plates*. Proceedings of the Koninklijke Nederlandse Akademie van Wetenschappen, 51, 793-795. (Vakum dalgalanmaları; Bölüm 1.2.8).
 * Caupin, F., & Herbert, E. (2006). *Cavitation in water: a review*. Comptes Rendus Physique, 7(9-10), 1000-1017. (Suda kavitasyon eşiğinin teorik ve deneysel sınırları; Bölüm 1.3.4, Ek A.3).
 * Clifford, W. K. (1873). *Preliminary Sketch of Biquaternions*. Proceedings of the London Mathematical Society, 4, 381-395. (Dört boyutta çift dönüş — Clifford dönüşü; Bölüm 1.1, 1.3 Postülat 5, 1.4.7).
-* Compton, A. H. (1923). *A Quantum Theory of the Scattering of X-rays by Light Elements*. Physical Review, 21(5), 483-502. (Compton saçılması ve Compton frekansı; Bölüm 1.2.2, 1.3 Postülat 5, 1.5.1).
+* Compton, A. H. (1923). *A Quantum Theory of the Scattering of X-rays by Light Elements*. Physical Review, 21(5), 483-502. (Compton saçılması; ayrıca Compton frekansı — teoride çapa değil, türetilmiş frekansın gözlemsel sağlama noktası olarak; Bölüm 1.2.2, 1.3 Postülat 5, 1.5.1).
 * de Broglie, L. (1925). *Recherches sur la théorie des quanta*. Annales de Physique, 10(3), 22-128. (Madde dalgaları ve parçacık/dalga ikiliği; Bölüm 1.2.2).
 * Descartes, R. (1644). *Principia Philosophiae*. Amsterdam: Ludovicum Elzevirium. (İlk Plenum/Girdap kütleçekim yaklaşımı; Bölüm 1.3 Postülat 1'de atıflı).
 * Drosd, R., Minkin, L., & Shapovalov, A. S. (2014). *Interference and the Law of Energy Conservation*. The Physics Teacher, 52(7), 428-429. (Girişimde enerji korunumu; Bölüm 1.2.7).

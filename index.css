@@ -1061,6 +1061,7 @@ body.light-theme #btn-theme-toggle .moon-icon {
 /* 4D Vortex Animation Container */
 .vortex-container {
     position: relative;
+    pointer-events: none;
     width: 200px;
     height: 200px;
     display: flex;

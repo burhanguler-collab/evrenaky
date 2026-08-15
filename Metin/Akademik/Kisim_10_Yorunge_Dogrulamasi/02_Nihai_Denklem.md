@@ -81,7 +81,7 @@ bu soruya farklı cevap verir ve fark, uyum sayılarından daha yapısaldır.
 | Kuvvet yasası | F1+F4, akışkan postülatlarından türetilmiş (M-35, M-37/M-38) | Newton + görünmez bileşen **varsayımı** | aynı |
 | Yoğunluk/hız profili | silindirik kolon $1/R$ + Rankine penceresi — **türetilmiş** (M-38, M-47) | NFW — teoriden değil, **N-cisim simülasyonu çıktısından** (Navarro+1996) | NFW gözlemle çelişince (cusp–çekirdek) fit ile gevşetilir |
 | Galaksi–kütle bağı | $M_{kaps}$: doğrudan **ölçülen** baryon dağılımı | abundance matching — gözlemsel istatistiğe **eşleştirme/fit** (Moster+2013) | $M_{200}$ galaksi başına **serbest fit** |
-| İkinci halo parametresi | — (yok) | $c_{200}(M)$ — **simülasyon fiti** (Dutton & Macciò 2014) | $c$ serbest ya da önselli fit |
+| İkinci halo parametresi | — (yok) | $c_{200}(M)$ — **simülasyon fiti** (Dutton & Macciò 2014) | $c_0$ serbest ya da önselli fit |
 | Geçiş fonksiyonu | $W$ — parametresiz **türetilmiş** (M-47) | — | — |
 | Evrensel ölçek | $a_0$: biçim **[T]**, değer [S], aday mikro kapanış (M-45) | evrensel ölçek yok — her halo kendi iki sayısını taşır | — |
 | Galaksi başına fit | **0** | 0 (ama zincirin halkaları fit-kökenli) | **2–3** |
@@ -116,7 +116,7 @@ modelleriyle düzeltilir. Evrenakı'nın bu kitaptaki kuralı bunun tam tersidir
 veriyorsa o basılır; sapma bulunduğunda formül galaksiye göre esnetilmez, sapmanın kendisi
 kayda geçer (10.10'un açık kalemleri). **Hesapta teoriye sadakat, bu programın fit kadar
 ölçülebilir bir karnesidir:** teorinin zincirinde gözleme fitlenmiş halka sayısı sıfırdır;
-"zincir" ΛCDM'inde iki halka (abundance matching, $c$–$M$) fit-kökenlidir; pratik ΛCDM'de
+"zincir" ΛCDM'inde iki halka (abundance matching, $c_0$–$M$) fit-kökenlidir; pratik ΛCDM'de
 zincir diye bir şey yoktur.
 
 **Dürüstlük kayıtları:**

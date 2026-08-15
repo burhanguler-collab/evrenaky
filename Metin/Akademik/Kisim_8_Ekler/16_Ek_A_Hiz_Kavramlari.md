@@ -4,23 +4,23 @@
 
 ### Ek A: Hız Kavramlarının Ayrıştırılması: Patinaj Sınırı, Denge Hızı ve Kavitasyon Eşiği
 
-Bölüm 2.2.1'de detaylandırılacağı üzere $c$ (SI'da tanım gereği 299.792.458 m/s; BIPM, 2019), Evrenakı'nın yırtılma (kavitasyon) sınırı DEĞİLDİR; o yalnızca ışığın bulunduğu yoğunluktaki yola tutunabildiği lokal 'patinaj' sınırıdır. Bu ek, teoride adı geçen tüm hız kavramlarını tek bir çatı altında ayrıştırır ve aralarındaki ilişkiyi nicel olarak kurar.
+Bölüm 2.2.1'de detaylandırılacağı üzere $c_0$ (SI'da tanım gereği 299.792.458 m/s; BIPM, 2019), Evrenakı'nın yırtılma (kavitasyon) sınırı DEĞİLDİR; o yalnızca ışığın bulunduğu yoğunluktaki yola tutunabildiği lokal 'patinaj' sınırıdır. Bu ek, teoride adı geçen tüm hız kavramlarını tek bir çatı altında ayrıştırır ve aralarındaki ilişkiyi nicel olarak kurar.
 
 #### Ek A.1 — İki Sınır, İki Kategori
 
-Kavrama Yasası ($v=\sqrt{P/\rho}$; Ek B'de $\rho_0=P_0/c^2$ olarak kullanılan ve Bölüm 3.4.6.3'te Fizeau katsayısını türeten bağıntı), $c$'nin fiziksel kimliğini netleştirir: **$c$, ortamın basınç-iletim (sonik) hızıdır** — Evrenakı'nın "Mach 1"i (bkz. Bölüm 2.4.1) *(katalog: **Ek M-1**)*. Bu kimlik, sık karıştırılan iki sınırın kategorik farkını kendiliğinden verir:
+Kavrama Yasası ($v=\sqrt{P/\rho}$; Ek B'de $\rho_0=P_0/c_0^2$ olarak kullanılan ve Bölüm 3.4.6.3'te Fizeau katsayısını türeten bağıntı), $c_0$'nin fiziksel kimliğini netleştirir: **$c_0$, ortamın basınç-iletim (sonik) hızıdır** — Evrenakı'nın "Mach 1"i (bkz. Bölüm 2.4.1) *(katalog: **Ek M-1**)*. Bu kimlik, sık karıştırılan iki sınırın kategorik farkını kendiliğinden verir:
 
-| | $c$ — kavrama (patinaj) sınırı | $v_{kav}$ — yırtılma (kavitasyon) eşiği |
+| | $c_0$ — kavrama (patinaj) sınırı | $v_{kav}$ — yırtılma (kavitasyon) eşiği |
 |---|---|---|
 | **Neyin sınırı?** | Kavrama yoluyla *ilerlemenin*: Zerre'nin ortama tutunarak yol alabilmesinin | Ortamın *bütünlüğünün*: akışkanın sürekli (yırtıksız) kalabilmesinin |
-| **Aşılırsa ne olur?** | Yasak değildir: patinaj/şok oluşur, enerji kaybedilir, hız $c$'ye oturur | Yasak değildir: akışkan yırtılır, vakum cebi açılır — **madde doğar** |
+| **Aşılırsa ne olur?** | Yasak değildir: patinaj/şok oluşur, enerji kaybedilir, hız $c_0$'ye oturur | Yasak değildir: akışkan yırtılır, vakum cebi açılır — **madde doğar** |
 | **Gündelik karşılığı** | Havada ses hızı: süpersonik uçuş vardır, yalnızca şok üretir | Sıvının çekme dayanımı: pervane ucundaki kavitasyon köpüğü |
 
-Buradan teorinin en yalın özeti çıkar: **ışık tam-sonik bir olgudur** (ortama kavrayarak tam $c$'de ilerler); **madde ise kalıcı süpersonik bir olgudur** (yüzeyi $c$'nin üstünde dönen, kendini sürekli yeniden kuran şok zarfı). $c$'nin üstündeki hızlar yasak değildir; yalnızca kavrama ile *sürdürülemez* — ya şok üreterek $c$'ye geri oturur, ya da ($v_{kav}$ da aşılmışsa) ortamı yırtarak maddeyi var eder.
+Buradan teorinin en yalın özeti çıkar: **ışık tam-sonik bir olgudur** (ortama kavrayarak tam $c_0$'de ilerler); **madde ise kalıcı süpersonik bir olgudur** (yüzeyi $c_0$'nin üstünde dönen, kendini sürekli yeniden kuran şok zarfı). $c_0$'nin üstündeki hızlar yasak değildir; yalnızca kavrama ile *sürdürülemez* — ya şok üreterek $c_0$'ye geri oturur, ya da ($v_{kav}$ da aşılmışsa) ortamı yırtarak maddeyi var eder.
 
-#### Ek A.2 — Denge Hızının Türetimi: Her Vakum-Cepli Girdap, Duvarını $\sqrt{2}\,c$'de Döndürür
+#### Ek A.2 — Denge Hızının Türetimi: Her Vakum-Cepli Girdap, Duvarını $\sqrt{2}\,c_0$'de Döndürür
 
-*(Bu türetim katalogda **M-3** olarak numaralanmıştır.)*
+*(Bu türetim katalogda **M-3** olarak numaralanmıştır. Güncelleme — 29 Temmuz 2026: geçerli türetim **M-3′**'tür [sıkıştırılabilir yeniden türetim]. Aşağıdaki sıkıştırılamaz kurulum ilk-geçiş pedagojisi olarak korunur; $\sqrt2\,c_0$ sayısı hayatta kalır ama **anlamı değişir** — keskin bir "vakum duvarı" yoktur, $\sqrt2\,c_0$ yoğunluğun $e$-katlanma hızıdır [$\rho=\rho_0/e$, $P=0{,}37P_0$], ve cep düzgün seyrelmeyle değil **yırtılmayla** açılır [M-4]. Tam gerekçe: Ek M-3/M-3′ Geçerlilik Sınırı.)*
 
 Teoride madde, içinde vakum cebi (yırtık) taşıyan ve dengede dönen bir girdap zarfıdır (bkz. Animasyon 1.3.2, Aşama 2–3). Cebin dışındaki akışkanda dönme akışı $v_\theta(r)=\Gamma/2\pi r$ ve Bernoulli ilkesi geçerlidir:
 
@@ -28,13 +28,13 @@ $$P(r)=P_0-\tfrac{1}{2}\rho_0\, v_\theta^2(r)$$
 
 Cep duvarında ($r=r_{cep}$; vakum cebi yarıçapı) basınç, cebin iç basıncına (vakum, $P\approx0$) inmek zorundadır:
 
-$$P_0-\tfrac{1}{2}\rho_0\, v_{duvar}^2=0 \;\;\Longrightarrow\;\; v_{duvar}=\sqrt{\frac{2P_0}{\rho_0}}=\boxed{\sqrt{2}\,c\approx 4{,}24\times10^8\ \text{m/s}}$$
+$$P_0-\tfrac{1}{2}\rho_0\, v_{duvar}^2=0 \;\;\Longrightarrow\;\; v_{duvar}=\sqrt{\frac{2P_0}{\rho_0}}=\boxed{\sqrt{2}\,c_0\approx 4{,}24\times10^8\ \text{m/s}}$$
 
 Bu sonucun üç kritik özelliği vardır:
 
-1. **Evrensellik.** $v_{duvar}=\sqrt{2}\,c$ sonucu cebin yarıçapına bağlı değildir; sirkülasyon $\Gamma$ yalnızca cebin *boyutunu* belirler ($r_{cep}=\Gamma/2\pi\sqrt{2}c$), duvar hızını değil. Üstelik bu bir denge çekim noktasıdır: zarf daha hızlı dönerse cep genişler, genişleyen yarıçapta çevresel hız düşer ve duvar $\sqrt{2}\,c$'ye geri oturur. **Her kararlı vakum-cepli girdap — boyutu ne olursa olsun — duvarını tam $\sqrt{2}\,c$'de döndürür.** Tüm nükleonların (ve onlarla aynı sıkışmış girdap fazını taşıyan Zerre'nin) yüzey hızının evrenselliği buradan çıkar.
-2. **Sayısal uyum.** Postülat 5'in bağımsız yoldan (Compton frekansı × proton yarıçapı: $2\pi\nu_c R_p$; proton yarıçapı için $R_p$) verdiği kompozit ekvator hızı $\approx5\times10^8$ m/s'dir; türetilen $\sqrt{2}\,c=4{,}24\times10^8$ m/s ile fark ~%18'dir. Ters okuma da tutarlıdır: $\nu=\sqrt{2}c/2\pi R_p$ bağıntısı, $R_p=0{,}84$ fm için $\nu\approx8\times10^{22}$ Hz verir — postüladaki $\sim10^{23}$ Hz ile aynı mertebe. Bu uyum **kesin eşitlik değil, mertebe + $O(1)$ uyumudur:** türetim, sıkıştırılamaz Bernoulli, iki boyutlu ideal girdap ve tam-sıfır cep basıncı varsayımlarını kullanır; sıkıştırılabilirlik (zarf bölgesinde yoğunluk artışı), dört boyutlu çift dönüşün üç boyuta izdüşümü ve zarfın sonlu kalınlığı $O(1)$ düzeltmeler getirir (açık hesap: Bölüm 7.4).
-3. **Zorunluluk.** Protonun ekvator hızının $c$'yi aşması bir istisna ya da savunulması gereken bir pürüz değil, **yapısal bir zorunluluktur.** Duvarı $c$'nin altında dönen bir zarf, cebindeki vakuma karşı gereken basınç açığını ($\tfrac12\rho_0 v^2<P_0$) üretemez ve cep çöker. Kısacası: **yüzeyi $c$-altı hızda dönen madde var olamaz.** Postülat 5'in "ışık hızını aşan ekvator hızı" ifadesi, böylece Kavrama Yasası'nın doğrudan bir sonucu hâline gelir.
+1. **Evrensellik.** $v_{duvar}=\sqrt{2}\,c_0$ sonucu cebin yarıçapına bağlı değildir; sirkülasyon $\Gamma$ yalnızca cebin *boyutunu* belirler ($r_{cep}=\Gamma/2\pi\sqrt{2}c_0$), duvar hızını değil. Üstelik bu bir denge çekim noktasıdır: zarf daha hızlı dönerse cep genişler, genişleyen yarıçapta çevresel hız düşer ve duvar $\sqrt{2}\,c_0$'ye geri oturur. **Her kararlı vakum-cepli girdap — boyutu ne olursa olsun — duvarını tam $\sqrt{2}\,c_0$'de döndürür.** Tüm nükleonların (ve onlarla aynı sıkışmış girdap fazını taşıyan Zerre'nin) yüzey hızının evrenselliği buradan çıkar.
+2. **Sayısal sağlama.** Teorinin verdiği büyüklük bir **hızdır**: evrensel çevresel hız $v_{cev}=v_{duvar}=\sqrt{2}\,c_0=4{,}24\times10^8$ m/s, boyuttan bağımsız. Frekans bundan **türetilir**: $\nu=\sqrt{2}c_0/2\pi R_p$ bağıntısı, $R_p=0{,}84$ fm için $\nu\approx8\times10^{22}$ Hz verir. Bunun bağımsız gözlemsel sağlaması, standart fiziğin Compton frekansından okunan kompozit ekvator hızıdır (Compton frekansı × proton yarıçapı: $2\pi\nu_c R_p\approx5\times10^8$ m/s, $\nu_c\approx10^{23}$ Hz); fark ~%18'dir. Compton frekansı burada teorinin girdisi değil, türetilmiş frekansın **gözlemsel sağlama noktasıdır**. Bu sağlama **kesin eşitlik değil, mertebe + $O(1)$ uyumudur:** türetim, sıkıştırılamaz Bernoulli, iki boyutlu ideal girdap ve tam-sıfır cep basıncı varsayımlarını kullanır; sıkıştırılabilirlik (zarf bölgesinde yoğunluk artışı), dört boyutlu çift dönüşün üç boyuta izdüşümü ve zarfın sonlu kalınlığı $O(1)$ düzeltmeler getirir (açık hesap: Bölüm 7.4).
+3. **Zorunluluk.** Protonun ekvator hızının $c_0$'yi aşması bir istisna ya da savunulması gereken bir pürüz değil, **yapısal bir zorunluluktur.** Duvarı $c_0$'nin altında dönen bir zarf, cebindeki vakuma karşı gereken basınç açığını ($\tfrac12\rho_0 v^2<P_0$) üretemez ve cep çöker. Kısacası: **yüzeyi $c_0$-altı hızda dönen madde var olamaz.** Postülat 5'in "ışık hızını aşan ekvator hızı" ifadesi, böylece Kavrama Yasası'nın doğrudan bir sonucu hâline gelir. *(Bu zorunluluk argümanının sıkıştırılabilir hâli için bkz. M-3′ — "basınç sıfıra iner" gerekçesi yerini $e$-katlanma dengesine bırakır; sonuç korunur, gerekçe güncellenmiştir.)*
 
 #### Ek A.3 — Kavitasyon Eşiği ve Kohezyon Dayanımı ($\Sigma$): Yaratma ile Sürdürme Ayrımı
 
@@ -42,13 +42,13 @@ Bu sonucun üç kritik özelliği vardır:
 
 Sağlam (yırtıksız) bir akışkanı yırtmak, basıncı sıfırın da altına — akışkanın **kohezyon (çekme) dayanımı** olan $-\Sigma$'nın altına — düşürmeyi gerektirir. Aynı Bernoulli hesabıyla yırtma eşiği:
 
-$$v_{kav}=\sqrt{\frac{2(P_0+\Sigma)}{\rho_0}}=\sqrt{2}\,c\,\sqrt{1+\frac{\Sigma}{P_0}}$$
+$$v_{kav}=\sqrt{\frac{2(P_0+\Sigma)}{\rho_0}}=\sqrt{2}\,c_0\,\sqrt{1+\frac{\Sigma}{P_0}}$$
 
-Evrenakı'nın kavitasyon eşiğinin $c$'den çok daha yüksek olması, $\Sigma\gg P_0$ demektir. Bu keyfî bir kabul değildir; gerçek akışkanlarda doğrudan emsali vardır: suyun teorik çekme dayanımı ($\sim10^2$ MPa), üzerindeki atmosfer basıncının ($\sim0{,}1$ MPa) yaklaşık bin katıdır (ölçüm ve teorik sınırlar: Briggs, 1950; Caupin & Herbert, 2006). Nükleasyon çekirdeği içermeyen, viskozitesi sıfıra yakın bir süper-akışkanda bu oranın çok daha yüksek olması beklenir. ($\Sigma$, teorinin adlandırılmış bir parametresidir; Bell hız-sınırı deneyleri $v_m$ özdeşleştirmesi üzerinden ilk gözlemsel alt sınırı verir — $\Sigma/P_0>10^8$, Bölüm 2.10.1 — tam sabitlenmesi Bölüm 7.4'te açık iş olarak kayıtlıdır.)
+Evrenakı'nın kavitasyon eşiğinin $c_0$'den çok daha yüksek olması, $\Sigma\gg P_0$ demektir. Bu keyfî bir kabul değildir; gerçek akışkanlarda doğrudan emsali vardır: suyun teorik çekme dayanımı ($\sim10^2$ MPa), üzerindeki atmosfer basıncının ($\sim0{,}1$ MPa) yaklaşık bin katıdır (ölçüm ve teorik sınırlar: Briggs, 1950; Caupin & Herbert, 2006). Nükleasyon çekirdeği içermeyen, viskozitesi sıfıra yakın bir süper-akışkanda bu oranın çok daha yüksek olması beklenir. ($\Sigma$, teorinin adlandırılmış bir parametresidir; Bell hız-sınırı deneyleri $v_m$ özdeşleştirmesi üzerinden ilk gözlemsel alt sınırı verir — $\Sigma/P_0>10^8$, Bölüm 2.10.1 — tam sabitlenmesi Bölüm 7.4'te açık iş olarak kayıtlıdır.)
 
-Kohezyon yalnızca yırtılmaya direnç değil, aynı zamanda ikinci bir **sinyal kanalıdır.** Basınç (sıkışma) salınımları ortamda sonik hızla ($c=\sqrt{P_0/\rho_0}$) yayılırken, ortamın *yapısal* yeniden düzenlenmesi — gradyan ve topografya kurulumu — kohezyon kanalının elastik hızıyla taşınır:
+Kohezyon yalnızca yırtılmaya direnç değil, aynı zamanda ikinci bir **sinyal kanalıdır.** Basınç (sıkışma) salınımları ortamda sonik hızla ($c_0=\sqrt{P_0/\rho_0}$) yayılırken, ortamın *yapısal* yeniden düzenlenmesi — gradyan ve topografya kurulumu — kohezyon kanalının elastik hızıyla taşınır:
 
-$$v_m=\sqrt{\frac{\Sigma}{\rho_0}}=c\,\sqrt{\frac{\Sigma}{P_0}}$$
+$$v_m=\sqrt{\frac{\Sigma}{\rho_0}}=c_0\,\sqrt{\frac{\Sigma}{P_0}}$$
 
 Bu hızın fiziksel rolü ve gözlemsel ölçüm programı Bölüm 2.10.1'de işlenir.
 
@@ -65,13 +65,13 @@ Bu hızın fiziksel rolü ve gözlemsel ölçüm programı Bölüm 2.10.1'de iş
 .desc-134 { background: rgba(255,0,229,0.1); padding: 12px; border-radius: 4px; border: 1px solid rgba(255,0,229,0.3); margin-top: 10px; font-size: 0.95rem; line-height: 1.5; color: #f3f4f6; }
 </style>
 
-<h4>Animasyon 1.3.4: İki Kanal — Basınç ($c$) ve Kohezyon ($v_m$) <a name="animasyon-134-ikikanal"></a></h4>
+<h4>Animasyon 1.3.4: İki Kanal — Basınç ($c_0$) ve Kohezyon ($v_m$) <a name="animasyon-134-ikikanal"></a></h4>
 <div class="pol-controls-134">
   <button class="btn-134" id="btn-fire-134">⟳ Sinyali Gönder</button>
   <div class="note-134">Temsilî oran: kohezyon kanalı burada yalnızca <b>50×</b> hızlı çizilmiştir; gerçekte oran <b>&ge; 10.000×</b>tir (Salart 2008 alt sınırı).</div>
 </div>
 <div class="pol-canvas-wrap-134"><canvas id="canvas134"></canvas></div>
-<div class="desc-134">Solda bir kütle (analizör) belirdiğinde ortama <b>iki ayrı haber</b> yayılır. <b>Üst şerit — basınç (sıkışma) kanalı:</b> yoğunluk dalgası sonik hızla ($c$) ilerler; ışık ve —standart fiziğin "kütleçekim dalgası" dediği— basınç salınımları bu kanaldadır. <b>Alt şerit — kohezyon (yapı) kanalı:</b> ortamın basınç topografyası, yapıyı bir arada tutan kohezyon ($\Sigma$) üzerinden $v_m=c\sqrt{\Sigma/P_0}$ hızıyla neredeyse anında yeniden kurulur; kütle-itim alanının kurulumu ve dolanıklık geçidi (Bölüm 2.10.1) bu kanaldadır. İki kanalın karıştırılması yasaktır: GW170817'nin bu basınç salınımlarının hızını tam $c$ ölçmesi üst şeridin, Bell korelasyonlarının "anındalığı" alt şeridin olayıdır.</div>
+<div class="desc-134">Solda bir kütle (analizör) belirdiğinde ortama <b>iki ayrı haber</b> yayılır. <b>Üst şerit — basınç (sıkışma) kanalı:</b> yoğunluk dalgası sonik hızla ($c_0$) ilerler; ışık ve —standart fiziğin "kütleçekim dalgası" dediği— basınç salınımları bu kanaldadır. <b>Alt şerit — kohezyon (yapı) kanalı:</b> ortamın basınç topografyası, yapıyı bir arada tutan kohezyon ($\Sigma$) üzerinden $v_m=c_0\sqrt{\Sigma/P_0}$ hızıyla neredeyse anında yeniden kurulur; kütle-itim alanının kurulumu ve dolanıklık geçidi (Bölüm 2.10.1) bu kanaldadır. İki kanalın karıştırılması yasaktır: GW170817'nin bu basınç salınımlarının hızını tam $c_0$ ölçmesi üst şeridin, Bell korelasyonlarının "anındalığı" alt şeridin olayıdır.</div>
 
 <script>
 (function(){
@@ -159,21 +159,23 @@ Bu hızın fiziksel rolü ve gözlemsel ölçüm programı Bölüm 2.10.1'de iş
 
 Böylece teorinin tüm hız kavramları tek bir sıralama üzerinde yerini bulur *(sıralama teoremi: **Ek M-6**)*:
 
-$$c \;<\; \underbrace{\sqrt{2}\,c}_{v_{denge}\;\approx\;v_{ekvator}} \;<\; \underbrace{c\sqrt{\Sigma/P_0}}_{v_m} \;<\; \underbrace{\sqrt{2}\,c\sqrt{1+\Sigma/P_0}}_{v_{kav}} \;\le\; v_{saf}$$
+$$c_0 \;<\; \underbrace{\sqrt{2}\,c_0}_{v_{denge}\;\approx\;v_{ekvator}} \;<\; \underbrace{c\sqrt{\Sigma/P_0}}_{v_m} \;<\; \underbrace{\sqrt{2}\,c_0\sqrt{1+\Sigma/P_0}}_{v_{kav}}$$
+
+> **Merdiven neden burada bitiyor?** Maddeyi doğuran dönüş $v_{kav}$'ın üzerindedir; ama o dönüşün taşıyıcısı **Kut düzeyindedir** ve Kut hiçbir hesaba girmez (Anayasa Madde 30). Teorinin niceliği yırtılmanın **eşiğidir**, eşiği aşan gövdenin hızı değil. Bu yüzden merdivende beşinci bir basamak yoktur.
 
 | Hız | Fiziksel kimliği | Formülü | Değeri |
 |---|---|---|---|
-| $c$ | Zerre'nin kavrama (patinaj) sınırı = ortamın sonik hızı | $\sqrt{P_0/\rho_0}$ (yerel: $\sqrt{P/\rho}$) | $2{,}998\times10^8$ m/s |
-| $v_{denge}$ | Vakum-cepli girdap zarfının denge yüzey hızı | $\sqrt{2}\,c$ | $4{,}24\times10^8$ m/s |
-| $v_{ekvator}$ | Protonun kompozit ekvator hızı (gözlemsel girdi) | $2\pi\nu_c R$ | $\approx5\times10^8$ m/s |
-| $v_m$ | Kohezyon kanalının elastik sinyal hızı — topografya/gradyan kurulumu (Bölüm 2.10.1) | $\sqrt{\Sigma/\rho_0}=c\sqrt{\Sigma/P_0}$ | $>10^4\,c$ (Bell alt sınırı) |
-| $v_{kav}$ | Sağlam akışkanı yırtma (kavitasyon) eşiği | $\sqrt{2}\,c\sqrt{1+\Sigma/P_0}\approx\sqrt2\,v_m$ | $\gg c$ ($\Sigma\gg P_0$) |
-| $v_{saf}$ | Temel alt-bileşenlerin saf dönüş hızları | $>v_{kav}$ | $\gg c$ |
+| $c_0$ | Zerre'nin kavrama (patinaj) sınırı = ortamın sonik hızı | $\sqrt{P_0/\rho_0}$ (yerel: $\sqrt{P/\rho}$) | $2{,}998\times10^8$ m/s |
+| $v_{denge}$ | Vakum-cepli girdap zarfının denge yüzey hızı | $\sqrt{2}\,c_0$ | $4{,}24\times10^8$ m/s |
+| $v_{cev}$ | Zerre'nin evrensel çevresel dönüş hızı — aynı duvar hızı yasasının Zerre'deki hâli (boyuttan bağımsız; M-3), M-10 muhasebesinin girdisi | $\sqrt{2}\,c_0$ | $4{,}24\times10^8$ m/s |
+| $v_{ekvator}$ | Protonun kompozit ekvator hızı (**gözlemsel sağlama**; teorinin değeri $v_{cev}=\sqrt{2}\,c_0$'dir) | $2\pi\nu_c R$ | $\approx5\times10^8$ m/s |
+| $v_m$ | Kohezyon kanalının elastik sinyal hızı — topografya/gradyan kurulumu (Bölüm 2.10.1) | $\sqrt{\Sigma/\rho_0}=c_0\sqrt{\Sigma/P_0}$ | $>10^4\,c_0$ (Bell alt sınırı) |
+| $v_{kav}$ | Sağlam akışkanı yırtma (kavitasyon) eşiği — **merdivenin son basamağı** | $\sqrt{2}\,c_0\sqrt{1+\Sigma/P_0}\approx\sqrt2\,v_m$ | $\gg c_0$ ($\Sigma\gg P_0$) |
 
 #### Ek A.4 — Makro hızlar: madde düşer, ortam dolaşır
 
-Yukarıdaki merdiven **mikro/relativistik** merdivendir: hepsi $c$ mertebesindedir ve maddenin *iç*
-yapısını yönetir. Teorinin bir de **makro** hız çifti vardır ($\ll c$); bunlar merdivene girmez ama
+Yukarıdaki merdiven **mikro/relativistik** merdivendir: hepsi $c_0$ mertebesindedir ve maddenin *iç*
+yapısını yönetir. Teorinin bir de **makro** hız çifti vardır ($\ll c_0$); bunlar merdivene girmez ama
 sözlüğe girer, çünkü karıştırılmaları kitabın kaydettiği en yaygın hatadır *(katalog: **M-9**;
 denge yasası: **DY-2**)*:
 
@@ -192,7 +194,8 @@ $$\boxed{\;\frac{v_\theta}{v_{y\ddot{o}r}}=\sqrt{\frac{\rho_n}{\rho_0}}=\sqrt{4}
 > hızıdır. Gözlenen bir eğriyi $v_\theta$ ile adlandırmak R-1'i ihlal eder; doğru sembol
 > $v_{y\ddot{o}r}$'dür.
 >
-> Bu $2\times$ fark teorinin **parametresiz bir öngörüsüdür** (karnede S-7): ortam ile maddenin
+> Bu $2\times$ fark teorinin **parametresiz bir öngörüsüdür** — henüz doğrudan ölçülmemiş, sınavı
+> açık bir kalemdir (7.4): ortam ile maddenin
 > arasında kalıcı bir kayma tabakası bulunmalıdır, ve büyüklüğü tam olarak $v_{y\ddot{o}r}$'dür.
 
 <div class="pol-widget-135" id="animasyon-135-merdiven">
@@ -261,7 +264,7 @@ $$\boxed{\;\frac{v_\theta}{v_{y\ddot{o}r}}=\sqrt{\frac{\rho_n}{\rho_0}}=\sqrt{4}
       if(v < 1.8)         return ['DENGE ZARFI (√2·c bölgesi)', 'Vakum-cepli girdap zarfının zorunlu yüzey hızı: √2·c (Ek A.2). Protonun kompozit ekvator hızı (~1,67c) bu banttadır: yüzeyi c-altı dönen madde var olamaz.'];
       if(v < 10000)       return ['SÜRDÜRÜLEMEZ ARA BÖLGE', 'Denge bandının üstü, kavitasyon eşiğinin altı: burada kalıcı yapı yoktur. Cisimler şok üretip yavaşlar; yalnızca kohezyon kanalının SİNYALİ (v_m) bu bölgenin tepesine erişir.'];
       if(v < 14100)       return ['v_m — KOHEZYON SİNYAL HIZI', 'Dikkat: bu bir cisim hızı değil, yapısal bilginin hızıdır. Topografya/gradyan kurulumu ve dolanıklık geçidi (2.10.1) bu hızla ayarlanır: v_m = c·√(Σ/P₀) ≥ 10⁴·c.'];
-      return ['YIRTILMA — MADDE DOĞUŞU', 'Kavitasyon eşiği aşıldı (v_kav = √2·c·√(1+Σ/P₀) ≈ √2·v_m): akışkan yırtılır, vakum cebi açılır, şok zarfı kurulur — madde doğar (bkz. Animasyon 1.3.2). v_saf, temel alt-bileşenlerin bu eşiği aşan saf dönüş hızlarıdır.'];
+      return ['YIRTILMA — MADDE DOĞUŞU', 'Kavitasyon eşiği aşıldı (v_kav = √2·c·√(1+Σ/P₀) ≈ √2·v_m): akışkan yırtılır, vakum cebi açılır, şok zarfı kurulur — madde doğar (bkz. Animasyon 1.3.2). Bu eşiği aşan dönüşün taşıyıcısı Kut düzeyindedir; merdiven burada biter.'];
   }
 
   function resize(){ if(!canvas.isConnected) { window.removeEventListener('resize', resize); return; }
@@ -347,8 +350,8 @@ $$\boxed{\;\frac{v_\theta}{v_{y\ddot{o}r}}=\sqrt{\frac{\rho_n}{\rho_0}}=\sqrt{4}
 
 Bu sıralama, maddenin öyküsünü iki ayrı hıza böler — **yaratma ve sürdürme:**
 
-* **Yaratma ($v_{saf}>v_{kav}$):** Evrenakı'yı yırtarak maddeyi (şok zarfını) sıfırdan var eden şey; protonun yavaşlamış kompozit hızı olan $5 \times 10^8 \text{ m/s}$ değil, onu oluşturan temel alt-bileşenlerin o devasa kavitasyon eşiğini aşan **'saf dönüş' hızlarıdır**. Kavitasyon sınırını aşarak uzayı yırtan bu temel parçacıklar, viskozitenin sıfıra çok yakın olduğu bu süper-akışkanda enerjilerini gözlemsel ölçekte fark edilir biçimde dağıtmazlar; tam aksine **kendilerini (kuantize olmuş kararlı bir şok zarfı veya topolojik bir hata olarak) yaratırlar.**
-* **Sürdürme ($v_{denge}=\sqrt{2}\,c$):** Yırtık bir kez açıldıktan sonra zarf, artık kohezyona değil yalnızca arka plan basıncına ($P_0$) karşı çalışır ve Ek A.2'deki denge hızına oturur. Proton, bu önceden yırtılmış ölümsüz şok dalgalarının birleşip yavaşladığı kompozit bir makinedir: hızı kavitasyon eşiğinin çok altına düşmüştür, ama denge gereği lokal patinaj sınırını ($c$) daima aşar.
+* **Yaratma ($>v_{kav}$):** Evrenakı'yı yırtarak maddeyi (şok zarfını) sıfırdan var eden şey; protonun yavaşlamış kompozit hızı olan $5 \times 10^8 \text{ m/s}$ değil, onu oluşturan Kut düzeyindeki alt-bileşenlerin o devasa kavitasyon eşiğini aşan **'saf dönüş' hızlarıdır**. Kavitasyon sınırını aşarak uzayı yırtan bu Kutlar, viskozitenin sıfıra çok yakın olduğu bu süper-akışkanda enerjilerini gözlemsel ölçekte fark edilir biçimde dağıtmazlar; tam aksine **kendilerini (kuantize olmuş kararlı bir şok zarfı veya topolojik bir hata olarak) yaratırlar.** *(Kut — Evrenakı'nın bölünemez en küçük kuantumlanmış birimi; bkz. 1.6. Burada yalnızca ontolojik adres olarak anılır: teorinin varlık tabanı Kut, açıklama tabanı Zerre'dir ve Kut hiçbir hesaba girmez.)*
+* **Sürdürme ($v_{denge}=\sqrt{2}\,c_0$):** Yırtık bir kez açıldıktan sonra zarf, artık kohezyona değil yalnızca arka plan basıncına ($P_0$) karşı çalışır ve Ek A.2'deki denge hızına oturur. Proton, bu önceden yırtılmış ölümsüz şok dalgalarının birleşip yavaşladığı kompozit bir makinedir: hızı kavitasyon eşiğinin çok altına düşmüştür, ama denge gereği lokal patinaj sınırını ($c_0$) daima aşar.
 
 > **Ek B ile bağ (açık iş):** Ek B'deki asgari arka plan basıncı türetimi, yırtılmanın $P=0$'da başladığını varsayar. Kohezyon dayanımı hesaba katıldığında bu koşul $P_0+\Sigma>\Delta P$ biçimini alır; iki ekin bu ortak paydada uzlaştırılması Bölüm 7.4'te kayıtlı açık iştir.
 
@@ -414,7 +417,7 @@ Bu sıralama, maddenin öyküsünü iki ayrı hıza böler — **yaratma ve sür
       "Aşama 4: Direnç (Kalıcılık) - Dış basınç (Evrenakı P₀) zarfı ezmeye çalışsa da, içerideki 'saf dönüş' sürdükçe şok zarfı kendini daima yeniden kurar; yapı ölümsüzleşir."
   ];
 
-  const speedTargets = [ "3%", "10%", "90%", "95%" ];
+  const speedTargets = [ "3%", "92%", "95%", "95%" ];
 
   btnNext.onclick = () => { if(stage < 4) { stage++; updateStage(); } };
   btnPrev.onclick = () => { if(stage > 1) { stage--; updateStage(); } };

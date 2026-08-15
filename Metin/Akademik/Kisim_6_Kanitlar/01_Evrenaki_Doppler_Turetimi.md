@@ -26,18 +26,18 @@ Aşağıdaki kısımda, eleştirel bir hakem perspektifinden Evrenakı teorisine
 
 Özel Görelilik, uzayda hareket eden bir cisim için Doppler kaymasını ($f_{obs}$) hesaplarken, uzayın bizzat genleştiği veya zamanın soyut bir dördüncü boyut olarak yavaşladığı varsayımına dayanır (Einstein, 1905a) ve Ives-Stilwell deneyiyle (Ives & Stilwell, 1938) doğrulanan şu meşhur formülü kullanır (uzaklaşan bir kaynak için):
 
-$$ f_{obs} = f_0 \sqrt{\frac{1 - v/c}{1 + v/c}} $$
+$$ f_{obs} = f_0 \sqrt{\frac{1 - v/c_0}{1 + v/c_0}} $$
 
 Şimdi aynı formülü, uzayın ve zamanın büküldüğü varsayımlarına başvurmadan, **Evrenakı Süper-Akışkanı** içinde tamamen saf mekanik ve hidrodinamik kurallarla (Zerre Katarı modeliyle) sıfırdan türetelim. Evrenakı'da zaman bükülmez, ancak **Zerre Aralığı (mekanik mesafe)** ve **Kompozit Saatler (ateşleme hızı)** akışkan dinamiği nedeniyle fiziksel olarak değişir.
 
 ### Adım 1: Klasik Uzaysal Mesafe (Zerre Aralığının Uzaması)
 
-Hareketsiz bir kaynak, yerel akışkan yoğunluğunda hızı sabit olan ($c$) Zerre mermilerini $f_s$ frekansıyla (saniyede fırlatılan mermi sayısıyla) ateşlesin. İki ardışık ateşleme arasında geçen süre (periyot) $T_s = \frac{1}{f_s}$ kadardır. Hareketsiz durumda iki mermi arasındaki uzaysal mesafe (Zerre Aralığı, $\lambda$):
-$$ \lambda_0 = c \cdot T_s = \frac{c}{f_s} $$
+Hareketsiz bir kaynak, yerel akışkan yoğunluğunda hızı sabit olan ($c_0$) Zerre mermilerini $f_s$ frekansıyla (saniyede fırlatılan mermi sayısıyla) ateşlesin. İki ardışık ateşleme arasında geçen süre (periyot) $T_s = \frac{1}{f_s}$ kadardır. Hareketsiz durumda iki mermi arasındaki uzaysal mesafe (Zerre Aralığı, $\lambda$):
+$$ \lambda_0 = c_0 \cdot T_s = \frac{c}{f_s} $$
 
 Ancak kaynak, alıcıdan **$v$ hızıyla uzaklaşıyorsa**, ilk Zerre namludan çıktıktan sonra kaynak $v$ hızıyla geriye doğru gidecek ve ikinci Zerre'yi $T_s$ saniye sonra, daha gerideki bir konumdan ateşleyecektir. Bu süre zarfında kaynak, ilk Zerre'nin gidiş yönünün tersine $v \cdot T_s$ kadar yol almıştır.
 Dolayısıyla iki mermi arasındaki **mekanik boşluk (Zerre Aralığı)** basit bir Newtonyen toplamayla şu kadar açılır:
-$$ \lambda = c \cdot T_s + v \cdot T_s = T_s (c + v) = \frac{c + v}{f_s} $$
+$$ \lambda = c_0 \cdot T_s + v \cdot T_s = T_s (c_0 + v) = \frac{c + v}{f_s} $$
 
 *(Eğer kaynak alıcıya yaklaşsaydı mesafe kısalacak ve formül $\lambda = \frac{c - v}{f_s}$ olacaktı).*
 
@@ -45,12 +45,12 @@ $$ \lambda = c \cdot T_s + v \cdot T_s = T_s (c + v) = \frac{c + v}{f_s} $$
 
 Peki hareketli bir kaynağın kendi ateşleme frekansı ($f_s$) sabit midir? Klasik mekanikte evet; ancak Evrenakı'da nükleon boşlukta asılı duran yapısız bir nokta değil, iç bileşenleriyle sürekli devinen **kompozit bir yapıdır**. 
 
-Postülat 5'te nükleonun iç çekirdeğinin $c$'yi aşan devasa hızlarda döndüğünü belirtmiştik. Ancak **ateşleme dişlisi** (atomik geçişler, ışımayı sağlayan elektron-zerre alışverişleri) doğrudan akışkana tutunma (patinaj/kavrama) mekanizmasıyla çalışır ve tam olarak $c$ hızına tabidir. Ateşleme anını belirleyen bu iç sinyaller, atomun içinde bir referans noktasından diğerine $c$ hızıyla gidip dönen mekanik bir "Zerre-Saati" (ışık saati) gibi çalışır.
+Postülat 5'te nükleonun iç çekirdeğinin $c_0$'yi aşan devasa hızlarda döndüğünü belirtmiştik. Ancak **ateşleme dişlisi** (atomik geçişler, ışımayı sağlayan elektron-zerre alışverişleri) doğrudan akışkana tutunma (patinaj/kavrama) mekanizmasıyla çalışır ve tam olarak $c_0$ hızına tabidir. Ateşleme anını belirleyen bu iç sinyaller, atomun içinde bir referans noktasından diğerine $c_0$ hızıyla gidip dönen mekanik bir "Zerre-Saati" (ışık saati) gibi çalışır.
 
-Atom, Evrenakı akışkanı içinde $v$ hızıyla hareket ettiğinde, bu $c$ limitli iç sinyaller düz bir çizgi yerine mecburen **çapraz (üçgen) bir yol** izlemek zorunda kalırlar. Hareketsiz atomda sinyalin gidiş-dönüş süresi $T_0$ iken, $v$ hızıyla ilerleyen atomda çapraz yolun süresi $T$ olur. Pisagor teoremine göre:
-$$ (c \cdot T)^2 = (v \cdot T)^2 + (c \cdot T_0)^2 $$
-$$ T^2 (c^2 - v^2) = c^2 \cdot T_0^2 $$
-$$ T = \frac{T_0}{\sqrt{1 - v^2/c^2}} $$
+Atom, Evrenakı akışkanı içinde $v$ hızıyla hareket ettiğinde, bu $c_0$ limitli iç sinyaller düz bir çizgi yerine mecburen **çapraz (üçgen) bir yol** izlemek zorunda kalırlar. Hareketsiz atomda sinyalin gidiş-dönüş süresi $T_0$ iken, $v$ hızıyla ilerleyen atomda çapraz yolun süresi $T$ olur. Pisagor teoremine göre:
+$$ (c_0 \cdot T)^2 = (v \cdot T)^2 + (c_0 \cdot T_0)^2 $$
+$$ T^2 (c_0^2 - v^2) = c_0^2 \cdot T_0^2 $$
+$$ T = \frac{T_0}{\sqrt{1 - v^2/c_0^2}} $$
 
 **Saatin Yönelimi ve Fiziksel Sıkışma (Boy Kısalması):**
 Burada çok kritik bir geometri sorusu doğar: Çapraz giden sinyal tam $\gamma$ yavaşlama verirken, hareket yönüne paralel gidip dönen sinyalin yol uzaması $\gamma^2$ çıkmalıdır. Bu durum saatin izotropisini (yönden bağımsızlığını) bozmaz mı? 
@@ -63,15 +63,15 @@ $$ f_s = f_0 \sqrt{1 - \frac{v^2}{c^2}} $$
 ### Adım 3: Sentez ve Nihai Formül
 
 Bu mekanik yavaşlamayı ($f_s$), Adım 1'deki Zerre Aralığı ($\lambda$) formülüne yerleştirelim:
-$$ \lambda = \frac{c + v}{f_0 \sqrt{1 - v^2/c^2}} $$
+$$ \lambda = \frac{c + v}{f_0 \sqrt{1 - v^2/c_0^2}} $$
 
-Sabit duran alıcımız, kendisine saniyede $c$ hızıyla çarpan bu mermilerin frekansını ($f_{obs}$) hesaplamak isterse, merminin hızını aralarındaki mesafeye ($\lambda$) böler:
+Sabit duran alıcımız, kendisine saniyede $c_0$ hızıyla çarpan bu mermilerin frekansını ($f_{obs}$) hesaplamak isterse, merminin hızını aralarındaki mesafeye ($\lambda$) böler:
 $$ f_{obs} = \frac{c}{\lambda} $$
 
 Yerine koyduğumuzda:
-$$ f_{obs} = \frac{c}{\frac{c + v}{f_0 \sqrt{1 - v^2/c^2}}} = f_0 \frac{c \sqrt{1 - v^2/c^2}}{c + v} $$
+$$ f_{obs} = \frac{c}{\frac{c + v}{f_0 \sqrt{1 - v^2/c_0^2}}} = f_0 \frac{c \sqrt{1 - v^2/c_0^2}}{c + v} $$
 
-Denklemin pay ve paydasını $c$'ye bölersek ($v/c = \beta$ diyerek):
+Denklemin pay ve paydasını $c_0$'ye bölersek ($v/c_0 = \beta$ diyerek):
 $$ f_{obs} = f_0 \frac{\sqrt{1 - \beta^2}}{1 + \beta} $$
 
 $\sqrt{1 - \beta^2}$ ifadesini kök içinde $(1 - \beta)(1 + \beta)$ olarak açalım:
@@ -80,8 +80,8 @@ $$ f_{obs} = f_0 \frac{\sqrt{(1 - \beta)(1 + \beta)}}{1 + \beta} $$
 $1 + \beta$ ifadesini $\sqrt{1 + \beta} \cdot \sqrt{1 + \beta}$ olarak düşünürsek, paydaki $\sqrt{1 + \beta}$ ile paydadakilerden biri sadeleşir ve geriye şu kalır:
 
 $$ f_{obs} = f_0 \sqrt{\frac{1 - \beta}{1 + \beta}} $$
-Veya $\beta$ yerine $v/c$ yazarsak:
-$$ f_{obs} = f_0 \sqrt{\frac{1 - v/c}{1 + v/c}} $$
+Veya $\beta$ yerine $v/c_0$ yazarsak:
+$$ f_{obs} = f_0 \sqrt{\frac{1 - v/c_0}{1 + v/c_0}} $$
 *(katalog: **Ek M-19**)*
 
 ---
@@ -101,8 +101,8 @@ Ancak bizim 6.1.2'deki türetimimiz, laboratuvarımızdaki **alıcının Dünya'
 Peki ya alıcı da yerel ortama göre $u$ hızıyla hareket ediyorsa? O zaman alıcının kendi saati de $\gamma_u$ oranında yavaşlar (kendi "bir saniyesi" uzar) ve saniyede yakaladığı mermi sayısı artar ($f_{obs} = \gamma_u \cdot \frac{c \pm u}{\lambda}$). 
 Bu durumda genel ve nicel (iki-hızlı) **Evrenakı Doppler Formülü** şu şekli alır:
 
-$$ f_{obs} = f_0 \left( \frac{1 \pm u/c}{1 \pm v/c} \right) \frac{\sqrt{1 - v^2/c^2}}{\sqrt{1 - u^2/c^2}} $$
+$$ f_{obs} = f_0 \left( \frac{1 \pm u/c_0}{1 \pm v/c_0} \right) \frac{\sqrt{1 - v^2/c_0^2}}{\sqrt{1 - u^2/c_0^2}} $$
 
 Yukarıdaki denklem, Lorentz esir teorisinin o meşhur gözlemlenemezlik teoremine (Lorentz, 1904) saygı duyar: Saat yavaşlaması ve boy kısalması mekanizmaları (ezilme) kusursuz çalıştığı için, $u$ ve $v$ mutlak hızları tam olarak SR'nin bağıl hız ($V_{rel}$) formülüne matematiksel olarak eşdeğer çıkar. Yani Evrenakı, Özel Görelilik'i kinematik düzeyde **%100 oranında kapsar ve doğrular.**
 
-Peki Evrenakı nerede Özel Görelilik'ten ayrışır ve onu yanlışlar? Cevap kinematik katmanda (hareket) değil, dinamik katmandadır (Postülat 4: Değişken $c$). Standart fizikte "Kütleçekimsel Kızıla Kayma" (Gravitational Redshift) olarak bilinen olguyu, Evrenakı teorisinde tamamen mekanik bir **dalga boyu esnemesi** (sabit frekans, değişen hız) olarak incelemek için bir sonraki kâğıt üzerinde deneye (Bölüm 6.2) geçiyoruz.
+Peki Evrenakı nerede Özel Görelilik'ten ayrışır ve onu yanlışlar? Cevap kinematik katmanda (hareket) değil, dinamik katmandadır (Postülat 4: Değişken $c_0$). Standart fizikte "Kütleçekimsel Kızıla Kayma" (Gravitational Redshift) olarak bilinen olguyu, Evrenakı teorisinde tamamen mekanik bir **dalga boyu esnemesi** (sabit frekans, değişen hız) olarak incelemek için bir sonraki kâğıt üzerinde deneye (Bölüm 6.2) geçiyoruz.

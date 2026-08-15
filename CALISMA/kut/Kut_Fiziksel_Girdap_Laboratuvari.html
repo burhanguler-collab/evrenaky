@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>KUT/LAB — 4B Kararlı Kavitasyon Laboratuvarı</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink:#eef3ea; --muted:#9cabaa; --line:#253739; --panel:#101a1c;
+      --panel2:#142225; --deep:#071012; --cyan:#62d8cf; --cyan2:#b9fff4;
+      --coral:#ff8068; --gold:#f1c56b; --bubble:#e9fff9; --good:#7cdda1; --warn:#ffcc73;
+      --danger:#ff8177; --shadow:0 24px 70px rgba(0,0,0,.34);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;min-height:100%;background:var(--deep);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+    body{background:
+      radial-gradient(circle at 78% -10%,rgba(98,216,207,.13),transparent 34rem),
+      radial-gradient(circle at -5% 50%,rgba(255,128,104,.08),transparent 30rem),var(--deep)}
+    button,input,select{font:inherit}
+    button{color:inherit}
+    .shell{width:min(1500px,100%);margin:auto;padding:18px}
+    .topbar{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:9px 2px 18px}
+    .brand{display:flex;align-items:center;gap:13px;min-width:0}
+    .mark{width:42px;height:42px;border:1px solid rgba(98,216,207,.55);display:grid;place-items:center;position:relative;transform:rotate(45deg)}
+    .mark:before,.mark:after{content:"";position:absolute;border:1px solid rgba(255,128,104,.75);inset:8px;border-radius:50%}
+    .mark:after{inset:15px;background:var(--cyan);border:0}
+    .mark span{transform:rotate(-45deg);font:600 9px/1 ui-monospace,monospace;z-index:1;color:#061113}
+    .eyebrow{font:600 10px/1.2 ui-monospace,SFMono-Regular,monospace;letter-spacing:.18em;color:var(--cyan);text-transform:uppercase}
+    h1{font-size:clamp(18px,2vw,27px);line-height:1.08;margin:4px 0 0;font-weight:650;letter-spacing:-.035em}
+    .scope{display:flex;align-items:center;gap:9px;padding:7px 10px;border:1px solid var(--line);background:rgba(16,26,28,.7);font:11px/1.2 ui-monospace,monospace;color:var(--muted)}
+    .scope i{width:8px;height:8px;border-radius:50%;background:var(--good);box-shadow:0 0 14px var(--good)}
+    .command{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:10px;background:rgba(16,26,28,.82);border:1px solid var(--line);box-shadow:var(--shadow)}
+    .command .spacer{flex:1}
+    button,.select{min-height:36px;border:1px solid var(--line);background:#142124;padding:0 12px;border-radius:2px;cursor:pointer;transition:.18s ease}
+    button:hover{border-color:#4b696a;background:#192a2d}
+    button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
+    button.primary{background:var(--cyan);border-color:var(--cyan);color:#061113;font-weight:700;min-width:92px}
+    button.primary:hover{background:var(--cyan2)}
+    button.ghost{background:transparent}
+    button.icon{width:36px;padding:0;display:grid;place-items:center;font-size:15px}
+    .preset{font:600 10px/1 ui-monospace,monospace;text-transform:uppercase;letter-spacing:.06em}
+    .preset.active{border-color:var(--cyan);color:var(--cyan);box-shadow:inset 0 -2px 0 var(--cyan)}
+    .workspace{display:grid;grid-template-columns:245px minmax(440px,1fr) 274px;gap:12px;margin-top:12px;align-items:start}
+    .panel{background:rgba(16,26,28,.88);border:1px solid var(--line);box-shadow:var(--shadow)}
+    .panel-head{display:flex;align-items:center;justify-content:space-between;min-height:44px;padding:0 14px;border-bottom:1px solid var(--line)}
+    .panel-head h2{font:600 11px/1 ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase;margin:0}
+    .panel-head span{font:10px/1 ui-monospace,monospace;color:var(--muted)}
+    .controls{padding:14px}
+    .control{margin-bottom:17px}
+    .control:last-child{margin-bottom:0}
+    .control-row{display:flex;justify-content:space-between;gap:12px;align-items:baseline;margin-bottom:7px}
+    .control label{font-size:12px;color:#d4dcda}
+    .control output{font:600 11px/1 ui-monospace,monospace;color:var(--cyan)}
+    input[type="range"]{width:100%;height:4px;appearance:none;background:#27383a;border-radius:3px;outline:0}
+    input[type="range"]::-webkit-slider-thumb{appearance:none;width:14px;height:14px;border-radius:50%;background:var(--ink);border:3px solid var(--cyan);cursor:pointer}
+    .range-scale{display:flex;justify-content:space-between;font:9px/1.4 ui-monospace,monospace;color:#687a7a;margin-top:5px}
+    .switch-row{display:flex;justify-content:space-between;align-items:center;font-size:12px;padding:8px 0;border-top:1px solid rgba(37,55,57,.65)}
+    .switch{position:relative;width:34px;height:18px}
+    .switch input{opacity:0;width:0;height:0}
+    .switch span{position:absolute;inset:0;background:#293638;border-radius:20px;cursor:pointer}
+    .switch span:before{content:"";position:absolute;width:12px;height:12px;left:3px;top:3px;background:#839393;border-radius:50%;transition:.16s}
+    .switch input:checked+span{background:rgba(98,216,207,.3)}
+    .switch input:checked+span:before{transform:translateX(16px);background:var(--cyan)}
+    .mini-actions{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:14px}
+    .mini-actions button{font-size:11px;padding:0 8px}
+    .stage{position:relative;overflow:hidden;background:#050b0c;min-height:596px}
+    #field{display:block;width:100%;height:596px;touch-action:none;cursor:crosshair}
+    .stage-top{position:absolute;left:12px;right:12px;top:12px;display:flex;justify-content:space-between;gap:10px;pointer-events:none}
+    .readout{background:rgba(5,11,12,.78);border:1px solid rgba(98,216,207,.23);backdrop-filter:blur(8px);padding:8px 10px;font:10px/1.55 ui-monospace,monospace;color:var(--muted)}
+    .readout b{color:var(--ink);font-weight:600}
+    .validity{display:flex;align-items:center;gap:7px;color:var(--good)}
+    .validity:before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+    .validity.warn{color:var(--warn)}
+    .validity.bad{color:var(--danger)}
+    .stage-bottom{position:absolute;left:12px;right:12px;bottom:10px;display:flex;align-items:flex-end;justify-content:space-between;gap:12px;pointer-events:none}
+    .legend{display:flex;gap:11px;flex-wrap:wrap;background:rgba(5,11,12,.72);padding:7px 9px;font:10px/1 ui-monospace,monospace;color:var(--muted)}
+    .key{display:flex;align-items:center;gap:5px}.swatch{width:13px;height:3px}.pos{background:var(--cyan)}.neg{background:var(--coral)}.flow{background:var(--gold)}
+    .hint{font:10px/1.45 ui-monospace,monospace;color:#829191;text-align:right;background:rgba(5,11,12,.72);padding:6px 8px}
+    .metrics{display:grid;grid-template-columns:1fr 1fr}
+    .metric{min-height:86px;padding:13px;border-bottom:1px solid var(--line)}
+    .metric:nth-child(odd){border-right:1px solid var(--line)}
+    .metric small{display:block;color:var(--muted);font:9px/1.25 ui-monospace,monospace;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
+    .metric strong{font:500 21px/1 ui-monospace,monospace;letter-spacing:-.04em}
+    .metric em{display:block;font:9px/1.3 ui-monospace,monospace;color:#718181;margin-top:7px;font-style:normal}
+    .status-box{padding:13px;border-bottom:1px solid var(--line)}
+    .status-title{font-size:12px;font-weight:650;margin-bottom:6px}
+    .status-copy{font-size:11px;line-height:1.55;color:var(--muted);min-height:51px}
+    .meter-label{display:flex;justify-content:space-between;font:9px/1 ui-monospace,monospace;color:var(--muted);margin:11px 0 6px}
+    .meter{height:4px;background:#263537;overflow:hidden}.meter span{display:block;height:100%;width:0;background:var(--good);transition:width .2s,background .2s}
+    .eventlog{padding:10px 13px 13px;min-height:160px}
+    .event{display:grid;grid-template-columns:46px 1fr;gap:8px;padding:7px 0;border-bottom:1px solid rgba(37,55,57,.55);font:10px/1.4 ui-monospace,monospace}
+    .event time{color:#627273}.event span{color:#b9c5c2}
+    .lower{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+    .chart-wrap{padding:10px 12px 12px}
+    canvas.chart{width:100%;height:188px;display:block}
+    .chart-legend{display:flex;gap:13px;align-items:center;flex-wrap:wrap;margin:2px 0 8px;font:10px/1.2 ui-monospace,monospace;color:var(--muted)}
+    .chart-legend .line{width:16px;height:2px;display:inline-block;margin-right:5px;vertical-align:middle}
+    details{margin-top:12px;border:1px solid var(--line);background:rgba(16,26,28,.72)}
+    summary{cursor:pointer;padding:13px 15px;font:600 11px/1.2 ui-monospace,monospace;letter-spacing:.08em;text-transform:uppercase}
+    .notes{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line)}
+    .note{padding:15px;border-right:1px solid var(--line);font-size:11px;line-height:1.55;color:var(--muted)}
+    .note:last-child{border:0}.note b{display:block;color:var(--ink);margin-bottom:5px}
+    .note code{color:var(--cyan);font:11px ui-monospace,monospace}
+    .note a{color:var(--cyan)}
+    .testbar{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:10px 2px 0;color:#617171;font:9px/1.4 ui-monospace,monospace}
+    @media (max-width:1100px){.workspace{grid-template-columns:220px 1fr}.right{grid-column:1/-1}.right .panel{display:grid;grid-template-columns:1fr 1.2fr 1fr}.right .panel-head{grid-column:1/-1}.metrics{border-right:1px solid var(--line)}.eventlog{min-height:0}.notes{grid-template-columns:1fr 1fr}.note:nth-child(2){border-right:0}.note:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+    @media (max-width:760px){.shell{padding:10px}.topbar{align-items:flex-start}.scope{display:none}.command{position:sticky;top:0;z-index:5}.command .preset{display:none}.workspace{grid-template-columns:1fr}.left{order:2}.stage{order:1;min-height:460px}#field{height:460px}.right{order:3;grid-column:auto}.right .panel{display:block}.lower{grid-template-columns:1fr}.left .panel .controls{display:grid;grid-template-columns:1fr 1fr;gap:0 18px}.mini-actions{grid-column:1/-1}.notes{grid-template-columns:1fr}.note{border-right:0;border-bottom:1px solid var(--line)}.hint{display:none}}
+    @media (max-width:470px){.mark{display:none}.command{gap:6px}.command button{padding:0 9px}.command .spacer{display:none}.workspace{margin-top:8px}.left .panel .controls{display:block}.stage-top{flex-direction:column;align-items:flex-start}.readout:last-child{align-self:flex-end}.metrics{grid-template-columns:1fr 1fr}}
+  </style>
+</head>
+<body>
+<main class="shell">
+  <header class="topbar">
+    <div class="brand">
+      <div class="mark" aria-hidden="true"><span>K</span></div>
+      <div><div class="eyebrow">KUT / kuram-içi yeniden kurulum 03</div><h1>4B Kararlı Kavitasyon Laboratuvarı</h1></div>
+    </div>
+    <div class="scope"><i></i><span>4B olay · 3B kesit · değişmez Kut yarıçapı</span></div>
+  </header>
+
+  <nav class="command" aria-label="Simülasyon komutları">
+    <button class="preset active" data-preset="cav">Kavitasyon</button>
+    <button class="preset" data-preset="pair">Aynı işaret</button>
+    <button class="preset" data-preset="dipole">Dipol</button>
+    <button class="preset" data-preset="ring7">N = 7</button>
+    <button class="preset" data-preset="ring8">N = 8</button>
+    <button class="preset" data-preset="mixed">Karışık</button>
+    <span class="spacer"></span>
+    <button id="stepBtn" class="icon" aria-label="Tek adım" title="Tek adım">↦</button>
+    <button id="resetBtn" class="ghost">Sıfırla</button>
+    <button id="playBtn" class="primary">▶ Başlat</button>
+  </nav>
+
+  <section class="workspace">
+    <aside class="left">
+      <section class="panel">
+        <div class="panel-head"><h2>4B görünüm</h2><span>boyutsuz</span></div>
+        <div class="controls">
+          <div class="control"><div class="control-row"><label for="nu">Görüş dönüşü ωₓw</label><output id="nuOut">0.35</output></div><input id="nu" type="range" min="0" max="1.5" value="0.35" step="0.01"><div class="range-scale"><span>sabit kesit</span><span>hızlı dönüş</span></div></div>
+          <div class="control"><div class="control-row"><label for="core">Değişmez Kut yarıçapı R₄</label><output id="coreOut">0.42 L</output></div><input id="core" type="range" min="0.16" max="0.9" value="0.42" step="0.01"><div class="range-scale"><span>küçük Kut</span><span>büyük Kut</span></div></div>
+          <div class="control"><div class="control-row"><label for="gamma">Dolaşım büyüklüğü |Γ|</label><output id="gammaOut">4.00</output></div><input id="gamma" type="range" min="0.5" max="8" value="4" step="0.1"></div>
+          <div class="control"><div class="control-row"><label for="sound">Görüş dönüşü ωᵧz</label><output id="soundOut">0.55</output></div><input id="sound" type="range" min="0" max="1.5" value="0.55" step="0.01"><div class="range-scale"><span>tek düzlem</span><span>çift dönüş</span></div></div>
+          <div class="control"><div class="control-row"><label for="ambientP">3B kesit konumu w₀</label><output id="ambientPOut">0.00 L</output></div><input id="ambientP" type="range" min="-1.5" max="1.5" value="0" step="0.01"></div>
+          <div class="control"><div class="control-row"><label for="speed">Zaman ölçeği</label><output id="speedOut">1.0×</output></div><input id="speed" type="range" min="0.2" max="3" value="1" step="0.1"></div>
+          <div class="switch-row"><span>4B kavite kesitleri</span><label class="switch"><input id="cavitationOn" type="checkbox" checked><span></span></label></div>
+          <div class="switch-row"><span>Girdaplık alanı</span><label class="switch"><input id="showField" type="checkbox" checked><span></span></label></div>
+          <div class="switch-row"><span>Hız vektörleri</span><label class="switch"><input id="showVectors" type="checkbox" checked><span></span></label></div>
+          <div class="switch-row"><span>İz çizgileri</span><label class="switch"><input id="showTrails" type="checkbox" checked><span></span></label></div>
+          <div class="mini-actions"><button id="addPos">+ Pozitif Kut</button><button id="addNeg">− Negatif Kut</button></div>
+        </div>
+      </section>
+    </aside>
+
+    <section class="panel stage" aria-label="4B kararlı Kut ve 3B kesit simülasyonu">
+      <canvas id="field" role="img" aria-label="Sabit yarıçaplı 4B Kutların üç boyutlu kesit görünümü"></canvas>
+      <div class="stage-top">
+        <div class="readout"><b id="scenarioName">Eşdönüşlü çift</b><br><span id="clock">t = 0.00 T · adım 0</span></div>
+        <div class="readout"><span id="validity" class="validity">Düşük Mach yaklaşımı geçerli</span></div>
+      </div>
+      <div class="stage-bottom">
+        <div class="legend"><span class="key"><i class="swatch pos"></i>+ Γ</span><span class="key"><i class="swatch neg"></i>− Γ</span><span class="key"><i class="swatch flow"></i>akış</span><span class="key"><i class="swatch" style="background:var(--bubble)"></i>kavite</span></div>
+        <div class="hint">Tıkla: seç/taşı · boş alana tıkla: ekle<br>Shift + tık: negatif girdap</div>
+      </div>
+    </section>
+
+    <aside class="right">
+      <section class="panel">
+        <div class="panel-head"><h2>Canlı tanı</h2><span id="particleCount">2 çekirdek</span></div>
+        <div class="metrics">
+          <div class="metric"><small>Net dolaşım</small><strong id="mGamma">+8.00</strong><em>Σ Γ — uzak alan</em></div>
+          <div class="metric"><small>Sınır hızı</small><strong id="mBoundary">0.00</strong><em>max halka RMS</em></div>
+          <div class="metric"><small>Tepe girdaplık</small><strong id="mOmega">0.00</strong><em>max |ω|</em></div>
+          <div class="metric"><small>4B norm hatası</small><strong id="mMach">0.00</strong><em>max |Δ‖q‖|</em></div>
+          <div class="metric"><small>Kut yarıçapı</small><strong id="mCore">0.42</strong><em>R₄ — değişmez</em></div>
+          <div class="metric"><small>4B dipol momenti</small><strong id="mDipole">0.00</strong><em>|Σ Γq|</em></div>
+          <div class="metric"><small>En yakın 4B uzaklık</small><strong id="mPressure">0.00</strong><em>min ‖qᵢ−qⱼ‖</em></div>
+          <div class="metric"><small>Görünen kesit</small><strong id="mCavity">0 / 0</strong><em>w=w₀ içinde</em></div>
+        </div>
+        <div class="status-box">
+          <div id="statusTitle" class="status-title">İki sonlu çekirdek ayrı</div>
+          <div id="statusCopy" class="status-copy">Aynı işaretli girdaplar birbirini döndürüyor. Viskoz yayılma arttıkça alanları örtüşür; kod onları tek noktaya ışınlamaz.</div>
+          <div class="meter-label"><span>çekirdek örtüşmesi</span><span id="overlapText">0%</span></div><div class="meter"><span id="overlapBar"></span></div>
+        </div>
+        <div class="eventlog" id="eventLog" aria-live="polite"></div>
+      </section>
+    </aside>
+  </section>
+
+  <section class="lower">
+    <section class="panel"><div class="panel-head"><h2>Sınır yanıtı</h2><span>merkezden yarıçap r</span></div><div class="chart-wrap"><div class="chart-legend"><span><i class="line pos"></i>halka RMS hızı</span><span><i class="line neg"></i>çevrelenmiş net Γ</span></div><canvas id="radialChart" class="chart" role="img" aria-label="Yarıçapa göre halka hızı ve çevrelenmiş dolaşım grafiği"></canvas></div></section>
+    <section class="panel"><div class="panel-head"><h2>4B kesit izi</h2><span>son 24 T</span></div><div class="chart-wrap"><div class="chart-legend"><span><i class="line pos"></i>görünen kesit</span><span><i class="line flow"></i>ortalama kesit yarıçapı</span><span><i class="line neg"></i>R₄ değişmezlik hatası</span></div><canvas id="historyChart" class="chart" role="img" aria-label="Zamana göre görünür 3B kesit sayısı, kesit yarıçapı ve 4B yarıçap değişmezliği"></canvas></div></section>
+  </section>
+
+  <details>
+    <summary>Modelin fiziksel sözleşmesi ve sınırları</summary>
+    <div class="notes">
+      <div class="note"><b>Kararlı 4B kavite</b><code>R₄(t)=R₄(0)</code><br>Kut bir kabarcık gibi büyümez veya çökmez. Kavitasyon Kut’un kalıcı yapısıdır.</div>
+      <div class="note"><b>3B kesit</b><code>r₃=√(R₄²−(w−w₀)²)</code><br>Ekrandaki dairenin büyüyüp küçülmesi Kut’un değişmesi değil, sabit 4B yapının kesitimize farklı miktarda girmesidir.</div>
+      <div class="note"><b>4B olay ölçütü</b><code>d₄=√(Δx²+Δy²+Δz²+Δw²)</code><br>Yakınlık, bağ ve yapı tanısı ekrandaki 2B uzaklığa göre değil tam 4B uzaklığa göre hesaplanır.</div>
+      <div class="note"><b>Kuramsal durum</b><code>R∈SO(4), detR=+1</code><br>SO(4) dönüşü ve kesit geometrisi matematikseldir. Kut etkileşim yasası bu ekranda kuram girdisidir; deneysel doğrulama değildir.</div>
+    </div>
+  </details>
+  <footer class="testbar"><span id="testStatus">öz sınamalar hazırlanıyor…</span><span>4B RK4 · SO(4) çift dönüş · R₄ sabit · SI kalibrasyonu yok</span></footer>
+</main>
+
+<script type="text/plain" id="retired-3b-rayleigh-plesset-model">
+(() => {
+  'use strict';
+  const TAU=Math.PI*2, field=document.getElementById('field'), ctx=field.getContext('2d');
+  const radial=document.getElementById('radialChart'), rctx=radial.getContext('2d');
+  const history=document.getElementById('historyChart'), hctx=history.getContext('2d');
+  const $=id=>document.getElementById(id);
+  const css=name=>getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+  const world={xmin:-6,xmax:6,ymin:-4.3,ymax:4.3};
+  let vortices=[],bubbles=[],running=false,last=performance.now(),time=0,steps=0,activePreset='cav',addSign=1,drag=null;
+  let trails=[],historyData=[],radialData=[],metrics={maxOmega:0,boundary:0,mach:0,enstrophy:0,overlap:0,core:0,dipole:0};
+  let lastDiag=-1,events=[],lastCavityCount=0;
+  const scenarios={
+    cav:{name:'Kavitasyon eşiğini aşan eşdönüşlü çift',make:(g,a)=>[{x:-.78,y:0,g:g*1.35,a2:(a*.8)**2},{x:.78,y:0,g:g*1.35,a2:(a*.8)**2}]},
+    pair:{name:'Eşdönüşlü sonlu çekirdek çifti',make:(g,a)=>[{x:-1.25,y:0,g,a2:a*a},{x:1.25,y:0,g,a2:a*a}]},
+    dipole:{name:'Zıt işaretli ilerleyen dipol',make:(g,a)=>[{x:0,y:-.72,g,a2:a*a},{x:0,y:.72,g:-g,a2:a*a}]},
+    ring7:{name:'N = 7 kritik / metastabil halka',make:(g,a)=>ring(7,2.25,g,a,.018)},
+    ring8:{name:'N = 8 kararsız halka',make:(g,a)=>ring(8,2.25,g,a,.026)},
+    mixed:{name:'Net dolaşımı sıfır karışık küme',make:(g,a)=>[
+      {x:-1.7,y:-.7,g,a2:a*a},{x:-.3,y:1.2,g,a2:a*a},{x:1.45,y:-.45,g,a2:a*a},
+      {x:-1.25,y:.7,g:-g,a2:a*a},{x:.45,y:-1.25,g:-g,a2:a*a},{x:1.65,y:.9,g:-g,a2:a*a}
+    ]}
+  };
+  function ring(n,r,g,a,jitter=0){return Array.from({length:n},(_,i)=>{const q=TAU*i/n,rr=r*(1+jitter*Math.sin(i*7.31));return{x:rr*Math.cos(q),y:rr*Math.sin(q),g,a2:a*a};});}
+  function params(){return{nu:+$('nu').value,core:+$('core').value,gamma:+$('gamma').value,sound:+$('sound').value,ambient:+$('ambientP').value,vapor:+$('vaporP').value,speed:+$('speed').value,cavitation:$('cavitationOn').checked};}
+  function setOutputs(){const p=params();$('nuOut').value=p.nu.toFixed(3);$('coreOut').value=p.core.toFixed(2)+' L';$('gammaOut').value=p.gamma.toFixed(2);$('soundOut').value=p.sound.toFixed(1)+' L/T';$('ambientPOut').value=p.ambient.toFixed(2);$('vaporPOut').value=p.vapor.toFixed(2);$('speedOut').value=p.speed.toFixed(1)+'×';}
+  function log(msg){events.unshift({t:time,msg});events=events.slice(0,5);$('eventLog').innerHTML=events.map(e=>`<div class="event"><time>${e.t.toFixed(2)} T</time><span>${e.msg}</span></div>`).join('');}
+  function seedNuclei(){const out=[];let id=0;for(const v of vortices){for(let k=0;k<12;k++){const q=TAU*(k/12)+v.id*.73,rr=.22+.09*(k%5);out.push({id:++id,x:v.x+rr*Math.cos(q),y:v.y+rr*Math.sin(q),R0:.026,R:.026,rdot:0,active:false,age:0});}}for(let y=-3.5;y<=3.5;y+=1)for(let x=-5;x<=5;x+=1)out.push({id:++id,x:x+.11*Math.sin(id*2.3),y:y+.11*Math.cos(id*1.7),R0:.022,R:.022,rdot:0,active:false,age:0});return out.slice(0,150);}
+  function reset(preset=activePreset){activePreset=preset;const p=params();vortices=scenarios[preset].make(p.gamma,p.core).map((v,i)=>({...v,id:i+1}));bubbles=seedNuclei();lastCavityCount=0;time=0;steps=0;trails=[];historyData=[];radialData=[];events=[];lastDiag=-1;document.querySelectorAll('.preset').forEach(b=>b.classList.toggle('active',b.dataset.preset===preset));$('scenarioName').textContent=scenarios[preset].name;log('Girdaplar ve mikroskobik kavitasyon çekirdekleri kuruldu.');diagnose(true);draw();}
+  function inducedAt(x,y,vs=vortices,skip=-1){let ux=0,uy=0;for(let j=0;j<vs.length;j++){if(j===skip)continue;const v=vs[j],dx=x-v.x,dy=y-v.y,r2=dx*dx+dy*dy,soft=Math.max(v.a2,1e-7);if(r2<1e-12)continue;const k=v.g/TAU*(1-Math.exp(-r2/soft))/r2;ux+=-dy*k;uy+=dx*k;}return{x:ux,y:uy};}
+  function derivatives(state){return state.map((v,i)=>inducedAt(v.x,v.y,state,i));}
+  function localPressure(x,y,p=params()){const u=inducedAt(x,y),speed2=u.x*u.x+u.y*u.y;return Math.max(.02,p.ambient-.5*speed2);}
+  function bubbleAcceleration(b,pLocal,p=params()){
+    const R=Math.max(b.R,.008),surface=.003,mu=.014,kappa=1.32;
+    const gas0=Math.max(.02,p.ambient-p.vapor+2*surface/b.R0);
+    const gas=gas0*Math.pow(b.R0/R,3*kappa);
+    return Math.max(-900,Math.min(900,(gas+p.vapor-pLocal-2*surface/R-4*mu*b.rdot/R-1.5*b.rdot*b.rdot)/R));
+  }
+  function advanceBubbles(dt){const p=params();for(const b of bubbles){const u=inducedAt(b.x,b.y),pl=localPressure(b.x,b.y,p);b.x+=u.x*dt;b.y+=u.y*dt;if(!p.cavitation){b.active=false;b.R=b.R0;b.rdot=0;continue;}if(!b.active&&pl<p.vapor+.012){b.active=true;b.age=0;}if(b.active){const acc=bubbleAcceleration(b,pl,p);b.rdot=Math.max(-2.2,Math.min(2.2,b.rdot+acc*dt));b.R=Math.max(.007,Math.min(.48,b.R+b.rdot*dt));b.age+=dt;if(b.R<=.009&&pl>p.vapor){b.active=false;b.R=b.R0;b.rdot=0;b.age=0;}}}}
+  function rk4(dt){const base=vortices.map(v=>({...v})),k1=derivatives(base);const s2=base.map((v,i)=>({...v,x:v.x+k1[i].x*dt/2,y:v.y+k1[i].y*dt/2}));const k2=derivatives(s2);const s3=base.map((v,i)=>({...v,x:v.x+k2[i].x*dt/2,y:v.y+k2[i].y*dt/2}));const k3=derivatives(s3);const s4=base.map((v,i)=>({...v,x:v.x+k3[i].x*dt,y:v.y+k3[i].y*dt}));const k4=derivatives(s4);const nu=params().nu;vortices.forEach((v,i)=>{v.x=base[i].x+dt*(k1[i].x+2*k2[i].x+2*k3[i].x+k4[i].x)/6;v.y=base[i].y+dt*(k1[i].y+2*k2[i].y+2*k3[i].y+k4[i].y)/6;v.a2+=4*nu*dt;});advanceBubbles(dt);time+=dt;steps++;if(steps%4===0){trails.push(vortices.map(v=>({x:v.x,y:v.y,g:v.g})));if(trails.length>170)trails.shift();}}
+  function center(){let G=vortices.reduce((s,v)=>s+v.g,0),sx=0,sy=0,w=0;if(Math.abs(G)>1e-6){vortices.forEach(v=>{sx+=v.g*v.x;sy+=v.g*v.y;});return{x:sx/G,y:sy/G};}vortices.forEach(v=>{const q=Math.abs(v.g);sx+=q*v.x;sy+=q*v.y;w+=q;});return{x:sx/(w||1),y:sy/(w||1)};}
+  function omegaAt(x,y){let o=0;for(const v of vortices)o+=v.g/(Math.PI*v.a2)*Math.exp(-((x-v.x)**2+(y-v.y)**2)/v.a2);return o;}
+  function overlapScore(){let best=0;for(let i=0;i<vortices.length;i++)for(let j=i+1;j<vortices.length;j++){if(Math.sign(vortices[i].g)!==Math.sign(vortices[j].g))continue;const d=Math.hypot(vortices[i].x-vortices[j].x,vortices[i].y-vortices[j].y),a=Math.sqrt(vortices[i].a2)+Math.sqrt(vortices[j].a2);best=Math.max(best,Math.exp(-2*(d/a)**2));}return best;}
+  function diagnose(force=false){if(!force&&time-lastDiag<.12)return;lastDiag=time;const c=center(),N=68,M=46,dx=(world.xmax-world.xmin)/N,dy=(world.ymax-world.ymin)/M,pNow=params();let maxO=0,maxU=0,en=0,minPressure=Infinity;for(let iy=0;iy<M;iy++)for(let ix=0;ix<N;ix++){const x=world.xmin+(ix+.5)*dx,y=world.ymin+(iy+.5)*dy,o=omegaAt(x,y),u=inducedAt(x,y),u2=u.x*u.x+u.y*u.y;maxO=Math.max(maxO,Math.abs(o));maxU=Math.max(maxU,Math.sqrt(u2));minPressure=Math.min(minPressure,Math.max(.02,pNow.ambient-.5*u2));en+=o*o*dx*dy;}
+    const bins=40,angles=48,arr=[];let boundary=0;for(let b=0;b<bins;b++){const r=.08+b*4.9/(bins-1);let u2=0;for(let k=0;k<angles;k++){const q=TAU*k/angles,x=c.x+r*Math.cos(q),y=c.y+r*Math.sin(q),u=inducedAt(x,y);u2+=u.x*u.x+u.y*u.y;}const urms=Math.sqrt(u2/angles);boundary=Math.max(boundary,urms);let enc=0;for(const v of vortices){const d=Math.hypot(c.x-v.x,c.y-v.y);const frac=.5*(1+Math.tanh((r-d)/(Math.sqrt(v.a2)*.7+.04)));enc+=v.g*frac;}arr.push({r,u:urms,g:enc});}
+    let dipx=0,dipy=0,core2=0,gw=0;vortices.forEach(v=>{dipx+=v.g*v.x;dipy+=v.g*v.y;core2+=Math.abs(v.g)*v.a2;gw+=Math.abs(v.g);});const activeBubbles=bubbles.filter(b=>b.active),cavity=activeBubbles.reduce((s,b)=>s+4*Math.PI*b.R**3/3,0);metrics={maxOmega:maxO,boundary,mach:maxU/pNow.sound,enstrophy:en,overlap:overlapScore(),core:Math.sqrt(core2/(gw||1)),dipole:Math.hypot(dipx,dipy),maxU,minPressure,cavity,activeBubbles:activeBubbles.length};radialData=arr;
+    if(activeBubbles.length>0&&lastCavityCount===0)log(`Kavitasyon başladı: p_min=${minPressure.toFixed(2)} < pᵥ=${pNow.vapor.toFixed(2)}.`);if(activeBubbles.length===0&&lastCavityCount>0)log('Kavite çekirdekleri çöktü; sıvı faz yeniden kapandı.');lastCavityCount=activeBubbles.length;
+    if(!historyData.length||time-historyData.at(-1).t>.16){historyData.push({t:time,o:maxO,b:boundary,e:en,c:cavity});while(historyData.length&&time-historyData[0].t>24)historyData.shift();}
+    updateDiagnostics();drawCharts();
+  }
+  function fmtSigned(x){return(x>=0?'+':'−')+Math.abs(x).toFixed(2)}
+  function updateDiagnostics(){const G=vortices.reduce((s,v)=>s+v.g,0);$('mGamma').textContent=fmtSigned(G);$('mBoundary').textContent=metrics.boundary.toFixed(2);$('mOmega').textContent=metrics.maxOmega.toFixed(2);$('mMach').textContent=metrics.mach.toFixed(2);$('mCore').textContent=metrics.core.toFixed(2);$('mDipole').textContent=metrics.dipole.toFixed(2);$('mPressure').textContent=metrics.minPressure.toFixed(2);$('mCavity').textContent=metrics.cavity<.001?metrics.cavity.toExponential(1):metrics.cavity.toFixed(3);$('particleCount').textContent=`${vortices.length} girdap · ${metrics.activeBubbles} kavite`;$('clock').textContent=`t = ${time.toFixed(2)} T · adım ${steps}`;
+    const val=$('validity');val.className='validity'+(metrics.mach>.6?' bad':metrics.mach>.3?' warn':'');val.textContent=metrics.mach>.6?'Model geçerlilik dışında (M > 0.6)':metrics.mach>.3?'Sıkıştırılabilirlik önemli (M > 0.3)':'Düşük Mach yaklaşımı geçerli';
+    const pct=Math.round(metrics.overlap*100);$('overlapText').textContent=pct+'%';$('overlapBar').style.width=pct+'%';$('overlapBar').style.background=pct>65?'var(--cyan)':pct>30?'var(--gold)':'var(--good)';
+    let title,copy;if(metrics.activeBubbles>0){const below=metrics.minPressure<params().vapor;title=`Kavitasyon etkin — ${metrics.activeBubbles} kabarcık`;copy=below?`Basınç çukuru sürüyor: p_min=${metrics.minPressure.toFixed(2)} < pᵥ=${params().vapor.toFixed(2)}. Toplam kavite hacmi ${metrics.cavity.toExponential(2)}.`:`Kabarcıklar önceki düşük basınç geçişinde çekirdeklendi; p_min şimdi ${metrics.minPressure.toFixed(2)}. Rayleigh–Plesset dinamiği büyüme veya çökmeyi sürdürüyor.`;}else if(activePreset==='dipole'||Math.abs(G)<1e-5){title='Net Γ sıfır; alan yine de var';copy=`Monopol terimi iptal oluyor fakat dipol momenti ${metrics.dipole.toFixed(2)}. Yapı sonlu uzaklıkta “görünmez” değildir.`;}else if(metrics.overlap>.62){title='Alanlar tek yapıya yaklaşıyor';copy='Tepe girdaplık zorunlu olarak artmıyor: dolaşım korunurken viskozite etkin çekirdeği genişletiyor.';}else{title='Kavitasyon eşiği henüz aşılmadı';copy=`p_min=${metrics.minPressure.toFixed(2)} ve pᵥ=${params().vapor.toFixed(2)}. Girdap hızı arttığında veya ortam basıncı düştüğünde çekirdeklenme başlayabilir.`;}if(metrics.activeBubbles===0&&activePreset==='ring7'){title='N = 7 kritik halka';copy='Kusursuz simetride uzun yaşayabilir; küçük bozuntu büyüdüğünde metastabil yapı çözülür.';}if(metrics.activeBubbles===0&&activePreset==='ring8'){title='N = 8 kararsız halka';copy='Halka modu küçük bozuntuyu büyütür. Artan çekirdek örtüşmesi ve viskozite bu gelişimi değiştirebilir.';}$('statusTitle').textContent=title;$('statusCopy').textContent=copy;
+  }
+  function resizeCanvas(canvas,c){const dpr=Math.min(devicePixelRatio||1,2),rect=canvas.getBoundingClientRect(),w=Math.max(1,Math.round(rect.width*dpr)),h=Math.max(1,Math.round(rect.height*dpr));if(canvas.width!==w||canvas.height!==h){canvas.width=w;canvas.height=h;c.setTransform(dpr,0,0,dpr,0,0);}return{w:rect.width,h:rect.height,dpr};}
+  function map(x,y,W,H){return{x:(x-world.xmin)/(world.xmax-world.xmin)*W,y:H-(y-world.ymin)/(world.ymax-world.ymin)*H};}
+  function unmap(px,py,W,H){return{x:world.xmin+px/W*(world.xmax-world.xmin),y:world.ymin+(H-py)/H*(world.ymax-world.ymin)};}
+  function draw(){const {w:W,h:H}=resizeCanvas(field,ctx);ctx.clearRect(0,0,W,H);ctx.fillStyle='#050b0c';ctx.fillRect(0,0,W,H);
+    ctx.save();ctx.strokeStyle='rgba(135,170,168,.07)';ctx.lineWidth=1;for(let x=-5;x<=5;x++){const p=map(x,0,W,H);ctx.beginPath();ctx.moveTo(p.x,0);ctx.lineTo(p.x,H);ctx.stroke();}for(let y=-4;y<=4;y++){const p=map(0,y,W,H);ctx.beginPath();ctx.moveTo(0,p.y);ctx.lineTo(W,p.y);ctx.stroke();}ctx.restore();
+    if($('showField').checked)drawVorticity(W,H);if($('showTrails').checked)drawTrails(W,H);if($('showVectors').checked)drawVectors(W,H);drawBubbles(W,H);drawVortices(W,H);
+  }
+  function drawVorticity(W,H){const nx=Math.max(70,Math.floor(W/8)),ny=Math.max(45,Math.floor(H/8)),cw=W/nx,ch=H/ny,maxRef=Math.max(metrics.maxOmega,.2);for(let iy=0;iy<ny;iy++)for(let ix=0;ix<nx;ix++){const p=unmap((ix+.5)*cw,(iy+.5)*ch,W,H),o=omegaAt(p.x,p.y),q=Math.min(1,Math.abs(o)/maxRef),a=.03+.48*Math.pow(q,.64);ctx.fillStyle=o>=0?`rgba(63,221,207,${a})`:`rgba(255,103,80,${a})`;ctx.fillRect(ix*cw,iy*ch,cw+1,ch+1);}}
+  function drawVectors(W,H){ctx.save();ctx.strokeStyle='rgba(241,197,107,.42)';ctx.fillStyle='rgba(241,197,107,.56)';ctx.lineWidth=1;const gap=W<600?52:46;for(let py=55;py<H-38;py+=gap)for(let px=30;px<W-20;px+=gap){const p=unmap(px,py,W,H),u=inducedAt(p.x,p.y),mag=Math.hypot(u.x,u.y);if(mag<.015)continue;const len=Math.min(16,3+7*Math.log1p(mag)),ex=px+u.x/mag*len,ey=py-u.y/mag*len;ctx.beginPath();ctx.moveTo(px,py);ctx.lineTo(ex,ey);ctx.stroke();const a=Math.atan2(ey-py,ex-px);ctx.beginPath();ctx.moveTo(ex,ey);ctx.lineTo(ex-3*Math.cos(a-.55),ey-3*Math.sin(a-.55));ctx.lineTo(ex-3*Math.cos(a+.55),ey-3*Math.sin(a+.55));ctx.fill();}ctx.restore();}
+  function drawTrails(W,H){if(trails.length<2)return;ctx.save();ctx.lineWidth=1;for(let i=0;i<vortices.length;i++){ctx.strokeStyle=vortices[i]?.g>=0?'rgba(98,216,207,.28)':'rgba(255,128,104,.28)';ctx.beginPath();let started=false;for(const frame of trails){if(!frame[i])continue;const p=map(frame[i].x,frame[i].y,W,H);if(!started){ctx.moveTo(p.x,p.y);started=true}else ctx.lineTo(p.x,p.y);}ctx.stroke();}ctx.restore();}
+  function drawBubbles(W,H){const scale=Math.min(W/(world.xmax-world.xmin),H/(world.ymax-world.ymin));ctx.save();for(const b of bubbles){if(!b.active)continue;const p=map(b.x,b.y,W,H),r=Math.max(1.7,b.R*scale);if(p.x<-r||p.x>W+r||p.y<-r||p.y>H+r)continue;const glow=ctx.createRadialGradient(p.x-r*.25,p.y-r*.3,0,p.x,p.y,r);glow.addColorStop(0,'rgba(255,255,255,.82)');glow.addColorStop(.34,'rgba(210,255,247,.24)');glow.addColorStop(1,'rgba(210,255,247,.03)');ctx.fillStyle=glow;ctx.strokeStyle='rgba(233,255,249,.88)';ctx.lineWidth=1;ctx.beginPath();ctx.arc(p.x,p.y,r,0,TAU);ctx.fill();ctx.stroke();ctx.fillStyle='rgba(255,255,255,.9)';ctx.beginPath();ctx.arc(p.x-r*.28,p.y-r*.28,Math.max(.7,r*.12),0,TAU);ctx.fill();}ctx.restore();}
+  function drawVortices(W,H){const sx=W/(world.xmax-world.xmin),sy=H/(world.ymax-world.ymin);vortices.forEach((v,i)=>{const p=map(v.x,v.y,W,H),a=Math.sqrt(v.a2)*Math.min(sx,sy);ctx.save();ctx.strokeStyle=v.g>=0?css('--cyan'):css('--coral');ctx.fillStyle=v.g>=0?'rgba(98,216,207,.12)':'rgba(255,128,104,.12)';ctx.lineWidth=1.4;ctx.setLineDash([4,4]);ctx.beginPath();ctx.arc(p.x,p.y,a,0,TAU);ctx.fill();ctx.stroke();ctx.setLineDash([]);ctx.fillStyle=v.g>=0?css('--cyan2'):'#ffc1b5';ctx.beginPath();ctx.arc(p.x,p.y,4.2,0,TAU);ctx.fill();ctx.fillStyle='#061012';ctx.font='600 8px ui-monospace';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText(v.g>=0?'+':'−',p.x,p.y+.5);if(drag===i){ctx.strokeStyle='#fff';ctx.lineWidth=1;ctx.beginPath();ctx.arc(p.x,p.y,9,0,TAU);ctx.stroke();}ctx.restore();});}
+  function chartBase(canvas,c){const s=resizeCanvas(canvas,c),W=s.w,H=s.h,p={l:43,r:15,t:9,b:25};c.clearRect(0,0,W,H);c.strokeStyle='rgba(120,150,149,.22)';c.lineWidth=1;c.strokeRect(p.l+.5,p.t+.5,W-p.l-p.r,H-p.t-p.b);c.font='9px ui-monospace';c.fillStyle=css('--muted');c.textAlign='center';c.fillText('0',p.l,H-7);return{W,H,p};}
+  function path(c,data,x,y,color){if(data.length<2)return;c.strokeStyle=color;c.lineWidth=1.6;c.beginPath();data.forEach((d,i)=>{const px=x(d),py=y(d);i?c.lineTo(px,py):c.moveTo(px,py);});c.stroke();}
+  function drawCharts(){drawRadial();drawHistory();}
+  function drawRadial(){const {W,H,p}=chartBase(radial,rctx);if(!radialData.length)return;const xmax=5,umax=Math.max(...radialData.map(d=>d.u),.1),gmax=Math.max(...radialData.map(d=>Math.abs(d.g)),.1),x=d=>p.l+d.r/xmax*(W-p.l-p.r),yu=d=>H-p.b-d.u/umax*(H-p.t-p.b),yg=d=>H-p.b-(d.g/gmax*.43+.5)*(H-p.t-p.b);path(rctx,radialData,x,yu,css('--cyan'));path(rctx,radialData,x,yg,css('--coral'));rctx.fillStyle=css('--muted');rctx.textAlign='right';rctx.fillText(umax.toFixed(2),p.l-5,p.t+5);rctx.fillText('r / L',W-p.r,H-7);rctx.textAlign='center';[1,2,3,4,5].forEach(v=>{const px=p.l+v/5*(W-p.l-p.r);rctx.fillText(v.toString(),px,H-7);});}
+  function drawHistory(){const {W,H,p}=chartBase(history,hctx);if(historyData.length<2)return;const t0=historyData[0].t,t1=Math.max(time,t0+.01),maxO=Math.max(...historyData.map(d=>d.o),.1),maxB=Math.max(...historyData.map(d=>d.b),.1),maxE=Math.max(...historyData.map(d=>d.e),.1),maxC=Math.max(...historyData.map(d=>d.c||0),.001),x=d=>p.l+(d.t-t0)/(t1-t0)*(W-p.l-p.r),yy=(key,max)=>d=>H-p.b-(d[key]||0)/max*(H-p.t-p.b);path(hctx,historyData,x,yy('o',maxO),css('--cyan'));path(hctx,historyData,x,yy('b',maxB),css('--gold'));path(hctx,historyData,x,yy('e',maxE),css('--coral'));path(hctx,historyData,x,yy('c',maxC),css('--bubble'));hctx.fillStyle=css('--muted');hctx.textAlign='right';hctx.fillText('ölçekli',p.l-5,p.t+5);hctx.fillText('t / T',W-p.r,H-7);}
+  function frame(now){const elapsed=Math.min(.05,(now-last)/1000);last=now;if(running){const total=elapsed*params().speed,dt=.006;let left=total;while(left>0){const h=Math.min(dt,left);rk4(h);left-=h;}diagnose();draw();}requestAnimationFrame(frame);}
+  function toggle(){running=!running;$('playBtn').textContent=running?'Ⅱ Duraklat':'▶ Başlat';}
+  document.querySelectorAll('.preset').forEach(b=>b.addEventListener('click',()=>reset(b.dataset.preset)));
+  $('playBtn').addEventListener('click',toggle);$('resetBtn').addEventListener('click',()=>reset());$('stepBtn').addEventListener('click',()=>{rk4(.025);diagnose(true);draw();});
+  ['nu','core','gamma','sound','ambientP','vaporP','speed'].forEach(id=>$(id).addEventListener('input',()=>{setOutputs();if(['core','gamma','ambientP','vaporP'].includes(id))reset();else{diagnose(true);draw();}}));
+  ['showField','showVectors','showTrails'].forEach(id=>$(id).addEventListener('change',draw));
+  $('cavitationOn').addEventListener('change',()=>{bubbles.forEach(b=>{b.active=false;b.R=b.R0;b.rdot=0;});lastCavityCount=0;diagnose(true);draw();log($('cavitationOn').checked?'Kavitasyon dinamiği etkin.':'Kavitasyon dinamiği kapatıldı.');});
+  $('addPos').addEventListener('click',()=>{addSign=1;log('Ekleme modu: pozitif Γ.');});$('addNeg').addEventListener('click',()=>{addSign=-1;log('Ekleme modu: negatif Γ.');});
+  field.addEventListener('pointerdown',e=>{const rect=field.getBoundingClientRect(),p=unmap(e.clientX-rect.left,e.clientY-rect.top,rect.width,rect.height);let best=-1,bd=.38;vortices.forEach((v,i)=>{const d=Math.hypot(v.x-p.x,v.y-p.y);if(d<bd){bd=d;best=i;}});if(best>=0){drag=best;field.setPointerCapture(e.pointerId);}else{const prm=params(),sign=e.shiftKey?-1:addSign;vortices.push({x:p.x,y:p.y,g:sign*prm.gamma,a2:prm.core**2,id:Date.now()});bubbles=seedNuclei();log(`${sign>0?'Pozitif':'Negatif'} girdap ve kavitasyon çekirdekleri eklendi.`);diagnose(true);draw();}});
+  field.addEventListener('pointermove',e=>{if(drag===null)return;const rect=field.getBoundingClientRect(),p=unmap(e.clientX-rect.left,e.clientY-rect.top,rect.width,rect.height);vortices[drag].x=p.x;vortices[drag].y=p.y;trails=[];diagnose(true);draw();});field.addEventListener('pointerup',()=>{drag=null;});field.addEventListener('pointercancel',()=>{drag=null;});
+  window.addEventListener('resize',()=>{draw();drawCharts();});
+  function selfTests(){const tests=[];const near=(a,b,t=1e-8)=>Math.abs(a-b)<t;let vs=[{x:-1,y:0,g:4,a2:.16},{x:1,y:0,g:4,a2:.16}],d=derivatives(vs);tests.push(d[0].y<0&&d[1].y>0);vs=[{x:0,y:-1,g:4,a2:.16},{x:0,y:1,g:-4,a2:.16}];d=derivatives(vs);tests.push(d[0].x<0&&d[1].x<0);const a2=.25,nu=.01,dt=.2;tests.push(near(a2+4*nu*dt,.258));tests.push(near([{g:4},{g:-4}].reduce((s,v)=>s+v.g,0),0));tests.push(localPressure(0,0,{...params(),ambient:1})<=1);const probe={R0:.026,R:.026,rdot:0};tests.push(bubbleAcceleration(probe,0,{...params(),ambient:1,vapor:.32})>0);$('testStatus').textContent=`${tests.filter(Boolean).length}/${tests.length} matematik öz sınaması geçti · fiziksel doğrulama değildir`;return tests.every(Boolean);}
+  setOutputs();reset('cav');selfTests();requestAnimationFrame(frame);
+  window.__kutLab={get state(){return{vortices:vortices.map(v=>({...v})),bubbles:bubbles.map(b=>({...b})),time,metrics:{...metrics},running};},reset,step:(dt=.01)=>{rk4(dt);diagnose(true);draw();},selfTests,localPressure,bubbleAcceleration};
+})();
+</script>
+<script src="Kut_4B_Kararli_Kavitasyon.js"></script>
+</body>
+</html>

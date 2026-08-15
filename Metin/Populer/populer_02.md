@@ -1,143 +1,92 @@
 # 2. Elma Neden Düşmez, İtilir! (Kütle-İtim)
 
 ⏱️ **Tahmini Okuma Süresi:** 4 dakika  
-🎓 **Akademik Sürüm Temeli:** [Kısım III & IV: Kütle-İtim Mekanizması ve Sabitlerin Türetimi (Akademik 3.4 & 4.2)](#akademik_03_04)  
+🎓 **Akademik Sürüm Temeli:** [Kısım III: Makro Evren (Akademik 3.4)](#akademik_03_04)  
 
-Isaac Newton'un kafasına elma düşünce, gezegenlerin ve nesnelerin birbirini uzaktan uzağa gizemli bir kuvvetle "çektiğini" düşündü ve buna kütleçekimi (gravity) adını verdi. Yaklaşık 250 yıl sonra Albert Einstein geldi ve dedi ki: "Hayır, çekim yok; kütle uzay-zaman denilen görünmez bir çarşafı büküyor, cisimler de bu çukura yuvarlanıyor."
+Hepimiz o meşhur hikayeyi biliriz: Newton bir elma ağacının altında otururken kafasına elma düşmüş ve "Evreka!" deyip yerçekimini bulmuş. Elma yere düşer, çünkü koca Dünya onu "çekiyordur." Milyarlarca tonluk gezegenler de uzayda görünmez halatlarla birbirlerini çekerler. 
 
-Kulağa hoş geliyor. Ama iki dâhi de kaçamadıkları o dev soruyu halının altına süpürdü: **Arada hiçbir fiziksel bağ, hiçbir ip, hiçbir temas yokken bir cisim diğerini nasıl çeker?**
+Hikaye çok romantik, değil mi? Ama küçük bir sorun var: **Evrende "çekmek" diye bir şey yoktur!**
 
-Elinizdeki mıknatısı bir düşünün — en azından onun görünmez alan çizgileri var. Ama Newton'un çekimi tamamen büyü gibidir: Güneş, 150 milyon kilometre öteden Dünya'yı hiçbir şeye dokunmadan tutuyor. Bu, Jedi'ların uzaktan kılıç çekmesinden farksız, mistik bir masal. Einstein'ın "bükülen çarşafı" da işi kurtarmıyor: Bir geometri, bir şekil, uzaydaki gerçek bir cismi nasıl **iteleyip** hızlandırabilir? Şeklin eli mi var? İşte tam burada modern fizik susar ve konuyu değiştirir.
+## Jedi Değiliz!
 
-## Çekim Diye Bir Şey Yok!
+Bir nesneyi kendinize doğru çekebilmeniz için ona fiziksel olarak bağlı olmanız gerekir. Bir ip, bir kanca veya bir zincir... Arada hiçbir bağ yokken, uzaktan kumanda gibi bir cismi kendinize doğru çekmek sadece *Star Wars*'taki Jedi'ların yapabileceği bir şeydir. Fizikte "uzaktan etki" (spooky action at a distance) yoktur.
 
-Evrenakı Teorisinin cevabı klasik ezberleri sarsar: **"Çekim" diye bir şey yoktur.** Düşen elmayı yer çeki-**mi**-yor; uzay onu iti-**yor**! Biz buna **Kütle-İtim (Push-Gravity)** diyoruz.
+Peki madem Dünya elmayı çekmiyor, elma neden kafamıza düşüyor?
 
-Nasıl mı? Birinci bölümde uzayın devasa bir süper-akışkan (Evrenakı) okyanusu olduğunu öğrenmiştik. Dünya, kendi etrafında saatte 1.600 km hızla dönerken bu görünmez sıvıyı da bir mikser gibi çevirir ve çevresinde muazzam bir girdap oluşturur.
+Cevap, önceki bölümde tanıştığımız o muazzam okyanusta (Evrenakı) gizli. Uzay bir sıvıysa, o sıvının içinde olup biten her şey **Akışkanlar Mekaniği** kurallarına tabidir. Ve akışkanlarda cisimler birbirini çekmez; **akışkan cisimleri iter!**
 
-Şimdi lise fizik dersinden ya da uçakların nasıl uçtuğundan bildiğiniz o kuralı hatırlayın — **Bernoulli İlkesi:** *Bir akışkan nerede hızlanırsa, orada basınç düşer.* Uçağın kanadının üstünde hava hızlanır, basınç düşer, uçak yukarı emilir. Aynı şey Dünya'nın çevresindeki sıvı girdabında da olur: Merkeze yaklaştıkça sıvı hızlanır, basınç dibe vurur. Dünya'nın tam ortası, kocaman bir **"alçak basınç kuyusudur."**
+## "Suya Batan Top" Deneyi
 
-Sonra ne olur? Uzayın derinliklerindeki durgun, **yüksek basınçlı** Evrenakı, tıpkı yüksek basıncın alçak basınca hücum etmesi gibi, gezegenin o düşük basınçlı merkezine doğru üşüşür. İşte dalından kopan elma yer tarafından "çekilmez"; çevredeki bu yüksek basınçlı okyanus tarafından merkeze doğru **itilir!** Selin ortasına düşen bir tahta parçasından hiçbir farkımız yok — hepimiz merkeze doğru itiliyoruz.
+Bunu anlamak için dünyanın en basit deneyini yapalım. Elinize bir pinpon topu alın ve onu içi su dolu bir kovanın dibine doğru bastırın. Ne olur? Su, topu inanılmaz bir güçle yukarı doğru **iter**. 
 
-<div style="width: 100%; height: 350px; border-radius: 12px; overflow: hidden; position: relative; border: 1px solid rgba(255, 0, 127, 0.2); box-shadow: 0 0 20px rgba(255, 0, 127, 0.1); margin-top: 20px; margin-bottom: 20px;">
-    <canvas id="gravity-canvas" style="width: 100%; height: 100%; display: block; background: #070308;"></canvas>
-    <div style="position: absolute; top: 10px; left: 10px; color: white; background: rgba(0,0,0,0.7); padding: 5px 10px; border-radius: 4px; font-size: 13px;">Gezegen (Alçak Basınç Girdabı)</div>
+Buna "Arşimet Kaldırma Kuvveti" diyoruz. Neden oluyor? Çünkü top, kovanın dibine indiğinde orada bulunması gereken suyu sağa sola iter (deplasman). Su da bozulan bu basınç dengesini sağlamak için var gücüyle topu sıkıştırır ve dışarı fırlatmaya çalışır. Yani topu yukarı çeken bir "yukarı-çekim kuvveti" falan yoktur; suyu yaran topu ezen bir **basınç farkı** (gradyan) vardır.
+
+İşte evrendeki tüm gezegenlerin ve galaksilerin sırrı bu kovanın içindedir!
+
+## Kütle-İtimi: Elmayı Uzay İtiyor!
+
+Dünya, milyarlarca ton kütlesiyle o görünmez Evrenakı denizinin ortasında duran devasa bir pinpon topudur. Dünya orada durdukça, uzaydaki Evrenakı sıvısını dışarıya doğru iter. Evrenakı ise bu büyük cisme "Sen benim yerimi işgal edemezsin!" diyerek her yönden, 360 derece etrafından Dünya'ya doğru korkunç bir basınç uygular. 
+
+İşte bu basınç, uzaydan yeryüzüne doğru inen bir şelale gibidir. 
+
+Ağaçtaki elmanın kopup yere düşmesinin sebebi, Dünya'nın merkezinden çıkan gizemli bir çekim gücü değildir. Uzaydaki süper-akışkanın (Evrenakı'nın) Dünya'ya doğru uyguladığı bu acımasız ezici basıncın, elmanın tepesine binip onu aşağı doğru **itmesidir**!
+
+Elma düşmez, **itilir!** Biz yere basmıyoruz, **uzay bizi yere yapıştırıyor!**
+
+<div style="background: #111827; padding: 20px; border-radius: 12px; border: 1px solid #374151; margin: 20px 0; text-align: center;">
+  <h4 style="color: #60a5fa; margin-top: 0;">Newton vs. Evrenakı (Kısaca)</h4>
+  <p><strong>Newton (Eski Fizik):</strong> Dünya elmayı sihirli görünmez bir kancayla çeker.</p>
+  <p><strong>Einstein (Eski Fizik 2.0):</strong> Dünya uzay çarşafını çukurlaştırır, elma çukura yuvarlanır.</p>
+  <p><strong>Evrenakı (Gerçek):</strong> Dünya Evrenakı sıvısını iter, sıvı da karşılık olarak elmayı Dünya'nın kafasına çarpar!</p>
 </div>
 
-<script>
-(function() {
-    const canvas = document.getElementById('gravity-canvas');
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    const dpr = window.devicePixelRatio || 1;
-    let width, height;
-    
-    function resize() { if(typeof canvas !== "undefined" && !canvas.isConnected) { window.removeEventListener("resize", resize); return; } 
-        const rect = canvas.parentElement.getBoundingClientRect();
-        width = rect.width;
-        height = rect.height;
-        canvas.width = width * dpr;
-        canvas.height = height * dpr;
-        ctx.scale(dpr, dpr);
-    }
-    window.addEventListener('resize', resize);
-    resize();
-    
-    const centerX = width / 2;
-    const centerY = height / 2;
-    
-    const apples = [];
-    function spawnApple() {
-        const angle = Math.random() * Math.PI * 2;
-        const radius = Math.max(width, height) / 2 + 50;
-        apples.push({
-            x: centerX + Math.cos(angle) * radius,
-            y: centerY + Math.sin(angle) * radius,
-            angle: angle,
-            dist: radius,
-            color: Math.random() > 0.5 ? '#ff4d4d' : '#ffffff',
-            size: Math.random() * 3 + 2
-        });
-    }
-    
-    for(let i=0; i<30; i++) spawnApple();
-    
-    let time = 0;
-    
-    function animate() {
-      if(typeof canvas !== "undefined" && !canvas.isConnected) return;
-        ctx.fillStyle = 'rgba(7, 3, 8, 0.2)';
-        ctx.fillRect(0, 0, width, height);
-        
-        ctx.beginPath();
-        ctx.arc(centerX, centerY, 30, 0, Math.PI * 2);
-        ctx.fillStyle = '#00f2fe';
-        ctx.shadowBlur = 20;
-        ctx.shadowColor = '#4facfe';
-        ctx.fill();
-        ctx.shadowBlur = 0;
-        
-        ctx.strokeStyle = 'rgba(79, 172, 254, 0.1)';
-        ctx.lineWidth = 1;
-        for(let r=50; r<Math.max(width,height); r+=30) {
-            ctx.beginPath();
-            ctx.arc(centerX, centerY, r, 0, Math.PI * 2);
-            ctx.stroke();
-        }
-        
-        for (let i = apples.length - 1; i >= 0; i--) {
-            let a = apples[i];
-            a.angle += 0.02;
-            a.dist -= 1.5;
-            a.x = centerX + Math.cos(a.angle) * a.dist;
-            a.y = centerY + Math.sin(a.angle) * a.dist;
-            
-            ctx.fillStyle = a.color;
-            ctx.beginPath();
-            ctx.arc(a.x, a.y, a.size, 0, Math.PI * 2);
-            ctx.fill();
-            
-            ctx.strokeStyle = `rgba(255,255,255,0.3)`;
-            ctx.beginPath();
-            ctx.moveTo(a.x, a.y);
-            let tailX = centerX + Math.cos(a.angle - 0.1) * (a.dist + 10);
-            let tailY = centerY + Math.sin(a.angle - 0.1) * (a.dist + 10);
-            ctx.lineTo(tailX, tailY);
-            ctx.stroke();
-            
-            if (a.dist < 30) {
-                apples.splice(i, 1);
-                spawnApple();
-            }
-        }
-        
-        if(Math.random() < 0.1) spawnApple();
-        
-        time += 0.05;
-        requestAnimationFrame(animate);
-    }
-    animate();
-})();
-</script>
+Yani aslında kütleçekim diye bir şey yoktur, **Kütle-İtimi** (Push-Gravity) vardır. Yıldızlar birbirlerini çekmezler; aralarındaki uzay sıvısının basıncı düştüğü için dışarıdaki yüksek basınç tarafından birbirlerine doğru itilirler. Akışkanlar mekaniğinde her şey basınca itaat eder.
 
-## Neden Her Şey Aynı Hızda Düşer?
-
-Galileo, Pisa Kulesi'nden bir tüyle bir gülleyi (havasız ortamda) bıraktığınızda ikisinin de **aynı anda** yere düştüğünü göstermişti. Modern fizik bunu "e işte öyle, çekim kütleyle orantılı" diye geçiştirir. Ama neden? Evrenakı bunu su gibi berrak açıklar: İtici basınç, cismin dış görünüşüne, rengine, cinsine değil, içindeki en temel yapı taşlarının (nükleonların) sayısına bindiği için, hangi maddeden yapılmış olursa olsun her cisim aynı ivmeyle merkeze itilir. Sırf ağırdır diye daha hızlı düşmez; çünkü onu "ağır" yapan şeyin ta kendisi, itilen malzemedir.
-
-## Düşündürücü Soru
-
-Diyelim ki kütleler gerçekten birbirini "çekiyor". O halde karanlık uzayın ortasında, birbirinden milyarlarca kilometre uzaktaki iki asteroit, birbirinin tam olarak **nerede** olduğunu nasıl biliyor da o yöne kuvvet uyguluyor? Aralarına gizli bir telefon hattı mı çekilmiş? Oysa uzay bir sıvıysa hiç sorun yok: Aralarındaki sıvının basıncı, dıştaki basınçtan düşük kalır ve dış okyanus bu iki taşı bir vakum etkisiyle usulca yan yana **iter**. Ne ip gerekir, ne büyü, ne de gizli haberleşme. Ne kadar mantıklı, değil mi?
-
-Kütleyi çözdük. Peki ya ışık? Sonraki bölümde ışığın o meşhur "hem dalga hem parçacık" efsanesini yerle bir edeceğiz.
-
+Bir sonraki bölümde, "Foton" diye yutturulan o meşhur ışık paketçiklerinin aslında ne olduğuna bakacağız ve neden lazer tabancalarının mermi attığını göreceğiz.
 
 ---
 
 ## Bu Bölümde Ne Öğrendik?
 
 > [!NOTE]
-> - **Eski Fizik:** Cisimler birbirini gizemli, temas gerektirmeyen bir kütleçekim kuvvetiyle 'çeker'.
-> - **Evrenakı Teorisi:** Çekim yoktur; basınç farkından doğan bir 'itme' vardır (Kütle-İtimi). Gezegenlerin çevresindeki girdap, cisimleri merkeze doğru iter.
+> - **Eski Fizik:** Nesneler uzaktan uzaya görünmez kuvvetlerle birbirini çeker (Kütleçekim).
+> - **Evrenakı Teorisi:** Akışkanlarda "çekmek" yoktur. Kütleler Evrenakı'yı sıkıştırır, Evrenakı da cisimleri basınca (gradyan) doğru iter (Kütle-İtimi). Elma itildiği için düşer!
+
+### 🧠 Mini Sınav: Kendinizi Test Edin
+
+<div class="quiz-container" style="background: #111827; border: 1px solid #374151; padding: 20px; border-radius: 12px; margin-top: 15px;">
+  <p style="font-weight: bold; margin-bottom: 10px; color: #60a5fa;">Soru: Evrenakı teorisine göre, daldan kopan bir elma neden yere düşer?</p>
+  <button class="quiz-btn" onclick="checkAnswer(this, false)" style="display: block; width: 100%; text-align: left; padding: 10px; margin-bottom: 8px; background: #1f2937; border: 1px solid #4b5563; color: white; border-radius: 6px; cursor: pointer;">A) Dünya'nın merkezindeki gizemli mıknatıslar onu çektiği için</button>
+  <button class="quiz-btn" onclick="checkAnswer(this, true)" style="display: block; width: 100%; text-align: left; padding: 10px; margin-bottom: 8px; background: #1f2937; border: 1px solid #4b5563; color: white; border-radius: 6px; cursor: pointer;">B) Evrenakı sıvısının basıncı, elmayı Dünya'ya doğru ittiği için</button>
+  <button class="quiz-btn" onclick="checkAnswer(this, false)" style="display: block; width: 100%; text-align: left; padding: 10px; margin-bottom: 8px; background: #1f2937; border: 1px solid #4b5563; color: white; border-radius: 6px; cursor: pointer;">C) Uzay çarşafı yırtılıp elma delikten düştüğü için</button>
+  <p class="quiz-feedback" style="display: none; margin-top: 15px; font-weight: bold; padding: 10px; border-radius: 6px;"></p>
+</div>
+
+<script>
+function checkAnswer(btn, isCorrect) {
+  const container = btn.parentElement;
+  const buttons = container.querySelectorAll('.quiz-btn');
+  const feedback = container.querySelector('.quiz-feedback');
+  
+  buttons.forEach(b => { b.disabled = true; b.style.opacity = '0.5'; });
+  btn.style.opacity = '1';
+  
+  feedback.style.display = 'block';
+  if (isCorrect) {
+    btn.style.background = '#059669';
+    btn.style.borderColor = '#10b981';
+    feedback.style.background = 'rgba(16, 185, 129, 0.2)';
+    feedback.style.color = '#34d399';
+    feedback.innerHTML = '🎉 Doğru! Evrende Jedi\'lar yoktur, kimse kimseyi çekemez. Her şey itilir!';
+  } else {
+    btn.style.background = '#dc2626';
+    btn.style.borderColor = '#ef4444';
+    feedback.style.background = 'rgba(239, 68, 68, 0.2)';
+    feedback.style.color = '#f87171';
+    feedback.innerHTML = '❌ Yanlış cevap! Çarşafları ve kancaları unutalım. Doğru cevap B (İtilmek) olacaktı.';
+  }
+}
+</script>
 
 > [!TIP]
-> Bu bölümün matematiksel ispatlarını ve akademik dildeki detaylı açıklamalarını görmek için **[Akademik Sürüm Kısım 2'ye geçiş yapın](#akademik_02)**.
+> Bu bölümün devasa matematiksel ispatlarını ve Arşimet Kaldırma Kuvvetinden ivmenin ($\vec{F}=m_z\vec{a}$) nasıl kusursuzca türetildiğini görmek için **[Akademik Sürüm Kısım 3.4'e geçiş yapın](#akademik_03_04)**.

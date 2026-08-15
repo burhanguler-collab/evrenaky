@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kavitasyonla Kut'un Doğuşu — 4B Gerçeklik / 3B Kesitimiz</title>
+<style>
+  :root{
+    --bg:#0b0f19; --panel:#111726; --line:#1f2937;
+    --cyan:#00e5ff; --orange:#ffb020; --grey:#8892b0; --light:#cbd5e1; --white:#f3f4f6;
+    --ok:#34d399; --bad:#f87171; --tear:#ff3b6b; --void:#05070c;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%;margin:0}
+  body{background:var(--bg);color:var(--light);
+       font-family:"Segoe UI",Roboto,system-ui,sans-serif;font-size:13px;
+       overflow-y:hidden;overflow-x:auto}
+  #wrap{display:grid;grid-template-columns:300px minmax(520px,1fr) 336px;
+        height:100vh;min-width:1160px}
+  .col{overflow-y:auto;overflow-x:hidden}
+  .col::-webkit-scrollbar{width:8px}
+  .col::-webkit-scrollbar-thumb{background:#243044;border-radius:4px}
+  #left,#right{background:var(--panel);padding:12px 13px 40px}
+  #left{border-right:1px solid var(--line)}
+  #right{border-left:1px solid var(--line)}
+  #center{display:flex;flex-direction:column;background:var(--bg);overflow:hidden}
+  #views{flex:1;display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);min-height:0}
+  .vw{position:relative;background:var(--bg);overflow:hidden}
+  .vw canvas{display:block;width:100%;height:100%}
+  .vwlab{position:absolute;left:10px;top:8px;font-size:10.5px;letter-spacing:.7px;
+         text-transform:uppercase;font-weight:600;pointer-events:none}
+  .vwsub{position:absolute;left:10px;top:24px;font-size:10px;color:var(--grey);pointer-events:none}
+  #ladderbox{height:118px;border-top:1px solid var(--line);background:#0c1220;padding:6px 14px 8px}
+  #ladder{width:100%;height:56px;display:block}
+  #stagebar{display:flex;gap:1px;margin-top:5px}
+  .stg{flex:1;padding:5px 4px;text-align:center;font-size:10px;background:#141c2e;
+       color:#5e6d88;cursor:pointer;border:1px solid transparent;line-height:1.3}
+  .stg.on{background:#0e3a44;color:var(--cyan);border-color:var(--cyan)}
+  .stg b{display:block;font-size:11px;margin-bottom:1px}
+  h1{font-size:14px;color:var(--white);margin:0 0 3px}
+  .sub{font-size:10.5px;color:var(--grey);margin:0 0 12px;line-height:1.5}
+  h2{font-size:11px;color:var(--cyan);text-transform:uppercase;letter-spacing:.9px;
+     margin:16px 0 8px;padding-bottom:5px;border-bottom:1px solid var(--line)}
+  h2:first-of-type{margin-top:4px}
+  label{display:block;font-size:11px;color:var(--grey);margin:9px 0 3px}
+  .val{color:var(--cyan);font-family:Consolas,monospace}
+  select,input[type=number]{width:100%;background:#0c1220;color:var(--light);
+    border:1px solid #26324a;border-radius:5px;padding:5px 7px;font-size:12px;font-family:inherit}
+  input[type=range]{width:100%;accent-color:var(--cyan);height:16px;margin:2px 0}
+  .row{display:flex;gap:6px}.row>*{flex:1}
+  button{background:#182338;color:var(--light);border:1px solid #2b3a55;border-radius:5px;
+         padding:6px 8px;font-size:11.5px;cursor:pointer;font-family:inherit}
+  button:hover{background:#1f2c46;border-color:var(--cyan);color:var(--white)}
+  button.on{background:#0e3a44;border-color:var(--cyan);color:var(--cyan)}
+  .chk{display:flex;align-items:center;gap:7px;margin:7px 0;font-size:11.5px;
+       color:var(--light);cursor:pointer}
+  .chk input{accent-color:var(--cyan);width:14px;height:14px;margin:0;cursor:pointer}
+  .note{font-size:10.5px;color:var(--grey);line-height:1.55;margin:7px 0;
+        border-left:2px solid #2b3a55;padding:2px 0 2px 8px}
+  .warn{border-left-color:var(--orange);color:#d6bd97}
+  .decl{border-left-color:#7c5cff;color:#b9a8f0}
+  table.kv{width:100%;border-collapse:collapse;font-size:11px;font-family:Consolas,monospace}
+  table.kv td{padding:3px 2px;border-bottom:1px solid #1a2233}
+  table.kv td:last-child{text-align:right;color:var(--white)}
+  .prof{width:100%;height:118px;display:block;background:#0c1220;
+        border:1px solid #1e2940;border-radius:5px}
+  .tl{font-size:10px;color:var(--grey);margin:10px 0 3px;display:flex;justify-content:space-between}
+  #tests{font-size:10.5px;font-family:Consolas,monospace;line-height:1.5}
+  #tests div{display:flex;justify-content:space-between;gap:8px;padding:2px 0;
+             border-bottom:1px solid #161e2e}
+  #tests span.s{flex:0 0 auto;font-weight:bold}
+  .pass{color:var(--ok)}.fail{color:var(--bad)}
+  #banner{padding:6px 8px;border-radius:5px;font-size:11px;margin-bottom:8px;
+          text-align:center;font-weight:600}
+  .eq{font-family:Consolas,monospace;font-size:10.5px;color:#9fe8f5;background:#0c1220;
+      border:1px solid #1e2940;border-radius:4px;padding:5px 7px;margin:5px 0;
+      line-height:1.6;overflow-x:auto;white-space:nowrap}
+  .tag{display:inline-block;font-size:9px;padding:1px 5px;border-radius:3px;
+       font-weight:700;letter-spacing:.4px;vertical-align:1px}
+  .t-k{background:#0d3b2e;color:#6ee7b7}
+  .t-t{background:#3b2f0d;color:#fcd34d}
+  .t-y{background:#3b1030;color:#f0a6d6}
+  code{font-family:Consolas,monospace;color:#9fe8f5;font-size:10.5px}
+</style>
+</head>
+<body>
+<div id="wrap">
+
+<!-- ==================== SOL: DENETİMLER ==================== -->
+<div id="left" class="col">
+  <h1>Kavitasyonla Kut'un Doğuşu</h1>
+  <p class="sub">Evrenakı'nın W içeren bir düzlemde dönmesi, ortamı yırtması ve
+  bir Kut'u doğurması — teorinin kendi eşikleriyle. Sol panel dönüşün geçtiği
+  4B düzlemi, sağ panel uzayımızın <code>w = 0</code> kesitini gösterir.</p>
+
+  <p class="note decl"><b>Beyan edilmiş bilinmez.</b> Dönüşün <i>kaynağı</i> ve
+  <i>nasıl başladığı</i> teoride bilinmiyor ve bu açıkça beyan edilmiştir. Bu
+  animasyon o boşluğu bir mekanizma uydurarak doldurmaz: dönüş <b>verili</b>
+  başlar. Açıklanan şey dönüşün kökeni değil, <b>sonucu</b>.</p>
+
+  <h2>Aşama sürücüsü</h2>
+  <div class="row">
+    <button id="play" class="on">▶ Oto döngü</button>
+    <button id="reset">↺ Başa</button>
+  </div>
+  <label>Dolanım Γ (aşama sürgüsü) — τ = <span class="val" id="tauV"></span></label>
+  <input type="range" id="tau" min="0" max="1" step="0.0005" value="0">
+  <label>Döngü hızı = <span class="val" id="spdV"></span>×</label>
+  <input type="range" id="spd" min="0.1" max="3" step="0.05" value="0.7">
+  <p class="note">Sürgü, girdabın <b>dolanımını</b> (Γ) sürer. Γ büyüdükçe her
+  yarıçaptaki akış hızı büyür; hız merdiveninde eşikler sırayla geçilir.</p>
+
+  <h2>Gözlem modeli</h2>
+  <select id="model">
+    <option value="stiff">e-KATLANMA — stiff akışkan (yürürlükteki okuma)</option>
+    <option value="incomp">SIKIŞTIRILAMAZ — keskin duvar (SÜPERSEDE)</option>
+  </select>
+  <p class="note" id="modelNote"></p>
+
+  <h2>Ortamın kohezyonu</h2>
+  <label>Σ/P₀ = <span class="val" id="sigV"></span></label>
+  <input type="range" id="sig" min="0" max="12" step="0.0001" value="9.2788">
+  <p class="note">Σ, Evrenakı'nın <b>çekme (kohezyon) dayanımıdır</b>. Yırtılma
+  eşiğini o belirler: <code>v_kav = √2c·√(1+Σ/P₀)</code> (M-4). KARNE'nin n=3
+  kısıtı <code>Σ/P₀ ≳ 1,9×10⁹</code> verir — sürgünün başlangıç değeri budur.</p>
+
+  <h2>Dönüş düzlemleri</h2>
+  <select id="pair">
+    <option value="0">XY + ZW — kanonik çift dönüş</option>
+    <option value="1">XZ + YW</option>
+    <option value="2">YZ + XW</option>
+  </select>
+  <label class="chk"><input type="checkbox" id="iso" checked>
+    <span>İzoklin (ω₂ = ω₁)</span></label>
+  <label>ω₂/ω₁ = <span class="val" id="rV"></span></label>
+  <input type="range" id="ratio" min="0" max="1" step="0.01" value="1" disabled>
+  <p class="note warn"><b>Tek düzlemli dönüş Kut üretemez.</b> 4B'de tek düzlemli
+  dönüş bütün bir düzlemi sabit bırakır (XW dönüşü YZ'yi sabitler) — boşluk
+  <b>levha</b> olur, parçacık olmaz. Yalnız çift dönüşün sabit noktası tektir.
+  Sayısal olarak sınandı: sabit altuzay boyutu tek düzlemde 2, çift dönüşte 0.
+  İzoklin hâlde ayrıca <code>|v| = ω·R</code> tam olarak geçerlidir — Kut 4B'de
+  küresel simetriktir, kesitimizde de küre görünür.</p>
+
+  <h2>Kut'un W konumu</h2>
+  <label>w₀ / r_e = <span class="val" id="w0V"></span></label>
+  <input type="range" id="w0" min="-1.4" max="1.4" step="0.005" value="0">
+  <p class="note">Kut W'de ötelenirse kesitimizde görünen yarıçapı
+  <code>√(r_e² − w₀²)</code>'ye düşer; <code>|w₀| ≥ r_e</code> olduğunda
+  uzayımızdan <b>tamamen çıkar</b>.</p>
+
+  <h2>Görünüm</h2>
+  <label>Cep görsel abartması = <span class="val" id="exV"></span>×</label>
+  <input type="range" id="exag" min="1" max="5" step="0.02" value="3.6">
+  <p class="note warn">Gerçek cep, çöküntü zarfından <b><span id="ratioTxt">—</span>
+  kat</b> küçüktür — abartılmadan çizilse tek piksel görünmez. Sağdaki profil
+  grafiği <b>log ölçeklidir</b> ve gerçek oranı gösterir.</p>
+  <label>İzleyici sayısı = <span class="val" id="nV"></span></label>
+  <input type="range" id="n" min="60" max="900" step="10" value="380">
+  <label class="chk"><input type="checkbox" id="flow" checked><span>Akış izleyicileri</span></label>
+  <label class="chk"><input type="checkbox" id="grid" checked><span>Eksenler ve w=0 izi</span></label>
+  <label class="chk"><input type="checkbox" id="spin" checked><span>3B kamera dönsün</span></label>
+</div>
+
+<!-- ==================== ORTA: İKİ EKRAN ==================== -->
+<div id="center">
+  <div id="views">
+    <div class="vw">
+      <canvas id="c4"></canvas>
+      <div class="vwlab" style="color:var(--orange)">4B GERÇEKLİK — dönüş düzlemi</div>
+      <div class="vwsub" id="lab4"></div>
+    </div>
+    <div class="vw">
+      <canvas id="c3"></canvas>
+      <div class="vwlab" style="color:var(--cyan)">3B KESİTİMİZ — w = 0</div>
+      <div class="vwsub" id="lab3"></div>
+    </div>
+  </div>
+  <div id="ladderbox">
+    <canvas id="ladder"></canvas>
+    <div id="stagebar"></div>
+  </div>
+</div>
+
+<!-- ==================== SAĞ: TANI ==================== -->
+<div id="right" class="col">
+  <div id="banner"></div>
+
+  <h2>Aşama</h2>
+  <p class="note" id="stageDesc" style="border-left-color:var(--cyan);color:var(--light)"></p>
+
+  <h2>Anlık ölçümler</h2>
+  <table class="kv">
+    <tr><td>r_e (e-katlanma yarıçapı)</td><td id="m_re">—</td></tr>
+    <tr><td>r_e'de akış hızı</td><td id="m_vre">—</td></tr>
+    <tr><td>ρ(r_e)/ρ₀</td><td id="m_rre">—</td></tr>
+    <tr><td>Yırtılma eşiği v_kav</td><td id="m_vkav">—</td></tr>
+    <tr><td>Vakum cebi R_cep</td><td id="m_rvoid">—</td></tr>
+    <tr><td>R_cep / r_e</td><td id="m_ratio">—</td></tr>
+    <tr><td>Yırtılma oldu mu?</td><td id="m_tear">—</td></tr>
+    <tr><td>Kesitte görünen yarıçap</td><td id="m_vis">—</td></tr>
+  </table>
+
+  <h2>Ortam sabitleri <span class="tag t-k">TÜRETİLMİŞ</span></h2>
+  <table class="kv">
+    <tr><td>P₀ = ¼ρ_n c²</td><td>6,07×10³³ Pa</td></tr>
+    <tr><td>ρ₀ = ρ_n/4</td><td>6,8×10¹⁶ kg/m³</td></tr>
+    <tr><td>c = √(P₀/ρ₀)</td><td>2,998×10⁸ m/s</td></tr>
+    <tr><td>√2c (e-katlanma)</td><td>4,2397×10⁸ m/s</td></tr>
+    <tr><td>Hâl denklemi</td><td>P = c²ρ (stiff)</td></tr>
+    <tr><td>v_ses</td><td>= c, tam</td></tr>
+  </table>
+
+  <div class="tl"><span>RADYAL PROFİL (log R)</span><span id="profLab">—</span></div>
+  <canvas class="prof" id="prof"></canvas>
+
+  <h2>Kullanılan hesap</h2>
+  <div class="eq">v(R) = √2c · r_e/R &nbsp;<span class="tag t-k">Ek A.2</span></div>
+  <div class="eq">ρ(R)/ρ₀ = exp(−(r_e/R)²) &nbsp;<span class="tag t-k">stiff</span></div>
+  <div class="eq">ρ(r_e)/ρ₀ = 1/e &nbsp;<span class="tag t-k">e-katlanma</span></div>
+  <div class="eq">v_kav = √2c·√(1+Σ/P₀) &nbsp;<span class="tag t-k">M-4</span></div>
+  <div class="eq">R_cep = r_e/√(1+Σ/P₀) &nbsp;<span class="tag t-t">türetim</span></div>
+  <div class="eq">r_3B = √(r_e²−w₀²) &nbsp;<span class="tag t-k">kesit</span></div>
+  <p class="note"><span class="tag t-k">TÜRETİLMİŞ</span> teorinin kendi metninde
+  var · <span class="tag t-t">TÜRETİM</span> teorinin ölçütünden bu sayfada
+  çıkarıldı, kitapta yazılı değil · <span class="tag t-y">TEMSİL</span> nitel,
+  sayısal iddia taşımaz.</p>
+
+  <h2>Öz-sınama <span id="testsum" style="float:right"></span></h2>
+  <div id="tests"></div>
+</div>
+</div>
+
+<script>
+'use strict';
+
+/* ==========================================================================
+   ÇEKİRDEK — saf matematik. Python'da bağımsız olarak yeniden uygulanıp
+   çapraz doğrulanmıştır (17/17).
+   ========================================================================== */
+/* ===== CORE-BEGIN ===== */
+
+/* --- Ortamın sabitleri (Ek B / Sembol Sözlüğü, k=0 · M-44) --------------- */
+const C_SON = 2.998e8;         /* m/s   sonik = kavrama (patinaj) sınırı   */
+const P0    = 6.07e33;         /* Pa    ¼ρ_n c²                             */
+const RHO0  = 6.8e16;          /* kg/m³ ρ_n/4                               */
+const VT    = Math.SQRT2 * C_SON;   /* 4,2397e8 — e-katlanma hızı (Ek A.2) */
+
+/* --- Hız alanı: serbest girdap (Ek A.2'nin kurulumu) ---------------------
+   r_e, akış hızının tam √2c olduğu yarıçaptır. Buradan
+       v(R) = √2c · r_e/R      ve      v(R)²/(2c²) = (r_e/R)²
+   İkinci ifadeyi u(R) diye adlandırıyoruz; iki modelin TEK farkı bunun
+   nasıl kullanıldığıdır.                                                  */
+function uOf(R, re){ const t = re / R; return t * t; }
+function vOf(R, re){ return VT * re / R; }
+
+/* --- İki okuma -----------------------------------------------------------
+   stiff  : c²·ln(ρ/ρ₀) = −v²/2  ⟹  ρ/ρ₀ = exp(−u)      [YÜRÜRLÜKTE]
+            √2c'de ρ/ρ₀ = 1/e — e-katlanma, KESKİN DUVAR YOK.
+   incomp : P/P₀ = 1 − u                                 [SÜPERSEDE]
+            √2c'de tam 0 — keskin vakum duvarı. KARNE 10 Ağu 2026 ile düştü. */
+function rhoStiff(R, re){ return Math.exp(-uOf(R, re)); }
+function pIncomp(R, re){ return 1 - uOf(R, re); }
+function fieldOf(R, re, model){
+  return (model === 'stiff') ? rhoStiff(R, re) : pIncomp(R, re);
+}
+
+/* --- Yırtılma (M-4) ------------------------------------------------------
+   Sağlam akışkanı yırtmak, basıncı kohezyon dayanımı −Σ'nın altına
+   düşürmeyi gerektirir:  1 − u ≤ −Σ/P₀  ⟹  u ≥ 1 + Σ/P₀.
+   Buradan cep yarıçapı ve eşik hızı ÇIKAR — ve tutarlıdır:
+   R_cep'te akış hızı tam olarak v_kav'dır.                                */
+function vKav(sig){ return VT * Math.sqrt(1 + sig); }
+function rVoid(re, sig){ return re / Math.sqrt(1 + sig); }
+
+/* --- so(4) üreticisi: iki düzlemde açısal hız ---------------------------- */
+const PAIRS = [
+  { p3:[0,1], pw:[2,3], l3:'XY', lw:'ZW' },
+  { p3:[0,2], pw:[1,3], l3:'XZ', lw:'YW' },
+  { p3:[1,2], pw:[0,3], l3:'YZ', lw:'XW' }
+];
+function genOmega(pi, w1, w2){
+  const P = PAIRS[pi], O = [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]];
+  O[P.p3[0]][P.p3[1]] = -w1; O[P.p3[1]][P.p3[0]] = w1;
+  O[P.pw[0]][P.pw[1]] = -w2; O[P.pw[1]][P.pw[0]] = w2;
+  return O;
+}
+function applyM(M, v){
+  const o = [0,0,0,0];
+  for (let i = 0; i < 4; i++){ let s = 0; for (let k = 0; k < 4; k++) s += M[i][k]*v[k]; o[i] = s; }
+  return o;
+}
+/* Sabit altuzayın boyutu = 4 − rank(Ω). Gauss elemesiyle rank. */
+function rank4(A){
+  const M = A.map(r => r.slice());
+  let rank = 0;
+  for (let col = 0, row = 0; col < 4 && row < 4; col++){
+    let piv = row, best = Math.abs(M[row][col]);
+    for (let i = row + 1; i < 4; i++) if (Math.abs(M[i][col]) > best){ best = Math.abs(M[i][col]); piv = i; }
+    if (best < 1e-12) continue;
+    const t = M[row]; M[row] = M[piv]; M[piv] = t;
+    for (let i = row + 1; i < 4; i++){
+      const f = M[i][col]/M[row][col];
+      for (let j = col; j < 4; j++) M[i][j] -= f*M[row][j];
+    }
+    row++; rank++;
+  }
+  return rank;
+}
+
+/* --- 4B kesiti ---------------------------------------------------------- */
+function sliceRadius(re, w0){
+  const s = re*re - w0*w0;
+  return s > 0 ? Math.sqrt(s) : 0;
+}
+
+/* --- Belirlenimci rastgelelik ------------------------------------------- */
+function mulberry32(a){
+  return function(){
+    a |= 0; a = (a + 0x6D2B79F5) | 0;
+    let t = Math.imul(a ^ (a >>> 15), 1 | a);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+/* --- ÖZ-SINAMALAR ------------------------------------------------------- */
+function selfTests(){
+  const T = [], add = (n, ok, e) => T.push({ n:n, ok:ok, e:e }), TOL = 1e-11;
+
+  /* 1. Ortam kendi içinde tutarlı mı? (yayımlanan sayılar 2-3 anlamlı hane) */
+  const cCalc = Math.sqrt(P0/RHO0);
+  const e1 = Math.abs(cCalc - C_SON)/C_SON;
+  add('c = √(P₀/ρ₀) yayımlanan c\'yi verir', e1 < 5e-3, e1);
+  add('stiff hâl: P₀ = c²ρ₀', Math.abs(P0 - cCalc*cCalc*RHO0)/P0 < TOL,
+      Math.abs(P0 - cCalc*cCalc*RHO0)/P0);
+
+  /* 2. e-katlanma: √2c'de ρ/ρ₀ = 1/e — TAM */
+  const e2 = Math.abs(rhoStiff(1, 1) - Math.exp(-1));
+  add('R=r_e ⟹ ρ/ρ₀ = 1/e (e-katlanma)', e2 < 1e-15, e2);
+  const e2b = Math.abs(vOf(1, 1) - VT)/VT;
+  add('R=r_e ⟹ v = √2c', e2b < TOL, e2b);
+
+  /* 3. Süpersede model √2c'de TAM sıfır verir — fark belgelenir */
+  const e3 = Math.abs(pIncomp(1, 1));
+  add('süpersede model r_e\'de tam 0 (keskin duvar)', e3 < 1e-15, e3);
+  add('iki okuma r_e\'de ayrışır (0 ↔ 1/e)', Math.abs(rhoStiff(1,1) - pIncomp(1,1)) > 0.3,
+      Math.abs(rhoStiff(1,1) - pIncomp(1,1)));
+
+  /* 4. stiff okumada duvar yok: ρ süreklidir ve sıçramaz.
+        DİKKAT — "hiçbir R'de tam 0 değil" ÇİFT DUYARLIKTA SINANAMAZ:
+        exp(−x) yaklaşık x>745'te taşma altına inip tam 0 olur, yani
+        R < r_e/27 için ρ kayan noktada 0 çıkar. Bu bir duvar DEĞİLDİR;
+        yoğunluğun temsil edilemeyecek kadar küçülmesidir. Sınama bu yüzden
+        temsil edilebilir aralıkta pozitifliği, ayrıca sıçrama olmadığını denetler. */
+  let poz = true, mn = 1;
+  for (let i = 25; i <= 400; i++){                 /* R = r_e/25 … 16·r_e */
+    const R = i/25, r = rhoStiff(R, 1);
+    if (!(r > 0)) poz = false;
+    mn = Math.min(mn, r);
+  }
+  add('stiff: temsil edilebilir aralıkta ρ > 0', poz, mn);
+  /* süreklilik: komşu örnekler arasında sıçrama yok (keskin duvar olsaydı olurdu) */
+  let maxAtlama = 0;
+  for (let i = 30; i <= 400; i++){
+    const a = rhoStiff(i/25, 1), b = rhoStiff((i-1)/25, 1);
+    maxAtlama = Math.max(maxAtlama, Math.abs(a - b));
+  }
+  add('stiff: profil sıçramasız (duvar yok)', maxAtlama < 0.05, maxAtlama);
+  /* ve cep bölgesinde yoğunluk zaten temsil edilemeyecek kadar küçüktür:
+     yırtılma, ρ'nun çoktan yok olduğu yerde olur — tutarlı. */
+  add('R_cep\'te ρ zaten ölçülemez mertebede', rhoStiff(rVoid(1, 1.9e9), 1) < 1e-300,
+      rhoStiff(rVoid(1, 1.9e9), 1));
+
+  /* 5. Profil monoton: R büyürken ρ artar, ρ→ρ₀ */
+  let mono = true;
+  for (let i = 1; i < 400; i++){
+    const a = rhoStiff(0.2 + i*0.02, 1), b = rhoStiff(0.2 + (i-1)*0.02, 1);
+    if (a < b - 1e-15) mono = false;
+  }
+  add('ρ(R) monoton artar', mono, 0);
+  const e5 = Math.abs(rhoStiff(1e4, 1) - 1);
+  add('R≫r_e ⟹ ρ → ρ₀', e5 < 1e-7, e5);
+
+  /* 6. Yırtılma tutarlılığı: R_cep'te hız TAM v_kav */
+  let e6 = 0;
+  for (const sig of [1e2, 1e6, 1.9e9, 1e12]){
+    const rv = rVoid(1, sig);
+    e6 = Math.max(e6, Math.abs(vOf(rv, 1) - vKav(sig))/vKav(sig));
+  }
+  add('R_cep\'te v = v_kav (eşik kendini doğrular)', e6 < 1e-9, e6);
+
+  /* 7. Merdiven sırası: c < √2c < v_m < v_kav  (Ek M-6) */
+  const sig = 1.9e9, vm = C_SON*Math.sqrt(sig), vk = vKav(sig);
+  add('merdiven: c < √2c < v_m < v_kav', C_SON < VT && VT < vm && vm < vk, 0);
+  add('v_kav ≈ √2·v_m  (Σ≫P₀)', Math.abs(vk/(Math.SQRT2*vm) - 1) < 1e-6,
+      Math.abs(vk/(Math.SQRT2*vm) - 1));
+  add('v_m ≳ 4,4×10⁴c  (KARNE alt sınırı)', vm/C_SON > 4.3e4, vm/C_SON);
+
+  /* 8. Yerelleşme: tek düzlem 2 boyutlu sabit altuzay, çift dönüş 0 */
+  const dTek = 4 - rank4(genOmega(2, 0, 1));
+  const dCift = 4 - rank4(genOmega(0, 1, 0.6));
+  const dIso = 4 - rank4(genOmega(0, 1, 1));
+  add('tek düzlemli dönüş: sabit altuzay 2B (levha)', dTek === 2, dTek);
+  add('çift dönüş: sabit altuzay yalnız orijin', dCift === 0 && dIso === 0, dCift + dIso);
+
+  /* 9. İzoklin ⟹ |v| = ω·R tam (4B küresel simetri) */
+  const Oi = genOmega(0, 1, 1), On = genOmega(0, 1, 0.37), rr = mulberry32(11);
+  let eIso = 0, spread = { mn: Infinity, mx: -Infinity };
+  for (let s = 0; s < 400; s++){
+    const p = [0,0,0,0];
+    for (let i = 0; i < 4; i++){
+      let u = 0, v = 0;
+      while (u === 0) u = rr(); while (v === 0) v = rr();
+      p[i] = Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v);
+    }
+    const R = Math.hypot(p[0], p[1], p[2], p[3]) || 1;
+    const vi = applyM(Oi, p), vn = applyM(On, p);
+    eIso = Math.max(eIso, Math.abs(Math.hypot(vi[0],vi[1],vi[2],vi[3])/R - 1));
+    const q = Math.hypot(vn[0],vn[1],vn[2],vn[3])/R;
+    spread.mn = Math.min(spread.mn, q); spread.mx = Math.max(spread.mx, q);
+  }
+  add('izoklin ⟹ |v| = ω·R tam', eIso < 1e-12, eIso);
+  add('negatif denetim: izoklin değil ⟹ |v|/R yayılır', (spread.mx - spread.mn) > 0.4,
+      spread.mx - spread.mn);
+
+  /* 10. Kesit: r² + w₀² = r_e² */
+  let e10 = 0;
+  for (let i = 0; i < 50; i++){
+    const w0 = -0.98 + i*0.04, r = sliceRadius(1, w0);
+    if (r > 0) e10 = Math.max(e10, Math.abs(r*r + w0*w0 - 1));
+  }
+  add('kesit: r² + w₀² = r_e²', e10 < 1e-14, e10);
+  add('|w₀| ≥ r_e ⟹ kesitte görünmez', sliceRadius(1, 1.2) === 0, 0);
+
+  return T;
+}
+/* ===== CORE-END ===== */
+
+
+/* ==========================================================================
+   AŞAMALAR
+   ========================================================================== */
+const ASAMA = [
+  { ad:'1 · Durgun Evrenakı', t0:0.00, t1:0.10,
+    kisa:'Γ = 0',
+    desc:'Homojen Evrenakı. ρ = ρ₀ her yerde, ∇P₀ = 0 — ortam kuvvetsiz, kararlı '
+       + 've doğurgan değil. Hiçbir yapı yok. Sol panelde dönüş düzlemi boş, sağ '
+       + 'panelde kesitimiz boş.' },
+  { ad:'2 · Dönüş ve eşikler', t0:0.10, t1:0.52,
+    kisa:'Γ büyür',
+    desc:'Dönüş başlar — kaynağı ve başlangıcı BEYAN EDİLMİŞ BİLİNMEZ. Γ büyüdükçe '
+       + 'her yarıçaptaki hız büyür. Merdivende önce c (kavrama sınırı — aşılınca şok), '
+       + 'sonra √2c (e-katlanma: ρ = ρ₀/e) geçilir. Ortam hâlâ BÜTÜNDÜR: yalnız bir '
+       + 'yoğunluk çöküntüsü var, yırtık yok.' },
+  { ad:'3 · Yırtılma — Kut doğar', t0:0.52, t1:0.68,
+    kisa:'v > v_kav',
+    desc:'Akış hızı kohezyon eşiğini (v_kav, M-4) aşar; Evrenakı fiziksel olarak '
+       + 'YIRTILIR ve merkezde bir vakum cebi açılır. Madde doğmuştur — ve bu eşiği '
+       + 'aşan dönüşün taşıyıcısı Kut düzeyindedir. Cep yarıçapı R_cep = r_e/√(1+Σ/P₀); '
+       + 'o yarıçapta akış hızı tam olarak v_kav\'dır.' },
+  { ad:'4 · Sınır tabakası', t0:0.68, t1:1.00,
+    kisa:'kararlı Kut',
+    desc:'Kut kararlıdır. Cepten arka plana kadar uzanan geçiş bölgesi — akışın '
+       + '√2c\'den durgunluğa indiği bölge — Kut\'un SINIR TABAKASIDIR: '
+       + 'ρ(R)/ρ₀ = exp(−(r_e/R)²). Keskin bir duvar yoktur; geçiş üstel ve '
+       + 'süreklidir. Sağ panelde kesitimizdeki küresel Kut görünür.' }
+];
+function asamaOf(t){
+  for (let i = ASAMA.length - 1; i >= 0; i--) if (t >= ASAMA[i].t0) return i;
+  return 0;
+}
+
+/* ==========================================================================
+   DURUM + ARAYÜZ
+   ========================================================================== */
+const $ = id => document.getElementById(id);
+const S = {
+  tau:0, playing:true, phase:0,
+  cam:{ az:0.7, el:0.35, d:3.4 },
+  pts:[], seed:20260811
+};
+
+function sigVal(){ return Math.pow(10, +$('sig').value); }
+/* r_e, τ ile büyür. Aşama 3'ün eşiği tam τ=0.52'de geçsin diye ölçeklenir. */
+function reOf(tau){
+  if (tau <= ASAMA[0].t1) return 0;
+  const x = (tau - ASAMA[0].t1) / (1 - ASAMA[0].t1);   /* 0..1 */
+  return 0.06 + 0.94 * Math.pow(x, 0.75);
+}
+/* Yırtılma, akışın v_kav'a ulaştığı yarıçap çizim alanında görünür olunca
+   "olmuş" sayılır: R_cep, abartma ile birlikte bir pikselden büyükse. */
+function tearOn(tau){ return tau >= ASAMA[2].t0; }
+
+function rebuildPts(){
+  const rnd = mulberry32(S.seed >>> 0), N = +$('n').value, a = [];
+  for (let k = 0; k < N; k++){
+    /* düzlem içinde: yarıçap dağılımı alanla düzgün olsun */
+    const rad = Math.sqrt(rnd()) * 1.45;
+    a.push({ r: Math.max(0.02, rad), th: 2*Math.PI*rnd(), ph: 2*Math.PI*rnd(),
+             el: Math.acos(2*rnd() - 1) });
+  }
+  S.pts = a;
+}
+
+/* --- renk: alan değerine göre (0 = boşluk, 1 = arka plan) --------------- */
+function fieldColor(f, al){
+  const t = Math.max(0, Math.min(1, f));
+  /* 0 → koyu mor-siyah (boşluk) · 0.37 → turuncu (e-katlanma) · 1 → camgöbeği */
+  let r, g, b;
+  if (t < 0.3679){
+    const s = t/0.3679;
+    r = 12 + (255-12)*s; g = 8 + (176-8)*s; b = 24 + (32-24)*s;
+  } else {
+    const s = (t-0.3679)/(1-0.3679);
+    r = 255 + (0-255)*s; g = 176 + (229-176)*s; b = 32 + (255-32)*s;
+  }
+  return 'rgba(' + (r|0) + ',' + (g|0) + ',' + (b|0) + ',' + al + ')';
+}
+
+/* ==========================================================================
+   ÇİZİM — SOL: 4B dönüş düzlemi
+   ========================================================================== */
+function draw4(now){
+  const cv = $('c4'), ctx = cv.getContext('2d');
+  const dpr = Math.min(2, window.devicePixelRatio || 1);
+  const W = cv.clientWidth, H = cv.clientHeight;
+  if (W < 2 || H < 2) return;
+  if (cv.width !== (W*dpr|0)){ cv.width = W*dpr|0; cv.height = H*dpr|0; }
+  ctx.setTransform(dpr,0,0,dpr,0,0);
+  ctx.fillStyle = '#0b0f19'; ctx.fillRect(0,0,W,H);
+
+  const cx = W/2, cy = H/2 + 8, sc = Math.min(W,H)*0.34;
+  const re = reOf(S.tau), model = $('model').value, sig = sigVal();
+  const ex = +$('exag').value;
+  const P = PAIRS[+$('pair').value];
+
+  /* alan halkaları */
+  if (re > 0){
+    const NR = 84;
+    for (let i = NR; i >= 1; i--){
+      const R = (i/NR)*1.5;
+      const f = fieldOf(R, re, model);
+      ctx.beginPath(); ctx.arc(cx, cy, R*sc, 0, 2*Math.PI);
+      ctx.fillStyle = fieldColor(f, 0.10);
+      ctx.fill();
+    }
+    /* e-katlanma yarıçapı */
+    ctx.beginPath(); ctx.arc(cx, cy, re*sc, 0, 2*Math.PI);
+    ctx.strokeStyle = 'rgba(255,176,32,0.85)'; ctx.lineWidth = 1.6;
+    ctx.setLineDash([5,4]); ctx.stroke(); ctx.setLineDash([]);
+    ctx.fillStyle = '#ffb020'; ctx.font = '10px Consolas'; ctx.textAlign = 'left';
+    ctx.fillText('r_e  (v = √2c, ρ = ρ₀/e)', cx + re*sc + 6, cy - 4);
+  }
+
+  /* vakum cebi */
+  if (tearOn(S.tau) && re > 0){
+    const rv = rVoid(re, sig), rvDraw = rv * Math.pow(10, ex - 1);
+    const rp = Math.max(2.5, Math.min(re*sc*0.92, rvDraw*sc));
+    const g = ctx.createRadialGradient(cx, cy, 0, cx, cy, rp*1.5);
+    g.addColorStop(0, '#05070c'); g.addColorStop(0.75, '#05070c');
+    g.addColorStop(1, 'rgba(255,59,107,0)');
+    ctx.beginPath(); ctx.arc(cx, cy, rp*1.5, 0, 2*Math.PI); ctx.fillStyle = g; ctx.fill();
+    ctx.beginPath(); ctx.arc(cx, cy, rp, 0, 2*Math.PI);
+    ctx.strokeStyle = 'rgba(255,59,107,0.95)'; ctx.lineWidth = 1.8; ctx.stroke();
+    ctx.fillStyle = '#ff3b6b'; ctx.font = 'bold 10px Consolas'; ctx.textAlign = 'center';
+    ctx.fillText('VAKUM CEBİ', cx, cy - rp - 7);
+    ctx.font = '9px Consolas'; ctx.fillStyle = '#c2708c';
+    ctx.fillText('v = v_kav  ·  abartma ×10^' + (ex-1).toFixed(1), cx, cy + rp + 14);
+  }
+
+  /* akış izleyicileri — düzlem içinde dolanım */
+  if ($('flow').checked && re > 0){
+    for (const p of S.pts){
+      /* serbest girdap: açısal hız ∝ 1/R²  (v ∝ 1/R) */
+      const ang = p.th + (now*0.00045) * (re*re)/(p.r*p.r + 0.004);
+      const x = cx + Math.cos(ang)*p.r*sc, y = cy + Math.sin(ang)*p.r*sc;
+      const f = fieldOf(p.r, re, model);
+      const inVoid = tearOn(S.tau) && p.r < rVoid(re, sig)*Math.pow(10, ex-1);
+      if (inVoid) continue;
+      ctx.beginPath(); ctx.arc(x, y, 1.5, 0, 2*Math.PI);
+      ctx.fillStyle = fieldColor(f, 0.85); ctx.fill();
+    }
+  }
+
+  /* eksenler + w=0 izi */
+  if ($('grid').checked){
+    /* düşey: W ekseni (uzayımızın DIŞI) */
+    ctx.strokeStyle = 'rgba(255,176,32,0.5)'; ctx.lineWidth = 1;
+    ctx.setLineDash([2,3]);
+    ctx.beginPath(); ctx.moveTo(cx, cy - sc*1.5); ctx.lineTo(cx, cy + sc*1.5); ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.fillStyle = '#ffb020'; ctx.font = '11px Consolas'; ctx.textAlign = 'center';
+    ctx.fillText('W', cx, cy - sc*1.5 - 5);
+    /* yatay: uzayımızın bu düzlemdeki izi (w = 0) */
+    ctx.strokeStyle = 'rgba(0,229,255,0.75)'; ctx.lineWidth = 1.6;
+    ctx.beginPath(); ctx.moveTo(cx - sc*1.5, cy); ctx.lineTo(cx + sc*1.5, cy); ctx.stroke();
+    ctx.fillStyle = '#00e5ff'; ctx.font = '10px Consolas'; ctx.textAlign = 'right';
+    ctx.fillText('w = 0  (uzayımızın izi)', cx + sc*1.5, cy - 6);
+  }
+  $('lab4').textContent = P.lw + ' düzlemi · dolanım Γ ' + (re > 0 ? '↑' : '= 0');
+}
+
+/* ==========================================================================
+   ÇİZİM — SAĞ: 3B kesitimiz
+   ========================================================================== */
+function camBasis(){
+  const ce = Math.cos(S.cam.el), se = Math.sin(S.cam.el);
+  const ca = Math.cos(S.cam.az), sa = Math.sin(S.cam.az);
+  const eye = [S.cam.d*ce*ca, S.cam.d*ce*sa, S.cam.d*se];
+  const f = [-ce*ca, -ce*sa, -se];
+  let r = [f[1], -f[0], 0];
+  const rn = Math.hypot(r[0], r[1], r[2]) || 1; r = [r[0]/rn, r[1]/rn, 0];
+  const u = [r[1]*f[2]-r[2]*f[1], r[2]*f[0]-r[0]*f[2], r[0]*f[1]-r[1]*f[0]];
+  return { eye:eye, f:f, r:r, u:u };
+}
+function draw3(now){
+  const cv = $('c3'), ctx = cv.getContext('2d');
+  const dpr = Math.min(2, window.devicePixelRatio || 1);
+  const W = cv.clientWidth, H = cv.clientHeight;
+  if (W < 2 || H < 2) return;
+  if (cv.width !== (W*dpr|0)){ cv.width = W*dpr|0; cv.height = H*dpr|0; }
+  ctx.setTransform(dpr,0,0,dpr,0,0);
+  ctx.fillStyle = '#0b0f19'; ctx.fillRect(0,0,W,H);
+
+  const cx = W/2, cy = H/2 + 8, foc = Math.min(W,H)*1.0;
+  const B = camBasis();
+  const re = reOf(S.tau), model = $('model').value, sig = sigVal();
+  const w0 = +$('w0').value * (re || 1);
+  const rvis = sliceRadius(re, w0);
+  const ex = +$('exag').value;
+
+  if (re === 0 || rvis === 0){
+    ctx.fillStyle = '#3d4a63'; ctx.font = '12px Segoe UI'; ctx.textAlign = 'center';
+    ctx.fillText(re === 0 ? 'homojen Evrenakı — yapı yok'
+                          : 'Kut uzayımızdan çıktı  (|w₀| ≥ r_e)', cx, cy);
+    $('lab3').textContent = 'görünür yarıçap 0';
+    return;
+  }
+
+  /* eksen üçlüsü */
+  if ($('grid').checked){
+    const L = 1.45, ax = [[L,0,0],[0,L,0],[0,0,L]], nm = ['X','Y','Z'];
+    const o = proj([0,0,0], B, foc, cx, cy);
+    for (let i = 0; i < 3; i++){
+      const q = proj(ax[i], B, foc, cx, cy);
+      if (!o || !q) continue;
+      ctx.strokeStyle = 'rgba(90,106,134,0.45)'; ctx.lineWidth = 1;
+      ctx.beginPath(); ctx.moveTo(o.x,o.y); ctx.lineTo(q.x,q.y); ctx.stroke();
+      ctx.fillStyle = '#5a6a86'; ctx.font = '10px Consolas'; ctx.textAlign = 'center';
+      ctx.fillText(nm[i], q.x, q.y - 4);
+    }
+  }
+
+  /* kesitteki Kut: 3B noktalar, yoğunluğa göre renkli, derinliğe göre sıralı */
+  const draw = [];
+  for (const p of S.pts){
+    /* küresel simetri: izoklin dönüşte alan yalnız 4B yarıçapına bağlı,
+       kesitimizde R = √(x²+y²+z²) — kürede örnekle */
+    const R3 = p.r;
+    const R4 = Math.hypot(R3, w0);
+    const st = Math.sin(p.el), ct = Math.cos(p.el);
+    const pos = [R3*st*Math.cos(p.ph), R3*st*Math.sin(p.ph), R3*ct];
+    const sc2 = proj(pos, B, foc, cx, cy);
+    if (!sc2) continue;
+    const inVoid = tearOn(S.tau) && R4 < rVoid(re, sig)*Math.pow(10, ex-1);
+    if (inVoid) continue;
+    draw.push({ sc:sc2, f: fieldOf(R4, re, model) });
+  }
+  draw.sort((a,b) => b.sc.z - a.sc.z);
+  for (const d of draw){
+    ctx.beginPath(); ctx.arc(d.sc.x, d.sc.y, Math.max(0.8, 0.020*d.sc.s), 0, 2*Math.PI);
+    ctx.fillStyle = fieldColor(d.f, 0.75); ctx.fill();
+  }
+
+  /* e-katlanma küresinin silueti */
+  const oc = proj([0,0,0], B, foc, cx, cy);
+  if (oc){
+    ctx.beginPath(); ctx.arc(oc.x, oc.y, rvis*oc.s, 0, 2*Math.PI);
+    ctx.strokeStyle = 'rgba(255,176,32,0.55)'; ctx.lineWidth = 1.2;
+    ctx.setLineDash([4,4]); ctx.stroke(); ctx.setLineDash([]);
+    if (tearOn(S.tau)){
+      const rv = rVoid(re, sig)*Math.pow(10, ex-1);
+      const rr = sliceRadius(rv, w0);
+      if (rr > 0){
+        ctx.beginPath(); ctx.arc(oc.x, oc.y, Math.max(2, rr*oc.s), 0, 2*Math.PI);
+        ctx.fillStyle = '#05070c'; ctx.fill();
+        ctx.strokeStyle = 'rgba(255,59,107,0.9)'; ctx.lineWidth = 1.6; ctx.stroke();
+      }
+    }
+  }
+  $('lab3').textContent = 'görünür yarıçap ' + rvis.toFixed(4) + ' r_e'
+                        + (Math.abs(+$('w0').value) > 1e-9 ? '  ·  W\'de ötelenmiş' : '');
+}
+function proj(p, B, foc, cx, cy){
+  const dx = p[0]-B.eye[0], dy = p[1]-B.eye[1], dz = p[2]-B.eye[2];
+  const vz = dx*B.f[0] + dy*B.f[1] + dz*B.f[2];
+  if (vz < 0.05) return null;
+  const vx = dx*B.r[0] + dy*B.r[1] + dz*B.r[2];
+  const vy = dx*B.u[0] + dy*B.u[1] + dz*B.u[2];
+  const s = foc/vz;
+  return { x:cx + vx*s, y:cy - vy*s, s:s, z:vz };
+}
+
+/* ==========================================================================
+   HIZ MERDİVENİ  (Ek M-6) — log ölçek
+   ========================================================================== */
+function drawLadder(){
+  const cv = $('ladder'), ctx = cv.getContext('2d');
+  const dpr = Math.min(2, window.devicePixelRatio || 1);
+  const W = cv.clientWidth, H = cv.clientHeight;
+  if (W < 2 || H < 2) return;
+  if (cv.width !== (W*dpr|0)){ cv.width = W*dpr|0; cv.height = H*dpr|0; }
+  ctx.setTransform(dpr,0,0,dpr,0,0);
+  ctx.clearRect(0,0,W,H);
+
+  const sig = sigVal(), vm = C_SON*Math.sqrt(sig), vk = vKav(sig);
+  const lo = 0, hi = Math.log10(vk/C_SON) * 1.06;
+  const X = v => 44 + (Math.log10(Math.max(1, v/C_SON))/hi) * (W - 88);
+  const y = 30;
+
+  ctx.strokeStyle = '#243044'; ctx.lineWidth = 2;
+  ctx.beginPath(); ctx.moveTo(44, y); ctx.lineTo(W-44, y); ctx.stroke();
+
+  const marks = [
+    { v:C_SON, l:'c', s:'kavrama · sonik', col:'#00e5ff' },
+    { v:VT,    l:'√2c', s:'e-katlanma', col:'#ffb020' },
+    { v:vm,    l:'v_m', s:'kohezyon sinyali', col:'#7c5cff' },
+    { v:vk,    l:'v_kav', s:'YIRTILMA (M-4)', col:'#ff3b6b' }
+  ];
+  for (const m of marks){
+    const x = X(m.v);
+    ctx.strokeStyle = m.col; ctx.lineWidth = 1.6;
+    ctx.beginPath(); ctx.moveTo(x, y-8); ctx.lineTo(x, y+8); ctx.stroke();
+    ctx.fillStyle = m.col; ctx.font = 'bold 10px Consolas'; ctx.textAlign = 'center';
+    ctx.fillText(m.l, x, y-12);
+    ctx.font = '9px Segoe UI'; ctx.fillStyle = '#6b7a94';
+    ctx.fillText(m.s, x, y+20);
+  }
+
+  /* şu anda r_e'de olan hız = √2c sabit; onun yerine CEP DUVARINDAKİ hızı göster:
+     yırtılma yoksa en yüksek erişilen hız r_e'deki √2c'dir. */
+  const re = reOf(S.tau);
+  let vNow = 0, etiket = '';
+  if (re > 0){
+    if (tearOn(S.tau)){ vNow = vk; etiket = 'cep duvarı'; }
+    else { vNow = VT * Math.min(1, re/0.55); etiket = 'en hızlı kabuk'; }
+  }
+  if (vNow > 0){
+    const x = X(vNow);
+    ctx.fillStyle = 'rgba(255,255,255,0.13)';
+    ctx.fillRect(44, y-4, Math.max(0, x-44), 8);
+    ctx.beginPath(); ctx.arc(x, y, 5, 0, 2*Math.PI);
+    ctx.fillStyle = '#fff'; ctx.fill();
+    ctx.fillStyle = '#fff'; ctx.font = '9px Consolas'; ctx.textAlign = 'center';
+    ctx.fillText(etiket, x, y+34);
+  }
+  ctx.fillStyle = '#4b5872'; ctx.font = '9px Consolas'; ctx.textAlign = 'left';
+  ctx.fillText('log ölçek — v_kav, √2c\'nin ' + (vk/VT).toExponential(2) + ' katı', 44, H-3);
+}
+
+/* ==========================================================================
+   RADYAL PROFİL  (log R)
+   ========================================================================== */
+function drawProf(){
+  const cv = $('prof'), ctx = cv.getContext('2d');
+  const dpr = Math.min(2, window.devicePixelRatio || 1);
+  const W = cv.clientWidth, H = cv.clientHeight;
+  if (W < 2 || H < 2) return;
+  if (cv.width !== (W*dpr|0)){ cv.width = W*dpr|0; cv.height = H*dpr|0; }
+  ctx.setTransform(dpr,0,0,dpr,0,0);
+  ctx.fillStyle = '#0c1220'; ctx.fillRect(0,0,W,H);
+
+  const re = reOf(S.tau) || 1, model = $('model').value, sig = sigVal();
+  const rv = rVoid(re, sig);
+  /* log R ekseni: cepten 100·r_e'ye */
+  const l0 = Math.log10(rv*0.35), l1 = Math.log10(re*100);
+  const XX = R => 6 + ((Math.log10(R)-l0)/(l1-l0))*(W-12);
+  const YY = f => H-14 - Math.max(0, Math.min(1, f))*(H-24);
+
+  ctx.strokeStyle = '#1b2438'; ctx.lineWidth = 1;
+  for (const f of [0, 0.3679, 1]){
+    ctx.beginPath(); ctx.moveTo(6, YY(f)); ctx.lineTo(W-6, YY(f)); ctx.stroke();
+  }
+  ctx.fillStyle = '#4b5872'; ctx.font = '8px Consolas'; ctx.textAlign = 'left';
+  ctx.fillText('ρ₀', 8, YY(1)-2); ctx.fillText('ρ₀/e', 8, YY(0.3679)-2);
+
+  /* eğri */
+  ctx.strokeStyle = model === 'stiff' ? '#00e5ff' : '#ff3b6b';
+  ctx.lineWidth = 1.8; ctx.beginPath();
+  let pen = false;
+  for (let i = 0; i <= 300; i++){
+    const R = Math.pow(10, l0 + (l1-l0)*i/300);
+    const f = fieldOf(R, re, model);
+    if (!isFinite(f)) { pen = false; continue; }
+    const x = XX(R), yy = YY(f);
+    if (!pen){ ctx.moveTo(x,yy); pen = true; } else ctx.lineTo(x,yy);
+  }
+  ctx.stroke();
+
+  /* r_e ve cep işaretleri */
+  for (const m of [{R:re,c:'#ffb020',l:'r_e'}, {R:rv,c:'#ff3b6b',l:'R_cep'}]){
+    const x = XX(m.R);
+    if (x < 6 || x > W-6) continue;
+    ctx.strokeStyle = m.c; ctx.lineWidth = 1; ctx.setLineDash([2,3]);
+    ctx.beginPath(); ctx.moveTo(x, 8); ctx.lineTo(x, H-14); ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.fillStyle = m.c; ctx.font = '9px Consolas'; ctx.textAlign = 'center';
+    ctx.fillText(m.l, x, H-3);
+  }
+  $('profLab').textContent = model === 'stiff' ? 'exp(−(r_e/R)²) — duvar yok'
+                                              : '1 − (r_e/R)² — keskin duvar';
+}
+
+/* ==========================================================================
+   DÖNGÜ
+   ========================================================================== */
+let lastT = performance.now(), kareSayisi = 0, fallback = null;
+function frameBody(now){
+  const dt = Math.min(0.05, (now-lastT)/1000); lastT = now;
+  if (S.playing){
+    S.tau += dt * 0.085 * (+$('spd').value);
+    if (S.tau > 1) S.tau = 0;
+    $('tau').value = S.tau;
+  } else {
+    S.tau = +$('tau').value;
+  }
+  if ($('spin').checked) S.cam.az += dt*0.12;
+
+  draw4(now); draw3(now); drawLadder(); drawProf();
+
+  /* --- ölçümler --- */
+  const re = reOf(S.tau), sig = sigVal(), vk = vKav(sig);
+  const rv = re > 0 ? rVoid(re, sig) : 0;
+  const w0 = +$('w0').value * (re || 1);
+  $('tauV').textContent = S.tau.toFixed(3);
+  $('m_re').textContent   = re > 0 ? re.toFixed(4) : '0 — yapı yok';
+  $('m_vre').textContent  = re > 0 ? '√2c = 4,2397×10⁸ m/s' : '—';
+  $('m_rre').textContent  = re > 0 ? (1/Math.E).toFixed(6) + '  (= 1/e)' : '—';
+  $('m_vkav').textContent = (vk/C_SON).toExponential(3) + ' c';
+  $('m_rvoid').textContent= rv > 0 ? rv.toExponential(3) : '—';
+  $('m_ratio').textContent= rv > 0 ? (rv/re).toExponential(3) : '—';
+  $('m_tear').innerHTML   = tearOn(S.tau)
+      ? '<span style="color:#ff3b6b">YIRTILDI — Kut var</span>'
+      : '<span style="color:#8892b0">ortam bütün</span>';
+  $('m_vis').textContent  = re > 0 ? sliceRadius(re, w0).toFixed(4) : '—';
+  $('ratioTxt').textContent = Math.sqrt(1+sig).toExponential(2);
+
+  const ph = asamaOf(S.tau);
+  if (ph !== S.phase){ S.phase = ph; paintStage(); }
+  document.querySelectorAll('.stg').forEach((e,i) => e.classList.toggle('on', i === ph));
+}
+function frame(now){
+  kareSayisi++;
+  try { frameBody(now); }
+  catch (err){
+    const b = $('banner');
+    b.style.background = '#3b1418'; b.style.color = '#fca5a5';
+    b.textContent = 'ÇİZİM HATASI: ' + err.message;
+    console.error(err);
+  }
+  if (!fallback) requestAnimationFrame(frame);
+}
+function paintStage(){ $('stageDesc').textContent = ASAMA[S.phase].desc; }
+
+/* ==========================================================================
+   BAĞLAMA
+   ========================================================================== */
+function bindLabels(){
+  const L = [['tau','tauV',3],['spd','spdV',2],['ratio','rV',2],
+             ['w0','w0V',3],['exag','exV',2],['n','nV',0]];
+  for (const [id,out,dp] of L){
+    const f = () => { $(out).textContent = (+$(id).value).toFixed(dp); };
+    $(id).addEventListener('input', f); f();
+  }
+  /* Σ/P₀ sürgüsü log₁₀ taşır ama etikette GERÇEK değer gösterilir. */
+  const fs = () => { $('sigV').textContent = sigVal().toExponential(3); };
+  $('sig').addEventListener('input', fs); fs();
+}
+function noteUpdate(){
+  $('modelNote').innerHTML = $('model').value === 'stiff'
+    ? '<b>Yürürlükteki okuma.</b> Ortam stiff (Zel\'dovich) akışkandır: '
+    + '<code>P = c²ρ</code>. Bernoulli integrali <code>c²ln(ρ/ρ₀) = −v²/2</code> verir, '
+    + 'yani <code>ρ = ρ₀exp(−v²/2c²)</code>. <b>√2c\'de yoğunluk sıfıra inmez, '
+    + '1/e katına iner</b> — bu yüzden keskin bir vakum duvarı YOKTUR. KARNE '
+    + '(10 Ağu 2026, yazar onaylı): <i>"√2c sayısı korunur, anlamı e-katlanma hızı; '
+    + 'keskin vakum duvarı yok; cep yırtılmayla açılır (M-4)."</i>'
+    : '<b>SÜPERSEDE EDİLMİŞ okuma.</b> Sıkıştırılamaz Bernoulli '
+    + '<code>P = P₀ − ½ρ₀v²</code> kullanılırsa basınç r_e\'de <b>tam sıfıra</b> iner '
+    + 've keskin bir vakum duvarı çıkar. Ek A.2 böyle yazılmıştı; 10 Ağustos 2026\'da '
+    + 'düzeltildi. Bu seçenek <b>farkı görmek için</b> duruyor — teorinin '
+    + 'yürürlükteki hâli değildir.';
+}
+function buildStages(){
+  const bar = $('stagebar');
+  ASAMA.forEach((a,i) => {
+    const d = document.createElement('div');
+    d.className = 'stg';
+    d.innerHTML = '<b>' + a.ad + '</b>' + a.kisa;
+    d.onclick = () => { S.playing = false; $('play').classList.remove('on');
+      $('play').textContent = '▶ Oto döngü'; S.tau = a.t0 + 0.004;
+      $('tau').value = S.tau; };
+    bar.appendChild(d);
+  });
+}
+function renderTests(){
+  const T = selfTests(), box = $('tests');
+  box.innerHTML = ''; let bad = 0;
+  for (const t of T){
+    if (!t.ok) bad++;
+    const d = document.createElement('div');
+    d.innerHTML = '<span>' + t.n + '</span><span class="s ' + (t.ok?'pass':'fail') + '">'
+                + (t.ok?'PASS':'FAIL') + '</span>';
+    d.title = 'sapma = ' + (+t.e).toExponential(3);
+    box.appendChild(d);
+  }
+  $('testsum').innerHTML = '<span class="' + (bad?'fail':'pass') + '">'
+                         + (T.length-bad) + '/' + T.length + '</span>';
+  const b = $('banner');
+  if (bad){ b.style.background = '#3b1418'; b.style.color = '#fca5a5';
+            b.textContent = bad + ' SINAMA BAŞARISIZ — sonuçlara güvenmeyin'; }
+  else { b.style.background = '#0d2f26'; b.style.color = '#6ee7b7';
+         b.textContent = '✓ ' + T.length + ' öz-sınamanın tamamı geçti'; }
+}
+
+$('model').addEventListener('input', noteUpdate);
+$('n').addEventListener('input', rebuildPts);
+$('iso').addEventListener('change', () => {
+  $('ratio').disabled = $('iso').checked;
+  if ($('iso').checked){ $('ratio').value = 1; $('rV').textContent = '1.00'; }
+});
+$('play').addEventListener('click', () => {
+  S.playing = !S.playing;
+  $('play').classList.toggle('on', S.playing);
+  $('play').textContent = S.playing ? '▶ Oto döngü' : '⏸ Duraklat';
+});
+$('reset').addEventListener('click', () => { S.tau = 0; $('tau').value = 0; });
+$('tau').addEventListener('input', () => {
+  S.playing = false; $('play').classList.remove('on'); $('play').textContent = '▶ Oto döngü';
+});
+
+/* 3B panelde fare ile yörünge */
+(function(){
+  const cv = $('c3'); let drag = false, lx = 0, ly = 0;
+  cv.addEventListener('mousedown', e => { drag = true; lx = e.clientX; ly = e.clientY; });
+  window.addEventListener('mouseup', () => { drag = false; });
+  window.addEventListener('mousemove', e => {
+    if (!drag) return;
+    S.cam.az -= (e.clientX-lx)*0.007;
+    S.cam.el = Math.max(-1.45, Math.min(1.45, S.cam.el + (e.clientY-ly)*0.007));
+    lx = e.clientX; ly = e.clientY;
+  });
+  cv.addEventListener('wheel', e => {
+    e.preventDefault();
+    S.cam.d = Math.max(1.8, Math.min(9, S.cam.d*(1 + Math.sign(e.deltaY)*0.08)));
+  }, { passive:false });
+})();
+
+/* açılış */
+bindLabels(); noteUpdate(); buildStages(); renderTests(); rebuildPts(); paintStage();
+requestAnimationFrame(frame);
+setTimeout(function(){
+  if (kareSayisi === 0){
+    fallback = setInterval(function(){ frame(performance.now()); }, 33);
+    console.warn('rAF ateşlenmedi; 30 fps zamanlayıcıya düşüldü.');
+  }
+}, 1000);
+</script>
+</body>
+</html>

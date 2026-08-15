@@ -6,14 +6,14 @@ Standart fizik, maddenin çevresindeki etki bölgelerini soyut "alan" kavramlar�
 
 ## 1.5.1 Gradyanın Kaynağı: Dönen Madde ve Deplasman
 
-Gradyanın var olabilmesi iki postülatın doğrudan sonucudur. Birincisi, Evrenakı **sıkıştırılabilirdir** (1. postülat): sıkıştırılamaz bir akışkanda kalıcı yoğunluk farkı oluşamazdı. İkincisi, madde durağan değildir (5. postülat): her nükleon, Evrenakı içinde Compton frekansında (Compton, 1923) dönen hacimsel bir girdaptır ve bu dönüş, çevresindeki akışkanla sınır tabakası etkileşimi (boundary layer coupling) kurar.
+Gradyanın var olabilmesi iki postülatın doğrudan sonucudur. Birincisi, Evrenakı **sıkıştırılabilirdir** (1. postülat): sıkıştırılamaz bir akışkanda kalıcı yoğunluk farkı oluşamazdı. İkincisi, madde durağan değildir (5. postülat): her nükleon, duvarını $\sqrt{2}\,c_0$'de döndüren hacimsel bir girdaptır — açısal hızı duvar hızı yasasından okunur ($\Omega=\sqrt{2}\,c_0/r$, M-3; nükleon için $5{,}0389\times10^{23}$ rad/s) — ve bu dönüş, çevresindeki akışkanla sınır tabakası etkileşimi (boundary layer coupling) kurar. Bu değerin frekans karşılığı teorinin girdisi değil, duvar hızı yasasının **türetilmiş sonucudur**; standart fiziğin Compton frekansıyla (Compton, 1923) mertebe uyumu, gradyanın mekanik kökeni için gözlemsel bir sağlama noktasıdır.
 
 Bu iki olgu birleştiğinde her madde parçacığı, çevresindeki akışkanda iki temel iz bırakır:
 
 1. **Deplasman (yerinden etme):** Parçacığın hacmi ve girdabı, bulunduğu bölgedeki Evrenakı'yı yerinden eder; maddenin işgal ettiği ve taradığı bölgede yerel Evrenakı yoğunluğu, serbest uzaya kıyasla **düşer**. Madde, akışkan okyanusun içinde bir "seyreklik cebi"dir.
 2. **Basınç profili:** Parçacığın "nefes alan" pompa hareketi ve yerinden edilen akışkan, kütlenin merkezinden dışarı doğru azalan bir hidrodinamik basınç ve yoğunluk farklılığı yaratır (Bernoulli, 1738). Kütlenin merkezinde en düşük (vakum) olan basıncın, çeperdeki dik geçiş yamacı (Evrenakı Rampası) boyunca hızla yükselip dış uzaya doğru uzaklaştıkça global Evrenakı basıncına ($P_0$) asimptotik olarak dengelendiği küresel bir geçiş bölgesi oluşturur; basınç hiçbir noktada $P_0$'ı aşmaz. Çeperde zirve yapan büyüklük ise **yoğunluktur**: dışa pompalanan akışkan, yüzeyde ince ve yüksek yoğunluklu bir sınır tabakası (kabuk) hâlinde yığılır ve bu kabuk, basınç profilinde vadinin içinde kalan küçük bir **kabartı** oluşturur. Bu vadi–rampa profili, gradyanın kendisidir.
 
-Gradyan, dönen maddenin durduğu yerde "yaydığı" bir şey değildir; maddenin akışkan içindeki varlığının ve dönüşünün **geometrik zorunluluğudur**. Mekanik kaynağı, parçacığın 4 boyutlu çift dönüşüdür: W'li bileşenin ($\omega_2$) üç boyuta düşen "nefes alma" (pulsasyon) imzası — bkz. 1.4.11, birinci imza — parçacığı Evrenakı'yı dışa pompalayan mikroskobik bir pompaya dönüştürürken, üç boyut içindeki hızlı dönüş bileşeni ($\omega_1$) bu deplasmanı sınır tabakası etkileşimiyle sürekli kılar. Bu pompalamanın makro kütlelerde — devinimle birlikte — nasıl örgütlendiği Kısım 3'te ele alınacaktır.
+Gradyan, dönen maddenin durduğu yerde "yaydığı" bir şey değildir; maddenin akışkan içindeki varlığının ve dönüşünün **geometrik zorunluluğudur**. Mekanik kaynağı, parçacığın 4 boyutlu çift dönüşüdür: W'li bileşenin ($\omega_2$) üç boyuta düşen "nefes alma" (pulsasyon) imzası — bkz. 1.4.11, birinci imza — parçacığı Evrenakı'yı dışa pompalayan mikroskobik bir pompaya dönüştürürken, üç boyut içindeki dönüş bileşeni ($\omega_1$) bu deplasmanı sınır tabakası etkileşimiyle sürekli kılar. Bu pompalamanın makro kütlelerde — devinimle birlikte — nasıl örgütlendiği Kısım 3'te ele alınacaktır.
 
 <div class="pol-widget-151">
 <style>
@@ -358,6 +358,21 @@ Gradyan, dönen maddenin durduğu yerde "yaydığı" bir şey değildir; maddeni
 En küçük kararlı gradyan mimarisi atomdur ve iki iç içe bileşenden oluşur:
 
 * **Çekirdek gradyanı:** 4. boyut dönüşünün kalıntısını taşıyan çekirdek, "nefes alan" bir gidiş-geliş pompası gibi davranarak Evrenakı'yı sürekli olarak dışa doğru deplase eder. Kütlenin merkezi bir vakumdur; ancak dışarı pompalanan akışkan hemen çeperde yığılarak **yüksek yoğunluklu** dönen bir "Sınır Tabakası (Evrenakı Rampası)" oluşturur. Sınır tabakasından dış uzaya doğru uzaklaştıkça basınç dengelenerek global seviyeye ulaşır. Madde, yüksek yoğunluklu bir rampayla korunan **düşük basınç (vakum) cebidir.**
+
+> [!IMPORTANT]
+> **İki rampa vardır ve karıştırılmamalıdır.** Yukarıdaki madde **pulsasyon rampasını** tarif eder ($\omega_2$'nin nefes alma imzası); aşağıdaki elektron maddesi ise **elektron rampasını**. İkisi ayrı yapılardır:
+>
+> | | **Pulsasyon rampası** | **Elektron rampası** |
+> |---|---|---|
+> | Kaynak | Nükleonların $\omega_2$ nefes alması | Yüzeydeki elektronların dolanımı |
+> | Simetri | **Küresel** — nefes alan pompanın yönü yoktur | Elektronla birlikte yer değiştirir |
+> | Konum | Gövdeyi kuşatan hacim | Madde yüzeyine yapışık |
+> | Kalınlık | Dış gradyana bağlı, **değişken** | $\lesssim0{,}1$ mm, maddeye bağlı, **sabit** |
+> | İşi | Kütle-itimin yakın alanı, çarpışma kesiti | Optik: yansıma (2.6), soğurma (2.9), kalkan (1.6) |
+>
+> **Pulsasyon rampasının erimi serbest değildir — türetilir.** Sınırı, cismin kendi kütle-itim ivmesinin dış ivmeye yenildiği yerdir: $r_{puls}=\sqrt{\mathcal{G}m/a_{d\imath\c{s}}}$ — **sürüklenme zarfının erimiyle aynı ölçüt** (11.4.8.1). Tek ölçüt, her ölçekte.
+>
+> **Ve hangisinin büyük olduğu ortama göre değişir.** Yeryüzünde 1 kg'lık bir cismin pulsasyon rampası yalnız $2{,}6\ \mu$m'dir — elektron rampasının kırkta biri; iki cisim daima **elektron rampalarından** değer ve sıradan temas mekaniği bozulmaz. Bir Satürn halka taneciğinde ise pulsasyon rampası **17 metredir** — elektron rampasının beş mertebe üstünde. Hangi rampanın hesaba gireceği bu karşılaştırmayla belirlenir (11.4.5).
 * **Elektron gradyanı:** Çekirdek etrafında dolanan elektron da ayrı bir vakum merkezidir. Elektronun merkezinden dışarı itilen akışkan, hemen etrafında yüksek yoğunluklu hareketli bir sınır tabakası (rampa) örer. Elektron **kendi vakum cebi ve yüksek yoğunluklu rampasıyla birlikte döner**. Elektronun dolanımı nedeniyle bu hareketli yoğunluk rampası, atomun çevresinde sürekli konum değiştiren, dinamik bir akışkan zırhı yaratır.
 
 Atomik yörüngeler iki boyutlu düzlemsel diskler değil, katman katman iç içe geçmiş üç boyutlu küresel tabakalardır *(bu 3B topolojinin gerekçelendirmesi için bkz. Güler, 2021)*. Elektronların taşıdığı yüksek yoğunluklu hareketli rampalar (sınır tabakaları), dolanımları sırasında atomun çevresindeki her doğrultudan geçmek zorundadır. Bu kesintisiz küresel tarama, atomu güçlü bir hidrodinamik kalkanla sarar. İleride (Kısım 2) gösterilecektir ki ışığın bir yüzeyde yansıması, içinden geçmesi veya soğurulması — 1.2.6'da üç ayrı modele bölündüğünü gördüğümüz üç davranış — işte bu tek mikro-gradyan mimarisinin üç farklı geometrik sonucundan ibarettir.

@@ -21,7 +21,7 @@
 * Clauser, J. F., & Horne, M. A. (1974). *Experimental consequences of objective local theories*. Physical Review D, 10(2), 526-535. (CH formülasyonu — kayıpları eşitsizliğin içine alan tasarım, Bölüm 2.10.1).
 * Clauser, J. F., Horne, M. A., Shimony, A., & Holt, R. A. (1969). *Proposed Experiment to Test Local Hidden-Variable Theories*. Physical Review Letters, 23(15), 880-884. (CHSH istatistiği, Bölüm 2.10.1).
 * Cocke, W. J., Disney, M. J., & Taylor, D. J. (1969). *Discovery of Optical Signals from Pulsar NP 0532*. Nature, 221, 525-527. (Crab pulsarının optik nabızları — renk-saçılması sınırı, Bölüm 2.4.4).
-* Compton, A. H. (1923). *A Quantum Theory of the Scattering of X-rays by Light Elements*. Physical Review, 21(5), 483-502. (Compton saçılması ve Compton frekansı, Bölüm 2.1).
+* Compton, A. H. (1923). *A Quantum Theory of the Scattering of X-rays by Light Elements*. Physical Review, 21(5), 483-502. (Compton saçılması; Compton frekansı — teorinin dönüş çapası değil, $\Omega=\sqrt{2}\,c_0/r$'den türetilen frekansın gözlemsel sağlaması olarak, Bölüm 2.1).
 * Couder, Y., & Fort, E. (2006). *Single-Particle Diffraction and Interference at a Macroscopic Scale*. Physical Review Letters, 97, 154101. (Damlacık–pilot dalga analogu, Bölüm 2.6.5).
 * de Broglie, L. (1925). *Recherches sur la théorie des quanta*. Annales de Physique, 10(3), 22-128. (Madde dalgaları ve parçacık/dalga ikiliği, Bölüm 2.10).
 * Descartes, R. (1637). *Discours de la méthode … plus La Dioptrique*. Leiden: Jan Maire. (Kırılma yasasının ilk yayımlanmış biçimi, Bölüm 2.3.7).
@@ -31,6 +31,7 @@
 * Einstein, A., Podolsky, B., & Rosen, N. (1935). *Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?* Physical Review, 47(10), 777-780. (EPR — "uzaktan ürkütücü etki" eleştirisi, Bölüm 2.10.1).
 * Ewald, P. P. (1916). *Zur Begründung der Kristalloptik*. Annalen der Physik, 354(21), 1-38. (Ewald–Oseen sönümleme teoremi, Bölüm 2.6.2).
 * Fan, X., Myers, T. G., Sukra, B. A. D., & Gabrielse, G. (2023). *Measurement of the Electron Magnetic Moment*. Physical Review Letters, 130, 071801. (Elektron manyetik momentinin en hassas ölçümü, Bölüm 2.1).
+* Güler, B. *Atom Geometrisi*. Mai tezi serisi, birinci kitap. (Kare katman çekirdek geometrisi; 2, 8, 18, 32 kabuk sayılarının proton diziliminden türetimi ve element-element çekirdek geometrileri — Bölüm 2.1'in "Kabuk Sayıları" notu).
 * Feynman, R. P. (1948). *Space-Time Approach to Non-Relativistic Quantum Mechanics*. Reviews of Modern Physics, 20(2), 367-387. (Yol integrali — "tüm olası yollar toplamı", Bölüm 2.6.2).
 * Feynman, R. P. (1985). *QED: The Strange Theory of Light and Matter*. Princeton: Princeton University Press. (Yol toplamı ilkesinin popüler sunumu, Bölüm 2.6.2).
 * Fizeau, H. (1851). *Sur les hypothèses relatives à l'éther lumineux*. Comptes Rendus de l'Académie des Sciences, 33, 349-355. (Hareketli ortamlarda kısmi optik sürüklenme; bu kısımda metin-içi atıfı yoktur — deneyin teorideki ayrıntılı işlenişi ve katsayı türetimi Bölüm 3.4.6'dadır, bkz. 3.12 Kaynakça).

@@ -70,12 +70,13 @@
     <link rel="icon" type="image/png" href="Gorseller/pwa_icon.png">
     <link rel="apple-touch-icon" href="Gorseller/pwa_icon.png">
     <link rel="manifest" href="manifest.json">
+    <meta name="evrenaki-build" content="20260815-082701">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="theme-color" content="#030712">
     
     <!-- Custom Style Sheet -->
-    <link rel="stylesheet" href="index.css?v=7">
+    <link rel="stylesheet" href="index.css?v=2dadf2cf22">
 </head>
 <body class="dark-theme">
     
@@ -94,12 +95,12 @@
                 <div style="display: flex; justify-content: center; width: 100%;">
                     <div class="splash-badge-dev">
                         <i data-lucide="construction" style="width: 14px; height: 14px; color: #ffb020;"></i>
-                        <span>YAPIM AŞAMASINDADIR (BETA v1.02)</span>
+                        <span>YAPIM AŞAMASINDADIR (BETA v1.03)</span>
                     </div>
                 </div>
                 <p class="splash-statement">"Evrenakı Teorisi'nde varsayımlara yer yoktur; her iddia mutlaka kanıtlarla mühürlenmiştir."</p>
             </div>
-            <div class="intro-options" style="display: flex; gap: 16px; margin-top: 24px; z-index: 10;">
+            <div class="intro-options" style="display: flex; gap: 16px; margin-top: 24px; position: relative; z-index: 9999; pointer-events: auto;">
                 <button id="btn-academic" class="btn btn-primary" onclick="selectVersion('akademik')">
                     <i data-lucide="book-open"></i> Akademik Sürüm
                 </button>
@@ -233,10 +234,10 @@
                                     <button class="btn btn-primary" onclick="loadChapter('ozet')" style="background-color: var(--neon-magenta); border-color: var(--neon-magenta);">
                                         <i data-lucide="book"></i> Kitabın Özeti
                                     </button>
-                                    <button class="btn btn-primary" onclick="loadChapter('bolum_01')">
+                                    <button class="btn btn-primary" onclick="loadChapter('akademik_01_01')">
                                         <i data-lucide="book-open"></i> Okumaya Başla
                                     </button>
-                                    <button class="btn btn-peer-review" onclick="loadChapter('duzeltme')">
+                                    <button class="btn btn-peer-review" onclick="loadChapter('akademik_13_01')">
                                         <i data-lucide="shield-check"></i> Hakem Değerlendirmeleri
                                     </button>
                                     <button class="btn btn-secondary" onclick="switchTab('sim')">
@@ -312,7 +313,7 @@
                             </div>
 
                             <!-- Peer Review Banner -->
-                            <div class="peer-review-banner fade-in" onclick="loadChapter('duzeltme')">
+                            <div class="peer-review-banner fade-in" onclick="loadChapter('akademik_13_01')">
                                 <div class="peer-review-content">
                                     <div class="peer-badge">
                                         <i data-lucide="file-text"></i> Akademik Akran Denetimi
@@ -931,8 +932,8 @@
         </div>
     </div>
 
-    <!-- App Logic -->
-    <script src="app.js?v=25"></script>
+    <!-- Main JS Application Logic -->
+    <script src="app.js?v=622d38dd03"></script>
     <!-- Firebase: Authentication (üyelik) + Firestore (yorum/forum/istatistik) -->
     <script type="module" src="firebase-client.js?v=9"></script>
 </body>

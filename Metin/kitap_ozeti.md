@@ -16,9 +16,10 @@
 Modern fizik yüz yılı aşkın süredir uzayın devasa bir hiçlik olduğunu ve gök cisimlerinin bu hiçlik içinde birbirini gizemli bir kuvvetle çektiğini varsaydı. Evrenakı Teorisi bu varsayımı reddeder:
 
 1. **Evrenakı Okyanusu:** Uzay; viskozitesi sıfıra yakın (ultra-düşük sürtünmeli), sıkıştırılabilir ve tüm varlığı kuşatan süper-akışkan bir ham malzeme ortamıdır.
-2. **Zerre (Işık Parçacığı/Damlası):** Işığı ve elektromanyetik ışınımı oluşturan, fiziksel hacmi, kütlesi ve Compton dönel frekansı olan temel ışık damlacıklarıdır.
-3. **Dördüncü Boyut ve Nefes Alan Parçacıklar:** Tüm temel parçacıklar, dördüncü boyuttaki ($W$ ekseni) Compton frekanslı dönüşlerinin ($f_C \approx 10^{20} \text{ Hz}$) 3B uzaya düşen izdüşümüyle sürekli dışa doğru akışkan iter (**Deplasman / Nefes alma**).
-4. **Basınç Gradyanı (Kütle-İtim):** Kütle kalkanı Evrenakı'yı dışa ittiği için, kütleye yaklaştıkça akışkan basıncı yükselmez, **düşer**. Dış uzaydaki yüksek basınçlı Evrenakı, cisimleri merkezdeki düşük basınç kuyusuna doğru bastırır. **Newton'un "çekim" dediği şey, dış okyanusun itişidir (Push-Gravity).**
+2. **Kut (Bölünemez Temel Birim):** Evrenakı'nın bölünemeyen, kuantumlanmış en küçük birimidir; teorinin tek temel parçacığı odur. Zerre de nötrino da Kutlardan kuruludur; Kut'un altında parçacık değil, süreklilik vardır. Teorinin **varlık tabanı** Kut, **açıklama tabanı** ise Zerre'dir — bütün hesaplar Zerre'de durur, Kut hiçbir hesaba girmez.
+3. **Zerre (Işık Parçacığı/Damlası):** Işığı ve elektromanyetik ışınımı oluşturan; fiziksel hacmi, kütlesi ve evrensel çevresel dönüş hızı ($v_{cev} = \sqrt{2}\,c_0$) olan, Kutlardan kurulu **en küçük kararlı yapılanmadır.**
+4. **Dördüncü Boyut ve Nefes Alan Parçacıklar:** Tüm parçacıklar ve kararlı yapılanmalar, dördüncü boyuttaki ($W$ ekseni) dönüşlerinin 3B uzaya düşen izdüşümüyle sürekli dışa doğru akışkan iter (**Deplasman / Nefes alma**). Bu dönüşün frekansı duvar hızı yasasından türetilir ve gözlemlenen Compton frekansı mertebesiyle ($f_C \approx 10^{20} \text{ Hz}$) örtüşür.
+5. **Basınç Gradyanı (Kütle-İtim):** Kütle kalkanı Evrenakı'yı dışa ittiği için, kütleye yaklaştıkça akışkan basıncı yükselmez, **düşer**. Dış uzaydaki yüksek basınçlı Evrenakı, cisimleri merkezdeki düşük basınç kuyusuna doğru bastırır. **Newton'un "çekim" dediği şey, dış okyanusun itişidir (Push-Gravity).**
 
 ---
 
@@ -36,7 +37,7 @@ Gök cisimleri ve parçacıklar, Evrenakı okyanusunda yüzelerken aynı anda **
 
 ## 💡 3. Işık ve Mikro Evrenin Tekilliği
 
-* **Foton İllüzyonu Yoktur:** Işık kütlesiz veya hacimsiz bir olasılık dalgası değil, Compton dönel frekansına ve kütlesine sahip zerre katarlarıdır (*Zerre / Akışkan Damlacığı*).
+* **Foton İllüzyonu Yoktur:** Işık kütlesiz veya hacimsiz bir olasılık dalgası değil, kütlesi ve evrensel çevresel dönüş hızı olan Zerre katarlarıdır (*Zerre / Akışkan Damlacığı*).
 * **Yansıma ve Kırılma:** Aynadaki yansıma gelen açıyla değil, atomik yüzeydeki elektron kalkanının açılıp kapanma zamanlamasıyla (kapı açık mı/kapalı mı) belirlenir.
 * **Girişim ve Çift Yarık:** Işık enerjisi karanlık saçaklarda yok olmaz; Zerreler birbirinin arkasında bıraktığı alçak basınçlı iz kanallarına kapılarak aydınlık saçaklara yığılır (Enerji korunumu %100 sağlanır).
 

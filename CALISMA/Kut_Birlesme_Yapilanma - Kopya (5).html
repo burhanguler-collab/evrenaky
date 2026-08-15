@@ -1,0 +1,2335 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kutların Birleşmesi — Sınır Tabakası Bağı ve 4B Dönüşün 3B İzi</title>
+<style>
+  :root{
+    --bg:#0b0f19; --panel:#111726; --line:#1f2937;
+    --cyan:#00e5ff; --orange:#ffb020; --grey:#8892b0; --light:#cbd5e1; --white:#f3f4f6;
+    --ok:#34d399; --bad:#f87171; --ridge:#ff3b6b; --bond:#7cfc6b;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%;margin:0}
+  body{background:var(--bg);color:var(--light);font-family:"Segoe UI",Roboto,system-ui,sans-serif;
+       font-size:13px;overflow-y:hidden;overflow-x:auto;user-select:none}
+  #wrap{display:grid;grid-template-columns:300px minmax(560px,1fr) 340px;height:100vh;min-width:1200px}
+  .col{overflow-y:auto;overflow-x:hidden}
+  .col::-webkit-scrollbar{width:8px}
+  .col::-webkit-scrollbar-thumb{background:#243044;border-radius:4px}
+  #left,#right{background:var(--panel);padding:12px 13px 40px}
+  #left{border-right:1px solid var(--line)}
+  #right{border-left:1px solid var(--line)}
+  #center{display:flex;flex-direction:column;background:var(--bg);overflow:hidden}
+  #views{flex:1;display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);min-height:0}
+  .vw{position:relative;background:var(--bg);overflow:hidden}
+  .vw canvas{display:block;width:100%;height:100%}
+  #c4{cursor:crosshair}
+  .vwlab{position:absolute;left:10px;top:8px;font-size:10.5px;letter-spacing:.7px;
+         text-transform:uppercase;font-weight:600;pointer-events:none}
+  .vwsub{position:absolute;left:10px;top:24px;font-size:10px;color:var(--grey);pointer-events:none}
+  #statusbar{height:44px;border-top:1px solid var(--line);background:#0c1220;
+             display:flex;align-items:center;gap:0;padding:0 4px}
+  .sb{flex:1;text-align:center;font-size:10px;color:var(--grey);line-height:1.35;
+      border-right:1px solid #1a2334}
+  .sb:last-child{border-right:none}
+  .sb b{display:block;font-size:13px;color:var(--white);font-family:Consolas,monospace}
+  h1{font-size:14px;color:var(--white);margin:0 0 3px}
+  .sub{font-size:10.5px;color:var(--grey);margin:0 0 12px;line-height:1.5}
+  h2{font-size:11px;color:var(--cyan);text-transform:uppercase;letter-spacing:.9px;
+     margin:16px 0 8px;padding-bottom:5px;border-bottom:1px solid var(--line)}
+  h2:first-of-type{margin-top:4px}
+  label{display:block;font-size:11px;color:var(--grey);margin:9px 0 3px}
+  .val{color:var(--cyan);font-family:Consolas,monospace}
+  select{width:100%;background:#0c1220;color:var(--light);border:1px solid #26324a;
+         border-radius:5px;padding:5px 7px;font-size:12px;font-family:inherit}
+  input[type=range]{width:100%;accent-color:var(--cyan);height:16px;margin:2px 0}
+  .row{display:flex;gap:6px}.row>*{flex:1}
+  button{background:#182338;color:var(--light);border:1px solid #2b3a55;border-radius:5px;
+         padding:6px 8px;font-size:11.5px;cursor:pointer;font-family:inherit}
+  button:hover{background:#1f2c46;border-color:var(--cyan);color:var(--white)}
+  button.on{background:#0e3a44;border-color:var(--cyan);color:var(--cyan)}
+  .chk{display:flex;align-items:center;gap:7px;margin:7px 0;font-size:11.5px;cursor:pointer}
+  .chk input{accent-color:var(--cyan);width:14px;height:14px;margin:0;cursor:pointer}
+  .note{font-size:10.5px;color:var(--grey);line-height:1.55;margin:7px 0;
+        border-left:2px solid #2b3a55;padding:2px 0 2px 8px}
+  .warn{border-left-color:var(--orange);color:#d6bd97}
+  .stop{border-left-color:#7c5cff;color:#b9a8f0}
+  .key{border-left-color:var(--bond);color:#a9e8a0}
+  table.kv{width:100%;border-collapse:collapse;font-size:11px;font-family:Consolas,monospace}
+  table.kv td{padding:3px 2px;border-bottom:1px solid #1a2233}
+  table.kv td:last-child{text-align:right;color:var(--white)}
+  .tl{font-size:10px;color:var(--grey);margin:10px 0 3px;display:flex;
+      justify-content:space-between;gap:6px}
+  .prof{width:100%;height:112px;display:block;background:#0c1220;
+        border:1px solid #1e2940;border-radius:5px}
+  #sinavSonuc{font-size:11px;font-family:Consolas,monospace;text-align:center;
+              padding:7px 6px;margin:6px 0 2px;border-radius:5px;
+              background:#0c1220;border:1px solid #1e2940;color:var(--grey);line-height:1.5}
+  #tests{font-size:10.5px;font-family:Consolas,monospace;line-height:1.5}
+  #tests div{display:flex;justify-content:space-between;gap:8px;padding:2px 0;border-bottom:1px solid #161e2e}
+  #tests span.s{flex:0 0 auto;font-weight:bold}
+  .pass{color:var(--ok)}.fail{color:var(--bad)}
+  #banner{padding:6px 8px;border-radius:5px;font-size:11px;margin-bottom:8px;
+          text-align:center;font-weight:600}
+  .eq{font-family:Consolas,monospace;font-size:10.5px;color:#9fe8f5;background:#0c1220;
+      border:1px solid #1e2940;border-radius:4px;padding:5px 7px;margin:5px 0;
+      line-height:1.6;overflow-x:auto;white-space:nowrap}
+  .tag{display:inline-block;font-size:9px;padding:1px 5px;border-radius:3px;
+       font-weight:700;letter-spacing:.4px;vertical-align:1px}
+  .t-k{background:#0d3b2e;color:#6ee7b7}
+  .t-t{background:#3b2f0d;color:#fcd34d}
+  .t-d{background:#2a1550;color:#c4b5fd}
+  code{font-family:Consolas,monospace;color:#9fe8f5;font-size:10.5px}
+  #depo{display:flex;align-items:center;gap:10px;background:#0c1220;border:1px dashed #2b3a55;
+        border-radius:8px;padding:10px;margin:6px 0}
+  #depoKut{flex:0 0 auto;cursor:grab;display:block;border-radius:50%;
+           filter:drop-shadow(0 0 8px rgba(0,229,255,.45))}
+  #depoKut.armed{filter:drop-shadow(0 0 10px var(--bond)) drop-shadow(0 0 3px var(--bond))}
+  #pick.armed{background:#123d1c;border-color:var(--bond);color:var(--bond)}
+  #pickState{font-size:10.5px;text-align:center;margin:5px 0 0;color:#5e6d88;
+             font-family:Consolas,monospace}
+  #pickState.armed{color:var(--bond);font-weight:bold}
+  #depoTxt{font-size:10.5px;color:var(--grey);line-height:1.45}
+  #npad{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin:4px 0 2px}
+  #npad button{padding:6px 0;font-size:11.5px;font-family:Consolas,monospace}
+  #npad button.kar{border-color:#1f6b52;color:#6ee7b7}
+  #npad button.kars{border-color:#6b2530;color:#f6a6b2}
+  #npad button.bel{border-color:#4a3d6b;color:#c4b5fd}
+</style>
+</head>
+<body>
+<div id="wrap">
+
+<!-- ==================== SOL ==================== -->
+<div id="left" class="col">
+  <h1>Kutların Birleşmesi</h1>
+  <p class="sub">Kutları tek tek yerleştir. Yeni Kut bir başkasının sınır tabakasına
+  girdiğinde bağ kurulur ve yeni yapı oluşur. Sağ panel, yapının 4B çift dönüşünün
+  <code>w = 0</code> kesitimize düşen izini gösterir.</p>
+
+  <p class="note stop"><b>Kapsam uyarısı — teorinin kendi sınırı.</b> Evrenakı
+  Teorisi bu düzeyi <b>açıkça kapsam dışı ilan eder</b>: <i>"Varlık tabanı Kut,
+  açıklama tabanı Zerre'dir. Kut hiçbir hesaba girmez... Bileşim argümanları
+  Zerre'ye kadar serbesttir, Zerre'de durur."</i> Bu sayfa bir <b>keşif
+  aracıdır</b>, teorinin bir iddiası değil. Buradaki Kut ölçekli her sayı
+  <b>parametriktir</b> (birim: r_e).</p>
+
+  <h2>Kut deposu</h2>
+  <div id="depo">
+    <!-- Inline SVG: CSS gradyanına bağımlı DEĞİL. Altta düz renkli daire var,
+         gradyan çizilmezse bile görünür kalır. -->
+    <svg id="depoKut" width="48" height="48" viewBox="0 0 48 48">
+      <title>Kut al — sonra sahneye tıkla</title>
+      <defs>
+        <radialGradient id="kgrad" cx="38%" cy="34%" r="72%">
+          <stop offset="0%"   stop-color="#05070c"/>
+          <stop offset="26%"  stop-color="#05070c"/>
+          <stop offset="50%"  stop-color="#ffb020"/>
+          <stop offset="100%" stop-color="#00e5ff"/>
+        </radialGradient>
+      </defs>
+      <circle cx="24" cy="24" r="21" fill="#0e3a44" stroke="#00e5ff" stroke-width="2"/>
+      <circle cx="24" cy="24" r="21" fill="url(#kgrad)"/>
+      <circle cx="24" cy="24" r="6.5" fill="#05070c"/>
+    </svg>
+    <div id="depoTxt"><b>KUT AL</b> düğmesine bas, sonra<br>sol sahneye tıkla.
+    <br><span style="color:#5e6d88">Sahneye <b>çift tıklamak</b> da Kut ekler.
+    Var olanı sürükle; sağ tık siler.</span></div>
+  </div>
+  <button id="pick" style="width:100%">＋ KUT AL</button>
+  <div id="pickState">hazır</div>
+  <div class="row" style="margin-top:6px">
+    <button id="addC">Merkeze ekle</button>
+    <button id="addR">Yanına ekle (bağ kurar)</button>
+  </div>
+  <label>Yeni Kut'un W konumu: w = <span class="val" id="wV"></span> r_e</label>
+  <input type="range" id="wnew" min="-2" max="2" step="0.01" value="0">
+
+  <label>Yeni Kut'un dönüş yönü</label>
+  <div class="row">
+    <button id="dirF" class="on">⟳ İLERİ</button>
+    <button id="dirR">⟲ TERS</button>
+  </div>
+  <label>Dolanım şiddeti |g| = <span class="val" id="gsV"></span></label>
+  <input type="range" id="gs" min="0.2" max="3" step="0.05" value="1">
+  <p class="note warn"><b>Teori ters yönü yasaklar.</b> <i>"Girdapların kesinlikle
+  aynı yönde dönmek zorunda olduğu kanıtlanır… İki kütle girdabı tavizsiz bir
+  şekilde aynı yönde dönmek zorundadır"</i> (4_Boyut_ve_Girdap_Yonleri). Ters
+  Kut, o kuralın <b>neden</b> gerektiğini görmek için var.</p>
+  <p class="note key"><b>Sayısal olarak sınandı — üç sonuç:</b><br>
+  ① Eş yönlü çift <b>yörüngeye girer</b>, ayrım korunur (bağlı yapı).<br>
+  ② Zıt yönlü çift <b>dönmez, düz çizgide ötelenir</b> — hız
+  <code>Γ/2πd</code>, ayrım yine korunur ama yapı <b>uçup gider</b>.<br>
+  ③ Aralarındaki alan tersine döner: eş yönlüde tam yoğunlukta <b>sırt</b>
+  (ρ=ρ₀), zıt yönlüde <b>hendek</b> — <code>|v|<sub>orta</sub> = 4√2·r_e/d</code>,
+  d=1 r_e'de ρ/ρ₀ = 1,1×10⁻⁷.</p>
+  <p class="note stop"><b>Merkez ayrıcalıklı — ama yalnız kısmen.</b> Ters Kut tam
+  merkezde bir <b>denge noktasıdır</b>: hiç bozma verilmezse yapı kıpırdamaz
+  (kayma 10⁻⁸ altı) ve yalnız Ω değişir —
+  <code>Ω = Γ(N−1)/4πR² + g<sub>c</sub>Γ/2πR²</code>; <code>g<sub>c</sub> &lt;
+  −(N−1)/2</code> ise bileşiğin dönüşü <b>işaret değiştirir</b>.
+  <b>Ama denge ≠ kararlılık.</b> En küçük bozmayla N=6 halkası
+  g<sub>c</sub>=−1'de <b>dağılıyor</b> (0,87). Eşik ölçüldü: −0,1→0,007 ·
+  −0,3→0,019 · −0,4→0,042 · <b>−0,5→0,101</b> · −1→0,83; yani N=6 için
+  <code>g<sub>c</sub> ≈ −0,45</code>. Ve N'e bağlı: g<sub>c</sub>=−1'de N=4
+  <b>mertebe kadar dirençli</b> (0,055) ama o da kararlı değil; N=6 ve N=8
+  açıkça dağılıyor (0,83 / 0,88).
+  <b>Merkez dışına koyarsan hiç tartışma yok: derhal dağılır.</b></p>
+
+  <div class="row">
+    <button id="clr">⌫ Hepsini sil</button>
+    <button id="undo">↶ Geri al</button>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <button id="addT">⟲ Ters Kut'u yanına ekle</button>
+  </div>
+  <label>Hazır dizilim — düzen</label>
+  <select id="layout">
+    <option value="halka">TEK HALKA — düzgün çokgen</option>
+    <option value="merkez">MERKEZ + HALKA — ortada bir Kut</option>
+    <option value="kabuk">KABUKLU — merkez + 6 + 12 + …</option>
+  </select>
+  <label>Kut sayısı seç</label>
+  <div id="npad"></div>
+  <p class="note" id="layoutNote"></p>
+
+  <h2>Yapının dinamiği</h2>
+  <select id="mode">
+    <option value="serbest">SERBEST DİNAMİK — tam N-girdap denklemi (RK4)</option>
+    <option value="cokgen">BAĞIL DENGE — düzgün çokgene oturt</option>
+  </select>
+  <p class="note" id="modeNote"></p>
+  <label class="chk"><input type="checkbox" id="run" checked><span>Dinamiği çalıştır</span></label>
+  <label>Zaman adımı ×<span class="val" id="dtV"></span></label>
+  <input type="range" id="dtm" min="0.05" max="2" step="0.01" value="0.5">
+
+  <h2>Bağ ölçütü</h2>
+  <label>Yakalama yarıçapı = <span class="val" id="capV"></span> r_e</label>
+  <input type="range" id="cap" min="1.2" max="10" step="0.05" value="3">
+  <p class="note">Sınır tabakasının dış kenarı: <code>ρ/ρ₀ = exp(−(r_e/R)²)</code>
+  olduğundan R = 3 r_e'de yoğunluk arka planın %89'u, R = 10 r_e'de %99'udur.
+  Yakalama yarıçapı bu tabakanın neresini "değme" saydığımızı belirler —
+  <b>seçilmiş bir eşiktir, türetilmiş değil.</b></p>
+
+  <h2>Yakınlaşma olayları</h2>
+  <label class="chk"><input type="checkbox" id="ev" checked>
+    <span>Cep sınırı olaylarını uygula</span></label>
+  <label>Olay ölçeği ×10<sup><span class="val" id="evsV"></span></sup></label>
+  <input type="range" id="evs" min="0" max="5" step="0.05" value="4">
+  <p class="note warn"><b>Neden ölçek gerekiyor.</b> Gerçek eşik
+  <code>d_yok = 9,18×10⁻⁵ r_e</code> — ekranda <b>0,004 piksel</b>. Yani gerçek
+  değerinde olay hiç görünmez ve nokta-girdap dipolü haklı olarak sonsuza kadar
+  ötelenir. Ölçek <b>×1</b>'de gerçek eşik, büyütüldükçe olay izlenebilir hâle
+  gelir. Eşiğin kendisi hiç değişmiyor; yalnız <b>görünür kılınıyor</b>.</p>
+  <label class="chk"><input type="checkbox" id="dka" checked>
+    <span>Darbe Kutları öteleyebilsin</span></label>
+  <label>Darbe genliği δρ/ρ₀ = <span class="val" id="dampV"></span></label>
+  <input type="range" id="damp" min="0" max="0.9" step="0.005" value="0.35">
+  <label>Darbe kabuk kalınlığı = <span class="val" id="dkalV"></span> r_e</label>
+  <input type="range" id="dkal" min="0.1" max="3" step="0.02" value="0.8">
+  <p class="note warn"><b>Darbe Kut'a nasıl dokunuyor.</b> Stiff akışkanda
+  <code>δP = c²δρ</code> ve <code>δv = δP/(ρ₀c)</code> ⟹ <b><code>δv = c·(δρ/ρ₀)</code></b>.
+  Girdap yerel akışkanla taşındığı için darbe onu <b>öteler</b>; yön yayılma
+  doğrultusu (radyal, dışa), desen <code>cos(θ−θ_I)</code> lobu, genlik
+  <code>1/√r</code> — <b>hepsi türetilmiş.</b> Kabuk kalınlığı ve δρ/ρ₀ tepe
+  değeri <b>türetilmemiştir</b>, parametredir.</p>
+  <p class="note stop"><b>Darbe dönüş yönünü ÇEVİREMEZ.</b> Dolanım Kelvin gereği
+  korunur; <code>g</code> Kut'un kendi özelliğidir. Darbenin yapabileceği tek şey
+  <b>ötelemedir</b> — ama öteleme konfigürasyonu bozduğu için sonraki hareket
+  <b>dolaylı olarak</b> değişir; yörüngeler, Ω, hatta yapının dağılıp dağılmaması.
+  Ve darbe etkinken girdap altsistemi <b>kapalı değildir</b>: I ve A sapması
+  beklenir, çünkü ortam artık aktif bir katılımcıdır.</p>
+
+  <p class="note key"><b>İki olay, tek ölçütten.</b><br>
+  <b>ZIT çift → YOK OLMA</b> — <code>d = 2(R_cep,1+R_cep,2)</code>. Hendeğin dibi
+  <code>v_kav</code>'ı aşar, ortam <b>köprülenir</b>, cepler birleşir. Net dolanım
+  <code>+Γ−Γ = 0</code> ve sıfır dolanımlı boşluğu ayakta tutan hiçbir şey yok →
+  arka plan <code>P₀</code> <b>çökertir</b>.<br>
+  <b>EŞ çift → BİRLEŞME</b> — <code>d = R_cep,1+R_cep,2</code>. Arada sırt var,
+  köprü kurulmaz; cepler <b>değdiğinde</b> birleşir. Net dolanım <code>2Γ ≠ 0</code>,
+  cep beslenmeye devam eder → <b>tek, daha büyük Kut</b> (r_e iki katına çıkar).<br>
+  <b>Zıt çift, eş çiftten tam İKİ KAT uzakta olay yaşar.</b></p>
+
+  <h2>Kararlılık sınavı</h2>
+  <label>Doğrulanmış yapı kataloğu</label>
+  <select id="kat"></select>
+  <div class="row" style="margin-top:6px">
+    <button id="katYukle">↧ Sahneye kur</button>
+    <button id="sinav">⚖ Sınavı çalıştır</button>
+  </div>
+  <div id="sinavSonuc">—</div>
+  <label>Sınav süresi T = <span class="val" id="stV"></span></label>
+  <input type="range" id="st" min="20" max="400" step="5" value="120">
+  <label>Bozma ε = <span class="val" id="seV"></span></label>
+  <input type="range" id="se" min="0.005" max="0.2" step="0.005" value="0.05">
+  <p class="note">Ölçüt <b>ikili mesafelerin</b> kaymasıdır — ötelenmeden ve dönmeden
+  bağımsız, o yüzden ötelenen dipolü yanlışlıkla "dağıldı" saymaz. Bozma
+  <b>mutlaktır</b> (çarpımsal bozma merkezdeki Kut'u hiç oynatmaz). Sınav bir
+  <b>kopya</b> üzerinde koşar; sahneye dokunmaz.
+  Eşikler: <code>&lt;0,10</code> kararlı · <code>&lt;0,40</code> sınırda · üstü dağılır.</p>
+
+  <div class="row">
+    <button id="tara">📊 Aile taraması</button>
+  </div>
+  <div class="tl"><span>SON KUT'UN g'sine GÖRE KARARLILIK</span><span id="taraLab">—</span></div>
+  <canvas class="prof" id="taraC"></canvas>
+  <p class="note">Tarama, <b>son eklenen Kut'un</b> dolanımını −3'ten +3'e süpürür ve her
+  değerde sınavı koşar. Yeşil bant kararlı bölgeyi, kırmızı bant dağılan bölgeyi gösterir —
+  yani <b>hangi yapılanmaların ayakta kaldığını</b> doğrudan okursun.</p>
+
+  <h2>4B dönüş</h2>
+  <select id="pair">
+    <option value="0">XY + ZW — kanonik çift dönüş</option>
+    <option value="1">XZ + YW</option>
+    <option value="2">YZ + XW</option>
+  </select>
+  <label>φ₂ hızı (W düzlemi) = <span class="val" id="w2V"></span></label>
+  <input type="range" id="w2" min="-0.8" max="0.8" step="0.01" value="0.22">
+  <label class="chk"><input type="checkbox" id="iso" checked>
+    <span>İzoklin (φ₁ hızı = φ₂ hızı)</span></label>
+  <label>Kesit kalınlığı ε = <span class="val" id="epsV"></span> r_e</label>
+  <input type="range" id="eps" min="0.15" max="3" step="0.01" value="1.1">
+
+  <h2>Görünüm</h2>
+  <label class="chk"><input type="checkbox" id="fld" checked><span>Yoğunluk alanı (tam, çapraz terimli)</span></label>
+  <label class="chk"><input type="checkbox" id="addm"><span>Karşılaştır: TOPLAMSAL (yanlış) alan</span></label>
+  <label class="chk"><input type="checkbox" id="stag" checked><span>Durgunluk noktaları / sırtlar</span></label>
+  <label class="chk"><input type="checkbox" id="halo" checked><span>Sınır tabakası ve yakalama halkaları</span></label>
+  <label class="chk"><input type="checkbox" id="spin" checked><span>3B kamera dönsün</span></label>
+</div>
+
+<!-- ==================== ORTA ==================== -->
+<div id="center">
+  <div id="views">
+    <div class="vw">
+      <canvas id="c4"></canvas>
+      <div class="vwlab" style="color:var(--orange)">4B — dönüş düzlemi · renk = w</div>
+      <div class="vwsub" id="lab4"></div>
+    </div>
+    <div class="vw">
+      <canvas id="c3"></canvas>
+      <div class="vwlab" style="color:var(--cyan)">3B KESİTİMİZ — w = 0</div>
+      <div class="vwsub" id="lab3"></div>
+    </div>
+  </div>
+  <div id="statusbar">
+    <div class="sb">Kut sayısı<b id="s_n">0</b></div>
+    <div class="sb">Yapının Ω<b id="s_om">—</b></div>
+    <div class="sb">Ölçülen sapma<b id="s_st">—</b></div>
+    <div class="sb">δ = D<sub>XW</sub>/D<sub>XX</sub><b id="s_dl">—</b></div>
+    <div class="sb">Kesitte görünen<b id="s_vis">—</b></div>
+    <div class="sb">Yok / Birleşme<b id="s_olay">0 / 0</b></div>
+    <div class="sb">Korunum sapması<b id="s_cons">—</b></div>
+  </div>
+</div>
+
+<!-- ==================== SAĞ ==================== -->
+<div id="right" class="col">
+  <div id="banner"></div>
+
+  <p class="note key"><b>Bağ bir ÇEKİM DEĞİL.</b> İki eş-yönlü Kut'un karşılıklı
+  taşıma hızının <b>radyal bileşeni tam sıfırdır</b> — birbirlerine ne yaklaşır ne
+  uzaklaşırlar. Ortak merkez etrafında <b>birlikte yörüngeye girerler</b>; ayrım
+  korunur. Kararlı yapı budur. (Öz-sınamada doğrulanıyor.)</p>
+
+  <p class="note warn"><b>Aralarında çöküntü değil, SIRT var.</b> Eş-yönlü çiftin
+  orta noktasında hız <b>tam sıfırdır</b> → ρ = ρ₀, tam arka plan. Teorinin kendi
+  cümlesi: <i>"iki dolanım üst üste binerse |v₁+v₂|²'nin çapraz terimi
+  toplanabilirliği bozar; zıt yönlü oldukları bölgede götürülme olur, orada gradyan
+  tutulamaz"</i> (Ek 18_5). "TOPLAMSAL alan" seçeneği bu sırtı kaçıran yanlış
+  okumayı gösterir.</p>
+
+  <h2>Yapı tanısı</h2>
+  <table class="kv">
+    <tr><td>Bağlı öbek sayısı</td><td id="m_cl">—</td></tr>
+    <tr><td>En büyük öbek</td><td id="m_big">—</td></tr>
+    <tr><td>Dış kabuk yarıçapı R</td><td id="m_R">—</td></tr>
+    <tr><td>Ω — tek-halka formülü</td><td id="m_omc">—</td></tr>
+    <tr><td>Ω — ölçülen (dış Kut)</td><td id="m_omn">—</td></tr>
+    <tr><td>Σg — dolanım toplamı</td><td id="m_gt">—</td></tr>
+    <tr><td>Dönüş yönleri</td><td id="m_mix">—</td></tr>
+    <tr><td>A = Σg|P|² sapması</td><td id="m_ai">—</td></tr>
+    <tr><td>L = Σg·P sapması</td><td id="m_cm">—</td></tr>
+    <tr><td>H sapması</td><td id="m_ham">—</td></tr>
+    <tr><td>R_cep (|g|=1)</td><td id="m_rcep">—</td></tr>
+    <tr><td>d_yok (gerçek)</td><td id="m_dyok">—</td></tr>
+    <tr><td>d_bir (gerçek)</td><td id="m_dbir">—</td></tr>
+    <tr><td>etkin d_yok (ölçekli)</td><td id="m_dyoke">—</td></tr>
+    <tr><td>en yakın çift</td><td id="m_dmin">—</td></tr>
+    <tr><td>olaylar (yok / birleşme)</td><td id="m_olay">0 / 0</td></tr>
+  </table>
+
+  <h2>Olay muhasebesi — ortama geçen</h2>
+  <table class="kv">
+    <tr><td>devredilen Γ (net dönme)</td><td id="m_devG">0,000</td></tr>
+    <tr><td>devredilen |I| (momentum)</td><td id="m_devL">0,000</td></tr>
+    <tr><td>I doğrultusu</td><td id="m_devDir">—</td></tr>
+    <tr><td>yolda olan darbe</td><td id="m_darbe">0</td></tr>
+    <tr><td>şu an vurulan Kut</td><td id="m_vur">0</td></tr>
+    <tr><td>toplam ötelenme</td><td id="m_otel">0,0000</td></tr>
+    <tr><td>çift etkileşim enerjisi</td><td id="m_devE">0,000</td></tr>
+  </table>
+  <p class="note warn"><b>Momentum ne yapar — panelde görünen.</b> Yok olma anında
+  turuncu bir <b>darbe</b> doğar ve <code>c</code> hızıyla yayılır (stiff akışkanda
+  <code>v_ses = c</code> tam). Deseni <b>dipoldür</b>: tek kutuplu bir darbe simetri
+  gereği net momentum <b>taşıyamaz</b>, o yüzden lob zorunludur. Ok, taşınan
+  <code>I</code>'nın doğrultusunu gösterir — ve o doğrultu, çiftin yok olmadan önce
+  <b>gittiği yönün ta kendisidir</b>. Genlik 2B silindirik dalga için
+  <code>1/√r</code> ile düşer.</p>
+  <p class="note key"><b>Kitap kapanıyor.</b> Yok olmada ortama geçen <b>net dönme
+  SIFIRDIR</b> — zıt çiftte Γ_top zaten sıfırdı. Geçen şey <b>momentum</b>
+  (L = Γ·d, kaybolamaz → yönlü basınç darbesi) ve <b>enerjidir</b> (zıt yaklaşma
+  ekzotermik). Birleşmede L bile tam korunur, çünkü yeni Kut g-ağırlıklı merkeze
+  konur.</p>
+  <p class="note stop"><b>Ve bu yüzden madde geri kurulamaz.</b> Bir Kut zorunlu
+  olarak <code>+Γ</code> taşır; sıfır dolanımdan <b>tek</b> Kut kurulamaz —
+  yalnızca <code>±</code> <b>çiftleri</b> kurulabilir. Ama teori aynı yönlülüğü
+  zorunlu kılar, dolayısıyla ± çift kalıcı olamaz ve aynı eşikle yeniden yok olur.
+  Üstelik yeni çiftin doğabilmesi için ayrımının <code>d &gt; d_yok = 4R_cep</code>
+  olması gerekir, oysa patlamanın olduğu bölge bundan küçüktür — kendini yiyen
+  koşul. <b>Süreç tek yönlüdür.</b></p>
+  <p class="note">Korunanlar <b>ağırlıklıdır</b> (gᵢ ile): karışık işaretlerde
+  ağırlıksız hâlleri korunmaz. Üçünün de 10⁻¹⁰ altında kalması RK4'ün
+  sağlığının kanıtıdır.</p>
+
+  <h2>Kullanılan hesap</h2>
+  <div class="eq">v(P) = Σᵢ K·(−Δyᵢ, Δxᵢ)/|Δᵢ|² , K = √2·r_e</div>
+  <div class="eq">u = |v|²/2c² , ρ/ρ₀ = exp(−u) &nbsp;<span class="tag t-k">2. anim.</span></div>
+  <div class="eq">tek Kut: u = (r_e/R)² , u(r_e) = 1</div>
+  <div class="eq">dPᵢ/dt = Σ_{j≠i} v(Pᵢ; Pⱼ) &nbsp;<span class="tag t-d">RK4</span></div>
+  <div class="eq">Ω_N = Γ(N−1)/(4πR²) &nbsp;<span class="tag t-t">Thomson</span></div>
+  <div class="eq">çift: Ω = 2√2·c·r_e/d² &nbsp;<span class="tag t-t">türetim</span></div>
+  <div class="eq">δ = D_XW/D_XX , D = PᵀP</div>
+  <p class="note"><span class="tag t-k">TEORİ</span> kitabın kendi metninde ·
+  <span class="tag t-t">TÜRETİM</span> teorinin ontolojisinden bu sayfada çıkarıldı ·
+  <span class="tag t-d">KLASİK</span> standart akışkan/girdap mekaniği.</p>
+
+  <h2>Öz-sınama <span id="testsum" style="float:right"></span></h2>
+  <div id="tests"></div>
+</div>
+</div>
+
+<script>
+'use strict';
+
+/* ==========================================================================
+   ÇEKİRDEK — saf matematik. Python'da bağımsız uygulamayla doğrulandı (20/20).
+   Birimler: r_e = 1, c = 1.  Dolayısıyla K = Γ/2π = √2·r_e = √2.
+   ========================================================================== */
+/* ===== CORE-BEGIN ===== */
+const RE = 1.0, CC = 1.0;
+/* Ortamın kohezyon oranı — KARNE'nin n=3 kısıtı: Σ/P₀ ≳ 1,9×10⁹.
+   Cep yarıçapı ve olay eşikleri buradan çıkar. */
+const SIGP0 = 1.9e9;
+const K  = Math.SQRT2 * RE;        /* Γ/(2π); tek Kut'ta u(r_e)=1 verir */
+const GAM = 2 * Math.PI * K;       /* dolanım */
+
+/* --- Hız alanı: TAM toplam (çapraz terimler kendiliğinden dahil) ---------
+   Her Kut'un g'si dolanımının İŞARETİ ve ŞİDDETİdir (g=+1 ileri, g=−1 ters).
+   Teori bütün girdapların AYNI yönde dönmek zorunda olduğunu söyler
+   (4_Boyut_ve_Girdap_Yonleri); g=−1 o kuralı sınamak için vardır.        */
+function gOf(q){ return (q.g === undefined) ? 1 : q.g; }
+function velAt(px, py, kuts, skip){
+  let vx = 0, vy = 0;
+  for (let i = 0; i < kuts.length; i++){
+    if (i === skip) continue;
+    const dx = px - kuts[i].x, dy = py - kuts[i].y;
+    let r2 = dx*dx + dy*dy;
+    if (r2 < 1e-12) r2 = 1e-12;
+    const k = gOf(kuts[i]) * K / r2;
+    vx += -k*dy; vy += k*dx;
+  }
+  return [vx, vy];
+}
+/* u = |v|²/(2c²) ; ρ/ρ₀ = exp(−u) */
+function uExact(px, py, kuts){
+  const v = velAt(px, py, kuts, -1);
+  return (v[0]*v[0] + v[1]*v[1]) / (2*CC*CC);
+}
+/* TOPLAMSAL (yanlış) okuma: her Kut'un u'su ayrı hesaplanıp toplanır.
+   Çapraz terimi atar, dolayısıyla aradaki sırtı göremez. */
+function uAdditive(px, py, kuts){
+  let s = 0;
+  for (const q of kuts){
+    const dx = px - q.x, dy = py - q.y;
+    let r2 = dx*dx + dy*dy; if (r2 < 1e-12) r2 = 1e-12;
+    /* u ∝ v² ∝ Γ² ⟹ g² ile ölçeklenir; işaret BİLGİSİ kaybolur.
+       Zıt yönlü çiftin hendeğini bu yüzden hiç göremez. */
+    s += gOf(q)*gOf(q)*(RE*RE)/r2;
+  }
+  return s;
+}
+function rhoOf(u){ return Math.exp(-u); }
+
+/* --- N-girdap hareket denklemi + RK4 ------------------------------------ */
+function derivs(kuts){
+  const d = [];
+  for (let i = 0; i < kuts.length; i++){
+    const v = velAt(kuts[i].x, kuts[i].y, kuts, i);
+    d.push(v);
+  }
+  return d;
+}
+function stepRK4(kuts, h){
+  const n = kuts.length;
+  if (n < 2) return;
+  const P0 = kuts.map(q => [q.x, q.y]);
+  const G  = kuts.map(q => gOf(q));
+  /* g ARA AŞAMALARA TAŞINMAK ZORUNDA. Taşınmazsa gOf() varsayılan +1 döner
+     ve integrasyon bütün Kutları eş yönlü sanır: dipol ötelenmez, karışık
+     işaretli korunanlar tutmaz. Bu hata öz-sınamada yakalandı. */
+  const mk = P => P.map((p, i) => ({ x:p[0], y:p[1], g:G[i] }));
+  const k1 = derivs(mk(P0));
+  const P1 = P0.map((p,i) => [p[0] + h/2*k1[i][0], p[1] + h/2*k1[i][1]]);
+  const k2 = derivs(mk(P1));
+  const P2 = P0.map((p,i) => [p[0] + h/2*k2[i][0], p[1] + h/2*k2[i][1]]);
+  const k3 = derivs(mk(P2));
+  const P3 = P0.map((p,i) => [p[0] + h*k3[i][0], p[1] + h*k3[i][1]]);
+  const k4 = derivs(mk(P3));
+  for (let i = 0; i < n; i++){
+    kuts[i].x = P0[i][0] + h/6*(k1[i][0] + 2*k2[i][0] + 2*k3[i][0] + k4[i][0]);
+    kuts[i].y = P0[i][1] + h/6*(k1[i][1] + 2*k2[i][1] + 2*k3[i][1] + k4[i][1]);
+  }
+}
+/* --- Geometrik orta (her zaman tanımlı; çizim/ölçek için) -------------- */
+function centroid(kuts){
+  let sx = 0, sy = 0;
+  for (const q of kuts){ sx += q.x; sy += q.y; }
+  const n = kuts.length || 1;
+  return [sx/n, sy/n];
+}
+/* --- KORUNAN nicelikler: karışık işaretlerde AĞIRLIKLI olmak zorunda ----
+   Nokta girdap sistemi için tam korunanlar (sabit orijine göre):
+     L = Σ gᵢ Pᵢ            (doğrusal impuls, vektör)
+     A = Σ gᵢ |Pᵢ|²         (açısal impuls)
+     H = −Σ_{i<j} gᵢgⱼ ln rᵢⱼ  (Hamiltonyen, sabit çarpan hariç)
+   Ağırlıksız hâlleri karışık işaretlerde KORUNMAZ; eski sürüm
+   ağırlıksızdı ve yalnız hepsi +1 iken doğruydu.                          */
+function totG(kuts){ let s = 0; for (const q of kuts) s += gOf(q); return s; }
+/* FİZİKSEL hidrodinamik impuls (2B):  I = ρ∫ x × ωẑ dA = ρ Σ Γᵢ(yᵢ, −xᵢ)
+   DİKKAT — Σ Γᵢ Pᵢ DEĞİL. İkisi de korunur (biri diğerinin 90° dönüğü) ama
+   YÖN fiziksel olanda doğrudur: dipolün gitme yönü tam olarak Î'dir.
+   Sayısal doğrulama: (+1,−1) çifti x-ekseninde, d=4 ⟹ gitme yönü (0,1);
+   Σ Γᵢ(yᵢ,−xᵢ) = (0,4) ✓ ;  Σ Γᵢ Pᵢ = (−4,0) ✗ (90° sapar).            */
+function linImpulse(kuts){
+  let ix = 0, iy = 0;
+  for (const q of kuts){ ix += gOf(q)*q.y; iy += -gOf(q)*q.x; }
+  return [ix, iy];
+}
+function angImpulse(kuts){
+  let s = 0;
+  for (const q of kuts) s += gOf(q)*(q.x*q.x + q.y*q.y);
+  return s;
+}
+function hamiltonian(kuts){
+  let h = 0;
+  for (let i = 0; i < kuts.length; i++)
+    for (let j = i+1; j < kuts.length; j++){
+      const r = Math.hypot(kuts[i].x-kuts[j].x, kuts[i].y-kuts[j].y);
+      if (r > 1e-9) h -= gOf(kuts[i])*gOf(kuts[j])*Math.log(r);
+    }
+  return h;
+}
+/* --- Yapı bozulma ölçütü: İKİLİ MESAFELER ------------------------------
+   Ötelenmeden ve dönmeden BAĞIMSIZ. Yarıçap tabanlı eski ölçüt, ötelenen
+   bir dipolü yanlışlıkla "bozuldu" sayardı; bu ölçüt saymaz.             */
+function pairDists(kuts){
+  const out = [];
+  for (let i = 0; i < kuts.length; i++)
+    for (let j = i+1; j < kuts.length; j++)
+      out.push(Math.hypot(kuts[i].x-kuts[j].x, kuts[i].y-kuts[j].y));
+  return out;
+}
+function pairDrift(kuts, ref){
+  if (!ref || !ref.length) return 0;
+  const d = pairDists(kuts);
+  if (d.length !== ref.length) return 0;
+  const scale = Math.max.apply(null, ref) || 1;
+  let mx = 0;
+  for (let i = 0; i < d.length; i++) mx = Math.max(mx, Math.abs(d[i]-ref[i])/scale);
+  return mx;
+}
+
+/* --- Thomson çokgeni: kapalı biçim açısal hız --------------------------- */
+function omegaPolygon(N, R){
+  if (N < 2 || R <= 0) return 0;
+  return GAM*(N-1)/(4*Math.PI*R*R);
+}
+/* Halka + MERKEZDEKİ girdap. Merkezdeki Kut'un halka üyesine kattığı
+   tanjantel hız Γ_c/(2πR)'dir, dolayısıyla açısal hıza katkısı
+   Γ_c/(2πR²) olur — halkanın geometrisini DEĞİŞTİRMEZ, yalnız hızını.
+   g_c < 0 ise Ω düşer; g_c < −(N−1)/2 ise Ω İŞARET DEĞİŞTİRİR. */
+function omegaRingCenter(N, R, gc){
+  if (N < 1 || R <= 0) return 0;
+  return GAM*(N-1)/(4*Math.PI*R*R) + gc*GAM/(2*Math.PI*R*R);
+}
+function allSameSign(kuts){
+  if (!kuts.length) return true;
+  const s = gOf(kuts[0]) >= 0;
+  for (const q of kuts) if ((gOf(q) >= 0) !== s) return false;
+  return true;
+}
+/* Sayısal açısal hız: EN DIŞTAKİ girdabın tanjantel taşınması / R.
+   DİKKAT: kuts[0] kullanılamaz — merkezli dizilimlerde o merkezdeki Kut'tur,
+   R≈0 olduğundan (v×r̂)/R² patlar ve işareti bile ters çıkar. Bu hata
+   merkez+7 dizilimi sınanırken yakalandı. */
+function omegaNumeric(kuts){
+  if (kuts.length < 2) return 0;
+  const c = centroid(kuts);
+  let bi = -1, bR = 0;
+  for (let i = 0; i < kuts.length; i++){
+    const R = Math.hypot(kuts[i].x-c[0], kuts[i].y-c[1]);
+    if (R > bR){ bR = R; bi = i; }
+  }
+  if (bi < 0 || bR < 1e-6) return 0;
+  const q = kuts[bi], rx = q.x-c[0], ry = q.y-c[1];
+  const v = velAt(q.x, q.y, kuts, bi);
+  return (v[1]*rx - v[0]*ry) / (bR*bR);
+}
+/* Dış kabuğun ortalama yarıçapı — merkeze yakın Kutlar sayılmaz.
+   Aksi hâlde merkezli dizilimde ortalama yarıçap düşer ve kapalı
+   biçim Ω'yı olduğundan büyük gösterir. */
+function outerRadius(kuts){
+  if (!kuts.length) return 0;
+  const c = centroid(kuts);
+  const rs = kuts.map(q => Math.hypot(q.x-c[0], q.y-c[1]));
+  const rmax = Math.max.apply(null, rs) || 0;
+  if (rmax < 1e-9) return 0;
+  let s = 0, n = 0;
+  for (const r of rs) if (r > 0.15*rmax){ s += r; n++; }
+  return n ? s/n : rmax;
+}
+/* --- Dizilim kararlılığı ------------------------------------------------
+   Sayısal olarak sınandı (mutlak bozma + RK4, 45 zaman birimi):
+     TEK HALKA      : N ≤ 7 kararlı (sapma ≤0,022) · N ≥ 8 bozulur (≥0,72)
+     MERKEZ + HALKA : N ≤ 10 kararlı — merkezdeki Kut sınırı yükseltir
+                      (N=8'de 0,0065; aynı N tek halkada 0,72 idi)
+     KABUKLU        : genel olarak SINANMADI; denenenler sınırda/kararsız
+   null = "bilinmiyor", false ile karıştırılmamalı.                       */
+function layoutStable(N, layout){
+  if (N < 2) return true;
+  if (layout === 'halka')  return N <= 7;
+  if (layout === 'merkez') return N <= 10;
+  return null;
+}
+/* Geriye dönük ad: tek halka ölçütü */
+function ringStable(N){ return layoutStable(N, 'halka'); }
+
+/* Kabuk planı: merkez(1) + 6 + 12 + 18 + … greedy doldurulur. */
+function shellPlan(N){
+  const plan = []; let left = N, k = 0;
+  while (left > 0){
+    const cap = (k === 0) ? 1 : 6*k;
+    const take = Math.min(left, cap);
+    plan.push({ k:k, n:take }); left -= take; k++;
+  }
+  return plan;
+}
+
+/* --- Bağ öbekleri: yakalama yarıçapına göre bağlantılı bileşenler ------- */
+function clusters(kuts, cap){
+  const n = kuts.length, lab = new Array(n).fill(-1);
+  let c = 0;
+  for (let i = 0; i < n; i++){
+    if (lab[i] !== -1) continue;
+    const st = [i]; lab[i] = c;
+    while (st.length){
+      const a = st.pop();
+      for (let b = 0; b < n; b++){
+        if (lab[b] !== -1) continue;
+        const dx = kuts[a].x-kuts[b].x, dy = kuts[a].y-kuts[b].y, dw = kuts[a].w-kuts[b].w;
+        if (Math.sqrt(dx*dx + dy*dy + dw*dw) <= cap){ lab[b] = c; st.push(b); }
+      }
+    }
+    c++;
+  }
+  return { lab:lab, count:c };
+}
+
+/* ==========================================================================
+   YAKINLAŞMA OLAYLARI — nokta girdap modelinin geçerlilik sınırı
+   ==========================================================================
+   Nokta girdabın çekirdeği yoktur; dipol her mesafede sonsuza kadar ötelenir.
+   Ama Kut'un CEBİ vardır ve yaklaşma yeterince ilerlediğinde model çöker.
+   İki olay, tek ölçütten (ortam v_kav'ı aşınca yırtılır) türer:
+
+   Kut'un kendi cep yarıçapı:   R_cep(g) = |g|·r_e/√(1+Σ/P₀)
+     çünkü √2|g|c·r_e/ρ = v_kav ⟹ ρ = |g|·r_e/√(1+Σ/P₀)
+
+   ZIT işaretli çiftte eksen ortasındaki hız:  |v| = 2√2c(|g₁|+|g₂|)r_e/d
+     (eksen boyunca EN YAVAŞ nokta tam ortadır; orta yırtılırsa arası
+      tümüyle yırtılmıştır) ⟹ köprü tamamlanır:
+        d_yok = 2(R_cep,1 + R_cep,2)
+     Sonra Γ_top = g₁+g₂ ≈ 0 ⟹ boşluğu ayakta tutan yok ⟹ P₀ çökertir.
+
+   EŞ işaretli çiftte ortada durgunluk vardır (|v| = 0): köprü KURULMAZ.
+   Cepler ancak geometrik olarak değdiğinde birleşir:
+        d_bir = R_cep,1 + R_cep,2          ⟹  d_yok = 2·d_bir  (daima)
+     Γ_top = g₁+g₂ ≠ 0 ⟹ birleşik cep beslenir ⟹ tek, daha büyük Kut.     */
+function rcepUnit(sig){ return 1/Math.sqrt(1+sig); }
+function rcepOf(q, sig){ return Math.abs(gOf(q))*RE*rcepUnit(sig); }
+function dAnnihilate(a, b, sig){ return 2*(rcepOf(a,sig) + rcepOf(b,sig)); }
+function dMerge(a, b, sig){ return rcepOf(a,sig) + rcepOf(b,sig); }
+
+/* Olayları uygula. olcek = görsel büyütme çarpanı (1 = gerçek eşik).
+   Dönen nesne: {yok, bir} sayaçları. Kut listesi YERİNDE değiştirilir. */
+function olaylariUygula(kuts, sig, olcek, esik){
+  /* sayac.devrΓ / devrL / salinanE = olayın ORTAMA devrettiği kalemler.
+     Muhasebe (sayısal olarak doğrulandı):
+       Γ  : DAİMA korunur. Tam yok olmada zaten Γ_top = 0'dı; birleşmede
+            g toplanır. Yani ortama NET DÖNME hiç geçmez.
+       L  : birleşmede TAM korunur (yeni Kut g-ağırlıklı merkeze konduğu için);
+            yok olmada L = Γ·d kadarı ortama DEVREDİLİR — dipolün momentumu
+            kaybolamaz, yönlü bir basınç darbesi olarak çıkar.
+       E  : çiftin etkileşim enerjisi −gᵢgⱼ·ln d. Zıt çiftte yaklaşma
+            EKZOTERMİKtir (salınır), eş çiftte ENDOTERMİK (gerekir).        */
+  const sayac = { yok:0, bir:0, devrG:0, devrLx:0, devrLy:0, salinanE:0, darbeler:[] };
+  const tiny = 1e-9;
+  for (let pas = 0; pas < 8; pas++){
+    let oldu = false;
+    for (let i = 0; i < kuts.length && !oldu; i++){
+      for (let j = i+1; j < kuts.length && !oldu; j++){
+        const a = kuts[i], b = kuts[j];
+        const d = Math.hypot(a.x-b.x, a.y-b.y);
+        const zit = gOf(a)*gOf(b) < 0;
+        const lim = (zit ? dAnnihilate(a,b,sig) : dMerge(a,b,sig)) * olcek;
+        if (d > lim) continue;
+        const gs = gOf(a) + gOf(b);
+        /* olay anındaki kalemler. FİZİKSEL impuls: I = Σ Γᵢ(yᵢ, −xᵢ) */
+        const Lbx = gOf(a)*a.y + gOf(b)*b.y;
+        const Lby = -(gOf(a)*a.x + gOf(b)*b.x);
+        const Ep = (d > 1e-12) ? -gOf(a)*gOf(b)*Math.log(d) : 0;
+        sayac.salinanE += Ep;
+        if (zit && Math.abs(gs) < tiny*Math.max(1, Math.abs(gOf(a)))){
+          /* TAM yok olma: ikisi de gider. Γ zaten sıfırdı (devredilen dönme YOK),
+             ama I = Γ·d ORTAMA GEÇER — momentum kaybolamaz. Ortamda yönlü bir
+             basınç darbesi olarak, TAM Î doğrultusunda çıkar. */
+          sayac.devrLx += Lbx; sayac.devrLy += Lby;
+          sayac.darbeler.push({ x:(a.x+b.x)/2, y:(a.y+b.y)/2,
+                                ix:Lbx, iy:Lby, mag:Math.hypot(Lbx, Lby) });
+          kuts.splice(j,1); kuts.splice(i,1);
+          sayac.yok++; oldu = true;
+        } else {
+          /* Birleşme (eş) veya KISMİ yok olma (zıt, eşit olmayan şiddet).
+             Konum: g-ağırlıklı merkez (eş işarette daima tanımlı);
+             ΣG≈0'a yakınsa aritmetik ortaya düşülür. */
+          let px, py;
+          if (Math.abs(gs) > tiny){
+            px = (gOf(a)*a.x + gOf(b)*b.x)/gs;
+            py = (gOf(a)*a.y + gOf(b)*b.y)/gs;
+          } else { px = (a.x+b.x)/2; py = (a.y+b.y)/2; }
+          const pw = (a.w + b.w)/2;
+          kuts.splice(j,1); kuts.splice(i,1);
+          kuts.push({ x:px, y:py, w:pw, g:gs });
+          if (zit) sayac.yok++; else sayac.bir++;
+          oldu = true;
+        }
+      }
+    }
+    if (!oldu) break;
+  }
+  return sayac;
+}
+
+/* ==========================================================================
+   KARARLILIK SINAVI — hangi yapılanmalar ayakta kalır?
+   ==========================================================================
+   Ölçüt İKİLİ MESAFELERİN kaymasıdır: ötelenmeden ve dönmeden bağımsız,
+   dolayısıyla ötelenen dipolü yanlışlıkla "dağıldı" saymaz.
+   Bozma MUTLAK olmalı (çarpımsal bozma merkezdeki Kut'u oynatmaz).
+   Sınav bir KOPYA üzerinde çalışır; canlı sahneye dokunmaz.                */
+function kararlilikSinavi(kuts, T, eps, h){
+  const arr = kuts.map(q => ({ x:q.x, y:q.y, w:q.w, g:gOf(q) }));
+  if (arr.length < 2) return { kayma:0, adim:0, kesildi:false };
+  const ref = pairDists(arr), faz = 2.399963;
+  arr.forEach((q, i) => { q.x += eps*Math.cos(i*faz); q.y += eps*Math.sin(i*faz); });
+  const n = Math.max(1, Math.round(T/h));
+  let mx = 0;
+  for (let s = 0; s < n; s++){
+    stepRK4(arr, h);
+    const d = pairDrift(arr, ref);
+    if (d > mx) mx = d;
+    if (mx > 5) return { kayma:mx, adim:s+1, kesildi:true };
+  }
+  return { kayma:mx, adim:n, kesildi:false };
+}
+function kararliMi(kayma){
+  return (kayma < 0.10) ? 'KARARLI' : ((kayma < 0.40) ? 'SINIRDA' : 'DAĞILIR');
+}
+
+/* Doğrulanmış katalog — değerler Python'da bağımsız olarak ölçüldü
+   (13/13 sınama geçti; yaradilis/05..07 betikleri).
+   Her satır: [x, y, w, g]. */
+const KATALOG = [
+  { ad:'Dipol (+1, −1)',                 bek:'KARARLI',
+    k:[[-1.5,0,0,1],[1.5,0,0,-1]] },
+  { ad:'Dipol eşit değil (+1, −0,6)',    bek:'KARARLI',
+    k:[[-1.5,0,0,1],[1.5,0,0,-0.6]] },
+  { ad:'Tripol (+2, −1, −1)  ⟨Γ=0⟩',     bek:'KARARLI',
+    k:[[0,0,0,2],[-2,0,0,-1],[2,0,0,-1]] },
+  { ad:'Tripol çevrik (−2, +1, +1) ⟨Γ=0⟩', bek:'KARARLI',
+    k:[[0,0,0,-2],[-2,0,0,1],[2,0,0,1]] },
+  { ad:'Tripol (+3, −0,2, −0,2)',        bek:'KARARLI',
+    k:[[0,0,0,3],[-2,0,0,-0.2],[2,0,0,-0.2]] },
+  { ad:'Tripol (+1, −1, −1)  ✗',         bek:'DAĞILIR',
+    k:[[0,0,0,1],[-2,0,0,-1],[2,0,0,-1]] },
+  { ad:'Üçgen (+1, +1, −0,3)',           bek:'KARARLI',
+    k:[[2.5,0,0,1],[-1.25,2.165,0,1],[-1.25,-2.165,0,-0.3]] },
+  { ad:'Üçgen (+1, +1, −1)  ✗',          bek:'DAĞILIR',
+    k:[[2.5,0,0,1],[-1.25,2.165,0,1],[-1.25,-2.165,0,-1]] },
+  { ad:'Doğrusal (+1, −0,5, +1)  ✗',     bek:'DAĞILIR',
+    k:[[-2,0,0,1],[0,0,0,-0.5],[2,0,0,1]] },
+  { ad:'Halka 7 (hepsi eş)',             bek:'KARARLI', halka:[7,1,null] },
+  { ad:'Halka 8 (hepsi eş)  ✗',          bek:'DAĞILIR', halka:[8,1,null] },
+  { ad:'Merkez + halka 7  (N=8)',        bek:'KARARLI', halka:[7,1,1] },
+  { ad:'Halka 6 + merkez −0,2',          bek:'KARARLI', halka:[6,1,-0.2] },
+  { ad:'Halka 6 + merkez −1  ✗',         bek:'DAĞILIR', halka:[6,1,-1] },
+  { ad:'Halka 3 + merkez −3 ⟨Γ=0⟩',      bek:'KARARLI', halka:[3,1,-3] },
+  { ad:'Halka 4 + merkez −4 ⟨Γ=0⟩ ✗',    bek:'DAĞILIR', halka:[4,1,-4] },
+  { ad:'İki dipol yan yana  ✗',          bek:'DAĞILIR',
+    k:[[-2,1,0,1],[-2,-1,0,-1],[2,1,0,1],[2,-1,0,-1]] }
+];
+function katalogKur(idx){
+  const e = KATALOG[idx], out = [];
+  if (e.halka){
+    const N = e.halka[0], gr = e.halka[1], gc = e.halka[2], R = 3;
+    for (let i = 0; i < N; i++){
+      const t = 2*Math.PI*i/N;
+      out.push({ x:R*Math.cos(t), y:R*Math.sin(t), w:0, g:gr });
+    }
+    if (gc !== null) out.push({ x:0, y:0, w:0, g:gc });
+  } else {
+    for (const q of e.k) out.push({ x:q[0], y:q[1], w:q[2], g:q[3] });
+  }
+  return out;
+}
+
+/* --- DARBENİN KUTLARA ETKİSİ -------------------------------------------
+   Nokta girdap modelinde basınç bağımsız aktör DEĞİLDİR; girdap yalnız hız
+   alanıyla taşınır. Bu yüzden ideal modelde darbenin Kut'a dokunacağı kanal
+   yoktur. Ama Evrenakı SIKIŞTIRILABİLİRdir (stiff: P = c²ρ, v_ses = c tam) ve
+   akustik darbe basınçla birlikte bir HIZ pertürbasyonu taşır:
+        δP = c²δρ ,  δv = δP/(ρ₀c)   ⟹   δv = c·(δρ/ρ₀)          [TÜRETİM]
+   Girdap yerel akışkanla taşındığından bu onu ÖTELER.
+   Yön: yayılma doğrultusu (olaydan dışa doğru) — RADYAL.        [TÜRETİM]
+   Desen: dipol lobu cos(θ−θ_I) — net momentum taşımanın zorunluluğu. [TÜRETİM]
+   Genlik: 2B silindirik dalgada 1/√r.                            [TÜRETİM]
+   Kabuk kalınlığı ve δρ/ρ₀ tepe değeri TÜRETİLMEMİŞTİR — parametre.
+
+   ÖNEMLİ: darbe Kut'un g'sini DEĞİŞTİREMEZ. Dolanım Kelvin gereği korunur;
+   bir darbe dönüş yönünü çeviremez. Yapabileceği tek şey ÖTELEMEDİR — ve
+   öteleme konfigürasyonu bozduğu için sonraki hareket dolaylı olarak değişir.
+   Ayrıca: darbe etkinken girdap altsistemi KAPALI DEĞİLDİR; I ve A sapması
+   beklenir, ortam artık aktif bir katılımcıdır.                            */
+function darbeHizi(p, qx, qy, amp, kal){
+  const dx = qx - p.x, dy = qy - p.y;
+  const dist = Math.hypot(dx, dy);
+  if (dist < 1e-9) return [0, 0];
+  if (Math.abs(dist - p.r) > kal*0.5) return [0, 0];     /* kabuğun içinde mi */
+  const ang = Math.atan2(dy, dx);
+  const lob = Math.cos(ang - p.th);
+  if (lob <= 0) return [0, 0];                            /* arka lob sönük */
+  const dv = CC * amp * lob / Math.sqrt(Math.max(1, dist));
+  return [dv*dx/dist, dv*dy/dist];                        /* RADYAL, dışa */
+}
+/* Bütün darbelerin bir Kut'a kattığı toplam hız pertürbasyonu */
+function darbeToplam(darbeler, qx, qy, amp, kal){
+  let vx = 0, vy = 0;
+  for (const p of darbeler){
+    const v = darbeHizi(p, qx, qy, amp, kal);
+    vx += v[0]; vy += v[1];
+  }
+  return [vx, vy];
+}
+
+/* --- "Yanına ekle" konumu ----------------------------------------------
+   Bağ ölçütü EN YAKIN Kut'a olan 4B uzaklıktır: √(dx²+dy²+dw²) ≤ cap.
+   Bu yüzden konum ağırlık merkezine göre DEĞİL, en dıştaki Kut'a göre
+   hesaplanır; w farkı da bütçeden düşülür. İlk sürüm merkeze göre
+   hesaplıyordu ve bağ kurmuyordu — sınama yakaladı.                      */
+function yanPozisyon(kuts, cap, wnew){
+  if (!kuts.length) return [0, 0, wnew];
+  const c = centroid(kuts);
+  let bi = 0, bR = -1;
+  for (let i = 0; i < kuts.length; i++){
+    const R = Math.hypot(kuts[i].x-c[0], kuts[i].y-c[1]);
+    if (R > bR){ bR = R; bi = i; }
+  }
+  const q = kuts[bi];
+  let ux = q.x-c[0], uy = q.y-c[1];
+  const nn = Math.hypot(ux, uy);
+  if (nn < 1e-6){ ux = 1; uy = 0; } else { ux /= nn; uy /= nn; }
+  /* w farkı TEK BAŞINA cap'i aşarsa hiçbir xy konumu bağ kuramaz
+     (√(dx²+dy²+dw²) ≥ |dw| > cap). Bu yüzden w, bağ kurulabilir aralığa
+     KIRPILIR ve kırpıldığı kullanıcıya bildirilir. Sınama bu durumu
+     yakaladı: cap=1,5 · w=−2 için ayrım/cap = 1,34 çıkıyordu. */
+  const wMax = 0.8*cap;
+  let dw = wnew - q.w;
+  if (Math.abs(dw) > wMax) dw = (dw < 0 ? -1 : 1)*wMax;
+  const pay = Math.sqrt(Math.max(0.04, cap*cap*0.81 - dw*dw));
+  const s = Math.max(0.25, Math.min(cap*0.6, pay));
+  return [q.x + s*ux, q.y + s*uy, q.w + dw];
+}
+
+/* --- 4B dönüş (1. animasyondan; SO(4)) --------------------------------- */
+const PAIRS = [
+  { p3:[0,1], pw:[2,3], l3:'XY', lw:'ZW' },
+  { p3:[0,2], pw:[1,3], l3:'XZ', lw:'YW' },
+  { p3:[1,2], pw:[0,3], l3:'YZ', lw:'XW' }
+];
+function eye4(){ return [[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]]; }
+function rotPlane(i,j,th){
+  const M = eye4(), c = Math.cos(th), s = Math.sin(th);
+  M[i][i]=c; M[i][j]=-s; M[j][i]=s; M[j][j]=c; return M;
+}
+function mul4(A,B){
+  const C = [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]];
+  for (let i=0;i<4;i++) for (let j=0;j<4;j++){
+    let s=0; for (let k=0;k<4;k++) s+=A[i][k]*B[k][j]; C[i][j]=s; }
+  return C;
+}
+function apply4(M,v){
+  const o=[0,0,0,0];
+  for (let i=0;i<4;i++){ let s=0; for (let k=0;k<4;k++) s+=M[i][k]*v[k]; o[i]=s; }
+  return o;
+}
+function transp4(A){
+  const T=[[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]];
+  for(let i=0;i<4;i++) for(let j=0;j<4;j++) T[i][j]=A[j][i];
+  return T;
+}
+function det3m(m){
+  return m[0][0]*(m[1][1]*m[2][2]-m[1][2]*m[2][1])
+       - m[0][1]*(m[1][0]*m[2][2]-m[1][2]*m[2][0])
+       + m[0][2]*(m[1][0]*m[2][1]-m[1][1]*m[2][0]);
+}
+function det4(A){
+  let d=0;
+  for(let j=0;j<4;j++){
+    const m=[];
+    for(let i=1;i<4;i++){ const r=[]; for(let k=0;k<4;k++){ if(k!==j) r.push(A[i][k]); } m.push(r); }
+    d += ((j%2===0)?1:-1)*A[0][j]*det3m(m);
+  }
+  return d;
+}
+function buildR(pi, ph3, phw){
+  const P = PAIRS[pi];
+  return mul4(rotPlane(P.p3[0],P.p3[1],ph3), rotPlane(P.pw[0],P.pw[1],phw));
+}
+
+/* --- Moment matrisi ve δ ----------------------------------------------- */
+function momentD(P4){
+  const D = [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]];
+  for (const p of P4) for (let i=0;i<4;i++) for (let j=0;j<4;j++) D[i][j] += p[i]*p[j];
+  return D;
+}
+function deltaOf(D){ return Math.abs(D[0][0]) > 1e-14 ? D[0][3]/D[0][0] : 0; }
+
+/* --- ÖZ-SINAMALAR ------------------------------------------------------ */
+function selfTests(){
+  const T = [], add = (n,ok,e)=>T.push({n:n,ok:ok,e:e}), TOL = 1e-11;
+
+  /* 1. Tek Kut normalizasyonu (2. animasyonla bağ) */
+  const one = [{x:0,y:0,w:0}];
+  add('tek Kut: u(r_e) = 1', Math.abs(uExact(RE,0,one)-1) < TOL, Math.abs(uExact(RE,0,one)-1));
+  add('tek Kut: ρ(r_e)/ρ₀ = 1/e',
+      Math.abs(rhoOf(uExact(RE,0,one)) - Math.exp(-1)) < TOL,
+      Math.abs(rhoOf(uExact(RE,0,one)) - Math.exp(-1)));
+  add('tek Kut: u(2r_e) = 1/4', Math.abs(uExact(2*RE,0,one)-0.25) < TOL,
+      Math.abs(uExact(2*RE,0,one)-0.25));
+
+  /* 2. Eş-yönlü çiftin ortası: TAM DURGUNLUK — teorinin çapraz terim cümlesi */
+  const d = 4*RE, pair = [{x:-d/2,y:0,w:0},{x:d/2,y:0,w:0}];
+  const vm = velAt(0,0,pair,-1);
+  add('eş-yönlü çiftin ortası durgunluk noktası', Math.hypot(vm[0],vm[1]) < 1e-12,
+      Math.hypot(vm[0],vm[1]));
+  add('ortada ρ = ρ₀ (tam arka plan)', Math.abs(rhoOf(uExact(0,0,pair))-1) < TOL,
+      Math.abs(rhoOf(uExact(0,0,pair))-1));
+  const uA = uAdditive(0,0,pair);
+  add('TOPLAMSAL okuma ortayı yanlış verir', Math.abs(uA - uExact(0,0,pair)) > 0.4,
+      Math.abs(uA - uExact(0,0,pair)));
+
+  /* 3. Karşılıklı taşıma TAM TANJANTEL — bağ çekim değil */
+  const vOnA = velAt(pair[0].x, pair[0].y, pair, 0);
+  const ux = 1, uy = 0;                     /* A→B birim vektörü */
+  const radial = vOnA[0]*ux + vOnA[1]*uy;
+  const tang = Math.abs(vOnA[1]*ux - vOnA[0]*uy);
+  add('karşılıklı taşıma radyal bileşeni = 0', Math.abs(radial) < 1e-12*Math.max(1,tang),
+      Math.abs(radial));
+  add('taşıma tanjantel bileşeni ≠ 0 (yörünge)', tang > 1e-6, tang);
+
+  /* 4. Çiftin açısal hızı: Ω = 2√2·c·r_e/d² */
+  const omN = omegaNumeric(pair), omC = 2*Math.SQRT2*CC*RE/(d*d);
+  add('Ω_çift = 2√2·c·r_e/d²', Math.abs(omN-omC)/Math.abs(omC) < 1e-10,
+      Math.abs(omN-omC)/Math.abs(omC));
+
+  /* 5. Thomson çokgeni: Ω_N = Γ(N−1)/(4πR²), N = 2..9 */
+  let ePoly = 0;
+  for (let N = 2; N <= 9; N++){
+    const R = 3, ks = [];
+    for (let i = 0; i < N; i++){
+      const a = 2*Math.PI*i/N;
+      ks.push({ x:R*Math.cos(a), y:R*Math.sin(a), w:0 });
+    }
+    const a1 = omegaNumeric(ks), a2 = omegaPolygon(N, R);
+    ePoly = Math.max(ePoly, Math.abs(a1-a2)/Math.abs(a2));
+  }
+  add('Thomson: Ω_N = Γ(N−1)/(4πR²)  [N=2..9]', ePoly < 1e-10, ePoly);
+
+  /* omegaNumeric merkezli dizilimde de doğru işaret/büyüklük vermeli.
+     Eski sürüm kuts[0]'ı (merkezdeki Kut, R≈0) kullanıyordu ve işareti
+     ters çıkıyordu — bu sınama o hatayı bir daha geçirmez. */
+  const cen = [{x:0,y:0,w:0}];
+  for (let i = 0; i < 7; i++){
+    const t = 2*Math.PI*i/7;
+    cen.push({ x:3*Math.cos(t), y:3*Math.sin(t), w:0 });
+  }
+  const omCen = omegaNumeric(cen);
+  add('merkezli dizilimde Ω işareti doğru (>0)', omCen > 0, omCen);
+  /* Merkezdeki Kut da dış halkayı taşır: Ω, saf 7-halkasından BÜYÜK olmalı */
+  const ring7 = [];
+  for (let i = 0; i < 7; i++){
+    const t = 2*Math.PI*i/7;
+    ring7.push({ x:3*Math.cos(t), y:3*Math.sin(t), w:0 });
+  }
+  add('merkez Kut Ω\'yı artırır', omCen > omegaNumeric(ring7), omCen - omegaNumeric(ring7));
+  add('outerRadius merkezi saymaz', Math.abs(outerRadius(cen) - 3) < 1e-9,
+      Math.abs(outerRadius(cen) - 3));
+
+  /* 6. RK4 korunumları: ağırlık merkezi ve Σ|P|² */
+  const ks = [];
+  for (let i = 0; i < 5; i++){
+    const a = 2*Math.PI*i/5 + 0.17;
+    ks.push({ x:2.5*Math.cos(a), y:2.5*Math.sin(a), w:0 });
+  }
+  const c0 = centroid(ks), a0 = angImpulse(ks);
+  for (let s = 0; s < 400; s++) stepRK4(ks, 0.01);
+  const c1 = centroid(ks), a1 = angImpulse(ks);
+  add('RK4: ağırlık merkezi korunur', Math.hypot(c1[0]-c0[0], c1[1]-c0[1]) < 1e-8,
+      Math.hypot(c1[0]-c0[0], c1[1]-c0[1]));
+  add('RK4: Σ|P|² korunur', Math.abs(a1-a0)/a0 < 1e-8, Math.abs(a1-a0)/a0);
+
+  /* 7. Kararlılık — gerçek dinamikle ölçülür, formülle değil.
+        Bozma MUTLAK olmalı: çarpımsal bozma merkezdeki Kut'u oynatmaz
+        (0×1.004 = 0) ve merkezli dizilimlerin sınamasını sessizce
+        geçersiz kılar. Bu tuzağa bir kez düşüldü, Python sınaması yakaladı. */
+  function growth(arr, adim){
+    const c0 = centroid(arr);
+    const R0 = arr.map(q => Math.hypot(q.x-c0[0], q.y-c0[1]));
+    const Rmax = Math.max.apply(null, R0) || 1;
+    /* mutlak bozma, belirlenimci (altın açı) */
+    const eps = 0.012, faz = 2.399963;
+    arr.forEach((q,i) => { q.x += eps*Math.cos(i*faz); q.y += eps*Math.sin(i*faz); });
+    let mx = 0;
+    for (let s = 0; s < adim; s++){
+      stepRK4(arr, 0.004);
+      const c = centroid(arr);
+      for (let i = 0; i < arr.length; i++){
+        const rr = Math.hypot(arr[i].x-c[0], arr[i].y-c[1]);
+        mx = Math.max(mx, Math.abs(rr - R0[i])/Rmax);
+      }
+    }
+    return mx;
+  }
+  const mkRing = (N,R) => { const a=[]; for(let i=0;i<N;i++){ const t=2*Math.PI*i/N;
+    a.push({x:R*Math.cos(t), y:R*Math.sin(t), w:0}); } return a; };
+  const mkCen  = (m,R) => { const a=[{x:0,y:0,w:0}]; for(let i=0;i<m;i++){ const t=2*Math.PI*i/m;
+    a.push({x:R*Math.cos(t), y:R*Math.sin(t), w:0}); } return a; };
+
+  const g6 = growth(mkRing(6,3), 8000);
+  const g8 = growth(mkRing(8,3), 8000);
+  add('tek halka N=6 korunur', g6 < 0.05, g6);
+  add('tek halka N=8 BOZULUR', g8 > 0.10, g8);
+  add('ölçüt: tek halka N ≤ 7', ringStable(7) === true && ringStable(8) === false, 0);
+
+  /* Merkez bulgusu: merkeze bir Kut, N=8'i KARARLI kılar */
+  const gc8 = growth(mkCen(7,3), 8000);
+  add('merkez + 7 (N=8) korunur — merkez sınırı yükseltir', gc8 < 0.05, gc8);
+  add('aynı N: merkezli sapma ≪ tek halka sapması', gc8 * 5 < g8, gc8/g8);
+  add('ölçüt: merkez+halka N ≤ 10',
+      layoutStable(10,'merkez') === true && layoutStable(11,'merkez') === false, 0);
+  add('kabuklu düzen "bilinmiyor" döndürür (false değil)',
+      layoutStable(20,'kabuk') === null, 0);
+
+  /* 8. δ: düzlemsel dizilim 0, W-eğimli dizilim tam değer */
+  const flat = [[3,0,0,0],[-1.5,2.598,0,0],[-1.5,-2.598,0,0]];
+  add('düzlemsel dizilim (w=0): δ = 0', Math.abs(deltaOf(momentD(flat))) < 1e-14,
+      Math.abs(deltaOf(momentD(flat))));
+  const tilt = flat.map(p => [p[0], p[1], p[2], 0.2*p[0]]);
+  add('W-eğimli dizilim: δ = 0,2 tam', Math.abs(deltaOf(momentD(tilt)) - 0.2) < 1e-13,
+      Math.abs(deltaOf(momentD(tilt)) - 0.2));
+
+  /* 9. 4B dönüş SO(4) üyesi mi? */
+  let mo = 0, md = 0;
+  for (let pi = 0; pi < 3; pi++) for (let s = 0; s < 8; s++){
+    const R = buildR(pi, 0.71*s+0.13, -1.9*s+0.44), I = mul4(transp4(R), R);
+    for (let i=0;i<4;i++) for (let j=0;j<4;j++) mo = Math.max(mo, Math.abs(I[i][j]-(i===j?1:0)));
+    md = Math.max(md, Math.abs(det4(R)-1));
+  }
+  add('4B dönüş: RᵀR = I', mo < TOL, mo);
+  add('4B dönüş: det R = +1', md < TOL, md);
+
+  /* 10. Öbekleme: yakalama yarıçapı bağlantılılığı doğru buluyor mu? */
+  const cl = clusters([{x:0,y:0,w:0},{x:2,y:0,w:0},{x:20,y:0,w:0}], 3);
+  add('öbekleme: 2 bağlı + 1 serbest = 2 öbek', cl.count === 2, cl.count);
+  const cl2 = clusters([{x:0,y:0,w:0},{x:0,y:0,w:5}], 3);
+  add('öbekleme W\'yi de sayar (w farkı ayırır)', cl2.count === 2, cl2.count);
+
+  /* 11. "Yanına ekle" DAİMA bağ kurmalı — çeşitli yapı ve w değerlerinde */
+  let enKotu = 0, hepBagli = true;
+  for (const cap of [1.5, 3, 6]){
+    for (const wn of [0, 0.8, 1.5, -2]){
+      /* çeşitli başlangıç yapıları: tek, çift, halka, merkezli halka */
+      const setler = [
+        [{x:0,y:0,w:0}],
+        [{x:-1,y:0,w:0},{x:1,y:0,w:0.3}],
+        [{x:2,y:0,w:0},{x:-1,y:1.7,w:0},{x:-1,y:-1.7,w:0}],
+        [{x:0,y:0,w:0},{x:2,y:0,w:0},{x:-2,y:0,w:0},{x:0,y:2,w:0}]
+      ];
+      for (const ks of setler){
+        const p = yanPozisyon(ks, cap, wn);
+        const yeni = { x:p[0], y:p[1], w:p[2] };   /* w kırpılmış hâliyle */
+        let en = Infinity;
+        for (const q of ks) en = Math.min(en,
+          Math.sqrt((q.x-yeni.x)**2 + (q.y-yeni.y)**2 + (q.w-yeni.w)**2));
+        if (en > cap) hepBagli = false;
+        enKotu = Math.max(enKotu, en/cap);
+        /* Doğru ölçüt: yeni Kut KENDİ BAŞINA yeni bir öbek AÇMAMALI.
+           "Yapının tamamı tek öbek olur" YANLIŞ bir iddiadır — başlangıç
+           kümesi zaten kopuk olabilir (örn. cap=1,5'te geniş üçgen üç
+           ayrı öbektir) ve tek Kut eklemek onları birleştirmez. */
+        if (clusters(ks.concat([yeni]), cap).count !== clusters(ks, cap).count)
+          hepBagli = false;
+      }
+    }
+  }
+  add('"Yanına ekle" var olan bir Kut\'a bağlanır', hepBagli, enKotu);
+  add('en kötü durumda ayrım/cap ≤ 1', enKotu <= 1.0, enKotu);
+
+  /* ===== 12. TERS YÖNLÜ KUT ============================================ */
+  const dd = 4;
+  const es  = [{x:-dd/2,y:0,w:0,g:1}, {x:dd/2,y:0,w:0,g: 1}];
+  const zit = [{x:-dd/2,y:0,w:0,g:1}, {x:dd/2,y:0,w:0,g:-1}];
+  const tekKatki = Math.hypot.apply(null, velAt(0, 0, [es[0]], -1));
+
+  /* Ortadaki alan: eş yönlüde SIRT, zıt yönlüde HENDEK */
+  const vEs = velAt(0,0,es,-1), vZit = velAt(0,0,zit,-1);
+  add('eş yönlü çift: ortada tam durgunluk', Math.hypot(vEs[0],vEs[1]) < 1e-12,
+      Math.hypot(vEs[0],vEs[1]));
+  add('zıt yönlü çift: ortada hız tek katkının 2 katı',
+      Math.abs(Math.hypot(vZit[0],vZit[1]) - 2*tekKatki) < 1e-12,
+      Math.abs(Math.hypot(vZit[0],vZit[1]) - 2*tekKatki));
+  add('zıt yönlü: u ortada 4 kat (hendek)',
+      Math.abs(uExact(0,0,zit) - 4*uExact(0,0,[es[0]])) < 1e-12,
+      Math.abs(uExact(0,0,zit) - 4*uExact(0,0,[es[0]])));
+  /* |v|_orta = 4√2·r_e/d  ⟹  √2c'ye d = 4 r_e'de ulaşır */
+  add('|v|_orta = 4√2·r_e/d  (d=4 ⟹ √2c)',
+      Math.abs(Math.hypot(vZit[0],vZit[1]) - Math.SQRT2) < 1e-12,
+      Math.abs(Math.hypot(vZit[0],vZit[1]) - Math.SQRT2));
+  /* TOPLAMSAL okuma işarete KÖR: eş ve zıt için aynı sonucu verir */
+  add('toplamsal okuma işaret körü (eş = zıt)',
+      Math.abs(uAdditive(0,0,es) - uAdditive(0,0,zit)) < 1e-12,
+      Math.abs(uAdditive(0,0,es) - uAdditive(0,0,zit)));
+
+  /* Hareket: eş yönlü DÖNER (hızlar zıt), zıt yönlü ÖTELENİR (hızlar eşit) */
+  const vAes = velAt(es[0].x, es[0].y, es, 0), vBes = velAt(es[1].x, es[1].y, es, 1);
+  const vAz  = velAt(zit[0].x, zit[0].y, zit, 0), vBz = velAt(zit[1].x, zit[1].y, zit, 1);
+  add('eş yönlü: taşıma hızları ZIT (döner)', vAes[0]*vBes[0] + vAes[1]*vBes[1] < 0,
+      vAes[1]*vBes[1]);
+  add('zıt yönlü: taşıma hızları EŞİT (katı ötelenme)',
+      Math.abs(vAz[0]-vBz[0]) < 1e-12 && Math.abs(vAz[1]-vBz[1]) < 1e-12,
+      Math.abs(vAz[1]-vBz[1]));
+  add('dipol ötelenme hızı = Γ/(2πd)',
+      Math.abs(Math.hypot(vAz[0],vAz[1]) - GAM/(2*Math.PI*dd)) < 1e-12,
+      Math.abs(Math.hypot(vAz[0],vAz[1]) - GAM/(2*Math.PI*dd)));
+
+  /* RK4: dipolün ayrımı korunur ama yapı ÖTELENİR; ikili-mesafe ölçütü
+     bunu "dağıldı" saymaz — yarıçap tabanlı eski ölçüt sayardı. */
+  const dip = zit.map(q => ({x:q.x, y:q.y, w:q.w, g:q.g}));
+  const dip0 = pairDists(dip), c0dip = centroid(dip);
+  for (let s = 0; s < 600; s++) stepRK4(dip, 0.01);
+  add('dipol: ayrım korunur', pairDrift(dip, dip0) < 1e-9, pairDrift(dip, dip0));
+  const cdip = centroid(dip);
+  add('dipol gerçekten ötelenir', Math.hypot(cdip[0]-c0dip[0], cdip[1]-c0dip[1]) > 1,
+      Math.hypot(cdip[0]-c0dip[0], cdip[1]-c0dip[1]));
+  add('ikili-mesafe ölçütü ötelenmeyi "dağılma" saymaz', pairDrift(dip, dip0) < 1e-9,
+      pairDrift(dip, dip0));
+
+  /* Ağırlıklı korunanlar — karışık işaretlerde */
+  const mix = [];
+  for (let i = 0; i < 6; i++){
+    const a = 2.399963*i;
+    mix.push({ x:2.5*Math.cos(a), y:2.5*Math.sin(a), w:0, g:(i%3===0)?-1:1 });
+  }
+  const L0m = linImpulse(mix), A0m = angImpulse(mix), H0m = hamiltonian(mix);
+  for (let s = 0; s < 1500; s++) stepRK4(mix, 0.002);
+  const L1m = linImpulse(mix);
+  add('karışık işaret: L = Σg·P korunur',
+      Math.hypot(L1m[0]-L0m[0], L1m[1]-L0m[1]) < 1e-7,
+      Math.hypot(L1m[0]-L0m[0], L1m[1]-L0m[1]));
+  add('karışık işaret: A = Σg|P|² korunur',
+      Math.abs(angImpulse(mix)-A0m)/Math.abs(A0m) < 1e-7,
+      Math.abs(angImpulse(mix)-A0m)/Math.abs(A0m));
+  add('karışık işaret: H korunur',
+      Math.abs(hamiltonian(mix)-H0m)/Math.abs(H0m) < 1e-6,
+      Math.abs(hamiltonian(mix)-H0m)/Math.abs(H0m));
+
+  /* MERKEZ AYRICALIĞI: ters Kut merkezde yapıyı bozmaz, dışında bozar */
+  /* DİKKAT — bozma ZORUNLU. Bozmasız ölçüm yalnız "denge noktası mı?"
+     sorusunu yanıtlar, "kararlı mı?" sorusunu YANITLAMAZ. İlk sürüm
+     bozmasızdı: merkezdeki ters Kut için 3×10⁻¹² veriyordu ve "bozmaz"
+     diye okunuyordu. Bozma verilince aynı konfigürasyon 0,87 ile dağılıyor.
+     Denge ≠ kararlılık. */
+  function driftOf(arr, adim, eps){
+    const ref = pairDists(arr);
+    const e = (eps === undefined) ? 0.012 : eps, faz = 2.399963;
+    arr.forEach((q, i) => { q.x += e*Math.cos(i*faz); q.y += e*Math.sin(i*faz); });
+    let mx = 0;
+    for (let s = 0; s < adim; s++){ stepRK4(arr, 0.004); mx = Math.max(mx, pairDrift(arr, ref)); }
+    return mx;
+  }
+  const Rr = 3;
+  const mkR = (N, gc, gr) => {
+    const a = [];
+    for (let i = 0; i < N; i++){
+      const t = 2*Math.PI*i/N;
+      a.push({ x:Rr*Math.cos(t), y:Rr*Math.sin(t), w:0, g:(gr===undefined?1:gr) });
+    }
+    if (gc !== undefined) a.push({ x:0, y:0, w:0, g:gc });
+    return a;
+  };
+  /* Bozmasız: her üçü de DENGE noktasıdır (drift ≈ 0) */
+  add('merkezli konfigürasyonlar denge noktasıdır (bozmasız)',
+      driftOf(mkR(6, -1), 3000, 0) < 1e-8, driftOf(mkR(6, -1), 3000, 0));
+  /* Bozmalı: kararlılık ayrışır */
+  const dIleri  = driftOf(mkR(6, +1),   6000);
+  const dTers   = driftOf(mkR(6, -1),   6000);
+  const dZayif  = driftOf(mkR(6, -0.2), 6000);
+  add('merkezde İLERİ Kut: kararlı', dIleri < 0.05, dIleri);
+  add('merkezde TERS Kut (g=−1): KARARSIZ, dağıtır', dTers > 0.2, dTers);
+  add('merkezde ZAYIF ters Kut (g=−0,2): hâlâ kararlı', dZayif < 0.05, dZayif);
+  add('ters merkez eşiği: |g_c| büyüdükçe sapma büyür', dTers > dZayif*5, dTers/dZayif);
+  /* N bağımlılığı: küçük halka aynı ters merkezi tolere eder */
+  /* N=4, g_c=−1'de KARARLI DEĞİL ama N=6'dan mertebe kadar dirençli
+     (0,055 ↔ 0,83). Mutlak eşik iddiası yanlış olurdu — oran iddiası doğru. */
+  const dN4 = driftOf(mkR(4, -1), 6000);
+  add('N=4, g_c=−1: N=6\'dan mertebe kadar dirençli', dN4*8 < dTers, dN4/dTers);
+  /* Merkez dışındaki ters Kut: derhal dağıtır */
+  const yanTers = mkR(6);
+  yanTers.push({ x:Rr+1.2, y:0, w:0, g:-1 });
+  const dYanTers = driftOf(yanTers, 6000);
+  add('merkez DIŞINDAKİ ters Kut yapıyı DAĞITIR', dYanTers > 0.2, dYanTers);
+
+  /* Merkezli halka için Ω kapalı biçimi ve İŞARET DÖNÜŞÜ */
+  let eRC = 0;
+  for (const gc of [-3, -1, 0, 1, 2.5]){
+    const arr = mkR(6, gc);
+    eRC = Math.max(eRC, Math.abs(omegaNumeric(arr) - omegaRingCenter(6, Rr, gc))
+                        / Math.max(1e-12, Math.abs(omegaRingCenter(6, Rr, gc))));
+  }
+  add('Ω = Γ(N−1)/4πR² + g_c·Γ/2πR²', eRC < 1e-9, eRC);
+  /* N=6 ⟹ g_c < −2,5'te işaret döner */
+  add('g_c < −(N−1)/2 ⟹ Ω işaret değiştirir',
+      omegaRingCenter(6, Rr, -3) < 0 && omegaRingCenter(6, Rr, -2) > 0,
+      omegaRingCenter(6, Rr, -3));
+
+  /* ===== 13. YAKINLAŞMA OLAYLARI ====================================== */
+  const SG = 1.9e9, R0u = rcepUnit(SG), vkav = Math.SQRT2*Math.sqrt(1+SG);
+  add('R_cep(|g|=1) = r_e/√(1+Σ/P₀)',
+      Math.abs(rcepOf({g:1}, SG) - R0u) < 1e-18, Math.abs(rcepOf({g:1},SG)-R0u));
+  add('R_cep |g| ile doğrusal', Math.abs(rcepOf({g:2.5},SG) - 2.5*R0u) < 1e-18,
+      Math.abs(rcepOf({g:2.5},SG) - 2.5*R0u));
+  /* eşit |g|=1 için: d_yok = 4R_cep, d_bir = 2R_cep */
+  add('d_yok = 4·R_cep  (|g|=1)',
+      Math.abs(dAnnihilate({g:1},{g:-1},SG) - 4*R0u) < 1e-18,
+      Math.abs(dAnnihilate({g:1},{g:-1},SG) - 4*R0u));
+  add('d_bir = 2·R_cep  (|g|=1)',
+      Math.abs(dMerge({g:1},{g:1},SG) - 2*R0u) < 1e-18,
+      Math.abs(dMerge({g:1},{g:1},SG) - 2*R0u));
+  /* d_yok = 2·d_bir DAİMA — hendek köprüsü, cepler değmeden önce kurulur */
+  let eRatio = 0;
+  for (const ga of [0.4, 1, 2.7]) for (const gb of [0.4, 1, 3.1]){
+    const A = {g:ga}, B = {g:gb};
+    eRatio = Math.max(eRatio, Math.abs(dAnnihilate(A,B,SG)/dMerge(A,B,SG) - 2));
+  }
+  add('d_yok = 2·d_bir  (her |g| çifti için)', eRatio < 1e-12, eRatio);
+  /* d_yok'ta hendeğin dibi TAM v_kav olmalı */
+  let eV = 0;
+  for (const ga of [0.5, 1, 2]) for (const gb of [0.7, 1, 1.8]){
+    const dy = dAnnihilate({g:ga},{g:-gb}, SG);
+    const pr = [{x:-dy/2,y:0,w:0,g:ga}, {x:dy/2,y:0,w:0,g:-gb}];
+    const v = velAt(0,0,pr,-1);
+    eV = Math.max(eV, Math.abs(Math.hypot(v[0],v[1]) - vkav)/vkav);
+  }
+  add('d_yok\'ta orta nokta hızı = v_kav (tam)', eV < 1e-9, eV);
+
+  /* Olay uygulaması */
+  const mkPair = (d, ga, gb) => [{x:-d/2,y:0,w:0,g:ga},{x:d/2,y:0,w:0,g:gb}];
+  /* zıt, eşik içinde ⟹ İKİSİ DE gider */
+  const p1 = mkPair(3.9*R0u, 1, -1);
+  const s1 = olaylariUygula(p1, SG, 1);
+  add('zıt çift eşik içinde: TAM yok olma', p1.length === 0 && s1.yok === 1, p1.length);
+  /* zıt, eşik dışında ⟹ olay yok */
+  const p2 = mkPair(4.1*R0u, 1, -1);
+  const s2 = olaylariUygula(p2, SG, 1);
+  add('zıt çift eşik dışında: olay yok', p2.length === 2 && s2.yok === 0, p2.length);
+  /* eş, d_bir içinde ⟹ tek Kut, g toplanır */
+  const p3 = mkPair(1.9*R0u, 1, 1);
+  const s3 = olaylariUygula(p3, SG, 1);
+  add('eş çift d_bir içinde: birleşir, g = 2',
+      p3.length === 1 && Math.abs(gOf(p3[0]) - 2) < 1e-12 && s3.bir === 1,
+      p3.length);
+  /* KRİTİK: eş çift, d_bir ile d_yok ARASINDA ⟹ olay YOK.
+     Arada sırt var, köprü kurulmaz — zıt çift orada yok olurdu. */
+  const p4 = mkPair(3*R0u, 1, 1);
+  const s4 = olaylariUygula(p4, SG, 1);
+  add('eş çift d_bir–d_yok arasında: olay YOK (sırt)',
+      p4.length === 2 && s4.bir === 0 && s4.yok === 0, p4.length);
+  const p5 = mkPair(3*R0u, 1, -1);
+  olaylariUygula(p5, SG, 1);
+  add('aynı mesafede ZIT çift yok olur (asimetri)', p5.length === 0, p5.length);
+  /* eşit olmayan zıt ⟹ KISMİ yok olma, kalan g = g₁+g₂ */
+  const p6 = mkPair(2*R0u, 1, -0.4);
+  olaylariUygula(p6, SG, 1);
+  add('eşit olmayan zıt: kısmi yok olma, g = 0,6',
+      p6.length === 1 && Math.abs(gOf(p6[0]) - 0.6) < 1e-12,
+      p6.length === 1 ? Math.abs(gOf(p6[0])-0.6) : 99);
+  /* görsel ölçek eşiği ölçekler, oranı bozmaz */
+  const p7 = mkPair(3.9*R0u*100, 1, -1);
+  olaylariUygula(p7, SG, 100);
+  add('görsel ölçek eşiği ×olcek büyütür', p7.length === 0, p7.length);
+  /* birleşme g-ağırlıklı merkeze düşer */
+  const p8 = [{x:0,y:0,w:0,g:3},{x:R0u,y:0,w:0,g:1}];
+  olaylariUygula(p8, SG, 1);
+  add('birleşme g-ağırlıklı merkeze düşer',
+      p8.length === 1 && Math.abs(p8[0].x - R0u*0.25) < 1e-15,
+      p8.length === 1 ? Math.abs(p8[0].x - R0u*0.25) : 99);
+
+  /* ===== 14. OLAY MUHASEBESİ — ne korunur, ne devredilir ============== */
+  /* Γ olayda DAİMA korunur: yok olmada zaten 0'dı, birleşmede g toplanır */
+  const q1 = mkPair(3*R0u, 1, -1), G1 = totG(q1);
+  const r1 = olaylariUygula(q1, SG, 1);
+  add('yok olma: Γ korunur (0 → 0)',
+      Math.abs(G1) < 1e-15 && Math.abs(totG(q1)) < 1e-15, Math.abs(totG(q1)));
+  /* ...ama L = Γ·d ORTAMA DEVREDİLİR — momentum kaybolamaz */
+  add('yok olma: L = Γ·d ortama devredilir',
+      Math.abs(Math.hypot(r1.devrLx, r1.devrLy) - 3*R0u) < 1e-15,
+      Math.abs(Math.hypot(r1.devrLx, r1.devrLy) - 3*R0u));
+  /* Birleşmede L TAM korunur (g-ağırlıklı merkez seçimi bunu sağlar) */
+  const q2 = mkPair(1.5*R0u, 1, 1), L2b = linImpulse(q2);
+  const r2 = olaylariUygula(q2, SG, 1);
+  const L2a = linImpulse(q2);
+  add('birleşme: L tam korunur (devir yok)',
+      Math.hypot(r2.devrLx, r2.devrLy) < 1e-18
+      && Math.hypot(L2a[0]-L2b[0], L2a[1]-L2b[1]) < 1e-18,
+      Math.hypot(L2a[0]-L2b[0], L2a[1]-L2b[1]));
+  add('birleşme: Γ korunur (1+1 = 2)', Math.abs(totG(q2) - 2) < 1e-15,
+      Math.abs(totG(q2) - 2));
+  /* Enerji işareti: zıt yaklaşma EKZOTERMİK, eş ENDOTERMİK */
+  const eZit = olaylariUygula(mkPair(3*R0u, 1, -1), SG, 1).salinanE;
+  const eEs  = olaylariUygula(mkPair(1.5*R0u, 1, 1), SG, 1).salinanE;
+  add('zıt çift: etkileşim enerjisi NEGATİF (ekzotermik)', eZit < 0, eZit);
+  add('eş çift: etkileşim enerjisi POZİTİF (endotermik)', eEs > 0, eEs);
+  /* Sıfır dolanımdan TEK Kut kurulamaz — yalnız ± çiftleri.
+     Ölçüt: bir Kut'un g'si sıfır olamaz. */
+  add('sıfır dolanımdan tek Kut kurulamaz (g≠0 zorunlu)',
+      Math.abs(gOf({g:0})) === 0 && rcepOf({g:0}, SG) === 0, 0);
+
+  /* ===== 15. MOMENTUM — yön, büyüklük, darbe ========================== */
+  const dq = 4, dpr = [{x:-dq/2,y:0,w:0,g:1},{x:dq/2,y:0,w:0,g:-1}];
+  const git = velAt(dpr[0].x, dpr[0].y, dpr, 0);           /* gitme hızı */
+  const gN = Math.hypot(git[0], git[1]) || 1;
+  const Iv = linImpulse(dpr), IN = Math.hypot(Iv[0], Iv[1]) || 1;
+  /* Î, dipolün GİTME yönüyle aynı olmalı — asıl düzeltme bu */
+  add('Î doğrultusu = dipolün gitme yönü',
+      Math.abs(Iv[0]/IN - git[0]/gN) < 1e-12 && Math.abs(Iv[1]/IN - git[1]/gN) < 1e-12,
+      Math.abs(Iv[1]/IN - git[1]/gN));
+  add('|I| = Γ·d', Math.abs(IN - dq) < 1e-12, Math.abs(IN - dq));
+  /* Σ Γᵢ Pᵢ (eski, yanlış) 90° sapar — tuzağı kayda geçir */
+  let sx = 0, sy = 0;
+  for (const q of dpr){ sx += gOf(q)*q.x; sy += gOf(q)*q.y; }
+  const sN = Math.hypot(sx, sy) || 1;
+  add('ΣΓᵢPᵢ 90° sapar (gitme yönü DEĞİL)',
+      Math.abs((sx/sN)*(git[0]/gN) + (sy/sN)*(git[1]/gN)) < 1e-12,
+      Math.abs((sx/sN)*(git[0]/gN) + (sy/sN)*(git[1]/gN)));
+  /* Yok olma TAM BİR darbe doğurur; yönü ve büyüklüğü doğru olmalı */
+  const dp2 = mkPair(3*R0u, 1, -1);
+  const gt2 = velAt(dp2[0].x, dp2[0].y, dp2, 0);
+  const r15 = olaylariUygula(dp2, SG, 1);
+  add('yok olma bir darbe doğurur', r15.darbeler.length === 1, r15.darbeler.length);
+  if (r15.darbeler.length === 1){
+    const D = r15.darbeler[0], dN = Math.hypot(D.ix, D.iy) || 1;
+    const g2N = Math.hypot(gt2[0], gt2[1]) || 1;
+    add('darbe doğrultusu = çiftin gitme yönü',
+        Math.abs(D.ix/dN - gt2[0]/g2N) < 1e-12 && Math.abs(D.iy/dN - gt2[1]/g2N) < 1e-12,
+        Math.abs(D.iy/dN - gt2[1]/g2N));
+    add('darbe büyüklüğü = Γ·d', Math.abs(D.mag - 3*R0u) < 1e-15,
+        Math.abs(D.mag - 3*R0u));
+  } else { add('darbe doğrultusu = çiftin gitme yönü', false, 1);
+           add('darbe büyüklüğü = Γ·d', false, 1); }
+  /* Birleşme darbe DOĞURMAZ (I tam korunur, devredilecek pay yok) */
+  const mp = mkPair(1.5*R0u, 1, 1);
+  const rm = olaylariUygula(mp, SG, 1);
+  add('birleşme darbe doğurmaz', rm.darbeler.length === 0, rm.darbeler.length);
+  /* Dipol lobu zorunlu: izotrop darbe net momentum taşıyamaz.
+     Ölçüt — cos lobunun yönlü integrali sıfırdan farklı, sabitin sıfır. */
+  let dipolInt = 0, monoInt = 0;
+  for (let k = 0; k < 720; k++){
+    const a = 2*Math.PI*k/720;
+    dipolInt += Math.cos(a)*Math.cos(a);     /* dipol × yön */
+    monoInt  += 1*Math.cos(a);               /* monopol × yön */
+  }
+  add('dipol deseni net momentum taşır', Math.abs(dipolInt) > 100, dipolInt);
+  add('izotrop desen net momentum TAŞIMAZ', Math.abs(monoInt) < 1e-9, Math.abs(monoInt));
+
+  /* ===== 16. DARBE → KUT ÖTELEMESİ ==================================== */
+  const P0d = { x:0, y:0, r:3, th:0, mag:1 };   /* +x doğrultulu darbe, r=3 */
+  const AMP = 0.4, KAL = 0.8;
+  /* kabuğun İÇİNDE, lob ekseninde ⟹ radyal DIŞA öteleme */
+  const v1 = darbeHizi(P0d, 3, 0, AMP, KAL);
+  add('kabuk içinde: öteleme radyal dışa (+x)', v1[0] > 0 && Math.abs(v1[1]) < 1e-12, v1[0]);
+  add('δv = c·(δρ/ρ₀)/√r  (lob tepesi)',
+      Math.abs(v1[0] - CC*AMP/Math.sqrt(3)) < 1e-12,
+      Math.abs(v1[0] - CC*AMP/Math.sqrt(3)));
+  /* kabuğun DIŞINDA ⟹ etki yok */
+  const v2 = darbeHizi(P0d, 5, 0, AMP, KAL);
+  add('kabuk dışında: etki yok', v2[0] === 0 && v2[1] === 0, Math.hypot(v2[0],v2[1]));
+  /* ARKA lobda ⟹ etki yok (cos < 0) */
+  const v3 = darbeHizi(P0d, -3, 0, AMP, KAL);
+  add('arka lobda etki yok (cos<0)', v3[0] === 0 && v3[1] === 0, Math.hypot(v3[0],v3[1]));
+  /* 90°'de lob sıfırlanır */
+  const v4 = darbeHizi(P0d, 0, 3, AMP, KAL);
+  add('lob 90°\'de sıfır', Math.hypot(v4[0], v4[1]) < 1e-12, Math.hypot(v4[0],v4[1]));
+  /* genlik 1/√r ile düşer */
+  const a9 = darbeHizi({x:0,y:0,r:9,th:0,mag:1}, 9, 0, AMP, KAL);
+  add('genlik 1/√r ile düşer',
+      Math.abs(a9[0]/v1[0] - Math.sqrt(3/9)) < 1e-12,
+      Math.abs(a9[0]/v1[0] - Math.sqrt(3/9)));
+  /* δρ/ρ₀ = 0 ⟹ hiç etki yok (kanal kapatılabilir) */
+  add('δρ/ρ₀ = 0 ⟹ etki yok',
+      Math.hypot.apply(null, darbeHizi(P0d, 3, 0, 0, KAL)) === 0, 0);
+  /* Darbe g'yi DEĞİŞTİRMEZ — yalnız konumu */
+  const kt = [{x:3,y:0,w:0,g:1}], g0 = gOf(kt[0]);
+  const vv = darbeToplam([P0d], kt[0].x, kt[0].y, AMP, KAL);
+  kt[0].x += vv[0]*0.1; kt[0].y += vv[1]*0.1;
+  add('darbe g\'yi değiştirmez (dolanım korunur)', gOf(kt[0]) === g0, 0);
+  add('darbe konumu değiştirir (ötelenme > 0)', kt[0].x > 3, kt[0].x - 3);
+
+  /* ===== 17. KARARLILIK SINAVI — katalogla çapraz doğrulama ============
+     Sınav, Python'da bağımsız ölçülen 17 yapının kararlılık kararını
+     yeniden üretmek zorunda. Bir tanesi bile uyuşmazsa sınav güvenilmez. */
+  let uyusan = 0, uyusmayan = [];
+  for (let i = 0; i < KATALOG.length; i++){
+    const cfg = katalogKur(i);
+    const r = kararlilikSinavi(cfg, 50, 0.05, 0.005);
+    const v = kararliMi(r.kayma);
+    /* SINIRDA'yı ilgili tarafa say: beklenen KARARLI ise sınırda da kabul */
+    const ok = (v === KATALOG[i].bek) ||
+               (v === 'SINIRDA' && KATALOG[i].bek === 'KARARLI');
+    if (ok) uyusan++; else uyusmayan.push(KATALOG[i].ad + '→' + v);
+  }
+  add('katalog kararları yeniden üretiliyor (' + uyusan + '/' + KATALOG.length + ')',
+      uyusan === KATALOG.length, KATALOG.length - uyusan);
+  /* Ölçüt ötelenmeye kör olmalı: dipol ötelenir ama DAĞILMAZ */
+  const dpx = kararlilikSinavi([{x:-1.5,y:0,w:0,g:1},{x:1.5,y:0,w:0,g:-1}], 50, 0.05, 0.005);
+  add('sınav ötelenen dipolü "dağıldı" saymaz', kararliMi(dpx.kayma) !== 'DAĞILIR', dpx.kayma);
+  /* Sınav KOPYA üzerinde çalışmalı: girdi listesi değişmemeli */
+  const orj = [{x:1,y:2,w:0,g:1},{x:-1,y:0,w:0,g:1},{x:0,y:-2,w:0,g:1}];
+  const kopyaOnce = JSON.stringify(orj);
+  kararlilikSinavi(orj, 20, 0.05, 0.005);
+  add('sınav girdiyi bozmaz (kopya üzerinde)', JSON.stringify(orj) === kopyaOnce, 0);
+  /* Eşik fonksiyonu tutarlı */
+  add('kararliMi eşikleri doğru',
+      kararliMi(0.05) === 'KARARLI' && kararliMi(0.2) === 'SINIRDA'
+      && kararliMi(1.0) === 'DAĞILIR', 0);
+  /* katalogKur her girdi için >= 2 Kut üretmeli */
+  let hepGecerli = true;
+  for (let i = 0; i < KATALOG.length; i++) if (katalogKur(i).length < 2) hepGecerli = false;
+  add('katalog girdileri geçerli (≥2 Kut)', hepGecerli, 0);
+
+  return T;
+}
+/* ===== CORE-END ===== */
+
+
+/* ==========================================================================
+   DURUM + ARAYÜZ
+   ========================================================================== */
+const $ = id => document.getElementById(id);
+const S = {
+  kuts: [], gecmis: [], armed:false, drag:-1, bondFlash:0, bondAt:null, dir:1,
+  ph3:0, ph2:0, cam:{ az:0.7, el:0.35, d:14 },
+  view:{ cx:0, cy:0, sc:1 },
+  cons:{ L0:null, a0:null, h0:null, d0:null, maxDev:0 },
+  olay:{ yok:0, bir:0, Lx:0, Ly:0, E:0 }, olayFlash:0, olaySon:'',
+  darbeler:[], vurulan:[], otelenme:0, tara:null
+};
+
+function snapshot(){ S.gecmis.push(JSON.parse(JSON.stringify(S.kuts))); if (S.gecmis.length > 40) S.gecmis.shift(); }
+function resetCons(){
+  const n = S.kuts.length;
+  S.cons.L0 = n ? linImpulse(S.kuts) : null;
+  S.cons.a0 = n > 1 ? angImpulse(S.kuts) : null;
+  S.cons.h0 = n > 1 ? hamiltonian(S.kuts) : null;
+  /* Yapı bozulması ÖLÇÜMDEN okunur ve ölçüt İKİLİ MESAFELERDİR:
+     ötelenen bir dipol "bozulmuş" sayılmaz, dağılan yapı sayılır. */
+  S.cons.d0 = n > 1 ? pairDists(S.kuts) : null;
+  S.cons.maxDev = 0;
+}
+function yeniG(){ return (S.dir < 0 ? -1 : 1) * (+$('gs').value); }
+function addKut(x, y, w, g){
+  snapshot();
+  /* bağ oldu mu? — yerleştirmeden ÖNCE bak */
+  const cap = +$('cap').value;
+  let bonded = false;
+  for (const q of S.kuts){
+    if (Math.sqrt((q.x-x)*(q.x-x) + (q.y-y)*(q.y-y) + (q.w-w)*(q.w-w)) <= cap){ bonded = true; break; }
+  }
+  S.kuts.push({ x:x, y:y, w:w, g:(g === undefined) ? yeniG() : g });
+  /* Parlamayı HER eklemede tazele: bağ yoksa bayat "BAĞ KURULDU" yazısı kalmasın. */
+  if (bonded){ S.bondFlash = 1; S.bondAt = [x,y]; }
+  else { S.bondFlash = 0; S.bondAt = null; }
+  if ($('mode').value === 'cokgen') toPolygon();
+  resetCons();
+}
+function toPolygon(){
+  const n = S.kuts.length;
+  if (n < 2) return;
+  const c = centroid(S.kuts);
+  let R = 0;
+  for (const q of S.kuts) R += Math.hypot(q.x-c[0], q.y-c[1]);
+  R = Math.max(1.5, R/n);
+  S.kuts.forEach((q,i) => {
+    const a = 2*Math.PI*i/n;
+    q.x = c[0] + R*Math.cos(a); q.y = c[1] + R*Math.sin(a);
+  });
+  resetCons();
+}
+/* N Kut'u seçilen düzene diz. Yarıçap N ile büyür ki Kutlar üst üste binmesin. */
+function makeStruct(N, layout){
+  snapshot();
+  S.kuts = [];
+  const R0 = 2.4;
+  /* Hazır dizilimler daima EŞ YÖNLÜDÜR (g = +1) — teorinin kuralı budur.
+     Ters Kut'u kullanıcı elle ekler. */
+  const halka = (m, R, faz) => {
+    for (let i = 0; i < m; i++){
+      const a = 2*Math.PI*i/m + (faz || 0);
+      S.kuts.push({ x:R*Math.cos(a), y:R*Math.sin(a), w:0, g:1 });
+    }
+  };
+  if (layout === 'halka'){
+    if (N === 1) S.kuts.push({ x:0, y:0, w:0, g:1 });
+    else halka(N, Math.max(2.0, R0*Math.sqrt(N/6) + 1.0), 0);
+  } else if (layout === 'merkez'){
+    S.kuts.push({ x:0, y:0, w:0, g:1 });
+    if (N > 1) halka(N-1, Math.max(2.0, R0*Math.sqrt((N-1)/6) + 1.0), 0);
+  } else {
+    for (const sh of shellPlan(N)){
+      if (sh.k === 0){ S.kuts.push({ x:0, y:0, w:0, g:1 }); continue; }
+      halka(sh.n, R0*sh.k, (sh.k % 2) ? 0 : Math.PI/Math.max(1, sh.n));
+    }
+  }
+  /* MUTLAK bozma — kararsızlık gizlenmesin.
+     DİKKAT: çarpımsal bozma (q.x *= 1.004) merkezdeki Kut'u HİÇ oynatmaz
+     (0×1.004 = 0) ve sınamayı sessizce geçersiz kılar. Bu tuzağa bir kez
+     düşüldü ve Python sınamasında yakalandı. */
+  const eps = 0.012, faz = 2.399963;   /* altın açı — belirlenimci */
+  S.kuts.forEach((q, i) => { q.x += eps*Math.cos(i*faz); q.y += eps*Math.sin(i*faz); });
+  S.bondFlash = 0; S.bondAt = null;
+  resetCons();
+}
+
+/* --- ekran ↔ dünya --------------------------------------------------- */
+function toWorld(px, py){
+  return [ (px - S.view.cx)/S.view.sc, -(py - S.view.cy)/S.view.sc ];
+}
+function toScreen(x, y){
+  return [ S.view.cx + x*S.view.sc, S.view.cy - y*S.view.sc ];
+}
+
+/* --- renk: w kodu (1. animasyonun idyomu) ---------------------------- */
+function wColor(w, al){
+  const t = Math.max(-1, Math.min(1, w/2));
+  let r,g,b;
+  if (t >= 0){ r = 232+(255-232)*t; g = 244+(176-244)*t; b = 248+(32-248)*t; }
+  else { const a = -t; r = 232+(0-232)*a; g = 244+(229-244)*a; b = 248+(255-248)*a; }
+  return 'rgba(' + (r|0) + ',' + (g|0) + ',' + (b|0) + ',' + al + ')';
+}
+function fieldColor(rho, al){
+  const t = Math.max(0, Math.min(1, rho));
+  let r,g,b;
+  if (t < 0.3679){ const s = t/0.3679; r = 10+(255-10)*s; g = 6+(176-6)*s; b = 22+(32-22)*s; }
+  else { const s = (t-0.3679)/(1-0.3679); r = 255+(10-255)*s; g = 176+(60-176)*s; b = 32+(90-32)*s; }
+  return 'rgba(' + (r|0) + ',' + (g|0) + ',' + (b|0) + ',' + al + ')';
+}
+
+/* ==========================================================================
+   SOL PANEL — dönüş düzlemi
+   ========================================================================== */
+function draw4(){
+  const cv = $('c4'), ctx = cv.getContext('2d');
+  const dpr = Math.min(2, window.devicePixelRatio || 1);
+  const W = cv.clientWidth, H = cv.clientHeight;
+  if (W < 4 || H < 4) return;
+  if (cv.width !== (W*dpr|0)){ cv.width = W*dpr|0; cv.height = H*dpr|0; }
+  ctx.setTransform(dpr,0,0,dpr,0,0);
+  ctx.fillStyle = '#0b0f19'; ctx.fillRect(0,0,W,H);
+
+  S.view.cx = W/2; S.view.cy = H/2 + 6;
+  S.view.sc = Math.min(W,H)/16;
+  const sc = S.view.sc, useAdd = $('addm').checked;
+
+  /* yoğunluk alanı — kaba ızgara, hızlı */
+  if ($('fld').checked && S.kuts.length){
+    const step = 7;
+    for (let py = 0; py < H; py += step){
+      for (let px = 0; px < W; px += step){
+        const wp = toWorld(px + step/2, py + step/2);
+        const u = useAdd ? uAdditive(wp[0], wp[1], S.kuts) : uExact(wp[0], wp[1], S.kuts);
+        ctx.fillStyle = fieldColor(rhoOf(u), 0.55);
+        ctx.fillRect(px, py, step, step);
+      }
+    }
+  }
+
+  /* durgunluk noktaları: komşu Kut çiftlerinin ortası (tam alanda |v|≈0) */
+  if ($('stag').checked && S.kuts.length > 1){
+    for (let i = 0; i < S.kuts.length; i++)
+      for (let j = i+1; j < S.kuts.length; j++){
+        const mx = (S.kuts[i].x + S.kuts[j].x)/2, my = (S.kuts[i].y + S.kuts[j].y)/2;
+        const v = velAt(mx, my, S.kuts, -1);
+        const sp = Math.hypot(v[0], v[1]);
+        const dd = Math.hypot(S.kuts[i].x-S.kuts[j].x, S.kuts[i].y-S.kuts[j].y);
+        if (sp > 0.35*K/(dd/2) || dd > 2*(+$('cap').value)) continue;
+        const s0 = toScreen(mx, my);
+        ctx.beginPath(); ctx.arc(s0[0], s0[1], 4, 0, 2*Math.PI);
+        ctx.strokeStyle = 'rgba(255,59,107,0.95)'; ctx.lineWidth = 1.5; ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(s0[0]-6, s0[1]); ctx.lineTo(s0[0]+6, s0[1]);
+        ctx.moveTo(s0[0], s0[1]-6); ctx.lineTo(s0[0], s0[1]+6); ctx.stroke();
+      }
+  }
+
+  /* --- MOMENTUM DARBELERİ ------------------------------------------------
+     Yok olmanın ortama devrettiği impuls, c hızıyla yayılan yönlü bir basınç
+     darbesi olarak çıkar. Desen DİPOLdür (cos lobu): izotrop bir darbe
+     simetri gereği net momentum taşıyamaz, o yüzden lob zorunludur.
+     Genlik 2B silindirik dalga için 1/√r ile düşer. */
+  for (const p of S.darbeler){
+    const s0 = toScreen(p.x, p.y), rp = p.r*sc;
+    if (rp < 1) continue;
+    const gen = Math.min(1, p.mag/3) / Math.sqrt(Math.max(0.4, p.r));
+    const N = 72;
+    ctx.lineWidth = 2.4;
+    for (let k = 0; k < N; k++){
+      const a0 = 2*Math.PI*k/N, a1 = 2*Math.PI*(k+1)/N;
+      const lob = Math.cos((a0 + a1)/2 - p.th);      /* dipol lobu */
+      if (lob <= 0.02) continue;                     /* arka lob sönük */
+      const al = Math.max(0, Math.min(0.95, gen*lob*2.6));
+      if (al < 0.02) continue;
+      ctx.strokeStyle = 'rgba(255,120,60,' + al.toFixed(3) + ')';
+      ctx.beginPath(); ctx.arc(s0[0], s0[1], rp, -a1, -a0); ctx.stroke();
+    }
+    /* impuls oku — darbenin taşıdığı yön */
+    const ax = s0[0] + Math.cos(-p.th)*rp*0.55, ay = s0[1] + Math.sin(-p.th)*rp*0.55;
+    const al2 = Math.max(0, Math.min(0.9, gen*3));
+    if (al2 > 0.04){
+      ctx.strokeStyle = 'rgba(255,150,90,' + al2.toFixed(3) + ')';
+      ctx.lineWidth = 1.6;
+      ctx.beginPath(); ctx.moveTo(s0[0], s0[1]); ctx.lineTo(ax, ay); ctx.stroke();
+      ctx.beginPath();
+      ctx.moveTo(ax + 7*Math.cos(-p.th), ay + 7*Math.sin(-p.th));
+      ctx.lineTo(ax + 5*Math.cos(-p.th+2.5), ay + 5*Math.sin(-p.th+2.5));
+      ctx.lineTo(ax + 5*Math.cos(-p.th-2.5), ay + 5*Math.sin(-p.th-2.5));
+      ctx.closePath();
+      ctx.fillStyle = 'rgba(255,150,90,' + al2.toFixed(3) + ')'; ctx.fill();
+      ctx.fillStyle = 'rgba(255,170,110,' + al2.toFixed(3) + ')';
+      ctx.font = '9px Consolas'; ctx.textAlign = 'center';
+      ctx.fillText('I = ' + p.mag.toFixed(2), ax, ay - 10);
+    }
+  }
+
+  /* Kutlar */
+  const cap = +$('cap').value;
+  for (let i = 0; i < S.kuts.length; i++){
+    const q = S.kuts[i], s0 = toScreen(q.x, q.y);
+    if ($('halo').checked){
+      ctx.beginPath(); ctx.arc(s0[0], s0[1], RE*sc, 0, 2*Math.PI);
+      ctx.strokeStyle = 'rgba(255,176,32,0.55)'; ctx.lineWidth = 1.2;
+      ctx.setLineDash([4,3]); ctx.stroke();
+      ctx.beginPath(); ctx.arc(s0[0], s0[1], cap*sc, 0, 2*Math.PI);
+      ctx.strokeStyle = 'rgba(124,252,107,0.30)'; ctx.lineWidth = 1;
+      ctx.setLineDash([2,5]); ctx.stroke(); ctx.setLineDash([]);
+    }
+    /* çekirdek: cep (siyah) + w renkli halka; boyut |g| ile ölçeklenir */
+    const g = gOf(q), ters = g < 0, rk = 6 + 2.2*Math.min(2, Math.abs(g));
+    ctx.beginPath(); ctx.arc(s0[0], s0[1], rk, 0, 2*Math.PI);
+    ctx.fillStyle = wColor(q.w, 0.95); ctx.fill();
+    ctx.beginPath(); ctx.arc(s0[0], s0[1], rk*0.45, 0, 2*Math.PI);
+    ctx.fillStyle = '#05070c'; ctx.fill();
+    /* TERS Kut: kırmızı çember, ayırt edilebilir olmalı */
+    ctx.strokeStyle = ters ? 'rgba(255,59,107,0.95)' : 'rgba(11,15,25,0.8)';
+    ctx.lineWidth = ters ? 2.2 : 1;
+    ctx.beginPath(); ctx.arc(s0[0], s0[1], rk, 0, 2*Math.PI); ctx.stroke();
+    /* DARBE VURUYOR: turuncu halka + itme oku */
+    if (S.vurulan.indexOf(i) >= 0){
+      ctx.strokeStyle = 'rgba(255,140,70,0.95)'; ctx.lineWidth = 2.6;
+      ctx.beginPath(); ctx.arc(s0[0], s0[1], rk + 6, 0, 2*Math.PI); ctx.stroke();
+      const vv = darbeToplam(S.darbeler, q.x, q.y, +$('damp').value, +$('dkal').value);
+      const vn = Math.hypot(vv[0], vv[1]);
+      if (vn > 1e-9){
+        const L2 = Math.min(34, 16 + vn*40);
+        const ex2 = s0[0] + vv[0]/vn*L2, ey2 = s0[1] - vv[1]/vn*L2;
+        ctx.strokeStyle = 'rgba(255,160,90,0.95)'; ctx.lineWidth = 2;
+        ctx.beginPath(); ctx.moveTo(s0[0], s0[1]); ctx.lineTo(ex2, ey2); ctx.stroke();
+        const aa = Math.atan2(-vv[1], vv[0]);
+        ctx.beginPath();
+        ctx.moveTo(ex2 + 7*Math.cos(aa), ey2 + 7*Math.sin(aa));
+        ctx.lineTo(ex2 + 5*Math.cos(aa+2.5), ey2 + 5*Math.sin(aa+2.5));
+        ctx.lineTo(ex2 + 5*Math.cos(aa-2.5), ey2 + 5*Math.sin(aa-2.5));
+        ctx.closePath(); ctx.fillStyle = 'rgba(255,160,90,0.95)'; ctx.fill();
+      }
+    }
+    /* dönüş yönü oku — yayın ucundaki üçgen yönü işareti gösterir */
+    const ra = rk + 5.5, y0 = ters ? Math.PI*0.15 : -Math.PI*0.15;
+    ctx.strokeStyle = ters ? 'rgba(255,59,107,0.9)' : 'rgba(0,229,255,0.9)';
+    ctx.lineWidth = 1.6;
+    ctx.beginPath();
+    ctx.arc(s0[0], s0[1], ra, y0, y0 + (ters ? -1 : 1)*Math.PI*1.25, ters);
+    ctx.stroke();
+    const ae = y0 + (ters ? -1 : 1)*Math.PI*1.25;
+    const ax0 = s0[0] + ra*Math.cos(ae), ay0 = s0[1] + ra*Math.sin(ae);
+    const tn = ae + (ters ? -1 : 1)*Math.PI/2;
+    ctx.beginPath();
+    ctx.moveTo(ax0 + 4.5*Math.cos(tn), ay0 + 4.5*Math.sin(tn));
+    ctx.lineTo(ax0 + 3.2*Math.cos(tn+2.4), ay0 + 3.2*Math.sin(tn+2.4));
+    ctx.lineTo(ax0 + 3.2*Math.cos(tn-2.4), ay0 + 3.2*Math.sin(tn-2.4));
+    ctx.closePath();
+    ctx.fillStyle = ters ? '#ff3b6b' : '#00e5ff'; ctx.fill();
+    ctx.fillStyle = ters ? '#ff8fa6' : '#7b8aa5';
+    ctx.font = '9px Consolas'; ctx.textAlign = 'center';
+    ctx.fillText('w=' + q.w.toFixed(2) + '  g=' + (g > 0 ? '+' : '') + g.toFixed(1),
+                 s0[0], s0[1] + rk + 15);
+  }
+
+  /* bağ çizgileri */
+  const cl = clusters(S.kuts, cap);
+  for (let i = 0; i < S.kuts.length; i++)
+    for (let j = i+1; j < S.kuts.length; j++){
+      const a = S.kuts[i], b = S.kuts[j];
+      const dd = Math.sqrt((a.x-b.x)**2 + (a.y-b.y)**2 + (a.w-b.w)**2);
+      if (dd > cap) continue;
+      const s1 = toScreen(a.x,a.y), s2 = toScreen(b.x,b.y);
+      ctx.strokeStyle = 'rgba(124,252,107,0.5)'; ctx.lineWidth = 1.4;
+      ctx.beginPath(); ctx.moveTo(s1[0],s1[1]); ctx.lineTo(s2[0],s2[1]); ctx.stroke();
+    }
+
+  /* bağ kuruldu parlaması */
+  if (S.bondFlash > 0 && S.bondAt){
+    const s0 = toScreen(S.bondAt[0], S.bondAt[1]);
+    ctx.beginPath(); ctx.arc(s0[0], s0[1], (1-S.bondFlash)*70 + 10, 0, 2*Math.PI);
+    ctx.strokeStyle = 'rgba(124,252,107,' + S.bondFlash.toFixed(2) + ')';
+    ctx.lineWidth = 2.5; ctx.stroke();
+    ctx.fillStyle = 'rgba(124,252,107,' + S.bondFlash.toFixed(2) + ')';
+    ctx.font = 'bold 12px Segoe UI'; ctx.textAlign = 'center';
+    ctx.fillText('BAĞ KURULDU — sınır tabakaları değdi', s0[0], s0[1] - 34);
+  }
+
+  /* olay bildirimi — yok olma kırmızı, birleşme yeşil */
+  if (S.olayFlash > 0){
+    const yk = S.olaySon === 'YOK OLMA';
+    ctx.globalAlpha = Math.min(1, S.olayFlash);
+    ctx.fillStyle = yk ? '#ff3b6b' : '#7cfc6b';
+    ctx.font = 'bold 15px Segoe UI'; ctx.textAlign = 'center';
+    ctx.fillText(S.olaySon, W/2, 52);
+    ctx.font = '10.5px Segoe UI'; ctx.fillStyle = yk ? '#e08099' : '#a9e8a0';
+    ctx.fillText(yk ? 'zıt çift: hendek köprülendi · Γ_top = 0 · P₀ cebi çökertti'
+                    : 'eş çift: cepler değdi · Γ_top ≠ 0 · tek büyük Kut',
+                 W/2, 68);
+    ctx.globalAlpha = 1;
+  }
+
+  if (!S.kuts.length){
+    ctx.fillStyle = '#3d4a63'; ctx.font = '12px Segoe UI'; ctx.textAlign = 'center';
+    ctx.fillText('Soldaki Kut deposundan bir Kut tut ve buraya bırak', W/2, H/2);
+  }
+  $('lab4').textContent = PAIRS[+$('pair').value].l3 + ' düzlemi · '
+    + S.kuts.length + ' Kut · ' + cl.count + ' öbek'
+    + (useAdd ? '  ·  TOPLAMSAL (yanlış) alan' : '');
+}
+
+/* ==========================================================================
+   SAĞ PANEL — 3B kesitimiz
+   ========================================================================== */
+function camBasis(){
+  const ce = Math.cos(S.cam.el), se = Math.sin(S.cam.el);
+  const ca = Math.cos(S.cam.az), sa = Math.sin(S.cam.az);
+  const eye = [S.cam.d*ce*ca, S.cam.d*ce*sa, S.cam.d*se];
+  const f = [-ce*ca, -ce*sa, -se];
+  let r = [f[1], -f[0], 0];
+  const rn = Math.hypot(r[0], r[1], r[2]) || 1; r = [r[0]/rn, r[1]/rn, 0];
+  const u = [r[1]*f[2]-r[2]*f[1], r[2]*f[0]-r[0]*f[2], r[0]*f[1]-r[1]*f[0]];
+  return { eye:eye, f:f, r:r, u:u };
+}
+function proj3(p, B, foc, cx, cy){
+  const dx = p[0]-B.eye[0], dy = p[1]-B.eye[1], dz = p[2]-B.eye[2];
+  const vz = dx*B.f[0] + dy*B.f[1] + dz*B.f[2];
+  if (vz < 0.1) return null;
+  const vx = dx*B.r[0] + dy*B.r[1] + dz*B.r[2];
+  const vy = dx*B.u[0] + dy*B.u[1] + dz*B.u[2];
+  const s = foc/vz;
+  return { x:cx+vx*s, y:cy-vy*s, s:s, z:vz };
+}
+function draw3(){
+  const cv = $('c3'), ctx = cv.getContext('2d');
+  const dpr = Math.min(2, window.devicePixelRatio || 1);
+  const W = cv.clientWidth, H = cv.clientHeight;
+  if (W < 4 || H < 4) return;
+  if (cv.width !== (W*dpr|0)){ cv.width = W*dpr|0; cv.height = H*dpr|0; }
+  ctx.setTransform(dpr,0,0,dpr,0,0);
+  ctx.fillStyle = '#0b0f19'; ctx.fillRect(0,0,W,H);
+
+  const cx = W/2, cy = H/2+6, foc = Math.min(W,H)*1.15;
+  const B = camBasis(), eps = +$('eps').value;
+  const R4 = buildR(+$('pair').value, S.ph3, S.ph2);
+
+  /* eksen üçlüsü */
+  const L = 5, ax = [[L,0,0],[0,L,0],[0,0,L]], nm = ['X','Y','Z'];
+  const o = proj3([0,0,0], B, foc, cx, cy);
+  for (let i = 0; i < 3; i++){
+    const q = proj3(ax[i], B, foc, cx, cy);
+    if (!o || !q) continue;
+    ctx.strokeStyle = 'rgba(90,106,134,0.4)'; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(o.x,o.y); ctx.lineTo(q.x,q.y); ctx.stroke();
+    ctx.fillStyle = '#5a6a86'; ctx.font = '10px Consolas'; ctx.textAlign = 'center';
+    ctx.fillText(nm[i], q.x, q.y-4);
+  }
+
+  /* Kutları 4B'de döndür, kesitte gör */
+  const drawList = [], vis4 = [];
+  for (const q of S.kuts){
+    const p4 = apply4(R4, [q.x, q.y, 0, q.w]);
+    const gor = Math.abs(p4[3]) < eps;
+    const s0 = proj3([p4[0], p4[1], p4[2]], B, foc, cx, cy);
+    if (!s0) continue;
+    if (gor) vis4.push(p4);
+    drawList.push({ s:s0, gor:gor, w:p4[3], g:gOf(q) });
+  }
+  drawList.sort((a,b) => b.s.z - a.s.z);
+
+  /* bağ çizgileri (yalnız ikisi de görünürse) */
+  const cap = +$('cap').value;
+  for (let i = 0; i < S.kuts.length; i++)
+    for (let j = i+1; j < S.kuts.length; j++){
+      const a = S.kuts[i], b = S.kuts[j];
+      const dd = Math.sqrt((a.x-b.x)**2 + (a.y-b.y)**2 + (a.w-b.w)**2);
+      if (dd > cap) continue;
+      const pa = apply4(R4, [a.x,a.y,0,a.w]), pb = apply4(R4, [b.x,b.y,0,b.w]);
+      if (Math.abs(pa[3]) >= eps || Math.abs(pb[3]) >= eps) continue;
+      const s1 = proj3([pa[0],pa[1],pa[2]], B, foc, cx, cy);
+      const s2 = proj3([pb[0],pb[1],pb[2]], B, foc, cx, cy);
+      if (!s1 || !s2) continue;
+      ctx.strokeStyle = 'rgba(124,252,107,0.45)'; ctx.lineWidth = 1.4;
+      ctx.beginPath(); ctx.moveTo(s1.x,s1.y); ctx.lineTo(s2.x,s2.y); ctx.stroke();
+    }
+
+  for (const d of drawList){
+    const rad = Math.max(1.5, 0.30*d.s.s * (d.gor ? Math.sqrt(Math.max(0.02, 1-(d.w/eps)**2)) : 0.25));
+    ctx.beginPath(); ctx.arc(d.s.x, d.s.y, rad, 0, 2*Math.PI);
+    ctx.fillStyle = d.gor ? wColor(d.w, 0.92) : 'rgba(80,95,120,0.16)';
+    ctx.fill();
+    if (d.gor){
+      /* TERS Kut kesitte de ayırt edilir: kırmızı çember */
+      ctx.strokeStyle = (d.g < 0) ? 'rgba(255,59,107,0.95)' : 'rgba(11,15,25,0.7)';
+      ctx.lineWidth = (d.g < 0) ? 2 : 1;
+      ctx.stroke();
+    }
+  }
+
+  if (!S.kuts.length){
+    ctx.fillStyle = '#3d4a63'; ctx.font = '12px Segoe UI'; ctx.textAlign = 'center';
+    ctx.fillText('yapı yok', W/2, H/2);
+  }
+  $('lab3').textContent = vis4.length + ' / ' + S.kuts.length + ' Kut uzayımızda'
+    + '  ·  φ₂ = ' + ((S.ph2*180/Math.PI)%360).toFixed(0) + '°';
+  $('s_vis').textContent = vis4.length + '/' + S.kuts.length;
+}
+
+/* ==========================================================================
+   DÖNGÜ
+   ========================================================================== */
+let lastT = performance.now(), kareSayisi = 0, fallback = null;
+function frameBody(now){
+  const dt = Math.min(0.05, (now-lastT)/1000); lastT = now;
+
+  /* girdap dinamiği */
+  if ($('run').checked && S.kuts.length > 1 && $('mode').value === 'serbest'){
+    const h = dt * (+$('dtm').value);
+    stepRK4(S.kuts, h);
+  }
+  /* cep sınırı olayları — nokta girdap modelinin geçerlilik sınırı */
+  if ($('ev').checked && S.kuts.length > 1){
+    const olcek = Math.pow(10, +$('evs').value);
+    const s = olaylariUygula(S.kuts, SIGP0, olcek);
+    if (s.yok || s.bir){
+      S.olay.yok += s.yok; S.olay.bir += s.bir;
+      S.olay.Lx += s.devrLx; S.olay.Ly += s.devrLy; S.olay.E += s.salinanE;
+      /* Momentum darbesini doğur: ortamda c hızıyla yayılır (stiff akışkanda
+         v_ses = c TAM), ve DİPOL desenlidir — tek kutuplu (izotrop) bir darbe
+         simetri gereği NET MOMENTUM TAŞIYAMAZ, dolayısıyla lob zorunludur. */
+      for (const dr of s.darbeler){
+        S.darbeler.push({ x:dr.x, y:dr.y, r:0, mag:dr.mag,
+                          th:Math.atan2(dr.iy, dr.ix) });
+      }
+      S.olayFlash = 1; S.olaySon = s.yok ? 'YOK OLMA' : 'BİRLEŞME';
+      resetCons();
+    }
+  }
+  /* darbeleri ilerlet: r = c·t,  c = 1 (kod birimi) */
+  if (S.darbeler.length){
+    const hh = dt * (+$('dtm').value) * CC;
+    for (const p of S.darbeler) p.r += hh;
+    S.darbeler = S.darbeler.filter(p => p.r < 26);
+  }
+  /* DARBE → KUT: akustik hız pertürbasyonu Kutları öteler.
+     Kut'un g'sine DOKUNMAZ; yalnız konumunu değiştirir. */
+  S.vurulan = [];
+  if (S.darbeler.length && $('dka').checked && S.kuts.length){
+    const amp = +$('damp').value, kal = +$('dkal').value;
+    const hh = dt * (+$('dtm').value);
+    for (let i = 0; i < S.kuts.length; i++){
+      const q = S.kuts[i];
+      const v = darbeToplam(S.darbeler, q.x, q.y, amp, kal);
+      if (v[0] || v[1]){
+        q.x += v[0]*hh; q.y += v[1]*hh;
+        S.otelenme += Math.hypot(v[0], v[1])*hh;
+        S.vurulan.push(i);
+      }
+    }
+  }
+  /* 4B dönüş fazları */
+  const w2 = +$('w2').value;
+  const w1 = $('iso').checked ? w2 : w2*0.45;
+  S.ph3 += 2*Math.PI*w1*dt; S.ph2 += 2*Math.PI*w2*dt;
+  if ($('spin').checked) S.cam.az += dt*0.10;
+  if (S.bondFlash > 0) S.bondFlash = Math.max(0, S.bondFlash - dt*1.4);
+  if (S.olayFlash > 0) S.olayFlash = Math.max(0, S.olayFlash - dt*0.8);
+
+  draw4(); draw3(); drawTara();
+
+  /* --- tanı --- */
+  const n = S.kuts.length, cap = +$('cap').value;
+  const cl = clusters(S.kuts, cap);
+  const boy = new Array(cl.count).fill(0);
+  cl.lab.forEach(l => { if (l >= 0) boy[l]++; });
+  const big = boy.length ? Math.max.apply(null, boy) : 0;
+  const c = n ? centroid(S.kuts) : [0,0];
+  const R = outerRadius(S.kuts);          /* merkeze yakın Kutları saymaz */
+  const omC = omegaPolygon(n, R), omN = omegaNumeric(S.kuts);
+
+  $('s_n').textContent = n;
+  $('s_om').textContent = n > 1 ? omN.toFixed(4) : '—';
+
+  /* ÖLÇÜLEN bozulma: İKİLİ MESAFELERİN kayması — ötelenme ve dönmeden
+     bağımsız. Dinamiğin kendi çıktısıdır, formül değil. */
+  if (S.cons.d0 && n > 1){
+    S.cons.maxDev = Math.max(S.cons.maxDev, pairDrift(S.kuts, S.cons.d0));
+    const d0 = S.cons.maxDev;
+    $('s_st').innerHTML = (d0 < 0.05)
+        ? '<span style="color:#34d399">' + d0.toFixed(4) + ' · korundu</span>'
+        : '<span style="color:#f87171">' + d0.toFixed(3) + ' · DAĞILDI</span>';
+  } else { S.cons.maxDev = 0; $('s_st').textContent = '—'; }
+  const P4 = S.kuts.map(q => [q.x, q.y, 0, q.w]);
+  const dl = n ? deltaOf(momentD(P4)) : 0;
+  $('s_dl').textContent = n ? dl.toFixed(4) : '—';
+  $('m_cl').textContent = cl.count;
+  $('m_big').textContent = big;
+  $('m_R').textContent = n > 1 ? R.toFixed(4) : '—';
+  /* Tek-halka formülü yalnız EŞ dolanımlı Kutlar için anlamlıdır. */
+  $('m_omc').textContent = (n > 1 && allSameSign(S.kuts)) ? omC.toFixed(5) : '— (karışık)';
+  $('m_omn').textContent = n > 1 ? omN.toFixed(5) : '—';
+  if (S.cons.a0 !== null && S.cons.a0 !== undefined && n > 1){
+    const da = Math.abs(angImpulse(S.kuts) - S.cons.a0)/Math.max(1e-12, Math.abs(S.cons.a0));
+    const L = linImpulse(S.kuts);
+    const dl2 = Math.hypot(L[0]-S.cons.L0[0], L[1]-S.cons.L0[1]);
+    const dh = Math.abs(hamiltonian(S.kuts) - S.cons.h0)/Math.max(1e-12, Math.abs(S.cons.h0));
+    $('m_ai').textContent = da.toExponential(2);
+    $('m_cm').textContent = dl2.toExponential(2);
+    $('m_ham').textContent = dh.toExponential(2);
+    $('s_cons').textContent = Math.max(da, dh).toExponential(1);
+  } else {
+    $('m_ai').textContent = '—'; $('m_cm').textContent = '—';
+    $('m_ham').textContent = '—'; $('s_cons').textContent = '—';
+  }
+  /* Dolanım toplamı ve karışık işaret uyarısı */
+  const gT = totG(S.kuts), esYon = allSameSign(S.kuts);
+  /* Cep ve olay eşikleri — GERÇEK değerler, ölçekten bağımsız */
+  const R0u = RE*rcepUnit(SIGP0), olcekE = Math.pow(10, +$('evs').value);
+  const bir = { g:1 }, ikinci = { g:1 };
+  $('m_rcep').textContent  = R0u.toExponential(3);
+  $('m_dyok').textContent  = dAnnihilate(bir, ikinci, SIGP0).toExponential(3);
+  $('m_dbir').textContent  = dMerge(bir, ikinci, SIGP0).toExponential(3);
+  $('m_dyoke').textContent = (dAnnihilate(bir,ikinci,SIGP0)*olcekE).toExponential(3);
+  /* en yakın çift ve o çiftin türü */
+  let dmin = Infinity, dminZit = false;
+  for (let i = 0; i < n; i++) for (let j = i+1; j < n; j++){
+    const d = Math.hypot(S.kuts[i].x-S.kuts[j].x, S.kuts[i].y-S.kuts[j].y);
+    if (d < dmin){ dmin = d; dminZit = gOf(S.kuts[i])*gOf(S.kuts[j]) < 0; }
+  }
+  $('m_dmin').textContent = isFinite(dmin)
+      ? dmin.toFixed(4) + (dminZit ? '  (zıt)' : '  (eş)') : '—';
+  $('m_olay').textContent = S.olay.yok + ' / ' + S.olay.bir;
+  /* Ortama devredilen kalemler — Γ daima 0 çıkmalı, L yok olmada çıkar */
+  $('m_devG').textContent = '0,000  (daima)';
+  $('m_devL').textContent = Math.hypot(S.olay.Lx, S.olay.Ly).toFixed(4);
+  $('m_devDir').textContent = (Math.hypot(S.olay.Lx, S.olay.Ly) > 1e-12)
+      ? (Math.atan2(S.olay.Ly, S.olay.Lx)*180/Math.PI).toFixed(1) + '°' : '—';
+  $('m_darbe').textContent = S.darbeler.length;
+  $('m_vur').innerHTML = S.vurulan.length
+      ? '<span style="color:#ff9048">' + S.vurulan.length + '</span>' : '0';
+  $('m_otel').textContent = S.otelenme.toFixed(4);
+  $('m_devE').textContent = S.olay.E.toFixed(4);
+  $('s_olay').innerHTML = (S.olay.yok || S.olay.bir)
+      ? '<span style="color:#ff3b6b">' + S.olay.yok + '</span> / <span style="color:#7cfc6b">'
+        + S.olay.bir + '</span>' : '0 / 0';
+  $('m_gt').textContent = n ? gT.toFixed(2) : '—';
+  $('m_mix').innerHTML = !n ? '—'
+      : (esYon ? '<span style="color:#34d399">hepsi eş yönlü</span>'
+               : '<span style="color:#f87171">KARIŞIK — teori yasaklar</span>');
+}
+function frame(now){
+  kareSayisi++;
+  try { frameBody(now); }
+  catch (err){
+    const b = $('banner');
+    b.style.background = '#3b1418'; b.style.color = '#fca5a5';
+    b.textContent = 'ÇİZİM HATASI: ' + err.message;
+    console.error(err);
+  }
+  if (!fallback) requestAnimationFrame(frame);
+}
+
+/* ==========================================================================
+   ETKİLEŞİM
+   ========================================================================== */
+function bindLabels(){
+  const L = [['wnew','wV',2],['cap','capV',2],['w2','w2V',2],['eps','epsV',2],
+             ['dtm','dtV',2],['gs','gsV',2],['evs','evsV',2],
+             ['damp','dampV',3],['dkal','dkalV',2],['st','stV',0],['se','seV',3]];
+  for (const [id,out,dp] of L){
+    const f = () => { $(out).textContent = (+$(id).value).toFixed(dp); };
+    $(id).addEventListener('input', f); f();
+  }
+}
+function noteUpdate(){
+  $('modeNote').innerHTML = $('mode').value === 'serbest'
+    ? 'Tam N-girdap hareket denklemi RK4 ile integre edilir: <code>dPᵢ/dt = Σ_{j≠i} v(Pᵢ;Pⱼ)</code>. '
+    + 'Kutlar birbirini gerçekten taşır. <b>8\'li halka bu kipte gerçekten bozulur</b> — '
+    + 'kararlılık sınırını gözle görebilirsin. Korunum sapması alt çubuktadır.'
+    : 'Yapı her eklemede düzgün çokgene oturtulur; bu bir <b>bağıl dengedir</b> ve katı '
+    + 'gibi döner. Ω kapalı biçimle sayısal değerin birebir tutması sağdaki tanıda görünür.';
+}
+$('mode').addEventListener('input', () => { noteUpdate(); if ($('mode').value==='cokgen') toPolygon(); });
+$('cap').addEventListener('input', () => {});
+$('clr').addEventListener('click', () => {
+  snapshot(); S.kuts = []; S.bondFlash = 0; S.bondAt = null;
+  /* TÜM alanlar sıfırlanmalı; Lx/Ly/E atlanırsa += ile NaN'a döner. */
+  S.olay = { yok:0, bir:0, Lx:0, Ly:0, E:0 }; S.olayFlash = 0;
+  S.darbeler = []; S.vurulan = []; S.otelenme = 0; resetCons();
+});
+$('undo').addEventListener('click', () => {
+  if (S.gecmis.length){ S.kuts = S.gecmis.pop(); resetCons(); }
+});
+/* ==========================================================================
+   KARARLILIK SINAVI — arayüz
+   ========================================================================== */
+function buildKatalog(){
+  const s = $('kat');
+  s.innerHTML = '';
+  KATALOG.forEach((e, i) => {
+    const o = document.createElement('option');
+    o.value = i; o.textContent = e.ad + '  → ' + e.bek;
+    s.appendChild(o);
+  });
+}
+$('katYukle').addEventListener('click', () => {
+  snapshot();
+  S.kuts = katalogKur(+$('kat').value);
+  S.bondFlash = 0; S.bondAt = null; S.darbeler = []; S.vurulan = [];
+  S.tara = null; resetCons();
+  $('sinavSonuc').textContent = 'kuruldu — sınavı çalıştır';
+  $('sinavSonuc').style.color = 'var(--grey)';
+});
+function sinavYaz(r, bek){
+  const v = kararliMi(r.kayma);
+  const renk = (v === 'KARARLI') ? '#34d399' : (v === 'SINIRDA' ? '#ffb020' : '#f87171');
+  let t = v + '  ·  kayma ' + r.kayma.toFixed(4);
+  if (r.kesildi) t += '  (erken kesildi)';
+  if (bek){
+    t += '<br><span style="color:#8892b0">beklenen (Python): ' + bek +
+         (bek === v ? '  ✓ uyuştu' : '  ✗ UYUŞMADI') + '</span>';
+  }
+  $('sinavSonuc').innerHTML = t;
+  $('sinavSonuc').style.color = renk;
+}
+$('sinav').addEventListener('click', () => {
+  if (S.kuts.length < 2){
+    $('sinavSonuc').textContent = 'en az 2 Kut gerekir';
+    $('sinavSonuc').style.color = 'var(--grey)'; return;
+  }
+  const r = kararlilikSinavi(S.kuts, +$('st').value, +$('se').value, 0.004);
+  /* katalogdan kurulduysa beklenen değerle karşılaştır */
+  const idx = +$('kat').value, kat = katalogKur(idx);
+  let bek = null;
+  if (kat.length === S.kuts.length){
+    let ayni = true;
+    for (let i = 0; i < kat.length; i++){
+      if (Math.abs(kat[i].x-S.kuts[i].x) > 1e-6 || Math.abs(kat[i].y-S.kuts[i].y) > 1e-6
+          || Math.abs(gOf(kat[i])-gOf(S.kuts[i])) > 1e-9){ ayni = false; break; }
+    }
+    if (ayni) bek = KATALOG[idx].bek;
+  }
+  sinavYaz(r, bek);
+});
+/* Aile taraması: SON Kut'un g'sini −3…+3 süpür, her değerde sınavı koş */
+$('tara').addEventListener('click', () => {
+  if (S.kuts.length < 2){ $('taraLab').textContent = 'en az 2 Kut gerekir'; return; }
+  const N = 31, T = Math.min(80, +$('st').value), eps = +$('se').value;
+  const g0 = gOf(S.kuts[S.kuts.length-1]);
+  const out = [];
+  for (let i = 0; i < N; i++){
+    const g = -3 + 6*i/(N-1);
+    const kop = S.kuts.map(q => ({ x:q.x, y:q.y, w:q.w, g:gOf(q) }));
+    kop[kop.length-1].g = g;
+    out.push({ g:g, kayma:kararlilikSinavi(kop, T, eps, 0.004).kayma });
+  }
+  S.tara = { veri:out, g0:g0, n:S.kuts.length };
+  /* kararlı aralığı bul */
+  const kar = out.filter(o => o.kayma < 0.10).map(o => o.g);
+  $('taraLab').textContent = kar.length
+      ? 'kararlı: ' + Math.min.apply(null,kar).toFixed(1) + ' … ' + Math.max.apply(null,kar).toFixed(1)
+      : 'kararlı aralık yok';
+});
+function drawTara(){
+  const cv = $('taraC'), g = cv.getContext('2d');
+  const dpr = Math.min(2, window.devicePixelRatio || 1);
+  const W = cv.clientWidth, H = cv.clientHeight;
+  if (W < 4 || H < 4) return;
+  if (cv.width !== (W*dpr|0)){ cv.width = W*dpr|0; cv.height = H*dpr|0; }
+  g.setTransform(dpr,0,0,dpr,0,0);
+  g.fillStyle = '#0c1220'; g.fillRect(0,0,W,H);
+  if (!S.tara){
+    g.fillStyle = '#3d4a63'; g.font = '10.5px Segoe UI'; g.textAlign = 'center';
+    g.fillText('"Aile taraması"na bas', W/2, H/2); return;
+  }
+  const d = S.tara.veri;
+  const X = gg => 6 + (gg+3)/6*(W-12);
+  /* log ölçek: kayma 1e-3 … 5 */
+  const lo = Math.log10(1e-3), hi = Math.log10(5);
+  const Y = k => H-14 - (Math.log10(Math.max(1e-3, Math.min(5,k)))-lo)/(hi-lo)*(H-22);
+  /* kararlı / dağılır bantları */
+  for (const o of d){
+    const x = X(o.g), w = (W-12)/d.length;
+    g.fillStyle = (o.kayma < 0.10) ? 'rgba(52,211,153,0.16)'
+                : (o.kayma < 0.40) ? 'rgba(255,176,32,0.14)' : 'rgba(248,113,113,0.14)';
+    g.fillRect(x-w/2, 6, w, H-20);
+  }
+  /* eşik çizgileri */
+  for (const [k,c,l] of [[0.10,'#34d399','0,10'],[0.40,'#ffb020','0,40']]){
+    g.strokeStyle = c; g.lineWidth = 1; g.setLineDash([3,3]);
+    g.beginPath(); g.moveTo(6, Y(k)); g.lineTo(W-6, Y(k)); g.stroke(); g.setLineDash([]);
+    g.fillStyle = c; g.font = '8px Consolas'; g.textAlign = 'left';
+    g.fillText(l, 8, Y(k)-2);
+  }
+  /* eğri */
+  g.strokeStyle = '#00e5ff'; g.lineWidth = 1.7; g.beginPath();
+  d.forEach((o,i) => { const x = X(o.g), y = Y(o.kayma);
+    if (i === 0) g.moveTo(x,y); else g.lineTo(x,y); });
+  g.stroke();
+  /* g = 0 ve mevcut g */
+  for (const [gg,c] of [[0,'#4b5872'],[S.tara.g0,'#fff']]){
+    if (gg < -3 || gg > 3) continue;
+    g.strokeStyle = c; g.lineWidth = 1;
+    g.beginPath(); g.moveTo(X(gg), 6); g.lineTo(X(gg), H-14); g.stroke();
+  }
+  g.fillStyle = '#4b5872'; g.font = '9px Consolas';
+  g.textAlign = 'left';  g.fillText('g = −3', 6, H-3);
+  g.textAlign = 'right'; g.fillText('+3', W-6, H-3);
+  g.textAlign = 'center'; g.fillStyle = '#8892b0';
+  g.fillText('beyaz = sahnedeki g', W/2, H-3);
+}
+
+/* --- Kut sayısı düğmeleri: renk, sınanmış kararlılığı gösterir ---------- */
+const NPAD = [1,2,3,4,5,6,7,8,9,10,11,12,15,20];
+function buildNpad(){
+  const pad = $('npad'), lay = $('layout').value;
+  pad.innerHTML = '';
+  for (const N of NPAD){
+    const b = document.createElement('button');
+    b.textContent = N;
+    const st = layoutStable(N, lay);
+    b.className = (st === null) ? 'bel' : (st ? 'kar' : 'kars');
+    b.title = (st === null) ? 'kararlılığı sınanmadı — dinamiği izle'
+            : (st ? 'sınandı: kararlı' : 'sınandı: bozulur');
+    b.onclick = () => makeStruct(N, $('layout').value);
+    pad.appendChild(b);
+  }
+}
+function layoutNoteUpdate(){
+  const l = $('layout').value;
+  $('layoutNote').innerHTML = l === 'halka'
+    ? 'Düzgün çokgen. <b>Sayısal olarak sınandı: N ≤ 7 korunur (sapma ≤0,022), '
+    + 'N ≥ 8 bozulur (≥0,72).</b> Yeşil düğmeler kararlı, kırmızılar bozulacak.'
+    : l === 'merkez'
+    ? 'Ortada bir Kut, kalanı halkada. <b>Merkezdeki Kut sınırı yükseltir: N ≤ 10 '
+    + 'korunur</b> — N=8\'de sapma 0,0065, oysa aynı N tek halkada 0,72 idi. Yani '
+    + '"en fazla 7" kuralı <b>tek halkaya</b> aittir, merkezli yapıya değil.'
+    : 'Merkez + 6 + 12 + … kabukları. <b>Kararlılığı genel olarak sınanmadı</b>; '
+    + 'denenenler karışık çıktı (N=19/20 sınırda ≈0,065 · N=13 bozuldu 0,55). Bu bir '
+    + '<b>düzenlemedir</b>, kararlı yapı iddiası değil — alt çubuktaki ölçülen sapmayı izle.';
+}
+$('layout').addEventListener('input', () => { buildNpad(); layoutNoteUpdate(); });
+
+/* --- Kut alma: BİRDEN ÇOK yol, hiçbiri CSS gradyanına bağımlı değil.
+   Daha önce tek yol vardı ve o yol yalnızca CSS radial-gradient ile görünen
+   bir <div> idi; gradyan uygulanmadığında öğe şeffaf kalıyor ve kullanıcı
+   nereye tıklayacağını göremiyordu. Artık: KUT AL düğmesi, SVG daire,
+   Merkeze ekle, Yanına ekle ve sahnede çift tıklama. */
+let sonEkleme = -1e9;
+function setArmed(on){
+  S.armed = on;
+  ['depoKut','pick','pickState'].forEach(id => $(id).classList.toggle('armed', on));
+  $('pickState').textContent = on ? '▸ şimdi SAHNEYE tıkla' : 'hazır';
+}
+function yerlestir(x, y, w, g){
+  addKut(x, y, (w === undefined) ? +$('wnew').value : w, g);
+  sonEkleme = performance.now();
+  setArmed(false);
+}
+/* Dönüş yönü seçimi */
+function setDir(d){
+  S.dir = d;
+  $('dirF').classList.toggle('on', d > 0);
+  $('dirR').classList.toggle('on', d < 0);
+}
+$('dirF').addEventListener('click', () => setDir(1));
+$('dirR').addEventListener('click', () => setDir(-1));
+/* Ters Kut'u doğrudan yapının yanına ekle — yönü geçici olarak ters alır */
+$('addT').addEventListener('click', () => {
+  const istenen = +$('wnew').value;
+  const p = yanPozisyon(S.kuts, +$('cap').value, istenen);
+  yerlestir(p[0], p[1], p[2], -(+$('gs').value));
+});
+$('pick').addEventListener('click', e => { e.preventDefault(); setArmed(!S.armed); });
+$('depoKut').addEventListener('mousedown', e => { e.preventDefault(); setArmed(true); });
+$('depoKut').addEventListener('click', e => { e.preventDefault(); setArmed(true); });
+$('addC').addEventListener('click', () => yerlestir(0, 0));
+/* Bağ MUTLAKA kurulacak biçimde ekler.
+   Bağ ölçütü en yakın Kut'a olan 4B uzaklıktır: √(dx²+dy²+dw²) ≤ cap.
+   Bu yüzden yeni Kut, ağırlık merkezinden değil, EN DIŞTAKİ KUT'TAN
+   ölçülen bir uzaklığa konur ve w farkı da bütçeden düşülür.
+   (İlk sürüm merkeze göre yerleştiriyordu ve bağ kurmuyordu — test yakaladı.) */
+$('addR').addEventListener('click', () => {
+  const istenen = +$('wnew').value;
+  const p = yanPozisyon(S.kuts, +$('cap').value, istenen);
+  yerlestir(p[0], p[1], p[2]);
+  if (Math.abs(p[2] - istenen) > 1e-9){
+    $('pickState').textContent = 'w bağ için ' + p[2].toFixed(2) + '\'ye kırpıldı';
+  }
+});
+
+const cv4 = $('c4');
+cv4.addEventListener('mousedown', e => {
+  const r = cv4.getBoundingClientRect();
+  const wp = toWorld(e.clientX - r.left, e.clientY - r.top);
+  if (e.button === 2) return;
+  if (S.armed){ yerlestir(wp[0], wp[1]); return; }
+  /* var olanı sürükle */
+  let best = -1, bd = 1e9;
+  for (let i = 0; i < S.kuts.length; i++){
+    const d = Math.hypot(S.kuts[i].x-wp[0], S.kuts[i].y-wp[1]);
+    if (d < bd){ bd = d; best = i; }
+  }
+  if (best >= 0 && bd < 12/S.view.sc*1.4){ S.drag = best; snapshot(); }
+});
+window.addEventListener('mousemove', e => {
+  if (S.drag < 0) return;
+  const r = cv4.getBoundingClientRect();
+  const wp = toWorld(e.clientX - r.left, e.clientY - r.top);
+  S.kuts[S.drag].x = wp[0]; S.kuts[S.drag].y = wp[1];
+});
+window.addEventListener('mouseup', () => {
+  if (S.drag >= 0){ S.drag = -1; resetCons(); }
+});
+/* Çift tıklama: silahlanmaya gerek yok, doğrudan Kut ekler.
+   400 ms guard — tek tıkla yerleştirmenin hemen ardından ikinci Kut eklenmesin. */
+cv4.addEventListener('dblclick', e => {
+  if (performance.now() - sonEkleme < 400) return;
+  const r = cv4.getBoundingClientRect();
+  const wp = toWorld(e.clientX - r.left, e.clientY - r.top);
+  yerlestir(wp[0], wp[1]);
+});
+cv4.addEventListener('contextmenu', e => {
+  e.preventDefault();
+  const r = cv4.getBoundingClientRect();
+  const wp = toWorld(e.clientX - r.left, e.clientY - r.top);
+  let best = -1, bd = 1e9;
+  for (let i = 0; i < S.kuts.length; i++){
+    const d = Math.hypot(S.kuts[i].x-wp[0], S.kuts[i].y-wp[1]);
+    if (d < bd){ bd = d; best = i; }
+  }
+  if (best >= 0 && bd < 12/S.view.sc*1.4){ snapshot(); S.kuts.splice(best,1); resetCons(); }
+});
+
+/* 3B kamera */
+(function(){
+  const cv = $('c3'); let dg = false, lx = 0, ly = 0;
+  cv.addEventListener('mousedown', e => { dg = true; lx = e.clientX; ly = e.clientY; });
+  window.addEventListener('mouseup', () => { dg = false; });
+  window.addEventListener('mousemove', e => {
+    if (!dg) return;
+    S.cam.az -= (e.clientX-lx)*0.007;
+    S.cam.el = Math.max(-1.45, Math.min(1.45, S.cam.el + (e.clientY-ly)*0.007));
+    lx = e.clientX; ly = e.clientY;
+  });
+  cv.addEventListener('wheel', e => {
+    e.preventDefault();
+    S.cam.d = Math.max(5, Math.min(40, S.cam.d*(1 + Math.sign(e.deltaY)*0.08)));
+  }, { passive:false });
+})();
+
+function renderTests(){
+  const T = selfTests(), box = $('tests');
+  box.innerHTML = ''; let bad = 0;
+  for (const t of T){
+    if (!t.ok) bad++;
+    const d = document.createElement('div');
+    d.innerHTML = '<span>' + t.n + '</span><span class="s ' + (t.ok?'pass':'fail') + '">'
+                + (t.ok?'PASS':'FAIL') + '</span>';
+    d.title = 'sapma = ' + (+t.e).toExponential(3);
+    box.appendChild(d);
+  }
+  $('testsum').innerHTML = '<span class="' + (bad?'fail':'pass') + '">'
+                         + (T.length-bad) + '/' + T.length + '</span>';
+  const b = $('banner');
+  if (bad){ b.style.background = '#3b1418'; b.style.color = '#fca5a5';
+            b.textContent = bad + ' SINAMA BAŞARISIZ — sonuçlara güvenmeyin'; }
+  else { b.style.background = '#0d2f26'; b.style.color = '#6ee7b7';
+         b.textContent = '✓ ' + T.length + ' öz-sınamanın tamamı geçti'; }
+}
+
+/* açılış */
+bindLabels(); noteUpdate(); buildNpad(); layoutNoteUpdate(); buildKatalog();
+setArmed(false); setDir(1); renderTests();
+requestAnimationFrame(frame);
+setTimeout(function(){
+  if (kareSayisi === 0){
+    fallback = setInterval(function(){ frame(performance.now()); }, 33);
+    console.warn('rAF ateşlenmedi; 30 fps zamanlayıcıya düşüldü.');
+  }
+}, 1000);
+</script>
+</body>
+</html>

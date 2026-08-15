@@ -16,9 +16,9 @@
 | **T-10** | Yoğunluk↔basınç dil birleştirmesi (T-1'den doğdu) | 🟠 İç tutarlılık | ✅ TAŞINDI — 2.4.2 ilke kutusu + 2.6/2.4.4/3.4.6/7.4 düzenlendi | **2.4.2, 2.6, 2.4.4** ✓ |
 | **T-2** | Lorentz İhlali Duvarı | 🔴 Kritik | ✅ TAŞINDI — İtiraz 5 (4.2.15) + 5.1.5 Ayırt Edici Kontroller & Yanlışlanma Taahhüdü + 7.4 md.9 + 7.5 satır 1b | **4.2.15** ✓ **5.1.5** ✓ |
 | **T-3** | Zarf Körlüğü Paradoksu | 🔴 Kritik | ✅ Teori tarafı taşındı (3.4.5); deney tarafı Kısım 5 yazımına ertelendi | **3.4.5** ✓ + 5.1 (ertelendi) |
-| **T-4** | Proton Yüzey Hızı ve $c$ Sınırı | 🟠 İç tutarlılık | ✅ TAŞINDI — Postülat 5 notu + Ek A yeniden yazıldı ($\sqrt2 c$ türetimi, $\Sigma$) + 7.4 md.10; Ek B revizyonu T-5'e devredildi | **Postülat 5** + **Ek A** ✓ |
+| **T-4** | Proton Yüzey Hızı ve $c_0$ Sınırı | 🟠 İç tutarlılık | ✅ TAŞINDI — Postülat 5 notu + Ek A yeniden yazıldı ($\sqrt2 c_0$ türetimi, $\Sigma$) + 7.4 md.10; Ek B revizyonu T-5'e devredildi | **Postülat 5** + **Ek A** ✓ |
 | **T-5** | Ortamın Kütleçekimsel Muafiyeti | 🟠 İç tutarlılık | ✅ TAŞINDI — Postülat 1 teorem dili + Ek B yeniden yapılandırıldı (B.1–B.4) + 7.4 md.10 güncellendi | **Postülat 1** + **Ek B** ✓ |
-| **T-6** | Bell Deneyleri ve $v_m$ Kurtarması | 🟠 İç tutarlılık | ✅ TAŞINDI — $v_m=c\sqrt{\Sigma/P_0}$ özdeşleştirmesi; 2.10.1 + Ek A.3 + 7.4 md.6/10-i + 7.5 satır 8 güncellendi | **2.10.1** ✓ + **Ek A.3** ✓ |
+| **T-6** | Bell Deneyleri ve $v_m$ Kurtarması | 🟠 İç tutarlılık | ✅ TAŞINDI — $v_m=c_0\sqrt{\Sigma/P_0}$ özdeşleştirmesi; 2.10.1 + Ek A.3 + 7.4 md.6/10-i + 7.5 satır 8 güncellendi | **2.10.1** ✓ + **Ek A.3** ✓ |
 | **T-7** | Karanlık Maddenin Diğer Kanıtları | 🟡 Kabul edilmiş | ✅ TAŞINDI — "görünmez sirkülasyon kuyuları" ilkesi; yeni 3.7.4 (4 alt bölüm) + 3.7.1 dil netleştirmesi + 7.4 md.4 + 7.5 satır 10 + EDITOR_NOTLARI | **3.7.4** ✓ + **7.4.4** ✓ |
 | **T-8** | Nicel Boşluklar ve Serbest Parametreler | 🟡 Kabul edilmiş | ✅ TAŞINDI — yeni Ek C (21 satırlık envanter + C.1 dürüst sayım); 7.4.1–2 yeniden yazıldı; $\Xi$ resmen adlandı; 3.10/6.2.8 atıfları; $\eta_z\equiv\eta_E$ birleştirildi | **Ek C** ✓ + **7.4.1–2** ✓ |
 | **T-9** | Deney Verilerinin Yayımlanmaması | 🟡 Kabul edilmiş | ⏸ ERTELENDİ (yazar kararı, 26.07.2026) — deney yazımı, kitabın konu yazımı tamamlandıktan sonra ayrı bir yoğun çalışma fazı olarak yapılacak; onlarca deney + sonuç eklenecek | **Kısım 5** (tümü) |
@@ -97,7 +97,7 @@ Teleskop tüpü suyla doldurulursa ($n=1{,}33$, ışık %25 yavaşlar) sapma aç
 Akan su içinde ışık, suyun hızının tamamını değil **$1-1/n^2$** kesrini alır (su için 0,437; Fizeau ~0,48±0,05, Michelson–Morley 1886: 0,434±0,020 ölçtü). Zeeman bunu farklı tüp uzunlukları ve dalga boylarıyla doğruladı: katsayı **uzunluktan bağımsız**, $n$'ye bağlı ve dispersiyon düzeltmesiyle birlikte doğru. Yani ortamın ışığı sürüklemesi ne tam ne sıfır; **malzemenin kırılma indisine kilitli** nicel bir kesirdir.
 
 **(e) Michelson–Morley 1887 + modern rezonatörler.**
-Beklenen saçak kayması 0,4; ölçülen < 0,02. Modern optik rezonatör versiyonları yönsel $\Delta c/c$ farkını $10^{-17}$–$10^{-18}$ düzeyinde dışlar. (Bu sütun teorinin zaten açıkladığını iddia ettiği sütundur — ama cevap diğer dördünü bozmadan bunu korumalıdır.)
+Beklenen saçak kayması 0,4; ölçülen < 0,02. Modern optik rezonatör versiyonları yönsel $\Delta c_0/c_0$ farkını $10^{-17}$–$10^{-18}$ düzeyinde dışlar. (Bu sütun teorinin zaten açıkladığını iddia ettiği sütundur — ama cevap diğer dördünü bozmadan bunu korumalıdır.)
 
 ## 2. Kıskacın mantıksal yapısı
 
@@ -124,7 +124,7 @@ Bu sorunun her cevabı bir modeldir ve her modelin beş sütunda karnesi çıkar
 |---|---|:---:|:---:|:---:|:---:|
 | **A — Tam vektör relaksasyonu** | Zarf, Zerre'nin hız vektörünü kendi çerçevesine çeker (akıntı taşır) | ✅ | ❌ silinir | — | ❌ tam sürükleme (1) öngörür, ölçülen 0,44 |
 | **B — Saf balistik (relaksasyon yok)** | Ortam hıza karışmaz | ❌ zarf işlevsiz; ayrıca 2.4.1'in kavrama ilkesiyle çelişir | ✅ | ✅ | ❌ sıfır sürükleme öngörür |
-| **C — Yalnız sürat relaksasyonu** | Sürat yerel ortama göre $c$'ye oturur, doğrultu balistik korunur | ✅ | ✅ | ✅ | ❌ akan suda **tam** sürükleme (1) öngörür — çapraz akıntıda mermi yönü değişmeden sürat vektörü su çerçevesine kilitlenemez; kilitleniyorsa katsayı 1 çıkar |
+| **C — Yalnız sürat relaksasyonu** | Sürat yerel ortama göre $c_0$'ye oturur, doğrultu balistik korunur | ✅ | ✅ | ✅ | ❌ akan suda **tam** sürükleme (1) öngörür — çapraz akıntıda mermi yönü değişmeden sürat vektörü su çerçevesine kilitlenemez; kilitleniyorsa katsayı 1 çıkar |
 | **D — Sonlu relaksasyon uzunluğu $L_r$** | Vektör, $L_r$ ölçeğinde ortama uyum sağlar ($L_{Fizeau} \ll L_r \ll L_{zarf}$ seçilirse a-e uzlaşır gibi görünür) | ✅ | ⚠️ | ⚠️ | ❌ **Zeeman'a takılır:** katsayı uzunluğa değil $n$'ye bağlı ölçüldü; ayrıca yoğun suda relaksasyonun seyreltik zarftakinden *yavaş* olması gerekir — fiziksel olarak ters |
 
 **Tablonun acımasız özeti:** Dört doğal model de en az bir sütunda nicel olarak çarpıyor ve hepsinin ortak çarptığı yer **Fizeau katsayısıdır.** $1-1/n^2$, herhangi bir "ortam ışığı taşır/taşımaz" ikiliğinin üretemediği, *malzeme indisine kilitli* bir kesirdir. (Standart fizikte bu kesir, hız toplama formülünün birinci mertebe açılımı olarak tek satırda çıkar — kıskacın göreliliği doğurmasının nedeni budur.)
@@ -140,7 +140,7 @@ Yazılacak 3.4.6 bölümü, önerdiği mekanizmanın şu altı kalemi **aynı pa
 | 3 | Günlük sapma | 0,32″·cos φ | Rutin ölçülüyor |
 | 4 | Airy koşulu | Su dolu teleskopta açı değişimi = 0 | Ölçüm: sıfır |
 | 5 | Fizeau katsayısı | $1-1/n^2$ (+Zeeman dispersiyon terimi), uzunluktan bağımsız | ±%5 |
-| 6 | M&M / rezonatör | Yönsel $\Delta c/c$ | $<10^{-17}$ |
+| 6 | M&M / rezonatör | Yönsel $\Delta c_0/c_0$ | $<10^{-17}$ |
 
 **Ek kısıt (astrometrik):** Zarf gradyanlıysa (Rampa), içinden geçen yıldız ışığı kırılır. Bu kırılma yıldız konumlarını bakış doğrultusuna ve mevsime bağlı olarak sistematik kaydırırdı; Gaia'nın µas hassasiyetli, tüm gökyüzü tutarlı astrometrisi buna çok dar bir üst sınır koyar. Rampa profili önerilecekse bu bükme bütçesi de hesaplanmalıdır.
 
@@ -177,7 +177,7 @@ Yazarın S1 cevabı, Tur 1 tablosundaki **C modelinin ta kendisidir** ve bu çok
 | Yıllık sapma 20,49″ | ✅ **Geçer.** Doğrultu balistik korunur; sapma, Dünya'nın dış ortama göre hızının saf kinematik sonucu olarak aynen üretilir (yağmurda koşan adam). Zarfın varlığı doğrultuya dokunmaz. |
 | Günlük sapma 0,32″ | ✅ **Geçer.** Aynı kinematik; zarfın Ay'a kadar *birlikte dönmesi* (S4) doğrultuyu etkilemez, çünkü kavrama skalerdir — zarfın toplu hareketi Zerre'nin yönüne karışmaz. Tur 1'de "3.4.5 için ölümcül" denen tehdit **S1 cevabıyla kendiliğinden çözüldü.** |
 | Airy (su dolu teleskop) | ✅ **Geçer.** Sapma varışta zaten kodlu; teleskop içindeki ortam ne olursa olsun açı değişmez. |
-| M&M + rezonatörler | ✅ **Geçer.** Sürat yerel zarfa göre $c$'ye oturur; zarf laboratuvarla birlikte hareket ettiğinden laboratuvar çerçevesinde hız her yönde eşittir → sıfır sonuç. |
+| M&M + rezonatörler | ✅ **Geçer.** Sürat yerel zarfa göre $c_0$'ye oturur; zarf laboratuvarla birlikte hareket ettiğinden laboratuvar çerçevesinde hız her yönde eşittir → sıfır sonuç. |
 | **Fizeau $1-1/n^2$** | ❌ **Tek kalan engel.** Aşağıda tam açıklama. |
 
 **Not (gradyan bükmesi sapmayı bozmaz):** S1'deki "gradyan ölçüsünde kıvırma", Dünya çevresinde radyal simetriktir ve statiktir; yıldız konumlarını merceklenme benzeri şekilde kaydırabilir ama hıza bağlı, yılda bir dönen elips (sapma) üretmez/silmez. İki etki farklı imzalar taşır — bu, 3.4.6 yazılırken açıkça söylenmelidir.
@@ -190,7 +190,7 @@ Fizeau bir borudan **hızla su akıttı** (u ≈ 7 m/s) ve ışığı ikiye böl
 
 Üç aday cevap vardı:
 
-1. **Tam taşıma:** Su, ışığı nehirdeki sal gibi taşır → ışığın laboratuvar hızı $\frac{c}{n} + u$ olur. (Su için $c/n \approx 225.000$ km/s; buna 7 m/s'nin **tamamı** eklenir.)
+1. **Tam taşıma:** Su, ışığı nehirdeki sal gibi taşır → ışığın laboratuvar hızı $\frac{c}{n} + u$ olur. (Su için $c_0/n \approx 225.000$ km/s; buna 7 m/s'nin **tamamı** eklenir.)
 2. **Hiç taşımama:** Su aksa da akmasa da ışık aynı hızda gider → $\frac{c}{n}$.
 3. **Kısmi taşıma:** Arada bir değer.
 
@@ -206,9 +206,9 @@ Tuhaflık şurada: bu kesir malzemeden malzemeye **kırılma indisine kilitli** 
 
 ### 3c. Bu neden Evrenakı için problem?
 
-Kitabın 2.6'sı der ki: ışık suyun içinde, su moleküllerinin deplasmanıyla oluşmuş **ortak Deplasman Havuzu'nun** içinden geçer; hızı ($c/n$) o havuzun düşük Evrenakı yoğunluğunun dayattığı patinajla belirlenir.
+Kitabın 2.6'sı der ki: ışık suyun içinde, su moleküllerinin deplasmanıyla oluşmuş **ortak Deplasman Havuzu'nun** içinden geçer; hızı ($c_0/n$) o havuzun düşük Evrenakı yoğunluğunun dayattığı patinajla belirlenir.
 
-Şimdi su aksın. Havuzu yaratan şey su molekülleridir; moleküller akıntıyla gidiyorsa **havuz da onlarla birlikte gider.** Skaler kavrama ilkesi (S1) der ki: Zerre'nin sürati, *içinde bulunduğu yerel ortama göre* $c/n$'dir. Yerel ortam (havuz) $u$ hızıyla akıyorsa, laboratuvar hızı:
+Şimdi su aksın. Havuzu yaratan şey su molekülleridir; moleküller akıntıyla gidiyorsa **havuz da onlarla birlikte gider.** Skaler kavrama ilkesi (S1) der ki: Zerre'nin sürati, *içinde bulunduğu yerel ortama göre* $c_0/n$'dir. Yerel ortam (havuz) $u$ hızıyla akıyorsa, laboratuvar hızı:
 
 $$v_{lab} = \frac{c}{n} + u \times \mathbf{1} \quad \text{(tam taşıma, katsayı 1)}$$
 
@@ -222,7 +222,7 @@ Tarihte bu katsayıyı ilk türeten kişi Fresnel'dir (1818) ve mantığı **Evr
 
 Şimdi aynı cümleyi Evrenakı terimleriyle kurun:
 
-> Suyun içindeki etkin ortam iki bileşenden oluşur. **Arka plan Evrenakı'sı** su aksa da yerinde durur (onu su molekülleri üretmedi, evrenseldir). Moleküllerin deplasmanla **yeniden şekillendirdiği pay** (Deplasman Havuzu'nun yoğunluk *değişikliği*) moleküllere bağlıdır ve suyla birlikte akar. Zerre'nin sürati bu **karışık ortama** göre $c/n$'dir; dolayısıyla laboratuvar hızına suyun katkısı, akan payın ağırlığı kadardır.
+> Suyun içindeki etkin ortam iki bileşenden oluşur. **Arka plan Evrenakı'sı** su aksa da yerinde durur (onu su molekülleri üretmedi, evrenseldir). Moleküllerin deplasmanla **yeniden şekillendirdiği pay** (Deplasman Havuzu'nun yoğunluk *değişikliği*) moleküllere bağlıdır ve suyla birlikte akar. Zerre'nin sürati bu **karışık ortama** göre $c_0/n$'dir; dolayısıyla laboratuvar hızına suyun katkısı, akan payın ağırlığı kadardır.
 
 Eğer o ağırlığın $1-1/n^2$ olduğu, kitabın **kendi** havuz mekaniğinden (2.6'daki yoğunluk-patinaj ilişkisinden) türetilebilirse:
 
@@ -233,7 +233,7 @@ Eğer o ağırlığın $1-1/n^2$ olduğu, kitabın **kendi** havuz mekaniğinden
 
 Gösterilmesi gereken zincir şudur:
 
-1. 2.6 mekaniğinden: havuz yoğunluğu $\rho_{havuz}$ ile kırılma indisi $n$ arasındaki fonksiyonel bağ. (Kitapta nitel olarak var: düşük yoğunluk → patinaj → $c/n$. Nicel biçimi yazılmalı: $n = f(\rho_0/\rho_{havuz})$ mi, başka bir bağ mı?)
+1. 2.6 mekaniğinden: havuz yoğunluğu $\rho_{havuz}$ ile kırılma indisi $n$ arasındaki fonksiyonel bağ. (Kitapta nitel olarak var: düşük yoğunluk → patinaj → $c_0/n$. Nicel biçimi yazılmalı: $n = f(\rho_0/\rho_{havuz})$ mi, başka bir bağ mı?)
 2. Etkin ortamın "molekülle akan" payının ağırlığı = havuzun arka plana göre yoğunluk **değişiklik** payı.
 3. Bu ağırlığın $1-1/n^2$'ye eşit çıktığı. (Fresnel'de bu, esir yoğunluğunun $n^2$ ile orantılı sayılmasından çıkar: akan pay $=\frac{n^2-1}{n^2}=1-\frac{1}{n^2}$. Evrenakı'da yoğunluk-hız bağı *ters* yönlüdür — madde içinde yoğunluk düşüktür — bu yüzden türetim birebir kopya olamaz; işaret ve oran dikkatle kurulmalıdır. **Bu, türetimin asıl zorluğudur ve dürüstçe not edilmelidir.**)
 4. Rafine hedef (zorunlu değil ama güçlendirici): Zeeman'ın dispersiyon düzeltmesi $-\frac{\lambda}{n}\frac{dn}{d\lambda}$ teriminin de mekanikten çıkması.
@@ -258,7 +258,7 @@ Bölümün tek denklemi şudur:
 
 $$E_T = \frac{1}{2} m_z v^2 \ (\text{çizgisel}) + \frac{1}{2} I \omega^2 \ (\text{dönme})$$
 
-2.2.2'deki fotoelektrik denklemi de aynı yapıyı taşır: $\frac{1}{2}m_z(c^2 + k\,v_{cev}^2)$ — öteleme + dönme enerjisinin toplamı.
+2.2.2'deki fotoelektrik denklemi de aynı yapıyı taşır: $\frac{1}{2}m_z(c_0^2 + k\,v_{cev}^2)$ — öteleme + dönme enerjisinin toplamı.
 
 Bu denklem bir **korunum/muhasebe** ifadesidir: patinaj sırasında kaybolan çizgisel enerjinin nereye gittiğini söyler (spine gider). Ama iki bilinmeyeni ($v$ ve $\omega$) tek denkleme bağlar; **belirli bir yoğunlukta patinajın NE KADAR olacağını söyleyemez.** Benzetme: arabada enerji korunumu, frenlemede ısınan enerjinin kinetik kayba eşit olduğunu söyler; ama *ne kadar sert* frenleneceğini söyleyen şey sürtünme yasasıdır. 2.4.2'de sürtünme yasasının karşılığı yok.
 
@@ -274,7 +274,7 @@ Bu yasa kitabın hiçbir yerinde formül olarak yazılmamış. 2.4.1 nitel söyl
 
 **Ek B** (Kısım 1.3.4), asgari arka plan yoğunluğunu şöyle türetmişti:
 
-$$\rho_0 = \frac{P_0}{c^2} \quad \Longleftrightarrow \quad c^2 = \frac{P_0}{\rho_0}$$
+$$\rho_0 = \frac{P_0}{c^2} \quad \Longleftrightarrow \quad c_0^2 = \frac{P_0}{\rho_0}$$
 
 Bu, akustiğin **Newton–Laplace ses hızı formülünün** ta kendisidir: bir basınç darbesinin akışkandaki yayılma hızı $v=\sqrt{P/\rho}$. Üstelik 2.4.1 zaten ışık hızını sese benzetiyor (*"tıpkı sesin havadaki hızının Mach 1 olması gibi"*). Yani kitap, farkında olmadan iki ayrı yerde aynı yasayı ima etmiş:
 
@@ -282,17 +282,17 @@ Bu, akustiğin **Newton–Laplace ses hızı formülünün** ta kendisidir: bir 
 
 Alternatif aday:
 
-> **KY-2 (doğrusal):** $v/c = \rho/\rho_0$ — hız yoğunlukla doğru orantılı (Postülat 4'ün en yalın okuması).
+> **KY-2 (doğrusal):** $v/c_0 = \rho/\rho_0$ — hız yoğunlukla doğru orantılı (Postülat 4'ün en yalın okuması).
 
 İki yasa, havuz yoğunluğu $\rho_{havuz}$ için farklı $n$ bağları verir:
-- KY-1: $n = c/v = \sqrt{\dfrac{\rho_{havuz}/\rho_0}{P_{havuz}/P_0}}$ (havuzun hal denklemi de gerekir)
+- KY-1: $n = c_0/v = \sqrt{\dfrac{\rho_{havuz}/\rho_0}{P_{havuz}/P_0}}$ (havuzun hal denklemi de gerekir)
 - KY-2: $n = \rho_0/\rho_{havuz}$ (yalın; camda $n=1{,}5$ → havuz yoğunluğu arka planın 2/3'ü)
 
 **Öneri:** KY-1 tercih edilmeli; çünkü (a) Ek B onu zaten kullanmış — tutarlılık bedava, (b) hidrodinamik olarak doğal, (c) $P$ ve $\rho$'yu ayrı ayrı işin içine sokarak Fizeau türetimine gereken serbestliği veriyor. Ancak bu **yazarın kararıdır** — teoriye yeni bir postülat-altı yasa eklenmektedir ve kitapta açıkça ilan edilmelidir (gizli varsayım olarak kalmamalı).
 
 ## 4. Fizeau türetim programının denetimi: bir yol kapandı, bir yol açık
 
-**Kapanan yol — "dur-kalk" modeli:** "Zerre yolun bir kesrini arka planda $c$ ile, kalanını moleküle demirli havuz bölgelerinde yavaş gider" modelini nicel denetledim. Fresnel katsayısını üretebilmesi için havuz bölgelerinin yol kesrinin tam $n(n-1)$ olması gerekiyor; bu değer $n > 1{,}618$ için 1'i aşar (flint camı $n=1{,}75$, elmas $n=2{,}4$ için **imkânsız**) — oysa sürükleme katsayısı yüksek indisli katılarda da doğrulanmıştır (Jones 1972, dönen cam disk). **Bu yol yapısal olarak ölü; vakit harcanmamalı.**
+**Kapanan yol — "dur-kalk" modeli:** "Zerre yolun bir kesrini arka planda $c_0$ ile, kalanını moleküle demirli havuz bölgelerinde yavaş gider" modelini nicel denetledim. Fresnel katsayısını üretebilmesi için havuz bölgelerinin yol kesrinin tam $n(n-1)$ olması gerekiyor; bu değer $n > 1{,}618$ için 1'i aşar (flint camı $n=1{,}75$, elmas $n=2{,}4$ için **imkânsız**) — oysa sürükleme katsayısı yüksek indisli katılarda da doğrulanmıştır (Jones 1972, dönen cam disk). **Bu yol yapısal olarak ölü; vakit harcanmamalı.**
 
 **Açık yol — "desen/madde ayrımı" (deplasman geri-akışı):** Kilit fiziksel ayrım şu:
 - Havuzun **yoğunluk deseni** (deplasman deseni) moleküllere demirlidir → suyla birlikte $u$ hızıyla hareket eder.
@@ -363,7 +363,7 @@ Bunun için Tur 3/5'teki karar hâlâ bekliyor: **kavrama yasası KY-1 ($v=\sqrt
 ## 1. Kurulum (iki denklem)
 
 Arka plan (vakum) ve durgun ortam için KY-1:
-$$c=\sqrt{\frac{P_0}{\rho_0}}, \qquad \frac{c}{n}=\sqrt{\frac{P_m}{\rho_m}} \;\Longrightarrow\; \boxed{\frac{1}{n^2}=\frac{P_m}{P_0}\cdot\frac{\rho_0}{\rho_m}} \quad (*)$$
+$$c_0=\sqrt{\frac{P_0}{\rho_0}}, \qquad \frac{c}{n}=\sqrt{\frac{P_m}{\rho_m}} \;\Longrightarrow\; \boxed{\frac{1}{n^2}=\frac{P_m}{P_0}\cdot\frac{\rho_0}{\rho_m}} \quad (*)$$
 
 ## 2. İki bileşenli ortam (Tur 4, düzeltilmiş biçim)
 
@@ -415,7 +415,7 @@ Yani "düşük yoğunluk → patinaj → yavaşlama" mekanizması ile Fizeau'nun
 Fizeau sürüklemesi **pozitif ve ileri yönlüdür**. Pozitif sürükleme, ışığı taşıyan ortamda moleküllerle **birlikte hareket eden bir yoğunluk FAZLASI** gerektirir (denklem **). Eğer madde içi bir yoğunluk **açığı** (deplasman/vakum cebi) olsaydı, momentum ortalaması negatif çıkar, ışık geriye sürüklenirdi — ölçümün tersi. Test edildi (bkz. alternatif KY-2 aşağıda), başarısız.
 
 ### KY-2 neden kurtarmıyor?
-Doğrusal yasa $v/c=\rho/\rho_0$ (yani $\rho_m=\rho_0/n$, madde içi **düşük** yoğunluk — anlatıya uyar) denendi: bu durumda ortam bir açıktır, Fizeau sürüklemesi sıfır/negatif çıkar. **KY-2 anlatıya uyar ama Fizeau'da çöker.** Net takas:
+Doğrusal yasa $v/c_0=\rho/\rho_0$ (yani $\rho_m=\rho_0/n$, madde içi **düşük** yoğunluk — anlatıya uyar) denendi: bu durumda ortam bir açıktır, Fizeau sürüklemesi sıfır/negatif çıkar. **KY-2 anlatıya uyar ama Fizeau'da çöker.** Net takas:
 
 | Yasa | Madde-içi yoğunluk | Anlatıya (2.4.2/2.6) uyum | Fizeau $1-1/n^2$ |
 |---|---|:---:|:---:|
@@ -478,7 +478,7 @@ Tur 5'in "densifikasyon zorunlu, anlatı ters dönmeli" sonucu **iki gizli varsa
 
 **Hata 1 — Basınç sürekliliği ($P_m=P_0$) varsaydım.** Bunu "durgun sıvı, çevresiyle mekanik dengede aynı basınçtadır" diye gerekçelendirmiştim. Ama bu teoride madde-içi düşük basınç **pasif denge değil**, moleküllerin deplasmanla **aktif olarak** düşük tuttuğu bir cepdir (vakum cebi). Aktif tutulan bir bölgede basınç sürekliliği geçmez. Teori $P_m < P_0$ der. Benim $P_m=P_0$ varsayımım teorinin fiziğine aykırıydı.
 
-**Hata 2 — Yavaşlamayı Evrenakı yoğunluk *artışına* bağladım.** KY-1'i "yoğunluk artarsa hız düşer" diye okuyup, madde içi yoğunluğu yüksek saydım. Yazarın işaret ettiği karışıklık tam buydu. Doğrusu: KY-1'de $v=\sqrt{P/\rho}$, madde içinde **hem $P$ hem $\rho$ düşer**; ışık yavaşlar çünkü **$P$, $\rho$'dan daha hızlı düşer** ($P/\rho = c^2/n^2$). Düşük Evrenakı yoğunluğu + yavaş ışık, KY-1 ile **tam tutarlıdır.** Anlatıyı bozmaya gerek yokmuş.
+**Hata 2 — Yavaşlamayı Evrenakı yoğunluk *artışına* bağladım.** KY-1'i "yoğunluk artarsa hız düşer" diye okuyup, madde içi yoğunluğu yüksek saydım. Yazarın işaret ettiği karışıklık tam buydu. Doğrusu: KY-1'de $v=\sqrt{P/\rho}$, madde içinde **hem $P$ hem $\rho$ düşer**; ışık yavaşlar çünkü **$P$, $\rho$'dan daha hızlı düşer** ($P/\rho = c_0^2/n^2$). Düşük Evrenakı yoğunluğu + yavaş ışık, KY-1 ile **tam tutarlıdır.** Anlatıyı bozmaya gerek yokmuş.
 
 ## 3. Peki düşük yoğunlukta Fizeau sürüklemesi pozitif çıkar mı? (kritik kontrol)
 
@@ -507,7 +507,7 @@ Kontrol: bu tam da teorinin zaten kullandığı dildir — kitap ışığın mad
 
 Wake mekanizması sürüklemenin **işaretini** ve **varlığını** doğru veriyor. Katsayının **tam olarak** $1-1/n^2$ çıkması ise ayrı bir hesap:
 
-- Genel Fresnel argümanı şunu söyler: sürükleme katsayısı = ışığı yavaşlatan (ve madde ile birlikte hareket eden) etkin ortamın *payı* = $1-1/n^2$. Yavaşlatıcı etken (molekül wake'leri) madde ile birlikte hareket ettiği ve arka plan ($c$'yi belirleyen) durgun kaldığı için, katsayının bu değere oturması **beklenir ve makuldür.**
+- Genel Fresnel argümanı şunu söyler: sürükleme katsayısı = ışığı yavaşlatan (ve madde ile birlikte hareket eden) etkin ortamın *payı* = $1-1/n^2$. Yavaşlatıcı etken (molekül wake'leri) madde ile birlikte hareket ettiği ve arka plan ($c_0$'yi belirleyen) durgun kaldığı için, katsayının bu değere oturması **beklenir ve makuldür.**
 - Ancak bunu Evrenakı wake kinematiğinden **nicel olarak** ($f=1-1/n^2$, artı Zeeman dispersiyon terimi) türetmek, henüz **tamamlanmış bir hesap değildir.** İşaret ve mertebe doğru; kesin katsayı açık bir türetim görevidir.
 
 Bu, Tur 5'teki "bedel"den çok daha iyi bir konumdur: **çelişki yok, anlatı sağlam, mekanizma teorinin kendi dilinde, işaret doğru — kalan tek şey nicel türetimin tamamlanması.**
@@ -546,7 +546,7 @@ $$\bar{P}_m = P_0(1-\phi)$$
 ## 3. Türetim
 
 **Adım 1 — Kırılma indisi (KY-1 + G1 + G2):**
-$$\left(\frac{c}{n}\right)^2 = \frac{\bar{P}_m}{\bar{\rho}_m} = \frac{P_0(1-\phi)}{\rho_0} = c^2(1-\phi)$$
+$$\left(\frac{c}{n}\right)^2 = \frac{\bar{P}_m}{\bar{\rho}_m} = \frac{P_0(1-\phi)}{\rho_0} = c_0^2(1-\phi)$$
 $$\Longrightarrow \boxed{\frac{1}{n^2} = 1-\phi} \quad\Longrightarrow\quad \phi = 1-\frac{1}{n^2}$$
 
 Dikkat: burada ışık **düşük basınç** nedeniyle yavaşlıyor (yoğunluk ortalaması sabit, $\rho_0$). Bu, "düşük yoğunluk patinajı"ndan farklı ve **kütle-itim mekanizmasıyla aynı dilde**: her ikisi de düşük-basınç olgusudur.
@@ -624,7 +624,7 @@ Kurulum: ışık $+x$'te ilerliyor, molekül ortamı $+u$ ile aynı yönde akıy
 
 ## 3. Adım 1 — Molekül çerçevesinde ritim kayması (Doppler)
 
-Zerreler laboratuvarda $\Lambda$ aralığıyla, $V\approx c/n$ hızıyla gidiyor; lab frekansı $\omega = 2\pi V/\Lambda$. Ortamın molekülleri $u$ ile aynı yöne kaçtığı için, Zerreleri **daha seyrek** yakalar. Molekülün gördüğü ritim:
+Zerreler laboratuvarda $\Lambda$ aralığıyla, $V\approx c_0/n$ hızıyla gidiyor; lab frekansı $\omega = 2\pi V/\Lambda$. Ortamın molekülleri $u$ ile aynı yöne kaçtığı için, Zerreleri **daha seyrek** yakalar. Molekülün gördüğü ritim:
 $$\omega' = \omega\,\frac{V-u}{V} = \omega\left(1-\frac{u}{V}\right) \approx \omega\left(1-\frac{nu}{c}\right)$$
 
 Yani molekül çerçevesinde frekans kızıla kayar: $\displaystyle \delta\omega = \omega'-\omega = -\,\omega\,\frac{nu}{c}$.
@@ -634,7 +634,7 @@ Yani molekül çerçevesinde frekans kızıla kayar: $\displaystyle \delta\omega
 Zerre-molekül etkileşimi (yavaşlama) molekülün gördüğü ritme bağlıdır, lab ritmine değil. Dolayısıyla $n$, $\omega'$'de değerlenir:
 $$n(\omega') \approx n(\omega) + \frac{dn}{d\omega}\,\delta\omega = n - \frac{dn}{d\omega}\,\omega\,\frac{nu}{c}$$
 
-Zerre'nin molekül çerçevesine göre sürati $c/n(\omega')$:
+Zerre'nin molekül çerçevesine göre sürati $c_0/n(\omega')$:
 $$\frac{c}{n(\omega')} \approx \frac{c}{n}\left(1 + \frac{1}{n}\frac{dn}{d\omega}\,\omega\,\frac{nu}{c}\right) = \frac{c}{n} + \frac{\omega}{n}\frac{dn}{d\omega}\,u$$
 
 ## 5. Adım 3 — Laboratuvar hızı: sürat + entrainment sürüklemesi
@@ -714,7 +714,7 @@ Dürüst kayıt: sürüklenme mekanizması tek bir deneyle değil, birbirini kı
 | Günlük sapma | 0,32″·cos φ (Dünya'nın kendi dönüşünden) | Yön etkisi, zarfın dönüşünden **etkilenmemeli** |
 | Su dolu teleskop (Airy, 1871) | Tüp suyla dolunca sapma **değişmez** | Sapma yerel ortamda/zarf sınırında **üretilemez** |
 | Kısmi sürükleme (Fizeau, 1851; Zeeman, 1914) | Akan su ışığı hızının $1-1/n^2$'si kadar sürükler | Sürükleme ne tam ne sıfır; **kırılma indisine kilitli** |
-| Michelson–Morley (1887) ve modern rezonatörler | Sıfır; yönsel $\Delta c/c < 10^{-17}$ | Yerel ortam laboratuvarla **birlikte hareket etmeli** |
+| Michelson–Morley (1887) ve modern rezonatörler | Sıfır; yönsel $\Delta c_0/c_0 < 10^{-17}$ | Yerel ortam laboratuvarla **birlikte hareket etmeli** |
 
 Bu beş satır bir kıskaç kurar. Klasik dalga-esiri mantığında bir çıkış yoktur: birinci ve beşinci satır *tam sürüklenme* ister, ikinci ve üçüncü satır *hiç sürüklenme* ister, dördüncü satır ise *kısmi ve nicel* bir sürüklenme dayatır. Stokes'un (1845) tam sürüklenmeyi kurtarma girişimi, akışkan koşullarının aynı anda sağlanamaması nedeniyle çökmüştü; tarihsel çözüm Lorentz dönüşümlerine, yani göreliliğe giden yol oldu. Evrenakı, farklı ve mekanik bir çıkış sunar.
 
@@ -726,7 +726,7 @@ Bu tek ilke, kıskacın dört kolunu birden açar:
 
 * **Yıllık ve günlük sapma.** Zerre'nin doğrultusu balistik olarak korunduğundan, sapma tıpkı yağmurda koşan birinin şemsiyesini eğmesi gibi, saf kinematik bir sonuçtur. Dünya'nın dış ortama göre hızı (yörünge için ~30 km/s, dönüş için ~465 m/s) doğrultuya olduğu gibi yansır. Zarfın Dünya (hatta Ay'ı da içine alan gradyan) ile birlikte toplu hareketi, kavrama skaler olduğu için Zerre'nin yönüne karışmaz — bu yüzden zarfın varlığı sapmayı **silmez.**
 * **Airy'nin su dolu teleskobu.** Sapma, ışığın gözlemciye varış doğrultusunda zaten kodludur; teleskop içindeki ortam bu doğrultuyu değiştiremez. Skaler kavrama yalnızca tüp içindeki *sürati* düşürür, geliş *açısını* değil — bu yüzden açı değişmez.
-* **Michelson–Morley.** Sürat, yerel zarfa göre $c$'ye oturur; zarf laboratuvarla birlikte hareket ettiğinden, laboratuvar çerçevesinde ışık her yönde eşit hızlıdır. Sonuç sıfırdır.
+* **Michelson–Morley.** Sürat, yerel zarfa göre $c_0$'ye oturur; zarf laboratuvarla birlikte hareket ettiğinden, laboratuvar çerçevesinde ışık her yönde eşit hızlıdır. Sonuç sıfırdır.
 
 Geriye kıskacın tek sert kolu kalır: Fizeau'nun **kısmi** sürüklemesi. İşte teorinin nicel sınavı buradadır.
 
@@ -745,11 +745,11 @@ Su molekülleri, boru ve dış ortamın Evrenakı'sını topluca sürükleyemez;
 
 * *(Korunum)* Moleküller Evrenakı'yı yaratmaz/yok etmez, yalnızca iter. Hacimce ortalama yoğunluk sabittir: $\bar\rho_m=\rho_0$.
 * *(Basınç)* Moleküller, hacim kesri $\phi$ kadar yer kaplayan düşük-basınçlı deplasman cepleridir. Hacimce ortalama basınç: $\bar P_m = P_0(1-\phi)$.
-* *(Kavrama Yasası)* Zerre'nin bir ortamdaki sürati, o ortamın basınç-iletim hızıdır: $v=\sqrt{P/\rho}$ (Ek B'de $\rho_0=P_0/c^2$ olarak zaten kullanılan bağıntı; ışığın ses benzeri iletim doğasının, bkz. 2.4.1, nicel ifadesi).
+* *(Kavrama Yasası)* Zerre'nin bir ortamdaki sürati, o ortamın basınç-iletim hızıdır: $v=\sqrt{P/\rho}$ (Ek B'de $\rho_0=P_0/c_0^2$ olarak zaten kullanılan bağıntı; ışığın ses benzeri iletim doğasının, bkz. 2.4.1, nicel ifadesi).
 
 Kırılma indisi bu üçünden çıkar:
 
-$$\left(\frac{c}{n}\right)^2=\frac{\bar P_m}{\bar\rho_m}=\frac{P_0(1-\phi)}{\rho_0}=c^2(1-\phi)\;\;\Longrightarrow\;\; \frac{1}{n^2}=1-\phi$$
+$$\left(\frac{c}{n}\right)^2=\frac{\bar P_m}{\bar\rho_m}=\frac{P_0(1-\phi)}{\rho_0}=c_0^2(1-\phi)\;\;\Longrightarrow\;\; \frac{1}{n^2}=1-\phi$$
 
 Burada kritik bir kavramsal düzeltme vardır: **ışık, madde içinde düşük *basınç* nedeniyle yavaşlar** (ortalama yoğunluk sabit kalır). Bu, kütle-itim mekanizmasıyla tam aynı dildir — her ikisi de bir düşük-basınç olgusudur. (Bu, 2.4.2/2.6'da "düşük yoğunluk" olarak geçen ifadenin "düşük basınç" olarak inceltilmesini gerektirir; bkz. o bölümlerdeki not.)
 
@@ -776,7 +776,7 @@ Aynı Postülat 7, hem laboratuvarın neden esir rüzgârı görmediğini hem de
 
 Zeeman (1914–15), Fizeau katsayısının bir de renge bağlı ince bir düzeltme taşıdığını ölçmüştür. Zerre'nin bir **mermi akışı** oluşu (renk = atış ritmi, bkz. 2.3) bu terimi doğal kılar: akan ortam, mermi akışının ritmini Doppler ile kaydırır.
 
-Molekül ortamı $u$ ile aynı yöne aktığında, Zerreleri daha seyrek yakalar; molekül çerçevesindeki ritim kızıla kayar: $\omega'=\omega(1-nu/c)$. Zerre-molekül etkileşimi bu kaymış ritme göre gerçekleştiğinden, kırılma indisi $\omega'$'de değerlenir ve süratte ek bir pay doğar. Entrainment sürüklemesiyle birleştiğinde laboratuvar hızı:
+Molekül ortamı $u$ ile aynı yöne aktığında, Zerreleri daha seyrek yakalar; molekül çerçevesindeki ritim kızıla kayar: $\omega'=\omega(1-nu/c_0)$. Zerre-molekül etkileşimi bu kaymış ritme göre gerçekleştiğinden, kırılma indisi $\omega'$'de değerlenir ve süratte ek bir pay doğar. Entrainment sürüklemesiyle birleştiğinde laboratuvar hızı:
 
 $$v_{lab}=\frac{c}{n}+u\left[\,1-\frac{1}{n^2}+\frac{\omega}{n}\frac{dn}{d\omega}\,\right]$$
 
@@ -858,7 +858,7 @@ Bu, tam olarak **Lorentz Esir Teorisi (LET)** duruşudur. Ve bilinen bir gerçek
 
 ## 2. Bunun modern Lorentz testlerine cevabı (sağlam yarı)
 
-Modern testlerin en sıkı olanları — dönen optik rezonatörler, Michelson–Morley'in modern versiyonları — **yönsel anizotropiyi** ($c$'nin yöne göre farkını) $10^{-18}$ düzeyinde sınırlar. Evrenakı bu testlerde **sıfır anizotropi** öngörür, iki bağımsız sebeple:
+Modern testlerin en sıkı olanları — dönen optik rezonatörler, Michelson–Morley'in modern versiyonları — **yönsel anizotropiyi** ($c_0$'nin yöne göre farkını) $10^{-18}$ düzeyinde sınırlar. Evrenakı bu testlerde **sıfır anizotropi** öngörür, iki bağımsız sebeple:
 1. **Sürüklenme zarfı** (T-3): esir rüzgârı sıfır → yön farkı yok.
 2. **Lorentzcı deformasyon** (6.1): kalan her şey izotropik fiziksel ezilmeyle gizlenir — LET gözlemlenemezlik teoremi.
 
@@ -866,13 +866,13 @@ Yani Evrenakı, anizotropi testlerini **tam olarak SR'nin geçtiği gibi geçer.
 
 ## 3. Ayrışma nerede? Dinamik katman (Postülat 4)
 
-6.1 (satır 103) ayrışmanın yerini kendisi söylüyor: *"Cevap kinematik katmanda değil, **dinamik katmandadır (Postülat 4: Değişken $c$)**."* Yani Evrenakı SR'den kinematikte değil, $c$'nin zamansal/konumsal değişiminde ayrışır — bu da Kısım 5'in ölçmeyi hedeflediği skaler zaman-driftidir (T-3'teki skaler/yönsel ayrımıyla aynı).
+6.1 (satır 103) ayrışmanın yerini kendisi söylüyor: *"Cevap kinematik katmanda değil, **dinamik katmandadır (Postülat 4: Değişken $c_0$)**."* Yani Evrenakı SR'den kinematikte değil, $c_0$'nin zamansal/konumsal değişiminde ayrışır — bu da Kısım 5'in ölçmeyi hedeflediği skaler zaman-driftidir (T-3'teki skaler/yönsel ayrımıyla aynı).
 
 ## 4. AMA — gerçek zor nokta (dürüst yarı)
 
 Modern testler yalnızca anizotropiyi sınamıyor. İki sınıf daha var ve bunlar Evrenakı'nın skaler iddiasını **doğrudan** hedefler:
 
-- **Kennedy–Thorndike deneyleri:** *asimetrik* interferometre kullanır ve $c$'nin gözlemcinin hızına/zamanına bağlılığını arar. Modern kriyojenik versiyonlar yıllık $c$ modülasyonunu ~$10^{-16}$ düzeyinde sınırlar.
+- **Kennedy–Thorndike deneyleri:** *asimetrik* interferometre kullanır ve $c_0$'nin gözlemcinin hızına/zamanına bağlılığını arar. Modern kriyojenik versiyonlar yıllık $c_0$ modülasyonunu ~$10^{-16}$ düzeyinde sınırlar.
 - **SME izotropik katsayısı ($\tilde\kappa_{tr}$):** skaler/izotropik Lorentz ihlalini sınırlar (anizotropik kadar sıkı değil ama serbest de değil).
 
 **Kritik farkındalık:** Kısım 5'in asimetrik-kollu interferometresi, ana akım terminolojide **tam olarak bir Kennedy–Thorndike deneyidir.** Yani Kısım 5, modern KT deneylerinin ölçtüğü şeyi ölçüyor. Bu iki sonucu doğurur:
@@ -894,7 +894,7 @@ Bu, T-1 gibi temiz bir "çözüldü" değil; **yarısı sağlam çözüm + yarı
 
 1. **4.2.16'ya İtiraz 5:** Yukarıdaki 1–4'ün özeti. Evrenakı bir Lorentzcı esir teorisidir → anizotropi testlerini SR gibi geçer (6.1/6.2 referansı); ayrışma dinamik katmanda (skaler drift); bu drift KT/SME-izotropik sınırlarıyla nicel uzlaştırılmalı (açık iş).
 2. **5.1'e not:** Bu düzeneklerin ana akımdaki adı Kennedy–Thorndike sınıfıdır; öngörülen drift genliği mevcut KT sınırlarıyla karşılaştırılmalı (bkz. 7.4).
-3. **7.4'e yeni madde:** skaler $c$-drift genliğinin öngörülüp KT/SME-izotropik sınırlarının altında/üstünde olduğunun nicel gösterimi.
+3. **7.4'e yeni madde:** skaler $c_0$-drift genliğinin öngörülüp KT/SME-izotropik sınırlarının altında/üstünde olduğunun nicel gösterimi.
 4. **6.1/6.2'ye** küçük ileri referans: "Bu LET-eşdeğerliğinin modern Lorentz-ihlali testleri karşısındaki konumu için bkz. 4.2.16 İtiraz 5."
 
 ## 7. Yazara sorular (Tur 2)
@@ -913,7 +913,7 @@ Bu bir ayrıntı değil; **hangi büyüklüğün gözlemlenebilir olduğunu** de
 
 ## 2. Neden bu ayrım her şeyi değiştirir
 
-**Sıkıştırılamaz esir (klasik, 19. yy):** Yoğunluğu her yerde **sabittir** ($\rho=$ sabit). Bu ortamda ışık hızı $c=\sqrt{P/\rho}$ **değişemez.** Dolayısıyla tek gözlemlenebilir büyüklük, ortama göre **hareketinizdir** (esir rüzgârı). Michelson–Morley, Kennedy–Thorndike ve modern rezonatörler tam olarak bunu — tercihli çerçeveye göre hızı — $10^{-18}$ düzeyinde sıfırlar. **İşte bu testlerin öldürdüğü şey, sıkıştırılamaz esirdir** (ya da tam-sürükleme → yıldız sapması çelişkisi, T-1).
+**Sıkıştırılamaz esir (klasik, 19. yy):** Yoğunluğu her yerde **sabittir** ($\rho=$ sabit). Bu ortamda ışık hızı $c_0=\sqrt{P/\rho}$ **değişemez.** Dolayısıyla tek gözlemlenebilir büyüklük, ortama göre **hareketinizdir** (esir rüzgârı). Michelson–Morley, Kennedy–Thorndike ve modern rezonatörler tam olarak bunu — tercihli çerçeveye göre hızı — $10^{-18}$ düzeyinde sıfırlar. **İşte bu testlerin öldürdüğü şey, sıkıştırılamaz esirdir** (ya da tam-sürükleme → yıldız sapması çelişkisi, T-1).
 
 **Sıkıştırılabilir Evrenakı:** Yoğunluğu bir **dinamik alandır** ($\rho(\mathbf{r},t)$ değişir). Bu, sıkıştırılamaz esirin sahip **olmadığı** bir serbestlik derecesidir. Işık hızı yerel $\sqrt{P/\rho}$'ya bağlıdır — ve bu, "bir çerçeveye göre hızınız" değil, **yerel bir skaler alan değeridir.**
 
@@ -921,35 +921,35 @@ Bu bir ayrıntı değil; **hangi büyüklüğün gözlemlenebilir olduğunu** de
 
 Modern Lorentz-ihlali testleri ve SME parametrizasyonu, özünde **sabit bir tercihli-çerçeve arka planına göre hareketi** (ya da sabit-katsayılı bir ihlali) sınar. Bunların hepsi bir **"hareket/rüzgar"** gözlemlenebiliridir.
 
-Evrenakı'nın çekirdek öngörüsü ise hareket değil, **ortamın kendi yoğunluk alanının değişmesidir.** İki gözlemci düşünün, ikisi de yerel ortama göre **hareketsiz** (rüzgar sıfır): biri yoğun kozmik bölgede, diğeri seyrek bölgede. Sıkıştırılamaz esirde ikisi aynı $c$'yi görür (yoğunluk sabit). Sıkıştırılabilir Evrenakı'da **farklı $c$ görürler** — çünkü yerel $\rho$ farklıdır. Bu fark, *hiçbir harekete* bağlı değildir; ortamın halinden doğar.
+Evrenakı'nın çekirdek öngörüsü ise hareket değil, **ortamın kendi yoğunluk alanının değişmesidir.** İki gözlemci düşünün, ikisi de yerel ortama göre **hareketsiz** (rüzgar sıfır): biri yoğun kozmik bölgede, diğeri seyrek bölgede. Sıkıştırılamaz esirde ikisi aynı $c_0$'yi görür (yoğunluk sabit). Sıkıştırılabilir Evrenakı'da **farklı $c_0$ görürler** — çünkü yerel $\rho$ farklıdır. Bu fark, *hiçbir harekete* bağlı değildir; ortamın halinden doğar.
 
 Dolayısıyla:
 - **Hareket/anizotropi testleri** ($10^{-18}$): Evrenakı sıfır öngörür (sürüklenme zarfı rüzgârı sıfırlar + 6.1 Lorentzcı deformasyon). **Geçilir — hem de daha temiz**, çünkü Evrenakı'nın imzası zaten bu kategoride değil.
-- **Evrenakı'nın gerçek imzası** (yoğunluk-alanı kaynaklı $c$ değişimi), bu testlerin ölçtüğü *hareket* büyüklüğünden **kategorik olarak farklıdır.**
+- **Evrenakı'nın gerçek imzası** (yoğunluk-alanı kaynaklı $c_0$ değişimi), bu testlerin ölçtüğü *hareket* büyüklüğünden **kategorik olarak farklıdır.**
 
 Yani "Lorentz testleri esiri çürüttü, öyleyse Evrenakı'yı da çürütür" çıkarımı **geçersizdir:** o testler *sıkıştırılamaz* esiri çürüttü; Evrenakı'nın ayırt edici özelliği tam da sıkıştırılabilir olmasıdır ve imzası başka bir gözlemlenebilirdir.
 
 ## 4. Dürüst yarı (küçüldü ama kalmadı değil)
 
 Sıkıştırılabilirlik, etkiyi doğru kategoriye taşır ("temel sabitlerin/ortamın zamansal değişimi"), ama tümüyle sınırsız kılmaz:
-- **Optik saatler ve $\alpha$-değişim aramaları:** Temel sabitlerin zamanla değişimini ~$10^{-18}$/yıl düzeyinde sınırlar. Evrenakı'nın yoğunluk-kaynaklı $c(t)$ driftinin genliği bu sınırların altında olmalı (ya da onları test eden bir öngörü olarak sunulmalı).
-- **Gözlemlenebilirlik inceliği:** Eğer tüm yerel fizik (cetveller, saatler, atomik geçişler) yerel $\sqrt{P/\rho}$ ile birlikte ölçekleniyorsa, **ortak-mod (common-mode)** bir $c$-drifti görünmez olabilir ("cetvelin kendisi de esniyorsa" — populer_06). Bu yüzden Kısım 5 **diferansiyel/asimetrik** bir düzenek kullanır: ölçeklenmeleri farklı olan iki yolu karşılaştırır. Bu inceliğin (neyin ölçeklenip neyin ölçeklenmediğinin) açıkça gösterilmesi, teorinin ödevidir.
+- **Optik saatler ve $\alpha$-değişim aramaları:** Temel sabitlerin zamanla değişimini ~$10^{-18}$/yıl düzeyinde sınırlar. Evrenakı'nın yoğunluk-kaynaklı $c_0(t)$ driftinin genliği bu sınırların altında olmalı (ya da onları test eden bir öngörü olarak sunulmalı).
+- **Gözlemlenebilirlik inceliği:** Eğer tüm yerel fizik (cetveller, saatler, atomik geçişler) yerel $\sqrt{P/\rho}$ ile birlikte ölçekleniyorsa, **ortak-mod (common-mode)** bir $c_0$-drifti görünmez olabilir ("cetvelin kendisi de esniyorsa" — populer_06). Bu yüzden Kısım 5 **diferansiyel/asimetrik** bir düzenek kullanır: ölçeklenmeleri farklı olan iki yolu karşılaştırır. Bu inceliğin (neyin ölçeklenip neyin ölçeklenmediğinin) açıkça gösterilmesi, teorinin ödevidir.
 
 ## 5. Düzeltilmiş iki katmanlı sonuç (Tur 1'e göre güçlendi)
 
 | Katman | Tur 1 | Tur 2 (sıkıştırılabilirlikle) |
 |---|---|---|
 | Anizotropi/hareket testleri ($10^{-18}$) | ✅ Geçilir (LET) | ✅ Geçilir **+ kategorik bağışıklık**: Evrenakı'nın imzası zaten hareket değil |
-| Skaler $c$ değişimi | ⚠️ KT sınırıyla çelişebilir | ⚠️→🟢 Doğru kategori: "ortamın zamansal değişimi"; optik-saat/$\alpha$ sınırlarının altında kalma + ortak-mod gözlemlenebilirlik ödevi |
+| Skaler $c_0$ değişimi | ⚠️ KT sınırıyla çelişebilir | ⚠️→🟢 Doğru kategori: "ortamın zamansal değişimi"; optik-saat/$\alpha$ sınırlarının altında kalma + ortak-mod gözlemlenebilirlik ödevi |
 
-**Ana kazanım:** Tur 1'de "Kısım 5 bir Kennedy–Thorndike deneyidir, mevcut sıfırlarla çelişebilir" demiştim. Sıkıştırılabilirlik bunu düzeltir: KT, *hareket kaynaklı* $c$ değişimini sınar; Evrenakı'nın öngördüğü *yoğunluk kaynaklı* değişim farklı bir büyüklüktür. Yine de her ikisi de asimetrik interferometrede kayma ürettiği için, öngörü genliği sayısal verilip **hangi sınıf sinyal olduğu** (hareket mi, yoğunluk mu; hangi zaman ölçeğinde) ayrıştırılmalıdır.
+**Ana kazanım:** Tur 1'de "Kısım 5 bir Kennedy–Thorndike deneyidir, mevcut sıfırlarla çelişebilir" demiştim. Sıkıştırılabilirlik bunu düzeltir: KT, *hareket kaynaklı* $c_0$ değişimini sınar; Evrenakı'nın öngördüğü *yoğunluk kaynaklı* değişim farklı bir büyüklüktür. Yine de her ikisi de asimetrik interferometrede kayma ürettiği için, öngörü genliği sayısal verilip **hangi sınıf sinyal olduğu** (hareket mi, yoğunluk mu; hangi zaman ölçeğinde) ayrıştırılmalıdır.
 
 ## 6. Düzeltilmiş öneri — İtiraz 5'in omurgası
 
 İtiraz 5 artık şu üç adımda kurulacak:
 1. **Ayrım:** Lorentz testleri *sıkıştırılamaz* esiri (hareket/rüzgar gözlemlenebilirini) çürütür; Evrenakı sıkıştırılabilirdir.
 2. **Anizotropi bağışıklığı:** Evrenakı yön testlerinde sıfır öngörür (zarf + LET deformasyonu, 6.1/6.2); imzası zaten bu kategoride değildir.
-3. **Gerçek imza ve dürüst ödev:** Ayrışma, yoğunluk-alanı kaynaklı $c$ değişimindedir (Postülat 4); bu, optik-saat/$\alpha$-değişim sınırlarıyla nicel uzlaştırılmalı ve ortak-mod gözlemlenebilirlik açıkça kurulmalıdır (Kısım 5 diferansiyel tasarımı).
+3. **Gerçek imza ve dürüst ödev:** Ayrışma, yoğunluk-alanı kaynaklı $c_0$ değişimindedir (Postülat 4); bu, optik-saat/$\alpha$-değişim sınırlarıyla nicel uzlaştırılmalı ve ortak-mod gözlemlenebilirlik açıkça kurulmalıdır (Kısım 5 diferansiyel tasarımı).
 
 ## 7. Tur 3 gündemi
 Bu güçlendirilmiş çerçeveyi onaylarsan İtiraz 5 taslağını yazıp 4.2.16'ya, kısa notu 5.1'e, açık nicel kalemi 7.4'e taşırım. (S2 sorusu hâlâ geçerli: skaler drift genliği için elde mertebe var mı? Yoksa 7.4'e "nicel açık iş" yazılır — ama artık "çürütülme tehdidi" değil, "ayırt edici öngörü" statüsünde.)
@@ -966,18 +966,18 @@ Denedim. İlgili tüm yayımlanmış ölçüm sınıflarını taradım. Sonucu d
 
 | Ölçüm sınıfı | Ne sınar | Sonuç | Duyarlılık |
 |---|---|---|---|
-| Optik saat karşılaştırmaları ($\alpha$-drift; Rosenband 2008, sonrası) | Temel sabitlerin zaman driftini ($\dot\alpha/\alpha$, dolayısıyla $\dot c/c$) | **Değişim YOK** | ~$10^{-18}$/yıl |
-| Kennedy–Thorndike (modern kriyojenik) | $c$'nin hıza/zamana bağlılığı | **Değişim YOK** | ~$10^{-16}$ |
-| Dönen optik rezonatör (Herrmann 2009, Eisele 2009) | $c$ anizotropisi | **Değişim YOK** | ~$10^{-18}$ |
+| Optik saat karşılaştırmaları ($\alpha$-drift; Rosenband 2008, sonrası) | Temel sabitlerin zaman driftini ($\dot\alpha/\alpha$, dolayısıyla $\dot c_0/c_0$) | **Değişim YOK** | ~$10^{-18}$/yıl |
+| Kennedy–Thorndike (modern kriyojenik) | $c_0$'nin hıza/zamana bağlılığı | **Değişim YOK** | ~$10^{-16}$ |
+| Dönen optik rezonatör (Herrmann 2009, Eisele 2009) | $c_0$ anizotropisi | **Değişim YOK** | ~$10^{-18}$ |
 | Kuazar absorpsiyon çizgileri (Webb vd.) | Kozmolojik $\alpha$ değişimi | Tartışmalı/doğrulanmamış | ~$10^{-6}$ |
 
-**Kritik ve dürüst tespit:** Bu ölçümler Evrenakı'ya "paralel bir değişim" **göstermiyor** — tam tersine **sabitlik** gösteriyorlar, hem de olağanüstü hassasiyetle. Yani bunları "değişken $c$'yi doğrulayan ölçümler" olarak gösteremem; bu **yanlış** olur. Onlar doğrulama değil, **kısıt**tır.
+**Kritik ve dürüst tespit:** Bu ölçümler Evrenakı'ya "paralel bir değişim" **göstermiyor** — tam tersine **sabitlik** gösteriyorlar, hem de olağanüstü hassasiyetle. Yani bunları "değişken $c_0$'yi doğrulayan ölçümler" olarak gösteremem; bu **yanlış** olur. Onlar doğrulama değil, **kısıt**tır.
 
 ## 2. Bu null sonuçlar Evrenakı için ne anlama gelir?
 
 İki yönlü:
 - **İyi haber:** Anizotropi null'ları Evrenakı'yı çürütmez — çünkü (Tur 2) Evrenakı'nın imzası anizotropi/hareket değil. Bu sütun sıkıştırılabilirlik + zarf + LET ile zaten geçiliyor.
-- **Zor haber:** Optik saat null'ları ($\dot c/c < 10^{-18}$/yıl) Evrenakı'nın **skaler $c$-drifti** için bir **tavan** koyar. Evrenakı bu tavanla ancak driftin çok küçük olması hâlinde uzlaşır.
+- **Zor haber:** Optik saat null'ları ($\dot c_0/c_0 < 10^{-18}$/yıl) Evrenakı'nın **skaler $c_0$-drifti** için bir **tavan** koyar. Evrenakı bu tavanla ancak driftin çok küçük olması hâlinde uzlaşır.
 
 ## 3. Asıl gerilim (bunu net söylemeliyim)
 
@@ -993,11 +993,11 @@ Optik saatler $10^{-18}$'de hiçbir şey görmediyse, onlardan milyar kat daha k
 Null'ları "doğrulama" diye sunmak yerine, teoriyi doğru zemine oturtmak:
 
 1. **Kozmik çerçeveyi CMB çerçevesine bağla.** CMB dipolü, Güneş sisteminin CMB'ye göre ~370 km/s hareketini gösteren **gerçek, yayımlanmış, tartışmasız** bir ölçümdür. Evrenakı'nın "kozmik durgun çerçevesi" = CMB çerçevesi denilebilir. Bu, çerçeveyi *ad hoc* olmaktan çıkarır ve teoriye somut bir çapa verir. (Ve bu hareket rüzgar üretmez — zarf + LET perdeler; anizotropi null'larıyla tutarlı.)
-2. **Değişken $c$'yi öncelikle astrofiziksel/kozmolojik ölçeğe yerleştir** (galaktik gradyanlar, merceklenme, SN 1987A güzergâhı) — orada sınırlar gevşek ve olgu doğal. Masaüstü/laboratuvar iddiasını öne çıkarma.
+2. **Değişken $c_0$'yi öncelikle astrofiziksel/kozmolojik ölçeğe yerleştir** (galaktik gradyanlar, merceklenme, SN 1987A güzergâhı) — orada sınırlar gevşek ve olgu doğal. Masaüstü/laboratuvar iddiasını öne çıkarma.
 3. **Masaüstü tespit iddiasını (Kısım 5) dürüst açık kalem yap:** ya çok daha büyük bir *yerel* gradyan etkisi ölçülüyordur (kütle-yakını, kozmik değil), ya da optik-saat tavanının nasıl aşıldığı gösterilmelidir. Bu, teslim edilmesi gereken nicel iş.
 
 ## 5. SN 1987A "paralel" mi? Dürüst kayıt
-Hayır — kitabın 2.4.4'ü zaten kabul ediyor: 3 saatlik fark, ana akımda "şok çıkışı gecikmesi" (kaynaktan geç çıkış) ile açıklanır; değişken-$c$-yol-boyunca'ya gerek yoktur. Yani onu da "değişken $c$'yi doğrulayan ölçüm" diye kullanamam.
+Hayır — kitabın 2.4.4'ü zaten kabul ediyor: 3 saatlik fark, ana akımda "şok çıkışı gecikmesi" (kaynaktan geç çıkış) ile açıklanır; değişken-$c_0$-yol-boyunca'ya gerek yoktur. Yani onu da "değişken $c_0$'yi doğrulayan ölçüm" diye kullanamam.
 
 ## 6. Önerim (İtiraz 5 için)
 
@@ -1007,7 +1007,7 @@ Hayır — kitabın 2.4.4'ü zaten kabul ediyor: 3 saatlik fark, ana akımda "ş
 3. **CMB-çerçeve çapası** — kozmik frame somutlaşır.
 4. **Dürüst tavan:** optik-saat null'ları skaler drifti $<10^{-18}$/yıl sınırlar; teori bu tavanla uzlaşır (etki astrofiziksel ölçekte anlamlı, lab ölçeğinde küçük). **Masaüstü tespit iddiası açık nicel kalem** olarak 7.4'e yazılır.
 
-**Yapmayacağım:** "Mevcut ölçümler değişken $c$'yi doğruluyor / bizimle paralel" cümlesi. Bu, null sonuçları yanlış temsil eder ve ilk ciddi hakemde teoriye ağır zarar verir. Dürüst tavan çok daha güçlüdür.
+**Yapmayacağım:** "Mevcut ölçümler değişken $c_0$'yi doğruluyor / bizimle paralel" cümlesi. Bu, null sonuçları yanlış temsil eder ve ilk ciddi hakemde teoriye ağır zarar verir. Dürüst tavan çok daha güçlüdür.
 
 ## 7. Tur 4 gündemi
 Yazar bu dürüst çerçeveyi onaylarsa İtiraz 5 taslağını (6 maddedeki gibi) yazıp taşırım. Onaylamazsa hangi noktada ayrıldığımızı tartışırız.
@@ -1021,12 +1021,12 @@ Yazar bu dürüst çerçeveyi onaylarsa İtiraz 5 taslağını (6 maddedeki gibi
 **Kritik uyarı (kaydedilmeli):** "Kozmik değil, yerel Dünya vakumu" demek iddiayı **güvenli kılmaz — tersine, en sıkı kısıtlanmış bölgeye taşır.** Çünkü optik saat / Kennedy–Thorndike / rezonatör null'ları (~$10^{-18}$) tam olarak **yerel Dünya vakumunda** çalışır. Kozmik/astrofiziksel ölçek sınırların *gevşek* olduğu yerdir; yerel lab ise sınırların *en sıkı* olduğu yer.
 
 **Ayrım şart:**
-- "c ortama bağlıdır (camda $c/n$)" → **aşikâr doğru, tartışmasız**, ama yeni değil.
+- "c ortama bağlıdır (camda $c_0/n$)" → **aşikâr doğru, tartışmasız**, ama yeni değil.
 - "c yerel vakumda zamanla/koşulla değişir" → mevcut $10^{-18}$ null'larıyla **doğrudan yarışan** iddia.
 
-**Teorinin cevaplaması gereken gerçek fizik sorusu — ortak-mod gözlemlenebilirlik:** Eğer $c$ ile birlikte tüm yerel standartlar (atomik geçişler, uzunluklar) da $\sqrt{P/\rho}$ ile ölçekleniyorsa, "değişim" görünmez olur. Kısım 5'in bir sinyal görebilmesi için, $c$ ile **birlikte ölçeklenmeyen** bir referansa (mekanik kol boyu? elektronik zamanlama?) dayanması ve bunun neden ölçeklenmediğinin gösterilmesi gerekir. Bu, teorinin çözülmemiş çekirdek sorusudur; "ispatladık" demeden önce cevaplanmalıdır.
+**Teorinin cevaplaması gereken gerçek fizik sorusu — ortak-mod gözlemlenebilirlik:** Eğer $c_0$ ile birlikte tüm yerel standartlar (atomik geçişler, uzunluklar) da $\sqrt{P/\rho}$ ile ölçekleniyorsa, "değişim" görünmez olur. Kısım 5'in bir sinyal görebilmesi için, $c_0$ ile **birlikte ölçeklenmeyen** bir referansa (mekanik kol boyu? elektronik zamanlama?) dayanması ve bunun neden ölçeklenmediğinin gösterilmesi gerekir. Bu, teorinin çözülmemiş çekirdek sorusudur; "ispatladık" demeden önce cevaplanmalıdır.
 
-**Önerilen dürüst çerçeve (İtiraz 5 + Kısım 5):** Kısım 5 deneyleri, yerel vakumda $c$ sabitliğini **diferansiyel/asimetrik yöntemle sınayan**, Kennedy–Thorndike sınıfı düzeneklerdir. "İspat" değil, "sınama/kısıt" dili kullanılır. Öngörülen artık-değişimin mevcut null'larla ilişkisi (altında mı, onları test mi ediyor) ve ortak-mod gözlemlenebilirlik açıkça kurulur. Bu, "ispatladık" iddiasından çok daha savunulabilirdir.
+**Önerilen dürüst çerçeve (İtiraz 5 + Kısım 5):** Kısım 5 deneyleri, yerel vakumda $c_0$ sabitliğini **diferansiyel/asimetrik yöntemle sınayan**, Kennedy–Thorndike sınıfı düzeneklerdir. "İspat" değil, "sınama/kısıt" dili kullanılır. Öngörülen artık-değişimin mevcut null'larla ilişkisi (altında mı, onları test mi ediyor) ve ortak-mod gözlemlenebilirlik açıkça kurulur. Bu, "ispatladık" iddiasından çok daha savunulabilirdir.
 
 ---
 
@@ -1038,46 +1038,46 @@ Haklı bir talep. Her deney sınıfının **tam olarak hangi büyüklüğü** ö
 
 ## 1. Michelson–Morley (1887) + modern dönen rezonatörler → ANİZOTROPİ ölçer
 
-**Ne ölçer:** İki dik kolda ışığın gidiş-dönüş süresini, düzenek **dönerken** karşılaştırır. Bir kol diğerinden farklı $c$ görürse (esir rüzgârı), dönme sırasında saçaklar kayar.
+**Ne ölçer:** İki dik kolda ışığın gidiş-dönüş süresini, düzenek **dönerken** karşılaştırır. Bir kol diğerinden farklı $c_0$ görürse (esir rüzgârı), dönme sırasında saçaklar kayar.
 
-**Kritik nokta:** Bu bir **diferansiyel yön** ölçümüdür. $c$'nin **mutlak değerini** ya da **zamanla değişimini** ölçmez. Eğer $c$ değişir ama **her yönde eşit** değişirse (izotropik), saçak deseni kaymaz — düzenek buna **yapısal olarak kördür.**
+**Kritik nokta:** Bu bir **diferansiyel yön** ölçümüdür. $c_0$'nin **mutlak değerini** ya da **zamanla değişimini** ölçmez. Eğer $c_0$ değişir ama **her yönde eşit** değişirse (izotropik), saçak deseni kaymaz — düzenek buna **yapısal olarak kördür.**
 
-**Evrenakı bağlamında sonuç:** MM ve tüm "MM-tipi" dönen rezonatörler (Herrmann 2009, Eisele 2009), **izotropik/zamansal değişken-$c$ iddiasını sınamaz.** Evrenakı zaten sıfır anizotropi öngörür (zarf). **→ Bu deneyler Evrenakı'yı kısıtlamaz. Yazar haklı.**
+**Evrenakı bağlamında sonuç:** MM ve tüm "MM-tipi" dönen rezonatörler (Herrmann 2009, Eisele 2009), **izotropik/zamansal değişken-$c_0$ iddiasını sınamaz.** Evrenakı zaten sıfır anizotropi öngörür (zarf). **→ Bu deneyler Evrenakı'yı kısıtlamaz. Yazar haklı.**
 
 > **Yaygın yanlış:** "Michelson–Morley ışık hızının sabit olduğunu kanıtladı." **Hatalı ifade.** MM, ışık hızının **izotropik** (her yönde eşit) olduğunu kanıtladı — **zamanla sabit** ya da **yoğunluktan bağımsız** olduğunu DEĞİL. Bu ikisi tamamen farklı iddialardır. Bu, kitapta açıkça yazılabilecek, doğru ve savunulabilir bir noktadır.
 
 ## 2. Kennedy–Thorndike (1932, modern kriyojenik) → HIZA bağlılık ölçer
 
-**Ne ölçer:** **Asimetrik** (eşitsiz kollu) interferometreyle, $c$'nin **laboratuvarın hızına** bağlı olup olmadığını, Dünya'nın yörünge hızı yıl içinde değişirken izler. Kararlı bir referansa (spektral çizgi / atom saati) karşı ölçer.
+**Ne ölçer:** **Asimetrik** (eşitsiz kollu) interferometreyle, $c_0$'nin **laboratuvarın hızına** bağlı olup olmadığını, Dünya'nın yörünge hızı yıl içinde değişirken izler. Kararlı bir referansa (spektral çizgi / atom saati) karşı ölçer.
 
 **Kritik nokta:** Bu, **Kısım 5'in kendi deneyiyle AYNI SINIFTIR.** İkisi de asimetrik kollu, ikisi de zamansal değişim arar. Yani Kısım 5, KT'nin ölçtüğü büyüklüğü ölçüyor.
 
-**Evrenakı bağlamında:** KT, zamansal $c$ değişimini kısıtlar — **ama** bu kısıt, aşağıdaki "ortak-mod" sorusuna bağlıdır.
+**Evrenakı bağlamında:** KT, zamansal $c_0$ değişimini kısıtlar — **ama** bu kısıt, aşağıdaki "ortak-mod" sorusuna bağlıdır.
 
-## 3. Optik saat karşılaştırmaları → $\alpha = e^2/(4\pi\epsilon_0\hbar c)$ ölçer
+## 3. Optik saat karşılaştırmaları → $\alpha = e^2/(4\pi\epsilon_0\hbar c_0)$ ölçer
 
 **Ne ölçer:** Boyutsuz ince yapı sabitinin zaman driftini ($\dot\alpha/\alpha$). Rosenband (2008): $\sim10^{-17}$/yıl; sonrası daha sıkı.
 
-**Kritik nokta — ve tüm düğümün kalbi:** Hiçbir deney $c$'yi *tek başına* ölçemez; $c$ boyutlu bir niceliktir, ancak başka bir boyutlu standarda (uzunluk, başka bir saat) **oranla** ölçülür. Ölçülen daima **boyutsuz oranlardır** ($\alpha$ gibi). Bu, iki olasılık doğurur:
+**Kritik nokta — ve tüm düğümün kalbi:** Hiçbir deney $c_0$'yi *tek başına* ölçemez; $c_0$ boyutlu bir niceliktir, ancak başka bir boyutlu standarda (uzunluk, başka bir saat) **oranla** ölçülür. Ölçülen daima **boyutsuz oranlardır** ($\alpha$ gibi). Bu, iki olasılık doğurur:
 
 | Senaryo | $\alpha$ değişir mi? | Optik saatler | Kısım 5 |
 |---|---|---|---|
-| **Ortak-mod:** $c$ ile birlikte $e,\hbar,m_e$ de $\sqrt{P/\rho}$ ile ölçeklenir | Hayır ($\alpha$ sabit) | Null (görmez) | **Görmez** (referans da ölçeklenir) |
-| **Saf-$c$:** yalnız $c$ değişir, atomik sabitler değişmez | Evet ($\alpha\propto 1/c$) | **Görür** — $10^{-18}$'de sınırlar | Görür |
+| **Ortak-mod:** $c_0$ ile birlikte $e,\hbar,m_e$ de $\sqrt{P/\rho}$ ile ölçeklenir | Hayır ($\alpha$ sabit) | Null (görmez) | **Görmez** (referans da ölçeklenir) |
+| **Saf-$c_0$:** yalnız $c_0$ değişir, atomik sabitler değişmez | Evet ($\alpha\propto 1/c_0$) | **Görür** — $10^{-18}$'de sınırlar | Görür |
 
 ## 4. Ives–Stilwell → zaman genleşmesi ($\gamma$) ölçer
 
-Enine Doppler / zaman genleşmesini ölçer. Evrenakı bunu **birebir üretir** (6.1). Değişken-$c$ kısıtı değildir; tutarlıdır.
+Enine Doppler / zaman genleşmesini ölçer. Evrenakı bunu **birebir üretir** (6.1). Değişken-$c_0$ kısıtı değildir; tutarlıdır.
 
 ## 5. DÜĞÜMÜN DÜRÜST ÇÖZÜMÜ — ve teorinin ödevi
 
 Deneyler iki gruba ayrılıyor:
 - **Anizotropi grubu (MM, rezonatör, Hughes–Drever):** Evrenakı'yı kısıtlamaz. Yön ölçer, Evrenakı yön farkı öngörmez. **Temiz.** ✓
-- **Zamansal grup (KT, optik saat):** Değişken-$c$'yi ancak **saf-$c$ senaryosunda** kısıtlar. **Ortak-mod senaryosunda** hem onlar hem Kısım 5 kördür.
+- **Zamansal grup (KT, optik saat):** Değişken-$c_0$'yi ancak **saf-$c_0$ senaryosunda** kısıtlar. **Ortak-mod senaryosunda** hem onlar hem Kısım 5 kördür.
 
-**Kaçınılmaz mantıksal sonuç:** Kısım 5'in bir sinyal *görmesi*, ancak **saf-$c$ (veya kısmi ölçekleme)** senaryosunda mümkündür — yani $c$ değişirken Kısım 5'in referansının (kol boyu? kaynak frekansı? elektronik sayıcı?) **onunla birlikte ölçeklenmemesi** gerekir. Ama tam da o senaryoda optik saatler de görürdü ve $10^{-18}$'de sınırlardı. Yani:
+**Kaçınılmaz mantıksal sonuç:** Kısım 5'in bir sinyal *görmesi*, ancak **saf-$c_0$ (veya kısmi ölçekleme)** senaryosunda mümkündür — yani $c_0$ değişirken Kısım 5'in referansının (kol boyu? kaynak frekansı? elektronik sayıcı?) **onunla birlikte ölçeklenmemesi** gerekir. Ama tam da o senaryoda optik saatler de görürdü ve $10^{-18}$'de sınırlardı. Yani:
 
-> **Kısım 5 bir sinyal görüyorsa, optik saatlerin onu neden görmediğini açıklamak zorundadır.** Tek tutarlı çıkış: Kısım 5'in ölçtüğü referans (ör. makro mekanik kol boyu) $c$ ile ölçeklenmezken, optik saatlerin karşılaştırdığı iki atomik frekansın **birbirine göre** ölçeklendiğini (yani $\alpha$'nın sabit kaldığını) göstermek. Bu, teorinin çözülmemiş çekirdek ödevidir — ve çözülürse İtiraz 5 gerçekten güçlü olur.
+> **Kısım 5 bir sinyal görüyorsa, optik saatlerin onu neden görmediğini açıklamak zorundadır.** Tek tutarlı çıkış: Kısım 5'in ölçtüğü referans (ör. makro mekanik kol boyu) $c_0$ ile ölçeklenmezken, optik saatlerin karşılaştırdığı iki atomik frekansın **birbirine göre** ölçeklendiğini (yani $\alpha$'nın sabit kaldığını) göstermek. Bu, teorinin çözülmemiş çekirdek ödevidir — ve çözülürse İtiraz 5 gerçekten güçlü olur.
 
 ## 6. Bu turun kazanımı ve önerisi
 
@@ -1088,7 +1088,7 @@ Deneyler iki gruba ayrılıyor:
 **İtiraz 5 için revize omurga:**
 1. **Sıkıştırılabilirlik** ayrımı (Tur 2).
 2. **Anizotropi grubu** Evrenakı'yı sınamaz — MM izotropi ölçer, zamansal sabitlik değil (bu tur, güçlü).
-3. **Zamansal grup** yalnız saf-$c$ senaryosunda kısıtlar; ortak-mod/diferansiyel referans ayrımı kurulmalı.
+3. **Zamansal grup** yalnız saf-$c_0$ senaryosunda kısıtlar; ortak-mod/diferansiyel referans ayrımı kurulmalı.
 4. **CMB çapası** + dürüst tavan.
 5. Kısım 5'in "optik-saatler-neden-görmedi" ödevi açık kalem (7.4).
 
@@ -1116,29 +1116,29 @@ Yazarın önerdiği test (farklı ortamlarda kıyas) fizikte mevcuttur ve üç b
 | Test | Farklı "ortam" | Sonuç | Evrenakı |
 |---|---|---|---|
 | **Kütleçekimsel kızıla kayma** (farklı yükseklikteki saatler; Chou 2010: 33 cm'de bile ölçüldü) | Farklı yükseklik = farklı yerel Evrenakı yoğunluğu | Saatler farklı tikliyor | **Birebir üretir** (6.2, Postülat 3: patinaj) |
-| **Shapiro gecikmesi** (Güneş yanından geçen radar) | Işık farklı Evrenakı yoğunluğundan geçer | Işık ölçülebilir şekilde gecikir | **Birebir üretir** (değişken $c$) |
+| **Shapiro gecikmesi** (Güneş yanından geçen radar) | Işık farklı Evrenakı yoğunluğundan geçer | Işık ölçülebilir şekilde gecikir | **Birebir üretir** (değişken $c_0$) |
 | **Kütleçekimsel merceklenme** | Işık kütle yakınındaki yoğun gradyandan geçer | Işık bükülür/yavaşlar | **Üretir** (Kısım 4) |
 
 **Kritik ve güçlü sonuç:** Farklı Evrenakı yoğunluklarında ışık hızının değişmesi **zaten deneysel olarak yerleşiktir** — adı kütleçekimsel kızıla kayma ve Shapiro gecikmesidir. Evrenakı bunları reddetmez, **kendi diline çevirip birebir üretir.** Yani "c farklı ortamda değişir" iddiası, teorinin okumasında **halihazırda kanıtlıdır.**
 
 ## 3. Ama dürüst iki sınır (bunları saklamam)
 
-**(a) Bu bir yorum eşdeğerliğidir, yeni bir etki değil.** Ana akım aynı verileri "uzay-zaman eğriliği / zaman genleşmesi" diye okur; Evrenakı "değişken $c$" diye okur. Aynı ölçüm, iki dil. Evrenakı burada standart fizikten *fazladan* bir şey öngörmez — onu **kapsar ve yeniden yorumlar.** Bu güçlü bir tutarlılıktır ama "yeni tahmin" değildir. Dürüst İtiraz 5 bunu böyle demeli.
+**(a) Bu bir yorum eşdeğerliğidir, yeni bir etki değil.** Ana akım aynı verileri "uzay-zaman eğriliği / zaman genleşmesi" diye okur; Evrenakı "değişken $c_0$" diye okur. Aynı ölçüm, iki dil. Evrenakı burada standart fizikten *fazladan* bir şey öngörmez — onu **kapsar ve yeniden yorumlar.** Bu güçlü bir tutarlılıktır ama "yeni tahmin" değildir. Dürüst İtiraz 5 bunu böyle demeli.
 
-**(b) Kısım 5'in masaüstü iddiası hâlâ ayrı ve daha zor.** Çünkü Kısım 5'in asimetrik interferometresinde **iki kol da aynı laboratuvarda, aynı Evrenakı yoğunluğundadır.** Yazarın kendi "farklı ortam" ilkesine göre, aynı-ortam iki kol arasındaki yoğunluk etkisi de **ortak-moddur.** Kısım 5'in ölçtüğü şey uzaysal yoğunluk farkı değil, **zamansal** drifttir (Dünya kozmik bölgelerden geçerken). O da yine "referans $c$ ile ölçekleniyor mu?" sorusuna bağlıdır (Tur 5, madde 5). Yani madde 2'deki kazanım Kısım 5'i doğrudan kurtarmaz.
+**(b) Kısım 5'in masaüstü iddiası hâlâ ayrı ve daha zor.** Çünkü Kısım 5'in asimetrik interferometresinde **iki kol da aynı laboratuvarda, aynı Evrenakı yoğunluğundadır.** Yazarın kendi "farklı ortam" ilkesine göre, aynı-ortam iki kol arasındaki yoğunluk etkisi de **ortak-moddur.** Kısım 5'in ölçtüğü şey uzaysal yoğunluk farkı değil, **zamansal** drifttir (Dünya kozmik bölgelerden geçerken). O da yine "referans $c_0$ ile ölçekleniyor mu?" sorusuna bağlıdır (Tur 5, madde 5). Yani madde 2'deki kazanım Kısım 5'i doğrudan kurtarmaz.
 
 ## 4. Bu turun net kazanımı
 
 Yazarın sezgisi, düğümün **kavramsal yarısını** çözdü ve İtiraz 5'i belirgin şekilde güçlendirdi:
 - α-drift null'u artık **beklenen** sonuç (aynı ortam = ortak-mod), tehdit değil.
-- "Farklı ortamda $c$ değişir" iddiası **kanıtlı** (kızıla kayma, Shapiro) ve Evrenakı bunları üretiyor.
+- "Farklı ortamda $c_0$ değişir" iddiası **kanıtlı** (kızıla kayma, Shapiro) ve Evrenakı bunları üretiyor.
 - Kalan tek dürüst açık kalem: Kısım 5'in **aynı-lab zamansal** tespit iddiası + referans-ölçekleme sorusu.
 
 ## 5. İtiraz 5 için nihai omurga (6 madde)
 1. **Sıkıştırılabilirlik** ayrımı — Lorentz testleri sıkıştırılamaz esiri çürütür (Tur 2).
 2. **Anizotropi grubu** (MM, rezonatör) izotropi ölçer, zamansal/yoğunluk sabitliğini değil — Evrenakı'yı sınamaz (Tur 5).
 3. **Aynı-ortam null'u beklenir** (ortak-mod); optik saat α-null'u Evrenakı'yla tutarlı (Tur 6).
-4. **Farklı-ortam değişkenliği kanıtlı:** kütleçekimsel kızıla kayma + Shapiro gecikmesi = değişken $c$; Evrenakı birebir üretir (6.2, Kısım 4). *Yorum eşdeğerliği, yeni etki değil — dürüstçe.*
+4. **Farklı-ortam değişkenliği kanıtlı:** kütleçekimsel kızıla kayma + Shapiro gecikmesi = değişken $c_0$; Evrenakı birebir üretir (6.2, Kısım 4). *Yorum eşdeğerliği, yeni etki değil — dürüstçe.*
 5. **CMB çapası** — kozmik çerçeve somut.
 6. **Açık kalem:** Kısım 5'in aynı-lab zamansal tespiti + referans-ölçekleme; nicel öngörü genliği (7.4).
 
@@ -1192,22 +1192,22 @@ T-10'daki yönsel/skaler ayrımı bu paradoksu doğrudan çözer. Zarf **iki ayr
 | | Zarfın etkisi | Sınayan deney | Sonuç |
 |---|---|---|---|
 | **Yönsel bağıl hız** (esir rüzgârı, vektörel) | **Sıfırlar** (zarf Dünya ile birlikte hareket eder) | Standart M&M (eşit kollu): anlık yön anizotropisi | **Sıfır** |
-| **Skaler $P/\rho$ büyüklüğü** (yön yok) | **Sıfırlamaz** (Evrenakı her maddeye nüfuz eder; yerel $P/\rho$, dış kozmik ortamın değerini alır) | Kısım 5 (asimetrik kollu): zamanla $c$ değişimi | **Sıfır değil** |
+| **Skaler $P/\rho$ büyüklüğü** (yön yok) | **Sıfırlamaz** (Evrenakı her maddeye nüfuz eder; yerel $P/\rho$, dış kozmik ortamın değerini alır) | Kısım 5 (asimetrik kollu): zamanla $c_0$ değişimi | **Sıfır değil** |
 
-**Denizaltı benzetmesi:** Bir denizaltının gövdesini saran sınır tabakası onunla birlikte hareket eder — gövdede bağıl akış yoktur (≈ M&M sıfır). Ama o tabakanın **basıncı ve yoğunluğu**, denizaltı farklı derinliklere gittikçe **yerel ortam değerini alır.** Zarf kinematik olarak sürükler ama skaler $P/\rho$ olarak yerel ortamı izler. Evrenakı zarfı da böyledir: Dünya ile birlikte akar (rüzgar yok), ama Dünya farklı kozmik $P/\rho$ bölgelerinden geçtikçe zarfın $P/\rho$'su onları izler → $c=\sqrt{P/\rho}$ zamanla değişir.
+**Denizaltı benzetmesi:** Bir denizaltının gövdesini saran sınır tabakası onunla birlikte hareket eder — gövdede bağıl akış yoktur (≈ M&M sıfır). Ama o tabakanın **basıncı ve yoğunluğu**, denizaltı farklı derinliklere gittikçe **yerel ortam değerini alır.** Zarf kinematik olarak sürükler ama skaler $P/\rho$ olarak yerel ortamı izler. Evrenakı zarfı da böyledir: Dünya ile birlikte akar (rüzgar yok), ama Dünya farklı kozmik $P/\rho$ bölgelerinden geçtikçe zarfın $P/\rho$'su onları izler → $c_0=\sqrt{P/\rho}$ zamanla değişir.
 
 ## 3. En güçlü yanı: bu bir *türetim* ve iki deneyi ayrıştırıyor
 
-İnterferometre matematiği çözümü doğruluyor. Bir kolun gidiş-dönüş faz katkısı $\varphi=\omega\cdot 2L/c$; iki kol farkı $\Delta\varphi=\dfrac{2\omega}{c}(L_1-L_2)$.
+İnterferometre matematiği çözümü doğruluyor. Bir kolun gidiş-dönüş faz katkısı $\varphi=\omega\cdot 2L/c_0$; iki kol farkı $\Delta\varphi=\dfrac{2\omega}{c}(L_1-L_2)$.
 
 * **Yönsel etki (M&M'in aradığı):** zarf rüzgârı sıfırladığından yoktur → sıfır.
-* **Skaler zaman değişimi ($c\to c+\delta c$):** $\delta(\Delta\varphi)=-\dfrac{2\omega}{c^2}(L_1-L_2)\,\delta c$.
+* **Skaler zaman değişimi ($c_0\to c_0+\delta c$):** $\delta(\Delta\varphi)=-\dfrac{2\omega}{c^2}(L_1-L_2)\,\delta c$.
 
-Kritik nokta: bu kayma **$(L_1-L_2)$ ile orantılıdır.** Standart M&M kolları **eşit** olduğundan skaler $c$ değişimine **kördür**; yalnızca yönsel anizotropiyi görür. Kısım 5 düzeneği kolları **kasıtlı asimetrik** (15/45 cm) yaptığından tam tersine **skaler zaman değişimine duyarlıdır.** İki deney farklı büyüklükleri ölçer; çelişki yok, **tamamlayıcıdırlar** — Kısım 5'in kolları neden eşitsiz yaptığının fiziksel gerekçesi de budur.
+Kritik nokta: bu kayma **$(L_1-L_2)$ ile orantılıdır.** Standart M&M kolları **eşit** olduğundan skaler $c_0$ değişimine **kördür**; yalnızca yönsel anizotropiyi görür. Kısım 5 düzeneği kolları **kasıtlı asimetrik** (15/45 cm) yaptığından tam tersine **skaler zaman değişimine duyarlıdır.** İki deney farklı büyüklükleri ölçer; çelişki yok, **tamamlayıcıdırlar** — Kısım 5'in kolları neden eşitsiz yaptığının fiziksel gerekçesi de budur.
 
 ## 4. Dürüst kayıt: kritik sistematik (T-9'a bağlanır)
 
-Asimetrik düzeneğin öngördüğü "zamansal $c$ drifti", **çevresel sistematiklerle dejeneredir:** 45 ve 15 cm kollar farklı **termal genleşme** yaşar; aylarca süren ölçümde sıcaklık kaynaklı yavaş faz kayması ($\delta L$), tam olarak $\delta c$ ile aynı imzayı üretir. Aynı şey fiber osilatörde fiberin termal uzaması için geçerlidir. Çözüm kavramsal olarak sağlam; ama **ölçümün** bu sistematiklerden arındığının gösterilmesi şarttır (bkz. 7.4.3, T-9).
+Asimetrik düzeneğin öngördüğü "zamansal $c_0$ drifti", **çevresel sistematiklerle dejeneredir:** 45 ve 15 cm kollar farklı **termal genleşme** yaşar; aylarca süren ölçümde sıcaklık kaynaklı yavaş faz kayması ($\delta L$), tam olarak $\delta c$ ile aynı imzayı üretir. Aynı şey fiber osilatörde fiberin termal uzaması için geçerlidir. Çözüm kavramsal olarak sağlam; ama **ölçümün** bu sistematiklerden arındığının gösterilmesi şarttır (bkz. 7.4.3, T-9).
 
 ## 5. Önerilen düzenlemeler
 
@@ -1222,7 +1222,7 @@ T-3, T-10'un yönsel/skaler ayrımının uygulaması; yeni fizik kararı gerekti
 
 #### TUR 2 — KISMİ TAŞIMA + YAZAR GİRDİSİ (25 Temmuz 2026)
 
-**Yazar girdisi (kayıt):** Deneyde sıcaklık parametresi ~%1/derece hassasiyetle ölçülmüş ve gözlenen $c$ değişiminin **sıcaklıktan bağımsız** olduğu gösterilmiştir. Yani Tur 1 madde 4'teki termal dejenerasyon endişesi, gerçek deneyde uygun kontrolle kapatılmıştır. (Deneyin tam ayrıntıları, tüm deneyler yazıldığında Kısım 5'e girecektir; şimdilik "rapor edilen sonuç" statüsünde.)
+**Yazar girdisi (kayıt):** Deneyde sıcaklık parametresi ~%1/derece hassasiyetle ölçülmüş ve gözlenen $c_0$ değişiminin **sıcaklıktan bağımsız** olduğu gösterilmiştir. Yani Tur 1 madde 4'teki termal dejenerasyon endişesi, gerçek deneyde uygun kontrolle kapatılmıştır. (Deneyin tam ayrıntıları, tüm deneyler yazıldığında Kısım 5'e girecektir; şimdilik "rapor edilen sonuç" statüsünde.)
 
 **Karar — düzenlemeler ikiye ayrıldı:**
 - ✅ **Yapıldı (teori-içi):** 3.4.5 sonuna "Zarfın İki Ayrı İşlevi" paragrafı eklendi — yönsel sürükleme vs skaler saydamlık, denizaltı benzetmesi, $(L_1-L_2)$ argümanı, M&M ↔ Kısım 5 tamamlayıcılığı. Termal uyarı **eklenmedi** (yazar girdisi + deney bölümüne ait).
@@ -1241,16 +1241,16 @@ T-3, T-10'un yönsel/skaler ayrımının uygulaması; yeni fizik kararı gerekti
 
 ---
 
-## T-4 — PROTON YÜZEY HIZI VE $c$ SINIRI
+## T-4 — PROTON YÜZEY HIZI VE $c_0$ SINIRI
 
 ### Problem
-Postülat 5, protonun ekvatoral çizgisel hızını $v_{ekvator} \approx 5\times10^8$ m/s olarak veriyor — yani $c$'nin üzerinde. Aynı zamanda $c$, "Zerre'nin akışkan içindeki limit hızı" olarak tanımlanıyor. Metin bunu "kompozit hız" ve "kavitasyon eşiği $c$'den çok yüksektir" açıklamalarıyla dengelemeye çalışıyor (Ek A).
+Postülat 5, protonun ekvatoral çizgisel hızını $v_{ekvator} \approx 5\times10^8$ m/s olarak veriyor — yani $c_0$'nin üzerinde. Aynı zamanda $c_0$, "Zerre'nin akışkan içindeki limit hızı" olarak tanımlanıyor. Metin bunu "kompozit hız" ve "kavitasyon eşiği $c_0$'den çok yüksektir" açıklamalarıyla dengelemeye çalışıyor (Ek A).
 
 ### Gerilim
-Eğer $c$ ortamın bir özelliği değil de yalnızca Zerre'nin patinaj sınırıysa, o zaman "ışık hızı yerel yoğunluğa bağlıdır" iddiası ile "kavitasyon eşiği çok daha yüksektir" iddiası arasında **hangi büyüklüğün ortamın gerçek karakteristik hızı olduğu** belirsiz kalıyor. Okuyucu için iki farklı "sınır hız" kavramı iç içe geçiyor.
+Eğer $c_0$ ortamın bir özelliği değil de yalnızca Zerre'nin patinaj sınırıysa, o zaman "ışık hızı yerel yoğunluğa bağlıdır" iddiası ile "kavitasyon eşiği çok daha yüksektir" iddiası arasında **hangi büyüklüğün ortamın gerçek karakteristik hızı olduğu** belirsiz kalıyor. Okuyucu için iki farklı "sınır hız" kavramı iç içe geçiyor.
 
 ### Yapılması gereken
-Üç hızın açık ve ayrı tanımı: (a) Zerre'nin patinaj sınırı $c$, (b) ortamın kavitasyon eşiği, (c) kompozit parçacık yüzey hızı. Hangisinin hangi denklemde göründüğü tabloyla netleştirilmeli.
+Üç hızın açık ve ayrı tanımı: (a) Zerre'nin patinaj sınırı $c_0$, (b) ortamın kavitasyon eşiği, (c) kompozit parçacık yüzey hızı. Hangisinin hangi denklemde göründüğü tabloyla netleştirilmeli.
 
 ### Taşınacak yer
 `Kisim_1_Giris/03_Evrenaki_Postulasi.md` → **Postülat 5 metni + Ek A** (hız kavramları tablosu olarak)
@@ -1259,89 +1259,89 @@ Eğer $c$ ortamın bir özelliği değil de yalnızca Zerre'nin patinaj sınır�
 
 ---
 
-#### TUR 1 — ÜÇ HIZIN AYRIŞTIRILMASI VE ÖNEMLİ BULGU: $\sqrt{2}\,c$ DENGE HIZI (25 Temmuz 2026)
+#### TUR 1 — ÜÇ HIZIN AYRIŞTIRILMASI VE ÖNEMLİ BULGU: $\sqrt{2}\,c_0$ DENGE HIZI (25 Temmuz 2026)
 
 ## 1. Envanter: kitapta kaç "sınır hız" var, nerede?
 
 | Hız | Kitaptaki tanımı | Nicel mi? | Geçtiği yerler |
 |---|---|---|---|
-| $c$ | Zerre'nin patinaj/kavrama sınırı; "mutlak üst sınır DEĞİL" | ✅ $2{,}998\times10^8$ m/s; T-1'den beri formüllü: $c=\sqrt{P_0/\rho_0}$ (KY-1, Ek B) | Postülat 4, 2.4.1, 3.4.6, 6.1 |
+| $c_0$ | Zerre'nin patinaj/kavrama sınırı; "mutlak üst sınır DEĞİL" | ✅ $2{,}998\times10^8$ m/s; T-1'den beri formüllü: $c_0=\sqrt{P_0/\rho_0}$ (KY-1, Ek B) | Postülat 4, 2.4.1, 3.4.6, 6.1 |
 | $v_{ekvator}$ | Protonun kompozit ekvator hızı ($2\pi\nu_c R$) | ✅ $\approx 5\times10^8$ m/s $\approx 1{,}67c$ | Postülat 5 |
 | $v_{kav}$ | Ortamın gerçek yırtılma (kavitasyon) eşiği | ❌ yalnız "c'den çok daha yüksek" | Ek A |
 | $v_{saf}$ | Alt-bileşenlerin saf dönüş hızları ($>v_{kav}$) | ❌ yalnız "devasa" | Ek A, 1.3.1 |
 
-Problemin özü: metin $c$'ye "limit hız" diyor ama proton yüzeyi onu aşıyor; $v_{kav}$'a "gerçek sınır" diyor ama değerini vermiyor. Okuyucu, ortamın **asıl karakteristik hızının** hangisi olduğunu kestiremiyor. Çözüm iki adımlı: (i) kavramsal taksonomi, (ii) nicelleştirme — ve ikincisinde beklenmedik bir hediye çıktı.
+Problemin özü: metin $c_0$'ye "limit hız" diyor ama proton yüzeyi onu aşıyor; $v_{kav}$'a "gerçek sınır" diyor ama değerini vermiyor. Okuyucu, ortamın **asıl karakteristik hızının** hangisi olduğunu kestiremiyor. Çözüm iki adımlı: (i) kavramsal taksonomi, (ii) nicelleştirme — ve ikincisinde beklenmedik bir hediye çıktı.
 
-## 2. Kavramsal taksonomi: $c$ bir duvar değil, SONİK noktadır
+## 2. Kavramsal taksonomi: $c_0$ bir duvar değil, SONİK noktadır
 
-KY-1 ($v=\sqrt{P/\rho}$, T-1'de onaylandı) $c$'nin fiziksel kimliğini zaten netleştirdi: $c$, ortamın **basınç-iletim (ses) hızıdır.** 2.4.1'in "tıpkı sesin havadaki hızının Mach 1 olması gibi" benzetmesi, KY-1 ile artık benzetme değil formüldür. Bu kimlik, iki "sınırın" kategorik farkını kendiliğinden verir:
+KY-1 ($v=\sqrt{P/\rho}$, T-1'de onaylandı) $c_0$'nin fiziksel kimliğini zaten netleştirdi: $c_0$, ortamın **basınç-iletim (ses) hızıdır.** 2.4.1'in "tıpkı sesin havadaki hızının Mach 1 olması gibi" benzetmesi, KY-1 ile artık benzetme değil formüldür. Bu kimlik, iki "sınırın" kategorik farkını kendiliğinden verir:
 
-| | $c$ (kavrama sınırı) | $v_{kav}$ (yırtılma sınırı) |
+| | $c_0$ (kavrama sınırı) | $v_{kav}$ (yırtılma sınırı) |
 |---|---|---|
 | Neyin sınırı? | Kavrama yoluyla **ilerlemenin** (Zerre'nin ortama tutunarak yol almasının) | Ortamın **bütünlüğünün** (sürekli akışkan kalmasının) |
-| Aşılırsa ne olur? | Yasak değil: patinaj/şok — enerji kaybı, hız $c$'ye oturur | Yasak değil: akışkan yırtılır, vakum cebi açılır (**madde doğar**, Ek A) |
+| Aşılırsa ne olur? | Yasak değil: patinaj/şok — enerji kaybı, hız $c_0$'ye oturur | Yasak değil: akışkan yırtılır, vakum cebi açılır (**madde doğar**, Ek A) |
 | Havadaki karşılığı | Ses hızı (Mach 1): süpersonik uçuş vardır, sadece şok üretir | Sıvının çekme dayanımı: pervane ucunda kavitasyon köpüğü |
 
-Buradan tek cümlelik güçlü çerçeve: **ışık tam-sonik bir olgudur ($v=c$, ortama kavrayarak); madde ise kalıcı süpersonik bir olgudur (yüzeyi $c$'nin üstünde dönen şok zarfı).** Ek A'nın "madde = kuantize şok zarfı" tanımı zaten bunu söylüyor; eksik olan, iki sınırın bu tabloyla ayrıştırılmasıydı. Bu çerçeve, $c$-üstü hız iddialarını zayıflatmaz — tersine onları *sınıflandırır*: $c$'yi aşmak şok üretmek demektir ve madde zaten budur.
+Buradan tek cümlelik güçlü çerçeve: **ışık tam-sonik bir olgudur ($v=c_0$, ortama kavrayarak); madde ise kalıcı süpersonik bir olgudur (yüzeyi $c_0$'nin üstünde dönen şok zarfı).** Ek A'nın "madde = kuantize şok zarfı" tanımı zaten bunu söylüyor; eksik olan, iki sınırın bu tabloyla ayrıştırılmasıydı. Bu çerçeve, $c_0$-üstü hız iddialarını zayıflatmaz — tersine onları *sınıflandırır*: $c_0$'yi aşmak şok üretmek demektir ve madde zaten budur.
 
-## 3. ÖNEMLİ BULGU: kavitasyonlu girdabın denge yüzey hızı $\sqrt{2}\,c$ — proton hızı türetilebilir çıktı
+## 3. ÖNEMLİ BULGU: kavitasyonlu girdabın denge yüzey hızı $\sqrt{2}\,c_0$ — proton hızı türetilebilir çıktı
 
 Postülat 5'teki $5\times10^8$ m/s şu ana dek **girdi** idi (Compton frekansı × proton yarıçapı). KY-1 onu **çıktıya** çevirebiliyor:
 
 **Kurulum.** Proton, Ek A gereği içinde vakum cebi (yırtık) bulunan, dengede dönen bir girdap zarfıdır. Cebin dışındaki akışkan için dönme akışı $v_\theta(r)=\Gamma/2\pi r$ ve Bernoulli:
 $$P(r)=P_0-\tfrac{1}{2}\rho_0 v_\theta^2(r)$$
 Cep duvarında ($r=a$) basınç, cebin iç basıncına (vakum, $P\approx0$) eşit olmalıdır:
-$$P_0-\tfrac{1}{2}\rho_0 v_{duvar}^2=0 \;\Longrightarrow\; v_{duvar}=\sqrt{\frac{2P_0}{\rho_0}}=\boxed{\sqrt{2}\,c\approx 4{,}24\times10^8 \text{ m/s}}$$
+$$P_0-\tfrac{1}{2}\rho_0 v_{duvar}^2=0 \;\Longrightarrow\; v_{duvar}=\sqrt{\frac{2P_0}{\rho_0}}=\boxed{\sqrt{2}\,c_0\approx 4{,}24\times10^8 \text{ m/s}}$$
 
 **Üç önemli özellik:**
 
-1. **Evrensellik (boyuttan bağımsızlık):** $v_{duvar}=\sqrt2 c$ sonucu cebin yarıçapına bağlı değildir; sirkülasyon $\Gamma$ yalnızca cebin **boyutunu** belirler ($a=\Gamma/2\pi\sqrt2 c$), duvar hızını değil. Üstelik bu bir **çekim noktasıdır (attractor):** zarf daha hızlı dönerse cep genişler, genişleyen yarıçapta $v_\theta$ düşer ve duvar hızı $\sqrt2 c$'ye geri oturur. Yani **her kararlı vakum-cepli girdap, boyutu ne olursa olsun, duvarını tam $\sqrt2 c$'de döndürür.** Bu, tüm nükleonların (ve Postülat 4 gereği aynı girdap fazını taşıyan Zerre'nin) yüzey hızının neden evrensel olduğunu açıklar.
-2. **Sayısal karşılaştırma:** $\sqrt2 c = 4{,}24\times10^8$ m/s; Postülat 5'in $2\pi\nu_c R$ değeri $5{,}0\times10^8$ m/s. Fark **~%18.** Ters okuma da tutarlı: $\nu=\sqrt2 c/2\pi R$ ile $R=0{,}84$ fm için $\nu\approx 8\times10^{22}$ Hz — postüladaki "$\approx10^{23}$ Hz" ile aynı mertebe.
-3. **Anlatısal dönüşüm — pürüz zorunluluğa dönüşüyor:** Bu türetim doğruysa, protonun ekvator hızının $c$'yi aşması açıklanması gereken bir utanç değil, **yapısal zorunluluktur:** duvarı $c$'nin altında dönen bir zarf, cep içindeki vakuma karşı gereken basınç açığını üretemez ve cep çöker — yani **yüzeyi $c$-altı dönen madde var olamaz.** "$c<v_{ekvator}$" ifadesi teorinin savunmak zorunda olduğu bir iddia olmaktan çıkıp, KY-1 + Ek A'nın (vakum cebi + Bernoulli) doğrudan sonucu hâline gelir.
+1. **Evrensellik (boyuttan bağımsızlık):** $v_{duvar}=\sqrt2 c_0$ sonucu cebin yarıçapına bağlı değildir; sirkülasyon $\Gamma$ yalnızca cebin **boyutunu** belirler ($a=\Gamma/2\pi\sqrt2 c_0$), duvar hızını değil. Üstelik bu bir **çekim noktasıdır (attractor):** zarf daha hızlı dönerse cep genişler, genişleyen yarıçapta $v_\theta$ düşer ve duvar hızı $\sqrt2 c_0$'ye geri oturur. Yani **her kararlı vakum-cepli girdap, boyutu ne olursa olsun, duvarını tam $\sqrt2 c_0$'de döndürür.** Bu, tüm nükleonların (ve Postülat 4 gereği aynı girdap fazını taşıyan Zerre'nin) yüzey hızının neden evrensel olduğunu açıklar.
+2. **Sayısal karşılaştırma:** $\sqrt2 c_0 = 4{,}24\times10^8$ m/s; Postülat 5'in $2\pi\nu_c R$ değeri $5{,}0\times10^8$ m/s. Fark **~%18.** Ters okuma da tutarlı: $\nu=\sqrt2 c_0/2\pi R$ ile $R=0{,}84$ fm için $\nu\approx 8\times10^{22}$ Hz — postüladaki "$\approx10^{23}$ Hz" ile aynı mertebe.
+3. **Anlatısal dönüşüm — pürüz zorunluluğa dönüşüyor:** Bu türetim doğruysa, protonun ekvator hızının $c_0$'yi aşması açıklanması gereken bir utanç değil, **yapısal zorunluluktur:** duvarı $c_0$'nin altında dönen bir zarf, cep içindeki vakuma karşı gereken basınç açığını üretemez ve cep çöker — yani **yüzeyi $c_0$-altı dönen madde var olamaz.** "$c_0<v_{ekvator}$" ifadesi teorinin savunmak zorunda olduğu bir iddia olmaktan çıkıp, KY-1 + Ek A'nın (vakum cebi + Bernoulli) doğrudan sonucu hâline gelir.
 
 **Dürüst kayıt (%18'in kaynağı):** Türetim sıkıştırılamaz Bernoulli + 2B ideal (potansiyel) girdap + cep basıncı tam sıfır varsayımlarını kullanır. Sıkıştırılabilirlik (zarf bölgesinde $\rho$ artışı), 4B çift dönüşün 3B'ye izdüşümü ve zarfın sonlu kalınlığı $O(1)$ düzeltmeler getirir. Sonuç "kesin eşitlik" değil, **mertebe + $O(1)$ uyumu** olarak sunulmalıdır; %18'lik farkın hangi düzeltmeden geldiği açık araştırma maddesidir.
 
 ## 4. $v_{kav}$'ın nicelleştirilmesi: adlandırılmış yeni parametre gerekiyor — kohezyon $\Sigma$
 
-"Kavitasyon eşiği $c$'den çok yüksektir" (Ek A) ifadesi, şu an hiçbir formüle bağlı değil. Akışkanlar mekaniğinde sağlam (yırtıksız) bir akışkanı yırtmak, basıncı sıfırın da altına — akışkanın **çekme/kohezyon dayanımı** $-\Sigma$'nın altına — düşürmeyi gerektirir. Aynı Bernoulli hesabıyla:
+"Kavitasyon eşiği $c_0$'den çok yüksektir" (Ek A) ifadesi, şu an hiçbir formüle bağlı değil. Akışkanlar mekaniğinde sağlam (yırtıksız) bir akışkanı yırtmak, basıncı sıfırın da altına — akışkanın **çekme/kohezyon dayanımı** $-\Sigma$'nın altına — düşürmeyi gerektirir. Aynı Bernoulli hesabıyla:
 
-$$v_{kav}=\sqrt{\frac{2(P_0+\Sigma)}{\rho_0}}=\sqrt2\,c\,\sqrt{1+\frac{\Sigma}{P_0}}$$
+$$v_{kav}=\sqrt{\frac{2(P_0+\Sigma)}{\rho_0}}=\sqrt2\,c_0\,\sqrt{1+\frac{\Sigma}{P_0}}$$
 
 - Ek A'nın "çok daha yüksek" ifadesi $\Longleftrightarrow \Sigma\gg P_0$. Bu keyfî değildir; gerçek akışkanlarda emsali vardır: suyun teorik çekme dayanımı (~$10^2$ MPa), atmosfer basıncının (~$0{,}1$ MPa) **bin katı** mertebesindedir. Çekirdeksiz (nükleasyon merkezi içermeyen) süper-akışkanda bu oran daha da doğaldır.
 - Böylece Ek A'nın üç sözel iddiası tek sıralama teoreminde toplanır:
-$$c \;<\; \underbrace{\sqrt2 c}_{v_{denge}\,\approx\,v_{ekvator}} \;<\; \underbrace{\sqrt2 c\sqrt{1+\Sigma/P_0}}_{v_{kav}} \;\le\; v_{saf}$$
-- **Fiziksel okuma:** Alt-bileşenlerin saf dönüşleri $v_{kav}$'ı aşarak sağlam akışkanı **yırtar** (yaratılış); yırtık bir kez açıldıktan sonra zarf, kohezyona değil yalnızca $P_0$'a karşı çalışır ve $\sqrt2 c$'lik **denge** hızına oturur (kalıcılık). "Yaratma hızı ≫ sürdürme hızı" ayrımı, Ek A'daki "proton = birleşip yavaşlamış kompozit makine" anlatısının nicel karşılığıdır.
+$$c_0 \;<\; \underbrace{\sqrt2 c_0}_{v_{denge}\,\approx\,v_{ekvator}} \;<\; \underbrace{\sqrt2 c_0\sqrt{1+\Sigma/P_0}}_{v_{kav}} \;\le\; v_{saf}$$
+- **Fiziksel okuma:** Alt-bileşenlerin saf dönüşleri $v_{kav}$'ı aşarak sağlam akışkanı **yırtar** (yaratılış); yırtık bir kez açıldıktan sonra zarf, kohezyona değil yalnızca $P_0$'a karşı çalışır ve $\sqrt2 c_0$'lik **denge** hızına oturur (kalıcılık). "Yaratma hızı ≫ sürdürme hızı" ayrımı, Ek A'daki "proton = birleşip yavaşlamış kompozit makine" anlatısının nicel karşılığıdır.
 - **Dürüst kayıt:** $\Sigma$, teoriye eklenen adlandırılmış bir parametredir ve bağımsız bir gözlemle sabitlenmediği sürece serbesttir → T-8 listesine işlenmelidir. Kazanç: Ek A'nın tüm sözel hız iddiaları tek parametreli, iç tutarlı bir formül ailesine iner.
 
 ## 5. Çapraz kontrol: Ek B ile gerilim (T-5'e devredilecek not)
 
 Ek B, asgari arka plan basıncını *"akışkanın yırtılmasını önlemek için $P_0>\Delta P$"* koşulundan türetir — yani yırtılmanın $P=0$'da başladığını ($\Sigma=0$) varsayar. Madde 4'teki $\Sigma\gg P_0$ ile bu **çelişir:** kohezyon varsa doğru koşul $P_0+\Sigma>\Delta P$'dir ve Ek B'nin $P_0\ge1{,}6\times10^{25}$ Pa alt sınırı $(1+\Sigma/P_0)$ çarpanı kadar gevşer. Bu, T-4'ün değil Ek B'nin (T-5'in) sorunudur; oraya not düşülmelidir.
 
-**T-5'e hediye (ilk bakış hesabı, denetlenmeli):** $P_0$'ı alt-sınır yerine **bağımsız gözlemle sabitlemenin** bir yolu var görünüyor. Kütleçekimsel kızıla kayma/saat kayması genliği, yüzeydeki oransal basınç açığıyla ölçeklenir: $\delta c/c\sim\tfrac12\Delta P_{yüzey}/P_0$. Gözlenen genlik $\Phi/c^2\approx7\times10^{-10}$ ve $\Delta P_{yüzey}=\rho_n\Phi$ olduğundan $P_0\approx\tfrac12\rho_n c^2\approx10^{34}$ Pa, dolayısıyla $\rho_0\approx\rho_n/2\approx1{,}4\times10^{17}$ kg/m³ çıkar — arka plan yoğunluğu, nükleon öz yoğunluğunun yarısı mertebesinde. (Varsayımlar: $\rho$ sabit, ölçekleme lineer; teoride kütle yakınında $\rho$ da düştüğü için bu kaba bir ilk hesaptır. Ama tutarsa monizmle çok uyumlu: madde, arka planın yalnızca ~2 kat sıkışmış fazı olur.)
+**T-5'e hediye (ilk bakış hesabı, denetlenmeli):** $P_0$'ı alt-sınır yerine **bağımsız gözlemle sabitlemenin** bir yolu var görünüyor. Kütleçekimsel kızıla kayma/saat kayması genliği, yüzeydeki oransal basınç açığıyla ölçeklenir: $\delta c/c_0\sim\tfrac12\Delta P_{yüzey}/P_0$. Gözlenen genlik $\Phi/c_0^2\approx7\times10^{-10}$ ve $\Delta P_{yüzey}=\rho_n\Phi$ olduğundan $P_0\approx\tfrac12\rho_n c_0^2\approx10^{34}$ Pa, dolayısıyla $\rho_0\approx\rho_n/2\approx1{,}4\times10^{17}$ kg/m³ çıkar — arka plan yoğunluğu, nükleon öz yoğunluğunun yarısı mertebesinde. (Varsayımlar: $\rho$ sabit, ölçekleme lineer; teoride kütle yakınında $\rho$ da düştüğü için bu kaba bir ilk hesaptır. Ama tutarsa monizmle çok uyumlu: madde, arka planın yalnızca ~2 kat sıkışmış fazı olur.)
 
 ## 6. Önerilen düzenlemeler (yazar onayı sonrası)
 
-1. **Postülat 5, "Önemli Not" parantezi:** sadeleştirilir; sonuna tek cümle: *"Bu hızın $c$'yi aşması bir istisna değil zorunluluktur: içinde vakum cebi taşıyan her girdap zarfının denge yüzey hızı $\sqrt2 c$'dir (nicel türetim: Ek A)."*
-2. **Ek A yeniden yapılandırılır:** (i) hız taksonomisi tablosu ($c$, $v_{denge}=\sqrt2 c$, $v_{ekvator}$, $v_{kav}(\Sigma)$, $v_{saf}$ — hangisi hangi denklemde), (ii) $\sqrt2 c$ türetimi + evrensellik/attractor argümanı + %18 dürüst kaydı, (iii) $\Sigma$ tanımı ve sıralama teoremi, (iv) "ışık tam-sonik, madde kalıcı-süpersonik" çerçevesi.
+1. **Postülat 5, "Önemli Not" parantezi:** sadeleştirilir; sonuna tek cümle: *"Bu hızın $c_0$'yi aşması bir istisna değil zorunluluktur: içinde vakum cebi taşıyan her girdap zarfının denge yüzey hızı $\sqrt2 c_0$'dir (nicel türetim: Ek A)."*
+2. **Ek A yeniden yapılandırılır:** (i) hız taksonomisi tablosu ($c_0$, $v_{denge}=\sqrt2 c_0$, $v_{ekvator}$, $v_{kav}(\Sigma)$, $v_{saf}$ — hangisi hangi denklemde), (ii) $\sqrt2 c_0$ türetimi + evrensellik/attractor argümanı + %18 dürüst kaydı, (iii) $\Sigma$ tanımı ve sıralama teoremi, (iv) "ışık tam-sonik, madde kalıcı-süpersonik" çerçevesi.
 3. **7.4/T-8'e iki madde:** $\Sigma$'nın bağımsız sabitlenmesi; %18 farkın kökeni ($O(1)$ düzeltmeler).
 4. **T-5 notu:** Ek B'nin $\Sigma$'lı revizyonu + $P_0$'ın kızıla kayma genliğinden sabitlenmesi denemesi (madde 5).
 
 ## 7. Yazara sorular (Tur 2 gündemi)
 
-- **S1.** $\sqrt2 c$ denge-hızı türetimi benimseniyor mu? Benimsenirse Postülat 5'in $c$-üstü hızı "türetilmiş zorunluluk" statüsüne yükselir — teorinin $c$-üstü iddiaları *güçlenir*.
-- **S2.** Kohezyon dayanımı $\Sigma$, adlandırılmış parametre olarak teoriye resmen eklensin mi? ($v_{kav}=\sqrt2 c\sqrt{1+\Sigma/P_0}$; Ek A'nın "çok yüksek eşik" ifadesinin tek nicel taşıyıcısı bu.)
+- **S1.** $\sqrt2 c_0$ denge-hızı türetimi benimseniyor mu? Benimsenirse Postülat 5'in $c_0$-üstü hızı "türetilmiş zorunluluk" statüsüne yükselir — teorinin $c_0$-üstü iddiaları *güçlenir*.
+- **S2.** Kohezyon dayanımı $\Sigma$, adlandırılmış parametre olarak teoriye resmen eklensin mi? ($v_{kav}=\sqrt2 c_0\sqrt{1+\Sigma/P_0}$; Ek A'nın "çok yüksek eşik" ifadesinin tek nicel taşıyıcısı bu.)
 - **S3.** %18 fark nasıl sunulsun: (a) "mertebe + $O(1)$ uyumu, düzeltmeler araştırma maddesi" dili mi, (b) yoksa $\nu_c$ veya $R$'nin teori-içi bağımsız tayiniyle kapatma denemesi mi?
-- **S4.** Madde 5'teki $P_0\approx\tfrac12\rho_n c^2$ ilk-bakış hesabı T-5 gündemine alınsın mı?
+- **S4.** Madde 5'teki $P_0\approx\tfrac12\rho_n c_0^2$ ilk-bakış hesabı T-5 gündemine alınsın mı?
 
 ---
 
 #### TUR 2 — ONAY VE TAŞIMA: T-4 KAPANDI (25 Temmuz 2026)
 
-**Yazar kararları (kayıt):** S1 ✅ ($\sqrt2 c$ türetimi benimsendi), S2 ✅ ($\Sigma$ resmen eklendi), S3 → **(a)** "mertebe + $O(1)$ uyumu" dili, S4 ✅ ($P_0\approx\tfrac12\rho_n c^2$ hesabı T-5 gündemine alındı).
+**Yazar kararları (kayıt):** S1 ✅ ($\sqrt2 c_0$ türetimi benimsendi), S2 ✅ ($\Sigma$ resmen eklendi), S3 → **(a)** "mertebe + $O(1)$ uyumu" dili, S4 ✅ ($P_0\approx\tfrac12\rho_n c_0^2$ hesabı T-5 gündemine alındı).
 
 **Yapılan taşımalar:**
-1. **Postülat 5, "Önemli Not":** sonuna zorunluluk cümlesi eklendi — "$c$'yi aşma istisna değil yapısal zorunluluk; vakum-cepli her girdap zarfının denge yüzey hızı $\sqrt2 c\approx4{,}24\times10^8$ m/s; nicel türetim: Ek A."
-2. **Ek A yeniden yapılandırıldı** (`Kisim_1_Giris/03_Evrenaki_Postulasi.md`), yeni başlık: *"Hız Kavramlarının Ayrıştırılması: Patinaj Sınırı, Denge Hızı ve Kavitasyon Eşiği"*. İçerik: **A.1** iki sınırın kategorik ayrımı tablosu + "ışık tam-sonik, madde kalıcı-süpersonik" çerçevesi; **A.2** $\sqrt2 c$ türetimi (Bernoulli + vakum cebi) + evrensellik/attractor + %18 için $O(1)$ dili + zorunluluk argümanı; **A.3** $\Sigma$ tanımı, $v_{kav}=\sqrt2 c\sqrt{1+\Sigma/P_0}$, sıralama teoremi, beş-hız tablosu, yaratma/sürdürme ayrımı, Ek B bağı için açık-iş kutusu. Eski paragrafın tüm iddiaları (saf dönüşler yırtar, şok zarfı kendini yaratır, proton kompozit makine) korunarak yeni yapıya yedirildi. Animasyon 1.3.2 olduğu gibi kaldı (ölçeği yeni yapıyla zaten uyumlu: $c$ %10'da, eşik %90'da).
+1. **Postülat 5, "Önemli Not":** sonuna zorunluluk cümlesi eklendi — "$c_0$'yi aşma istisna değil yapısal zorunluluk; vakum-cepli her girdap zarfının denge yüzey hızı $\sqrt2 c_0\approx4{,}24\times10^8$ m/s; nicel türetim: Ek A."
+2. **Ek A yeniden yapılandırıldı** (`Kisim_1_Giris/03_Evrenaki_Postulasi.md`), yeni başlık: *"Hız Kavramlarının Ayrıştırılması: Patinaj Sınırı, Denge Hızı ve Kavitasyon Eşiği"*. İçerik: **A.1** iki sınırın kategorik ayrımı tablosu + "ışık tam-sonik, madde kalıcı-süpersonik" çerçevesi; **A.2** $\sqrt2 c_0$ türetimi (Bernoulli + vakum cebi) + evrensellik/attractor + %18 için $O(1)$ dili + zorunluluk argümanı; **A.3** $\Sigma$ tanımı, $v_{kav}=\sqrt2 c_0\sqrt{1+\Sigma/P_0}$, sıralama teoremi, beş-hız tablosu, yaratma/sürdürme ayrımı, Ek B bağı için açık-iş kutusu. Eski paragrafın tüm iddiaları (saf dönüşler yırtar, şok zarfı kendini yaratır, proton kompozit makine) korunarak yeni yapıya yedirildi. Animasyon 1.3.2 olduğu gibi kaldı (ölçeği yeni yapıyla zaten uyumlu: $c_0$ %10'da, eşik %90'da).
 3. **7.4'e madde 10 eklendi:** (i) $\Sigma$'nın bağımsız sabitlenmesi + Ek B'nin $P_0+\Sigma>\Delta P$ revizyonu, (ii) %18 farkın $O(1)$ düzeltme bütçesi.
 4. **Kısım 8 Ekler dizini:** Ek A'nın başlık referansı güncellendi.
 5. **T-5 ve T-8'e devir notları** işlendi (aşağıda ilgili bölümlerde).
@@ -1368,7 +1368,7 @@ Postülat 1, Evrenakı'yı *"çok yoğun bir durgun kütleye sahip olan, ancak u
 
 > **T-4'ten devredilen iki gündem maddesi (25 Temmuz 2026, yazar onaylı):**
 > 1. **Ek B'nin $\Sigma$ ile revizyonu:** Ek B, asgari arka plan basıncını "yırtılma $P=0$'da başlar" ($\Sigma=0$) varsayımıyla türetiyor; Ek A artık $\Sigma\gg P_0$ diyor. Doğru koşul $P_0+\Sigma>\Delta P$'dir ve mevcut $P_0\ge1{,}6\times10^{25}$ Pa alt sınırı $(1+\Sigma/P_0)$ çarpanı kadar gevşer. (7.4 madde 10'a da işlendi.)
-> 2. **$P_0$'ı bağımsız sabitleme denemesi:** Kızıla kayma/saat-kayması genliğinden $\delta c/c\sim\tfrac12\Delta P_{yüzey}/P_0=\Phi/c^2$ kurulursa $P_0\approx\tfrac12\rho_n c^2\approx1{,}2\times10^{34}$ Pa ve $\rho_0\approx\rho_n/2\approx1{,}4\times10^{17}$ kg/m³ çıkar — arka plan yoğunluğu nükleon öz yoğunluğunun yarısı (monizmle uyumlu: madde, arka planın ~2 kat sıkışmış fazı). Varsayımları ($\rho$ sabit, lineer ölçekleme; oysa teoride kütle yakınında $\rho$ da düşüyor) Tur 1'de denetlenecek. **Not:** Bu sabitleme tutarsa, T-5'in "ağırlıksızlık muafiyeti" argümanı da yeni $P_0/\rho_0$ değerleriyle kurulmalı; ayrıca Ek B'deki $\rho_0\ge1{,}8\times10^8$ kg/m³ alt sınırının statüsü (alt sınır → sabitlenmiş değer) değişir.
+> 2. **$P_0$'ı bağımsız sabitleme denemesi:** Kızıla kayma/saat-kayması genliğinden $\delta c/c_0\sim\tfrac12\Delta P_{yüzey}/P_0=\Phi/c_0^2$ kurulursa $P_0\approx\tfrac12\rho_n c_0^2\approx1{,}2\times10^{34}$ Pa ve $\rho_0\approx\rho_n/2\approx1{,}4\times10^{17}$ kg/m³ çıkar — arka plan yoğunluğu nükleon öz yoğunluğunun yarısı (monizmle uyumlu: madde, arka planın ~2 kat sıkışmış fazı). Varsayımları ($\rho$ sabit, lineer ölçekleme; oysa teoride kütle yakınında $\rho$ da düşüyor) Tur 1'de denetlenecek. **Not:** Bu sabitleme tutarsa, T-5'in "ağırlıksızlık muafiyeti" argümanı da yeni $P_0/\rho_0$ değerleriyle kurulmalı; ayrıca Ek B'deki $\rho_0\ge1{,}8\times10^8$ kg/m³ alt sınırının statüsü (alt sınır → sabitlenmiş değer) değişir.
 
 ---
 
@@ -1387,30 +1387,30 @@ Gündelik karşılık: dış çekim alanı olmayan sonsuz bir okyanusta basınç
 İtirazın ciddi versiyonu şudur: "peki homojen durum kararlı mı? Newtoncu öz-kütleçekimli akışkanda homojen durum **Jeans-kararsızdır** — en küçük yoğunluk pürüzü çöker ve büyür." Evrenakı'da bu kararsızlığın **iki bacağı da yoktur:**
 
 1. **Çekimsel geri-besleme yok:** Jeans çökmesini süren şey, yoğunlaşan bölgenin *daha çok çekmesidir.* Evrenakı'da yoğunlaşan bölge kimseyi çekmez; yalnızca basıncı yükseltir.
-2. **Basınç geri-yaylanması var:** Kavrama Yasası gereği $c^2=dP/d\rho>0$; her yoğunluk pürüzü, $c$ hızında yayılan basınç dalgası olarak **dağılır** — büyümez. Homojen durum yalnızca izinli değil, ortamın **tek doğal taban durumudur.**
-3. *(T-4 bağlantısı — kendiliğinden madde doğumu da yok:)* Arka planın "kaynayıp" kendiliğinden girdap-madde üretmesi için yerel akışın $v_{kav}=\sqrt2 c\sqrt{1+\Sigma/P_0}\gg c$ eşiğine ulaşması gerekir; $\Sigma\gg P_0$ kohezyonlu bir süper-akışkanda rastgele dalgalanmalar bu eşiğe ulaşamaz. Vakumun kararlılığı (uzayın durup dururken maddeye dönüşmemesi) de aynı çerçeveden bedavaya çıkar.
+2. **Basınç geri-yaylanması var:** Kavrama Yasası gereği $c_0^2=dP/d\rho>0$; her yoğunluk pürüzü, $c_0$ hızında yayılan basınç dalgası olarak **dağılır** — büyümez. Homojen durum yalnızca izinli değil, ortamın **tek doğal taban durumudur.**
+3. *(T-4 bağlantısı — kendiliğinden madde doğumu da yok:)* Arka planın "kaynayıp" kendiliğinden girdap-madde üretmesi için yerel akışın $v_{kav}=\sqrt2 c_0\sqrt{1+\Sigma/P_0}\gg c_0$ eşiğine ulaşması gerekir; $\Sigma\gg P_0$ kohezyonlu bir süper-akışkanda rastgele dalgalanmalar bu eşiğe ulaşamaz. Vakumun kararlılığı (uzayın durup dururken maddeye dönüşmemesi) de aynı çerçeveden bedavaya çıkar.
 
 **Dürüst dipnot (mekanik incelik):** Kütle *çevresindeki* gradyan bölgesinde ortamın kendisi de tepkisiz değildir — Euler gereği gradyana cevap verir; ama cevabı *düşmek* değil **dolaşmaktır** (girdap/sürüklenme: $\nabla P/\rho_0 = v_\theta^2/r$ Bernoulli dengesi, Postülat 7–8'in alanı). Katı deplasman cebi (nükleon) ise akıp dengelenemez; bütün hâlde itilir. "Madde düşer, ortam dolaşır" ayrımı Postülat 1 revizyonunda bir cümleyle verilmelidir.
 
-## 3. Devir maddesi 2'nin denetimi: $P_0\approx\tfrac12\rho_n c^2$ sabitlemesi — genelleştirilmiş biçimiyle SAĞLAM
+## 3. Devir maddesi 2'nin denetimi: $P_0\approx\tfrac12\rho_n c_0^2$ sabitlemesi — genelleştirilmiş biçimiyle SAĞLAM
 
 T-4'ten devredilen ilk-bakış hesabını varsayımlarını gevşeterek yeniden kurdum. Kütle yakınında hem $P$ hem $\rho$ düşüyorsa ($\delta\rho/\rho_0 = k\,\delta P/P_0$, $0\le k<1$; teori $P$'nin daha hızlı düştüğünü söylüyor, T-1 Tur 6):
 
 $$\frac{\delta c}{c}=\frac12\left(\frac{\delta P}{P_0}-\frac{\delta\rho}{\rho_0}\right)=\frac{1-k}{2}\cdot\frac{\Delta P_{yüzey}}{P_0}$$
 
-Gözlenen genlik $\Phi/c^2$ ve $\Delta P_{yüzey}=\rho_n\Phi$ (Ek B'nin kendi gradyanının integrali) ile:
+Gözlenen genlik $\Phi/c_0^2$ ve $\Delta P_{yüzey}=\rho_n\Phi$ (Ek B'nin kendi gradyanının integrali) ile:
 
-$$\boxed{P_0=\frac{1-k}{2}\,\rho_n c^2,\qquad \rho_0=\frac{1-k}{2}\,\rho_n}$$
+$$\boxed{P_0=\frac{1-k}{2}\,\rho_n c_0^2,\qquad \rho_0=\frac{1-k}{2}\,\rho_n}$$
 
 - **Sonuç $k$'ya sadece $O(1)$ duyarlı:** her durumda $P_0\sim10^{33}$–$10^{34}$ Pa, $\rho_0\sim10^{16}$–$10^{17}$ kg/m³ — arka plan, nükleon öz yoğunluğunun **yarısı mertebesinde.** Monizmle çarpıcı uyum: madde, arka planın yalnızca ~2 kat sıkışmış fazı (Postülat 1'in "madde = okyanusun yoğunlaşmış hâli" cümlesi nicelleşiyor).
-- **T-4 devir maddesi 1 kendiliğinden çözülüyor:** $P_0\sim10^{34}$ Pa iken Dünya'nın $\Delta P\approx0{,}83\times10^{25}$ Pa'sı **$10^{-9}$'luk bir pürüzdür** — ortam yırtılmanın yanına bile yaklaşmaz; Ek B'nin "kavitasyonu önleme" koşulu $\Sigma$'dan bağımsız olarak devasa marjla sağlanır. Ek B'nin rolü değişir: "asgari $P_0$ türetimi" değil, **"zayıf-alan tutarlılık kontrolü"** ($\Delta P/P_0\approx\Phi/c^2\sim10^{-9}$ — kütleçekimsel etkilerin gözlenen küçüklüğüyle birebir).
-- **Otomatik tutarlılıklar:** GPS 38 µs/gün ve Pound–Rebka aynı $\Phi/c^2$ fiziği (inşa gereği ✓); kütle-itim formülü $\vec a=-\nabla P/\rho_n$ etkilenmez ($\nabla P=\rho_n g$ inşa gereği ✓); Fizeau türetimi yalnız oranları kullanır ($\phi$), etkilenmez ✓.
+- **T-4 devir maddesi 1 kendiliğinden çözülüyor:** $P_0\sim10^{34}$ Pa iken Dünya'nın $\Delta P\approx0{,}83\times10^{25}$ Pa'sı **$10^{-9}$'luk bir pürüzdür** — ortam yırtılmanın yanına bile yaklaşmaz; Ek B'nin "kavitasyonu önleme" koşulu $\Sigma$'dan bağımsız olarak devasa marjla sağlanır. Ek B'nin rolü değişir: "asgari $P_0$ türetimi" değil, **"zayıf-alan tutarlılık kontrolü"** ($\Delta P/P_0\approx\Phi/c_0^2\sim10^{-9}$ — kütleçekimsel etkilerin gözlenen küçüklüğüyle birebir).
+- **Otomatik tutarlılıklar:** GPS 38 µs/gün ve Pound–Rebka aynı $\Phi/c_0^2$ fiziği (inşa gereği ✓); kütle-itim formülü $\vec a=-\nabla P/\rho_n$ etkilenmez ($\nabla P=\rho_n g$ inşa gereği ✓); Fizeau türetimi yalnız oranları kullanır ($\phi$), etkilenmez ✓.
 - **Denetlenmesi gerekenler (Tur 2 öncesi):** (i) $G$'nin 4.2'deki türetimi yeni $P_0$ ile aynı sayıyı veriyor mu? (ii) SN 1987A gecikme bütçesi (2.4.4) galaktik $\delta P/P_0$ değerleriyle hâlâ tutuyor mu? (iii) Ek B'deki $\rho_0\ge1{,}8\times10^8$ kg/m³ satırı "alt sınır" olarak korunup üstüne "kızıla kaymadan sabitlenen değer $\sim\rho_n/2$" mi eklenmeli, yoksa tamamen yeniden mi yazılmalı?
 
 ## 4. Önerilen düzenlemeler (yazar onayı sonrası)
 
 1. **Postülat 1 metni:** "ancak uzayda serbestçe yayıldığı için bir 'ağırlığı' bulunmayan" ifadesi tanım olmaktan çıkarılır; yerine teorem dili: *"Bu ortamın 'ağırlıksızlığı' ayrı bir muafiyet değil, kuvvet tanımının sonucudur: teoride ağırlık, kütlenin değil basınç gradyanının (deplasmanın) özelliğidir ve homojen ortam gradyan üretmez (nicel gerekçe ve kararlılık: Ek B). Madde düşer, ortam dolaşır."*
-2. **Ek B genişletmesi:** (i) homojenlik teoremi + Jeans karşılaştırmalı kararlılık argümanı (madde 2), (ii) $P_0=\tfrac{1-k}{2}\rho_n c^2$ sabitlemesi ve $\Delta P/P_0\sim10^{-9}$ zayıf-alan kontrolü, (iii) mevcut alt-sınır hesabının "bağımsız tutarlılık kontrolü" olarak yeniden konumlanması, (iv) $\Sigma$'lı yırtılma koşulunun kaydı (7.4 md.10 bağı).
+2. **Ek B genişletmesi:** (i) homojenlik teoremi + Jeans karşılaştırmalı kararlılık argümanı (madde 2), (ii) $P_0=\tfrac{1-k}{2}\rho_n c_0^2$ sabitlemesi ve $\Delta P/P_0\sim10^{-9}$ zayıf-alan kontrolü, (iii) mevcut alt-sınır hesabının "bağımsız tutarlılık kontrolü" olarak yeniden konumlanması, (iv) $\Sigma$'lı yırtılma koşulunun kaydı (7.4 md.10 bağı).
 3. **7.4 güncellemesi:** md.10(i)'deki "Ek B revizyonu" kalemi bu çözümle kapanır; $G$/SN 1987A çapraz kontrolleri açık iş olarak kalır.
 
 ## 5. Yazara sorular (Tur 2 gündemi)
@@ -1426,14 +1426,14 @@ $$\boxed{P_0=\frac{1-k}{2}\,\rho_n c^2,\qquad \rho_0=\frac{1-k}{2}\,\rho_n}$$
 **Yazar kararları (kayıt):** S1 ✅ ("ağırlıksızlık = teorem" + "madde düşer, ortam dolaşır"), S2 ✅ ($P_0$ kızıla kaymadan sabitlenir, Ek B buna göre yeniden yazılır), S3 → **$k$ bir $O(1)$ belirsizlik olarak işaretlenir** (teori henüz taahhüt etmiyor).
 
 **Bağımlı-sayı taraması (S2 şartı) yapıldı:**
-- Kitapta $\rho_0$'ın eski alt-sınır değeri ($1{,}8\times10^8$ kg/m³) **hiçbir başka bölümde sayısal olarak kullanılmıyor** — yalnızca Ek B'de türetiliyordu. (Grep: tüm `\rho_0` geçişleri ya sembolik oran (Fizeau türetimi 3.4.6, $\rho_0/\rho_m$) ya da $c=\sqrt{P_0/\rho_0}$ tanımı; hiçbiri mutlak sayıya bağlı değil.) → Sabitleme güvenle yapıldı.
+- Kitapta $\rho_0$'ın eski alt-sınır değeri ($1{,}8\times10^8$ kg/m³) **hiçbir başka bölümde sayısal olarak kullanılmıyor** — yalnızca Ek B'de türetiliyordu. (Grep: tüm `\rho_0` geçişleri ya sembolik oran (Fizeau türetimi 3.4.6, $\rho_0/\rho_m$) ya da $c_0=\sqrt{P_0/\rho_0}$ tanımı; hiçbiri mutlak sayıya bağlı değil.) → Sabitleme güvenle yapıldı.
 - **$G$ türetimi (4.2):** $P(r)=P_0-\alpha M/r$ formülü yalnızca gradyan bağlaşımı $\alpha$'ya dayanıyor, $P_0$'ın mutlak değerine değil → **etkilenmiyor** (Ek B.3'te dürüst kayıt olarak yazıldı).
 - **Fizeau (3.4.6):** yalnız $\phi$ ve oranlar → etkilenmiyor.
 - **SN 1987A (2.4.4):** çapraz kontrol açık iş olarak 7.4 md.10(iii)'e yazıldı.
 
 **Yapılan taşımalar:**
 1. **Postülat 1 metni:** "ağırlığı bulunmayan" ifadesi tanım olmaktan çıkarıldı; teorem diline çevrildi ("ağırlık kütlenin değil gradyanın özelliğidir; homojen ortam gradyan üretmez — madde düşer, ortam dolaşır"; Ek B'ye ref).
-2. **Ek B dört alt bölüme yapılandırıldı** (`Kisim_1_Giris/03_Evrenaki_Postulasi.md`): **B.1** çok bileşenli basınç alanı (eski içerik korundu); **B.2** yırtılmama koşulu artık "muhafazakâr alt sınır" olarak konumlandı ($\Sigma=0$ notu + $P_0+\Sigma>\Delta P$); **B.3** $P_0=\tfrac{1-k}{2}\rho_n c^2$ sabitlemesi ($\rho_0\sim\rho_n/2$, monizm nicelleşmesi, zayıf-alan kontrolü $\Delta P/P_0\sim10^{-9}$, $G$-bağımsızlığı dürüst kaydı); **B.4** ağırlıksızlık teoremi (3 adım: datum + Jeans-karşılaştırmalı kararlılık + kendiliğinden madde doğumu yok) + "madde düşer, ortam dolaşır" mekanik inceliği. Eski kapanış paragrafı korundu.
+2. **Ek B dört alt bölüme yapılandırıldı** (`Kisim_1_Giris/03_Evrenaki_Postulasi.md`): **B.1** çok bileşenli basınç alanı (eski içerik korundu); **B.2** yırtılmama koşulu artık "muhafazakâr alt sınır" olarak konumlandı ($\Sigma=0$ notu + $P_0+\Sigma>\Delta P$); **B.3** $P_0=\tfrac{1-k}{2}\rho_n c_0^2$ sabitlemesi ($\rho_0\sim\rho_n/2$, monizm nicelleşmesi, zayıf-alan kontrolü $\Delta P/P_0\sim10^{-9}$, $G$-bağımsızlığı dürüst kaydı); **B.4** ağırlıksızlık teoremi (3 adım: datum + Jeans-karşılaştırmalı kararlılık + kendiliğinden madde doğumu yok) + "madde düşer, ortam dolaşır" mekanik inceliği. Eski kapanış paragrafı korundu.
 3. **7.4 madde 10** genişletildi: (iii) $k$ belirsizliği + SN 1987A çapraz kontrolü + $G$-bağımsızlığı eklendi; başlık "Ek A–B" oldu.
 4. **Kısım 8 Ekler dizini:** Ek B başlık referansı güncellendi.
 
@@ -1446,7 +1446,7 @@ $$\boxed{P_0=\frac{1-k}{2}\,\rho_n c^2,\qquad \rho_0=\frac{1-k}{2}\,\rho_n}$$
 ## T-6 — BELL DENEYLERİ VE $v_m$ KURTARMASI
 
 ### Problem
-Bölüm 2.10, 2015'in üç boşluksuz Bell deneyinin (Giustina, Shalm, Hensen) teorinin yerel katmanıyla çeliştiğini **açıkça kabul ediyor** — bu dürüstlük değerlidir. Verilen cevap, $v_m > 10^4 c$ hızında ayarlanan "ortak okyanus topografyası"dır.
+Bölüm 2.10, 2015'in üç boşluksuz Bell deneyinin (Giustina, Shalm, Hensen) teorinin yerel katmanıyla çeliştiğini **açıkça kabul ediyor** — bu dürüstlük değerlidir. Verilen cevap, $v_m > 10^4 c_0$ hızında ayarlanan "ortak okyanus topografyası"dır.
 
 ### Gerilim
 Bu bir **kurtarma hipotezidir**: teorinin çekirdek vaadi olan "her şey temas mekaniğidir" iddiasını, ışık hızının on bin katı hızla ayarlanan bir ortam varsayarak korur. Açıklanan gizemin yerine yeni bir gizem konmuş olur.
@@ -1463,7 +1463,7 @@ Ya (a) $v_m$'nin bağımsız bir fiziksel büyüklük olarak nereden geldiği t�
 
 ## 1. Sorunun özü
 
-2.10.1'in mevcut hâli $v_m$'yi *"ortamın kendi topografya-ayar hızı"* diye adlandırıyor ve Salart 2008'in $v>10^4c$ alt sınırını "$v_m$'nin ölçümü" olarak okuyor. Ama $v_m$'nin **formülü yok**: hangi fiziksel büyüklükten geldiği, merdivendeki yeri ($\sqrt2 c$? $v_{kav}$? $v_{saf}$?) ve başka hangi gözlemde iz bırakacağı söylenmiyor. T-6'nın teşhisi doğrudur: formülsüz bir hız, ihtiyaç anında istenen değeri alabilen bir **kurtarma parametresidir.**
+2.10.1'in mevcut hâli $v_m$'yi *"ortamın kendi topografya-ayar hızı"* diye adlandırıyor ve Salart 2008'in $v>10^4c$ alt sınırını "$v_m$'nin ölçümü" olarak okuyor. Ama $v_m$'nin **formülü yok**: hangi fiziksel büyüklükten geldiği, merdivendeki yeri ($\sqrt2 c_0$? $v_{kav}$? $v_{saf}$?) ve başka hangi gözlemde iz bırakacağı söylenmiyor. T-6'nın teşhisi doğrudur: formülsüz bir hız, ihtiyaç anında istenen değeri alabilen bir **kurtarma parametresidir.**
 
 ## 2. Teorinin elindeki hazır malzeme: iki kanal
 
@@ -1471,20 +1471,20 @@ T-4/T-5 revizyonlarından sonra teori, sinyal taşıma için **iki ayrı kanala*
 
 | Kanal | Taşıdığı şey | Hızı | Kaynak |
 |---|---|---|---|
-| **Basınç (sıkışma) kanalı** | Yoğunluk/basınç salınımları — ışık, ses-tipi dalgalar | $c=\sqrt{P_0/\rho_0}$ (KY-1) | T-1, Ek B |
+| **Basınç (sıkışma) kanalı** | Yoğunluk/basınç salınımları — ışık, ses-tipi dalgalar | $c_0=\sqrt{P_0/\rho_0}$ (KY-1) | T-1, Ek B |
 | **Kohezyon (yapı) kanalı** | Ortamın *yapısal* yeniden düzenlenmesi — gradyan/topografya kurulumu | **?** | Ek A.3: $\Sigma$ var, hızı tanımsız |
 
 Sürekli ortamlar mekaniğinde bu ayrım standarttır: sıkışma dalgaları $\sqrt{\partial P/\partial\rho}$ ile, kesme/elastik sinyaller ise $\sqrt{G/\rho}$ ile gider ($G$: kesme modülü). Evrenakı'da kesme modülü rolünü oynayabilecek tek adlandırılmış büyüklük **kohezyon dayanımı $\Sigma$'dır** (Ek A.3, T-4'te resmen eklendi).
 
 ## 3. Öneri (çekirdek hamle)
 
-$$\boxed{\;v_m=\sqrt{\frac{\Sigma}{\rho_0}}=c\,\sqrt{\frac{\Sigma}{P_0}}\;}$$
+$$\boxed{\;v_m=\sqrt{\frac{\Sigma}{\rho_0}}=c_0\,\sqrt{\frac{\Sigma}{P_0}}\;}$$
 
 **Gerekçe:** Topografya kurulumu (analizör kütlelerinin gradyanlarının uzağa uzanması, kütle-itim alanının ayarlanması) bir *sıkışma dalgası* değil, ortamın *yapısal* olayıdır; yapıyı bir arada tutan şey kohezyon olduğuna göre, yapısal bilginin taşıyıcı hızı kohezyon kanalının elastik hızıdır. $v_m$ böylece **yeni bir varsayım olmaktan çıkar; Ek A.3'te zaten var olan $\Sigma$'nın ikinci yüzü olur.**
 
-**Merdivendeki yeri (tutarlılık kontrolü):** $v_{kav}=\sqrt2\,c\sqrt{1+\Sigma/P_0}\approx\sqrt2\,v_m$ olduğundan ($\Sigma\gg P_0$):
+**Merdivendeki yeri (tutarlılık kontrolü):** $v_{kav}=\sqrt2\,c_0\sqrt{1+\Sigma/P_0}\approx\sqrt2\,v_m$ olduğundan ($\Sigma\gg P_0$):
 
-$$c \;<\; \sqrt2\,c \;<\; v_m \;<\; v_{kav}\approx\sqrt2\,v_m \;\le\; v_{saf}$$
+$$c_0 \;<\; \sqrt2\,c_0 \;<\; v_m \;<\; v_{kav}\approx\sqrt2\,v_m \;\le\; v_{saf}$$
 
 Topografya ışıktan çok hızlı ayarlanır ama kavitasyon eşiğinin **altında** kalır: ortam bilgiyi taşırken yırtılmaz. Merdiven kendiliğinden kapanıyor — hiçbir yeni sabit eklenmedi.
 
@@ -1492,8 +1492,8 @@ Topografya ışıktan çok hızlı ayarlanır ama kavitasyon eşiğinin **altın
 
 1. **Salart 2008 artık $\Sigma$'nın ölçümüdür:** $v_m>10^4c \Rightarrow \Sigma/P_0>10^8$. T-8'de "bağımsız gözlemle sabitlenmemiş" diye kayıtlı olan $\Sigma$, ilk **gözlemsel alt sınırını** Bell hız-sınırı deneylerinden alır. Kurtarma hipotezi, serbest parametreye veri bağlayan bir ölçüm programına dönüşür.
 2. **Çapraz iz — madde doğum eşiği:** Aynı $\Sigma$, $v_{kav}\approx\sqrt2\,v_m>1{,}4\times10^4c$ verir. Dolanıklık deneylerindeki hız sınırı ile maddenin yaratılma eşiği (Ek A.3) ve vakumun kararlılığı (Ek B.4) **aynı parametreye kilitlenir**: Bell alt sınırı yükseldikçe vakum kararlılığı teoremi güçlenir. Birbirinden bağımsız üç bölüm tek $\Sigma$ üzerinde kenetlenir.
-3. **Çapraz iz — kütleçekim dalgaları (GW170817):** İki-kanal ayrımı burada kritik bir sınavı kendiliğinden geçer. GW170817, kütleçekim *dalgalarının* $c$'de gittiğini $10^{-15}$ hassasiyetle ölçtü. Teoride bu çelişki değildir: **dalga** (salınım) basınç kanalında $c$ ile gider; **topografya** (statik gradyan yapısının kurulumu) kohezyon kanalında $v_m$ ile ayarlanır. 2.10.1'deki *"kütle-itim alanının hızlı ayarlanması da aynı $v_m$'yi gerektirir"* cümlesi bu ayrımla birlikte okunmalıdır — aksi hâlde GW ölçümüyle çelişki doğar.
-4. **Yanlışlanabilirlik keskinleşir:** $L>v_m\cdot t$ testinde $S\to2$ bozulması bir gün ölçülürse, $\Sigma/P_0=(v_m/c)^2$ bağıntısı ve Ek B.3'ün sabitlediği $P_0\approx\tfrac12\rho_n c^2$ ile $\Sigma$ **pascal cinsinden** sabitlenir. Ölçülmezse alt sınır yükselmeye devam eder. Her iki sonuç da bilgi vericidir.
+3. **Çapraz iz — kütleçekim dalgaları (GW170817):** İki-kanal ayrımı burada kritik bir sınavı kendiliğinden geçer. GW170817, kütleçekim *dalgalarının* $c_0$'de gittiğini $10^{-15}$ hassasiyetle ölçtü. Teoride bu çelişki değildir: **dalga** (salınım) basınç kanalında $c_0$ ile gider; **topografya** (statik gradyan yapısının kurulumu) kohezyon kanalında $v_m$ ile ayarlanır. 2.10.1'deki *"kütle-itim alanının hızlı ayarlanması da aynı $v_m$'yi gerektirir"* cümlesi bu ayrımla birlikte okunmalıdır — aksi hâlde GW ölçümüyle çelişki doğar.
+4. **Yanlışlanabilirlik keskinleşir:** $L>v_m\cdot t$ testinde $S\to2$ bozulması bir gün ölçülürse, $\Sigma/P_0=(v_m/c_0)^2$ bağıntısı ve Ek B.3'ün sabitlediği $P_0\approx\tfrac12\rho_n c_0^2$ ile $\Sigma$ **pascal cinsinden** sabitlenir. Ölçülmezse alt sınır yükselmeye devam eder. Her iki sonuç da bilgi vericidir.
 
 ## 5. Dürüst kayıt (7.4 ve T-8'e işlenecek)
 
@@ -1503,16 +1503,16 @@ Topografya ışıktan çok hızlı ayarlanır ama kavitasyon eşiğinin **altın
 
 ## 6. 2.10.1'e işlenecek değişiklikler (onay sonrası)
 
-1. **Katman 2, madde (3):** "$v_m$... bundan bağımsız ve çok daha yüksektir" cümlesine formül eklenir: $v_m=\sqrt{\Sigma/\rho_0}=c\sqrt{\Sigma/P_0}$ (Ek A.3'e atıf) + iki-kanal cümlesi (basınç kanalı $c$, kohezyon kanalı $v_m$).
-2. **$v_m$ programı paragrafı:** Salart 2008 cümlesi "$v_m$'nin ölçümü" yerine "$\Sigma/P_0>10^8$ alt sınırının ölçümü" olarak keskinleştirilir; merdiven satırı ($c<\sqrt2 c<v_m<v_{kav}$) eklenir; GW170817 iki-kanal notu bir cümleyle eklenir.
+1. **Katman 2, madde (3):** "$v_m$... bundan bağımsız ve çok daha yüksektir" cümlesine formül eklenir: $v_m=\sqrt{\Sigma/\rho_0}=c_0\sqrt{\Sigma/P_0}$ (Ek A.3'e atıf) + iki-kanal cümlesi (basınç kanalı $c_0$, kohezyon kanalı $v_m$).
+2. **$v_m$ programı paragrafı:** Salart 2008 cümlesi "$v_m$'nin ölçümü" yerine "$\Sigma/P_0>10^8$ alt sınırının ölçümü" olarak keskinleştirilir; merdiven satırı ($c_0<\sqrt2 c_0<v_m<v_{kav}$) eklenir; GW170817 iki-kanal notu bir cümleyle eklenir.
 3. **Kurtarma-hipotezi itirazına açık cevap:** bir cümle — "$v_m$ bu bölüm için icat edilmiş bir hız değildir; Ek A.3'ün kohezyon parametresinin elastik hızıdır ve madde-doğum eşiğiyle aynı sabite bağlıdır."
-4. **Ek A.3'e tek satır:** hız tablosuna $v_m=c\sqrt{\Sigma/P_0}$ satırı (kohezyon kanalının sinyal hızı; $\sqrt2 c$ ile $v_{kav}$ arası).
+4. **Ek A.3'e tek satır:** hız tablosuna $v_m=c_0\sqrt{\Sigma/P_0}$ satırı (kohezyon kanalının sinyal hızı; $\sqrt2 c_0$ ile $v_{kav}$ arası).
 5. **7.4 ve T-8 kayıtları:** yukarıdaki 5(i) ve 5(iii).
 
 ## 7. Yazara sorular
 
-- **S1.** Çekirdek özdeşleştirme ($v_m=c\sqrt{\Sigma/P_0}$, kohezyon kanalı) benimsensin mi? *(Benimsenmezse dürüst alternatif, T-6 seçenek (b)'dir: 7.4'e "kurtarma hipotezi" kaydı.)*
-- **S2.** GW170817 iki-kanal notu (dalga $c$ ile, topografya $v_m$ ile) 2.10.1'e eklensin mi? Eklenmezse bu gerilim ileride T-2 türü bir açık olarak geri döner; eklenmesi önerilir.
+- **S1.** Çekirdek özdeşleştirme ($v_m=c_0\sqrt{\Sigma/P_0}$, kohezyon kanalı) benimsensin mi? *(Benimsenmezse dürüst alternatif, T-6 seçenek (b)'dir: 7.4'e "kurtarma hipotezi" kaydı.)*
+- **S2.** GW170817 iki-kanal notu (dalga $c_0$ ile, topografya $v_m$ ile) 2.10.1'e eklensin mi? Eklenmezse bu gerilim ileride T-2 türü bir açık olarak geri döner; eklenmesi önerilir.
 - **S3.** Ek A.3 hız tablosuna $v_m$ satırı eklensin mi (madde 6.4)?
 
 Onay gelirse TUR 2'de metinler kitabın diliyle yazılıp taşınır ve T-6 ✅ yapılır.
@@ -1521,7 +1521,7 @@ Onay gelirse TUR 2'de metinler kitabın diliyle yazılıp taşınır ve T-6 ✅ 
 
 #### TUR 2 — ONAY VE TAŞIMA: T-6 KAPANDI (26 Temmuz 2026)
 
-**Yazar kararları (kayıt):** S1 ✅ ($v_m=c\sqrt{\Sigma/P_0}$ kohezyon-kanalı özdeşleştirmesi benimsendi), S2 ✅ (GW170817 iki-kanal notu eklendi), S3 ✅ (Ek A.3 hız tablosuna $v_m$ satırı eklendi).
+**Yazar kararları (kayıt):** S1 ✅ ($v_m=c_0\sqrt{\Sigma/P_0}$ kohezyon-kanalı özdeşleştirmesi benimsendi), S2 ✅ (GW170817 iki-kanal notu eklendi), S3 ✅ (Ek A.3 hız tablosuna $v_m$ satırı eklendi).
 
 **Yapılan taşımalar:**
 1. **2.10.1 Katman 2, madde (3):** iki-kanal ayrımı + $v_m$ formülü + merdiven konumu + GW170817 notu yazıldı.
@@ -1529,7 +1529,7 @@ Onay gelirse TUR 2'de metinler kitabın diliyle yazılıp taşınır ve T-6 ✅ 
 3. **Ek A.3:** kohezyon kanalı paragrafı + $v_m$ formülü; merdiven denklemine ve hız tablosuna $v_m$ eklendi; $\Sigma$ paragrafına Bell alt sınırı işlendi.
 4. **7.4 madde 6:** $v_m$'nin özdeşleştirildiği, ama bunun mekanizma önerisi statüsünde olduğu kaydedildi (madde 10-i bağlantısıyla).
 5. **7.4 madde 10-i:** $\Sigma$'nın Bell deneylerinden gelen gözlemsel alt sınırı ($\Sigma/P_0>10^8$) eklendi.
-6. **7.5 satır 8:** öngörü $v_m=c\sqrt{\Sigma/P_0}$ formülüyle keskinleştirildi.
+6. **7.5 satır 8:** öngörü $v_m=c_0\sqrt{\Sigma/P_0}$ formülüyle keskinleştirildi.
 
 **T-8'e devir:** kohezyon-kanalı özdeşleştirmesinin mikro-modelden türetimi + $\Sigma$'nın tam sabitlenmesi (aşağıda T-8'de).
 
@@ -1596,14 +1596,14 @@ Akışkan türbülansının doğal deseni tam da gözlenen kozmik ağdır: vorte
 **Yazar düzeltmesi (kayıt, 26.07.2026):** Teori Büyük Patlama olayını **savunur.** 3.7.1'deki eleştiri olayın kendisine değil, standart modelin *mekanizmasız, salt matematiksel* sunumuna yöneliktir: standart model patlamayı denklemle tarif eder ama mekanik sebebini veremez; Evrenakı aynı olaya hidrodinamik mekanizma kazandırır. (3.7.3 zaten "evrenin genç ve **yüksek basınçlı** olduğu dönem"i kullanıyor — sıcak/yoğun erken evren teorinin kendi malzemesidir.)
 
 **Teorinin mekanizması (iki parça):**
-1. **Işımanın kendisi:** CMB, o sıcak ve yüksek-basınçlı erken dönemin denge ışımasının **fosilidir** — teori bunu kabul eder. Bugünkü 2,725 K'ye inişi ise metrik genişlemeyle değil, teorinin kendi kızıla-kayma mekanizmasıyla okunur: ışıma, $c$'nin çok daha yüksek olduğu genç ve yüksek-basınçlı evrende üretilmiştir; zamansal $c$ oranı (3.7.3) tayfı bugünkü soğuk değere taşır.
+1. **Işımanın kendisi:** CMB, o sıcak ve yüksek-basınçlı erken dönemin denge ışımasının **fosilidir** — teori bunu kabul eder. Bugünkü 2,725 K'ye inişi ise metrik genişlemeyle değil, teorinin kendi kızıla-kayma mekanizmasıyla okunur: ışıma, $c_0$'nin çok daha yüksek olduğu genç ve yüksek-basınçlı evrende üretilmiştir; zamansal $c_0$ oranı (3.7.3) tayfı bugünkü soğuk değere taşır.
 2. **Pik desenleri:** Erken plazma gerçekten salınmıştır — "evrenin ilk sesi" ifadesi, her şeyi basınç ve akustikle okuyan bir teoriye herkesten çok yakışır. Standart modelin ihtiyacı, plazmayla birlikte **salınmayan** bir çekici iskelettir (karanlık madde kuyuları). Evrenakı'da bu rolü **ortamın ilkel girdap kaskadının basınç kuyuları** oynar: plazma, okyanusun önceden var olan kuyu iskeletinin içinde salınır. Kuyular parçacık olmadığı için ışımaz, çarpışmaz, dedektörde görünmez — karanlık madde aramalarının tüm null sonuçları teoride otomatik açıklanır. Meşhur "görünür maddenin ~5 katı" oranı da karanlık parçacık sayımı değil, **kuyu iskeletinin gücünün ölçümüdür** (ortam sirkülasyonunun baryonik öz-çekime oranı) → T-8'e gözlemsel kulp adayı.
 
 **Birleşik tablo (T-7'nin asıl kazancı):** Dört kanıt sınıfı tek mekanizmaya iner — standart fiziğin "karanlık madde" dediği her şey, **ortamın görünmez sirkülasyon kuyularıdır:** dönüş eğrilerinde galaktik vorteks kuyusu (4.2.9.2), Bullet Cluster'da galaksilerle geçen kuyular (madde 3), kozmik ağda kaskadın filaman iskeleti (madde 4), CMB piklerinde plazmanın içinde salındığı ilkel kuyu iskeleti. MOND'un düştüğü yerde teorinin düşmemesinin yapısal nedeni: MOND kuvvet yasasını değiştirir ama *taşıyıcı yapı* önermez; Evrenakı taşıyıcı yapıyı önerir.
 
 **Tutarlılık çapası:** CMB dipolü T-2'de kozmik durgun çerçevenin çapası olarak kullanılmıştı; erken-evren fosili okuması bununla aynı hizadadır.
 
-**Nicel program (7.4'e kalem):** pik konum/oranlarının "kuyu iskeleti + plazma salınımı" hesabından türetimi ve 2,725 K'nin zamansal-$c$ soğuma bütçesinden hesabı, manüskriptin açık *hesap* işleridir — mekanizma bellidir, sayısal türetim programdadır (cos², ring rain vb. ile aynı statü).
+**Nicel program (7.4'e kalem):** pik konum/oranlarının "kuyu iskeleti + plazma salınımı" hesabından türetimi ve 2,725 K'nin zamansal-$c_0$ soğuma bütçesinden hesabı, manüskriptin açık *hesap* işleridir — mekanizma bellidir, sayısal türetim programdadır (cos², ring rain vb. ile aynı statü).
 
 ## 6. Taşıma planı (onay sonrası)
 
@@ -1617,7 +1617,7 @@ Akışkan türbülansının doğal deseni tam da gözlenen kozmik ağdır: vorte
 
 - **S1.** Yer: yeni içerik **3.7.4 alt bölümü** olarak mı (önerilen), yoksa Kısım 3'te ayrı yeni dosya olarak mı?
 - **S2.** Bullet Cluster mekanizma önerisi (merceklenme sirkülasyon kuyularını izler; şoklanan gaz kuyusunu yitirir) bu haliyle benimsensin mi?
-- **S3.** CMB mekanizması (erken sıcak dönemin fosil ışıması + zamansal-$c$ soğuması + plazmanın ortam kuyu iskeletinde salınımı; "5:1 oranı = kuyu iskeletinin gücü") bu haliyle benimsensin mi?
+- **S3.** CMB mekanizması (erken sıcak dönemin fosil ışıması + zamansal-$c_0$ soğuması + plazmanın ortam kuyu iskeletinde salınımı; "5:1 oranı = kuyu iskeletinin gücü") bu haliyle benimsensin mi?
 - **S4.** Sınanabilir kulp (ofset ↔ sirkülasyon korelasyonu) 7.5 tablosuna satır 10 olarak eklensin mi?
 
 Onay gelirse TUR 2'de metin kitabın diliyle yazılıp taşınır ve T-7 ✅ yapılır.
@@ -1626,7 +1626,7 @@ Onay gelirse TUR 2'de metin kitabın diliyle yazılıp taşınır ve T-7 ✅ yap
 
 #### TUR 2 — ONAY VE TAŞIMA: T-7 KAPANDI (26 Temmuz 2026)
 
-**Yazar kararları (kayıt):** S1 ✅ (3.7.4 alt bölümü), S2 ✅ (Bullet Cluster mekanizması), S3 ✅ (CMB: erken dönem fosili + zamansal-$c$ soğuma + kuyu iskeleti), S4 ✅ (7.5 satır 10), S5 ✅ (3.7.1 dil netleştirmesi). Ayrıca iki yazar düzeltmesi bu turda kayda geçti ve hafızaya alındı: (1) teori hiçbir gözlemi açıklamasız bırakmaz — açık kalanlar yalnızca hesap kalemleridir; (2) **Büyük Patlama olayı savunulur, reddedilmez** — eleştiri mekanizmasız sunuma yöneliktir.
+**Yazar kararları (kayıt):** S1 ✅ (3.7.4 alt bölümü), S2 ✅ (Bullet Cluster mekanizması), S3 ✅ (CMB: erken dönem fosili + zamansal-$c_0$ soğuma + kuyu iskeleti), S4 ✅ (7.5 satır 10), S5 ✅ (3.7.1 dil netleştirmesi). Ayrıca iki yazar düzeltmesi bu turda kayda geçti ve hafızaya alındı: (1) teori hiçbir gözlemi açıklamasız bırakmaz — açık kalanlar yalnızca hesap kalemleridir; (2) **Büyük Patlama olayı savunulur, reddedilmez** — eleştiri mekanizmasız sunuma yöneliktir.
 
 **Yapılan taşımalar:**
 1. **Yeni 3.7.4** (dört alt bölüm): 3.7.4.1 Bullet Cluster ("ayrışan şey akış yapısıdır"; Markevitch 2004, Clowe 2006 kaynaklı), 3.7.4.2 Kozmik Ağ (kaskadın filaman iskeleti), 3.7.4.3 CMB ("evrenin ilk sesi"; Penzias & Wilson 1965, Planck 2020 kaynaklı; null-sonuç kazancı ve 5:1 = kuyu gücü ölçümü), 3.7.4.4 Birleşik İlke tablosu + MOND karşılaştırması + dürüst kayıt.
@@ -1653,7 +1653,7 @@ Onay gelirse TUR 2'de metin kitabın diliyle yazılıp taşınır ve T-7 ✅ yap
 Değerlendirme: Bu bölüm sürtünmeyi zaten "düşük basınç"a bağlıyor. Tek pürüz "seyrekleşir" (yoğunluk düşer) kelimesi — 3.4.6'nın "ortalama yoğunluk korunur" ifadesiyle küçük gerilim.
 
 **2.6** (satır 14) — *güçlü yoğunluk dilinde (ana çatışma burada):*
-> "…dış uzaya kıyasla çok daha **düşük bir Evrenakı yoğunluğuyla** karşılaşır… bu **düşük yoğunluklu ortama** giren zerre anında patinaja başlar… ışık hızını ($c/n$) belirleyen **yegâne fiziksel faktör**… yerel Evrenakı **yoğunluğudur**."
+> "…dış uzaya kıyasla çok daha **düşük bir Evrenakı yoğunluğuyla** karşılaşır… bu **düşük yoğunluklu ortama** giren zerre anında patinaja başlar… ışık hızını ($c_0/n$) belirleyen **yegâne fiziksel faktör**… yerel Evrenakı **yoğunluğudur**."
 
 Değerlendirme: Burada yavaşlamanın sürücüsü açıkça "yoğunluk" ve "yegâne faktör" deniyor. 3.4.6'nın "basınç düşer, ortalama yoğunluk korunur" türetimiyle **doğrudan çelişiyor.** Asıl düzeltilecek yer burası.
 
@@ -1713,10 +1713,10 @@ Yazar 4. maddedeki soruyu onaylarsa, 5'teki beş düzenleme yapılır ve T-10 �
 - Satürn "ring rain" kütle kaybı hızı mevcut parametre setiyle türetilemiyor (nitel düzeyde).
 - Galaktik kızıla kayma sapmasının sayısal değeri, gerçek vorteks yoğunluk profili $\rho(r)$ hesaplanmadan verilemiyor.
 - $\eta_E$ (viskozite) ve $\kappa_d$ (deşarj sabiti) bağımsız gözlemlerle sabitlenmemiş.
-- *(T-4'ten devir, 25 Temmuz 2026):* Kohezyon dayanımı $\Sigma$ bağımsız gözlemle sabitlenmemiş; $\sqrt2 c$ (denge) ile $v_{ekvator}$ (Postülat 5) arasındaki ~%18 farkın $O(1)$ düzeltme bütçesi hesaplanmamış. (Kitapta: 7.4 madde 10.)
-- *(T-5'ten devir, 25 Temmuz 2026):* $k$ oranı (Ek B.3; kütle yakınında $\rho$'nun $P$'ye eşlik etme oranı) teorice taahhüt edilmemiş $O(1)$ belirsizliktir. Ayrıca $P_0=\tfrac{1-k}{2}\rho_n c^2$ sabitlemesinin SN 1987A gecikme bütçesiyle (2.4.4) çapraz kontrolü yapılmamıştır. (Kitapta: 7.4 madde 10(iii).)
-- *(T-6'dan devir, 26 Temmuz 2026):* $v_m=c\sqrt{\Sigma/P_0}$ özdeşleştirmesiyle $\Sigma$ ilk gözlemsel alt sınırını aldı ($\Sigma/P_0>10^8$; Salart 2008). Açık kalan iki kalem: kohezyon-kanalı özdeşleştirmesinin ($\Sigma$'ya kesme-modülü rolü) mikro-modelden türetimi ve $\Sigma$'nın tam değerle sabitlenmesi. (Kitapta: 7.4 madde 6 ve 10-i.)
-- *(T-7'den devir, 26 Temmuz 2026):* 3.7.4'ün dört hesap kalemi: kuyu derinliği–sirkülasyon ilişkisinin kütle-itim türetimiyle tek formülasyonu; Bullet Cluster merceklenme haritasının nicel üretimi; kozmik ağ $P(k)$ spektrumunun kaskaddan türetimi; CMB pik konum/oranları + 2,725 K'nin zamansal-$c$ bütçesi. Gözlemsel kulp adayı: "5:1 oranı = kuyu iskeletinin gücü" — bu oran, ortam sirkülasyonunun baryonik öz-çekime oranını sabitleyen bir ölçüm olarak kullanılabilir. (Kitapta: 7.4 madde 4.)
+- *(T-4'ten devir, 25 Temmuz 2026):* Kohezyon dayanımı $\Sigma$ bağımsız gözlemle sabitlenmemiş; $\sqrt2 c_0$ (denge) ile $v_{ekvator}$ (Postülat 5) arasındaki ~%18 farkın $O(1)$ düzeltme bütçesi hesaplanmamış. (Kitapta: 7.4 madde 10.)
+- *(T-5'ten devir, 25 Temmuz 2026):* $k$ oranı (Ek B.3; kütle yakınında $\rho$'nun $P$'ye eşlik etme oranı) teorice taahhüt edilmemiş $O(1)$ belirsizliktir. Ayrıca $P_0=\tfrac{1-k}{2}\rho_n c_0^2$ sabitlemesinin SN 1987A gecikme bütçesiyle (2.4.4) çapraz kontrolü yapılmamıştır. (Kitapta: 7.4 madde 10(iii).)
+- *(T-6'dan devir, 26 Temmuz 2026):* $v_m=c_0\sqrt{\Sigma/P_0}$ özdeşleştirmesiyle $\Sigma$ ilk gözlemsel alt sınırını aldı ($\Sigma/P_0>10^8$; Salart 2008). Açık kalan iki kalem: kohezyon-kanalı özdeşleştirmesinin ($\Sigma$'ya kesme-modülü rolü) mikro-modelden türetimi ve $\Sigma$'nın tam değerle sabitlenmesi. (Kitapta: 7.4 madde 6 ve 10-i.)
+- *(T-7'den devir, 26 Temmuz 2026):* 3.7.4'ün dört hesap kalemi: kuyu derinliği–sirkülasyon ilişkisinin kütle-itim türetimiyle tek formülasyonu; Bullet Cluster merceklenme haritasının nicel üretimi; kozmik ağ $P(k)$ spektrumunun kaskaddan türetimi; CMB pik konum/oranları + 2,725 K'nin zamansal-$c_0$ bütçesi. Gözlemsel kulp adayı: "5:1 oranı = kuyu iskeletinin gücü" — bu oran, ortam sirkülasyonunun baryonik öz-çekime oranını sabitleyen bir ölçüm olarak kullanılabilir. (Kitapta: 7.4 madde 4.)
 
 **Kitabın durumu:** 7.4.1 ve 7.4.2'de kabul edilmiş.
 
@@ -1739,14 +1739,14 @@ Taslak tablo (statüler: **T**üretilmiş · **S**abitlenmiş · **A**ralıklı/
 | 1 | $m_z$ | Zerre kütlesi | **S** | $\approx1{,}47\times10^{-35}$ kg | Planck sabitinden türetim | 2.2.2 |
 | 2 | $\rho_n$ | Nükleon öz yoğunluğu | **G** | $\approx2{,}7\times10^{17}$ kg/m³ | Standart nükleer ölçüm | Ek B.3 |
 | 3 | $k$ | Kütle yakınında $\rho$'nun $P$'ye eşlik oranı | **F** ($O(1)$) | $0\le k<1$ | SN 1987A gecikme bütçesi (çapraz kontrol bekliyor) | Ek B.3 |
-| 4 | $P_0$ | Arka plan basıncı | **S** ($k$'ya $O(1)$ duyarlı) | $\tfrac{1-k}{2}\rho_n c^2\sim10^{33}$ Pa | Kütleçekimsel kızıla kayma genliği (GPS/Pound–Rebka) | Ek B.3 |
+| 4 | $P_0$ | Arka plan basıncı | **S** ($k$'ya $O(1)$ duyarlı) | $\tfrac{1-k}{2}\rho_n c_0^2\sim10^{33}$ Pa | Kütleçekimsel kızıla kayma genliği (GPS/Pound–Rebka) | Ek B.3 |
 | 5 | $\rho_0$ | Arka plan yoğunluğu | **S** (aynı) | $\tfrac{1-k}{2}\rho_n\sim10^{17}$ kg/m³ | Aynı sabitleme | Ek B.3 |
-| 6 | $c$ | Yerel sonik/patinaj hızı | **T** (yerel değişken!) | $\sqrt{P/\rho}$; arka planda $2{,}998\times10^8$ m/s | — (türetilmiş; sabit değildir) | Postülat 4, Ek A.1 |
-| 7 | $v_{denge}$ | Girdap zarfı denge hızı | **T** | $\sqrt2\,c$ | — | Ek A.2 |
-| 8 | $v_{ekvator}$ | Proton kompozit ekvator hızı | **G** | $\approx5\times10^8$ m/s | $2\pi\nu_c R$; $\sqrt2 c$ ile ~%18 farkın $O(1)$ bütçesi açık | Postülat 5, Ek A |
+| 6 | $c_0$ | Yerel sonik/patinaj hızı | **T** (yerel değişken!) | $\sqrt{P/\rho}$; arka planda $2{,}998\times10^8$ m/s | — (türetilmiş; sabit değildir) | Postülat 4, Ek A.1 |
+| 7 | $v_{denge}$ | Girdap zarfı denge hızı | **T** | $\sqrt2\,c_0$ | — | Ek A.2 |
+| 8 | $v_{ekvator}$ | Proton kompozit ekvator hızı | **G** | $\approx5\times10^8$ m/s | $2\pi\nu_c R$; $\sqrt2 c_0$ ile ~%18 farkın $O(1)$ bütçesi açık | Postülat 5, Ek A |
 | 9 | $\Sigma$ | Kohezyon dayanımı | **A** | $\Sigma/P_0>10^8$ | Alt sınır: Bell hız deneyleri (Salart 2008); tam değer: $S\to2$ bozulması ölçümü | Ek A.3, 2.10.1 |
-| 10 | $v_m$ | Kohezyon kanalı sinyal hızı | **T** ($\Sigma$'dan) | $c\sqrt{\Sigma/P_0}>10^4c$ | $\Sigma$ ile birlikte | Ek A.3, 2.10.1 |
-| 11 | $v_{kav}$ | Kavitasyon eşiği | **T** | $\sqrt2\,c\sqrt{1+\Sigma/P_0}$ | $\Sigma$ ile birlikte | Ek A.3 |
+| 10 | $v_m$ | Kohezyon kanalı sinyal hızı | **T** ($\Sigma$'dan) | $c_0\sqrt{\Sigma/P_0}>10^4c$ | $\Sigma$ ile birlikte | Ek A.3, 2.10.1 |
+| 11 | $v_{kav}$ | Kavitasyon eşiği | **T** | $\sqrt2\,c_0\sqrt{1+\Sigma/P_0}$ | $\Sigma$ ile birlikte | Ek A.3 |
 | 12 | $\alpha$ | Gradyan bağlaşım katsayısı | **S** | — | $G$ ölçümünden | 4.2 |
 | 13 | $S_{kosmik}$ | Evrensel deşarj kaynak terimi | **S** | $3\rho_0 H_0$ | Hubble sabitinden | 3.7.2, 4.2.11 |
 | 14 | $\eta_E$ | Evrenakı viskozitesi | **F** | $\approx0^+$ (süper-akışkan) | Gaia/pulsar katalog korelasyonları (parametrik davet) | 3.1 |
@@ -1821,3 +1821,6 @@ Onay gelirse TUR 2'de Ek C yazılır, 7.4.1–2 güncellenir ve T-8 ✅ yapılı
 5. Tüm konular ✅ olduğunda **bu dosya silinir.**
 
 > **Not:** Bu dosya `app.js`'e kayıtlı değildir; sitede görünmez. `Kisim_3/EDITOR_NOTLARI.md` ile aynı statüdedir. Yayına çıkmasını istemiyorsanız `.gitignore`'a eklenmesi gerekir (bkz. genel denetim raporu, madde 6).
+
+## [ACİL REVİZYON - 13 Ağu 2026] SN 1987A Gecikme Bütçesi
+> **DİKKAT:** c_0'ın mutlak sınır değil akustik bir sınır olması nedeniyle, Nötrino'nun c_0'ı aşması Evrenakı için paradoks yaratmaz. Bu nedenle 1987A'daki "Zerre'nin patinaj yapması/oyalanması" şeklindeki mevcut savunma mekanizması **geri çekilmiştir**. Yeni kabule göre gecikme bütçesinin yeniden ele alınması gerekmektedir.

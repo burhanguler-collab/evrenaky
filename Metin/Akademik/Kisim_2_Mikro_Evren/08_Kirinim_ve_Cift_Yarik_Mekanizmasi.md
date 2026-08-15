@@ -125,4 +125,4 @@ Girişim için soyut dalga fonksiyonlarına, kendi kendine bölünen foton varsa
 
 ## 2.8.4 Bölüm Kapanışı ve Geçiş
 
-Tek kenardan başlayıp çift yarığa ve kırınım ağlarına uzanan bu bölümde, girişim deseninin sihirsiz iskeleti kuruldu: kenar gradyanlarında bükülen yörüngeler, kesişen yelpazeler ve wake kanallarında yığılma. Bir sonraki bölümde (2.9) bakışı katarın kendisine çeviriyoruz: Zerre'nin gradyan basıncı altında form değiştirmesi (polarizasyon) ve polarize diskin basınç torkuyla yönlendirilişi.
+Tek kenardan başlayıp çift yarığa ve kırınım ağlarına uzanan bu bölümde, girişim deseninin sihirsiz iskeleti kuruldu: kenar gradyanlarında bükülen yörüngeler, kesişen yelpazeler ve wake kanallarında yığılma. Bir sonraki bölümde (2.9) bakışı katarın kendisine çeviriyoruz: Zerre diskinin yöneliminin gradyan basıncıyla belirlenmesi (polarizasyon) ve polarize diskin basınç torkuyla yönlendirilişi.

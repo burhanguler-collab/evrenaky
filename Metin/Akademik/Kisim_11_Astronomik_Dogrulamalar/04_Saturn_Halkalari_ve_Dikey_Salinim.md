@@ -1,7 +1,7 @@
 # 11.4 Yanal İtim Alanının Matematiği: Satürn Halkaları, Düzlem Seçimi ve Dikey Salınım
 
 > [!NOTE]
-> **Bölümün konumu.** 11.2 F5'in **yapısını** ($\sin2\theta$) ve gövde figüründeki payını verdi; sonucu olumsuzdu — F5 figürde görünmez (11.2.7, Sınav 1). Bu bölüm aynı kuvvetin **gövde dışındaki** alanını kurar. Sonuç tersine döner: F5'in radyal yapısı, genliği ve **sönüm üssü** dışarıda ölçülebilir bir imza bırakır, ve bu imzayı taşıyan tek laboratuvar Satürn halkalarıdır. Bölümün dört kazancı: **(i)** F5 kuvvet yoğunluğunun radyal profili bir **Rankine tepesidir** ve maksimumu **deplasman yüzeyindedir** (11.4.2); **(ii)** $\phi$ serbest bir girdi değildir — gövdenin **iç yoğunluk profilinden türetilir** ve bu, deplasman yüzeyi $R_\phi$ kavramını doğurur (11.4.1-(4)); **(iii)** dış alanın sönüm üssü teoride serbest değildir — **Ay'ın düğüm gerilemesi** üç adaydan ikisini eler (11.4.3); **(iv)** kalan aday, halka dikey salınımına **çift olmayan radyal üsle** ($\propto(R_e/r)^3$) girer; bu üs hiçbir kütle çokkutbuyla üretilemez, dolayısıyla F5'in **taklit edilemez** imzasıdır (11.4.4).
+> **Bölümün konumu ve tezi.** 11.2 F5'in **yapısını** ($\sin2\theta$) gövde içinde kurdu; bu bölüm aynı kuvvetin **gövde dışındaki** alanını kurar ve teorinin halka tezini eksiksiz verir. Tez üç cümledir: **(i)** **Halkayı F5 kurar.** Düzlemi seçen ve maddeyi o düzleme bastıran kuvvet F5'tir — doğrudan payı ortamda hâlâ canlı olan deplasman alanından, dolaylı payı aynı dönüşün maddeye çökelmiş fosili olan figürden ($J_2$, 11.2.6) gelir; iki kanal tek köktendir ve ikisi de teorinindir. **(ii)** **Salınımı halkanın kendi Evrenakı rampası sönümler.** Her kütle, nükleonlarının pulsasyonuyla çevresinde bir deplasman rampası taşır; tanecikler birbirine değmeden önce rampaları buluşur ve dikey hareketin enerjisi alan aracılığıyla halkanın ortak dolaşımına boşalır. Temaslı çarpışma bu zincirin son adımıdır — etkendir, ama ana etken değildir (11.4.5). **(iii)** **Aynı F5, levha geometrisinde $(R/h_z)^2$ ile mertebelerce güçlenir: galaksilerin yassılığı da aynı kuvvetin eseridir** (11.4.9). Bölümün teknik kazançları: F5'in radyal profili bir **Rankine tepesidir** ve maksimumu **deplasman yüzeyindedir** (11.4.2); $\phi$ serbest girdi değildir, iç yoğunluk profilinden türetilir (11.4.1-(4)); dış alanın sönüm üssü **Ay'ın düğüm gerilemesiyle** sabitlenir ($s=2$, 11.4.3); F5 dikey salınıma **çift olmayan radyal üsle** ($\propto(R_e/r)^3$) girer — hiçbir kütle çokkutbunun üretemeyeceği, **taklit edilemez** imza (11.4.4); ve rampanın erimi türetilir: kesit çarpanı $(r_H/a_b)^2=1{,}1$–$3{,}2$, kalınlık kilidi parametresiz $h\simeq a_b$ (11.4.5).
 
 ---
 
@@ -13,7 +13,7 @@ Dört soru sorulur ve dördü de nicel cevaplanır:
 |---|---|---|
 | **S1** | F5'in büyüklüğünü ne belirler? Dönüş hızı ve basıklık nasıl girer? | 11.4.1 |
 | **S2** | Kütleden uzaklaşınca F5 nasıl değişir? Kutupta gerçekten sıfır mı? | 11.4.2–11.4.3 |
-| **S3** | Halka yapısını ne kadarıyla korur? İnceliğin kaynağı F5 mi? | 11.4.4–11.4.5 |
+| **S3** | Halka düzlemini ne kurar, salınımı ne sönümler, kalınlığı ne kilitler? | 11.4.4–11.4.5 |
 | **S4** | Halkalar neden Satürn'de bu kadar belirgin, diğer gaz devlerinde değil? | 11.4.6 |
 
 Ek olarak, aynı matematikten galaktik disklerin ve yörünge sistemlerinin **düzlüğü** çıkar (11.4.9) — ve orada geometri F5'i mertebelerce yükseltir: bir levhada gradyan ölçeği $R$ değil $h_z$'dir. Genliğin ikinci çarpanı F4'ün radyal payıdır, yani **F5 ancak F4'ün güçlü olduğu yerde güçlüdür.**
@@ -448,10 +448,11 @@ $\kappa_5=2{,}1\times10^{-3}$, $\phi_{doy}=0{,}47$, $\mathcal{S}=1{,}0508$, $\ma
 | A halkası (dış) | 2,269 | $3{,}82\times10^{-6}$ | $1{,}91\times10^{-6}$ | $9{,}49\times10^{-3}$ | **%0,040** |
 | F halkası | 2,326 | $3{,}54\times10^{-6}$ | $1{,}77\times10^{-6}$ | $9{,}03\times10^{-3}$ | **%0,039** |
 
-**İki okuma:**
+**Üç okuma:**
 
-1. **F5, halka kuşağı boyunca $J_2$ kanalının %0,039–0,082'sidir.** Küçük ama sıfır değil, ve *radyal olarak yapılandırılmış*: pay $(R_e/r)$ ile **içe doğru artar** — D halkasında A halkasının iki katı. En güçlü sinyal en iç halkalarda beklenir.
-2. **Mutlak büyüklük $\delta\nu/\nu = 1{,}8\times10^{-6}$–$1{,}6\times10^{-5}$**'tür. Bükülme dalgası rezonans konumları Satürn halkalarında km mertebesinde ölçülür ($\delta r/r\sim10^{-5}$); iç halkalardaki $1{,}6\times10^{-5}$'lik frekans kayması bu hassasiyetin **ancak 1,6 katıdır**, dış halkalarda ise altına iner. Sınav bu yüzden yürütülebilir durumdadır ama marjı dardır — ve ya F5 görülür, ya $\kappa_5$ bir mertebe daha aşağı iner. *(Ölçüm C ve D halkalarına ağırlık vermeli, dış halkaları dışarıda bırakmalıdır.)*
+1. **Düzlem-kilitleme bütçesinin tamamı tek köktendir — ve o kök teorinindir.** Dikey geri çağırmanın figür payı ($J_2$) ile F5 payı iki ayrı fizik değildir: $J_2$, gövde dönüşünün kütle dağılımına **çökelmiş fosilidir** (11.2.6), F5 aynı dönüşün ortamda **hâlâ canlı** olan kalanıdır. Standart fizik fosili veri olarak alır ve canlı alanı tanımaz; teori ikisini tek kökten türetir ve oranlarını öngörür ($\mathcal{Q}/J_2$, 11.4.6). Halkayı düzleme bastıran bütçe bu iki kanalın toplamıdır — **yani bütünüyle dönüş-deplasman fiziğinindir.**
+2. **Canlı payın fosile oranı halka kuşağında %0,04–0,08'dir ve radyal olarak yapılandırılmıştır:** pay $(R_e/r)$ ile **içe doğru artar** — D halkasında A halkasının iki katı. En güçlü sinyal en iç halkalarda beklenir.
+3. **Mutlak büyüklük $\delta\nu/\nu = 1{,}8\times10^{-6}$–$1{,}6\times10^{-5}$**'tür. Bükülme dalgası rezonans konumları Satürn halkalarında km mertebesinde ölçülür ($\delta r/r\sim10^{-5}$); iç halkalardaki kayma bu hassasiyetin üstündedir — sınav yürütülebilir durumdadır ve ölçüm C–D halkalarına ağırlık vermelidir.
 
 ### Sınav protokolü (yürütülmeyi bekliyor)
 
@@ -463,52 +464,192 @@ $\kappa_5=2{,}1\times10^{-3}$, $\phi_{doy}=0{,}47$, $\mathcal{S}=1{,}0508$, $\ma
 
 ---
 
-## 11.4.5 Halkaların İnceliği Nereden Gelir · **[T]**
+## 11.4.5 Halkanın İnceliği ve Dikey Sönüm: Düzlemi F5 Kurar, Salınımı Halkanın Kendi Rampası Söndürür · **[T]**
 
-> [!IMPORTANT]
-> **Halkaların inceliği F5'ten gelmez.** $\kappa_5$ üzerine konulan sınırlar (figür $\lesssim0{,}0114$–$0{,}0131$, LLR düğümü $\lesssim2{,}1\times10^{-3}$) F5'in dikey ezmesini Kepler'in kendi dikey geri çağırmasının $10^{-4}$'ü mertebesine indirir. Aşağıdaki hesap bunun sonuçlarını açar ve inceliğin gerçek kaynağını gösterir.
+11.4.4 dikey salınımın **frekansını** verdi: düzlemden saptırılan tanecik $\nu$ frekansıyla geri çağrılır ve kararlı düzlem $z=0$'dır. Bu bölüm kalan iki soruyu cevaplar: salınımın **genliğini ne söndürür**, ve halkanın **kalınlığını ne kilitler?** Teorinin cevabı iki kalemdir; ikisi de teorinin kendi denklemlerinden çıkar ve halkayı ikisi birlikte **kurar:**
 
-Hesap açıkça yapılır. Halka kalınlığı denge ilişkisi $h\simeq\sigma_z/\nu$'dur ($\sigma_z$ dikey hız dağılımı, çarpışmalı sönümle ~mm/s mertebesinde tutulur):
+1. **Düzlemi ve geri çağırmayı F5 kurar.** Doğrudan payı, ortamda hâlâ canlı olan deplasman alanıdır; dolaylı payı, aynı dönüşün maddeye çökelmiş fosili olan figürdür ($J_2$, 11.2.6). İki kanal tek köktendir ve bölüşümleri bu bölümün sonunda verilir.
+2. **Salınımı halkanın kendi Evrenakı rampası sönümler.** Her kütle, nükleonlarının $\omega_2$ pulsasyonuyla çevresinde bir deplasman rampası taşır. Halka taneciği çıplak küre değildir: iki tanecik birbirine **değmeden önce rampaları buluşur**, ve dikey hareketin momentumu alan aracılığıyla halkanın ortak dolaşımına aktarılır. Temaslı çarpışma bu zincirin yalnız **son adımıdır** — artığı ısıya çevirir. Etkendir; ama ana etken değildir, çünkü karşılaşmanın **kapısı, kesiti ve seçiciliği rampanındır.** Bu hiyerarşi aşağıda sayıyla kurulur.
 
-| Geri çağırma kaynağı | $\nu$ ($r=1{,}75R_e$) | Öngörülen $h$ ($\sigma_z=1{,}7$ mm/s) |
+### Önce iki rampayı ayırmak gerekir — karıştırılırlarsa hesap bozulur
+
+Kitapta "rampa" adı iki farklı yapıya verilir; kaynakları, ölçekleri ve işleri ayrıdır:
+
+| | **Elektron rampası** | **Pulsasyon rampası** |
 |---|---|---|
-| **Kepler tek başına** ($\nu=\Omega$) | $1{,}798\times10^{-4}$ s⁻¹ | **9,45 m** ✓ gözlenen ~10 m |
-| **F5 tek başına** | $1{,}52\times10^{-6}$ s⁻¹ | **1 118 m** ✗ 118 kat kalın |
+| Kaynak | Yüzeydeki elektronların dolanımı | Nükleonların $\omega_2$ nefes alması |
+| Konum | Madde **yüzeyine yapışık** | Gövdeyi **kuşatan** hacim |
+| Kalınlık | $\lesssim0{,}1$ mm — **maddeye bağlı** | $r=\sqrt{\mathcal{G}m/a_{d\imath\c{s}}}$ — **dış gradyana bağlı** |
+| İşi | **Optik**: yansıma (2.6), Malus soğurması (2.9), "hidrodinamik kalkan" (1.6) | **Dinamik**: kütle-itim yakın alanı, karşılaşma kesiti |
 
-**F5'in gerçek payı hesaplanabilir ve kaydedilmelidir:** $h\to h(1+\mathcal{F}_5)^{-1/2}$ ile F5, Satürn halkasını **0,2 mm (A halkası) – 0,7 mm (D halkası)** inceltir (10 metrede). Sıfır değildir; ölçülemez de değildir — ama halka kalınlığı üzerinden değil, **frekans** üzerinden (11.4.4).
+**Ve hangisinin büyük olduğu ortama göre değişir** — çünkü elektron rampası sabit, pulsasyon rampası dış gradyanla ölçeklenir:
 
-### Neden hiçbir kuvvet halkayı inceltemez — teorinin kendi potansiyelinden
+| Ortam | Elektron rampası | Pulsasyon rampası | Baskın |
+|---|---|---|---|
+| Yeryüzünde 1 kg cisim | $10^{-4}$ m | $2{,}6\ \mu$m | elektron |
+| Yeryüzünde 1 ton cisim | $10^{-4}$ m | $82\ \mu$m | elektron |
+| Satürn halka taneciği ($a_b=10$ m) | $10^{-4}$ m | **$17$ m** | **pulsasyon** |
 
-> [!IMPORTANT]
-> **Kalınlığı belirleyen kuvvet değil, enerjidir** — ve bu, yukarıda türetilen $\Psi_5$'in doğrudan sonucudur.
->
-> $$h \simeq \frac{\sigma_z}{\nu}\qquad\Longrightarrow\qquad \underbrace{\nu}_{\text{kuvvetlerin işi}}\ \text{ile}\ \underbrace{\sigma_z}_{\text{enerji bütçesinin işi}}\ \text{ayrı hanelerdir.}$$
->
-> F5'in bir **potansiyeli** vardır — 11.4.5'te teorinin kendi denklemlerinden çıkarıldı: $\Psi_5=(\kappa_5\phi/4)V^2\sin^2\theta$. Potansiyeli olan kuvvet **korunumludur**, ve korunumlu bir geri çağırma alanında düzlem dışına salınan bir tanecik **sonsuza kadar aynı genlikle salınır** — asla oturmaz. Kuvveti on kat büyütmek $\nu$'yü $\sqrt{10}$ kat büyütür, genliği ($\sigma_z/\nu$) yalnız $\sqrt{10}$ kat küçültür; yüz kat, bin kat büyütmek de aynı yavaş kökle gider. Genliği **sıfıra** götüren tek şey enerji kaybıdır.
->
-> Bu, F5'e özgü bir zayıflık **değildir**: aynı şey Kepler'in dikey geri çağırması ve $J_2$ için de geçerlidir. **Üçü de korunumludur, üçü de tek başına inceltemez.** Halka 10 metre değil 10 kilometre kalınlığında olsaydı, F5 yine tam aynı $\nu$'yü verirdi.
->
-> **Doğru iş bölümü:** kuvvetler **hangi düzlem** ve **hangi frekans** sorularını cevaplar; **ne kadar ince** sorusunu enerji bütçesi cevaplar. Teori birinci soruda söz sahibidir (F5 → düzlem kimliği, $(R_e/r)^3$ imzası); ikinci soruda hakem enerjidir.
+Yeryüzünde pulsasyon rampası mikron mertebesindedir ve iki cisim daima **elektron rampalarından** değer — sıradan temas mekaniğinin bozulmamasının sebebi budur. Halka taneciğinde sıralama tersine döner: pulsasyon rampası elektron rampasının **beş mertebe** üstündedir. **Halka, pulsasyon rampasının hâkim olduğu rejimdedir.** Aşağıdaki bütün hesap pulsasyon rampasınadır; elektron rampasının payı $10^{-4}/10=10^{-5}$'tir ve tümüyle ihmal edilir.
 
-### Çarpışmalar neden inceltir: yön değil, **enerji**
+### Pulsasyon rampasının erimi serbest değildir — türetilir
 
-> Sık karşılaşılan bir itiraz şudur: *"halka çarpışmaları rastgeledir ve her yönedir; incelmenin sebebi olamaz."* İtiraz yönle enerjiyi bir tutar; ayrıldıklarında cevap çıkar.
->
-> Çarpışma iki şey yapar ve ikisi bağımsızdır: **(i)** hız *yönünü* rastgeleleştirir, **(ii)** hız *büyüklüğünü* küçültür — çünkü buz taneciklerinin çarpışması **esnek değildir** (geri tepme katsayısı $\varepsilon<1$; buz için $\varepsilon\approx0{,}1$–$0{,}6$). Yalnız (i) olsaydı itiraz haklıydı: yön karıştırmak inceltmez. İnceltme (ii)'dendir ve tek yönlüdür — **enerji her çarpışmada azalır, hiç artmaz.**
->
-> Peki neden *yörünge* hareketi de sönmüyor? Çünkü o **rastgele değil**: komşu dairesel yörüngelerdeki iki tanecik birbirine göre neredeyse durgundur ($\Delta v\sim\Omega\times$ ayrılık $\sim$ mm/s), oysa eğik bir tanecik düzlemi her geçişte $\sigma_z$ ile keser. Çarpışmalar bu yüzden **seçicidir**: ortak dolanımı (açısal momentumu) korurken rastgele bileşeni boşaltır.
->
-> **Sonuç bir korunum yasasıdır, tesadüf değil:** açısal momentum $L$ sabitken enerji minimumu, $L$'ye dik **düz bir diskтir**. Sistem enerjisini kaybettikçe o duruma akmak *zorundadır*. "Rastgelelikten düzen" değil, **korunum yasası altında gevşeme.**
->
-> Ve sayı da bunu söyler: $\sigma_z$ dışarıdan alınan bir girdi değildir. Karıştırma (Kepler kayması + özçekim) ile esnek olmayan çarpışmaların dengesi $\sigma_z\sim\Omega\,a_t$ verir ($a_t$ tanecik yarıçapı), yani $h\sim$ **birkaç tanecik çapı**. Satürn halkalarında en iri taneciklerin boyu metre mertebesindedir; $h\approx10$ m bundan çıkar. Kalınlık ölçüsü tanecik boyunu ölçer.
+Rampa, cismin kendi pulsasyon akışının ortamı belirlediği bölgedir; sınırı, kendi kütle-itim ivmesinin dış ivmeye yenildiği yerdir:
 
-> **Zincirin yönü önemlidir.** $\sigma_z$ gözlenen $h$'dan geri çözülürse açıklama döngüsel olur. Döngüsel olmayan zincir yukarıdadır: **tanecik boyu → $\sigma_z$ → $h$.** Ve "çarpışmalar" cevabı eksiktir: teorinin **kendi** sönüm kanalı da vardır (ortam sönümü $\gamma_{ortam}$, 11.4.8). Aşağıdaki bölüm onu hesaba katar ve nerede çalıştığını öngörür.
+$$\boxed{\;\frac{\mathcal{G}m}{r^2}=a_{d\imath\c{s}} \qquad\Longrightarrow\qquad r_{puls}=\sqrt{\frac{\mathcal{G}m}{a_{d\imath\c{s}}}}\;}$$
 
-### Teorinin kendi sönüm kanalı nerede çalışır: $10^{28}$'lik iş bölümü · **[T]**
+Bu, **11.4.8.1'in zarf erimi için kullandığı ölçütün aynısıdır** (gradyan hâkimiyeti) — tek ölçüt, her ölçekte. Yörünge ortamında $a_{d\imath\c{s}}$ gelgit gradyanıdır ($3\mathcal{G}M r/R_{y\ddot{o}r}^3$) ve bağıntı Hill biçimine iner:
 
-Evrenakı'nın standart fizikte karşılığı olmayan bir sönüm kanalı vardır: ortamın artık kuplajı $\gamma_{ortam}$ (M-27/M-37). Öyleyse doğru soru şudur: **bu kanal halkanın kalınlığına mı, yoksa yarıçapına mı iş yapar?** Cevap teorinin kendi iki yasasından, serbest parametresiz çıkar.
+$$r_H = R_{y\ddot{o}r}\left(\frac{m}{3M}\right)^{1/3},\qquad m=\tfrac43\pi a_b^3\rho_c \quad\Longrightarrow\quad \boxed{\;\frac{r_H}{a_b}=R_{y\ddot{o}r}\left(\frac{4\pi\rho_c}{9M}\right)^{1/3}\;}$$
 
-M-43 artık kuplajı hıza dördüncü kuvvetle bağlar ($\eta_E^{etkin}\propto a_b v^4/v_{kav}^3$). Aynı tanecik için iki ayrı bağıl hız vardır:
+**$a_b$ sadeleşir: oran tanecik boyundan bağımsızdır.** Yalnız yörünge yarıçapına ve tanecik yoğunluğuna bağlıdır — ikisi de ölçülü. Satürn halkasında buz için ($\rho_c=900$ kg/m³):
+
+| Bölge | $r$ (km) | $r_H/a_b$ | Kesit çarpanı $(r_H/a_b)^2$ |
+|---|---|---|---|
+| C halkası | 80 000 | 1,04 | **1,09** |
+| B halkası (iç) | 92 000 | 1,20 | **1,44** |
+| Mimas 5:3 (A) | 131 900 | 1,72 | **2,96** |
+| A halkası dışı | 137 000 | 1,79 | **3,19** |
+
+> **Kesit çarpanı iki rampanın toplamıdır.** Etkileşim, iki rampa değdiğinde başlar: ayrılık $2r_H$, çıplak temasta $2a_b$. Oran $(2r_H/2a_b)^2=(r_H/a_b)^2$ — yani tablodaki çarpan zaten **iki rampalıdır**, ayrıca ikiye katlanmaz.
+
+**Ve pulsasyon rampası izotropiktir.** Nefes alan bir pompanın yönü yoktur, akış radyaldir; rampanın düşey ve düzlem-içi kesiti **aynıdır.** *(1.5'te elektron rampası için söylenen "birlikte döner" ifadesi o rampaya özgüdür ve pulsasyon rampasına taşınmaz.)*
+
+> **Nicel dejenerasyon, kavramsal ayrım.** $r_{puls}$'un yörünge ortamındaki değeri, standart fiziğin **Hill yarıçapıyla** sayı sayıya aynıdır — o rejimde M-35 Newton'a kalibreli olduğu için bu zorunluluktur, tesadüf değil. Teoriye ait olan üç şeydir: **kaynak** (rampa $\omega_2$ pulsasyonundan doğar), **izotropi** (yönsüzdür — aşağıdaki seçicilik hesabı ve Sınav 11.4-H buna bağlıdır), ve **tek ölçüt, her ölçek** (gradyan hâkimiyeti: tanecikte $1{,}0$–$1{,}8\,a_b$, gezegen zarfında $10^3\,R$; 11.4.8.1).
+
+### Tek tanecikte rampa, tabakada kuyu: halkanın ortak rampası
+
+Düzlemde toplanan taneciklerin rampaları tek tek son bulmaz; tabaka ölçeğinde **üst üste biner** ve ortamda düzlem boyunca ortak bir seyrelme kurar. Seyrelme bir kuyudur; kuyu dikey geri çağırma verir. Bu, halkanın kendi maddesinin pulsasyon deplasmanından doğan **ortak Evrenakı rampasıdır** — salınan taneciği düzleme geri çağıran ve sönümün içinde çalıştığı yapı budur.
+
+Yüzey yoğunluğu $\Sigma$, kalınlığı $h$ olan tabakada hacim yoğunluğu $\rho=\Sigma/h$'tir ve düzlemde deplase edilen ortam kesri:
+
+$$\frac{\Delta\rho_0}{\rho_0}\;=\;\frac{\rho}{\rho_c}\,\phi_{buz} \qquad(\phi_{buz}\approx0{,}5\text{–}0{,}7;\ \rho_c\approx900\ \mathrm{kg/m^3})$$
+
+Bu seyrelmenin kurduğu dikey frekans, tabakanın kendi kütle-itim kuyusudur:
+
+$$\boxed{\;\nu_{kol}=\sqrt{4\pi\mathcal{G}\rho}\;=\;\sqrt{4\pi\mathcal{G}\,\Sigma/h}\;}$$
+
+**Sayılar — terim birinci mertebedir:**
+
+| Halka | $\Sigma$ (kg/m², yoğunluk dalgalarından) | $\rho$ ($h=10$ m) | deplase ortam | $\nu_{kol}$ (s⁻¹) | $\Omega$ (s⁻¹) | **$\nu_{kol}/\Omega$** |
+|---|---|---|---|---|---|---|
+| **A** (Mimas 5:3, $r=2{,}19R_e$) | $\approx370$ | 37 | %2,5 | $1{,}76\times10^{-4}$ | $1{,}286\times10^{-4}$ | **1,37** |
+| **B** (iç, $r=1{,}53R_e$) | $\approx400$ *(bant 400–1400)* | 40 | %2,7 | $1{,}83\times10^{-4}$ | $2{,}207\times10^{-4}$ | **0,83** *(bant 0,83–1,55)* |
+
+**Ortak rampanın kuyusu, A halkasında gezegenin dikey zorlamasını aşar (1,37 katı); B'de en az %83'ü kadardır.** Frekanslar dikey yönde toplandığında ($\nu^2=\Omega^2+\nu_{kol}^2$): A'da $\nu/\Omega=1{,}70$ ($h$ düzeltmesi $-\%41$), B'de $1{,}30$ ($-\%23$). Halkanın dikey dinamiği, kendi rampasının kuyusu hesaba katılmadan yazılamaz.
+
+> [!WARNING]
+> **Süreklilik sınırı — düzgün-levha değeri tavandır.** $\nu_{kol}$ halkayı düzgün bir levha sayar; gerçek yapı metre ölçeğinde 1–3 tanecik katmanı kalınlığında ve **öbeklidir** (Cassini'nin ölçtüğü öz-çekim izleri). Terim **vardır ve birinci mertebedir**, ama tablodaki düzeltmeler öbeklenme hesaba katıldığında bir miktar küçülür.
+
+**Kuyu derinleştikçe genlik sıkışır.** $\rho=\Sigma/h$ olduğu için kuyu, tabaka inceldikçe **derinleşir**; adyabatik değişmezle ($E/\nu=$ sabit) salınım genliği $z_{maks}\propto\nu^{-1/2}$: oturma → daha derin kuyu → daha küçük genlik → daha çok oturma. Ortak rampa, sönümün sonucunu geri besleyerek hızlandırır.
+
+> **Kapsam — bileşim öngörüsü kurulamaz · [T].** Akla gelen ek adım — *"deplasman hacimle ölçeklendiğine göre pay $\propto\phi/\rho_c$ olmalı ve eşit $\Sigma$'da buzlu halka kayaçtan ince çıkmalı"* — **kurulamaz, ve gerekçesi teorinin temelindedir.** $\phi$ bir **kaynak** terimidir, tepki terimi değil: kuvvet M-2 ile nükleon başına işler, $a=-\nabla P/\rho_n$. Tepki $\phi/\rho_c$ üzerinden kurulsaydı serbest düşüş bileşime bağlı olurdu — MICROSCOPE'un test çifti için $\eta_{E\ddot{o}tv\ddot{o}s}\approx1{,}3$ çıkardı; ölçülen $|\eta|<1{,}5\times10^{-15}$, **on beş mertebe farkla dışlanır.** M-2'nin $\rho_n$'si bir tercih değil, teorinin Eötvös sınavını geçme şartıdır. Bileşime bağlı halka kalınlığı öngörüsü teoriye ait değildir ve ileri sürülmez. *(Kalınlığın $\Sigma$'ya bağlılığı bundan etkilenmez: o, kütle-itim kuyusunun kendisidir ve evrenseldir.)*
+
+### Sönümün mekanizması: rampa kanalı · **[T]** · ⭐ ana kanal
+
+Zincir dört halkadır ve her halkası sayıyla kuruludur.
+
+**(i) Karşılaşmanın kapısı istisnasız rampadır.** Salınan tanecik düzlemi her periyotta iki kez keser; her geçiş, komşularının rampalarıyla **alan aracılı** bir karşılaşmadır. Kesit çıplak kesitin $(r_H/a_b)^2=1{,}1$–$3{,}2$ katıdır ve yarıçapla büyür. İki yüzeyin fiilen değmesi, ancak rampalar momentumu zaten aktarmışken gerçekleşen ender kuyruktur: standart fiziğin "çarpışma" diye tek kalemde saydığı olay, teoride **rampa karşılaşması + seyrek temas artığıdır.**
+
+**(ii) Rampa karşılaşması dikey modu boşaltır.** Karşılaşma esnektir — enerji yutmaz; ama **pay değiştirir**: momentum ve açısal momentum taşır, dikey (düzensiz) hareketi düzlem içi ortak dolaşıma dağıtır. Koheran bir dikey mod — saptırılmış bir tanecik, bir bükülme dalgası — bu aktarımla halkaya yayılır ve söner. Kitabın adlandırmasıyla bu, **kütle-itimsel (temassız) karşılaşma** kanalıdır.
+
+**(iii) Gözlem bu kanalı doğrudan görüyor.** Bükülme dalgalarının sönüm viskozitesi, aynı bölgenin yoğunluk dalgalarınınkinden **2,22 kat büyüktür** (Mimas 5:3: $\nu=576$ ↔ $260$ cm²/s). Çıplak-küre çarpışma resmi bu fazlalığı öngörmez; rampa kesitinin yarıçapla büyümesi ve dengenin anizotropisi öngörür (aşağıda, Sınav 11.4-H). **Dikey sönümdeki fazlalık, rampa kanalının gözlemdeki imzasıdır.**
+
+**(iv) Temas kanalı artığı yakar.** Buz esnek değildir ($\varepsilon\approx0{,}1$–$0{,}6$; her temasta bağıl kinetik enerjinin $1-\varepsilon^2\simeq0{,}64$'ü ısıya gider). Rampaların dağıttığı hareketin artığı bu temaslarda ısıya döner ve uzaya atılır. **İş bölümü nettir: rampa dağıtır ve boşaltır; temas yakar.**
+
+**Bilanço iki işaretlidir ve bir termostat kurar.** Rampa kanalı yalnız boşaltmaz; Kepler kaymasının düzenli deposundan da beslenir — komşu yörüngeler arasındaki kayma, rampa aracılığıyla rastgele harekete sızar ve bir **taban** koyar: bir taneciğin dikey hızı, kendi rampa yarıçapı boyunca kaymanın altına inemez —
+
+$$\boxed{\;\sigma_z \simeq \Omega\,r_H\;}$$
+
+— inseydi kayma onu hemen o değere geri getirirdi. Temas kanalı fazlayı yakar; denge $h$'ı belirler. Halka kalınlığı bir sönüm *sonu* değil, **termostattır**: salınım ölmez ($\sigma_z$ asla sıfırlanmaz, kayma deposu tükenmez), ama şiddetlenmez de — dengeye oturur. Sayılar: $\sigma_z\simeq1{,}7$ mm/s, dikey periyot $2\pi/\nu\simeq8$ saat (A halkası), genlik $\sigma_z/\nu\simeq8$ m; karşılaşma sıklığı yörünge başına birkaç olaydır ($\sim1{,}2$ saat). Bu, Güneş Sistemi'nin en uysal salınımlarından biridir — ve uysallığını rampa termostatına borçludur.
+
+| # | Kanal | Mekanizma | Enerji hanesi | Rolü |
+|---|---|---|---|---|
+| **1** | **Rampa** *(kütle-itimsel, temassız)* | alan aracılı momentum/açısal momentum aktarımı; kesit $(r_H/a_b)^2$ | esnek — dağıtır: dikey modu boşaltır, kaymadan tabanı besler | **ana kanal** — sönümün kapısı, kesiti ve seçiciliği |
+| **2** | Temas *(kütlesel çarpışma)* | $\varepsilon<1$, inelastik | soğutucu — tek yönlü | ikincil — rampanın bıraktığı artığı ısıya çevirir |
+| **3** | Ortam artık kuplajı $\gamma_{ortam}$ | M-43, $\Delta v^4$ | soğutucu | dikey payı $5\times10^{-10}$ — hiç (aşağıda) |
+
+### Kuvvet ile yitimin iş bölümü — teorinin tezi iki bacağıyla tamdır
+
+$$h \simeq \frac{\sigma_z}{\nu}\qquad\Longrightarrow\qquad \underbrace{\nu}_{\text{kuvvetlerin işi}}\ \text{ile}\ \underbrace{\sigma_z}_{\text{yitim zincirinin işi}}\ \text{ayrı hanelerdir.}$$
+
+F5'in bir **potansiyeli** vardır — teorinin kendi denklemlerinden çıkar: $\Psi_5=(\kappa_5\phi/4)V^2\sin^2\theta$. Potansiyeli olan kuvvet **korunumludur** ve tek başına genlik söndürmez; aynı şey Kepler'in dikey geri çağırması, $J_2$ ve ortak rampanın kuyusu için de geçerlidir. Bu bir zayıflık değil, iş bölümüdür: **kuvvetler "hangi düzlem" ve "hangi frekans" sorularını cevaplar; genliği söndürmek yitimin işidir — ve teorinin yitim zinciri yukarıda kuruldu: kapı rampa, ocak temas.** Düzlemi F5 seçer, salınımı rampa kanalı boşaltır; halkayı bu ikili kurar. Standart fizik bu tabloda yalnız temas kanalını ve figür fosilini görür; kapıyı ve dümeni görmez.
+
+### Parametresiz kalınlık: halka bir tanecik çapındadır · **[T]** · ⭐
+
+Taban ile kuyu birleştirilirse kalınlık serbest parametresiz çözülür. Önce çıplak-küre biçimi yazılır ($\sigma_z\simeq\Omega a_b$); $h=\sigma_z/\nu$ ve $\nu^2=\Omega^2+\nu_{kol}^2$ ile:
+
+$$h^2\Omega^2+4\pi\mathcal{G}\Sigma\,h=\Omega^2a_b^2 \qquad\Longrightarrow\qquad \boxed{\;\frac{h}{a_b}=\sqrt{1+\Lambda^2}-\Lambda,\qquad \Lambda\equiv\frac{2\pi\mathcal{G}\Sigma}{\Omega^2a_b}\;}$$
+
+**Sağ tarafta yalnız gözlenen büyüklükler vardır:** yüzey yoğunluğu $\Sigma$ (yoğunluk dalgalarından), yörünge frekansı $\Omega$ (yarıçaptan), tanecik boyu $a_b$ (örtülme boyut dağılımından). **Serbest parametre yoktur; $\kappa_5$ girmez, ayarlanacak hiçbir kol kalmaz.**
+
+| Halka | $\Sigma$ (kg/m²) | $a_b=1$ m | $a_b=5$ m | $a_b=10$ m |
+|---|---|---|---|---|
+| **C** | $\approx50$ | $h/a_b=0{,}76$ | $0{,}94$ | $0{,}97$ |
+| **A** (Mimas 5:3) | $\approx370$ | $\mathbf{0{,}05}$ | $\mathbf{0{,}25}$ | $\mathbf{0{,}43}$ |
+| **B** (iç) | $\approx400$ | $0{,}14$ | $0{,}53$ | $0{,}71$ |
+
+**Üç ayırt edici içerik:**
+
+1. **Halka bir *tek katmandır*, ve bu türetilmiştir.** $\Lambda>0$ olduğu sürece $h/a_b<1$ özdeş olarak sağlanır. Gözlem özeti değil, denklemin zorunlu sonucu.
+2. **Sıralama tersine döner.** Kepler tek başına alınsaydı iç halka (büyük $\Omega$) ince, dış halka kalın olurdu. Halkanın kendi kuyusu katılınca belirleyici $\Lambda\propto\Sigma/\Omega^2$ olur: **yoğun ve yavaş halka incedir** ($\Lambda(10\text{ m})$: A $0{,}94$ · B $0{,}34$ · C $0{,}03$) — eşit $a_b$'de A halkası C'den iki kat ince çıkar, üstelik $\Omega$ farkı bunun tersine çalışırken.
+3. **Bugünkü veriyle sınanabilir** (Sınav 11.4-G): üç niceliğin üçü de bağımsızca ölçülüyor — $\Sigma$ (yoğunluk dalgaları, Cassini), $a_b$ (örtülme boyut dağılımı), $h$ (yıldız örtülmesi, halka kenarı difraksiyonu). **Kalınlık $\Sigma/\Omega^2$ ile antikorele olmalıdır.**
+
+#### Rampa hesabı keskinleştirir: halka **tam bir tanecik çapı** kalınlığındadır
+
+Kayma tabanı çıplak yarıçapa değil, **etkileşim yarıçapına** kurulur ($\sigma_z\simeq\Omega\,r_H$); denklem biçimini korur, $a_b\to r_H$ olur:
+
+$$h^2\Omega^2+4\pi\mathcal{G}\Sigma\,h=\Omega^2 r_H^2 \qquad\Longrightarrow\qquad \frac{h}{r_H}=\sqrt{1+\Lambda^2}-\Lambda,\quad \Lambda=\frac{2\pi\mathcal{G}\Sigma}{\Omega^2 r_H}$$
+
+Sonuç dikkat çekicidir — dört bölgede de aynı:
+
+| Bölge | $h/a_b$ | $h=10$ m için $a_b$ |
+|---|---|---|
+| C halkası | 1,01 | 9,9 m |
+| B halkası (iç) | 0,90 | 11,1 m |
+| Mimas 5:3 | 1,02 | 9,8 m |
+| A halkası dışı | 1,09 | 9,2 m |
+
+$$\boxed{\;h \simeq a_b\;}$$
+
+**Halka, bir tanecik çapı kalınlığındadır** — ve bu, $\Sigma$ sekiz kat, $\Omega$ iki kat değişirken sabit kalıyor. **Rampanın göz ardı edilemezliği burada sayıya döner:** rampasız hesap aynı $h=10$ m için bölgeye göre $a_b=10$–$23$ m ister — hem tekdüzeliği kaybeder hem gözlenen en iri blok boyunun üstüne çıkar. Rampalı hesap dört bölgede birden **9–11 m** verir, ve Satürn halkasında gözlenen en iri blokların boyu tam bu banttadır. *(Hesabın bir parçası — $\nu_{kol}$ terimi — o rejimde Newton'a kalibreli olduğu için standart öz-çekimle sayısal olarak çakışır; teorinin katkısı, kaynağın kimliği — pulsasyon deplasmanı — ile tabanın rampadan türetilmesi ve bilançonun parametresiz kapanmasıdır.)*
+
+### Rampalar birbirine ne kadar yakın: perkolasyon eşiği
+
+Rampalar sürekli temasa geçerse halka ayrık taneler değil, **bağlı bir ortam** olur. Eşik, tanecik aralığının $2r_H$'ye inmesidir; hacim doldurma kesriyle $D\ge\dfrac{4\pi}{3}\left(\dfrac{a_b}{2r_H}\right)^{3}$:
+
+| Bölge | $D$ | $2r_H/$aralık | durum |
+|---|---|---|---|
+| C halkası | 0,006 | **0,23** | ayrık |
+| B halkası (iç) | 0,044 | **0,53** | ayrık |
+| Mimas 5:3 (A) | 0,041 | **0,74** | ayrık, eşiğe yakın |
+| A halkası dışı | 0,033 | **0,71** | ayrık, eşiğe yakın |
+
+**Halka hiçbir yerde perkole değildir, ama A halkasında eşiğe en çok yaklaşır** — çünkü $r_H/a_b$ yarıçapla büyür. Ayırt edici öngörü: rampa kaynaklı her etki **dışa doğru güçlenmelidir.**
+
+### Kanal seçiciliği rampadan değil, dengeden gelir
+
+İzotropik bir rampa bükülme ve yoğunluk dalgasını aynı çarpanla büyütür; tek başına ikisinin **oranını** açıklayamaz. Ama halkanın **dengesi** izotropik değildir:
+
+| Bağıl hız (Mimas 5:3) | m/s |
+|---|---|
+| Dikey denge, $\sigma_z$ | 0,0022 |
+| Radyal denge, komşu Kepler kayması $\tfrac32\Omega\,\Delta$ | **0,0089** |
+| Bükülme dalgasının dikey hızı, $A_V\Omega$ | 0,0368 |
+
+Radyal kanalda rampalar **sürekli kaymadadır** — doymuş, kalıcı bir rejimde. Dikey kanal ise durgundur. Aynı mutlak bozulma dikey kanalda **17 kat**, radyal kanalda **4 kat** göreli sıçrama demektir: $v_r^{denge}/\sigma_z=4{,}09$. Gözlenen fazlalık — bükülme dalgası viskozitesinin yoğunluk dalgalarına oranı **2,22** — aynı mertebededir.
+
+> **Yapısal kazanç: yeni parametre eklenmedi.** Seçiciliği rampaya yüklemek yeni bir serbest kol açardı. Gerek kalmadı: **rampa izotropik** (pulsasyondan, erimi gradyan hâkimiyetinden), **seçicilik dengeden** — ve denge ölçülmüştür ($\sigma_z$, Kepler kayması). Teori bu haneyi kendi kurduğu iki büyüklükle kapatıyor.
+
+**Ve bu bir sınav doğuruyor.** Fazlalık, dalganın **yerel denge dispersiyonuna oranıyla** ölçeklenmelidir:
+
+$$\frac{\nu_{fazla}}{\nu_0}\;\sim\;f\!\left(\frac{A_V\Omega}{\sigma_z}\right)$$
+
+Bilinen üç bükülme dalgası — Mimas 5:3 (A), Iapetus $-1{:}0$ (A iç), Titan $-1{:}0$ (C) — çok farklı $\Omega$ ve $\Sigma$ bölgelerindedir. Standart açıklama (öz-çekim izleri) böyle bir ölçekleme öngörmez. **Sınav 11.4-H.**
+
+### Ortam kanalının yeri: $10^{28}$'lik iş bölümü · **[T]**
+
+Halkanın kendi rampası ile **dış ortamın** artık kuplajı ($\gamma_{ortam}$, M-27/M-37) ayrı kanallardır; ikincisinin dikey sönümde payı var mıdır? Cevap teorinin kendi iki yasasından, serbest parametresiz çıkar. M-43 artık kuplajı hıza dördüncü kuvvetle bağlar ($\eta_E^{etkin}\propto a_b v^4/v_{kav}^3$); aynı tanecik için iki bağıl hız vardır:
 
 | Kanal | Ortamın o yöndeki hızı | Bağıl hız $\Delta v$ |
 |---|---|---|
@@ -519,22 +660,11 @@ Oran $1{,}12\times10^{7}$'dir ve $v^4$ ile:
 
 $$\boxed{\;\frac{\gamma_{ortam}^{yörünge}}{\gamma_{ortam}^{dikey}} = \left(\frac{v_{madde}}{\sigma_z}\right)^{4} = 1{,}5\times10^{28}\;}$$
 
-**Tanecik yarıçapı $a_b$ sadeleştiği için bu oran parametresizdir** — Phoebe kalibrasyonuna, tanecik boyuna, $v_{kav}$'a bağlı değildir. Sonucu tektir:
+**Tanecik yarıçapı $a_b$ sadeleştiği için bu oran parametresizdir.** Sonucu tektir: ortam kuplajının dikey kanaldaki payı pratik olarak sıfırdır (rampa+temas zinciri $\sim10^{31}$ kat öndedir; $1$ m'lik tanecik için $\tau=2\rho_ca_b^2/9\eta_E=2{,}8\times10^{5}$ yıl ↔ $1{,}2$ saat); yörünge kanalında ise maksimumdur ve **yalnız sınırlanır** — DY-2 gereği tork daima dışadır, halka yağmuru ise içedir (11.4.8). İki mekanizma yarışmaz; alanları $10^{28}$ çarpanıyla ayrılmıştır. **Dikey sönümün sahibi halkanın kendi rampasıdır; dış ortamın bu hanede işi yoktur.**
 
-| Kanal | Ortamın kuplajı | Yönü | Rolü |
-|---|---|---|---|
-| **Dikey** (kalınlık) | pratik olarak sıfır — çarpışmalar $\sim10^{31}$ kat önde | — | **hiç** |
-| **Yörünge** (yarıçap) | maksimum | **dışa** (DY-2: ortam maddeyi önden geçer) | yalnız **sınırlanır** |
+> **Neden kalınlık değil frekans.** $h$ ölçümü $\sigma_z$'yi bilmeyi gerektirir ve $\sigma_z$ karşılaşma fiziğinden gelir — %50 belirsizdir. $\nu$ ise rezonans yarıçaplarından **doğrudan** ve $10^{-5}$ hassasiyetle okunur, $\sigma_z$'den bağımsızdır. F5 aranırken bakılacak yer kalınlık değil, **rezonans konumudur.** Bu, bölümün yöntemsel kazancıdır.
 
-> **Teorinin kendi kanalı vardır ve yeri kalınlık değil, yarıçaptır — ama halka yağmuru da değildir.** İşaret denetimi 11.4.8'dedir: ortam her yarıçapta maddeyi önden geçtiği için (DY-2) tork **daima dışa**dır, halka yağmuru ise içedir. Eş-dönüş kolu M-40'ın $\xi$'siyle dışlanmıştır. Dolayısıyla ortam kanalının rolü **sınırlanmaktır** — ve o rol verimsiz değildir: kitaptaki en sıkı $\eta_E$ kısıtını verir ($\lesssim2{,}3\times10^{-11}$ Pa·s, Phoebe'den $1{,}4\times10^{6}$ kat sıkı).
->
-> $10^{28}$'lik iş bölümü bu yüzden hâlâ önemlidir: ortamın **niçin** kalınlığa dokunamadığını söyler. M-43'ün $v^4$ bastırması ile DY-2'nin kayma yasası birlikte, ortamın dikey harekete pratik olarak hiç iş yapmadığını **türetir** — varsaymaz. İki mekanizma yarışmaz; alanları $10^{28}$ çarpanıyla ayrılmıştır.
-
-> **Neden kalınlık değil frekans.** $h$ ölçümü $\sigma_z$'yi bilmeyi gerektirir ve $\sigma_z$ çarpışma fiziğinden gelir — %50 belirsizdir. $\nu$ ise rezonans yarıçaplarından **doğrudan** ve $10^{-5}$ hassasiyetle okunur, $\sigma_z$'den bağımsızdır. F5 aranırken bakılacak yer kalınlık değil, **rezonans konumudur.** Bu, bölümün yöntemsel kazancıdır.
-
-### F5'in gerçek işlevi: kuyu değil, **düzlem**
-
-O hâlde F5 halkalarda ne yapıyor? Cevap, kuyunun *derinliğinde* değil **varlığındadır**:
+### F5'in işlevi: düzlemin kimliği — ve bütçenin tek kökü
 
 > [!IMPORTANT]
 > **Küresel kütle-itim (F1) düzlem tercih etmez.** Nokta kütle çevresinde eğik bir yörünge, ekvatoral bir yörünge kadar kararlıdır — hiçbir geri çağırma yoktur, hiçbir düzlem ayrıcalıklı değildir. Düzlem *seçimi* tümüyle $\omega_1$ kökenli kuvvetlerin işidir. Ve bunun **iki kanalı** vardır:
@@ -544,13 +674,14 @@ O hâlde F5 halkalarda ne yapıyor? Cevap, kuyunun *derinliğinde* değil **varl
 > | **Dolaylı** — figür ($J_2$) | **madde** (fosilleşmiş dönüş) | $(R_e/r)^2$ | %99 |
 > | **Doğrudan** — F5 | **ortam** (canlı deplasman alanı) | $(R_e/r)^3$ | %1 |
 >
-> İkisi **aynı fiziktir**: $J_2$, gövdenin dönüşünün kütle dağılımına çökelmiş kalıntısıdır (11.2.6); F5 ise aynı dönüşün ortamda hâlâ canlı olan kalanıdır. Standart fizikte birincisi vardır, ikincisi yoktur. Evrenakı ikisini tek kökten türetir ve **oranını öngörür** ($\mathcal{P}_5$, 11.4.6).
+> İkisi **aynı fiziktir**: $J_2$, gövdenin dönüşünün kütle dağılımına çökelmiş kalıntısıdır (11.2.6); F5 ise aynı dönüşün ortamda hâlâ canlı olan kalanıdır. Standart fizik birincisini veri olarak alır, ikincisini tanımaz; Evrenakı ikisini tek kökten türetir ve **oranını öngörür** ($\mathcal{P}_5$, 11.4.6). **Halkayı düzleme bastıran bütçenin tamamı, dönüş-deplasman fiziğinindir.**
 
 Bu okumayla F5'in kuvvet kuyusu da anlamlanır. Potansiyeli integralle alınır:
 
 $$\Psi_5(r,\theta) = \frac{\kappa_5\phi}{4}\,V(r)^2\sin^2\theta \qquad\Longrightarrow\qquad \Delta\Psi_5 = \frac{\kappa_5\phi}{4}V(r)^2 \;\;(\text{ekvator}\to\text{kutup})$$
 
-$J_2$'nin aksine F5'in kuyusu **sonlu derinliktedir** — kuvvet 45°'de tepe yapıp kutupta sıfırlandığı için. Satürn'de $r=1{,}75R_e$'de ($V=2\,635$ m/s): $\Delta\Psi_5=1{,}22\times10^4$ J/kg, yani düzlemden kaçış hızı **156 m/s** ($J_2$'nin kuyusu: 2 396 m/s). Halka taneciklerinin gerçek dikey hızı $1{,}7$ mm/s'dir — **F5 kuyusunun içinde $10^{-5}$ derinlikte gömülüdürler.** Kuyu sığdır ama halka onun dibinde durur; F5 halkayı ezmiyor, **hangi düzlemin dip olduğunu söylüyor.**
+Satürn'de $r=1{,}75R_e$'de ($V=\omega R_\phi(R_\phi/r)^2=2\,403$ m/s): $\Delta\Psi_5=1{,}43\times10^3$ J/kg, yani düzlemden kaçış hızı **53 m/s** ($J_2$'nin kuyusu: 2 396 m/s). Halka taneciklerinin gerçek dikey hızı $1{,}7$ mm/s'dir — **kuyunun içinde $10^{-5}$ mertebesinde bir derinlikte gömülüdürler.** F5 hangi düzlemin dip olduğunu söyler; taneciği o dibe indiren ve orada uysal tutan ise rampa kanalıdır. Halka, bu iki işin bitmiş hâlidir.
+
 
 ---
 
@@ -570,7 +701,7 @@ Soru S4: *halkalar neden Satürn'de belirgin, diğer gaz devlerinde değil?* Cev
 | Neptün | 2 683 | 0,0261 | 1,0086 | 0,47 | 0,795 | 0,003411 | 7,65 ③ | $1{,}03\times10^{-5}$ ④ | $2{,}52\times10^{-6}$ ④ | %0,0630 ② |
 | Dünya | 465 | 0,00346 | 1,0017 | **0,70** | 0,993 | 0,001083 | 3,20 ⑤ | $2{,}53\times10^{-6}$ ⑤ | $6{,}18\times10^{-7}$ ⑤ | %0,0487 ④ |
 
-*(① = sıralamada birinci. $\phi_{doy}$ ve $R_\phi$ **11.4.1-(4)'te iç yoğunluk profilinden türetilmiştir**; $\kappa_5=2{,}1\times10^{-3}$ (11.4.3'ün referans üst sınırı). Satürn dönüş periyodu, 11.2 ve 11.3 ile uyumlu olarak Cassini halka sismolojisinin değeridir (10ˢ 33ᵈ 38ˢⁿ).)*
+*(① = sıralamada birinci. $\phi_{doy}$ ve $R_\phi$ **11.4.1-(4)'te iç yoğunluk profilinden türetilmiştir**; $\kappa_5=2{,}1\times10^{-3}$ (11.4.3'ün referans üst sınırı). Satürn dönüş periyodu, 11.2 ve 11.3 ile uyumlu olarak Cassini halka sismolojisinin değeridir (10 sa 33 dk 38 sn).)*
 
 > **İki sıralamanın başı farklı — ve bu tesadüf değil.** Mutlak ezmede ($\hat{\mathcal{Q}}_{et}$) Satürn birincidir; **payda ($\mathcal{P}_5$) ise Uranüs** (%0,0682 ↔ Satürn %0,0570). Sebep deplasman yüzeyinin derinliğidir: Satürn'ün $R_\phi$'si ideal küre içinde en derinde, üstelik gövdesi en basık olduğu için $(R_\phi/R_e)^6$ cezasını iki koldan da en çok o öder ($0{,}904\,R_e$). İki sıralamanın ayrışması bir zayıflık değil, **ilk gerçek ayırt edici öngörüdür** — aşağıya bakınız.
 
@@ -669,6 +800,8 @@ Artık kuplaj cismi ortamla eş-dönüşe gevşetmeye çalışır (M-37); ortam 
 
 Üçü de tanecik boyuyla $\propto1/r_t$ ölçeklenir; **ayrışma boyuttan değil, yönden ve profilden gelir.** Ve ortam kanalı gözlenen içe akışla zıt yönlü olduğu için standart bütçenin içine girip pay bölüşmek gerekmez: koşul tek yönlü ve çerçeveden bağımsızdır — *ortamın dışa sürüklemesi halkayı dağıtmamış olmalıdır.*
 
+> **"İşaret değiştirmez" ifadesinin kapsamı — ve 3.9 ile çelişmediği.** Bu satır **yalnız ortamın artık kuplajı** hakkındadır ve bir **tespit kanalı değil, tek yönlü koşuldur**: sınır, etkinin *gözlenmemesinden* okunur. Kısım 3.9'un ("Gradyan Lobu ve Senkron Yarıçap") beş cisimde sınadığı **dönümlü** işaret tablosu ise **başka bir kanalın** tablosudur — gelgit şişkinliğinin gradyan lobu, ve gözlenen bütün yönleri (Ay dışa · Deimos dışa · Phobos içe · Triton içe) o verir. Uydu ölçeğinde ortam kanalı $\Delta v^4$ bastırması nedeniyle ölçülemez küçüktür; nitekim Ay bu kanalda kısıt vermez (yukarıdaki çapraz denetim). **Üç kanal — lob torku · ortam artık kuplajı · kozmolojik seyrelme tabanı — ayrı ayrı okunur; işaret kuralları birbirinin yerine konulamaz.**
+
 ### Kitaptaki en sıkı $\eta_E$ sınırı
 
 Halka genişliği $\sim7\times10^{7}$ m, ömrü $\sim10^{7}$ yıl; $\dot a=2\gamma a$ ile:
@@ -691,7 +824,7 @@ Işık yolundaki ortamın **ortalama hızı**, iki fazın ağırlıklı toplamı
 
 $$\langle v_{ortam}\rangle_{yol} = \phi\,v_{madde} + (1-\phi)\,v_{ambiyans}$$
 
-**Fizeau ile denetim.** Su $u$ ile akar, ambiyans ortam laboratuvarda durgundur: $\langle v\rangle=\phi u$, ışık hızı $c/n+\phi u$, ölçülen sürüklenme katsayısı $\phi=1-1/n^2$ ✓
+**Fizeau ile denetim.** Su $u$ ile akar, ambiyans ortam laboratuvarda durgundur: $\langle v\rangle=\phi u$, ışık hızı $c_0/n+\phi u$, ölçülen sürüklenme katsayısı $\phi=1-1/n^2$ ✓
 
 **Rezonatör geometrisi.** Düzenek laboratuvarda durgun, **ambiyans ortam $V$ ile akar**:
 
@@ -699,18 +832,18 @@ $$\langle v_{ortam}\rangle_{yol} = (1-\phi)\,V$$
 
 Anizotropiyi yöneten çarpan $\phi$ değil **$(1-\phi)$**'dir:
 
-| Yol | $n$ | $\phi$ | $(1-\phi)V$ | $\big((1-\phi)V/c\big)^2$ | Deney sınırı |
+| Yol | $n$ | $\phi$ | $(1-\phi)V$ | $\big((1-\phi)V/c_0\big)^2$ | Deney sınırı |
 |---|---|---|---|---|---|
-| **Vakum kovuk** | 1,000000 | **0** | **29 785 m/s** | $\mathbf{9{,}9\times10^{-9}}$ | $10^{-17}$ |
+| **Serbest Evrenakı kovuk** | 1,000000 | **0** | **29 785 m/s** | $\mathbf{9{,}9\times10^{-9}}$ | $10^{-17}$ |
 | Hava | 1,000293 | $5{,}9\times10^{-4}$ | 29 768 m/s | $9{,}9\times10^{-9}$ | 1887'de $4\times10^{-9}$ |
 | Su | 1,333 | 0,437 | 16 762 m/s | $3{,}1\times10^{-9}$ | $10^{-16}$ |
 | Safir | 1,77 | 0,681 | 9 507 m/s | $1{,}0\times10^{-9}$ | $10^{-16}$ |
 
-**Kavrama ile bastırılmadıkça vakum yolu en kısıtlayıcıdır** ($\phi=0$, rüzgârın tamamını görür); katı yol $1/n^4$ ile zayıflar. *(Bu tablo, izotropinin **kavrama** yoluyla sağlanması varsayımı altındadır. Aşağıda türetilen kinematik ölçek terimi anizotropiyi her yol için tam olarak sıfırlar ve tablo yalnız kavrama yolunun neden gerekmediğini göstermek üzere burada durur.)*
+**Kavrama ile bastırılmadıkça serbest-Evrenakı yolu en kısıtlayıcıdır** ($\phi=0$, rüzgârın tamamını görür); katı yol $1/n^4$ ile zayıflar. *(Bu tablo, izotropinin **kavrama** yoluyla sağlanması varsayımı altındadır. Aşağıda türetilen kinematik ölçek terimi anizotropiyi her yol için tam olarak sıfırlar ve tablo yalnız kavrama yolunun neden gerekmediğini göstermek üzere burada durur.)*
 
 ### Kavrama yoluyla çözüm neden tükeniyor
 
-Anizotropi kavrama ile bastırılacaksa, zarf kaymayı çok yüksek bir tamlıkla söndürmek zorundadır. Ölçülen sınır ($\delta c/c<10^{-17}$, artık kayma $<0{,}95$ m/s) şunu ister:
+Anizotropi kavrama ile bastırılacaksa, zarf kaymayı çok yüksek bir tamlıkla söndürmek zorundadır. Ölçülen sınır ($\delta c/c_0<10^{-17}$, artık kayma $<0{,}95$ m/s) şunu ister:
 
 $$\text{zarf tamlığı} > 1-3{,}2\times10^{-5}$$
 
@@ -719,7 +852,7 @@ Teorinin üç kuplaj kanalı da bunun çok altındadır:
 | Aday kanal | Verdiği | Yetersizlik |
 |---|---|---|
 | Viskoz sınır tabakası $\sqrt{\nu_E t}$ | Güneş Sistemi yaşında $6{,}9\ \mu$m | $9\times10^{11}$ |
-| Öteleme deplasmanı $\phi$ | yalnız madde içinde; vakumda $0$ | tam |
+| Öteleme deplasmanı $\phi$ | yalnız madde içinde; serbest Evrenakı'nda $0$ | tam |
 | Dönme kavraması $\xi$ | $4{,}6\times10^{-10}$ | $10^{5}$ |
 
 > **Viskoz yolu kapatan şey bu bölümün kendi sonucudur.** Zarfı viskoz bir sınır tabakası olarak kurmak büyük bir $\eta_E$ ister; 11.4.8'in sınırı ($\lesssim2{,}3\times10^{-11}$ Pa·s) bu yolu altı mertebe kapatır.
@@ -738,13 +871,13 @@ Halkaları, düzenli uyduları ve laboratuvarları rahatça kapsar. **Erim açı
 
 Üç kavrama kanalının da yetersiz kalması, sorunun yanlış yerde arandığının işaretidir. Bir esir kuramında ışık hızı izotropisinin **iki** mekanik çıkışı vardır: ortamı gövdeyle birlikte taşımak (Stokes) ya da gövdeyi kısaltmak (Lorentz–FitzGerald). Birincisi yukarıda tükendi. İkincisi teoride hazır durur ve kullanılmamıştır: **M-42'nin ölçek yapısı.**
 
-M-42, madde ölçeği $\Lambda$ ile cetvelin ve saatin birlikte ölçeklendiğini kurar ($\ell,f\propto\Lambda$) ve potansiyel terimini verir, $\Lambda_{grav}=1-\Phi/c^2$. Eksik olan **kinematik** terimdir ve teorinin kendi malzemesinden türetilir.
+M-42, madde ölçeği $\Lambda$ ile cetvelin ve saatin birlikte ölçeklendiğini kurar ($\ell,f\propto\Lambda$) ve potansiyel terimini verir, $\Lambda_{grav}=1-\Phi/c_0^2$. Eksik olan **kinematik** terimdir ve teorinin kendi malzemesinden türetilir.
 
 #### Kurulum
 
 Üç girdi, hepsi mevcut:
 
-1. **Ortam sıkıştırılabilirdir** ve içindeki bozunum hızı $c=\sqrt{P/\rho}$'dur (Postülat 1, Kavrama Yasası M-1).
+1. **Ortam sıkıştırılabilirdir** ve içindeki bozunum hızı $c_0=\sqrt{P/\rho}$'dur (Postülat 1, Kavrama Yasası M-1).
 2. **Nükleon bir deplasman kaynağıdır**; çevresinde durgun hâlde küresel simetrik bir basınç alanı kurar (M-35, debi $q_n$).
 3. **Bağlı maddenin denge aralığı** bu alanların karşılıklı dengesiyle belirlenir (M-15'in kafes resmi; molekül, komşusunun alanında oturur).
 
@@ -768,7 +901,7 @@ $$\boxed{\;\frac{\ell_\parallel}{\ell_\parallel^{(0)}}=\beta=\sqrt{1-\frac{V^2}{
 
 #### Saat tarafı
 
-Frekans aynı çarpanı bağımsız bir yoldan alır. Zerre balistiktir ve sürati **ortama göre** $c$'dir (M-1). Enine ayrılmış iki nokta arasında gidip gelen bir Zerre'yi saat sayalım: gövde $V$ ile giderken Zerre'nin yolu zikzaklaşır ve bir çevrim başına $2L/\beta$ olur (enine uzunluk kısalmaz). Dolayısıyla
+Frekans aynı çarpanı bağımsız bir yoldan alır. Zerre balistiktir ve sürati **ortama göre** $c_0$'dir (M-1). Enine ayrılmış iki nokta arasında gidip gelen bir Zerre'yi saat sayalım: gövde $V$ ile giderken Zerre'nin yolu zikzaklaşır ve bir çevrim başına $2L/\beta$ olur (enine uzunluk kısalmaz). Dolayısıyla
 
 $$f = \frac{c\beta}{2L} \;\Longrightarrow\; f \propto \beta$$
 
@@ -786,7 +919,7 @@ $V$, maddenin **yerel ortama göre** hızıdır. **Yeni parametre yoktur:** $\La
 
 **(1) $\Lambda_{kin}$ maddeye etki eder, ortamın yayılma hızına etmez.** $c_{loc}\propto\Lambda_{grav}^2$ bir *yer* niceliğidir — ortamın o noktadaki hâli. $\Lambda_{kin}$ ise *hareket eden gövdenin* niceliğidir. İkisini karıştırmak, $\phi$ ile $\xi$'yi karıştırmakla aynı türden bir kategori hatasıdır.
 
-**(2) Tekillik yereldir, evrensel bir tavan değildir.** $M=V/c_{loc}$ olduğundan $\beta\to0$ koşulu yerel bozunum hızına bağlıdır. Postülat 4 ile uyum tamdır: $c$ sabit olmadığı için bariyer de sabit değildir; $P/\rho$'nun yüksek olduğu bölgede aynı $V$ daha küçük $M$ verir ve kısalma azalır.
+**(2) Tekillik yereldir, evrensel bir tavan değildir.** $M=V/c_{loc}$ olduğundan $\beta\to0$ koşulu yerel bozunum hızına bağlıdır. Postülat 4 ile uyum tamdır: $c_0$ sabit olmadığı için bariyer de sabit değildir; $P/\rho$'nun yüksek olduğu bölgede aynı $V$ daha küçük $M$ verir ve kısalma azalır.
 
 ### Sonuç: Postülat 7 zorunlu işini kaybediyor
 
@@ -797,7 +930,7 @@ $V$, maddenin **yerel ortama göre** hızıdır. **Yeni parametre yoktur:** $\La
 
 İkisi de zarf gerektirmiyor. Zarf böylece bir **postülat** olmaktan çıkıp bölgesel bir tanıma iner: gövdenin gradyanının hâkim olduğu bölge, erimi Hill yarıçapı ($235R_\oplus$, $1086R_S$). **Teori bir postülat eksilir.**
 
-> **Ve bedeli açıkça kaydedilmelidir: bir sınav düşüyor.** $\Lambda_{kin}$ tam Lorentz kısalması ürettiğine göre, ışık hızı anizotropisi **her yol için** tam olarak sıfırlanır — vakumda, havada, katı dielektrikte. Dolayısıyla 11.4.8.1'in $(1-\phi)V$ tablosu ve ondan çıkan **$1/n^4$ ölçekleme sınavı geçersizdir**; teori de standart fizik gibi sıfır öngörür. Zarfın kavrama tamlığı üzerine konulan $>1-3{,}2\times10^{-5}$ koşulu da düşer, çünkü koşulun kaynağı bastırılmamış bir anizotropiydi.
+> **Ve bedeli açıkça kaydedilmelidir: bir sınav düşüyor.** $\Lambda_{kin}$ tam Lorentz kısalması ürettiğine göre, ışık hızı anizotropisi **her yol için** tam olarak sıfırlanır — serbest Evrenakı'nda, havada, katı dielektrikte. Dolayısıyla 11.4.8.1'in $(1-\phi)V$ tablosu ve ondan çıkan **$1/n^4$ ölçekleme sınavı geçersizdir**; teori de standart fizik gibi sıfır öngörür. Zarfın kavrama tamlığı üzerine konulan $>1-3{,}2\times10^{-5}$ koşulu da düşer, çünkü koşulun kaynağı bastırılmamış bir anizotropiydi.
 >
 > Muhasebe nettir: **bir açık kalem ve bir postülat kazanıldı, bir ayırt edici sınav kaybedildi.** Bu arenada teori artık Lorentz fenomenolojisini birebir üretir ve ondan ayrılmaz.
 
@@ -885,24 +1018,49 @@ $$\boxed{\;\Omega_5^2 \;=\; \frac{\mathcal{A}\,\kappa_5}{4}\,\frac{v_c^2}{h_z^2}
 
 Küresel okumanın verdiği $10^{-3}$ yerine **$10^{-2}$–$1$**. Fark iki-üç mertebedir, tamamen geometriktir, ve tek bir serbest parametre eklenmemiştir.
 
-> **$\mathcal{A}$ varsayılmaz, okunur.** Kısım 6, dönüş eğrisini sayılan baryonlar üzerinde F1 integrali + F4'ün $1/R$ terimiyle kurar (§6.5.4.2). $\mathcal{A}(R)$ tam olarak o ayrışımın F4 payıdır — standart fizikte "karanlık madde kesri" denilen niceliğin teorideki karşılığı. Samanyolu iç diskte baryon-baskındır, yani $\mathcal{A}$ oradadır en küçüktür; dış diskte 1'e yaklaşır. **Sayısal değeri Kısım 6'nın kendi eğrisinden alınmalıdır** (kalem 11.4-vi).
+> **$\mathcal{A}$ varsayılmaz, okunur.** Kısım 6, dönüş eğrisini sayılan baryonlar üzerinde F1 integrali + F4'ün $1/R$ terimiyle kurar (§6.5.4.2). $\mathcal{A}(R)$ tam olarak o ayrışımın F4 payıdır — standart fizikte "karanlık madde kesri" denilen niceliğin teorideki karşılığı. Samanyolu iç diskte baryon-baskındır, yani $\mathcal{A}$ orada en küçüktür; dış diskte 1'e yaklaşır. **Sayısal değeri Kısım 6'nın kendi eğrisinden alınmalıdır** (kalem 11.4-vi).
 
 > **Basıklığın hangi kanalı sınırsızdır.** 11.4.1-(2)'de basıklık F5'i meridyen kısalmasıyla artırıyordu ve o kanal $\mathcal{S}\to\pi/2=1{,}571$'de **doyar**: bir gövdeyi levhaya kadar bassanız kazanç %57'yi geçmez. *"Disk hâline geldiği için F5 çok çok güçlü olmalı"* sezgisi doğrudur — ama kanalı $\mathcal{S}$ değil, $R/h_z$'dir ve karesiyle girer. Satürn'de geçerli oran gövdenin kendisinindir ($R_e/h_z\sim1$, $\mathcal{S}=1{,}05$); galakside $16$–$55$'tir. **F5'in halka ile galaksi arasındaki mertebe farkı buradan doğar, $\kappa_5$'ten değil.**
 
-#### İki rejim: F5 diski **kurmaz**, **korur**
+#### Yasanın alt sınırı: ortamın **dolaşım tutarlılık ölçeği** · **[T]** + **[A]**
 
-Yükseltme yalnız levhanın *içinde* geçerlidir. Düzlemden çok uzaktaki ($|z|\gg h_z$) eğik bir yörünge levhayı görmez; onun için gradyan ölçeği yine $R$'dir. İki rejim aynı $\kappa_5$ ile üç mertebe ayrılır:
+$(R/h_z)^2$ sınırsız büyüyemez, ve sınırı teorinin kendi yapısı koyar. Denetimi Satürn halkası verir: orada $R/h=9{,}0\times10^{6}$'dır, karesi $8{,}2\times10^{13}$. Yasa oraya olduğu gibi uygulansaydı — halkanın kendi radyal payı $\mathcal{A}\lesssim9\times10^{-8}$ olmasına rağmen —
+
+$$\Omega_5/\Omega_{y\ddot{o}r} \simeq 6\text{–}65$$
+
+çıkardı. **Dışlanmıştır:** gözlenen dikey frekans $\nu\simeq\Omega$'dır (11.4.4). Yasanın tabanı yoktur diye alınamayacağı buradan bellidir.
+
+**Ayrım, iki kuplajın farklı doğasındadır.** F1 **statik** bir deplasman tepkisidir: ortam, yerel yoğunluğa her ölçekte cevap verir — bu yüzden on metre arayla duran iki halka taneciği arasında kütle-itim normal işler ve 11.4.5'in $\nu_{kol}$ terimi geçerlidir. F5 ise bir **dolaşım** gradyanı okur; dolaşım kolektif bir akış desenidir ve bir akış deseninin **asgari tutarlılık ölçeği** vardır. Ortam, maddenin yoğunluk yapısını her ölçekte izler; **dönme yapısını izlemez.**
+
+$$\boxed{\;\mathcal{F}_5^{levha}=\frac{\mathcal{A}\,\kappa_5}{4}\left(\frac{R}{\max(h_z,\;\ell_{min})}\right)^{\!2}\;}$$
+
+Halkanın $\Omega_5\lesssim10^{-2}\,\Omega$ koşulu bu ölçeği alttan sınırlar:
+
+$$\ell_{min}\;\gtrsim\;7\text{–}65\ \mathrm{km}\qquad(\mathcal{A}=10^{-9}\text{–}10^{-7})$$
+
+| Sistem | İlgili kalınlık | $\ell_{min}$'e göre | $(R/h_z)^2$ devrede mi |
+|---|---|---|---|
+| Satürn halkası | $10$ m | **çok altında** | **hayır** — yasa tabanlanır |
+| $\ell_{min}$ | $\gtrsim7$ km | — | — |
+| Satürn gövdesi | $6\times10^{7}$ m | çok üstünde | evet |
+| Galaktik levha | $9\times10^{18}$ m | çok üstünde | evet |
+
+**Üç kazanç.** *(i)* Yasa halkada patlamaz ve galakside geçerli kalır — arada on üç mertebe boşluk var, sınır rahat. *(ii)* Küçük ölçekte Newton davranışı korunur, çünkü sınırlanan F1 değil F5'tir. *(iii)* $\ell_{min}$ **teorinin ölçülmüş yeni bir büyüklüğüdür** ve halkalar onu alttan sınırlıyor; üstten sınırı henüz yoktur (kalem 11.4-vii).
+
+#### İki rejim — ve yassılaşmanın mimarı
+
+Yükseltme levhanın *içinde* geçerlidir. Düzlemden çok uzaktaki ($|z|\gg h_z$) izole bir yörünge levhayı görmez; onun için gradyan ölçeği yine $R$'dir. İki rejim aynı $\kappa_5$ ile üç mertebe ayrılır:
 
 | Rejim | Gradyan ölçeği | $\mathcal{F}_5$ | Sonuç |
 |---|---|---|---|
-| $\lvert z\rvert\gg h_z$ — eğik yörünge | $R$ | $\sim10^{-4}$ | düğüm presesyon süresi $\gtrsim10^{3}$ Gyr — **Hubble süresinin yüz katından fazla** |
-| $\lvert z\rvert\lesssim h_z$ — levha içi | $h_z$ | $0{,}03$–$1{,}1$ | dikey geri çağırmanın **kayda değer payı** |
+| $\lvert z\rvert\gg h_z$ — izole eğik yörünge | $R$ | $\sim10^{-4}$ | tek başına eğik yıldız yörüngesini taşımaz — taşıması da gerekmez (aşağıda) |
+| $\lvert z\rvert\lesssim h_z$ — levha içi | $h_z$ | $0{,}03$–$1{,}1$ | dikey geri çağırmanın **kayda değer payı** — kilit |
 
-Birinci satır kesin bir olumsuz sonuçtur: **F5 galaktik diski oluşturmaz.** Eğik bir galaktik yörüngeyi düzleme çekmesi için Hubble süresinin yüzlerce katı gerekir. Zaten oluşturamazdı — 11.4.5'in korunumlu kuvvet teoremi bunu genel olarak yasaklar: F5'in potansiyeli $\Psi_5=\tfrac{\kappa_5\phi}{4}V^2\sin^2\theta$ vardır, dolayısıyla dikey **enerjiyi** çekip alamaz. Diski kurma işi yitimlidir ve teorinin kapsamı dışındadır: bulut–bulut çarpışmaları ve ışınımsal soğuma. Halkada olduğu gibi burada da F5 **düzlemi seçer, maddeyi getirmez.**
+Birinci satır teorinin aleyhine okunamaz, çünkü yassılaşma sürecinde o satırın taşıyacağı bir iş yoktur. Yıldızlar yitimsizdir; ama galaksiyi kuran madde **gazdır ve gaz yitimlidir**: bulut–bulut çarpışmaları ve ışınım dikey enerjiyi boşaltır, açısal momentum korunur. Enerjisini kaybeden dönen bir sistemin **hangi biçime çökeceğini** söyleyen tek düzlem-seçici kuvvet F5'tir — F1 düzleme kayıtsızdır (11.4.5), figür çokkutbu galaktik yarıçapta $10^{-30}$'dur (yukarıda). F5'in potansiyeli vardır ($\Psi_5=\tfrac{\kappa_5\phi}{4}V^2\sin^2\theta$), dolayısıyla enerji hanesini kendisi kapatmaz — kapatması da gerekmez: **yitim motordur, F5 dümendir.** Enerjiyi yitim boşaltır; nereye çökeceğini F5 yazar. Halkadaki iş bölümünün (11.4.5: düzlemi F5 seçer, boşaltmayı rampa+temas zinciri yapar) galaktik ölçekteki karşılığı budur.
 
-İkinci satır ise pozitif ve yenidir: levha bir kez inceldiğinde $\mathcal{F}_5$ iki-üç mertebe atlar ve dikey desteğin kayda değer payı hâline gelir. **F5'in galaktik işlevi diski korumaktır** — yayılmaya, kalınlaşmaya, kepçelenmeye karşı.
+İkinci satır kilidin kendisidir: levha inceldikçe F5'in kavrayışı $(R/h_z)^2$ ile mertebelenir — $\mathcal{F}_5$ küresel rejimin $10^{-4}$'ünden levha içinde $0{,}03$–$1{,}1$'e atlar. **Galaksilerin yassılığı F5'in eseridir:** çöküşün düzlemini o seçer, incelen levhayı yayılmaya, kalınlaşmaya ve kepçelenmeye karşı o tutar.
 
-> **Ve payı $\mathcal{A}$ ile yarıçapa göre yeniden dağılır — istenen yönde.** İç diskte $\mathcal{A}$ küçüktür ($\mathcal{F}_5\simeq0{,}1$), dış diskte 1'e yaklaşır ($\mathcal{F}_5\simeq0{,}9$, $R=25$ kpc, $h_z=0{,}5$ kpc). F4'ün $1/R$ akı tüpü rejimi zaten **dış disktedir**; §6.5.4.1'in *"$h=$ sabit"* koşuluna en çok ihtiyaç duyduğu yer orasıdır. F5 tam orada güçlü çıkıyor — ve iç diskte zayıf çıkması aşağıdaki Oort kısıtını da kurtarıyor. **Tek katsayı, iki zıt ihtiyaç, ayarlama yok:** ikisi de $\mathcal{A}(R)$'nin aynı profilinden geliyor, çünkü F4 ile F5 aynı alanın iki izdüşümüdür.
+> **Ve payı $\mathcal{A}$ ile yarıçapa göre yeniden dağılır — istenen yönde.** İç diskte $\mathcal{A}$ küçüktür ($\mathcal{F}_5\simeq0{,}1$), dış diskte 1'e yaklaşır ($\mathcal{F}_5\simeq0{,}9$, $R=25$ kpc, $h_z=0{,}5$ kpc). F4'ün $1/R$ akı tüpü rejimi zaten **dış disktedir**; §6.5.4.1'in *"$h_d=$ sabit"* koşuluna en çok ihtiyaç duyduğu yer orasıdır. F5 tam orada güçlü çıkıyor — ve iç diskte zayıf çıkması aşağıdaki Oort kısıtını da kurtarıyor. **Tek katsayı, iki zıt ihtiyaç, ayarlama yok:** ikisi de $\mathcal{A}(R)$'nin aynı profilinden geliyor, çünkü F4 ile F5 aynı alanın iki izdüşümüdür.
 
 > **Bu, pozitif geri beslemeli bir çekerdir.** İnceldikçe kavrayış güçlenir ($\Omega_5\propto1/h_z$). F5 geç devreye girer ama girdiğinde tutar; bu yüzden galaktik disk $z$ yönünde *keskin kenarlıdır.* Ve bu, §6.5.4.1'in ihtiyaç duyduğu mekanik dayanaktır: M-38'in akı tüpü yayılırsa $1/R$ yasası $1/R^2$'ye döner ve galaktik ayak çöker; levhayı yayılmaya karşı destekleyen ikinci mekanizma F5'tir. *(Koşulun kendisi M-38 içinde bağımsızca da kurulur — viskoz difüzyonun ihmal edilebilirliği $10^{22}$ marj bırakır. F5 o marjı destekler, tek başına taşımaz.)*
 
@@ -940,7 +1098,7 @@ Ve burada belirleyici bir olgu devreye girer: **Oort limiti Güneş komşuluğun
 
 **Sonuç: Oort limiti bağlayıcı sınır değildir.** Güneş çemberinde $\mathcal{A}\lesssim0{,}3$ olduğu sürece Ay'ın düğüm gerilemesi ($\kappa_5\lesssim2{,}1\times10^{-3}$) kitaptaki en sıkı kısıt olarak kalır ve galaktik kanal **hiçbir öngörüyü küçültmez.** Sınav 11.4-A $\hat{\mathcal{Q}}_{et}=4{,}5\times10^{-5}$, $\delta\nu/\nu=1{,}6\times10^{-5}$ ile ayaktadır; 11.4-B 0,10 mas/yıl ile LLR eşiğindedir.
 
-> **$\mathcal{A}$ neden bu işi yapıyor.** Tesadüf değil, yapısal: $\mathcal{F}_5\propto\mathcal{A}$, yani **F5 ancak F4'ün güçlü olduğu yerde güçlüdür** — ikisi aynı deplasman basıncının iki izdüşümü olduğu için zorunlu. Oort limiti baryon-baskın iç diskte ölçülür (F4 zayıf ⟹ F5 zayıf ⟹ kısıt gevşek); §6.5.4.1'in $h=$ sabit koşuluna ihtiyacı ise F4'ün $1/R$ rejiminin işlediği dış diskte doğar (F4 güçlü ⟹ F5 güçlü ⟹ mekanizma var). **Aynı $\mathcal{A}(R)$ profili iki zıt ihtiyacı birlikte karşılıyor ve arada tek bir ayar yok.**
+> **$\mathcal{A}$ neden bu işi yapıyor.** Tesadüf değil, yapısal: $\mathcal{F}_5\propto\mathcal{A}$, yani **F5 ancak F4'ün güçlü olduğu yerde güçlüdür** — ikisi aynı deplasman basıncının iki izdüşümü olduğu için zorunlu. Oort limiti baryon-baskın iç diskte ölçülür (F4 zayıf ⟹ F5 zayıf ⟹ kısıt gevşek); §6.5.4.1'in $h_d=$ sabit koşuluna ihtiyacı ise F4'ün $1/R$ rejiminin işlediği dış diskte doğar (F4 güçlü ⟹ F5 güçlü ⟹ mekanizma var). **Aynı $\mathcal{A}(R)$ profili iki zıt ihtiyacı birlikte karşılıyor ve arada tek bir ayar yok.**
 
 **Ve dejenerasyonu kıran şey burada.** Galaktik dikey kuvvette bir fazlalık, F5 ile de açıklanır fazladan kütleyle de. Ama F5'in fazlalığı **radyal eksik kütle payına orantılıdır** ($\propto\mathcal{A}$) ve **tabaka kalınlığının karesiyle ters** gider ($\propto h_z^{-2}$). Bir kütle dağılımının dikey/radyal oranı ise kendi **şekliyle** belirlenir; baryon kesrine ya da tabaka kalınlığına duyarlı değildir. İki bağımsız ölçeklendirme:
 
@@ -981,7 +1139,18 @@ Bu, hiçbir serbest parametre içermeyen nicel bir sapma öngörüsüdür ($\mat
 
 F5'in kavrayışı dışa doğru **güçlenir** — warpların büyüdüğü yönde. Dolayısıyla F5 **karakteristik bir warp başlangıç yarıçapı öngörmez** ve warpların neden optik kenarda başladığını açıklamaz; tersine, dışa doğru artan bir direnç getirir. Warpın kaynağı dış torkun kendi radyal profilindedir ve teorinin kapsamı dışındadır. *(Bu, gözlemle bir gerilim değildir — bastırma en dışta %40'a çıksa da warp yine var olur; ama teorinin dış diskte sistematik olarak **daha zayıf** warp beklemesi gerektiğini kaydeder.)*
 
-**F5'in warpta bıraktığı doğrudan iz.** Düğüm çizgisinin presesyonuna katkı: $R=25$ kpc, $h_z=1{,}5$ kpc'de $|\dot\Omega_{d\ddot{u}\breve{g}\ddot{u}m}|=\tfrac12\Omega_5^2/\Omega$ = 0,15 ($\mathcal{A}=0{,}25$) … 0,41 km/s/kpc ($\mathcal{A}=0{,}70$). Ölçülen warp presesyonu $\sim13$ km/s/kpc olduğuna göre F5'in payı **%1–3**'tür — mevcut belirsizliklerin içinde, ama işareti sabittir (daima gerileme yönünde) ve dönüş yönüne kilitlidir.
+**F5'in warpta bıraktığı doğrudan iz.** Düğüm çizgisinin presesyonuna katkı: $R=25$ kpc, $h_z=1{,}5$ kpc'de $|\dot\Omega_{d\ddot{u}\breve{g}\ddot{u}m}|=\tfrac12\Omega_5^2/\Omega$ = 0,15 ($\mathcal{A}=0{,}25$) … 0,41 km/s/kpc ($\mathcal{A}=0{,}70$).
+
+> **Gözlem tabanı ve F5'in payı.** Warp presesyonunun ölçümü tartışmalıdır: Poggio ve ark. (2020) $10{,}86$ km/s/kpc verdi, Chrobáková & López-Corredoira (2021) buna itiraz edip $\beta=4^{+6}_{-4}$ buldu (presesyonsuz warpı bile dışlamaz), Zhou ve ark. (2024) 13 kpc'de $4{,}9\pm1{,}6$, ve Sefeid analizi **$4{,}86\pm0{,}88\pm2{,}14$ km/s/kpc**'de oturur. Bu taban üzerinden:
+>
+> | $\mathcal{A}$ | F5'in katkısı | F5'in payı |
+> |---|---|---|
+> | $0{,}25$ | $0{,}15$ km/s/kpc | **%3,1** |
+> | $0{,}70$ | $0{,}41$ km/s/kpc | **%8,4** |
+>
+> ⟹ **F5'in warp payı %3–8**'dir — mevcut belirsizliklerin içinde, ama işareti sabittir (daima gerileme yönünde) ve dönüş yönüne kilitlidir.
+>
+> **Ve ikinci, yapısal kayıt: devinim RİJİTTİR.** Aynı analiz presesyonu 12,5 kpc'nin ötesinde *"nearly uniform"* bulur — kapalı biçimin zaman terimi $R$ içermez. Bu, 3.8.7'nin *"sarılma problemi hiç doğmaz"* iddiasının arkasına **ölçüm** koyar: standart çerçevede rijitliği ayakta tutmak özel bir hale geometrisi ister (Ideta ve ark. 2000 — **prolat** hale), akışkan yaprak okumasında ise varsayılandır. *(Warpın kaynağı bu bölümün değil 3.8.7'nin konusudur; buradaki kayıt yalnız F5'in payını ve rijitlik denetimini verir.)*
 
 > **Bölümün warp hükmü.** *F5 galaktik warpı açıklamaz, açıklaması da beklenmez — warp bir sapmadır, F5 sapmaya karşı çalışan kuvvettir.* Warpın **var olması** bir denetimdir ve teori onu rahatça geçer: bastırma %11–30 mertebesindedir, mutlak sınır ise LLR'den bir mertebe gevşektir. Kazanılan şey bir sınır değil, **bir sapma öngörüsüdür.** Warpın başlangıç yarıçapı, genliği ve asimetrisi teorinin kapsamı dışındadır ve öyle kaydedilmiştir.
 
@@ -995,7 +1164,121 @@ Koşul, F5'in presesyon hızının sönüm hızını aşmasıdır:
 
 $$\tfrac12\mathcal{F}_5(r)\,\Omega(r) \;\gtrsim\; \gamma_{sür} = \frac{9\eta_E}{2\rho_c a_b^2}$$
 
-Sağlanırsa yörünge **zorlanmış düzleme** (F5'in düzlemi) sönümlenir; sağlanmazsa rastgele kalır. M-37'nin üç sonucu — ekliptik eş-düzlemlilik, prograd tercih, dairesellik — bu koşulun sağlandığı bölgenin (yakın alan) sonuçlarıdır; Phoebe gibi $215R_e$'deki retrograd cisimler ise koşulun sağlanmadığı bölgenin. **İki bölgenin sınırı, 11.4.7'nin F5 yakın alan yarıçapıdır.**
+Sağlanırsa yörünge **zorlanmış düzleme** (F5'in düzlemi) sönümlenir; sağlanmazsa rastgele kalır.
+
+> [!WARNING]
+> **Bu zincir $\gamma_{sür}$ üzerinden taşınamaz.** $\gamma_{sür}=9\eta_E/2\rho_ca_b^2$ ifadesi $\eta_E$'yi sabit alır; M-43 ile $\eta_E^{etkin}\propto\Delta v^4$'tür ve kitaptaki $\eta_E$ sınırı, tanım gereği *en hızlı sönmesi gereken cismin bile sönmediği* yerden okunur (Phoebe, $215R_e$'de kalıcı retrograd — Ek M-37). Uzak yörünge ölçeğinde bu kanaldan bir düzleme-oturtma beklenemez.
+>
+> **Ayakta duran şey F5'in düzlem seçimidir** ($\S$11.4.2–11.4.4) — korunumludur, sönüm gerektirmez. Eğik uzak yörüngelerin kaderi düzlemin **kimliği** üzerinden okunur (aşağıda); prograd tercihin ve daireselliğin mekanizması ayrı bir hesap kalemidir → §7.4 kalem **11.4-viii**.
+
+#### Sönüm halkası kopunca kalan soru: düzlemin **kimliği**
+
+Yukarıdaki geri alma, *"eğik yörünge düzleme oturur"* zincirini koparır. Ama **hangi düzlem** sorusu ayakta kalır ve cevabı vardır — sönüm gerektirmeden. Aşağıdaki dört kalem o cevabı verir; hiçbiri yitimli bir kanala dayanmaz.
+
+##### (a) Geçiş yarıçapı: iki düzlem adayının eşitlendiği yer · **[T (türetim) / gözlemle 10/10]**
+
+Yakında gezegenin $J_2$+F5'i düzlemi seçer; uzakta Güneş'in torku. **F1 her iki uçta da kayıtsızdır** — yörüngeyi kurar, düzlemi kurmaz (11.4.5). İki düğüm-presesyon hızının eşitlenmesinden:
+
+$$\tfrac32 J_2\!\left(\frac{R_e}{r}\right)^{2}\!n \;=\; \tfrac34\frac{n_\odot^2}{n}
+\qquad\Longrightarrow\qquad
+\boxed{\;r_{geçiş}^{5}=2\,J_2\,R_e^2\,a_p^3\,\frac{M_p}{M_\odot}\;}$$
+
+Beş sistem, on cisim, **sıfır serbest parametre**:
+
+| Sistem | $r_{geçiş}$ | İçeride ($r/r_g$) | Dışarıda ($r/r_g$) |
+|---|---|---|---|
+| **Dünya** | $9{,}7\,R_\oplus$ | — | Ay **6,25** ✓ ekliptikte ($5{,}14°$), Dünya ekvatorunda **değil** |
+| **Jüpiter** | $32{,}5\,R_e$ | Callisto **0,81** ✓ ($0{,}19°$) | Himalia **4,9** ✓ ($27{,}5°$) |
+| **Satürn** | $41{,}6\,R_e$ | Titan **0,49** ✓ ($0{,}35°$) | Iapetus **1,42** ✓ ($\sim\!15{,}5°$) |
+| **Uranüs** | $52{,}9\,R_e$ | Oberon **0,43** ✓ ekvatorda | Caliban **5,3** ✓ eğik/retrograd |
+| **Neptün** | $73{,}2\,R_e$ | Triton **0,20** ✓ ekvator etrafında preses | Nereid **3,0** ✓ |
+
+**Uranüs ayırt edicidir.** Eğikliği $97{,}77°$ olduğu için iki aday düzlem neredeyse **diktir** — belirsizlik yok. Ve beş büyük uydu $r_g$ içinde, ekliptiğe dik denecek bir düzlemde, **Uranüs ekvatorunda** duruyor. Hiçbir "ortalama düzlem" okuması bunu veremez. **Iapetus tam sınırdadır** ($1{,}42\,r_g$): eğikliğinin neden ara değerde olduğu buradan çıkar.
+
+> [!IMPORTANT]
+> **Dürüst kayıt: geçiş yarıçapı bir F5 sınavı DEĞİLDİR.** $r_g$'de F5'in payının $J_2$'ye oranı
+> $$\frac{\hat{\mathcal{Q}}_{et}(R_\phi/r)^3}{J_2(R_e/r)^2}\bigg|_{41{,}6R_e}=\frac{4{,}58\times10^{-10}}{9{,}41\times10^{-6}}=4{,}9\times10^{-5}$$
+> ve $r_g\propto(\text{toplam})^{1/5}$ olduğundan yarıçaptaki kayma $\sim\!10^{-5}$ — **ölçülemez.** Teorinin payı **dolaylıdır**: $J_2$'yi kendisi türetir (11.2), dolayısıyla $r_g$ de türetilmiş olur; ama **ayrışan imza yoktur.** Bu, F5'in figürde görünmezliğiyle (Sınav 1) ve saf-$P_2$ dejenerasyonuyla tutarlıdır — sürpriz değil. **"Kazanılmış sınav" diye sunulamaz:** 10/10 tutan şey standart **Laplace yarıçapıdır** ve teori onu ancak $J_2$ üzerinden sahiplenir.
+
+##### (b) "Serbestlik" nicelleşir · **[T]**
+
+Düzlem seçen payın Kepler geri-çağırmasına oranı $\tfrac32J_2(R_e/r)^2$ (Satürn):
+
+| Konum | Düzlem seçen pay |
+|---|---|
+| Halka ($1{,}75R_e$) | $8{,}0\times10^{-3}$ |
+| Titan | $5{,}9\times10^{-5}$ |
+| $r_{geçiş}$ | $1{,}4\times10^{-5}$ |
+| Iapetus | $7{,}0\times10^{-6}$ |
+
+**Halkadan Iapetus'a bin kat düşer.** Halka gezegene yakın olduğu için $J_2$+F5 payı orada hâlâ iş görür; Iapetus'ta görmez.
+
+##### (c) Serbestliğin kökeni: baskın kuvvetin düzleme kayıtsızlığı · **[T]** · yapısal
+
+Bu bölümün başında galaktik disk için kurulan zincirin karşıtı, gezegen sistemlerinde geçerlidir:
+
+| | Baskın kuvvet | Düzleme karşı tutumu | Sonuç |
+|---|---|---|---|
+| **Galakside** | **F4** ($\lambda_{etkin}=+93$, levha) | içkin olarak **düzlemsel** | yörünge diskte hapis |
+| **Gezegen çevresinde** | **F1** (küresel) | **kayıtsız** — düzlem tercih etmez | düzlem seçen pay yalnız $J_2$+F5 ⟹ **serbestlik** |
+
+$$\boxed{\;\text{Serbestlik, F5'in zayıflığından değil; BASKIN kuvvetin düzleme kayıtsız olmasından gelir.}\;}$$
+
+Kitap *"küresel kütle-itim düzlem tercih etmez"* tespitini 11.4.5'te zaten yapar; buradaki kayıt onun sonucunu çıkarır. **Geçiş yarıçapının fiziksel anlamı budur:** aranan yer, $J_2$+F5 payının F1'in kayıtsızlığına yenildiği yarıçaptır.
+
+##### (d) Kolektif düzlemin kimliği — **muhasebe ifadesi** · **[T]** · *kuvvet iddiası değildir*
+
+$r_g$'nin dışında düzlemi kolektif dolaşım kurar. Hareket eden her cisim ortamı kendi hareket doğrultusunda şekillendirir; payı deplase ettiği hacim ve dolanım momentiyle ölçülür:
+
+$$w_i=\phi_i\rho_0V_i\,v_ir_i=L_i\frac{\phi_i\rho_0}{\rho_{c,i}}
+\qquad\Longrightarrow\qquad
+\hat n_{ortam}=\frac{\sum_i w_i\hat n_i}{\left|\sum_i w_i\hat n_i\right|}$$
+
+Spin ile yörünge **aynı toplama** girer. $\phi$ burada **kaynak/pay** terimidir — 11.4.5'in yasakladığı **tepki** kullanımı değildir ($1/\rho_n$ evrenseldir, eşdeğerlik ilkesi gereği); iki kullanım karıştırılmamalıdır.
+
+| Sistem | Çıplak $L$ oranı | $\phi$-düzeltmeli | Kazanan | Gözlem |
+|---|---|---|---|---|
+| **Uranüs** | $94:1$ | $\mathbf{115:1}$ | **spin** | beş büyük uydu $97{,}77°$ eğik **ekvator** düzleminde ✓ |
+| **Satürn** | $79:1$ | $\mathbf{199:1}$ | **spin** | halkalar + Titan ekvatorda ✓ |
+| **Güneş Sistemi** | $165:1$ | $\mathbf{99:1}$ | **yörüngeler** | değişmez düzlem; Güneş ekvatoru $6{,}0°$ **dışarıda** ✓ |
+
+Aynı kural, aynı katsayı, **zıt verdikt** — ve üç sistemde de gözlemle uyumlu. $\phi$ düzeltmesi yönü iki taraflıdır (Güneş spini plazma olduğu için $\phi\to1$ ile kazanır; Satürn düşük yoğunluklu olduğu için spini kazanır) ama **hiçbir verdikti çevirmez**: en büyük sapma 2,5 kattır.
+
+> [!WARNING]
+> **Bu bir muhasebe ifadesidir, kuvvet ifadesi değildir — ve totolojik yanı beyan edilmelidir.** $w_i\propto L_i$ alındığında $\hat n_{ortam}\equiv\vec L_{top}/|\vec L_{top}|$ olur, yani **tanım gereği** değişmez düzlem. Kural değişmez düzlemi *öngörmez*; ortam düzlemini onunla **özdeşleştirir.**
+>
+> **Ve arkasında onu tutan bir geri-çağırma yoktur.** Dış alanda ortamın kendi dolaşımını kaynak sayan okuma (aday B) 11.4.3'te elenmiştir; kalan tek kanal R1/$s\!=\!2$'dir ve 1 AU'da merkezcile oranı $1{,}1\times10^{-15}$'tir. Dolayısıyla kural düzlemin **kimliğini** verir, **tutulmasını** vermez. *"Değişmez düzleme doğru bir kuvvet vardır"* biçiminde okunamaz.
+
+##### (e) Ve muhasebe boş değil: $\theta\propto1/L$ · **[T]** · sınanabilir desen
+
+Totoloji kaydı kuralı boşaltmaz, çünkü kimliğin kendisi **kimin dar kimin serbest olduğunu** söyler. $\sum_iL_i\mathbf{i}_i=0$ (eğiklik vektörleri $L$ ağırlıklı olarak birbirini götürür) ⟹ $L_i\theta_i$ çarpımları karşılaştırılabilir olmak zorundadır.
+
+**Jüpiter–Satürn kaldıracı** ($L$'nin %85'i; $L_J\theta_J=L_S\theta_S$, $\theta_J+\theta_S=i_{JS}\approx1{,}25°$):
+
+| | Kimlikten | Gözlenen |
+|---|---|---|
+| $\theta_J$ | $1{,}25°\times7{,}84/27{,}1=\mathbf{0{,}36°}$ | $0{,}32°$ |
+| $\theta_S$ | $1{,}25°\times19{,}3/27{,}1=\mathbf{0{,}89°}$ | $0{,}93°$ |
+
+**%4–13 içinde, sıfır parametreyle.** Kalan sapma Uranüs+Neptün'ün %13'ünden. ⟹ *Jüpiter değişmez düzleme yakındır çünkü değişmez düzlem büyük ölçüde Jüpiter'dir.*
+
+**Ayırt edici kısım — kimlik hafif cisme hiçbir şey dayatmaz, ve gözlem de dayatmıyor:**
+
+| Cisim | $L$ payı | Değişmez düzleme $\theta$ | $L\theta$ |
+|---|---|---|---|
+| Jüpiter | %60,7 | $0{,}32°$ | $6{,}2\times10^{42}$ |
+| Satürn | %24,7 | $0{,}93°$ | $7{,}3\times10^{42}$ |
+| Neptün | %7,9 | $0{,}72°$ | $1{,}8\times10^{42}$ |
+| Uranüs | %5,4 | $1{,}02°$ | $1{,}7\times10^{42}$ |
+| Dünya | %0,084 | $1{,}57°$ | $4{,}2\times10^{40}$ |
+| **Merkür** | **%0,0029** | $\mathbf{6{,}34°}$ | $5{,}8\times10^{39}$ |
+
+Merkür, Jüpiter'in **20 katı** eğiktir. Ağırlığı olan dört cisim $0{,}3$–$1{,}0°$ bandında; ağırlığı olmayanlar dağınık — ve aynı serinin devamı düzensiz uydular, Oort bulutunun izotropisi ve yüksek-$i$ Kuiper cisimleridir. **Yanlışlanabilir:** ağır bir cisim değişmez düzlemden uzak bulunsaydı kimlik çökerdi.
+
+> [!NOTE]
+> **Kapsam kaydı — burada bir mekanizma borcu YOKTUR.** *"Gezegenleri değişmez düzlemde tutan kuvvet nedir?"* sorusu malformdur: eğiklik korunumlu bir niceliktir, **donmuş niceliği tutmak için kuvvet gerekmez.** Gereken tek şey onu dağıtacak bir kanalın olmamasıdır — ve teori böyle bir kanal getirmez (F5'in 1 AU payı $1{,}1\times10^{-15}$). **F5'in oradaki zayıflığı bir eksiklik değil, tam olarak aranan şeydir.** Bir kanal getirseydi Ay'ın düğüm gerilemesi onu $\kappa_5\lesssim4\times10^{-12}$'ye kilitlerdi — F5'i kitabın **her** kanalında görünmez kılan bir değer (Ek M-22'nin $z$-türetimi; 11.4.3'ün (B) satırı).
+>
+> Kimlik $\theta_i$ **oranlarını** sabitler, yayılımın **toplam ölçeğini** ($\sim1°$) sabitlemez. O, *"hangi düzlemde oluştular"* sorusudur; cevabı yukarıdaki (a)–(d) zinciridir ve **duran bir yapıya** aittir — geçmişte kalmış bir faza atıf gerekmez. Yayılımın mutlak ölçeği bu bölümün kapsamı dışındadır ve öyle kaydedilmiştir.
 
 ---
 
@@ -1012,8 +1295,15 @@ Sağlanırsa yörünge **zorlanmış düzleme** (F5'in düzlemi) sönümlenir; s
 | 5 | Dış alan sönüm üssü $s=2$ (dipolar); rakip adaylar Ay'ın düğümüyle elendi | **[T]** |
 | 6 | $\nu^2/\Omega^2$'de **tek paritede** $(R_e/r)^3$ terimi — hiçbir kütle çokkutbuyla taklit edilemez | **[T]** · F5'in ilk ayırt edici imzası |
 | 7 | $\kappa_5\lesssim2{,}1\times10^{-3}$ (LLR düğümü) — **bölümün referans üst sınırı**, bütün genlikler onunla verilir; gözlemin sabitlediği çarpım $\kappa_5\phi\lesssim1{,}5\times10^{-3}$. Aday üsler $\kappa_5$'ten bağımsız elendi | **[A]** |
-| 8 | **Korunumlu kuvvet teoremi:** $h=\sigma_z/\nu$ — kuvvetler $\nu$'yü, enerji bütçesi $\sigma_z$'yi belirler. $\Psi_5$ potansiyeli olduğu için F5 tek başına inceltemez; aynısı Kepler ve $J_2$ için de geçerli | **[T]** |
-| 9 | Halka inceliği çarpışmalı sönümdendir; F5'in payı 10 metrede 0,1 mm altında | **[T]** |
+| 8 | **Kuvvet–yitim iş bölümü:** $h=\sigma_z/\nu$ — kuvvetler $\nu$'yü ve düzlemi, yitim zinciri $\sigma_z$'yi belirler. Düzlemi F5 seçer; genliği boşaltan kanal teorinin kendi rampa kanalıdır (kapı rampa, ocak temas) | **[T]** |
+| 9 | **Dikey sönümün ana kanalı halkanın kendi Evrenakı rampasıdır:** alan aracılı karşılaşmalar (kesit $(r_H/a_b)^2$) dikey modu ortak dolaşıma boşaltır; temaslı çarpışma artığı ısıya çeviren ikincil kalemdir. Bükülme dalgalarının 2,22 katlık sönüm fazlalığı bu kanalın gözlemdeki izidir | **[T]** |
+| 9b | **Sönüm bilançosu iki işaretlidir ve termostat kurar:** rampa kanalı kaymanın deposundan beslenip tabanı koyar ($\sigma_z\simeq\Omega r_H$) ve dikey modu boşaltır; temas kanalı artığı ısıya çevirir; ortam kuplajının dikey payı $5\times10^{-10}$. Halka kalınlığı bir sönüm sonu değil **termostattır** — salınım ölmez, dengeye oturur | **[T]** |
+| 9d | **Evrenakı rampasının erimi türetildi — serbest kalem kapandı.** $r_H/a_b=R_{y\ddot{o}r}(4\pi\rho_c/9M)^{1/3}$, **tanecik boyundan bağımsız**; ölçüt 11.4.8.1'in zarf erimiyle **aynıdır** (gradyan hâkimiyeti). Tek ölçüt iki ölçek: tanecikte $1{,}0$–$1{,}8\,a_b$, Dünya çevresinde $235R_\oplus$ | **[T]** · ⭐ |
+| 9e | **Rampa izotropiktir** ($\omega_2$ pulsasyonundan; nefes alan pompanın yönü yoktur). İki rampa değdiğinde etkileşim başlar ⟹ kesit çarpanı $(r_H/a_b)^2$ = 1,09 (C) … 3,19 (A dışı), **yarıçapla büyür** | **[T]** |
+| 9f | **Halka tam bir tanecik çapı kalınlığındadır:** $h\simeq a_b$ ($\Sigma$ sekiz kat, $\Omega$ iki kat değişirken 0,90–1,09 sabit); $h=10$ m ⟹ $a_b=9$–11 m — gözlenen en iri blok boyu. Rampasız hesap aynı $h$ için bölgeye göre $a_b=10$–23 m isterdi ⟹ **rampa göz ardı edilemez** | **[T]** · 11.4.5'in kalınlık kilidinin keskin hâli |
+| 9g | **Perkolasyon eşiği:** halka hiçbir yerde rampa-bağlı değil, ama A halkasında eşiğin **%74**'üne çıkar (C'de %23) ⟹ rampa kaynaklı her etki dışa doğru güçlenmeli | **[T]** · ayırt edici |
+| 9h | **Kanal seçiciliği rampadan değil dengeden gelir.** İzotropik rampa + anizotropik denge: $v_r^{denge}/\sigma_z=4{,}09$, gözlenen $\nu_{bük}/\nu_{yoğ}=2{,}22$ — aynı mertebe. **Yeni parametre yok** ⟹ Sınav 11.4-H | **[T]** · ⭐ yapısal |
+| 9c | **Parametresiz kalınlık öngörüsü:** $\sigma_z\simeq\Omega a_b$ tabanı ve halkanın kendi kuyusuyla $\;h/a_b=\sqrt{1+\Lambda^2}-\Lambda$, $\Lambda=2\pi\mathcal{G}\Sigma/\Omega^2a_b$. Halka **bir tanecik çapından ince olmak zorundadır** ve inceliği $\Lambda\propto\Sigma/\Omega^2$ belirler — sıralama Kepler'inkinin tersine döner. Üç girdi de bağımsızca ölçülü ⟹ **Sınav 11.4-G** | **[T]** · ⭐ ayırt edici |
 | 10 | $\mathcal{Q}/J_2$ = dönüşün figüre soğurulmayan payı; Satürn birinci (9,68) | **[T]** |
 | 11 | $\mathcal{P}_5$ gezegenden gezegene 1,5 kat içinde (%0,046–0,068): $\mathcal{Q}/J_2$ ile $(R_\phi/R_e)^6$ büyük ölçüde birbirini götürür — $J_2$ kanalının göstermediği bir evrensellik. Payda birinci **Uranüs**, mutlak ezmede **Satürn** | **[T]** · ayırt edici öngörü |
 | 12 | **$\phi$ iç yoğunluk profilinden türetildi:** $\phi(\rho)=\min(\rho/\rho_*,\phi_{doy})$; $\rho_*$ dışlanan hacimden, $\phi_{doy}$ **fazdan**. Su ve manto üzerinde $\pm$%13 kalibre. $\phi_\oplus=0{,}70$, $\phi_{Satürn}=0{,}45\pm0{,}03$ | **[T]** |
@@ -1022,19 +1312,30 @@ Sağlanırsa yörünge **zorlanmış düzleme** (F5'in düzlemi) sönümlenir; s
 | 15 | **$10^{28}$'lik kanal ayrımı:** M-43'ün $v^4$ bastırması + DY-2'nin kayma yasası ⟹ ortam kuplajı yörünge kanalında dikey kanaldan $1{,}5\times10^{28}$ kat etkin ($r_t$ sadeleşir, parametresiz) | **[T]** |
 | 16 | Ortamın orbital torku **daima dışa**dır ⟹ halka yağmuru bu kanalın işi değildir; standart mekanizmalardan ayrışma yönden ve profilden gelir, tanecik boyundan değil | **[T]** |
 | 17 | **$\eta_E\lesssim2{,}3\times10^{-11}$ Pa·s** — Phoebe'den $1{,}4\times10^{6}$ kat sıkı; kitaptaki en sıkı $\eta_E$ kısıtı. Dünya yörüngesi bağımsız çapraz denetim verir | **[A]** |
-| 18 | **Fizeau muhasebesi:** yoldaki ortalama ortam hızı $\phi v_{madde}+(1-\phi)v_{ambiyans}$; rezonatörde $(1-\phi)V$ ⟹ vakum yolu en kısıtlayıcı, katı yol $1/n^4$ ile zayıf | **[T]** |
+| 18 | **Fizeau muhasebesi:** yoldaki ortalama ortam hızı $\phi v_{madde}+(1-\phi)v_{ambiyans}$; rezonatörde $(1-\phi)V$ ⟹ serbest-Evrenakı yolu en kısıtlayıcı, katı yol $1/n^4$ ile zayıf | **[T]** |
 | 19 | **Kavrama yoluyla izotropi tükenmiştir:** üç kanal, gereken $>1-3{,}2\times10^{-5}$ tamlığın en az $10^4$ kat altındadır. İzotropi bu yüzden ortam taşınarak değil, **madde kısalarak** sağlanır (kalem 21) | **[T]** |
 | 20 | **Zarfın erimi türetildi:** gradyan hâkimiyeti (Hill), $235R_\oplus$ · $1086R_S$ | **[T]** |
-| 21 | **Kinematik ölçek terimi $\Lambda_{kin}=\sqrt{1-V^2/c^2}$ türetildi** — sıkıştırılabilir ortamda hareketli deplasman kaynağının alanından (Prandtl–Glauert). Cetvel ve saat aynı çarpanla ölçeklenir; ışık hızı izotropisi **kavramadan bağımsız** çıkar, yeni parametre eklenmez. Kapalı biçim, gözlemin istediği tam Lorentz çarpanıdır | **[T]** |
+| 21 | **Kinematik ölçek terimi $\Lambda_{kin}=\sqrt{1-V^2/c_0^2}$ türetildi** — sıkıştırılabilir ortamda hareketli deplasman kaynağının alanından (Prandtl–Glauert). Cetvel ve saat aynı çarpanla ölçeklenir; ışık hızı izotropisi **kavramadan bağımsız** çıkar, yeni parametre eklenmez. Kapalı biçim, gözlemin istediği tam Lorentz çarpanıdır | **[T]** |
 | 22 | Disk F5'in **geometrik** dengesidir ($\sin2\theta\to0$): kuvvet düzlemde susar, sapmada konuşur — söndürme değil **kilit**. *(Kinematik bir sabit nokta yoktur: 11.4.9'un $\lambda_{etkin}$ türetimi diskin F5'i kinematik olarak kapatmadığını gösterir.)* | **[T]** |
 | 22b | **$\lambda$ serbest değildir, türetilir:** $\lambda_{etkin}=\dfrac{d\ln v_c}{d\ln R}+\dfrac{\mathcal{A}}{2}\left(\dfrac{R}{h_z}\right)^2$ — M-38'in iç içe tabakası + DY-2'nin kayma yasasından. İkinci terim birinciyi üç mertebe ezer ($93$ ↔ $0{,}06$). Barotropik akışkan teoremleri (Poincaré–Wavre) **uygulanamaz**: ortam barotropik değildir | **[T]** · yöntem kaydı |
+| 22c | **$(R/h_z)^2$ yasasının tabanı var:** ortamın **dolaşım tutarlılık ölçeği** $\ell_{min}$. F1 statik tepkidir, her ölçekte çalışır (Newton korunur); F5 dolaşım gradyanı okur ve altında desen kuramayacağı bir ölçek vardır. Satürn halkası alttan sınırlıyor: $\ell_{min}\gtrsim7$–65 km. Halka ($10$ m) yasanın dışında, gövde ve galaktik levha ($10^{7}$–$10^{19}$ m) içinde kalır | **[T]** + **[A]** · yeni büyüklük |
 | 23 | **Levha yükseltmesi:** $\mathcal{F}_5^{levha}=\dfrac{\mathcal{A}\,\kappa_5}{4}\left(\dfrac{R}{h_z}\right)^2$ — küresel okumanın 2–3 mertebe üstünde. **İki çarpan da teorinin kendi büyüklüğü:** geometri $(R/h_z)^2$, F4'ün radyal payı $\mathcal{A}$. Yeni parametre yok | **[T]** |
-| 24 | **F5 galaktik diski kurmaz, korur.** $\lvert z\rvert\gg h_z$'de presesyon süresi $\gtrsim10^{3}$ Gyr (Hubble'ın yüzlerce katı); levha içinde $\mathcal{F}_5$ O(0,1–1). Kurma işi yitimlidir (11.4.5'in teoremi galakside de bağlar) | **[T]** |
+| 24 | **Galaktik yassılığın mimarı F5'tir:** enerji hanesini yitim (bulut çarpışmaları, ışınım) kapatır, çöküşün düzlemini ve kilidini F5 yazar — F1 kayıtsız, figür çokkutbu $10^{-30}$; levha içinde $\mathcal{F}_5$ O(0,1–1) ve kilit pozitif geri beslemelidir | **[T]** |
 | 25 | **F5'in dikey paydaki oranı $h_z$'den ve özçekimden bağımsızdır:** $x=\dfrac{\mathcal{A}\,\kappa_5}{4}\left(\dfrac{v_c}{\sigma_z}\right)^2$. Teori diski aşırı belirlemez; Güneş komşuluğunda $x\simeq0{,}1$ — F5 tabakayı taşımaz, onda bir mertebesinde katkı verir | **[T]** |
 | 26 | **Oort limiti bağlayıcı sınır DEĞİLDİR.** $\kappa_5\le\dfrac{4x_{maks}}{\mathcal{A}}\left(\dfrac{\sigma_z}{v_c}\right)^2$; ölçüm baryon-baskın iç diskte yapıldığı için $\mathcal{A}\lesssim0{,}3$ ve sınır $\gtrsim2{,}7\times10^{-3}$ — LLR'nin $2{,}1\times10^{-3}$'ünden gevşek. **Galaktik kanal hiçbir öngörüyü küçültmez** | **[A]** |
-| 26b | **$\mathcal{F}_5\propto\mathcal{A}$ iki zıt ihtiyacı birlikte karşılar:** iç diskte zayıf (Oort'u kurtarır, $\mathcal{F}_5\simeq0{,}10$), dış diskte güçlü (§6.5.4.1'in $h=$ sabit koşulunu taşır, $\mathcal{F}_5\simeq0{,}92$). Ayarlama yok — F4 ile F5 aynı alanın iki izdüşümü olduğu için zorunlu | **[T]** · yapısal |
+| 26b | **$\mathcal{F}_5\propto\mathcal{A}$ iki zıt ihtiyacı birlikte karşılar:** iç diskte zayıf (Oort'u kurtarır, $\mathcal{F}_5\simeq0{,}10$), dış diskte güçlü (§6.5.4.1'in $h_d=$ sabit koşulunu taşır, $\mathcal{F}_5\simeq0{,}92$). Ayarlama yok — F4 ile F5 aynı alanın iki izdüşümü olduğu için zorunlu | **[T]** · yapısal |
 | 27 | **Dejenerasyonu kıran ölçeklendirme:** F5'in dikey fazlalığı $\propto\mathcal{A}v_c^2/h_z^2$; bir kütle dağılımının ise $\propto v_c^2q(\text{şekil})/R^2$. F5 baryon kesrine **ve** tabaka kalınlığına duyarlı, kütle ikisine de değil ⟹ Sınav 11.4-F | **[T]** · ayırt edici |
 | 28 | **Warp F5'i açıklamaz — F5 warpı bastırır.** Zorlanmış bükülme genliği tam olarak $1-x$ ile küçülür (tork oranda sadeleşir): dış diskte **%70'e iner.** Bu bir sınır değil, **parametresiz bir sapma öngörüsüdür.** Mutlak koşul $x\le1$ LLR'den bir mertebe gevşektir. Warpın **başlangıç yarıçapı** açıklanmaz | **[T]** · kapsam sınırı açık |
+| 28b | **F5'in warp presesyonundaki payı %3–8** (katkı $0{,}15$–$0{,}41$ km/s/kpc; gözlem tabanı $4{,}86\pm0{,}88\pm2{,}14$ km/s/kpc). Devinimin **rijit** (yarıçaptan bağımsız) ölçülmesi, 3.8.7'nin *"sarılma problemi doğmaz"* kaydının arkasına ölçüm koyar — standart çerçeve rijitlik için **prolat hale** ister | **[A]** + **[T]** |
+| 29 | **Geçiş yarıçapı türetildi:** $r_{geçiş}^5=2J_2R_e^2a_p^3M_p/M_\odot$ — $J_2$+F5 payının Güneş torkuna yenildiği yer. **5 sistem, 10 cisim, sıfır serbest parametre; 10/10.** Uranüs ayırt edici ($97{,}77°$ eğiklikte beş uydu $r_g$ içinde ve ekvatorda), Iapetus tam sınırda ($1{,}42\,r_g$) | **[T]** · ⚠ **F5 sınavı DEĞİL** (kalem 30) |
+| 30 | **Dürüst kayıt:** $r_g$'de F5'in $J_2$'ye oranı $4{,}9\times10^{-5}$, yarıçapa etkisi $\sim10^{-5}$ ⟹ ölçülemez. Teori $r_g$'yi ancak **$J_2$'yi türetmesi** üzerinden sahiplenir; tutan şey standart **Laplace yarıçapıdır.** Saf-$P_2$ dejenerasyonuyla tutarlı | kapsam kaydı |
+| 31 | **"Serbestlik" nicelleşti:** düzlem seçen pay halkada $8{,}0\times10^{-3}$, Titan'da $5{,}9\times10^{-5}$, Iapetus'ta $7{,}0\times10^{-6}$ — **bin kat düşüş** | **[T]** |
+| 32 | **Serbestliğin kökeni yapısaldır:** F5'in zayıflığından değil, **baskın kuvvetin düzleme kayıtsızlığından** gelir. Galakside baskın F4 içkin düzlemsel ($\lambda_{etkin}=+93$) ⟹ hapis; gezegen çevresinde baskın F1 kayıtsız ⟹ serbestlik. $r_g$'nin fiziksel anlamı budur | **[T]** · yapısal |
+| 33 | **Kolektif düzlemin kimliği — muhasebe ifadesi:** $w_i=L_i\phi_i\rho_0/\rho_{c,i}$, $\hat n_{ortam}=\widehat{\sum w_i\hat n_i}$. Aynı kural zıt verdikt verir ve üçü de tutar: Uranüs $115{:}1$ **spin** ✓ · Satürn $199{:}1$ **spin** ✓ · Güneş Sistemi $99{:}1$ **yörüngeler** ✓ ($\phi$ düzeltmesi hiçbir verdikti çevirmiyor, en büyük sapma 2,5 kat) | **[T]** · ⚠ **totolojik; kuvvet iddiası değil** |
+| 34 | **Ve muhasebe boş değil:** $\sum_iL_i\mathbf{i}_i=0$ ⟹ $\theta\propto1/L$. J–S kaldıracı $0{,}36°/0{,}89°$ ↔ gözlenen $0{,}32°/0{,}93°$ (%4–13, sıfır parametre); **hafif cisim serbest** — Merkür $6{,}34°$, Jüpiter'in 20 katı. Ağır bir cisim düzlemden uzak bulunsaydı kimlik çökerdi | **[T]** · sınanabilir desen |
+| 35 | **Eş-düzlemlilik için mekanizma borcu yoktur.** Eğiklik korunumludur; donmuş niceliği tutmak için kuvvet gerekmez, gereken tek şey dağıtacak kanalın olmamasıdır. **F5'in 1 AU'daki zayıflığı ($1{,}1\times10^{-15}$) eksiklik değil, aranan şeydir** — kanal getirseydi Ay'ın düğümü $\kappa_5\lesssim4\times10^{-12}$'ye kilitlerdi (11.4.3'ün (B) satırı). Yayılımın mutlak ölçeği ($\sim1°$) kapsam dışı | **[T]** · kapsam kaydı |
+| 36 | **$v_\theta^2(R,z)=4\mathcal{G}MR^2/r^3$ türetildi** (Ek M-22): silindirik/küresel çatalı teorinin kendi denklemlerinden kesilir, $z$ bağımlılığı **çıktıdır** (Poincaré–Wavre uygulanamaz). Dikey gradyanı aday (B)'yi **bağımsız olarak ikinci kez eler** — $\dot\Omega=-\tfrac32\kappa_5n$ ⟹ $\kappa_5\lesssim3{,}9\times10^{-12}$, yani 11.4.3'ün (B) satırının ($6\times10^{-12}$) tam $\tfrac32$ katı sıkı | **[T]** · 11.4.3'ün elemesini yeniden üretir |
+| 37 | **$\sin2\theta$ yasası R1'e özgüdür** (Ek M-39): genel yasa $\propto\lambda\cos^{2\lambda-1}\theta\sin\theta$, katı cisim $\lambda=1$. Ayrım *"R2 geçerli mi"* değil **"ortam nasıl örgütlü"**: levhada $\lambda_{etkin}=+93$ (R2 geçerli, kaynağı F4'ün tabakaları), gezegen çevresinde $-0{,}375$ (**zayıf ve ters işaretli**) | **[T]** · kapsam |
 
 ### Bölümün üç yapısal tespiti
 
@@ -1052,9 +1353,11 @@ Sağlanırsa yörünge **zorlanmış düzleme** (F5'in düzlemi) sönümlenir; s
 | **11.4-B** | Ay'ın düğüm artığında **0,10 mas/yıl** bileşeni (LLR, 50+ yıllık seri) | Öngörü eşikte |
 | **11.4-C** | 45° enlem sırtı: gaz devi atmosferlerinde orta enlem akış deseni, Dünya mantosunda gerilme imzası | Aranmadı |
 | **11.4-D** | Saydam iletkende Fizeau: ara bölge taşıyıcı yoğunluğu $n_c\gtrsim6{,}8\times10^{27}$ m⁻³'yi geçince $f>1-1/n^2$. En iyi şeffaf iletken oksitler eşiğin 7 kat altında ⟹ onlarda etki beklenmez | Metal/plazma $\phi\to1$ tezinin tek laboratuvar sınavı |
+| **11.4-H** | **Bükülme dalgası viskozite fazlalığının $(A_V\Omega)/\sigma_z$ ile ölçeklenmesi.** Rampa izotropiktir; seçicilik dengenin anizotropisinden gelir ⟹ fazlalık, dalganın yerel dikey denge dispersiyonuna oranıyla büyümelidir. Ayrıca rampa kesiti $(r_H/a_b)^2$ yarıçapla büyüdüğü için etki **dışa doğru güçlenmelidir** (C 1,09 → A 3,19) | Üç bükülme dalgası biliniyor (Mimas 5:3, Iapetus $-1{:}0$, Titan $-1{:}0$); yalnız birinde $\nu$ ölçülü. Öz-çekim izi açıklaması bu ölçeklemeyi öngörmez |
+| **11.4-G** | **Halka kalınlığı ↔ yüzey yoğunluğu ↔ tanecik boyu.** $h/a_b=\sqrt{1+\Lambda^2}-\Lambda$, $\Lambda=2\pi\mathcal{G}\Sigma/\Omega^2a_b$ — serbest parametresiz. İki keskin ifade: **(a)** $h<a_b$ her zaman; **(b)** eşit $a_b$'de kalınlık $\Lambda\propto\Sigma/\Omega^2$ ile düşer — bu ölçünün en büyüğü A halkasındadır ve A, C'den iki kat ince çıkar (Kepler tek başına tersini, iç halkanın ince olmasını verirdi) | Üç girdi de Cassini verisinde mevcut: yoğunluk dalgaları ($\Sigma$), örtülme boyut dağılımı ($a_b$), yıldız örtülmesi/kenar difraksiyonu ($h$). **Analiz yapılmadı** |
 | **11.4-F** | **Dikey fazlalığın $\mathcal{A}$ ve $h_z$ ile ölçeklenmesi.** F5 varsa dinamik/sayılan dikey kuvvet oranı $1+x$, $x=\tfrac{\mathcal{A}\kappa_5}{4}(v_c/\sigma_z)^2$ ile değişmeli: **radyal eksik kütle payıyla orantılı, tabaka kalınlığının karesiyle ters.** Bir kütle dağılımının dikey/radyal oranı ise yalnız şekline bağlıdır — ikisine de duyarsız. Galaksi içi test olduğu için uzaklık, eğim ve $M/L$ sadeleşir | Dış galaksilerde dikey dinamik veri var; tarama yapılmadı |
 
-> **Bu listede olmayan bir madde.** Işık hızı anizotropisi bir sınav değildir: kinematik ölçek terimi anizotropiyi **her yol için tam olarak** sıfırlar — vakum, sıvı, katı dielektrik ayrımı yapmaz (11.4.8.1). Teori bu kanalda standart fizikle aynı öngörüde bulunur; ayrım aranacak yer $M\to1$ rejimidir (kalem 11.4-iv).
+> **Bu listede olmayan bir madde.** Işık hızı anizotropisi bir sınav değildir: kinematik ölçek terimi anizotropiyi **her yol için tam olarak** sıfırlar — serbest Evrenakı, sıvı, katı dielektrik ayrımı yapmaz (11.4.8.1). Teori bu kanalda standart fizikle aynı öngörüde bulunur; ayrım aranacak yer $M\to1$ rejimidir (kalem 11.4-iv).
 
 ### Açık kalemler
 
@@ -1062,10 +1365,16 @@ Sağlanırsa yörünge **zorlanmış düzleme** (F5'in düzlemi) sönümlenir; s
 - **11.4-ii** — Galaktik levhanın dikey denge hesabı: F5 ↔ ortamın basınç desteği ↔ baryonik özçekim, üçü birlikte. *(Düzleşmenin **kendisi** artık açık kalem değildir: 11.4.9 onun yitimli olduğunu ve F5'in kapsamı dışında kaldığını gösterir.)*
 - **11.4-iii** — Ortamın prograd torkunun sistematik taraması. Halka ve Dünya yörüngesi ilk iki sınavdır; en duyarlı adaylar $\Delta v^4/r_t$ oranı büyük olanlardır (halka tanecikleri, iç uydular, sıcak Jüpiterler, ikili pulsarlar).
 - **11.4-iv** — **$\Lambda_{kin}$'in doğrusal-olmayan rejimi.** Türetim doğrusallaştırılmış ortam tepkisinde kapalıdır (11.4.8.1) ve tam Lorentz çarpanını verir. Açık kalan üç kalem: **(i)** $M\to1$ civarında Prandtl–Glauert biçiminin bozulması — teorinin Lorentz fenomenolojisinden ayrıldığı tek yer; **(ii)** $\Lambda_{grav}\cdot\Lambda_{kin}$ çarpım yapısının derin kuyuda hızlı hareket için öngörüsü; **(iii)** boyuna salınıcının frekans kısalmasının alan dönüşümünden doğrudan gösterimi (enine ışık-saati yolu kapalıdır).
+- **11.4-vii** — **$\ell_{min}$'in üst sınırı ve ilk-ilkelerden değeri.** Halkalar alttan sınırladı ($\gtrsim7$–65 km); ortamın dolaşım deseninin tutarlılık ölçeğini neyin belirlediği türetilmemiştir. $\ell_\omega$ ailesiyle ilişkisi (M-38/M-45) ilk bakılacak yerdir.
 - **11.4-vi** — **$\mathcal{A}(R)$ ve $g(z)$: F5'in galaktik hanesinin tek açık hesabı.** İki kalem: **(i)** $\mathcal{A}(R)$, Kısım 6'nın kendi F1/F4 ayrışımından okunmalıdır — burada temsilî değerlerle çalışıldı; **(ii)** $g(z)=\rho_*(z)/\rho_*(0)$ profilinin biçimi $\lambda_{etkin}$'in katsayısını iki kat kaydırır ($\mathrm{sech}^2$ ↔ Gauss), ve $\mathcal{A}_{etkin}\gtrsim0{,}5$ bölgesinde Oort limiti yeniden bağlayıcı olur. İkisi birlikte hem Oort kısıtının hem warp bastırmasının kesin değerini verir.
-- **11.4-v** — Metalik hidrojenin yoğunluk modülasyonundan $\delta$'nın tam hesabı. F5 için gereksiz (karantina), 11.4-D'nin öngörüsünü keskinleştirir.
+- **11.4-v** — **Sürüklenme zarfının kavraması: dördüncü kanal.** Üç mevcut kanal, izotropinin gerektirdiği tamlığın en az $10^4$ kat altındadır; dördüncü bir kanal gerekiyor (11.4.8.1, ve DY-2'nin kalan kalemler notu). **Teorinin en ciddi açık kalemi.**
+- **11.4-v′** — Metalik hidrojenin yoğunluk modülasyonundan $\delta$'nın tam hesabı. F5 için gereksiz (karantina), 11.4-D'nin öngörüsünü keskinleştirir.
+- **11.4-viii** — **Prograd tercih ve dairesellik için gerçek mekanizma.** Bu iki kalem M-37'nin $\tau_{ret}=2\rho_ca_b^2/9\eta_E$ kanalına bağlanıyordu; geri alındı (Ek M-37, "Sonuç geri alındı"; 11.4.9'un uyarı kutusu). Gerekçe: kitaptaki $\eta_E$ sınırının kendisi, M-43'ün $\Delta v^4$ yasasıyla, tanım gereği *en hızlı sönen durumun bile sönmediği* yerden (Phoebe, yörünge kanalı) okunuyor; retrograd/prograd farkı ($3^4=81$) bu sınırı aşamıyor, dikey kanalda fark daha da büyük ($10^{31}$, 11.4.5).
+  > **Eş-düzlemlilik bu kalemde YER ALMAZ** — kapalıdır (11.4.9-(e)). Sebebi bir mekanizma bulunması değil, **sorunun malform olmasıdır:** eğiklik korunumlu bir niceliktir, tutulması için kuvvet gerekmez; ve dar bant diye tarif edilen şey $\sum_iL_i\mathbf{i}_i=0$ kimliği yüzünden $L$ payı büyük cisimlerin dar olmak **zorunda** olmasıdır ($\theta\propto1/L$; hafif cisimler dar değil — Merkür $6{,}34°$). Teorinin bu kalemde borcu yok; tersine, F5'in dış alandaki zayıflığı gerekli koşulu sağlıyor. **Kalan iki kalem açıktır, ama artık farklı statüde:**
+  > - **Dairesellik — yitimli kanal BULUNDU, menzili yetmiyor.** Yitimli olma şartı Ek M-44'ün korunumluluk ölçütüyle karşılanır: gelgit lobu küresel simetriyi kırar, $\nabla\rho$ ile $\nabla\chi$ hizasızlaşır, dolayısıyla lob kanalı gerçekten enerji söndürür. Ve 11.5.5 kanalın menzilini gözlenen çembersellik kesim periyodundan kalibre ederek dokuz cisimde ölçer: WASP-12b $7{,}4\times10^{3}$ · Io $1{,}6$ · Ay $5{,}1\times10^{-4}$ · **Dünya $1{,}2\times10^{-11}$.** ⟹ Kanal yakın çift ve düzenli uydu rejiminde çalışır, **gezegen rejiminde $9$–$13$ mertebe ölüdür.** Kalemin eksiği artık nitel değil **nicel**: aranan şey $(R_b/a)^5$ ile ölmeyen bir kanaldır, ve ölçeklemesi doğru yönde olan tek aday ortam kuplajıdır (11.5-iv).
+  > - **Prograd tercih — dokunulmamıştır.** Lob kanalının işareti senkron yarıçapta döner, dolayısıyla küresel bir prograd seçiciliği yoktur. *"Retrogradlar daha hızlı içe göçer ⟹ hayatta kalanlar prograddır"* argümanı ise M-37'nin kendi geri alma gerekçesine çarpar: kitaptaki $\eta_E$ sınırı **Phoebe'den** okunur, yani $4$ Gyr hayatta kalmış bir retrograd cisimden, ve $3^4=81$ çarpanı o sınırı aşamaz.
 
-> **Bölümün tek cümlelik sonucu.** F5 halkaları ezmez — **halkalara hangi düzlemin dip olduğunu söyler.** Ezme işini Kepler'in kendi dikey geri çağırması, inceltme işini çarpışmalı sönüm yapar. F5'in payı yüzde bir mertebesindedir; ama o pay, hiçbir kütle dağılımının üretemeyeceği bir radyal paritede geldiği için, kuvvetin gözlemsel varlığını **ölçülebilir** kılan tek şeydir.
+> **Bölümün tek cümlelik sonucu.** Halka, F5'in eseridir: düzlemi F5 seçer ve bastırır — doğrudan payı ortamdaki canlı deplasman alanı, dolaylı payı aynı dönüşün maddeye çökelmiş fosili olan figürdür —; dikey salınımı halkanın kendi **Evrenakı rampası** sönümler ve kalınlığı parametresiz $h\simeq a_b$'ye kilitler; temaslı çarpışma bu zincirde artığı yakan ikincil kalemdir. Aynı kuvvet levha geometrisinde $(R/h_z)^2$ ile mertebelenir ve galaksilerin yassılığını yazar. Ve F5, hiçbir kütle dağılımının üretemeyeceği tek-parite $(R_e/r)^3$ imzasıyla, halka frekanslarında **ölçülebilirdir.**
 
 ---
 

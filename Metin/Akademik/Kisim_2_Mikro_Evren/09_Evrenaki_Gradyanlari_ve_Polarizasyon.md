@@ -1,18 +1,18 @@
 # 2.9 Evrenakı Gradyanları ve Polarizasyon
 
-Işığın uzayda (Evrenakı denizinde) nasıl ilerlediğini tam anlamıyla kavrayabilmek için, standart fiziğin "foton" dediği ışık birimlerinin "dalga" veya "parçacık" gibi sabit kimliklere sahip olmadığını, bulundukları hidrodinamik şartlara göre şekil değiştiren **esnek akışkan zerreler** olduğunu hatırlamalıyız. Evrenakı teorisine göre zerreler sabit boyutlu katı bilyeler değil, kendi iç dinamikleri (spinleri) ile Evrenakı'nın dış basıncı arasında sürekli dinamik bir denge kuran esnek akışkan yapılardır.
+Işığın uzayda (Evrenakı denizinde) nasıl ilerlediğini tam anlamıyla kavrayabilmek için, standart fiziğin "foton" dediği ışık birimlerinin "dalga" veya "parçacık" gibi sabit kimliklere sahip olmadığını, belirli bir gövdesi ve yönelimi olan **akışkan Zerreler** olduğunu hatırlamalıyız. Evrenakı teorisine göre Zerre ne sabit boyutlu katı bir bilyedir ne de bulunduğu ortama göre biçim değiştiren gevşek bir damla: kendi dönüşünün belirlediği **kalıcı basık (disk) gövdeye** sahiptir. Çevresel dönüş hızı tüm Zerreler için evrensel olduğundan ($v_{cev} = \sqrt{2}\,c_0$), bu basıklık da ortamdan ortama değişmez. Hidrodinamik şartlarla değişen tek şey diskin **yönelimidir** — yani disk düzleminin akış çizgilerine göre aldığı doğrultu.
 
-Bu esnekliğin kutuplaşma bağlamındaki temel sonucu Bölüm 2.4.3'te kurulmuştu ve tek cümleyle özetlenebilir: düşük basınçlı gradyana giren Zerre patinaja geçer, doğrusal enerjisi dönüşe aktarılır ve artan merkezkaç ile azalan dış baskı altında **küreden diske (elipsoide)** yassılaşır — standart fiziğin "polarizasyon" dediği durum, bu mekanik form değişiminin ta kendisidir. Bu bölümün özgün konusu ise bir sonraki adımdır: polarize olmuş diskin, gradyan alanlarında **basınç torkuyla** nasıl yönlendirildiği.
+Bu gövdenin kutuplaşma bağlamındaki temel sonucu Bölüm 2.4.3'te kurulmuştu ve tek cümleyle özetlenebilir: gradyan alanına giren Zerre'nin **kalıcı disk düzlemi belirli bir doğrultuya yönelir** — standart fiziğin "polarizasyon" dediği durum, diskin şeklindeki bir değişim değil, bu mekanik yönelimin ta kendisidir. Gradyan, diskin biçimini değil yönelimini belirler. Bu bölümün özgün konusu ise bir sonraki adımdır: yönelmiş diskin, gradyan alanlarında **basınç torkuyla** nasıl hizalandığı.
 
-## 2.9.1 Evrenakı Gradyanı ve Zerre Polarizasyonu (Küreden Diske Geçiş)
+## 2.9.1 Evrenakı Gradyanı ve Zerre Polarizasyonu (Disk Yönelimi)
 
-Işığın kutuplanma mekanizmasını görselleştiren temel animasyon ve hidrodinamik açıklamalar, **Bölüm 2.4.3: Evrenakı Gradyanı ve Küreden Diske Geçiş** başlığı altında detaylıca işlenmiştir; gradyan artışının spin'i nasıl hızlandırdığını ve Zerre'yi disk formuna nasıl yassılaştırdığını etkileşimli incelemek için oradaki **Animasyon 2.4.3**'e başvurunuz.
+Işığın kutuplanma mekanizmasını görselleştiren temel animasyon ve hidrodinamik açıklamalar, **Bölüm 2.4.3: Evrenakı Gradyanı ve Zerre Diskinin Yönelimi** başlığı altında detaylıca işlenmiştir; gradyanın Zerre diskini hangi doğrultuya yönelttiğini ve bu yönelimin nasıl kararlı bir hizaya oturduğunu etkileşimli incelemek için oradaki **Animasyon 2.4.3**'e başvurunuz.
 
 ## 2.9.2 Evrenakı Gradyanı ve Zerre Bükülmeleri
 
 Evrenakı Teorisi'nde ışığın kırılması veya yön değiştirmesi (bükülmesi), soyut bir dalga cephesinin yavaşlamasıyla değil, son derece somut bir hidrodinamik basınç mekanizmasıyla gerçekleşir. 
 
-Halihazırda polarize olmuş (disk formuna kavuşmuş) bir zerre, uzayda ilerlerken Evrenakı gradyanlarına (farklı basınç bölgelerine) açılı bir şekilde girdiğinde, zerre diski üzerinde fiziksel bir dönme momenti (tork) oluşur. 
+Halihazırda polarize olmuş (disk düzlemi belirli bir doğrultuya yönelmiş) bir zerre, uzayda ilerlerken Evrenakı gradyanlarına (farklı basınç bölgelerine) açılı bir şekilde girdiğinde, zerre diski üzerinde fiziksel bir dönme momenti (tork) oluşur. 
 
 Zerre diskini çeviren asıl unsur, Evrenakı gradyanlarının yoğun (yüksek basınçlı) bölgeden az yoğun (düşük basınçlı) bölgeye doğru itici bir kuvvet doğurmasından gelir. Disk, bu basınç farkı alanına açılı girdiğinde, diskin farklı noktalarına etki eden eşitsiz hidro-kuvvetler net bir tork yaratır. Bu tork, diski Evrenakı gradyanlarının akış çizgilerine uymaya (hizalanmaya) zorlar. Dönüş hareketi, zerre diski gradyanın müsaade ettiği nihai kararlı denge konumuna (akışa tam paralel hale) ulaşana kadar devam eder. Polarizör filtrelerin ve kırılma olaylarının arkasında yatan gerçek fiziksel mekanizma, basınç farkından doğan bu tork etkisidir.
 
@@ -371,4 +371,4 @@ Bu ayrımın sonucu, teoriye bir gözlem penceresi açar: **saydam cisimlerin i�
 
 ## 2.9.3 Bölüm Kapanışı ve Geçiş
 
-Bu bölümde kutuplaşmanın iki ayağı tamamlandı: Zerre'nin gradyan basıncı altında küreden diske geçişi (mekanizmanın tam kuruluşu için bkz. 2.4.3) ve polarize diskin, gradyanlara açılı girdiğinde basınç torkuyla akış çizgilerine hizalanması (2.9.2). Böylece Kısım 2'nin mekanik araç seti — patinaj, rampa geçidi, wake, paket ve tork — eksiksiz kuruldu. Bir sonraki bölümde (2.10) bu araçların, standart fiziğin en gizemli saydığı kuantum anomalilerini — dolanıklık ve belirsizlik — nasıl karşıladığını göreceğiz.
+Bu bölümde kutuplaşma tek bir mekanizmaya indirgendi: Zerre kendi dönüşünün belirlediği kalıcı disk gövdeye sahiptir ve kutuplaşma bu diskin yöneliminden ibarettir; gradyanlara açılı giren disk, basınç torkuyla akış çizgilerine hizalanır (mekanizmanın tam kuruluşu için bkz. 2.4.3, gradyan alanlarındaki uygulaması için 2.9.2). Böylece Kısım 2'nin mekanik araç seti — patinaj, rampa geçidi, wake, paket ve tork — eksiksiz kuruldu. Bir sonraki bölümde (2.10) bu araçların, standart fiziğin en gizemli saydığı kuantum anomalilerini — dolanıklık ve belirsizlik — nasıl karşıladığını göreceğiz.

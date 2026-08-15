@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #050505;
+    color: #ffffff;
+    overflow: hidden;
+    /* Three.js canvas will fill the screen behind this */
+}
+
+/* Three.js Canvas */
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+/* Glassmorphism UI Container */
+#ui-container {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    width: 380px;
+    background: rgba(20, 20, 25, 0.6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #00f0ff, #ff00e5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    font-size: 0.9rem;
+    color: #a0a0b0;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+.info-panel {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    padding: 1.2rem;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(0, 240, 255, 0.2);
+}
+
+.stat-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+}
+
+.stat-row:last-child {
+    margin-bottom: 0;
+}
+
+.label {
+    color: #888899;
+}
+
+.value {
+    font-weight: 500;
+    color: #e0e0e0;
+}
+
+.highlight {
+    color: #00f0ff;
+}
+
+.glow-text {
+    color: #ff00e5;
+    text-shadow: 0 0 10px rgba(255, 0, 229, 0.6);
+    font-weight: 700;
+}
+
+.controls label {
+    display: block;
+    font-size: 0.9rem;
+    color: #a0a0b0;
+    margin-bottom: 0.8rem;
+}
+
+input[type=range] {
+    width: 100%;
+    -webkit-appearance: none;
+    background: rgba(255,255,255,0.1);
+    height: 6px;
+    border-radius: 3px;
+    outline: none;
+    margin-bottom: 1.5rem;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #00f0ff;
+    cursor: pointer;
+    box-shadow: 0 0 10px #00f0ff;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(90deg, rgba(0,240,255,0.1), rgba(255,0,229,0.1));
+    border: 1px solid rgba(255, 0, 229, 0.4);
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(90deg, rgba(0,240,255,0.3), rgba(255,0,229,0.3));
+    box-shadow: 0 0 15px rgba(255, 0, 229, 0.4);
+    transform: translateY(-2px);
+}
+
+.footer-note {
+    margin-top: 1.5rem;
+    font-size: 0.8rem;
+    color: #666677;
+    text-align: center;
+    font-style: italic;
+}
+
+#labels-container {
+    position: absolute;
+    bottom: 2rem;
+    left: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.view-label {
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(0, 240, 255, 0.3);
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+.right-label {
+    border-color: rgba(255, 0, 229, 0.3);
+    box-shadow: 0 0 20px rgba(255, 0, 229, 0.2);
+    color: #ff00e5;
+}
+
+.left-label {
+    color: #00f0ff;
+}

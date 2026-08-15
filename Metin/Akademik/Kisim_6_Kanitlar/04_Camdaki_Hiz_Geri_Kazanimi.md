@@ -4,7 +4,7 @@
 
 ## 6.4.1 İki Bağımsız Paradoks
 
-**Paradoks 1 — Hız Geri Kazanımı (Bölüm 1.2.2):** Standart fizikte "foton" kütlesizdir ve hiçbir itki mekanizması yoktur. Buna rağmen cam veya su gibi saydam bir ortama girdiğinde hızı düşer (camda yaklaşık $0.66c$), ortamdan çıktığında ise kendiliğinden yeniden $c$'ye fırlar. Motoru olmayan bir nesnenin, yavaşladıktan sonra hangi enerjiyle yeniden hızlandığı sorusu, klasik eylemsizlik ilkesiyle doğrudan çelişir. Standart kuantum optiği bu durumu "fotonun ortam içinde aslında hiç yavaşlamadığı, soğurma-yeniden yayım veya polariton süperpozisyonu nedeniyle *efektif* olarak geciktiği" gibi yorum katmanlarıyla idare eder; ancak bu yorumlar arasında ortak bir mekanik tablo yoktur.
+**Paradoks 1 — Hız Geri Kazanımı (Bölüm 1.2.2):** Standart fizikte "foton" kütlesizdir ve hiçbir itki mekanizması yoktur. Buna rağmen cam veya su gibi saydam bir ortama girdiğinde hızı düşer (camda yaklaşık $0.66c$), ortamdan çıktığında ise kendiliğinden yeniden $c_0$'ye fırlar. Motoru olmayan bir nesnenin, yavaşladıktan sonra hangi enerjiyle yeniden hızlandığı sorusu, klasik eylemsizlik ilkesiyle doğrudan çelişir. Standart kuantum optiği bu durumu "fotonun ortam içinde aslında hiç yavaşlamadığı, soğurma-yeniden yayım veya polariton süperpozisyonu nedeniyle *efektif* olarak geciktiği" gibi yorum katmanlarıyla idare eder; ancak bu yorumlar arasında ortak bir mekanik tablo yoktur.
 
 **Paradoks 2 — Abraham-Minkowski:** Işığın saydam bir ortam içindeki momentumu konusunda fizik literatürü bir asırdır ikiye bölünmüştür (Minkowski, 1908; Abraham, 1909): Minkowski formülasyonu ortamda momentumun *arttığını* ($p' = np$), Abraham formülasyonu ise *azaldığını* ($p' = p/n$) söyler ve her iki tarafı da destekleyen deneyler mevcuttur. Sorunun bu kadar uzun süre çözümsüz kalmasının nedeni, standart modelde ışığın ortam içindeki "hızı" ile "momentumu"nun hangi fiziksel taşıyıcıya ait olduğunun belirsiz olmasıdır. *(Dürüst kayıt: literatürde Barnett'in kinetik/kanonik momentum ayrımı — Abraham'ın kinetik, Minkowski'nin kanonik momentumu ölçtüğü tezi — geniş kabul gören bir uzlaşma önermiştir; bkz. Barnett, 2010. Teorinin buradaki katkısı paradoksu "ilk kez çözmek" değil, bu ayrıma mekanik bir taşıyıcı — çizgisel ve açısal Zerre momentumu — önermektir.)*
 
@@ -28,7 +28,7 @@ Mekanizmanın makro ölçekteki görünümü ve animasyonu Bölüm 2.3.4'te sunu
 
 Bu bölümün kanıt değeri şu üç özellikten gelir:
 
-* **Ek varsayımsızlık:** Çözüm için teoriye hiçbir yeni parametre, alan veya kural eklenmemiştir; Postülat 4 (değişken $c$ / patinaj) ve klasik enerji korunumu yeterlidir.
+* **Ek varsayımsızlık:** Çözüm için teoriye hiçbir yeni parametre, alan veya kural eklenmemiştir; Postülat 4 (değişken $c_0$ / patinaj) ve klasik enerji korunumu yeterlidir.
 * **Bağımsız çifte kapsama:** Aynı mekanizma, birbirinden bağımsız iki anomaliyi birden kapatmaktadır; bu, tekil bir soruna geriye dönük uydurulmuş (ad hoc) bir açıklamadan yapısal olarak farklıdır.
 * **Deneysel bağlantı:** Mekanizmanın nicel sınaması kitapta zaten tanımlıdır: Kısım 5.3'teki kütle içi gradyan ölçümü, patinaj modelinin öngördüğü "camın içinde konuma bağlı hız farkını" (rapor edilen değer: merkez-kenar arasında ~4650 m/sn) doğrudan test eder. Patinaj modeli yanlışsa, homojen camın içinde böyle bir iç hız gradyanı bulunmamalıdır.
 

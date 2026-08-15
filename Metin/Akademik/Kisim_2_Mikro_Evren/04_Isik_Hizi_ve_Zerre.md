@@ -2,25 +2,25 @@
 
 Evrenakı teorisinde uzay boşluğu (vakum), pasif bir "hiçlik" değil, devasa bir iç basınca sahip ve viskozitesi sıfıra çok yakın (ama sıfır olmayan) bir akışkandır (süper-akışkan; bkz. Bölüm 1.3, 7. postülat). Işık ise bu akışkanın içinde dalgalanan soyut bir enerji değil, bizzat bu akışkandan kopartılarak fırlatılan somut bir kütle, yani **Zerre**'dir.
 
-Standart fizik, ışığın (Zerrenin) boşlukta saniyede tam 299.792.458 metre ($c$) hızla hareket ettiğini (SI'da bu değer tanım gereği sabittir; BIPM, 2019) ve bu değerin Evren'in her yerinde mutlak bir evrensel sabit olduğunu iddia eder. Ancak bu yaklaşım bu hızın mekanik altyapısını veya "neden" bu değere sahip olduğunu açıklayamaz. 
+Standart fizik, ışığın (Zerrenin) boşlukta saniyede tam 299.792.458 metre ($c_0$) hızla hareket ettiğini (SI'da bu değer tanım gereği sabittir; BIPM, 2019) ve bu değerin Evren'in her yerinde mutlak bir evrensel sabit olduğunu iddia eder. Ancak bu yaklaşım bu hızın mekanik altyapısını veya "neden" bu değere sahip olduğunu açıklayamaz. 
 
-Evrenakı mekaniği ise ışık hızını çok net bir akışkanlar dinamiği yasasıyla tanımlar: **$c$, Evrenakı akışkanının bulunduğumuz lokal yoğunluğunun müsaade ettiği Kavrama (Tutunma) hızıdır.** Şayet Evrenakı akışkanının kendi doğası için mutlak bir "üst sınır" tanımlayacak isek, bu sınır 299.792.458 m/s'nin çok ötesindedir.
+Evrenakı mekaniği ise ışık hızını çok net bir akışkanlar dinamiği yasasıyla tanımlar: **$c_0$, Evrenakı akışkanının bulunduğumuz lokal yoğunluğunun müsaade ettiği Kavrama (Tutunma) hızıdır.** Şayet Evrenakı akışkanının kendi doğası için mutlak bir "üst sınır" tanımlayacak isek, bu sınır 299.792.458 m/s'nin çok ötesindedir.
 
-## 2.4.1 İletim Sınırı Olarak $c$
+## 2.4.1 İletim Sınırı Olarak $c_0$
 
-Evrenakı denizine ateşlenen bir Zerre, 7. Postülat'ta belirtildiği üzere viskozitesi sıfıra çok yakın ($\mu \approx 0$; "sıfıra yakın, sıfır değil") bir ortamda hareket eder; yani klasik anlamda kinetik enerjisini gözlemsel ölçekte sömüren bir "direnç" kuvveti yoktur — kalan viskoz kayıp, Zerre'nin yol boyunca hızını hissedilir biçimde düşürmeyecek kadar küçüktür. Zerre'nin hızı $c$'ye ulaştığında olan şey, bir direnç dengesi değil, akışkana "kavrama (tutunma)" mekanizmasının sınırlarına ulaşılmasıdır. Bu noktada $c$ limitinin ikili doğasını (Öteleme vs. Dönüş) çok net ayırmak gerekir:
+Evrenakı denizine ateşlenen bir Zerre, 7. Postülat'ta belirtildiği üzere viskozitesi sıfıra çok yakın ($\mu \approx 0$; "sıfıra yakın, sıfır değil") bir ortamda hareket eder; yani klasik anlamda kinetik enerjisini gözlemsel ölçekte sömüren bir "direnç" kuvveti yoktur — kalan viskoz kayıp, Zerre'nin yol boyunca hızını hissedilir biçimde düşürmeyecek kadar küçüktür. Zerre'nin hızı $c_0$'ye ulaştığında olan şey, bir direnç dengesi değil, akışkana "kavrama (tutunma)" mekanizmasının sınırlarına ulaşılmasıdır. Bu noktada $c_0$ limitinin ikili doğasını (Öteleme vs. Dönüş) çok net ayırmak gerekir:
 
-*   **Öteleme (Çizgisel İlerleme) için Kavrama Limiti:** Zerre (ışık) gibi akışkan içinde öteleme hareketi yapan cisimler için $c$, ortamın izin verdiği maksimum iletim hızıdır (tıpkı sesin havadaki hızının Mach 1 olması gibi). Zerre, bu hıza ulaştığında daha fazla çizgisel ivmelenemez; çünkü içinden geçtiği sıvıya tutunma (kavrama) limiti budur. Bu sınır aşılmaya çalışıldığında zerre akışkanı yırtamaz, sadece akışkan üzerinde "patinaja" düşer.
-*   **Dönüş (Spin) ve Gerçek Kavitasyon (Yırtılma) Sınırı:** Bir nükleonun kendi kompozit dönüş hızı $c$'yi aşsa da yeni bir kavitasyon yaratmaz; ancak onu oluşturan **temel alt-bileşenlerin çekirdeğindeki** devasa 4 boyutlu girdaplar, Evrenakı'nın $c$'den çok daha yüksek olan **gerçek kavitasyon (yırtılma) sınırını** bile aşacak kadar akıl almaz bir hızda döner. Öteleme olmadığı için patinaj yaşanmaz; bunun yerine Evrenakı yırtılır. Kısım 1'deki 5. Postülat'ta belirtildiği gibi, madde dediğimiz o ölümsüz şok zarfını (çekirdeği) sıfırdan yaratan şey $c$'nin aşılması değil, bu temel alt-parçacıkların gerçek kavitasyon sınırını yırtmasıdır.
+*   **Öteleme (Çizgisel İlerleme) için Kavrama Limiti:** Zerre (ışık) gibi akışkan içinde öteleme hareketi yapan cisimler için $c_0$, ortamın izin verdiği maksimum iletim hızıdır (tıpkı sesin havadaki hızının Mach 1 olması gibi). Zerre, bu hıza ulaştığında daha fazla çizgisel ivmelenemez; çünkü içinden geçtiği sıvıya tutunma (kavrama) limiti budur. Bu sınır aşılmaya çalışıldığında zerre akışkanı yırtamaz, sadece akışkan üzerinde "patinaja" düşer.
+*   **Dönüş (Spin) ve Gerçek Kavitasyon (Yırtılma) Sınırı:** Bir nükleonun kendi kompozit dönüş hızı $c_0$'yi aşsa da yeni bir kavitasyon yaratmaz; ancak onu oluşturan yapılanmanın **en alt düzeyindeki (Kut düzeyindeki)** devasa 4 boyutlu girdaplar, Evrenakı'nın $c_0$'den çok daha yüksek olan **gerçek kavitasyon (yırtılma) sınırını** bile aşacak kadar akıl almaz bir hızda döner. Öteleme olmadığı için patinaj yaşanmaz; bunun yerine Evrenakı yırtılır. Kısım 1'deki 5. Postülat'ta belirtildiği gibi, madde dediğimiz o ölümsüz şok zarfını (çekirdeği) sıfırdan yaratan şey $c_0$'nin aşılması değil, Kut düzeyindeki bu saf dönüşün gerçek kavitasyon sınırını yırtmasıdır. *(Kut burada yalnızca ontolojik adrestir: varlık tabanı Kut, açıklama tabanı Zerre'dir; Kut hiçbir hesaba girmez.)*
 
-Bu yüzden $c$ (299.792.458 m/s), Evrenakı'nın mutlak yırtılma (kavitasyon) eşiği değil, sadece ışığın Dünya civarındaki yoğunlukta yola tutunabildiği lokal **patinaj sınırıdır**. Işık farklı yoğunluklardaki derin uzay bölgelerinde bu hızı zaten aşar. Gerçek kavitasyon eşiğini aşarak kütleyi var eden şey ise kompozit parçacıkların değil, evrenin en temel yapıtaşlarının o akıl almaz 'saf dönüş' hızlarıdır.
+Bu yüzden $c_0$ (299.792.458 m/s), Evrenakı'nın mutlak yırtılma (kavitasyon) eşiği değil, sadece ışığın Dünya civarındaki yoğunlukta yola tutunabildiği lokal **patinaj sınırıdır**. Işık farklı yoğunluklardaki derin uzay bölgelerinde bu hızı zaten aşar. Gerçek kavitasyon eşiğini aşarak kütleyi var eden şey ise kompozit parçacıkların değil, yapılanmanın en alt düzeyindeki — Kut düzeyindeki — o akıl almaz 'saf dönüş' hızlarıdır.
 
-**Lokal (Yerel) Bir Sınır Olarak $c$**
-Evrenakı Teorisi'nde $c$ sabiti (299.792.458 m/s), Evren'in mutlak ve değişmez bir hızı değildir. Bu spesifik rakam sadece **Dünya yüzeyindeki (ve Dünya çevresindeki) Evrenakı yoğunluğunun** müsaade ettiği iletim hızıdır (laboratuvardaki vakum ortamları da bu lokal Evrenakı denizi içindedir). Farklı bir yıldız sisteminde, galaksiler arası derin uzayda veya bir kara delik yakınlarında (yani Evrenakı basıncının ve yoğunluğunun farklı olduğu bölgelerde) o bölgeye ait "lokal ışık hızı" Dünya'dakinden farklıdır. Kısacası ışığın hızı, daima içinde bulunduğu yerel Evrenakı ortamının kendisine müsaade ettiği maksimum kavrama hızına eşittir.
+**Lokal (Yerel) Bir Sınır Olarak $c_0$**
+Evrenakı Teorisi'nde $c_0$ sabiti (299.792.458 m/s), Evren'in mutlak ve değişmez bir hızı değildir. Bu spesifik rakam sadece **Dünya yüzeyindeki (ve Dünya çevresindeki) Evrenakı yoğunluğunun** müsaade ettiği iletim hızıdır (laboratuvardaki vakum ortamları da bu lokal Evrenakı denizi içindedir). Farklı bir yıldız sisteminde, galaksiler arası derin uzayda veya bir kara delik yakınlarında (yani Evrenakı basıncının ve yoğunluğunun farklı olduğu bölgelerde) o bölgeye ait "lokal ışık hızı" Dünya'dakinden farklıdır. Kısacası ışığın hızı, daima içinde bulunduğu yerel Evrenakı ortamının kendisine müsaade ettiği maksimum kavrama hızına eşittir.
 
 ## 2.4.2 Patinaj Etkisi (Slip) ve Camdaki Kinetik Takas
 
-Standart fizik, ışığın (fotonun) kütlesiz olduğunu ve hızının ($c$) sadece boşlukta sabit kalabildiğini söyler. Ancak ışık, cam veya su gibi saydam bir maddenin içine girdiğinde hızı aniden düşer (örneğin kırılma indisi $n \approx 1{,}5$ olan camda $0.66c$'ye geriler; ortam indisleri için bkz. Hecht, 2002). Camdan çıktığında ise hiçbir itici güce veya motora sahip olmamasına rağmen, birdenbire tekrar eski hızı olan $c$'ye fırlar. Bu fenomen, klasik mekaniğin "eylemsizlik" prensibiyle çelişen ve **Bölüm 1.2.2'de** "Hız Geri Kazanımı Paradoksu" olarak tanımladığımız krizin ta kendisidir: Kütlesi ve motoru olmayan bir şey, yavaşladıktan sonra enerjiyi nereden bularak tekrar hızlanmaktadır? Dahası, bu durum bir asırdır süren **Abraham-Minkowski tartışmasının** (ışığın ortamdaki momentumunun artıp azalmadığı sorusunun) da zeminidir; tartışmanın literatürdeki durumu ve teorinin ona kattığı mekanik dil, Bölüm 6.4'te kanıt statüsüyle birlikte değerlendirilmektedir.
+Standart fizik, ışığın (fotonun) kütlesiz olduğunu ve hızının ($c_0$) sadece boşlukta sabit kalabildiğini söyler. Ancak ışık, cam veya su gibi saydam bir maddenin içine girdiğinde hızı aniden düşer (örneğin kırılma indisi $n \approx 1{,}5$ olan camda $0.66c$'ye geriler; ortam indisleri için bkz. Hecht, 2002). Camdan çıktığında ise hiçbir itici güce veya motora sahip olmamasına rağmen, birdenbire tekrar eski hızı olan $c_0$'ye fırlar. Bu fenomen, klasik mekaniğin "eylemsizlik" prensibiyle çelişen ve **Bölüm 1.2.2'de** "Hız Geri Kazanımı Paradoksu" olarak tanımladığımız krizin ta kendisidir: Kütlesi ve motoru olmayan bir şey, yavaşladıktan sonra enerjiyi nereden bularak tekrar hızlanmaktadır? Dahası, bu durum bir asırdır süren **Abraham-Minkowski tartışmasının** (ışığın ortamdaki momentumunun artıp azalmadığı sorusunun) da zeminidir; tartışmanın literatürdeki durumu ve teorinin ona kattığı mekanik dil, Bölüm 6.4'te kanıt statüsüyle birlikte değerlendirilmektedir.
 
 Evrenakı Teorisi, bu asırlık paradoksu "Zerre'nin Akışkanlar Mekaniği" ile tek bir mekanizmayla çözer: Işık soyut bir dalga fonksiyonu değildir. Işık yavaşlamaz; yalnızca **Patinaj (Slip)** yapar.
 
@@ -35,15 +35,15 @@ Evrenakı Teorisi, bu asırlık paradoksu "Zerre'nin Akışkanlar Mekaniği" ile
 > 1. *Yoğun saydam madde (cam, su):* Evrenakı korunumlu olduğundan, atom çekirdeklerinden itilen Evrenakı maddenin *aralarında* kalır; **hacimce ortalama Evrenakı yoğunluğu korunur**, ama düşük-basınçlı deplasman cepleri **ortalama Evrenakı basıncını düşürür.** Işık bu yüzden yavaşlar (kırılma indisi ve Fizeau sürüklemesinin nicel türetimi için bkz. Bölüm 3.4.6).
 > 2. *Astrofiziksel gradyan (yıldız zarfı, galaktik alan):* Burada Evrenakı hem yoğunluk hem basınç olarak makro-ölçekte **gerçekten seyrelir** (bkz. SN 1987A, Bölüm 2.4.4).
 >
-> **Yön kuralı (eşlik oranı $k$):** İkinci rejimde akla şu soru gelir: madem hem $P$ hem $\rho$ düşüyor, $P/\rho$ oranının — dolayısıyla $c$'nin — düşeceği nereden belli? Cevap, Ek B.3'te tanımlanan eşlik oranındadır: yoğunluk, basınçtaki değişime ancak $k$ kesriyle eşlik eder ($\delta\rho/\rho_0 = k\cdot\delta P/P_0$ ve $0 \le k < 1$). $k<1$ olduğu sürece **basınçtaki oransal düşüş yoğunluktakinden daima büyüktür**; bu nedenle
+> **Yön kuralı (eşlik oranı $k$):** İkinci rejimde akla şu soru gelir: madem hem $P$ hem $\rho$ düşüyor, $P/\rho$ oranının — dolayısıyla $c_0$'nin — düşeceği nereden belli? Cevap, Ek B.3'te tanımlanan eşlik oranındadır: yoğunluk, basınçtaki değişime ancak $k$ kesriyle eşlik eder ($\delta\rho/\rho_0 = k\cdot\delta P/P_0$ ve $0 \le k < 1$). $k<1$ olduğu sürece **basınçtaki oransal düşüş yoğunluktakinden daima büyüktür**; bu nedenle
 > $$\frac{\delta c}{c} = \frac{1}{2}\left(\frac{\delta P}{P_0}-\frac{\delta\rho}{\rho_0}\right) = \frac{1-k}{2}\cdot\frac{\delta P}{P_0} < 0 \quad (\delta P < 0)$$
 > yani kütleye yaklaşan ışık **zorunlu olarak** yavaşlar. "Işık kütle yanında yavaşlar" iddiası ayrı bir varsayım değil, $k<1$ koşulunun doğrudan sonucudur.
 >
 > **Ölçek yapısı — iki ayrı büyüklük.** Yavaşlamanın *büyüklüğü* için bir incelik zorunludur (tam türetim: **Ek M-42**). Kütle-itim potansiyeli bölgedeki her şeyi birlikte ölçekler: yalnız ortamı değil, ölçüm aletlerinin maddesini de. Madde ölçeği
 > $$\Lambda \equiv 1-\frac{\Phi}{c^2}$$
 > cetvelleri, saatleri ve atomik geçiş frekanslarını yönetirken ($\ell\propto\Lambda$, $f\propto\Lambda$), Zerre'nin arka plandaki **yayılma hızı** bunun karesiyle ölçeklenir:
-> $$c_{loc} = c\,\Lambda^2 \quad\Longrightarrow\quad n_{eff}=\frac{1}{\Lambda^2}=1+\frac{2\Phi}{c^2}$$
-> İki sonucu vardır. Birincisi: ışık bükülmesi $1{,}7512''$ çıkar (ölçülen $1{,}7510''$) — Bölüm 4.2.15'te uzun süre analojiyle bırakılan **2 çarpanı** buradan gelir. İkincisi: $\ell$ ve $f$ aynı çarpanla ölçeklendiği için **yerel olarak ölçülen $c$ tam olarak değişmezdir** ($c_{loc}/(\ell f)$ sabit) — Lorentz ihlali deneylerinin $10^{-18}$ düzeyindeki null sonuçları teorinin öngörüsüdür.
+> $$c_{loc} = c_0\,\Lambda^2 \quad\Longrightarrow\quad n_{eff}=\frac{1}{\Lambda^2}=1+\frac{2\Phi}{c^2}$$
+> İki sonucu vardır. Birincisi: ışık bükülmesi $1{,}7512''$ çıkar (ölçülen $1{,}7510''$) — Bölüm 4.2.15'te uzun süre analojiyle bırakılan **2 çarpanı** buradan gelir. İkincisi: $\ell$ ve $f$ aynı çarpanla ölçeklendiği için **yerel olarak ölçülen $c_0$ tam olarak değişmezdir** ($c_{loc}/(\ell f)$ sabit) — Lorentz ihlali deneylerinin $10^{-18}$ düzeyindeki null sonuçları teorinin öngörüsüdür.
 >
 > **Ortak-mod ↔ diferansiyel ayrımı (kritik).** Bu değişmezlik yalnız **ortak-mod** etkiler için geçerlidir; maddi ortamdaki yavaşlamayı ortadan kaldırmaz. Bir cam bloğu, ışığın *yolundaki* $P/\rho$'yu düşürür ama laboratuvardaki cetveli ve saati değiştirmez — telafi yoktur, etki **yerel olarak ölçülebilir** kalır ve $n=1/\sqrt{1-\phi}$ ile Fizeau katsayısı buradan çıkar (yukarıdaki 1. rejim; Bölüm 3.4.6). Yani teorinin "ışık hızı değişkendir" iddiasının iki ayrı sınıfı vardır: potansiyel kaynaklı (ortak-mod, yerel ölçümde gizli, bükülmede görünür) ve maddi ortam kaynaklı (diferansiyel, doğrudan ölçülebilir).
 >
@@ -52,25 +52,25 @@ Evrenakı Teorisi, bu asırlık paradoksu "Zerre'nin Akışkanlar Mekaniği" ile
 **Zerre'nin Dönme Momenti (Spin)**
 Zerreler (ışık mermileri), kaynağını terk ettiği andan itibaren yüksek basınçlı dış uzayda (Evrenakı denizinde) tam bir yol tutuşuyla ilerlerler. Bu ilerleyiş sırasında, bir otomobil lastiği gibi çevrelerindeki sıvıya tam olarak kavrayarak/tutunarak devinirler. Ancak Zerre, bir cam prizması veya su gibi **atomik olarak yoğun** maddelerin oluşturduğu **düşük Evrenakı basıncı (deplasman/vakum)** bölgesine girdiğinde tutunma zeminini yitirir. (Atomik yoğunluk yüksektir; ama bu, Evrenakı basıncını düşürür — zıtlık kuralı. Hacimce ortalama Evrenakı yoğunluğu ise korunur; yerel cepler seyrek, aralar sıkışıktır.)
 
-Vakum (düşük basınç) nedeniyle yola tutunamayan Zerre, buzlanmış bir yola veya çamura giren bir araba tekerleği gibi "boşa dönmeye" başlar. Doğrusal hızı ($v$) gözle görülür şekilde düşerken, kendi ekseni etrafındaki dönme hızı ($\omega$) şiddetle artar.
+Vakum (düşük basınç) nedeniyle yola tutunamayan Zerre, buzlanmış bir yola veya çamura giren bir araba tekerleği gibi "boşa dönmeye" başlar. Doğrusal hızı ($v$) gözle görülür şekilde düşer; buna karşılık kendi ekseni etrafındaki dönüşü hızlanmaz. Zerre'nin çevresel dönüş hızı evrensel bir sabittir ($v_{cev} = \sqrt{2}\,c_0$, dolayısıyla $\Omega = \sqrt{2}\,c_0/r$; duvar hızı yasası, **Ek M-3**) ve ortamın basıncıyla oynamaz. Patinajda değişen tek kanal ötelemedir: dönüş aynı şiddetle sürer, ama artık yola değil, deplasman ceplerinin gevşek zeminine iş yapar.
 
 **Kinetik Takas ve Enerjinin Korunumu**
-Bu yavaşlama esnasında Zerre'nin toplam enerjisi ($E_T$) eksilmez. Kaybolduğu sanılan doğrusal kinetik enerji, açısal (dönme) kinetik enerjisine dönüşerek Zerre'nin kendi içinde korunur. Klasik mekanikteki dönüşüm denklemi kusursuz olarak işler:
+Bu yavaşlama esnasında Zerre'nin toplam enerjisi ($E_T$) eksilmez; ancak takas, Zerre'nin *içinde* iki kanal arasında olmaz. Zerre'nin dönme payı kilitlidir: çevresel hız evrensel bir sabit olduğundan ($v_{cev} = \sqrt{2}\,c_0$), dönme enerjisi $\tfrac{1}{2} k_a m_z v_{cev}^2$ değerinde durur — ne dolar ne boşalır. Dolayısıyla patinajda öteleme kanalından çıkan enerji dönmeye değil, **ortama** geçer: Zerre boşa dönerken çalkaladığı düşük basınçlı deplasman ceplerine iş yapar. Muhasebe Zerre'nin içinde değil, Zerre ile Evrenakı ($\Psi$) arasında kapanır:
 
-$$E_T = \frac{1}{2} m_z v^2 \ (\text{Çizgisel}) + \frac{1}{2} I \omega^2 \ (\text{Dönme})$$
+$$\underbrace{\frac{1}{2} m_z v^2}_{\text{Öteleme (değişken)}} \; + \; \underbrace{\frac{1}{2} k_a m_z v_{cev}^2}_{\text{Dönme (sabit)}} \; + \; \underbrace{W_{\Psi}}_{\text{Ortamla takas}} \;=\; E_T \;=\; \text{sabit}$$
 
-*(Not: Buradaki atalet momenti $I = k_a \cdot m_z \cdot r^2$, **Bölüm 2.2.2**'deki fotoelektrik enerji muhasebesi denkleminde geçen $(c^2 + k_a \cdot v_{cev}^2)$ teriminin dönme payı ile aynı fiziğin iki farklı yüzüdür — $k_a$, Zerre'nin kütle dağılımı (atalet) katsayısıdır; homojen küre için $k_a=2/5$. Zerre kütlesi ($m_z$; Postülat 4'te tanımlı evrensel sabit) değişmez, yalnızca enerjinin formu dönüşür.)*
+*(Not: Buradaki $W_{\Psi}$, Zerre'nin patinaj boyunca Evrenakı'na yaptığı net iştir. Atalet momenti $I = k_a \cdot m_z \cdot r^2$ ve $\Omega = v_{cev}/r$ olduğundan dönme payı $\tfrac{1}{2} I \Omega^2 = \tfrac{1}{2} k_a m_z v_{cev}^2$ biçimine iner; bu, **Bölüm 2.2.2**'deki fotoelektrik enerji muhasebesi denkleminde geçen $(c_0^2 + k_a \cdot v_{cev}^2)$ teriminin dönme payı ile aynı fiziğin iki farklı yüzüdür — $k_a$, Zerre'nin kütle dağılımı (atalet) katsayısıdır; basık/disk gövde için $k_a=1/2$. Zerre kütlesi ($m_z$) ve çevresel hızı ($v_{cev}$) değişmez; değişen, öteleme payı ile ortama yapılan iştir.)*
 
-Zerre camdan çıkıp tekrar dış uzayın yüksek basıncına (kuru asfalta) temas ettiğinde, tekerlek yeniden yola tutunur (kavrama sağlanır). Patinaj biter, fırıldak gibi dönme (spin) enerjisi tekrar çizgisel ivmeye aktarılır ve Zerre hiçbir dış enerjiye ihtiyaç duymadan (Bölüm 1.2.2'deki paradoksu çözerek) eski çizgisel hızı olan $c$'ye geri döner.
+Zerre camdan çıkıp tekrar dış uzayın yüksek basıncına (kuru asfalta) temas ettiğinde yerel $P/\rho$ yükselir ve tekerlek yeniden yola tutunur (kavrama sağlanır). Patinaj biter; hiç kesilmemiş olan dönüş artık boşa değil yeniden yola iş yapar ve Zerre öteleme hızını yerel $c_0$'ye geri taşır. Bölüm 1.2.2'deki Hız Geri Kazanımı Paradoksu'nun çözümü budur: Zerre'nin yeniden hızlanmak için ne bir dış motora ne de içeride biriktirilmiş bir dönme deposuna ihtiyacı vardır — motor zaten hiç durmamıştır, yitirilen yalnızca kavramaydı. Ortama yapılan iş ile geri kazanılan öteleme payı arasındaki bütçenin nicel dağılımı ise açık bir kalemdir (bkz. Bölüm 7.4).
 
 Minkowski ve Abraham'ın ışığın momentumu konusunda bir asırdır tartıştığı o meşhur paradoksun (Minkowski, 1908; Abraham, 1909) (momentum artar mı azalır mı sorusunun) çözümü tek bir mekanizmaya dayanır: Işık soyut bir dalga değil mermidir, camda yavaşlamaz, sadece patinaj yapar.
 
 *(Bu mekanizmanın — iki bağımsız paradoksu tek hamlede çözmesinin — kanıt değeri, Kısım 6'daki kanıt dosyasında ayrıca değerlendirilmektedir: bkz. Bölüm 6.4.)*
 
 
-## 2.4.3 Evrenakı Gradyanı ve Küreden Diske Geçiş
+## 2.4.3 Evrenakı Gradyanı ve Zerre Diskinin Yönelimi
 
-Patinaj etkisiyle dönüş enerjisi (spin) artan zerrenin formu sabit kalamaz. Dış basınç zayıfladığında zerre ciddi bir mekanik şekil değişimine uğrar. Düşük basınç gradyanına (deplasman havuzuna) giren zerre patinaj yaparken, artan dönme hızıyla oluşan reel merkezkaç basıncının (M-22) etkisiyle dışa doğru esner ve kusursuz bir küre formundan çıkarak bir "diske" dönüşür.
+Zerre kusursuz bir küre değildir: kendi dönüşü nedeniyle daima basık, eksenel simetrik bir gövdedir — atalet katsayısının basık/disk değeri ($k_a=1/2$) bunun enerji muhasebesindeki karşılığıdır. Bu basıklığı üreten reel merkezkaç basıncı (M-22) dönüşün kendisi kadar kalıcıdır; çevresel hız evrensel bir sabit olduğu için ($v_{cev} = \sqrt{2}\,c_0$) basıklık da gradyanla azalıp artmaz, gövdeye içkindir. Dolayısıyla düşük basınç gradyanına (deplasman havuzuna) giren Zerre'de değişen şey **şekil** değil, **yönelimdir**: patinaj sırasında yola tutunma zayıfladıkça disk düzlemi serbest kalır ve gradyanın dayattığı eksene göre hizalanır. Gradyan ne kadar dikse hizalanma o kadar keskindir; Zerre gradyandan çıktığında gövdesi aynı basıklıktadır, ama disk normali gradyanın bıraktığı yönelimi taşır. Bölüm 2.9'da polarizasyon olarak okunacak olan olgu tam olarak bu hizalanmadır.
 
 <div class="pol-widget">
 <style>
@@ -84,7 +84,7 @@ Patinaj etkisiyle dönüş enerjisi (spin) artan zerrenin formu sabit kalamaz. D
 .pol-legend{margin-top:10px;font-size:0.78rem;color:#8892b0;}
 </style>
 
-<h4>Animasyon 2.4.3: Evrenakı Gradyanı ve Küreden Diske Geçiş</h4>
+<h4>Animasyon 2.4.3: Evrenakı Gradyanı ve Zerre Diskinin Yönelimi</h4>
 <div class="pol-controls">
   <div class="pol-control">
       <span>Evrenakı Gradyanı (Basınç Düşüşü): <b id="polGradVal" style="color:var(--pol-blue);">0%</b></span>
@@ -94,8 +94,8 @@ Patinaj etkisiyle dönüş enerjisi (spin) artan zerrenin formu sabit kalamaz. D
 <div class="pol-canvas-wrap"><canvas id="polCanvas"></canvas></div>
 <div class="pol-legend">
   * <b>Arka plan ve Akış çizgileri (Evrenakı):</b> Uzay boşluğunda (normal basınçta) zerre tam hızıyla ilerler (çizgiler hızlı akar). Zerre, makro kütlelerin yarattığı Evrenakı gradyanına (deplasman havuzuna) girdiğinde öteleme hızı yavaşlar. Rengin siyahtan açık eflatuna dönmesi, ortamdaki hidrodinamik basıncın ve yoğunluğun <b>azalışını</b> temsil eder.<br>
-  * <b>Altın Sarısı Zerre (Ekvatoral Bakış):</b> Düşük basınca giren zerre "patinaj" yapmaya başlar; doğrusal hızı düşerken dönüş (spin) enerjisi artar. Ortam basıncı azaldıkça zerrenin kendi etrafındaki dönüşü dramatik şekilde hızlanır.<br>
-  * <b>Yassılaşma (Disk) Formu:</b> Dış Evrenakı basıncının <b>azalması</b>, zerreyi küresel tutan sıkıştırma kuvvetini zayıflatır. Dış basınç düştükçe ve spin hızlandıkça, zerre mükemmel <b>küre</b> formunu koruyamaz ve içsel merkezkaç basıncının (M-22) etkisiyle yatay eksende savrulup yassılaşarak bir <b>diske</b> (elipsoide) dönüşür.
+  * <b>Altın Sarısı Zerre (Ekvatoral Bakış):</b> Düşük basınca giren zerre "patinaj" yapmaya başlar ve doğrusal hızı düşer. Dönüşü ise hızlanmaz: zerrenin çevresel hızı ($v_{cev}=\sqrt{2}\,c_0$) evrensel bir sabittir ve gradyanla değişmez — animasyonda dönüş bu yüzden baştan sona aynı tempodadır.<br>
+  * <b>Disk Gövde ve Yönelimi:</b> Zerre, kendi dönüşünün ürettiği reel merkezkaç basıncı (M-22) nedeniyle <b>daima</b> basık bir disk gövdedir ($k_a=1/2$); dış basınç bu basıklığı ne artırır ne azaltır. Gradyan arttıkça değişen tek şey disk düzleminin <b>yönelimidir</b>: tutunma zayıfladıkça disk normali gradyanın dayattığı eksene hizalanır.
 </div>
 
 <script>
@@ -201,20 +201,21 @@ Patinaj etkisiyle dönüş enerjisi (spin) artan zerrenin formu sabit kalamaz. D
           ctx.stroke();
       });
 
-      // 3. Zerre (Kendi ekseninde dönen ve yatay yassılaşan)
-      // Non-lineer kompresyon (fiziksel baskı hissi)
-      const compression = Math.pow(normGrad, 1.2); 
+      // 3. Zerre (kalıcı basık disk gövde; gradyanla yalnız yönelimi değişir)
+      // Gövde geometrisi gradyandan bağımsızdır: basıklık gövdeye içkindir (k_a = 1/2).
+      const a = 68;  // disk büyük yarı-ekseni - sabit
+      const b = 30;  // disk küçük yarı-ekseni - sabit
       
-      // Yatay elipsleşme: Genişlik artar, yükseklik azalır
-      const a = 45 * (1 + compression * 1.4);  // Genişlik yatayda %240'a çıkar
-      const b = 45 * (1 - compression * 0.75); // Yükseklik %25'e kadar düşer 
+      // Gradyan yalnızca disk normalinin YÖNELİMİNİ belirler:
+      // %0'da disk serbest (eğik) durur, %100'de gradyan eksenine tam hizalanır.
+      const tilt = (1 - normGrad) * (Math.PI / 3);
       
-      // Kullanıcı İsteği: Gradyan arttıkça zerre dönüşü çok dramatik şekilde hızlanacak.
-      // %0'da neredeyse durma noktasında (0.005), %100'de çok hızlı (0.30)
-      zerreAngle += 0.005 + (normGrad * 0.30);
+      // Çevresel hız evrensel sabittir (v_cev = sqrt(2)*c): dönüş tempo değiştirmez.
+      zerreAngle += 0.12;
       
       ctx.save();
       ctx.translate(cx, cy);
+      ctx.rotate(tilt);
       
       // Zerrenin hıza bağlı parlaması (Glow) - Artık altın/sarı tonlarında
       const glowBlur = 20 + normGrad * 40;
@@ -306,7 +307,8 @@ Patinaj etkisiyle dönüş enerjisi (spin) artan zerrenin formu sabit kalamaz. D
       const uiX = 20;
       let uiY = 20;
       
-      drawBar('Zerre Dönüş (Spin) Hızı', normGrad, uiX, uiY, 'rgba(255, 204, 0, 0.8)');
+      // Çevresel hız evrensel sabittir: çubuk gradyandan bağımsız, tam doludur.
+      drawBar('Çevresel Hız (sabit: √2·c)', 1, uiX, uiY, 'rgba(255, 204, 0, 0.8)');
       uiY += 28;
       // Doğrusal hız taban limiti %20
       drawBar('Zerre Doğrusal Hızı', 0.2 + (1 - normGrad)*0.8, uiX, uiY, 'rgba(0, 240, 255, 0.8)');
@@ -314,7 +316,8 @@ Patinaj etkisiyle dönüş enerjisi (spin) artan zerrenin formu sabit kalamaz. D
       // Yoğunluk/Basınç taban limiti %15 (tam sıfır/mutlak hiçlik olmaz)
       drawBar('Evrenakı Yoğunluğu / Basıncı', 0.15 + (1 - normGrad)*0.85, uiX, uiY, 'rgba(160, 50, 255, 0.8)');
       uiY += 28;
-      drawBar('Küresel Basıklık', compression, uiX, uiY, 'rgba(255, 0, 229, 0.8)');
+      // Basıklık gövdeye içkindir; gradyanla değişen tek şey disk yönelimidir.
+      drawBar('Disk Yönelimi (Hizalanma)', normGrad, uiX, uiY, 'rgba(255, 0, 229, 0.8)');
 
       requestAnimationFrame(step);
   }
@@ -325,6 +328,10 @@ Patinaj etkisiyle dönüş enerjisi (spin) artan zerrenin formu sabit kalamaz. D
 </div>
 
 ## 2.4.4 Vaka Analizi ve Nicel Kısıt: SN 1987A Nötrino Yarışı
+
+> [!WARNING]
+> **YAZAR NOTU (13 Ağustos 2026): MEKANİZMA GERİ ÇEKİLMİŞTİR**
+> SN 1987A'daki nötrino–optik varış farkını açıklayan bu bölümdeki "Zerre'nin yola tutunup patinaj yapması" argümanı iptal edilmiştir. Evrenakı'da $c_0$ mutlak bilgi hızı sınırı değil, yalnızca ortamın akustik ses hızıdır. Nötrinonun $c_0$'ı aşması teoride paradoks yaratmadığından, kriz standart bilime aittir. Bu konu (SN 1987A gecikme bütçesi) yeni kabule göre yeniden yapılandırılmak üzere çalışma listesine alınmıştır.
 
 1987 yılında, yaklaşık 168.000 ışık yılı uzaklıktaki Büyük Macellan Bulutu'nda bir süpernova (SN 1987A) patladı. Kamiokande-II, IMB ve Baksan dedektörleri patlamadan gelen nötrino demetini yakaladı; ilk optik tespit ise bundan yaklaşık **3 saat sonra** geldi (Kamiokande-II: Hirata ve ark., 1987; IMB: Bionta ve ark., 1987; Baksan: Alekseev ve ark., 1988).
 
@@ -339,10 +346,10 @@ $$D_{toplam} = D_{zarf} + D_{yol}$$
 
 Nötrino, tutunma mekanizmasına bağımlı olmadığından (bkz. 2.1) her iki bölgeden de oyalanmadan geçer — 3 saatin tamamı ışığın hanesine yazılır. İki bileşenin **ağırlığı ise SN 1987A verisinden tek başına ayrıştırılamaz ve açık problemdir.** Bununla birlikte patinajın renk bağımlılığı (dispersiyon, bkz. Bölüm 4.3) $D_{yol}$'a bugünden bir tavan koyar: yol payı büyük olsaydı, galaksi içindeki kaynakların — örneğin Crab pulsarının milisaniyelik optik nabızlarının (Cocke ve ark., 1969) — renkler arasında ölçülebilir varış saçılması göstermesi gerekirdi; böyle bir saçılma gözlenmediğinden $D_{yol}$, toplamın küçük bir kesriyle sınırlı görünmektedir.
 
-**Nicel kısıt ve karar deneyleri:** 168.000 yıllık yol yaklaşık $1{,}5 \times 10^9$ saattir; varış farkının yalnızca ~3 saat olması, yol-içi *ortalama* yavaşlamayı $\Delta v / c \lesssim 2 \times 10^{-9}$ ile sınırlar — bu değer, $D_{yol}$ bileşeninin gözlemsel üst sınırıdır. *(hesap: **Ek M-13**)* Bileşenlerin ağırlığını gelecekte üç deney ayrıştıracaktır:
+**Nicel kısıt ve karar deneyleri:** 168.000 yıllık yol yaklaşık $1{,}5 \times 10^9$ saattir; varış farkının yalnızca ~3 saat olması, yol-içi *ortalama* yavaşlamayı $\Delta v / c_0 \lesssim 2 \times 10^{-9}$ ile sınırlar — bu değer, $D_{yol}$ bileşeninin gözlemsel üst sınırıdır. *(hesap: **Ek M-13**)* Bileşenlerin ağırlığını gelecekte üç deney ayrıştıracaktır:
 
 1. **Bir sonraki galaktik süpernova:** Nötrino dedektörleri çağında Samanyolu'nda henüz süpernova patlamamıştır (nötrinosu yakalanan tek süpernova SN 1987A'dır); SNEWS erken-uyarı ağı, tam da nötrino-önce sıralamasını bekleyerek kuruludur (Antonioli ve ark., 2004; ikinci nesil ağ: Al Kharusi ve ark., 2021). Gözlenecek gecikmenin **progenitör tipiyle** ölçeklenmesi $D_{zarf}$'ın, **güzergâh uzunluğuyla** ölçeklenmesi $D_{yol}$'un baskınlığını gösterir.
 2. **Farklı uzaklıklardaki nötrinolu süpernovalar:** Gecikme–mesafe ilişkisi, yol bileşeninin birikimli karakterini doğrudan test eder.
 3. **Renk-saçılması imzası:** $D_{yol}$ ne kadarsa, varışta $\chi$ ölçekli bir mavi-kırmızı ayrışması o kadar olur (bkz. 4.3); pulsar nabız hizalamaları bu imzayı bugünden sınırlamakta, gelecekteki hassas ölçümler yol payını doğrudan ölçebilecektir.
 
-Hangi yönde çözülürse çözülsün bu çatalların her biri teoriyi nicelleştirir; $\Delta v/c$ sınırının sistematik ihlali ise ya derin uzay yoğunluk haritasının ya da patinaj mekanizmasının revizyonunu zorlar.
+Hangi yönde çözülürse çözülsün bu çatalların her biri teoriyi nicelleştirir; $\Delta v/c_0$ sınırının sistematik ihlali ise ya derin uzay yoğunluk haritasının ya da patinaj mekanizmasının revizyonunu zorlar.
