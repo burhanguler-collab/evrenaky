@@ -1,4 +1,4 @@
-# 12.99 Kaynakça
+﻿# 12.99 Kaynakça
 
 Aşağıdaki kaynaklar Kısım XII'nin beş bölümünde **adıyla anılan** ya da doğrudan kullanılan mekanizmaların standart referanslarıdır. Her kalemin sonunda hangi bölümde ne için kullanıldığı belirtilmiştir.
 
@@ -85,6 +85,6 @@ Kısım XII'nin üç etkileşimli simülasyonu, metinde anlatılan her sayıyı 
 |---|---|---|
 | [Kavitasyonla Kut oluşumu](Simulasyon/kisim12/kut_kavitasyon_dogusu.html) | 12.1 | 21 |
 | [4B dönüşün 3B'ye yansıması](Simulasyon/kisim12/kut_4b_donus.html) | 12.2 | 12 |
-| [Kutların birleşmesi ve yapılanması](Simulasyon/kisim12/kut_birlesme_yapilanma.html) | 12.3, 12.5 | 220 |
+| [Kutların birleşmesi ve yapılanması](Simulasyon/kisim12/kut_birlesme_yapilanma.html) | 12.3, 12.5 | 229 |
 
-Toplam **253 öz-sınama**. Bu kısımda verilen hiçbir sayı elle girilmemiştir; hepsi simülasyonların ölçümüdür ve sınamalardan biri düşerse ilgili sayfa açılışta kırmızı uyarı verir.
+Toplam **262 öz-sınama**. Bu kısımda verilen hiçbir sayı elle girilmemiştir; hepsi simülasyonların ölçümüdür ve sınamalardan biri düşerse ilgili sayfa açılışta kırmızı uyarı verir.

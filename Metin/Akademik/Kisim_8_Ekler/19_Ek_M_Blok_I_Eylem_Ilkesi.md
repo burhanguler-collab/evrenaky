@@ -163,18 +163,18 @@ Bu blok, programın tamamlandığını değil **başladığını** kaydeder. Yuk
 
 1. ~~Kütle-itimin $1/r^2$'si çıkmaz~~ → **M-46 ile kapandı:** $\chi$'nin yayılım terimi yazılmıştır ($\nabla^2\chi=-q_nn_m$), profil ve $1/r^2$ eylemden çıkar; kalan, $C=-(\partial P/\partial\chi)_\rho$ katsayısının **değerinin** mikro türetimidir (aşağıda md. 2 ile birleşir).
 2. **İki kısmi türevin ortak mikro-modeli yoktur.** Adiyabatik tepkinin neden tam stiff, deplasmanın neden tam yoğunluk-korumalı olduğu ayrı ayrı ifade düzeyindedir; ikisini tek bir mikro-yapıdan (nükleonun vakum cepli girdap yapısı) türetmek yapılmamıştır.
-3. **$\omega_1/\omega_2$ çift dönüşü temsil edilemez.** Skaler $\varphi$, $\rho$, $\chi$ ile 4B çift dönüş yazılamaz; beş kuvvetin köken haritası eylemin dışındadır. 4B genişletme ya da bir yönelim/direktör alanı gerekir.
+3. ~~$\omega_1/\omega_2$ çift dönüşü temsil edilemez~~ → **M-50 ile yapı düzeyinde kapandı:** 4B'de iki Clebsch çifti, vortisitenin Darboux ayrışımı olarak çift dönüşü doğrudan temsil eder (izoklin = öz-dual vortisite). Kalan: $\omega_2$'yi süren dinamik ve hizalanma tercihi (M-50 Geçerlilik Sınırı 1–2).
 4. **$\Lambda$ ölçeklemesi çıkmaz.** Cetvellerin ve saatlerin neden tam $\Lambda$ ile ölçeklendiği (M-42'nin $\gamma_\ell=-1$'i) maddenin ortam içindeki bağlı yapısının modelini gerektirir.
 
-Ayrıca kohezyon ($\Sigma$) da bu eylemde yoktur: barotropik $u$ çekme dayanımı üretmez. Gradyan terimi ($\propto(\nabla\rho)^2/\rho$) $\Sigma$ ve $v_{kav}$'ı verebilir ama statik tepkiyi perdeler (Yukawa, $\sim10^{-18}$ m), yani 1. maddeyi ağırlaştırır.
+Kohezyon ($\Sigma$) bu eylemde yoktu: barotropik $u$ çekme dayanımı üretmez. *(Güncelleme: gradyan teriminin "statik tepkiyi perdeler" itirazı, kütle-itimin $\chi$-sektörüne taşınmasıyla (M-46) düşmüştür — $\rho$-gradyan terimi $\chi$ denklemine dokunmaz. Kohezyon sektörü M-50'de perdelemesiz eklenmiştir; $\Sigma(\Lambda_\Sigma)$ özdeşleştirmesi oranın açık kalemidir.)*
 
 ### Açık Uçlar
 
 - ~~$\chi$ alanının denklemi (öncelik 1)~~ → **çözüldü: M-46.** Terim yazıldı ($\nabla^2\chi=-q_nn_m$ + kohezyon-taşıyıcılı zaman sektörü), M-35'in profili ve kütle-itim eylemden çıktı; öncelik artık $C$'nin **değerinin** mikro türetimindedir (M-46 Açık Uçlar).
 - **İki kısmi türevin birleşik mikro-türetimi.** Nükleonun vakum cebi ve girdap zarfı, hem stiff adiyabatik tepkiyi hem yoğunluk-korumalı deplasmanı birlikte vermeli.
-- **Kohezyonun perdelemesiz eklenmesi.** $\Sigma$ ve $v_{kav}$'ı $1/r$ kuyruğunu bozmadan üretecek terim.
-- **Dönüsüz-olmayan genişletme.** Clebsch veya Lin kısıtıyla vortisiteli akış; makro-vorteks kolunun (M-22, M-30) eyleme bağlanması buna bağlıdır.
-- **Korunum yasaları.** Eylem tamamlandığında Noether akımları hesaplanmalı; elle konan korunumlar (M-38'in silindirik akısı) böylece türetilmiş olur.
+- ~~Kohezyonun perdelemesiz eklenmesi~~ → **M-50 ile eklendi** (sektör ayrımı sayesinde perdelemesiz); kalan iş $\Sigma(\Lambda_\Sigma)$ özdeşleştirmesi.
+- ~~Dönüsüz-olmayan genişletme~~ → **M-50 ile çözüldü:** Clebsch genişletmesi yazıldı, Euler ve vortisite eylemden çıkıyor; makro-vorteks kolu (M-22, M-30) eyleme bağlandı.
+- **Korunum yasaları** → **program M-50'de açıldı:** yeniden-etiketleme Noether'i Kelvin'i, 2B indirgeme nokta-girdap yüklerini ($H$, $\vec I$, $A$) verdi; alan-düzeyi akımlar ve M-38'in silindirik akısı hâlâ hesaplanmalı.
 - **Zaman bağımlı korunumsuzluğun bastırılması** *(Sonuç 2'den).* Küresel-radyal bir basınç gecikmesinin kapalı yörüngede net iş **yapmadığı** gösterilmelidir. Naif okuma gözlenen ikili daralmanın $10^{9}$ katını verir; bir bastırma mekanizması zorunludur ve türetilmemiştir. 11.6-iii ile aynı ailedendir.
 
 ### Kritik Ayrım: Deplasman Bağıntısı Bir Hâl Denklemi Değildir
@@ -278,4 +278,90 @@ $$\boxed{\;\nabla^2\chi=-q_nn_m\;;\qquad \left(\frac{\partial P}{\partial\chi}\r
 
 ---
 
-*Blok I, matematik programının Faz 1–6'sı sonrası açılmıştır. M-44 hâl denklemini ve eylemi kurar; M-46 deplasman alanının yayılım terimini ekleyerek kütle-itimi eyleme bağlar. Sonraki girdiler eylemin genişletilmesiyle eklenecektir.*
+## M-50 · Birleşik Eylem: Girdaplı Sektör, 4B Çift Dönüş ve Kohezyon · **[T (yapı) / F (katsayılar)]**
+
+**Kullanıldığı bölümler:** Kısım 12 (12.0 Temel Sözleşme, 12.1 profil, 12.2 çift dönüş, 12.3 bağ kanalları, 12.4 korunumlar). Bağlı katalog: M-44 (akışkan eylemi), M-46 ($\chi$-sektörü), M-22/M-30 (makro-vorteks kolu), Ek A.3 ($\Sigma$, $v_{\text{kav}}$).
+
+M-44 kendi eksik listesini yazmıştı: dönüsüz akış kısıtı, çift dönüşün temsilsizliği, kohezyonun yokluğu, Noether programının kapalılığı. Bu girdi o listeye karşılık verir: **girdaplı sektörü, 4B çift dönüşü ve kohezyonu tek eylem iskeletine alır** ve hangi sonucun yapıdan çıktığını, hangisinin hesap kalemi kaldığını tek tek kaydeder.
+
+### Varsayımlar
+
+1. Ortam 4B'dir; akışkan alanları $\mathbb R^4$ üzerinde tanımlıdır ve fiziksel okuma $w=0$ kesitidir (12.0).
+2. Hâl denklemi stiff'tir: $P=c_0^2\rho$ (M-44'ün $\rho$-kanalı; $\chi$-sektörü M-46'da ayrı ve aynen korunur).
+3. Hız alanı Clebsch temsillidir; 4B'de iki çift yeter (aşağıda Darboux gerekçesi).
+4. Kohezyon, yoğunluk-gradyanı enerjisi olarak girer (biçim aşağıda; katsayı özdeşleştirmesi açık).
+
+### Adımlar
+
+**1 · Tam iç enerji — 12.1'in profili eylemden çıkar.** Stiff hâl denkleminin *tam* barotropik potansiyeli (M-44'teki "mertebesinde" yazımının kesinleştirilmesi):
+
+$$U(\rho)=c_0^2\,\rho\,\ln\frac{\rho}{\rho_0} \qquad\Longrightarrow\qquad P=\rho\,U'-U=c_0^2\rho\ \checkmark$$
+
+Bernoulli varyasyonu $U'(\rho)=c_0^2(1+\ln(\rho/\rho_0))$ verir (sabit, $\varphi$ ayarına emilir); durağan girdap çözümünde
+
+$$\tfrac12 v^2 + c_0^2\ln\frac{\rho}{\rho_0}=0 \;\;\Longrightarrow\;\; \rho=\rho_0\,e^{-v^2/2c_0^2} \;\;\overset{v=\sqrt2 c_0 r_e/R}{\Longrightarrow}\;\; \boxed{\;\rho=\rho_0\,e^{-(r_e/R)^2}\;}$$
+
+— **Kısım 12.1.3'ün sınır tabakası profili artık bir eylem sonucudur**, bağımsız bir ansatz değil.
+
+**2 · Girdaplı sektör (3B): Clebsch genişletmesi.** M-44'ün dönüsüz kısıtı kalkar:
+
+$$\vec v=\nabla\varphi+\alpha\nabla\beta,\qquad
+S_3=\int dt\,d^3x\Big[-\rho\big(\partial_t\varphi+\alpha\,\partial_t\beta+\tfrac12 v^2\big)-U(\rho)\Big]+S_\chi^{\text{(M-46)}}$$
+
+Varyasyonlar: $\delta\varphi\Rightarrow$ süreklilik; $\delta\rho\Rightarrow$ Bernoulli; $\delta\alpha,\delta\beta\Rightarrow D\beta/Dt=0,\ D\alpha/Dt=0$ — birlikte tam Euler denklemi ve vortisite $\vec\omega=\nabla\alpha\times\nabla\beta$. **Makro-vorteks kolu (M-22, M-30) böylece eyleme bağlanır.**
+
+**3 · Kelvin ve korunumlar Noether'den.** Clebsch eyleminin parçacık **yeniden-etiketleme simetrisi**, Noether yükü olarak dolanımı verir: $\Gamma=\oint\vec v\cdot d\vec\ell$ korunur — Kısım 12.4'ün omurgası ($\Gamma_{\text{top}}=\sum\Gamma_i$) elle konan bir teorem olmaktan çıkıp **eylemin simetri sonucuna** dönüşür. İki boyutlu nokta-girdap indirgemesinde eylem, standart indirgemeyle simülasyonun kullandığı yapıya iner:
+
+$$H=-\frac{\rho_0}{4\pi}\sum_{i\neq j}\Gamma_i\Gamma_j\ln\frac{r_{ij}}{d_{\text{ref}}},\qquad
+\vec I=\rho_0\sum_i\Gamma_i(y_i,-x_i),\qquad A=-\frac{\rho_0}{2}\sum_i\Gamma_i|\vec x_i|^2$$
+
+— öteleme, dönme ve zaman simetrilerinin yükleri. **12.4.6'nın "kilitli sınamaları" artık eylem sınamalarıdır.**
+
+**4 · 4B genişletme — çift dönüş, vortisitenin Darboux ayrışımıdır.** $\mathbb R^4$'te hız 1-formu iki Clebsch çiftiyle yazılır:
+
+$$v^\flat=d\varphi+\alpha\,d\beta+\gamma\,d\delta \qquad\Longrightarrow\qquad w\equiv dv^\flat=d\alpha\wedge d\beta+d\gamma\wedge d\delta$$
+
+**Darboux teoremi** bunun bir kısıt olmadığını söyler: kapalı, tam ranklı her 2-form yerel olarak tam bu biçimdedir — 4B akışkanın jenerik vortisitesi *zorunlu olarak* iki dik düzleme ayrışır. Bir noktada $w_{\mu\nu}$ blok-köşegenleştirildiğinde iki düzlem vortisitesi $\lambda_1,\lambda_2$ çıkar (katı dönmede $\lambda=2\omega$): **Kısım 12.2'nin SO(4) çift dönüşü, 4B akışkan vortisitesinin kaçınılmaz normal biçimidir.** $\omega_1$ kesit-içi düzlemin, $\omega_2$ $W$-içeren düzlemin vortisite yarısıdır; pulsasyon kolu $(\gamma,\delta)$ çiftinde yaşar. İki zarif özdeşlik kayda geçer: **(i)** Pfaffian $w\wedge w=2\lambda_1\lambda_2\,\mathrm{vol}_4$ — iki dönüşün çarpımı, koordinattan bağımsız bir değişmezdir; **(ii)** izoklinik dönüş ($|\lambda_1|=|\lambda_2|$) tam olarak vortisitenin **öz-dual** ($w=\pm\star w$) olmasıdır — $\mathfrak{so}(4)=\mathfrak{su}(2)\oplus\mathfrak{su}(2)$ ideal ayrışımının akışkan karşılığı. M-44'ün 3 numaralı eksiği ("çift dönüş temsil edilemez") **yapı düzeyinde kapanır**: temsil artık vardır; $\omega_2$'yi *süren* dinamik ise hâlâ açıktır (aşağıda).
+
+**5 · Kohezyon sektörü — perdelemesiz.** Eyleme yoğunluk-gradyanı enerjisi eklenir:
+
+$$\Delta S_{\text{koh}}=-\int dt\,d^4x\;\frac{c_0^2\Lambda_\Sigma^2}{2}\,\frac{|\nabla\rho|^2}{\rho}$$
+
+Üç sonucu vardır. **(i)** Dispersiyon kısa dalgada sertleşir: $\omega^2=c_0^2k^2(1+\Lambda_\Sigma^2k^2)$ (bu bağıntı $\Lambda_\Sigma$'nın tanımıdır); $\Lambda_\Sigma$, cep duvarının sağlık (healing) uzunluğudur. **(ii)** Keskin gradyanlı katman bir yüzey enerjisi taşır — ortam **çekme dayanımı** kazanır; $\Sigma(\Lambda_\Sigma)$ özdeşleştirme integrali açık kalemdir ve $\Sigma/P_0\sim10^9$ mertebesi için M-46'nın $v_m$-sektörüyle bağ kurulması gerekir. **(iii)** M-44'ün perdeleme itirazı **düşer**: kütle-itimin $1/r$ kuyruğu $\chi$-sektöründedir (M-46) ve $\rho$-gradyan terimi $\chi$ denklemine dokunmaz; gradyan terimi profili yalnız $R\lesssim\Lambda_\Sigma$ ölçeğinde düzeltir, 12.1.3 profili $R\gg\Lambda_\Sigma$'da aynen kalır.
+
+**6 · 12.3 kanallarının eylemdeki adresi (program).** Bjerknes ve ışıma kanalları bu eylemin *pertürbatif* sektörüdür: iki-Kut çözümü çevresinde akustik genişlemenin monopol–monopol terimi Bjerknes'i, kuadrupol yayını Lighthill'i vermelidir — Lighthill denklemi sıkıştırılabilir Euler'in özdeş yeniden yazımı olduğundan ve Euler bu eylemden çıktığından, kanallar eylemle **tutarlıdır**; açık türetimleri hesap kalemidir. Gecikmeli-Magnus köprüsünün (12.3.4) eylem karşılığı dalga sektörünün **tek geciken Green fonksiyonudur**. Bu çekirdeğin radyal ve teğetsel izdüşümleri $(\mathcal R,\mathcal T)$ ile kuadrupol yanıtı $F_L$ birlikte hesaplanmalıdır; üçü bağımsız fonksiyon veya serbest katsayı değildir. Dairesel iki-Kut geometrisinde gecikme $y=M_{\text{orb}}\cos y$ ve $q=\Omega_p\tau$ ile kapandığından, $M\ll1$, $\Omega_p\gg\Omega_{\text{orb}}$ ve $k_pd\ll1$ yalnız asimptotik sınır koşullarıdır, temel eyleme eklenecek varsayımlar değildir.
+
+### Sonuç
+
+$$\boxed{\;S=\int dt\,d^4x\Big[-\rho\big(\partial_t\varphi+\alpha\partial_t\beta+\gamma\partial_t\delta+\tfrac12 v^2\big)-c_0^2\rho\ln\tfrac{\rho}{\rho_0}-\tfrac{c_0^2\Lambda_\Sigma^2}{2}\tfrac{|\nabla\rho|^2}{\rho}\Big]+S_\chi^{\text{(M-46)}}\;}$$
+
+| Verdiği | Nasıl |
+|---|---|
+| Süreklilik + Euler (girdaplı) | varyasyon |
+| 12.1.3 sınır tabakası profili | tam $U(\rho)$ + durağan çözüm |
+| Kelvin / $\Gamma_{\text{top}}=\sum\Gamma_i$ (12.4 omurgası) | yeniden-etiketleme Noether'i |
+| Nokta-girdap $H$, $\vec I$, $A$ (simülasyon korunumları) | 2B indirgeme + Noether |
+| Çift dönüş = jenerik 4B vortisite; izoklin = öz-dual | Darboux + Hodge |
+| Kohezyon sektörü, $1/r$ kuyruğu bozulmadan | sektör ayrımı ($\rho$-gradyan ⊥ $\chi$) |
+| Kütle-itim $1/r^2$ | $S_\chi$ (M-46, aynen) |
+
+### Geçerlilik Sınırı — eylemin hâlâ *vermediği* şeyler
+
+1. **$\omega_2$'nin sürücüsü ve ilk dönmenin kaynağı** — temsil var, dinamo yok (12.1.5'in beyanı sürer).
+2. **$\vec\omega_1\parallel\vec\omega_2$ hizalanması** — kanonik biçimin seçilme gerekçesi (12.2.1) eylemden çıkarılmadı; öz-dual sektöre bir enerji tercihi gösterilebilirse kapanır (aday: ışıma sönümünün anizotropisi).
+3. **$\Sigma(\Lambda_\Sigma)$ özdeşleştirmesi** ve $10^9$ hiyerarşisinin $v_m$-sektörüne bağlanması.
+4. **Bjerknes / Lighthill / geciken-Green türetimlerinin eylem-içi açık yazımı.** *(Kısmen kapandı: düşük-Mach/çıplak-yörünge özel sınırında $C_L^{(0)}=8\pi^2$ Euler düzeyinde hesaplandı — 12.3.3–12.3.4. En öncelikli açık iş, eylemin pertürbatif sektöründen $(\mathcal R,\mathcal T,F_L)$'yi tek iki-Kut çözümünde türetmek ve gerçek $M_{\text{orb}}$ ile $d_e$'yi bağlı çözmektir. $L_{\text{eff}}$ ayrıca seçilecek katsayı değil, 4B Kut geometrisinden özdeşleştirilecek mevcut uzunluktur.)*
+5. **Alan-düzeyi Noether akımlarının açık hesabı** (nokta-girdap yükleri türetildi; alan ifadeleri ve M-38'in silindirik akısı yazılmadı).
+6. M-44'ün 2 ve 4 numaralı eksikleri (iki kısmi türevin mikro-modeli; $\Lambda$ ölçeklemesi) **bu girdide de açıktır.**
+
+### Açık Uçlar
+
+- **Birinci öncelik — tek sonlu-yayılım iki-Kut çözümü:** geciken Green fonksiyonundan $\mathcal R$, $\mathcal T$ ve $F_L$ birlikte çıkarılacak; ardından iki Green–Magnus denklemi $M_{\text{orb}}$, $d_e$ ve $U'(d_e)$ için çözülecek. $M_K(d_e)=1$ yalnız çıplak dolaşım kontrolüdür, işletme Mach sayısının yerine konmaz.
+- İndirgenmiş $d^{-3}$ koşumu çift ve öbek düzeyinde uygulama/ölçek tutarlılığı kontrolünü geçti. $\Delta V_{\text{öbek}}\propto N^{3/2}$ ve $\Omega_{p,N}\propto N^{-1}$ fiziksel doğrulama veya postüla değil, $d_N\propto N$ tam ölçeklemesi için simülasyonda bağımsız ölçülecek sonuç koşullarıdır. İkinci koşul ortak tek-Kut $\omega_2$ hükmünden doğrudan çıkmadığından dayatılmayacak; tam çekirdeğin $q$'ya duyarsız kolu veya türetilmiş kolektif modu yoksa doğrusal ölçekleme indirgenmiş statüde kalacaktır (12.3.4, 12.3.7).
+- Öz-dual (izoklin) sektörün kararlılık/enerji analizi — hizalanma varsayımının eylem-içi sınavı.
+- $\Lambda_\Sigma$'nın $R_{\text{cep}}$ ve $\Sigma$ ile özdeşleştirilmesi; kavitasyon ölçütünün (12.0.3) eylem diline çevrilmesi.
+- Alan-düzeyi Noether akımları ve enerji-momentum tensörü (M-46'nın boyut kaydındaki $\rho_\chi$ çarpanı dahil).
+
+---
+
+*Blok I, matematik programının Faz 1–6'sı sonrası açılmıştır. M-44 hâl denklemini ve eylemi kurar; M-46 deplasman alanının yayılım terimini ekleyerek kütle-itimi eyleme bağlar; M-50 girdaplı sektörü, 4B çift dönüşü ve kohezyonu tek iskelete alır. Sonraki girdiler pertürbatif sektörün açık türetimleriyle eklenecektir.*

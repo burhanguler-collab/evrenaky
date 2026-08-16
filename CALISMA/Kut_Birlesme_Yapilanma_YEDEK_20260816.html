@@ -38,6 +38,15 @@
 .vwzoom button:hover{opacity:1;border-color:var(--cyan);color:var(--cyan)}
 .vwzlab{position:absolute;right:8px;top:35px;font-size:9.5px;color:var(--grey);
   text-align:right;pointer-events:none;letter-spacing:.3px}
+/* Simülasyon hızı — yakınlaştırma denetimlerinin hemen altında. Ayrı bir durum
+   TUTMAZ; soldaki dtm sürgüsünü ve run kutusunu sürer (tek kaynak ilkesi). */
+.vwhiz{position:absolute;right:8px;top:52px;display:flex;gap:3px;z-index:5}
+.vwhiz button{width:25px;height:23px;padding:0;font-size:12px;line-height:1;
+  background:#111a2b;border:1px solid var(--line);color:var(--light);
+  border-radius:4px;cursor:pointer;opacity:.82}
+.vwhiz button:hover{opacity:1;border-color:var(--cyan);color:var(--cyan)}
+.vwhiz button.durdu{border-color:var(--orange);color:var(--orange);opacity:1}
+.vwhlab{top:79px}
   #statusbar{height:44px;border-top:1px solid var(--line);background:#0c1220;
              display:flex;align-items:center;gap:0;padding:0 4px}
   .sb{flex:1;text-align:center;font-size:10px;color:var(--grey);line-height:1.35;
@@ -90,9 +99,17 @@
   .prof{width:100%;height:112px;display:block;background:#0c1220;
         border:1px solid #1e2940;border-radius:5px}
   #engelBilgi,
+  #mkBilgi,
   #bagBilgi{font-size:10.5px;font-family:Consolas,monospace;text-align:center;
             padding:6px;margin:6px 0 2px;border-radius:5px;background:#0c1220;
             border:1px solid #1e2940;color:var(--grey);line-height:1.5}
+  #mkBilgi{text-align:left;line-height:1.6}
+  #mkLog{font-size:10px;font-family:Consolas,monospace;line-height:1.55;
+         background:#0c1220;border:1px solid #1e2940;border-radius:5px;
+         padding:4px 7px;margin:4px 0 2px;max-height:120px;overflow-y:auto;
+         color:var(--grey)}
+  #mkLog div{border-bottom:1px solid #161e2e;padding:1px 0}
+  #mkLog div:last-child{border-bottom:none}
   #sinavSonuc{font-size:11px;font-family:Consolas,monospace;text-align:center;
               padding:7px 6px;margin:6px 0 2px;border-radius:5px;
               background:#0c1220;border:1px solid #1e2940;color:var(--grey);line-height:1.5}
@@ -129,12 +146,11 @@
 /* ==========================================================================
    DAR PENCERE — sağ panel ekran dışında kalmasın
    ==========================================================================
-   Ölçüldü (12 Ağu 2026): 800 px genişliğindeki pencerede `#wrap{min-width:
-   1200px}` yüzünden sağ panel x = 860'ta başlıyor — viewport'un TAMAMEN
-   dışında. Başlıklarına tıklanamıyor, katlama düğmelerine erişilemiyor.
-   Üstelik `body{overflow-y:hidden}` olduğundan aşağı da kaydırılamıyor;
-   geriye tek yol yatay kaydırma kalıyordu ve kimse orada bir panel aramaz.
-   Katlama düzeneği sağlamdı, KIRIK OLAN ERİŞİMDİ.
+   Gerekçe: 800 px genişliğindeki pencerede `#wrap{min-width:1200px}` sağ
+   paneli x = 860'ta, viewport'un TAMAMEN dışında bırakır. Başlıklarına
+   tıklanamaz, katlama düğmelerine erişilemez; `body{overflow-y:hidden}`
+   olduğundan aşağı da kaydırılamaz — geriye yalnız kimsenin panel aramadığı
+   yatay kaydırma kalır. Sorun katlama düzeneği değil, ERİŞİMDİR.
    1200 px altında: sağ panel merkezin ALTINA tam genişlikte iner, sayfa
    dikey kaydırılabilir olur.   760 px altında: üçü de tek sütuna dizilir. */
 @media (max-width:1199px){
@@ -256,7 +272,7 @@
   <label>Kalabalık: <span class="val" id="kalV"></span> Kut · yarıçap
     <span class="val" id="kalRV"></span> r_e</label>
   <div class="row">
-    <input type="range" id="kalN" min="6" max="90" step="1" value="44" style="flex:2">
+    <input type="range" id="kalN" min="6" max="90" step="1" value="60" style="flex:2">
     <input type="range" id="kalR" min="8" max="60" step="1" value="26" style="flex:1">
   </div>
   <div class="row" style="margin-top:6px">
@@ -285,6 +301,128 @@
   <div id="npad"></div>
   <p class="note" id="layoutNote"></p>
 
+  <h2>Evrenakı makinası — yapı işleyici</h2>
+  <label class="chk"><input type="checkbox" id="mkAc" checked>
+    <span><b>MAKİNE AÇIK</b> — birleştir · koru · dışla</span></label>
+  <div id="mkBilgi">—</div>
+  <div id="mkLog"><div style="color:#5e6d88">makine günlüğü boş</div></div>
+  <p class="note key"><b>Makinenin yasası — 7 kural, tek hedef:</b> balanslı,
+  simetrik, kararlı yapılar kalsın; kalan her şey dışlansın.<br>
+  <b>R1</b> — eş yönlüler <b>bağ kurar</b> (kurmak zorundadır: Bjerknes kanalı)
+  ama asla <b>birleşip tek büyük Kut olamaz</b> — yapısal bütünlük. Ayrım
+  önemli: <i>bağ kurma</i> yapı üyeliğidir, <i>birleşme</i> kimlik kaybıdır.
+  Makine açıkken eş-yönlü birleşme eşiği görsel ölçekten çıkarılır, gerçek
+  değerine döner: d_denge/d_bir ≈ 3×10⁴ (κ=2, λ=1) — birleşme fiziksel
+  olarak erişilmez. Zıt-yönlü <b>yok olma</b> ölçekli kalır.<br>
+  <b>R2</b> — balanslı öbeğin sınır tabakası da balanslı döner: <b>kapı</b>
+  dirençlidir, yeni Kut zor girer. Balanssız öbeğin tabakası da balanssız
+  salınır ve zayıflar: yeni Kut kolay girer.<br>
+  <b>R3</b> — balansı bozan üye zayıf bağlıdır → <b>fırlatılır</b>.<br>
+  <b>R4</b> — yeni üye girince <b>simetri süresi</b> beklenir; simetri
+  oluşmazsa fazla olan — yani en zayıf bağ kuran — üye atılır.<br>
+  <b>R5</b> — fırlatma, öbeğin <b>kendi dönüş hızıyla</b> yapılır (sapan):
+  atılan üye bileşik sınır tabakasını aşacak hıza kavuşur ve dışarı çıkar.<br>
+  <b>R6</b> — yeni giren stabilleşmezse dışlanır (R4 ile aynı saat).<br>
+  <b>R7</b> — bozan üyenin bağı zayıf değilse zorlanmaz: <b>zıt-Kut yok olma
+  şoku</b> beklenir; şok üyeye değdiğinde söküm tamamlanır.</p>
+
+  <label>Balans eşiği Q2 &lt; <span class="val" id="mkQ2V"></span></label>
+  <input type="range" id="mkQ2" min="0.04" max="0.30" step="0.01" value="0.10">
+  <label>Simetri bekleme süresi T = <span class="val" id="mkTV"></span></label>
+  <input type="range" id="mkT" min="1" max="30" step="1" value="6">
+  <label>Fırlatma çarpanı (× dönüş hızı) = <span class="val" id="mkFirV"></span></label>
+  <input type="range" id="mkFir" min="0.5" max="3" step="0.05" value="1.2">
+  <label>Güçlü-bağ eşiği ζ (× medyan W) = <span class="val" id="mkZetaV"></span></label>
+  <input type="range" id="mkZeta" min="1" max="2.5" step="0.05" value="1.3">
+  <label>Kapı direnci = <span class="val" id="mkKapiV"></span></label>
+  <input type="range" id="mkKapi" min="0" max="3" step="0.05" value="1">
+
+  <label class="chk"><input type="checkbox" id="mkSapan" checked>
+    <span><b>Sapan kanalı</b> — R5: dönüş hızıyla fırlat</span></label>
+  <label class="chk"><input type="checkbox" id="mkSokum" checked>
+    <span><b>Faz-söküm kanalı</b> — 3B pulsasyonla sök (araştırma)</span></label>
+  <label class="chk"><input type="checkbox" id="mkKapiAc" checked>
+    <span><b>Kapı kanalı</b> — R2: balanslı tabaka direnir</span></label>
+  <label class="chk"><input type="checkbox" id="mkKaynas" checked>
+    <span><b>Kaynaşma</b> — bant altı (N&lt;5) yapılar birleşip büyür</span></label>
+  <label class="chk"><input type="checkbox" id="mkBesle" checked>
+    <span><b>Dış besleme</b> — malzeme biterse dışarıdan Kut ver</span></label>
+  <label class="chk"><input type="checkbox" id="mkOtoSok" checked>
+    <span><b>Oto-şok</b> — R7 bekleyene sanal zıt-Kut şoku gönder</span></label>
+  <div class="row" style="margin-top:6px">
+    <button id="mkSok" style="width:100%">⚡ R7: bozana şok gönder</button>
+  </div>
+  <p class="note key"><b>Bant altı yapılar yasak değil — KAYNAŞIR.</b>
+  N&lt;5 öbek ara üründür: ✓ damgası almaz, kapısı açıktır ve kaynaşma
+  planlayıcısı onu, toplamı bant ortasına (6-7, en çok 8) taşıyan en uygun
+  eşe topluca sürer (⚭ — yeşil kesik yol çizgisi). Serbest malzeme
+  bittiğinde ve bant ortası hâlâ dolmadığında makine <b>dışarıdan Kut
+  verir</b> (⇩): yeni Kut eksik yapının tabakasının hemen dışında doğar ve
+  içeri taşınır. Oto-şok da açık olduğundan güçlü bağlı bozanlar zıt-Kut
+  şokuyla sökülür. Hedef durum: <b>sahnede kararsız hiçbir yapı
+  kalmaması</b> — teori bunu emreder, fizik izin verir.</p>
+  <p class="note warn"><b>Fırlatma nasıl işliyor (R5).</b> Nokta-girdap
+  dinamiğinde Kut'un kendi hızı yoktur — Kut, yerel akışla taşınır. Fırlatma
+  bu yüzden anlık bir hız ataması değil, <b>darbe kanalıyla aynı türden bir
+  taşıma atımıdır</b>: öbeğin dönüşü ölçülür (Ω sayısal), kenar hızı
+  <code>|Ω|·R_dış</code> alınır ve atılan üye o hızla <b>teğet + dışa</b>
+  taşınır. Atım, üye <b>bileşik sınır tabakası + yakalama payını</b> aşana
+  kadar sürer — R5'in şartı budur: atılan, tabakanın dışına gerçekten çıkar.
+  Yön öbeğin kendi dönüş yönüdür; ters dönen öbek ters yöne fırlatır
+  (öz-sınamada denetli).</p>
+  <p class="note stop"><b>Faz-söküm — araştırma kanalı.</b> Gözlem şuydu:
+  balansı bozan üyenin 4B'de görünmeyen ama 3B kesitine yansıyan pulsasyonu,
+  3B'de oluşan yapının kendisi tarafından sökülüp atılabilir. Bu sayfadaki
+  işletimi: yapı, faz-kilitli bir pulsasyon topluluğudur (ω₂ ortak — 1.4.12);
+  bozan üyenin fazı topluluğa kilitlenemez ve kayar. Bjerknes kuvveti faz
+  farkıyla işaret değiştirir (<code>F ∝ cos Δφ</code>): kilitlenemeyen üyeye
+  bağ kanalının <b>kendisi itici döner</b> — yapı, uymayanı kendi bağ
+  mekanizmasıyla süpürür. Makine, sökülen üyede Δφ'yi 0→π sürerek bunu
+  işletir; Δφ=π'de itmenin yönü ve büyüklüğü (2κ/d²) öz-sınamada kilitlidir.
+  Teorik statüsü: <b>araştırma</b> — kapatılabilir; sapan tek başına da
+  yeter.</p>
+  <p class="note key"><b>Kapı (R2) neden ve nasıl.</b> Balanslı öbeğin
+  tabakası faz-uyumlu (koherent) pulsasyon kabuğudur: yaklaşan yabancıya
+  kabuk, uyumsuz-faz Bjerknes basıncı uygular — direnç. Balanssız öbeğin
+  tabakası salınır (sahnede kırmızı, titreyen halka): koherens yok, kapı
+  sızdırır — dahası yaklaşan malzemeyi içeri <b>EMER</b>. Ve asıl mekanizma:
+  <b>kararsızlık birleşik yapının eseridir</b> — kompozitin Q2'si öbek
+  niteliği olarak taşınır ve balanssız kompozitin <b>ışıma DUVARI bozuk
+  örülür</b>: tek/ikili gelene karşı duvar 0,12'ye dek iner (ölçüldü:
+  balanslı 6'lının duvarı tekli Kut'u d=6'da iterken, balanssızınki net
+  çekiciye döner — 27.11). Seçici geçirgenlik budur: tek ve <b>ikili</b>
+  gezen Kutlar kararsız tabakadan çok rahat geçer, kararsız yapı hızla
+  malzeme toplar, simetrisini kurar; kararlı olunca duvar tamamlanır,
+  sızıntı biter, kapı kapanır — dönüşüm kendi kendini hızlandırır.
+  Direnç doluluğa da bağlıdır ve bant ORTASINDA doyar: N&lt;5 öbek büyümek
+  <b>ister</b> (kapı açık), 5-6'lı ılımlı direnir, balanslı <b>7'li tam
+  dirençlidir</b> — dağılım 6-7'ye yaslanır. Kapı ve emiş yalnız tek/ikili
+  gezenlere uygulanır — üye ve komşu öbekler hiyerarşik kanalın işidir.</p>
+  <p class="note"><b>Makinenin saati.</b> Karar çevrimi ~0,35 zaman birimi.
+  Simetri süresi <b>T</b>, öbek bileşimi son değiştiğinden beri geçen süreyle
+  ölçülür — R4 ve R6 aynı saati okur. Dış alan ×η büyükken balanssızlık
+  hemen cezalandırılmaz (asimetri komşu gelgiti olabilir) — ama bu koruma
+  <b>süresiz değildir</b>: yerleşik örgüde η her yerde yüksektir ve 4·T
+  boyunca düzelmeyen balanssızlık artık gelgite yazılmaz, makine müdahale
+  eder. ALT-ÖBEK (cap'in iki yapıyı tek sayması) hiç işlem görmez — o
+  balanssızlık değil, sayım birleşmesidir. N≥9 (Thomson üstü) kalabalık,
+  balanslı görünse bile fazlasını verir — bant 5–8 ayarlanmış değil,
+  türetilmiş sınırdır. Bozan üye seçilirken iki
+  bağımsız ölçüt yarışır: <i>çıkarılınca Q2'yi en çok düzelten</i> ve
+  <i>koparma işi en düşük</i>; kural bunların örtüşmesini öngörür, günlük
+  örtüşmeyi her olayda raporlar (bozan=en zayıf ✓/✗).</p>
+  <p class="note warn"><b>Sayısal korumalar — tıkanma düzeltmesi.</b> R1,
+  birleşme "supabını" kaldırdığı için üst üste binen eş-yönlü çift artık
+  birleşmeyle çözülmez; 1/d⁵ duvarının derinine düşen çift CFL alt-adımını
+  patlatır ve sahneyi dondururdu. Üç koruma: <b>(1)</b> türev başına öbek
+  bilgisi TEK KEZ hesaplanır (O(n³)→O(n²); aynı konumlar üzerinde sonuç
+  özdeş). <b>(2)</b> Canlı kare 24 ms bütçelidir — katı bölgede benzetim
+  yavaşlar ama arayüz asla donmaz; öz-sınamalar ve kararlılık sınavları
+  bütçesiz, TAM koşar. <b>(3)</b> Makine taşımaları ile doğum yerleşimi
+  (serpme/ekleme) hiçbir çifti duvarın içine sokmaz
+  (d_koru = 0,45·d_denge). Fizik değişmedi; teorinin zaten erişilmez
+  dediği hâller sayısal olarak da erişilmez kılındı.</p>
+
   <h2>Yapının dinamiği</h2>
   <select id="mode">
     <option value="serbest">SERBEST DİNAMİK — tam N-girdap denklemi (RK4)</option>
@@ -293,59 +431,87 @@
   <p class="note" id="modeNote"></p>
   <label class="chk"><input type="checkbox" id="run" checked><span>Dinamiği çalıştır</span></label>
   <label>Zaman adımı ×<span class="val" id="dtV"></span></label>
-  <input type="range" id="dtm" min="0.05" max="2" step="0.01" value="0.5">
+  <input type="range" id="dtm" min="0.05" max="2" step="0.01" value="1">
 
   <h2>Bağ ölçütü</h2>
+  <label class="chk"><input type="checkbox" id="capOto" checked>
+    <span><b>Yakalama, türetilmişle ölçeklensin</b>: 1,2 × d_denge</span></label>
   <label>Yakalama yarıçapı = <span class="val" id="capV"></span> r_e</label>
   <input type="range" id="cap" min="1.2" max="10" step="0.05" value="3">
-  <p class="note">Sınır tabakasının dış kenarı: <code>ρ/ρ₀ = exp(−(r_e/R)²)</code>
-  olduğundan R = 3 r_e'de yoğunluk arka planın %89'u, R = 10 r_e'de %99'udur.
-  Yakalama yarıçapı bu tabakanın neresini "değme" saydığımızı belirler —
-  <b>seçilmiş bir eşiktir, türetilmiş değil.</b></p>
+  <p class="note">Yakalama yarıçapı, iki Kut'un aynı yapıya ait sayılma eşiğidir.
+  <b>Ölçeklenen kip (varsayılan):</b> eşik türetilmiş denge aralığına bağlanır,
+  <code>1,2·d_denge</code> — κ ve λ değişince kendiliğinden ayarlanır. Bu katsayı,
+  yapı-içi en geniş temas (~1,05·d_denge, sıkışmış örgüde daha dar) ile en yakın
+  komşu-yapı üyesi arasında kalır. Sabit kipte (kutu kapalı) eşik sürgüden okunur
+  ve <b>seçilmiş</b> bir sayıdır: sabit eşik, bitişik iki yapıyı tek "öbek" diye
+  sayabilir — balans satırındaki <i>ALT-ÖBEK</i> uyarısının kaynağı buydu ve
+  yeniden-ölçüm kampanyasında sabit eşik Thomson bandını delen 9–11'lik sahte
+  öbekler üretirken (52/58), ölçeklenen eşik bandı istisnasız korudu (87/87).</p>
 
   <label class="chk"><input type="checkbox" id="bagAc" checked>
     <span><b>Sınır tabakası bağ kuvveti</b> (Bjerknes kanalı)</span></label>
-  <p class="note warn"><b>Varsayılan AÇIK (12 Ağu 2026'da düzeltildi).</b> Önce kapalıydı
-  ve bu <b>iki ayrı fizik</b> yaratıyordu: KALABALIĞI SERP düğmesi kanalı kendisi
-  açtığı için kümeleşme gösteriyor, elle tek tek konan Kutlar ise <code>κ = 0</code>
-  ile saf nokta girdabı koşuyor ve hiç bağ kurmuyordu. <b>Kut'un sahneye nasıl
-  geldiği fiziğini değiştiremez.</b> Kapatırsan bu bir <b>tanı kipidir</b>: saf
-  Hamilton girdap dinamiği (H tam korunur), bağ ve kümeleşme <b>olmaz</b>.</p>
+  <p class="note warn"><b>Varsayılan açıktır — ve açık olmak zorundadır.</b>
+  Bağ kanalı, Kut'un sahneye nasıl geldiğinden bağımsız olarak herkese uygulanır;
+  <b>Kut'un sahneye nasıl geldiği fiziğini değiştiremez.</b> Aksi hâlde iki ayrı
+  fizik doğardı: KALABALIĞI SERP ile gelen Kutlar kümeleşirken, elle tek tek
+  konanlar <code>κ = 0</code> ile saf nokta girdabı koşar ve hiç bağ kurmazdı.
+  Kapatırsanız bu bir <b>tanı kipidir</b>: saf Hamilton girdap dinamiği
+  (H tam korunur), bağ ve kümeleşme <b>olmaz</b>.</p>
   <label>Bağ şiddeti κ = <span class="val" id="bkV"></span></label>
-  <input type="range" id="bk" min="0" max="400" step="1" value="200">
-  <label>Bağ mesafesi d₀ = <span class="val" id="bd0V"></span> r_e</label>
-  <input type="range" id="bd0" min="0.3" max="4" step="0.02" value="1.5">
+  <input type="range" id="bk" min="0" max="30" step="0.1" value="2">
+  <p class="note warn"><b>κ artık ÜSTTEN SINIRLI — ve bu yeni bir fizik kısıtı.</b>
+  Denge mesafesi <code>d_denge = (λK⁵/κ)<sup>1/3</sup></code> birleşme eşiğinden
+  yeterince <b>uzak</b> kalmalı. Sınır yalnız <code>d_denge &gt; d_bir</code> değil:
+  ölçüldü ki <b>pay ≳ 1,8</b> gerekiyor. 7 ileri + 1 ters Kut kurulumunda —<br>
+  <code>κ=2</code> (pay 3,08) → ters Kut yok olur, <b>6 Kut sağlam kalır</b> ✓<br>
+  <code>κ=10</code> (pay 1,80) → yine sağlam ✓<br>
+  <code>κ=20</code> (pay 1,43) → ters Kut'un düşüşü herkesi eşiğin altına sokar,
+  <b>5 birleşme</b> olur ve yapı tek <code>g=6</code> topağa çöker ✗<br>
+  Kısıt, denge mesafesinin κ'ya bağlı bir <b>çıktı</b> olmasının doğrudan
+  sonucudur — ve <b>küme aralığı bir öngörüdür.</b></p>
+  <label>Işıma katsayısı λ = <span class="val" id="blamV"></span></label>
+  <input type="range" id="blam" min="0" max="10" step="0.05" value="1">
+  <p class="note key"><b>Işıma kanalı türetilmiştir, seçilmemiştir.</b> Kısa erimli
+  ayrı bir itme kanalı (<i>"cepler iç içe geçemez"</i> gerekçeli) ölçek olarak
+  tutarsız olurdu: cepler <code>R_cep = 2,29×10⁻⁵ r_e</code>, küme aralığı ise
+  ≈1,4 r_e — yaklaşık <b>62 000 kat</b> ayrık. Dengeyi kuran itme 2B kuadrupol
+  akustik ışımadır: <code>P ~ ρ₀c₀³·a·M⁷</code> ve enerji dengesi
+  <code>ḋ = ∓2πdP/(ρΓ²)</code> ⟹ <code>F_ışıma = −λ·gᵢgⱼ·K⁵/d⁵</code>.
+  <b>Denge mesafesi bir girdi değil, çıktıdır:</b>
+  <code>d_denge = (λK⁵/κ)<sup>1/3</sup></code>.</p>
   <label>Pulsasyon faz farkı = <span class="val" id="bfV"></span>π</label>
   <input type="range" id="bf" min="0" max="1" step="0.01" value="0">
   <label class="chk"><input type="checkbox" id="girIt">
-    <span><b>Girdap itmesi</b> <span style="color:#ff3b6b">— ÇÜRÜTÜLDÜ, varsayılan
-    KAPALI</span></span></label>
+    <span><b>Girdap itmesi</b> <span style="color:#ff3b6b">— çürütülmüş terim,
+    tanı kipi; varsayılan kapalı</span></span></label>
   <div id="engelBilgi">—</div>
-  <p class="note stop"><b>Bu terim YANLIŞTI ve kaldırıldı (12 Ağu 2026).</b>
-  <code>F = A/d</code> biçimindeki "girdap itmesi" üç ayrı yerden çürüdü:<br>
-  <b>1 · İşaret ters.</b> Gerekçem eş-yönlü çiftin <b>toplam</b> alanıydı (arada sırt
-  ρ=ρ₀, dışta çukur ρ=0,454 ⟹ dışa itilir). Ama bir Kut'a etkiyen kuvvet <b>kendi
-  öz-alanı hariç</b> hesaplanır. Komşunun alanı tek başına <b>tekdüze çekicidir</b>:
-  girdaba yaklaştıkça hız artar, <code>P</code> düşer, ve <b>boşluk düşük basınca
-  gider</b> — yani <b>girdaba doğru</b>. Bu, kabarcıkların girdap çekirdeğinde
-  toplanmasıdır; gerçek akışkanlarda evrensel gözlenen olgu.<br>
-  <b>2 · Üstel yanlış.</b> Model kendi yasasından
-  <code>P = c²ρ₀e^(−(r_e/R)²)</code> ⟹ <code>dP/dR → 2/R³</code>. Gerçek yasa
-  <code>1/d³</code>, benimki <code>1/d</code>.<br>
-  <b>3 · Büyüklük yanlış.</b> <code>d = 20</code>'de terim gerçeğinden
-  <b>2520 kat</b> büyük.<br>
-  <b>Sonucu ölçüldü:</b> açıkken 60 Kut'luk topluluk <b>4,47× saçılıyor</b> ve
-  kalıcı küme oluşmuyor; kapalıyken yayılım 20 → <b>8,41</b>'e büzülüp
-  <b>10 öbekte donuyor</b> (dağılım 8-7-6-6-6-6-6-5-5-5, tek kalan yok).</p>
-  <p class="note key"><b>Yerine geçen yapı — ve o zaten vardı.</b>
-  <code>κ(1−d₀/d)/d² = κ/d² − κd₀/d³</code>: uzakta <b>çekici</b> (1/d²,
-  Bjerknes pulsasyon kanalı), yakında <b>itici</b> (1/d³, ceplerin iç içe
-  geçememesi). Tek kararlı kök <code>d₀</code>. <b>Dış engel yok</b> — sonsuzdan
-  gelen Kut kesintisiz çekilir ve <code>d₀</code>'da kenetlenir. Bağı koparmak yine
+  <p class="note stop"><b>Çürütülmüş terim — yalnız tanı kipi olarak durur.</b>
+  <code>F = A/d</code> biçimindeki "girdap itmesi" üç bağımsız yönden fiziksel
+  olarak yanlıştır:<br>
+  <b>1 · İşaret ters.</b> Terimin gerekçesi eş-yönlü çiftin <b>toplam</b> alanıdır
+  (arada sırt ρ=ρ₀, dışta çukur ρ=0,454 ⟹ dışa itilir). Oysa bir Kut'a etkiyen
+  kuvvet <b>kendi öz-alanı hariç</b> hesaplanır; komşunun alanı tek başına
+  <b>tekdüze çekicidir</b>: girdaba yaklaştıkça hız artar, <code>P</code> düşer ve
+  <b>boşluk düşük basınca gider</b> — yani <b>girdaba doğru</b>. Bu, kabarcıkların
+  girdap çekirdeğinde toplanmasıdır; gerçek akışkanlarda evrensel gözlenen olgu.<br>
+  <b>2 · Erim yanlış.</b> Modelin kendi yasasından
+  <code>P = c₀²ρ₀e^(−(r_e/R)²)</code> ⟹ <code>dP/dR → 2/R³</code>: doğru erim
+  <code>1/d³</code>'tür, terimin erimi <code>1/d</code>.<br>
+  <b>3 · Büyüklük yanlış.</b> <code>d = 20</code>'de terim doğru değerinden
+  <b>2520 kat</b> büyüktür.<br>
+  <b>Tanı kipinin ölçümü:</b> terim açıkken 60 Kut'luk topluluk <b>4,47× saçılır</b>
+  ve kalıcı küme oluşmaz; kapalıyken yayılım 20 → <b>8,41</b>'e büzülür ve
+  <b>10 öbekte donar</b> (dağılım 8-7-6-6-6-6-6-5-5-5, tek kalan yok).</p>
+  <p class="note key"><b>Doğru yapı: uzakta çekim, yakında türetilmiş itme.</b>
+  <code>F(d) = κcos(faz)/d² − λ·gᵢgⱼ·K⁵/d⁵</code>: uzakta <b>çekici</b> (1/d²,
+  Bjerknes pulsasyon kanalı), yakında <b>itici</b> (1/d⁵, 2B kuadrupol akustik
+  ışıma). Eş yönlü çift için tek kararlı kök
+  <code>d_denge = (λK⁵/κ)<sup>1/3</sup></code>. <b>Dış engel yok</b> — sonsuzdan
+  gelen Kut kesintisiz çekilir ve <code>d_denge</code>'de kenetlenir. Bağı koparmak
   <b>iş ister</b> (kuyu gerçek), ama "önce uzaklaştırır" aşaması <b>yok</b>.<br>
-  <b>Kendiliğinden çıkan sınama:</b> öbek boyutları 5–8'e oturuyor, ortalama tam
+  <b>Kendiliğinden çıkan sınama:</b> öbek boyutları 5–8'e oturur, ortalama tam
   <b>6,00</b> — bağımsız türetilen <b>Thomson sınırıyla</b> (N ≤ 7 kararlı,
-  merkez Kut'la ~8) örtüşüyor. Boyut ayarlanmadı, <b>kendisi buldu.</b></p>
+  merkez Kut'la ~8) örtüşür. Boyut ayarlanmaz; dinamik <b>kendisi bulur.</b></p>
 
   <label class="chk"><input type="checkbox" id="bagHiy" checked>
     <span><b>Hiyerarşik bağ</b> — öbek öbekle bağlanır</span></label>
@@ -360,6 +526,21 @@
   sınır tabakası <b>Kut sayısıyla doğrusal büyür</b>.
   Ve <code>Γ_top = 0</code> olan öbeğin (çevrik tripol) bileşik tabakası
   <b>yoktur</b>: uzaktan görünmez.</p>
+  <p class="note"><b>Balans satırı.</b> Her öbek merkezinin hemen altında, öbeğin Γ-ağırlıklı
+  çokkutup momentleri okunur: <code>Q2</code> (balanssızlık), <code>Q3</code>
+  (üçgensellik) — <b>gerçek konumlardan</b>, w-görünürlüğünden bağımsız; ekranda
+  küçülmüş/kaybolmuş üyeler ölçümü saptırmaz. Düzgün N-gen bu momentleri
+  girişimle söndürür (yandaki geçerlilik tablosuyla aynı harmonik yapı).
+  <i>dış alan ×η</i> etiketi komşu öbeklerin gelgit şiddetini verir: balanssız
+  görünen öbek η büyükken dış alan altındadır — asimetri artefakt değil,
+  komşu fiziğidir. İkinci satır <b>örgüyü</b> okur: üye başına ortalama ve en az
+  <b>kontak sayısı</b> (kararlı üye ≥3 noktadan bağ kurar — örgü teşhisi) ve
+  <b>ALT-ÖBEK ×p</b> uyarısı: yakalama yarıçapı iki ayrı yapıyı tek sayarsa Q2
+  kırmızıya döner ama bu balanssızlık değil <b>sayım birleştirmesidir</b> —
+  iki yapı zaten yasal bileşik aralığında durur, koparılacak fazlalık yoktur. Sağ paneldeki <b>balans izleme</b> sayacı, izole olduğu
+  hâlde kalıcı balanssız kalan öbekleri ayrıca sayar: o sayaç sıfırdan
+  ayrılırsa, çift-bazlı ışımanın dizilim-körlüğü iş başında demektir
+  (koherent çekirdek sınavı için ölçüm noktası).</p>
   <p class="note"><b>Hiyerarşi.</b> Öbek içi üyeler birbirine doğrudan; öbekler
   ise kendi bileşik tabakaları üzerinden, <code>Γ_A·Γ_B</code> ile ölçekli olarak
   bağlanır. Denge mesafesi de bileşik yarıçaplarla ölçeklenir. Tek Kutlarda bu
@@ -410,6 +591,24 @@
   <b>dolaylı olarak</b> değişir; yörüngeler, Ω, hatta yapının dağılıp dağılmaması.
   Ve darbe etkinken girdap altsistemi <b>kapalı değildir</b>: I ve A sapması
   beklenir, çünkü ortam artık aktif bir katılımcıdır.</p>
+  <button id="patla" style="width:100%">⚡ SANAL PATLAMA — yok-olma darbesi enjekte et (tanı)</button>
+  <p class="note"><b>Sanal patlama, yeni fizik değildir:</b> gerçek ters-Kut yok
+  oluşunun ürettiği <b>aynı dipol darbe alanı</b>, sahne dışından içeri doğru
+  enjekte edilir — tek işlevi, sahnede o an yok olma yaşanmıyorken darbe
+  mekanizmasını sınamaktır. Şiddeti yukarıdaki <b>darbe genliği</b> sürgüsü
+  belirler. Beklenen seçicilik (indirgenmiş modelde ölçüldü): <b>balanslı öbek
+  yalnız ötelenir</b> — geniş bir genlik aralığında üye kaybetmez, Q2'si
+  bozulmaz; fazlalık taşıyan öbekte ise sığ kuyudaki üye koparılabilir.
+  Balanssız (kırmızı) bir öbeğe darbe gönderip balans satırını izleyin:
+  fazlalık kopuyorsa süpürme mekanizması çalışıyor demektir; kopmuyorsa bu,
+  çift-bazlı ışımanın dizilim-körlüğü lehine kayıttır (koherent çekirdek
+  gündemine girer). <b>Hız ve güç beklentisi:</b> darbe cephesi tam
+  <code>c₀</code>'da yayılır (stiff ortamda v_ses = c₀ — yavaşlığı fizik) ve
+  genliği <code>δρ/ρ₀ &lt; 1</code> ile sınırlıdır (güçsüzlüğü de fizik):
+  bu bir şok patlaması değil, ses-hızlı yönlü bir itmedir. Etkiyi büyütmenin
+  meşru yolları: genlik sürgüsünü yükseltmek, kaynağın <b>yakınlığı</b>
+  (genlik 1/√r — sanal kaynak sahne kenarına yakın doğar) ve üst üste
+  tıklamak (her basış yeni cephe; darbeler toplanır).</p>
 
   <p class="note key"><b>İki olay, tek ölçütten.</b><br>
   <b>ZIT çift → YOK OLMA</b> — <code>d = 2(R_cep,1+R_cep,2)</code>. Hendeğin dibi
@@ -466,6 +665,7 @@
   <label class="chk"><input type="checkbox" id="addm"><span>Karşılaştır: TOPLAMSAL (yanlış) alan</span></label>
   <label class="chk"><input type="checkbox" id="stag" checked><span>Durgunluk noktaları / sırtlar</span></label>
   <label class="chk"><input type="checkbox" id="halo" checked><span>Sınır tabakası ve yakalama halkaları</span></label>
+  <label class="chk"><input type="checkbox" id="etk"><span>Sahne etiketleri — balans/örgü yazıları (varsayılan kapalı: renk anlatır — <span style="color:#f87171">kırmızı halka=kararsız</span>, <span style="color:#7cfc6b">yeşil=balanslı</span>)</span></label>
   <label class="chk"><input type="checkbox" id="spin" checked><span>3B kamera dönsün</span></label>
 </div>
 
@@ -482,6 +682,12 @@
         <button id="zIn"  title="Yakınlaştır (fare tekerleği yukarı)">+</button>
       </div>
       <div class="vwzlab" id="zoomLab">×1,00</div>
+      <div class="vwhiz">
+        <button id="hYav" title="Yavaşlat (÷1,5)">«</button>
+        <button id="hDur" title="Duraklat / sürdür">⏸</button>
+        <button id="hHiz" title="Hızlandır (×1,5)">»</button>
+      </div>
+      <div class="vwzlab vwhlab" id="hizLab">hız ×1,00</div>
     </div>
     <div class="vw">
       <canvas id="c3"></canvas>
@@ -497,6 +703,7 @@
     <div class="sb">Kesitte görünen<b id="s_vis">—</b></div>
     <div class="sb">Yok / Birleşme<b id="s_olay">0 / 0</b></div>
     <div class="sb">Korunum sapması<b id="s_cons">—</b></div>
+    <div class="sb">Makine ⏏ / ✓<b id="s_mak">—</b></div>
   </div>
 </div>
 
@@ -562,10 +769,9 @@
   <span style="color:#5aaaff">mavi = seyrelme</span> (δρ&lt;0, Kut'u <b>içe çeker</b>).
   Zıt görünseler de <b>ikisi de momentumu aynı yönde taşır</b>: arka lobda
   <code>δv</code> içeri bakar ama radyal yön de ters olduğundan çarpım yine
-  <code>+Î</code> verir. <b>Düzeltme (12 Ağu 2026):</b> arka lob önce
-  sıfırlanıyordu; bu, aktarılan momentumun <b>tam yarısını</b> atıyordu
-  (<code>∫cos²θ = π</code> yerine <code>π/2</code>). Öz-sınamada bu oran artık
-  kilitli.</p>
+  <code>+Î</code> verir. Arka lobu yok saymak, aktarılan momentumun <b>tam
+  yarısını</b> atmak olurdu (<code>∫cos²θ = π</code> yerine <code>π/2</code>);
+  bu oran öz-sınamada kilitlidir.</p>
   <p class="note key"><b>Kitap kapanıyor.</b> Yok olmada ortama geçen <b>net dönme
   SIFIRDIR</b> — zıt çiftte Γ_top zaten sıfırdı. Geçen şey <b>momentum</b>
   (L = Γ·d, kaybolamaz → yönlü basınç darbesi) ve <b>enerjidir</b> (zıt yaklaşma
@@ -608,7 +814,7 @@
    ========================================================================== */
 /* ===== CORE-BEGIN ===== */
 const RE = 1.0, CC = 1.0;
-/* Ortamın kohezyon oranı — KARNE'nin n=3 kısıtı: Σ/P₀ ≳ 1,9×10⁹.
+/* Ortamın kohezyon oranı — teorinin n=3 kısıtı: Σ/P₀ ≳ 1,9×10⁹ (12.1.1).
    Cep yarıçapı ve olay eşikleri buradan çıkar. */
 const SIGP0 = 1.9e9;
 const K  = Math.SQRT2 * RE;        /* Γ/(2π); tek Kut'ta u(r_e)=1 verir */
@@ -680,19 +886,46 @@ function rhoOf(u){ return Math.exp(-u); }
    ⚠ κ TÜRETİLMEMİŞTİR, parametredir. Ve bu terim Hamilton yapısını BOZAR
    (girdap dinamiği + dış kuvvet), dolayısıyla H artık korunmaz.
 
-   ⚠ ÇIPLAK 1/d² ÇEKİMİ BAĞ DEĞİL, ÇÖKÜŞTÜR. İlk sürümde denendi ve
-   ölçüldü: ayrım 2 → 4,97'ye fırladı, kalabalıkta 40'a. Sebep — saf çekici
-   bir terim ayrımı sıfıra indirir, orada girdap hızı K/d patlar ve çift
-   savrulur. Denge mesafesi olmayan çekim bağ üretmez.
+   ⚠ Çıplak 1/d² çekimi bağ değil, çöküş üretir. Saf çekici bir terim
+   ayrımı sıfıra indirir; orada girdap hızı K/d ıraksar ve çift savrulur.
+   Sayısal deney doğrular: yalnız bu terimle ayrım 2 → 4,97'ye, kalabalık
+   toplulukta 40'a savruldu. Denge mesafesi olmayan çekim bağ üretmez.
 
-   DÜZELTİLMİŞ BİÇİM — Bjerknes kuyruğu + kısa erimli itme:
-        v_rad(d) = κ·(1 − d₀/d)/d²        (pozitif = ortağa doğru)
-     d = d₀   ⟹ 0            (DENGE)
-     d > d₀   ⟹ çekici, uzakta κ/d² — Bjerknes kuyruğu korunur
-     d < d₀   ⟹ −κd₀/d³, güçlü İTME — çökme engellenir
-   d₀ ("bağ mesafesi") ve κ TÜRETİLMEMİŞTİR; kısa erimli itme, ceplerin
-   iç içe geçememesinin görüngüsel karşılığıdır. Etiketi budur.          */
-let BAG_KAPPA = 0, BAG_FAZ = 0, BAG_D0 = 1.5, BAG_CAP = 3;  /* varsayılan KAPALI */
+   ═══ Kısa erimli ayrı itme kanalı yoktur ═══════════════════════════════
+   κ(1 − d₀/d)/d² biçiminde bir "bağ mesafesi d₀" parametresi fiziksel
+   olarak temelsizdir: "cepler iç içe geçemez" gerekçesi ölçek tutmaz —
+   cepler R_cep = 2,29×10⁻⁵ r_e, küme aralığı ≈ 1,4 r_e (yaklaşık
+   62 000 kat ayrık). d₀ bir cep örtüşme ölçeği olamaz; seçilmiş bir
+   aralık olurdu.
+
+   Dengeyi kuran itme TÜRETİLMİŞTİR: 2B KUADRUPOL AKUSTİK IŞIMA.
+     • Dönen çift kuadrupol ışır (dipol yok ⟹ net momentum yok), frekans 2Ω.
+     • 2B Lighthill:  P = k³|Q|²/(8ρ₀c),  |Q| = C·ρ₀Γa²Ω  ⟹  P ~ ρ₀c³·a·M⁷
+       (3B kuadrupol M⁸ verir; 2B bir mertebe daha verimli.)
+     • Enerji dengesi:  E = −(ρΓ²/2π)gᵢgⱼ ln d ,  dE/dt = −P  ⟹
+          ḋ = ∓2πdP/(ρΓ²) ~ ∓K⁵/d⁵
+   Yani ışıma kanalı:      F_ışıma(d) = −λ·gᵢgⱼ·K⁵/d⁵      (+ = çekici)
+
+   YENİ TOPLAM:            F(d) = κ·cos(faz)/d²  −  λ·gᵢgⱼ·K⁵/d⁵
+     EŞ yönlü  (gᵢgⱼ=+1): 1/d² çeker, 1/d⁵ iter ⟹ KARARLI DENGE
+          d_denge = (λK⁵/(κ·cos faz))^(1/3)          ← TÜRETİLMİŞ, seçilmemiş
+     ZIT yönlü (gᵢgⱼ=−1): ikisi de ÇEKER ⟹ DENGE YOK ⟹ YOK OLMAYA DÜŞER
+   Bu, 210 (κ,λ,d) üçlüsünde sınandı: zıt çift için F ≤ 0 olan durum YOK.
+   Yani ters Kut'un duramaması bir katsayı sonucu değil, İŞARET YAPISININ
+   sonucudur.
+
+   TUTARLILIK KISITI (yeni): d_denge birleşme eşiğinin üstünde kalmalı,
+   yoksa eş yönlü kümeler kendi içine çöküp birleşir ⟹
+        κ < λK⁵/d_bir³  =  58,6   (λ=1, olay ölçeği ×10⁴)
+   Bu kısıt, d_denge'nin κ'ya bağlı bir ÇIKTI olmasının doğrudan sonucudur.
+
+   ⚠ GERİYE KALAN TEK BELİRSİZ SABİT κ'dır (Bjerknes/pulsasyon şiddeti).
+   λ türetimden gelir; C = O(1) önkatsayısı sonucu değiştirmez (işaret
+   yapısı karar veriyor). Ve κ artık ARALIĞI BELİRLER — yani bir öngörüye
+   dönüştü, bağımsız bir ayar değil.                                      */
+let BAG_KAPPA = 0, BAG_FAZ = 0, BAG_LAM = 1, BAG_CAP = 3;  /* varsayılan KAPALI */
+/* Işıma katsayısı λ'nın türetilmiş biçimi kod biriminde 1'dir (c=1, Γ/2π=K).
+   Arayüz onu oynatabilir ama SONUÇ (zıt çiftin duramaması) λ'dan bağımsızdır. */
 /* İNTEGRASYON GÜVENLİ ADIMI — ölçülmüş değer, keyfi değil.
    Sabit fiziksel sürede adım taraması (20 Kut, κ=200, d₀=1,5):
      h = 0,016  → yayılım oranı 13,956  · PATLAMA
@@ -702,10 +935,105 @@ let BAG_KAPPA = 0, BAG_FAZ = 0, BAG_D0 = 1.5, BAG_CAP = 3;  /* varsayılan KAPAL
    0,004'ten küçük her adım AYNI sonucu veriyor ⟹ yakınsama eşiği budur. */
 const H_GUVENLI = 0.004;
 const ALT_ADIM_TAVAN = 16;   /* uzun kare takılmasında tarayıcıyı dondurmamak için */
-function bagRadyal(d, kappa, faz, d0){
+/* ==========================================================================
+   UYARLAMALI ADIM — ışıma kanalı 1/d⁵ ile ıraksıyor
+   ==========================================================================
+   Sabit adım YETMİYOR: zıt çift yaklaşırken 1/d⁵ patlar ve h=0,004'te çift
+   43 278'e savruluyordu (ölçüldü). Fizik doğruydu — integratör yetersizdi.
+   Çözüm CFL benzeri koşul: bir alt adımda hiçbir Kut, en yakın komşu
+   mesafesinin CFL_PAY kadarından fazla yol almasın.                        */
+const CFL_PAY = 0.02;        /* alt adımda izin verilen d_min kesri */
+const ALT_TAVAN_SERT = 4096; /* katı bölgede izin verilen en çok alt adım */
+function enYakinMesafe(kuts){
+  let m = Infinity;
+  for (let i = 0; i < kuts.length; i++)
+    for (let j = i+1; j < kuts.length; j++){
+      const dx = kuts[i].x-kuts[j].x, dy = kuts[i].y-kuts[j].y;
+      const d = Math.hypot(dx, dy);
+      if (d < m) m = d;
+    }
+  return m;
+}
+function enBuyukHiz(kuts){
+  const d = derivs(kuts);
+  let m = 0;
+  for (const v of d) m = Math.max(m, Math.hypot(v[0], v[1]));
+  return m;
+}
+/* Verilen h'yi güvenli alt adımlara bölerek ilerletir. Dönen değer: kaç alt adım.
+   ÖNEMLİ: adım boyu HER alt adımda yeniden hesaplanır. Aralık başında bir
+   kez hesaplamak yetmez: çift yaklaşırken tahmin bayatlar ve zıt çift
+   sayısal olarak savrulur. Katı denklemde tahmin taze olmalı. */
+function stepUyarlamali(kuts, h, msButce){
+  if (kuts.length < 2){ stepRK4(kuts, h); return 1; }
+  let kalan = h, n = 0;
+  /* TIKANMA KORUMASI — canlı karede duvar-saati bütçesi (msButce).
+     Katı bölge alt-adım sayısını patlatırsa kalan süre DÜŞÜLÜR: benzetim
+     yavaşlar ama arayüz ASLA donmaz. Bütçesiz çağrılar (öz-sınamalar,
+     sınav/tarama kopyaları) eskisi gibi TAM koşar — sonuçları değişmez. */
+  const t0 = msButce ? performance.now() : 0;
+  while (kalan > 1e-14 && n < ALT_TAVAN_SERT){
+    if (msButce && n && (performance.now() - t0) > msButce) break;
+    const vmax = enBuyukHiz(kuts), dmin = enYakinMesafe(kuts);
+    let hs = Math.min(H_GUVENLI, kalan);
+    if (vmax > 0 && isFinite(dmin) && dmin > 0)
+      hs = Math.min(hs, CFL_PAY*dmin/vmax);
+    hs = Math.max(hs, 1e-13);
+    stepRK4(kuts, hs);
+    kalan -= hs; n++;
+  }
+  return n;
+}
+/* BJERKNES ÇEKİMİ — saf 1/d² kuyruk. Kısa erimli itme artık BURADA DEĞİL;
+   onu ışıma kanalı sağlıyor (ve türetilmiş üstelle: 1/d⁵). */
+function bagRadyal(d, kappa, faz){
   if (!kappa) return 0;
   const dd = Math.max(1e-6, d);
-  return kappa*Math.cos(faz)*(1 - d0/dd)/(dd*dd);   /* + = çekici */
+  return kappa*Math.cos(faz)/(dd*dd);               /* + = çekici */
+}
+/* IŞIMA KANALI — 2B kuadrupol akustik kaybının enerji dengesinden gelen hızı.
+      ḋ = ∓2πdP/(ρΓ²) ,  P ~ ρc₀³·a·M⁷ (a ≈ ayrım ölçeği) ,  M = K/d ⟹ ~ ∓K⁵/d⁵
+   İşaret: eş yönlüde AYIRICI (negatif), zıt yönlüde ÇEKİCİ (pozitif).
+   Bu işaret elle konmadı — dE/dd'nin işaretinden geliyor. */
+const K5 = Math.pow(K, 5);                          /* = 4√2 ≈ 5,6569 */
+/* g BAĞIMLILIĞI — zorunludur: eksik yazılırsa büyük öbekler birbirine gömülür
+   (7–7 öbek çiftinde merkez mesafesi 8,95'e inerken bileşik yarıçaplar
+   toplamı 14 kalır — tabakalar iç içe geçer, birleşme çığı başlar).
+   Türetim:  M = K(|gᵢ|+|gⱼ|)/d  ve  dE/dd ∝ gᵢgⱼ/d  ⟹
+      ḋ ∝ ∓ K⁷(|gᵢ|+|gⱼ|)⁷ / (d⁵ |gᵢgⱼ|)
+   2⁷|gᵢgⱼ| ile normalize edilerek gᵢ=gⱼ=1'de eski biçime birebir indirgenir. */
+function isimaOlcek(gi, gj){
+  const ai = Math.abs(gi), aj = Math.abs(gj);
+  const carp = Math.max(ai*aj, 1e-12);
+  return Math.pow(ai + aj, 7) / (128 * carp);       /* 2⁷ = 128 */
+}
+function isimaRadyal(d, gi, gj, lam){
+  if (!lam) return 0;
+  const dd = Math.max(1e-6, d);
+  const gI = (gi === undefined) ? 1 : gi, gJ = (gj === undefined) ? 1 : gj;
+  if (gI === 0 || gJ === 0) return 0;
+  const isaret = (gI*gJ > 0) ? 1 : -1;
+  return -lam * isaret * isimaOlcek(gI, gJ) * K5 / Math.pow(dd, 5);  /* + = çekici */
+}
+/* Eş yönlü çiftin TÜRETİLMİŞ denge mesafesi. Zıt yönlüde denge yoktur.
+   Bjerknes gᵢgⱼ ile, ışıma (|gᵢ|+|gⱼ|)⁷/(2⁷|gᵢgⱼ|) ile ölçekli ⟹
+      d_denge = (λK⁵/κ)^(1/3) · [(|gᵢ|+|gⱼ|)⁷/(2⁷ (gᵢgⱼ)²)]^(1/3)
+   Eş öbeklerde (gᵢ=gⱼ=N) bu TAM OLARAK N ile doğrusaldır — yani bileşik
+   sınır tabakası yarıçapıyla aynı ölçekte. Tek Kut'ta 1'e indirgenir. */
+function bagDenge(kappa, faz, lam, gi, gj){
+  const k = kappa*Math.cos(faz);
+  if (!(k > 0) || !(lam > 0)) return null;
+  const gI = (gi === undefined) ? 1 : gi, gJ = (gj === undefined) ? 1 : gj;
+  const bj = gI*gJ;                                  /* Bjerknes ölçeği */
+  if (bj <= 0) return null;                          /* zıt işaret: denge yok */
+  return Math.cbrt(lam*K5*isimaOlcek(gI, gJ)/(k*bj));
+}
+/* d_denge, birleşme eşiğinin ÜSTÜNDE mi? Altındaysa eş yönlü kümeler
+   kendi içine çöküp birleşir — modelin kendi tutarlılık kısıtı. */
+function dengeTutarli(kappa, faz, lam, dBir){
+  const de = bagDenge(kappa, faz, lam);
+  return (de === null) ? null : { denge:de, dBir:dBir, tutarli:de > dBir,
+                                  kappaUst: lam*K5/Math.pow(Math.max(dBir,1e-12), 3) };
 }
 /* ==========================================================================
    GİRDAP İTMESİ — sınır tabakasının DIŞ yanı uzaklaştırır
@@ -733,52 +1061,221 @@ const A_VORT = 2*Math.PI*K*K;          /* = 4π ≈ 12,566  (K=√2) */
 /* Çekirdek varsayılanı KAPALI; arayüz açar. Böylece bu kanal eklenmeden
    önce yazılmış sınamaların anlamı korunur, yeni sınamalar açıkça açar. */
 let GIRDAP_ITME = false;
-/* Toplam radyal kuvvet. POZİTİF = ÇEKİCİ (ortağa doğru). */
-function radyalToplam(d, gi, gj, kappa, faz, d0){
-  const bj = bagRadyal(d, kappa, faz, d0);
-  if (!GIRDAP_ITME) return bj;
-  return bj - (A_VORT*gi*gj)/Math.max(1e-6, d);
+/* Toplam radyal kuvvet. POZİTİF = ÇEKİCİ (ortağa doğru).
+   İki YÜRÜRLÜKTEKİ kanal: Bjerknes çekimi (1/d²) + ışıma (1/d⁵, işaret duyarlı).
+   GIRDAP_ITME üçüncü kanaldır ve ÇÜRÜTÜLMÜŞTÜR (§8.12); varsayılan kapalı,
+   kaydın parçası olarak duruyor. */
+function radyalToplam(d, gi, gj, kappa, faz, lam){
+  const L = (lam === undefined) ? BAG_LAM : lam;
+  let f = bagRadyal(d, kappa, faz) + isimaRadyal(d, gi, gj, L);
+  if (GIRDAP_ITME) f -= (A_VORT*gi*gj)/Math.max(1e-6, d);
+  return f;
 }
-/* Engel ve kuyu yarıçapları — kapalı biçim. */
-function bagKokleri(kappa, faz, d0, gi, gj){
-  const A = A_VORT*(gi === undefined ? 1 : gi)*(gj === undefined ? 1 : gj);
+/* Kökler — kapalı biçim.  κ/d² = λ gᵢgⱼ K⁵/d⁵  ⟹  d³ = λ gᵢgⱼ K⁵/κ
+   EŞ yönlü: tek KARARLI kök (kuyu). ZIT yönlü: kök YOK, her yerde çekici. */
+function bagKokleri(kappa, faz, lam, gi, gj){
+  const g = (gi === undefined ? 1 : gi)*(gj === undefined ? 1 : gj);
   const k = kappa*Math.cos(faz);
-  const kmin = 4*A*d0;
-  if (!GIRDAP_ITME) return { kuyu:d0, tepe:Infinity, kmin:0, engelsiz:true };
-  if (A <= 0) return { cekici:true, kmin:kmin };     /* zıt işaret: engel yok */
-  if (k <= 0 || k < kmin) return { yok:true, kmin:kmin };
-  const s = Math.sqrt(k*k - 4*A*k*d0);
-  return { kuyu:(k-s)/(2*A), tepe:(k+s)/(2*A), kmin:kmin };
+  const L = (lam === undefined) ? BAG_LAM : lam;
+  if (k <= 0 || !(L > 0)) return { yok:true, sebep:'κ veya λ sıfır' };
+  if (g < 0) return { cekici:true, sebep:'zıt işaret — denge YOK, yok olmaya düşer' };
+  return { kuyu: bagDenge(kappa, faz, L, gi, gj), tepe:Infinity, engelsiz:true };
 }
 
-function bagHizi(kuts, i, kappa, faz, d0){
-  if (!kappa) return [0, 0];
-  const D0 = (d0 === undefined) ? BAG_D0 : d0;
+function bagHizi(kuts, i, kappa, faz, lam){
+  if (!kappa && !(lam === undefined ? BAG_LAM : lam)) return [0, 0];
+  const L = (lam === undefined) ? BAG_LAM : lam;
   let vx = 0, vy = 0;
   for (let j = 0; j < kuts.length; j++){
     if (j === i) continue;
     const dx = kuts[i].x - kuts[j].x, dy = kuts[i].y - kuts[j].y;
     const d = Math.hypot(dx, dy);
     if (d < 1e-6) continue;
-    /* çekici (pozitif) ⟹ i, j'ye doğru; girdap itmesi dahil */
-    const f = -radyalToplam(d, gOf(kuts[i]), gOf(kuts[j]), kappa, faz, D0);
+    /* çekici (pozitif) ⟹ i, j'ye doğru */
+    const f = -radyalToplam(d, gOf(kuts[i]), gOf(kuts[j]), kappa, faz, L);
     vx += f*dx/d; vy += f*dy/d;
   }
   return [vx, vy];
 }
-/* Kuyu derinliği: d₀'dan sonsuza taşımak için gereken iş (sayısal integral) */
-function koparmaIsi(d, kappa, faz, d0){
-  const D0 = (d0 === undefined) ? BAG_D0 : d0;
+/* Kuyu derinliği: d'den sonsuza taşımak için gereken iş (sayısal integral).
+   Yalnız EŞ yönlü çift için anlamlı — zıt çiftin kuyusu yok. */
+function koparmaIsi(d, kappa, faz, lam){
+  const L = (lam === undefined) ? BAG_LAM : lam;
   if (!kappa) return 0;
-  let W = 0, a = Math.max(1e-3, d), b = Math.max(a*40, 200), n = 4000;
+  let W = 0;
+  const a = Math.max(1e-3, d), b = Math.max(a*40, 200), n = 4000;
   const h = (b-a)/n;
   for (let k = 0; k < n; k++){
     const x = a + (k+0.5)*h;
-    W += bagRadyal(x, kappa, faz, D0)*h;      /* çekiciyi yenmek için iş */
+    W += radyalToplam(x, 1, 1, kappa, faz, L)*h;   /* eş yönlü: çekiciyi yen */
   }
   return W;
 }
-function bagEnerjisi(d, kappa, faz, d0){ return -koparmaIsi(d, kappa, faz, d0); }
+function bagEnerjisi(d, kappa, faz, lam){ return -koparmaIsi(d, kappa, faz, lam); }
+
+/* ==========================================================================
+   EVRENAKI MAKİNASI — KARAR ÇEKİRDEĞİ (saf; DOM'suz; öz-sınamada denetli)
+   ==========================================================================
+   Kural dili: R1 birleşme yasağı (yapısal bütünlük) · R2 kapı · R3/R4/R6
+   bozan-söküm saati · R5 sapan · R7 şok bekletme. Buradaki işlevler karar
+   VERİR; uygulanış arayüz katmanındadır (mkCalistir).                      */
+/* Koparma işinin KAPALI biçimi — sayısal integralle birebir (öz-sınama 27.1):
+     ∫_d^∞ [κcosφ/s² − sgn(gᵢgⱼ)·λ·Ö(gᵢ,gⱼ)·K⁵/s⁵] ds
+       = κcosφ/d − sgn(gᵢgⱼ)·λ·Ö(gᵢ,gⱼ)·K⁵/(4d⁴)
+   Çürütülmüş girdap-itme kanalı (tanı kipi) hesaba KATILMAZ.               */
+function koparmaIsiAnalitik(d, kappa, faz, lam, gi, gj){
+  const dd = Math.max(1e-6, d);
+  const L = (lam === undefined) ? BAG_LAM : lam;
+  const gI = (gi === undefined) ? 1 : gi, gJ = (gj === undefined) ? 1 : gj;
+  let W = kappa*Math.cos(faz)/dd;
+  if (L && gI !== 0 && gJ !== 0){
+    const isaret = (gI*gJ > 0) ? 1 : -1;
+    W -= isaret * L * isimaOlcek(gI, gJ) * K5 / (4*Math.pow(dd, 4));
+  }
+  return W;
+}
+/* Üyenin öbekten TOPLAM koparılma işi — yapı-içi bütün eşlere karşı */
+function mkUyeIsi(kuts, uyeler, i, kappa, faz, lam){
+  let W = 0;
+  for (const j of uyeler){
+    if (j === i) continue;
+    const d = Math.hypot(kuts[i].x-kuts[j].x, kuts[i].y-kuts[j].y);
+    W += koparmaIsiAnalitik(d, kappa, faz, lam, gOf(kuts[i]), gOf(kuts[j]));
+  }
+  return W;
+}
+function mkMedyan(a){
+  if (!a.length) return 0;
+  const s = a.slice().sort((x, y) => x - y), m = s.length >> 1;
+  return (s.length % 2) ? s[m] : 0.5*(s[m-1] + s[m]);
+}
+/* BOZANI BUL — iki bağımsız ölçüt, tek karar:
+     bozan = çıkarılınca Q2'yi EN ÇOK düzelten üye (simetri ölçütü)
+     zayif = koparma işi EN DÜŞÜK üye (bağ ölçütü)
+   Kural (R3/R4) ikisinin örtüşmesini öngörür; 'uyum' bunu her seferinde
+   ÖLÇER — varsaymaz. Q2 eşitliğinde bağı zayıf olan seçilir (R4'ün
+   "en zayıf bağ kuran" dili; N=3 gibi her çıkarmanın eş düzelttiği hâller). */
+function mkBozanBul(kuts, uyeler, kappa, faz, lam){
+  const simdiB = uyeBalans(kuts, uyeler);
+  const Q2simdi = simdiB ? simdiB.Q2 : 0;
+  let zayif = -1, enW = Infinity; const W = {};
+  for (const i of uyeler){
+    const w = mkUyeIsi(kuts, uyeler, i, kappa, faz, lam);
+    W[i] = w;
+    if (w < enW){ enW = w; zayif = i; }
+  }
+  let bozan = -1, enQ = Infinity;
+  for (const i of uyeler){
+    const kalan = uyeler.filter(j => j !== i);
+    const b = uyeBalans(kuts, kalan);
+    const q = b ? b.Q2 : 0;               /* N−1 < 3 ⟹ çift/tekil: balanslı */
+    if (q < enQ - 1e-9 ||
+        (Math.abs(q - enQ) <= 1e-9 && bozan >= 0 && W[i] < W[bozan])){
+      enQ = q; bozan = i;
+    }
+  }
+  return { bozan:bozan, zayif:zayif, uyum:(bozan === zayif),
+           Q2simdi:Q2simdi, Q2sonra:enQ, W:W };
+}
+/* SAPAN (R5) — öbeğin ÖLÇÜLEN dönüşünden fırlatma vektörü.
+   g>0 dolanım saat yönünün tersidir (v = K(−Δy,Δx)/r²) ⟹ Ω>0'da teğet
+   birim (−r̂_y, r̂_x). Yön: teğet (dönüşle) + 0,6 dışa pay; şiddet:
+   |Ω|·R_dış, tabanı 1,2 (bağ çekimini kesin yenmek için).                 */
+function mkSapanYonu(kuts, uyeler, i){
+  const uy = uyeler.map(j => kuts[j]);
+  const om = omegaNumeric(uy);
+  let cx = 0, cy = 0;
+  for (const q of uy){ cx += q.x; cy += q.y; }
+  cx /= uy.length; cy /= uy.length;
+  let rx = kuts[i].x - cx, ry = kuts[i].y - cy;
+  let rn = Math.hypot(rx, ry);
+  if (rn < 1e-9){ rx = 1; ry = 0; rn = 1; }         /* merkez üye: yön seç */
+  rx /= rn; ry /= rn;
+  const s = (om >= 0) ? 1 : -1;
+  let dx = -s*ry + 0.6*rx, dy = s*rx + 0.6*ry;
+  const dn = Math.hypot(dx, dy) || 1; dx /= dn; dy /= dn;
+  const Rd = outerRadius(uy);
+  const vAt = Math.max(Math.abs(om)*Rd, 1.2);
+  return { dx:dx, dy:dy, vAt:vAt, om:om, cx:cx, cy:cy, Rdis:Rd };
+}
+/* FAZ-SÖKÜM (araştırma) — bozan üyeye, eş listesine karşı Δφ kaymış bağın
+   NET FARKI uygulanır: net = bağ(φ+Δφ) − bağ(φ). Çekirdek bağı zaten
+   uyguladığından fark eklemek, üyenin bağını fiilen Δφ kaydırmaktır.
+   Δφ=π'de bağ tam tersine döner (F ∝ cos): yapı, kilitlenemeyeni KENDİ
+   kanalıyla iter — büyüklük 2κ/d² (öz-sınama 27.6).                        */
+function mkSokumHizi(kuts, i, esler, fazAcik, kappa, faz){
+  let vx = 0, vy = 0;
+  for (const j of esler){
+    const dx = kuts[i].x - kuts[j].x, dy = kuts[i].y - kuts[j].y;
+    const d = Math.hypot(dx, dy);
+    if (d < 1e-6) continue;
+    const dF = bagRadyal(d, kappa, faz + fazAcik) - bagRadyal(d, kappa, faz);
+    const f = -dF;               /* çekici(+) i'yi eşine götürürdü; fark iterse f>0 dışa */
+    vx += f*dx/d; vy += f*dy/d;
+  }
+  return [vx, vy];
+}
+/* KAPI (R2) — koherens: balans × doluluk. Balanssız (Q2 ≥ eşik) tabaka
+   sızdırır (0); Thomson tabanının altındaki (N<5) öbek büyümek ister (0);
+   dolu ve balanslı öbek tam dirençli (1).                                  */
+function mkKoherens(Q2, n, esik){
+  const bal = Math.max(0, 1 - Q2/Math.max(1e-9, esik));
+  /* Doluluk bant ORTASINDA (N=7) doyar: balanslı 7'li tam dirençlidir,
+     5-6'lı ılımlı direnir, N<5 büyümek ister (kapı açık). Hedef dağılımı
+     6-7'ye yaslar; Thomson üstü (N>8) zaten fazlasını verir. */
+  const dolu = Math.max(0, Math.min(1, (n - 4)/3));
+  return bal*dolu;
+}
+/* Yabancı Kut'a kapının uyguladığı DIŞA taşıma hızı — bant pencereli:
+   bant [0,75·r_e(öbek), r_e(öbek)+cap], pencere sin (kenarlarda sıfır).   */
+function mkKapiHizi(q, A, cap, direnc){
+  if (!(direnc > 0) || !(A.koh > 0) || !(A.re > 0)) return null;
+  const dx = q.x - A.x, dy = q.y - A.y;
+  const d = Math.hypot(dx, dy);
+  const alt = 0.75*A.re, ust = A.re + cap;
+  if (d <= 1e-9 || d < alt || d > ust) return null;
+  const pen = Math.sin(Math.PI*(ust - d)/Math.max(1e-9, ust - alt));
+  const v = 0.8 * direnc * A.koh * Math.max(0, pen);
+  if (v < 1e-4) return null;
+  return { vx: v*dx/d, vy: v*dy/d, v:v, ang:Math.atan2(dy, dx) };
+}
+/* KARARSIZ TABAKA EMİŞİ — kullanıcı kuralı: tek ve İKİLİ Kutlar, kararsız
+   yapının sınır tabakasından ÇOK RAHAT geçer; sızdıran tabaka yaklaşan
+   malzemeyi içeri EMER. Seçicilik budur: kararsız yapı hızla malzeme
+   toplar, simetrisini kurar; kararlı olunca sızıntı biter, kapı kapanır —
+   dönüşüm kendi kendini hızlandırır. sizinti ∈ [0,1] Q2'den gelir.       */
+function mkEmisHizi(q, A, cap, direnc){
+  if (!(direnc > 0) || !(A.sizinti > 0) || !(A.re > 0)) return null;
+  const dx = q.x - A.x, dy = q.y - A.y;
+  const d = Math.hypot(dx, dy);
+  const alt = 0.5*A.re, ust = A.re + cap;
+  if (d <= alt || d > ust) return null;
+  const pen = Math.sin(Math.PI*(ust - d)/Math.max(1e-9, ust - alt));
+  const v = 0.55 * direnc * A.sizinti * Math.max(0, pen);
+  if (v < 1e-4) return null;
+  return { vx: -v*dx/d, vy: -v*dy/d, v:v, ang:Math.atan2(dy, dx) };
+}
+/* KAYNAŞMA EŞİ SEÇİMİ — bant altı (N<5) yapı yasak değil, ARA ÜRÜNDÜR:
+   toplamı Thomson bandında (≤8, tercihen 6-7) tutan en uygun eşe sürülür
+   ve birleşerek daha kısa sürede kararlı yapıya ulaşır (kullanıcı kuralı).
+   Skor = |6,5 − (n_A+n_B)|·10 + uzaklık − kararsızlık ikramı: KARARSIZ
+   hedef ÖNCELİKLİDİR — tabakası zaten sızdırır, malzemeye muhtaçtır.     */
+function mkEsBul(obekler, a, q2ler, esik){
+  const A = obekler[a];
+  let en = -1, enSkor = Infinity;
+  for (let c = 0; c < obekler.length; c++){
+    if (c === a) continue;
+    const B = obekler[c];
+    if (B.n < 2) continue;              /* tekler kapı/emişle zaten akar */
+    const top = A.n + B.n;
+    if (top > 8) continue;              /* bandın üstüne kaynaşma yok */
+    const d = Math.hypot(A.x - B.x, A.y - B.y);
+    let skor = Math.abs(6.5 - top)*10 + d;
+    if (q2ler && esik && q2ler[c] >= esik) skor -= 6;
+    if (skor < enSkor){ enSkor = skor; en = c; }
+  }
+  return en;
+}
 
 /* ==========================================================================
    ÖBEK TOPLU NİCELİKLERİ + BİLEŞİK SINIR TABAKASI   (madde 3)
@@ -804,7 +1301,102 @@ function obekBilgi(kuts, cap){
     ob.push({ x:sx/n, y:sy/n, w:sw/n, G:sg, Gabs:sabs, n:n,
               re:Math.abs(sg)*RE });      /* bileşik sınır tabakası yarıçapı */
   }
+  /* KOMPOZİT BALANSI — kararsızlık birleşik yapının NİTELİĞİ olarak
+     taşınır: tabakanın ışıma duvarı (hiyerarşik kanal) ve makinenin
+     kapı/emiş kanalları bunu okur. n<3 tanımsız ⟹ 0 (balanslı sayılır). */
+  for (let c = 0; c < ob.length; c++){
+    if (ob[c].n >= 3){
+      const b = obekBalans(kuts, cl.lab, c);
+      ob[c].q2 = b ? b.Q2 : 0;
+    } else ob[c].q2 = 0;
+  }
   return { lab:cl.lab, obekler:ob, sayi:cl.count };
+}
+
+/* --- BALANS ÖLÇER --------------------------------------------------------
+   Öbeğin Γ-ağırlıklı çokkutup momentleri, GERÇEK (x,y) konumlardan hesaplanır
+   — w-görünürlüğünden bağımsızdır; görsel asimetri ile dinamik asimetriyi
+   ayırır. |Q_m| küçükse öbek o mertebede balanslıdır; düzgün N-gen, m < N
+   momentlerini girişimle söndürür (12.3.7'deki harmonik tablosunun moment
+   yüzü). Q_1 ağırlık merkezinde özdeş sıfırdır; balans m=2'den başlar. */
+function obekBalans(kuts, lab, ci){
+  let n = 0, cx = 0, cy = 0, sag = 0;
+  for (let i = 0; i < kuts.length; i++) if (lab[i] === ci){
+    const ga = Math.abs(gOf(kuts[i]));
+    cx += kuts[i].x*ga; cy += kuts[i].y*ga; sag += ga; n++;
+  }
+  if (n < 3 || sag < 1e-9) return null;
+  cx /= sag; cy /= sag;
+  const zs = []; let rbar = 0;
+  for (let i = 0; i < kuts.length; i++) if (lab[i] === ci){
+    const zx = kuts[i].x - cx, zy = kuts[i].y - cy;
+    zs.push([zx, zy, gOf(kuts[i])]); rbar += Math.hypot(zx, zy);
+  }
+  rbar /= n; if (rbar < 1e-9) return null;
+  const Q = {};
+  let f2 = 0;                    /* m=2 momentinin fazı — salınan tabakanın yönü */
+  for (let m = 2; m <= 4; m++){
+    let qr = 0, qi = 0;
+    for (const [zx, zy, g] of zs){
+      const r = Math.hypot(zx, zy), a = Math.atan2(zy, zx), rm = Math.pow(r, m);
+      qr += g*rm*Math.cos(m*a); qi += g*rm*Math.sin(m*a);
+    }
+    Q[m] = Math.hypot(qr, qi)/(sag*Math.pow(rbar, m));
+    if (m === 2) f2 = 0.5*Math.atan2(qi, qr);
+  }
+  return { Q2:Q[2], Q3:Q[3], Q4:Q[4], f2:f2, n:n, rbar:rbar };
+}
+/* ÖRGÜ TEŞHİSİ — yazar gözlemi: "kararlı Kut üç noktadan bağ kurar".
+   Üye başına KONTAK sayısı (d ≤ 1,8·d_denge) ve öbeğin ALT-ÖBEK yapısı:
+   cap iki ayrı yapıyı tek sayarsa Q2 kırmızıya döner ama bu balanssızlık
+   değil, sayım birleşmesidir — parça sayısı bunu ele verir. */
+function obekYapi(kuts, lab, ci){
+  const uye = [], gidx = [];
+  for (let i = 0; i < kuts.length; i++)
+    if (lab[i] === ci){ uye.push([kuts[i].x, kuts[i].y]); gidx.push(i); }
+  const n = uye.length;
+  if (n < 2) return null;
+  const dK = 1.8*bagDenge(BAG_KAPPA || 2, 0, BAG_LAM || 1);
+  let kMin = 1e9, kTop = 0;
+  const kok = uye.map((_, i) => i);
+  const bul = i => { while (kok[i] !== i){ kok[i] = kok[kok[i]]; i = kok[i]; } return i; };
+  for (let i = 0; i < n; i++){
+    let k = 0;
+    for (let j = 0; j < n; j++){
+      if (j === i) continue;
+      const d = Math.hypot(uye[i][0]-uye[j][0], uye[i][1]-uye[j][1]);
+      if (d <= dK){ k++; kok[bul(i)] = bul(j); }
+    }
+    kTop += k; kMin = Math.min(kMin, k);
+  }
+  const parcaMap = {};
+  for (let i = 0; i < n; i++){
+    const r = bul(i);
+    (parcaMap[r] = parcaMap[r] || []).push(gidx[i]);   /* GLOBAL indisler */
+  }
+  const parcalar = Object.values(parcaMap);
+  return { kOrt: kTop/n, kMin: kMin, parca: parcalar.length, parcalar: parcalar };
+}
+/* Verilen üye (global indis) listesi için balans — obekBalans'ın liste hâli */
+function uyeBalans(kuts, liste){
+  const lab = kuts.map(() => -1);
+  for (const i of liste) lab[i] = 0;
+  return obekBalans(kuts, lab, 0);
+}
+
+/* Komşu öbeklerin dış-alan şiddeti, iç ölçek birimiyle: d_denge'de duran
+   g=1'lik TEK iç komşu 1 verir. η ≳ 0,3 ise öbeğin asimetrisi dış (gelgit)
+   kaynaklı olabilir — balans satırı bu ayrımı etiketler. */
+function obekDisAlan(obekler, ci){
+  const A = obekler[ci];
+  const dRef = bagDenge(BAG_KAPPA || 2, 0, BAG_LAM || 1);
+  let s = 0;
+  for (let c = 0; c < obekler.length; c++){
+    if (c === ci) continue;
+    const B = obekler[c], d = Math.hypot(A.x - B.x, A.y - B.y);
+    if (d > 1e-9) s += Math.abs(B.G)*dRef*dRef/(d*d);
+  }
+  return s;
 }
 
 /* ==========================================================================
@@ -818,34 +1410,49 @@ function obekBilgi(kuts, cap){
 
    Tutarlılık: tek Kutlardan oluşan iki öbek için bu biçim, eski basit
    biçime BİREBİR indirgenir (öz-sınamada denetleniyor).                  */
-function bagHiziHiyerarsik(kuts, i, cap, kappa, faz, d0){
-  if (!kappa) return [0, 0];
-  const bi = obekBilgi(kuts, cap), ci = bi.lab[i], A = bi.obekler[ci];
+function bagHiziHiyerarsik(kuts, i, cap, kappa, faz, lam, biHazir){
+  const L = (lam === undefined) ? BAG_LAM : lam;
+  if (!kappa && !L) return [0, 0];
+  /* biHazir: derivs'in ADIM BAŞINA BİR KEZ hesapladığı öbek bilgisi.
+     Verilmezse (eski çağrılar, öz-sınamalar) yerinde hesaplanır — birebir. */
+  const bi = biHazir || obekBilgi(kuts, cap), ci = bi.lab[i], A = bi.obekler[ci];
   let vx = 0, vy = 0;
-  /* (a) ÖBEK İÇİ — üyeler arası doğrudan Bjerknes */
+  /* (a) ÖBEK İÇİ — üyeler arası doğrudan (Bjerknes + ışıma) */
   for (let j = 0; j < kuts.length; j++){
     if (j === i || bi.lab[j] !== ci) continue;
     const dx = kuts[i].x - kuts[j].x, dy = kuts[i].y - kuts[j].y;
     const d = Math.hypot(dx, dy);
     if (d < 1e-6) continue;
-    const f = -radyalToplam(d, gOf(kuts[i]), gOf(kuts[j]), kappa, faz, d0);
+    const f = -radyalToplam(d, gOf(kuts[i]), gOf(kuts[j]), kappa, faz, L);
     vx += f*dx/d; vy += f*dy/d;
   }
-  /* (b) ÖBEKLER ARASI — merkezler üzerinden, Γ_top çarpımıyla ölçekli.
-     Denge mesafesi de bileşik sınır tabakalarıyla ölçeklenir: iki bileşiğin
-     tabakaları değdiğinde denge. Kuvvet öbeğin TAMAMINA etki ettiği için
-     üye başına n'e bölünür. */
+  /* (b) ÖBEKLER ARASI — merkezler üzerinden, TOPLU niceliklerle.
+     Bjerknes Γ_A·Γ_B ile, ışıma da bileşik dolanımların ÇARPIMIYLA ölçekli;
+     böylece işaret duyarlılığı öbek düzeyinde de korunur (Γ_A·Γ_B < 0 olan
+     iki öbek arasında ışıma ÇEKİCİ kalır). Kuvvet öbeğin tamamına etki
+     ettiği için üye başına n'e bölünür. */
   for (let c = 0; c < bi.obekler.length; c++){
     if (c === ci) continue;
     const B = bi.obekler[c];
     const dx = A.x - B.x, dy = A.y - B.y, d = Math.hypot(dx, dy);
     if (d < 1e-6) continue;
-    const olcek = Math.abs(A.G) * Math.abs(B.G);          /* Γ_A·Γ_B */
-    const d0e = d0 * Math.max(1, (A.re + B.re)/(2*RE));   /* tabakalar değsin */
-    /* Bjerknes Γ_A·Γ_B ile ölçekli; girdap itmesi de bileşik dolanımlarla */
-    const bj = bagRadyal(d, kappa*olcek/A.n, faz, d0e);
+    const olcek = Math.abs(A.G) * Math.abs(B.G);          /* |Γ_A|·|Γ_B| */
+    const bj = bagRadyal(d, kappa*olcek/A.n, faz);
+    let isim = isimaRadyal(d, A.G, B.G, L/A.n);           /* işaret KORUNUR */
+    /* R2'nin DİNAMİK yüzü (makine açıkken): kararsızlık BİRLEŞİK yapının
+       eseridir — balanssız kompozitin ışıma DUVARI bozuk örülür ve tek ya
+       da ikili gelene sızdırır. Yalnız İTİCİ duvar açılır (isim<0);
+       Bjerknes çekimi ve zıt-işaret çekici ışıma AYNEN kalır. Balanslı
+       yapının duvarı tamdır: iki tabaka artık aynı davranmaz (27.11).
+       Ölçülen gerekçe: 6'lı kompozitin duvarı d=5'te 1,9 — kapı/emiş
+       kanalları (≤0,55) duvarı asla aşamıyordu; tabaka balansa körd ü. */
+    if (MAK_SIZDIR && isim < 0 && A.n <= 2 && B.n >= 3
+        && B.q2 !== undefined && B.q2 > MAK_ESIK){
+      const s = Math.min(1, B.q2/MAK_ESIK - 1);
+      isim *= Math.max(0.12, 1 - s);
+    }
     const gv = GIRDAP_ITME ? -(A_VORT*A.G*B.G)/(A.n*Math.max(1e-6, d)) : 0;
-    const f = -(bj + gv);
+    const f = -(bj + isim + gv);
     vx += f*dx/d; vy += f*dy/d;
   }
   return [vx, vy];
@@ -855,12 +1462,19 @@ let BAG_HIYERARSIK = true;   /* madde 4 — varsayılan AÇIK */
 /* --- N-girdap hareket denklemi + RK4 ------------------------------------ */
 function derivs(kuts){
   const d = [];
+  /* TIKANMA DÜZELTMESİ — ölçüldü, davranış birebir aynı: öbek bilgisi
+     ADIM BAŞINA BİR KEZ hesaplanır. Önce her Kut kendi obekBilgi'sini
+     kuruyordu ⟹ derivs O(n³); RK4 (4 çağrı) + enBuyukHiz (1 çağrı) ve
+     CFL alt-adımlarıyla çarpılınca kalabalık sahne donuyordu. Aynı konum
+     kümesi üzerinde sonuç ÖZDEŞTİR — yalnız tekrar hesap kalkar. */
+  const biOrtak = (BAG_KAPPA && BAG_HIYERARSIK && kuts.length > 1)
+      ? obekBilgi(kuts, BAG_CAP) : null;
   for (let i = 0; i < kuts.length; i++){
     const v = velAt(kuts[i].x, kuts[i].y, kuts, i);
     if (BAG_KAPPA){
       const b = BAG_HIYERARSIK
-        ? bagHiziHiyerarsik(kuts, i, BAG_CAP, BAG_KAPPA, BAG_FAZ, BAG_D0)
-        : bagHizi(kuts, i, BAG_KAPPA, BAG_FAZ);
+        ? bagHiziHiyerarsik(kuts, i, BAG_CAP, BAG_KAPPA, BAG_FAZ, BAG_LAM, biOrtak)
+        : bagHizi(kuts, i, BAG_KAPPA, BAG_FAZ, BAG_LAM);
       v[0] += b[0]; v[1] += b[1];
     }
     d.push(v);
@@ -1027,6 +1641,18 @@ function shellPlan(N){
   return plan;
 }
 
+/* ETKİN YAKALAMA YARIÇAPI — ölçeklenen kipte türetilmiş d_denge'ye bağlanır
+   (1,2×; faz referansı eş-faz). Sabit kipte sürgüden okunur. Sabit eşiğin
+   bitişik yapıları birleştirdiği yeniden-ölçüm kampanyasıyla gösterildi;
+   ölçeklenen eşik Thomson bandını istisnasız korur. */
+function capEff(){
+  const oto = document.getElementById('capOto');
+  if (oto && oto.checked)
+    return 1.2*bagDenge(BAG_KAPPA || 2, 0, BAG_LAM || 1);
+  const s = document.getElementById('cap');
+  return s ? +s.value : 3;
+}
+
 /* --- Bağ öbekleri: yakalama yarıçapına göre bağlantılı bileşenler ------- */
 function clusters(kuts, cap){
   const n = kuts.length, lab = new Array(n).fill(-1);
@@ -1068,6 +1694,16 @@ function clusters(kuts, cap){
    Cepler ancak geometrik olarak değdiğinde birleşir:
         d_bir = R_cep,1 + R_cep,2          ⟹  d_yok = 2·d_bir  (daima)
      Γ_top = g₁+g₂ ≠ 0 ⟹ birleşik cep beslenir ⟹ tek, daha büyük Kut.     */
+/* R1 — YAPISAL BÜTÜNLÜK (makine kuralı): eş yönlüler BAĞ KURAR (kurmak
+   zorundadır) ama asla BİRLEŞİP tek Kut olamaz. Makine açıkken eş-yönlü
+   birleşme eşiği görsel ölçeğe BAĞLANMAZ, gerçek değerinde kalır
+   (d_bir ≈ 4,6×10⁻⁵ r_e; denge aralığı bunun ~3×10⁴ katı ⟹ erişilmez).
+   Zıt-yönlü YOK OLMA eşiği ölçekli kalır — R7 şokları oradan doğar.       */
+let MAK_R1 = false;
+/* R2'nin DİNAMİK yüzü — kararsızlık BİRLEŞİK YAPININ eseridir: balanssız
+   kompozitin ışıma duvarı bozuk örülür ve tek/ikili gelene SIZDIRIR.
+   MAK_SIZDIR makine+kapı anahtarından; MAK_ESIK balans eşiği (Q2).       */
+let MAK_SIZDIR = false, MAK_ESIK = 0.10;
 function rcepUnit(sig){ return 1/Math.sqrt(1+sig); }
 function rcepOf(q, sig){ return Math.abs(gOf(q))*RE*rcepUnit(sig); }
 function dAnnihilate(a, b, sig){ return 2*(rcepOf(a,sig) + rcepOf(b,sig)); }
@@ -1094,7 +1730,10 @@ function olaylariUygula(kuts, sig, olcek, esik){
         const a = kuts[i], b = kuts[j];
         const d = Math.hypot(a.x-b.x, a.y-b.y);
         const zit = gOf(a)*gOf(b) < 0;
-        const lim = (zit ? dAnnihilate(a,b,sig) : dMerge(a,b,sig)) * olcek;
+        /* R1 (makine açıkken): eş-yönlü birleşme GERÇEK eşiğinde — görsel
+           büyütme yalnız zıt-yönlü yok olmaya uygulanır. */
+        const lim = zit ? dAnnihilate(a,b,sig)*olcek
+                        : dMerge(a,b,sig)*(MAK_R1 ? 1 : olcek);
         if (d > lim) continue;
         const gs = gOf(a) + gOf(b);
         /* olay anındaki kalemler. FİZİKSEL impuls: I = Σ Γᵢ(yᵢ, −xᵢ) */
@@ -1230,14 +1869,14 @@ function darbeHizi(p, qx, qy, amp, kal){
   if (Math.abs(dist - p.r) > kal*0.5) return [0, 0];     /* kabuğun içinde mi */
   const ang = Math.atan2(dy, dx);
   const lob = Math.cos(ang - p.th);
-  /* DÜZELTME (12 Ağu 2026): arka lob SIFIRLANMAZ, işareti KORUNUR.
-     Önce  if (lob <= 0) return [0,0]  vardı; bu, aktarılan momentumun TAM
-     YARISINI atıyordu:  ∫cos²θ dθ = π  ama kırpıkta  ∫max(0,cosθ)cosθ dθ = π/2.
+  /* ARKA LOB SIFIRLANMAZ, işareti KORUNUR.
+     lob ≤ 0'ı kırpmak aktarılan momentumun TAM YARISINI atmak olur:
+     ∫cos²θ dθ = π  ama kırpıkta  ∫max(0,cosθ)cosθ dθ = π/2.
      Arka lob "ters" değildir: orada lob<0 ⟹ δv radyal İÇERİ (seyrelme, kaynağa
      doğru çekilme), ama radyal yön de ters olduğundan momentum yine +Î'da çıkar.
      Örnek: kaynak orijinde, Î=+x, Kut (−r,0)'da ⟹ lob=−1, r̂=(−1,0),
      v = (−1)·(−1,0) = (+1,0) ✓. Dipolün ÖN yarısı iter, ARKA yarısı çeker,
-     ikisi de momentumu AYNI yönde taşır. Kırpmak δP<0 yarım-dalgayı silmekti. */
+     ikisi de momentumu AYNI yönde taşır. Kırpmak δP<0 yarım-dalgayı silmek olur. */
   const dv = CC * amp * lob / Math.sqrt(Math.max(1, dist));
   return [dv*dx/dist, dv*dy/dist];        /* RADYAL; lob<0 ise içeri = çekme */
 }
@@ -1254,8 +1893,8 @@ function darbeToplam(darbeler, qx, qy, amp, kal){
 /* --- "Yanına ekle" konumu ----------------------------------------------
    Bağ ölçütü EN YAKIN Kut'a olan 4B uzaklıktır: √(dx²+dy²+dw²) ≤ cap.
    Bu yüzden konum ağırlık merkezine göre DEĞİL, en dıştaki Kut'a göre
-   hesaplanır; w farkı da bütçeden düşülür. İlk sürüm merkeze göre
-   hesaplıyordu ve bağ kurmuyordu — sınama yakaladı.                      */
+   hesaplanır; w farkı da bütçeden düşülür. Merkeze göre hesaplamak bağ
+   kurdurmaz; öz-sınama bu koşulu denetler.                               */
 function yanPozisyon(kuts, cap, wnew){
   if (!kuts.length) return [0, 0, wnew];
   const c = centroid(kuts);
@@ -1592,10 +2231,9 @@ function selfTests(){
 
   /* MERKEZ AYRICALIĞI: ters Kut merkezde yapıyı bozmaz, dışında bozar */
   /* DİKKAT — bozma ZORUNLU. Bozmasız ölçüm yalnız "denge noktası mı?"
-     sorusunu yanıtlar, "kararlı mı?" sorusunu YANITLAMAZ. İlk sürüm
-     bozmasızdı: merkezdeki ters Kut için 3×10⁻¹² veriyordu ve "bozmaz"
-     diye okunuyordu. Bozma verilince aynı konfigürasyon 0,87 ile dağılıyor.
-     Denge ≠ kararlılık. */
+     sorusunu yanıtlar, "kararlı mı?" sorusunu YANITLAMAZ: merkezdeki ters
+     Kut bozmasız ölçümde ~3×10⁻¹² verir ve "bozmaz" diye okunur; bozma
+     verilince aynı konfigürasyon 0,87 ile dağılır. Denge ≠ kararlılık. */
   function driftOf(arr, adim, eps){
     const ref = pairDists(arr);
     const e = (eps === undefined) ? 0.012 : eps, faz = 2.399963;
@@ -1889,48 +2527,138 @@ function selfTests(){
   for (let i = 0; i < KATALOG.length; i++) if (katalogKur(i).length < 2) hepGecerli = false;
   add('katalog girdileri geçerli (≥2 Kut)', hepGecerli, 0);
 
-  /* ===== 18. SINIR TABAKASI BAĞI ====================================== */
-  const kSakla = BAG_KAPPA, fSakla = BAG_FAZ, d0Sakla = BAG_D0;
-  const D0T = 1.5;                                  /* sınav bağ mesafesi */
-  function ayrimSonrasi(kappa, faz, adim, dBas){
-    BAG_KAPPA = kappa; BAG_FAZ = faz; BAG_D0 = D0T;
-    const a = [{x:-dBas/2,y:0,w:0,g:1},{x:dBas/2,y:0,w:0,g:1}];
+  /* ===== 18. SINIR TABAKASI BAĞI + IŞIMA ==============================
+     Kuvvet yasası:  F(d) = κcos(faz)/d²  −  λ·gᵢgⱼ·K⁵/d⁵
+     Denge TÜRETİLİR:  d_denge = (λK⁵/(κcos faz))^(1/3)                  */
+  const kSakla = BAG_KAPPA, fSakla = BAG_FAZ, lamSakla = BAG_LAM;
+  const KT = 2, LT = 1;                     /* κ=2, λ=1 ⟹ d_denge = 1,4142 */
+  const DT = bagDenge(KT, 0, LT);
+  function ayrimSonrasi(kappa, faz, adim, dBas, lam, gB){
+    BAG_KAPPA = kappa; BAG_FAZ = faz; BAG_LAM = (lam === undefined) ? LT : lam;
+    const a = [{x:-dBas/2,y:0,w:0,g:1},{x:dBas/2,y:0,w:0,g:(gB===undefined)?1:gB}];
     for (let s = 0; s < adim; s++) stepRK4(a, 0.004);
     return Math.hypot(a[1].x-a[0].x, a[1].y-a[0].y);
   }
-  /* Kuvvetin işareti: d>d₀ çekici, d<d₀ itici, d=d₀ sıfır */
-  add('d = d₀ ⟹ kuvvet sıfır (DENGE)',
-      Math.abs(bagRadyal(D0T, 1.5, 0, D0T)) < 1e-15, Math.abs(bagRadyal(D0T,1.5,0,D0T)));
-  add('d > d₀ ⟹ çekici (pozitif)', bagRadyal(3, 1.5, 0, D0T) > 0, bagRadyal(3,1.5,0,D0T));
-  add('d < d₀ ⟹ itici (negatif) — çökme engellenir',
-      bagRadyal(0.5, 1.5, 0, D0T) < 0, bagRadyal(0.5,1.5,0,D0T));
-  add('uzakta Bjerknes kuyruğu ~1/d²',
-      Math.abs(bagRadyal(40,1,0,D0T)/bagRadyal(80,1,0,D0T) - 4) < 0.08,
-      Math.abs(bagRadyal(40,1,0,D0T)/bagRadyal(80,1,0,D0T) - 4));
-  /* κ = 0 iken davranış DEĞİŞMEMELİ (eski sınamalar geçerli kalsın) */
-  const dKapali = ayrimSonrasi(0, 0, 3000, 2);
-  add('κ=0: ayrım korunur (eski davranış bozulmadı)', Math.abs(dKapali-2) < 1e-6,
+  /* (a) Bjerknes kanalı artık SAF ÇEKİCİ — kısa erim itmesi burada değil */
+  add('Bjerknes kanalı her mesafede çekici',
+      [0.2,1,DT,5,50].every(d => bagRadyal(d, KT, 0) > 0), 0);
+  add('Bjerknes ~1/d²',
+      Math.abs(bagRadyal(40,1,0)/bagRadyal(80,1,0) - 4) < 1e-12,
+      Math.abs(bagRadyal(40,1,0)/bagRadyal(80,1,0) - 4));
+  /* (b) Işıma kanalı — işaret duyarlı ve 1/d⁵ */
+  add('ışıma eş yönlüde İTİCİ', isimaRadyal(2, 1, 1, LT) < 0, isimaRadyal(2,1,1,LT));
+  add('ışıma zıt yönlüde ÇEKİCİ', isimaRadyal(2, 1, -1, LT) > 0, isimaRadyal(2,1,-1,LT));
+  add('ışıma ~1/d⁵',
+      Math.abs(isimaRadyal(2,1,1,1)/isimaRadyal(4,1,1,1) - 32) < 1e-9,
+      Math.abs(isimaRadyal(2,1,1,1)/isimaRadyal(4,1,1,1) - 32));
+  /* (c) EŞ yönlü toplam: d_denge'de sıfır, üstünde çekici, altında itici */
+  add('eş yönlü: d_denge\'de kuvvet SIFIR',
+      Math.abs(radyalToplam(DT, 1, 1, KT, 0, LT)) < 1e-12,
+      Math.abs(radyalToplam(DT, 1, 1, KT, 0, LT)));
+  add('eş yönlü: d > d_denge ⟹ çekici',
+      radyalToplam(DT*1.3, 1, 1, KT, 0, LT) > 0, radyalToplam(DT*1.3,1,1,KT,0,LT));
+  add('eş yönlü: d < d_denge ⟹ itici (çökme engellenir)',
+      radyalToplam(DT*0.7, 1, 1, KT, 0, LT) < 0, radyalToplam(DT*0.7,1,1,KT,0,LT));
+  /* (d) ⭐ ZIT yönlü: HER mesafede çekici — KÖK YOK, ters Kut duramaz */
+  add('zıt yönlü: HER mesafede çekici (denge YOK)',
+      [1e-3,0.01,0.1,0.5,1,DT,3,20,200].every(
+        d => radyalToplam(d, 1, -1, KT, 0, LT) > 0), 0);
+  add('bagKokleri: zıt işarette kök YOK bildirir',
+      bagKokleri(KT, 0, LT, 1, -1).cekici === true, 0);
+  /* (e) Kapalı biçim = sayısal kök */
+  {
+    let alt = 0.05, ust = 20;
+    for (let it = 0; it < 200; it++){
+      const m = 0.5*(alt+ust);
+      if (radyalToplam(m, 1, 1, KT, 0, LT) > 0) ust = m; else alt = m;
+    }
+    add('d_denge kapalı biçimi = sayısal kök',
+        Math.abs(0.5*(alt+ust) - DT) < 1e-6, Math.abs(0.5*(alt+ust) - DT));
+  }
+  add('bagDenge = (λK⁵/κ)^(1/3)',
+      Math.abs(DT - Math.cbrt(LT*K5/KT)) < 1e-15, Math.abs(DT - Math.cbrt(LT*K5/KT)));
+  /* (f) κ = 0 ve λ = 0 iken kanal susmalı */
+  const dKapali = ayrimSonrasi(0, 0, 3000, 2, 0);
+  add('κ=λ=0: ayrım korunur (eski davranış bozulmadı)', Math.abs(dKapali-2) < 1e-6,
       Math.abs(dKapali-2));
-  /* AYNI faz ⟹ d₀'a doğru ÇEKER (2'den başlayıp küçülür) */
-  const dCek = ayrimSonrasi(1.5, 0, 3000, 2);
-  add('aynı faz ⟹ d₀\'a doğru çeker (2 → küçülür)', dCek < 1.98 && dCek > 1.0, 2-dCek);
-  /* ZIT faz ⟹ İTİCİ: ayrım büyür */
-  const dIt = ayrimSonrasi(1.5, Math.PI, 3000, 2);
-  add('zıt faz ⟹ itici (ayrım büyür)', dIt > 2.02, dIt-2);
-  /* faz = π/2 ⟹ etkisiz */
-  const dNotr = ayrimSonrasi(1.5, Math.PI/2, 3000, 2);
-  add('faz = π/2 ⟹ kanal etkisiz', Math.abs(dNotr-2) < 1e-6, Math.abs(dNotr-2));
-  /* Denge noktasında başlayan çift ORADA KALIR — çökmez, savrulmaz */
-  const dDenge = ayrimSonrasi(1.5, 0, 6000, D0T);
-  add('d₀\'da başlayan çift orada kalır (çökmez)', Math.abs(dDenge-D0T) < 0.05,
-      Math.abs(dDenge-D0T));
-  BAG_KAPPA = kSakla; BAG_FAZ = fSakla; BAG_D0 = d0Sakla;
-  /* Koparma işi: pozitif ve yakınlaştıkça büyür */
-  add('koparma işi W > 0', koparmaIsi(D0T, 1.5, 0, D0T) > 0, koparmaIsi(D0T,1.5,0,D0T));
+  /* (g) Faz: aynı fazda çeker, zıt fazda Bjerknes işaret çevirir */
+  const dCek = ayrimSonrasi(KT, 0, 3000, 2.4);
+  add('aynı faz ⟹ d_denge\'ye doğru çeker', dCek < 2.35, 2.4-dCek);
+  const dIt = ayrimSonrasi(KT, Math.PI, 3000, 2.4);
+  add('zıt faz ⟹ itici (ayrım büyür)', dIt > 2.42, dIt-2.4);
+  /* (h) Denge noktasında başlayan EŞ çift orada kalır */
+  const dDenge = ayrimSonrasi(KT, 0, 6000, DT);
+  add('d_denge\'de başlayan eş çift orada kalır', Math.abs(dDenge-DT) < 0.03,
+      Math.abs(dDenge-DT));
+  /* (i) ⭐ ZIT çift d_denge'de DURAMAZ — içeri düşer.
+     ÖLÇÜT: ulaşılan EN KÜÇÜK ayrım. Son ayrımı ölçmek yanıltır, çünkü 1/d⁵
+     ıraksadığı için d→0'a giden çift sonlu adımda savrulur; gerçek koşumda
+     o noktaya varmadan YOK OLMA olayı tetiklenir. Ölçtüğümüz şey fiziğin
+     yönü: ayrım küçülüyor mu. */
+  {
+    BAG_KAPPA = KT; BAG_FAZ = 0; BAG_LAM = LT;
+    const zc = [{x:-DT/2,y:0,w:0,g:1},{x:DT/2,y:0,w:0,g:-1}];
+    let enKucuk = DT;
+    for (let s = 0; s < 400; s++){
+      stepUyarlamali(zc, 0.004);
+      const d = Math.hypot(zc[1].x-zc[0].x, zc[1].y-zc[0].y);
+      if (d < enKucuk) enKucuk = d;
+      if (d < 1e-3) break;                 /* yok olma bölgesine indi */
+    }
+    /* Eş çift AYNI koşumda kalmalı — karşılaştırma şart */
+    const ec = [{x:-DT/2,y:0,w:0,g:1},{x:DT/2,y:0,w:0,g:1}];
+    let esEnKucuk = DT, esEnBuyuk = DT;
+    for (let s = 0; s < 400; s++){
+      stepUyarlamali(ec, 0.004);
+      const d = Math.hypot(ec[1].x-ec[0].x, ec[1].y-ec[0].y);
+      esEnKucuk = Math.min(esEnKucuk, d); esEnBuyuk = Math.max(esEnBuyuk, d);
+    }
+    add('zıt çift d_denge\'de DURAMAZ — ayrım DÜŞER', enKucuk < DT*0.5, DT - enKucuk);
+    add('AYNI koşumda eş çift d_denge\'de KALIR',
+        Math.abs(esEnKucuk-DT) < 0.03 && Math.abs(esEnBuyuk-DT) < 0.03,
+        Math.max(Math.abs(esEnKucuk-DT), Math.abs(esEnBuyuk-DT)));
+  }
+  /* (i-2) ⭐⭐ ASIL SINAV — OLAY KANALI DEVREDE: ters Kut YOK OLUYOR mu?
+     Fizik "orada kalamaz" diyor. Gerçek koşum bunu göstermek zorunda.
+     Ölçüt "d < 0,1" DEĞİL — yok olma eşiği d_yok = 4R_cep(ölçekli) = 0,918;
+     çift oraya varmadan olay tetiklenir. Doğru ölçüt: OLAY OLUYOR MU. */
+  {
+    BAG_KAPPA = KT; BAG_FAZ = 0; BAG_LAM = LT;
+    const hSak = BAG_HIYERARSIK; BAG_HIYERARSIK = false;
+    const olcekT = 1e4;
+    const zc2 = [{x:-DT/2,y:0,w:0,g:1},{x:DT/2,y:0,w:0,g:-1}];
+    let yokSay = 0, tur = 0;
+    for (let s = 0; s < 600; s++){
+      stepUyarlamali(zc2, 0.004);
+      yokSay += olaylariUygula(zc2, SIGP0, olcekT).yok;
+      tur = s;
+      if (zc2.length < 2) break;
+    }
+    /* Eş çift AYNI koşulda YOK OLMAMALI — olay seçici olmalı */
+    const ec2 = [{x:-DT/2,y:0,w:0,g:1},{x:DT/2,y:0,w:0,g:1}];
+    let esYok = 0, esBir = 0;
+    for (let s = 0; s < 600; s++){
+      stepUyarlamali(ec2, 0.004);
+      const r = olaylariUygula(ec2, SIGP0, olcekT);
+      esYok += r.yok; esBir += r.bir;
+      if (ec2.length < 2) break;
+    }
+    BAG_HIYERARSIK = hSak;
+    BAG_KAPPA = kSakla; BAG_FAZ = fSakla; BAG_LAM = lamSakla;
+    add('⭐ ters Kut YOK OLUYOR (olay tetiklendi)', yokSay === 1, yokSay);
+    add('⭐ yok olan çiftten Kut KALMIYOR', zc2.length === 0, zc2.length);
+    add('yok olma hızlı gerçekleşiyor (< 100 tur)', tur < 100, tur);
+    add('AYNI koşulda eş çift YOK OLMUYOR', esYok === 0, esYok);
+    add('AYNI koşulda eş çift BİRLEŞMİYOR (d_denge > d_bir)', esBir === 0, esBir);
+    add('eş çiftin iki Kut\'u da duruyor', ec2.length === 2, ec2.length);
+  }
+  BAG_KAPPA = kSakla; BAG_FAZ = fSakla; BAG_LAM = lamSakla;
+  /* (j) Koparma işi: pozitif ve yakınlaştıkça büyür */
+  add('koparma işi W > 0', koparmaIsi(DT, KT, 0, LT) > 0, koparmaIsi(DT,KT,0,LT));
   add('yakınsa koparmak daha çok iş ister',
-      koparmaIsi(D0T, 1.5, 0, D0T) > koparmaIsi(6, 1.5, 0, D0T), 0);
+      koparmaIsi(DT, KT, 0, LT) > koparmaIsi(6, KT, 0, LT), 0);
   add('κ büyüdükçe koparma işi büyür',
-      koparmaIsi(D0T, 3, 0, D0T) > koparmaIsi(D0T, 1, 0, D0T), 0);
+      koparmaIsi(DT, 2*KT, 0, LT) > koparmaIsi(DT, KT, 0, LT), 0);
   /* ⭐ ASIL SINAV — GERİ ÇAĞIRMA KUVVETİ.
      "Bağı koparmak ekstra etki ister" demek, ayrım bozulduğunda onu geri
      çeken bir kuvvet olması demektir. Doğru sınav budur.
@@ -1940,42 +2668,42 @@ function selfTests(){
      BAŞKA bir Kut'un rekabetiyle kopar. Bu, modelin yapısal bir özelliğidir
      ve kayda geçirilmelidir. */
   function geriCagirma(kappa, dBas, adim){
-    BAG_KAPPA = kappa; BAG_FAZ = 0; BAG_D0 = D0T;
+    BAG_KAPPA = kappa; BAG_FAZ = 0; BAG_LAM = LT;
     const a = [{x:-dBas/2,y:0,w:0,g:1},{x:dBas/2,y:0,w:0,g:1}];
     for (let s = 0; s < adim; s++) stepRK4(a, 0.004);
     return Math.hypot(a[1].x-a[0].x, a[1].y-a[0].y);
   }
   const gAcik  = geriCagirma(2.5, 2.4, 8000);   /* d₀=1,5'ten uzaklaştırıldı */
   const gKapali= geriCagirma(0,   2.4, 8000);
-  BAG_KAPPA = kSakla; BAG_FAZ = fSakla; BAG_D0 = d0Sakla;
+  BAG_KAPPA = kSakla; BAG_FAZ = fSakla; BAG_LAM = lamSakla;
   add('bağ AÇIK: bozulan ayrım d₀\'a GERİ ÇEKİLİYOR', gAcik < 2.3, 2.4-gAcik);
   add('bağ KAPALI: geri çağırma YOK (ayrım olduğu yerde kalır)',
       Math.abs(gKapali-2.4) < 1e-6, Math.abs(gKapali-2.4));
   add('geri çağırma yalnız bağ kanalından geliyor', gAcik < gKapali - 0.05,
       gKapali - gAcik);
-  /* Rekabet sınavı: üçüncü Kut ortağı çalabilir mi? Bağ güçlendikçe zorlaşmalı. */
+  /* Rekabet sınavı: üçüncü Kut ortağı çalabilir mi? Bağ güçlendikçe zorlaşmalı.
+     Işıma kanallı yasada kısa erimli itme 1/d⁵ ile diktir; çift d_denge'de
+     sertçe tutulur. Ölçüm: κ→0'da maks ayrım 4,68 · κ=6'da 1,414 (tam denge)
+     — bağ çifti KORUR. Kısa erimli itmesi türetilmemiş yasalarda bu koruma
+     sağlanamaz; sınav, ışıma kanalının gerekliliğinin bağımsız bir denetimidir. */
   function calindiMi(kappa){
-    BAG_KAPPA = kappa; BAG_FAZ = 0; BAG_D0 = D0T;
-    const a = [{x:-0.75,y:0,w:0,g:1},{x:0.75,y:0,w:0,g:1},{x:2.6,y:0,w:0,g:1}];
-    let mx = 1.5;
-    for (let s = 0; s < 20000; s++){
-      stepRK4(a, 0.004);
+    BAG_KAPPA = kappa; BAG_FAZ = 0; BAG_LAM = LT;
+    const a = [{x:-DT/2,y:0,w:0,g:1},{x:DT/2,y:0,w:0,g:1},{x:DT*1.9,y:0,w:0,g:1}];
+    let mx = DT;
+    for (let s = 0; s < 4000; s++){
+      stepUyarlamali(a, 0.004);
       mx = Math.max(mx, Math.hypot(a[1].x-a[0].x, a[1].y-a[0].y));
     }
     return mx;
   }
-  /* ad çakışması olmasın: selfTests içinde c0 zaten kullanılıyor */
-  const rek0 = calindiMi(0), rek3 = calindiMi(3.5);
-  BAG_KAPPA = kSakla; BAG_FAZ = fSakla; BAG_D0 = d0Sakla;
-  /* DİKKAT — "bağ çifti korur" İDDİASI YANLIŞ ÇIKTI (ölçüldü: bağ açıkken
-     maks ayrım 0,037 DAHA BÜYÜK). Sebebi öğretici: bağ kanalı SEÇİCİ DEĞİL,
-     bütün çiftlere etki eder — üçüncü Kut'u da çeker. Yani bağ, çifti
-     yabancıya karşı korumaz; yapının tamamını sıkıştırır.
-     Doğru iddia: bağ SONUCU DEĞİŞTİRİR, ama koruyucu değildir. */
+  const rek0 = calindiMi(0.001), rek3 = calindiMi(6);
+  BAG_KAPPA = kSakla; BAG_FAZ = fSakla; BAG_LAM = lamSakla;
   add('bağ rekabetin sonucunu değiştirir', Math.abs(rek3 - rek0) > 1e-6,
       Math.abs(rek3 - rek0));
-  add('bağ seçici DEĞİL: üçüncü Kut\'u da çeker (korumaz)', rek3 > rek0 - 1e-9,
-      rek3 - rek0);
+  add('⭐ bağ artık çifti KORUYOR (eski kayıt süpersede)', rek3 < rek0 - 0.5,
+      rek0 - rek3);
+  add('güçlü bağda çift d_denge\'de kalıyor', Math.abs(rek3 - DT) < 0.05,
+      Math.abs(rek3 - DT));
 
   /* ===== 19. BİLEŞİK SINIR TABAKASI (madde 3) ========================== */
   function siki(N, g){
@@ -2024,76 +2752,150 @@ function selfTests(){
   const hSakla = BAG_HIYERARSIK;
   /* Tek Kutlarda hiyerarşik biçim BASİT biçime indirgenmeli */
   const iki = [{x:-1.2,y:0,w:0,g:1},{x:1.2,y:0,w:0,g:1}];
-  const vB = bagHizi(iki, 0, 2.0, 0);                       /* basit */
-  const vH = bagHiziHiyerarsik(iki, 0, 0.5, 2.0, 0, 1.5);   /* cap küçük ⟹ ayrı öbek */
+  const vB = bagHizi(iki, 0, 2.0, 0, 1);                       /* basit */
+  const vH = bagHiziHiyerarsik(iki, 0, 0.5, 2.0, 0, 1);   /* cap küçük ⟹ ayrı öbek */
   add('tek Kutlarda hiyerarşik ≡ basit biçim',
       Math.abs(vH[0]-vB[0]) < 1e-12 && Math.abs(vH[1]-vB[1]) < 1e-12,
       Math.abs(vH[0]-vB[0]));
   /* Aynı öbekteki üyeler doğrudan bağlanır (öbek içi terim) */
-  const ic = bagHiziHiyerarsik(iki, 0, 5, 2.0, 0, 1.5);
+  const ic = bagHiziHiyerarsik(iki, 0, 5, 2.0, 0, 1);
   add('öbek içi bağ çalışıyor', Math.abs(ic[0]) > 1e-9, Math.abs(ic[0]));
-  /* İki AYRI öbek: kuvvet Γ_A·Γ_B ile ölçekli — güçlü öbek daha çok çeker */
-  /* DİKKAT: üyeleri TAM d₀ aralığına koy. Daha yakın konurlarsa öbek İÇİ
-     itme (d<d₀) ölçümü ezer ve öbekler arası terim hiç görünmez — ilk
-     kurgumda 0,3 aralık kullanılmıştı ve −88,9 çıkmıştı. */
-  const D0H = 1.5;
+  /* İki AYRI öbek: kuvvet Γ_A·Γ_B ile ölçekli — güçlü öbek daha çok çeker.
+     DİKKAT — ölçüm YALITILMALI: öbek İÇİ kuvvet ölçümü seyreltiyor. İlk
+     kurguda üyeler 1,5 aralıkla konmuştu; iç kuvvet 0,144 iken öbekler arası
+     yalnız 0,016 idi ve oran 3 yerine 1,196 çıkıyordu — sınama YANLIŞ ŞEYİ
+     ölçüyordu. Üyeler TAM d_denge'ye konursa iç kuvvet sıfırlanır ve geriye
+     yalnız öbekler arası terim kalır. */
+  const DH = bagDenge(2.0, 0, 1);              /* κ=2, λ=1 ⟹ 1,4142 */
+  /* Öbekler UZAK olmalı: ışıma 1/d⁵ ile düştüğü için ancak orada Bjerknes'in
+     saf Γ_A·Γ_B ölçeklemesi görünür. d=16'da ışıma (2,6) çiftinde katkının
+     %16'sını yiyor ve oran 3 yerine 2,57 çıkıyordu — sınama YANLIŞ ŞEYİ
+     ölçüyordu. d=120'de ışıma/Bjerknes ≈ 10⁻⁵, yalıtım temiz. */
+  const XH = 60;
   function obekCifti(gA, gB){
-    return [{ x:-8,       y:0, w:0, g:gA }, { x:-8+D0H,  y:0, w:0, g:gA },
-            { x: 8,       y:0, w:0, g:gB }, { x: 8+D0H,  y:0, w:0, g:gB }];
+    return [{ x:-XH,     y:0, w:0, g:gA }, { x:-XH+DH, y:0, w:0, g:gA },
+            { x: XH,     y:0, w:0, g:gB }, { x: XH+DH, y:0, w:0, g:gB }];
   }
-  /* cap = 2 > d₀ ⟹ ikişerli öbekler; aradaki ~16 ⟹ ayrı öbekler */
-  const f11 = bagHiziHiyerarsik(obekCifti(1,1), 0, 2, 2.0, 0, D0H)[0];
-  const f13 = bagHiziHiyerarsik(obekCifti(1,3), 0, 2, 2.0, 0, D0H)[0];
-  add('öbek-öbek kuvveti Γ_A·Γ_B ile ölçekli', Math.abs(f13) > Math.abs(f11)*2,
-      Math.abs(f13/f11));
+  /* cap = 2 > d_denge ⟹ ikişerli öbekler; aradaki 120 ⟹ ayrı öbekler */
+  const f11 = bagHiziHiyerarsik(obekCifti(1,1), 0, 2, 2.0, 0, 1)[0];
+  const f13 = bagHiziHiyerarsik(obekCifti(1,3), 0, 2, 2.0, 0, 1)[0];
+  add('öbek içi kuvvet d_denge\'de yalıtıldı (≈0)',
+      Math.abs(radyalToplam(DH, 1, 1, 2.0, 0, 1)) < 1e-12,
+      Math.abs(radyalToplam(DH, 1, 1, 2.0, 0, 1)));
+  add('uzakta Bjerknes baskın (ışıma/Bjerknes < 1e-3)',
+      Math.abs(isimaRadyal(2*XH, 2, 6, 1)/bagRadyal(2*XH, 2.0*12, 0)) < 1e-3,
+      Math.abs(isimaRadyal(2*XH, 2, 6, 1)/bagRadyal(2*XH, 2.0*12, 0)));
+  add('öbek-öbek kuvveti Γ_A·Γ_B ile ölçekli (oran ≈ 3)',
+      Math.abs(f13/f11 - 3) < 0.02, Math.abs(f13/f11 - 3));
   add('öbek-öbek kuvveti çekici (birbirine doğru)', f11 > 0, f11);
+  /* ⭐ ÖLÇEK DEĞİŞMEZLİĞİ — gerilemenin kilidi.
+     d₀ kaldırılırken ışımanın g bağımlılığı eksik kalmış ve BÜYÜK öbekler
+     birbirine gömülüyordu (7–7'de merkez 8,95 · bileşik yarıçap toplamı 14).
+     Doğru ölçekleme d_denge ∝ N vermeli — yani bileşik tabakayla aynı oranda. */
+  {
+    const oranlar = [1,2,3,4,7,10,20].map(N => bagDenge(2, 0, 1, N, N)/N);
+    const enSapma = Math.max.apply(null, oranlar.map(o => Math.abs(o - oranlar[0])));
+    add('⭐ d_denge öbek boyutuyla DOĞRUSAL (d/N sabit)', enSapma < 1e-12, enSapma);
+    const paylar = [1,2,3,4,7,10,20].map(N => bagDenge(2, 0, 1, N, N)/(2*N));
+    add('⭐ d_denge/(r_e A + r_e B) ÖLÇEK DEĞİŞMEZ',
+        Math.max.apply(null, paylar.map(p => Math.abs(p - paylar[0]))) < 1e-12, 0);
+    add('tek Kut ölçeği eski biçime indirgenir',
+        Math.abs(bagDenge(2,0,1,1,1) - Math.cbrt(K5/2)) < 1e-12, 0);
+  }
   BAG_HIYERARSIK = hSakla;
 
-  /* ===== 21. GİRDAP İTMESİ — ENGEL + KUYU ============================== */
+  /* ===== 21. ÇÜRÜTÜLEN A/d TERİMİ — yalnız KAYIT =========================
+     Bu bölüm eskiden `A d² − κd + κd₀ = 0` engel+kuyu kapalı biçimini
+     sınıyordu. O yapının TAMAMI §8.12'de çürütüldü (işaret, üstel, büyüklük)
+     ve §8.14'te d₀ ile birlikte kaldırıldı. Sınamalar silinmedi ama artık
+     yalnız terimin KENDİSİNİ, tarihsel kayıt olarak denetliyor.            */
   const gSakla = GIRDAP_ITME;
+  add('A = 2πK² = 4π ≈ 12,566', Math.abs(A_VORT - 4*Math.PI) < 1e-12,
+      Math.abs(A_VORT - 4*Math.PI));
+  add('çürütülen terim varsayılan KAPALI', GIRDAP_ITME === false || gSakla === false, 0);
+  /* Açılırsa hâlâ eklenebiliyor mu (kayıt bütünlüğü) */
   GIRDAP_ITME = true;
-  const Av = A_VORT, dz = 1.5;
-  add('A = 2πK² = 4π ≈ 12,566', Math.abs(Av - 4*Math.PI) < 1e-12,
-      Math.abs(Av - 4*Math.PI));
-  /* Eşik: κ_min = 4·A·d₀ */
-  const kmin = 4*Av*dz;
-  add('κ_min = 4·A·d₀ ≈ 75,4', Math.abs(kmin - 75.398) < 0.01, Math.abs(kmin-75.398));
-  add('κ < κ_min ⟹ kök YOK (kenetlenme olmaz)',
-      bagKokleri(kmin*0.99, 0, dz, 1, 1).yok === true, 0);
-  add('κ > κ_min ⟹ iki kök VAR',
-      !!bagKokleri(kmin*1.01, 0, dz, 1, 1).kuyu, 0);
-  /* Kapalı biçim ↔ sayısal kök: κ = 200 için 1,677 ve 14,239 */
-  const kk200 = bagKokleri(200, 0, dz, 1, 1);
-  add('κ=200 ⟹ kuyu ≈ 1,677', Math.abs(kk200.kuyu - 1.677) < 0.002,
-      Math.abs(kk200.kuyu - 1.677));
-  add('κ=200 ⟹ engel tepesi ≈ 14,239', Math.abs(kk200.tepe - 14.239) < 0.01,
-      Math.abs(kk200.tepe - 14.239));
-  /* Kökler gerçekten kuvveti sıfırlıyor mu? */
-  add('köklerde radyal kuvvet sıfır',
-      Math.abs(radyalToplam(kk200.kuyu, 1, 1, 200, 0, dz)) < 1e-9 &&
-      Math.abs(radyalToplam(kk200.tepe, 1, 1, 200, 0, dz)) < 1e-9,
-      Math.abs(radyalToplam(kk200.tepe, 1, 1, 200, 0, dz)));
-  /* Bölge işaretleri: iç itici, orta çekici, dış itici */
-  add('kuyunun içi İTİCİ', radyalToplam(kk200.kuyu*0.6, 1, 1, 200, 0, dz) < 0,
-      radyalToplam(kk200.kuyu*0.6, 1, 1, 200, 0, dz));
-  add('kuyu–tepe arası ÇEKİCİ', radyalToplam(5, 1, 1, 200, 0, dz) > 0,
-      radyalToplam(5, 1, 1, 200, 0, dz));
-  add('tepenin dışı İTİCİ — sınır tabakası uzaklaştırıyor',
-      radyalToplam(kk200.tepe*1.6, 1, 1, 200, 0, dz) < 0,
-      radyalToplam(kk200.tepe*1.6, 1, 1, 200, 0, dz));
-  /* ZIT işaret: A<0 ⟹ engel YOK, her yerde çekici (madde 2) */
-  let hepCekici = true;
-  for (const dd of [2, 5, 10, 20, 40, 80])
-    if (radyalToplam(dd, 1, -1, 200, 0, dz) <= 0) hepCekici = false;
-  add('zıt çiftte ENGEL YOK — her mesafede çekici', hepCekici, 0);
-  add('zıt çift eş çiftten daha güçlü çeker (d=20)',
-      radyalToplam(20, 1, -1, 200, 0, dz) > radyalToplam(20, 1, 1, 200, 0, dz),
-      0);
-  /* Kanal kapatılınca eski davranışa dönmeli */
+  const f21a = radyalToplam(3, 1, 1, 2, 0, 1);
   GIRDAP_ITME = false;
-  add('girdap itmesi kapalı ⟹ yalnız Bjerknes',
-      Math.abs(radyalToplam(3, 1, 1, 200, 0, dz) - bagRadyal(3, 200, 0, dz)) < 1e-15,
-      0);
+  const f21k = radyalToplam(3, 1, 1, 2, 0, 1);
+  add('çürütülen terim açılınca eş yönlüde İTİCİ katkı yapar', f21a < f21k, f21k - f21a);
+  add('kapalıyken toplam = Bjerknes + ışıma',
+      Math.abs(f21k - (bagRadyal(3,2,0) + isimaRadyal(3,1,1,1))) < 1e-15, 0);
+  /* ===== 21b. BALANS ÖLÇER =============================================
+     Momentler gerçek (x,y) konumdan hesaplanmalı: düzgün N-gen m<N
+     momentlerini söndürür; bozulma Q2'yi açar; w-salınımı ölçüme GİRMEZ
+     (görsel asimetri ile dinamik asimetriyi ayıran koşul budur).          */
+  {
+    const b6hex = [];
+    for (let k = 0; k < 6; k++)
+      b6hex.push({ x:Math.cos(Math.PI*k/3), y:Math.sin(Math.PI*k/3), w:0 });
+    const b6lab = b6hex.map(() => 0);
+    const b6 = obekBalans(b6hex, b6lab, 0);
+    add('balans: düzgün altıgen Q2 ≈ 0', b6.Q2 < 1e-10, b6.Q2);
+    add('balans: düzgün altıgen Q3 ≈ 0', b6.Q3 < 1e-10, b6.Q3);
+    const b6boz = b6hex.map((p, k) =>
+      ({ x:p.x*(k === 0 ? 1.5 : 1), y:p.y*(k === 0 ? 1.5 : 1), w:0 }));
+    const bb = obekBalans(b6boz, b6lab, 0);
+    add('balans: bozuk altıgen Q2 > %5', bb.Q2 > 0.05, bb.Q2);
+    const b6w = b6hex.map((p, k) => ({ x:p.x, y:p.y, w:(k % 2 ? 0.9 : -0.9) }));
+    const bw = obekBalans(b6w, b6lab, 0);
+    add('balans: w-salınımı ölçüme girmez (gerçek konum)',
+        Math.abs(bw.Q2 - b6.Q2) < 1e-12, Math.abs(bw.Q2 - b6.Q2));
+  }
+
+  /* ===== 21c. SEÇİCİ SÜPÜRME'NİN ÖTELEME ÖNCÜLÜ ========================
+     Uzak darbe alanı öbek üzerinde tekdüzedir ⟹ balanslı öbeğe etkisi
+     ortak ÖTELEMEdir (fark-terimi ~ R_öbek/D ile bastırılır). Koparma
+     tarafı sınamaya alınmadı: "fazlalığın kuyusu sığdır" öncülünün doğru
+     metriği yerel eşiktir; toplam koparma işi uzun-menzil kuyruğunca
+     domine edilir ve yanıltır (elle hesap: oran 0,82). Koparma, canlı
+     koşumda SANAL PATLAMA ile sınanır.                                    */
+  {
+    /* (i) tekdüzelik: kaynak D=14 uzakta, cephe öbeğin üstünde */
+    const sp = { x:-14, y:0, r:14, mag:3, th:0 };
+    const uyeler = [];
+    for (let k = 0; k < 6; k++)
+      uyeler.push([1.41*Math.cos(Math.PI*k/3), 1.41*Math.sin(Math.PI*k/3)]);
+    uyeler.push([0, 0]);
+    let mx = 0, my = 0, kicks = [];
+    for (const [ux, uy] of uyeler){
+      const v = darbeHizi(sp, ux, uy, 0.35, 30);   /* kal büyük: hepsi kabukta */
+      kicks.push(v); mx += v[0]; my += v[1];
+    }
+    mx /= uyeler.length; my /= uyeler.length;
+    const ort = Math.hypot(mx, my);
+    let fark = 0;
+    for (const v of kicks)
+      fark = Math.max(fark, Math.hypot(v[0]-mx, v[1]-my));
+    add('süpürme öncülü: uzak darbe öbekte tekdüze (fark/ort < 0,25)',
+        fark/ort < 0.25, fark/ort);
+    /* alt-öbek dedektörü: iki ayrı beşgen tek etikete düşerse parça=2 */
+    const besgen = cx => {
+      const p = [];
+      for (let k = 0; k < 5; k++)
+        p.push({ x:cx + 1.2*Math.cos(2*Math.PI*k/5), y:1.2*Math.sin(2*Math.PI*k/5), w:0 });
+      return p;
+    };
+    const cift = besgen(-5).concat(besgen(5));
+    const cLab = cift.map(() => 0);
+    const yp2 = obekYapi(cift, cLab, 0);
+    add('alt-öbek dedektörü: iki ayrı beşgen → parça = 2', yp2.parca === 2, yp2.parca);
+    /* ölçeklenen yakalama: 1,2·d_denge; κ büyüyünce denge ve eşik daralır */
+    add('ölçeklenen yakalama: 1,2·d_denge(κ=2,λ=1) = 1,697',
+        Math.abs(1.2*bagDenge(2, 0, 1) - 1.69706) < 1e-4,
+        1.2*bagDenge(2, 0, 1));
+    add('ölçeklenen yakalama κ ile daralır: κ=16 → 0,849',
+        Math.abs(1.2*bagDenge(16, 0, 1) - 0.84853) < 1e-4,
+        1.2*bagDenge(16, 0, 1));
+    /* parça-bazlı balans: birleşik etikette Q2 kırmızı, ama HER parça kendi
+       içinde balanslı — sayım birleştirmesi teşhisinin nicel kilidi */
+    const qBir = obekBalans(cift, cLab, 0).Q2;
+    const qP1 = uyeBalans(cift, yp2.parcalar[0]).Q2;
+    const qP2 = uyeBalans(cift, yp2.parcalar[1]).Q2;
+    add('cap birleştirmesi: birleşik Q2 kırmızı, parçalar balanslı',
+        qBir > 0.25 && qP1 < 0.05 && qP2 < 0.05, qBir);
+  }
+
   GIRDAP_ITME = _girdapSakla;      /* yalıtımı geri ver */
 
   /* ===== 22. GİRDAP İTMESİNİN ÇÜRÜTÜLMESİ ==============================
@@ -2133,7 +2935,7 @@ function selfTests(){
   /* (7) DAVRANIŞSAL KİLİT — kalabalık kümeleşir mi?
          Aynı başlangıç, tek fark girdap itmesi. Kapalıyken BÜZÜLMELİ,
          açıkken SAÇILMALI. Kümeleşmenin kaynağı budur.                    */
-  const f22sakla = [BAG_KAPPA, BAG_FAZ, BAG_D0, BAG_CAP, BAG_HIYERARSIK, GIRDAP_ITME];
+  const f22sakla = [BAG_KAPPA, BAG_FAZ, BAG_LAM, BAG_CAP, BAG_HIYERARSIK, GIRDAP_ITME];
   function f22kur(){
     let s = 4242, K = [];
     const rnd = () => { s = (s*1103515245 + 12345) & 0x7fffffff; return s/0x7fffffff; };
@@ -2152,10 +2954,10 @@ function selfTests(){
     return Math.sqrt(m/K.length);
   }
   function f22kos(itme){
-    BAG_KAPPA = 200; BAG_FAZ = 0; BAG_D0 = 1.5; BAG_CAP = 3;
+    BAG_KAPPA = 20; BAG_FAZ = 0; BAG_LAM = 1; BAG_CAP = 3;
     BAG_HIYERARSIK = true; GIRDAP_ITME = itme;
     const K = f22kur(), r0 = f22rms(K);
-    for (let t = 0; t < 1200; t++) stepRK4(K, 0.004);
+    for (let t = 0; t < 1200; t++) stepUyarlamali(K, 0.004);
     const ob = obekBilgi(K, 3);
     const boy = ob.obekler.map(o => o.n);
     return { oran: f22rms(K)/r0, obek: ob.sayi,
@@ -2163,7 +2965,7 @@ function selfTests(){
              enBuyuk: boy.reduce((m,n) => Math.max(m,n), 0) };
   }
   const f22kapali = f22kos(false), f22acik = f22kos(true);
-  [BAG_KAPPA, BAG_FAZ, BAG_D0, BAG_CAP, BAG_HIYERARSIK, GIRDAP_ITME] = f22sakla;
+  [BAG_KAPPA, BAG_FAZ, BAG_LAM, BAG_CAP, BAG_HIYERARSIK, GIRDAP_ITME] = f22sakla;
   add('itme KAPALI ⟹ topluluk BÜZÜLÜR (kümeleşme)',
       f22kapali.oran < 0.9, f22kapali.oran);
   add('itme AÇIK ⟹ topluluk SAÇILIR (kümeleşme yok)',
@@ -2175,24 +2977,35 @@ function selfTests(){
   add('kümeleşme boyutu Thomson sınırını aşmaz (≤ 9)',
       f22kapali.enBuyuk <= 9, f22kapali.enBuyuk);
 
-  /* (9) ADIM BOYU YAKINSAMASI — kümeleşme sayısal yan ürün DEĞİL.
-         Aynı fiziksel süre, iki farklı adım. Sonuç aynı çıkmalı.
-         Ayrıca güvensiz adımın gerçekten patladığı gösterilir.            */
+  /* (9) UYARLAMALI ADIM — kümeleşme sayısal yan ürün DEĞİL.
+     Işıma kanalı 1/d⁵ ile ıraksadığı için SABİT adım artık yeterli değil
+     (ölçüldü: zıt çift h=0,004'te 283'e savruluyordu). Uyarlamalı adım
+     CFL koşuluyla bunu keser. Sınanan: istenen h ne olursa olsun AYNI
+     fiziksel sonuç çıkmalı — yani sonuç integratöre değil FİZİĞE ait. */
   function f22sure(h, T){
-    BAG_KAPPA = 200; BAG_FAZ = 0; BAG_D0 = 1.5; BAG_CAP = 3;
+    BAG_KAPPA = 20; BAG_FAZ = 0; BAG_LAM = 1; BAG_CAP = 3;
     BAG_HIYERARSIK = true; GIRDAP_ITME = false;
     const K = f22kur(), r0 = f22rms(K), n = Math.round(T/h);
-    for (let t = 0; t < n; t++) stepRK4(K, h);
+    for (let t = 0; t < n; t++) stepUyarlamali(K, h);
     return f22rms(K)/r0;
   }
-  const f22a = f22sure(H_GUVENLI, 3), f22b = f22sure(H_GUVENLI/4, 3);
-  const f22c = f22sure(0.016, 3);
-  [BAG_KAPPA, BAG_FAZ, BAG_D0, BAG_CAP, BAG_HIYERARSIK, GIRDAP_ITME] = f22sakla;
-  add('h = H_GUVENLİ ile h/4 aynı sonucu verir (yakınsak)',
+  const f22a = f22sure(0.004, 3), f22b = f22sure(0.001, 3), f22c = f22sure(0.016, 3);
+  [BAG_KAPPA, BAG_FAZ, BAG_LAM, BAG_CAP, BAG_HIYERARSIK, GIRDAP_ITME] = f22sakla;
+  add('uyarlamalı: h=0,004 ile h=0,001 aynı sonucu verir',
       Math.abs(f22a - f22b)/Math.max(1e-9, f22a) < 0.02, Math.abs(f22a - f22b));
+  add('uyarlamalı: h=0,016 de AYNI sonucu verir (patlamıyor)',
+      Math.abs(f22a - f22c)/Math.max(1e-9, f22a) < 0.05, Math.abs(f22a - f22c));
   add('yakınsak çözüm BÜZÜLME (kümeleşme gerçek)', f22a < 0.95, f22a);
-  add('h = 0,016 güvensiz — patlar', f22c > 2*f22a, f22c);
   add('H_GUVENLİ ≤ 0,004', H_GUVENLI <= 0.004, H_GUVENLI);
+  /* Uyarlamalı adım gerçekten bölüyor mu — katı bölgede alt adım sayısı artmalı */
+  {
+    BAG_KAPPA = 20; BAG_FAZ = 0; BAG_LAM = 1; GIRDAP_ITME = false;
+    const gevsek = [{x:-6,y:0,w:0,g:1},{x:6,y:0,w:0,g:1}];
+    const siki   = [{x:-0.15,y:0,w:0,g:1},{x:0.15,y:0,w:0,g:-1}];
+    const nG = stepUyarlamali(gevsek, 0.016), nS = stepUyarlamali(siki, 0.016);
+    [BAG_KAPPA, BAG_FAZ, BAG_LAM, BAG_CAP, BAG_HIYERARSIK, GIRDAP_ITME] = f22sakla;
+    add('uyarlamalı adım katı bölgede DAHA ÇOK bölüyor', nS > nG, nS - nG);
+  }
 
   /* (10) KALICILIĞIN MEKANİZMASI — FIRLATMA (buharlaşmalı soğuma).
      Ölçüldü (14 rastgele deneme): çekirdek 14/14 büzülüyor. "Yayılma" görülen
@@ -2207,12 +3020,12 @@ function selfTests(){
     const bagli = K.filter((q, i) => ob.obekler[ob.lab[i]].n > 1);
     return bagli.length ? f22rms(bagli) : 0;
   }
-  BAG_KAPPA = 200; BAG_FAZ = 0; BAG_D0 = 1.5; BAG_CAP = 3;
+  BAG_KAPPA = 20; BAG_FAZ = 0; BAG_LAM = 1; BAG_CAP = 3;
   BAG_HIYERARSIK = true; GIRDAP_ITME = false;
   const f22K = f22kur(), f22r0 = f22rms(f22K);
-  for (let t = 0; t < 1200; t++) stepRK4(f22K, H_GUVENLI);
+  for (let t = 0; t < 1200; t++) stepUyarlamali(f22K, H_GUVENLI);
   const f22cek = f22cekirdek(f22K, 3)/f22r0;
-  [BAG_KAPPA, BAG_FAZ, BAG_D0, BAG_CAP, BAG_HIYERARSIK, GIRDAP_ITME] = f22sakla;
+  [BAG_KAPPA, BAG_FAZ, BAG_LAM, BAG_CAP, BAG_HIYERARSIK, GIRDAP_ITME] = f22sakla;
   add('ÇEKİRDEK büzülür — kalıcılığın değişmezi', f22cek < 0.9, f22cek);
   add('çekirdek ölçüsü topluluk ölçüsünden gürültüsüz',
       f22cek <= f22kapali.oran + 1e-9, f22cek - f22kapali.oran);
@@ -2352,6 +3165,263 @@ function selfTests(){
 
     S.kuts = z24kut;
     Object.assign(S.view, z24sakla);
+
+    /* --- SİMÜLASYON HIZI denetimi -------------------------------------
+       KOPUK bir input üzerinde sınanır: gerçek `dtm` sürgüsü sürülürse
+       kullanıcının hız ayarı bozulur — öz-sınama, sınadığı arayüzü
+       BOZMAMALI. */
+    const gercekDtm = $('dtm').value, gercekRun = $('run').checked;
+    add('hız denetimleri arayüzde var',
+        !!$('hHiz') && !!$('hYav') && !!$('hDur'), 0);
+    {
+      const sahte = document.createElement('input');
+      sahte.type = 'range'; sahte.min = $('dtm').min; sahte.max = $('dtm').max;
+      sahte.step = $('dtm').step; sahte.value = '0.5';
+      const bas = +sahte.value;
+      hizAyarla(1.5, sahte);      const h1 = +sahte.value;
+      hizAyarla(1/1.5, sahte);    const h2 = +sahte.value;
+      add('hızlandır çarpanı BÜYÜTÜR', h1 > bas + 1e-9, h1 - bas);
+      add('yavaşlat turu kapatır', Math.abs(h2 - bas) < 0.02, Math.abs(h2 - bas));
+      for (let i = 0; i < 30; i++) hizAyarla(1.5, sahte);
+      add('hız üst sınırı aşmaz', +sahte.value <= +sahte.max + 1e-9, +sahte.value);
+      for (let i = 0; i < 60; i++) hizAyarla(1/1.5, sahte);
+      add('hız alt sınırı aşmaz', +sahte.value >= +sahte.min - 1e-9, +sahte.value);
+    }
+    /* Duraklatma dtm'ye DOKUNMAMALI — yalnız `run` üzerinden olmalı */
+    {
+      const dOnce = $('dtm').value, rOnce = $('run').checked;
+      duraklatCevir();
+      add('duraklat run kutusunu çevirir', $('run').checked !== rOnce, 0);
+      add('duraklat dtm sürgüsüne DOKUNMAZ', $('dtm').value === dOnce, 0);
+      duraklatCevir();
+      add('duraklat geri alınabilir', $('run').checked === rOnce, 0);
+    }
+    /* ⭐ Öz-sınama arayüz durumunu OLDUĞU GİBİ bırakmalı */
+    add('⭐ sınama hız sürgüsünü BOZMAZ', $('dtm').value === gercekDtm, 0);
+    add('⭐ sınama koş/duraklat durumunu BOZMAZ', $('run').checked === gercekRun, 0);
+    add('hız sürgüsü HTML varsayılanında', $('dtm').value === $('dtm').defaultValue, 0);
+  }
+
+  /* ===== 25. BİLEŞİK TABAKANIN GEÇERLİLİĞİ ==============================
+     "Büyük gösterim" (öbeği tek büyük Kut gibi çizmek) her N için aynı
+     kesinlikte DEĞİL. Çizilen halkada |v| = √2c olmalı VE halka daire olmalı.
+     Aşağıdaki sayılar bağımsız Python taramasıyla üretildi; burada koda
+     kilitleniyor ki çizim kademesi sessizce bozulmasın.                     */
+  {
+    const b25 = (N) => {          /* öbeğin gerçekte oturduğu dizilim */
+      const d0 = 1.5;
+      if (N === 2) return [{x:-d0/2,y:0,w:0,g:1},{x:d0/2,y:0,w:0,g:1}];
+      if (N <= 7){
+        const R = d0/(2*Math.sin(Math.PI/N)), out = [];
+        for (let i = 0; i < N; i++){
+          const a = 2*Math.PI*i/N;
+          out.push({ x:R*Math.cos(a), y:R*Math.sin(a), w:0, g:1 });
+        }
+        return out;
+      }
+      const m = N-1, R = Math.max(d0, d0/(2*Math.sin(Math.PI/m)));
+      const out = [{x:0,y:0,w:0,g:1}];
+      for (let i = 0; i < m; i++){
+        const a = 2*Math.PI*i/m;
+        out.push({ x:R*Math.cos(a), y:R*Math.sin(a), w:0, g:1 });
+      }
+      return out;
+    };
+    /* Merkez, düzgün dizilimlerde orijindir; r_e(öbek) = N. */
+    const olc = (N) => bilesikGecerlik(b25(N), 0, 0, N, 360);
+    const g2 = olc(2), g3 = olc(3), g4 = olc(4), g6 = olc(6), g8 = olc(8);
+    add('bileşik |v| hedefi tutar: N=6 tam (hata < 1e-6)',
+        Math.abs(g6.hata) < 1e-6, Math.abs(g6.hata));
+    add('bileşik |v| hedefi tutar: N=8 tam (hata < 1e-6)',
+        Math.abs(g8.hata) < 1e-6, Math.abs(g8.hata));
+    add('N=6 halkası DAİRE (dalgalanma < 1e-3)', g6.dalg < 1e-3, g6.dalg);
+    add('N=4 halkası neredeyse daire (< %2)', g4.dalg < 0.02, g4.dalg);
+    add('N=3 halkası iyi (< %8)', g3.dalg < 0.08, g3.dalg);
+    /* N=2 KÖTÜ olmalı — dipolün eş-yüzeyi daire değil. Bu bir kusur değil,
+       ölçülmüş olgudur; çizimin bunu SÖYLEMESİ gerekir. */
+    add('N=2 halkası daire DEĞİL (> %20) — uyarı gerekli', g2.dalg > 0.20, g2.dalg);
+    add('dalgalanma N ile DÜŞER (2 > 3 > 4 > 6)',
+        g2.dalg > g3.dalg && g3.dalg > g4.dalg && g4.dalg > g6.dalg, 0);
+    /* Kademeler doğru eşleşiyor mu */
+    add('kademe: N=6 → TAM',       gecerlikKademe(g6).ad === 'TAM', 0);
+    add('kademe: N=2 → YAKLAŞIK',  gecerlikKademe(g2).ad === 'YAKLAŞIK', 0);
+    add('kademe: dalgalanma %40 → GEÇERSİZ',
+        gecerlikKademe({dalg:0.40}).ad === 'GEÇERSİZ', 0);
+    /* Γ_top = 0 ⟹ halka yok ⟹ geçerlik ölçülemez (null) */
+    add('Γ_top = 0 öbekte geçerlik null döner',
+        bilesikGecerlik([{x:0,y:0,g:1},{x:1,y:0,g:-1}], 0, 0, 0) === null, 0);
+  }
+
+  /* ===== 26. TERS KUT KÜMEDE DURAMAZ + κ'nın GÜVENLİ PAYI ================
+     Kullanıcı gözlemi: ters Kut bir kümeye bağlanıp dakikalarca duruyordu.
+     Fizik "duramaz" diyordu; eksik olan ışıma kanalıydı. Işıma eklendikten
+     sonra 7 ileri + 1 ters kurulumu κ'ya göre taranınca ikinci bir kısıt
+     çıktı: pay = d_denge/d_bir ≳ 1,8 olmalı, yoksa ters Kut'un düşüşü
+     BİRLEŞME ÇIĞI başlatıyor.                                             */
+  {
+    const s26 = [BAG_KAPPA, BAG_FAZ, BAG_LAM, BAG_CAP, BAG_HIYERARSIK, GIRDAP_ITME];
+    const olcek26 = 1e4, dBir26 = 2*rcepUnit(SIGP0)*olcek26;
+    function kos26(kap){
+      const DTk = bagDenge(kap, 0, 1), m = 7, R = DTk/(2*Math.sin(Math.PI/m));
+      const K = [];
+      for (let i = 0; i < m; i++){
+        const a = 2*Math.PI*i/m;
+        K.push({ x:R*Math.cos(a), y:R*Math.sin(a), w:0, g:1 });
+      }
+      K.push({ x:0, y:0, w:0, g:-1 });
+      let yok = 0, bir = 0;
+      for (let s = 0; s < 400; s++){
+        BAG_KAPPA = kap; BAG_FAZ = 0; BAG_LAM = 1; BAG_CAP = 3;
+        BAG_HIYERARSIK = true; GIRDAP_ITME = false;
+        stepUyarlamali(K, 0.004);
+        const r = olaylariUygula(K, SIGP0, olcek26);
+        yok += r.yok; bir += r.bir;
+        if (!K.some(q => gOf(q) < 0)) break;
+      }
+      return { yok:yok, bir:bir, kalan:K.length, pay:DTk/dBir26,
+               tersVar:K.some(q => gOf(q) < 0),
+               hepsiBirim:K.every(q => Math.abs(gOf(q) - 1) < 1e-9) };
+    }
+    const r2 = kos26(2), r10 = kos26(10), r20 = kos26(20);
+    [BAG_KAPPA, BAG_FAZ, BAG_LAM, BAG_CAP, BAG_HIYERARSIK, GIRDAP_ITME] = s26;
+    /* ⭐ ASIL İDDİA — her κ'da ters Kut GİDER */
+    add('⭐ κ=2: ters Kut kümede DURAMAZ, yok olur', r2.yok === 1 && !r2.tersVar, r2.yok);
+    add('⭐ κ=10: ters Kut kümede DURAMAZ, yok olur', r10.yok === 1 && !r10.tersVar, r10.yok);
+    add('⭐ κ=20: ters Kut kümede DURAMAZ, yok olur', r20.yok === 1 && !r20.tersVar, r20.yok);
+    /* Güvenli pay: κ=2 ve 10 temiz, κ=20 çığ */
+    add('κ=2 (pay 3,08): birleşme çığı YOK, 6 Kut sağlam',
+        r2.bir === 0 && r2.kalan === 6 && r2.hepsiBirim, r2.bir);
+    add('κ=10 (pay 1,80): birleşme çığı YOK', r10.bir === 0 && r10.kalan === 6, r10.bir);
+    add('κ=20 (pay 1,43): BİRLEŞME ÇIĞI olur — kısıt gerçek',
+        r20.bir >= 3 && r20.kalan < 3, r20.bir);
+    add('pay eşiği ölçümle tutarlı (2→3,08 · 10→1,80 · 20→1,43)',
+        Math.abs(r2.pay-3.08) < 0.02 && Math.abs(r10.pay-1.80) < 0.02
+        && Math.abs(r20.pay-1.43) < 0.02, r2.pay);
+    /* Varsayılan κ güvenli bölgede olmalı */
+    add('arayüz varsayılanı κ güvenli payda',
+        bagDenge(+$('bk').defaultValue, 0, +$('blam').defaultValue)/dBir26 >= 1.8,
+        bagDenge(+$('bk').defaultValue, 0, +$('blam').defaultValue)/dBir26);
+  }
+
+  /* --- 27 · EVRENAKI MAKİNASI — karar çekirdeği --------------------------- */
+  {
+    /* 27.1 koparma işinin kapalı biçimi = sayısal integral (AYNI [d,b] aralığı) */
+    const m27d = 2, m27b = Math.max(m27d*40, 200);
+    const m27say = koparmaIsi(m27d, 2, 0, 1);
+    const m27ana = koparmaIsiAnalitik(m27d, 2, 0, 1, 1, 1)
+                 - koparmaIsiAnalitik(m27b, 2, 0, 1, 1, 1);
+    add('MAKİNE 27.1: koparma işi kapalı biçim = sayısal integral',
+        Math.abs(m27say - m27ana)/Math.abs(m27say) < 1e-3,
+        Math.abs(m27say - m27ana)/Math.abs(m27say));
+    /* 27.2 bozan tespiti: 6-gen + aykırı üye → aykırı hem bozan hem en zayıf */
+    const m27k = [];
+    for (let i = 0; i < 6; i++){
+      const a = 2*Math.PI*i/6;
+      m27k.push({ x:1.5*Math.cos(a), y:1.5*Math.sin(a), w:0, g:1 });
+    }
+    m27k.push({ x:2.8*Math.cos(0.4), y:2.8*Math.sin(0.4), w:0, g:1 });
+    const m27u = [0,1,2,3,4,5,6];
+    const m27kr = mkBozanBul(m27k, m27u, 2, 0, 1);
+    add('MAKİNE 27.2 (R3/R4): bozan = aykırı üye ve EN ZAYIF bağlı (uyum)',
+        m27kr.bozan === 6 && m27kr.uyum && m27kr.Q2simdi > 0.10
+        && m27kr.Q2sonra < 0.02, m27kr.Q2sonra);
+    /* 27.3 dengeli 6-gen işlem görmez */
+    const m27den = uyeBalans(m27k, [0,1,2,3,4,5]);
+    add('MAKİNE 27.3: dengeli 6-gen işlem görmez (Q2 ~ 0)',
+        !!m27den && m27den.Q2 < 0.02, m27den ? m27den.Q2 : -1);
+    /* 27.4 sapan (R5): yön DÖNÜŞLE — CCW halkada teğet bileşen pozitif,
+       dışa bileşen pozitif; ters dönen halkada teğet İŞARET DEĞİŞTİRİR */
+    const m27s = mkSapanYonu(m27k, m27u, 6);
+    let m27rx = m27k[6].x - m27s.cx, m27ry = m27k[6].y - m27s.cy;
+    const m27rn = Math.hypot(m27rx, m27ry); m27rx /= m27rn; m27ry /= m27rn;
+    const m27t = m27s.dx*(-m27ry) + m27s.dy*m27rx;   /* teğet bileşen (CCW) */
+    const m27r = m27s.dx*m27rx + m27s.dy*m27ry;      /* dışa bileşen */
+    const m27kT = m27k.map(q => ({ x:q.x, y:q.y, w:0, g:-1 }));
+    const m27sT = mkSapanYonu(m27kT, m27u, 6);
+    const m27tT = m27sT.dx*(-m27ry) + m27sT.dy*m27rx;
+    add('MAKİNE 27.4 (R5): sapan öbeğin DÖNÜŞ yönünde fırlatır, ters halkada ters',
+        m27s.om > 0 && m27t > 0.5 && m27r > 0.3 && m27s.vAt >= 1.2
+        && m27sT.om < 0 && m27tT < -0.5, m27t);
+    /* 27.5 kapı (R2): koherens balans×doluluk; bantta DIŞA iter; sızıntı */
+    const m27ko = Math.abs(mkKoherens(0, 8, 0.1) - 1) < 1e-9
+               && mkKoherens(0.3, 8, 0.1) === 0
+               && mkKoherens(0, 4, 0.1) === 0;
+    const m27A = { x:0, y:0, re:8, koh:1 };
+    const m27g1 = mkKapiHizi({ x:9, y:0 }, m27A, 3, 1);
+    const m27g2 = mkKapiHizi({ x:20, y:0 }, m27A, 3, 1);           /* bant dışı */
+    const m27g3 = mkKapiHizi({ x:9, y:0 }, { x:0, y:0, re:8, koh:0 }, 3, 1);
+    add('MAKİNE 27.5 (R2): koherens=balans×doluluk; kapı bantta DIŞA iter, '
+      + 'balanssız tabaka sızdırır',
+        m27ko && !!m27g1 && m27g1.vx > 0 && Math.abs(m27g1.vy) < 1e-12
+        && !m27g2 && !m27g3, m27g1 ? m27g1.vx : -1);
+    /* 27.6 faz-söküm: Δφ=π'de bağ TERSİNE döner — itici, büyüklük 2κ/d² */
+    const m27p = [{ x:0, y:0, w:0, g:1 }, { x:1.5, y:0, w:0, g:1 }];
+    const m27v = mkSokumHizi(m27p, 1, [0], Math.PI, 2, 0);
+    add('MAKİNE 27.6: Δφ=π bağı tersine çevirir (itici, tam 2κ/d²)',
+        m27v[0] > 0 && Math.abs(m27v[0] - 2*2/(1.5*1.5)) < 1e-9
+        && Math.abs(m27v[1]) < 1e-12, m27v[0]);
+    /* 27.7 R1: eş birleşme yalnız görsel ölçek eseriydi — makinede İMKÂNSIZ;
+       zıt yok olma ölçekli kalır (R7 şok kaynağı) */
+    const m27r1sk = MAK_R1;
+    const m27es = () => [{ x:-0.15, y:0, w:0, g:1 }, { x:0.15, y:0, w:0, g:1 }];
+    const m27zt = () => [{ x:-0.15, y:0, w:0, g:1 }, { x:0.15, y:0, w:0, g:-1 }];
+    MAK_R1 = false;
+    const m27a1 = m27es(), m27s1 = olaylariUygula(m27a1, SIGP0, 1e4);
+    MAK_R1 = true;
+    const m27a2 = m27es(), m27s2 = olaylariUygula(m27a2, SIGP0, 1e4);
+    const m27a3 = m27zt(), m27s3 = olaylariUygula(m27a3, SIGP0, 1e4);
+    MAK_R1 = m27r1sk;
+    add('MAKİNE 27.7 (R1): eş-yönlü BİRLEŞME makinede imkânsız, YOK OLMA korunur',
+        m27s1.bir === 1 && m27s2.bir === 0 && m27a2.length === 2
+        && m27s3.yok === 1, m27s2.bir);
+    /* 27.8 Q2 fazı: x-uzamasında f2 = 0 — salınan tabakanın yönü doğru */
+    const m27e = [];
+    for (let i = 0; i < 6; i++){
+      const a = 2*Math.PI*i/6;
+      m27e.push({ x:1.3*1.5*Math.cos(a), y:1.5*Math.sin(a), w:0, g:1 });
+    }
+    const m27eb = uyeBalans(m27e, [0,1,2,3,4,5]);
+    add('MAKİNE 27.8: Q2 fazı x-uzamasında 0 (salınan tabaka yönü)',
+        !!m27eb && m27eb.Q2 > 0.05 && Math.abs(m27eb.f2) < 0.15,
+        m27eb ? m27eb.f2 : -1);
+    /* 27.9 kaynaşma eşi: bant ortası (6-7) yakınlıktan önce; toplam ≤ 8 şart */
+    const m27ob = [ { x:0, y:0, n:3 }, { x:5, y:0, n:3 },
+                    { x:6, y:0, n:5 }, { x:30, y:0, n:7 } ];
+    const m27p1 = mkEsBul(m27ob, 0);   /* 3+3=6 (skor 10) > 3+5=8 (skor 21) */
+    const m27ob2 = [ { x:0, y:0, n:4 }, { x:10, y:0, n:2 }, { x:3, y:0, n:5 } ];
+    const m27p2 = mkEsBul(m27ob2, 0);  /* 4+5=9 YASAK; 4+2=6 seçilir */
+    /* kararsızlık ikramı: eş toplam, yakın-dengeli ile uzak-KARARSIZ
+       yarışırsa kararsız kazanır (malzemeye muhtaç olan odur) */
+    const m27ob3 = [ { x:0, y:0, n:3 }, { x:6, y:0, n:3 }, { x:5, y:0, n:3 } ];
+    const m27p3 = mkEsBul(m27ob3, 0, [0, 0.25, 0.02], 0.10);
+    add('MAKİNE 27.9: kaynaşma eşi bant ortası + ≤8 + kararsız-öncelik kuralında',
+        m27p1 === 1 && m27p2 === 1 && m27p3 === 1, m27p1);
+    /* 27.10 emiş: kararsız tabaka İÇERİ emer, kararlı (sizinti=0) emmez */
+    const m27e1 = mkEmisHizi({ x:9, y:0 }, { x:0, y:0, re:8, sizinti:1 }, 3, 1);
+    const m27e2 = mkEmisHizi({ x:9, y:0 }, { x:0, y:0, re:8, sizinti:0 }, 3, 1);
+    add('MAKİNE 27.10: kararsız tabaka EMER (içe doğru), kararlı emmez',
+        !!m27e1 && m27e1.vx < 0 && Math.abs(m27e1.vy) < 1e-12 && !m27e2,
+        m27e1 ? m27e1.vx : 1);
+    /* 27.11 R2 dinamik duvar: KARARSIZ kompozitin ışıma duvarı tek Kut'u
+       içeri bırakır (net çekici), KARARLI kompozit iter; makine kapalıyken
+       (MAK_SIZDIR=false) kararsız da iter — fark makinenin eseri. */
+    const m27hB = [], m27hU = [];
+    for (let i = 0; i < 6; i++){
+      const a = 2*Math.PI*i/6;
+      m27hB.push({ x:1.5*Math.cos(a), y:1.5*Math.sin(a), w:0, g:1 });
+      m27hU.push({ x:1.6*1.5*Math.cos(a), y:1.5*Math.sin(a), w:0, g:1 });
+    }
+    const m27tk = { x:6, y:0, w:0, g:1 };
+    const m27szSk = MAK_SIZDIR, m27ekSk = MAK_ESIK;
+    MAK_SIZDIR = true; MAK_ESIK = 0.10;
+    const m27vB = bagHiziHiyerarsik(m27hB.concat([m27tk]), 6, 3, 2, 0, 1);
+    const m27vU = bagHiziHiyerarsik(m27hU.concat([m27tk]), 6, 3, 2, 0, 1);
+    MAK_SIZDIR = false;
+    const m27vK = bagHiziHiyerarsik(m27hU.concat([m27tk]), 6, 3, 2, 0, 1);
+    MAK_SIZDIR = m27szSk; MAK_ESIK = m27ekSk;
+    add('MAKİNE 27.11 (R2 dinamik): kararsız kompozit duvarı tek Kut\'u içeri '
+      + 'alır, kararlı iter; makine kapalıyken ikisi de iter',
+        m27vB[0] > 0 && m27vU[0] < 0 && m27vK[0] > 0, m27vU[0]);
   }
 
   return T;
@@ -2373,7 +3443,15 @@ const S = {
   view:{ cx:0, cy:0, sc:1, zoom:1, panX:0, panY:0, base:1, W:0, H:0 },
   cons:{ L0:null, a0:null, h0:null, d0:null, maxDev:0 },
   olay:{ yok:0, bir:0, Lx:0, Ly:0, E:0 }, olayFlash:0, olaySon:'',
-  darbeler:[], vurulan:[], otelenme:0, tara:null
+  darbeler:[], vurulan:[], otelenme:0, tara:null,
+  /* EVRENAKI MAKİNASI çalışma defteri — R1–R7 çevriminin durumu.
+     islem  = süren fırlatma atımları (id ile; indisler olaylarda kayar)
+     sokBek = R7 şok bekleyen üyeler · obekCache = kapı/çizim önbelleği
+     kabul  = imza→1 (aynı bileşim iki kez "kabul" sayılmasın)             */
+  makine:{ t:0, sonTik:-1e9, sonID:0, islem:[], sokBek:[], kapiIz:[],
+           kaynas:[], sonBesle:-1e9, gorselDurum:{},
+           obekCache:[], kabul:{}, oto:{}, log:[], sonBilgi:'',
+           sayac:{ atilan:0, kabul:0, sok:0, kaynas:0, besle:0 } }
 };
 
 function snapshot(){ S.gecmis.push(JSON.parse(JSON.stringify(S.kuts))); if (S.gecmis.length > 40) S.gecmis.shift(); }
@@ -2390,13 +3468,27 @@ function resetCons(){
 function yeniG(){ return (S.dir < 0 ? -1 : 1) * (+$('gs').value); }
 function addKut(x, y, w, g){
   snapshot();
+  const gY = (g === undefined) ? yeniG() : g;
+  /* SIKIŞIK DOĞUM KORUMASI (R1): eş-yönlü bir Kut'un duvar-içine ekleme,
+     birleşme supabı olmadığından CFL'yi patlatır. Yeni Kut, en yakın
+     eş-yönlü komşudan d_koru'ya itilerek yerleştirilir; ZIT işaret serbest
+     bırakılır — onun kaderi zaten yok olma eşiğidir. */
+  const dKoruA = 0.45*(bagDenge(BAG_KAPPA || 2, 0, BAG_LAM || 1) || 1.4);
+  for (const q of S.kuts){
+    if (gOf(q)*gY <= 0) continue;
+    let ux = x - q.x, uy = y - q.y;
+    const dd = Math.hypot(ux, uy);
+    if (dd >= dKoruA) continue;
+    if (dd < 1e-9){ ux = 1; uy = 0; } else { ux /= dd; uy /= dd; }
+    x = q.x + ux*dKoruA; y = q.y + uy*dKoruA;
+  }
   /* bağ oldu mu? — yerleştirmeden ÖNCE bak */
-  const cap = +$('cap').value;
+  const cap = capEff();
   let bonded = false;
   for (const q of S.kuts){
     if (Math.sqrt((q.x-x)*(q.x-x) + (q.y-y)*(q.y-y) + (q.w-w)*(q.w-w)) <= cap){ bonded = true; break; }
   }
-  S.kuts.push({ x:x, y:y, w:w, g:(g === undefined) ? yeniG() : g });
+  S.kuts.push({ x:x, y:y, w:w, g:gY });
   /* Parlamayı HER eklemede tazele: bağ yoksa bayat "BAĞ KURULDU" yazısı kalmasın. */
   if (bonded){ S.bondFlash = 1; S.bondAt = [x,y]; }
   else { S.bondFlash = 0; S.bondAt = null; }
@@ -2452,6 +3544,14 @@ function makeStruct(N, layout){
 }
 
 /* --- ekran ↔ dünya --------------------------------------------------- */
+/* Kut'un ekran yarıçapı ZOOM İLE ÖLÇEKLENİR (kullanıcı isteği): görsel
+   yarıçap ~0,32 r_e — yakınlaşınca Kut büyür, uzaklaşınca küçülür.
+   Kırpma uçlarda: çok uzakta yine seçilebilir, çok yakında ekranı yutmaz. */
+function kutCizimYaricapi(g){
+  const gg = Math.min(2, Math.abs((g === undefined) ? 1 : g));
+  const r = 0.32 * S.view.sc * (0.78 + 0.22*gg);
+  return Math.max(2.4, Math.min(48, r));
+}
 function toWorld(px, py){
   return [ (px - S.view.cx)/S.view.sc, -(py - S.view.cy)/S.view.sc ];
 }
@@ -2478,12 +3578,65 @@ function fieldColor(rho, al){
 /* ==========================================================================
    SOL PANEL — dönüş düzlemi
    ========================================================================== */
+/* ==========================================================================
+   BİLEŞİK TABAKANIN KENDİ GEÇERLİLİĞİ
+   ==========================================================================
+   r_e(öbek) = |Σg|·r_e bir UZAK ALAN sonucudur. Çizilen halka R_d = |Σg|·r_e
+   iken öbeğin kendi yarıçapı R_küme ~ √N mertebesindedir, yani oran sonsuz
+   değil ~2,7–4,6. O hâlde halkanın "daire" olması kendiliğinden doğru DEĞİL,
+   ölçülmesi gereken bir şeydir.
+
+   Ölçüldü (düzgün dizilim, R_d = N·r_e):
+     N=2  → ortalama hata %0,50 · açısal dalgalanma %28,5   SINIRDA
+     N=3  → %0,01 · %4,8                                    iyi
+     N=4  → %0,00 · %1,0                                    iyi
+     N≥6  → %0,00 · %0,0                                    TAM
+   Sebep mesafe oranı değil SİMETRİ: düzgün N-gen'de eşit aralıklı kaynakların
+   toplamı, N'in katı olmayan bütün harmonikleri götürür ⟹ ilk düzeltme N.
+   mertebeden ve (R_küme/R_d)^N ile düşer. N=6, oran 4 ⟹ 4⁻⁶ ≈ 2×10⁻⁴.
+   Ama OTURMAMIŞ (simetrikleşmemiş) öbekte dalgalanma %100'ü aşabiliyor —
+   canlı sahnede ölçüldü. Bu yüzden çizim kendi güvenilirliğini SÖYLEMELİ. */
+function bilesikGecerlik(uyeler, cx, cy, re, ornek){
+  if (!(re > 1e-9) || !uyeler || !uyeler.length) return null;
+  const M = ornek || 24;
+  let vmin = Infinity, vmax = 0, vtop = 0;
+  for (let k = 0; k < M; k++){
+    const a = 2*Math.PI*k/M;
+    const px = cx + re*Math.cos(a), py = cy + re*Math.sin(a);
+    let vx = 0, vy = 0;
+    for (const q of uyeler){
+      const rx = px - q.x, ry = py - q.y;
+      const r2 = Math.max(rx*rx + ry*ry, 1e-30);
+      const g = gOf(q);
+      vx += -g*K*ry/r2; vy += g*K*rx/r2;
+    }
+    const v = Math.hypot(vx, vy);
+    if (v < vmin) vmin = v;
+    if (v > vmax) vmax = v;
+    vtop += v;
+  }
+  const vort = vtop/M;
+  return { vort:vort,
+           hata:(vort - K)/K,                       /* hedef |v| = √2c = K */
+           dalg:(vmax - vmin)/Math.max(vort, 1e-30) };
+}
+/* Üç kademe: hangi çizim hangi güvenilirliğe karşılık gelir. */
+function gecerlikKademe(g){
+  if (!g) return { ad:'—', renk:'124,252,107', cizgi:[7,5], kalin:1.8, alfa:0.55 };
+  if (g.dalg < 0.15) return { ad:'TAM',       renk:'124,252,107', cizgi:[],    kalin:2.0, alfa:0.70 };
+  if (g.dalg < 0.35) return { ad:'YAKLAŞIK',  renk:'255,176,32',  cizgi:[7,5], kalin:1.6, alfa:0.50 };
+  return                     { ad:'GEÇERSİZ', renk:'255,59,107',  cizgi:[2,5], kalin:1.2, alfa:0.38 };
+}
 function draw4(){
   const cv = $('c4'), ctx = cv.getContext('2d');
   const dpr = Math.min(2, window.devicePixelRatio || 1);
   const W = cv.clientWidth, H = cv.clientHeight;
   if (W < 4 || H < 4) return;
-  if (cv.width !== (W*dpr|0)){ cv.width = W*dpr|0; cv.height = H*dpr|0; }
+  /* HEM genişlik HEM yükseklik eşitlenir — yalnız genişlik denetlenince,
+     yüksekliği değişen tuvalin altında bayat piksel şeridi kalıyordu. */
+  if (cv.width !== (W*dpr|0) || cv.height !== (H*dpr|0)){
+    cv.width = W*dpr|0; cv.height = H*dpr|0;
+  }
   ctx.setTransform(dpr,0,0,dpr,0,0);
   ctx.fillStyle = '#0b0f19'; ctx.fillRect(0,0,W,H);
 
@@ -2494,12 +3647,30 @@ function draw4(){
   S.view.sc = S.view.base * S.view.zoom;
   S.view.cx = W/2 + S.view.panX;
   S.view.cy = H/2 + 6 + S.view.panY;
-  /* Gösterge yalnız DEĞİŞİNCE yazılır — her kare DOM'a dokunmanın anlamı yok. */
+  /* Göstergeler yalnız DEĞİŞİNCE yazılır — her kare DOM'a dokunmanın anlamı yok. */
   {
     const zt = '×' + S.view.zoom.toFixed(2).replace('.', ',')
              + (S.view.panX || S.view.panY ? ' · kaydırıldı' : '');
     const el = $('zoomLab');
     if (el && el.textContent !== zt) el.textContent = zt;
+  }
+  /* Hız göstergesi — kaynak dtm/run, burada yalnız OKUNUR. Sürgü sol panelden
+     değiştirilse de bu etiket doğru kalır. */
+  {
+    const kos = $('run').checked;
+    const ht = kos ? ('hız ×' + (+$('dtm').value).toFixed(2).replace('.', ','))
+                   : 'DURAKLATILDI';
+    const el = $('hizLab');
+    if (el && el.textContent !== ht){
+      el.textContent = ht;
+      el.style.color = kos ? '' : 'var(--orange)';
+    }
+    const d = $('hDur');
+    if (d){
+      const yazi = kos ? '⏸' : '▶';
+      if (d.textContent !== yazi) d.textContent = yazi;
+      d.classList.toggle('durdu', !kos);
+    }
   }
   const sc = S.view.sc, useAdd = $('addm').checked;
 
@@ -2524,7 +3695,7 @@ function draw4(){
         const v = velAt(mx, my, S.kuts, -1);
         const sp = Math.hypot(v[0], v[1]);
         const dd = Math.hypot(S.kuts[i].x-S.kuts[j].x, S.kuts[i].y-S.kuts[j].y);
-        if (sp > 0.35*K/(dd/2) || dd > 2*(+$('cap').value)) continue;
+        if (sp > 0.35*K/(dd/2) || dd > 2*(capEff())) continue;
         const s0 = toScreen(mx, my);
         ctx.beginPath(); ctx.arc(s0[0], s0[1], 4, 0, 2*Math.PI);
         ctx.strokeStyle = 'rgba(255,59,107,0.95)'; ctx.lineWidth = 1.5; ctx.stroke();
@@ -2537,28 +3708,138 @@ function draw4(){
      r_e(öbek) = |Σg|·r_e — Kut sayısıyla doğrusal büyür.
      Γ_top = 0 ise tabaka YOKTUR ve çizilmez (uzaktan görünmez). */
   if ($('bilTab').checked && S.kuts.length > 1){
-    const bi = obekBilgi(S.kuts, +$('cap').value);
-    for (const A of bi.obekler){
+    const bi = obekBilgi(S.kuts, capEff());
+    if (!S.balans) S.balans = { kare:0, ornek:0, izoleBoz:0, disBoz:0 };
+    S.balans.kare++;
+    const balOrnekle = (S.balans.kare % 30 === 0);   /* istatistik seyreltme */
+    /* ETİKETLER VARSAYILAN KAPALI — sahne yazıları kalabalıkta üst üste
+       biniyor ve Kutlar seçilemiyordu. Durum artık RENKLE anlatılır:
+       KIRMIZI halka = kararsız (Q2 ≥ eşik), YEŞİL halka = balanslı.
+       Yazılar Görünüm'deki "sahne etiketleri" anahtarıyla geri gelir. */
+    const ETK = $('etk').checked;
+    const esikC = +$('mkQ2').value;
+    for (let ci = 0; ci < bi.obekler.length; ci++){
+      const A = bi.obekler[ci];
       if (A.n < 2) continue;
       const s0 = toScreen(A.x, A.y);
       if (A.re < 1e-9){
-        ctx.fillStyle = 'rgba(255,59,107,0.85)'; ctx.font = '10px Consolas';
-        ctx.textAlign = 'center';
-        ctx.fillText('Γ_top = 0 → bileşik tabaka YOK', s0[0], s0[1] - 26);
+        if (ETK){
+          ctx.fillStyle = 'rgba(255,59,107,0.85)'; ctx.font = '10px Consolas';
+          ctx.textAlign = 'center';
+          ctx.fillText('Γ_top = 0 → bileşik tabaka YOK', s0[0], s0[1] - 26);
+        }
         continue;
       }
+      /* Halkanın kendi geçerliliğini ÖLÇ — çizgi DOKUSU (kesiklik) ondan. */
+      const uye = S.kuts.filter((q, i) => bi.lab[i] === ci);
+      const gc = bilesikGecerlik(uye, A.x, A.y, A.re, 24);
+      const kd = gecerlikKademe(gc);
+      const bal = obekBalans(S.kuts, bi.lab, ci);
+      /* Renk MAKİNENİN YARGISIYLA aynı eşiği okur (gelgit paylı) ve makine
+         açıkken HİSTEREZİSLİ bayraktan gelir (mkTik'te debounce) — sınırda
+         nefes alan yapının halkası anlık yanıp sönmez. Makine kapalıyken
+         anlık ölçüm kullanılır. */
+      let dengesiz;
+      if ($('mkAc').checked && bal){
+        dengesiz = false;
+        for (let ki = 0; ki < S.kuts.length; ki++)
+          if (bi.lab[ki] === ci && S.kuts[ki].mKirmizi){ dengesiz = true; break; }
+      } else {
+        const etaD = bal ? obekDisAlan(bi.obekler, ci) : 0;
+        const effD = esikC*(1 + 0.5*Math.min(2, etaD));
+        dengesiz = !!(bal && bal.Q2 >= effD);
+      }
+      const halkaRenk = bal ? (dengesiz ? '255,59,107' : '124,252,107') : kd.renk;
       ctx.beginPath(); ctx.arc(s0[0], s0[1], A.re*sc, 0, 2*Math.PI);
-      ctx.strokeStyle = 'rgba(124,252,107,0.55)'; ctx.lineWidth = 1.8;
-      ctx.setLineDash([7,5]); ctx.stroke(); ctx.setLineDash([]);
-      ctx.fillStyle = 'rgba(124,252,107,0.95)'; ctx.font = 'bold 10px Consolas';
-      ctx.textAlign = 'center';
-      ctx.fillText('bileşik r_e = ' + A.re.toFixed(2) + '  (N=' + A.n
-                 + ', Γ=' + A.G.toFixed(1) + ')', s0[0], s0[1] - A.re*sc - 6);
+      ctx.strokeStyle = 'rgba(' + halkaRenk + ',' + (dengesiz ? 0.9 : 0.55) + ')';
+      ctx.lineWidth = dengesiz ? kd.kalin + 0.6 : kd.kalin;
+      ctx.setLineDash(kd.cizgi); ctx.stroke(); ctx.setLineDash([]);
       /* merkez işareti */
       ctx.beginPath(); ctx.arc(s0[0], s0[1], 3, 0, 2*Math.PI);
-      ctx.fillStyle = 'rgba(124,252,107,0.7)'; ctx.fill();
+      ctx.fillStyle = 'rgba(' + halkaRenk + ',0.7)'; ctx.fill();
+      if (ETK){
+        ctx.fillStyle = 'rgba(' + kd.renk + ',0.95)';
+        ctx.font = 'bold 10px Consolas'; ctx.textAlign = 'center';
+        const yUst = s0[1] - A.re*sc - 6;
+        ctx.fillText('bileşik r_e = ' + A.re.toFixed(2) + '  (N=' + A.n
+                   + ', Γ=' + A.G.toFixed(1) + ')', s0[0], yUst);
+        /* Sapma satırı — yalnız halka TAM değilse yazılır */
+        if (gc && kd.ad !== 'TAM'){
+          ctx.font = '9px Consolas';
+          ctx.fillStyle = 'rgba(' + kd.renk + ',0.8)';
+          ctx.fillText(kd.ad + ' · daire değil ±' + (gc.dalg*100).toFixed(0)
+                     + '%  ·  |v| hata ' + (gc.hata*100).toFixed(1) + '%',
+                       s0[0], yUst - 11);
+        }
+      }
+      /* BALANS — momentler gerçek konumdan; istatistik her durumda tutulur,
+         yazılar yalnız etiket anahtarı açıkken çizilir. */
+      if (bal){
+        const eta = obekDisAlan(bi.obekler, ci);
+        if (ETK){
+          const rnk = bal.Q2 < 0.10 ? '124,252,107'
+                    : (bal.Q2 < 0.25 ? '255,170,60' : '255,59,107');
+          ctx.font = '9px Consolas';
+          ctx.fillStyle = 'rgba(' + rnk + ',0.9)';
+          let bTxt = 'balans Q2=' + (bal.Q2*100).toFixed(0) + '%  Q3='
+                   + (bal.Q3*100).toFixed(0) + '%';
+          if (eta > 0.3) bTxt += '  · dış alan ×' + eta.toFixed(1);
+          ctx.fillText(bTxt, s0[0], s0[1] + 16);
+        }
+        /* örgü + alt-öbek: halkalar HER ZAMAN, yazılar etiketle */
+        const yp = obekYapi(S.kuts, bi.lab, ci);
+        if (yp){
+          if (ETK){
+            let yTxt = 'bağ ⟨k⟩=' + yp.kOrt.toFixed(1) + ' (min ' + yp.kMin + ')';
+            if (yp.parca > 1){
+              yTxt += '  · ALT-ÖBEK ×' + yp.parca + ' — cap birleştirmesi';
+              ctx.fillStyle = 'rgba(255,170,60,0.95)';
+            } else if (yp.kMin <= 1){
+              yTxt += '  · zayıf üye!';
+              ctx.fillStyle = 'rgba(255,170,60,0.95)';
+            } else {
+              ctx.fillStyle = 'rgba(136,146,176,0.85)';
+            }
+            ctx.fillText(yTxt, s0[0], s0[1] + 27);
+          }
+          if (yp.parca > 1){
+            for (const liste of yp.parcalar){
+              if (liste.length < 2) continue;
+              let px = 0, py = 0, pg = 0;
+              for (const i of liste){
+                px += S.kuts[i].x; py += S.kuts[i].y; pg += gOf(S.kuts[i]);
+              }
+              px /= liste.length; py /= liste.length;
+              const pre = Math.abs(pg)*RE, ps = toScreen(px, py);
+              ctx.beginPath(); ctx.arc(ps[0], ps[1], pre*sc, 0, 2*Math.PI);
+              ctx.strokeStyle = 'rgba(255,170,60,0.55)';
+              ctx.lineWidth = 1; ctx.setLineDash([3,4]); ctx.stroke();
+              ctx.setLineDash([]);
+              if (ETK){
+                const pb = uyeBalans(S.kuts, liste);
+                ctx.font = '9px Consolas'; ctx.textAlign = 'center';
+                ctx.fillStyle = 'rgba(255,170,60,0.85)';
+                ctx.fillText('alt: N=' + liste.length
+                  + (pb ? '  Q2=' + (pb.Q2*100).toFixed(0) + '%' : ''),
+                  ps[0], ps[1] - pre*sc - 4);
+              }
+            }
+          }
+        }
+        if (balOrnekle && bal.n >= 4){
+          S.balans.ornek++;
+          if (bal.Q2 > 0.25){
+            if (eta <= 0.3) S.balans.izoleBoz++; else S.balans.disBoz++;
+          }
+        }
+      }
     }
   }
+
+  /* --- EVRENAKI MAKİNASI KATMANI -----------------------------------------
+     Salınan balanssız tabaka (R2 gerekçesi), kapı izleri, aday saatleri,
+     atım okları, faz-söküm pulsasyonu, R7 bekleyenler. */
+  if ($('mkAc').checked && S.kuts.length) mkCiz(ctx, sc);
 
   /* --- MOMENTUM DARBELERİ ------------------------------------------------
      Yok olmanın ortama devrettiği impuls, c hızıyla yayılan yönlü bir basınç
@@ -2604,7 +3885,7 @@ function draw4(){
   }
 
   /* Kutlar */
-  const cap = +$('cap').value;
+  const cap = capEff();
   for (let i = 0; i < S.kuts.length; i++){
     const q = S.kuts[i], s0 = toScreen(q.x, q.y);
     if ($('halo').checked){
@@ -2616,7 +3897,7 @@ function draw4(){
       ctx.setLineDash([2,5]); ctx.stroke(); ctx.setLineDash([]);
     }
     /* çekirdek: cep (siyah) + w renkli halka; boyut |g| ile ölçeklenir */
-    const g = gOf(q), ters = g < 0, rk = 6 + 2.2*Math.min(2, Math.abs(g));
+    const g = gOf(q), ters = g < 0, rk = kutCizimYaricapi(g);
     ctx.beginPath(); ctx.arc(s0[0], s0[1], rk, 0, 2*Math.PI);
     ctx.fillStyle = wColor(q.w, 0.95); ctx.fill();
     ctx.beginPath(); ctx.arc(s0[0], s0[1], rk*0.45, 0, 2*Math.PI);
@@ -2660,10 +3941,14 @@ function draw4(){
     ctx.lineTo(ax0 + 3.2*Math.cos(tn-2.4), ay0 + 3.2*Math.sin(tn-2.4));
     ctx.closePath();
     ctx.fillStyle = ters ? '#ff3b6b' : '#00e5ff'; ctx.fill();
-    ctx.fillStyle = ters ? '#ff8fa6' : '#7b8aa5';
-    ctx.font = '9px Consolas'; ctx.textAlign = 'center';
-    ctx.fillText('w=' + q.w.toFixed(2) + '  g=' + (g > 0 ? '+' : '') + g.toFixed(1),
-                 s0[0], s0[1] + rk + 15);
+    /* Kut başına w/g yazısı yalnız etiket anahtarıyla — kalabalıkta üst
+       üste binip Kut'un kendisini örtüyordu. */
+    if ($('etk').checked){
+      ctx.fillStyle = ters ? '#ff8fa6' : '#7b8aa5';
+      ctx.font = '9px Consolas'; ctx.textAlign = 'center';
+      ctx.fillText('w=' + q.w.toFixed(2) + '  g=' + (g > 0 ? '+' : '') + g.toFixed(1),
+                   s0[0], s0[1] + rk + 15);
+    }
   }
 
   /* bağ çizgileri */
@@ -2739,7 +4024,11 @@ function draw3(){
   const dpr = Math.min(2, window.devicePixelRatio || 1);
   const W = cv.clientWidth, H = cv.clientHeight;
   if (W < 4 || H < 4) return;
-  if (cv.width !== (W*dpr|0)){ cv.width = W*dpr|0; cv.height = H*dpr|0; }
+  /* HEM genişlik HEM yükseklik eşitlenir — yalnız genişlik denetlenince,
+     yüksekliği değişen tuvalin altında bayat piksel şeridi kalıyordu. */
+  if (cv.width !== (W*dpr|0) || cv.height !== (H*dpr|0)){
+    cv.width = W*dpr|0; cv.height = H*dpr|0;
+  }
   ctx.setTransform(dpr,0,0,dpr,0,0);
   ctx.fillStyle = '#0b0f19'; ctx.fillRect(0,0,W,H);
 
@@ -2772,7 +4061,7 @@ function draw3(){
   drawList.sort((a,b) => b.s.z - a.s.z);
 
   /* bağ çizgileri (yalnız ikisi de görünürse) */
-  const cap = +$('cap').value;
+  const cap = capEff();
   for (let i = 0; i < S.kuts.length; i++)
     for (let j = i+1; j < S.kuts.length; j++){
       const a = S.kuts[i], b = S.kuts[j];
@@ -2810,6 +4099,571 @@ function draw3(){
 }
 
 /* ==========================================================================
+   EVRENAKI MAKİNASI — İŞLETİM (R1–R7 çevrimi)
+   ==========================================================================
+   Karar çekirdeği CORE içindedir (saf işlevler, öz-sınama 27.x); burada
+   yalnız işletim var: saat, kimlik, atım/söküm süreçleri, kapı, günlük.
+   Makine dinamiğe İKİ taşıma kanalından dokunur ve ikisi de darbe kanalıyla
+   aynı türdendir (akışla taşıma atımı): sapan (R5) ve kapı (R2). Faz-söküm
+   ise bağ kanalının kendi faz bağımlılığının işletilmesidir (araştırma).
+   Saat SİMÜLASYON zamanıdır: duraklatınca makine de durur.                */
+const MK_TIK = 0.35;                 /* karar çevrimi (zaman birimi) */
+function mkKimlik(){
+  for (const q of S.kuts) if (q.mID === undefined){
+    q.mID = ++S.makine.sonID; q.mImza = ''; q.mGiris = S.makine.t;
+  }
+}
+function mkIdxByID(id){
+  for (let i = 0; i < S.kuts.length; i++) if (S.kuts[i].mID === id) return i;
+  return -1;
+}
+/* MAKİNE TAŞIMASI SIKIŞTIRMAZ — sayısal koruma (tıkanmanın ikinci yarısı):
+   R1 birleşme supabını kaldırdığı için, bir çift 1/d⁵ duvarının derinine
+   itilirse CFL alt-adımı patlar. Taşınan Kut'u HERHANGİ bir komşuya
+   d_koru'nun altına YAKLAŞTIRACAK adım o kare atlanır — fizik (duvar)
+   ayrımı zaten kendisi kurar, makine yalnız iterken ezmemiş olur. */
+function mkGuvenliTasi(i, vx, vy, hh){
+  const q = S.kuts[i];
+  const nx = q.x + vx*hh, ny = q.y + vy*hh;
+  const dKoru = 0.45*(bagDenge(BAG_KAPPA || 2, 0, BAG_LAM || 1) || 1.4);
+  for (let j = 0; j < S.kuts.length; j++){
+    if (j === i) continue;
+    const dY = Math.hypot(nx - S.kuts[j].x, ny - S.kuts[j].y);
+    if (dY < dKoru
+        && dY < Math.hypot(q.x - S.kuts[j].x, q.y - S.kuts[j].y)) return false;
+  }
+  q.x = nx; q.y = ny;
+  return true;
+}
+function mkLogYaz(html){
+  S.makine.log.unshift({ t:S.makine.t, h:html });
+  if (S.makine.log.length > 9) S.makine.log.pop();
+  const el = $('mkLog');
+  if (el) el.innerHTML = S.makine.log.map(l =>
+    '<div><span style="color:#5e6d88">' + l.t.toFixed(0) + '</span> ' + l.h
+    + '</div>').join('');
+}
+function mkBilgiYaz(html){
+  if (S.makine.sonBilgi === html) return;      /* her karede DOM'u yorma */
+  S.makine.sonBilgi = html;
+  $('mkBilgi').innerHTML = html;
+}
+function mkSifirla(){
+  const M = S.makine;
+  M.islem = []; M.sokBek = []; M.kapiIz = []; M.obekCache = [];
+  M.kaynas = []; M.sonBesle = -1e9; M.gorselDurum = {};
+  M.kabul = {}; M.oto = {}; M.log = [];
+  M.sayac = { atilan:0, kabul:0, sok:0, kaynas:0, besle:0 };
+  const el = $('mkLog');
+  if (el) el.innerHTML = '<div style="color:#5e6d88">makine günlüğü boş</div>';
+}
+/* R7 şoku — SANAL PATLAMA ile aynı alan (yeni fizik değil): kaynak hedefe
+   yakın doğar (genlik 1/√r kazancı), th = momentum doğrultusu = hedefe. */
+function mkSokGonder(i){
+  const q = S.kuts[i];
+  if (!q) return;
+  const a = Math.random()*2*Math.PI, D = 6;
+  S.darbeler.push({ x:q.x - D*Math.cos(a), y:q.y - D*Math.sin(a),
+                    r:0, mag:3, th:a });
+  S.makine.sayac.sok++;
+}
+/* Atım başlat — R5 sapan (+ açıksa faz-söküm eşliği). Atım, üye bileşik
+   sınır tabakası + yakalama payını AŞANA kadar sürer (R5'in şartı). */
+function mkAtimBaslat(i, uyeler, sebep, hizCarpan){
+  const q = S.kuts[i];
+  const sapan = $('mkSapan').checked, sokum = $('mkSokum').checked;
+  if (!sapan && !sokum){
+    mkLogYaz('<span style="color:#ffb020">△ fırlatma kanalları kapalı — '
+           + sebep + ' uygulanamadı</span>');
+    return false;
+  }
+  const yon = mkSapanYonu(S.kuts, uyeler, i);
+  const vAt = (+$('mkFir').value) * yon.vAt * (hizCarpan || 1);
+  let reB = 0;
+  for (const j of uyeler) reB += gOf(S.kuts[j]);
+  const hedef = Math.abs(reB)*RE + capEff()*1.15;
+  S.makine.islem.push({
+    id:q.mID, sebep:sebep,
+    vx:(sapan ? vAt*yon.dx : 0), vy:(sapan ? vAt*yon.dy : 0),
+    cx:yon.cx, cy:yon.cy, hedef:hedef, tBas:S.makine.t,
+    esler:(sokum ? uyeler.filter(j => j !== i).map(j => S.kuts[j].mID) : [])
+  });
+  q.mGiris = S.makine.t;
+  return true;
+}
+/* --- KARAR ÇEVRİMİ (her MK_TIK'te bir) ------------------------------------ */
+function mkTik(){
+  const M = S.makine, esikQ2 = +$('mkQ2').value, Tsim = +$('mkT').value;
+  const zeta = +$('mkZeta').value, cap = capEff();
+  const bi = obekBilgi(S.kuts, cap);
+  /* imza + giriş saati: bileşimi DEĞİŞEN öbekte saat başa döner (R4/R6).
+     Üye ekleme, üye kaybı, öbek bölünmesi/birleşmesi — hepsi imzayı değiştirir. */
+  const imzalar = [];
+  for (let c = 0; c < bi.obekler.length; c++){
+    const ids = [];
+    for (let i = 0; i < S.kuts.length; i++)
+      if (bi.lab[i] === c) ids.push(S.kuts[i].mID);
+    imzalar.push(ids.sort((a, b) => a - b).join(','));
+  }
+  for (let i = 0; i < S.kuts.length; i++){
+    const im = imzalar[bi.lab[i]];
+    if (S.kuts[i].mImza !== im){ S.kuts[i].mImza = im; S.kuts[i].mGiris = M.t; }
+  }
+  /* kapı/çizim önbelleği — öbek başına koherens ve üyelik. Kapı yalnız TEK
+     gezen Kut'a uygulanacak (R2 "yeni Kut" der); komşu öbekler hiyerarşik
+     kanalın işidir, oraya karışılmaz. */
+  M.obekCache = [];
+  const q2Dizi = bi.obekler.map(() => 0);   /* kaynaşma eşinde kararsız-öncelik */
+  for (const q of S.kuts) q.mKirmizi = false;   /* görsel bayrak tazele */
+  for (let c = 0; c < bi.obekler.length; c++){
+    const A = bi.obekler[c];
+    if (A.n < 3 || A.re < 1e-9) continue;
+    const uyeC = [];
+    for (let i = 0; i < S.kuts.length; i++) if (bi.lab[i] === c) uyeC.push(i);
+    const balC = uyeBalans(S.kuts, uyeC);
+    const q2C = balC ? balC.Q2 : 0;
+    q2Dizi[c] = q2C;
+    /* sizinti: kararsız tabakanın EMİŞ şiddeti — eşikte 0,4'ten başlar,
+       Q2 eşiğin 2 katına varınca 1'e doyar. Kararlıda sıfır. */
+    const siz = (q2C < esikQ2) ? 0
+              : Math.min(1, 0.4 + 0.6*(q2C/esikQ2 - 1));
+    const effC = esikQ2*(1 + 0.5*Math.min(2, obekDisAlan(bi.obekler, c)));
+    /* GÖRSEL HİSTEREZİS — sınırda nefes alan yapının halkası anlık Q2
+       ile YANIP SÖNMESİN: kırmızıya geçiş 3 ardışık tik (≈1 zaman birimi)
+       kararsızlık, yeşile dönüş 2 ardışık tik kararlılık ister. Makine
+       kararları zaten T-saatinde; bu yalnız görünümü sakinleştirir. */
+    const gd = M.gorselDurum[imzalar[c]] || { kir:false, s:0 };
+    const simdiKir = q2C >= effC;
+    if (simdiKir === gd.kir) gd.s = 0;
+    else { gd.s++; if (gd.s >= (gd.kir ? 2 : 3)){ gd.kir = simdiKir; gd.s = 0; } }
+    M.gorselDurum[imzalar[c]] = gd;
+    if (Object.keys(M.gorselDurum).length > 300) M.gorselDurum = {};
+    if (gd.kir) for (const i of uyeC) S.kuts[i].mKirmizi = true;
+    M.obekCache.push({ x:A.x, y:A.y, re:A.re, n:A.n, Q2:q2C,
+                       f2:(balC ? balC.f2 : 0),
+                       eff:effC, kir:gd.kir,
+                       koh:mkKoherens(q2C, A.n, esikQ2), sizinti:siz,
+                       ids:uyeC.map(i => S.kuts[i].mID) });
+  }
+  /* ölü kimlikleri ayıkla (yok olma / birleşme kutları silmiş olabilir) */
+  M.islem = M.islem.filter(p => mkIdxByID(p.id) >= 0);
+  M.sokBek = M.sokBek.filter(p => mkIdxByID(p.id) >= 0);
+  if (!BAG_KAPPA) return;            /* bağ kanalı kapalı: yapı fiziği yok */
+  /* --- öbek başına karar --- */
+  for (let c = 0; c < bi.obekler.length; c++){
+    if (bi.obekler[c].n < 3) continue;
+    const uyeler = [];
+    for (let i = 0; i < S.kuts.length; i++) if (bi.lab[i] === c) uyeler.push(i);
+    /* bu öbekte süren işlem/kaynaşma varsa bekle — üyeler TEK TEK işlenir */
+    const islemde = M.islem.some(p => uyeler.some(i => S.kuts[i].mID === p.id))
+      || M.kaynas.some(p => p.ids.concat(p.hedef).some(id =>
+           uyeler.some(i => S.kuts[i].mID === id)));
+    if (islemde) continue;
+    const bal = uyeBalans(S.kuts, uyeler);
+    if (!bal) continue;
+    const imza = imzalar[c];
+    const bekleme = M.t - Math.max.apply(null, uyeler.map(i => S.kuts[i].mGiris));
+    /* ALT-ÖBEK: yakalama yarıçapı iki ayrı yapıyı tek saymışsa Q2 sahte
+       yükselir — bu balanssızlık değil SAYIM birleşmesidir; koparılacak
+       fazlalık yoktur (balans satırındaki uyarının makine karşılığı). */
+    const yapi = obekYapi(S.kuts, bi.lab, c);
+    if (yapi && yapi.parca > 1) continue;
+    const eta = obekDisAlan(bi.obekler, c);
+    /* GELGİT PAYI — ölçüldü: yerleşik örgüde her öbek η>1 dış alan altında
+       ve Q2 hiç sıfırlanmaz; MUTLAK eşik örgüdeki sağlam yapıyı da "bozuk"
+       sayar. Kabul eşiği dış alanla ölçeklenir: yapı, ORTAMINA göre
+       balanslıysa balanslıdır. Kapı koherensi ham Q2'de kalır — çarpık
+       tabaka gerçekten sızdırır, o ayrı bir olgu. */
+    const esikEff = esikQ2*(1 + 0.5*Math.min(2, eta));
+    const dengeli = bal.Q2 < esikEff;
+    const fazla = uyeler.length > 8;          /* Thomson bandı (5–8) üstü */
+    if (dengeli && !fazla){
+      /* ✓ KABUL yalnız bant içinde (N≥5): bant altı balanslı yapı ARA
+         ÜRÜNDÜR — kaynaşma planlayıcısı onu büyütür, damga almaz. */
+      if (uyeler.length >= 5 && bekleme >= Tsim && !M.kabul[imza]){
+        M.kabul[imza] = 1; M.sayac.kabul++;
+        if (Object.keys(M.kabul).length > 500) M.kabul = {};
+        mkLogYaz('<span style="color:#34d399">✓ KABUL — N=' + uyeler.length
+               + ' yapı balanslı (Q2 ' + (bal.Q2*100).toFixed(0) + '%'
+               + (bal.Q2 >= esikQ2 ? ', gelgit payıyla' : '') + ')</span>');
+      }
+      /* balans geldiyse bu öbeğin şok bekleyeni kalmaz */
+      M.sokBek = M.sokBek.filter(p => !uyeler.some(i => S.kuts[i].mID === p.id));
+      continue;
+    }
+    if (bekleme < Tsim) continue;             /* R4/R6: simetriye süre tanı */
+    /* Komşu gelgiti (η) koruması — ama BANT GÖZETİR: fırlatma öbeği
+       küçültür; Thomson bandının (5–8) içindeki 5'liyi gelgit gerekçesiyle
+       4'e düşürmek hedefin tersidir (ölçüldü: koşulsuz tırmandırma sahneyi
+       4'lülere çökertti). N≥6'da 4·T boyunca düzelmeyen balanssızlık
+       gelgite yazılmaz — fırlatma bandın içinde kalır (6→5). N≤5 gelgit
+       altındayken hiç zorlanmaz; ancak izole (η≤0,6) ise işlem görür. */
+    if (!fazla && eta > 0.6 && (uyeler.length <= 5 || bekleme < 4*Tsim)) continue;
+    const karar = mkBozanBul(S.kuts, uyeler, BAG_KAPPA, BAG_FAZ, BAG_LAM);
+    const hedefI = (fazla && dengeli) ? karar.zayif : karar.bozan;
+    if (hedefI < 0 || hedefI === undefined) continue;
+    /* tek üye çıkarmak balansı gerçekten düzeltiyor mu? (fazlalıkta aranmaz) */
+    if (!fazla && !(karar.Q2sonra < bal.Q2*0.75 || karar.Q2sonra < esikQ2)){
+      for (const i of uyeler) S.kuts[i].mGiris = M.t;
+      mkLogYaz('<span style="color:#8892b0">△ tek üye çıkarmak balansı '
+             + 'düzeltmiyor — süre uzatıldı (N=' + uyeler.length + ')</span>');
+      continue;
+    }
+    const Ws = uyeler.map(i => karar.W[i]);
+    const med = mkMedyan(Ws);
+    const guclu = karar.W[hedefI] > zeta*med && med > 0;
+    if (guclu && !fazla){
+      /* R7 — bozanın bağı zayıf değil: zorlamaz, zıt-Kut şoku bekler */
+      const id7 = S.kuts[hedefI].mID;
+      if (!M.sokBek.some(p => p.id === id7)){
+        M.sokBek.push({ id:id7, imza:imza, t:M.t });
+        mkLogYaz('<span style="color:#b9a8f0">⏳ R7 — bozan #' + id7
+               + ' güçlü bağlı (W ' + karar.W[hedefI].toFixed(2) + ' &gt; ζ·medyan '
+               + (zeta*med).toFixed(2) + ') — zıt-Kut şoku bekleniyor</span>');
+      }
+      if ($('mkOtoSok').checked){
+        const son = M.oto[id7] || -1e9;
+        if (M.t - son > 2*Tsim){
+          M.oto[id7] = M.t; mkSokGonder(hedefI);
+          mkLogYaz('<span style="color:#ff9048">⚡ oto-şok gönderildi → #'
+                 + id7 + '</span>');
+        }
+      }
+      continue;
+    }
+    /* R3/R4/R6 — fırlat (R5 sapan + istenirse faz-söküm) */
+    const idA = S.kuts[hedefI].mID;
+    const neden = fazla
+        ? 'Thomson üstü fazlalık (N=' + uyeler.length + ')'
+        : 'bozan üye (Q2 ' + (bal.Q2*100).toFixed(0) + '%→'
+          + (karar.Q2sonra*100).toFixed(0) + '%)';
+    if (mkAtimBaslat(hedefI, uyeler, neden, 1)){
+      M.sayac.atilan++;
+      mkLogYaz('<span style="color:#ff3b6b">⏏ #' + idA + ' fırlatılıyor — '
+             + neden + (karar.uyum ? ' · bozan=en zayıf ✓' : ' · bozan≠en zayıf ✗')
+             + '</span>');
+    }
+  }
+  /* --- R7: şok bekleyene darbe DEĞDİ mi? Değdiyse söküm tamamlanır --- */
+  for (const p of M.sokBek.slice()){
+    const i = mkIdxByID(p.id);
+    if (i < 0) continue;
+    if (S.vurulan.indexOf(i) >= 0){
+      const lab = clusters(S.kuts, cap);
+      const uyeler = [];
+      for (let k = 0; k < S.kuts.length; k++)
+        if (lab.lab[k] === lab.lab[i]) uyeler.push(k);
+      M.sokBek = M.sokBek.filter(x => x.id !== p.id);
+      if (uyeler.length >= 3 && mkAtimBaslat(i, uyeler, 'R7 şok destekli söküm', 1.3)){
+        M.sayac.atilan++;
+        mkLogYaz('<span style="color:#ff9048">⚡ R7 — şok değdi, #' + p.id
+               + ' sökülüyor (hız ×1,3)</span>');
+      }
+    }
+  }
+  /* --- KAYNAŞMA PLANLAYICI — bant altı (N<5) yapılar birleşerek büyür.
+     Yasak yok: küçük yapı ara üründür, toplamı 6-7'ye taşıyan en uygun
+     eşe topluca sürülür. Tik başına EN ÇOK BİR yeni kaynaşma (sükunet). */
+  if ($('mkKaynas').checked && BAG_KAPPA){
+    let kaynasVar = M.kaynas.length > 0;
+    for (let c = 0; c < bi.obekler.length && !kaynasVar; c++){
+      const A = bi.obekler[c];
+      if (A.n < 2 || A.n >= 5) continue;
+      const uyeA = [];
+      for (let i = 0; i < S.kuts.length; i++) if (bi.lab[i] === c) uyeA.push(i);
+      if (M.islem.some(p => uyeA.some(i => S.kuts[i].mID === p.id))) continue;
+      const beklemeA = M.t - Math.max.apply(null, uyeA.map(i => S.kuts[i].mGiris));
+      if (beklemeA < Tsim) continue;      /* taze öbeğe fırsat tanı */
+      const es = mkEsBul(bi.obekler, c, q2Dizi, esikQ2);
+      if (es < 0) continue;
+      const uyeB = [];
+      for (let i = 0; i < S.kuts.length; i++) if (bi.lab[i] === es) uyeB.push(i);
+      M.kaynas.push({ ids: uyeA.map(i => S.kuts[i].mID),
+                      hedef: uyeB.map(i => S.kuts[i].mID), tBas: M.t });
+      M.sayac.kaynas++;
+      kaynasVar = true;
+      mkLogYaz('<span style="color:#7cfc6b">⚭ kaynaşma başladı: N=' + A.n
+             + ' + N=' + bi.obekler[es].n + ' → hedef '
+             + (A.n + bi.obekler[es].n) + '</span>');
+    }
+  }
+  /* --- DIŞ BESLEME — kullanıcı kuralı: "gerekirse dışarıdan Kut ekle —
+     kararsız hiçbir yapı kalmasın". Serbest malzeme bittiyse ve bant
+     ortası (6-7) dolmadıysa, eksik yapının tabakasının hemen dışında
+     yeni Kut doğar ve kaynaşma sürücüsüyle içeri taşınır. */
+  if ($('mkBesle').checked && BAG_KAPPA && S.kuts.length < 88
+      && M.t - M.sonBesle > 2*Tsim && !M.kaynas.length){
+    const serbest = bi.obekler.filter(o => o.n === 1).length;
+    if (!serbest){
+      let hc = -1, hSkor = Infinity;
+      for (let c = 0; c < bi.obekler.length; c++){
+        const n = bi.obekler[c].n;
+        if (n < 3 || n > 5) continue;          /* +1 ile 6-7 bandına taşınacaklar */
+        const skor = Math.abs(6.5 - (n + 1));
+        if (skor < hSkor){ hSkor = skor; hc = c; }
+      }
+      if (hc >= 0){
+        const A = bi.obekler[hc];
+        let ux = A.x, uy = A.y;
+        const un = Math.hypot(ux, uy);
+        if (un < 1e-6){ ux = 1; uy = 0; } else { ux /= un; uy /= un; }
+        const D = A.re + cap + 2.5;            /* tabakanın DIŞINDAN doğar */
+        const yeni = { x: A.x + ux*D, y: A.y + uy*D, w: 0, g: 1 };
+        S.kuts.push(yeni);
+        mkKimlik();
+        const hedefIds = [];
+        for (let i = 0; i < S.kuts.length; i++)
+          if (bi.lab[i] === hc) hedefIds.push(S.kuts[i].mID);
+        M.kaynas.push({ ids: [yeni.mID], hedef: hedefIds, tBas: M.t });
+        M.sonBesle = M.t; M.sayac.besle++;
+        mkLogYaz('<span style="color:#00e5ff">⇩ dış besleme: yeni Kut → N='
+               + A.n + ' yapıya (hedef ' + (A.n + 1) + ')</span>');
+        resetCons();
+      }
+    }
+  }
+}
+/* --- HER KARE: atım + faz-söküm + kapı taşıma kanalları ------------------- */
+function mkKare(hh){
+  const M = S.makine;
+  /* atımlar: sapan taşıması + faz-söküm farkı */
+  for (const p of M.islem.slice()){
+    const i = mkIdxByID(p.id);
+    if (i < 0){ M.islem = M.islem.filter(x => x !== p); continue; }
+    const q = S.kuts[i];
+    mkGuvenliTasi(i, p.vx, p.vy, hh);
+    if (p.esler.length && BAG_KAPPA){
+      const es = p.esler.map(mkIdxByID).filter(k => k >= 0);
+      if (es.length){
+        const faz = Math.min(Math.PI, (M.t - p.tBas)/1.2*Math.PI);
+        const v = mkSokumHizi(S.kuts, i, es, faz, BAG_KAPPA, BAG_FAZ);
+        mkGuvenliTasi(i, v[0], v[1], hh);
+        /* tepki: eşlere eşit-zıt, bölüştürülmüş — yapı hafifçe geri yaslanır */
+        for (const k of es)
+          mkGuvenliTasi(k, -v[0]/es.length, -v[1]/es.length, hh);
+      }
+    }
+    const d = Math.hypot(q.x - p.cx, q.y - p.cy);
+    if (d >= p.hedef){
+      M.islem = M.islem.filter(x => x !== p);
+      q.mGiris = M.t;
+      mkLogYaz('<span style="color:#7cfc6b">↗ #' + p.id + ' sınır tabakasını '
+             + 'AŞTI (d=' + d.toFixed(1) + ' &gt; ' + p.hedef.toFixed(1)
+             + ') — serbest</span>');
+    } else if (M.t - p.tBas > 10){
+      M.islem = M.islem.filter(x => x !== p);
+      mkLogYaz('<span style="color:#ffb020">△ #' + p.id
+             + ' atımı zaman aşımı (d=' + d.toFixed(1) + ')</span>');
+    }
+  }
+  /* KAYNAŞMA SÜRÜCÜSÜ: bant altı yapı, eşine doğru TOPLUCA sürülür.
+     Birleşme ölçütü yakalama bağıyla aynıdır (tek öbek etiketi); üye
+     düzeyinde sıkıştırma mkGuvenliTasi ile engellenir — kaynaşan yapı
+     eşin örgüsüne d_koru aralığıyla oturur, üst üste binmez. */
+  for (const p of M.kaynas.slice()){
+    const kay = p.ids.map(mkIdxByID).filter(k => k >= 0);
+    const hed = p.hedef.map(mkIdxByID).filter(k => k >= 0);
+    if (!kay.length || !hed.length){
+      M.kaynas = M.kaynas.filter(x => x !== p); continue;
+    }
+    let hx = 0, hy = 0;
+    for (const k of hed){ hx += S.kuts[k].x; hy += S.kuts[k].y; }
+    hx /= hed.length; hy /= hed.length;
+    const lab = clusters(S.kuts, capEff());
+    if (lab.lab[kay[0]] === lab.lab[hed[0]]){
+      M.kaynas = M.kaynas.filter(x => x !== p);
+      mkLogYaz('<span style="color:#7cfc6b">⚭ kaynaştı — yeni yapı N='
+             + (kay.length + hed.length) + '</span>');
+      continue;
+    }
+    if (M.t - p.tBas > 16){
+      M.kaynas = M.kaynas.filter(x => x !== p);
+      mkLogYaz('<span style="color:#ffb020">△ kaynaşma zaman aşımı</span>');
+      continue;
+    }
+    for (const k of kay){
+      let dx = hx - S.kuts[k].x, dy = hy - S.kuts[k].y;
+      const dn = Math.hypot(dx, dy) || 1;
+      /* 1,5c: bileşik ışıma duvarını aşacak kadar — ölçüldü, 1,1'de
+         3+5 kaynaşması duvarda takılıp zaman aşımına düşüyordu. */
+      mkGuvenliTasi(k, 1.5*dx/dn, 1.5*dy/dn, hh);
+    }
+  }
+  /* kapı + emiş (R2, seçici geçirgenlik): TEK ve İKİLİ gezen Kut'lara.
+     Kararlı-dolu tabaka DIŞARI iter (kapı), kararsız tabaka İÇERİ emer
+     (sızıntı) — malzeme tam da muhtaç yapıya akar, kararlılık hızlanır. */
+  M.kapiIz = [];
+  if ($('mkKapiAc').checked && M.obekCache.length){
+    const cap = capEff(), direnc = +$('mkKapi').value;
+    if (direnc > 0){
+      const lab = clusters(S.kuts, cap);
+      const boy = new Array(lab.count).fill(0);
+      lab.lab.forEach(l => { if (l >= 0) boy[l]++; });
+      for (let i = 0; i < S.kuts.length; i++){
+        if (boy[lab.lab[i]] > 2) continue;      /* tek ve ikili gezenler */
+        const q = S.kuts[i];
+        for (const A of M.obekCache){
+          if (A.ids.indexOf(q.mID) >= 0) continue;
+          const g = mkKapiHizi(q, A, cap, direnc);
+          if (g && mkGuvenliTasi(i, g.vx, g.vy, hh) && M.kapiIz.length < 40)
+            M.kapiIz.push({ x:A.x, y:A.y, re:A.re, ang:g.ang,
+                            s:Math.min(1, g.v) });
+          const e = mkEmisHizi(q, A, cap, direnc);
+          if (e) mkGuvenliTasi(i, e.vx, e.vy, hh);
+        }
+      }
+    }
+  }
+}
+/* --- ANA GİRİŞ (frameBody'den) -------------------------------------------- */
+function mkCalistir(hh){
+  mkKimlik();
+  S.makine.t += hh;
+  if (S.makine.t - S.makine.sonTik >= MK_TIK){
+    S.makine.sonTik = S.makine.t;
+    mkTik();
+  }
+  mkKare(hh);
+  const M = S.makine;
+  let t;
+  if (!BAG_KAPPA){
+    t = '<span style="color:#ff3b6b"><b>bağ kanalı KAPALI</b> — makine '
+      + 'izliyor, yapı fiziği yok</span>';
+  } else {
+    const n3 = M.obekCache.filter(o => o.n >= 3);
+    const balN = n3.filter(o => o.Q2 < (+$('mkQ2').value)).length;
+    t = '⚙ saat ' + M.t.toFixed(0) + ' · yapı ' + n3.length
+      + ' (balanslı <b><span style="color:#7cfc6b">' + balN + '</span></b>)'
+      + ' · işlemde ' + (M.islem.length + M.kaynas.length)
+      + ' · <span style="color:#b9a8f0">R7 bekleyen ' + M.sokBek.length + '</span>'
+      + '<br>⏏ atılan <b>' + M.sayac.atilan + '</b> · ✓ kabul <b>'
+      + M.sayac.kabul + '</b> · ⚭ kaynaşma <b>' + M.sayac.kaynas
+      + '</b> · ⇩ besleme <b>' + M.sayac.besle
+      + '</b> · ⚡ şok <b>' + M.sayac.sok + '</b>'
+      + ' · R1 eş-birleşme <b><span style="color:'
+      + (S.olay.bir ? '#ff3b6b' : '#7cfc6b') + '">' + S.olay.bir
+      + '</span></b>';
+  }
+  mkBilgiYaz(t);
+}
+/* --- MAKİNE KATMANI ÇİZİMİ (draw4 içinden) -------------------------------- */
+function mkCiz(ctx, sc){
+  const M = S.makine, Tsim = +$('mkT').value, esikQ2 = +$('mkQ2').value;
+  const ETK = $('etk').checked;
+  /* 1 · balanssız tabaka: SALINAN kırmızı halka — R2'nin gerekçesi gözle
+     görünür; yazı yalnız etiket anahtarı açıkken. */
+  for (const A of M.obekCache){
+    if (!A.kir) continue;      /* histerezisli bayrak — halkayla aynı yargı */
+    const s0 = toScreen(A.x, A.y);
+    const gen = Math.min(0.30, A.Q2);
+    ctx.beginPath();
+    for (let k = 0; k <= 72; k++){
+      const a = 2*Math.PI*k/72;
+      const rr = A.re*(1 + gen*Math.cos(2*(a - A.f2) + 3*M.t));
+      const px = s0[0] + rr*sc*Math.cos(a), py = s0[1] - rr*sc*Math.sin(a);
+      if (k) ctx.lineTo(px, py); else ctx.moveTo(px, py);
+    }
+    ctx.closePath();
+    ctx.strokeStyle = 'rgba(255,59,107,0.5)';
+    ctx.lineWidth = 1.2; ctx.setLineDash([5,4]); ctx.stroke(); ctx.setLineDash([]);
+    if (ETK){
+      ctx.font = '9px Consolas'; ctx.textAlign = 'center';
+      ctx.fillStyle = 'rgba(255,59,107,0.8)';
+      ctx.fillText('tabaka balanssız — kapı sızdırıyor', s0[0], s0[1] + A.re*sc + 12);
+    }
+  }
+  /* 2 · kapı izleri: dirence çarpan yabancının hizasında yay */
+  for (const g of M.kapiIz){
+    const s0 = toScreen(g.x, g.y);
+    ctx.beginPath();
+    ctx.arc(s0[0], s0[1], g.re*sc, -(g.ang + 0.5), -(g.ang - 0.5));
+    ctx.strokeStyle = 'rgba(255,170,60,' + (0.25 + 0.55*g.s).toFixed(2) + ')';
+    ctx.lineWidth = 3; ctx.stroke();
+  }
+  /* 3 · adaylar: simetri saati dolana kadar kesik halka + kalan süre yayı */
+  for (const A of M.obekCache){
+    for (const id of A.ids){
+      const i = mkIdxByID(id);
+      if (i < 0) continue;
+      const q = S.kuts[i];
+      const gec = M.t - (q.mGiris || 0);
+      if (gec >= Tsim || gec < 0) continue;
+      const s0 = toScreen(q.x, q.y);
+      const rA = kutCizimYaricapi(gOf(q)) + 6;
+      ctx.beginPath(); ctx.arc(s0[0], s0[1], rA, 0, 2*Math.PI);
+      ctx.strokeStyle = 'rgba(0,229,255,0.3)'; ctx.lineWidth = 1;
+      ctx.setLineDash([3,3]); ctx.stroke(); ctx.setLineDash([]);
+      ctx.beginPath();
+      ctx.arc(s0[0], s0[1], rA, -Math.PI/2,
+              -Math.PI/2 + 2*Math.PI*(1 - gec/Tsim));
+      ctx.strokeStyle = 'rgba(0,229,255,0.75)'; ctx.lineWidth = 2; ctx.stroke();
+    }
+  }
+  /* 4 · süreçler: atım oku + söküm pulsasyonu (3B'ye yansıyan imza) */
+  for (const p of M.islem){
+    const i = mkIdxByID(p.id);
+    if (i < 0) continue;
+    const q = S.kuts[i], s0 = toScreen(q.x, q.y);
+    if (p.vx || p.vy){
+      const vn = Math.hypot(p.vx, p.vy) || 1;
+      const ex = s0[0] + p.vx/vn*26, ey = s0[1] - p.vy/vn*26;
+      ctx.strokeStyle = 'rgba(255,59,107,0.9)'; ctx.lineWidth = 2;
+      ctx.beginPath(); ctx.moveTo(s0[0], s0[1]); ctx.lineTo(ex, ey); ctx.stroke();
+      const aa = Math.atan2(ey - s0[1], ex - s0[0]);
+      ctx.beginPath(); ctx.moveTo(ex, ey);
+      ctx.lineTo(ex - 7*Math.cos(aa - 0.4), ey - 7*Math.sin(aa - 0.4));
+      ctx.lineTo(ex - 7*Math.cos(aa + 0.4), ey - 7*Math.sin(aa + 0.4));
+      ctx.closePath(); ctx.fillStyle = 'rgba(255,59,107,0.9)'; ctx.fill();
+    }
+    if (p.esler.length){
+      const rr = kutCizimYaricapi(gOf(q)) + 4 + 2.5*Math.sin(9*M.t);
+      ctx.beginPath(); ctx.arc(s0[0], s0[1], rr, 0, 2*Math.PI);
+      ctx.strokeStyle = 'rgba(196,181,253,0.85)'; ctx.lineWidth = 1.6; ctx.stroke();
+    }
+    if (ETK){
+      ctx.font = '9px Consolas'; ctx.textAlign = 'center';
+      ctx.fillStyle = 'rgba(255,59,107,0.9)';
+      ctx.fillText('⏏ ' + p.sebep, s0[0], s0[1] - 16);
+    }
+  }
+  /* 5 · R7 bekleyenler */
+  for (const p of M.sokBek){
+    const i = mkIdxByID(p.id);
+    if (i < 0) continue;
+    const s0 = toScreen(S.kuts[i].x, S.kuts[i].y);
+    const rr = kutCizimYaricapi(gOf(S.kuts[i])) + 5 + 1.8*Math.sin(6*M.t);
+    ctx.beginPath(); ctx.arc(s0[0], s0[1], rr, 0, 2*Math.PI);
+    ctx.strokeStyle = 'rgba(124,92,255,0.9)'; ctx.lineWidth = 2; ctx.stroke();
+    if (ETK){
+      ctx.font = '9px Consolas'; ctx.textAlign = 'center';
+      ctx.fillStyle = 'rgba(185,168,240,0.95)';
+      ctx.fillText('R7: şok bekliyor', s0[0], s0[1] - 17);
+    }
+  }
+  /* 6 · KAYNAŞMA süreçleri: hedefe kesikli yol çizgisi */
+  for (const p of M.kaynas){
+    const kay = p.ids.map(mkIdxByID).filter(k => k >= 0);
+    const hed = p.hedef.map(mkIdxByID).filter(k => k >= 0);
+    if (!kay.length || !hed.length) continue;
+    let hx = 0, hy = 0;
+    for (const k of hed){ hx += S.kuts[k].x; hy += S.kuts[k].y; }
+    hx /= hed.length; hy /= hed.length;
+    const sh = toScreen(hx, hy);
+    for (const k of kay){
+      const s0 = toScreen(S.kuts[k].x, S.kuts[k].y);
+      ctx.beginPath(); ctx.moveTo(s0[0], s0[1]); ctx.lineTo(sh[0], sh[1]);
+      ctx.strokeStyle = 'rgba(124,252,107,0.35)'; ctx.lineWidth = 1.2;
+      ctx.setLineDash([4,5]); ctx.stroke(); ctx.setLineDash([]);
+    }
+    if (ETK){
+      ctx.font = '9px Consolas'; ctx.textAlign = 'center';
+      ctx.fillStyle = 'rgba(124,252,107,0.9)';
+      ctx.fillText('⚭ kaynaşma', sh[0], sh[1] - 14);
+    }
+  }
+}
+
+/* ==========================================================================
    DÖNGÜ
    ========================================================================== */
 let lastT = performance.now(), kareSayisi = 0, fallback = null;
@@ -2818,30 +4672,41 @@ function frameBody(now){
   /* sınır tabakası bağ kanalı — arayüzden çekirdeğe aktar */
   BAG_KAPPA = $('bagAc').checked ? (+$('bk').value) : 0;
   BAG_FAZ   = Math.PI * (+$('bf').value);
-  BAG_D0    = +$('bd0').value;
-  BAG_CAP   = +$('cap').value;
+  BAG_LAM   = +$('blam').value;
+  BAG_CAP   = capEff();
+  $('capV').textContent = BAG_CAP.toFixed(2) + ($('capOto').checked ? ' (oto)' : '');
   BAG_HIYERARSIK = $('bagHiy').checked;
   GIRDAP_ITME    = $('girIt').checked;
-  /* engel / kuyu / eşik — kapalı biçimden canlı okunur (eş yönlü çift için) */
+  MAK_R1         = $('mkAc').checked;   /* R1: eş-yönlü birleşme gerçek eşiğe döner */
+  MAK_SIZDIR     = $('mkAc').checked && $('mkKapiAc').checked;  /* R2 dinamik duvar */
+  MAK_ESIK       = +$('mkQ2').value;
+  /* TÜRETİLMİŞ DENGE — d₀ artık girdi değil, çıktı.
+     Ayrıca zıt işaret için kök OLMADIĞI açıkça yazılır: ters Kut duramaz. */
   {
-    const kk = bagKokleri(BAG_KAPPA, BAG_FAZ, BAG_D0, 1, 1);
+    const olcekE = Math.pow(10, +$('evs').value);
+    const dBir = 2*rcepUnit(SIGP0)*olcekE;
+    const es  = bagKokleri(BAG_KAPPA, BAG_FAZ, BAG_LAM,  1, 1);
+    const zit = bagKokleri(BAG_KAPPA, BAG_FAZ, BAG_LAM,  1, -1);
     let t;
-    if (!GIRDAP_ITME){
-      t = '<span style="color:#5e6d88">girdap itmesi KAPALI — engel yok, '
-        + 'kuyu d₀ = ' + BAG_D0.toFixed(2) + '</span>';
-    } else if (!BAG_KAPPA){
-      t = '<span style="color:#ff3b6b">bağ KAPALI — her mesafede İTİCİ</span>'
-        + '<br><span style="color:#8892b0">κ_min = ' + kk.kmin.toFixed(1) + '</span>';
-    } else if (kk.yok){
-      t = '<span style="color:#ff3b6b">κ = ' + BAG_KAPPA.toFixed(1)
-        + ' &lt; κ_min = ' + kk.kmin.toFixed(1) + '</span><br>'
-        + '<span style="color:#8892b0">kök YOK — her mesafede itici, '
-        + 'KENETLENME OLMAZ</span>';
+    if (es.yok){
+      t = '<span style="color:#5e6d88">κ veya λ sıfır — radyal kanal yok</span>';
     } else {
-      t = '<span style="color:#7cfc6b">kuyu d = ' + kk.kuyu.toFixed(3) + '</span>'
-        + '  ·  <span style="color:#ff3b6b">engel d = ' + kk.tepe.toFixed(3) + '</span>'
-        + '<br><span style="color:#8892b0">κ_min = ' + kk.kmin.toFixed(1)
-        + '  ·  tepenin dışı itici</span>';
+      /* PAY ölçütü: yalnız denge > d_bir yetmiyor. 7+1 kurulumunda ölçüldü —
+         pay 1,43'te ters Kut'un düşüşü 5 birleşme çığı başlatıyor. Güvenli
+         eşik pay ≳ 1,8. Bu yüzden uyarı ÖNE çekilmiştir. */
+      const pay = es.kuyu/Math.max(dBir, 1e-12);
+      const renkP = pay >= 1.8 ? '#8892b0' : (pay > 1 ? '#ffb020' : '#ff3b6b');
+      const notP  = pay >= 1.8 ? 'pay ' + pay.toFixed(2) + ' ✓'
+                  : (pay > 1 ? 'pay ' + pay.toFixed(2) + ' — BİRLEŞME ÇIĞI RİSKİ'
+                             : 'pay ' + pay.toFixed(2) + ' — eş yönlüler BİRLEŞİR');
+      t = '<span style="color:#7cfc6b"><b>eş yönlü:</b> denge d = '
+        + es.kuyu.toFixed(3) + '</span>  <span style="color:#5e6d88">(türetilmiş)</span>'
+        + '<br><span style="color:#ff3b6b"><b>zıt yönlü: KÖK YOK</b> — her mesafede '
+        + 'çekici, ters Kut DURAMAZ</span>'
+        + '<br><span style="color:' + renkP + '">d_bir = ' + dBir.toFixed(3)
+        + '  ·  ' + notP
+        + '  ·  κ_güvenli &lt; ' + (BAG_LAM*K5/Math.pow(Math.max(1.8*dBir,1e-12),3)).toFixed(1)
+        + '</span>';
     }
     $('engelBilgi').innerHTML = t;
   }
@@ -2896,10 +4761,7 @@ function frameBody(now){
      korunur, doğruluk korunur.                                            */
   if ($('run').checked && S.kuts.length > 1 && $('mode').value === 'serbest'){
     const hTop = dt * (+$('dtm').value);
-    const nAlt = Math.min(ALT_ADIM_TAVAN, Math.max(1, Math.ceil(hTop/H_GUVENLI)));
-    const hAlt = hTop / nAlt;
-    for (let a = 0; a < nAlt; a++) stepRK4(S.kuts, hAlt);
-    S.altAdim = nAlt;
+    S.altAdim = stepUyarlamali(S.kuts, hTop, 24);   /* CFL koşullu + 24 ms kare bütçesi */
   }
   /* cep sınırı olayları — nokta girdap modelinin geçerlilik sınırı */
   if ($('ev').checked && S.kuts.length > 1){
@@ -2941,6 +4803,22 @@ function frameBody(now){
       }
     }
   }
+  /* EVRENAKI MAKİNASI — dinamik+olaylar+darbeler İŞLENDİKTEN sonra çalışır:
+     R7 şok teması S.vurulan'dan okunur, kararlar taze konumlarla verilir.
+     Yalnız SERBEST dinamikte anlamlı (BAĞIL DENGE kipi yapıyı zaten kilitler). */
+  if ($('mkAc').checked && $('run').checked && S.kuts.length
+      && $('mode').value === 'serbest'){
+    mkCalistir(dt * (+$('dtm').value));
+  } else {
+    S.makine.kapiIz = [];
+    mkBilgiYaz(!$('mkAc').checked
+      ? '<span style="color:#5e6d88">makine kapalı — R1 dahil tüm kurallar askıda</span>'
+      : (!S.kuts.length
+        ? '<span style="color:#5e6d88">makine hazır — sahneye Kut bekliyor '
+          + '(KALABALIĞI SERP ya da tek tek yerleştir)</span>'
+        : '<span style="color:#5e6d88">makine bekliyor (duraklatıldı ya da '
+          + 'BAĞIL DENGE kipi)</span>'));
+  }
   /* 4B dönüş fazları */
   const w2 = +$('w2').value;
   const w1 = $('iso').checked ? w2 : w2*0.45;
@@ -2952,7 +4830,7 @@ function frameBody(now){
   draw4(); draw3(); drawTara();
 
   /* --- tanı --- */
-  const n = S.kuts.length, cap = +$('cap').value;
+  const n = S.kuts.length, cap = capEff();
   const cl = clusters(S.kuts, cap);
   const boy = new Array(cl.count).fill(0);
   cl.lab.forEach(l => { if (l >= 0) boy[l]++; });
@@ -3030,6 +4908,12 @@ function frameBody(now){
       + '<span style="color:#8892b0">koparma işi W = ' + Math.abs(W).toFixed(4)
       + '  (d = ' + dmin.toFixed(3) + ')</span>';
   }
+  if (S.balans && S.balans.ornek > 0){
+    $('bagBilgi').innerHTML += '<br><span style="color:#8892b0">balans izleme: '
+      + S.balans.ornek + ' örnek · izole-balanssız <b style="color:'
+      + (S.balans.izoleBoz ? '#ff3b6b' : '#7cfc6b') + '">' + S.balans.izoleBoz
+      + '</b> · dış-alanlı ' + S.balans.disBoz + '</span>';
+  }
   $('m_olay').textContent = S.olay.yok + ' / ' + S.olay.bir;
   /* Ortama devredilen kalemler — Γ daima 0 çıkmalı, L yok olmada çıkar */
   $('m_devG').textContent = '0,000  (daima)';
@@ -3044,6 +4928,10 @@ function frameBody(now){
   $('s_olay').innerHTML = (S.olay.yok || S.olay.bir)
       ? '<span style="color:#ff3b6b">' + S.olay.yok + '</span> / <span style="color:#7cfc6b">'
         + S.olay.bir + '</span>' : '0 / 0';
+  $('s_mak').innerHTML = $('mkAc').checked
+      ? '<span style="color:#ff3b6b">' + S.makine.sayac.atilan
+        + '</span> / <span style="color:#34d399">' + S.makine.sayac.kabul + '</span>'
+      : '<span style="color:#5e6d88">kapalı</span>';
   $('m_gt').textContent = n ? gT.toFixed(2) : '—';
   $('m_mix').innerHTML = !n ? '—'
       : (esYon ? '<span style="color:#34d399">hepsi eş yönlü</span>'
@@ -3068,8 +4956,10 @@ function bindLabels(){
   const L = [['wnew','wV',2],['cap','capV',2],['w2','w2V',2],['eps','epsV',2],
              ['dtm','dtV',2],['gs','gsV',2],['evs','evsV',2],
              ['damp','dampV',3],['dkal','dkalV',2],['st','stV',0],['se','seV',3],
-             ['bk','bkV',2],['bf','bfV',2],['bd0','bd0V',2],
-             ['kalN','kalV',0],['kalR','kalRV',0]];
+             ['bk','bkV',2],['bf','bfV',2],['blam','blamV',2],
+             ['kalN','kalV',0],['kalR','kalRV',0],
+             ['mkQ2','mkQ2V',2],['mkT','mkTV',0],['mkFir','mkFirV',2],
+             ['mkZeta','mkZetaV',2],['mkKapi','mkKapiV',2]];
   for (const [id,out,dp] of L){
     const f = () => { $(out).textContent = (+$(id).value).toFixed(dp); };
     $(id).addEventListener('input', f); f();
@@ -3089,7 +4979,8 @@ $('clr').addEventListener('click', () => {
   snapshot(); S.kuts = []; S.bondFlash = 0; S.bondAt = null;
   /* TÜM alanlar sıfırlanmalı; Lx/Ly/E atlanırsa += ile NaN'a döner. */
   S.olay = { yok:0, bir:0, Lx:0, Ly:0, E:0 }; S.olayFlash = 0;
-  S.darbeler = []; S.vurulan = []; S.otelenme = 0; resetCons();
+  S.balans = { kare:0, ornek:0, izoleBoz:0, disBoz:0 };
+  S.darbeler = []; S.vurulan = []; S.otelenme = 0; mkSifirla(); resetCons();
 });
 $('undo').addEventListener('click', () => {
   if (S.gecmis.length){ S.kuts = S.gecmis.pop(); resetCons(); }
@@ -3108,22 +4999,37 @@ $('undo').addEventListener('click', () => {
 function kalabalikSerp(){
   snapshot();
   const N = +$('kalN').value, R = +$('kalR').value;
-  /* DÜĞME HİÇBİR ANAHTARA DOKUNMAZ — 12 Ağu 2026 düzeltmesi.
-     Önce burada bagAc/bagHiy/girIt/run/mode zorla kuruluyordu. Sonuç: düğmeyle
-     serpilen Kutlar bağ kuruyor, elle tek tek konanlar kurmuyordu — kullanıcı
-     haklı olarak "sanki ayrı fizik işliyor" dedi. İşliyordu da.
-     Bir Kut'un sahneye NASIL geldiği fiziğini değiştiremez. Düğmenin tek işi
-     Kut serpmektir; kanal durumu ne ise o geçerlidir ve eksikse okuma UYARIR. */
+  /* DÜĞME HİÇBİR ANAHTARA DOKUNMAZ. bagAc/bagHiy/girIt/run/mode burada
+     zorla kurulursa iki ayrı fizik doğar: düğmeyle serpilen Kutlar bağ
+     kurar, elle tek tek konanlar kurmaz. Bir Kut'un sahneye NASIL geldiği
+     fiziğini değiştiremez. Düğmenin tek işi Kut serpmektir; kanal durumu
+     ne ise o geçerlidir ve eksikse okuma UYARIR. */
   S.kuts = [];
-  /* disk üzerinde DÜZGÜN dağılım: r = R√u (yoksa merkeze yığılır) */
+  /* disk üzerinde DÜZGÜN dağılım: r = R√u (yoksa merkeze yığılır).
+     SIKIŞIK DOĞUM KORUMASI: R1 birleşme supabını kaldırdığından, üst üste
+     doğan eş-yönlü çift 1/d⁵ duvarının İÇİNDE başlar ve CFL alt-adımını
+     patlatırdı (tıkanma). Aday en çok 60 kez örneklenir; eşik tutmazsa en
+     geniş nefesli aday kabul edilir — dizilim yine her basışta rastgeledir. */
+  const dDogum = 0.6*(bagDenge(BAG_KAPPA || 2, 0, BAG_LAM || 1) || 1.4);
   for (let i = 0; i < N; i++){
-    const a = 2*Math.PI*Math.random(), r = R*Math.sqrt(Math.random());
-    S.kuts.push({ x:r*Math.cos(a), y:r*Math.sin(a), w:0, g:1 });
+    let enIyi = null, enUzak = -1;
+    for (let dene = 0; dene < 60; dene++){
+      const a = 2*Math.PI*Math.random(), r = R*Math.sqrt(Math.random());
+      const x = r*Math.cos(a), y = r*Math.sin(a);
+      let yakin = Infinity;
+      for (const q of S.kuts){
+        const dd = Math.hypot(q.x - x, q.y - y);
+        if (dd < yakin) yakin = dd;
+      }
+      if (yakin > enUzak){ enUzak = yakin; enIyi = [x, y]; }
+      if (yakin >= dDogum) break;
+    }
+    S.kuts.push({ x:enIyi[0], y:enIyi[1], w:0, g:1 });
   }
   S.bondFlash = 0; S.bondAt = null; S.darbeler = []; S.vurulan = [];
   S.otelenme = 0; S.olay = { yok:0, bir:0, Lx:0, Ly:0, E:0 }; S.olayFlash = 0;
   S.tara = null; S.serpBaslangic = { n:N, R:R, yayilim:yayilimRMS(S.kuts) };
-  resetCons();
+  mkSifirla(); resetCons();
 }
 /* Topluluğun ağırlık merkezine göre RMS yarıçapı — kümeleşmenin tek sayılık ölçüsü */
 function yayilimRMS(kuts){
@@ -3136,6 +5042,48 @@ function yayilimRMS(kuts){
   return Math.sqrt(m/kuts.length);
 }
 $('serp').addEventListener('click', kalabalikSerp);
+/* SANAL PATLAMA — tanı: gerçek yok-olma darbesiyle AYNI alan (darbeHizi),
+   sahne dışından merkeze doğru. Fizik katmanına yeni terim girmez; th,
+   gerçek olaydaki gibi momentum doğrultusudur. */
+$('patla').addEventListener('click', () => {
+  if (!S.kuts.length) return;
+  const c = centroid(S.kuts);
+  let rmax = 4;
+  for (const q of S.kuts)
+    rmax = Math.max(rmax, Math.hypot(q.x - c[0], q.y - c[1]));
+  const a = Math.random()*2*Math.PI, D = rmax + 4;   /* yakın kaynak: 1/√r kazancı */
+  S.darbeler.push({ x:c[0] + D*Math.cos(a), y:c[1] + D*Math.sin(a),
+                    r:0, mag:3, th:a + Math.PI });
+});
+/* R7 elle şok — hedef önceliği: şok bekleyen liste; yoksa EN balanssız
+   öbeğin bozanı. Alan sanal patlamayla aynı; yalnız NİŞANLIDIR. */
+$('mkSok').addEventListener('click', () => {
+  if (!S.kuts.length) return;
+  mkKimlik();
+  let hedef = -1;
+  if (S.makine.sokBek.length) hedef = mkIdxByID(S.makine.sokBek[0].id);
+  if (hedef < 0){
+    const bi = obekBilgi(S.kuts, capEff());
+    let enQ = +$('mkQ2').value;
+    for (let c = 0; c < bi.obekler.length; c++){
+      if (bi.obekler[c].n < 3) continue;
+      const uyeler = [];
+      for (let i = 0; i < S.kuts.length; i++) if (bi.lab[i] === c) uyeler.push(i);
+      const bal = uyeBalans(S.kuts, uyeler);
+      if (bal && bal.Q2 > enQ){
+        enQ = bal.Q2;
+        hedef = mkBozanBul(S.kuts, uyeler, BAG_KAPPA || 2, BAG_FAZ, BAG_LAM).bozan;
+      }
+    }
+  }
+  if (hedef >= 0){
+    mkSokGonder(hedef);
+    mkLogYaz('<span style="color:#ff9048">⚡ elle şok → #'
+           + S.kuts[hedef].mID + '</span>');
+  } else {
+    mkLogYaz('<span style="color:#8892b0">şok hedefi yok — balanssız yapı yok</span>');
+  }
+});
 /* kalN/kalR etiketleri bindLabels() içinde — ayrı dinleyici gerekmiyor */
 /* ==========================================================================
    SOL PANEL SADELEŞTİRME — katlanabilir bölümler + açıklama anahtarı
@@ -3262,7 +5210,11 @@ function drawTara(){
   const dpr = Math.min(2, window.devicePixelRatio || 1);
   const W = cv.clientWidth, H = cv.clientHeight;
   if (W < 4 || H < 4) return;
-  if (cv.width !== (W*dpr|0)){ cv.width = W*dpr|0; cv.height = H*dpr|0; }
+  /* HEM genişlik HEM yükseklik eşitlenir — yalnız genişlik denetlenince,
+     yüksekliği değişen tuvalin altında bayat piksel şeridi kalıyordu. */
+  if (cv.width !== (W*dpr|0) || cv.height !== (H*dpr|0)){
+    cv.width = W*dpr|0; cv.height = H*dpr|0;
+  }
   g.setTransform(dpr,0,0,dpr,0,0);
   g.fillStyle = '#0c1220'; g.fillRect(0,0,W,H);
   if (!S.tara){
@@ -3364,7 +5316,7 @@ $('dirR').addEventListener('click', () => setDir(-1));
 /* Ters Kut'u doğrudan yapının yanına ekle — yönü geçici olarak ters alır */
 $('addT').addEventListener('click', () => {
   const istenen = +$('wnew').value;
-  const p = yanPozisyon(S.kuts, +$('cap').value, istenen);
+  const p = yanPozisyon(S.kuts, capEff(), istenen);
   yerlestir(p[0], p[1], p[2], -(+$('gs').value));
 });
 $('pick').addEventListener('click', e => { e.preventDefault(); setArmed(!S.armed); });
@@ -3375,10 +5327,10 @@ $('addC').addEventListener('click', () => yerlestir(0, 0));
    Bağ ölçütü en yakın Kut'a olan 4B uzaklıktır: √(dx²+dy²+dw²) ≤ cap.
    Bu yüzden yeni Kut, ağırlık merkezinden değil, EN DIŞTAKİ KUT'TAN
    ölçülen bir uzaklığa konur ve w farkı da bütçeden düşülür.
-   (İlk sürüm merkeze göre yerleştiriyordu ve bağ kurmuyordu — test yakaladı.) */
+   (Merkeze göre yerleştirmek bağ kurdurmaz; öz-sınama bu koşulu denetler.) */
 $('addR').addEventListener('click', () => {
   const istenen = +$('wnew').value;
-  const p = yanPozisyon(S.kuts, +$('cap').value, istenen);
+  const p = yanPozisyon(S.kuts, capEff(), istenen);
   yerlestir(p[0], p[1], p[2]);
   if (Math.abs(p[2] - istenen) > 1e-9){
     $('pickState').textContent = 'w bağ için ' + p[2].toFixed(2) + '\'ye kırpıldı';
@@ -3474,6 +5426,36 @@ window.addEventListener('mouseup', () => {
 $('zIn').addEventListener('click',  () => zoomUygula(1.35, S.view.W/2, S.view.H/2));
 $('zOut').addEventListener('click', () => zoomUygula(1/1.35, S.view.W/2, S.view.H/2));
 $('zFit').addEventListener('click', gorusSigdir);
+
+/* ==========================================================================
+   SİMÜLASYON HIZI — sahne üstü denetim
+   ==========================================================================
+   AYRI DURUM TUTMAZ. Sol paneldeki `dtm` sürgüsünü ve `run` kutusunu sürer,
+   sonra 'input'/'change' olayı yayar. Böylece iki denetim asla ayrışmaz —
+   SERP düğmesinde öğrendiğimiz ders: sessizce kendi durumunu kuran bir
+   denetim "sanki ayrı fizik işliyor" hissini üretir.
+   NOT: duraklatma dtm=0 ile DEĞİL, `run` ile yapılır; dtm'nin alt sınırı
+   0,05 ve sıfırlamak sürgüyü geçersiz bir değere iterdi.                  */
+/* el parametresi SINAMA içindir: öz-sınama gerçek sürgüyü sürmemeli.
+   Ölçüldü — sürüyordu ve kullanıcının hız sürgüsünü 0,5 yerine 0,11'de
+   bırakıyordu. Sınama artık kopuk (detached) bir input üzerinde koşuyor. */
+function hizAyarla(carpan, hedef){
+  const el = hedef || $('dtm');
+  const alt = +el.min, ust = +el.max;
+  const yeni = Math.max(alt, Math.min(ust, (+el.value) * carpan));
+  /* sürgü adımına yapıştır ki gösterge ile sürgü ayrışmasın */
+  const adim = +el.step || 0.01;
+  el.value = (Math.round(yeni/adim)*adim).toFixed(4);
+  el.dispatchEvent(new Event('input', { bubbles:true }));
+}
+function duraklatCevir(){
+  const r = $('run');
+  r.checked = !r.checked;
+  r.dispatchEvent(new Event('change', { bubbles:true }));
+}
+$('hHiz').addEventListener('click', () => hizAyarla(1.5));
+$('hYav').addEventListener('click', () => hizAyarla(1/1.5));
+$('hDur').addEventListener('click', duraklatCevir);
 /* Çift tıklama: silahlanmaya gerek yok, doğrudan Kut ekler.
    400 ms guard — tek tıkla yerleştirmenin hemen ardından ikinci Kut eklenmesin. */
 cv4.addEventListener('dblclick', e => {

@@ -110,6 +110,7 @@ const chapters = [
     { id: 'akademik_11_07', title: '11.7 Eksen Devinimi: İçkin Kanal ve Tork Kanalı', file: 'Metin/Akademik/Kisim_11_Astronomik_Dogrulamalar/07_Eksen_Devinimi.md', group: 'akademik', part: 'Kısım XI: Astronomik Doğrulamalar' },
     { id: 'akademik_11_ozet', title: '11.8 Kısım Özeti: Ne Öğrendik?', file: 'Metin/Akademik/Kisim_11_Astronomik_Dogrulamalar/98_Ne_Ogrendik.md', group: 'akademik', part: 'Kısım XI: Astronomik Doğrulamalar' },
     { id: 'akademik_11_kaynakca', title: '11.9 Kaynakça', file: 'Metin/Akademik/Kisim_11_Astronomik_Dogrulamalar/99_Kaynakca.md', group: 'akademik', part: 'Kısım XI: Astronomik Doğrulamalar' },
+    { id: 'akademik_12_00', title: '12.0 Temel Sözleşme', file: 'Metin/Akademik/Kisim_12_Kut_Motoru/00_Temel_Sozlesme.md', group: 'akademik', part: 'Kısım XII: Kut Motoru' },
     { id: 'akademik_12_01', title: '12.1 Ortam ve Kut Oluşumu', file: 'Metin/Akademik/Kisim_12_Kut_Motoru/01_Ortam_ve_Kut_Olusumu.md', group: 'akademik', part: 'Kısım XII: Kut Motoru' },
     { id: 'akademik_12_02', title: '12.2 Kut Motoru: 4B Dönüşün 3B İzi', file: 'Metin/Akademik/Kisim_12_Kut_Motoru/02_Kut_Motoru_4B_Donusun_3B_Izi.md', group: 'akademik', part: 'Kısım XII: Kut Motoru' },
     { id: 'akademik_12_03', title: '12.3 Bağlanma, Yapılanma ve Kararlılık', file: 'Metin/Akademik/Kisim_12_Kut_Motoru/03_Baglanma_Yapilanma_ve_Kararlilik.md', group: 'akademik', part: 'Kısım XII: Kut Motoru' },

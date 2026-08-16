@@ -20,13 +20,13 @@ Kelvin dolanım teoremi gereği, bir akışkanda kapalı bir eğri boyunca dolan
 
 $$\Gamma = \oint \vec v \cdot d\vec\ell$$
 
-korunur. Ve birden çok girdabı çevreleyen bir eğri için dolanım, içerdiği girdapların dolanımlarının **toplamıdır**:
+korunur. (Bu teorem artık dışarıdan devralınan bir sonuç da değildir: birleşik eylemde parçacık yeniden-etiketleme simetrisinin Noether yüküdür — Ek M-50.) Ve birden çok girdabı çevreleyen bir eğri için dolanım, içerdiği girdapların dolanımlarının **toplamıdır**:
 
 $$\boxed{\;\Gamma_{\text{top}} = \sum_i \Gamma_i\;}$$
 
 Bu, aktarımın bütün mekanizmasıdır. Kut'un dönüşü yapıya "aktarılmaz" — yapının dönüşü zaten Kutların dönüşünün **toplamıdır**. Ayrı bir taşıyıcıya, ayrı bir kuvvete, ayrı bir kanala gerek yoktur.
 
-Bu, 12.3.7'de ölçülen sonucun da kaynağıdır: bir öbek uzaktan tek girdap gibi görünür ve dolanımı $\Gamma_{\text{top}}$'tur; bileşik sınır tabakası yarıçapı $r_e(\text{öbek}) = |\sum g|\,r_e$ olur.
+Bu, 12.3.7'de ölçülen sonucun da kaynağıdır: bir Kutam uzaktan tek girdap gibi görünür ve dolanımı $\Gamma_{\text{top}}$'tur; bileşik sınır tabakası yarıçapı $r_e(\text{Kutam}) = |\sum g|\,r_e$ olur.
 
 **Ve korunum olaylarda da tutar.** Simülasyonda ölçüldü:
 
@@ -57,7 +57,7 @@ Bu, 12.3.7'de ölçülen sonucun da kaynağıdır: bir öbek uzaktan tek girdap 
 
 Bjerknes kuvveti ancak **aynı fazda** pulsasyon yapan kaviteler arasında çekicidir; zıt fazda iticidir. Rastgele fazlı bir toplulukta ortalama kuvvet sıfıra yakın olurdu ve hiçbir yapı kurulamazdı.
 
-Teori bu koşulu **kendisi sağlar**: bütün Kutlar aynı 4B dönüşün parçasıdır, dolayısıyla $\omega_2$ **ortaktır**. Faz uyumu bir varsayım değil, kurgunun zorunlu sonucudur.
+Burada ince bir nokta vardır ve açıkça söylenmelidir: **aynı frekans, tek başına aynı fazı garanti etmez** — $\phi_i(t)=\omega_2t+\phi_{i0}$ yazımında başlangıç fazları serbest kalabilirdi. Teori bu boşluğu frekans ortaklığıyla değil, daha güçlü bir hükümle kapatır (12.0.4): Kutlar bağımsız osilatörler değil, **tek bir küresel 4B dönüşün yerel kesitleridir.** Ortak olan dönüşün kendisidir; dolayısıyla $\phi_{i0}$ diye bağımsız bir serbestlik yoktur. Faz uyumu bir varsayım değil, kurucu hükmün zorunlu sonucudur.
 
 Bu, teorinin en az fark edilen ama en güçlü iç tutarlılıklarından biridir: **yapının var olabilmesi için gereken faz uyumunu, yapının dönüşünü sağlayan aynı mekanizma üretiyor.**
 
@@ -114,11 +114,11 @@ Bu, "yapı kendi dönüşünü bir yerden alıyor" ifadesinin sayısal karşıl�
 
 ## 12.4.5 Bir Kat Yukarı: Yörünge de Aynı Yasadan
 
-Aktarım tek katta durmuyor. İki **öbek** birbirinin etrafında dönerken de aynı yasa işliyor:
+Aktarım tek katta durmuyor. İki **Kutam** birbirinin etrafında dönerken de aynı yasa işliyor:
 
 $$\boxed{\;\Omega_{\text{yörünge}} = \frac{\Gamma_A + \Gamma_B}{2\pi d^2}\;}$$
 
-Merkezleri $d = 30$ uzakta iki öbek, saf girdap kipinde:
+Merkezleri $d = 30$ uzakta iki Kutam, saf girdap kipinde:
 
 | $N_A$–$N_B$ | $\Gamma_A$ | $\Gamma_B$ | $\Omega$ ölçülen | $\Omega$ öngörülen | Fark |
 |---|---|---|---|---|---|
@@ -132,7 +132,7 @@ Merkezleri $d = 30$ uzakta iki öbek, saf girdap kipinde:
 
 $$\Omega_{\text{yörünge}} = \frac{2\Gamma}{2\pi(2R)^2} = \frac{\Gamma}{4\pi R^2} = \Omega_{N=2} \quad\checkmark$$
 
-Öbek içi dönüş ile öbekler arası yörünge, **aynı yasanın iki okumasıdır.**
+Kutam içi dönüş ile Kutamlar arası yörünge, **aynı yasanın iki okumasıdır.**
 
 ### Yörünge, dolanımın dağılımına kördür
 
@@ -145,7 +145,10 @@ Tablodaki en öğretici satır çifti şudur:
 
 **Dengeli 3–3 ile dengesiz 2–4, aynı yörünge hızını veriyor.** Yörünge, dolanımın taraflar arasında nasıl paylaşıldığını umursamıyor — yalnız **toplamını** görüyor.
 
-Bu, 12.3.7'deki "uzak alan iç dizilime kördür" sonucunun dinamik karşılığıdır. Ve 12.5'teki ölçek değişmezliğinin sebebidir: her katman, bir alt katmanı yalnız $\Gamma_{\text{top}}$ olarak görür.
+Bu, 12.3.7'deki "uzak alan iç dizilime kördür" sonucunun dinamik karşılığıdır ve
+12.5'teki ölçek değişmezliği için gerekli koşullardan biridir: her katman, bir alt
+katmanın dolaşım alanını yalnız $\Gamma_{\text{top}}$ olarak görür. Denge aralığının
+da doğrusal ölçeklenmesi ayrıca gecikmeli yanıtların öz-benzer kalmasını gerektirir.
 
 ---
 
@@ -175,7 +178,9 @@ Dönüş tek başına aktarılmıyor; hareketin öteki iki büyüklüğü de akt
 
 **3.** Ortak $\omega_2$ ⟹ faz uyumu ⟹ ikincil Bjerknes kuvveti **çekicidir** ⟹ Kutlar bağ kurabilir. *(12.3.2)*
 
-**4.** Bağ, ışıma kanalıyla dengelenir ve türetilmiş bir aralıkta kilitlenir: $d_{\text{denge}} = (\lambda K^5/\kappa)^{1/3}$. *(12.3.4)*
+**4.** Bağ, gecikmeli Bjerknes torku ile ışıma torkunun dengesinde kilitlenir.
+$d_e=(\lambda K^5/\kappa)^{1/3}$ indirgenmiş modelin köküdür; temel aralık ve gerçek
+yörünge hızı iki bağlı Green–Magnus denkleminden birlikte çıkar. *(12.3.4)*
 
 **5.** $\omega_1$, dolanım olarak görünür ve dolanım **toplanabilirdir**: $\Gamma_{\text{top}} = \sum\Gamma_i$. *(12.4.1)*
 

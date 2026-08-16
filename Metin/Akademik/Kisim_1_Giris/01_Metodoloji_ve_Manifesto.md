@@ -29,16 +29,18 @@ Bu taahhüdün simetrik bir yüzü, kitap boyunca **Karşı Kayıt ilkesi** olar
 
 ## 1.1.3 Yazarın Açık Beyanı: Sınırın Dürüstçe Çizilmesi
 
-Bu kuram, evrende gözlemlenen pek çok olguyu — ışığın kıvrılmasından galaksi dönüş eğrilerine, kütlenin doğasından eksen devinimlerine kadar — tek bir hidrodinamik mekanizmayla açıklama iddiasındadır. Ancak tek bir noktada cevabımız yoktur ve bu ontolojik sınırın baştan dürüstçe çizilmesi gerekir: **Evrenakı'nın başlangıç durumu.**
+Bu kuram, evrende gözlemlenen pek çok olguyu — ışığın kıvrılmasından galaksi dönüş eğrilerine, kütlenin doğasından eksen devinimlerine kadar — tek bir hidrodinamik mekanizmayla açıklama iddiasındadır. Ancak iki noktada cevabımız yoktur ve bu ontolojik sınırın baştan dürüstçe çizilmesi gerekir: **Evrenakı'nın başlangıç durumu ve kök girdileri.**
 
 Bu sınırın iki yüzü vardır:
 
-* *Atom altı parçacıkların o "4. boyuttaki temel çift-dönüşünü" başlatan ilk hareket ettirici (prime mover) nedir?*
-* *Tek ve sürekli bir tözün neden bölünemeyen bir en küçük birimi (Kut; bkz. 1.6) vardır — bu taneliliği ne kuantumlar?*
+1. **İlk Hareket (Temel 4B Dönüş):** *Atom altı parçacıkların o "4. boyuttaki temel çift-dönüşünü" başlatan ilk hareket ettirici (prime mover) nedir?*
+2. **Başlangıç Sıkışıklığı ve Arka Plan Basıncı:** *Evrenakı akışkanını en baştan devasa bir iç basınçla sıkıştıran — sonradan kütle-itimi, kavitasyon ceplerini ve ses yayılım hızını ($c_0$) mümkün kılan o temel "arka plan basıncını" ($P_0$) — neyin sağladığı ve bu sıkışıklığın kökeni nedir?*
 
-Biri dönüşü, öteki taneliliği sorar; ikisi de Evrenakı'nın **verili** hâlini sorar. **Bunu bilmiyoruz** — ve belki hiçbir zaman bilemeyeceğiz. 
+Biri temel dönüşün kaynağını, öteki ortamın başlangıçtaki devasa iç basıncını ($P_0$) sorar; ikisi de Evrenakı'nın **verili ve kurucu başlangıç hâlini** sorar. **Bunları fiziksel ölçümlerle bilmiyoruz** — ve doğa biliminin yöntemleriyle belki hiçbir zaman bilemeyeceğiz. *(Tanelilik, kuantumlaşma veya kavitasyon cepleri ise ayrı birer muamma değildir; bu sıkışmış ortam içindeki temel dönüşün zorunlu hidrodinamik sonucudur).*
 
-Kuramımız, bu kök durumun *neden* böyle olduğuyla değil; böyle olduğu için Evrenakı okyanusunda hangi devasa hidrodinamik süreçleri tetiklediğiyle ve evrenin fiziksel işleyişini nasıl şekillendirdiğiyle ilgilenir. Evrenakı, 4 boyutlu dönüş ve onun taneliliği — biri yoksa ötekiler sessizliğe gömülür; bu kavramlardan herhangi birinin eksikliği, elinizdeki çalışmanın sayfalarının sonsuza dek boş kalması anlamına gelirdi.
+Fizik; doğanın "nasıl" işlediğini, kuvvetlerin mekanik mekanizmalarını ve ölçülebilir yasalarını araştırır. Ancak "İlk Hareket" ve "Kozmik Başlangıç Durumu" gibi mutlak kök nedenler, ampirik fiziğin sınırını aşarak felsefe ve teolojinin alanına girer. Elinizdeki çalışma **katı bir pozitif bilim ve hidrodinamik mekanik kitabı** olduğu için, sınırını tam burada çizer: inanç ve metafizik alanına taşmaz, bu iki kök girdiyi evrenin aksiyomatik başlangıç koşulu kabul eder ve bu temelin üzerinde doğanın saat gibi işleyen mekanik çarklarını kurmaya odaklanır.
+
+Kuramımız, bu kök durumların *neden* böyle olduğuyla değil; ortam bu devasa iç basınca ($P_0$) ve bu 4 boyutlu temel dönüşe sahip olduğu için Evrenakı okyanusunda hangi devasa hidrodinamik süreçleri tetiklediğiyle ve evrenin fiziksel işleyişini nasıl şekillendirdiğiyle ilgilenir. Evrenakı'nın varlığı, iç basıncı ve 4 boyutlu dönüş — biri yoksa ötekiler sessizliğe gömülür; bu kurucu unsurlardan herhangi birinin eksikliği, elinizdeki çalışmanın sayfalarının sonsuza dek boş kalması anlamına gelirdi.
 
 Bu sınır, kitap boyunca bir yöntem kuralı olarak işler: **varlığın tabanı Kut, açıklamanın tabanı Zerre'dir.** Her şeyin Kut'tan kurulu olduğunu kabul ederiz; ancak Zerre'nin, elektronun, nükleonun veya nötrinonun Kutlardan **nasıl** kurulduğunu bu kitap açıklamaz ve açıklamayı üstlenmez. Açıklamalarımızın tamamı, bilinen yapıtaşlarının **gözlenen davranış ve özellikleri** üzerinden yürür. Bu bir eksiklik beyanı değil, bir yöntem beyanıdır: termodinamik atom keşfedilmeden, kimya kuark bilinmeden kuruldu; bir katmanın yasaları alt katmanın çözülmesini beklemez. Kuralın karşılığı şudur ve istisnası yoktur: **Kut hiçbir hesaba girmez** — hiçbir denklemde görünmez. Kut'a yapılan atıf, açıklama yerine geçmez; bir olguyu açıklamak için Kut'a başvurma ihtiyacı doğuyorsa bu, açıklamanın Zerre düzeyinde henüz kurulamadığı anlamına gelir ve çözüm orada aranır. Sınır, gözlemleri açıklama yükümlülüğünü hafifletmez; yalnızca yapıtaşlarının kendi iç kuruluşunu kapsam dışında tutar.
 
@@ -59,7 +61,7 @@ Bu sınıra göre aşağıdaki konular **bilinçli olarak** *Atomların İşleyi
 
 > **Havalenin ölçütü: mekanizma burada, hesap orada.** Bu kitap her havale edilen kalemde **mekanizmayı kurar** ve yalnız niceliksel işlenişi sonraki kitaba bırakır. Atom tayfı bunun en açık örneğidir: zincirin tamamı — çekirdeğin kare katman geometrisinden örgüye, örgüden elemente özgü desene, desenden ritmik pencerelere ve Zerre'nin senkron geçişine — bu kitapta kuruludur (9.11); havale edilen şey **hesaptır**, ve gerekçesi 9.11.8'de iki maddeyle yazılıdır: (i) elimizdeki bütün ölçüm tabanı standart fiziğin nicelikleriyle yazılıdır ve teori bu ailede kendi uzunluk ölçeğini henüz kurmamıştır — ödünç sabitle beslenen hesap girdiyi geri okur; (ii) **atomdan Zerre salınımının mekanizması** henüz açıklanmamıştır, oysa tayfın temeli odur. Bu iki eksik giderilmeden yapılacak matematik başarıya ulaşmaz; hesap bu yüzden **yapılamadığı için değil, bugün yapılırsa anlamsız olacağı için** bırakılmıştır.
 
-Hedefimiz, bu kitabın son sayfasına ulaştığınızda zihninizde evrenin nasıl işlediğine dair mekanik bir boşluk kalmamasıdır; bu hedefe ne ölçüde ulaştığımızın yargıcı okuyucudur. Ancak her durumda geriye kalacak muamma tektir: *Evrenakı'yı durmaksızın çırpan o kusursuz dönüş ve denizin en küçük tanesi — ikisi de nereden gelir?*
+Hedefimiz, bu kitabın son sayfasına ulaştığınızda zihninizde evrenin nasıl işlediğine dair mekanik bir boşluk kalmamasıdır; bu hedefe ne ölçüde ulaştığımızın yargıcı okuyucudur. Ancak her durumda geriye kalacak muamma tektir: *Evrenakı'yı durmaksızın çırpan o kusursuz dönüş ve denizi sıkıştıran o başlangıç iç basıncı ($P_0$) — ikisi de nereden gelir?*
 
 ## 1.1.4 Yapay Zekâ Katkı Beyanı
 

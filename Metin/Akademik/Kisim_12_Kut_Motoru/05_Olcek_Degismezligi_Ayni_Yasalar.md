@@ -1,4 +1,4 @@
-# 12.5 Ölçek Değişmezliği: Zerre Altı Dünya, Makro Dünyayla Aynı Yasalara Tabidir
+﻿# 12.5 Ölçek Değişmezliği: Zerre Altı Dünya, Makro Dünyayla Aynı Yasalara Tabidir
 
 Bu bölüm, Kısım 12'nin — ve belki bütün kitabın — en iddialı cümlesini kurar:
 
@@ -47,7 +47,7 @@ Bu dokuz mekanizmanın Kut ölçeğinde ürettikleri:
 | Öngörü | Ölçüm |
 |---|---|
 | Kümeleşme oluşur | **12/12 deneme** |
-| Küme boyutu Thomson sınırını aşmaz | **62/62 öbek, istisnasız $\le 8$** |
+| Küme boyutu Thomson sınırını aşmaz | **62/62 Kutam, istisnasız $\le 8$** |
 | Ortalama küme boyu | **5,65** (Thomson: 5–8) |
 | Kümeler kalıcıdır | **14/14 denemede çekirdek büzülür** |
 | Zıt Kut duramaz | **$\kappa = 2$, 10, 20 — üçünde de yok oluyor** |
@@ -61,21 +61,30 @@ Ve iki bağımsız hesabın buluştuğu iki nokta:
 
 ---
 
-## 12.5.4 En Keskin Kanıt: Ölçek Değişmezliği
+## 12.5.4 En Keskin İndirgenmiş Sınama: Ölçek Değişmezliği
 
-En doğrudan sonuç şudur. İki Kut öbeği arasındaki denge mesafesi ölçüldü ve bileşik sınır tabakası yarıçaplarına oranlandı:
+İndirgenmiş modelde iki Kutam arasındaki denge mesafesi ölçüldü ve bileşik sınır tabakası yarıçaplarına oranlandı:
 
-| Öbek boyu $N$ | 1 | 2 | 4 | 7 | 10 | 20 |
+| Kutam boyu $N$ | 1 | 2 | 4 | 7 | 10 | 20 |
 |---|---|---|---|---|---|---|
 | $d_{\text{denge}}$ | 1,414 | 2,828 | 5,657 | 9,900 | 14,142 | 28,284 |
 | $d_{\text{denge}}/N$ | 1,414214 | 1,414214 | 1,414214 | 1,414214 | 1,414214 | 1,414214 |
 | $d_{\text{denge}}/(r_e^A+r_e^B)$ | **0,7071** | **0,7071** | **0,7071** | **0,7071** | **0,7071** | **0,7071** |
 
-> **Yirmi Kut'tan oluşan bir topluluk, tek bir Kut'la tam olarak aynı bağıl mesafede durur.**
+> **İndirgenmiş koşumda** yirmi Kut'tan oluşan bir topluluk, tek bir Kut'la tam olarak aynı bağıl mesafede durur.
 
-Bu, ölçek değişmezliğinin en yalın ifadesidir. Yapı büyüdükçe yasa değişmez — yalnız birim değişir. Ve bu **ısmarlanmış bir sonuç değildir**: sabitliği koşullayan ayrı bir ayar yoktur. Işımanın $g$ bağımlılığı türetimden geldiği biçimiyle yazıldığında oran kendiliğinden sabitlenir; bağımlılık eksik yazılırsa değişmezlik bozulur ve büyük öbekler birbirine gömülür. Oranın sabitliği, türetimin doğruluğunun bağımsız bir sınavıdır.
+Bu, indirgenmiş yasanın ölçek değişmezliği sınamasıdır. Tam Green–Magnus sisteminde
+aynı sonucun korunması için boyutsuz yanıtların da öz-benzer kalması gerekir:
+$M_{\text{orb},N}$ ve $q_N=\Omega_{p,N}\tau_N$ sabit olmalıdır. $d_N\propto N$
+altında bu, $\Omega_{p,N}\propto N^{-1}$ gerekli koşulunu verir; donmuş
+$d^{-3}$ kolunda ayrıca $\Delta V_N\propto N^{3/2}$ gerekir. Bunlar yeni postülalar
+değil, tam çözümde sınanacak sonuç koşullarıdır. Üstelik ilk koşul Temel
+Sözleşme'deki ortak tek-Kut $\omega_2$'sinden doğrudan çıkmaz. Bu nedenle iki
+ölçekleme dayatılmaz: tam çekirdek bunları veya $q$'ya duyarsız bir kolu üretirse
+doğrusal ölçekleme temel teoriye yükselir; üretmezse tablo indirgenmiş modelin
+sınırını gösterir.
 
-Aynı değişmezliğin ikinci yüzü: **öbeğin uzak alanı iç dizilime kördür.** Düzgün çokgen, doğrusal dizi, yığın, rastgele küme — hepsi aynı $|v|$ verir ($\sim10^{-6}$ fark). Dışarıdan bakan için bir öbek, $\Gamma_{\text{top}}$ dışında hiçbir bilgi taşımaz. Tam olarak tek bir Kut gibi.
+Aynı değişmezliğin ikinci yüzü: **Kutam'ın uzak alanı iç dizilime kördür.** Düzgün çokgen, doğrusal dizi, yığın, rastgele küme — hepsi aynı $|v|$ verir ($\sim10^{-6}$ fark). Dışarıdan bakan için bir Kutam, $\Gamma_{\text{top}}$ dışında hiçbir bilgi taşımaz. Tam olarak tek bir Kut gibi.
 
 ---
 
@@ -89,15 +98,15 @@ Aynı değişmezliğin ikinci yüzü: **öbeğin uzak alanı iç dizilime körd�
 
 **Adım 3.** Her Kut aynı 4B dönüşün parçasıdır; $\omega_2$ **ortaktır**. Bu, 12.3.2'de bağ kanalının çalışabilmesi için gereken faz uyumunu sağlayan şeydir — Bjerknes çekimi ancak eşfazlı pulsasyonla çekici olur.
 
-**Adım 4.** Kutlar bağlandığında öbek, üyelerin dolanımlarının toplamıyla döner. Bileşik yapının dönüşü ($\Gamma_{\text{top}}$) üyelerin dönüşünden **türetilir**, bağımsız değildir.
+**Adım 4.** Kutlar bağlandığında Kutam, üyelerin dolanımlarının toplamıyla döner. Bileşik yapının dönüşü ($\Gamma_{\text{top}}$) üyelerin dönüşünden **türetilir**, bağımsız değildir.
 
-**Adım 5.** Öbekler kendi bileşik tabakaları üzerinden bağlanır (hiyerarşik bağ) ve aynı yasayla, aynı bağıl mesafede dizilir (12.5.4).
+**Adım 5.** Kutamlar kendi bileşik tabakaları üzerinden bağlanır (hiyerarşik bağ) ve aynı yasayla, aynı bağıl mesafede dizilir (12.5.4).
 
 Zincirin sonucu:
 
 > **Bir gezegenin ekseni etrafındaki dönüşü de, bir yıldızın dönüşü de, bir Zerre'nin spini de aynı kökten gelir: Kut'un 4B dönüşü. Ölçek değişir, birim değişir — yasa değişmez.**
 
-Yörüngeler için aynı şey geçerlidir. Bir öbeğin diğerinin etrafındaki dönüşü, iki bileşik dolanımın karşılıklı taşınmasıdır — tek bir Kut çiftinin ortak merkez etrafındaki yörüngesiyle **aynı denklemdir** (12.3.1). Aradaki tek fark $\Gamma$'nın büyüklüğüdür.
+Yörüngeler için aynı şey geçerlidir. Bir Kutam'ın diğerinin etrafındaki dönüşü, iki bileşik dolanımın karşılıklı taşınmasıdır — tek bir Kut çiftinin ortak merkez etrafındaki yörüngesiyle **aynı denklemdir** (12.3.1). Aradaki tek fark $\Gamma$'nın büyüklüğüdür.
 
 Bu yüzden yörüngeler tesadüfi değildir. Tesadüfi olan yalnız **hangi** Kutların bir araya geldiğidir; bir araya geldikten sonra nasıl döneceklerini yasa belirler.
 
@@ -108,11 +117,11 @@ Bu yüzden yörüngeler tesadüfi değildir. Tesadüfi olan yalnız **hangi** Ku
 Ölçek değişmezliği iddiası, teoriyi güçlendirdiği kadar **kırılgan** da yapar. Çürütmek için şunlardan biri yeterlidir:
 
 1. **Kut ölçeğinde makro yasalardan sapma.** Bu kısımdaki dokuz mekanizmadan herhangi biri Kut ölçeğinde farklı bir üstel, farklı bir işaret ya da farklı bir eşik gerektirirse, iddia düşer.
-2. **Ölçek değişmezliğinin bozulması.** $d_{\text{denge}}/(r_e^A+r_e^B)$ oranı öbek boyutuyla değişirse, "aynı yasa" iddiası düşer.
+2. **Ölçek değişmezliğinin bozulması.** $d_{\text{denge}}/(r_e^A+r_e^B)$ oranı Kutam boyutuyla değişirse, "aynı yasa" iddiası düşer.
 3. **Thomson sınırının tutmaması.** Kümeleşmeden çıkan boyutlar $N \le 8$ bandını sistematik olarak aşarsa, girdap kristali analojisi kopar.
-4. **Dördüncü bir imza.** 12.2.3'teki üç imzanın dışında bir 4B kökenli iz gözlemlenirse, motor kurgusu yanlıştır.
+4. **Dördüncü bir imza.** 12.2.3'teki üç imzanın dışında bir 4B kökenli iz gözlemlenirse, motor kurgusu yanlıştır. Üç imzanın tam liste olduğu 12.2.3'ün başındaki üreteç sayımıyla kurulmuştur; dördüncü bir iz, o sayımı — dolayısıyla SO(4) kurgusunun kendisini — çürütür.
 
-Dördü de sayısaldır ve dördü de simülasyonda **ölçülebilir** durumdadır. Simülasyonun 220 öz-sınaması bunları sürekli denetler; herhangi biri düşerse sayfa açılışında kırmızı uyarı verir.
+Dördü de sayısaldır ve dördü de simülasyonda **ölçülebilir** durumdadır. Simülasyonun 229 öz-sınaması bunları sürekli denetler; herhangi biri düşerse sayfa açılışında kırmızı uyarı verir.
 
 ---
 
@@ -122,13 +131,21 @@ Bu bölümün iddiası güçlüdür; o yüzden sınırları da açıkça yazılm
 
 | Büyüklük | Durum |
 |---|---|
-| Işıma yasası $\propto K^5/d^5$, işaret yapısı | **Türetildi** |
-| $d_{\text{denge}} = (\lambda K^5/\kappa)^{1/3}$ | **Türetildi** |
-| $r_e(\text{öbek}) = |\sum g|\,r_e$ | **Türetildi** |
+| Işıma yasası $\propto K^5/d^5$, işaret yapısı | **Düşük-Mach/çıplak-yörünge sınırında türetildi**; genel biçim $P(\Omega_{\text{orb}})$ ve $F_L$ ile yazılıdır |
+| $d_{\text{denge}} = (\lambda K^5/\kappa)^{1/3}$ | **İndirgenmiş model kökü**; temel öngörü iki bağlı Green–Magnus denkleminden çıkacaktır |
+| $r_e(\text{Kutam}) = |\sum g|\,r_e$ | **Türetildi** |
 | $R_{\text{cep}}$, $d_{\text{yok}}/d_{\text{bir}} = 2$ | **Türetildi** |
 | Thomson sınırı | **Türetildi** (bağımsız) |
-| $\kappa$ — Bjerknes/pulsasyon şiddeti | **Türetilmedi.** Tek belirsiz sabit. Artık üstten sınırlı ($\kappa \lesssim 10$) ve küme aralığını belirliyor — yani bir öngörüye dönüştü, bağımsız bir ayar değil. |
-| Kuadrupol önkatsayısı $C = O(1)$ | **Hesaplanmadı.** Sonucu değiştirmiyor (karar işaret yapısında) ama sayısal ışıma gücü için gerekli. |
+| $\kappa$ — Bjerknes/pulsasyon şiddeti | **Türetildi (kapalı biçim):** $\kappa_{\mathrm{SI}}=\rho_0\omega_2^2\Delta V^2/2\pi$ (12.3.2). Açık kalan: $\varepsilon$, $A_w$, $\omega_2$'nin taban büyüklüklere bağlanması. |
+| Kuvvet–hareket köprüsü | **Boyutça kapandı:** Magnus yasası ve akustik tork yeni hareketlilik sabiti olmadan iki bağlı denklemi verir. Nicel açık iş aynı Green çekirdeğinden $(\mathcal R,\mathcal T,F_L)$ hesabıdır (12.3.4). |
+| Kuadrupol yanıtı $F_L$ | **Düşük-Mach özel sınırı hesaplandı:** $C_L^{(0)}=8\pi^2$, $C^{(0)}=1$; işletme değeri gerçek $M_{\text{orb}}$ ile bağlı çözümden çıkar (12.3.3–12.3.4). |
+| Denge-dışı üstel ($d^{-2}$ ↔ $d^{-3}$) | **İndirgenmiş tutarlılık koşumu yapıldı:** kodlanan uzak-alan eğimleri $-2/-3$ elde edildi. $\Delta V_{\text{Kutam}}\propto N^{3/2}$, $d\propto N$'yi korumak için çıkan kilit ve sınanabilir öngörüdür; fiziksel doğrulama tam simülasyonda bağımsız genlik ölçümünü bekler (12.3.4). |
+| $\vec\omega_1\parallel\vec\omega_2$ hizalanması | **Varsayım** (12.2.1): kanonik koordinat-çifti biçiminin seçilme gerekçesi ayrı türetim bekler. |
 | İlk dönmenin kaynağı | **Bilinmiyor, beyan edildi** (12.1) |
 
-Bir tek serbest sabit ve bir hesaplanmamış $O(1)$ çarpanla, dokuz makro mekanizma Kut ölçeğinde çalıştı. İddia budur.
+Yeni serbest sabit eklenmedi. $\kappa$ kapalı biçime bağlandı; kuvvet–hareket köprüsü
+Magnus yasası ve akustik torktan çıktı. Sayısal kapanışın ilk işi, var olan eylemin
+gecikmeli iki-Kut çözümünden $\mathcal R$, $\mathcal T$ ve $F_L$'yi birlikte
+hesaplamaktır. Ardından $\varepsilon$, $A_w$, $\omega_2$ ve $L_{\text{eff}}$ mevcut
+Kut geometrisinden özdeşleştirilir. Bu kalemler yeni fizik faturası değil, yazılmış
+eylemin henüz tamamlanmamış hesabıdır.

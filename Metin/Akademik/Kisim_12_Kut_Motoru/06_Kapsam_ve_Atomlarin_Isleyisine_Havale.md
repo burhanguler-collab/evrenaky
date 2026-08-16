@@ -20,17 +20,19 @@ Atomun kendisi — atom altı parçacığın nasıl oluştuğu, çekirdeğin nas
 
 ## 12.6.2 Bu Kısım Neyin Temelidir
 
-Kısım 12, "Atomların İşleyişi" kitabının **taban katıdır**. Orada kullanılacak her kavramın burada tanımı, türetimi ve sayısal sınaması vardır:
+Kısım 12, "Atomların İşleyişi" kitabının **taban katıdır**. Orada kullanılacak her
+kavramın burada tanımı ve kanıt statüsü vardır; indirgenmiş sonuçlarla açık temel
+hesaplar birbirinden ayrılmıştır:
 
 | Kısım 12'de kurulan | "Atomların İşleyişi"nde ne işe yarayacak |
 |---|---|
 | Kut'un kavitasyonla doğuşu, $R_{\text{cep}}$ | Parçacık büyüklüklerinin tabanı |
 | 4B dönüşün üç imzası | Spin, kiralite ve pulsasyonun kaynağı |
-| Bağ yasası $\kappa/d^2 - \lambda g_ig_j K^5/d^5$ | Parçacık içi bağların biçimi |
+| Bağ dinamiği: indirgenmiş $U_{\text{red}}$ ve temel iki-denklemli Green–Magnus kapanışı | Parçacık içi bağların biçimi; temel hesap kapanmadan indirgenmiş katsayılar doğa sabiti sayılmaz |
 | İşaret yapısı: zıt çiftte denge yok | Madde–karşımadde davranışının kökü |
 | Thomson sınırı, $N \le 7$ (merkezle ~10) | Kararlı yapı boyutlarının neden sınırlı olduğu |
 | Bileşik sınır tabakası $r_e = |\sum g|r_e$ | Bileşik parçacıkların dışarıdan görünüşü |
-| Ölçek değişmezliği | Aynı yasanın her katmanda geçerliliği |
+| Ölçek değişmezliği ve öz-benzerlik koşulları | Aynı yasanın her katmanda geçerli olup olmadığının sınaması |
 | Fırlatmayla kararlılık | Yapıların nasıl kalıcı olduğu |
 
 Yani bu kısım, atomlara giden yolun **ilk taşlarını** döşer ve orada durur.
@@ -48,7 +50,7 @@ Bu kitap atomların işleyişine **hiç girmez.** Bazı mekanizmaların yalnızc
 
 Bu ayrım bilinçlidir ve iki sebebi vardır:
 
-**1 · Kapsam beyanı.** Teorinin kendi Anayasası şunu söyler: *"Varlık tabanı Kut, açıklama tabanı Zerre'dir. Kut hiçbir hesaba girmez. Bileşim argümanları Zerre'ye kadar serbesttir, Zerre'de durur."* Atomun işleyişi bu sınırın ötesindedir.
+**1 · Kapsam beyanı.** Bu kısım Kut'un özünü veya daha küçük bileşenlerini hesaplamaz. Hesaplanan, Kut oluşumu sırasında Evrenakı ortamında meydana gelen cep, sınır tabakası, dolanım ve Kutlar arası etkileşimlerdir. Zerrelerin ve atomların ayrıntılı yapılanması bu kısmın kapsamı dışındadır.
 
 **2 · Dürüstlük.** Atomun işleyişini bu kitapta birkaç sayfada özetlemek, ona hakkını vermemek olurdu. Atom, bilinen en karmaşık kendiliğinden işleyen makinedir. Onu anlatmak ayrı bir cilt ister.
 

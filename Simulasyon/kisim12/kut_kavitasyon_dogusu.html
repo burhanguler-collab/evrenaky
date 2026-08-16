@@ -113,7 +113,7 @@
   <h2>Gözlem modeli</h2>
   <select id="model">
     <option value="stiff">e-KATLANMA — stiff akışkan (yürürlükteki okuma)</option>
-    <option value="incomp">SIKIŞTIRILAMAZ — keskin duvar (SÜPERSEDE)</option>
+    <option value="incomp">SIKIŞTIRILAMAZ — keskin duvar (geçersiz okuma, karşılaştırma)</option>
   </select>
   <p class="note" id="modelNote"></p>
 
@@ -121,8 +121,9 @@
   <label>Σ/P₀ = <span class="val" id="sigV"></span></label>
   <input type="range" id="sig" min="0" max="12" step="0.0001" value="9.2788">
   <p class="note">Σ, Evrenakı'nın <b>çekme (kohezyon) dayanımıdır</b>. Yırtılma
-  eşiğini o belirler: <code>v_kav = √2c·√(1+Σ/P₀)</code> (M-4). KARNE'nin n=3
-  kısıtı <code>Σ/P₀ ≳ 1,9×10⁹</code> verir — sürgünün başlangıç değeri budur.</p>
+  eşiğini o belirler: <code>v_kav = √2c·√(1+Σ/P₀)</code> (M-4). Teorinin n=3
+  kısıtı <code>Σ/P₀ ≳ 1,9×10⁹</code> verir (12.1.1'in taban tablosu) —
+  sürgünün başlangıç değeri budur.</p>
 
   <h2>Dönüş düzlemleri</h2>
   <select id="pair">
@@ -256,8 +257,9 @@ function vOf(R, re){ return VT * re / R; }
 /* --- İki okuma -----------------------------------------------------------
    stiff  : c²·ln(ρ/ρ₀) = −v²/2  ⟹  ρ/ρ₀ = exp(−u)      [YÜRÜRLÜKTE]
             √2c'de ρ/ρ₀ = 1/e — e-katlanma, KESKİN DUVAR YOK.
-   incomp : P/P₀ = 1 − u                                 [SÜPERSEDE]
-            √2c'de tam 0 — keskin vakum duvarı. KARNE 10 Ağu 2026 ile düştü. */
+   incomp : P/P₀ = 1 − u                                 [GEÇERSİZ — karşılaştırma]
+            √2c'de tam 0 — keskin vakum duvarı. Stiff akışkanda bu biçim
+            çıkmaz; seçenek yalnız farkı göstermek için durur. */
 function rhoStiff(R, re){ return Math.exp(-uOf(R, re)); }
 function pIncomp(R, re){ return 1 - uOf(R, re); }
 function fieldOf(R, re, model){
@@ -394,7 +396,7 @@ function selfTests(){
   add('merdiven: c < √2c < v_m < v_kav', C_SON < VT && VT < vm && vm < vk, 0);
   add('v_kav ≈ √2·v_m  (Σ≫P₀)', Math.abs(vk/(Math.SQRT2*vm) - 1) < 1e-6,
       Math.abs(vk/(Math.SQRT2*vm) - 1));
-  add('v_m ≳ 4,4×10⁴c  (KARNE alt sınırı)', vm/C_SON > 4.3e4, vm/C_SON);
+  add('v_m ≳ 4,4×10⁴c  (n=3 alt sınırı)', vm/C_SON > 4.3e4, vm/C_SON);
 
   /* 8. Yerelleşme: tek düzlem 2 boyutlu sabit altuzay, çift dönüş 0 */
   const dTek = 4 - rank4(genOmega(2, 0, 1));
@@ -881,13 +883,13 @@ function noteUpdate(){
     ? '<b>Yürürlükteki okuma.</b> Ortam stiff (Zel\'dovich) akışkandır: '
     + '<code>P = c²ρ</code>. Bernoulli integrali <code>c²ln(ρ/ρ₀) = −v²/2</code> verir, '
     + 'yani <code>ρ = ρ₀exp(−v²/2c²)</code>. <b>√2c\'de yoğunluk sıfıra inmez, '
-    + '1/e katına iner</b> — bu yüzden keskin bir vakum duvarı YOKTUR. KARNE '
-    + '(10 Ağu 2026, yazar onaylı): <i>"√2c sayısı korunur, anlamı e-katlanma hızı; '
-    + 'keskin vakum duvarı yok; cep yırtılmayla açılır (M-4)."</i>'
-    : '<b>SÜPERSEDE EDİLMİŞ okuma.</b> Sıkıştırılamaz Bernoulli '
+    + '1/e katına iner</b> — bu yüzden keskin bir vakum duvarı YOKTUR. '
+    + '√2c sayısı korunur; anlamı <b>e-katlanma hızıdır</b>. '
+    + 'Cep, duvar çökmesiyle değil <b>yırtılmayla</b> açılır (M-4).'
+    : '<b>Geçersiz okuma — yalnız karşılaştırma için.</b> Sıkıştırılamaz Bernoulli '
     + '<code>P = P₀ − ½ρ₀v²</code> kullanılırsa basınç r_e\'de <b>tam sıfıra</b> iner '
-    + 've keskin bir vakum duvarı çıkar. Ek A.2 böyle yazılmıştı; 10 Ağustos 2026\'da '
-    + 'düzeltildi. Bu seçenek <b>farkı görmek için</b> duruyor — teorinin '
+    + 've keskin bir vakum duvarı çıkar. Stiff akışkanda bu biçim geçersizdir '
+    + '(12.1.3). Seçenek <b>farkı görmek için</b> duruyor — teorinin '
     + 'yürürlükteki hâli değildir.';
 }
 function buildStages(){

@@ -67,6 +67,8 @@ $\lvert v\rvert = \sqrt2\,c_0\,(r_e/R)$ ve merkeze inildikçe hız hızla büyü
 İfade kendi içinde kapalıdır: $\sqrt2\,c_0\,(r_e/R_{\text{cep}}) = \sqrt2\,c_0\sqrt{1+\Sigma/P_0} = v_{\text{kav}}$ — yani cep duvarı, tanım gereği **kavitasyon
 hızında** döner. Bu iki ifade, $R_{\text{cep}}$ tanımı yerine konularak elde edilen **aynı bağıntının iki eşdeğer yazımıdır**; bağımsız bir doğrulama değil, bir tutarlılık denetimidir.
 
+Buradaki Mach sayısı, Evrenakı akış hızının ortamın bozuntu yayılma hızı $c_0$'a oranıdır; $c_0$ mutlak hız sınırı değildir. Teorinin üst hız hükmü 12.0.2'de sabitlenmiştir: **sürekli Evrenakı akışında $|v| \le v_{\text{kav}}$; eşitlikte ortam yırtılır** — akış sürekli olmaktan çıkar, faz değiştirir ve Kut doğar. $v > v_{\text{kav}}$ değerine sahip sürekli akış durumu yoktur; bu bir yasak değil, sürekli çözümün var olmama koşuludur. Evren içindeki diğer bütün hızlar bu üst hızın alt ölçekli türevleri olarak ortaya çıkar. $\Sigma/P_0$ bir alt sınır olduğu sürece $M_{\text{kav}} \gtrsim 6{,}164\times10^4$ yazılır; kesin değer $\Sigma$ kesinleşince belirlenir.
+
 **Compton kıyası.** Zitterbewegung resminde Compton dönüş hızı **tam olarak $c$**'dir
 ($\omega_C \cdot \hbar/m_ec = c$). Kut'un cep duvarı ise:
 
@@ -79,7 +81,7 @@ $$\frac{v(R_{\text{cep}})}{v_{\text{Compton}}} = 6{,}16\times10^{4}$$
 
 ## 12.1.2 Kavitasyon Eşiği ve Cep Yarıçapı
 
-Dönme başladığında merkeze doğru hız artar, basınç düşer. Basınç yeterince düştüğünde ortam **köprülenemez** ve bir boşluk açılır. Açılan boşluğun yarıçapı doğrudan türetilir:
+Dönme başladığında merkeze doğru hız artar, basınç düşer. Basınç yeterince düştüğünde ortam **köprülenemez** ve bir boşluk açılır. Ölçüt, 12.0.3'te sabitlenen tanımdır: **yerel kinetik enerji yoğunluğu $\tfrac12\rho_0v^2$, taban basınç ile kohezyon dayanımının toplamını ($P_0+\Sigma$) aştığında ortam yırtılır.** Burada iki ayrı yasa iş başındadır ve karıştırılmamalıdır: yoğunluk profili (12.1.3) akışın sıkıştırılabilir Bernoulli dengesinden gelir; yırtılma ölçütü ise akışın değil **malzemenin** özelliğidir — $\Sigma$, ortamın çekme dayanımıdır. Açılan boşluğun yarıçapı bu tanımdan doğrudan türetilir:
 
 $$\boxed{\;R_{\text{cep}} = \frac{r_e}{\sqrt{1+\Sigma/P_0}}\;}$$
 
