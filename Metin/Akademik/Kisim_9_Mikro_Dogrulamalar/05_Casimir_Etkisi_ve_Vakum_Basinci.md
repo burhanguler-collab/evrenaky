@@ -10,7 +10,7 @@ Bölümün kilit tespiti şudur: bu rampa bu bölüm için icat edilmiş bir yap
 
 | # | Gözlem | Ölçülen değer / davranış | Kaynak |
 |---|---|---|---|
-| G-1 | Kuvvet yasası | $F/A = \dfrac{\pi^2\hbar c_0}{240\,a^4}$; $a=1$ µm'de $\approx1{,}3$ mPa, $a^{-4}$ ile büyür | Casimir, 1948 (öngörü) |
+| G-1 | Kuvvet yasası | $F/A = \dfrac{\pi^2\hbar c}{240\,a^4}$ (standart fizik yazımı); $a=1$ µm'de $\approx1{,}3$ mPa, $a^{-4}$ ile büyür | Casimir, 1948 (öngörü) |
 | G-2 | Hassas doğrulama | torsiyon sarkacı (~%5, 0,6–6 µm); AFM küre-plaka (~%1, 0,1–0,9 µm) | Lamoreaux, 1997; Mohideen & Roy, 1998 |
 | G-3 | Malzeme bağımlılığı | sonlu iletkenlik ve yüzey pürüzü kuvveti öngörülebilir biçimde düşürür; sapma **etkin plazma dalga boyu** ölçeğinde başlar (Al $\approx100$ nm, Au $\approx500$ nm) | Mohideen & Roy, 1998; Lambrecht & Reynaud, 2000 |
 | G-4 | İşaret çevrimi | uygun dielektrik sıvıyla ayrılmış asimetrik malzeme çiftinde kuvvet **itici** olabilir | Munday ve ark., 2009 |

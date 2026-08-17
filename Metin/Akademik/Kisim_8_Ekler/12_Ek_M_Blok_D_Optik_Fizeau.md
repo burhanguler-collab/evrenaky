@@ -2,7 +2,7 @@
 
 > Şablon ve rozet sistemi için bkz. Blok A (M-1..M-6) girişi.
 >
-> **Blokun kapsamı:** Işığın (Zerre'nin) madde içindeki davranışının dört türetimi: kırılma indisinin ilk-ilke türetimi (M-15), Fizeau sürükleme katsayısı (M-16), dispersiyon (Lorentz) düzeltmesi (M-17) ve interferometre faz duyarlılığı ile asimetrik kol tasarımının gerekçesi (M-18). Dördü de tek bir mekanik resimden — sürüklenme zarfının molekül ölçeğindeki hâlinden (Postülat 7) ve Kavrama Yasası $c_0=\sqrt{P/\rho}$'dan (M-1) — beslenir.
+> **Blokun kapsamı:** Işığın (Zerre'nin) madde içindeki davranışının dört türetimi: kırılma indisinin ilk-ilke türetimi (M-15), Fizeau sürükleme katsayısı (M-16), dispersiyon (Lorentz) düzeltmesi (M-17) ve interferometre faz duyarlılığı ile asimetrik kol tasarımının gerekçesi (M-18). Dördü de tek bir mekanik resimden — sürüklenme zarfının molekül ölçeğindeki hâlinden (Postülat 7) ve Kavrama Yasası $c_{loc}=\sqrt{P/\rho}$'dan (M-1) — beslenir.
 >
 > **Notasyon uyarısı (S-12, S-21):** Bu blokta $\phi$ **daima moleküllerin hacim kesridir**; interferometre **fazı** ise $\varphi$ ile gösterilir (M-18). Momentum-ağırlıklı ortalama hız, gövde metninde (3.4.6.3) $w$ olarak geçer; katalogda Ek D · S-12 gereği $u_{ort}$ yazılır ($w$ dördüncü eksen koordinatına ayrılmıştır).
 
@@ -25,9 +25,9 @@
 
 ### Adımlar
 1. Kavrama Yasası (M-1) yerel biçimiyle uygulanır: Zerre'nin bir ortamdaki sürati, o ortamın Evrenakı basınç-iletim hızıdır ve ortalanmış alanlarla yazılır:
-$$\left(\frac{c}{n}\right)^2=\frac{\bar P_m}{\bar\rho_m}$$
+$$\left(\frac{c_0}{n}\right)^2=\frac{\bar P_m}{\bar\rho_m}$$
 2. G1 ve G2 ikame edilir:
-$$\left(\frac{c}{n}\right)^2=\frac{P_0(1-\phi)}{\rho_0}=c_0^2(1-\phi)$$
+$$\left(\frac{c_0}{n}\right)^2=\frac{P_0(1-\phi)}{\rho_0}=c_0^2(1-\phi)$$
 3. Sadeleştirme doğrudan kırılma indisini verir.
 
 ### Sonuç
@@ -65,7 +65,7 @@ Su için $n=1{,}333$ ters okunursa $\phi = 1-1/n^2 = 0{,}437$ çıkar. Sıvı su
 $$u_{ort}=\frac{\rho_0(1-\phi)\cdot 0+\rho_0\phi\cdot u}{\rho_0(1-\phi)+\rho_0\phi}=\frac{\rho_0\phi\,u}{\rho_0}=\phi\,u$$
 *(Ağırlıklandırma uyarısı: paylar $\rho_0$ ve $\rho_0\phi/(1-\phi)$ alınamaz — toplamı $\rho_0/(1-\phi)>\rho_0$ çıkar ve madde içinde arka plandan **daha yoğun** bir ortam ima eder; bu, M-15'in "molekül = düşük basınç cebi" aksiyomuyla ve $\rho=\rho_0$ kullanımıyla çelişir. Doğru olan hacim kesri ağırlıklandırmasıdır; **sonuç $u_{ort}=\phi u$'dur.**)*
 *(Notasyon notu: bu büyüklük gövde metninde — 3.4.6.3 — $w$ olarak yazılıdır; Ek D · S-12 gereği katalogda $u_{ort}$ kullanılır.)*
-3. **Galile toplamı.** Laboratuvar hızı: $v_{lab}=\dfrac{c}{n}+u_{ort}=\dfrac{c}{n}+\phi\,u$; sürükleme katsayısı tanım gereği $f=\phi$.
+3. **Galile toplamı.** Laboratuvar hızı: $v_{lab}=\dfrac{c_0}{n}+u_{ort}=\dfrac{c_0}{n}+\phi\,u$; sürükleme katsayısı tanım gereği $f=\phi$.
 4. **M-15 ile birleştirme.** $\phi = 1-1/n^2$ ikamesi kapalı formu verir.
 
 ### Sonuç
@@ -112,16 +112,16 @@ Gaz limiti aynı zamanda iç tutarlılık sınavıdır: $\phi\to 0$ iken ortam s
 
 ### Adımlar
 1. **Doppler ritim kayması.** Ortam ışıkla aynı yönde $u$ hızıyla aktığında moleküller Zerreleri daha seyrek yakalar; ortam içi hız $c_0/n$ olduğundan molekül çerçevesindeki ritim:
-$$\omega'=\omega\left(1-\frac{nu}{c}\right)$$
+$$\omega'=\omega\left(1-\frac{nu}{c_0}\right)$$
 2. **İndisin kaymış frekansta değerlenmesi.** Taylor açılımıyla ($\omega'-\omega=-\omega n u/c_0$):
-$$n(\omega')\approx n(\omega)-\frac{dn}{d\omega}\cdot\frac{\omega n u}{c}$$
+$$n(\omega')\approx n(\omega)-\frac{dn}{d\omega}\cdot\frac{\omega n u}{c_0}$$
 3. **Sürat payı.** $c_0/n(\omega')$ birinci mertebede genişletilir:
-$$\frac{c}{n(\omega')}\approx\frac{c}{n}+u\,\frac{\omega}{n}\frac{dn}{d\omega}$$
+$$\frac{c_0}{n(\omega')}\approx\frac{c_0}{n}+u\,\frac{\omega}{n}\frac{dn}{d\omega}$$
 4. **Sentez.** Bu renk payı, M-16'nın entrainment payıyla ($u_{ort}=(1-1/n^2)u$) toplanır:
-$$v_{lab}=\frac{c}{n}+u\left[\,1-\frac{1}{n^2}+\frac{\omega}{n}\frac{dn}{d\omega}\,\right]$$
+$$v_{lab}=\frac{c_0}{n}+u\left[\,1-\frac{1}{n^2}+\frac{\omega}{n}\frac{dn}{d\omega}\,\right]$$
 
 ### Sonuç
-$$\boxed{\;v_{lab}=\frac{c}{n}+u\left[\,1-\frac{1}{n^2}+\frac{\omega}{n}\frac{dn}{d\omega}\,\right]\;}$$
+$$\boxed{\;v_{lab}=\frac{c_0}{n}+u\left[\,1-\frac{1}{n^2}+\frac{\omega}{n}\frac{dn}{d\omega}\,\right]\;}$$
 
 Köşeli parantezin son terimi, Lorentz'in dispersiyon-düzeltmeli katsayısının birebir aynısıdır ve **Zeeman'ın (1914–15) ölçtüğü tam katsayıdır.** Normal dispersiyonda $dn/d\omega>0$ olduğundan renk katkısı pozitiftir: sürükleme artar — Zeeman'ın gözlediği işaretle uyumlu. Böylece Fizeau ailesinin hem ana katsayısı (M-16) hem ince renk yapısı (M-17), tek bir Zerre-akışı resminden çıkar.
 
@@ -148,21 +148,21 @@ Köşeli parantezin son terimi, Lorentz'in dispersiyon-düzeltmeli katsayısın�
 
 ### Adımlar
 1. **Tek kol fazı.** Gidiş-dönüş faz katkısı:
-$$\varphi=\omega\cdot\frac{2L}{c}$$
+$$\varphi=\omega\cdot\frac{2L}{c_0}$$
 2. **İki kol farkı.**
-$$\Delta\varphi=\frac{2\omega}{c}\,(L_1-L_2)$$
+$$\Delta\varphi=\frac{2\omega}{c_0}\,(L_1-L_2)$$
 3. **Skaler $c_0$ değişimine duyarlılık.** $c_0\to c_0+\delta c$ varyasyonu alınır:
-$$\delta(\Delta\varphi)=-\frac{2\omega}{c^2}\,(L_1-L_2)\,\delta c$$
+$$\delta(\Delta\varphi)=-\frac{2\omega}{c_0^2}\,(L_1-L_2)\,\delta c$$
 4. **İki yapısal sonuç:**
    - **(i) Eşit kollu düzenek skaler değişime kördür.** $L_1=L_2$ ise $\delta(\Delta\varphi)=0$ — kol uzunluğu, hassasiyet veya işletme süresi ne olursa olsun. Klasik Michelson–Morley bu sınıftadır: yalnızca **anlık yön anizotropisini** görür; zarf onu sıfırladığından sonuç sıfırdır. **M&M'in null sonucu teoriyle çelişmez** — düzenek, teorinin öngördüğü büyüklüğe yapısal olarak kapalıdır.
    - **(ii) Asimetrik kollar skaler değişimi ölçer.** $L_1\ne L_2$ yapılırsa $\delta(\Delta\varphi)\propto(L_1-L_2)\,\delta c$ sıfırdan ayrılır. Kısım 5 düzeneğinin kolları bu yüzden **kasıtlı olarak eşitsizdir** (15/45 cm; 3:1 oran): $L_1-L_2=30$ cm'lik kaldıraç, skaler $c_0$ driftini faz kaymasına çevirir.
 5. **Tamamlayıcılık teoremi.** Eşit kollu M&M ile asimetrik kollu Kısım 5 düzeneği **farklı fiziksel büyüklükleri** ölçer (yönsel anizotropi vs skaler zaman değişimi); ikisinin sonuçları çelişmez, ikili imza oluşturur: *eşit kolda sıfır + asimetrik kolda drift.*
 
 ### Sonuç
-$$\boxed{\;\delta(\Delta\varphi)=-\frac{2\omega}{c^2}\,(L_1-L_2)\,\delta c\;;\qquad L_1=L_2\Rightarrow\text{skaler }\delta c\text{'ye yapısal körlük}\;}$$
+$$\boxed{\;\delta(\Delta\varphi)=-\frac{2\omega}{c_0^2}\,(L_1-L_2)\,\delta c\;;\qquad L_1=L_2\Rightarrow\text{skaler }\delta c\text{'ye yapısal körlük}\;}$$
 
 ### Sistematikler (bağlayıcı uyarı)
-Termal genleşme kaynaklı $\delta L$, faz farkında $\delta(\Delta\varphi)=\frac{2\omega}{c}\,\delta(L_1-L_2)$ üretir — **skaler $\delta c$ ile aynı imzada** bir yavaş kaymadır (dejenerasyon). Farklı uzunluktaki kollar farklı termal genleşme yaşadığından, aylar ölçeğindeki ölçümde sıcaklık kontrolü ve sıcaklık-bağımsızlık gösterimi **şarttır**; bu kontrolün raporu deney fazının (Kısım 5 tam yazımı, T-9) kalemidir.
+Termal genleşme kaynaklı $\delta L$, faz farkında $\delta(\Delta\varphi)=\frac{2\omega}{c_0}\,\delta(L_1-L_2)$ üretir — **skaler $\delta c$ ile aynı imzada** bir yavaş kaymadır (dejenerasyon). Farklı uzunluktaki kollar farklı termal genleşme yaşadığından, aylar ölçeğindeki ölçümde sıcaklık kontrolü ve sıcaklık-bağımsızlık gösterimi **şarttır**; bu kontrolün raporu deney fazının (Kısım 5 tam yazımı, T-9) kalemidir.
 
 ### Geçerlilik Sınırı
 - Türetim skaler ve birinci mertebedir ($\delta c/c_0 \ll 1$); kaynak ritmi $\omega$'nun kendisinin $\delta c$'den etkilenmediği (veya etkisinin ortak-mod olarak düştüğü) varsayılır.

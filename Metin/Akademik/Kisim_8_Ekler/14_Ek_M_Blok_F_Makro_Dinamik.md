@@ -13,6 +13,7 @@
 ### Varsayımlar
 1. Evrenakı, Navier-Stokes denklemine tabi sıkıştırılabilir bir akışkandır (Postülat 1); viskozitesi sıfıra çok yakındır: $0 < \mu \ll 1$ (Postülat 7; $\mu$ sembolü yalnız bu standart alıntıda geçer, teorinin kendi viskozite parametresi $\eta_E$'dir — S-19).
 2. Kütle çevresindeki makro girdap **kararlı** ($\partial\vec v/\partial t = 0$) ve **eksenel simetriktir**; akış alanı saf teğetseldir: $\vec v = v_\theta(r)\,\hat e_\theta$.
+   > **⚠ Statü kaydı (17 Ağustos 2026).** Bu varsayım, ortamın dolaştığı **opsiyonel bir dinamik durumu** tanımlar; zorunluluk değildir. Kohezyonlu ortam kuyuyu dolaşmadan da tutabilir (**Ek M-51**) ve gezegen ölçeğinde dolaşım **gözlemle dışlanmıştır** (**Ek M-52**: dolaşan ortamda apsisler $\Omega_m=2n$ ile sürüklenir, kapalı elips kalmaz; dört bağımsız gövdede dışlama $10^2$–$10^6$). Bu girdinin **madde** tarafındaki sonuçları (radyal denge, kuyu konvansiyonu) etkilenmez; etkilenen yalnız ortamın kendi teğetsel alanına ilişkin okumalardır.
 
 ### Adımlar
 1. Standart Navier-Stokes denkleminden başlanır:
@@ -47,7 +48,7 @@ Madde, ortamın dolaşım hızında dönmeye kalksaydı gereken merkezcil ivmeni
 
 $$\frac{v_{madde}^2}{r}=\frac{1}{4}\frac{v_\theta^2}{r} \;\Longrightarrow\; \boxed{\;v_{madde}=\frac{v_\theta}{2}\;}$$
 
-Santrifüjde yoğun maddenin dışa çökmesiyle **aynı mekanizmadır**: madde ortama göre fazla yoğun olduğu için dolaşıma tutunamaz. Bu, **M-9**'un *"madde düşer, ortam dolaşır"* ifadesinin mekanik nedenidir ve 2 çarpanını görmenin üçüncü bağımsız yoludur (diğerleri: M-9'un doğrudan ifadesi ve M-25'in muhasebe zincirleri).
+Santrifüjde yoğun maddenin dışa çökmesiyle **aynı mekanizmadır**: madde ortama göre fazla yoğun olduğu için dolaşıma tutunamaz. Bu, **M-9**'un *"madde düşer, ortam düşmez"* ifadesinin mekanik nedenidir *(ortamın cevabının dolaşım mı gerilme mi olduğu ayrı sorudur: Ek M-51/M-52 gerilme kolunu seçer)* ve 2 çarpanını görmenin üçüncü bağımsız yoludur (diğerleri: M-9'un doğrudan ifadesi ve M-25'in muhasebe zincirleri).
 
 > **Sonuç — kapılış yörüngeyi sağlamaz.** Madde ortamın hızına kilitli olsaydı dışa savrulurdu; gözlem gezegenleri $v_{madde}=\sqrt{\mathcal{G}M/r}$'de, yani ortamın **yarı hızında** bulur. Sürüklenme zarfının rolü (Postülat 7) yörüngeyi üretmek değil, **yerel bağıl hızı sıfırlayarak sürüklemeyi bastırmaktır** (M-37 sıfırıncı mertebe; M&M null'unun kaynağı). *(İki yaygın hata: gradyanı "dışa doğru itim" saymak, ve F1 ile M-22'yi iki rakip kuvvet gibi yazmak. Gradyan **içe** iter; M-22 rakip bir kuvvet değil, F1'in kurduğu gradyanın ortamın dönüşüyle dengede olduğunu söyleyen bir **denge koşuludur.** "Merkezkaç reel olmalı" tezi geçerlidir — reellik gradyanın yönünden değil, ataletin gerçekliğinden ve iki yoğunluğun farkından gelir.)*
 
@@ -144,7 +145,7 @@ $$\boxed{\omega_{gözlenen}(M,R) = \big[1-g(R)\big]\,\omega_{serbest}(M) + g(R)\
 **Kullanıldığı bölümler:** 3.8.1–3.8.1.1 (Güneş vorteksi + Açısal Momentum Paradoksu), 3.9.4 (Dünya-Ay muhasebesi), 3.8.2 (nedenselliğin tersinmesi), 3.4.4.
 
 ### Varsayımlar
-1. **Gezegen girdaba kapılmaz; aynı basınç alanında düşer.** Madde $\vec a=-\nabla P/\rho_n$ ile serbest dengede dolanır; ortam ise aynı alana düşerek değil **dolaşarak** cevap verir, $\nabla P/\rho_0=v_\theta^2/R$ (**M-9**: *"madde düşer, ortam dolaşır"*; M-22). *(Gezegenleri "akıntı katmanlarına kapılmış" saymak M-9 ile çelişir ve literal alındığında onları $2v_{Kepler}$'e koyar.)*
+1. **Gezegen girdaba kapılmaz; aynı basınç alanında düşer.** Madde $\vec a=-\nabla P/\rho_n$ ile serbest dengede dolanır; ortam ise aynı alana **düşerek** cevap vermez (**M-9**: *"madde düşer, ortam düşmez"*). Kohezyonsuz limitte ortamın cevabı dolaşmaktır ($\nabla P/\rho_0=v_\theta^2/R$; M-22), kohezyonlu Evrenakı'da ise **gerilmektir** (Ek M-51) — ve gözlem gerilme kolunu seçer (Ek M-52). *(Gezegenleri "akıntı katmanlarına kapılmış" saymak M-9 ile çelişir ve literal alındığında onları $2v_{Kepler}$'e koyar.)*
 2. Kepler'in Üçüncü Yasası gözlemsel girdi olarak alınır: $T^2 \propto R^3$ (Kepler, 1619) **[S]**.
 3. $\rho_0=\frac{1-k}{4}\rho_n$ ve $k=0$ (M-8) ⟹ $\sqrt{\rho_n/\rho_0}=2$ **tam**.
 

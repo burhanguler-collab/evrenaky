@@ -161,7 +161,7 @@ Hubble sabiti $H_0$, mistik bir "metrik genişleme" oranı değil; Evrenakı'nı
 **Kullanıldığı bölümler:** 4.3.4–4.3.5 (ana metin), 6.5 (kanıt taksonomisi), 7.4 (açık işler).
 
 ### Varsayımlar
-1. Merceklenme, uzay-zaman eğriliği değil, kütle çevresindeki Evrenakı gradyanında hidrodinamik optik kırılmadır; yerel ışık hızı $c_0 = \sqrt{P/\rho}$ konuma göre değişir.
+1. Merceklenme, uzay-zaman eğriliği değil, kütle çevresindeki Evrenakı gradyanında hidrodinamik optik kırılmadır; yerel ışık hızı $c_{loc} = \sqrt{P/\rho}$ konuma göre değişir.
 2. Kırılma bir ortam olayı olduğundan **kromatik** olmak zorundadır: farklı frekanslı Zerre katarları farklı patinaj yapar, sapma renge bağlıdır. (Standart görelilikte sapma akromatiktir; fark çift taraflı bir ayrım testidir.)
 
 ### Adımlar

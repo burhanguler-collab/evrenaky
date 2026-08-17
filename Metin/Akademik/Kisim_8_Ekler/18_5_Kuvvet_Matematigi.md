@@ -49,7 +49,7 @@ Bu bloğun girdileri **iki ayrı türdendir** ve karıştırılmaları teorinin 
 | $\kappa_5$ | Yanal itim deplasman kapanış katsayısı | boyutsuz | **F**, $\lesssim2{,}1\times10^{-3}$ (Ay'ın düğüm gerilemesi, LLR — **11.4.3**); figür sınırı $\lesssim0{,}0114$–$0{,}0131$ (Dünya basıklığı + $k=0$ + $p=1$ + $\phi_\oplus=0{,}70$ — M-39). Gözlemin sabitlediği: **$\kappa_5\phi\lesssim1{,}5\times10^{-3}$** |
 | $\phi$ | Deplasman hacim kesri $=1-1/n^2$; **iç kavrama kesri** $\mathcal{R}=\phi$ | boyutsuz | **T** (M-15/M-16) — serbest değil |
 | $r_0$ | F1↔F4 rejim geçiş yarıçapı, $=\ell_\omega^{etkin}$ | m | **T** (M-38): $r_0=\sqrt{\mathcal{G}M/a_0}=\ell_\omega\sqrt{M/m_n}$ — serbest değil; 141 galakside ölçülü (kütle üssü 0,506 ↔ türetim 0,500) |
-| $\Lambda$ | Yerel madde ölçek çarpanı, $1-\Phi/c_0^2$ ($\ell,f\propto\Lambda$; $c_{loc}\propto\Lambda^2$) | boyutsuz | **T** (M-42) — serbest değil |
+| $\Lambda$ | Yerel madde ölçek çarpanı, $\Lambda \equiv e^{-\Phi/c_0^2}$ (tam biçim, **Ek M-55**; birinci mertebede $1-\Phi/c_0^2$); $\ell,f\propto\Lambda$; $c_{loc}\propto\Lambda^2$ | boyutsuz | **T** (M-42) — serbest değil |
 | $n$ | Altkritik bastırma üssü, $F\propto(v/v_{kav})^{n}$ | boyutsuz | **S** (M-43); $n\simeq3$, Phoebe'den |
 
 > $C$ ve $q_n$ bağımsız değildir; gözleme yalnız **$Cq_n$ çarpımı** bağlanır. Ek C'de tek kalem olarak sayılmalıdır.
@@ -117,20 +117,20 @@ $$[\alpha] = \frac{[\mathrm{kg\,m^{-3}s^{-1}}]\cdot[\mathrm{m^3 s^{-1}}]}{[\math
 
 > [!IMPORTANT]
 > **$C$'nin doğru adı: ortamın yapısal uzunluğu $L_\ast$ — ve bu bir değişken değiştirmedir, faturası sıfırdır.**
-> $[C]=(\text{yoğunluk})(\text{hız})/(\text{uzunluk})$ olduğundan $C=\rho_0c/L_\ast$ yazımı bir boyut
+> $[C]=(\text{yoğunluk})(\text{hız})/(\text{uzunluk})$ olduğundan $C=\rho_0c_0/L_\ast$ yazımı bir boyut
 > zorunluluğudur, yeni bir iddia değil: **yukarıdaki hiçbir denklem değişmez** ve iki yazım aynı
 > $\mathcal{G}$'yi altı hane verir. Kazanç yorumdadır — Postülat 4 gereği aranan şey evrensel bir
 > sabit olamaz ($c_0$ nasıl yerelse ortamın tepkisi de yereldir), dolayısıyla soyut bir katsayı
 > aramak yerine **ortamın kendi ölçeği** sorulur:
-> $$\mathcal{G}=\frac{\sqrt2\,r_n^{2}\sqrt{m_p/m_e}}{4m_n}\cdot\frac{c}{L_\ast},\qquad
-> L_\ast=\frac{\rho_0c}{C}=8{,}64\times10^{24}\ \mathrm{m}$$
+> $$\mathcal{G}=\frac{\sqrt2\,r_n^{2}\sqrt{m_p/m_e}}{4m_n}\cdot\frac{c_0}{L_\ast},\qquad
+> L_\ast=\frac{\rho_0c_0}{C}=8{,}64\times10^{24}\ \mathrm{m}$$
 > Ve bu blok içindeki empedans oranı saf bir uzunluk oranına iner:
 > $\ell_\omega/L_\ast=4{,}17\times10^{-39}$ — *kütle-itim zayıftır çünkü nükleonun ölçeği ortamın
 > ölçeğine göre $10^{-39}$ mertebesindedir.* Ek C'de kalem sayısı **bir** kalır; tam işleniş
 > **1.4.12**'dedir.
 
-- $q_n$'nin $\omega_2$ frekansı ve nükleon deplasman hacminden hesabı → $\alpha$ tamamen türetilmiş olur. *(Aday kapanış M-45'tedir: $q_n=4\pi r_n^2\sqrt2c\sqrt{m_p/m_e}=1{,}62\times10^{-19}$ m³/s.)*
-- ~~$C$ ile M-1'in hâl katsayısı $A$ arasındaki ilişki~~ → **kimlik kuruldu**: $A=P_0/\rho_0=c_0^2$ (dalga kanalının sertliği) ve iki kanalın empedans oranı kapalı biçimde $\dfrac{C\,\ell_\omega}{\rho_0c}=2\sqrt2\,\dfrac{\mathcal{G}m_n/c_0^2}{r_n}=4{,}2\times10^{-39}$'dur — kütle-itimin zayıflık hiyerarşisi tek boyutsuz sayıda. $\chi$-yayılım terimi **M-46'da yazılmıştır** — profil ve kütle-itim artık eylemden çıkar, $C$'nin kimliği hâl denkleminin ikinci katsayısıdır ($-(\partial P/\partial\chi)_\rho$); kalan iş yalnız $C$'nin **değerinin** mikro türetimidir ($\mathcal{G}$'nin — dolayısıyla yerel ölçülen $G$ değerinin — türetimine eşdeğer). *(Tuzak kaydı: $C\approx3{,}8\rho_nH_0$ görünümü $a_0\sim cH_0$ rastlantısının aynısıdır; yüksek-$z$ sınavı kozmik okumayı dışlamıştır — $C$, $H_0$'a bağlanamaz.)*
+- $q_n$'nin $\omega_2$ frekansı ve nükleon deplasman hacminden hesabı → $\alpha$ tamamen türetilmiş olur. *(Aday kapanış M-45'tedir: $q_n=4\pi r_n^2\sqrt2c_0\sqrt{m_p/m_e}=1{,}62\times10^{-19}$ m³/s.)*
+- ~~$C$ ile M-1'in hâl katsayısı $A$ arasındaki ilişki~~ → **kimlik kuruldu**: $A=P_0/\rho_0=c_0^2$ (dalga kanalının sertliği) ve iki kanalın empedans oranı kapalı biçimde $\dfrac{C\,\ell_\omega}{\rho_0c_0}=2\sqrt2\,\dfrac{\mathcal{G}m_n/c_0^2}{r_n}=4{,}2\times10^{-39}$'dur — kütle-itimin zayıflık hiyerarşisi tek boyutsuz sayıda. $\chi$-yayılım terimi **M-46'da yazılmıştır** — profil ve kütle-itim artık eylemden çıkar, $C$'nin kimliği hâl denkleminin ikinci katsayısıdır ($-(\partial P/\partial\chi)_\rho$); kalan iş yalnız $C$'nin **değerinin** mikro türetimidir ($\mathcal{G}$'nin — dolayısıyla yerel ölçülen $G$ değerinin — türetimine eşdeğer). *(Tuzak kaydı: $C\approx3{,}8\rho_nH_0$ görünümü $a_0\sim cH_0$ rastlantısının aynısıdır; yüksek-$z$ sınavı kozmik okumayı dışlamıştır — $C$, $H_0$'a bağlanamaz.)*
 
 ---
 
@@ -246,7 +246,7 @@ Büyük gelgit (hizalı) $0{,}781$ m · küçük gelgit (dik) $0{,}289$ m · ora
 **Kullanıldığı bölümler:** 3.2.2 (Kuvvet 3), 3.1.3-B, 3.4.4, 3.6.1. Bağlı katalog: M-22, M-25, M-27, M-30.
 
 Kuvvet 3'ün iki mertebesi karıştırılmamalıdır:
-- **Sıfırıncı mertebe (zarf):** Gövdeyi saran sürüklenme zarfı içinde bağıl hız sıfıra iner ve klasik $F_d\propto\rho v_{bağıl}^2$ sürüklemesi kaybolur — Michelson–Morley null'unun kaynağı budur. Bu bir **taşıma mekanizması değildir:** yörünge hareketini sağlayan şey zarf değil, maddenin basınç gradyanında **serbest düşmesidir** ($v_{madde}=\sqrt{\mathcal{G}M/R}$, M-2). Ortamın kendi dolaşımı bundan ayrıdır ve $\sqrt{\rho_n/\rho_0}=2$ kat hızlıdır (**M-9**: *"madde düşer, ortam dolaşır"*; M-22, M-25); zarf sınırında bir kayma tabakası kalır. *("Cisim ortamla gider ($v_{bağıl}=0$), bu da yörünge hareketinin kendisini sağlar" okuması M-9'un Geçerlilik Sınırı ile doğrudan çelişir ve literal alındığında gezegenleri $2v_{Kepler}$'e koyar; gözlem onu dışlar. Zarfın rolü sürüklemeyi bastırmaktır, yörüngeyi üretmek değil.)*
+- **Sıfırıncı mertebe (zarf):** Gövdeyi saran sürüklenme zarfı içinde bağıl hız sıfıra iner ve klasik $F_d\propto\rho v_{bağıl}^2$ sürüklemesi kaybolur — Michelson–Morley null'unun kaynağı budur. Bu bir **taşıma mekanizması değildir:** yörünge hareketini sağlayan şey zarf değil, maddenin basınç gradyanında **serbest düşmesidir** ($v_{madde}=\sqrt{\mathcal{G}M/R}$, M-2). Ortamın kendi teğetsel alanı bundan ayrıdır: dolaşan-ortam senaryosunda $\sqrt{\rho_n/\rho_0}=2$ kat hızlı olurdu (**M-9**: *"madde düşer, ortam düşmez"*; M-22, M-25), ama dolaşım **Ek M-52**'de dört bağımsız gövdede dışlanmıştır ve kohezyonlu ortam kuyuyu gerilerek tutar (**Ek M-51**); zarf sınırında bir kayma tabakası kalır. *("Cisim ortamla gider ($v_{bağıl}=0$), bu da yörünge hareketinin kendisini sağlar" okuması M-9'un Geçerlilik Sınırı ile doğrudan çelişir ve literal alındığında gezegenleri $2v_{Kepler}$'e koyar; gözlem onu dışlar. Zarfın rolü sürüklemeyi bastırmaktır, yörüngeyi üretmek değil.)*
 - **Birinci mertebe (artık kuplaj):** Bağıl hız varsa ortam cismi eş-dönüşe **gevşetir**. Asıl "sürüklenme kuvveti" budur.
 
 ### Varsayımlar
@@ -267,7 +267,7 @@ $$\bigl|a_{madde}(R)\bigr| = \frac{1}{\rho_n}\frac{dP}{dR} \;\Longrightarrow\; \
 2. **Ortamın dengesi** (siklostrofik, M-22; $\rho_0$ ile):
 $$\frac{dP}{dR}=\rho_0\frac{v_\theta^2}{R} \;\Longrightarrow\; v_\theta^2=\frac{R}{\rho_0}\frac{dP}{dR}=\frac{\rho_n}{\rho_0}\,R\,\bigl|a_{madde}\bigr| \;\Longrightarrow\; \boxed{\;v_\theta(R)=\sqrt{\frac{\rho_n}{\rho_0}}\;v_{yör}(R)=2\,v_{yör}(R)\;}$$
 
-$\rho_0=\rho_n/4$ olduğundan ($k=0$, M-8) oran **tam 2**'dir; serbest parametre içermez. **M-9'un *"madde düşer, ortam dolaşır"* ifadesi böylece bu bloğun içinde matematiksel olarak da kurulmuş olur** — dışarıdan getirilmiş bir kural değil, aynı $\nabla P$'nin iki yoğunlukla okunmasının sonucudur.
+$\rho_0=\rho_n/4$ olduğundan ($k=0$, M-8) oran **tam 2**'dir; serbest parametre içermez — aynı $\nabla P$'nin iki yoğunlukla okunmasının sonucudur. *(Kayıt: bu oran, ortamın dolaştığı senaryonun niceliğidir ve M-9'un cevabının **kohezyonsuz** kolunu verir; kohezyonlu kolda ortam dolaşmaz, gerilir — Ek M-51 — ve gözlem o kolu seçer, Ek M-52.)*
 
 **Her iki profil de radyal itim yasasının sonucudur** — bağımsız girdi değildir. Üç rejim tek satırdan çıkar:
 
@@ -277,7 +277,12 @@ $\rho_0=\rho_n/4$ olduğundan ($k=0$, M-8) oran **tam 2**'dir; serbest parametre
 | Kepler (küresel akı, M-35) | $\mathcal{G}M/R^2$ | $v_{yör}=\sqrt{\mathcal{G}M/R}$ ✓ **Kepler yörüngeleri** | $2\sqrt{\mathcal{G}M/R}$ | **M-25** ✓ |
 | Logaritmik kuyu (silindirik akı, M-38) | $v_0^2/R$ | $v_{yör}=v_0$ (sabit) ✓ **düz dönüş eğrisi** | $2v_0$ | **M-30** ✓ |
 
-**Gözlenen daima orta kolondur.** Sağ kolon ortamın kendi dolaşımıdır ve görünmez olduğu için ölçülmemiştir; aradaki fark $\Delta v=v_{yör}$'dür (kayma tablosu: 11.3.1).
+**Gözlenen daima orta kolondur.** Sağ kolon ortamın kendi dolaşımıdır; aradaki fark $\Delta v=v_{yör}$'dür (kayma tablosu: 11.3.1).
+
+> **⚠ Sağ kolonun statüsü düştü (17 Ağustos 2026).** Sağ kolon "görünmez olduğu için ölçülmemiş" değil, **dolaylı olarak ölçülmüş ve dışlanmıştır**. Dolaşan bir ortamda cismin apsisleri ortamla sürüklenir ve sürüklenme hızı tam olarak $\Omega_m=w/r=2n$'dir (**Ek M-52**) — yani apsis her radyal periyotta iki tur atardı ve **kapalı elips yörünge var olamazdı**. Dört bağımsız gövdede dışlama $10^2$–$10^6$ mertebesindedir (Merkür, Ay, Titan, Io). Dolayısıyla:
+> - $v_\theta=2v_{yör}$ **kohezyonsuz üst sınırdır**; türetimi doğrudur ($\sqrt{\rho_n/\rho_0}=2$ tam) ama zorunluluk değildir. Kuyuyu dolaşmadan tutan kanal kohezyondur (**Ek M-51**), ve dolaşımın yokluğu üç yapısal nedenden türetilir (**Ek M-53**).
+> - **Orta kolon — yani gözlenen dönüş eğrisi — etkilenmez:** $v_{yör}=\sqrt{R\lvert a_{madde}\rvert}$ yalnız M-2'yi ve akı geometrisini (M-35/M-38) kullanır; ortamın hız alanı bu türetime hiç girmez. Düz dönüş eğrisi, $a_0$, geçiş yarıçapı ve galaksi fitleri **aynen ayaktadır**.
+> - Sağ kolona dayanan sürükleme kalemleri (retrograd/prograd $\Delta v$ asimetrisi, DY-2'nin eğiklik yasası) buna göre koşullu okunur — bkz. Ek M-52'nin bedel kaydı ve 7.4 md.15.
 
 Sayısal kontrol (değişmedi): Dünya yörüngesi için $v_{yör}=\sqrt{R\lvert a_{madde}\rvert}=29{,}79$ km/s, gözlenen $29{,}78$ ✓. Ortamın aynı yarıçaptaki dolaşımı $59{,}58$ km/s'dir (öngörü).
 
@@ -373,7 +378,7 @@ Bu girdide ve M-39'da "ekvator" sözcüğü iki farklı fiziksel nesne için kul
 | **Madde ekvator kuşağı** | gövdenin kendi malzemesi | yalnız $r=R$ | $\omega_{gövde}R$ | $\rho_n$ |
 | **Ortam ekvator düzlemi** *(dolaşım düzlemi)* | Evrenakı | $r>R$, tüm menzil | $v_\theta(r)$ | $\rho_0$ |
 
-İkisi **gövdenin yakın çevresinde** eş düzlemlidir — F5 dolaşımı gövdenin dönme düzlemine kilitler (M-39) — fakat **aynı nesne değildir**: biri tek yarıçapta duran maddedir, öteki tüm menzile yayılan ortamdır. Kural: "ekvator" yalın hâlde **madde kuşağını** gösterir; ortam kastediliyorsa **"ortam ekvator düzlemi"** açıkça yazılır.
+İkisi **gövdenin yakın çevresinde** eş düzlemlidir — F5, ortamın teğetsel yapısını ve düzlem kimliğini gövdenin dönme düzlemine kilitler (M-39; kilit ortamın *dolaşmasını* gerektirmez — Ek M-51/M-52) — fakat **aynı nesne değildir**: biri tek yarıçapta duran maddedir, öteki tüm menzile yayılan ortamdır. Kural: "ekvator" yalın hâlde **madde kuşağını** gösterir; ortam kastediliyorsa **"ortam ekvator düzlemi"** açıkça yazılır.
 
 > **⚠ Menzil kaydı — eş düzlemlilik her yarıçapta geçerli DEĞİLDİR.** Kilidin nereye kadar tuttuğu türetilmiştir: Gövdenin düzlem seçen payı ($J_2$+F5) uzaklıkla düşer ve **geçiş yarıçapında** kolektif torka yenilir:
 > $$r_{geçiş}^5=2\,J_2\,R_e^2\,a_p^3\,\frac{M_p}{M_\odot}\qquad(\text{11.4.9-(a)})$$
@@ -896,7 +901,7 @@ ve $\sin2\theta$ bunun **yalnız $\lambda=1$ hâlidir.** Bu, M-39'un yasasını 
 
 $$\frac{dP}{dR}=\rho_0\,\frac{v_\theta^2}{R}$$
 
-**Ne söyler:** Kütle çevresindeki gradyan bölgesinde ortam tepkisiz değildir; **cevabı düşmek değil dolaşmaktır.** Katı deplasman cebi (nükleon) ise akıp dengelenemez, bütün hâlde itilir. M-9'un tek cümlesiyle: **"madde düşer, ortam dolaşır."**
+**Ne söyler:** Kütle çevresindeki gradyan bölgesinde ortam tepkisiz değildir; **cevabı düşmek değildir.** Kohezyonsuz limitte cevap dolaşmaktır; kohezyonlu Evrenakı'da ise **gerilmektir** (statik kesme dengesi, **Ek M-51**) ve gözlem bu kolu seçer (**Ek M-52**). Katı deplasman cebi (nükleon) ise akıp dengelenemez, bütün hâlde itilir. M-9'un tek cümlesiyle: **"madde düşer, ortam gerilir."**
 
 **Kuvvet olmadığının kanıtı:** Denklemin sol tarafı F1'in kurduğu gradyandır. M-22 yeni bir gradyan eklemez — o gradyanın **ortamın dönüşüyle uyumlu olduğunu** söyler. Sağ taraf bir kuvvet değil, ortamın **ataletidir.**
 
@@ -932,7 +937,7 @@ $d$ ölçekli bir bölgede birikme süresi $t_{boşalma}\sim\sqrt{2d/a_{ortam}}=
 
 **Ayarlanma süresi.** Sıkışma kanalı yerel $c_0$ ile taşır (M-5'in kanal tablosu): $t_{dolma}\sim d/c_0$.
 
-$$\boxed{\;\frac{t_{dolma}}{t_{boşalma}}=\frac{1}{c}\sqrt{\frac{2\mathcal{G}M}{d}}=\sqrt2\,\frac{v}{c}\;}$$
+$$\boxed{\;\frac{t_{dolma}}{t_{boşalma}}=\frac{1}{c_0}\sqrt{\frac{2\mathcal{G}M}{d}}=\sqrt2\,\frac{v}{c_0}\;}$$
 
 $M$ ve $d$ sadeleşir; kalan tek nicelik **yerel hızın $c_0$'ye oranıdır.**
 
@@ -1055,7 +1060,7 @@ $$\Longrightarrow\quad \langle\Omega\rangle^{\text{kutupsal}} = \frac{\xi R^3\om
 
 5. **Sayısal değerlendirme (Dünya / GP-B).** $I=0{,}3307\,M_\oplus R_\oplus^2 = 8{,}02\times10^{37}$ kg·m², $\omega_\oplus=7{,}292\times10^{-5}$ rad/s, dolayısıyla $J_\oplus=5{,}85\times10^{33}$ kg·m²/s; $r=R_\oplus+642\ \text{km}=7013$ km:
 
-$$\Omega_{yerel} = \frac{GJ_\oplus}{c^2r^3} = 1{,}26\times10^{-14}\ \text{rad/s} = 81{,}9\ \text{mas/yıl}$$
+$$\Omega_{yerel} = \frac{GJ_\oplus}{c_0^2r^3} = 1{,}26\times10^{-14}\ \text{rad/s} = 81{,}9\ \text{mas/yıl}$$
 $$\langle\Omega\rangle^{\text{kutupsal}} = \tfrac12\times81{,}9 = 41{,}0\ \text{mas/yıl}$$
 
 ### Sonuç
@@ -1079,19 +1084,19 @@ $\xi$ uzun süre gözlemle sabitlenmiş bir kesir olarak kaldı ve yapısal biç
 | Eşik | Fiziksel olay | Yönettiği |
 |---|---|---|
 | $c_0=\sqrt{P/\rho}$ | **kavrama/patinaj** (sonik sınır, M-1) | dönme sürüklenme kesri $\xi$ |
-| $v_{kav}=\sqrt2c\sqrt{1+\Sigma/P_0}$ | **kavitasyon/yırtılma** (kohezyon, M-4) | öteleme artık sürüklemesi (M-43) |
+| $v_{kav}=\sqrt2c_0\sqrt{1+\Sigma/P_0}$ | **kavitasyon/yırtılma** (kohezyon, M-4) | öteleme artık sürüklemesi (M-43) |
 
 $\xi$'yi $v_{kav}$'a bağlama girişimi başarısızdır ve nedeni yapısaldır: $\xi$ bir yırtılma değil bir **patinaj** büyüklüğüdür — adı da bunu söyler. Doğru eşik $c_0$'dir.
 
 **Adım 1 — Kavramanın yerel ölçüsü.** Ortam bir cismi ancak kavrama hızının o bölgede *bozulduğu* ölçüde tutar; bozulma yoksa ($\delta c=0$) tutamaç da yoktur. Bozulmanın kesri M-42'den doğrudan gelir — yüzeyde
-$$\left|\frac{\delta c_{loc}}{c}\right|_{yüzey} = \frac{2\Phi}{c^2}$$
+$$\left|\frac{\delta c_{loc}}{c_0}\right|_{yüzey} = \frac{2\Phi}{c_0^2}$$
 (2 çarpanı **ışık bükülmesinden** sabitlenmiştir, M-42; GP-B'den değil).
 
 **Adım 2 — Dönmenin geometrik ağırlığı.** Öteleme kütleyi düz toplarken dönme onu $r^2$ ile ağırlıklandırır; kesre giren geometrik çarpan bu yüzden atalet momenti oranıdır, $I/MR^2$.
 
 **Adım 3 — Kavrama kesri.** $\xi$ boyutsuzdur ve cismin ortamdaki tutamacını ölçer; ortamı niteleyen tek yerel boyutsuz büyüklük $\delta c/c_0$, cismi niteleyen tek geometrik oran $I/MR^2$'dir. Serbest sayısal katsayı yoktur:
 
-$$\boxed{\;\xi \;=\; \frac{I}{MR^{2}}\left|\frac{\delta c_{loc}}{c}\right| \;=\; \frac{I}{MR^{2}}\cdot\frac{2\Phi}{c^{2}} \;=\; \frac{I}{MR^{2}}\left(\frac{v_{kaç}}{c}\right)^{2}\;}$$
+$$\boxed{\;\xi \;=\; \frac{I}{MR^{2}}\left|\frac{\delta c_{loc}}{c_0}\right| \;=\; \frac{I}{MR^{2}}\cdot\frac{2\Phi}{c_0^{2}} \;=\; \frac{I}{MR^{2}}\left(\frac{v_{kaç}}{c_0}\right)^{2}\;}$$
 
 Dünya için: $0{,}3307\times1{,}392\times10^{-9} = \mathbf{4{,}605\times10^{-10}}$.
 
@@ -1105,7 +1110,7 @@ Dünya için: $0{,}3307\times1{,}392\times10^{-9} = \mathbf{4{,}605\times10^{-10
 
 Adım 3'ün eşlemesi $\xi R^3/2 = GI/c_0^2$ çözülünce kesrin yapısı çıkar:
 
-$$\boxed{\;\xi = \frac{2GI}{c^2R^3} = 2\left(\frac{I}{MR^2}\right)\frac{GM}{c^2R} = 2\left(\frac{I}{MR^2}\right)\frac{\Phi}{c^2}\;}$$
+$$\boxed{\;\xi = \frac{2GI}{c_0^2R^3} = 2\left(\frac{I}{MR^2}\right)\frac{GM}{c_0^2R} = 2\left(\frac{I}{MR^2}\right)\frac{\Phi}{c_0^2}\;}$$
 
 Sağdaki $\Phi/c_0^2$, **M-8'in arka plan basıncını sabitlemek için kullandığı gözlemsel girdinin aynısıdır** (GPS 38 µs/gün + Pound–Rebka). Teori böylece atom saati kaymasıyla jiroskop sürüklenmesini tek sayıya bağlar; sınandığında:
 
@@ -1170,11 +1175,11 @@ Bu, iki formülün **neden yapısal olarak farklı** olduğunu da açıklar: iç
 
 ### Minimum Karadelik Kütlesi — Kilitli Kafesin Bedava Öngörüsü
 
-Karadelik, kafesi kilitlenene kadar sıkışmış maddeyse (dönen bir cismin açısal momentumunu taşıyan bir yapı olmak zorundadır), yarıçapı $R_\rho=(3M/4\pi\rho_n)^{1/3}\propto M^{1/3}$ ile sınırlıdır. Schwarzschild yarıçapı ise $\propto M$'dir; ikisi tek bir kütlede kesişir:
+Karadelik, kafesi kilitlenene kadar sıkışmış maddeyse (dönen bir cismin açısal momentumunu taşıyan bir yapı olmak zorundadır), yarıçapı $R_\rho=(3M/4\pi\rho_n)^{1/3}\propto M^{1/3}$ ile sınırlıdır. Karşısına konacak ölçek ise **teorinin kendi foton küresidir**: üstel indisin ($n_{eff}=e^{2\Phi/c_0^2}$) Fermat ekstremumu $r_{ph}=2\mathcal{G}M/c_0^2\propto M$ verir (Ek **M-55**) — sayısal olarak Schwarzschild yarıçapıyla **birebir** çakışır, ama gerekçesi tümüyle teori-içidir ve **ufka dayanmaz** (üstel yapıda ufuk yoktur). İkisi tek bir kütlede kesişir:
 
-$$\boxed{\;M_{\min}=\frac{1}{G}\sqrt{\frac{3c^6}{32\pi G\rho_n}} \approx 8{,}3\,M_\odot\;}$$
+$$\boxed{\;M_{\min}=\frac{1}{G}\sqrt{\frac{3c_0^6}{32\pi G\rho_n}} \approx 8{,}3\,M_\odot\;}$$
 
-Altında $R_\rho>R_s$ — sıkışmış cisim ufkunun dışında kalır, karadelik oluşamaz. Nötron yıldızları $\rho_n$'i zaten ~1,4 kat aştığından ($\bar\rho\approx3{,}9\times10^{17}$ kg/m³) tavan yukarı alınırsa $M_{\min}$ **4–8 $M_\odot$** bandına iner.
+Altında $R_\rho>r_{ph}$ — sıkışmış cisim foton küresinin **dışında** kalır, dolayısıyla **gölge oluşamaz.** *(Anlam kaydı, 17 Ağustos 2026: eşik bir **ufuk** eşiği değil **gölge** eşiğidir; altındaki cisimler "karadelik oluşamaz" değil, **"gölgesiz kompakt gövde"** sınıfındadır. Formül ve sayı değişmez — $r_{ph}=2\mu=R_s$ birebir — yalnız mekanizmanın adı ve eşiğin yorumu değişir; Ek M-55.)* Nötron yıldızları $\rho_n$'i zaten ~1,4 kat aştığından ($\bar\rho\approx3{,}9\times10^{17}$ kg/m³) tavan yukarı alınırsa $M_{\min}$ **4–8 $M_\odot$** bandına iner.
 
 Gözlemsel karşılık: yıldız-kütleli karadeliklerin ölçülen alt kenarı ~5 $M_\odot$'dir ve nötron yıldızı üst sınırı (~2,2 $M_\odot$) ile arasındaki **kütle boşluğu** tam bu banda düşer. Teori boşluğu bir seçim etkisi değil, **yapısal bir eşik** olarak okur. *(Rozet: $\rho_n$'in gerçek sıkışma tavanı olup olmadığı türetilmediğinden mertebe öngörüsüdür, kesin sayı değil.)*
 
@@ -1201,7 +1206,7 @@ M-40 jiroskop **spininin** sürüklenmesini verdi. LAGEOS'ta ölçülen ise fark
 
 ### Varsayımlar
 
-1. Ortamın dönme alanı M-40'tan alınır: $\vec\Omega_{rot} = \dfrac{G}{c^2r^3}\left[3(\vec J\cdot\hat r)\hat r - \vec J\right]$ (aynı $\xi$, yeni parametre yok).
+1. Ortamın dönme alanı M-40'tan alınır: $\vec\Omega_{rot} = \dfrac{G}{c_0^2r^3}\left[3(\vec J\cdot\hat r)\hat r - \vec J\right]$ (aynı $\xi$, yeni parametre yok).
 2. **Uydu, yerel olarak dönen ortam içinde hareket eder ve Coriolis ivmesi duyar** — M-23'ün atmosferik dolaşım için türettiği $-2\vec\Omega\times\vec v$ yapısının birebir aynısı, bu kez yörünge ölçeğinde:
 $$\vec a_{pert} = -2\,\vec\Omega_{rot}\times\vec v$$
 3. Pertürbasyon küçüktür; Gauss yörünge denklemleri geçerlidir.
@@ -1212,17 +1217,17 @@ $$\vec a_{pert} = -2\,\vec\Omega_{rot}\times\vec v$$
 
 **2. Düzlem-dışı (normal) bileşen.** İki çapraz çarpımın $\hat n$ izdüşümleri: $(\hat r\times\vec v)\cdot\hat n = v$ ve $(\hat z\times\vec v)\cdot\hat n = v\sin i\sin u$. Dolayısıyla:
 
-$$W \equiv \vec a_{pert}\cdot\hat n = -2\frac{GJ}{c^2a^3}\Bigl[\,3\sin i\sin u\cdot v \;-\; v\sin i\sin u\,\Bigr] = -\frac{4\,GJ\,v\,\sin i\,\sin u}{c^2a^3}$$
+$$W \equiv \vec a_{pert}\cdot\hat n = -2\frac{GJ}{c_0^2a^3}\Bigl[\,3\sin i\sin u\cdot v \;-\; v\sin i\sin u\,\Bigr] = -\frac{4\,GJ\,v\,\sin i\,\sin u}{c_0^2a^3}$$
 
 **3. Gauss düğüm denklemi** (dairesel yörünge, $r=a$, $v=na$):
 
-$$\frac{d\Omega_{düğüm}}{dt} = \frac{a\sin u}{n a^2 \sin i}\,W = -\frac{4\,GJ\,\sin^2 u}{c^2 a^3}$$
+$$\frac{d\Omega_{düğüm}}{dt} = \frac{a\sin u}{n a^2 \sin i}\,W = -\frac{4\,GJ\,\sin^2 u}{c_0^2 a^3}$$
 
 **4. Yörünge ortalaması** ($\langle\sin^2u\rangle = \tfrac12$):
 
 ### Sonuç
 
-$$\boxed{\;\left|\frac{d\Omega_{düğüm}}{dt}\right| = \frac{2\,G J}{c^2 a^3\,(1-e^2)^{3/2}}\;}$$
+$$\boxed{\;\left|\frac{d\Omega_{düğüm}}{dt}\right| = \frac{2\,G J}{c_0^2 a^3\,(1-e^2)^{3/2}}\;}$$
 
 Yön, merkez cismin dönüş yönüyle aynıdır (prograd sürükleme) — gözlenen yön budur.
 
@@ -1269,15 +1274,17 @@ $\epsilon \equiv \Phi/c_0^2$ tanımlayıp üç yerel büyüklüğün arka plana 
 
 $$c_{loc} = c_0\,(1+\gamma_c\,\epsilon),\qquad \ell_{loc} = \ell\,(1+\gamma_\ell\,\epsilon),\qquad f_{loc} = f\,(1+\gamma_f\,\epsilon)$$
 
+*(Bu doğrusal ansatz birinci mertebededir; aşağıda sabitlenen üsler birinci mertebe ilişkileridir ve tam biçimde — $\Lambda=e^{-\Phi/c_0^2}$, **Ek M-55** — aynen geçerlidir.)*
+
 Burada $c_{loc}$ Zerre'nin arka plan (düz) uzayda ölçülen yayılma hızı, $\ell_{loc}$ maddeden yapılmış bir cetvelin uzunluğu, $f_{loc}$ yerel bir saatin tik hızıdır. $\gamma_c=\gamma_f=-1$ ve $\gamma_\ell=0$ seçimi bükülmeyi **yarım** verir; aşağıda görülecektir.
 
 ### Adımlar — üç kısıt, üç üs
 
 **Kısıt 1 — Kütleçekimsel kızıla kayma (ölçülmüş).** GPS'in günde 38 µs'si ve Pound–Rebka genliği, saat hızının potansiyelle nasıl değiştiğini doğrudan verir:
-$$\frac{\delta f}{f} = -\frac{\Phi}{c^2} \quad\Longrightarrow\quad \boxed{\gamma_f = -1}$$
+$$\frac{\delta f}{f} = -\frac{\Phi}{c_0^2} \quad\Longrightarrow\quad \boxed{\gamma_f = -1}$$
 
 **Kısıt 2 — Işık bükülmesi (ölçülmüş).** Teorinin ontolojisinde uzay düzdür; bükülme, düz arka planda değişken yayılma hızının Fermat ilkesiyle ürettiği kırılmadır. Uzak saatle ölçülen uçuş süresi
-$$T = \int\frac{ds}{c_{loc}} = \frac1c\int\left(1-\gamma_c\epsilon\right)ds \quad\Longrightarrow\quad n_{eff} = 1-\gamma_c\,\epsilon$$
+$$T = \int\frac{ds}{c_{loc}} = \frac1{c_0}\int\left(1-\gamma_c\epsilon\right)ds \quad\Longrightarrow\quad n_{eff} = 1-\gamma_c\,\epsilon$$
 Bükülme açısı $\delta = 2(-\gamma_c)\,GM/c_0^2b$ olduğundan, Güneş kenarı için ölçülen $1{,}751''$:
 $$\boxed{\gamma_c = -2}$$
 ($\gamma_c=-1$ seçimi $0{,}876''$ verir — Soldner/Newton değeri, gözlemin tam yarısı.)
@@ -1289,7 +1296,11 @@ $$\gamma_c = \gamma_\ell + \gamma_f \quad\Longrightarrow\quad -2 = \gamma_\ell -
 
 Üç üs tek bir çarpana iner. **Madde ölçeği** tanımlanır:
 
-$$\boxed{\;\Lambda \equiv 1 - \frac{\Phi}{c^2}\;;\qquad \ell_{loc} \propto \Lambda,\qquad f_{loc}\propto\Lambda,\qquad c_{loc}\propto\Lambda^{2}\;}$$
+$$\boxed{\;\Lambda \equiv e^{-\Phi/c_0^2}\;;\qquad \ell_{loc} \propto \Lambda,\qquad f_{loc}\propto\Lambda,\qquad c_{loc}\propto\Lambda^{2}\;}$$
+
+> **Biçim kaydı (17 Ağustos 2026).** Yukarıdaki üç ölçekleme ilişkisi bu girdinin sonucudur ve **her mertebede** geçerlidir; $\Lambda$'nın **biçimi** ise **Ek M-55**'te türetilir: deplasman kanalının yerel tepkisi üsteldir. Bu girdinin uzun süre kullandığı $\Lambda=1-\Phi/c_0^2$ yazımı, onun **birinci mertebe kesitidir**:
+> $$\Lambda=e^{-\Phi/c_0^2}=1-\frac{\Phi}{c_0^2}+O\!\left(\frac{\Phi^2}{c_0^4}\right)$$
+> Aşağıdaki üç kısıt ($\gamma_c=-2$, $\gamma_f=-1$, $\gamma_\ell=-1$) **birinci mertebe** ilişkileridir ve aynen geçerlidir; ikinci mertebe (PPN $\beta$) M-55'te kapanır.
 
 Yapı kendi içinde kapanır:
 
@@ -1297,7 +1308,7 @@ Yapı kendi içinde kapanır:
 |---|---|
 | Işık-saati: $f = c_{loc}/\ell_{loc} \propto \Lambda^2/\Lambda = \Lambda$ | ✓ gözlenen kızıla kayma |
 | Yerel ölçüm: $c_{loc}/(\ell_{loc}f_{loc}) \propto \Lambda^2/\Lambda^2 = 1$ | ✓ Lorentz testleri null |
-| Optik yol: $n_{eff} = 1/\Lambda^2 = 1+2\Phi/c_0^2$ | ✓ $1{,}7512''$ |
+| Optik yol: $n_{eff} = 1/\Lambda^2 = 1+2\Phi/c_0^2$ *(ilk eşitlik her mertebede geçerlidir; ikinci eşitlik birinci mertebe — tam biçim $\Lambda=e^{-\Phi/c_0^2}$, **Ek M-55**)* | ✓ $1{,}7512''$ |
 
 **Kritik notasyon ayrımı.** Teorinin "yerel ışık hızı" dediği iki farklı büyüklük vardır ve karıştırılmamalıdır:
 - **$\Lambda$** — madde ölçeği; saatleri, cetvelleri ve atomik geçiş frekanslarını yönetir. Kızıla kayma ve Zerre-Saati formüllerinde geçen budur (M-20, M-21).
@@ -1311,10 +1322,10 @@ Bu çözüm teoriye yabancı bir hamle değildir; teorinin **hareket** için zat
 
 | | Cetvel | Saat | Yayılım | Yerel ölçüm $\dfrac{c_{yay}}{\ell f}$ |
 |---|---|---|---|---|
-| **Hareket** (M-19) | $\ell/\gamma$ | $f/\gamma$ | $c_0/\gamma^{2}$ *(paralel kolda yol uzaması)* | $\dfrac{c/\gamma^2}{(\ell/\gamma)(f/\gamma)}=\dfrac{c}{\ell f}$ ✓ M&M null |
-| **Kütle-itim** (M-42) | $\ell\Lambda$ | $f\Lambda$ | $c_0\Lambda^{2}$ | $\dfrac{c\Lambda^2}{(\ell\Lambda)(f\Lambda)}=\dfrac{c}{\ell f}$ ✓ Lorentz null |
+| **Hareket** (M-19) | $\ell/\gamma$ | $f/\gamma$ | $c_0/\gamma^{2}$ *(paralel kolda yol uzaması)* | $\dfrac{c_0/\gamma^2}{(\ell/\gamma)(f/\gamma)}=\dfrac{c_0}{\ell f}$ ✓ M&M null |
+| **Kütle-itim** (M-42) | $\ell\Lambda$ | $f\Lambda$ | $c_0\Lambda^{2}$ | $\dfrac{c_0\Lambda^2}{(\ell\Lambda)(f\Lambda)}=\dfrac{c_0}{\ell f}$ ✓ Lorentz null |
 
-**Simetrinin tam ifadesi.** Cetvel ile saatin aynı çarpanla ölçeklenmesi, ortamı yerel ölçümden gizlemek için **tek başına yeterli değildir**: $\ell$ ve $f$ birlikte çarpanın *karesini* üretir, dolayısıyla yayılım teriminin de aynı kareyi taşıması gerekir. İki durumda da tam olarak bu olur — ve mekanizmaları farklıdır: harekette kare, hareket yönündeki gidiş-dönüş yolunun $\gamma^2$ uzamasından gelir (M-19 Adım 2'nin boy kısalması tartışması); kütle-itimde ise doğrudan $c_{loc}=c_0\Lambda^2$ ölçeklemesinden. Değişen yalnız çarpanın kaynağıdır: $1/\gamma \approx 1-v^2/2c^2$ ↔ $\Lambda = 1-\Phi/c_0^2$.
+**Simetrinin tam ifadesi.** Cetvel ile saatin aynı çarpanla ölçeklenmesi, ortamı yerel ölçümden gizlemek için **tek başına yeterli değildir**: $\ell$ ve $f$ birlikte çarpanın *karesini* üretir, dolayısıyla yayılım teriminin de aynı kareyi taşıması gerekir. İki durumda da tam olarak bu olur — ve mekanizmaları farklıdır: harekette kare, hareket yönündeki gidiş-dönüş yolunun $\gamma^2$ uzamasından gelir (M-19 Adım 2'nin boy kısalması tartışması); kütle-itimde ise doğrudan $c_{loc}=c_0\Lambda^2$ ölçeklemesinden. Değişen yalnız çarpanın kaynağıdır: $1/\gamma \approx 1-v^2/2c_0^2$ ↔ $\Lambda = 1-\Phi/c_0^2$ *(her ikisi de birinci mertebe açılımı olarak karşılaştırılıyor; $\Lambda$'nın tam biçimi $e^{-\Phi/c_0^2}$ — **Ek M-55**)*.
 
 Bu, $\gamma_\ell = \gamma_f$ eşitliğinin neden doğal olduğunu da açıklar: teori hareket kolunda cetvel ve saati zaten tek ortak çarpana bağlamıştı; potansiyel kolunda aynı yapının tekrarlanması yeni bir varsayım değil, mevcut yapının uzatılmasıdır.
 
@@ -1329,6 +1340,8 @@ $\Lambda$ yapısı, PPN dilinde $\gamma_{PPN}=1$ vermeye denktir; $\gamma$'ya ba
 | Shapiro gecikmesi (Dünya–Mars, teğet) | **≈247 µs** (aşağıda hesaplandı) | ≈250 µs ✓ |
 | Kütleçekimsel kızıla kayma | $-\Phi/c_0^2$ | GPS, Pound–Rebka ✓ |
 | Lorentz ihlali sınırları | yapısal olarak null | $10^{-18}$ ✓ |
+| **Günberi kayması (Merkür)** | **42,9805″/yüzyıl** | $42{,}9799\pm0{,}0009$ ✓ (**0,69σ**; $\beta_{PPN}=1$, Ek **M-55**) |
+| **Karadelik gölge çapı (Sgr A\*)** | **55,73 µas** ($b_{krit}=2e\mu$) | $51{,}8\pm2{,}3$ µas (1,04σ) — GR'dan $+\%4{,}63$, **yeni ayırt edici** (M-55) |
 
 > **Jeodetik satırının mekanizma kaydı** *(düzeltme, 17 Ağustos 2026: eski gerekçe "Thomas ½ + ölçek payı 1" idi — ayrışım yanlıştı ve "Thomas" çıplak bir SR ithaliydi)*. Doğru ayrışım teori-içi iki kalemdir ve $1+\tfrac12$ değil $\mathbf{2-\tfrac12}$'dir:
 > **(i) Taşınım payı (+2).** Jiroskop ekseni malzeme doğrultusu değil, dolaşım düzleminin kesitle arakesitidir (11.7.1); dolayısıyla **yayılım kanalında** taşınır ve tam yörüngede, bükülmeyi veren aynı $n_{eff}=1/\Lambda^2$'nin Fermat holonomisi kadar döner: $\Delta\alpha = \oint \partial_\perp(\ln n_{eff})\,ds = 4\pi\,\mathcal{G}M/(c_0^2 r)$ — yeni girdi yok. *(Yerel-oran yazımı değil, kapalı-yörünge holonomisi: düzgün gradyanda düz taşınan eksen simetri gereği dönmez; birikim, gradyan yönünün yörünge boyunca dönmesinden gelir.)*
@@ -1336,7 +1349,7 @@ $\Lambda$ yapısı, PPN dilinde $\gamma_{PPN}=1$ vermeye denktir; $\gamma$'ya ba
 > Kepler bağıyla ($v^2=\mathcal{G}M/r$) toplam: $4\pi\mu/r - \pi\mu/r = 3\pi\,\mathcal{G}M/(c_0^2 r)$ per yörünge — tablodaki ~6.606 mas/yıl. **Açık kalem:** (i)'in kanal ağırlığının (yayılım, $\Lambda^2$) taşınan girdap çekirdeğinin yönelim dinamiğinden alt-düzey türetimi — Açık Uçlar'da kayıtlıdır; cetvel kanalı ($\Lambda$) seçilseydi toplam $\tfrac12$'ye düşer ve GP-B ile ~240σ çelişirdi.
 
 **Shapiro gecikmesinin hesabı.** Aynı $n_{eff}$ Fermat integraline sokulur; ek varsayım yoktur:
-$$\Delta t = \frac1c\int (n_{eff}-1)\,ds = \frac{2GM}{c^3}\int\frac{ds}{r} \quad\Longrightarrow\quad \Delta t_{gidiş-dönüş} = \frac{4GM}{c^3}\,\ln\!\frac{4r_1r_2}{b^2}$$
+$$\Delta t = \frac1{c_0}\int (n_{eff}-1)\,ds = \frac{2GM}{c_0^3}\int\frac{ds}{r} \quad\Longrightarrow\quad \Delta t_{gidiş-dönüş} = \frac{4GM}{c_0^3}\,\ln\!\frac{4r_1r_2}{b^2}$$
 Güneş kenarına teğet geçen Dünya–Mars sinyali için ($r_1=1$ AU, $r_2=1{,}524$ AU, $b=R_\odot$): $4GM_\odot/c_0^3 = 1{,}97\times10^{-5}$ s ve $\ln(2{,}82\times10^{5}) = 12{,}55$, dolayısıyla
 $$\Delta t \approx 247\ \mu\text{s}$$
 Ölçülen değer ≈250 µs'dir (Shapiro, 1964; Viking: Reasenberg ve ark., 1979). **Yarım indis ($n=1+\Phi/c_0^2$) bu sayının tam yarısını (≈124 µs) verir ve gözlemle kesin olarak çelişir** — yani Shapiro, 2 çarpanının bükülmeden bağımsız **üçüncü** doğrulamasıdır. Cassini'nin daha keskin ölçümü PPN $\gamma$'yı $1+(2{,}1\pm2{,}3)\times10^{-5}$ olarak sabitler (Bertotti ve ark., 2003); yapının verdiği $\gamma=1$ bu bantla uyumludur.
@@ -1347,28 +1360,31 @@ $$\Delta t \approx 247\ \mu\text{s}$$
 
 M-8, $P_0$'ı kızıla kayma genliğinden sabitlerken $\delta c/c_0 = \delta f/f$ eşitliğini kullanıyordu. $\Lambda$ yapısında bu eşitlik geçersizdir ($\delta c/c_0 = 2\,\delta f/f$), dolayısıyla zincir yeniden çalışır:
 
-$$\frac{1-k}{2}\cdot\frac{-\rho_n\Phi}{P_0} = -\frac{2\Phi}{c^2} \quad\Longrightarrow\quad \boxed{P_0 = \frac{1-k}{4}\,\rho_n c_0^2\;,\qquad \rho_0 = \frac{1-k}{4}\,\rho_n}$$
+$$\frac{1-k}{2}\cdot\frac{-\rho_n\Phi}{P_0} = -\frac{2\Phi}{c_0^2} \quad\Longrightarrow\quad \boxed{P_0 = \frac{1-k}{4}\,\rho_n c_0^2\;,\qquad \rho_0 = \frac{1-k}{4}\,\rho_n}$$
 
 $k=0$ için $P_0 \approx 6{,}1\times10^{33}$ Pa ve $\rho_0\approx\rho_n/4 \approx 6{,}8\times10^{16}$ kg/m³. Mertebe değişmez; M-7'nin alt sınırı ($1{,}6\times10^{25}$ Pa) hâlâ sekiz-dokuz mertebe aşılır. Monizm ifadesi "madde, okyanusun ~4 kat sıkışmış fazıdır" biçimini alır. **Ayrıca $P_0$ artık kızıla kaymadan değil bükülmeden sabitlenir** — kızıla kayma serbest kalıp öngörüye dönüştüğü için.
 
 ### Geçerlilik Sınırı
 
-- Yapı **birinci mertebedir** ($O(\Phi/c_0^2)$). PPN dilinde yalnız $\gamma=1$'i verir; $\beta$ parametresi (ortamın doğrusal-olmayan tepkisi, $O(\Phi^2/c_0^4)$) belirlenmemiştir.
-- Bu nedenle **Merkür günberi kayması hâlâ kapanmamıştır:** presesyon $\frac{2+2\gamma-\beta}{3}$ ile ölçeklenir; $\gamma=1$ sağlandı, $\beta=1$ gerekiyor. $\beta$ olmadan öngörü $\frac{4-\beta}{3}\times43''$/yüzyıldır.
+- Bu girdinin kendi türetimi **birinci mertebededir** ($O(\Phi/c_0^2)$) ve PPN dilinde $\gamma=1$'i verir. ~~$\beta$ parametresi belirlenmemiştir~~ → **kapandı (17 Ağustos 2026, Ek M-55):** ikinci mertebe, deplasman kanalının yerel (üstel) tepkisinden türetilir ve $\beta_{PPN}=1$ verir.
+- ~~**Merkür günberi kayması hâlâ kapanmamıştır**~~ → **KAPANDI.** Presesyon $\frac{2+2\gamma-\beta}{3}$ ile ölçeklenir; $\gamma=1$ bu girdiden, $\beta=1$ **Ek M-55**'ten gelir ⟹ ölçek tam 1 ⟹ Merkür **42,9805″/yüzyıl**, ölçüm $42{,}9799\pm0{,}0009$ (**0,69σ**). Doğrusal yazım $\beta=\tfrac12$ ile 50,14″ verir ve **7960σ** ile dışlanır — yani gözlem iki aday hâl ilişkisi arasında **seçim yapmıştır**.
+- **Yeni geçerlilik tabanı:** yapı artık $O(\Phi^2)$'ye kadar tamdır ve $g_{tt}$'de GR ile özdeştir; ayrışma $O(\Phi^3)$'te ve güçlü alanda başlar (M-55 Sayısal Çapraz Kontroller (f)).
 - $\Lambda$ yapısı **ortak-mod** bir etkidir: bölgedeki hem ortamı hem ölçüm aletlerinin maddesini birlikte ölçekler. Maddi ortamdaki (cam, su, fiber) kırılma ise **diferansiyeldir** — yalnız ışığın yolunu değiştirir, gözlemcinin cetvelini değiştirmez. Bu yüzden $1/n^2=1-\phi$ (M-15) ve $f=\phi=1-1/n^2$ (M-16) türetimleri bu yapıdan **etkilenmez** ve maddi ortamda ışığın yavaşlaması yerel olarak ölçülebilir kalır.
 
 ### Açık Uçlar
 
-- **$\beta$ parametresi:** Ortamın $O(\Phi^2)$ tepkisinin $P(\Phi)$ hâl ilişkisinden türetilmesi. Kapanırsa Merkür'ün 43″'si de kapanır — teorinin kalan tek klasik GR sınavı.
+- ~~**$\beta$ parametresi:** Ortamın $O(\Phi^2)$ tepkisinin $P(\Phi)$ hâl ilişkisinden türetilmesi. Kapanırsa Merkür'ün 43″'si de kapanır — teorinin kalan tek klasik GR sınavı.~~ → **KAPANDI (17 Ağustos 2026, Ek M-55):** tepki yerel-referanslıdır (Postülat 4'ün form-değişmezliği) ⟹ üstel ⟹ $\beta_{PPN}=1$; Merkür 0,69σ. **Teorinin klasik GR sınav kümesi (bükülme · Shapiro · kızıla kayma · jeodetik · çerçeve sürüklenmesi · LAGEOS · günberi) böylece tamamlanmıştır.** Aynı biçim GW170817'yi de özdeş olarak sağlar ve ufuk/tekilliğin yokluğunu yapısal sonuç yapar.
 - **$\gamma_\ell=-1$'in mekanizması:** Cetvellerin neden tam $\Lambda$ ile büzüldüğü, atomun/nükleonun ortam içindeki denge boyutundan birinci-ilkelerle türetilmelidir. Şu an yerel değişmezlik gözleminden sabitlenmiştir. *(Hareket kolundaki karşılığı kapanmıştır — boy kısalması 11.4.8.1'de Prandtl–Glauert'ten türetildi; açık olan potansiyel koludur.)*
 - **Jeodetiğin taşınım payı (17 Ağu 2026):** Eksenin yayılım kanalında ($\Lambda^2$, $n_{eff}$) taşındığı, 11.7.1'in "eksen malzeme doğrultusu değildir" teoremi ve 1.4.7'nin ZW-kutusu (W'yi içeren kol ekseni eğemez) ile gerekçelidir; gözlemsel olarak da zorunludur (cetvel kanalı toplamı ½'ye düşürür, GP-B ~240σ dışlar). Eksik olan, bu ağırlığın **taşınan girdap çekirdeğinin yönelim dinamiğinden** alt-düzey türetimidir (Kapanan Gözlemler notu).
-- **Ayırt edicilik:** $\gamma=1$ ile teori 1PN düzeyinde GR ile gözlemsel olarak ayrışmaz. Ayrışma ancak $\beta$'da veya ikinci mertebede aranabilir.
+- **Ayırt edicilik — arena değişti (17 Ağustos 2026).** ~~Ayrışma ancak $\beta$'da veya ikinci mertebede aranabilir.~~ $\beta$ de 1 çıktığından teori **1PN düzeyinde ve $\beta$ mertebesinde** GR'dan gözlemsel olarak ayrışmaz. **Ayrışma arenası zayıf alandan güçlü alana taşınmıştır:** karadelik gölge çapı $b_{krit}=2e\mu$ ↔ GR'ın $3\sqrt3\mu$'sü, **$+\%4{,}63$** (parametresiz; bugünkü EHT sistematiğiyle ayırt edilmez, ngEHT sınıfı duyarlılıkla belirleyici olur) ve **ufuk yokluğu / sonlu kızıla kayma** (kategorik ayrım, ölçüm yolu tanımlanmadı). Ek **M-55**'in muhasebesi. *(Bu, 11.4.8.1'in $\Lambda_{kin}$ turuyla aynı türden ikinci kayıptır: teori bir arenada daha Einstein fenomenolojisini birebir üretir hâle gelmiştir — dürüst kayıt.)*
 
 - **Yapının türü ve $\beta$'nın neden ayrı iş olduğu (denetim notu, 28 Temmuz 2026).** Bu türetim biçimsel olarak bir **optik-ortam** (etkin kırılma indisi) kuruluşudur: düz arka plan + konuma bağlı $c_{loc}$ + Fermat ilkesi. Bu sınıfın bilinen bir kapsamı ve bilinen bir sınırı vardır ve teorinin durumu tam olarak o sınıra oturur:
   - **Kapsam:** Işık yolu gözlemleri — bükülme, Shapiro gecikmesi, merceklenme, $\gamma$'ya bağlı her şey. Bunları tek indisle, ek varsayım olmadan verir. ✓
   - **Sınır:** Kütleli cisim yörüngeleri. Bir skaler indis, $n$'nin hıza bağlı olmadığı sürece kütleli parçacıkların hareketini tam üretmez; günberi kaymasının ikinci mertebe payı bu yüzden indisin *dışındadır*.
 
-  Yani Merkür'ün açık kalması rastlantı ya da eksik hesap değil, **kullanılan yapının cinsinden gelen bir sınırdır.** Kapanması için ortamın hâl ilişkisinin ($P(\Phi)$) ikinci mertebe terimi gerekir — yani optik analojiden çıkıp ortamın dinamiğine geçmek gerekir. Bu, $\beta$'yı "hesaplanmayı bekleyen bir sayı" olmaktan çıkarıp **yapısal bir sonraki adım** hâline getirir; 7.4 md.12 bu çerçevede okunmalıdır.
+  > **⚠ Bu teşhis 17 Ağustos 2026'da geri alınmıştır.** Teşhisin *koşulu* doğruydu ("indis hıza bağlı olmalı"), ama **koşul teoride zaten sağlanıyordu** ve o iki yarı hiç birleştirilmemişti: **11.4.8.1** kinematik ölçek terimini Prandtl–Glauert dönüşümünden türetir ($\Lambda_{kin}=\sqrt{1-V^2/c_{loc}^2}$, [T]) — yani indis skaler değil, **çarpım yapılıdır** ($\Lambda=\Lambda_{grav}\Lambda_{kin}$). Eksik olan ikinci parça, $\Lambda_{grav}$'ın **biçimiydi** ve o **Ek M-55**'te türetilir (üstel). İkisi birleştiğinde teorinin kendi eyleminden çıkan yörünge denklemi Merkür'ü **tam** verir (42,9805″/yy, 0,69σ).
+  >
+  > Dolayısıyla Merkür'ün açık kalması *"kullanılan yapının cinsinden gelen bir sınır"* değildi; **ölçek çarpanının biçimi eksikti ve hız kolu hiç devreye sokulmamıştı.** İki dürüst kayıt: (i) saf M-2 (kuvvet yasası) tek başına Merkür'de **ters işaret** verir ($-28{,}65$″/yy $=-\tfrac23\times$GR); 43″'nin %167'si eylemin hız-bağımlı terimlerinden gelir. (ii) Ayrışma artık $\beta$'da değil **güçlü alanda** aranır (gölge, $+\%4{,}63$).
 
 ---
 
@@ -1405,7 +1421,7 @@ $$F_{artık} = \underbrace{\tfrac12 C_D\,\rho_0\,v_{bağıl}^2\,A}_{\text{klasik
 $$n = \frac{\ln(2{,}1\times10^{-29})}{\ln(1{,}2\times10^{-9})} = \frac{-66{,}0}{-20{,}5} = 3{,}2$$
 En yakın tam sayı **$n=3$**'tür. $n=3$ alınırsa eşitlik $v_{kav}\ge1{,}9\times10^{13}$ m/s gerektirir, yani:
 $$\frac{\Sigma}{P_0} \gtrsim 1{,}9\times10^{9}\,,\qquad v_m \gtrsim 4{,}4\times10^{4}\,c_0$$
-Bu, Bell'in verdiği alt sınırı ($\Sigma/P_0>10^8$, $v_m>10^4c$) $v_m$'de **~4 kat sıkıştırır** ve onunla çelişmez. *(Düzeltme, 9 Ağustos 2026: zincir $v_{bağıl}=2v_{yör}$ ile hesaplanmıştı; DY-2 retrograd kayması $3v_{yör}$ ile yeniden koşuldu — $n=3$ sonucu değişmedi.)*
+Bu, Bell'in verdiği alt sınırı ($\Sigma/P_0>10^8$, $v_m>10^4c_0$) $v_m$'de **~4 kat sıkıştırır** ve onunla çelişmez. *(Düzeltme, 9 Ağustos 2026: zincir $v_{bağıl}=2v_{yör}$ ile hesaplanmıştı; DY-2 retrograd kayması $3v_{yör}$ ile yeniden koşuldu — $n=3$ sonucu değişmedi.)*
 
 **4. $\eta_E$'nin statüsünün çözülmesi.** M-37'nin doğrusal ansatzı ($F=6\pi\eta_E a_b v$) bastırılmış sürüklemeye eşitlenir:
 $$\eta_{E}^{etkin} = \frac{C_D\,\rho_0\,a_b\,v_{bağıl}^{\,1+n}}{12\,v_{kav}^{\,n}} \;\overset{n=3}{=}\; \frac{C_D\,\rho_0\,a_b\,v_{bağıl}^{4}}{12\,v_{kav}^{3}}$$
@@ -1454,14 +1470,14 @@ Sönüm zamanı $\tau\equiv v/|\dot v|$ iki yazımda farklı ölçeklenir:
 
 ## M-45 · İki Kolun Güç Eşbölüşümü: $q_n/\gamma_n$ Oranı ve $a_0$'ın Aday Kapanışı · **[T (yapı) / T-aday (eşbölüşüm)]**
 
-**Kullanıldığı bölümler:** 6.5.4.3 (Adım 6–7), 6.5.4.5 (a₀'ın değeri), Kısım X 10.7. Bağlı katalog: M-15/M-39 (kafes=atom), M-35 (açık ucu), Ek A.2 ($\sqrt2c$).
+**Kullanıldığı bölümler:** 6.5.4.3 (Adım 6–7), 6.5.4.5 (a₀'ın değeri), Kısım X 10.7. Bağlı katalog: M-15/M-39 (kafes=atom), M-35 (açık ucu), Ek A.2 ($\sqrt2c_0$).
 
 M-35'in açık ucu şuydu: *"$q_n$'nin $\omega_2$ frekansı ve nükleon deplasman hacminden hesabı → $\alpha$ tamamen türetilmiş olur."* Bu türetim o ucu, iki kolun oranı üzerinden **aday** düzeyinde kapatır.
 
 ### Varsayımlar
 
 1. **Tek kaynak, iki izdüşüm** (H.0 köken haritası): $\gamma_n$ ($\omega_1$, 3B-içi dönüş) ve $q_n$ ($\omega_2$, W-eksenli pulsasyon), nükleonun tek 4B çift dönüşünün iki düzlem izdüşümüdür.
-2. **İzoklinik eş-güç — türetilmiştir**: **(2a)** Ek A.2'nin $\sqrt2c$'si izoklinik kilidin doğrudan ifadesidir — kararlılık her iki değişmez düzlemi ayrı ayrı kavrama sınırında ($c_0$) doyurur, $\sqrt{c^2+c_0^2}=\sqrt2c$; iki kanal **tek ortak frekansta** sürülür ve çekirdeğin düzlem enerjileri eşit kilitlenir. **(2b)** Dejenere iki mod, ortak Zerre banyosuyla sürekli alışverişte olduğundan kararlı hâlde mod başına ortalama enerji eşitlenir (eşbölüşüm; değiş-tokuş/vuru yoluyla da aynı sonuç). **(2c)** Eşbölüşümün geçerlilik koşulu hesaplanmış ve kapanmıştır: kanal enerjisi $E=m_pc^2$, sızıntı gücü (alan-kurma işi, üst sınır) $\Delta P\cdot q_n=5{,}8\times10^{-24}$ W → boşalma süresi $\sim0{,}8$ milyon yıl; banyo teması dönüş periyodu ölçeğindedir ($10^{-23}$ s) — $t_{term}/t_{sızıntı}\lesssim10^{-30}$, **36 mertebe marj.** Aynı hesap bir düzeltme de getirir: ışıma düzeltmesi $10^{-30}$ mertebesindedir, dolayısıyla ölçülen %1'lik fark (42,4'e karşı 42,85) fiziksel bir açık değil, medyanın kendi ölçüm hatasının (%3,5) içidir — **oran, ölçüm hassasiyeti neye izin veriyorsa o kadar tam $\sqrt{m_p/m_e}$ olmalıdır** (keskinleşen öngörü; G-9).
+2. **İzoklinik eş-güç — türetilmiştir**: **(2a)** Ek A.2'nin $\sqrt2c_0$'si izoklinik kilidin doğrudan ifadesidir — kararlılık her iki değişmez düzlemi ayrı ayrı kavrama sınırında ($c_0$) doyurur, $\sqrt{c_0^2+c_0^2}=\sqrt2c_0$; iki kanal **tek ortak frekansta** sürülür ve çekirdeğin düzlem enerjileri eşit kilitlenir. **(2b)** Dejenere iki mod, ortak Zerre banyosuyla sürekli alışverişte olduğundan kararlı hâlde mod başına ortalama enerji eşitlenir (eşbölüşüm; değiş-tokuş/vuru yoluyla da aynı sonuç). **(2c)** Eşbölüşümün geçerlilik koşulu hesaplanmış ve kapanmıştır: kanal enerjisi $E=m_pc^2$ *(standart fizik yazımı)*, sızıntı gücü (alan-kurma işi, üst sınır) $\Delta P\cdot q_n=5{,}8\times10^{-24}$ W → boşalma süresi $\sim0{,}8$ milyon yıl; banyo teması dönüş periyodu ölçeğindedir ($10^{-23}$ s) — $t_{term}/t_{sızıntı}\lesssim10^{-30}$, **36 mertebe marj.** Aynı hesap bir düzeltme de getirir: ışıma düzeltmesi $10^{-30}$ mertebesindedir, dolayısıyla ölçülen %1'lik fark (42,4'e karşı 42,85) fiziksel bir açık değil, medyanın kendi ölçüm hatasının (%3,5) içidir — **oran, ölçüm hassasiyeti neye izin veriyorsa o kadar tam $\sqrt{m_p/m_e}$ olmalıdır** (keskinleşen öngörü; G-9).
 3. **Taşıyıcı ayrımı:** dolanım kolunun süredurumunu nükleon özü taşır ($m_p$, yarıçap $r_n$); pulsasyon kolu **deplasman kafesinin** nefesidir ve kafes atomun tamamıdır (M-15/M-39) — kafesin oynak süredurumunu zarfın en hafif bileşeni, elektron kütlesi ($m_e$) taşır. Tür-ayrımlı genel hâl $u_r/v_t=\sqrt{Am_p/(Zm_e)}$'dir (H: 42,85 · He/metaller: 60,6); nükleonların yarıdan fazlası hidrojen olduğundan ($X>0{,}5$) **medyan her ortamda H değerine kilitlenir** — $\ell_\omega$ medyanının bileşimden etkilenmemesini (kütleyle korelasyon $+0{,}03$) bu kilit açıklar ve tür-ayrımlı ikinci bir mod ($\ell\approx51$ fm) öngörür.
 4. **Kürsel kaynak yazımı:** $q_n=4\pi r_n^2 u_r$, $\gamma_n=2\pi r_n v_t$ ($u_r$: radyal pulsasyon hızı, $v_t$: teğetsel dolanım hızı).
 
@@ -1470,10 +1486,10 @@ M-35'in açık ucu şuydu: *"$q_n$'nin $\omega_2$ frekansı ve nükleon deplasma
 1. Eş enerji (Varsayım 2+3): $\tfrac12 m_e u_r^2=\tfrac12 m_p v_t^2 \Rightarrow u_r/v_t=\sqrt{m_p/m_e}=42{,}85$.
 2. Vortisite uzunluğu: $\ell_\omega=\dfrac{q_n}{2\gamma_n}=r_n\dfrac{u_r}{v_t}=r_n\sqrt{\dfrac{m_p}{m_e}}=36{,}05$ fm.
 3. İvme ölçeği (6.5.4.3 Adım 6 ile): $a_0=\dfrac{\mathcal{G}m_n}{\ell_\omega^2}=\dfrac{\mathcal{G}\,m_n\,m_e}{m_p\,r_n^{2}}=8{,}60\times10^{-11}$ m/s².
-4. **Mutlak debiler** (Ek A.2 çapasıyla — kararlı vakum-cepli girdap duvarını $\sqrt2c$'de döndürür → $v_t=\sqrt2c$):
-$$\gamma_n=2\pi r_n\sqrt2c=2{,}24\times10^{-6}\ \mathrm{m^2/s},\qquad
-q_n=4\pi r_n^2\sqrt2c\sqrt{m_p/m_e}=1{,}62\times10^{-19}\ \mathrm{m^3/s}$$
-$u_r\approx61c$'dir — çelişki değildir: pulsasyon cephesi kohezyon kanalında taşınır ($v_m>10^4c$; Ek A.3) ve $c_0$ mutlak sınır değildir (Postülat 4).
+4. **Mutlak debiler** (Ek A.2 çapasıyla — kararlı vakum-cepli girdap duvarını $\sqrt2c_0$'de döndürür → $v_t=\sqrt2c_0$):
+$$\gamma_n=2\pi r_n\sqrt2c_0=2{,}24\times10^{-6}\ \mathrm{m^2/s},\qquad
+q_n=4\pi r_n^2\sqrt2c_0\sqrt{m_p/m_e}=1{,}62\times10^{-19}\ \mathrm{m^3/s}$$
+$u_r\approx61c_0$'dir — çelişki değildir: pulsasyon cephesi kohezyon kanalında taşınır ($v_m>10^4c_0$; Ek A.3) ve $c_0$ mutlak sınır değildir (Postülat 4).
 5. $C$–$q_n$ dejenerasyonu kırılır: $C=\dfrac{4\pi \mathcal{G}\rho_n m_n}{q_n}=2{,}35$ kg·m⁻³·s⁻¹ (denetim: $\alpha=Cq_n/4\pi m_n=1{,}80\times10^{7}$ s⁻², $\mathcal{G}=\alpha/\rho_n$ birebir geri çıkar ✓).
 
 ### Sonuç
@@ -1491,9 +1507,9 @@ a_0=\frac{\mathcal{G}\,m_n\,m_e}{m_p\,r_n^{2}}\;}$$
 
 ### Açık Uçlar
 
-- **Mutlak çapa seçimi:** $v_t$ bileşke duvar hızı mı ($\sqrt2c$ — burada kullanılan) düzlem-başına hız mı ($c_0$)? Oranı ve $a_0$'ı etkilemez; $(\gamma_n,q_n,C)$ mutlakları ortak $\sqrt2$ çarpanıyla oynar. Ek C satır 8'in ekvator-hızı bütçesiyle birlikte çözülmelidir.
+- **Mutlak çapa seçimi:** $v_t$ bileşke duvar hızı mı ($\sqrt2c_0$ — burada kullanılan) düzlem-başına hız mı ($c_0$)? Oranı ve $a_0$'ı etkilemez; $(\gamma_n,q_n,C)$ mutlakları ortak $\sqrt2$ çarpanıyla oynar. Ek C satır 8'in ekvator-hızı bütçesiyle birlikte çözülmelidir.
 - **Banyo temas kesrinin ($\eta$) ilk-ilkelerden hesabı:** eşbölüşüm koşulu $\eta$'nın her fiziksel değerinde sağlanır (2c'nin 36 mertebelik marjı); yine de $\eta$'nın kendisi Zerre-çarpışma modelinden hesaplanırsa marj bir ölçüme döner.
-- ~~$C=2{,}35$'in M-1'in hâl katsayısı $A$ ile ilişkisi~~ → **kimlik kuruldu** (M-35 Açık Uçlar): $C\ell_\omega/\rho_0c=2\sqrt2(\mathcal{G}m_n/c_0^2)/r_n=4{,}2\times10^{-39}$; $\chi$-yayılım terimi M-46'da yazıldı (kütle-itim eylemden çıkar; $C=-(\partial P/\partial\chi)_\rho$); kalan: $C$'nin değerinin mikro türetimi — yapılırsa $\mathcal{G}$ (dolayısıyla yerel ölçülen $G$ değeri) türetilmiş olur.
+- ~~$C=2{,}35$'in M-1'in hâl katsayısı $A$ ile ilişkisi~~ → **kimlik kuruldu** (M-35 Açık Uçlar): $C\ell_\omega/\rho_0c_0=2\sqrt2(\mathcal{G}m_n/c_0^2)/r_n=4{,}2\times10^{-39}$; $\chi$-yayılım terimi M-46'da yazıldı (kütle-itim eylemden çıkar; $C=-(\partial P/\partial\chi)_\rho$); kalan: $C$'nin değerinin mikro türetimi — yapılırsa $\mathcal{G}$ (dolayısıyla yerel ölçülen $G$ değeri) türetilmiş olur.
 - $u_r$ taşınımının M-4/M-43 eşik yapısıyla tam tutarlılık hesabı; tür-ayrımlı ikinci modun ($\ell\approx51$ fm) galaksi-içi ince yapıda aranması; kalıcı bir yüzde-düzeyi oran sapması bulunursa $m_e$-etkin süredurumu / $r_n$ vekili hesabı.
 
 ---
@@ -1606,9 +1622,9 @@ Tam-baskın limitte $g=g_{bar}(1+\sqrt{a_0/g_{ext}})$ — **yarı-Newton**, $\ma
 | M-37 | Vorteks sürüklenmesi | $\omega_1$ | teğetsel akış | $v_\theta=\sqrt{R\lvert a_{radyal}\rvert}$ — **türetilmiş** | yörünge düzlemi | [T]/[A] |
 | M-38 | Eksenel itim | $\omega_1$ | silindirik, $2\pi Rh$ | $1/R$ (yalnız $r_0<R<R_{kesim}$) | galaktik disk | [T]/[A] |
 | M-39 | Yanal itim | $\omega_1$ | enlem gradyanı | $\sin2\theta$; oran $=\kappa_5\frac{\rho_0}{\rho_n}\phi$ **cisimden bağımsız** ($p=1$ türetildi; R1/R2 ayrımı); dış sönüm $s=2$ türetildi, kaynak $R_\phi$'de (11.4) | gövde yüzeyi, disk oluşumu; **figür harmoniklerinde imza YOK** (saf $P_2$ — Sınav 1); dışta **tek-parite $(R_e/r)^3$** imzası var (11.4.4) | [T]/[F], **$\kappa_5\lesssim2{,}1\times10^{-3}$** (LLR düğümü); figür sınırı $\lesssim0{,}0114$–$0{,}0131$ |
-| M-40 | Dönme sürüklenmesi — jiroskop spini | $\omega_1$ | dipolar (simetriden) | $\xi R^3\omega/4r^3$, $\xi=\frac{I}{MR^2}\frac{2\Phi}{c^2}$ | jiroskop ölçekleri; kompaktlıkla doyar | **[T]** — $\xi$ türetildi |
+| M-40 | Dönme sürüklenmesi — jiroskop spini | $\omega_1$ | dipolar (simetriden) | $\xi R^3\omega/4r^3$, $\xi=\frac{I}{MR^2}\frac{2\Phi}{c_0^2}$ | jiroskop ölçekleri; kompaktlıkla doyar | **[T]** — $\xi$ türetildi |
 | M-41 | Dönme sürüklenmesi — yörünge düzlemi | $\omega_1$ | aynı alan, Coriolis kuvveti | $2GJ/c_0^2a^3$ | uydu yörüngeleri | **[T]** — yeni parametre yok |
-| M-42 | *(kuvvet değil)* ölçek yapısı $\Lambda$ | $\omega_2$ potansiyeli | — (skaler ölçekleme) | $\Lambda=1-\Phi/c_0^2$; $c_{loc}\propto\Lambda^2$ | tüm ışık yolu gözlemleri | **[T]** — yeni parametre yok |
+| M-42 | *(kuvvet değil)* ölçek yapısı $\Lambda$ | $\omega_2$ potansiyeli | — (skaler ölçekleme) | $\Lambda=e^{-\Phi/c_0^2}$ (tam biçim, **M-55**; birinci mertebede $1-\Phi/c_0^2$); $c_{loc}\propto\Lambda^2$ | tüm ışık yolu gözlemleri | **[T]** — yeni parametre yok |
 | M-43 | *(kuvvet değil)* artık kuplajın rejimi | — (ortam tepkisi) | altkritik bastırma | $F\propto\rho_0v^2A\,(v/v_{kav})^{3}$ | tüm sürükleme/sönüm hesapları | [T (yapı)]/**[S ($n$)]** — $\eta_E$'yi kaldırır |
 | M-49 | *(kuvvet değil)* dış alan etkisi (EFE) | — | egemenlik yarıçapı + sonlu kolon | $W_{dış}=\min(1,\sqrt{g_{kaps}/g_{ext}})$; tam-baskında $\mathcal{G}_{etkin}=\mathcal{G}(1+\sqrt{a_0/g_{ext}})$ | uydu cüceler, yoğun çevre dış bölgeleri | **[T-aday]** — Chae altkümesi/dSph sınavı bekler |
 | M-48 | *(kuvvet değil)* basınç-destekli köprü | — | küresel izdüşüm + Jeans | $a_r$ diskle aynı; $v_c=\sqrt2\sigma$; $\sigma^4=\mathcal{G}M_{bar}a_0/4$ | eliptik/cüce küresel dış bölgesi | **[T]** — iki bağımsız aile geçildi (dSph $+0{,}009$; SLUGGS $+0{,}051$/$-0{,}004$) |
@@ -1623,14 +1639,14 @@ M-42 bir kuvvet türetmez; diğer altısının **ölçüm çerçevesini** sabitl
 
 $$\underbrace{q_n,\;C}_{\text{tek serbest çift}} \Rightarrow \alpha \Rightarrow \underbrace{\text{M-35}}_{1/r^2} \Rightarrow \underbrace{\text{M-36}}_{\text{taban } a_2\text{, farkta düşer}} \qquad\qquad \underbrace{a_{radyal}}_{\text{M-35}+\text{M-38}} \Rightarrow \underbrace{v_\theta(R)}_{\text{M-37}} \Rightarrow \underbrace{v_e}_{\text{M-39}}$$
 
-M-36 fiziksel olarak M-35'ten ayrı bir mekanizmadır (yönsüz taban sıkışma), ama serbest parametre bütçesine hiçbir yeni kalem eklemez: taban değeri $a_2$ gelgit hesabında farkta düşer ve nihai tensör tamamen M-35'in kendi gradyanından çıkar (M-36). M-37 ve M-39 ise radyal yasaya **bağımlıdır**. Bağımsız serbest kalemler yalnız **ikidir**: $(Cq_n)$ ve $\kappa_5$ — artı M-43'ün altkritik bastırma üssü $n$ (boyutsuz, tek gözlemden). *(3 Ağustos 2026: $r_0$ listeden **çıktı** — M-38'de $r_0=\sqrt{\mathcal{G}M/a_0}=\ell_\omega^{etkin}$ olarak türetildi ve onunla birlikte F4'ün genliği $A_4=\sqrt{\mathcal{G}Ma_0}$ de kapandı. Üç kalem ikiye indi. Ayrıca $\kappa_5$'in sınırı Sınav 1 ile $\lesssim0{,}02$'ye sıkıştı ve F5'in figür harmoniklerinde imzası olmadığı görüldü — M-39.)* $(Cq_n)$ çifti için M-45'in aday kapanışı kayıtlıdır: eş-güç türetilmiştir (izoklinik kilit + banyo eşbölüşümü, termalleşme koşulu 36 mertebe marjla kapalı) ve $\sqrt2c$ çapasıyla $q_n=1{,}62\times10^{-19}$ m³/s, $C=2{,}35$ kg·m⁻³·s⁻¹ — **[T-aday]**; bağımsız $\ell_\omega$ ölçümü ve hakem denetimi gelene dek çift Ek C'de [F] sayılmaya devam eder. M-40'ın $\xi$'si ise artık **türetilmiştir** ([T]): $\xi=(I/MR^2)\,|\delta c_{loc}/c_0| = (I/MR^2)(2\Phi/c_0^2)$, ve $|\delta c_{loc}/c_0|$ M-42'de ışık bükülmesinden sabitlenmiştir — yani bloğa parametre eklemez, **çıkarır.** $\eta_E$ de M-43 ile boyutlu serbest parametre olmaktan çıkmıştır.
+M-36 fiziksel olarak M-35'ten ayrı bir mekanizmadır (yönsüz taban sıkışma), ama serbest parametre bütçesine hiçbir yeni kalem eklemez: taban değeri $a_2$ gelgit hesabında farkta düşer ve nihai tensör tamamen M-35'in kendi gradyanından çıkar (M-36). M-37 ve M-39 ise radyal yasaya **bağımlıdır**. Bağımsız serbest kalemler yalnız **ikidir**: $(Cq_n)$ ve $\kappa_5$ — artı M-43'ün altkritik bastırma üssü $n$ (boyutsuz, tek gözlemden). *(3 Ağustos 2026: $r_0$ listeden **çıktı** — M-38'de $r_0=\sqrt{\mathcal{G}M/a_0}=\ell_\omega^{etkin}$ olarak türetildi ve onunla birlikte F4'ün genliği $A_4=\sqrt{\mathcal{G}Ma_0}$ de kapandı. Üç kalem ikiye indi. Ayrıca $\kappa_5$'in sınırı Sınav 1 ile $\lesssim0{,}02$'ye sıkıştı ve F5'in figür harmoniklerinde imzası olmadığı görüldü — M-39.)* $(Cq_n)$ çifti için M-45'in aday kapanışı kayıtlıdır: eş-güç türetilmiştir (izoklinik kilit + banyo eşbölüşümü, termalleşme koşulu 36 mertebe marjla kapalı) ve $\sqrt2c_0$ çapasıyla $q_n=1{,}62\times10^{-19}$ m³/s, $C=2{,}35$ kg·m⁻³·s⁻¹ — **[T-aday]**; bağımsız $\ell_\omega$ ölçümü ve hakem denetimi gelene dek çift Ek C'de [F] sayılmaya devam eder. M-40'ın $\xi$'si ise artık **türetilmiştir** ([T]): $\xi=(I/MR^2)\,|\delta c_{loc}/c_0| = (I/MR^2)(2\Phi/c_0^2)$, ve $|\delta c_{loc}/c_0|$ M-42'de ışık bükülmesinden sabitlenmiştir — yani bloğa parametre eklemez, **çıkarır.** $\eta_E$ de M-43 ile boyutlu serbest parametre olmaktan çıkmıştır.
 
 **İki eşik, iki kanal (blokun kapanış ilkesi).** Ortamın $c_0$'yi aşan iki tepki kanalı ayrı eşiklere bağlıdır ve karıştırılmamalıdır:
 
 | Kanal | Eşik | Yönettiği | Katalog |
 |---|---|---|---|
 | **Kavrama / patinaj** | $c_0=\sqrt{P/\rho}$ | dönme sürüklenme kesri $\xi$ | M-40 (+M-42) |
-| **Kavitasyon / yırtılma** | $v_{kav}=\sqrt2c\sqrt{1+\Sigma/P_0}$ | öteleme artık sürüklemesi, $\tau_{ret}$ | M-43 (+M-4) |
+| **Kavitasyon / yırtılma** | $v_{kav}=\sqrt2c_0\sqrt{1+\Sigma/P_0}$ | öteleme artık sürüklemesi, $\tau_{ret}$ | M-43 (+M-4) |
 
 Bu ayrım, $\xi$'yi $v_{kav}$'a bağlama girişiminin neden başarısız olduğunu açıklar (sayısal olarak ~10 kat tutmaz ve Bell sınırıyla çelişir): yanlış eşik denenmiştir. Doğru eşleme yapıldığında iki kanal da kapanır.
 
@@ -1662,7 +1678,7 @@ Bu ayrım teorinin patinaj ilkesinin (2.4.2) dönme eksenine uygulanmasıdır; e
 | Ay mesafesinde $1/R$ payı $\varepsilon<2\times10^{-5}$ | Apsidal presesyon (8,85 yıl), LLR | **Sınır aktif** — teori uymak zorunda |
 | $\eta_E^{etkin}=3{,}3\times10^{-5}$ Pa·s *(evrensel sabit değil: $\propto a_b v^4/v_{kav}^3$)* | Phoebe'nin retrograd yörüngesinin 4 Gyr ayakta kalması | M-43 ile yeniden yorumlandı |
 | **$\tau_{ret}\propto \rho_c a_b\,v_{bağıl}^{-4}$** | Retrograd cisim popülasyonu (farklı $v_{bağıl}$, $a_b$) | **Ayırt edici** — Stokes yazımı $\rho_c a_b^2 v^0$ der (M-43) |
-| **$\Sigma/P_0\gtrsim6{,}4\times10^{8}$** ($v_m\gtrsim2{,}5\times10^4c$) | Bell hız sınırı ($>10^8$) ile uyumlu, 2,5 kat sıkı | M-43'ün $n=3$ sonucundan; bağımsız $\Sigma$ ölçümü sınayacak |
+| **$\Sigma/P_0\gtrsim6{,}4\times10^{8}$** ($v_m\gtrsim2{,}5\times10^4c_0$) | Bell hız sınırı ($>10^8$) ile uyumlu, 2,5 kat sıkı | M-43'ün $n=3$ sonucundan; bağımsız $\Sigma$ ölçümü sınayacak |
 | Denge gelgiti 0,53 m (Ay) + 0,25 m (Güneş) | Açık okyanus gelgit genliği | Mertebe ✓, hassas karşılaştırma bekliyor |
 | Gelgit tensörü oranı tam $(+2,-1,-1)$ | Gelgit ivmesinin yanal/eksenel ölçümü | Sapma $\nabla^2P=0$'ı çürütür |
 | ~~$\tau_{ret}$, $e$ ve $i$'den bağımsız~~ → **bağımlıdır**: $\tau_{ret}\propto v_{bağıl}^{-4}$ | Farklı basıklık/eğimdeki retrograd cisimlerin sönüm süreleri | **M-43 ile ters çevrildi** — bağımlılık artık öngörüdür; iki yazımı ayıran sınav budur |
@@ -1671,8 +1687,8 @@ Bu ayrım teorinin patinaj ilkesinin (2.4.2) dönme eksenine uygulanmasıdır; e
 | *Yanal itimin gaz devlerinde güçlü, Güneş'te yok olması bir öngörü **değildir*** | — | "Tam iyonize plazmada $\phi$ çöker" gerekçesi geçersizdir (kavrama nükleon düzeyindedir; $\phi_\odot\approx0$ Güneş'in makro girdabını iptal ederdi; aynı argüman iyonize metalik hidrojenli Jüpiter'e en yüksek payı verirdi — M-39 Varsayım 4 ve 11.2). Ayrıca $\Delta_4$ ile $\kappa_5$ arasında bağıntı kurulamaz: F5 saf $P_2$'dir. Ne gerekçe ne ölçüm kanalı ayaktadır |
 | **$\mathcal{R}=\phi=1-1/n^2$ — Fizeau ile aynı büyüklük** | Akan su $f=0{,}434$ ↔ gezegen $J_4$ | Çapraz-ölçek iddiası; kavrama kütleyle değil hacimle ölçeklenir |
 | Minimum karadelik kütlesi 4–8 $M_\odot$ | Yıldız-kütleli karadelik dağılımının alt kenarı (~5 $M_\odot$) | Kütle boşluğu seçim etkisi değil, yapısal eşik (M-40) |
-| **Sıkışma dalgası hızı tam $c_0$** (stiff hâl denklemi) | GW170817: kütleçekim dalgası ↔ ışık, $10^{-15}$ | **Sınandı ✓** — Ek M-44; ortam Zel'dovich tipi akışkandır |
-| $P_0=\tfrac14\rho_nc^2$ kesin ($k=0$ türetildi) | SN 1987A gecikme bütçesi ile bağımsız doğrulama | Ek M-44; $k$ serbest parametre olmaktan çıktı ($6\to5$) |
+| **Sıkışma dalgası hızı tam $c_{loc}$** (stiff hâl denklemi) | GW170817: kütleçekim dalgası ↔ ışık, $10^{-15}$ | **Sınandı ✓** — Ek M-44; ortam Zel'dovich tipi akışkandır |
+| $P_0=\tfrac14\rho_nc_0^2$ kesin ($k=0$ türetildi) | SN 1987A gecikme bütçesi ile bağımsız doğrulama | Ek M-44; $k$ serbest parametre olmaktan çıktı ($6\to5$) |
 | Yanal itim maksimumu 45° enlemde **ve $r=R_\phi$'de** (Rankine tepesi) | Orta enlem gerilme/akış deseni | Henüz aranmadı; radyal adres 11.4.2'de keskinleşti |
 | ~~Halka kalınlığı: $f_{yanal}$ salınımı = M-27 dikey salınımı~~ → **halka inceliği F5'ten gelmiyor** | Cassini/Voyager halka profilleri | **Karşılaştırıldı (11.4.5):** gözlenen ~10 m, $\sigma_z/\nu$ dengesidir (Kepler + halkanın kendi kuyusu + rampa tabanıyla $h_{halka}\simeq a_b$); F5 tek başına km mertebesi verir (6,4 km). F5'in payı 10 metrede **0,02–0,16 mm**. Doğru kanal kalınlık değil **frekanstır** |
 | **Halka dikey frekansında tek-parite terimi:** $\nu^2/\Omega^2 \ni \hat{\mathcal{Q}}_{et}(R_e/r)^3$, $\hat{\mathcal{Q}}_{et}=4{,}5\times10^{-5}$ (Satürn) | Satürn bükülme dalgası / düğüm rezonans yarıçapları (Cassini) | **Ayırt edici ve taklit edilemez** — kuzey-güney simetrik bir kütle alanı yalnız **çift** üs üretir. F5'in ilk yürütülebilir doğrudan sınavı (11.4.4, Sınav 11.4-A) |

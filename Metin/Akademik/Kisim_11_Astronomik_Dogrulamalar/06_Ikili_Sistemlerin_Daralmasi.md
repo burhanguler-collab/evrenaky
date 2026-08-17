@@ -202,7 +202,7 @@ Yukarıdaki iki kapanmanın ortak mekanik gerekçesi tek bir orandan okunur. Den
 süresi ile ortamın kendini ayarlama süresi arasındaki oran DY-1'in ölçek kaydında **parametresiz**
 olarak çıkar:
 
-$$\boxed{\;\frac{t_{ayarlanma}}{t_{birikme}}=\sqrt2\,\frac{v}{c}\;}$$
+$$\boxed{\;\frac{t_{ayarlanma}}{t_{birikme}}=\sqrt2\,\frac{v}{c_0}\;}$$
 
 Sağ tarafta yalnız yörünge hızının ışık hızına oranı vardır — serbest bir katsayı yoktur. Kompakt
 bir ikilide bile oran $\sim2\times10^{-3}$'tür: ortam, dengesizlik birikmeden **500 kat** önce

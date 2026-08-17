@@ -6,7 +6,34 @@
 
 ---
 
-## 1. Tek paragrafta ne oldu
+## 0. ⭐ DURUM: **ÜSTEL YAPI M-55 OLARAK YAYIN METNİNE TAŞINDI** (17 Ağustos 2026, Enes onayı: *"üstel yapıyı da M-55 olarak taşı"*)
+
+**Yeni girdi:** **M-55 · Üstel Ölçek Yapısı: Deplasman Kanalının Yerel Tepkisi** — rozet **[T (biçim) / S (n=1 gözlemsel kilidi)]**, `Kisim_8_Ekler/19_Ek_M_Blok_I_Eylem_Ilkesi.md` sonuna (Blok I, M-50'den sonra). Blok I'in kapanış paragrafı da güncellendi.
+
+**Girdiye YAZILAN gerekçeler (denetimden ayakta çıkanlar):** Adım 2 form-değişmezliği (Postülat 4) · Adım 6 GW170817 kilidi (9 mertebe) · Adım 7 pozitiflik (M-7) · üssün 4'ünün ρₙ/ρ₀'dan gelmesi.
+**Girdiye YAZILMAYAN, "Elenen gerekçeler" bölümünde dürüstçe kayda geçen:** (1) K=P hacim modülü argümanı (M-44'ün iki-kısmi-türev ayrımını çiğniyor), (2) stiff entalpi (kanal karıştırması).
+**Geçerlilik Sınırı'na giren dürüst kayıtlar:** Merkür yalnız κ=1'i sınar, üstel biçimi seçmez (GR-izotropik de κ=1 ve ufku var) · saf M-2 ters işaret verir (−28,65″/yy; 43″'nin %167'si eylemin hız terimlerinden) · "SINAV C tam eşleşme" her Λ için kimliktir, delil değil · profil tabanı r ≳ 0,20μ (1+z ≤ 140) · derin kuyuda %28 kayma · ikili pulsar geçilmiş değil **ertelenmiş** · yörünge sonuçları M-51–M-54'ün durgunluk sonucuna bağlı.
+
+**Uygulanan bağlı düzeltmeler (12 nokta):** M-42 kanonik kutusu (Λ = e^{−Φ/c₀²} + birinci-mertebe kesiti kaydı) · M-42 Kapanan Gözlemler tablosuna **Merkür ve gölge** satırları · M-42 Geçerlilik Sınırı ("β belirlenmemiştir" ve "Merkür kapanmamıştır" → kapandı) · M-42 Açık Uçlar β kalemi → kapandı · M-42 Ayırt edicilik → arena güçlü alana taşındı · M-42'nin 28 Tem "yapısal sınır" tezi → **geri alındı** (teşhisin koşulu teoride zaten sağlanıyordu: 11.4.8.1'in Λ_kin'i; eksik olan Λ_grav'ın biçimiydi) · M-44 Adım 2 → **v_ses = c_loc** (C-16 düzeltmesi + GW170817'nin güçlenen gerekçesi) · M-46 Varsayım 3 kapsam kutusu + Adım 2'ye tam biçim · Sözlük Λ satırı ve R-10 · **S-28: Φ ≡ −(c₀²/4)ln(P/P₀)** kararı · M_min → r_ph = 2μ, "ufuk eşiği" → **"gölge eşiği"** · `07_Matematiksel_Ekler` M-1..M-55 · 7.4 md.14 tümüyle yeniden yazıldı (kapanış + bedel + arena) · KARNE'ye **S-15/S-16/S-17/S-18**.
+
+**B SINIFI SÜPÜRGESİ — 17 Ağustos 2026'da koşuldu** (11 paralel ajan, dosya bazında bölünmüş; + bir denetim ajanı). Kapsam: `Λ = 1−Φ/c₀²` yazımının geçtiği türev metinlere birinci-mertebe notu + tam biçim atfı. Süpürgeye üç **içerik** düzeltmesi de dahil edildi (mekanik değil, gerçek kapanış kaydı gerektiren yerler):
+- `Kisim_6/03:178` "Karşı Kayıt — kalan kalem" kutusu (Merkür'ün açık olduğunu söylüyordu)
+- `Kisim_4/02:63` parantezi (aynı) + bayat atıf "7.4 md.12" → **md.14**
+- `Kisim_4/02:99` (4.2.16) listesi: **Merkür çıkarıldı**; r_ISCO ve kritik dönüş limitleri kaldı + ufuksuz yapıda yeniden türetim notu
+- `Kisim_11/04_Saturn:910` ve `KARNE:264` kutularında Λ_kin'in çıplak `c`'si → **c_loc** (ikinci mertebeye duyarlı; günberi hesabının kullandığı biçim)
+Sonuç ve denetim raporu: bu dosyanın sonundaki **"B SINIFI SÜPÜRGE KAYDI"** bölümü.
+
+**✅ B SINIFI SÜPÜRGESİ TAMAM** (12 ajan, hata yok): Λ'nın biçiminin açıkça yazıldığı **36/36 vuruş nitelikli**; M-55 atıf ağı kırıksız (**61 atıf / 18 dosya**, hepsi tek gerçek girdiye çözülüyor); M-55 girdisinin başlık/rozet/şablon yapısı kardeş girdilerle uyumlu doğrulandı. Denetimde ek olarak `Kisim_7/04:165` bulunup düzeltildi (listede yoktu).
+
+**🔧 İKİ KUYRUĞA ALINAN KALEM** (c/c₀ sweep'i aynı dosyalarda çalıştığı için çakışmamak adına bekletildi — sweep bitince uygulanacak):
+1. `19_Ek_M_Blok_I_Eylem_Ilkesi.md:373–377` — Blok I'in **kapanış paragrafı öksüz kaldı**: M-55'i dosyanın sonuna eklediğim için kapanış notu dosyanın ortasında (M-55 başlığından önce) duruyor. Kardeş bloklar (09_Blok_A, 13_Blok_E, 15_Blok_G) kapanış notunu dosya sonunda tutuyor. İşlem: `---` + italik paragraf + `---` bloğunu dosyanın en sonuna taşı. **Metin değişmez, yalnız konum.**
+2. `08_Sembol_Sozlugu.md:130` — **Φ satırı hâlâ eski tanımı taşıyor** (`Φ ≡ (P₀−P)/ρₙ ≥ 0`), oysa aynı dosyanın S-28'i (:217) resmî tanımı `Φ ≡ −(c₀²/4)ln(P/P₀)` olarak güncelledi (M-55). İşlem: Φ hücresinin ana tanımını S-28 ile hizala; `(P₀−P)/ρₙ = Φ` eşitliğini **birinci mertebe okuması** olarak işaretle. *(Bu, M-55'i taşırken kendimin açtığı tutarsızlık.)*
+
+**⚠️ HÂLÂ KALAN AYRI PARTİLER:** C-20'nin **11.3 ufuk dili** süpürgesi (`Kisim_11/03_Kutle_Spin...`: 200, 1006, 1014, 1021, 1022, 1623, 1805, 1856, 1858, 1916 + SVG etiketleri 53, 459, 1268, 1694, 1734 — "ufuk tavanı" → "gölge/foton-küresi tavanı"; **sayılar değişmez**, 2μ = R_s birebir) ve C-14'ün **r_ISCO / kritik dönüş limitleri** türetimi. İkisi de M-55'in Açık Uçlar'ında kayıtlı.
+
+---
+
+## 1. Tek paragrafta ne oldu (üstel yapının hikâyesi)
 
 Kitabın iki ayrı açık kalemi — **Merkür'ün 43″/yy günberi kayması** (7.4 md.14, "GR'ın klasik sınavları karşısındaki kalan tek boşluk") ve **karadeliğin GR'dan ödünç alınmış eşiği** (M_min'in Schwarzschild yarıçapını girdi alması) — aynı kökten çıktı: M-46'nın **lineer** deplasman yanıtı P = P₀ − Cχ. Bu yanıt küçük-deplasman kesitidir. Yerel-referanslı (Postülat 4 uyumlu) hâli üstel verir:
 
@@ -179,7 +206,13 @@ Kaynak: `denetim_raporlari\04_lambda_yayginlik.md` (185 Λ vuruşu, 29 dosya, A/
 
 ---
 
-## 7. Bu oturumda kitapta YAPILAN değişiklikler (üstelden ayrı işler)
+## 7. Bu oturumda kitapta YAPILAN değişiklikler
+
+### 7a. ⭐ ORTAMIN HIZ ALANI DÖRTLÜSÜ — YAYIN METNİNE TAŞINDI (17 Ağu 2026, Enes onayıyla)
+**M-51, M-52, M-53, M-54** `Kisim_8_Ekler/10_Ek_M_Blok_B_Arka_Plan_Basinci.md` sonuna eklendi (satır 131/186/248/321). Bağlı 16 düzeltme + 8 dosyada slogan hizalaması (*"ortam dolaşır"* → *"ortam gerilir/düşmez"*) + katalog kapağı (M-1..M-54) + KARNE'ye S-12/S-13/S-14 satırları uygulandı. **Tam taşıma kaydı ve dosya:satır listesi: `M51_M54_TASLAK_ortam_hiz_alani.md` sonundaki "TAŞIMA KAYDI" bölümü.**
+**Sonraki oturum için not:** Bu taşıma, üstel ölçek yapısından **bağımsızdır** ve onu engellemez; dördü de Λ'nın biçimine dayanmaz. Üstel girdi için sıradaki boş numara **M-55**.
+
+### 7b. Jeodetik ve Parti 1 (üstelden ayrı işler)
 
 **Jeodetik presesyon** (Tartışma #2 öncesi karar) — `18_5_Kuvvet_Matematigi.md`: `:1264` işaretçi · Kapanan Gözlemler tablosu altına **"Jeodetik satırının mekanizma kaydı"** kutusu (doğru ayrışım **2−½**: taşınım holonomisi + tur açığı; eski "Thomas ½ + ölçek payı 1" düzeltme kaydıyla geçersiz) · `:1681` H.3 gerekçesi · M-42 Açık Uçlar'a "taşınım payı" kalemi + γ_ℓ parantezi onarıldı.
 **Daha önce (Parti 1, aynı gün):** Φ/Φ_it/Φ_N ayrımı + S-28 (9 yer), M-19 açık ucu kapatıldı, "nedensel olarak en katı" dili, çekim→toplanma, faktör-2 atıfları. Tam liste `tartısma_matematik` İŞLEM KAYDI'nda.

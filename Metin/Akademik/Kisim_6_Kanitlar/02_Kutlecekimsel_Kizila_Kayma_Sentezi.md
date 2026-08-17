@@ -5,10 +5,10 @@
 Cevap, standart fiziğin Genel Görelilik (GR) adı altında "uzay-zaman eğriliği" ile açıkladığı **Kütleçekimsel Kızıla Kayma** fenomeninde gizlidir. Evrenakı bu olguyu uzay bükülmesi gibi soyut kavramlarla değil, doğrudan **Postülat 4 (Değişken $c_0$)** ve Zerre Katarı'nın **akı korunumu** ile açıklar.
 
 > **Notasyon uyarısı — "yerel ışık hızı" iki ayrı büyüklüktür.** Teorinin uzun süre tek isimle ($c_{yerel}$) andığı şey, **Ek M-42**'de iki büyüklüğe ayrıştırılmıştır:
-> - **Madde ölçeği $\Lambda \equiv 1 - \Phi/c_0^2$** — cetvelleri, saatleri ve atomik geçiş frekanslarını yönetir. **Bu bölümdeki tüm kızıla kayma ve Zerre-Saati bağıntılarında geçen budur.**
+> - **Madde ölçeği $\Lambda \equiv e^{-\Phi/c_0^2}$** (tam biçim, **Ek M-55**; birinci mertebede $1 - \Phi/c_0^2$) — cetvelleri, saatleri ve atomik geçiş frekanslarını yönetir. **Bu bölümdeki tüm kızıla kayma ve Zerre-Saati bağıntılarında geçen budur.**
 > - **Yayılma hızı $c_{loc} = c_0\,\Lambda^2$** — Zerre'nin arka plandaki (düz) uzayda ölçülen çizgisel hızı. Işık bükülmesi, Shapiro gecikmesi ve etkin kırılma indisi ($n_{eff} = 1/\Lambda^2$) bağıntılarında geçen budur.
 >
-> Ayrımın gerekçesi: ikisi tek büyüklük sayıldığında ışık bükülmesi gözlemin tam **yarısı** çıkıyordu (1,751″ yerine 0,876″). Ayrıldıklarında bükülme de kızıla kayma da doğru genlikte gelir. Bir ışık-saatinin tik hızı $f \propto c_{loc}/\ell_{loc} \propto \Lambda^2/\Lambda = \Lambda$ olduğundan kural şudur: **saat/frekans bağlamında daima $\Lambda$, yayılım bağlamında daima $c_{loc}$.** Kavrama Yasası $c_0 = \sqrt{P/\rho}$ (M-1) yayılma hızının kendisidir ve değişmeden korunur. Sayısal sonuç etkilenmez: kızıla kayma her iki durumda da $\delta f/f = -\Phi/c_0^2$'dir.
+> Ayrımın gerekçesi: ikisi tek büyüklük sayıldığında ışık bükülmesi gözlemin tam **yarısı** çıkıyordu (1,751″ yerine 0,876″). Ayrıldıklarında bükülme de kızıla kayma da doğru genlikte gelir. Bir ışık-saatinin tik hızı $f \propto c_{loc}/\ell_{loc} \propto \Lambda^2/\Lambda = \Lambda$ olduğundan kural şudur: **saat/frekans bağlamında daima $\Lambda$, yayılım bağlamında daima $c_{loc}$.** Kavrama Yasası $c_{loc} = \sqrt{P/\rho}$ (M-1) yayılma hızının kendisidir ve değişmeden korunur. Sayısal sonuç etkilenmez: kızıla kayma her iki durumda da $\delta f/f = -\Phi/c_0^2$'dir.
 
 ## 6.2.1 Standart Anlatı ve Görünürdeki İki Rakip Tez
 
@@ -16,7 +16,7 @@ Einstein'ın Genel Görelilik teorisine göre (Einstein, 1915), büyük bir yıl
 
 Evrenakı Teorisine göre ise ışık, enerjisi tükenen hayali bir dalga değil, fiziksel bir **Zerre Katarı'dır (mermi dizisidir).** Akışkanlar mekaniğinin en temel kuralı şudur: Bir kaynaktan saniyede 100 mermi çıkıyorsa, hedefteki alıcıya da saniyede 100 mermi ulaşmak zorundadır; mermiler yolda buharlaşamaz.
 
-Işığa fiziksel bir varlık atfeden her teori, ilk bakışta böylece iki rakip anlatı üretir gibi görünür: biri "gözlenen frekans düşer" der, öteki "frekans hiç değişmez, sadece dalga boyu esner". Bu bölümün amacı, hem hareket hem de kütleçekim kaynaklı kaymanın aslında **tek bir mekanizmanın** — yerel saatin tik hızının — farklı görünümleri olduğunu ve bu iki anlatının çelişmediğini göstermektir. Bu çözüm üç aracı aynı anda çalıştırır: **Kozmik Zaman ve yerel saat**, **Değişken ışık hızı** ($c_0 = \sqrt{P/\rho}$) ve **Zerre Katarı'nın akı korunumu.**
+Işığa fiziksel bir varlık atfeden her teori, ilk bakışta böylece iki rakip anlatı üretir gibi görünür: biri "gözlenen frekans düşer" der, öteki "frekans hiç değişmez, sadece dalga boyu esner". Bu bölümün amacı, hem hareket hem de kütleçekim kaynaklı kaymanın aslında **tek bir mekanizmanın** — yerel saatin tik hızının — farklı görünümleri olduğunu ve bu iki anlatının çelişmediğini göstermektir. Bu çözüm üç aracı aynı anda çalıştırır: **Kozmik Zaman ve yerel saat**, **Değişken ışık hızı** ($c_{loc} = \sqrt{P/\rho}$) ve **Zerre Katarı'nın akı korunumu.**
 
 ## 6.2.2 Kritik Ayrım: İki Ayrı "Frekans" Vardır
 
@@ -34,7 +34,8 @@ Bu çözümün kalbinde, maddenin bir saat gibi işleyen iç mekanizması yatar.
 
 Burada kritik ayrımı hatırlamak gerekir (bkz. **Ek M-42**): tik hızını belirleyen şey yalnız iç sinyalin hızı değil, **hız ile iç yol uzunluğunun oranıdır.** Basınç kuyusunda ikisi birlikte ölçeklenir — atomun iç yolu (cetveli) $\ell_{loc} \propto \Lambda$, sinyal hızı $c_{loc} \propto \Lambda^2$ olarak. Dolayısıyla saatin tik hızı ikisinin oranıdır:
 
-$$ f_{tik} \propto \frac{c_{loc}}{\ell_{loc}} \propto \frac{\Lambda^2}{\Lambda} = \Lambda, \qquad \Lambda \equiv 1 - \frac{\Phi}{c^2} $$
+$$ f_{tik} \propto \frac{c_{loc}}{\ell_{loc}} \propto \frac{\Lambda^2}{\Lambda} = \Lambda, \qquad \Lambda \equiv e^{-\Phi/c_0^2} $$
+*(tam biçim, **Ek M-55**; birinci mertebede $\Lambda = 1 - \Phi/c_0^2$)*
 
 $\Lambda$, teorinin **madde ölçeğidir**: yerel Evrenakı basıncının maddeden yapılmış her cetveli, her saati ve her atomik geçiş frekansını ölçekleyen tek çarpan. Saat hareket ediyorsa buna bir de iç sinyalin izlediği **çapraz yolun uzaması** ($\gamma$ çarpanı) eklenir. İkisi tek ifadede toplanır:
 
@@ -53,13 +54,13 @@ Aşağıda önce hareket, sonra yoğunluk kaynaklı kaymayı bu tek saatten tür
 Kaynak ve alıcı aynı yoğunlukta olsun ($c_0$ ortak); kaynak, alıcıdan $v$ hızıyla uzaklaşsın. İki etki üst üste biner.
 
 **1. Zerre Aralığının açılması (uzaysal).** Kaynak, her mermiyi bir öncekinden daha geride ateşler; iki ardışık mermi arasındaki fiziksel mesafe Newtonyen olarak açılır:
-$$ \lambda = \frac{c + v}{f_{emit}} $$
+$$ \lambda = \frac{c_0 + v}{f_{emit}} $$
 
 **2. Zerre-Saatinin yavaşlaması (zamansal).** Hareket eden kaynağın iç sinyali çapraz yol izlediği için saati yavaşlar; ateşleme akısı $\gamma$ oranında düşer:
 $$ f_{emit} = f_0 \sqrt{1 - v^2/c_0^2} $$
 
 Durgun alıcı, kendisine $c_0$ hızıyla çarpan mermileri sayar ($f_{obs} = c_0/\lambda$). İkisi birleştiğinde:
-$$ f_{obs} = \frac{c}{\lambda} = \frac{c\, f_0 \sqrt{1 - v^2/c_0^2}}{c + v} = f_0 \sqrt{\frac{1 - v/c_0}{1 + v/c_0}} $$
+$$ f_{obs} = \frac{c_0}{\lambda} = \frac{c_0\, f_0 \sqrt{1 - v^2/c_0^2}}{c_0 + v} = f_0 \sqrt{\frac{1 - v/c_0}{1 + v/c_0}} $$
 
 Bu, Özel Görelilik'in (Ives-Stilwell deneyiyle doğrulanan) rölativistik Doppler denklemidir — ama burada uzay-zaman bükülmesinden değil, mermiler arası mesafenin açılmasından ve saatin fiziksel yavaşlamasından türemiştir. (Adım adım tam türetim için bkz. Bölüm 6.1.2.)
 
@@ -76,7 +77,7 @@ Burada $\Lambda_{ref}$, öz frekansı $f_0$ tanımlayan standart yoğunluk refer
 **3. Ölçüm.** Alıcı, gelen ışığı kendi ortamındaki referans lambasıyla ($f_0 \cdot \Lambda_{alıcı}/\Lambda_{ref}$) karşılaştırır; $\Lambda_{ref}$ sadeleşir:
 $$ \frac{f_{obs}}{f_0} = \frac{\Lambda_{kaynak}}{\Lambda_{alıcı}} $$
 *(katalog: **Ek M-20**)*
-Kaynak vadinin dibinde olduğu için $\Lambda_{kaynak} < \Lambda_{alıcı}$, dolayısıyla $f_{obs} < f_0$: **kızıla kayma.** Birinci mertebede $\Lambda = 1 - \Phi/c_0^2$ olduğundan bu oran doğrudan bilinen genliği verir: $\delta f/f = -\Phi/c_0^2$ (Pound–Rebka, GPS). Standart fiziğin "uzay bükülmesi" ile açıkladığı kütleçekimsel kayma, burada saf bir madde-ölçeği ($\Lambda$) oranıdır. Klasik prizmalar ve spektrometreler frekansı değil, doğrudan dalga boyunu ($\lambda$) ve vuruş momentumunu ölçtükleri için, arası açılmış bu mermileri "kırmızı ışık" olarak algılarlar.
+Kaynak vadinin dibinde olduğu için $\Lambda_{kaynak} < \Lambda_{alıcı}$, dolayısıyla $f_{obs} < f_0$: **kızıla kayma.** Birinci mertebede $\Lambda = 1 - \Phi/c_0^2$ olduğundan *(tam biçim: $\Lambda = e^{-\Phi/c_0^2}$, **Ek M-55**)* bu oran doğrudan bilinen genliği verir: $\delta f/f = -\Phi/c_0^2$ (Pound–Rebka, GPS). Standart fiziğin "uzay bükülmesi" ile açıkladığı kütleçekimsel kayma, burada saf bir madde-ölçeği ($\Lambda$) oranıdır. Klasik prizmalar ve spektrometreler frekansı değil, doğrudan dalga boyunu ($\lambda$) ve vuruş momentumunu ölçtükleri için, arası açılmış bu mermileri "kırmızı ışık" olarak algılarlar.
 
 ## 6.2.6 Birleşik Formül: İki Kolun Tek İfadesi
 
@@ -105,7 +106,7 @@ Bu mekanik model, standart fiziğin ölçümleriyle (kinematik tarafta Ives & St
 **Ayrışma dinamik katmandadır ve tek bir soruya iner: yerel yoğunluğu ne belirliyor?** Kütleçekimsel kaymayı iki kuram farklı büyüklüğe bağlar:
 
 * **Genel Görelilik**, kaymayı kütleçekim potansiyeline (uzay-zaman metriğine) bağlar.
-* **Evrenakı**, kaymayı madde ölçeğine ($\Lambda$), onu da yerel basınç–yoğunluk profiline bağlar; profil ile hızlar arasındaki köprü Kavrama Yasası'dır ($c_0 = \sqrt{P/\rho}$, M-1).
+* **Evrenakı**, kaymayı madde ölçeğine ($\Lambda$), onu da yerel basınç–yoğunluk profiline bağlar; profil ile hızlar arasındaki köprü Kavrama Yasası'dır ($c_{loc} = \sqrt{P/\rho}$, M-1).
 
 Güneş Sistemi gibi test edilmiş bölgelerde bu iki büyüklük — metrik potansiyeli ile Evrenakı yoğunluk profili — aynı sonucu vermek zorundadır (ölçümler bunu dayatır). Ayrışma, ancak bu iki profilin **birbirinden koptuğu** ölçekte doğar; ve teoriye göre bu kopuş galaktik ölçekte kaçınılmazdır. Nedeni, teorinin bir başka iddiasıdır:
 
@@ -114,6 +115,6 @@ Güneş Sistemi gibi test edilmiş bölgelerde bu iki büyüklük — metrik pot
 
 Bu iki senaryo, galaktik bölgedeki yoğunluk dağılımını **farklı** öngörür: biri karanlık-madde destekli bir metrik, öteki vorteks kaynaklı bir $\rho(r)$ profili. Farklı yoğunluk → farklı $\Lambda(r)$ → farklı kızıla kayma. İşte ayrışmanın kaynağı budur: uzak galaktik yoğunluk sınırlarında ve galaksiler arası seyrek bölgelerde ölçülecek kayma, karanlık-madde tahmininden nicel olarak (ppm düzeyinde) sapacaktır. *($\rho(r)$ profilinin parametre statüsü ve sabitleme programı için bkz. Ek C, satır P1: dönüş eğrisi + kızıla kayma ortak fiti, bu profili ve 7.4'teki iki nicel boşluğu birlikte kapatır.)*
 
-**Bu, sapmayı keyfi bir parametre olmaktan çıkarır.** Kızıla kaymadaki fark ile karanlık maddenin reddi aynı köke — vorteks yoğunluğuna — iner. Dolayısıyla galaksinin dönüş eğrisinden belirlenen vorteks profili, aynı anda kızıla kayma sapmasının işaretini ve büyüklüğünü de sabitler; iki bağımsız gözlem tek mekanizmaya çapraz-bağlanır. Bu sapmanın nicel değeri, gerçek bir vorteks yoğunluk profili $c_0 = \sqrt{P/\rho}$ bağıntısına konularak hesaplanabilir; teorinin bir sonraki nicel adımı budur.
+**Bu, sapmayı keyfi bir parametre olmaktan çıkarır.** Kızıla kaymadaki fark ile karanlık maddenin reddi aynı köke — vorteks yoğunluğuna — iner. Dolayısıyla galaksinin dönüş eğrisinden belirlenen vorteks profili, aynı anda kızıla kayma sapmasının işaretini ve büyüklüğünü de sabitler; iki bağımsız gözlem tek mekanizmaya çapraz-bağlanır. Bu sapmanın nicel değeri, gerçek bir vorteks yoğunluk profili $c_{loc} = \sqrt{P/\rho}$ bağıntısına konularak hesaplanabilir; teorinin bir sonraki nicel adımı budur.
 
 Böylece kızıla kayma — ister hareketten ister kütle-itim gradyanından doğsun — enerji tüketen hayali bir dalga ya da soyut bir uzay eğriliği değil; yerel saatin tik hızıyla kaynakta belirlenen, akı olarak korunan ve değişken ışık hızı altında dalga boyu esneyen somut bir Zerre Katarı'nın mekanik sonucudur.

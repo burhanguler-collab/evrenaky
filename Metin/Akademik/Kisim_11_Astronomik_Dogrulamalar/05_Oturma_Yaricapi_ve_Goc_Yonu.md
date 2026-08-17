@@ -133,11 +133,27 @@ $\gamma_{ortam}<1{,}0\times10^{-15}$ s⁻¹, $\Delta v=1{,}90\times10^{4}$ m/s, 
 sınırından geriye çözülür, $r_t\approx11$ m — 11.4'ün "en iri blok $\sim10$ m" kaydıyla tutarlı.
 Geriye çözülmüş bir sayıdır ve öyle kullanılır.)*
 
-**Retrograd cisimde 81 çarpanı — teorinin kendi öngörüsü.** DY-2 ile ortam prograd yönde $2v$
-dolaştığı için retrograd bir cisimde $\Delta v=|2v-(-v)|=3v$ ⟹ $\Delta v^4$ çarpanı
-$3^4=\mathbf{81}$. Retrograd cisimlerin ortam kuplajı, prograd eşdeğerlerinden **seksen bir kat**
-güçlüdür — DY-2'nin dolaysız, parametresiz sonucudur ve standart anlatıda karşılığı olmayan bir
-çarpandır. Triton'un aşağıdaki tablodaki yerini bu yükseltir.
+**Retrograd cisimde 81 çarpanı — iki senaryonun ayırt edici sınavı.** DY-2 ortamın prograd yönde
+$2v$ dolaştığını varsayarsa retrograd bir cisimde $\Delta v=|2v-(-v)|=3v$ olur ⟹ $\Delta v^4$
+çarpanı $3^4=\mathbf{81}$: retrograd cisimlerin ortam kuplajı prograd eşdeğerlerinden seksen bir
+kat güçlü olur ve standart anlatıda karşılığı olmayan bir çarpan doğar.
+
+> **⚠ Statü kaydı (17 Ağustos 2026).** Bu çarpan **tümüyle dolaşım varsayımına bağlıdır** ve dolaşım
+> Ek M-52'de kategorik olarak dışlanmıştır (dolaşan ortamda apsisler $\Omega_m=2n$ ile sürüklenir,
+> kapalı elips kalmaz; dört bağımsız gövdede dışlama $10^2$–$10^6$). **Statik ortamda**
+> $\Delta v=|0-(\pm v)|=v$ olur; prograd ve retrograd için **aynı** ⟹ **asimetri yok, oran 1.**
+> İki senaryonun öngörüleri dışlayıcıdır ve sınav 7.4 md.15'te zaten tanımlıdır:
+>
+> | Senaryo | retrograd/prograd sürükleme oranı |
+> |---|---|
+> | Dolaşan ortam ($w=2v$) | **81** |
+> | **Statik ortam (Ek M-51/52/53)** | **1** |
+>
+> **Prograd hesaplar iki senaryoda da aynıdır** ($\lvert v-2v\rvert=\lvert v-0\rvert=v$); değişen
+> yalnız retrograd kalemlerdir ve statik senaryoda 81 kat **zayıflarlar** — bu, Phoebe'nin dört
+> milyar yıllık hayatta kalmasından çıkan $\eta_E$ sınırını **gevşetir**, sıkıştırmaz (en sıkı sınır
+> zaten Satürn halkası kanalındandır). Aşağıdaki tabloda Triton'un yeri bu ayrımla okunmalıdır:
+> $81$ çarpanı dolaşan-ortam senaryosunun öngörüsüdür.
 
 $\dot a=2\gamma a$ ile, gözlenen göçe oran:
 

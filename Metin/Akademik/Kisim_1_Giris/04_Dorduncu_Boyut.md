@@ -525,11 +525,11 @@ Yukarıda **türetilmiş** olan şey kaynağın *şiddetidir* ($q_n$). Şiddeti 
 **Ama bu kalemin doğru adı $C$ değildir.** Postülat 4 gereği aranan şey evrensel bir sabit **olamaz**: $c_0$ nasıl yerelse, ortamın deplasman tepkisi de yereldir. Evrensel bir eşleşme aramak postülatla çelişir. Boyut analizi doğru adı zaten söyler — $[C]=(\text{yoğunluk})(\text{hız})/(\text{uzunluk})$:
 
 $$C=\frac{\rho_0\,c_0}{L_\ast}\qquad\Longrightarrow\qquad
-\boxed{\;\mathcal{G}=\underbrace{\frac{\sqrt2\,r_n^{2}\sqrt{m_p/m_e}}{4m_n}}_{\text{nükleon yapısı}}\times\frac{c}{L_\ast}\;}$$
+\boxed{\;\mathcal{G}=\underbrace{\frac{\sqrt2\,r_n^{2}\sqrt{m_p/m_e}}{4m_n}}_{\text{nükleon yapısı}}\times\frac{c_0}{L_\ast}\;}$$
 
 $c_0=\sqrt{P_0/\rho_0}$ zaten ortamın durumundan çıkıyordu; ama $(P_0,\rho_0)$ ikilisi bir **hız** verir, **uzunluk** vermez. Eksik olan tek şey odur:
 
-$$L_\ast=\frac{\rho_0c}{C}=8{,}64\times10^{24}\ \mathrm{m}$$
+$$L_\ast=\frac{\rho_0c_0}{C}=8{,}64\times10^{24}\ \mathrm{m}$$
 
 **Ve hiyerarşi saf bir uzunluk oranına iner.** M-46'nın empedans oranı, hiçbir katsayı taşımayan bir orandır:
 
@@ -540,7 +540,7 @@ $$\frac{\ell_\omega}{L_\ast}=\frac{3{,}61\times10^{-14}}{8{,}64\times10^{24}}=4{
 Aynı oran, nükleonun kendi ritmine göre normalize edildiğinde kuplajın **boyutsuz şiddetini** verir:
 
 $$\varepsilon\equiv\frac{C/\rho_0}{\omega_n}=6{,}88\times10^{-41},\qquad
-\varepsilon=\frac{\ell_\omega}{L_\ast}\cdot\frac{c}{u_r},\qquad\frac{u_r}{c}=\sqrt2\sqrt{m_p/m_e}=60{,}60$$
+\varepsilon=\frac{\ell_\omega}{L_\ast}\cdot\frac{c_0}{u_r},\qquad\frac{u_r}{c_0}=\sqrt2\sqrt{m_p/m_e}=60{,}60$$
 
 İki yazım tek kalemdir ($4{,}17\times10^{-39}/60{,}60=6{,}88\times10^{-41}$); Ek C'de sayı değişmez.
 

@@ -785,6 +785,8 @@ $$v_{ortam}=2v_{Kepler} \;\Longrightarrow\; \Delta v = +v_{Kepler}\ \ (\text{her
 
 Artık kuplaj cismi ortamla eş-dönüşe gevşetmeye çalışır (M-37); ortam önden geçtiğine göre kuvvet prograddır ve açısal momentumu **artırır**.
 
+> **⚠ Senaryo kaydı (17 Ağustos 2026).** Yukarıdaki torkun **işareti** dolaşım varsayımından gelir ve o varsayım Ek M-52'de dışlanmıştır (Satürn ortamı için Titan apsisiyle $3{,}4\times10^4$ kat dışlama; dolaşan ortam Titan'ın apsisini 733 yıl yerine 8 günde döndürürdü). **Statik ortamda** $\Delta v=v_{Kepler}$ **büyüklüğü korunur** — dolayısıyla sürüklenme *genliği* ve $\eta_E$ sınırları değişmez — ama teğetsel bir *önden geçme* yoktur; net sekülér torkun işareti bu kanaldan **belirlenmez**. Aşağıdaki dışa-göç okuması bu nedenle dolaşan-ortam senaryosunun sonucudur; statik senaryoda göç yönü başka bir kanaldan (gelgit kilidi, senkron yarıçap) okunmalıdır. Astronomik birim kararlılığından çıkan $\eta_E$ çapraz denetimi de aynı çekinceyi taşır.
+
 > **Halka yağmuru bu kanalın işi değildir.** Halka yağmuru **içe**dir, ortamın torku **dışa**. Teorinin bu olguda ayrışan bir sözü yoktur; içe akış standart mekanizmalara aittir (plazma sürüklemesi, mikrometeorit bombardımanı, viskoz yayılma, elektromanyetik güdüm). Kısım 6'nın kanıt matrisinde de kalem bu gerekçeyle taşınmaz.
 
 **Eş-dönüş kolu neden yok.** "Zarf içinde ortam gövdeyle eş-döner" okuması bir **dönme** sürüklenmesi iddiasıdır ve onu $\xi$ yönetir, $\phi$ değil: $\xi_\oplus=4{,}6\times10^{-10}$ (M-40, GP-B ile sınandı). M-39 bu kolu adıyla eler — *"ortam gövdeyle eş-dönseydi presesyon ölçülenin $10^{10}$ katı çıkardı."* $\phi$ öteleme, $\xi$ dönme kanalıdır; ikisi birbirinin yerine konulamaz.
@@ -843,7 +845,7 @@ Anizotropiyi yöneten çarpan $\phi$ değil **$(1-\phi)$**'dir:
 
 ### Kavrama yoluyla çözüm neden tükeniyor
 
-Anizotropi kavrama ile bastırılacaksa, zarf kaymayı çok yüksek bir tamlıkla söndürmek zorundadır. Ölçülen sınır ($\delta c/c_0<10^{-17}$, artık kayma $<0{,}95$ m/s) şunu ister:
+Anizotropi kavrama ile bastırılacaksa, zarf kaymayı çok yüksek bir tamlıkla söndürmek zorundadır. Ölçülen sınır ($\delta c/c<10^{-17}$ — standart fizik yazımı, artık kayma $<0{,}95$ m/s) şunu ister:
 
 $$\text{zarf tamlığı} > 1-3{,}2\times10^{-5}$$
 
@@ -871,19 +873,19 @@ Halkaları, düzenli uyduları ve laboratuvarları rahatça kapsar. **Erim açı
 
 Üç kavrama kanalının da yetersiz kalması, sorunun yanlış yerde arandığının işaretidir. Bir esir kuramında ışık hızı izotropisinin **iki** mekanik çıkışı vardır: ortamı gövdeyle birlikte taşımak (Stokes) ya da gövdeyi kısaltmak (Lorentz–FitzGerald). Birincisi yukarıda tükendi. İkincisi teoride hazır durur ve kullanılmamıştır: **M-42'nin ölçek yapısı.**
 
-M-42, madde ölçeği $\Lambda$ ile cetvelin ve saatin birlikte ölçeklendiğini kurar ($\ell,f\propto\Lambda$) ve potansiyel terimini verir, $\Lambda_{grav}=1-\Phi/c_0^2$. Eksik olan **kinematik** terimdir ve teorinin kendi malzemesinden türetilir.
+M-42, madde ölçeği $\Lambda$ ile cetvelin ve saatin birlikte ölçeklendiğini kurar ($\ell,f\propto\Lambda$) ve potansiyel terimini verir, $\Lambda_{grav}=1-\Phi/c_0^2$ *(birinci mertebede; tam biçim $\Lambda_{grav}=e^{-\Phi/c_0^2}$ — **Ek M-55**)*. Eksik olan **kinematik** terimdir ve teorinin kendi malzemesinden türetilir.
 
 #### Kurulum
 
 Üç girdi, hepsi mevcut:
 
-1. **Ortam sıkıştırılabilirdir** ve içindeki bozunum hızı $c_0=\sqrt{P/\rho}$'dur (Postülat 1, Kavrama Yasası M-1).
+1. **Ortam sıkıştırılabilirdir** ve içindeki bozunum hızı $c_{loc}=\sqrt{P/\rho}$'dur (Postülat 1, Kavrama Yasası M-1).
 2. **Nükleon bir deplasman kaynağıdır**; çevresinde durgun hâlde küresel simetrik bir basınç alanı kurar (M-35, debi $q_n$).
 3. **Bağlı maddenin denge aralığı** bu alanların karşılıklı dengesiyle belirlenir (M-15'in kafes resmi; molekül, komşusunun alanında oturur).
 
 Ortama göre $V$ hızıyla giden bir gövdede alan artık küresel değildir. Kararlı hâlde, küçük bozunum yaklaşımında (teorinin her yerde kullandığı doğrusal ortam tepkisi — M-35 Varsayım 2, M-37 Varsayım 3) basınç potansiyeli şu denklemi sağlar:
 
-$$(1-M^2)\,\frac{\partial^2\varphi}{\partial x^2}+\frac{\partial^2\varphi}{\partial y^2}+\frac{\partial^2\varphi}{\partial z^2}=0,\qquad M\equiv\frac{V}{c}$$
+$$(1-M^2)\,\frac{\partial^2\varphi}{\partial x^2}+\frac{\partial^2\varphi}{\partial y^2}+\frac{\partial^2\varphi}{\partial z^2}=0,\qquad M\equiv\frac{V}{c_{loc}}$$
 
 $x$ hareket doğrultusudur. Bu, sıkıştırılabilir akışkanın standart kararlı-hâl denklemidir; teoriye yeni hiçbir şey eklemez.
 
@@ -895,19 +897,21 @@ $$(1-M^2)\frac{1}{\beta^2}\varphi_{XX}+\varphi_{yy}+\varphi_{zz}=\varphi_{XX}+\v
 
 Yani **hareketli kaynağın alanı, durgun alanın hareket doğrultusunda $1/\beta$ ile gerilmiş hâlidir.** Tersi de doğrudur ve aradığımız ifade odur: *bir kafes dizilimi, hareket hâlinde durgun hâldeki alan yapısını koruyabilmek için hareket doğrultusunda $\beta$ ile kısalmak zorundadır.* Denge aralığı alan yapısıyla belirlendiğine göre (girdi 3), kısalma fiziksel olarak gerçekleşir:
 
-$$\boxed{\;\frac{\ell_\parallel}{\ell_\parallel^{(0)}}=\beta=\sqrt{1-\frac{V^2}{c^2}}\;,\qquad \ell_\perp\ \text{değişmez}\;}$$
+$$\boxed{\;\frac{\ell_\parallel}{\ell_\parallel^{(0)}}=\beta=\sqrt{1-\frac{V^2}{c_{loc}^2}}\;,\qquad \ell_\perp\ \text{değişmez}\;}$$
 
 **Bu, Lorentz çarpanının kendisidir — ve seri açılımı değil, kapalı biçimi.** Sıkıştırılabilir akışkan mekaniğinde aynı çarpan Prandtl–Glauert dönüşümü olarak bilinir; burada bir benzetme değil, teorinin ortamının doğrudan sonucudur.
 
 #### Saat tarafı
 
-Frekans aynı çarpanı bağımsız bir yoldan alır. Zerre balistiktir ve sürati **ortama göre** $c_0$'dir (M-1). Enine ayrılmış iki nokta arasında gidip gelen bir Zerre'yi saat sayalım: gövde $V$ ile giderken Zerre'nin yolu zikzaklaşır ve bir çevrim başına $2L/\beta$ olur (enine uzunluk kısalmaz). Dolayısıyla
+Frekans aynı çarpanı bağımsız bir yoldan alır. Zerre balistiktir ve sürati **ortama göre** $c_{loc}$'dir (M-1). Enine ayrılmış iki nokta arasında gidip gelen bir Zerre'yi saat sayalım: gövde $V$ ile giderken Zerre'nin yolu zikzaklaşır ve bir çevrim başına $2L/\beta$ olur (enine uzunluk kısalmaz). Dolayısıyla
 
-$$f = \frac{c\beta}{2L} \;\Longrightarrow\; f \propto \beta$$
+$$f = \frac{c_{loc}\,\beta}{2L} \;\Longrightarrow\; f \propto \beta$$
 
 Bütün saatler birbiriyle uyumlu kalmak zorunda olduğundan bu, her bağlı salınıcıya taşınır. **Cetvel ve saat aynı çarpanla ölçeklenir — tam olarak M-42'nin kuralı:**
 
-$$\boxed{\;\Lambda=\Lambda_{grav}\cdot\Lambda_{kin},\qquad \Lambda_{grav}=1-\frac{\Phi}{c^2},\qquad \Lambda_{kin}=\sqrt{1-\frac{V^2}{c^2}}\;}$$
+$$\boxed{\;\Lambda=\Lambda_{grav}\cdot\Lambda_{kin},\qquad \Lambda_{grav}=e^{-\Phi/c_0^2},\qquad \Lambda_{kin}=\sqrt{1-\frac{V^2}{c_{loc}^2}}\;}$$
+
+*(Potansiyel terimi burada **tam biçimiyle** yazılıdır — birinci mertebede $\Lambda_{grav}=1-\Phi/c_0^2$, **Ek M-55**; çarpımsal bileşimin kendisi bunu dayatır, çünkü bileşim $\chi$'nin toplamsal olmasını gerektirir ve bu ancak $\Lambda_{grav}$ üstelse sağlanır (Ek M-55, Adım 2). $\Lambda_{kin}$'de bozunum hızı **yereldir**: aşağıdaki kapsam kuralı (2) ile aynı $M=V/c_{loc}$ okuması — ikinci mertebeye duyarlı bir ayrımdır ve günberi hesabının kullandığı biçim budur.)*
 
 $V$, maddenin **yerel ortama göre** hızıdır. **Yeni parametre yoktur:** $\Lambda$ envanterde zaten [T] statüsündedir; eklenen tek şey, mevcut ölçek yapısının hız bağımlılığıdır.
 
@@ -920,6 +924,15 @@ $V$, maddenin **yerel ortama göre** hızıdır. **Yeni parametre yoktur:** $\La
 **(1) $\Lambda_{kin}$ maddeye etki eder, ortamın yayılma hızına etmez.** $c_{loc}\propto\Lambda_{grav}^2$ bir *yer* niceliğidir — ortamın o noktadaki hâli. $\Lambda_{kin}$ ise *hareket eden gövdenin* niceliğidir. İkisini karıştırmak, $\phi$ ile $\xi$'yi karıştırmakla aynı türden bir kategori hatasıdır.
 
 **(2) Tekillik yereldir, evrensel bir tavan değildir.** $M=V/c_{loc}$ olduğundan $\beta\to0$ koşulu yerel bozunum hızına bağlıdır. Postülat 4 ile uyum tamdır: $c_0$ sabit olmadığı için bariyer de sabit değildir; $P/\rho$'nun yüksek olduğu bölgede aynı $V$ daha küçük $M$ verir ve kısalma azalır.
+
+**(3) "Yerel ortam" hangi ortamdır?** *(17 Ağustos 2026'da eklendi — ikinci mertebeye duyarlı bir ayrımdır.)* $V$'nin ölçüldüğü ortam, cismin **kendi zarfının dışındaki ambiyans ortamdır** — cismi saran, onunla birlikte taşınan zarf değil. Tam kavrama okuması ($V=0$) yanlıştır: müon ömrü, GPS'in $-7$ µs/gün kinematik terimi ve Ives–Stilwell hep $V\neq0$ gerektirir. Ambiyans ortam ise **merkezî cismin çerçevesinde durgundur** — ne dolaşır (Ek M-52: dolaşan ortam apsisleri $\Omega_m=2n$ ile sürükler, kapalı elips kalmaz) ne de yerel olarak kayar (zarf hiyerarşisi):
+
+| Zarf | Erim (Hill yarıçapı) | Kapsadığı |
+|---|---|---|
+| Güneş'in galaktik zarfı | $1{,}225$ pc $=2{,}5\times10^5$ AU | Oort bulutu dahil **tüm Güneş sistemi** |
+| Dünya'nın zarfı | $234{,}9\,R_\oplus$ | Ay (60 $R_\oplus$), GPS (4,2 $R_\oplus$) |
+
+Bu hiyerarşi iki hesabı birden doğru verir: **Merkür** kendi zarfının dışında olduğundan $V=47{,}87$ km/s (Güneş çerçevesinde durgun ambiyansa göre) — günberi kayması buradan çıkar; **GPS uydusu** Dünya'nın zarfı içinde olduğundan $V=$ yörünge hızı (Dünya çerçevesine göre) — $-7$ µs/gün buradan çıkar.
 
 ### Sonuç: Postülat 7 zorunlu işini kaybediyor
 
@@ -1315,7 +1328,7 @@ Merkür, Jüpiter'in **20 katı** eğiktir. Ağırlığı olan dört cisim $0{,}
 | 18 | **Fizeau muhasebesi:** yoldaki ortalama ortam hızı $\phi v_{madde}+(1-\phi)v_{ambiyans}$; rezonatörde $(1-\phi)V$ ⟹ serbest-Evrenakı yolu en kısıtlayıcı, katı yol $1/n^4$ ile zayıf | **[T]** |
 | 19 | **Kavrama yoluyla izotropi tükenmiştir:** üç kanal, gereken $>1-3{,}2\times10^{-5}$ tamlığın en az $10^4$ kat altındadır. İzotropi bu yüzden ortam taşınarak değil, **madde kısalarak** sağlanır (kalem 21) | **[T]** |
 | 20 | **Zarfın erimi türetildi:** gradyan hâkimiyeti (Hill), $235R_\oplus$ · $1086R_S$ | **[T]** |
-| 21 | **Kinematik ölçek terimi $\Lambda_{kin}=\sqrt{1-V^2/c_0^2}$ türetildi** — sıkıştırılabilir ortamda hareketli deplasman kaynağının alanından (Prandtl–Glauert). Cetvel ve saat aynı çarpanla ölçeklenir; ışık hızı izotropisi **kavramadan bağımsız** çıkar, yeni parametre eklenmez. Kapalı biçim, gözlemin istediği tam Lorentz çarpanıdır | **[T]** |
+| 21 | **Kinematik ölçek terimi $\Lambda_{kin}=\sqrt{1-V^2/c_{loc}^2}$ türetildi** — sıkıştırılabilir ortamda hareketli deplasman kaynağının alanından (Prandtl–Glauert). Cetvel ve saat aynı çarpanla ölçeklenir; ışık hızı izotropisi **kavramadan bağımsız** çıkar, yeni parametre eklenmez. Kapalı biçim, gözlemin istediği tam Lorentz çarpanıdır | **[T]** |
 | 22 | Disk F5'in **geometrik** dengesidir ($\sin2\theta\to0$): kuvvet düzlemde susar, sapmada konuşur — söndürme değil **kilit**. *(Kinematik bir sabit nokta yoktur: 11.4.9'un $\lambda_{etkin}$ türetimi diskin F5'i kinematik olarak kapatmadığını gösterir.)* | **[T]** |
 | 22b | **$\lambda$ serbest değildir, türetilir:** $\lambda_{etkin}=\dfrac{d\ln v_c}{d\ln R}+\dfrac{\mathcal{A}}{2}\left(\dfrac{R}{h_z}\right)^2$ — M-38'in iç içe tabakası + DY-2'nin kayma yasasından. İkinci terim birinciyi üç mertebe ezer ($93$ ↔ $0{,}06$). Barotropik akışkan teoremleri (Poincaré–Wavre) **uygulanamaz**: ortam barotropik değildir | **[T]** · yöntem kaydı |
 | 22c | **$(R/h_z)^2$ yasasının tabanı var:** ortamın **dolaşım tutarlılık ölçeği** $\ell_{min}$. F1 statik tepkidir, her ölçekte çalışır (Newton korunur); F5 dolaşım gradyanı okur ve altında desen kuramayacağı bir ölçek vardır. Satürn halkası alttan sınırlıyor: $\ell_{min}\gtrsim7$–65 km. Halka ($10$ m) yasanın dışında, gövde ve galaktik levha ($10^{7}$–$10^{19}$ m) içinde kalır | **[T]** + **[A]** · yeni büyüklük |

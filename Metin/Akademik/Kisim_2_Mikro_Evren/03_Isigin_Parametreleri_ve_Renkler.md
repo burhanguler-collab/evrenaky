@@ -26,7 +26,7 @@ Bu üç farklı "mermi sağanağının" Evrenakı okyanusu içerisindeki ilerley
 
 ## 2.3.3 Görsel Analoji: Renk Simülasyonu
 
-Aşağıdaki animasyonda (Animasyon 2.3.1), aynı hıza (c) sahip Mavi, Yeşil ve Kırmızı ışık zerrelerinin bir ekrana doğru uçuşu gösterilmektedir. 
+Aşağıdaki animasyonda (Animasyon 2.3.1), aynı hıza ($c_0$) sahip Mavi, Yeşil ve Kırmızı ışık zerrelerinin bir ekrana doğru uçuşu gösterilmektedir. 
 
 <div style="background: #121212; padding: 20px; border-radius: 12px; border: 1px solid #404040; box-shadow: 0 10px 30px rgba(0,0,0,0.8); margin: 20px 0; text-align: center;">
   <h3 style="margin-top: 0; margin-bottom: 20px; color: #fff; font-weight: 600; letter-spacing: 1px; text-shadow: 0 0 10px rgba(0, 229, 255, 0.5);">Animasyon 2.3.1: Mavi, Yeşil ve Kırmızı Işık Zerrelerinin Dalga Boyu ve Çarpma Frekansı (Sıklığı)</h3>

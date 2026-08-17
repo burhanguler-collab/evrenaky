@@ -60,7 +60,7 @@ Dürüst kayıt önce: **gelgit, basıklık ve göç yönünün sayı tabloları
 22. Nötron yıldızı Dünya'dan çok daha küresel olduğu hâlde, gözlenen $\omega_2/\omega_1$ oranı neden $\varepsilon$ oranından $59$ kat daha büyük çıkıyor? (11.7.6-(a))
 23. Bu kısımda hangi sonuç teoriyi standart fizikten *ayırır*, hangisi yalnız *uyumunu* gösterir? İkisini ayırt eden ölçüt nedir?
 24. Ek M-44'ün tek satırı, Güneş Sistemi'nin kararlılığı ile ikili pulsarın daralmasını nasıl **aynı anda** verir? Enerji hangi kanaldan çıkar, ve o kanalın hız sınavı nerede geçilmiştir? (11.6.1)
-25. Triton'un ortam kuplajı, prograd eşdeğerinden neden tam **81 kat** güçlüdür — ve bu çarpan neden standart anlatıda karşılıksızdır? (11.5.3)
+25. Triton'un ortam kuplajı, dolaşan-ortam senaryosunda prograd eşdeğerinden neden tam **81 kat** güçlü çıkar — ve statik-ortam senaryosunda bu oran neden **1**'e iner? (11.5.3; **Ek M-52** — ortam dönüşü kilit teoremi dolaşımı dört bağımsız gövdede dışlar, dolayısıyla teorinin öngörüsü "fark sıfır"dır; 7.4 md.15 bu ayrımı sınav olarak taşır.)
 
 ## Açık Kalemler
 

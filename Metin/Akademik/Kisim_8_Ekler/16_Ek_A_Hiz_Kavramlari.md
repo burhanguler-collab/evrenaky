@@ -159,7 +159,7 @@ Bu hızın fiziksel rolü ve gözlemsel ölçüm programı Bölüm 2.10.1'de iş
 
 Böylece teorinin tüm hız kavramları tek bir sıralama üzerinde yerini bulur *(sıralama teoremi: **Ek M-6**)*:
 
-$$c_0 \;<\; \underbrace{\sqrt{2}\,c_0}_{v_{denge}\;\approx\;v_{ekvator}} \;<\; \underbrace{c\sqrt{\Sigma/P_0}}_{v_m} \;<\; \underbrace{\sqrt{2}\,c_0\sqrt{1+\Sigma/P_0}}_{v_{kav}}$$
+$$c_0 \;<\; \underbrace{\sqrt{2}\,c_0}_{v_{denge}\;\approx\;v_{ekvator}} \;<\; \underbrace{c_0\sqrt{\Sigma/P_0}}_{v_m} \;<\; \underbrace{\sqrt{2}\,c_0\sqrt{1+\Sigma/P_0}}_{v_{kav}}$$
 
 > **Merdiven neden burada bitiyor?** Maddeyi doğuran dönüş $v_{kav}$'ın üzerindedir; ama o dönüşün taşıyıcısı **Kut düzeyindedir** ve Kut hiçbir hesaba girmez (Anayasa Madde 30). Teorinin niceliği yırtılmanın **eşiğidir**, eşiği aşan gövdenin hızı değil. Bu yüzden merdivende beşinci bir basamak yoktur.
 
@@ -172,7 +172,9 @@ $$c_0 \;<\; \underbrace{\sqrt{2}\,c_0}_{v_{denge}\;\approx\;v_{ekvator}} \;<\; \
 | $v_m$ | Kohezyon kanalının elastik sinyal hızı — topografya/gradyan kurulumu (Bölüm 2.10.1) | $\sqrt{\Sigma/\rho_0}=c_0\sqrt{\Sigma/P_0}$ | $>10^4\,c_0$ (Bell alt sınırı) |
 | $v_{kav}$ | Sağlam akışkanı yırtma (kavitasyon) eşiği — **merdivenin son basamağı** | $\sqrt{2}\,c_0\sqrt{1+\Sigma/P_0}\approx\sqrt2\,v_m$ | $\gg c_0$ ($\Sigma\gg P_0$) |
 
-#### Ek A.4 — Makro hızlar: madde düşer, ortam dolaşır
+#### Ek A.4 — Makro hızlar: madde düşer, ortam düşmez
+
+> **⚠ Statü kaydı (17 Ağustos 2026).** Bu bölümün "ortam hızı" ($v_\theta=2v_{yör}$) kolonu, ortamın *dolaştığı* senaryonun niceliğidir ve o senaryo **Ek M-52**'de dört bağımsız gövdede dışlanmıştır (dolaşan ortamda apsisler $\Omega_m=2n$ ile sürüklenir, kapalı elips kalmaz). Kohezyonlu ortam kuyuyu **gerilerek** tutar (**Ek M-51**) ve dolaşımın yokluğu üç yapısal nedenden türetilir (**Ek M-53**). Aşağıdaki sözlük, iki hızın **karıştırılmaması** kuralı için aynen geçerlidir; değişen yalnız ortam kolonunun statüsüdür: türetilmiş nicelik değil, **kohezyonsuz üst sınır**.
 
 Yukarıdaki merdiven **mikro/relativistik** merdivendir: hepsi $c_0$ mertebesindedir ve maddenin *iç*
 yapısını yönetir. Teorinin bir de **makro** hız çifti vardır ($\ll c_0$); bunlar merdivene girmez ama

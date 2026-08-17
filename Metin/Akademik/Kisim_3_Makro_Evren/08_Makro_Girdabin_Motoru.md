@@ -28,7 +28,7 @@ Standart fizik bunu "uzaktan etki eden kütleçekim kuvveti" olarak soyutlaştı
 > | **Gezegen** (katı deplasman cebi) | $\vec a=-\nabla P/\rho_n$ | $\rho_n$ | akıp dengelenemez → **düşer**, $v=\sqrt{\mathcal{G}M/R}$ |
 > | **Ortam** (Zerre akışkanı) | $\nabla P/\rho_0=v_\theta^2/R$ | $\rho_0$ | düşmez → **dolaşır**, $v_\theta=2\sqrt{\mathcal{G}M/R}$ |
 >
-> $\rho_0=\rho_n/4$ olduğundan (Ek M-8, $k=0$) ortam gezegenlerden **tam iki kat hızlı** döner. M-9'un tek cümlelik ifadesiyle: **"madde düşer, ortam dolaşır."**
+> $\rho_0=\rho_n/4$ olduğundan (Ek M-8, $k=0$) dolaşan-ortam senaryosunda ortam gezegenlerden **tam iki kat hızlı** döner. M-9'un tek cümlelik ifadesiyle: **"madde düşer, ortam düşmez."** *(Statü kaydı, 17 Ağu 2026: bu iki kat, ortamın **dolaştığı** senaryonun niceliğidir ve Ek M-52 dolaşımı dört bağımsız gövdede dışlamıştır — kohezyonlu ortam kuyuyu dolaşmadan, gerilerek tutar (Ek M-51). Gezegenlerin gözlenen hızları ve dönüş eğrileri bundan **etkilenmez**; onlar yalnız $\nabla P$'den çıkar.)*
 >
 > Dolayısıyla iki profilin **biçimi** aynıdır ($1/\sqrt R$ — ikisi de aynı $1/R^2$ alanından çıkar), **genlikleri** ise iki katlı farklıdır. Gezegenlerin hız profilinin akışkanın profiliyle örtüşmesi bir kapılma değil, **aynı alanın iki okunuşudur** — ve aradaki 2 çarpanı serbest parametresiz bir öngörüdür (kayma tablosu: 11.3.1).
 >

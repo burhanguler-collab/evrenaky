@@ -39,7 +39,7 @@ Kütle tarafında gezegenler ve çift sistemler (pulsar zamanlaması + Shapiro g
 
 $$j\equiv\frac{J}{M}\ \ [\mathrm{m^2/s}] \qquad\text{ve}\qquad \mathcal{A}\equiv\frac{J}{M^{2}}\ \ [\mathrm{m^2\,s^{-1}\,kg^{-1}}]$$
 
-$\mathcal{A}$'nın seçimi keyfî değildir: hem gezegen yükleme katsayısı hem kompakt cisimlerin tavanı ($J_{max}=\mathcal{G}_{yerel}M^2/c_{yerel}$ — standart adıyla Kerr sınırı) **aynı $M^2$ biçimindedir.** O hâlde her sınıfın tek işareti katsayısıdır. Boyutsuz yazımı $a^*=cJ/\mathcal{G}M^2$'dir; kompakt olmayan cisimlerde 1'i aşabilir, çünkü yarıçapları itim yarıçaplarının çok üstündedir ve tavan onları bağlamaz.
+$\mathcal{A}$'nın seçimi keyfî değildir: hem gezegen yükleme katsayısı hem kompakt cisimlerin tavanı ($J_{max}=\mathcal{G}_{yerel}M^2/c_{yerel}$ — standart adıyla Kerr sınırı) **aynı $M^2$ biçimindedir.** O hâlde her sınıfın tek işareti katsayısıdır. Boyutsuz yazımı $a^*=c_{yerel}J/\mathcal{G}M^2$'dir; kompakt olmayan cisimlerde 1'i aşabilir, çünkü yarıçapları itim yarıçaplarının çok üstündedir ve tavan onları bağlamaz.
 
 > **Ölçüm birimi uyarısı — $\mathcal{G}$ ve $c_0$ burada sabit değildir.** Evrenakı'da ne kütle-itim katsayısı $\mathcal{G}$ ne de dalga hızı $c_0$ evrensel sabittir: $c_{yerel}=\sqrt{P/\rho_0}$ (Postülat 4) ve $\mathcal{G}=Cq_n/4\pi\rho_nm_n$ (M-35) — ikincisi ortamın yerel yoğunluğuyla ölçeklenir, M-45'in *"yerel ölçülen $G$"* ifadesi tam bunu söyler. Bu bölümdeki her $\mathcal{G}$ ve $c_0$, **ölçümün yapıldığı yerdeki** değerdir. Sonuçların yerel-bağımsız biçimi 11.3.7(c–d)'de kurulur.
 
@@ -896,7 +896,7 @@ Yüklemenin kinematik imzası da ölçülür ve tekil seçilir: $\omega\propto g
 
 ### (c) İlkel biçim: $\mathcal{G}$ ve $c_0$ teoride sabit değildir
 
-Katsayıyı $\mathcal{A}_0=\mathcal{G}m_p/2cm_e$ biçiminde yazmak yanıltıcıdır, çünkü sağ tarafın iki niceliği de yereldir. Teorinin ilkel niceliklerine açıldığında **$c_0$ tamamen sadeleşir**: $\mathcal{G}=Cq_n/4\pi\rho_nm_n$ ve $q_n=4\pi r_n^2u_r$, $u_r=\sqrt2\,c_{yerel}\sqrt{m_p/m_e}$ olduğundan $\mathcal{G}\propto c_{yerel}/\rho_0$'dır; $\mathcal{G}/c_0$ ise $c_0$ içermez. Sonuç:
+Katsayıyı $\mathcal{A}_0=\mathcal{G}m_p/2c_{yerel}m_e$ biçiminde yazmak yanıltıcıdır, çünkü sağ tarafın iki niceliği de yereldir. Teorinin ilkel niceliklerine açıldığında **$c_0$ tamamen sadeleşir**: $\mathcal{G}=Cq_n/4\pi\rho_nm_n$ ve $q_n=4\pi r_n^2u_r$, $u_r=\sqrt2\,c_{yerel}\sqrt{m_p/m_e}$ olduğundan $\mathcal{G}\propto c_{yerel}/\rho_0$'dır; $\mathcal{G}/c_0$ ise $c_0$ içermez. Sonuç:
 
 $$\boxed{\;\mathcal{A}_0=\frac{1}{4\sqrt2}\cdot\frac{C\,\ell_\omega^{3}}{m_n\,\rho_0\,r_n}\;}$$
 
@@ -969,7 +969,7 @@ Kütle oranının yalnız **birinci** kuvveti $O(1)$ katsayı verir; komşuları
 <p style="font-size:0.9em;color:#8fa3c0;margin:10px 4px 2px;"><em>Şekil 11.3.F: Oranın sınavı. κ = ½ (yani yükleme/tavan = m_p/2m_e) beş gezegenin 1σ bandının içindedir; κ = 1 ve κ = ¼ ~3σ dışlanır. κ'nın beş girdisi de ölçülmüş olduğu için değeri M-45'in √2 çapa belirsizliğinden bağımsızdır; ½'nin ilkel türetimi hesap kalemidir.</em></p>
 </div>
 
-$\kappa=0{,}489$ bir ölçümdür ve sağlamlığı kendi yapısından gelir: $\kappa=\mathcal{A}_0c\,m_e/\mathcal{G}m_p$ ifadesinin beş girdisi de ölçülmüş niceliklerdir, dolayısıyla $\kappa$ **M-45'in $\sqrt2$ çapa seçiminden bağımsızdır** — çapa yalnız (c)'deki ilkel yazımın ön çarpanını oynatır ($1/4\sqrt2$ ↔ $1/8$), çünkü $C$ ile $q_n$ ters yönde değişip $\mathcal{G}$'yi sabit bırakır. Değerin tam $\tfrac12$'ye ilkel yoldan bağlanması hesap kalemidir (7.4); "$1/8$ daha temiz görünüyor" türü bir estetik itiraz ise fizik argümanı değil, muhasebe artığıdır.
+$\kappa=0{,}489$ bir ölçümdür ve sağlamlığı kendi yapısından gelir: $\kappa=\mathcal{A}_0c_{yerel}\,m_e/\mathcal{G}m_p$ ifadesinin beş girdisi de ölçülmüş niceliklerdir, dolayısıyla $\kappa$ **M-45'in $\sqrt2$ çapa seçiminden bağımsızdır** — çapa yalnız (c)'deki ilkel yazımın ön çarpanını oynatır ($1/4\sqrt2$ ↔ $1/8$), çünkü $C$ ile $q_n$ ters yönde değişip $\mathcal{G}$'yi sabit bırakır. Değerin tam $\tfrac12$'ye ilkel yoldan bağlanması hesap kalemidir (7.4); "$1/8$ daha temiz görünüyor" türü bir estetik itiraz ise fizik argümanı değil, muhasebe artığıdır.
 
 ### (e) Yerel yoğunluk bağı: yeni bir yanlışlanabilir öngörü
 
@@ -1622,7 +1622,7 @@ Bir de kayda geçmesi gereken bir **eksik**: $k^2$ ataması iki katalogda da yı
 
 Buraya kadarki sınavlar sınıf sınıf yürüdü. Şimdi hepsi tek eksende toplanır ve **yasanın tanım alanı ölçülür.** Doğru değişken $\mathcal{A}=J/M^{2}$'dir, çünkü bu değişkende hem yükleme yasası hem ufuk tavanı **yatay doğruya** iner:
 
-$$J=\mathcal{A}_0M^{2}\ \Longleftrightarrow\ \mathcal{A}=\mathcal{A}_0=\text{sabit}\ ,\qquad J\le\frac{\mathcal{G}}{c}M^{2}\ \Longleftrightarrow\ \mathcal{A}\le\frac{\mathcal{G}_{yerel}}{c_{yerel}}=\text{sabit}$$
+$$J=\mathcal{A}_0M^{2}\ \Longleftrightarrow\ \mathcal{A}=\mathcal{A}_0=\text{sabit}\ ,\qquad J\le\frac{\mathcal{G}}{c_{yerel}}M^{2}\ \Longleftrightarrow\ \mathcal{A}\le\frac{\mathcal{G}_{yerel}}{c_{yerel}}=\text{sabit}$$
 
 Yani $\mathcal{A}$–$M$ düzleminde teorinin bütün iddiası **iki yatay çizgi ve aralarındaki 897,5 kat**tır. Her sınıf bu iki çizgiye göre nereye düştüğüyle okunur. Kullanılan altı popülasyon:
 

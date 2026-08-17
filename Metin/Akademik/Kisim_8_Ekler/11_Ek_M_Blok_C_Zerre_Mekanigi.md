@@ -36,7 +36,7 @@ $$\boxed{\Phi + E_{ke} = N \cdot \eta \cdot \tfrac{1}{2} m_z \left(c_0^2 + k_a\,
 - Rozet **[S]**: $m_z$ değeri ilk-ilkelerden türetilmemiştir ve türetilmesi beklenmez — $m_z$, teorinin **ölçülen girdi parametresidir** (Standart Model'de $m_e$ nasıl girdiyse öyle). Fotoelektrik veri ($\Phi$, $E_{ke}$, $\nu$) ile Postülat 4'ün evrensel $m_z$ değerinin tutarlılığı, bu girdinin **ölçek denetimidir**. $N$, girdi verildiğinde bu veriyle belirlenir.
 - **Ölçek denetimi — açıkça:** Yukarıdaki kutulu denklem $\eta = 4m_z/m_e$ yerine konduğunda
   $$\Phi + E_{ke} = \frac{2N m_z^2}{m_e}\left(c_0^2 + k_a\, v_{cev}^2\right) = \frac{4N m_z^2 c_0^2}{m_e}$$
-  hâlini alır ($k_a = 1/2$ ve $v_{cev} = \sqrt{2}\,c_0$ konduğunda $c_0^2 + k_a v_{cev}^2 = 2c^2$): **bir denklem, iki bilinmeyen** ($N$, $m_z$). $m_z$ ölçülen girdi olarak verildiğinde denklem $N$'yi belirler. Çizelgedeki $m_z \approx 1{,}47\times10^{-35}$ kg değerinin ölçek denetimi, sayısal zincirin ilk halkasında duran şu eşleşmedir:
+  hâlini alır ($k_a = 1/2$ ve $v_{cev} = \sqrt{2}\,c_0$ konduğunda $c_0^2 + k_a v_{cev}^2 = 2c_0^2$): **bir denklem, iki bilinmeyen** ($N$, $m_z$). $m_z$ ölçülen girdi olarak verildiğinde denklem $N$'yi belirler. Çizelgedeki $m_z \approx 1{,}47\times10^{-35}$ kg değerinin ölçek denetimi, sayısal zincirin ilk halkasında duran şu eşleşmedir:
   $$\tfrac12 m_z c_0^2 \;\simeq\; \Phi \;\approx\; 4\ \text{eV}\,, \qquad E_{Zerre} = m_z c_0^2 \;\simeq\; 2\Phi \;\approx\; 8{,}25\ \text{eV}$$
   Yani tek Zerre'nin **öteleme payı**, tipik metal iş fonksiyonu ölçeğine oturur; dönme payı buna tam eşit olduğundan Zerre'nin taşıdığı toplam enerji iş fonksiyonunun iki katı mertebesindedir. Ters çözüm, çapanın kendisiyle ($\simeq4$ eV) $m_z \approx 1{,}43\times10^{-35}$ kg verir — çizelge değerinden ~%3 sapma, çapanın genişliği içinde. Bu bir *ölçek denetimidir*, bağımsız bir tayin değil: iş fonksiyonları malzemeye göre ~2–5 eV arasında değişir, dolayısıyla denetim $m_z$'ye kendiliğinden $\sim\pm25\%$ genişlik bırakır. Bu genişlik çapanın genişliğidir; $m_z$'nin statüsünü — ölçülen girdi parametresi — değiştirmez.
 - **Bağın yönü — dürüstlük kaydı.** Muhasebede $N=\nu\tau$ konulduğunda standart $h\nu$ ile eşleşme $h \leftrightarrow 4\tau m_z^2 c_0^2/m_e$ verir. Ancak yukarıdaki birikim hesabı bundan **bağımsız değildir**: $N=(\Phi+E_{ke})/\delta = h\nu/\delta$ olduğundan $N/\nu \equiv h/\delta \equiv \tau$ çıkar. Yani iki yol cebirsel olarak tek bağıntıdır ve ikisinin de $7{,}7$ ps vermesi bir sağlama değil, bir özdeşliktir. **Bu ek $h$'ın sayısal değerini üretmez;** yaptığı şey $h$'ı iki mekanik büyüklüğe ($\delta$, $\tau$) **ayrıştırmaktır**. Ayrıştırma boş değildir — $\delta$ artık $m_z$'den tam hesaplanır — ama sayısal bir öngörü olarak sunulamaz. $\tau$'nun $h$'ı kullanmayan bağımsız tayini açık kalemdir. *(Ek C parametre çizelgesinin 1. satırı bu bağı ters yönde okuyup "Planck sabitinden türetim" yazıyordu; 30 Temmuz 2026'da düzeltildi.)*
@@ -81,7 +81,7 @@ $$\boxed{E_{ke} = (\delta\tau)\,\nu - \Phi\,, \qquad h = \delta\tau\,, \qquad E_
 Planck sabiti temel bir doğa gizemi değil, iki mekanik büyüklüğün — tek-vuruş aktarımı ile kopma penceresinin — çarpımıdır.
 
 ### Geçerlilik Sınırı
-- Rozet **[S]**: gözlemle özdeşlenen şey **çarpım** $(\delta\tau)$'dur; bileşenler ise artık serbest değildir. $\delta$, M-10'un muhasebesinden kapalı biçimde çıkar ($\delta = \eta\,E_{Zerre} = 4m_z^2c^2/m_e \approx 5{,}4\times10^{-4}$ eV), kopma penceresi de ondan okunur ($\tau = h/\delta \approx 7{,}8$ ps). Dolayısıyla $h$'nin ölçülmüş değeri iki bilinmeyeni birden değil, yalnız $\tau$'yu bağlar.
+- Rozet **[S]**: gözlemle özdeşlenen şey **çarpım** $(\delta\tau)$'dur; bileşenler ise artık serbest değildir. $\delta$, M-10'un muhasebesinden kapalı biçimde çıkar ($\delta = \eta\,E_{Zerre} = 4m_z^2c_0^2/m_e \approx 5{,}4\times10^{-4}$ eV), kopma penceresi de ondan okunur ($\tau = h/\delta \approx 7{,}8$ ps). Dolayısıyla $h$'nin ölçülmüş değeri iki bilinmeyeni birden değil, yalnız $\tau$'yu bağlar.
 - Doğrusallık, kopma penceresinin $\nu$'den bağımsız (evrensel) olduğu varsayımına dayanır; $\tau$'nun malzemeye veya frekansa zayıf bağımlılığı doğrudan sınanabilir bir sapma üretir.
 
 ### Açık Uçlar
@@ -129,7 +129,7 @@ Sonuç, iki Postülat 4 girdisinin ($m_z$, $\rho_n$) aritmetik sonucudur; rozet 
 **Kullanıldığı bölümler:** 2.4.4, 2.4.2 (Yön Kuralı), 4.3 (dispersiyon/renk imzası), Ek C satır 3 ($k$ eşlik oranının bağımsız ölçüm programı), 7.4.
 
 ### Varsayımlar
-1. Işığın patinajı, Evrenakı'nın $P/\rho$ oranının düştüğü bölgelerin olayıdır ($c_0 = \sqrt{P/\rho}$, M-1); nötrino tutunma mekanizmasına bağımlı değildir ve oyalanmadan geçer (2.1, 2.4.4).
+1. Işığın patinajı, Evrenakı'nın $P/\rho$ oranının düştüğü bölgelerin olayıdır ($c_{loc} = \sqrt{P/\rho}$, M-1); nötrino tutunma mekanizmasına bağımlı değildir ve oyalanmadan geçer (2.1, 2.4.4).
 2. SN 1987A gözlem girdileri: uzaklık ≈ 168.000 ışık yılı (Büyük Macellan Bulutu); nötrino–optik varış farkı ≈ 3 saat (Hirata ve ark., 1987; Bionta ve ark., 1987; Alekseev ve ark., 1988).
 3. Gecikme iki bileşenin toplamıdır (gecikme bütçesi):
 $$D_{toplam} = D_{zarf} + D_{yol}$$
@@ -139,11 +139,11 @@ $D_{zarf}$: yıldız zarfı içindeki madde-içi patinaj (standart fiziğin "şo
 1. Toplam yol süresi saate çevrilir:
 $$T_{yol} = 168.000 \text{ yıl} \approx 1{,}5\times10^{9} \text{ saat}$$
 2. En muhafazakâr atama yapılır: 3 saatlik farkın **tamamı** yol-içi yavaşlamaya yazılsa bile,
-$$\frac{\Delta v}{c} \lesssim \frac{D_{toplam}}{T_{yol}} = \frac{3}{1{,}5\times10^{9}} = 2\times10^{-9}$$
+$$\frac{\Delta v}{c_0} \lesssim \frac{D_{toplam}}{T_{yol}} = \frac{3}{1{,}5\times10^{9}} = 2\times10^{-9}$$
 3. Gerçekte $D_{zarf} > 0$ olduğundan (SN 2008D X-ışını parlaması, SN 2016gkg çıkış yükselişi bu bileşeni bağımsız kanaldan gözler), yol payı bu sınırın da altındadır; Crab pulsarının milisaniyelik nabızlarında renkler arası varış saçılmasının yokluğu $D_{yol}$'u ayrıca küçük bir kesirle sınırlar (2.4.4).
 
 ### Sonuç
-$$\boxed{\left.\frac{\Delta v}{c}\right|_{yol} \lesssim 2\times10^{-9} \qquad \text{(yol-içi ortalama yavaşlama üst sınırı)}}$$
+$$\boxed{\left.\frac{\Delta v}{c_0}\right|_{yol} \lesssim 2\times10^{-9} \qquad \text{(yol-içi ortalama yavaşlama üst sınırı)}}$$
 
 ### Geçerlilik Sınırı
 - Rozet **[S]**: sınır tek bir gözlem olayından (SN 1987A) çıkarılmıştır ve **yol-içi ORTALAMA** yavaşlamayı bağlar; yerel/geçici patinaj epizodlarını tek tek bağlamaz.
@@ -167,16 +167,16 @@ $$\boxed{\left.\frac{\Delta v}{c}\right|_{yol} \lesssim 2\times10^{-9} \qquad \t
 
 ### Adımlar
 1. Gözlemsel alt sınır doğrudan $v_m$'ye atanır ve M-5 bağıntısıyla $\Sigma$'ya çevrilir:
-$$\frac{v_m}{c} > 10^4 \;\Longrightarrow\; \frac{\Sigma}{P_0} = \left(\frac{v_m}{c}\right)^2 > 10^8$$
+$$\frac{v_m}{c_0} > 10^4 \;\Longrightarrow\; \frac{\Sigma}{P_0} = \left(\frac{v_m}{c_0}\right)^2 > 10^8$$
 (Sık karışan nokta: $10^4$ hız oranıdır; $10^8$ onun karesidir.)
 2. Aynı sınır, madde-doğum eşiğini aşağıdan destekler (M-4, M-6): $\Sigma \gg P_0$ limitinde
 $$v_{kav} \approx \sqrt{2}\,v_m > 1{,}4\times10^4\,c_0$$
 3. **Kalibrasyon yolu:** korelasyon bozulması bir gün ölçülür ve $v_m$ sonlu bir değerde yakalanırsa, kohezyon dayanımı pascal cinsinden sabitlenir:
-$$\Sigma = P_0\left(\frac{v_m}{c}\right)^2$$
+$$\Sigma = P_0\left(\frac{v_m}{c_0}\right)^2$$
 Ölçülmedikçe her yeni deney alt sınırı yükseltir — iki sonuç da bilgi vericidir: dolanıklık, madde doğumu ve arka plan kararlılığı (Ek B.4) tek $\Sigma$ üzerinde kenetlenir.
 
 ### Sonuç
-$$\boxed{\frac{\Sigma}{P_0} = \left(\frac{v_m}{c}\right)^2 > 10^8\,, \qquad v_{kav} \approx \sqrt{2}\,v_m > 1{,}4\times10^4\,c_0\,, \qquad \Sigma = P_0\left(\frac{v_m}{c}\right)^2}$$
+$$\boxed{\frac{\Sigma}{P_0} = \left(\frac{v_m}{c_0}\right)^2 > 10^8\,, \qquad v_{kav} \approx \sqrt{2}\,v_m > 1{,}4\times10^4\,c_0\,, \qquad \Sigma = P_0\left(\frac{v_m}{c_0}\right)^2}$$
 
 **Yanlışlanabilir öngörü:** $v_m$ sonludur; baz uzunluğu $L$ ve ayar-anahtarlama süresi $t$ için $L > v_m \cdot t$ rejimine ulaşan bir deneyde topografya yetişemez ve CHSH istatistiği $S \leq 2$'ye **düşmelidir** — kuantum mekaniği bozulma öngörmez; ayrışma noktası budur.
 

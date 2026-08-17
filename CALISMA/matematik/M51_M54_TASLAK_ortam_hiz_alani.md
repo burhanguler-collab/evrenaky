@@ -1,6 +1,9 @@
-# Ek M — Yeni Girdiler: Ortamın Hız Alanı (M-51 … M-54) · TAŞIMAYA HAZIR TASLAK
+# Ek M — Yeni Girdiler: Ortamın Hız Alanı (M-51 … M-54) · ✅ TAŞINDI
 
-> **DURUM: TASLAK — yayın metnine taşınmadı.** Çalışma dosyası yöntemi gereği taşıma yalnız "sonuçlandı" onayıyla, tek partide yapılır.
+> **DURUM: 17 Ağustos 2026'da yayın metnine TAŞINDI** (Enes onayı: *"yayın metnine taşı"*).
+> Dört girdi `Kisim_8_Ekler/10_Ek_M_Blok_B_Arka_Plan_Basinci.md`'nin sonuna eklendi (satır 131, 186, 248, 321).
+> Bağlı düzeltmelerin tamamı uygulandı — **taşıma kaydı bu dosyanın en sonundadır.**
+> Bu dosya artık tarihsel kayıt/karşılaştırma amacıyla saklanmaktadır.
 > **Kaynak çalışmalar:** `ortam_hiz_alani_cozumu.md` · `ortam_donusu_kilit_teoremi.md` · `es_duzlemlilik_cozumu.md` · `formasyon_gerekcesi.md`
 > **Sınav betikleri:** `ortam_hiz_alani_sinavi.py` · `ortam_dolasimi_mp.py` · `saturn_ortami_sinavi.py` · `es_duzlemlilik_sinavi.py` · `formasyon_gerekcesi_sinavi.py`
 >
@@ -281,3 +284,36 @@ Evren yaşının ($1{,}38\times10^{10}$ yıl) $10^{-4}$'ü ⇒ kilitlenme kozmol
 | KARNE | Yeni sınav satırları: Merkür (Güneş ortamı) · Ay + LAGEOS-2 (Dünya) · Titan (Satürn) · Io (Jüpiter) — statü **Sınandı ✓** · Mach sonucu satırı |
 
 **Dokunulmayacaklar (doğrulandı):** `18_5:313` (eş-düzlemlilik zaten F5'te, prograd tercih zaten açık kalem) · KARNE s.35 (*"eş-düzlemlilik için mekanizma borcu yoktur"*) · M-37'nin madde kolonu · galaktik zincir (a₀, W penceresi, 163 galaksi fiti) · Kısım 5 ve Kısım 10 (Λ ve ortam hız alanı geçmiyor).
+
+---
+
+# ✅ TAŞIMA KAYDI — 17 Ağustos 2026
+
+**Yeni girdiler:** `Kisim_8_Ekler/10_Ek_M_Blok_B_Arka_Plan_Basinci.md` sonuna eklendi — **M-51** (satır 131), **M-52** (186), **M-53** (248), **M-54** (321). Dördü de tam şablonla.
+
+**Uygulanan bağlı düzeltmeler (16 nokta, 10 dosya):**
+
+| # | Dosya | Ne yapıldı |
+|---|---|---|
+| 1 | `10_Ek_M_Blok_B` M-9 Geçerlilik Sınırı | İki kollu yazım (kohezyonsuz Euler ↔ kohezyonlu statik); M-51/52/53 atıfları; **"ortam gerilir"** + düzeltme kaydı |
+| 2 | `10_Ek_M_Blok_B` M-9 Açık Uçlar | Kalem yeniden tanımlandı: kohezyon/dolaşım **bölüşümü** |
+| 3 | `10_Ek_M_Blok_B` M-7 Geçerlilik Sınırı | Yırtılmama koşulunun **katı dönüşü de yasakladığı** kaydı (M-53 Ayak 2) |
+| 4 | `09_Ek_M_Blok_A` M-5 | **Σ'nın ikinci yapısal görevi** bölümü (Kepler yörüngelerinin varlık koşulu; Bell'den bağımsız gerekçe) + modül/dayanım açık ucu |
+| 5 | `09_Ek_M_Blok_A` M-2 İşaret Konvansiyonu | **İz/izsiz çiftlenme kaydı** (deplase hacim skaler ⇒ ize bağlanır; izsiz τ kuvvet uygulamaz) |
+| 6 | `14_Ek_M_Blok_F` M-22 Varsayım 2 | **Opsiyonel dinamik durum** statü kutusu |
+| 7 | `18_5` M-37 sağ kolon | Statü düştü: "ölçülmemiş" → **"dolaylı olarak ölçülmüş ve dışlanmış"**; madde kolonunun etkilenmediği vurgulandı |
+| 8 | `18_5:270` M-37 oran cümlesi | 2 katının kohezyonsuz kol olduğu kaydı |
+| 9 | `18_5:376` F5 | *"dolaşımı kilitler"* → dolaşımdan bağımsız yazım |
+| 10 | `18_5:249` sıfırıncı mertebe (zarf) | Ortam teğetsel alanı koşullu yazıldı |
+| 11 | `18_5:904` DY bölümü "Ne söyler" | **"ortam gerilir"** |
+| 12 | `Kisim_11/04_Saturn` 11.4.8.1 | **Kapsam kuralı (3) eklendi:** "yerel ortam" = zarf dışı ambiyans, merkezî cismin çerçevesinde durgun; Hill hiyerarşisi tablosu (Güneş 1,225 pc; Dünya 234,9 R⊕); Merkür ↔ GPS'in birlikte doğru çıkması |
+| 13 | `Kisim_11/04_Saturn:786` | Tork işaretinin dolaşıma bağlı olduğu **senaryo kaydı** |
+| 14 | `Kisim_11/05_Oturma_Yaricapi` | **81 çarpanı** iki senaryolu tabloya çevrildi (81 ↔ 1); prograd kolun değişmediği, Phoebe sınırının gevşediği kaydı |
+| 15 | `Kisim_11/98_Ne_Ogrendik:25` | Triton sorusu iki senaryolu yazıldı |
+| 16 | `Kisim_7/04` md.15 | Sınavın öngörüsü **karara bağlandı**: statik ⇒ fark sıfır |
+
+**Slogan hizalaması (kitap-içi tutarlılık, 8 yayın dosyası):** *"madde düşer, ortam dolaşır"* → **"ortam gerilir"** / **"ortam düşmez"**, her birinde M-51/52 atfıyla: `Kisim_1/03_Evrenaki_Postulasi` (Postülat 1 metni) · `Kisim_3/08_Makro_Girdabin_Motoru` · `Kisim_7/04` · `Kisim_8_Ekler/14_Blok_F` (2 yer) · `16_Ek_A` (Ek A.4 başlığı + statü kutusu) · `17_Ek_B` · `18_5` (2 yer). Yayın metninde eski ifade **kalmadı**; tek kalan yer `Kisim_7/00_CALISMA_Acik_Konular.md` (çalışma dosyası, tarihsel yazar kararı kaydı — kasıtlı bırakıldı).
+
+**Katalog/karne:** `07_Matematiksel_Ekler` — Blok B kapsam cümlesi genişletildi, "M-1..M-50" → **"M-1..M-54"** · `00_KARNE` — **S-12** (kilit teoremi, Sınandı ✓), **S-13** (Merkür = ortam dönüşü ölçümü, Sınandı ✓), **S-14** (Mach sonucu, mekanizma kuruldu) satırları eklendi; **S-7** yeniden okunmalı işaretlendi; 9 Ağustos DY-2 kutusuna güncelleme notu düşüldü.
+
+**Numara durumu:** M-51…M-54 kullanıldı. **Üstel ölçek yapısı girdisi hâlâ numara bekliyor — sıradaki boş numara M-55.**

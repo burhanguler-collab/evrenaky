@@ -19,9 +19,9 @@
 ### Adımlar
 
 **1. Uzaysal kol — Zerre Aralığının açılması.** Durgun kaynak $\nu_s$ frekansıyla ateşlesin; ardışık iki ateşleme arası süre $T_s = 1/\nu_s$. Durgun durumda iki Zerre arasındaki mekanik mesafe (Zerre Aralığı):
-$$ \lambda_0 = c_0\,T_s = \frac{c}{\nu_s} $$
+$$ \lambda_0 = c_0\,T_s = \frac{c_0}{\nu_s} $$
 Kaynak alıcıdan $v$ hızıyla **uzaklaşıyorsa**, ikinci Zerre $T_s$ süre sonra $v\,T_s$ kadar geriden ateşlenir; aralık basit Newtonyen toplamayla açılır:
-$$ \lambda = c_0\,T_s + v\,T_s = \frac{c + v}{\nu_s} $$
+$$ \lambda = c_0\,T_s + v\,T_s = \frac{c_0 + v}{\nu_s} $$
 (Yaklaşan kaynak için $\lambda = (c_0 - v)/\nu_s$.)
 
 **2. Zamansal kol — mekanik saatin yavaşlaması.** Atom akışkan içinde $v$ hızıyla ilerlerken, $c_0$-limitli iç sinyal düz yol yerine **çapraz (üçgen) yol** izlemek zorundadır. Durgun gidiş-dönüş süresi $T_0$, hareketli süre $T$ ise Pisagor'dan:
@@ -30,10 +30,10 @@ $$ (c_0\,T)^2 = (v\,T)^2 + (c_0\,T_0)^2 \;\Longrightarrow\; T = \frac{T_0}{\sqrt
 *Saat yönelimi bağımsızlığı (boy kısalması):* Çapraz kol $\gamma$ verirken, hareket yönüne **paralel** gidip dönen sinyalin yol uzaması $\gamma^2$ çıkar — izotropi bozulur gibi görünür. Teori burada boy kısalmasını varsaymaz, **mecburiyet olarak türetir**: yüksek hızla ilerleyen kompozit vorteks, önden yediği deplasman/dinamik basıncı nedeniyle hareket yönünde mekanik olarak ezilir; hidrodinamik ezilme oranı $1/\gamma$'dır. Paralel yol tam gereken oranda kısalır ve yavaşlama her yönelimde $\gamma$ olur (izotropi onarılır). Boy kısalması uzayın bükülmesi değil, akışkan basıncının cismi sıkıştırmasıdır.
 
 Periyot $\gamma$ katına çıktığından hareketli kaynağın ateşleme frekansı düşer:
-$$ \nu_s = \nu_0 \sqrt{1 - \frac{v^2}{c^2}} $$
+$$ \nu_s = \nu_0 \sqrt{1 - \frac{v^2}{c_0^2}} $$
 
 **3. Sentez.** Adım 2'yi Adım 1'e yerleştirip alıcının ölçümünü ($\nu_{obs} = c_0/\lambda$) yazalım:
-$$ \nu_{obs} = \frac{c}{\lambda} = \frac{c\,\nu_0\sqrt{1 - v^2/c_0^2}}{c + v} = \nu_0\,\frac{\sqrt{1-\beta^2}}{1+\beta}, \qquad \beta = \frac{v}{c} $$
+$$ \nu_{obs} = \frac{c_0}{\lambda} = \frac{c_0\,\nu_0\sqrt{1 - v^2/c_0^2}}{c_0 + v} = \nu_0\,\frac{\sqrt{1-\beta^2}}{1+\beta}, \qquad \beta = \frac{v}{c_0} $$
 $\sqrt{1-\beta^2} = \sqrt{(1-\beta)(1+\beta)}$ açılımı ve $\sqrt{1+\beta}$ sadeleşmesiyle rölativistik Doppler biçimi elde edilir (aşağıda, Sonuç).
 
 **4. Genel iki-hızlı biçim.** Alıcı da yerel ortama göre $u$ hızıyla hareket ediyorsa, alıcının kendi saati $\gamma_u$ oranında yavaşlar ve birim öz-zamanda yakaladığı Zerre sayısı değişir:
@@ -41,7 +41,7 @@ $$ \nu_{obs} = \nu_0 \left( \frac{1 \pm u/c_0}{1 \pm v/c_0} \right) \frac{\sqrt{
 Saat yavaşlaması ve boy kısalması kusursuz işlediği için $u$ ve $v$ mutlak hızları gözlemden matematiksel olarak silinir; ifade Özel Görelilik'in bağıl-hız ($v_{rel}$) formülüne eşdeğerdir (Lorentz'in gözlemlenemezlik teoremi, 1904). Evrenakı, SR'yi kinematik düzeyde tam kapsar.
 
 ### Sonuç
-$$\boxed{\nu_{obs} = \nu_0 \sqrt{\frac{1 - \beta}{1 + \beta}}\,, \qquad \beta = \frac{v}{c} \quad (\text{uzaklaşan kaynak; yaklaşan için } \beta \to -\beta)}$$
+$$\boxed{\nu_{obs} = \nu_0 \sqrt{\frac{1 - \beta}{1 + \beta}}\,, \qquad \beta = \frac{v}{c_0} \quad (\text{uzaklaşan kaynak; yaklaşan için } \beta \to -\beta)}$$
 
 Ives–Stilwell (1938) verisiyle doğrulanan rölativistik Doppler denklemi, uzay-zaman bükülmesi kabul edilmeden, yalnızca Newtonyen aralık açılması + mekanik saat yavaşlaması ile üretilmiştir.
 
@@ -59,13 +59,13 @@ Ives–Stilwell (1938) verisiyle doğrulanan rölativistik Doppler denklemi, uza
 
 **Kullanıldığı bölümler:** 6.2.2–6.2.8, 3.7.3, 7.7.1, Ek B.3/M-8 (yön kuralı, 2.4.2), Ek C satır P1.
 
-*Terminoloji notu:* "Kütleçekimsel kızıla kayma" (gravitational redshift) yerleşik **gözlem adı** olarak korunur; mekanizma teoride kütleçekim değil, **kütle-itim gradyanının** ördüğü basınç kuyusu / yoğunluk profilidir ($c_0 = \sqrt{P/\rho}$ üzerinden).
+*Terminoloji notu:* "Kütleçekimsel kızıla kayma" (gravitational redshift) yerleşik **gözlem adı** olarak korunur; mekanizma teoride kütleçekim değil, **kütle-itim gradyanının** ördüğü basınç kuyusu / yoğunluk profilidir ($c_{loc} = \sqrt{P/\rho}$ üzerinden).
 
 ### Varsayımlar
-1. $c_0 = \sqrt{P/\rho}$ yereldir ve değişkendir (M-1, Postülat 4): kütle çevresindeki basınç kuyusunda (**düşük Evrenakı-basıncı bölgesinde** — Yön Kuralı gereği kuyuda basınç düşer, yoğunluk korunur ya da daha yavaş düşer) yayılma hızı $c_{loc}$ düşüktür (2.4.2 / Ek B.3, M-8: $\delta c/c_0 = \frac{1-k}{2}\,\delta P/P_0 < 0$).
+1. $c_{loc} = \sqrt{P/\rho}$ yereldir ve değişkendir (M-1, Postülat 4): kütle çevresindeki basınç kuyusunda (**düşük Evrenakı-basıncı bölgesinde** — Yön Kuralı gereği kuyuda basınç düşer, yoğunluk korunur ya da daha yavaş düşer) yayılma hızı $c_{loc}$ düşüktür (2.4.2 / Ek B.3, M-8: $\delta c/c_0 = \frac{1-k}{2}\,\delta P/P_0 < 0$).
 2. **Akı korunumu:** Zerre Katarı'nın mermileri yolda buharlaşamaz; statik alanda sabit bir kesitten birim kozmik zamanda geçen Zerre sayısı korunur.
 3. Yerel saat M-21 bağıntısına uyar: $\nu_{tik} \propto \Lambda/\gamma$.
-4. **Ölçek ayrımı (M-42):** "Yerel ışık hızı" tek büyüklük değildir. **Madde ölçeği** $\Lambda \equiv 1-\Phi/c_0^2$ cetvelleri, saatleri ve atomik geçiş frekanslarını yönetir; **yayılma hızı** ise $c_{loc} = c_0\Lambda^2$'dir. Bu girdinin *üretim* ve *ölçüm* adımları $\Lambda$ ile, *yayılım* (Zerre Aralığı) adımı $c_{loc}$ ile yazılır. *(Köken notu: M-42'nin üsleri ışık bükülmesi ve yerel Lorentz-değişmezliği gözlemlerinden sabitlenmiştir; kızıla kayma bu zincirde girdi değil, **öngörüdür** — muhasebe M-42'de, kalibrasyon notu M-8 Açık Uçlar'da.)*
+4. **Ölçek ayrımı (M-42):** "Yerel ışık hızı" tek büyüklük değildir. **Madde ölçeği** $\Lambda \equiv e^{-\Phi/c_0^2}$ (tam biçim, **Ek M-55**; birinci mertebede $1-\Phi/c_0^2$) cetvelleri, saatleri ve atomik geçiş frekanslarını yönetir; **yayılma hızı** ise $c_{loc} = c_0\Lambda^2$'dir. Bu girdinin *üretim* ve *ölçüm* adımları $\Lambda$ ile, *yayılım* (Zerre Aralığı) adımı $c_{loc}$ ile yazılır. *(Köken notu: M-42'nin üsleri ışık bükülmesi ve yerel Lorentz-değişmezliği gözlemlerinden sabitlenmiştir; kızıla kayma bu zincirde girdi değil, **öngörüdür** — muhasebe M-42'de, kalibrasyon notu M-8 Açık Uçlar'da.)*
 
 ### Kritik Ayrım: İki Ayrı "Frekans"
 Görünürdeki çelişkinin tamamı tek kelimenin iki büyüklüğü adlandırmasındandır; teori ikisini titizlikle ayırır:
@@ -88,7 +88,7 @@ $$ \lambda(r) = \frac{c_{loc}(r)}{\nu_{emit}}\,, \qquad c_{loc} = c_0\,\Lambda^2
 **3. Ölçüm.** Alıcı, gelen ışığı kendi ortamındaki referansla ($\nu_0 \cdot \Lambda_{alıcı}/\Lambda_{ref}$) karşılaştırır; $\Lambda_{ref}$ sadeleşir:
 $$ \frac{\nu_{obs}}{\nu_0} = \frac{\Lambda_{kaynak}}{\Lambda_{alıcı}} $$
 
-Birinci mertebede $\Lambda = 1-\Phi/c_0^2$ olduğundan bu oran ölçülen genliği doğrudan verir: $\delta\nu/\nu = -\Phi/c_0^2$ (Pound–Rebka 1960; GPS: Ashby 2003).
+Birinci mertebede $\Lambda = 1-\Phi/c_0^2$ olduğundan *(tam biçim: $\Lambda=e^{-\Phi/c_0^2}$, **Ek M-55**)* bu oran ölçülen genliği doğrudan verir: $\delta\nu/\nu = -\Phi/c_0^2$ (Pound–Rebka 1960; GPS: Ashby 2003).
 
 **İşaret kontrolü:** kuyu dibinde $\Lambda_{kaynak} < \Lambda_{alıcı}$ ⟹ $\nu_{obs} < \nu_0$: **kızıla kayma.** Spektrometreler frekansı değil doğrudan Zerre Aralığını ($\lambda$) ve vuruş momentumunu ölçtüğünden, arası açılmış katarı "kırmızı ışık" olarak kaydeder.
 
@@ -121,7 +121,7 @@ Standart fiziğin iki ayrı kuramla (SR kinematiği + GR metriği) modellediği 
 ### Varsayımlar
 1. Madde kompozittir; bir atomun ışıma frekansını belirleyen atomik geçişler, akışkana kavrama mekanizmasıyla, yerel **yayılma hızına** ($c_{loc}$) tabi iç sinyallerle çalışır (M-1).
 2. Bu iç sinyaller, atom içinde bir referans noktasından diğerine $c_{loc}$ ile gidip gelen mekanik bir **Zerre-Saati** oluşturur; gidilen iç yolun uzunluğu $\ell_{loc}$'dur.
-3. **Ölçek ayrımı (M-42):** $\Lambda \equiv 1-\Phi/c_0^2$ **madde ölçeğidir** — cetvelleri ($\ell_{loc}\propto\Lambda$), saatleri ve atomik geçiş frekanslarını yönetir. Zerre'nin **yayılma hızı** ise ayrı bir büyüklüktür: $c_{loc} = c_0\Lambda^2$. "Yerel ışık hızı" ifadesi bu ikisini karıştırmamak için bu girdide kullanılmaz. *(Üslerin gözlemsel kökeni için köken notu: M-20 Varsayım 4.)*
+3. **Ölçek ayrımı (M-42):** $\Lambda \equiv e^{-\Phi/c_0^2}$ (tam biçim, **Ek M-55**; birinci mertebede $1-\Phi/c_0^2$) **madde ölçeğidir** — cetvelleri ($\ell_{loc}\propto\Lambda$), saatleri ve atomik geçiş frekanslarını yönetir. Zerre'nin **yayılma hızı** ise ayrı bir büyüklüktür: $c_{loc} = c_0\Lambda^2$. "Yerel ışık hızı" ifadesi bu ikisini karıştırmamak için bu girdide kullanılmaz. *(Üslerin gözlemsel kökeni için köken notu: M-20 Varsayım 4.)*
 
 ### Adımlar
 1. Saatin tik frekansı, iç sinyalin **hızının iç yol uzunluğuna oranıdır**. Basınç kuyusunda ikisi birlikte ölçeklenir ($c_{loc}\propto\Lambda^2$, $\ell_{loc}\propto\Lambda$), dolayısıyla tik hızı madde ölçeğine iner:
@@ -131,7 +131,9 @@ Kuyu derinleşip $\Lambda$ düşerse aynı iç çevrim daha uzun sürer → tik 
 3. İki bağımsız fiziksel etken tek ifadede çarpılır:
 
 ### Sonuç
-$$\boxed{\nu_{tik} \propto \frac{\Lambda}{\gamma}\,, \qquad \Lambda \equiv 1 - \frac{\Phi}{c^2}\,, \qquad \gamma = \frac{1}{\sqrt{1 - v^2/c_0^2}}}$$
+$$\boxed{\nu_{tik} \propto \frac{\Lambda}{\gamma}\,, \qquad \Lambda \equiv e^{-\Phi/c_0^2}\,, \qquad \gamma = \frac{1}{\sqrt{1 - v^2/c_0^2}}}$$
+
+*(Kutudaki $\Lambda$ tam biçimdir — **Ek M-55**; birinci mertebede $\Lambda = 1-\Phi/c_0^2$.)*
 
 Bu tek bağıntı, iki kayma türünü **aynı mekanik kökten** doğurur:
 - **Yoğunluk değişince** $\Lambda$ değişir → kütleçekimsel (yerleşik gözlem adıyla) kayma; mekanizma kütle-itim gradyanının yoğunluk profilidir. Birinci mertebede $\delta\nu/\nu = -\Phi/c_0^2$.

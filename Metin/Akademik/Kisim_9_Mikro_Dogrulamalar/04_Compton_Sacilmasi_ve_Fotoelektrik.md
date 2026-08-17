@@ -31,7 +31,7 @@ $$\Phi + E_{ke} = N\cdot\eta\cdot\tfrac12 m_z\!\left(c_0^2 + k_a v_{cev}^2\right
 | G-2 gecikme | birikim penceresi $N\approx7{,}5\times10^3$ vuruş → morötesi ritminde $\approx10$ ps | $\lesssim3$ ns | ✅ üç mertebe payla |
 | G-3a eşik | eşik-altı ritimde vuruşlar sönüm süresinden seyrek; enerji birikmez | keskin eşik | ✅ |
 | G-3b şiddet | şiddet = paralel katar sayısı; tek elektron tek katarla etkileşir → $E_{ke}$'ye girmez, yalnız sökülen elektron **sayısını** artırır | $E_{ke}$ şiddetten bağımsız; doyma akımı ∝ şiddet | ✅ iki yüzüyle birden |
-| çapraz kontrol | $h = 4\tau m_z^2c^2/m_e$ özdeşliği $\tau = h/\delta \approx 7{,}7$ ps verir; birikim yolu ($N/\nu$) **aynı sayıyı** verir | — | ⚠ Bağımsız sağlama **değildir**: iki yol cebirsel olarak aynı bağıntıdır ($N/\nu \equiv h/\delta$). $\tau$'nun $h$'ı kullanmayan tayini açık kalemdir (9.2.2) |
+| çapraz kontrol | $h = 4\tau m_z^2c_0^2/m_e$ özdeşliği $\tau = h/\delta \approx 7{,}7$ ps verir; birikim yolu ($N/\nu$) **aynı sayıyı** verir | — | ⚠ Bağımsız sağlama **değildir**: iki yol cebirsel olarak aynı bağıntıdır ($N/\nu \equiv h/\delta$). $\tau$'nun $h$'ı kullanmayan tayini açık kalemdir (9.2.2) |
 
 Fotoelektrik ayağının doğrulama bilançosu budur: dört gözlemsel davranışın dördü mekanikten çıkar; ödenen bedel, $\delta$ ve $\tau$'nun ayrı ayrı değil yalnız **çarpım** olarak sabitlenmesidir (rozet [S]; Ek C).
 
@@ -47,7 +47,7 @@ Kesikliliğin adresi 9.2.1'de kurulmuştu: "foton", cisim değil pencerelik alı
 
 Bu üç girdiyle Compton olayı saf **Newtonyen çarpışma kinematiğidir**: duran bir elektron-girdap, bir pencerede katardan $E_w = h\nu$, $p_w = h\nu/c_0$ alır; yönü değişen katar dilimi $\theta$ açısıyla, elektron $q$ momentumuyla ayrılır. X-ışını rejiminde ($h\nu \ll m_ec^2$ enerji ölçeği) elektronun geri tepmesi yavaştır ve görelilik gerekmez:
 
-$$\text{momentum: } q^2 = \left(\frac{h\nu}{c}\right)^2 + \left(\frac{h\nu'}{c}\right)^2 - 2\frac{h\nu}{c}\frac{h\nu'}{c}\cos\theta, \qquad \text{enerji: } h\nu - h\nu' = \frac{q^2}{2m_e}$$
+$$\text{momentum: } q^2 = \left(\frac{h\nu}{c_0}\right)^2 + \left(\frac{h\nu'}{c_0}\right)^2 - 2\frac{h\nu}{c_0}\frac{h\nu'}{c_0}\cos\theta, \qquad \text{enerji: } h\nu - h\nu' = \frac{q^2}{2m_e}$$
 
 İki denklem birleştirilip $\lambda = c_0/\nu$ (Zerre aralığı) diline çevrildiğinde, önder mertebede:
 
@@ -63,7 +63,7 @@ Bu okuma teorinin icadı değildir; Schrödinger, Compton olayının kayma form�
 
 ## 9.4.5 Sayısal Karşılaştırma
 
-**(a) Compton dalga boyu — yeni parametre eklenmeden, ama özdeş olarak.** $\lambda_C = 4\tau m_z^2c/m_e^2$ zincirine fotoelektrik eğimin sabitlediği $\tau = h/\delta \approx 7{,}7$ ps, Postülat 4'ün $m_z = 1{,}47\times10^{-35}$ kg değeri ve $m_e$ konduğunda:
+**(a) Compton dalga boyu — yeni parametre eklenmeden, ama özdeş olarak.** $\lambda_C = 4\tau m_z^2c_0/m_e^2$ zincirine fotoelektrik eğimin sabitlediği $\tau = h/\delta \approx 7{,}7$ ps, Postülat 4'ün $m_z = 1{,}47\times10^{-35}$ kg değeri ve $m_e$ konduğunda:
 
 $$\lambda_C = \frac{4\times(7{,}8\times10^{-12})\times(1{,}47\times10^{-35})^2\times(3{,}0\times10^8)}{(9{,}11\times10^{-31})^2} \approx 2{,}44\times10^{-12}\ \text{m}$$
 
@@ -112,7 +112,7 @@ Deney tarafı da aynı yöne bakar. 9.4.3'ün kendi sayısıyla, 17,4 keV'lik X-
 
 ## 9.4.7 Kenetlenme: Tek Çarpım, İki Olgu Ailesi
 
-Bölümün bilançosu tek cümlede toplanır: **fotoelektrik veriden sabitlenen $\delta\tau$ çarpımı, Compton saçılmasının bütün nicel içeriğini yeni hiçbir parametre olmadan üretir.** Fotoelektrik, çarpımı eğimden sabitler (G-1); Compton, aynı çarpımın $m_ec$'ye bölümünü bağımsız bir olgu ailesinde, bağımsız bir enerji ölçeğinde (eV'lik sökme işleri ↔ keV'lik X-ışınları) ve bağımsız bir gözlenebilirde (enerji doğrusu ↔ aralık açılması) sınar. İki aile tek çarpım üzerinde kenetlenir. **Kenetlenmenin sınırı da aynı cümlede yazılmalıdır:** $\delta\tau$ çarpımı fotoelektrik eğiminden, yani ölçülen $h$'tan sabitlendiği için Compton kayması bu çarpımın *sınayıcı* bir öngörüsü değildir; sınanan şey **mekanizmadır** (pencere-başına korunum + geri tepme Doppler'i), çarpımın değeri değil. $\tau$'nun $h$'ı kullanmayan bağımsız bir tayini elde edildiğinde bu satır gerçek bir nicel sınava dönüşür (açık kalem: 9.2.6/ii).
+Bölümün bilançosu tek cümlede toplanır: **fotoelektrik veriden sabitlenen $\delta\tau$ çarpımı, Compton saçılmasının bütün nicel içeriğini yeni hiçbir parametre olmadan üretir.** Fotoelektrik, çarpımı eğimden sabitler (G-1); Compton, aynı çarpımın $m_ec_0$'ye bölümünü bağımsız bir olgu ailesinde, bağımsız bir enerji ölçeğinde (eV'lik sökme işleri ↔ keV'lik X-ışınları) ve bağımsız bir gözlenebilirde (enerji doğrusu ↔ aralık açılması) sınar. İki aile tek çarpım üzerinde kenetlenir. **Kenetlenmenin sınırı da aynı cümlede yazılmalıdır:** $\delta\tau$ çarpımı fotoelektrik eğiminden, yani ölçülen $h$'tan sabitlendiği için Compton kayması bu çarpımın *sınayıcı* bir öngörüsü değildir; sınanan şey **mekanizmadır** (pencere-başına korunum + geri tepme Doppler'i), çarpımın değeri değil. $\tau$'nun $h$'ı kullanmayan bağımsız bir tayini elde edildiğinde bu satır gerçek bir nicel sınava dönüşür (açık kalem: 9.2.6/ii).
 
 Sınırın dürüst kaydı: bu kenetlenme bir **iç tutarlılık kilididir**, bağımsız iki sabitleme değildir — her iki olgu da aynı $h$'yi kullanır; teorinin katkısı, $h$'nin arkasına ölçülebilir iki mekanik büyüklük ($\delta$, $\tau$) koyması ve "foton"un yerine, ışığın kendisinde değil **etkileşimde** yaşayan pencere alışverişini geçirmesidir. $\delta$ ile $\tau$'nun **ayrı ayrı** tespiti gerçekleştiğinde (ayrıştırma programı: 9.2.6, 7.4), kilit bağımsız bir öngörüye dönüşür: o gün $\lambda_C$, fotoelektrikten hiç veri almadan hesaplanabilir olacaktır.
 

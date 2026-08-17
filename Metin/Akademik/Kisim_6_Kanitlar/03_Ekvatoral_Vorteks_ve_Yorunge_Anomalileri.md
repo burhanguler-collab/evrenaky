@@ -77,7 +77,7 @@ Kutupsal yörüngedeki uydunun jiroskopları kuzey-güney ekseninde dönmekteyke
 
 Aynı ortam alanı, jiroskop spinini değil doğrudan **yörünge düzlemini** de sürükler: LAGEOS uydularının düğüm doğrusunda yılda ~31 mas'lık bir kayma kaydedilmiştir (Ciufolini & Pavlis, 2004). Bu ikinci gözlemlenebilir, aynı sürüklenme kesriyle ($\xi$) ve yeni parametre eklenmeden türetilir — mekanizma bu kez paralel taşıma değil, **Coriolis kuvvetidir** (Bölüm 3.6.3'ün atmosferik dolaşım için kurduğu $-2\vec\Omega\times\vec v$ yapısının yörünge ölçeğindeki karşılığı):
 
-$$\left|\frac{d\Omega_{düğüm}}{dt}\right| = \frac{2GJ_\oplus}{c^2a^3(1-e^2)^{3/2}}$$
+$$\left|\frac{d\Omega_{düğüm}}{dt}\right| = \frac{2GJ_\oplus}{c_0^2a^3(1-e^2)^{3/2}}$$
 
 | Uydu | $a$ | **Evrenakı öngörüsü** | Gözlem |
 |---|---|---|---|
@@ -108,7 +108,7 @@ Bu alan **dipolardır**; curl'ü alındığında manyetik-dipol yapısı çıkar
 
 Dünya için $J_\oplus = I\omega_\oplus = 5{,}85\times10^{33}$ kg·m²/s ve GP-B yarıçapı $r = 7013$ km alındığında, **yörünge yarıçapındaki yerel** sürüklenme hızı:
 
-$$\Omega_{yerel} = \frac{G J_\oplus}{c^2 r^3} = 1{,}26\times10^{-14}\ \mathrm{rad/s} = 81{,}9\ \mathrm{mas/yıl}$$
+$$\Omega_{yerel} = \frac{G J_\oplus}{c_0^2 r^3} = 1{,}26\times10^{-14}\ \mathrm{rad/s} = 81{,}9\ \mathrm{mas/yıl}$$
 
 Ölçülen büyüklük ise **yörünge boyunca ortalanmış** presesyondur. Dipolar alanın açısal yapısı ($3(\vec J\cdot\hat r)\hat r-\vec J$) kutupsal yörünge üzerinde ortalanınca kesin bir geometrik çarpan verir:
 
@@ -134,7 +134,7 @@ Yani Dünya çevresinde ortam, gövdenin **milyarda yarısı** kadar bir kesirle
 
 Bu kesrin yapısı ise beklenmedik bir bağ açar:
 
-$$\xi = 2\left(\frac{I}{MR^2}\right)\frac{GM}{c^2R} = 2\left(\frac{I}{MR^2}\right)\frac{\Phi}{c^2}$$
+$$\xi = 2\left(\frac{I}{MR^2}\right)\frac{GM}{c_0^2R} = 2\left(\frac{I}{MR^2}\right)\frac{\Phi}{c_0^2}$$
 
 Sağdaki $\Phi/c_0^2$, **Teknik Ek B.3'ün arka plan basıncını ($P_0$) sabitlemek için kullandığı tam o gözlemsel girdidir** — GPS uydularının günde 38 µs'si ve Pound–Rebka genliği. Teori böylece şunu söyler: *atom saatinin kaymasını belirleyen sayı, jiroskobun sürüklenmesini de belirler.* Sınandığında:
 
@@ -171,18 +171,18 @@ GP-B **iki** etki ölçmüştür ve ikisi de aynı ölçek yapısından çıkar:
 Jeodetik (de Sitter) presesyon, çerçeve sürüklenmesinden 169 kat büyük ve 70 kat daha hassas ölçülmüştür; GP-B'nin ağırlıklı kısmı budur. Etki iki paya ayrılır:
 
 1. **Thomas presesyonu**, $\tfrac12\,GMv/c_0^2r^2$ — hızlanan çerçevenin özel görelilik kinematiğinden gelir; teorinin kendi türetimlerinden (M-19'un $\gamma$'sı ve boy kısalması) doğrudan çıkar.
-2. **Ölçek payı**, $GMv/c_0^2r^2$ — Genel Görelilik'in uzay eğriliğine yazdığı pay. Teoride karşılığı, madde ölçeğinin ($\Lambda = 1-\Phi/c_0^2$) cetvelleri ve saatleri yönetirken Zerre'nin yayılma hızını $\Lambda^2$ ile ölçeklemesidir (**Ek M-42**).
+2. **Ölçek payı**, $GMv/c_0^2r^2$ — Genel Görelilik'in uzay eğriliğine yazdığı pay. Teoride karşılığı, madde ölçeğinin ($\Lambda = 1-\Phi/c_0^2$ — *birinci mertebede; tam biçim $\Lambda = e^{-\Phi/c_0^2}$, **Ek M-55***) cetvelleri ve saatleri yönetirken Zerre'nin yayılma hızını $\Lambda^2$ ile ölçeklemesidir (**Ek M-42**).
 
 İkisi toplandığında GR'ın $\tfrac32\,GMv/c_0^2r^2$ katsayısı elde edilir; PPN dilinde bu $\gamma=1$'e denktir ve aynı yapı ışık bükülmesini de ($1{,}7512''$) verir. Uzun süre açık kalan **2 çarpanı** sorunu — bükülmenin neden 0,875″ değil 1,75″, presesyonun neden $\tfrac12$ değil $\tfrac32$ katsayısıyla geldiği — böylece tek bir yapıdan çözülmüştür.
 
-> **Karşı Kayıt — kalan kalem.** $\Lambda$ yapısı yalnız **birinci mertebeyi** ($\gamma=1$) verir. Merkür'ün günberi kayması (43″/yüzyıl) ayrıca ortamın ikinci mertebe tepkisini ($\beta$ parametresi, $O(\Phi^2/c_0^4)$) gerektirir ve **henüz türetilmemiştir.** Teorinin Genel Görelilik'in klasik sınavları karşısındaki kalan tek boşluğu budur (Bölüm 7.4 md.12).
+> **Kayıt — kapanan kalem.** Ölçeğin birinci mertebe kesiti ($\Lambda = 1-\Phi/c_0^2$) yalnız $\gamma=1$'i verir; Merkür'ün günberi kayması (43″/yüzyıl) ayrıca ortamın ikinci mertebe tepkisini ($\beta$ parametresi, $O(\Phi^2/c_0^4)$) gerektirir. Bu kalem **Ek M-55** ile kapanmıştır: ölçeğin tam biçimi üsteldir ($\Lambda = e^{-\Phi/c_0^2}$) ve $\beta=1$ ek serbest parametre olmadan **türetilir.** Merkür için sonuç $42{,}9805''$/yüzyıldır — gözlemle $0{,}69\sigma$ uyum. Böylece Genel Görelilik'in klasik sınavları karşısındaki son boşluk kalkmış, teorinin ayrışması **güçlü alan rejimine** taşınmıştır (gölge çapında $+\%4{,}63$).
 
 #### Statü — Dürüst Kayıt
 
 Bu sonuç, teoriyi Genel Görelilik'ten **ayırt etmez**; onunla yapısal olarak özdeştir (aynı dürüstlük Bölüm 3.10.3'ün dikey salınım kaydında da vardır). Kazanç iki yerdedir: (i) teori, kendi akışkan denklemlerinden GR'ın sayısını ek serbest parametre üretmeden veriyor; (ii) $\Phi/c_0^2$'nin iki bağımsız yolla aynı çıkması, teorinin iç tutarlılığının sınanmış bir noktası hâline geliyor.
 
 **$\xi$ türetilmiştir** (Ek M-40, "$\xi$'nin Türetimi") — gözlemle sabitlenmiş bir uydurma değildir. Ortam bir cismi ancak kavrama hızının bozulduğu ölçüde tutar; bozulmanın kesri Ek M-42'de ışık bükülmesinden sabitlenmiştir ve dönme kütleyi $r^2$ ile ağırlıklandırır:
-$$\xi = \frac{I}{MR^{2}}\left|\frac{\delta c_{loc}}{c}\right| = \frac{I}{MR^{2}}\cdot\frac{2\Phi}{c^{2}} = 0{,}3307\times1{,}392\times10^{-9} = 4{,}605\times10^{-10}$$
+$$\xi = \frac{I}{MR^{2}}\left|\frac{\delta c_{loc}}{c_0}\right| = \frac{I}{MR^{2}}\cdot\frac{2\Phi}{c_0^{2}} = 0{,}3307\times1{,}392\times10^{-9} = 4{,}605\times10^{-10}$$
 Serbest sayısal katsayı yoktur ve sonuç, Lense–Thirring'e eşlemeyle bulunanın birebir aynısıdır. Dolayısıyla **GP-B artık bir girdi değil, bir öngörüdür**: zincir ışık bükülmesinden başlar ($1{,}751''$ → $c_{loc}=c_0\Lambda^2$ → $\delta c/c_0=2\Phi/c_0^2$ → $\xi$ → 41,0 mas/yıl) ve $37{,}2\pm7{,}2$ ölçümü bu zinciri **sınar** (0,52σ). Ek M-40'ın rozeti [T]'ye yükselmiştir. *Kalan incelik:* bağıntı birinci mertebedir; $\xi\to1$ yaklaşırken (nötron yıldızı, ergosfer) doğrusal biçim geçerliliğini yitirir (Bölüm 7.4 md.15).
 
 **Sonuç**

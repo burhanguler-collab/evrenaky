@@ -12,7 +12,7 @@
 
 ### 1.2 Camda Işığın Yavaşlayıp Çıkışta Eski Hızına Dönmesi (Hız Geri Kazanımı)
 * **Standart Fiziğin Çıkmazı:** Kütlesiz fotonun cam atomları tarafından emilip zaman gecikmesiyle yeniden yayınlanması varsayımı (Abraham-Minkowski çelişkisi).
-* **Evrenakı Mekanik Çözümü:** Işık sabitsizdir ($c_0=\sqrt{P/\rho}$). Zerre katarı cam gibi yüksek yoğunluklu ortama girdiğinde patinaj yaparak yavaşlar; camdan çıktığında ortamın yerel arka plan basıncına göre kendiliğinden sonik hızına ($c_0$) geri ulaşır.
+* **Evrenakı Mekanik Çözümü:** Işık sabitsizdir ($c_{loc}=\sqrt{P/\rho}$). Zerre katarı cam gibi yüksek yoğunluklu ortama girdiğinde patinaj yaparak yavaşlar; camdan çıktığında ortamın yerel arka plan basıncına göre kendiliğinden sonik hızına ($c_{loc}$) geri ulaşır.
 
 ### 1.3 Michelson-Morley Sıfır Sonucu ve Bradley Yıldız Sapması İkilemi
 * **Standart Fiziğin Çıkmazı:** Özel Görelilik postülatı ile mutlak referans sisteminin reddi ve esir modellerinin sapmayla çelişmesi.
@@ -48,7 +48,7 @@
 
 ### 2.5 Kozmolojik Kızıla Kayma (Yorgun Işık Reddi)
 * **Standart Fiziğin Çıkmazı:** Uzay kumaşının genleşmesi.
-* **Evrenakı Mekanik Çözümü:** Işık yolda frekans kaybetmez. Genç, yüksek basınçlı evrende ortamın $c_0$ hızı daha yüksektir ($c_0=\sqrt{P/\rho}$); geçmişte yüksek $c_0$ ile yayınlanan ışık günümüz düşük $c_0$ ortamına ulaştığında doğal olarak kızıla kaymış gözlenir.
+* **Evrenakı Mekanik Çözümü:** Işık yolda frekans kaybetmez. Genç, yüksek basınçlı evrende ortamın $c_{loc}$ hızı daha yüksektir ($c_{loc}=\sqrt{P/\rho}$); geçmişte yüksek $c_{loc}$ ile yayınlanan ışık günümüz düşük $c_{loc}$ ortamına ulaştığında doğal olarak kızıla kaymış gözlenir.
 
 ### 2.6 Pioneer ve Sinekkuşu (Flyby) Yörünge Anomalileri — GERİ ÇEKİLEN KALEM
 * **Verinin bugünkü durumu:** Pioneer ivmesi, sondaların ısıl ışınım geri tepmesiyle çözülmüştür (Turyshev ve ark., 2012); flyby sapmaları ise sonraki hassas geçişlerde (Rosetta 2009/2011, Juno 2013) gözlenmemiştir (Thompson ve ark., 2014).
@@ -96,13 +96,13 @@
 | **Güneş Yunuslaması & Galactic Warp** | Çarpışma yaması / Yamuk Halo torku | Devinen merkez motorun salladığı basınç oluğu & kırbaç dalgası |
 | **Warp Devinim Hızı (Poggio ve ark., 2020)** | **Başarısız/Kriz:** $10{,}9\text{ km/s/kpc}$ hızını halo modelleri tutturamaz | **Başarılı:** Devinim frekansı doğrudan 4D merkez motor devinimine bağlıdır |
 | **Çift Yarık Deneyi** | Soyut Dalga Fonksiyonu Çökmesi | Sınır Tabakası Gradyanı ve Kenar Vorteksi Teması |
-| **Camda Işık Hızı** | Emilip yeniden yayınlanma varsayımı | Yerel basınç patinajı ve geri kazanımı ($c_0=\sqrt{P/\rho}$) |
+| **Camda Işık Hızı** | Emilip yeniden yayınlanma varsayımı | Yerel basınç patinajı ve geri kazanımı ($c_{loc}=\sqrt{P/\rho}$) |
 | **Bell Dolanıklığı** | Uzaktan gizemli etki / Telepati | Kohezyon Kanalı ($v_m \gg c_0$) ile ortak topografya |
 | **Atalet (İnerji)** | İçkin soyut özellik / Higgs alameti | Sürüklenme zarfının akışkan ek-kütlesi direnci |
 | **Kütleçekim** | Soyut Çekim veya Uzay-Zaman bükülmesi | Evrenakı Rampası ve Vakum Cebi İtimi ($\vec a=-\nabla P/\rho$) |
 | **Elektrik Yükü** | Soyut $+/-$ kuantum sayısı | 4D Helisite (sağ-el/sol-el tirbüşon akış burulması) |
 | **Nükleer Kuvvetler** | Bağımsız Gluon/Bozon etkileşimi | Femtometre ölçeğinde Rampa Kilitlenmesi |
-| **Kozmolojik Kızıla Kayma** | Metrik genleşme veya Yorgun Işık | Geçmiş yüksek $c_0$ ortamında yayınlanma etkisi |
+| **Kozmolojik Kızıla Kayma** | Metrik genleşme veya Yorgun Işık | Geçmiş yüksek $c_{loc}$ ortamında yayınlanma etkisi |
 
 ---
 

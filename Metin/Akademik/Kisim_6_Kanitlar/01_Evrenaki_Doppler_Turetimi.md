@@ -26,20 +26,22 @@ Aşağıdaki kısımda, eleştirel bir hakem perspektifinden Evrenakı teorisine
 
 Özel Görelilik, uzayda hareket eden bir cisim için Doppler kaymasını ($f_{obs}$) hesaplarken, uzayın bizzat genleştiği veya zamanın soyut bir dördüncü boyut olarak yavaşladığı varsayımına dayanır (Einstein, 1905a) ve Ives-Stilwell deneyiyle (Ives & Stilwell, 1938) doğrulanan şu meşhur formülü kullanır (uzaklaşan bir kaynak için):
 
-$$ f_{obs} = f_0 \sqrt{\frac{1 - v/c_0}{1 + v/c_0}} $$
+$$ f_{obs} = f_0 \sqrt{\frac{1 - v/c}{1 + v/c}} $$
+
+*(Bu satır standart fizik yazımıdır; $c$ o bilimin sembolü olarak korunmuştur — R-11.)*
 
 Şimdi aynı formülü, uzayın ve zamanın büküldüğü varsayımlarına başvurmadan, **Evrenakı Süper-Akışkanı** içinde tamamen saf mekanik ve hidrodinamik kurallarla (Zerre Katarı modeliyle) sıfırdan türetelim. Evrenakı'da zaman bükülmez, ancak **Zerre Aralığı (mekanik mesafe)** ve **Kompozit Saatler (ateşleme hızı)** akışkan dinamiği nedeniyle fiziksel olarak değişir.
 
 ### Adım 1: Klasik Uzaysal Mesafe (Zerre Aralığının Uzaması)
 
 Hareketsiz bir kaynak, yerel akışkan yoğunluğunda hızı sabit olan ($c_0$) Zerre mermilerini $f_s$ frekansıyla (saniyede fırlatılan mermi sayısıyla) ateşlesin. İki ardışık ateşleme arasında geçen süre (periyot) $T_s = \frac{1}{f_s}$ kadardır. Hareketsiz durumda iki mermi arasındaki uzaysal mesafe (Zerre Aralığı, $\lambda$):
-$$ \lambda_0 = c_0 \cdot T_s = \frac{c}{f_s} $$
+$$ \lambda_0 = c_0 \cdot T_s = \frac{c_0}{f_s} $$
 
 Ancak kaynak, alıcıdan **$v$ hızıyla uzaklaşıyorsa**, ilk Zerre namludan çıktıktan sonra kaynak $v$ hızıyla geriye doğru gidecek ve ikinci Zerre'yi $T_s$ saniye sonra, daha gerideki bir konumdan ateşleyecektir. Bu süre zarfında kaynak, ilk Zerre'nin gidiş yönünün tersine $v \cdot T_s$ kadar yol almıştır.
 Dolayısıyla iki mermi arasındaki **mekanik boşluk (Zerre Aralığı)** basit bir Newtonyen toplamayla şu kadar açılır:
-$$ \lambda = c_0 \cdot T_s + v \cdot T_s = T_s (c_0 + v) = \frac{c + v}{f_s} $$
+$$ \lambda = c_0 \cdot T_s + v \cdot T_s = T_s (c_0 + v) = \frac{c_0 + v}{f_s} $$
 
-*(Eğer kaynak alıcıya yaklaşsaydı mesafe kısalacak ve formül $\lambda = \frac{c - v}{f_s}$ olacaktı).*
+*(Eğer kaynak alıcıya yaklaşsaydı mesafe kısalacak ve formül $\lambda = \frac{c_0 - v}{f_s}$ olacaktı).*
 
 ### Adım 2: İç-Dolaşım Geometrisi ve Zerre-Saati (Patinaj Yavaşlaması)
 
@@ -57,19 +59,19 @@ Burada çok kritik bir geometri sorusu doğar: Çapraz giden sinyal tam $\gamma$
 İşte Evrenakı teorisi, Özel Görelilik'in (SR) matematiksel bir varsayım olarak "eklediği" **Uzunluk Kısalması (Length Contraction)** olgusunu burada mecburi ve fiziksel bir gerçeklik olarak türetir: Atom (kompozit vorteks), akışkan içinde çok yüksek hızlarda ilerlediğinde, önden yediği devasa **deplasman/dinamik basıncı** sebebiyle hareket yönünde mekanik olarak ezilir (sıkışır). Bu aerodinamik/hidrodinamik ezilme miktarı akışkan dinamiği gereği tam olarak $1/\gamma$ kadardır. Boy kısalması, uzayın bükülmesi değil, akışkan basıncının cismi ezip sıkıştırmasıdır. Bu fiziksel sıkışma sayesinde, paralel giden sinyalin yolu tam gereken oranda kısalır ve saat hangi yöne bakarsa baksın yavaşlama kusursuz bir şekilde $\gamma$ olarak gerçekleşir (İzotropi korunur).
 
 Görüldüğü gibi, ateşleme dişlisinin periyodu ($T$), atomun hareket hızından ötürü fiziksel (geometrik) bir zorunlulukla tam olarak **Lorentz çarpanı ($\gamma$) katına** çıkmıştır. Periyodun uzaması, frekansın düşmesi demektir ($f = 1/T$). Öyleyse hareketli kaynağın mekanik ateşleme hızı ($f_s$):
-$$ f_s = f_0 \sqrt{1 - \frac{v^2}{c^2}} $$
+$$ f_s = f_0 \sqrt{1 - \frac{v^2}{c_0^2}} $$
 Özel Görelilik'in soyut "zaman genleşmesi" dediği fenomen, Evrenakı teorisinde doğrudan **"Zerre-Saatinin yol uzamasından ve fiziksel sıkışmadan kaynaklanan dişli yavaşlamasıdır."**
 
 ### Adım 3: Sentez ve Nihai Formül
 
 Bu mekanik yavaşlamayı ($f_s$), Adım 1'deki Zerre Aralığı ($\lambda$) formülüne yerleştirelim:
-$$ \lambda = \frac{c + v}{f_0 \sqrt{1 - v^2/c_0^2}} $$
+$$ \lambda = \frac{c_0 + v}{f_0 \sqrt{1 - v^2/c_0^2}} $$
 
 Sabit duran alıcımız, kendisine saniyede $c_0$ hızıyla çarpan bu mermilerin frekansını ($f_{obs}$) hesaplamak isterse, merminin hızını aralarındaki mesafeye ($\lambda$) böler:
-$$ f_{obs} = \frac{c}{\lambda} $$
+$$ f_{obs} = \frac{c_0}{\lambda} $$
 
 Yerine koyduğumuzda:
-$$ f_{obs} = \frac{c}{\frac{c + v}{f_0 \sqrt{1 - v^2/c_0^2}}} = f_0 \frac{c \sqrt{1 - v^2/c_0^2}}{c + v} $$
+$$ f_{obs} = \frac{c_0}{\frac{c_0 + v}{f_0 \sqrt{1 - v^2/c_0^2}}} = f_0 \frac{c_0 \sqrt{1 - v^2/c_0^2}}{c_0 + v} $$
 
 Denklemin pay ve paydasını $c_0$'ye bölersek ($v/c_0 = \beta$ diyerek):
 $$ f_{obs} = f_0 \frac{\sqrt{1 - \beta^2}}{1 + \beta} $$
@@ -88,7 +90,7 @@ $$ f_{obs} = f_0 \sqrt{\frac{1 - v/c_0}{1 + v/c_0}} $$
 
 ## 6.1.3 Sonuç ve Yanlışlanabilir Öngörü
 
-Evrenakı Teorisi, ek bir "zaman genleşmesi" veya "uzay-zaman eğriliği" kabulüne ihtiyaç duymadan, sadece Newtonyen mesafe ($\lambda = \frac{c+v}{f_s}$) ve sıvı dinamiğinden kaynaklanan fiziksel ateşleme yavaşlaması ($f_s = f_0 / \gamma$) kurallarını uygulayarak **Özel Görelilik'in Doppler denklemini (Ives-Stilwell verisini) birebir aynı şekilde üretmiştir.** 
+Evrenakı Teorisi, ek bir "zaman genleşmesi" veya "uzay-zaman eğriliği" kabulüne ihtiyaç duymadan, sadece Newtonyen mesafe ($\lambda = \frac{c_0+v}{f_s}$) ve sıvı dinamiğinden kaynaklanan fiziksel ateşleme yavaşlaması ($f_s = f_0 / \gamma$) kurallarını uygulayarak **Özel Görelilik'in Doppler denklemini (Ives-Stilwell verisini) birebir aynı şekilde üretmiştir.** 
 
 Ancak Evrenakı, Göreliliğin sadece bir simülatörü değildir; aynı zamanda ondan ayrışan **yanlışlanabilir, ölçülebilir bir sapma (fark) öngörüsüne** sahiptir.
 
@@ -98,7 +100,7 @@ Ancak Evrenakı, Göreliliğin sadece bir simülatörü değildir; aynı zamanda
 
 Ancak bizim 6.1.2'deki türetimimiz, laboratuvarımızdaki **alıcının Dünya'nın Sürüklenme Zarfına (yerel akışkan havuzuna) göre hareketsiz ($u = 0$) olduğunu varsayarak** kurulmuştur. Çünkü $\gamma$ ve Zerre Aralığı, nesnelerin *birbirlerine göre* hızlarına değil, nesnelerin **akışkana (Zarfa) göre** mutlak hızlarına bağımlıdır.
 
-Peki ya alıcı da yerel ortama göre $u$ hızıyla hareket ediyorsa? O zaman alıcının kendi saati de $\gamma_u$ oranında yavaşlar (kendi "bir saniyesi" uzar) ve saniyede yakaladığı mermi sayısı artar ($f_{obs} = \gamma_u \cdot \frac{c \pm u}{\lambda}$). 
+Peki ya alıcı da yerel ortama göre $u$ hızıyla hareket ediyorsa? O zaman alıcının kendi saati de $\gamma_u$ oranında yavaşlar (kendi "bir saniyesi" uzar) ve saniyede yakaladığı mermi sayısı artar ($f_{obs} = \gamma_u \cdot \frac{c_0 \pm u}{\lambda}$). 
 Bu durumda genel ve nicel (iki-hızlı) **Evrenakı Doppler Formülü** şu şekli alır:
 
 $$ f_{obs} = f_0 \left( \frac{1 \pm u/c_0}{1 \pm v/c_0} \right) \frac{\sqrt{1 - v^2/c_0^2}}{\sqrt{1 - u^2/c_0^2}} $$
