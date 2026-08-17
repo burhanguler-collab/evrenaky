@@ -1,0 +1,461 @@
+# Matematik Tartışma Defteri
+
+Bu dosya, Evrenakı çalışması kapsamındaki matematik tartışmalarının kaydıdır.
+Her tartışma tarihli bir bölüm olarak eklenir; en yeni tartışma en üstte durur.
+
+---
+
+## ✅ Tartışma #4 — 17 Ağustos 2026 · **ORTAMIN HIZ ALANI ÇÖZÜLDÜ** (D4 kapandı)
+
+> Tam analiz: `ortam_hiz_alani_cozumu.md` · Sınav: `ortam_hiz_alani_sinavi.py`
+
+**Problem:** Üstel yapının Merkür kapanışı, ortamın Güneş çerçevesinde durgun olmasına asılıydı. Ama M-9 ortamın dolaşmak *zorunda* olduğunu söylüyordu (v_θ = 2v_yör = 95,8 km/s), gözlem ise Ω_m ≲ 1,4×10⁻¹⁸ rad/s bırakıyordu — **10¹² kat** çelişki.
+
+**Teşhis:** M-9 gerekçesini **Euler denklemine** dayandırıyor. Euler, **kesme taşımayan (kohezyonsuz)** akışkanın denklemidir; orada statik denge gerçekten imkânsızdır (∇·σ = −∇P ≠ 0) ve tek çıkış dolaşımdır. **Ama teorinin ortamı kohezyonludur:** M-4 kohezyon dayanımı Σ verir, M-5 Σ'yı **kesme modülü** rolünde kullanır (v_m = √(Σ/ρ₀)) ve Σ/P₀ > 10⁸ ilan eder. Üstelik M-5 zaten *"v_m … **ortam topografyasının (gradyan deseninin) ayar sinyalidir**"* diyor — statik gradyan deseninin taşıyıcısı olarak kohezyon kanalı kitapta **zaten** ilan edilmiş.
+
+**Çözüm (tam türetim):** σ = −P·I + τ (τ izsiz), ∇·σ = 0, küresel simetri ⇒
+$$\frac{d\tau_{rr}}{dr}+\frac{3\tau_{rr}}{r}=\frac{dP}{dr} \;\Longrightarrow\; \boxed{\tau_{rr}=\frac{\rho_n\Phi}{2}=\frac{\Delta P}{2}}$$
+Gereken kesme gerilmesi, basınç açığının **tam yarısı**. Σ'nın yalnız alt sınırıyla kıyas: Merkür yörüngesinde τ/Σ = **5,1×10⁻¹⁶**; Dünya yüzeyinde 1,4×10⁻¹⁷; nötron yıldızı yüzeyinde dahi 3,4×10⁻⁹. **14–15 mertebe marj.** Ortam kuyuyu dolaşmadan, ~10⁻¹⁶ elastik zorlanmayla tutuyor.
+
+**Genel denge:** (1/ρ₀)dP/dr = v_θ²/r + (kohezyon payı). v_θ = 2v_yör **kohezyonsuz üst sınırdır**, zorunluluk değil; v_θ = 0 izinli. Dolaşım serbest bir dinamik durum (açısal momentum), kohezyon farkı kapatır. **Gözlem statik kolu seçiyor.**
+
+**Kritik tutarlılık kontrolü — madde neden kohezyonu görmüyor:** M-2'nin kendi ifadesi *"itim, nükleonların **deplase ettiği hacimle** orantılıdır"* — deplase hacim bir **skalerdir**, yani gerilme tensörünün **izine** (basınca) bağlanır. τ **izsizdir** ⇒ saf hacim dışlamasıyla çiftlenmez. Ortam kendini kesmeyle tutar (madde görmez), madde yalnız ∇P görür ⇒ **M-2 aynen geçerli**.
+
+**Ortam hangi çerçevede durgun? İç içe zarf yapısı doğruladı:**
+| Zarf | Erim | Sonuç |
+|---|---|---|
+| Güneş'in galaktik zarfı | R_Hill = **1,225 pc = 2,53×10⁵ AU** | Oort bulutu (~10⁵ AU) dahil tüm sistem içeride ⇒ ortam Güneş çerçevesinde durgun |
+| Dünya'nın zarfı | R_Hill = **234,9 R_⊕** | 11.4.8.1'in verdiği **235 R_⊕** ile birebir ✓ |
+| GPS (4,17 R_⊕) | — | Dünya zarfı içinde ⇒ V = yörünge hızı ⇒ **−7 µs/gün ✓** |
+| Merkür | — | Güneş zarfı içinde, kendi zarfı dışında ⇒ V = 47,87 km/s ⇒ **42,98″ ✓** |
+İki hesabı birden doğru veren yapı bu. "Ortam merkezî cismin çerçevesinde durgundur" keyfi değil, **zarf hiyerarşisinin sonucu**.
+
+**✅ Galaktik zincir kontrolü — temiz.** M-37 ayrımı kitap kendisi yapmış: madde profili (gözlenen dönüş eğrisi) yalnız **M-2 + akı geometrisinden** çıkıyor (`18_5:265`); ortam dolaşımı ayrı kol ve kitabın kendi cümlesiyle *"görünmez olduğu için ölçülmemiştir"* (`:280`). **Düz dönüş eğrisi, a₀, 163 galaksi fiti, W penceresi — hiçbiri ortamın fiilen dolaşmasına dayanmıyor.** Değişen tek şey ortam kolonunun statüsü.
+
+**KAZANÇ — yeni bir ölçüm aleti:** Merkür günberi kayması artık **ortam dönüşünün en hassas ölçümü**: |Ω_ortam| ≤ 1,4×10⁻¹⁸ rad/s, yani Merkür yörüngesinde teğetsel hız ≤ **81 nm/s**; bir tam tur **1,4×10¹¹ yıl** = evren yaşının 10 katı. Güneş sisteminin ortamı fiilen dönmüyor — GR'de karşılığı olmayan bir okuma.
+
+**Kitapta düzeltilecekler:** M-9 Geçerlilik Sınırı (*"madde düşer, ortam dolaşır"* → **"madde düşer, ortam gerilir"**; Euler'in kohezyonsuz limit olduğu kaydı) · M-9 Açık Uçlar (kalem yeniden tanımlanır: kohezyon/dolaşım bölüşümü) · M-37 profil teoreminin statüsü (kohezyonsuz üst sınır) · M-22'nin varsayımı opsiyonel dinamik durum olarak etiketlenir · M-2'ye iz/izsiz çiftlenme notu · 11.4.8.1'e "yerel ortam = kendi zarfının dışındaki ambiyans" netleştirmesi · KARNE'ye Ω_ortam sınavı.
+
+**Kalan (dürüst kayıt):** zarf sınırı kayma tabakasının yitim/tork hesabı (eski açık kalem) · Σ alt sınır olduğundan marjın Σ'ya duyarsızlığı kayda geçmeli · statik çözümün C/r³ kolunun kaynak içi eşlenmesi.
+
+### Tartışma #4 EKİ — eş-düzlemlilik kontrolü tamamlandı (`es_duzlemlilik_cozumu.md`)
+
+**✅ Eş-düzlemlilik: hiçbir şey kaybedilmiyor — kitap zaten doğru yere koymuş.** Üç kayıt bunu ortam dolaşımına *hiç* bağlamıyor: `18_5:313` (*"gerçek adresi F5'in düzlem seçimidir"*), `11.4:1172` (*"korunumludur, sönüm gerektirmez"*), KARNE s.35 (*"**eş-düzlemlilik için mekanizma borcu yoktur**; eğiklik korunumludur… gereken tek şey dağıtacak kanalın olmamasıdır"*). F5'in kaynağı gövdenin **kendi ekvator hızıdır** (f = −κ₅ρv_e²sin2θ/r); ortam dolaşımı denklemde yok. Üstelik statik ortam koşulu **daha iyi** sağlıyor — dolaşan ortam, kesmeyle eğiklik dağıtan bir kanal olurdu.
+**Prograd tercih ve dairesellik:** `18_5:313` bunları zaten *"kanıtlanmış mekanizması **yoktur** — açık kalem (7.4)"* diye kaydetmiş. Kitap prograd tercihi hiçbir zaman dolaşıma dayandırmamış ⇒ kayıp yok.
+
+**⚠️ GERÇEK BEDEL — 81 çarpanı.** Dolaşıma *fiilen* dayanan küme: Δv = |v−w| ile w = 2v_yör ⇒ prograd Δv = v, retrograd Δv = 3v, sürükleme ∝ Δv⁴ ⇒ **3⁴ = 81** (Triton, `05_Oturma:136-138`, DY-2, KARNE:765). **Statik ortamda oran 1 — asimetri yok.** Ayrıca prograd tork ve ondan çıkan AU-kararlılığı η_E sınırı (`11.4:811`), M-39'un R2 hız kaynağı atfı (`18_5:565`) düşer.
+*Üç hafifletici:* (i) **prograd hesaplar değişmiyor** (dolaşanda da Δv = |v−2v| = v, statikte de v) — yalnız retrograd kalemler 81 kat zayıflıyor; (ii) Phoebe'nin η_E sınırı **gevşiyor**, sıkışmıyor (en sıkı sınır zaten Satürn halkasından); (iii) **kitap sınavı zaten tanımlamış** — 7.4 md.15: *"fark sıfır çıkarsa…"*; statik çözüm tam olarak **fark sıfır** öngörüyor ⇒ kayıp öngörü değil, **karara bağlanmış** öngörü.
+
+**✅ VE İKİNCİ BAĞIMSIZ DOĞRULAMA: AY.** Ortam dönüşünün imzası apsis sürüklenmesidir (hız = Ω_ortam). Dolaşan ortam Ay'ın apsisini **13,73 günde** bir tur döndürürdü; LLR'nin mm hassasiyetiyle ölçülen perigee presesyonu **8,85 yıl** ⇒ **236 kat aşım, kesin dışlanır**. Ay Dünya'nın zarfı içinde (60 R_⊕ < 235 R_⊕) olduğundan bu, **Dünya'nın ortamını bağımsız olarak** sınıyor.
+⇒ **İki ayrı gövdenin ortamı (Güneş: Merkür; Dünya: Ay), iki bağımsız gözlemle statik ilan ediliyor.** Kohezyonla tutulan statik denge ikisini birden açıklayan tek resim.
+
+**Yeni açık kalemler:** ~~Satürn ortamı sınanmadı~~ → **kilitlendi, aşağıya bkz.** · dolaşımın *neden* ~0 olduğu (kohezyon sıfırı izinli kılar, zorunlu kılmaz — formasyon senaryosu gerekli) · prograd tercih kaleminin zorluğu **arttı** (bir aday mekanizma elinden alındı; dürüstçe yazılmalı).
+
+### Tartışma #4 EKİ-2 — **ORTAM DÖNÜŞÜ KİLİT TEOREMİ** (`ortam_donusu_kilit_teoremi.md`)
+
+Satürn'ü kilitlerken beklenenden çok daha güçlü bir sonuç çıktı.
+
+**TEOREM.** Siklostrofik dolaşım w = 2v_yör alınırsa apsis sürüklenme hızı
+$$\Omega_m=\frac{w}{r}=2\sqrt{\frac{\mathcal{G}M}{r^3}}=\boxed{2n}$$
+— **kütleden ve yarıçaptan bağımsız, tam olarak ortalama hareketin iki katı.** (Sayısal denetim: Merkür, Ay, Titan, Mimas'ta oran **2,0000000000**.)
+
+**Anlamı kategorik, nicel değil:** Ω_m = 2n ise apsis çizgisi her radyal periyotta **tam iki tur** atar ⇒ yörüngeler kapalı elips **olamaz**, hızla dönen rozet olur. **Gözlenen kapalı elipslerin varlığı, tek başına, ortamın dolaşmadığının kanıtıdır.** Hassasiyet tartışmasına gerek yok; model tümüyle çöker.
+
+**Satürn kilitlendi (J₂-hâkim apsidal presesyonla kıyas):**
+| Uydu | Gözlenen apsis periyodu | Dolaşan ortamın vereceği | Dışlama |
+|---|---|---|---|
+| Mimas | 1,0 yıl | 11,3 saat | 776× |
+| Rhea | 38,7 yıl | 2,3 gün | 6.261× |
+| **Titan** | **733 yıl** | **8,0 gün** | **3,36×10⁴** |
+*(Iapetus'ta Güneş pertürbasyonu J₂'yi aşıyor; sağlam sınır Titan'dır. Phoebe: dolaşan ortamda apsisi 4 Gyr'de 5,3×10⁹ tur atardı.)*
+
+**Dört bağımsız ortam kilitlendi:**
+| Ortam | Gözlem | Dışlama | Kalan dönüş sınırı |
+|---|---|---|---|
+| Güneş | Merkür günberi (575,3100±0,0015″/yy) | 1,87×10⁶ | **≤ 2,3×10⁻¹⁸ rad/s** |
+| Dünya | Ay perigee 8,85 yıl (LLR) | 237× | ≤ ~2×10⁻¹⁶ |
+| Dünya | LAGEOS-2 (J₂ hâkim) | 4.489× | — |
+| Satürn | Titan apsisi | 3,36×10⁴ | ≤ ~2,7×10⁻¹⁵ |
+| Jüpiter | Io apsisi | 3.158× | — |
+
+**⭐ EN ÖNEMLİ SONUÇ — Σ'nın statüsü yükseldi.** Teorem kategorik olduğundan statik ortam bir *seçenek* değil **zorunluluktur**; ve teorinin elinde kuyuyu dolaşmadan tutacak **tek** mekanizma kohezyondur (M-4'ün Σ'sı, M-5'in kesme kanalı). Dolayısıyla:
+- **Önce:** Σ, Bell/Salart deneylerinden alttan sınırlı, başka hiçbir yere yük taşımayan bir kalem.
+- **Şimdi:** **Kepler elipslerinin var olabilmesinin yapısal koşulu.** Kohezyon olmasa ortam dolaşmak zorunda kalırdı; dolaşırsa kapalı elips kalmaz.
+Bu, Σ için **Bell'den tamamen bağımsız ikinci bir gerekçe** ve teorinin en eski "yalnız alttan sınırlı" kalemlerinden birine yapısal görev veriyor. *(Nicel yeni alt sınır vermiyor — gereken τ = ρₙΦ/2 zaten çok küçük; kazanç kavramsal ve yapısal.)*
+
+**Kalan:** ~~formasyon gerekçesi~~ → **kapandı, aşağıya bkz.** · Iapetus kanalının gerçek efemerid artıklarıyla çalışılması (Satürn sınırı ~10⁻¹⁷'ye inebilir) · kesme tabakası yitim/tork (eski kalem).
+
+### Tartışma #4 EKİ-3 — **FORMASYON GEREKÇESİ** (`formasyon_gerekcesi.md`)
+
+*"Dolaşım neden ~0?"* sorusu — "şanslı başlangıç koşulu" itirazını kapatan üç bağımsız ayak:
+
+**AYAK 3 (yük taşıyıcı) — madde ortamı DÖNDÜREMEZ.** Maddenin dönme enerji yoğunluğu / Σ: Güneş **2,8×10⁻²⁸**, Jüpiter 2,4×10⁻³¹, Güneş sistemi yörünge KE 8,3×10⁻³⁸, galaksi 4×10⁻⁵². Ortamı kesmeye zorlayacak enerji yok. Bağımsız ikinci kanal: M-43'ün altkritik bastırması 10²⁸ ⇒ tork da kapalı. **M-9'un *"homojen arka plan ortamın tek doğal taban durumudur"* teoremiyle birlikte: kesme hiç doğmadı.** Açısal momentum maddede kalır — gözlenen de bu.
+
+**AYAK 1 — diferansiyel dönüş bir denge DEĞİL.** M-5 kohezyonu kesme modülü rolünde kurar (Σ↔G_s); kesme modülü olan ortam kararlı kesme akışı taşımaz. Siklostrofik profil (Ω ∝ r^{−3/2}) denge çözümü değil, v_m/L frekanslı **kesme salınımıdır**: Merkür yörüngesinde periyot **0,019 s** ⇒ yörünge başına 3,9×10⁸ çevrim ⇒ sekülér apsis ölçümü sıfıra ortalar. Hubble ölçeğinde denkleşme **1,37 Myr** = evren yaşının 10⁻⁴'ü ⇒ ilksel diferansiyel dönüş 10⁴ denkleşme süresi önce silinmiş olurdu.
+
+**AYAK 2 — katı dönüş sınırsız kohezyonlu ortamda YASAK.** Merkezcil gereksinim τ = ρ₀Ω²r²/2 ⇒ r ile sınırsız büyür ⇒ Σ'yı r_max = √2·v_m/Ω'da aşar ⇒ **M-7'nin yırtılmama koşulu ihlal edilir**. Yapısal sınır (yırtılma Hubble yarıçapı içinde olmasın): **|Ω| < 3,26×10⁻¹⁴ rad/s** (gözlem bundan 1,4×10⁴ kat sıkı). **Ortam sınırsızsa (monizm) her Ω ≠ 0 sonlu yarıçapta yırtar ⇒ Ω = 0 TAM.**
+
+**⚠️ Önemli rafinaj (hesaplandı):** Ayak 1 tek başına **yetmez**. Viskozite ~0 olduğundan salınım **sönmüyor**: τ_sönüm = 5,3×10⁴⁰ yıl (1 AU). Ve ⟨w⟩ = 0 olsa da **⟨w²⟩ ≠ 0**, Λ_kin üzerinden ek saat terimi verir: tam genlikte (2v_yör) terim **Φ/c₀²'nin kendisi mertebesinde** olup kızıla kayma kalibrasyonunu çökertir. Kızıla kaymanın ~10⁻⁴ bağıl doğrulanması **w_genlik ≤ 0,02 v_yör** (Merkür'de ≤ 957 m/s) dayatıyor. **Çözüm: salınım hiç uyarılmadı — Ayak 3 + M-9.** İş bölümü: Ayak 3+M-9 kesmenin *hiç doğmadığını*, Ayak 1 *doğsa bile kararlı kalamayacağını*, Ayak 2 katı dönüşün de yasak olduğunu gösterir. Kitaba bu sırayla yazılmalı.
+
+**⭐ BONUS — Mach ilkesi mekanik olarak açıklanıyor.** Ortam tek sürekli elastik gövdedir; kesme rijitliği her yamayı küresel duruma kilitler. Denkleşme süresi L/v_m: Güneş sistemi **5 saniye**, galaksi **3,3 yıl**, gözlenebilir evren **1,37 Myr**. Yerel eylemsizlik çerçevesinin uzak maddeye göre dönmemesi — GR'de kozmolojik madde dağılımından gelen bir uyum sorunu (Mach ilkesi) — burada **kohezyon kanalının bedava sonucudur**. Teorinin "tercihli çerçeve" statüsünün de yeni okuması: tercihli çerçeve vardır, ama küresel olarak **tek ve dönmeyendir**.
+
+**Kalan:** ortamın uzaysal erimi (Ayak 2'nin Ω=0-tam kolu sınırsızlığa dayanıyor; kozmolojik erimle ilişkisi yazılmamış) · Σ alt sınırla kullanıldı, gerçek Σ büyükse Ayak 2'nin yapısal sınırı **gevşer** (ters yönlü duyarlılık) · galaktik ölçekte hükmün kitaba yazılması.
+
+---
+
+## ⚠️ Tartışma #3 DÜZELTME EKİ — 17 Ağustos 2026 (denetim sonrası, aynı gün)
+
+> **Bu ek, aşağıdaki Tartışma #3'ün iddialarını ölçekler. Tartışma #3 kaldırılmadı ama üç yerinde düzeltilmesi gerekiyor. Denetim (12 ajan) sayıları doğruladı, gerekçelerin bir kısmını yıktı ve teorinin daha derin, ÖNCEDEN VAR OLAN bir açığını görünür kıldı.**
+
+### D1 · Merkür kapanışı AYAKTA, ama sahibi üstel basınç profili DEĞİL
+İki bağımsız çürütme ajanı ve kendi kontrolüm aynı sonuca vardı:
+- **Saf M-2 (a = −∇P/ρₙ), üstel profille bile, Merkür'de TERS işaret veriyor: −28,65″/yy = −⅔ × GR.** Lineer profille −21,49″/yy.
+- Doğru sonuç yalnız **tam eylemden** (S = −mc₀²∫Λ_grav·Λ_kin dt) çıkıyor: +42,98″.
+- Ayrışım: **−0,667 (M-2'nin statik kanalı) + 1,667 (hız-bağımlı terimler) = 1,000 × GR.** Yani 43″'nin **%167'si M-2'de olmayan terimlerden** geliyor.
+- **Sonuç: Merkür kapanışı M-2'ye değil EYLEME aittir.** M-2'nin kapsamı kitapta yeniden yazılmalı: arka plan koordinat biçiminde statik limittir; hareketli cisim için tek başına yetersizdir ve yanlış işaret verir.
+
+### D2 · "SINAV C tam eşleşme (oran 1,0000000000)" bir KİMLİKTİR, delil değil
+P = P₀Λ⁴ verildiğinde M-2'nin ivmesi −c₀²Λ³Λ′, yapının statik ivmesi de −c₀²Λ³Λ′ — **her Λ için özdeş** (5 farklı Λ ile sayısal doğrulandı: üstel, lineer, √(1−2x), (1+4x)^{−1/4}, e^{−x+x²}). Ayırt edici gücü sıfır; yalnız üs muhasebesinin (4 çarpanının) tutarlılığını gösterir. **Tartışma #3'ün tablosundan delil olarak çıkarılmalı.**
+
+### D3 · Üstel biçim TÜRETİLMİŞ değil, κ = 1 Merkür'den KALİBRE
+- **Yol 1 (K = P argümanı) ÇÜRÜTÜLDÜ.** M-44'ün varlık nedeni olan iki-kısmi-türev ayrımını çiğniyor: K = ρ(∂P/∂ρ)_χ birinci türevdir ve deplasman kanalında δρ = 0 (k=0), dolayısıyla K bu kanalda hiçbir şeyin katsayısı değil. Ayrıca argüman ciddiye alınırsa üs **1** çıkar (k=1, M-8'i öldürür), oysa öneri üs **4** kullanıyor (o da ρₙ/ρ₀=4'ten, yani M-8'den geliyor) — seçici ödünç.
+- **Yerellik okuması da tek başına üsteli vermiyor:** C ∝ ρ₀ω_n ∝ Λ okuması κ = −2 verip dışlanıyor. Yalnız "ölçek P'nin kendisidir" okuması κ = 1 veriyor ve onun türetimi yok.
+- **Merkür yalnız κ = 1'i (yani β'yı) sınıyor, üstel biçimi seçmiyor.** GR'ın izotropik ölçeği de κ = 1'dir, üstel değildir ve **ufku vardır**. x³ katsayısı 100'e kadar ayırt edilemiyor.
+- **Dürüst statü:** κ, türetilmiş [T] değil, **tek gözlemle sabitlenmiş [S/F]** ikinci-mertebe katsayısıdır — PPN β'nın fit edilmesiyle aynı statü. Kazanç yine gerçek: *bir* katsayı sabitlenince gölge (+4,63%), ufuksuzluk ve M_min **öngörü** olarak çıkıyor.
+- **Ayakta kalan iki lehte yapısal argüman:** (i) çarpımsal ölçek bileşimi (Yol 2) — ama bu bir **aksiyom**, teorem değil (Λ_kin'in taşıyıcısı hızlılık toplamsaldır ama Λ_kin çarpımsal bileşmez; bu itiraz yanıtlanmalı); (ii) **pozitiflik**: lineer P = P₀(1−4μ/r), r < 4μ'de P < 0 verip M-7'nin yırtılmama tabanını ihlal eder, üstel hiçbir r'de ihlal etmez.
+
+### D4 · EN CİDDİ AÇIK KALEM (yeni, ve teoride ÖNCEDEN var olan): ortamın dönme durumu
+Λ_kin'deki V, **yerel ortama göre** hızdır (11.4.8.1'in açık ifadesi). Hesabım ortamı Güneş çerçevesinde **durgun** aldı. Ama teorinin kendi yapısı ortamın **dolaştığını** söylüyor: M-9'un siklostrofik dengesi ∇P/ρ₀ = v_θ²/r ile ρₙ/ρ₀ = 4 ⇒ **v_θ = 2v_yör** (M-37 profil teoremi de aynı). Merkür yörüngesinde bu **95,7 km/s**.
+
+Ortam akışını eyleme koyup yeniden hesapladım (`ortam_dolasimi_mp.py`, mpmath 60 hane; w=0 kontrolü 42,9805 ✓):
+
+| Ortam durumu | Merkür presesyonu | Sapma |
+|---|---|---|
+| w = 0 (durgun) | **42,9805″/yy** | 0,69σ ✓ |
+| w = 1 m/s (dolaşım) | 11.284″/yy | 1,2×10⁷σ |
+| w = 2v_yör (M-9'un kendi dengesi) | 1,15×10⁹″/yy | 1,3×10¹²σ |
+
+**Fiziksel okuma (net ve öğretici):** dönen bir ortamda apsisler ortamla birlikte **sürüklenir** — sürüklenme hızı tam olarak ortamın açısal hızıdır (Ω_m = w/r). Merkür'ün 43″'si bu sürüklenmeye yer bırakmıyor: **|Ω_ortam| ≲ 1,4×10⁻¹⁸ rad/s** (Güneş spininin 3×10⁻⁶'sı). M-9'un verdiği Ω_m = 1,65×10⁻⁶ rad/s bunun **10¹² katı**.
+
+**Bu bir çürütme değil, görünür hâle gelmiş eski bir borç:** teorinin mevcut dinamiği (M-2) hiç w içermediği için gerilim bugüne dek doğmamıştı. Aynı sessiz varsayım **GPS'in kinematik teriminde de** kullanılıyor (uydunun ortama göre hızı = yörünge hızı ⇒ −7 µs/gün). Yani "ortam merkezî cismin çerçevesinde durgundur" varsayımı kitapta baştan beri var, **yazılmamış** ve şimdi nicelleşti.
+
+**Teorinin elindeki çözüm adayları (hiçbiri yazılmadı):** (i) M-9'un dolaşımını kapsamla sınırlamak (galaktik makro-vorteks rejimi ↔ gezegen ölçeği); (ii) M-43'ün altkritik ayrışması (10²⁸ bastırma) gereği gövdenin yörüngesi ortamın *kütle akışına* bağlanmaz, yalnız saati |v−w|'nin *büyüklüğünü* görür — dikkat: |v − 2v| = |v| olduğundan saat terimi zaten değişmiyor, bozulan yalnız dinamik çapraz terimdir; (iii) Postülat 7'nin zarfı. **Bu kalem kapanmadan Merkür kapanışı kitaba yazılmamalı.**
+
+### D5 · Kitabın güçlü-alan defteriyle hesaplaşma gerekiyor (denetimin ek bulgusu)
+- **§11.3'ün "ufuk"u bir mekanizmadır.** 11.3.8 kırılma tavanını "olay ufkunda (R = 2𝒢M/c₀²)" hesaplıyor, R4 rejimini "zarf yok, **ufuk var**" diye tanımlıyor ve kitabın vitrin sonucunu (yükleme yasası ↔ ufuk tavanı 𝒢M²/c₀ oranı **897,5 ↔ m_p/2m_e = 918**; 2.527 pulsarda a\*≤1) ufkun varlığına dayandırıyor. **İyi haber:** r_ph = 2μ sayısal olarak R_s ile çakışıyor, yani formüller ve sayılar ayakta; ama **mekanizmanın adı** "ufuk"tan "foton küresi / gölge yarıçapı"na çevrilmek zorunda. M_min için yaptığım yeniden sınıflandırmanın aynısı — §11.3'ü kaydetmemiştim.
+- **M-7'nin yırtılma tabanı profili r ≈ 0,2μ'de kesiyor** (P_yırt/P₀ = 2,64×10⁻⁹). Tartışma #3'teki "r = 0,1μ'de 1+z = 2,2×10⁴" değeri **geri çekilmeli**; geçerli sınırda 1+z ≤ 140. "Tekillik yok" iddiası profilden çıkmıyor — profil zaten 0,2μ'nin altında geçersiz.
+- **Nötron yıldızı gibi derin kuyularda ΔP %28 kayıyor** (ΔP_üstel/ΔP_lineer = 0,7226): ξ, M-40 zinciri ve NS kızıla kaymaları yeniden hesaplanmalı.
+- **Gölge muhasebesi düzeltilmeli:** M-42'nin harfiyen lineeri (Λ=1−x) r_ph = 3μ, b = 6,75μ, **+%29,9** verir; benim yazdığım **+%100** ise n=0 (P-doğrusal) modeline aittir. Tek etiket altında iki farklı model aktarılmış.
+- **İkili pulsar "geçildi" yazılmamalı:** 1PN katkısı kütlelerle dejenere; asıl sınav Ṗ_b ve kitabın kendi kaydı orada 10⁹ kat fazlalık veriyor (M-44 Açık Uçlar) — sınav geçilmiyor, **erteleniyor**.
+- **Φ'nin iki tanımı çelişiyor** (Ek D · S-28'in (P₀−P)/ρₙ tanımı ↔ Φ = αχ): ayrışma r = 2μ'de %57 ve tam β'yı belirleyen mertebede. Çözüm: **Φ ≡ αχ birincil** (M-46 Poisson'undan, tam 1/r), (P₀−P)/ρₙ ve M-8'in ΔP = ρₙΦ'si **birinci mertebe bağıntısı** statüsüne inmeli.
+- **Lehte ek bulgu:** lineer yapı Merkür'den bağımsız olarak da ölü — β=½ ⇒ Nordtvedt η_N = 4β−γ−3 = −2, LLR sınırı |η_N| < 4,5×10⁻⁴. Üstel: η_N = 0 tam. *(Teorinin iki-cisim/öz-enerji yapısı yazılmadığı için bu okuma [F].)*
+
+### D6 · Düzeltilmiş özet — bugün ne kazandık, ne kazanmadık
+**Kesin kazanç:** (i) Mevcut lineer yazım **ölü** — Merkür'de 12.820σ, Nordtvedt'te 4.400σ, ve r<4μ'de negatif basınç. (ii) κ = 1 (β = 1) ailesi Merkür'ü **veriyor** ve üstel bu ailenin ufuksuz üyesi. (iii) Etkin yapı ve eylem **meşru** — GR ithali değil, M-42 + M-21 + 11.4.8.1'in kendi defteri (bu, denetimin en olumlu bulgusu). (iv) Λ_kin'in gerekliliği ve M-2'nin yetersizliği nicelleşti. (v) Kitabın ikinci-mertebede **tanımsız** olduğu ortaya çıktı (β için +½ ↔ −1 ikiliği).
+**Kazanmadığımız:** üstel biçim türetilmedi (κ kalibre); "ufuk yok" bir ekstrapolasyon; ortamın dönme durumu açık ve **Merkür sonucunu taşıyan yük** orada.
+**Sıradaki tek kritik iş:** D4 — ortamın gezegen ölçeğindeki hız alanı. Bu kapanmadan hiçbir şey yayın metnine geçmez.
+
+---
+
+## Tartışma #3 — 17 Ağustos 2026 · **ÇÖZÜM: ÜSTEL ÖLÇEK YAPISI** (Λ = e^{−Φ/c₀²})
+
+> **Bu, defterin en önemli kaydı.** Karadelik problemi ile Merkür problemi **tek kalem** çıktı ve **aynı hamleyle kapandı**. Oturum devri: Fable (limit doldu) → Opus. Fable'ın son hamlesi bu çözümün ipucunu vermişti (entalpi/stiff yapı); Opus türetimi tamamladı, sayısal olarak sınadı ve 12 ajanlı tam denetime soktu.
+
+### 1. Problem neydi
+İki ayrı gibi görünen açık kalem:
+- **Merkür (7.4 md.14, M-42 Geçerlilik Sınırı):** Mevcut ölçek yazımı Λ = 1 − Φ/c₀², PPN dilinde γ=1 veriyor ama **β = ½** bırakıyor. Günberi ölçeği (2+2γ−β)/3 = 7/6 ⇒ Merkür **50,14″/yy** öngörülür; ölçüm 42,98″/yy. **Kitabın kayıtlı son klasik açığı.**
+- **Karadelik (denetim bulgusu A4):** M_min ≈ 8,3 M☉ öngörüsü GR'ın Schwarzschild yarıçapını **girdi** alıyor; teori-yerli kritik yüzey yok. Fable'ın ilk yerli adayı (lineer profil, P→0 yüzeyi r_c = 4μ) gölgeyi GR'ın **iki katı** veriyordu (6√3 μ ↔ 3√3 μ) — EHT dışlar.
+
+### 2. Çözümün özü — tek satır
+M-46'nın **lineer** yanıtı (P = P₀ − Cχ) yalnızca **küçük-deplasman kesimidir**. Stiff ortamda **hacim modülü basıncın kendisidir** (K = ρc² = P, çünkü c² = P/ρ). O hâlde deplasman, basıncı sabit bir *miktar* değil sabit bir *oran* kadar düşürür:
+
+$$\frac{dP}{d\chi} = -C\,\frac{P}{P_0} \;\;\Longrightarrow\;\; P = P_0\,e^{-C\chi/P_0}$$
+
+χ'nin Poisson denklemi **değişmez** (M-46 aynen; χ = qₙM/4πmₙr) ve P₀ = ¼ρₙc₀² **değişmez** (M-8 aynen). Sonuç:
+
+$$\boxed{P(r) = P_0\,e^{-4\mathcal{G}M/c_0^2 r},\qquad c_{loc} = \sqrt{P/\rho_0} = c_0\,e^{-2\Phi/c_0^2},\qquad \Lambda = e^{-\Phi/c_0^2}}$$
+
+**M-42'nin Λ = 1 − Φ/c₀² yazımı, bunun birinci mertebe kesimi olarak ortaya çıkıyor.** M-42'nin bütün yapısal ilişkileri (ℓ,f ∝ Λ; c_loc = c₀Λ²; n_eff = 1/Λ²; yerel Lorentz null) **aynen** geçerli — değişen yalnız Λ'nın *biçimi*, ilişkiler değil. Dünya'da ΔP/P₀ ~ 10⁻⁹ olduğu için lineer kesim bugüne dek hiçbir yerde fark yaratmamıştı.
+
+### 2b. Türetim üç bağımsız yoldan geliyor (ayrıntı: `ustel_turetim_uc_yol.md`)
+1. **Çarpımsal ölçek bileşimi (en güçlü — saf yapı, maddesel varsayım yok).** Kitap ölçekleri çarpımsal bileştirir (11.4.8.1: Λ = Λ_grav·Λ_kin), χ ise Poisson lineerliğiyle toplamsal bileşir (M-46). İkisi birlikte Λ(χ₁+χ₂) = Λ(χ₁)Λ(χ₂) dayatır; bu fonksiyonel denklemin tek çözümü **üsteldir**. Sayısal: üstel ihlal 1,3×10⁻⁵¹ (tam sıfır), lineer ihlal U_⊕·U_☉ = 6,87×10⁻¹⁸ ≠ 0.
+2. **Yerellik (Postülat 4).** Sabit C, tepki yasasına her konumda aynı basınç ölçeğini — yani gizli bir **evrensel sabit** — yerleştirir. Yerelleştirilirse C_yerel = C₀·P/P₀ ⇒ üstel. Ek varsayım değil, yerellik ilkesinin gereği.
+3. **Stiff entalpi (M-3′).** Stiff ortamda doğal değişken P değil ln P'dir (M-3′ zaten h = c₀²ln ρ kullanıyor); χ doğal değişkene lineer bağlanırsa ⇒ üstel.
+
+**Genel aile ve gözlemin kilidi:** dP/dχ = −C(P/P₀)^n ⇒ **β = 2n−1** (sayısal doğrulandı, 6 değerde birebir). n=0 (mevcut sabit C) → β=−1; **n=1 (üstel) → β=1**. Merkür'ün ±0,0009″ hassasiyeti tepki üssünü **n = 1,000000 ± 3,1×10⁻⁵** bandına kilitler. Yapı n=1'i dayatıyor, gözlem 3×10⁻⁵ ile onaylıyor — **serbest parametre eklenmedi**, aksine β serbest kalemden türetilmiş kaleme geçti.
+
+### 2c. YAN BULGU (üstelden bağımsız, kitapta kayıtlı DEĞİL): lineer yazım ikinci mertebede tanımsız
+Mevcut kanonun iki okuması ikinci mertebede **ayrışıyor**:
+| Okuma | β | Merkür |
+|---|---|---|
+| (a) M-42'nin yazımı harfiyen (Λ = 1−U) | **+½** | 50,14″/yy |
+| (b) Basınç zinciri harfiyen (P = P₀(1−4U) ⇒ Λ = (1−4U)^{1/4}) | **−1** | 71,63″/yy |
+| (c) Üstel (Λ = e^{−U}, P = P₀e^{−4U}) | **+1** | **42,98″/yy** ✓ |
+Yani kitap, β için hangi okumanın kastedildiğini söylemiyor ve iki okuma 50,1″ ↔ 71,6″ kadar farklı sonuç veriyor. Üstel, Λ ile P'nin **aynı fonksiyonel biçimi** taşıdığı tek ailedir; c_loc = c₀Λ² ilişkisi böylece birinci mertebede değil **her mertebede** geçerli olur. Bu belirsizliğin giderilmesi, üstel geçişin bedava yan kazancıdır. *(Doğrulama: `ustel_turetim_sinavi.py`)*
+
+### 3. Doğrulanan sonuçlar (betikler bu klasörde)
+| Sınav | Üstel | Lineer (mevcut) | Gözlem | Betik |
+|---|---|---|---|---|
+| **Merkür günberi** | **42,9805″/yy** | 50,1439″/yy | 42,9799±0,0009 → üstel **0,69σ**, lineer **7960σ** | `karadelik_gunberi_mp.py` (mpmath 60 hane) |
+| Venüs/Dünya/Mars/Ikaros | oran **1,0000001** | oran **7/6 tam** | GR değerleri | aynı |
+| PPN | **γ=1, β=1** | γ=1, β=0,5 | Cassini γ−1=(2,1±2,3)e−5; LLR β−1=(1,2±1,1)e−4 | `karadelik_yorunge_sinavi.py` |
+| Gölge (Bouguer) | r_ph=2μ, b=**2e μ**=5,4366μ → GR'dan **+%4,63** | 6√3 μ = +%100 | EHT ~%10 içinde ⇒ üstel **uyumlu**, lineer **dışlanır** | `karadelik_ustel_profil_sinavi.py` |
+| Ufuk | **Λ=e^{−μ/r} hiçbir sonlu r'de sıfırlanmaz ⇒ UFUK YOK** | r_c=4μ'de P→0 duvarı | — | aynı |
+| İç tutarlılık | a = −∇P/ρₙ ↔ yapının statik ivmesi **oran 1,0000000000** | — | 4 yarıçapta | `karadelik_yorunge_sinavi.py` SINAV C |
+| **Işık bükülmesi** (tam Fermat integrali) | **1,7512″** | — | GR tam: 1,7512″; fark 7,3×10⁻⁷″ = ölçüm hassasiyetinin %0,4'ü ⇒ **ayırt edilemez, korunuyor** | `ustel_isik_sinavi.py` |
+| **Shapiro** (Dünya–Mars teğet, tam integral) | **247,244 µs** | — | kitabın kaydı 247 µs; ölçüm ~250 µs ⇒ **korunuyor** | aynı |
+| **Gölge, Sgr A\*** | **55,73 µas** | — | GR 53,27 µas; EHT halka 51,8±2,3 µas ⇒ **her ikisi de bantta** | aynı |
+| **Gölge, M87\*** | **41,53 µas** | — | GR 39,70 µas; EHT 42±3 µas | aynı |
+| Kalibrasyon | δc/c₀ = −2Φ/c₀² ✓ ; ΔP_yüzey = ρₙΦ ✓ | aynı | M-8/M-42 zinciri **korunur** | analitik |
+
+*İkinci mertebe ayrışması nerede başlıyor:* Güneş kenarında üstel/GR = 1,0000004 (görünmez); b=10μ'de 1,034; b=6μ'de 1,163. Yani **ayrışma yalnız güçlü alanda** — tam da EHT'nin baktığı yerde.
+
+### 3b. Kitap teşhisi kendi yapmış, ilacı kendi üretmiş — ama ikisini hiç birleştirmemiş
+Bu, üstel çözümün "teoriye yabancı değil, teorinin kendi parçalarından kurulu" olduğunun en somut kanıtı:
+
+- **`18_5:1369` (M-42 denetim notu) teşhisi doğru koymuş:** *"Bir skaler indis, n'nin **hıza bağlı olmadığı sürece** kütleli parçacıkların hareketini tam üretmez; günberi kaymasının ikinci mertebe payı bu yüzden indisin dışındadır."*
+- **`11.4.8.1:912` ilacı üretmiş:** *"Yeni parametre yoktur… eklenen tek şey, mevcut ölçek yapısının **hız bağımlılığıdır**"* — yani Λ_kin, M-42'nin eksik dediği şeyin ta kendisi.
+- **Ama hiç kimse M-42'ye dönüp "teşhis iyileşti" dememiş.** İki yarı iki ayrı kısımda duruyor; parçacık eylemi olarak birleştirilmemiş.
+
+**Dürüst pay ayrımı:** Λ_kin *gerekliydi ama yeterli değildi* — β yalnız potansiyel sektörüne (Λ_grav) bakar; lineer Λ_grav ile β = ½ kalırdı, Λ_kin ne olursa olsun. Yani çözümün iki bileşeni var: **(i) hız bağımlılığı — kitapta zaten mevcuttu (11.4.8.1, [T])**; **(ii) Λ_grav'ın üstel biçimi — yeni, ama kitabın kendi çarpımsal yapısı tarafından zorunlu kılınıyor (Yol 2).** İkisi birleşince Merkür kapanıyor.
+
+### 4. Neden bu bir "GR ithali" değil
+- Kullanılan tek yapı teorinin kendisi: M-1 (c=√(P/ρ)), M-44 (stiff dalga kanalı + k=0), M-46 (χ Poisson), M-8 (P₀), M-21/M-42 (saat/cetvel ölçeği), 11.4.8.1 (Λ_kin, Prandtl–Glauert).
+- Yörünge denklemi teorinin **kendi eyleminden** çıkarıldı: S = −mc₀²∫Λ_g√(1−V²/c_loc²)dt (iç faz birikimi; Zerre-Saati). Kodda tek bir GR/SR formülü yok.
+- "Etkin metrik" (g_tt=−Λ², g_ij=Λ⁻²) bir ithal değil, **M-42 tablosunun defter tutması**: yerel saat dτ=Λdt, yerel cetvel dℓ=dx/Λ ⇒ yerel ölçülen ışık hızı (dx/Λ)/(Λdt) = c_loc/Λ² = c₀ (Lorentz null, M-42'nin kendi satırı).
+- Einstein alan denklemleri **hiç kullanılmadı**; γ=β=1 çıkması bir tesadüf değil, stiff ortamın üstel yanıtının sonucu.
+
+### 5. Kazanç–kayıp muhasebesi (kitabın kendi dürüstlük usulü)
+**Kazanılan:** (i) Merkür kapandı — teorinin GR karşısındaki son klasik açığı; (ii) β artık serbest/açık kalem değil, **türetilmiş**; (iii) karadelik kapısı yerlileşti (ufuk yok, tekillik yok — artık iddia değil **yapısal sonuç**); (iv) M_min = 8,26 M☉ formülü sayısal olarak korunur ama anlamı **gölge eşiği** olur (ufuk eşiği değil); (v) lineer profilin P→0 duvarı kalktı.
+**Kaybedilen:** 1PN düzeyinde GR'dan ayrışma tümüyle kapandı (γ=β=1) — "Merkür'de ayrışma arayacağız" beklentisi düştü.
+**Doğan yeni ayırt edici sınav:** **gölge çapı +%4,6** (2e vs 3√3). Sgr A*'ın kütlesi S-yıldızlarından bağımsız ölçüldüğü için bu temiz bir sınav; ngEHT hassasiyetiyle (~%1–2) **ayırt edilebilir**.
+
+### 6. Bilinen ciddi açık kalem (saklanmıyor)
+**Yıldız-kütleli cisimlerde yüzey ışıması.** Ufuk olmadığı için ρₙ-gövdesinin yüzeyi sonlu kızıla kaymada kalır: 10 M☉ için R_ρ ≈ 26 km, μ ≈ 14,8 km ⇒ 1+z ≈ 1,8 (yüzey görünür). Süperkütlelilerde sorun yok (M87*: 1+z = e^{4,3·10⁵} — fiilen karanlık). Teorinin elindeki cevap adayları: kilitli kafes (φ→1) tam soğurucudur; madde kafese katılır, yeniden ışımaz; nükleer yanma imkânsız (madde zaten maksimum sıkışık). **Nicelleştirilmesi gerekir** — Type-I patlama yokluğu ve Sgr A* yüzey-ışıma üst sınırları bu kalemi doğrudan sınar. Bu, aynı zamanda **yıldız-kütleli ↔ süperkütleli arasında keskin bir yanlışlanabilir ayrım** öngörüsü doğurur.
+
+### 6b. Bağımsız denetimle çapraz doğrulama (`Kisim_8_Eylem_Plani_Antigravity.md`)
+Klasörde, **başka bir araçla yapılmış bağımsız bir Kısım 8 denetimi** bulundu. Bizim bulgularımızla örtüşüyor — ayrı yoldan aynı yerleri işaretlemiş: çıplak *c* ve çıplak *G* kalıntıları (bizim D bölümü), M_min'deki **Schwarzschild ithali** (bizim A4), jeodetikteki **Thomas/GR eşlemesi** (bizim A3), kızıla kaymada zaman-genleşmesi çağrışımları (bizim B grubu). İki bağımsız denetimin aynı kalemleri bulması, denetimin sağlamlığını destekler.
+
+**O denetimin iki açık sorusu artık cevaplı:**
+- *"Soru 1: Jeodetik (Thomas yarısı) mekanik olarak türetilecek mi, yoksa GR kalıntısı notuyla mı bırakılacak?"* → **Türetildi.** Ayrışım 2−½'dir (taşınım holonomisi − tur açığı); tur açığı 11.4.8.1'in P–G ezilmesinden **kapalı biçimde** çıkar ve sayısal bileşim sınavında oran 1,00000 verdi (`jeodetik_pusula_sinavi.py`). Kitaba işlendi (bkz. Oturum 3 işlem kaydı, madde 17–19). Kalan tek alt-düzey iş: taşınım payının girdap-yönelim türetimi.
+- *"Soru 2: Karadelik sınırı Schwarzschild yerine kavitasyon eşiği (v_kav) üzerinden mi tanımlanmalı?"* → **İkisi de değil.** v_kav > 10⁴c₀ olduğundan doğru ölçeği vermez. Teori-yerli cevap **üstel indisin foton küresidir**: n_eff = e^{2Φ/c₀²}'nin Fermat ekstremumu r_ph = 2𝒢M/c₀². Sayısal olarak R_s ile çakışır (dolayısıyla M_min = 8,26 M☉ formülü korunur) ama gerekçesi tümüyle teori-içidir ve **ufuk değil gölge eşiği** anlamına gelir.
+
+### 7. Durum ve üretilen dosyalar
+- 12 ajanlı tam denetim koşuldu (kanon denetimi 5 cephe · çelişme sınavı 3 cephe · güçlü alan 4 cephe · sentez).
+- Üretilen: `M52_Ustel_Olcek_Yapisi_TASLAK.md` (Ek M girdisi taslağı), `karadelik_cozum_calismasi.md`, **`DEVIR_KAYDI_ustel_olcek.md`** (sonraki oturumun sıfırdan devralması için tam durum dökümü).
+- **Kitap metnine henüz DOKUNULMADI** (çalışma dosyası yöntemi: yayın metnine yarım iş sızmaz). Taşıma yalnız "sonuçlandı" onayıyla, tek partide.
+
+---
+
+## Tartışma #2 — 17 Ağustos 2026 · Karadelik Problemi
+
+### Kitabın mevcut kurgusu (18_5, M-40 içi: satır ~1124-1193)
+- **Karadelik = kafesi ρₙ'ye kilitlenmiş madde** (tekillik YOK — Postülat 4'ün öz-yoğunluk tavanı); yarıçap R_ρ = (3M/4πρₙ)^{1/3} ∝ M^{1/3}.
+- **Ergosfer mekanik okumalı:** dönme sürüklenmesinin doyduğu yüzey (ξ→O(1)); doygunluk asimptotik (φ<1).
+- **φ→1 karadeliğe özgü değil** (metaller de →1); ayıran şey zarfın yokluğu (11.3).
+- **M_min öngörüsü:** R_ρ = R_s kesişimi → 8,3 M☉ (NS yoğunluk düzeltmesiyle 4-8 bandı); kütle boşluğu "yapısal eşik" okunuyor; rozet dürüst (mertebe).
+
+### Problem (denetim A4 + bugünkü analiz)
+1. **Kesişim kriteri GR nesnesi:** R_s = 2GM/c² metriğin ürünü; "ufuktan kaçılamaz" mantığı c'yi tavan sayar — Postülat 4'le uyumsuz ithal. Kritik yüzeyin teori-içi tanımı yok.
+2. **Teori-yerli aday (bugün türetildi):** Deplasman kanalında (k=0 ⇒ ρ≈ρ₀) M-28 profili P(r)=P₀−ρₙ𝒢M/r ve Kavrama Yasası c=√(P/ρ) birlikte **kapalı biçim** verir:
+   **c_loc(r) = c₀√(1 − 4𝒢M/(c₀²r))** — zayıf alanda ≈ c₀(1−2Φ/c₀²) = c₀Λ² (M-42 ile birebir ✓).
+   Doğal kritik yüzey: **arka plan basıncının tükendiği yer**, P→0 ⇒ c_loc→0:
+   **r_c = 𝒢ρₙM/P₀ = 4𝒢M/c₀² = 2R_s** (P₀=¼ρₙc₀² kullanıldı — M-8). Daha derini kohezyon taşır (M-4: −Σ'ye dek yırtılmaz). "Ufuk" değil: yayılım kanalının YEREL durması; kohezyon kanalı (v_m>10⁴c₀) içeriden statik alan ayarını taşımaya devam eder ⇒ bilgi tam hapsolmaz, "kütle-itim delikten nasıl çıkıyor" sorusu doğmaz.
+3. **M_min kriter-bağımlı:** R_ρ = r_c kesişimi M_min'i (1/2)^{3/2} = 0,354 katına indirir: **≈2,9 M☉** (ρₙ ile; NS-yoğunluklu tavanla ~2,5). Gözlemsel durum: LIGO boşluk-adayları (GW190814 ikincisi 2,59 M☉; GW230529 birincisi ~2,5-4,5 M☉) kitaptaki 4-8 tabanını ZORLUYOR; yerli 2,5-2,9 tabanı bu adaylarla çatışmaz — ama "boşluk = yapısal eşik" iddiası zayıflar (eşik boşluğun alt kenarına iner). İki kriter iki farklı yanlışlanabilir öngörü; karar türetim ister.
+4. **En sert bağımsız kısıt — EHT gölgesi:** Naif doğrusal profil (yukarıdaki c_loc) foton küresini r_ph = (3/2)r_c = 6𝒢M/c₀², kritik vuruş parametresini b = 6√3·𝒢M/c₀² ≈ 10,39 verir — GR'ın √27 ≈ 5,196'sının **tam 2 katı**. Sgr A*'da kütle S-yıldızlarından bağımsız ve hassas; ölçülen halka GR'la ~%5-10 içinde ⇒ **naif doğrusal profil güçlü alanda dışlanır.** Sonuç: P(Φ) derin kuyuda doğrusal kalamaz — bu, Merkür'ün β kalemiyle AYNI açık (M-42 Geçerlilik Sınırı). Tek program iki sınavı birden kapatmalı: **β (43″/yy) + gölge çapı (√27'ye ~%10)**. Zayıf alan güvende: her iki profil birinci mertebede özdeş (1,751″ korunur).
+
+### Ontolojik artılar (GR'ye karşı yapısal farklar)
+- Tekillik yok (ρₙ tavanı) → bilgi/geodezik tamlık sorunları doğmaz.
+- Olay ufku yok; **optik hapis** var (kaçış konisi büzülür, r_c'de yayılım donar) → dışarıdan "donmuş yüzey" görünümü; kohezyon kanalı nedensel bağlantıyı korur.
+- Ergosfer = sürüklenme doygunluğu (kitapta zaten mekanik).
+
+### Önerilen iş sırası (karar Enes'in)
+1. **A4 etiketi (hemen, dürüstlük):** M_min kutusuna "kesişim kriteri: GR'ın R_s'i girdi alınmıştır; teori-yerli aday r_c = 4𝒢M/c₀² → 2,9 M☉ — kriter türetimi açık" kaydı + H.3 satırına aynı şerh.
+2. **Kritik-yüzey türetimi:** r_c adayının k=0 ve doğrusal-profil geçerlilik sınırlarıyla sağlamlaştırılması (güçlü sıkışmada k(P) davranışı).
+3. **Güçlü-alan programı (β+gölge birleşik kalem, 7.4'e):** P(Φ)'nin O(Φ²) terimi hem Merkür'ü hem gölgeyi vermeli; EHT ters-problem olarak kullanılabilir (hangi nonlineerlik √27'yi geri getirir?).
+
+---
+
+## Tartışma #1 — 17 Ağustos 2026 · Kısım 8'de GR/SR Kalıntı Denetimi
+
+### Soru (Enes)
+`akiskan_matenatik_turetimi.md` (chat'in dosyası) incelenecek; Kısım 8 türetimlerinde GR kalıntısı var mı denetlenecek. Ölçüt: GR ile matematik **benzeşebilir, sorun değil** — ama temel fark korunmalı: **bizde ışık hızı sabit değil (GR'de sabit); bizde zaman evrensel ölçekte mutlak, saatler yerel ortama kilitli (GR/SR'de zamanın kendisi esner).** Kısım 8 tamamen bize özgü yapıya kavuşturulacak.
+
+### Yöntem
+1. 13 dosyada desen taraması (sabit-c, uzay-zaman/metrik/jeodezik, Lorentz/Minkowski/Einstein, foton, kütleçekim, zaman ifadeleri).
+2. Çekirdek dosyalar satır satır kendim okundu: Blok A (M-1..6), Blok B (M-7..9), Blok E (M-19..21), M-42 (18_5 içinde), Sembol Sözlüğü ilgili satırları, 07 kapak, Ek B (17). Çapraz doğrulama: Kısım 11.4.8.1 (Λ_kin/Prandtl–Glauert) ve KARNE satır 21.
+3. Kalan dosyalar üç paralel denetçiyle tam okundu: (i) Blok C+D+F, (ii) Blok G+Ek A+Ek B+Blok I, (iii) 18_5 tamamı (1708 satır) + Sembol Sözlüğü tamamı. Kritik iddialar ana oturumda yeniden doğrulandı.
+
+### ÖZET SONUÇ
+**Ontolojik omurga temiz.** İki direk (c değişken; zaman mutlak, saat yerel) Kısım 8'de yapısal olarak yerleşik — slogan değil, denklemlerin kuruluşu böyle. GR'ye benzeyen SONUÇLAR var (istenen bu zaten), mekanizma her yerde zıt: GR "c sabit + uzay eğri" çalışır, kitap "uzay düz + c=√(P/ρ) değişken" çalışır ve bunu açıkça yazar (M-42; 11.4.8.1 kapsam kuralı 2: "c₀ sabit olmadığı için bariyer de sabit değildir").
+**Ama denetim 6 gerçek kusur + 1 deney-riski + geniş bir notasyon borcu buldu.** Hiçbiri ontolojiyi çürütmüyor; çoğu "GR alışkanlığının sembol/muhasebe düzeyinde sızması". Aşağıda tamamı, dosya:satır ile.
+
+---
+
+## A. GERÇEK KUSURLAR (öncelik sırasıyla)
+
+### A1 · Φ İŞARET ÇELİŞKİSİ — kanon kusuru, kesin (iki bağımsız denetimde yakalandı)
+**Yer:** `08_Sembol_Sozlugu.md:130` ↔ aynı dosya :87 ve M-8, M-20, M-21, M-42, `17_Ek_B:29`.
+Sözlük 130 teori-içi tanım veriyor: **Φ ≡ (P−P₀)/ρₙ, a⃗=−∇Φ, dış alanda Φ=−𝒢M/r** (negatif). Kanonun geri kalanı Φ'yi **pozitif kuyu derinliği** olarak kullanıyor: :87 "Dünya yüzeyi için Λ=1−7×10⁻¹⁰" (Λ<1 ⇒ Φ>0 şart), M-8 "ΔP_yüzey=ρₙΦ", M-42 "δf/f=−Φ/c₀²" (Pound–Rebka yönü ancak Φ>0 ile doğru), M-40 "Φ/c₀²=GM/c₀²R". Satır 130'un işaretiyle **kızıla kayma, Shapiro ve n_eff yönleri ters döner** (kuyuda saat hızlanır çıkar). Bu, Newton'un "a=−∇Φ" biçimini kurtarma refleksinin (GR/Newton kalıntısı) tanıma sızmasıdır.
+**Önerilen düzeltme (tek hücre):** Φ ≡ (P₀−P)/ρₙ ≥ 0 (**basınç açığı/kuyu derinliği**; dış alanda Φ=+𝒢M/r). Dinamik daima M-2 ile: a⃗=−(1/ρₙ)∇P; standart fizik köprüsü: Φ_std=−Φ. Böylece Λ=1−(P₀−P)/(ρₙc₀²) **tamamen basınç-yerlisi** olur; Φ mekanizma değil, çeviri köprüsü. Ayrıca aynı hücrede iş fonksiyonu anlamı ayrılmalı: iş fonksiyonu → W_f (M-10/M-11'de değişim + S-28 karar satırı). Ek: `17_Ek_B:45`'teki reddedilen Poisson potansiyeli Φ_N yazılmalı (aynı ekte 16 satır arayla iki zıt Φ var).
+**UYGULAMA NOTU (önemli tasarım değişikliği):** Tek hücre düzeltmesi yetmezdi — eski negatif-işaretli Φ, Kısım 11.1'in gelgit-tensör türetiminde **canlı araç** olarak kullanılıyor (a⃗=−∇Φ, eş-basınç yüzeyi argümanı). Formüllerine dokunmadan çözüm: dinamik potansiyel **Φ_it ≡ (P−P₀)/ρₙ = −Φ** adıyla ayrıldı (11.1'de 6 satır yeniden adlandırıldı), sözlük Φ hücresi pozitif kuyu-derinliği ana tanımıyla yeniden yazıldı, **S-28** karar satırı eklendi (Φ / Φ_it / Φ_N / iş fonksiyonu ayrımı). İş fonksiyonu → W_f ayrımı ERTELENDİ: yayılımı 5 dosya (K1 03_Postulasi:378; K2 02_Zerre:27,29,35,61; K8 M-10/M-11; K9 04_Compton:26 + 02_Planck:38,42,96,98) — Parti 3 süpürmesine taşındı. Poisson-Φ_N düzeltmesi üç yerde yapıldı: 11.1:388 (Newton sütunu), `17_Ek_B:45` ve `10_Blok_B:91` (M-9 Varsayım 1).
+**Statü: UYGULANDI (17 Ağustos 2026, Φ_it tasarımıyla — ayrıntı İşlem Kaydı'nda).**
+
+### A2 · M-42 GİRDİ/ÇIKTI MUHASEBESİ TUTMUYOR — kesin (kendi okumamla doğrulandı)
+**Yer:** `18_5_Kuvvet_Matematigi.md:1276-1286` ↔ :1339.
+Kısıt 1 (satır 1277) γ_f=−1'i **doğrudan kızıla kaymadan** okuyor; Kısıt 2 bükülmeden γ_c=−2; Kısıt 3 Lorentz-null'dan γ_ℓ=−1. Üç bilinmeyen, üç gözlem — serbestlik sıfır. Ama Muhasebe satırı (1339) "iki girdi (bükülme, yerel değişmezlik) / üç çıktı (kızıla kayma, jeodetik, Shapiro)" diyor: **kızıla kayma hem girdi hem çıktı sayılmış.** Buna bağlı: :1347 ve M-8/Ek B/KARNE'deki "P₀ artık bükülmeden sabitlenir, kızıla kayma öngörü" iddiası mevcut kurgu ile dairesel.
+**Önerilen düzeltme (tercih edilen — iddiayı kurtaran yeniden sıralama):** Kısıtlar şöyle dizilir: (i) bükülme → γ_c=−2 [ölçüm]; (ii) Lorentz-null → γ_c=γ_ℓ+γ_f [ölçüm]; (iii) **γ_ℓ=γ_f [yapısal simetri]** — gerekçesi metinde zaten var (satır 1317-1319: hareket kolunda cetvel ve saat tek ortak çarpana bağlıdır — 11.4.8.1'de türetilmiş; potansiyel kolu aynı yapının uzatılması). Bu üçünden γ_f=γ_ℓ=−1 çıkar ⇒ **kızıla kayma gerçekten öngörü olur**, Kısıt 1 girdi değil sağlama satırına döner. Alternatif (daha muhafazakâr): muhasebeyi "üç girdi / iki çıktı (Shapiro, jeodetik*)" diye dürüstçe yeniden yazmak — ama o zaman P₀ kalibrasyon-kaynağı iddiaları da geri alınmalı. *Jeodetik zaten ayrı sorunlu: bkz. A3.
+**Statü: ÖNERİLDİ — uygulanmadı. Karar Enes'in: yeniden sıralama mı, muhafazakâr muhasebe mi?**
+
+### A3 · JEODETİK PRESESYON "✓" AMA TÜRETİM YOK; DAYANAK SAF SR İTHALİ — kesin
+**Yer:** `18_5:1328` (Kapanan Gözlemler tablosu "~6.606 mas/yıl ✓"), `18_5:1681` ("Thomas ½ + ölçek payı 1"), giriş vaadi :1264.
+Dosyada jeodetik presesyonun hiçbir türetimi yok (Shapiro :1334'te açıkça integre edilirken bu yalnız iddia). Dayandırılan "Thomas ½", Wigner dönmesi = **saf SR kinematiği** — akışkan karşılığı verilmemiş. "GR'a başvurulmaz" iddiası bu satır için tutmuyor.
+**Önerilen düzeltme:** Ya Thomas payının mekanik türetimi yazılır (zikzak/itme bileşimi — 11.4.8.1'in Λ_kin makinesiyle yapılabilir görünüyor; ayrı çalışma), ya satır "Kapanan"dan çıkarılıp Açık Uçlar'a alınır ve :1264'ün vaadi gerçekten türetilenlerle (bükülme, Shapiro, Lorentz-null) sınırlanır.
+**Statü: ÖNERİLDİ — uygulanmadı.**
+
+### A4 · MİNİMUM KARADELİK ÖNGÖRÜSÜ SCHWARZSCHILD YARIÇAPINA DAYANIYOR — kesin
+**Yer:** `18_5:1173-1175` (M_min≈8,3 M_⊙ kutusu), H.3 :1667 (yanılsanabilir öngörü listesinde).
+R_s=2GM/c², GR metriğinin nesnesi; üstelik "ufuktan kaçılamaz" mantığı c'yi tavan sayar — Postülat 4 ile uyumsuz ithal. Teorinin kendi kritik yüzeyi farklı yerde çıkar (ör. Λ→0 yüzeyi r=𝒢M/c₀², R_s'nin yarısı; ya da kavrama/kilitlenme eşiği) ve M_min sayısını değiştirir.
+**Önerilen düzeltme:** Kritik yüzey teori-içi türetilene kadar kutu "GR'ın R_s'i girdi alınarak" diye etiketlenmeli ve H.3'te statüsü düşürülmeli; teori-içi türetim ayrı çalışma kalemi.
+**Statü: ÖNERİLDİ — uygulanmadı.**
+
+### A5 · M-18 ASİMETRİK KOL ÖNGÖRÜSÜ, TEORİNİN KENDİ ÖLÇEK YAPISIYLA SIFIRLANIYOR OLABİLİR — fizik riski (Kısım 5 deneyini etkiler)
+**Yer:** `12_Ek_M_Blok_D_Optik_Fizeau.md:147-168` (M-18).
+M-18'in öngörüsü φ=ω·2L/c₀'ın δc₀'a duyarlılığı. Ama M-42 ölçeklemesi ortak-mod uygulanırsa: δω/ω=δf/f=½δc/c, δL/L=δℓ/ℓ=½δc/c ⇒ δφ/φ=½+½−1=**0** — birinci mertebede tam iptal. (Lorentz-null'un mekanizması zaten bu iptal!) Satır 168 "ω'nun δc'den etkilenmediği varsayılır" diyor; bu varsayım M-42 ve M-3'le (ν=√2c₀/2πr ⇒ δω≠0) çelişiyor. M-42'nin kendi Geçerlilik Sınırı (18_5:1353) ortak-mod/diferansiyel ayrımını maddi ortam için yapıyor; M-18'e aynı bütçe satırı şart: δc'nin hangi bileşeni ortak-mod (görünmez), hangisi diferansiyel (ölçülür)?
+**Sonuç iki yönden biri:** ya deney gerekçesi düzeltilmiş bütçeyle yeniden kurulur, ya asimetrik-kol öngörüsü geri çekilir. **Deney tasarımına dokunduğu için Enes'in kararı olmadan hiçbir şey değiştirilmedi.**
+**Statü: TARTIŞILACAK.**
+
+### A6 · M-19 AÇIK UCU BAYAT — kesin, kolay
+**Yer:** `13_Ek_M_Blok_E:54`.
+"Boy kısalmasının bağımsız hidrodinamik türetimi 7.4'e aittir" diyor; oysa türetim **yapılmış ve [T]**: 11.4.8.1 Λ_kin (Prandtl–Glauert, kapalı biçim; KARNE satır 21). Kalem kitap üslubuyla kapatılmalı (~~...~~ → "kapandı: 11.4.8.1"). Dikkat: M-42'nin "γ_ℓ=−1 mekanizması" açık ucu FARKLI kalemdir (potansiyel tarafı) — o açık kalır.
+**Yapısal öneri:** Ek M "kitabın tüm çok adımlı türetimleri buradadır" diye tanımlı; Λ_kin türetimi Satürn bölümüne gömülü kalmamalı — kataloğa kendi numarasıyla (ör. M-51) aynalanmalı, M-19/M-21/M-42'den atıf verilmeli. *(Bu kısım Parti 4'te; açık uç kapatması uygulandı.)*
+**Statü: UYGULANDI (17 Ağustos 2026 — M-19 Açık Uçlar kalemi kitap üslubuyla kapatıldı; M-51 aynalaması Parti 4'te).**
+
+---
+
+## B. POSTÜLAT-4 KORUMASI VE DİL KALEMLERİ (küçük ama ontolojiye dokunan)
+
+| # | Yer | Sorun | Düzeltme |
+|---|---|---|---|
+| B1 | `16_Ek_A:16,19` | c-üstü hız için iki şık ("c₀'ye oturur / yırtar") — √2c₀ denge kolu atlanmış; "c-üstü her hız c'ye düşer" izlenimi Postülat 4'ü zayıflatır. Dosyanın kendi widget'ı (:263) üç şıkkı doğru veriyor | üçüncü kolu ekle: "ya √2c₀ denge zarfına tırmanır" |
+| B2 | `19_Blok_I:42` ve `10_Blok_B:105` | "stiff... **nedensel olarak en katı hâl**" — GR/kozmoloji deyimi; orada v_ses=c doyumdur çünkü c nedensellik tavanıdır. Teoride c₀ tavan değil (aynı dosya :213: χ dalgaları v_m>10⁴c) | "sıkışma kanalının en katı hâli; nedensellik sınırı değildir — yapı kanalı v_m>10⁴c₀ ile çalışır (M-46)" |
+| B3 | `19_Blok_I:42` | "kütleçekim dalgası hızı kısıtı otomatik sağlanır" — ev üslubundaki şerh ("standart fiziğin ... dediği") burada düşmüş | şerhli biçime çevir |
+| B4 | `18_5:828,830` | "yanal itim alanının tek kararlı **çekim** noktası" — F5'in kendi mekanizma cümlesinde "çekim" | "denge/toplanma noktası" |
+| B5 | `08_Sozluk:79` | Ξ tanımında "baryonik öz-**çekim** oranı" | "öz-kuyu (öz-itim) oranı" |
+| B6 | `16_Ek_A:177` | hız merdivenine "mikro/**relativistik** merdiven" adı — c-üstü basamaklara SR çerçevesi giydiriyor | "mikro (c₀ mertebesi) merdiven" |
+| B7 | `16_Ek_A:7` | SI'nın c tanımı şerhsiz — "c evrensel sabit" okumasına yem | dipnot: yerel ölçüm değişmez çünkü cetvel-saat eş-ölçeklenir (M-42), c evrensel olduğundan değil |
+
+## C. MUHASEBE/ANLATIM DÜRÜSTLÜĞÜ (GR'ye benzemek değil, "bağımsızlık" iddiasının abartısı)
+
+| # | Yer | Sorun | Düzeltme |
+|---|---|---|---|
+| C1 | `18_5:1098` ↔ :1183 | ξ için "iki bağımsız yol aynı sayıda buluştu" — iki ifade cebirsel özdeş ((I/MR²)(2GM/Rc²)≡2GI/c²R³); :1183 zaten dürüst ("GR ile yapısal olarak özdeş") | "bağımsız yol" iddiası kaldırılır; kazanç doğru anlatılır: ξ'nin DEĞERİ GP-B'den değil, bükülmeyle sabitlenen δc/c'den gelir |
+| C2 | `18_5:1058` | teorinin kendi sayısal adımı GR'ın Lense–Thirring biçimi + çıplak G,c ile | ξR³ω/4r³ biçimi + 𝒢,c₀ ile yeniden |
+| C3 | `18_5:1204-1225` (M-41) | girdi-adım-kutu bütünüyle GR değişkenleriyle (G,J,c²); ξ,𝒢,c₀ hiç yok | alan Ω_rot=ξR³/2r³[...] ile kurulur, sonuç ξ cinsinden kutulanır; GR biçimi kıyas satırında kalır |
+| C4 | `18_5:1063` ↔ :1096 | Sonuç kutusu ξ'yi hâlâ GP-B'den okunan gibi sunuyor; 25 satır sonra türetilmiş 4,605×10⁻¹⁰ | kutu güncellenir: ξ_türetilen + GP-B iması + 0,52σ |
+| C5 | `18_5:1337` | "Shapiro ... bağımsız üçüncü doğrulama" — bükülmeyle AYNI parametreyi (γ_c) sınar; gözlem bağımsız, teori içeriği değil | "aynı parametrenin bağımsız ölçümle ikinci sınavı" |
+| C6 | `18_5:1352` | Merkür bütçesi PPN formülüyle üretiliyor (kıyas değil makine gibi) | "PPN diline çevrildiğinde..." çerçevesi; teorinin öngörüsü P(Φ) yazılana dek "türetilemiyor" kaydı |
+| C7 | `18_5:1133,1135` | ergosfer/ufuk satırları kompaktlık tablosunda gerçek yüzey gibi | "GR'ın ufuk yarıçapına karşılık gelen kompaktlıkta" kıyas ibaresi |
+| C8 | `15_Blok_G:187` | M-32, 2× çarpanını "analojik, açık kalem" sanıyor; M-42 onu türetmiş/sabitlemiş | çapraz atıf eklenir |
+
+## D. NOTASYON BORCU (tek toplu süpürme işi)
+
+- **Çıplak c → c₀:** teorinin KENDİ denklemlerinde yaygın; kutulu sonuçlar dahil. Başlıca: `18_5:1292` (**M-42 kanonik kutusu!**), 1087, 1094, 1108, 1277, 1334, 935, 1669; `12_Optik:124, 162` (kutulu), 28/68/115-121/153-155/165; `11_Zerre:39, 84, 142, 170-179`; `19_Blok_I:20, 65, 85, 203, 253, 259, 265`; `16_Ek_A:162` + widget etiketleri; `08_Sozluk:13, 93, 118`; `17_Ek_B:29, 31`. Kural: R-11 zaten var ("teori ışık hızının evrensel sabit olduğunu reddeder"); S-16'ya "teorinin kendi denklemlerinde çıplak c yazılmaz" satırı eklenmeli. DİKKAT: kör bul-değiştir değil — standart-fizik aktarım satırları (ör. "1,67c" kıyasları) c ile kalır.
+- **Çıplak G → 𝒢:** `18_5:863, 1058, 1334`; `15_Blok_G:94, 110`; `08_Sozluk:147` (Ω_z=√(GM/r³)). S-20 zaten kural; ihlaller temizlenir. (GM çarpımı ölçüm bağlamları muaf — sözlük 157 zaten izinli.)
+- **h çakışması:** `14_Makro:116` Kepler açısal momentumu h — S-4 ihlali (h=Planck). h→h_yör; S-4'e istisna satırı. (Aynı dosya :182 kuralı kendisi alıntılıyor!)
+- **γ dört anlamda:** Lorentz-çarpanı rezervasyonu (15:23) ↔ Clebsch γ (19:308), γ_n, γ_ℓ. Sözlük γ satırına M-19 türetim atfı eklenmeli (F-5); Clebsch çiftleri çakışmasız harfe alınmalı ya da rezervasyon gevşetilmeli.
+- **Λ_kin üs konvansiyonu:** `19:167` "γ_ℓ=−1" tek başına ℓ∝Λ⁻¹ okunabilir; doğrusal biçim (ℓ=ℓ₀(1+γ_ℓΦ/c₀²)) kullanım yerinde açılmalı.
+- **"kütleitimi"** → "kütle-itim" (`17_Ek_B:53`).
+
+## E. KAPSAM DIŞI AMA KAYDA DEĞER İÇ TUTARSIZLIKLAR (GR değil; ayrı iş)
+
+- **E1 · v_θ ihlali:** `15_Blok_G:94,110-112` gözlenen eğriyi v_θ ile yazıyor; `16_Ek_A:185-194` bunu açıkça yasaklıyor (doğru sembol v_yör; v_θ=2v_yör ⇒ siklostrofik dengede 4 kat fark riski). M-30, Ek A.4 güncellemesinden eski görünüyor — birlikte gözden geçirilmeli.
+- **E2 · M-50 ölçü beyanı:** birleşik eylem ∫dt d⁴x içine ∫dt d³x'lik S_χ ekleniyor (`19:309/328/336` ↔ :202); kasıtlıysa (w=0 kesiti) beyan edilmeli. (Eylemin ∫dt yapısı — tek evrensel zaman + 4B uzay — ölçüt-2 açısından tam isabet.)
+- **E3 · Ek B faktör-2 atıf hatası:** `17_Ek_B:29` ΔP_yüzey=ρₙΦ **doğru** (dış integral ∫_R^∞), ama atıf B.2'nin İÇ integraline (yarısını verir: 0,83×10²⁵); :36 da o yarım değere "toplam çukur" diyor (doğrusu: merkez–yüzey ek düşüşü). Faktör-2'lerin kritik olduğu kitapta atıf düzeltilmeli. Ayrıca :27'de işaret (δc<0 ↔ ΔP>0) M-44'teki gibi açık yazılmalı (K-9).
+
+---
+
+## F. CHAT DOSYASI KARARI (`akiskan_matenatik_turetimi.md`)
+
+**§1 (Prandtl–Glauert → γ):** Matematik doğru ((1−M²)φₓₓ+...=0; x'=x/√(1−M²) ⇒ Laplace ⇒ kararlı yapılar 1/γ ezilir; ışık-saati kolları γT₀). Ama kitapta **zaten daha sağlamı var**: 11.4.8.1 aynı türetimi geçerlilik sınırı + saat tarafı + Λ_grav·Λ_kin bileşimi + bedel muhasebesiyle yapmış. Chat'te geçerlilik sınırı yok (doğrusal/ses-altı; süpersonik çekirdek — M-3′ v=√2c₀ — kapsam dışı; kompozit zarfa uygulanır). Üslup kalıntısı: "Einstein'ın geometrik varsayımlarına (ışık saati vb.) ihtiyaç duymaz" — ışık saati geometrik varsayım değil; teori kendisi Zerre-Saati kullanıyor (M-19).
+**§2 (kızıla kayma): BOZUK — kitaba girmemeli.** Üç hata: (1) kendi öncülüyle çelişki: "R·c_loc=sabit" der, sonra R∝Λ yazar — öncülden R∝Λ⁻² ⇒ ν∝Λ⁴ çıkar, hedeflenen ν∝Λ değil; (2) işaret karışımı: "R büyür" ancak GR-işaretli Φ ile doğru olur, o zaman da kızıla kayma yönü bozulur (A1'deki karışıklığın aynısı); (3) M-42'nin dürüst açık kalemini (γ_ℓ mekanizması) çözülmüş gibi sunar. Not: naif girdap değişmezleri (Kelvin: Γ=2πR·v_duvar sabit; v_duvar∝c_loc∝Λ²) **R∝Λ⁻² verir ve gereken ℓ∝Λ ile kavga eder** — γ_ℓ açık ucunun gerçek zorluğu budur; ciddi türetim bu gerilimi çözmek zorunda.
+**Karar önerisi:** §1 için esas metin 11.4.8.1; chat dosyası karalama statüsünde. §2 hiçbir yere taşınmaz. Dosyanın başına uyarı bandı eklendi (İşlem Kaydı).
+
+---
+
+## G. TEMİZ ÇIKAN BÖLGELER (ileride yanlışlıkla "kalıntı" damgalanmasın diye pozitif kayıt)
+
+- **M-1:** "c₀ evrensel bir sabit değil, yerel ve türetilmiş"; "mutlak üst sınır değildir (Postülat 4)" açık.
+- **M-5 kanal tablosu:** "⚠ Postülat 4 kaydı — bu bir hız tavanı ifadesi DEĞİLDİR" kutusu; üç kanal, ikisi c₀-üstü; GW170817 doğru daraltılmış.
+- **M-19/M-20/M-21:** "Zaman mutlaktır (Kozmik Zaman)... yavaşlayan mekanik saattir"; "gözlemsel sonuç SR ile özdeş, ontoloji farklı (bükülen zaman yok, yavaşlayan dişli var)"; kütleçekimsel kızıla kayma yalnız gözlem adı (terminoloji notuyla); GPS çift bileşen doğru.
+- **M-42 iç yapısı:** uzay düz + değişken c_loc + Fermat; üsler her kullanım yerinde tutarlı (Λ, Λ², 1/Λ²); β/Merkür sınırı dürüst kayıtlı. (Sorun yalnız muhasebe cümlesi — A2.)
+- **M-9/Ek B.4:** Poisson açıkça "reddedilen gizli varsayım" olarak yazılı; Jeans'in iki bacağının yokluğu mekanik.
+- **M-16:** Fresnel sürüklemesi **Galile toplamasıyla** türetiliyor — SR hız-toplamasına hiç uğramadan; kitabın en iyi anti-SR ayak izlerinden.
+- **M-14 (foton):** "foton" yalnız standart-fizik sözcüğü olarak, Zerre Paketi'ne ayrıştırılırken; düzeltme kaydı fotonu ihya etmeme gerekçesini açıkça yazıyor. Kısım 8'de başka foton geçmiyor ("nanofotonik" cihaz adı hariç).
+- **Kütleçekim dili:** tüm geçişler ya yerleşik gözlem adı ya standart-fizik aktarımı; mekanizma cümleleri kütle-itim. ("kütleçekim dalgası" şerhli dipnotla — 11_C:188.)
+- **M-50:** Darboux/Hodge/SO(4) = Öklidyen 4B akışkan vortisitesi, Minkowski değil; eylemin ∫dt yapısı mutlak-zaman ontolojisinin tam karşılığı.
+- **Sözlük kural katmanı:** R-10 (Λ↔c_loc kategori ayrımı), R-11 ("teori ışık hızının evrensel sabit olduğunu reddeder"), S-11, S-20 — hepsi teori-içi ve titiz. Sorun kuralların birkaç satırda çiğnenmesi (D bölümü), kuralların kendisi değil.
+- **"Zaman genleşmesi/uzay-zaman/metrik/jeodezik":** üç denetçi + kendi okumam: Kısım 8'de bu kavramlar ya hiç geçmiyor ya yalnız reddedilirken/kıyaslanırken geçiyor ("mistik metrik genişleme değil", "uzay-zaman eğriliği değil" vb.).
+
+---
+
+## H. UYGULAMA PLANI (önerilen partiler — HİÇBİRİ HENÜZ UYGULANMADI)
+
+- **Parti 1 (tek oturumluk cerrahi, karar gerektirmez):** A1 (Φ hücresi + Φ_N + W_f), A6 (M-19 açık ucu kapatma), B2-B5 (dil), C8 (çapraz atıf), E3 (atıf/adlandırma), "kütleitimi" tiresi. → **✔ TAMAMLANDI (17 Ağustos 2026; W_f Parti 3'e kaydırıldı — bkz. İşlem Kaydı).**
+- **Parti 2 (Enes kararı gerekir):** A2 (M-42 yeniden sıralama MI, muhafazakâr muhasebe Mİ), A3 (jeodetik satırının statüsü; Thomas'ın mekanik türetimi ayrı iş olarak açılsın mı), A4 (karadelik kutusunun etiketi), A5 (M-18/deney bütçesi — Kısım 5'i etkiler), B1/B6/B7 (Ek A içerik rötuşları).
+- **Parti 3 (toplu süpürme, mekanik ama dikkatli):** D bölümü (c→c₀, G→𝒢, h→h_yör, γ ataması, Λ_kin konvansiyon beyanı). Kör değiştirme yok; her satır bağlamıyla.
+- **Parti 4 (yeni türetim çalışmaları — bu deftere):** (i) Thomas payının akışkan türetimi (A3 için); (ii) teori-içi kritik yüzey/karadelik eşiği (A4 için); (iii) γ_ℓ=−1'in girdap-denge mekanizması — Kelvin-Γ gerilimi çözülerek (F/§2'nin dürüst hâli); (iv) Λ_kin'in Ek M'ye aynalanması (M-51 taslağı).
+- **E1 (v_θ/v_yör) ve E2 (ölçü beyanı):** ayrı iç-tutarlılık işleri; GR denetiminden bağımsız ele alınmalı.
+
+## İ. İŞLEM KAYDI
+
+**Oturum 3 — jeodetik bulgularının kitaba işlenmesi (17 Ağu 2026, Enes talimatıyla):**
+16. `18_5:1264` — M-42 giriş vaadine mekanizma-notu işaretçisi eklendi.
+17. `18_5` Kapanan Gözlemler tablosu altına **"Jeodetik satırının mekanizma kaydı"** kutusu eklendi: doğru ayrışım 2−½ (taşınım holonomisi + tur açığı), holonomi ifadesi, Kepler bağıyla 3πμ/r, açık kalem kaydı. Eski "Thomas ½ + ölçek payı 1" gerekçesi düzeltme kaydıyla geçersiz kılındı.
+18. `18_5:1681` (H.3) — jeodetik satırının gerekçesi güncellendi (2−½; girdap türetimi açık uç).
+19. `18_5` M-42 Açık Uçlar — yeni kalem: "Jeodetiğin taşınım payı" (kanal gerekçesi + girdap-yönelim türetimi açık); ayrıca γ_ℓ kalemindeki bayat parantez düzeltildi (M-19 boy kısalması 11.4.8.1'de kapandı; açık olan potansiyel kolu).
+*(Not: `18_5:1339` Muhasebe cümlesi — A2 — bilinçli olarak DOKUNULMADI; Yol 1/Yol 2 kararı bekliyor. Kısım 4/6/7'deki jeodetik atıfları M-42'ye işaret ettiği için ayrıca düzeltme gerektirmedi.)*
+
+**Oturum 1 (denetim):**
+- Kanona dokunulmadı; `akiskan_matenatik_turetimi.md` başına uyarı bandı eklendi (§2 bozuk; esas metin 11.4.8.1). Defter oluşturuldu.
+
+**Oturum 2 — PARTİ 1 UYGULAMASI (17 Ağustos 2026, Enes onayıyla). Düzeltme kaydı:**
+
+*A1 · Φ tasarımı (işaret çelişkisi giderildi):*
+1. `08_Sembol_Sozlugu.md:130` — Φ hücresi yeniden yazıldı: ana tanım **Φ ≡ (P₀−P)/ρₙ ≥ 0** (kuyu derinliği; dış alanda +𝒢M/r); dinamik potansiyel **Φ_it ≡ (P−P₀)/ρₙ = −Φ** olarak ayrıldı; Φ_std köprüsü; iş fonksiyonu bağlam-yerel kayıt; düzeltme kaydı düşüldü.
+2. `08_Sembol_Sozlugu.md` — **S-28** karar satırı eklendi (Φ / Φ_it / Φ_N / iş fonksiyonu).
+3. `Kisim_11/01_Denge_Gelgiti:23,112,114,232,263` — dinamik potansiyel Φ → **Φ_it** (5 nokta; formüller değişmedi, yalnız sembol + işaret notu).
+4. Poisson → **Φ_N**: `01_Denge_Gelgiti:388` (Newton sütunu), `17_Ek_B:45`, `10_Blok_B:91`.
+5. **W_f ertelendi** → Parti 3 (yayılım: K1 03_Postulasi:378; K2 02_Zerre:27,29,35,61; K8 M-10/M-11; K9 04_Compton:26, 02_Planck:38,42,96,98).
+
+*A6 · M-19 açık ucu:*
+6. `13_Blok_E:54` — kalem kapatıldı: ~~bağımsız türetim açık~~ → 11.4.8.1 Λ_kin (Prandtl–Glauert, [T], KARNE satır 21); γ_ℓ-mekanizması ayrımı nota işlendi.
+
+*B2-B5 · Postülat-4 koruması ve dil:*
+7. `10_Blok_B:105` + `19_Blok_I:42` — "nedensel olarak en katı" → "dalga sertliği en yüksek" + adlandırma notu (c₀ tavan değil; v_m>10⁴c₀).
+8. `19_Blok_I:42` — "kütleçekim dalgası hızı kısıtı" şerhlendi ("standart fiziğin ... dediği", GW170817).
+9. `18_5:828,830` — "tek kararlı çekim noktası" → "toplanma (denge) noktası" (2 yer) + aynı cümlenin Kısım 11 aynası: `Kisim_11/02_Kuresel_Basiklik:101`.
+10. `08_Sozluk:79` — Ξ: "öz-çekim" → "öz-kuyu (öz-itim)".
+*(Not: M-3/Ek A'daki "denge çekim noktası" kullanımları attractor anlamında ve glossary'li — bilinçli olarak bırakıldı.)*
+
+*C8 · çapraz atıf:*
+11. `15_Blok_G:187` — M-32'nin 2× kalemi güncellendi: analojik değil, M-42 ölçek yapısının sonucu; açık kalan Λ üslerinin mikro türetimi.
+
+*E3 · faktör-2 atıf/adlandırma + işaret:*
+12. `17_Ek_B:29` + `10_Blok_B (M-8 Adım 4)` — ΔP_yüzey=ρₙΦ'nin **dış-bölge** integralinden geldiği açık yazıldı (∫_R^∞); iç-bölge (merkez–yüzey, yarısı) ayrımı nota kondu.
+13. `17_Ek_B:36` + `10_Blok_B:72` — "toplam basınç çukuru" → "merkez–yüzey basınç düşüşü".
+14. `17_Ek_B:25` — işaret notu: kuyuda δP<0 ⇒ δc<0; eşitlikler genlik üzerinden.
+
+*Hijyen:*
+15. `17_Ek_B:53` — "kütleitimi" → "kütle-itim"; `17_Ek_B:35` ondalık virgül (2.7→2,7).
+
+**Doğrulama:** "nedensel olarak en katı / toplam basınç çukuru / çekim noktasıdır / kütleitimi / Φ≡(P−P₀)" desenleri yeniden tarandı; kalan eşleşmeler yalnız (i) yeni adlandırma notlarının içindeki alıntılar, (ii) attractor-anlamlı bilinçli kullanımlar, (iii) Kısım 7 CALISMA dosyası (çalışma alanı, kapsam dışı).
+
+### DENETÇİ RAPORLARI
+Üç denetçinin satır-referanslı bulgularının tamamı A–E bölümlerine işlenmiştir; ham raporlar oturum kaydındadır.
+
+## K. KARAR KAYITLARI (Parti 2 tartışması)
+- **17 Ağu 2026 · Shapiro (Enes):** Shapiro gecikmesi Parti 2 / M-42 muhasebe tartışmasında bağımsız sınav olarak **sayılmayacak**. (Denetimin C5 bulgusuyla uyumlu: Shapiro, bükülmeyle aynı tek parametreyi — γ_c, aynı n_eff — sınıyor; ayrı teori içeriği yok.) Not: kitaptaki Shapiro ✓ kaydı **kalıyor** — teoride gecikme bir problem değil, c_loc=c₀Λ²'nin bedava sonucu (247↔250 µs); yalnız muhasebede ağırlık taşımıyor. İnce ayrım: gecikme yayılım kanalının kuyuda *yavaşlamasından* çıkar; c-üstü hızlar ayrı kanalın (kohezyon, v_m>10⁴c₀) işidir — iki kanal çelişmez (M-5).
+- **17 Ağu 2026 · Jeodetik (Enes):** A3 için karar: ✓ rozetini düşürmek yerine **türetim yazılacak** (Λ_kin makinesiyle). Çalışma açıldı: `jeodetik_turetim_calismasi.md` (M-51 adayı). İlk kurulum sonucu: Ω_geo = 2(sinyal taşınımı, n_eff=Λ⁻² — bükülmeyle AYNI kanal) − ½(tur açığı/Thomas, Λ_kin'den kapalı biçim (γ−1)ω) = (3/2)𝒢Mv/(c₀²r²) → 6.604 mas/yıl ↔ GP-B 6.601,8±18,3 ✓. Eski "1+½" ayrıştırması yanlıştı; doğrusu "2−½". Kanal ataması tek-bit: cetvel kanalı seçilse ½ birim (≈2.200 mas/yıl) çıkar, GP-B ~240σ dışlar. Kalan ana iş: küçük-döngü lemması (dolaşan desenin ekseni gerçekten ∇⊥ln n_eff ile döner mi — halka modeli). Kitaba taşıma yalnız "sonuçlandı" onayıyla.
+- **17 Ağu 2026 · Jeodetik sınav programı ("matematikte açığımız olmasın"):** Üç sayısal sınav koşuldu (betikler: `jeodetik_pusula_sinavi.py`, `jeodetik_rozet_sinavi.py`, `jeodetik_rozet_taramasi.py`). **Sonuçlar:** (1) **Tur açığı (−½) KAPANDI [S-num]** — türetilmiş cetvel-saat-yerelzaman haritalarının dairesel yolda bileşiminden Wigner artığı = −2π(γ−1), oran **1.00000** (üç hızda; kodda SR aksiyomu yok). (2) **Kalem A holonomi biçiminde netleşti:** düzgün-gradyan null'u (simetri gereği tam 0) yerel-oran ifadesinin gauge olduğunu gösterdi; doğru ifade kapalı-yörünge holonomisi Δα = 4πμ/R (analitik, konformal bağlantı); Kepler bağıyla toplam 3πμ/R = de Sitter ✓. (3) **Mikro-model dersleri:** kilitli pusula fırıldağa çöküyor (2π/yörünge, v̂-kilidi); sinyal-çifti rozeti temiz ama **9πμ/R** ölçüyor (a ve v'den bağımsız, ±%0,1) + kinematik pay 35,6β² — işaretçi dönen gelgit sürüklemesini de sayıyor, jiroskop değil. **Kalan iş netleşti:** taşınan girdap çekirdeğinin yönelim dinamiği (akışkan pertürbasyon hesabı) — Kalem A'nın alt-düzey türetimi; kitaba girme koşulu bu.
+- **17 Ağu 2026 · 4B denetimi (Enes'in sorusu: "eksen 4B'den yansıyan hareketlerin sonucu olabilir mi?"):** Kontrol edildi (1.4.7, 1.4.8, 11.7 tarandı). Sonuç: **içkin 4B kanal jeodetiği üretemez** — kitabın kendi teoremleri gereği (ZW ekseni eğemez, yalnız uzunluk modüle eder; asimetrik hâlde bile doğrusal salınım, koni değil; bağımlılık $\delta,\omega_2$'de, jeodetiğinki $\mathcal{G}Mv/r^2$'de). **Ama 4B yapı türetimi güçlendirdi:** 11.7.1'in bağlayıcı cümlesi ("eksen malzeme doğrultusu değildir, 4B dönüş yapısının kesitle arakesitidir") kanal seçimini kanona bağladı — eksen dolaşım-nesnesi ⇒ yayılım kanalı (Λ²); GP-B tek-bit'i girdilikten sağlamaya indi. Ek kazanç: ZW⊥ teoremi jeodetik toplama W-sektöründen üçüncü terim sızamayacağını garanti eder. GR/SR bağımlılık denetimi: temiz (girdiler M-1, M-42-bükülme, P-G; SR/GR yalnız kıyas). Ayrıntı: `jeodetik_turetim_calismasi.md` §2a. Jeodetik, 11.7'nin iki kanalına (tork, içkin) üçüncü tür olarak eklenecek: **taşınım kanalı**.

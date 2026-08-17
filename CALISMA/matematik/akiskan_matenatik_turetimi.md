@@ -1,3 +1,7 @@
+> ⚠️ **DENETİM NOTU (17 Ağustos 2026):** Bu dosya denetlendi — ayrıntı: `tartısma_matematik`, Tartışma #1, Bölüm F.
+> **§1 (zaman genleşmesi):** matematik doğru, ancak kitapta daha sağlam hâli zaten var (Kısım 11.4.8.1, Λ_kin, [T]); esas metin odur.
+> **§2 (kızıla kayma): BOZUK — kitaba taşınmasın.** Kendi öncülüyle çelişiyor (R·c_loc=sabit ⇒ R∝Λ⁻², metin R∝Λ diyor), işaret konvansiyonu karışık, M-42'nin açık kalemini (γ_ℓ mekanizması) çözülmüş gibi sunuyor.
+
 # Evrenakı: Rölativistik Etkilerin Saf Akışkanlar Mekaniğinden Türetilmesi
 
 Bu belge, "Zerre ve Akışkan" kurgusu dışına çıkmadan, Özel Görelilik (Zaman Genleşmesi) ve Genel Görelilik (Kızıla Kayma) sonuçlarının **saf hidrodinamik ve girdap dinamiği (vortex dynamics)** ile nasıl baştan sona (first-principles) türetilebileceğini göstermektedir. Bu yöntem, Einstein'ın geometrik varsayımlarına (ışık saati vb.) ihtiyaç duymaz.

@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>M1 — Tek Kenar (Bıçak) Girişim Simülatörü | Evrenakı</title>
+<style>
+:root{--bg:#0d0d0f;--panel:#141418;--panel2:#1b1b21;--accent:#00ffcc;--accent2:#ff9d3d;
+      --text:#e6e6e6;--muted:#8a8a95;--border:#2a2a33}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:'Segoe UI',Tahoma,Verdana,sans-serif;padding:14px;line-height:1.45}
+h1{font-size:1.05rem;color:var(--accent);letter-spacing:.5px;text-shadow:0 0 14px rgba(0,255,204,.35)}
+h1 small{display:block;font-size:.72rem;color:var(--muted);font-weight:400;letter-spacing:0;margin-top:3px}
+#wrap{max-width:1560px;margin:0 auto}
+header{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding:12px 16px;
+  background:var(--panel);border:1px solid var(--border);border-radius:10px 10px 0 0;flex-wrap:wrap}
+#btns{display:flex;gap:7px;flex-wrap:wrap}
+button{background:var(--panel2);color:var(--text);border:1px solid var(--border);border-radius:6px;
+  padding:7px 12px;cursor:pointer;font-size:.78rem;transition:.15s;white-space:nowrap}
+button:hover{border-color:var(--accent);color:var(--accent)}
+button.on{background:rgba(0,255,204,.13);border-color:var(--accent);color:var(--accent)}
+button.pre{background:rgba(255,157,61,.1);border-color:#5a4326;color:var(--accent2);font-weight:600}
+button.pre:hover{background:rgba(255,157,61,.2);border-color:var(--accent2)}
+#stage{background:#000;border-left:1px solid var(--border);border-right:1px solid var(--border)}
+canvas{display:block;width:100%;height:auto}
+#lower{display:grid;grid-template-columns:1fr 350px;border:1px solid var(--border);border-top:0;
+  border-radius:0 0 10px 10px;overflow:hidden}
+#ctrls{background:var(--panel);padding:14px 16px;display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(212px,1fr));gap:11px 18px;align-content:start}
+.c{display:flex;flex-direction:column;gap:3px}
+.c label{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.6px;
+  display:flex;justify-content:space-between;gap:8px}
+.c label b{color:var(--accent);font-weight:600;font-variant-numeric:tabular-nums}
+.c .sub{font-size:.65rem;color:#5f5f6b;text-transform:none;letter-spacing:0;margin-top:-1px}
+input[type=range]{width:100%;accent-color:var(--accent);cursor:pointer;height:16px}
+#readout{background:var(--panel2);padding:14px 16px;border-left:1px solid var(--border);font-size:.76rem}
+#readout h3{font-size:.7rem;color:var(--accent);text-transform:uppercase;letter-spacing:1px;
+  margin-bottom:8px;padding-bottom:5px;border-bottom:1px solid var(--border)}
+#readout h3:not(:first-child){margin-top:15px}
+.row{display:flex;justify-content:space-between;gap:10px;padding:2.5px 0;color:var(--muted)}
+.row b{color:var(--text);font-variant-numeric:tabular-nums;font-weight:600;text-align:right}
+.row b.ok{color:var(--accent)}.row b.warn{color:var(--accent2)}.row b.bad{color:#ff4d6d}
+.note{font-size:.7rem;color:#6b6b78;margin-top:11px;line-height:1.5;border-top:1px solid var(--border);padding-top:9px}
+#legend{display:flex;gap:15px;flex-wrap:wrap;font-size:.72rem;color:var(--muted);padding:9px 16px;
+  background:var(--panel2);border-left:1px solid var(--border);border-right:1px solid var(--border)}
+.lg{display:flex;align-items:center;gap:6px}
+.dot{width:9px;height:9px;border-radius:50%;box-shadow:0 0 7px currentColor;background:currentColor}
+</style>
+</head>
+<body>
+<div id="wrap">
+
+<header>
+  <h1>M1 · Tek Kenar (Bıçak) Girişim Simülatörü
+    <small>Evrenakı — 2.8.1 / DENEY 4 · Tam düzen: zerre dalgalanmaz, düz gider · Saçak formülü koda yazılmamıştır</small>
+  </h1>
+  <div id="btns">
+    <button id="pAnl" class="pre">🎬 Anlatı</button>
+    <button id="pSta" class="pre">📊 İstatistik</button>
+    <button id="bPlay" class="on">⏸ Duraklat</button>
+    <button id="bReset">↺ Sıfırla</button>
+    <button id="bCont">Basınç Konturu</button>
+    <button id="bWake" class="on">İz Tüpü</button>
+    <button id="bPath" class="on">Yörünge İzi</button>
+    <button id="bNum" class="on">Numaralar</button>
+  </div>
+</header>
+
+<div id="stage"><canvas id="cv" width="1520" height="760"></canvas></div>
+
+<div id="legend">
+  <span class="lg" style="color:#5b9dff"><i class="dot"></i>Aile-D · sapmasız düz</span>
+  <span class="lg" style="color:#ff9d3d"><i class="dot"></i>Aile-Y · uçtan yansıyan</span>
+  <span class="lg" style="color:#ff4d6d"><i class="dot"></i>Aile-K · gölgeye kıvrılan / seken</span>
+  <span class="lg" style="color:#00ffcc"><i class="dot"></i><b>TAKİPTE</b> · öndekinin izine oturdu (madde 10)</span>
+  <span class="lg" style="color:#8b5cf6"><i class="dot"></i>ŞERİT DEĞİŞTİRİYOR · zıt hizalı izi terk ediyor</span>
+</div>
+
+<div id="lower">
+  <div id="ctrls"></div>
+  <div id="readout">
+    <h3>Zerre Muhasebesi (süreklilik)</h3>
+    <div class="row"><span>Ateşlenen</span><b id="rFired">0</b></div>
+    <div class="row"><span>Ekrana varan</span><b id="rHit">0</b></div>
+    <div class="row"><span>Gövdeden geri seken</span><b id="rAbs">0</b></div>
+    <div class="row"><span>Sahneden çıkan</span><b id="rOut">0</b></div>
+    <div class="row"><span>Denklik (kayıp)</span><b id="rBal" class="ok">0</b></div>
+
+    <h3>İz Takibi (madde 10)</h3>
+    <div class="row"><span>Şu an TAKİPTE</span><b id="rLock">0</b></div>
+    <div class="row"><span>Şu an şerit değiştiren</span><b id="rPush">0</b></div>
+    <div class="row"><span>Uçuştaki zerre</span><b id="rLive">0</b></div>
+    <div class="row"><span>λ (ekranda)</span><b id="rLam">–</b></div>
+
+    <h3>Ekran Ölçümü</h3>
+    <div class="row"><span>Aydınlıkta saçak</span><b id="rFr">–</b></div>
+    <div class="row"><span>Uca yakın aralık</span><b id="rF1">–</b></div>
+    <div class="row"><span>Dıştaki aralık</span><b id="rF2">–</b></div>
+    <div class="row"><span>Aralık eğilimi</span><b id="rTrend">–</b></div>
+    <div class="row"><span>Gölgede saçak</span><b id="rSh">–</b></div>
+    <div class="row"><span>Tepe / ortalama</span><b id="rPk">–</b></div>
+
+    <div class="note">
+      <b>Düzen ilkesi:</b> zerre dalgalanmaz, <u>düz gider</u>. Yön yalnız üç olayda değişir:
+      ① gradyan kavisi ② uçtan yansıma ③ iz benimseme — <u>yörüngesi öndekinin yörüngesine dönüşür</u>.
+      λ, zerrenin salınımı değil, katardaki <u>aralıktır</u>. Davranışı rastgelelik değil,
+      katarın bıçağa uzaklığı belirler; katar içi hiza korunur, katarlar arası mesafe daralır
+      ve her katar belirli bir açı kazanır.<br>
+      <b>🎬 Anlatı:</b> az zerre, geniş aralık, ağır çekim — takip TEK TEK izlenir.
+      <b>📊 İstatistik:</b> yoğun katar — desen birikimi ölçülür.
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+"use strict";
+/*==CORE==*/
+/* ═══════════════════════════════════════════════════════════════════════════
+   M1 · TEK KENAR — EVRENAKI GİRİŞİM MEKANİĞİ · TAM DÜZEN SÜRÜMÜ
+   ───────────────────────────────────────────────────────────────────────────
+   İLKE (kullanıcı): "Zerreler dalgalanarak gitmez. Düz giderler.
+                      Düzensizlik yok, tam bir düzen var, saçılma yok."
+   ⇒ Zerre bir yön vektörüyle DÜZ uçar. Salınım terimi yoktur.
+   ⇒ Yön yalnız ÜÇ belirlenimci olayda değişir:
+      ① GRADYAN KAVİSİ  (madde 2,4,5,7)  — bıçak çevresinde pürüzsüz bükülme
+      ② UÇTAN YANSIMA   (madde 6)        — teğetten aynasal, geliş=çıkış
+      ③ İZ BENİMSEME    (madde 10)       — öndekinin izine oturur ve artık
+                                           ONUN yörüngesini uçar (saf takip)
+   ⇒ VERNİYER (madde 11): iz λ-yuvalıdır. Aradaki gecikme yuvayla HİZALIYSA
+      benimse (aydınlık şerit); ZIT hizadaysa tek yumuşak kavisle şeridi
+      terk et (karanlık şerit). Karar belirlenimcidir; rastgelelik yoktur.
+   ⇒ Madde 1: atış periyodu TAM λ/a₀ — zerre arası mesafe kesinlikle eşit,
+      yalnız renk (λ) değişince değişir. Ortak cetvel sıfırı buradan gelir.
+   ⇒ Madde 8: gecikme = yol uzunluğu + hız kaybı → tek sayaç z.t
+   ⇒ ÇİFT SAYIM YASAĞI: yön ← ∇P (dik bileşen) · büyüklük ← a(x,y)=√(P/ρ)
+   ⇒ Saçak formülü koda yazılmaz. Desen ÇIKTIDIR.
+   ═══════════════════════════════════════════════════════════════════════════ */
+const W=1520, H=760;
+const SRC_X=60, SCREEN_X=W-110, KNIFE_X=SRC_X+(SCREEN_X-SRC_X)*0.20;  // DENEY 4: 2m:8m
+const TIP_Y=520, BASE_HW=52, A0=250;
+
+const P={
+  nm:633,   lamX:1.0, tScale:1.0, trains:48,
+  g0:0.36,  nExp:2.0, R:180,  Kp:3.5,  k:0.55,
+  Riz:10,   life:1.40, kap:1.0, adopt:1.8,   /* Riz < λ şart: menzil şerit aralığını aşarsa verniyer çözülemez */
+  w:60,     rz:5,     refBoost:0.35,
+  beamU:300, beamD:60
+};
+const lamPx=()=>P.nm*(14/633)*P.lamX;
+
+/* ── durum ── */
+let zerre=[], fired=0, hitScreen=0, absorbed=0, exited=0, rankNo=0, emitAcc=0;
+let LK=0, PS=0;
+const BIN=2, NB=Math.ceil(H/BIN), hist=new Float32Array(NB);
+
+/* ── bıçak geometrisi ── */
+function halfW(y){ return y<=TIP_Y ? P.w/2 : P.w/2+(BASE_HW-P.w/2)*(y-TIP_Y)/(H-TIP_Y); }
+function inKnife(x,y){ return y>=TIP_Y && Math.abs(x-KNIFE_X)<=halfW(y); }
+function surf(x,y){
+  const hw=P.w/2; let best=1e9,bnx=0,bny=-1;
+  { const ax=KNIFE_X-hw,bx=KNIFE_X+hw, cx=Math.max(ax,Math.min(bx,x));
+    const dx=x-cx,dy=y-TIP_Y,d=Math.hypot(dx,dy);
+    if(d<best){best=d; if(d>1e-6){bnx=dx/d;bny=dy/d;}else{bnx=0;bny=-1;}} }
+  for(const s of [-1,1]){
+    const ax=KNIFE_X+s*hw,ay=TIP_Y,vx=s*(BASE_HW-hw),vy=H-TIP_Y,L2=vx*vx+vy*vy;
+    let t=((x-ax)*vx+(y-ay)*vy)/L2; t=t<0?0:(t>1?1:t);
+    const dx=x-(ax+t*vx),dy=y-(ay+t*vy),d=Math.hypot(dx,dy);
+    if(d<best){best=d; if(d>1e-6){bnx=dx/d;bny=dy/d;}else{bnx=s;bny=0;}} }
+  return {d:best,nx:bnx,ny:bny};
+}
+/* δP/P₀=−g₀(1−r/R)ⁿ, n=2 (pulsasyon) ⇒ |∇P|∝(1−r/R): kuvvet DOĞRUSAL (2.8.1)
+   a=a₀√((1−g)/(1−k·g)) : k<1 ⇒ kütle yanında zorunlu yavaşlama (Yön Kuralı)  */
+function fieldAt(x,y){
+  const s=surf(x,y);
+  if(s.d>=P.R) return {g:0,dPdd:0,nx:s.nx,ny:s.ny,a:A0,d:s.d};
+  const u=1-s.d/P.R, g=P.g0*Math.pow(u,P.nExp);
+  return {g, dPdd:P.g0*P.nExp*Math.pow(u,P.nExp-1)/P.R, nx:s.nx, ny:s.ny,
+          a:A0*Math.sqrt((1-g)/(1-P.k*g)), d:s.d};
+}
+
+/* ── iz haritası: her zerre GERÇEK yol noktalarını bırakır ── */
+const SAMP=5;
+let HC=20, hash=new Map();
+function rebuildHash(){
+  HC=Math.max(12,P.Riz); hash.clear();
+  for(const z of zerre) for(const p of z.pts){
+    const k=((p.x/HC)|0)*100003+((p.y/HC)|0);
+    let a=hash.get(k); if(!a){a=[];hash.set(k,a);} a.push(p);
+  }
+}
+/* izdeki yuva hizası: iz noktası ph ile bırakıldı; tanjant boyunca d px
+   ileri = d/λ yuva ilerler. Böylece hiza örneklemeden bağımsız, KESİN okunur. */
+function findLead(z,nu){
+  const gx=(z.x/HC)|0, gy=(z.y/HC)|0, R2=P.Riz*P.Riz;
+  let bp=null, bd=R2;
+  for(let j=-1;j<=1;j++) for(let i=-1;i<=1;i++){
+    const a=hash.get((gx+i)*100003+(gy+j)); if(!a) continue;
+    for(const p of a){
+      if(p.own===z) continue;
+      if(p.own.x<=z.x+2) continue;               // yalnız ÖNDEKİNİ takip eder
+      const dx=p.x-z.x, dy=p.y-z.y, d2=dx*dx+dy*dy;
+      if(d2<bd){bd=d2;bp=p;}
+    }
+  }
+  if(!bp) return null;
+  const ex=z.x-bp.x, ey=z.y-bp.y;
+  const lon=-(ex*bp.ux+ey*bp.uy);                // iz noktasından zerreye boyuna mesafe
+  const phHere=bp.ph - lon/lamPx();              // izin ZERRENİN bulunduğu yerdeki yuva sayacı
+  let d=(z.t*nu - phHere)%1; if(d<0)d+=1;
+  const align=Math.cos(6.283185307*d);           // +1 yuvaya oturur, −1 cepheye çarpar
+  const side=(ex*(-bp.uy)+ey*bp.ux)>=0?1:-1;     // izin hangi yanında
+  const cosA=z.dx*bp.ux+z.dy*bp.uy;              // zerre yönü ↔ iz istikameti uyumu
+  const cosD=z.dx*bp.own.dx+z.dy*bp.own.dy;      // zerre yönü ↔ öncünün GÜNCEL yönü
+  const lat=Math.abs(ex*(-bp.uy)+ey*bp.ux);      // ize dik uzaklık (yuva içine düştü mü?)
+  return {p:bp, own:bp.own, align, side, cosA, cosD, lat};
+}
+function nearTrail(lead,z){
+  let bp=null,bd=1e18;
+  for(const p of lead.pts){
+    const dx=p.x-z.x,dy=p.y-z.y,d2=dx*dx+dy*dy;
+    if(d2<bd){bd=d2;bp=p;}
+  }
+  return bp?{p:bp,d:Math.sqrt(bd)}:null;
+}
+
+/* ── atış: madde 1 — tam λ/a₀ periyodu, eşit aralık, sıfır rastgelelik ──
+   age: rankın tick içindeki gerçek yaşı — zerre SRC_X+age·a₀'da doğar ki
+   ardışık ranklar arası mesafe KESİNLİKLE λ kalsın (kare hızından bağımsız) */
+function spawn(age){
+  rankNo++;
+  const n=P.trains|0, top=TIP_Y-P.beamU, bot=TIP_Y+P.beamD;
+  const st=n>1?(bot-top)/(n-1):0, x0=SRC_X+age*A0;
+  for(let i=0;i<n;i++){
+    zerre.push({x:x0,y:top+i*st,px:x0,py:top+i*st,dx:1,dy:0,
+                t:age,fam:0,mode:0,lead:null,pushSign:1,pushT:0,imm:0,
+                pts:[],acc:0,id:i+1,rank:rankNo});
+    fired++;
+  }
+}
+function rot(z,th){
+  const c=Math.cos(th),s=Math.sin(th);
+  const dx=z.dx*c-z.dy*s, dy=z.dx*s+z.dy*c;
+  z.dx=dx; z.dy=dy;
+}
+
+/* ── adım: DÜZ uçuş + üç belirlenimci olay ── */
+const MAXTURN=3.0;                                // rad/s — pürüzsüz kavis tavanı
+function stepZ(z,dt,scan){
+  const f=fieldAt(z.x,z.y);
+  const sp=f.a;                                   // BÜYÜKLÜK: |v|=a(x,y) (madde 3)
+  const nu=A0/lamPx();
+
+  if(z.mode===1){
+    /* ③ İZ BENİMSEME: yörüngesi öndekinin yörüngesine DÖNÜŞMÜŞTÜR.
+       Hedef yön = öncünün GÜNCEL yönü (izin anlık kıvrımı DEĞİL — geçici
+       manevralar kopyalanmaz, düzen bozulmaz) + yanal hatayı kapatan
+       küçük düzeltme. Kuvvet yok, salınım yok.                          */
+    const L=z.lead, tr=L?nearTrail(L,z):null;
+    if(!tr || tr.d>2.5*P.Riz || (z.dx*L.dx+z.dy*L.dy)<0.97){ z.mode=0; z.lead=null; }
+    else{
+      const p=tr.p;
+      const e=(z.x-p.x)*(-L.dy)+(z.y-p.y)*L.dx;   // öncü yönüne dik imzalı hata
+      let corr=-P.adopt*0.05*e;
+      /* klamp, bırakma eşiğinin (cos>0.97 ⇒ 14°) İÇİNDE kalmalı: aksi hâlde
+         kilit girer, döner, eşikte düşer ve eğiklik zerrede kalırdı (sızıntı) */
+      if(corr>0.22)corr=0.22; if(corr<-0.22)corr=-0.22;
+      const c=Math.cos(corr),s=Math.sin(corr);
+      z.dx=L.dx*c-L.dy*s; z.dy=L.dx*s+L.dy*c;     // doğrudan atama: titreşimsiz
+    }
+  } else {
+    /* ① GRADYAN KAVİSİ (madde 2,4,5,7): yalnız dik bileşen yönü döndürür */
+    if(f.g>0){
+      const nx=-z.dy, ny=z.dx;
+      const aP=-P.Kp*f.dPdd*(f.nx*nx+f.ny*ny)*28000;
+      let dth=aP*dt/sp;
+      const cap=MAXTURN*dt;
+      if(dth>cap)dth=cap; if(dth<-cap)dth=-cap;
+      rot(z,dth);
+    }
+    /* şerit terki: S-MANEVRASI — kavis + karşı-kavis.
+       Net yön değişimi SIFIR (düzen korunur), yalnız yanal şerit kayması kalır. */
+    if(z.mode===2){
+      const w2=1.3*Math.min(1,P.kap);
+      rot(z, (z.pushT>0.175?1:-1)*z.pushSign*w2*dt);
+      z.pushT-=dt;
+      if(z.pushT<=0){ z.mode=0; z.imm=0.30; }
+    }
+    /* iz tarama (belirlenimci karar) — AÇI KAPISI:
+       Tam benimseme yalnız iz istikameti kendi istikametiyle UYUMLUYKEN olur
+       (dar açı ≤ ~18°): akıntı ancak aynı doğrultuda çeker. Geniş açıyla
+       kesen iz zerreyi döndüremez; orada yalnız zıt-hiza İTMESİ çalışır —
+       kaçık şerit boşaltılır, boşalan komşu çakışma şeridine gider (§10.3). */
+    if(scan && P.kap>0 && z.imm<=0 && z.mode===0){
+      const c=findLead(z,nu);
+      if(c){
+        /* KİLİT = yuvanın İÇİNE düşmek: yanal hata < λ/4. Eşdeğer komşu
+           hatlar (aralık > λ/4) yakalanmaz — sebepsiz şerit kayması olmaz.
+           Takip AYNI AİLE içinde işler (demet-içi wake takibi, 2.7.2);
+           aileler arası etkileşim verniyer İTMESİDİR (madde 11).          */
+        if(c.align>0.5 && c.cosA>0.99 && c.cosD>0.995 && c.lat<lamPx()/4
+           && c.own.fam===z.fam){ z.mode=1; z.lead=c.own; }
+        else if(c.align<-0.35){ z.mode=2; z.pushSign=c.side; z.pushT=0.35; }
+      }
+    }
+  }
+  if(z.imm>0) z.imm-=dt;
+
+  /* DÜZ uçuş */
+  z.px=z.x; z.py=z.y;
+  z.x+=z.dx*sp*dt; z.y+=z.dy*sp*dt; z.t+=dt;      // madde 8: yol+yavaşlama tek sayaçta
+
+  /* ② UÇTAN YANSIMA (madde 6): teğetten aynasal; zerre YOK EDİLMEZ */
+  { const su=surf(z.x,z.y);
+    if(inKnife(z.x,z.y)||su.d<P.rz){
+      const sx=z.x-su.nx*su.d, sy=z.y-su.ny*su.d;
+      z.x=sx+su.nx*(P.rz+0.6); z.y=sy+su.ny*(P.rz+0.6);
+      const dot=z.dx*su.nx+z.dy*su.ny;
+      if(dot<0){ z.dx-=2*dot*su.nx; z.dy-=2*dot*su.ny; }
+      z.mode=0; z.lead=null;
+      if(su.ny<-0.05){                                  // uç düzlemi (köşe sekmeleri dahil) → Aile-Y
+        if(z.fam!==1){ z.fam=1; rot(z,-P.refBoost); }   // ŞAHLANMA: kısa-ekran telafisi (bilerek)
+      }
+      else if(z.fam!==3){ absorbed++; z.fam=3; }        // gövde: geri seker (sayaç bilgi amaçlı)
+    } }
+  if(z.fam===0 && z.y>TIP_Y+3) z.fam=2;
+
+  /* iz noktası bırak — KİLİTLİYKEN BIRAKMAZ: tünelin içinde giden zerre
+     yeni tünel açmaz, öncünün tünelini tazeler. (Mega-kanal çökmesinin
+     freni: kanal çekiciliği öncü sayısıyla sınırlı kalır — §12.5 sorusu) */
+  if(z.mode!==1){
+    z.acc+=Math.hypot(z.x-z.px,z.y-z.py);
+    if(z.acc>=SAMP){
+      z.acc=0;
+      z.pts.push({x:z.x,y:z.y,ux:z.dx,uy:z.dy,ph:z.t*nu,own:z});
+      const cap=Math.max(6,Math.ceil(P.life*A0/SAMP));
+      if(z.pts.length>cap) z.pts.shift();
+    }
+  }
+
+  if(z.x>=SCREEN_X){ hist[Math.min(NB-1,Math.max(0,(z.y/BIN)|0))]++; hitScreen++; return false; }
+  if(z.x<0||z.y<-40||z.y>H+40){ exited++; return false; }
+  return true;
+}
+
+function tick(dtF){
+  const per=lamPx()/A0;                            // atış periyodu TAM λ/a₀ (madde 1)
+  emitAcc+=dtF;
+  let gd=0; while(emitAcc>=per&&gd++<40){ emitAcc-=per; spawn(emitAcc); }
+  rebuildHash();
+  const SUB=2, dt=dtF/SUB, keep=[];
+  for(const z of zerre){
+    let alive=true;
+    for(let s=0;s<SUB&&alive;s++) alive=stepZ(z,dt,s===0);
+    if(alive) keep.push(z);
+  }
+  zerre=keep;
+  LK=0; PS=0;
+  for(const z of zerre){ if(z.mode===1)LK++; else if(z.mode===2)PS++; }
+}
+
+function reset(){
+  zerre=[]; hist.fill(0); hash.clear();
+  fired=hitScreen=absorbed=exited=0; rankNo=0; emitAcc=0; LK=0; PS=0;
+}
+
+/* ── ölçüm (saf; DOM yok) ── */
+function peaksIn(lo,hi){
+  const s=new Float32Array(NB);
+  for(let i=lo;i<=hi;i++){ let q=0,n=0;
+    for(let j=-2;j<=2;j++){const t=i+j; if(t>=lo&&t<=hi){q+=hist[t];n++;}} s[i]=q/n; }
+  let mx=0,sum=0,cnt=0;
+  for(let i=lo;i<=hi;i++){ if(s[i]>mx)mx=s[i]; sum+=s[i]; cnt++; }
+  const mean=cnt?sum/cnt:0, out=[];
+  if(mx>=6) for(let i=lo+3;i<=hi-3;i++)
+    if(s[i]>s[i-1]&&s[i]>=s[i+1]&&s[i]>s[i-3]&&s[i]>s[i+3]&&s[i]>mean*1.18) out.push(i*BIN);
+  const cl=[]; for(const p of out) if(!cl.length||p-cl[cl.length-1]>6) cl.push(p);
+  return {peaks:cl,mean,mx};
+}
+function computeMeasure(){
+  const tip=(TIP_Y/BIN)|0;
+  const L=peaksIn(3,tip-4), G=peaksIn(tip+4,NB-4);
+  const r={sacak:L.peaks.length, golge:G.peaks.length,
+           tepeOrt:L.mean>0?+(L.mx/L.mean).toFixed(2):0,
+           yakin:null,dis:null,egilim:'-'};
+  if(L.peaks.length>=3){
+    const d=[]; for(let i=1;i<L.peaks.length;i++) d.push(L.peaks[i]-L.peaks[i-1]);
+    r.yakin=+d[d.length-1].toFixed(0); r.dis=+d[0].toFixed(0);
+    r.egilim = r.dis<r.yakin*0.90?'SIKISIYOR':(r.dis>r.yakin*1.10?'ACILIYOR':'SABIT');
+  }
+  return r;
+}
+/*==CORE-END==*/
+
+/* ═══════ ARAYÜZ / ÇİZİM (yalnız görselleştirme; fizik yukarıda) ═══════════ */
+const cv=document.getElementById('cv'), ctx=cv.getContext('2d',{alpha:false});
+let showCont=true, showWake=true, showPath=true, showNum=true, running=true;
+
+const SLIDERS=[
+ ['nm'    ,'Renk (dalga boyu λ)' ,'zerre arası mesafe YALNIZ bununla değişir' ,400,700,1  ,v=>v+' nm'],
+ ['lamX'  ,'λ görünürlük ölçeği' ,'aralıkları açar — abartma ekranda ilan edilir',1,12,0.5,v=>'×'+v.toFixed(1)],
+ ['tScale','Zaman ölçeği'        ,'ağır çekim — takibi izlemek için'          ,0.1,1.5,0.05,v=>'×'+v.toFixed(2)],
+ ['trains','Katar sayısı'        ,'paralel katar (şiddet)'                    ,3  ,60 ,1  ,v=>v],
+ ['g0'    ,'Gradyan derinliği δP₀','yüzeydeki bağıl basınç açığı'             ,0.05,0.70,0.01,v=>v.toFixed(2)],
+ ['nExp'  ,'Profil üssü n'       ,'δP∝(1−r/R)ⁿ · n=2 ⇒ kuvvet DOĞRUSAL'       ,1.0,3.0,0.1,v=>v.toFixed(1)],
+ ['R'     ,'Etki yarıçapı R'     ,'madde 7 — ışın genişliğinden KÜÇÜK olmalı' ,40 ,500,5  ,v=>v+' px'],
+ ['Kp'    ,'Bükme gücü K'        ,'madde 2,5 — gradyanın yön kanalı'          ,0  ,6.0,0.05,v=>v.toFixed(2)],
+ ['refBoost','Yansıma şahlanması','kısa-ekran telafisi — bilerek eklenir'     ,0  ,0.8,0.05,v=>Math.round(v*57.3)+'°'],
+ ['k'     ,'Yoğunluk eşliği k'   ,'k<1 ⇒ kütle yanında zorunlu yavaşlama'     ,0.0,0.98,0.01,v=>v.toFixed(2)],
+ ['Riz'   ,'İz yarıçapı R_iz'    ,'madde 10 — izi ne kadar uzaktan yakalar'   ,5  ,50 ,1  ,v=>v+' px'],
+ ['life'  ,'İz ömrü ℓ∥'          ,'madde 10 — iz ne kadar geriden takip edilir',0.10,4.0,0.05,v=>v.toFixed(2)+' s'],
+ ['kap'   ,'Takip anahtarı κ'    ,'madde 10 — 0 yaparsan desen ÖLMELİ'        ,0  ,1.0,0.05,v=>v.toFixed(2)],
+ ['adopt' ,'Takip sertliği'      ,'ize oturma düzeltmesinin kazancı'          ,0.2,3.0,0.1,v=>v.toFixed(1)],
+ ['w'     ,'Uç düzlem genişliği w','madde 6 — dar bir DÜZLEMDİR'              ,2  ,140,1  ,v=>v+' px'],
+ ['rz'    ,'Zerre yarıçapı r_z'  ,'katı damlanın hacmi'                       ,1  ,14 ,0.5,v=>v+' px'],
+ ['beamU' ,'Işın · uçtan yukarı' ,'aydınlık taraf — R değerinden BÜYÜK olmalı',60 ,500,5  ,v=>v+' px'],
+ ['beamD' ,'Işın · uçtan aşağı'  ,'bıçağın kestiği bant'                      ,10 ,200,5  ,v=>v+' px']
+];
+
+function nmColor(nm){
+  let r=0,g=0,b=0;
+  if(nm<440){r=-(nm-440)/60;b=1;}else if(nm<490){g=(nm-440)/50;b=1;}
+  else if(nm<510){g=1;b=-(nm-510)/20;}else if(nm<580){r=(nm-510)/70;g=1;}
+  else if(nm<645){r=1;g=-(nm-645)/65;}else{r=1;}
+  const m=Math.max(r,g,b)||1;
+  return [Math.round(255*r/m),Math.round(255*g/m),Math.round(255*b/m)];
+}
+const FAM=['#5b9dff','#ff9d3d','#ff4d6d','#ff4d6d'];
+
+function draw(){
+  ctx.fillStyle='#07070b'; ctx.fillRect(0,0,W,H);
+
+  if(showCont){
+    ctx.save(); ctx.lineWidth=1;
+    for(let i=1;i<=14;i++){
+      ctx.strokeStyle=`rgba(150,120,235,${0.30*(1-i/16)+0.05})`;
+      ctx.beginPath(); ctx.arc(KNIFE_X,TIP_Y,P.R*i/14,Math.PI*1.02,Math.PI*1.98); ctx.stroke();
+    }
+    ctx.restore();
+  }
+
+  ctx.save(); ctx.strokeStyle='rgba(255,255,255,.16)'; ctx.setLineDash([8,8]);
+  ctx.beginPath(); ctx.moveTo(KNIFE_X,TIP_Y); ctx.lineTo(SCREEN_X,TIP_Y); ctx.stroke();
+  ctx.setLineDash([]); ctx.font='11px Segoe UI'; ctx.fillStyle='rgba(255,255,255,.42)';
+  ctx.fillText('Klasik Gölge Sınırı',KNIFE_X+16,TIP_Y-8);
+  ctx.fillStyle='rgba(255,255,255,.28)';
+  ctx.fillText('AYDINLIK ↑  yörüngeler kesişir → saçak',SCREEN_X-268,TIP_Y-30);
+  ctx.fillText('GÖLGE ↓  kesişme yok → saçak yok',SCREEN_X-268,TIP_Y+38);
+  ctx.restore();
+
+  /* yörünge izi (kesikli) + iz tüpü (halkalar) — kitap GIF dili */
+  ctx.save();
+  for(const z of zerre){
+    const col=z.mode===1?'#00ffcc':(z.mode===2?'#8b5cf6':FAM[z.fam]);
+    if(showPath&&z.pts.length>1){
+      ctx.strokeStyle=col; ctx.globalAlpha=.34; ctx.lineWidth=1.1; ctx.setLineDash([5,5]);
+      ctx.beginPath(); ctx.moveTo(z.pts[0].x,z.pts[0].y);
+      for(let i=1;i<z.pts.length;i++) ctx.lineTo(z.pts[i].x,z.pts[i].y);
+      ctx.lineTo(z.x,z.y); ctx.stroke(); ctx.setLineDash([]);
+    }
+    if(showWake&&z.pts.length>1&&(zerre.length<=900||z.id%3===0)){
+      ctx.globalCompositeOperation='lighter'; ctx.lineWidth=1.2;
+      const n=z.pts.length, K=Math.min(n,22);
+      for(let i=0;i<K;i++){
+        const p=z.pts[n-1-i], fr=1-i/K;
+        ctx.strokeStyle=col; ctx.globalAlpha=.45*fr;
+        ctx.beginPath(); ctx.arc(p.x,p.y,P.Riz*(0.35+0.65*(1-fr))+2,0,6.2832); ctx.stroke();
+      }
+      ctx.globalCompositeOperation='source-over';
+    }
+    ctx.globalAlpha=1;
+  }
+  ctx.restore();
+
+  /* zerreler + numara (her katarın öncüsüne) */
+  const leadOf=new Map();
+  for(const z of zerre){ const c=leadOf.get(z.id); if(!c||z.x>c.x) leadOf.set(z.id,z); }
+  ctx.save(); ctx.font='10px Segoe UI';
+  const dotR=P.rz*0.8+1+(P.lamX>=3?2.5:0);
+  for(const z of zerre){
+    const col=z.mode===1?'#00ffcc':(z.mode===2?'#8b5cf6':FAM[z.fam]);
+    ctx.fillStyle=col; ctx.shadowColor=col; ctx.shadowBlur=z.mode===1?11:6;
+    ctx.beginPath(); ctx.arc(z.x,z.y,dotR,0,6.2832); ctx.fill();
+    ctx.shadowBlur=0; ctx.fillStyle='rgba(255,255,255,.9)';
+    ctx.beginPath(); ctx.arc(z.x,z.y,1.5,0,6.2832); ctx.fill();
+    if(showNum&&leadOf.get(z.id)===z&&zerre.length<=400){
+      ctx.fillStyle='rgba(255,255,255,.75)';
+      ctx.fillText(z.id,z.x+dotR+3,z.y-dotR-2);
+    }
+  }
+  ctx.restore();
+
+  /* bıçak */
+  const hw=P.w/2, gd=ctx.createLinearGradient(KNIFE_X-BASE_HW,0,KNIFE_X+BASE_HW,0);
+  gd.addColorStop(0,'#2b3038'); gd.addColorStop(.45,'#8b93a4');
+  gd.addColorStop(.55,'#525863'); gd.addColorStop(1,'#22262d');
+  ctx.fillStyle=gd; ctx.beginPath();
+  ctx.moveTo(KNIFE_X-hw,TIP_Y); ctx.lineTo(KNIFE_X+hw,TIP_Y);
+  ctx.lineTo(KNIFE_X+BASE_HW,H); ctx.lineTo(KNIFE_X-BASE_HW,H); ctx.closePath(); ctx.fill();
+  ctx.strokeStyle='rgba(255,255,255,.6)'; ctx.lineWidth=1.8;
+  ctx.beginPath(); ctx.moveTo(KNIFE_X-hw,TIP_Y); ctx.lineTo(KNIFE_X+hw,TIP_Y); ctx.stroke();
+  ctx.fillStyle='rgba(255,255,255,.5)'; ctx.font='11px Segoe UI'; ctx.textAlign='center';
+  ctx.fillText('Sivri Kenar (Katı Kütle)',KNIFE_X,TIP_Y+92);
+  ctx.font='10px Segoe UI'; ctx.fillText(`uç düzlemi w=${P.w}px`,KNIFE_X,TIP_Y-14);
+  ctx.textAlign='left';
+
+  /* kaynak */
+  const [cr,cg,cb]=nmColor(P.nm);
+  ctx.fillStyle=`rgb(${cr},${cg},${cb})`;
+  ctx.fillRect(SRC_X-10,TIP_Y-P.beamU,4,P.beamU+P.beamD);
+  ctx.save(); ctx.translate(SRC_X-18,TIP_Y-P.beamU/2); ctx.rotate(-Math.PI/2);
+  ctx.fillStyle='rgba(0,255,204,.55)'; ctx.font='10px Segoe UI'; ctx.textAlign='center';
+  ctx.fillText('KAYNAK · hizalı katarlar (madde 1)',0,0); ctx.restore();
+
+  /* ekran + histogram */
+  ctx.fillStyle='#191920'; ctx.fillRect(SCREEN_X,0,7,H);
+  let mx=0; for(let i=0;i<NB;i++) if(hist[i]>mx) mx=hist[i];
+  if(mx>0){
+    ctx.save(); ctx.globalCompositeOperation='lighter';
+    for(let i=0;i<NB;i++){ const v=hist[i]/mx; if(v<=0) continue;
+      ctx.fillStyle=`rgba(${cr},${(cg*.3+160*v)|0},${(cb*.3+45*v)|0},${Math.min(1,v*1.25)})`;
+      ctx.fillRect(SCREEN_X,i*BIN,7,BIN); }
+    ctx.restore();
+    ctx.strokeStyle=`rgba(${cr},${cg},${cb},.9)`; ctx.lineWidth=1.3; ctx.beginPath();
+    for(let i=0;i<NB;i++){ const X=SCREEN_X+11+hist[i]/mx*82; if(i)ctx.lineTo(X,i*BIN); else ctx.moveTo(X,i*BIN); }
+    ctx.stroke();
+  }
+  ctx.save(); ctx.translate(SCREEN_X+90,108); ctx.rotate(-Math.PI/2);
+  ctx.fillStyle='rgba(255,255,255,.32)'; ctx.font='10px Segoe UI'; ctx.textAlign='center';
+  ctx.fillText('EKRAN — biriken zerre',0,0); ctx.restore();
+
+  const pxPerM=(SCREEN_X-KNIFE_X)/8;
+  ctx.fillStyle='rgba(255,255,255,.24)'; ctx.font='10px Segoe UI';
+  ctx.fillText(`λ ekranda ${lamPx().toFixed(1)} px · gerçek ${P.nm} nm · abartma ≈ `+
+    (lamPx()/pxPerM/(P.nm*1e-9)).toExponential(1)+`× · nitel canlandırma`,14,H-12);
+}
+
+/* ── ölçüm → panel ── */
+const S=id=>document.getElementById(id);
+function writeMeasure(){
+  const r=computeMeasure();
+  S('rFr').textContent=r.sacak||'–';
+  const g=S('rSh'); g.textContent=r.golge; g.className=r.golge<=2?'ok':'warn';
+  S('rPk').textContent=r.tepeOrt?r.tepeOrt+' ×':'–';
+  S('rF1').textContent=r.yakin!=null?r.yakin+' px':'–';
+  S('rF2').textContent=r.dis!=null?r.dis+' px':'–';
+  const e=S('rTrend');
+  if(r.egilim==='SIKISIYOR'){e.textContent='↓ dışa SIKIŞIYOR ✓';e.className='ok';}
+  else if(r.egilim==='ACILIYOR'){e.textContent='↑ dışa açılıyor';e.className='warn';}
+  else if(r.yakin!=null){e.textContent='≈ sabit';e.className='';}
+  else {e.textContent='–';e.className='';}
+}
+
+/* ── döngü ── */
+let last=performance.now(), mt=0;
+function loop(now){
+  const raw=(now-last)/1000; last=now;
+  if(running) tick(Math.min(0.032,raw)*P.tScale);
+  if(++mt%18===0) writeMeasure();
+  draw();
+  S('rFired').textContent=fired.toLocaleString('tr');
+  S('rHit').textContent=hitScreen.toLocaleString('tr');
+  S('rAbs').textContent=absorbed.toLocaleString('tr');
+  S('rOut').textContent=exited.toLocaleString('tr');
+  const bal=fired-(hitScreen+exited+zerre.length);
+  const be=S('rBal'); be.textContent=bal; be.className=bal===0?'ok':'bad';
+  S('rLock').textContent=LK; S('rPush').textContent=PS;
+  S('rLive').textContent=zerre.length;
+  S('rLam').textContent=lamPx().toFixed(1)+' px';
+  requestAnimationFrame(loop);
+}
+
+/* ── kontroller ── */
+const cw=document.getElementById('ctrls'), inputs={};
+for(const [k,name,sub,mn,mx,st,fmt] of SLIDERS){
+  const d=document.createElement('div'); d.className='c';
+  d.innerHTML=`<label>${name}<b id="v_${k}">${fmt(P[k])}</b></label>
+    <input type="range" id="s_${k}" min="${mn}" max="${mx}" step="${st}" value="${P[k]}">
+    <span class="sub">${sub}</span>`;
+  cw.appendChild(d);
+  const inp=d.querySelector('input'); inputs[k]=inp;
+  inp.addEventListener('input',e=>{ P[k]=parseFloat(e.target.value); S('v_'+k).textContent=fmt(P[k]); });
+}
+function sync(){ for(const [k,,,,,,fmt] of SLIDERS){ inputs[k].value=P[k]; S('v_'+k).textContent=fmt(P[k]); } }
+function preset(o){ Object.assign(P,o); sync(); reset(); }
+
+S('pAnl').addEventListener('click',()=>{ preset({lamX:7,tScale:0.30,trains:12,
+  beamU:240,beamD:50,Riz:26,life:2.6});
+  showWake=showPath=showNum=true;
+  S('bWake').classList.add('on'); S('bPath').classList.add('on'); S('bNum').classList.add('on'); });
+S('pSta').addEventListener('click',()=>{ preset({lamX:1,tScale:1,trains:48,
+  beamU:300,beamD:60,Riz:10,life:1.40});
+  showNum=showPath=false; showWake=true;
+  S('bWake').classList.add('on'); S('bNum').classList.remove('on'); S('bPath').classList.remove('on'); });
+S('bPlay').addEventListener('click',e=>{ running=!running;
+  e.target.textContent=running?'⏸ Duraklat':'▶ Devam'; e.target.classList.toggle('on',running); });
+S('bReset').addEventListener('click',reset);
+const B=(id,fn,get)=>{const b=S(id); b.addEventListener('click',()=>{fn(); b.classList.toggle('on',get());});};
+B('bCont',()=>showCont=!showCont,()=>showCont);
+B('bWake',()=>showWake=!showWake,()=>showWake);
+B('bPath',()=>showPath=!showPath,()=>showPath);
+B('bNum' ,()=>showNum =!showNum ,()=>showNum);
+
+/* açılış: Anlatı — mekanizma önce TEK TEK izlenir */
+preset({lamX:7,tScale:0.30,trains:12,beamU:240,beamD:50,Riz:26,life:2.6});
+S('bCont').classList.add('on');
+requestAnimationFrame(loop);
+</script>
+</body>
+</html>

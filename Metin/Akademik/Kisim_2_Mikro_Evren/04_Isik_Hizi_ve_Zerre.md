@@ -68,9 +68,9 @@ Minkowski ve Abraham'ın ışığın momentumu konusunda bir asırdır tartışt
 *(Bu mekanizmanın — iki bağımsız paradoksu tek hamlede çözmesinin — kanıt değeri, Kısım 6'daki kanıt dosyasında ayrıca değerlendirilmektedir: bkz. Bölüm 6.4.)*
 
 
-## 2.4.3 Evrenakı Gradyanı ve Zerre Diskinin Yönelimi
+## 2.4.3 Evrenakı Gradyanı ve Küreden Diske Geçiş
 
-Zerre kusursuz bir küre değildir: kendi dönüşü nedeniyle daima basık, eksenel simetrik bir gövdedir — atalet katsayısının basık/disk değeri ($k_a=1/2$) bunun enerji muhasebesindeki karşılığıdır. Bu basıklığı üreten reel merkezkaç basıncı (M-22) dönüşün kendisi kadar kalıcıdır; çevresel hız evrensel bir sabit olduğu için ($v_{cev} = \sqrt{2}\,c_0$) basıklık da gradyanla azalıp artmaz, gövdeye içkindir. Dolayısıyla düşük basınç gradyanına (deplasman havuzuna) giren Zerre'de değişen şey **şekil** değil, **yönelimdir**: patinaj sırasında yola tutunma zayıfladıkça disk düzlemi serbest kalır ve gradyanın dayattığı eksene göre hizalanır. Gradyan ne kadar dikse hizalanma o kadar keskindir; Zerre gradyandan çıktığında gövdesi aynı basıklıktadır, ama disk normali gradyanın bıraktığı yönelimi taşır. Bölüm 2.9'da polarizasyon olarak okunacak olan olgu tam olarak bu hizalanmadır.
+Patinaj etkisiyle dönüş enerjisi (spin) artan zerrenin formu sabit kalamaz. Dış basınç zayıfladığında zerre ciddi bir mekanik şekil değişimine uğrar. Düşük basınç gradyanına (deplasman havuzuna) giren zerre patinaj yaparken, artan merkezkaç kuvvetinin etkisiyle yassılaşır ve kusursuz bir küre formundan çıkarak bir "diske" dönüşür.
 
 <div class="pol-widget">
 <style>
@@ -84,7 +84,7 @@ Zerre kusursuz bir küre değildir: kendi dönüşü nedeniyle daima basık, eks
 .pol-legend{margin-top:10px;font-size:0.78rem;color:#8892b0;}
 </style>
 
-<h4>Animasyon 2.4.3: Evrenakı Gradyanı ve Zerre Diskinin Yönelimi</h4>
+<h4>Animasyon 2.4.3: Evrenakı Gradyanı ve Küreden Diske Geçiş</h4>
 <div class="pol-controls">
   <div class="pol-control">
       <span>Evrenakı Gradyanı (Basınç Düşüşü): <b id="polGradVal" style="color:var(--pol-blue);">0%</b></span>
@@ -94,8 +94,8 @@ Zerre kusursuz bir küre değildir: kendi dönüşü nedeniyle daima basık, eks
 <div class="pol-canvas-wrap"><canvas id="polCanvas"></canvas></div>
 <div class="pol-legend">
   * <b>Arka plan ve Akış çizgileri (Evrenakı):</b> Uzay boşluğunda (normal basınçta) zerre tam hızıyla ilerler (çizgiler hızlı akar). Zerre, makro kütlelerin yarattığı Evrenakı gradyanına (deplasman havuzuna) girdiğinde öteleme hızı yavaşlar. Rengin siyahtan açık eflatuna dönmesi, ortamdaki hidrodinamik basıncın ve yoğunluğun <b>azalışını</b> temsil eder.<br>
-  * <b>Altın Sarısı Zerre (Ekvatoral Bakış):</b> Düşük basınca giren zerre "patinaj" yapmaya başlar ve doğrusal hızı düşer. Dönüşü ise hızlanmaz: zerrenin çevresel hızı ($v_{cev}=\sqrt{2}\,c_0$) evrensel bir sabittir ve gradyanla değişmez — animasyonda dönüş bu yüzden baştan sona aynı tempodadır.<br>
-  * <b>Disk Gövde ve Yönelimi:</b> Zerre, kendi dönüşünün ürettiği reel merkezkaç basıncı (M-22) nedeniyle <b>daima</b> basık bir disk gövdedir ($k_a=1/2$); dış basınç bu basıklığı ne artırır ne azaltır. Gradyan arttıkça değişen tek şey disk düzleminin <b>yönelimidir</b>: tutunma zayıfladıkça disk normali gradyanın dayattığı eksene hizalanır.
+  * <b>Altın Sarısı Zerre (Ekvatoral Bakış):</b> Düşük basınca giren zerre "patinaj" yapmaya başlar; doğrusal hızı düşerken dönüş (spin) enerjisi artar. Ortam basıncı azaldıkça zerrenin kendi etrafındaki dönüşü dramatik şekilde hızlanır.<br>
+  * <b>Yassılaşma (Disk) Formu:</b> Dış Evrenakı basıncının <b>azalması</b>, zerreyi küresel tutan sıkıştırma kuvvetini zayıflatır. Dış basınç düştükçe ve spin hızlandıkça, zerre mükemmel <b>küre</b> formunu koruyamaz ve merkezkaç etkisiyle yatay eksende yassılaşarak bir <b>diske</b> (elipsoide) dönüşür.
 </div>
 
 <script>
@@ -201,21 +201,20 @@ Zerre kusursuz bir küre değildir: kendi dönüşü nedeniyle daima basık, eks
           ctx.stroke();
       });
 
-      // 3. Zerre (kalıcı basık disk gövde; gradyanla yalnız yönelimi değişir)
-      // Gövde geometrisi gradyandan bağımsızdır: basıklık gövdeye içkindir (k_a = 1/2).
-      const a = 68;  // disk büyük yarı-ekseni - sabit
-      const b = 30;  // disk küçük yarı-ekseni - sabit
+      // 3. Zerre (Kendi ekseninde dönen ve yatay yassılaşan)
+      // Non-lineer kompresyon (fiziksel baskı hissi)
+      const compression = Math.pow(normGrad, 1.2); 
       
-      // Gradyan yalnızca disk normalinin YÖNELİMİNİ belirler:
-      // %0'da disk serbest (eğik) durur, %100'de gradyan eksenine tam hizalanır.
-      const tilt = (1 - normGrad) * (Math.PI / 3);
+      // Yatay elipsleşme: Genişlik artar, yükseklik azalır
+      const a = 45 * (1 + compression * 1.4);  // Genişlik yatayda %240'a çıkar
+      const b = 45 * (1 - compression * 0.75); // Yükseklik %25'e kadar düşer 
       
-      // Çevresel hız evrensel sabittir (v_cev = sqrt(2)*c): dönüş tempo değiştirmez.
-      zerreAngle += 0.12;
+      // Kullanıcı İsteği: Gradyan arttıkça zerre dönüşü çok dramatik şekilde hızlanacak.
+      // %0'da neredeyse durma noktasında (0.005), %100'de çok hızlı (0.30)
+      zerreAngle += 0.005 + (normGrad * 0.30);
       
       ctx.save();
       ctx.translate(cx, cy);
-      ctx.rotate(tilt);
       
       // Zerrenin hıza bağlı parlaması (Glow) - Artık altın/sarı tonlarında
       const glowBlur = 20 + normGrad * 40;
@@ -307,8 +306,7 @@ Zerre kusursuz bir küre değildir: kendi dönüşü nedeniyle daima basık, eks
       const uiX = 20;
       let uiY = 20;
       
-      // Çevresel hız evrensel sabittir: çubuk gradyandan bağımsız, tam doludur.
-      drawBar('Çevresel Hız (sabit: √2·c)', 1, uiX, uiY, 'rgba(255, 204, 0, 0.8)');
+      drawBar('Zerre Dönüş (Spin) Hızı', normGrad, uiX, uiY, 'rgba(255, 204, 0, 0.8)');
       uiY += 28;
       // Doğrusal hız taban limiti %20
       drawBar('Zerre Doğrusal Hızı', 0.2 + (1 - normGrad)*0.8, uiX, uiY, 'rgba(0, 240, 255, 0.8)');
@@ -316,8 +314,7 @@ Zerre kusursuz bir küre değildir: kendi dönüşü nedeniyle daima basık, eks
       // Yoğunluk/Basınç taban limiti %15 (tam sıfır/mutlak hiçlik olmaz)
       drawBar('Evrenakı Yoğunluğu / Basıncı', 0.15 + (1 - normGrad)*0.85, uiX, uiY, 'rgba(160, 50, 255, 0.8)');
       uiY += 28;
-      // Basıklık gövdeye içkindir; gradyanla değişen tek şey disk yönelimidir.
-      drawBar('Disk Yönelimi (Hizalanma)', normGrad, uiX, uiY, 'rgba(255, 0, 229, 0.8)');
+      drawBar('Küresel Basıklık', compression, uiX, uiY, 'rgba(255, 0, 229, 0.8)');
 
       requestAnimationFrame(step);
   }

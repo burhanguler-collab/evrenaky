@@ -184,7 +184,7 @@ Standart görelilikte bu fark tam sıfırdır; sıfırdan farklı herhangi bir k
 
 ### Açık Uçlar
 - $\chi$'nin gradyan mekaniğinden (patinaj/dispersiyon dinamiğinden) ilk-ilkelerle türetimi ve bağımsız kalibrasyonu (7.4).
-- $\theta_0 = 1{,}75''$ değerinin kendisi: klasik (Newtoncu) kestirim $0{,}875''$'in 2 katıdır; bu **2× faktörünün** Evrenakı mekaniğinden nicel türetimi de açık kalemdir (mevcut durumda analojik argüman düzeyindedir).
+- ~~$\theta_0 = 1{,}75''$ değerindeki **2× faktörünün** Evrenakı mekaniğinden nicel türetimi (analojik argüman düzeyinde)~~ → **güncellendi (17 Ağustos 2026):** 2× artık analojik değil, ölçek yapısının sonucudur — $c_{loc}=c_0\Lambda^2 \Rightarrow n_{eff}=1+2\Phi/c_0^2$ (**Ek M-42**; bükülme ölçümüyle sabitlenmiştir). Açık kalan, $\Lambda$ üslerinin mikro-mekanik türetimidir (M-42 Açık Uçlar).
 - Gaia kromatiklik kalibrasyon artıklarında $318\ \mu$as imzasının aranması (ileriye dönük test).
 
 ---

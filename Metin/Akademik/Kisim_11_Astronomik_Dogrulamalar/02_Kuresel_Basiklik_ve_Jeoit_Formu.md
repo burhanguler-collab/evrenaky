@@ -98,7 +98,7 @@ Eksi işareti ($-\hat\theta$), kuvvetin her iki yarımküreden de **ekvatora do�
 | Orta enlem ($\theta=45°$) | maksimum | ezme zirvesi |
 | Kutup ($\theta=90°$) | sıfır | **kararsız** — madde barınamaz, ekvatora savrulur |
 
-Ekvator, yanal itim alanının tek kararlı çekim noktasıdır. Halka sistemlerinin ve galaktik disklerin **ekvator düzleminde toplanması** bu desene bağlanır (11.4, M-27); yörünge eş-düzlemliliği de aynı kaynaktan gelir. Standart fizikte bu düzlem seçiminin kuvvet düzeyinde bir taşıyıcısı yoktur; Evrenakı'da vardır ve adı F5'tir. *(Düzlemin **kimliği** F5'in işidir; diskin **kalınlığı** değil — korunumlu bir kuvvet genliği belirlemez, onu enerji bütçesi belirler; 11.4.5.)*
+Ekvator, yanal itim alanının tek kararlı toplanma (denge) noktasıdır. Halka sistemlerinin ve galaktik disklerin **ekvator düzleminde toplanması** bu desene bağlanır (11.4, M-27); yörünge eş-düzlemliliği de aynı kaynaktan gelir. Standart fizikte bu düzlem seçiminin kuvvet düzeyinde bir taşıyıcısı yoktur; Evrenakı'da vardır ve adı F5'tir. *(Düzlemin **kimliği** F5'in işidir; diskin **kalınlığı** değil — korunumlu bir kuvvet genliği belirlemez, onu enerji bütçesi belirler; 11.4.5.)*
 
 > **Dikkat — düzlemde tutmak ile şişirmek aynı şey değildir.** F5 meridyenel bir **geri çağırıcı** kuvvettir ve tam da basıklığın kurulacağı yerde, ekvatorda, **sıfırdır**. Yörüngeleri ve halkaları düzlemde tutması bu yüzden güçlüdür; gövdeyi şişirme işini ise zincirin öbür kalemleri taşır — figürdeki payının ölçüde neden görünmediğini 11.2.7 türetir.
 

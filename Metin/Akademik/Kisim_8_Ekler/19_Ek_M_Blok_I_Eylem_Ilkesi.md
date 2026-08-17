@@ -39,7 +39,7 @@ Bu yapı, sıradan bir akışkanın $P=P(\rho,S)$ yapısının birebir karşıl�
 
 $$P=c_0^2\rho \qquad\Longrightarrow\qquad \left(\frac{\partial P}{\partial\rho}\right)_\chi=c_0^2 \qquad\Longrightarrow\qquad \boxed{\;v_{ses}=c_0\ \text{ tam olarak}\;}$$
 
-Bu, **stiff (Zel'dovich) akışkan** hâl denklemidir: ses hızının ışık hızına *tam eşit* olduğu, nedensel olarak en katı hâl. M-1'in kutulu sonucundaki $\rho_0=P_0/c_0^2$ bu denklemin ta kendisidir. Sonucu: **kütleçekim dalgası hızı kısıtı otomatik sağlanır.**
+Bu, **stiff (Zel'dovich) akışkan** hâl denklemidir: ses hızının ışık hızına *tam eşit* olduğu, dalga sertliği en yüksek hâl. *(Adlandırma notu: standart kozmolojinin "nedensel olarak en katı" deyişi burada kullanılmaz — o ad, $c$'yi nedensellik tavanı sayan çerçevenin ürünüdür; teoride $c_0$ tavan değildir, yapı/kohezyon kanalı $v_m>10^4c_0$ ile çalışır — M-5 ve aşağıda zaman sektörü.)* M-1'in kutulu sonucundaki $\rho_0=P_0/c_0^2$ bu denklemin ta kendisidir. Sonucu: standart fiziğin **"kütleçekim dalgası"** dediği gözlemin hız kısıtı (GW170817) otomatik sağlanır.
 
 **3. Deplasman kanalı — $k=0$.** Madde ortamı dışlar; bu süreç yoğunluğu değil basıncı değiştirir. Teori bunu iki ayrı yerde zaten söyler:
 

@@ -20,7 +20,7 @@ Bölümün sonunda mekanizma iddiası ölçüme bağlanır: kilitli bir kaynağ�
 | $\vec\xi$ | Gövde merkezinden ölçülen iç konum, $\lvert\xi\rvert\le b$ |
 | **gelgit ekseni** | Gövde merkezini kaynağa bağlayan doğrultu (Dünya–Ay doğrultusu). **Dünya'nın dönme ekseni değildir** — 11.1.3'teki uyarıya bkz. |
 | $\psi$ | $\vec\xi$ ile **gelgit ekseni** arasındaki açı |
-| $\Phi$ | İtim potansiyeli, $\Phi\equiv(P-P_0)/\rho_n$ (Kuvvet 1'e ait) |
+| $\Phi_{it}$ | İtim potansiyeli, $\Phi_{it}\equiv(P-P_0)/\rho_n$ (Kuvvet 1'e ait). *Sözlükteki kuyu-derinliği $\Phi$'sinin eksilisidir: $\Phi_{it}=-\Phi$ (Ek D · S-28; eski yazım indissiz $\Phi$ idi — düzeltme, 17 Ağu 2026)* |
 | $a_2$ | Kuvvet 2'nin taban sıkıştırma büyüklüğü; yönden bağımsızdır, $r$'ye bağlı olabilir (ivme boyutunda) |
 | $\Psi_T$ | Gelgit potansiyeli (ortak taşınma çıkarıldıktan sonraki artık) |
 | $\zeta$ | Serbest yüzey yükseltisi (Ek D · S-27) |
@@ -109,9 +109,9 @@ $$\frac{1}{\rho_n}\frac{d}{dr}\bigl[P(r)-P_0\bigr] \;=\; \frac{\alpha M}{\rho_n 
 
 Kütle-itim yasası $\vec a_1=-\frac{1}{\rho_n}\nabla P$'dir. $\rho_n$ sabit olduğundan ifade tam bir potansiyele indirgenir:
 
-$$\Phi \equiv \frac{P-P_0}{\rho_n} \;\Longrightarrow\; \vec a_1 = -\nabla\Phi,\qquad \Phi(r)=-\frac{\mathcal{G}M}{r}$$
+$$\Phi_{it} \equiv \frac{P-P_0}{\rho_n} \;\Longrightarrow\; \vec a_1 = -\nabla\Phi_{it},\qquad \Phi_{it}(r)=-\frac{\mathcal{G}M}{r}$$
 
-Bu, standart fizikten ödünç alınmış bir "kütleçekim potansiyeli" **değildir**: basınç alanının nükleon öz yoğunluğuna bölünmüş hâlidir. Değeri aynı, kökeni ve nesnesi farklıdır — burada $\Phi$'nin arkasında gerçek bir akışkanın gerçek basıncı durur.
+Bu, standart fizikten ödünç alınmış bir "kütleçekim potansiyeli" **değildir**: basınç alanının nükleon öz yoğunluğuna bölünmüş hâlidir. Değeri aynı, kökeni ve nesnesi farklıdır — burada $\Phi_{it}$'in arkasında gerçek bir akışkanın gerçek basıncı durur. *(İşaret notu: kızıla kayma/ölçek zincirinin kuyu-derinliği $\Phi$'si bunun eksilisidir, $\Phi=-\Phi_{it}\ge0$ — Ek D · S-28.)*
 
 Gövde merkezi $\vec r$'de, okyanus noktası $\vec r+\vec\xi$'dedir. İvme alanı açılır:
 
@@ -229,7 +229,7 @@ $\xi_\parallel=\xi\cos\psi$, $\xi_\perp=\xi\sin\psi$ ile kapalı biçim:
 
 $$\boxed{\;\Psi_T(\xi,\psi) = -\frac{\mathcal{G}M\,\xi^2}{2r^3}\left(3\cos^2\psi-1\right)\;}$$
 
-$\Phi=(P-P_0)/\rho_n$ tanımı tersine çevrilirse **artık basınç alanı** — teorinin fiilen konuştuğu büyüklük — çıkar:
+$\Phi_{it}=(P-P_0)/\rho_n$ tanımı tersine çevrilirse **artık basınç alanı** — teorinin fiilen konuştuğu büyüklük — çıkar:
 
 $$P_T(\xi,\psi) = \rho_n\Psi_T = -\frac{\rho_n\,\mathcal{G}M\,\xi^2}{2r^3}\left(3\cos^2\psi-1\right)$$
 
@@ -260,7 +260,7 @@ Okyanus serbest yüzeyi, toplam basıncın dengelendiği yüzeydir. Potansiyel d
 
 $$g\,\zeta(\psi) + \Psi_T(b,\psi) = \text{sabit},\qquad g=\frac{\mathcal{G}M_\oplus}{b^2}$$
 
-> **Bu bir "eşpotansiyel" değil, eş-basınç yüzeyidir.** $\Phi\equiv(P-P_0)/\rho_n$ tanımı $\rho_n$ sabit olduğu için birebir tersine çevrilebilir; "toplam potansiyelin sabit olduğu yüzey" cümlesi, **"toplam basıncın sabit olduğu yüzey" (izobar) ile aynı cümledir.** Serbest yüzeyin fiziksel tanımı da budur: üstündeki basınç her yerde $P_{atm}$ olduğu için su, basınç dengesizliği kalmayana dek akar. Potansiyel dili yalnız cebiri kısaltır; teorinin konuştuğu büyüklük 11.1.5'in $P_T$'sidir. Buradaki $g$ de standart bir "yerçekimi ivmesi" değil, Dünya'nın kendi Kuvvet 1'inin yüzey değeridir.
+> **Bu bir "eşpotansiyel" değil, eş-basınç yüzeyidir.** $\Phi_{it}\equiv(P-P_0)/\rho_n$ tanımı $\rho_n$ sabit olduğu için birebir tersine çevrilebilir; "toplam potansiyelin sabit olduğu yüzey" cümlesi, **"toplam basıncın sabit olduğu yüzey" (izobar) ile aynı cümledir.** Serbest yüzeyin fiziksel tanımı da budur: üstündeki basınç her yerde $P_{atm}$ olduğu için su, basınç dengesizliği kalmayana dek akar. Potansiyel dili yalnız cebiri kısaltır; teorinin konuştuğu büyüklük 11.1.5'in $P_T$'sidir. Buradaki $g$ de standart bir "yerçekimi ivmesi" değil, Dünya'nın kendi Kuvvet 1'inin yüzey değeridir.
 
 **Sabit, hacim korunumundan sıfırlanır.** Su yaratılmadığına göre $\langle\zeta\rangle=0$; $\langle 3\cos^2\psi-1\rangle=0$ (Legendre $P_2$'nin küre ortalaması sıfır) olduğundan sabit tam sıfırdır. Buradan:
 
@@ -385,7 +385,7 @@ Klasik kuramda bir kaynağın **dönüp dönmediği dış alanına hiç girmez.*
 | İmza | Newton | Teori |
 |---|---|---|
 | **Yanal dejenerasyonun kırılması** | Yalnız gövdenin basıklığından ($J_2$). Güneş için $J_2(R_\odot/r)^2 = 2{,}2\times10^{-7}\times(4{,}65\times10^{-3})^2 \approx 5\times10^{-12}$ | $\beta$ — apsidal presesyon üst sınırı $\lesssim10^{-9}$ |
-| **Boşlukta iz** | $\nabla^2\Phi=0$ gereği **tam olarak sıfır** — her kaynak, her uzaklık, her çokkutuplu mertebe | $-\gamma\,\mathcal{G}M/r^3 \ne 0$ |
+| **Boşlukta iz** | $\nabla^2\Phi_N=0$ gereği **tam olarak sıfır** — her kaynak, her uzaklık, her çokkutuplu mertebe ($\Phi_N$: Newton'un potansiyeli) | $-\gamma\,\mathcal{G}M/r^3 \ne 0$ |
 
 Birinci satırda Newton'un arka planı vardır ama **200 kat aşağıdadır** — gerçek bir keşif penceresi kalır. İkinci satırda arka plan **tam sıfırdır**: boşlukta ölçülen sıfırdan farklı bir gelgit izi, Newton'un kendi vakum denklemini ihlal eder. İkinci kanal bu yüzden temizdir.
 

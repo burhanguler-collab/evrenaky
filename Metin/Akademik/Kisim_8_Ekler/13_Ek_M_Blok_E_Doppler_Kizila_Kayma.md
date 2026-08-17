@@ -51,7 +51,7 @@ Ives–Stilwell (1938) verisiyle doğrulanan rölativistik Doppler denklemi, uza
 - Kinematik katmanda SR'den sapma öngörülmez; ayrışma dinamik katmandadır (değişken $c_0$; M-20).
 
 ### Açık Uçlar
-- Boy kısalmasının ($1/\gamma$ ezilme oranının) hidrodinamik mekanizmadan (deplasman basıncı profili) **bağımsız nicel türetimi**: 6.1.2'de oran, izotropi zorunluluğuyla sabitlenir; akışkan dinamiği hesabıyla aynı oranın bağımsız elde edilmesi 7.4 programına aittir.
+- ~~Boy kısalmasının ($1/\gamma$ ezilme oranının) hidrodinamik mekanizmadan bağımsız nicel türetimi~~ → **kapandı (17 Ağustos 2026):** türetim **11.4.8.1**'de yapılmıştır — ortama göre $V$ ile giden deplasman kaynağının kararlı alanı, Prandtl–Glauert dönüşümü gereği hareket yönünde tam $\beta=\sqrt{1-V^2/c_0^2}$ oranında kısalmak zorundadır (kapalı biçim; $\Lambda_{kin}$, KARNE satır 21, **[T]**). 6.1.2'nin izotropi argümanı böylece varsayım olmaktan çıkıp türetimin sağlaması konumuna iner. *(Ayrı kalem uyarısı: M-42'nin "$\gamma_\ell$ mekanizması" açık ucu — potansiyel kolunun cetvel ölçeği — bununla kapanmaz, açık kalır.)*
 
 ---
 

@@ -51,7 +51,7 @@ Bu bir kesin değer değil, güvenli tarafta kalan bir **tabandır**; ortamın g
 $$\frac{\delta\rho}{\rho_0} = k\,\frac{\delta P}{P_0}\,, \qquad 0 \le k < 1$$
 (Genel-$k$ yazımı yalnız türetimin yapısını göstermek içindir; deplasman kanalında değer taahhütlüdür: $k=0$ — M-44'ün kutulu sonucu.)
 3. Gözlemsel girdi: yüzey potansiyel genliği $\Phi/c_0^2 \approx 7\times10^{-10}$ ($\Phi$: standart fiziğin yüzey kütleçekim potansiyeli, burada yalnızca ölçülen genliğin etiketi).
-4. Yüzeydeki basınç açığı, M-7'nin gradyan integral yapısından: $\Delta P_{yüzey} = \rho_n\,\Phi$ (çünkü $|\nabla P| = \rho_n g$ ve $\int g\,dr = \Phi$).
+4. Yüzeydeki basınç açığı, M-7'nin gradyan yapısının **dış-bölge** integralinden: $\Delta P_{yüzey} = \int_R^\infty \rho_n g\,dr = \rho_n\,\Phi$ (çünkü $|\nabla P| = \rho_n g$ ve $\int_R^\infty g\,dr = \Phi$; M-7'nin *iç-bölge* integrali ayrı büyüklüktür — merkez–yüzey düşüşü, bunun yarısı).
 5. **Ölçek yapısı (M-42):** madde ölçeği $\Lambda = 1-\Phi/c_0^2$ ile saat $f\propto\Lambda$, yayılma hızı $c_0\propto\Lambda^2$; dolayısıyla $\delta c/c_0 = 2\,\delta f/f$, yani $\delta c/c_0 = -2\Phi/c_0^2$. Bu 2 çarpanı **ışık bükülmesi ölçümünden** ($1{,}751''$, Güneş kenarı) sabitlenmiştir — kızıla kaymadan değil. Kalibrasyon kaynağının bu değişimi aşağıda 2. adımın gerekçesidir.
 
 ### Adımlar
@@ -69,7 +69,7 @@ $$\boxed{P_0 = \frac{1-k}{4}\,\rho_n c_0^2 \;\xrightarrow{\;k=0\ (\text{M-44})\;
 $\rho_0 = \rho_n/4$: madde, okyanustan kopuk bir yabancı cisim değil, okyanusun yalnızca ~4 kat sıkışmış girdap fazıdır — monizm burada nicelleşir.
 
 ### Sayısal Çapraz Kontroller
-- **Pürüz oranı:** Dünya'nın toplam basınç çukuru $\Delta P \approx 0{,}83\times10^{25}$ Pa (M-7), $P_0$'ın yanında $\Delta P/P_0 \sim 10^{-9}$'luk bir pürüzdür — gözlenen saat kaymalarının $10^{-9}$–$10^{-10}$ mertebesiyle birebir aynı orandır ✓.
+- **Pürüz oranı:** Dünya'nın merkez–yüzey basınç düşüşü $\Delta P \approx 0{,}83\times10^{25}$ Pa (M-7), $P_0$'ın yanında $\Delta P/P_0 \sim 10^{-9}$'luk bir pürüzdür — gözlenen saat kaymalarının $10^{-9}$–$10^{-10}$ mertebesiyle birebir aynı orandır ✓.
 - **Alt sınır tutarlılığı:** Sabitlenen değer, M-7'nin muhafazakâr tabanının sekiz–dokuz mertebe üzerindedir ($6{,}07\times10^{33}/1{,}6\times10^{25}\approx3{,}8\times10^{8}$); yırtılmama koşulu kohezyondan bağımsız olarak devasa marjla sağlanır ✓.
 
 ### Geçerlilik Sınırı
@@ -88,7 +88,7 @@ $\rho_0 = \rho_n/4$: madde, okyanustan kopuk bir yabancı cisim değil, okyanusu
 **Kullanıldığı bölümler:** Ek B.4, 1.3 Postülat kutuları (Postülat 1'in "ağırlıksız ortam" ifadesinin kanıt statüsü), 7.4 md.10.
 
 ### Varsayımlar
-1. Teoride çekim diye bağımsız bir kuvvet yoktur; tek alan basınçtır, tek kuvvet $-\nabla P$'dir (Postülat 6, M-2). Standart fiziğin Poisson denklemi $\nabla^2\Phi = 4\pi G\rho_{toplam}$ — yani kütle yoğunluğunun kendiliğinden çekim alanı kaynakladığı önermesi — teorinin **reddettiği gizli varsayımdır**: ortam "ağırlıklı" değildir.
+1. Teoride çekim diye bağımsız bir kuvvet yoktur; tek alan basınçtır, tek kuvvet $-\nabla P$'dir (Postülat 6, M-2). Standart fiziğin Poisson denklemi $\nabla^2\Phi_N = 4\pi G\rho_{toplam}$ ($\Phi_N$: Newton'un öz-kütleçekim potansiyeli, Ek D · S-28) — yani kütle yoğunluğunun kendiliğinden çekim alanı kaynakladığı önermesi — teorinin **reddettiği gizli varsayımdır**: ortam "ağırlıklı" değildir.
 2. Kavrama Yasası (M-1) ve arka plan sabitlemesi (M-8) geçerlidir.
 3. Kavitasyon eşiği (M-4): $v_{kav} = \sqrt{2}\,c_0\,\sqrt{1+\Sigma/P_0} \gg c_0$.
 
@@ -102,7 +102,7 @@ $\rho_0 = \rho_n/4$: madde, okyanustan kopuk bir yabancı cisim değil, okyanusu
 $$\left(\frac{\partial P}{\partial\rho}\right)_{\chi} = c_0^2 \;>\; 0 \qquad\Longrightarrow\qquad c_{pürüz}=c_0$$
 Yani her yoğunluk pürüzü **tam $c_0$ hızında** yayılan bir basınç dalgası olarak dağılır. Sıkıştırılabilirlik her koşulda pozitif olduğundan kararsızlık penceresi hiçbir rejimde açılmaz; homojen durum yalnızca izinli değil, ortamın **tek doğal taban durumudur.**
 
-Bu, ortamın **stiff (Zel'dovich) akışkan** olması demektir — ses hızının ışık hızına tam eşit olduğu, nedensel olarak en katı hâl. Gözlemsel karşılığı doğrudandır: GW170817'nin kütleçekim dalgası ↔ ışık eşitliği ($10^{-15}$ hassasiyet) bu kanalı bağlar ve **otomatik olarak sağlanır**.
+Bu, ortamın **stiff (Zel'dovich) akışkan** olması demektir — ses hızının ışık hızına tam eşit olduğu, dalga sertliği en yüksek hâl. *(Adlandırma notu: standart kozmoloji bu hâle "nedensel olarak en katı" der, çünkü o çerçevede $c$ nedensellik tavanıdır; teoride $c_0$ tavan değildir — kohezyon kanalı $v_m>10^4c_0$ ile çalışır (M-5). Buradaki üstünlük sertliktir, tavan değil.)* Gözlemsel karşılığı doğrudandır: GW170817'nin kütleçekim dalgası ↔ ışık eşitliği ($10^{-15}$ hassasiyet) bu kanalı bağlar ve **otomatik olarak sağlanır**.
 
 > *Kanal uyarısı: dağılma hızı $c_0/\sqrt k$ **değildir.** O okuma, Ek B.3'ün **deplasman** bağıntısını bir hâl denklemi sanmaktan doğar ve GW170817 ile 6,5 mertebe çelişir. Ek M-44 iki kanalı ayırır ($\chi$ sabit ↔ $\rho$ sabit) ve sıkışma hızı **tam $c_0$** çıkar.*
 
@@ -113,13 +113,14 @@ Postülat 4 ile çelişki yoktur: $c_0$ Zerre'nin çizgisel öteleme sınırıd�
 $$\boxed{\nabla P_0 = 0 \;\Rightarrow\; \text{homojen arka plan kuvvetsiz, kararlı ve doğurgan-değildir:}\quad \text{ortam ağırlıksızdır — tanım değil, teorem.}}$$
 
 ### Geçerlilik Sınırı
-- Teorem homojen arka plan içindir. Kütle *çevresindeki* gradyan bölgesinde ortam tepkisiz değildir — Euler denklemi gereği gradyana cevap verir; ama cevabı düşmek değil **dolaşmaktır**: gradyan, dolaşımın merkezcil ivmesiyle siklostrofik dengede taşınır,
+- Teorem homojen arka plan içindir. Kütle *çevresindeki* gradyan bölgesinde ortam tepkisiz değildir — gradyana cevap verir. **Cevabın biçimi ortamın kohezyonuna bağlıdır ve iki koldur.** Kohezyonsuz (Euler) limitte statik denge imkânsızdır ($\nabla\!\cdot\!\sigma=-\nabla P\neq0$) ve tek çıkış dolaşmaktır: gradyan, dolaşımın merkezcil ivmesiyle siklostrofik dengede taşınır,
 $$\frac{\nabla P}{\rho_0} = \frac{v_\theta^2}{r}$$
-(Postülat 7–8'in sürüklenme ve vorteks alanları). Katı deplasman cebi (nükleon) ise akıp dengelenemez; bütün hâlde itilir. **Madde düşer, ortam dolaşır.**
+Ama Evrenakı kohezyonludur (M-4, M-5: $\Sigma/P_0>10^8$) ve kohezyon kanalı kesme modülü rolündedir; dolayısıyla **ikinci kol açıktır: ortam kuyuyu dolaşmadan, statik elastik dengede tutabilir** ($\tau_{rr}=\rho_n\Phi/2$, $\Sigma$'nın on dört–on beş mertebe altında — **Ek M-51**). Gözlem bu ikinci kolu **seçer**: dört bağımsız gözlem ailesi (Merkür günberi, Ay perigee, Titan apsisi, Io apsisi) dolaşımı dışlar (**Ek M-52**), ve dolaşımın yokluğu üç yapısal nedenden türetilir (**Ek M-53**). Katı deplasman cebi (nükleon) ise akıp dengelenemez; bütün hâlde itilir. **Madde düşer, ortam gerilir.**
+  *(Düzeltme kaydı, 17 Ağustos 2026: eski yazım *"cevabı düşmek değil dolaşmaktır"* diyor ve siklostrofik dengeyi tek seçenek sunuyordu; bu, Euler denkleminin — kohezyonsuz akışkanın — sonucudur ve teorinin kendi ortamı için eksiktir. Postülat 7–8'in sürüklenme ve vorteks alanları öteleme sektöründe geçerliliğini korur.)*
 - 2. adımın dalga-dağılma bacağı, hâl denkleminin $\chi$-sabit kanalından gelen $(\partial P/\partial\rho)_\chi = c_0^2$ türetimi (Ek M-44) $k$'dan bağımsız olduğu için **$k$'nın izinli tüm aralığında ve her sıkışma genliğinde** geçerlidir; ayrı bir "güçlü sıkışma rejimi" çekincesi gerekmez. *($k$ yalnız deplasman kanalının parametresidir, dalga kanalına hiç girmez; $dP/d\rho=c_0^2/k$ okuması, yukarıdaki Kanal Uyarısı'nın dışladığı eski türetimdi — düzeltme kaydı, 9 Ağustos 2026.)*
 - Kanıtlanan şey, **çöküşe karşı kararlılıktır** (Jeans tipi geri-besleme yok, $dP/d\rho>0$). Tam doğrusal-olmayan kararlılık — şok oluşumu, türbülans başlangıcı — ortamın hareket denklemlerinin bir eylem ilkesinden türetilmesini gerektirir; bu, teorinin bilinen ve ayrıca kayıtlı açığıdır (7.4).
 - Kozmolojik biçimin cevabı (1. adım) bir **tutarlılık** sonucudur: $\rho_0$ ile kritik yoğunluk arasındaki 43 mertebelik farkın çelişki olmadığını gösterir, CMB/ilksel bolluk oranlarını üretmez.
 
 ### Açık Uçlar
-- Siklostrofik denge profilinin ($v_\theta(r)$) kütle çevresi sürüklenme zarfıyla (Rampa profili, Ek C satır P2) nicel eşlenmesi.
+- ~~Siklostrofik denge profilinin ($v_\theta(r)$) kütle çevresi sürüklenme zarfıyla nicel eşlenmesi~~ → **yeniden tanımlandı (17 Ağustos 2026):** eşlenecek nicelik dolaşım değil, **kohezyon payı ile dolaşım payının bölüşümüdür** (Ek M-51'in genel denge ifadesi). Gezegen ölçeğinde gözlem bölüşümü fiilen tümüyle kohezyona verir ($\lvert\Omega_{ortam}\rvert\le1{,}4\times10^{-18}$ s⁻¹, Ek M-52); kalan iş, zarf sınırındaki kayma tabakasının (Rampa profili, Ek C satır P2) yitim ve tork muhasebesidir.
 - **Üç kanalın ortak mikro-modeli.** Ortamın üç ayrı tepki hızı vardır ve üçü ayrı katsayılardan gelir: **sıkışma** ($c_{pürüz}=c_0$, stiff hâl denklemi), **kohezyon/kesme** ($v_m=c_0\sqrt{\Sigma/P_0}>10^4c$, $\Sigma$'dan) ve **deplasman** (hız değil, $k=0$ ile tanımlı statik tepki). Sürekli ortamlar mekaniği bunlar arasında bir bağ gerektirmez — hacim ve kesme modülleri genel bir ortamda bağımsız malzeme sabitleridir ve M-5 bu bağımsızlığı açıkça varsayar. Açık olan soru: nükleonun vakum cepli girdap yapısı, üçünü birden veren tek bir mikro-model olabilir mi? Olursa $\Sigma$ de türetilmiş hale gelir ve Ek C'den bir kalem daha düşer. Bu, eylem ilkesi programına bağlıdır (7.4 md.16, Ek M-44 Açık Uçlar).

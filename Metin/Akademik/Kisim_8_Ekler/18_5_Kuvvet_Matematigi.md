@@ -825,9 +825,9 @@ Ayrıca F4'ün $P_2$ katkısı **pozitiftir**, yani $J_2$'yi **azaltır**: F4 ş
 
 ⟹ **Ekvator kararlı, kutup kararsız dengedir.** Kutupta kuvvet sıfırdır ama en küçük sapma maddeyi ekvatora savurur; madde kutupta birikemez.
 
-Satürn halkalarının, gezegen halka sistemlerinin ve galaktik disklerin neden ekvator düzleminde jilet inceliğinde toplandığının mekanik cevabı budur: **ekvator, yanal itim alanının tek kararlı çekim noktasıdır.**
+Satürn halkalarının, gezegen halka sistemlerinin ve galaktik disklerin neden ekvator düzleminde jilet inceliğinde toplandığının mekanik cevabı budur: **ekvator, yanal itim alanının tek kararlı toplanma (denge) noktasıdır.**
 
-> **Kapsam kaydı — "toplanma" düzlemin *kimliğidir*, inceliği değil.** Yukarıdaki cümle bir çekim noktası ifadesidir ve o kadarıyla geçerlidir. Jilet **inceliği** F5'in kanalı değildir: $\Psi_5$ bir potansiyel olduğu için F5 tek başına inceltemez ($h=\sigma_z/\nu$ — korunumlu kuvvet teoremi, 11.4.5), inceltme işini çarpışmalı sönüm yapar. F5 yalnız $\nu$'ye katkı verir.
+> **Kapsam kaydı — "toplanma" düzlemin *kimliğidir*, inceliği değil.** Yukarıdaki cümle bir denge-noktası (toplanma) ifadesidir ve o kadarıyla geçerlidir. Jilet **inceliği** F5'in kanalı değildir: $\Psi_5$ bir potansiyel olduğu için F5 tek başına inceltemez ($h=\sigma_z/\nu$ — korunumlu kuvvet teoremi, 11.4.5), inceltme işini çarpışmalı sönüm yapar. F5 yalnız $\nu$'ye katkı verir.
 
 #### $\sin2\theta$ yasası R1'e özgüdür — genel yasa $\lambda$ ile yazılır · **[T]**
 
@@ -1261,7 +1261,7 @@ Oran 4'tür ve tamamen mekanizma farkından gelir — aynı $\xi$, aynı alan, i
 
 **Kullanıldığı bölümler:** 2.4.2 (Yön Kuralı), 4.2.15 (İtiraz 3), 6.2.3, 6.2.5–6.2.6, 6.3.3. Bağlı katalog: M-1, M-8, M-19, M-21, M-40.
 
-Bu girdi, teorinin uzun süre açık kalan **2 çarpanı** sorununu çözer: ışık bükülmesinin neden 0,876″ değil 1,751″ olduğu, jeodetik presesyonun neden $\tfrac32$ katsayısıyla geldiği ve Lorentz testlerinin neden hiçbir şey görmediği tek bir yapıdan çıkar.
+Bu girdi, teorinin uzun süre açık kalan **2 çarpanı** sorununu çözer: ışık bükülmesinin neden 0,876″ değil 1,751″ olduğu, jeodetik presesyonun neden $\tfrac32$ katsayısıyla geldiği ve Lorentz testlerinin neden hiçbir şey görmediği tek bir yapıdan çıkar. *(Jeodetiğin $\tfrac32$'sinin mekanizma ayrışımı: aşağıda Kapanan Gözlemler tablosunun notu.)*
 
 ### Sorunun kurulumu
 
@@ -1330,6 +1330,11 @@ $\Lambda$ yapısı, PPN dilinde $\gamma_{PPN}=1$ vermeye denktir; $\gamma$'ya ba
 | Kütleçekimsel kızıla kayma | $-\Phi/c_0^2$ | GPS, Pound–Rebka ✓ |
 | Lorentz ihlali sınırları | yapısal olarak null | $10^{-18}$ ✓ |
 
+> **Jeodetik satırının mekanizma kaydı** *(düzeltme, 17 Ağustos 2026: eski gerekçe "Thomas ½ + ölçek payı 1" idi — ayrışım yanlıştı ve "Thomas" çıplak bir SR ithaliydi)*. Doğru ayrışım teori-içi iki kalemdir ve $1+\tfrac12$ değil $\mathbf{2-\tfrac12}$'dir:
+> **(i) Taşınım payı (+2).** Jiroskop ekseni malzeme doğrultusu değil, dolaşım düzleminin kesitle arakesitidir (11.7.1); dolayısıyla **yayılım kanalında** taşınır ve tam yörüngede, bükülmeyi veren aynı $n_{eff}=1/\Lambda^2$'nin Fermat holonomisi kadar döner: $\Delta\alpha = \oint \partial_\perp(\ln n_{eff})\,ds = 4\pi\,\mathcal{G}M/(c_0^2 r)$ — yeni girdi yok. *(Yerel-oran yazımı değil, kapalı-yörünge holonomisi: düzgün gradyanda düz taşınan eksen simetri gereği dönmez; birikim, gradyan yönünün yörünge boyunca dönmesinden gelir.)*
+> **(ii) Tur açığı (−½).** Hareketli bağlı yapının ölçüm ağı ($\Lambda_{kin}$; 11.4.8.1) yön değişimini $\gamma$ kat büyük sayar; torksuz eksen tur başına tam $2\pi(\gamma-1)$ geri kalır (kapalı biçim — türetilmiş cetvel-saat-yerelzaman haritalarının bileşim artığı; standart fizikteki adıyla Thomas payı, burada ithal değil sonuç).
+> Kepler bağıyla ($v^2=\mathcal{G}M/r$) toplam: $4\pi\mu/r - \pi\mu/r = 3\pi\,\mathcal{G}M/(c_0^2 r)$ per yörünge — tablodaki ~6.606 mas/yıl. **Açık kalem:** (i)'in kanal ağırlığının (yayılım, $\Lambda^2$) taşınan girdap çekirdeğinin yönelim dinamiğinden alt-düzey türetimi — Açık Uçlar'da kayıtlıdır; cetvel kanalı ($\Lambda$) seçilseydi toplam $\tfrac12$'ye düşer ve GP-B ile ~240σ çelişirdi.
+
 **Shapiro gecikmesinin hesabı.** Aynı $n_{eff}$ Fermat integraline sokulur; ek varsayım yoktur:
 $$\Delta t = \frac1c\int (n_{eff}-1)\,ds = \frac{2GM}{c^3}\int\frac{ds}{r} \quad\Longrightarrow\quad \Delta t_{gidiş-dönüş} = \frac{4GM}{c^3}\,\ln\!\frac{4r_1r_2}{b^2}$$
 Güneş kenarına teğet geçen Dünya–Mars sinyali için ($r_1=1$ AU, $r_2=1{,}524$ AU, $b=R_\odot$): $4GM_\odot/c_0^3 = 1{,}97\times10^{-5}$ s ve $\ln(2{,}82\times10^{5}) = 12{,}55$, dolayısıyla
@@ -1355,7 +1360,8 @@ $k=0$ için $P_0 \approx 6{,}1\times10^{33}$ Pa ve $\rho_0\approx\rho_n/4 \appro
 ### Açık Uçlar
 
 - **$\beta$ parametresi:** Ortamın $O(\Phi^2)$ tepkisinin $P(\Phi)$ hâl ilişkisinden türetilmesi. Kapanırsa Merkür'ün 43″'si de kapanır — teorinin kalan tek klasik GR sınavı.
-- **$\gamma_\ell=-1$'in mekanizması:** Cetvellerin neden tam $\Lambda$ ile büzüldüğü, atomun/nükleonun ortam içindeki denge boyutundan birinci-ilkelerle türetilmelidir. Şu an yerel değişmezlik gözleminden sabitlenmiştir (M-19'un boy kısalmasının kendi mekanik türetiminin de açık olması gibi).
+- **$\gamma_\ell=-1$'in mekanizması:** Cetvellerin neden tam $\Lambda$ ile büzüldüğü, atomun/nükleonun ortam içindeki denge boyutundan birinci-ilkelerle türetilmelidir. Şu an yerel değişmezlik gözleminden sabitlenmiştir. *(Hareket kolundaki karşılığı kapanmıştır — boy kısalması 11.4.8.1'de Prandtl–Glauert'ten türetildi; açık olan potansiyel koludur.)*
+- **Jeodetiğin taşınım payı (17 Ağu 2026):** Eksenin yayılım kanalında ($\Lambda^2$, $n_{eff}$) taşındığı, 11.7.1'in "eksen malzeme doğrultusu değildir" teoremi ve 1.4.7'nin ZW-kutusu (W'yi içeren kol ekseni eğemez) ile gerekçelidir; gözlemsel olarak da zorunludur (cetvel kanalı toplamı ½'ye düşürür, GP-B ~240σ dışlar). Eksik olan, bu ağırlığın **taşınan girdap çekirdeğinin yönelim dinamiğinden** alt-düzey türetimidir (Kapanan Gözlemler notu).
 - **Ayırt edicilik:** $\gamma=1$ ile teori 1PN düzeyinde GR ile gözlemsel olarak ayrışmaz. Ayrışma ancak $\beta$'da veya ikinci mertebede aranabilir.
 
 - **Yapının türü ve $\beta$'nın neden ayrı iş olduğu (denetim notu, 28 Temmuz 2026).** Bu türetim biçimsel olarak bir **optik-ortam** (etkin kırılma indisi) kuruluşudur: düz arka plan + konuma bağlı $c_{loc}$ + Fermat ilkesi. Bu sınıfın bilinen bir kapsamı ve bilinen bir sınırı vardır ve teorinin durumu tam olarak o sınıra oturur:
@@ -1678,7 +1684,7 @@ Bu ayrım teorinin patinaj ilkesinin (2.4.2) dönme eksenine uygulanmasıdır; e
 | Nötron yıldızında $\xi\approx0{,}11$ | PSR B1828-11 devinimi, glitch istatistiği | Henüz aranmadı |
 | **LAGEOS düğüm kayması 30,6 / 31,4 mas/yıl** | LAGEOS-1/2 lazer telemetrisi (~31 mas/yıl) | **Sınandı ✓** (M-41; aynı $\xi$, yeni parametre yok) |
 | Düğüm kayması eğiklikten bağımsız | Farklı eğiklikteki uydu çiftleri | Formülde $i$ yok — yapısal öngörü |
-| **Jeodetik presesyon 6.606 mas/yıl** | GP-B (±%0,28) | **Sınandı ✓** (M-42; Thomas $\tfrac12$ + ölçek payı 1) |
+| **Jeodetik presesyon 6.606 mas/yıl** | GP-B (±%0,28) | **Sınandı ✓** (M-42; taşınım holonomisi $2$ − tur açığı $\tfrac12$ — eski "Thomas ½ + ölçek payı 1" ayrışımı düzeltildi, 17 Ağu 2026; kanal ağırlığının girdap türetimi M-42 Açık Uçlar'da) |
 | **Işık bükülmesi 1,7512″** | Güneş kenarı, VLBI (1,7510″) | **Sınandı ✓** (M-42; $n_{eff}=1+2\Phi/c_0^2$) |
 | **Shapiro gecikmesi ≈247 µs** | Viking, Dünya–Mars teğet (≈250 µs) | **Sınandı ✓** (M-42; yarım indis 124 µs verirdi) |
 | PPN $\gamma=1$ | Cassini: $1+(2{,}1\pm2{,}3)\times10^{-5}$ | **Sınandı ✓** — yapı $\gamma$'yı serbest bırakmaz |
