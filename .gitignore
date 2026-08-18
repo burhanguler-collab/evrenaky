@@ -1,0 +1,67 @@
+# ==========================================================================
+#  GitHub Pages yayın dışı bırakılanlar
+# ==========================================================================
+#  Neden var: 18 Ağu 2026 — site iki yoldan yayınlanıyor. Firebase yolunda
+#  hangi dosyaların yayına çıkmayacağı firebase.json'ın "ignore" listesinde
+#  tanımlı. GitHub yolunda ise böyle bir liste yoktu ve websitesi/ klasörünün
+#  tamamı depoya gidiyordu; KARNE, çalışma dosyaları, arşiv ve betikler
+#  dahil. Bu dosya firebase.json'ın "ignore" listesinin birebir karşılığıdır.
+#
+#  DEĞİŞTİRİRKEN: firebase.json'ın "ignore" listesiyle bu dosyayı birlikte
+#  güncelleyin. İkisi ayrışırsa iki yayın yolu farklı içerik sunar.
+# ==========================================================================
+
+# --- nokta ile başlayan her şey (firebase: "**/.*" ve "**/.git/**") -------
+.*
+# ...ama bu ikisi izlenmeli:
+!.gitignore
+!.nojekyll
+
+# --- betikler ve derleme artıkları (firebase: "**/*.py") ------------------
+*.py
+__pycache__/
+*.pyc
+
+# --- arşiv klasörleri (firebase: "**/_arsiv/**", "**/_arsiv_betikler/**") -
+_arsiv/
+_arsiv_betikler/
+
+# --- bağımlılıklar (firebase: "**/node_modules/**") -----------------------
+node_modules/
+
+# --- sıkıştırılmış ve yedek dosyalar -------------------------------------
+#     (firebase: "**/*.rar", "**/*.zip", "**/*.7z", "**/*.bak")
+*.rar
+*.zip
+*.7z
+*.bak
+
+# --- düz metin veri/döküm dosyaları (firebase: "**/*.txt") ----------------
+*.txt
+
+# --- yayın dışı tekil metinler -------------------------------------------
+#     (firebase: adı verilen iki dosya)
+/Metin/Evrenaki_Sinirlari.md
+/Metin/Akademik/00_KARNE_Dogrulama_Durumu.md
+
+# --- çalışma ve yedek desenleri ------------------------------------------
+#     (firebase: "**/_YEDEK_*", "**/00_CALISMA_*", "**/EDITOR_NOTLARI.md")
+_YEDEK_*
+00_CALISMA_*
+EDITOR_NOTLARI.md
+
+# ==========================================================================
+#  FIREBASE PARİTESİNİN ÖTESİ — firebase.json'da KARŞILIĞI YOK
+# ==========================================================================
+#  firebase.json yalnız "_YEDEK_" ÖNEKİNİ ve "*.bak" uzantısını eliyor.
+#  Bu depoda yedekler başka türlü de adlandırılmış (sonek "_yedek", "copy",
+#  "backup", ".tmp") ve o dosyalar iki yoldan da yayına çıkıyordu —
+#  ör. Simulasyon/*_yedek.html, Metin/Akademik/dump.tmp.
+#  AYNI SATIRLAR firebase.json'ın "ignore" listesine de eklenmelidir;
+#  eklenmezse Firebase yolu bu dosyaları yayınlamaya devam eder.
+# ==========================================================================
+*yedek*
+*YEDEK*
+*backup*
+*.tmp
+* copy.*
